@@ -1,0 +1,29 @@
+language: node_js
+node_js:
+  - "8"
+  - "6"
+install:
+  - yarn
+cache:
+  yarn: true
+branches:
+  except:
+  - gh-pages
+stages:
+  - lint
+  - test
+  - build
+jobs:
+  include:
+    - stage: lint
+      script:
+        - npx prettier
+        - npm run lint:style 
+        - npx eslint
+    - stage: test
+      script:
+        - npx jest
+    - stage: build
+      script:
+        - npm run build:dist
+        - npm run build:lib
