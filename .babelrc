@@ -1,0 +1,16 @@
+{
+    "presets": [["env", {}], "react"],
+    "plugins": [
+        "lodash",
+        "transform-decorators-legacy",
+        "transform-class-properties",
+        [
+            "transform-object-rest-spread",
+            {
+                "useBuiltIns": true
+            }
+        ],
+        ["babel-plugin-webpack-alias", { "config": "./webpack.config.js", "noOutputExtension": true }],
+        "babel-plugin-styled-components"
+    ]
+}
