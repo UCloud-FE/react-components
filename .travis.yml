@@ -12,6 +12,7 @@ branches:
 stages:
   - lint
   - test
+  - jest
   - build
 jobs:
   include:
@@ -19,7 +20,7 @@ jobs:
       script:
         - npm run lint:es
         - npm run lint:style
-    - stage: test
+    - stage: jest
       script:
         - npx jest
     - stage: build
