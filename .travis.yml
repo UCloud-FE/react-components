@@ -1,0 +1,30 @@
+language: node_js
+node_js:
+  - "8"
+install:
+  - yarn
+cache:
+  yarn: true
+branches:
+  except:
+  - gh-pages
+stages:
+  - lint
+  - test
+  - build
+jobs:
+  include:
+    - stage: lint
+      script: npm run lint:es
+      name: 'eslint'
+    - script: npm run lint:style
+      name: 'stylelint'
+    - stage: test
+      script: npm run test
+    - stage: build
+      script: npm run build:dist
+      name: 'bulid dist'
+    - script:  npm run build:lib
+      name: 'build lib'
+    - script: npm run build:styleguide
+      name: 'bulid styleguide'
