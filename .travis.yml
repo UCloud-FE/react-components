@@ -17,9 +17,8 @@ jobs:
   include:
     - stage: lint
       script:
-        - npx prettier
-        - npm run lint:style 
-        - npx eslint
+        - npm run lint:es
+        - npm run lint:style
     - stage: test
       script:
         - npx jest

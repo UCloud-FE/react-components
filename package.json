@@ -36,6 +36,7 @@
     "test:all": "npm run jest && npm run lint:style",
     "jest": "jest",
     "jest:watch": "jest --watch",
+    "lint:es": "eslint . --ext .js,.jsx --cache",
     "lint:style": "stylelint './src/style/*.js' && stylelint './src/components/**/*.(jsx|js)'",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
