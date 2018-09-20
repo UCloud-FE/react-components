@@ -15,14 +15,16 @@ stages:
 jobs:
   include:
     - stage: lint
-      script:
-        - npm run lint:es
-        - npm run lint:style
+      script: npm run lint:es
+      name: 'eslint'
+    - script: npm run lint:style
+      name: 'stylelint'
     - stage: test
-      script:
-        - npm run test
+      script: npm run test
     - stage: build
-      script:
-        - npm run build:dist
-        - npm run build:lib
-        - npm run build:styleguide
+      script: npm run build:dist
+      name: 'bulid dist'
+    - script:  npm run build:lib
+      name: 'build lib'
+    - script: npm run build:styleguide
+      name: 'bulid styleguide'
