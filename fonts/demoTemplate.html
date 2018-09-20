@@ -1,0 +1,2690 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>UCloud字体图标库</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    /** 清除内外边距 **/
+    body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+    dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+    pre, /* text formatting elements 文本格式元素 */
+    form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+    th, td /* table elements 表格元素 */
+    {
+      margin: 0;
+      padding: 0;
+    }
+
+    /** 设置默认字体 **/
+    body,
+    button, input, select, textarea /* for ie */
+    {
+      font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-size: 100%;
+    }
+
+    address, cite, dfn, em, var {
+      font-style: normal;
+    }
+
+    /* 将斜体扶正 */
+    code, kbd, pre, samp {
+      font-family: courier new, courier, monospace;
+    }
+
+    /* 统一等宽字体 */
+    small {
+      font-size: 12px;
+    }
+
+    /* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+    /** 重置列表元素 **/
+    ul, ol {
+      list-style: none;
+    }
+
+    /** 重置文本格式元素 **/
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /** 重置表单元素 **/
+    legend {
+      color: #000;
+    }
+
+    /* for ie6 */
+    fieldset, img {
+      border: 0;
+    }
+
+    /* img 搭车：让链接里的 img 无边框 */
+    button, input, select, textarea {
+      font-size: 100%;
+    }
+
+    /* 使得表单元素在 ie 下能继承字体大小 */
+    /* 注：optgroup 无法扶正 */
+
+    /** 重置表格元素 **/
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    /* 清除浮动 */
+    .ks-clear:after, .clear:after {
+      content: '\20';
+      display: block;
+      height: 0;
+      clear: both;
+    }
+
+    .ks-clear, .clear {
+      *zoom: 1;
+    }
+
+    .main {
+      padding: 30px 100px;
+    }
+
+    .main h1 {
+      float: left;
+      font-size: 36px;
+      color: #333;
+      text-align: left;
+    }
+
+    .helps {
+      margin-top: 40px;
+    }
+
+    .helps pre {
+      padding: 20px;
+      margin: 10px 0;
+      border: solid 1px #e7e1cd;
+      background-color: #fffdef;
+      overflow: auto;
+    }
+
+    .icon_lists li {
+      float: left;
+      width: 100px;
+      height: 180px;
+      text-align: center;
+    }
+
+    .icon_lists .icon {
+      font-size: 42px;
+      line-height: 100px;
+      margin: 10px 0;
+      color: #333;
+      -webkit-transition: font-size 0.25s ease-out 0s;
+      -moz-transition: font-size 0.25s ease-out 0s;
+      transition: font-size 0.25s ease-out 0s;
+
+    }
+
+    .icon_lists .icon:hover {
+      font-size: 100px;
+    }
+
+  </style>
+  <link rel="stylesheet" href="../css/icon.css">
+  <style>
+    body {
+      background: none
+    }
+    .main-title {
+      margin-bottom: 30px;
+      border-bottom: 1px solid #eee;
+      overflow: hidden;
+    }
+    .version-wrapper {
+      float: right;
+      margin-top: 18px;
+      margin-right: 8px;
+      font-size: 20px;
+    }
+    .npm {
+      display: inline-block;
+      padding: 0 8px;
+      border-radius: 4px;
+      background-color: #C12127;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+<div class="main">
+  <div class="main-title">
+    <h1>UCloud字体图标库</h1>
+    <div class="version-wrapper">
+      当前版本：<span class="npm">npm</span> v<span id="version">0.0.0</span>
+    </div>
+  </div>
+  <div style="border-bottom: 1px solid #eee;padding-bottom: 30px;">
+    <button type="button" onclick="createFont()" id="btn" style="padding: 8px; cursor: pointer;background-color: white;border: 1px solid cadetblue;">点击更新字体&版本</button>
+    <span style="font-size: 16px;" id="textDiv"></span>
+    <button type="button" onclick="createFont(true)" id="btn" style="padding: 8px; cursor: pointer;margin-left: 16px;background-color: white;border: 1px solid firebrick;">强制更新版本</button>
+  </div>
+  <div class="helps" style="font-size: 16px;">
+    <div>使用npm安装：</div>
+    <pre>npm install @ucloud/ucloud-icons --registry=http://registry.npm.pre.ucloudadmin.com</pre>
+  </div>
+  <ul class="icon_lists clear">
+    
+    <li>
+      <i class="icon icon__OpenStack"></i>
+
+      <div class="fontclass">icon__OpenStack</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__Uhybrid01"></i>
+
+      <div class="fontclass">icon__Uhybrid01</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__ZJRQFH"></i>
+
+      <div class="fontclass">icon__ZJRQFH</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__ai"></i>
+
+      <div class="fontclass">icon__ai</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__air-play"></i>
+
+      <div class="fontclass">icon__air-play</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__align-center"></i>
+
+      <div class="fontclass">icon__align-center</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__align-justify"></i>
+
+      <div class="fontclass">icon__align-justify</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__align-left"></i>
+
+      <div class="fontclass">icon__align-left</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__align-right"></i>
+
+      <div class="fontclass">icon__align-right</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__alt"></i>
+
+      <div class="fontclass">icon__alt</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__anchor"></i>
+
+      <div class="fontclass">icon__anchor</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__anti-fraud"></i>
+
+      <div class="fontclass">icon__anti-fraud</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__apikey"></i>
+
+      <div class="fontclass">icon__apikey</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__app-security"></i>
+
+      <div class="fontclass">icon__app-security</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__approve"></i>
+
+      <div class="fontclass">icon__approve</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__aqfh"></i>
+
+      <div class="fontclass">icon__aqfh</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__archive"></i>
+
+      <div class="fontclass">icon__archive</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__arrow-down"></i>
+
+      <div class="fontclass">icon__arrow-down</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__arrow-left"></i>
+
+      <div class="fontclass">icon__arrow-left</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__arrow-right"></i>
+
+      <div class="fontclass">icon__arrow-right</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__arrow-up"></i>
+
+      <div class="fontclass">icon__arrow-up</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__ask"></i>
+
+      <div class="fontclass">icon__ask</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__avatar"></i>
+
+      <div class="fontclass">icon__avatar</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__backdoor"></i>
+
+      <div class="fontclass">icon__backdoor</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__baiju"></i>
+
+      <div class="fontclass">icon__baiju</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__ban-2"></i>
+
+      <div class="fontclass">icon__ban-2</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__ban"></i>
+
+      <div class="fontclass">icon__ban</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__bandwidth-web"></i>
+
+      <div class="fontclass">icon__bandwidth-web</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__bar-graph-2"></i>
+
+      <div class="fontclass">icon__bar-graph-2</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__bar-graph"></i>
+
+      <div class="fontclass">icon__bar-graph</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__battery"></i>
+
+      <div class="fontclass">icon__battery</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__bell-fill"></i>
+
+      <div class="fontclass">icon__bell-fill</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__bell"></i>
+
+      <div class="fontclass">icon__bell</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__bigdata"></i>
+
+      <div class="fontclass">icon__bigdata</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__book"></i>
+
+      <div class="fontclass">icon__book</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__briefcase-2"></i>
+
+      <div class="fontclass">icon__briefcase-2</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__briefcase"></i>
+
+      <div class="fontclass">icon__briefcase</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__btw"></i>
+
+      <div class="fontclass">icon__btw</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__buoy"></i>
+
+      <div class="fontclass">icon__buoy</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__business"></i>
+
+      <div class="fontclass">icon__business</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__caas"></i>
+
+      <div class="fontclass">icon__caas</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__calculator"></i>
+
+      <div class="fontclass">icon__calculator</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__calendar"></i>
+
+      <div class="fontclass">icon__calendar</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__camera"></i>
+
+      <div class="fontclass">icon__camera</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__card"></i>
+
+      <div class="fontclass">icon__card</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__caret-down"></i>
+
+      <div class="fontclass">icon__caret-down</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__caret-left"></i>
+
+      <div class="fontclass">icon__caret-left</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__caret-right"></i>
+
+      <div class="fontclass">icon__caret-right</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__caret-up"></i>
+
+      <div class="fontclass">icon__caret-up</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__cbox-ed"></i>
+
+      <div class="fontclass">icon__cbox-ed</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__cbox"></i>
+
+      <div class="fontclass">icon__cbox</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__centos"></i>
+
+      <div class="fontclass">icon__centos</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__check"></i>
+
+      <div class="fontclass">icon__check</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__checkbox-ed"></i>
+
+      <div class="fontclass">icon__checkbox-ed</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__checkbox"></i>
+
+      <div class="fontclass">icon__checkbox</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__circle-add"></i>
+
+      <div class="fontclass">icon__circle-add</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__circle-check"></i>
+
+      <div class="fontclass">icon__circle-check</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__circle-check_hover"></i>
+
+      <div class="fontclass">icon__circle-check_hover</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__circle-cross"></i>
+
+      <div class="fontclass">icon__circle-cross</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__circle-fill-small"></i>
+
+      <div class="fontclass">icon__circle-fill-small</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__circle-fill"></i>
+
+      <div class="fontclass">icon__circle-fill</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__circle-i"></i>
+
+      <div class="fontclass">icon__circle-i</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__circle-mark"></i>
+
+      <div class="fontclass">icon__circle-mark</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__circle-mark2"></i>
+
+      <div class="fontclass">icon__circle-mark2</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__circle-minus"></i>
+
+      <div class="fontclass">icon__circle-minus</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__circle-play"></i>
+
+      <div class="fontclass">icon__circle-play</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__circle-plus"></i>
+
+      <div class="fontclass">icon__circle-plus</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__circle-question-2"></i>
+
+      <div class="fontclass">icon__circle-question-2</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__circle-question"></i>
+
+      <div class="fontclass">icon__circle-question</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__circle-sm"></i>
+
+      <div class="fontclass">icon__circle-sm</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__circle-yes"></i>
+
+      <div class="fontclass">icon__circle-yes</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__circle"></i>
+
+      <div class="fontclass">icon__circle</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__clanguage"></i>
+
+      <div class="fontclass">icon__clanguage</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__clipboard"></i>
+
+      <div class="fontclass">icon__clipboard</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__clock"></i>
+
+      <div class="fontclass">icon__clock</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__closeeye"></i>
+
+      <div class="fontclass">icon__closeeye</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__cloud-download"></i>
+
+      <div class="fontclass">icon__cloud-download</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__cloud-encrypt"></i>
+
+      <div class="fontclass">icon__cloud-encrypt</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__cloud-paas"></i>
+
+      <div class="fontclass">icon__cloud-paas</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__cloud-private"></i>
+
+      <div class="fontclass">icon__cloud-private</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__cloud-upload"></i>
+
+      <div class="fontclass">icon__cloud-upload</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__cloud"></i>
+
+      <div class="fontclass">icon__cloud</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__cog"></i>
+
+      <div class="fontclass">icon__cog</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__collect"></i>
+
+      <div class="fontclass">icon__collect</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__collected"></i>
+
+      <div class="fontclass">icon__collected</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__columns"></i>
+
+      <div class="fontclass">icon__columns</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__command"></i>
+
+      <div class="fontclass">icon__command</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__company"></i>
+
+      <div class="fontclass">icon__company</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__content-left"></i>
+
+      <div class="fontclass">icon__content-left</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__content-right"></i>
+
+      <div class="fontclass">icon__content-right</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__contract"></i>
+
+      <div class="fontclass">icon__contract</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__copy"></i>
+
+      <div class="fontclass">icon__copy</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__crack"></i>
+
+      <div class="fontclass">icon__crack</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__cross"></i>
+
+      <div class="fontclass">icon__cross</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__dashboard"></i>
+
+      <div class="fontclass">icon__dashboard</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__dashbord-meum"></i>
+
+      <div class="fontclass">icon__dashbord-meum</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__data-analyse"></i>
+
+      <div class="fontclass">icon__data-analyse</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__data-ark"></i>
+
+      <div class="fontclass">icon__data-ark</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__data-center-web"></i>
+
+      <div class="fontclass">icon__data-center-web</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__data-warehouse"></i>
+
+      <div class="fontclass">icon__data-warehouse</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__debian"></i>
+
+      <div class="fontclass">icon__debian</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__delete"></i>
+
+      <div class="fontclass">icon__delete</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__disc"></i>
+
+      <div class="fontclass">icon__disc</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__door"></i>
+
+      <div class="fontclass">icon__door</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__double-left"></i>
+
+      <div class="fontclass">icon__double-left</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__double-right"></i>
+
+      <div class="fontclass">icon__double-right</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__down"></i>
+
+      <div class="fontclass">icon__down</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__down22"></i>
+
+      <div class="fontclass">icon__down22</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__download"></i>
+
+      <div class="fontclass">icon__download</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__drgs"></i>
+
+      <div class="fontclass">icon__drgs</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__drop"></i>
+
+      <div class="fontclass">icon__drop</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__edit"></i>
+
+      <div class="fontclass">icon__edit</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__edu"></i>
+
+      <div class="fontclass">icon__edu</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__eip"></i>
+
+      <div class="fontclass">icon__eip</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__ellipsis-verticle"></i>
+
+      <div class="fontclass">icon__ellipsis-verticle</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__ellipsis"></i>
+
+      <div class="fontclass">icon__ellipsis</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__esc"></i>
+
+      <div class="fontclass">icon__esc</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__expand"></i>
+
+      <div class="fontclass">icon__expand</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__eye"></i>
+
+      <div class="fontclass">icon__eye</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__faq"></i>
+
+      <div class="fontclass">icon__faq</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__fast"></i>
+
+      <div class="fontclass">icon__fast</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__feedback"></i>
+
+      <div class="fontclass">icon__feedback</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__fenxi"></i>
+
+      <div class="fontclass">icon__fenxi</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__file-add"></i>
+
+      <div class="fontclass">icon__file-add</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__file-subtract"></i>
+
+      <div class="fontclass">icon__file-subtract</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__file"></i>
+
+      <div class="fontclass">icon__file</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__filter"></i>
+
+      <div class="fontclass">icon__filter</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__finance"></i>
+
+      <div class="fontclass">icon__finance</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__flag"></i>
+
+      <div class="fontclass">icon__flag</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__flexible"></i>
+
+      <div class="fontclass">icon__flexible</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__folder"></i>
+
+      <div class="fontclass">icon__folder</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__fuhao"></i>
+
+      <div class="fontclass">icon__fuhao</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__game"></i>
+
+      <div class="fontclass">icon__game</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__gentoo"></i>
+
+      <div class="fontclass">icon__gentoo</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__gpu"></i>
+
+      <div class="fontclass">icon__gpu</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__green-line-web"></i>
+
+      <div class="fontclass">icon__green-line-web</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__grid"></i>
+
+      <div class="fontclass">icon__grid</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__head-2"></i>
+
+      <div class="fontclass">icon__head-2</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__head-3"></i>
+
+      <div class="fontclass">icon__head-3</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__head"></i>
+
+      <div class="fontclass">icon__head</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__headset"></i>
+
+      <div class="fontclass">icon__headset</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__heart"></i>
+
+      <div class="fontclass">icon__heart</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__helpbook"></i>
+
+      <div class="fontclass">icon__helpbook</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__home"></i>
+
+      <div class="fontclass">icon__home</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__hot-update"></i>
+
+      <div class="fontclass">icon__hot-update</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__hot"></i>
+
+      <div class="fontclass">icon__hot</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__huanjing"></i>
+
+      <div class="fontclass">icon__huanjing</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__huojian"></i>
+
+      <div class="fontclass">icon__huojian</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__icon1"></i>
+
+      <div class="fontclass">icon__icon1</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__icon2"></i>
+
+      <div class="fontclass">icon__icon2</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__icon3"></i>
+
+      <div class="fontclass">icon__icon3</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__id"></i>
+
+      <div class="fontclass">icon__id</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__image"></i>
+
+      <div class="fontclass">icon__image</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__inbox"></i>
+
+      <div class="fontclass">icon__inbox</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__industry"></i>
+
+      <div class="fontclass">icon__industry</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__ipsecvpn"></i>
+
+      <div class="fontclass">icon__ipsecvpn</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__jiaohuanji"></i>
+
+      <div class="fontclass">icon__jiaohuanji</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__jiekou"></i>
+
+      <div class="fontclass">icon__jiekou</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__jingxiang"></i>
+
+      <div class="fontclass">icon__jingxiang</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__jixie1"></i>
+
+      <div class="fontclass">icon__jixie1</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__js"></i>
+
+      <div class="fontclass">icon__js</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__kaiyang"></i>
+
+      <div class="fontclass">icon__kaiyang</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__kouzhan"></i>
+
+      <div class="fontclass">icon__kouzhan</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__language"></i>
+
+      <div class="fontclass">icon__language</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__layers"></i>
+
+      <div class="fontclass">icon__layers</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__layout"></i>
+
+      <div class="fontclass">icon__layout</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__left"></i>
+
+      <div class="fontclass">icon__left</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__lightning_m"></i>
+
+      <div class="fontclass">icon__lightning_m</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__line"></i>
+
+      <div class="fontclass">icon__line</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__link"></i>
+
+      <div class="fontclass">icon__link</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__list"></i>
+
+      <div class="fontclass">icon__list</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__load"></i>
+
+      <div class="fontclass">icon__load</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__loading"></i>
+
+      <div class="fontclass">icon__loading</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__location-2"></i>
+
+      <div class="fontclass">icon__location-2</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__location-3"></i>
+
+      <div class="fontclass">icon__location-3</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__location"></i>
+
+      <div class="fontclass">icon__location</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__lock"></i>
+
+      <div class="fontclass">icon__lock</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__logo-lc"></i>
+
+      <div class="fontclass">icon__logo-lc</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__logo-ucloud"></i>
+
+      <div class="fontclass">icon__logo-ucloud</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__logo"></i>
+
+      <div class="fontclass">icon__logo</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__mail"></i>
+
+      <div class="fontclass">icon__mail</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__mail1"></i>
+
+      <div class="fontclass">icon__mail1</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__managed-cluster"></i>
+
+      <div class="fontclass">icon__managed-cluster</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__map"></i>
+
+      <div class="fontclass">icon__map</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__marquee-add"></i>
+
+      <div class="fontclass">icon__marquee-add</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__marquee-subtract"></i>
+
+      <div class="fontclass">icon__marquee-subtract</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__marquee"></i>
+
+      <div class="fontclass">icon__marquee</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__maximize"></i>
+
+      <div class="fontclass">icon__maximize</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__memory"></i>
+
+      <div class="fontclass">icon__memory</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__menu"></i>
+
+      <div class="fontclass">icon__menu</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__message"></i>
+
+      <div class="fontclass">icon__message</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__microphone"></i>
+
+      <div class="fontclass">icon__microphone</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__minimize"></i>
+
+      <div class="fontclass">icon__minimize</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__minus"></i>
+
+      <div class="fontclass">icon__minus</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__mobile-2"></i>
+
+      <div class="fontclass">icon__mobile-2</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__mobile"></i>
+
+      <div class="fontclass">icon__mobile</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__mobile1"></i>
+
+      <div class="fontclass">icon__mobile1</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__moon"></i>
+
+      <div class="fontclass">icon__moon</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__more-three"></i>
+
+      <div class="fontclass">icon__more-three</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__more"></i>
+
+      <div class="fontclass">icon__more</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__move"></i>
+
+      <div class="fontclass">icon__move</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__mute"></i>
+
+      <div class="fontclass">icon__mute</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__n-jiaobiao"></i>
+
+      <div class="fontclass">icon__n-jiaobiao</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__net"></i>
+
+      <div class="fontclass">icon__net</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__new"></i>
+
+      <div class="fontclass">icon__new</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__node-web"></i>
+
+      <div class="fontclass">icon__node-web</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__open"></i>
+
+      <div class="fontclass">icon__open</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__outbox"></i>
+
+      <div class="fontclass">icon__outbox</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__paper-clip"></i>
+
+      <div class="fontclass">icon__paper-clip</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__paper-stack"></i>
+
+      <div class="fontclass">icon__paper-stack</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__paper"></i>
+
+      <div class="fontclass">icon__paper</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__paragraph"></i>
+
+      <div class="fontclass">icon__paragraph</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__password"></i>
+
+      <div class="fontclass">icon__password</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__pause"></i>
+
+      <div class="fontclass">icon__pause</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__pdico"></i>
+
+      <div class="fontclass">icon__pdico</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__personal"></i>
+
+      <div class="fontclass">icon__personal</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__pie-graph"></i>
+
+      <div class="fontclass">icon__pie-graph</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__platform"></i>
+
+      <div class="fontclass">icon__platform</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__play"></i>
+
+      <div class="fontclass">icon__play</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__plus"></i>
+
+      <div class="fontclass">icon__plus</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__power"></i>
+
+      <div class="fontclass">icon__power</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__printer"></i>
+
+      <div class="fontclass">icon__printer</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__project"></i>
+
+      <div class="fontclass">icon__project</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__proline"></i>
+
+      <div class="fontclass">icon__proline</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__prophet"></i>
+
+      <div class="fontclass">icon__prophet</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__qiming"></i>
+
+      <div class="fontclass">icon__qiming</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__qq-fill"></i>
+
+      <div class="fontclass">icon__qq-fill</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__qq"></i>
+
+      <div class="fontclass">icon__qq</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__qr-code"></i>
+
+      <div class="fontclass">icon__qr-code</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__questionmark"></i>
+
+      <div class="fontclass">icon__questionmark</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__qyw"></i>
+
+      <div class="fontclass">icon__qyw</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__realmode"></i>
+
+      <div class="fontclass">icon__realmode</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__recommend"></i>
+
+      <div class="fontclass">icon__recommend</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__recycle"></i>
+
+      <div class="fontclass">icon__recycle</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__redhat"></i>
+
+      <div class="fontclass">icon__redhat</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__refresh"></i>
+
+      <div class="fontclass">icon__refresh</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__reload"></i>
+
+      <div class="fontclass">icon__reload</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__remotelogin"></i>
+
+      <div class="fontclass">icon__remotelogin</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__repeat"></i>
+
+      <div class="fontclass">icon__repeat</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__repeat_m"></i>
+
+      <div class="fontclass">icon__repeat_m</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__reply"></i>
+
+      <div class="fontclass">icon__reply</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__ribbon-fill"></i>
+
+      <div class="fontclass">icon__ribbon-fill</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__ribbon"></i>
+
+      <div class="fontclass">icon__ribbon</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__rich"></i>
+
+      <div class="fontclass">icon__rich</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__right-angle"></i>
+
+      <div class="fontclass">icon__right-angle</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__right"></i>
+
+      <div class="fontclass">icon__right</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__rlsm"></i>
+
+      <div class="fontclass">icon__rlsm</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__rmb-02"></i>
+
+      <div class="fontclass">icon__rmb-02</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__rmb"></i>
+
+      <div class="fontclass">icon__rmb</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__safe2"></i>
+
+      <div class="fontclass">icon__safe2</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__safehouse"></i>
+
+      <div class="fontclass">icon__safehouse</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__search"></i>
+
+      <div class="fontclass">icon__search</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__settings"></i>
+
+      <div class="fontclass">icon__settings</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__share"></i>
+
+      <div class="fontclass">icon__share</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__sharebandwidth"></i>
+
+      <div class="fontclass">icon__sharebandwidth</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__shockwave"></i>
+
+      <div class="fontclass">icon__shockwave</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__shopping"></i>
+
+      <div class="fontclass">icon__shopping</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__shuffle"></i>
+
+      <div class="fontclass">icon__shuffle</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__signal"></i>
+
+      <div class="fontclass">icon__signal</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__sles"></i>
+
+      <div class="fontclass">icon__sles</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__smallu"></i>
+
+      <div class="fontclass">icon__smallu</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__sort"></i>
+
+      <div class="fontclass">icon__sort</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__speech-bubble"></i>
+
+      <div class="fontclass">icon__speech-bubble</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__square-add"></i>
+
+      <div class="fontclass">icon__square-add</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__square-check"></i>
+
+      <div class="fontclass">icon__square-check</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__square-cross"></i>
+
+      <div class="fontclass">icon__square-cross</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__square-minus"></i>
+
+      <div class="fontclass">icon__square-minus</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__square"></i>
+
+      <div class="fontclass">icon__square</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__ssh-tag"></i>
+
+      <div class="fontclass">icon__ssh-tag</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__ssh-tag1"></i>
+
+      <div class="fontclass">icon__ssh-tag1</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__stack-2"></i>
+
+      <div class="fontclass">icon__stack-2</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__stack"></i>
+
+      <div class="fontclass">icon__stack</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__star"></i>
+
+      <div class="fontclass">icon__star</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__step"></i>
+
+      <div class="fontclass">icon__step</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__sun"></i>
+
+      <div class="fontclass">icon__sun</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__survey"></i>
+
+      <div class="fontclass">icon__survey</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__sxt"></i>
+
+      <div class="fontclass">icon__sxt</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__tag"></i>
+
+      <div class="fontclass">icon__tag</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__telephone"></i>
+
+      <div class="fontclass">icon__telephone</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__thermometer"></i>
+
+      <div class="fontclass">icon__thermometer</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__tiangang"></i>
+
+      <div class="fontclass">icon__tiangang</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__ticket"></i>
+
+      <div class="fontclass">icon__ticket</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__tidb"></i>
+
+      <div class="fontclass">icon__tidb</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__time"></i>
+
+      <div class="fontclass">icon__time</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__toggle"></i>
+
+      <div class="fontclass">icon__toggle</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__trash"></i>
+
+      <div class="fontclass">icon__trash</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__triangle-i"></i>
+
+      <div class="fontclass">icon__triangle-i</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__triangle-question"></i>
+
+      <div class="fontclass">icon__triangle-question</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__tydd"></i>
+
+      <div class="fontclass">icon__tydd</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__uads"></i>
+
+      <div class="fontclass">icon__uads</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__uai"></i>
+
+      <div class="fontclass">icon__uai</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__uaiservice"></i>
+
+      <div class="fontclass">icon__uaiservice</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__uaitrain"></i>
+
+      <div class="fontclass">icon__uaitrain</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__uapi"></i>
+
+      <div class="fontclass">icon__uapi</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__uapigateway"></i>
+
+      <div class="fontclass">icon__uapigateway</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__uarchive"></i>
+
+      <div class="fontclass">icon__uarchive</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__uas"></i>
+
+      <div class="fontclass">icon__uas</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__ubsec"></i>
+
+      <div class="fontclass">icon__ubsec</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__ucabinet"></i>
+
+      <div class="fontclass">icon__ucabinet</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__ucamon"></i>
+
+      <div class="fontclass">icon__ucamon</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__ucdn"></i>
+
+      <div class="fontclass">icon__ucdn</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__ucf"></i>
+
+      <div class="fontclass">icon__ucf</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__udas"></i>
+
+      <div class="fontclass">icon__udas</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__udataark"></i>
+
+      <div class="fontclass">icon__udataark</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__udb"></i>
+
+      <div class="fontclass">icon__udb</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__udb4mongodb"></i>
+
+      <div class="fontclass">icon__udb4mongodb</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__udb4pgsql"></i>
+
+      <div class="fontclass">icon__udb4pgsql</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__udb4sqlserver"></i>
+
+      <div class="fontclass">icon__udb4sqlserver</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__udbc"></i>
+
+      <div class="fontclass">icon__udbc</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__uddb"></i>
+
+      <div class="fontclass">icon__uddb</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__uddp"></i>
+
+      <div class="fontclass">icon__uddp</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__udee"></i>
+
+      <div class="fontclass">icon__udee</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__udhost"></i>
+
+      <div class="fontclass">icon__udhost</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__udisk"></i>
+
+      <div class="fontclass">icon__udisk</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__udnr"></i>
+
+      <div class="fontclass">icon__udnr</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__udns"></i>
+
+      <div class="fontclass">icon__udns</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__udocker"></i>
+
+      <div class="fontclass">icon__udocker</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__udpn"></i>
+
+      <div class="fontclass">icon__udpn</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__udts"></i>
+
+      <div class="fontclass">icon__udts</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__udw"></i>
+
+      <div class="fontclass">icon__udw</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__uemr"></i>
+
+      <div class="fontclass">icon__uemr</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__ues"></i>
+
+      <div class="fontclass">icon__ues</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__uewaf"></i>
+
+      <div class="fontclass">icon__uewaf</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__ufile"></i>
+
+      <div class="fontclass">icon__ufile</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__ufs"></i>
+
+      <div class="fontclass">icon__ufs</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__ugaa"></i>
+
+      <div class="fontclass">icon__ugaa</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__ugc"></i>
+
+      <div class="fontclass">icon__ugc</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__ugroup"></i>
+
+      <div class="fontclass">icon__ugroup</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__uhadoop"></i>
+
+      <div class="fontclass">icon__uhadoop</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__uhas"></i>
+
+      <div class="fontclass">icon__uhas</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__uhids"></i>
+
+      <div class="fontclass">icon__uhids</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__uhost"></i>
+
+      <div class="fontclass">icon__uhost</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__uhub"></i>
+
+      <div class="fontclass">icon__uhub</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__uhybrid"></i>
+
+      <div class="fontclass">icon__uhybrid</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__uips"></i>
+
+      <div class="fontclass">icon__uips</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__ukafka"></i>
+
+      <div class="fontclass">icon__ukafka</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__ukv"></i>
+
+      <div class="fontclass">icon__ukv</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__ulan"></i>
+
+      <div class="fontclass">icon__ulan</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__ulb"></i>
+
+      <div class="fontclass">icon__ulb</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__ulink"></i>
+
+      <div class="fontclass">icon__ulink</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__ulive"></i>
+
+      <div class="fontclass">icon__ulive</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__ulog"></i>
+
+      <div class="fontclass">icon__ulog</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__umaa"></i>
+
+      <div class="fontclass">icon__umaa</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__umai"></i>
+
+      <div class="fontclass">icon__umai</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__umarket"></i>
+
+      <div class="fontclass">icon__umarket</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__umbrella"></i>
+
+      <div class="fontclass">icon__umbrella</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__umedia"></i>
+
+      <div class="fontclass">icon__umedia</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__umem"></i>
+
+      <div class="fontclass">icon__umem</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__umon"></i>
+
+      <div class="fontclass">icon__umon</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__umq"></i>
+
+      <div class="fontclass">icon__umq</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__unet"></i>
+
+      <div class="fontclass">icon__unet</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__uni"></i>
+
+      <div class="fontclass">icon__uni</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__unline"></i>
+
+      <div class="fontclass">icon__unline</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__unlock"></i>
+
+      <div class="fontclass">icon__unlock</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__untu"></i>
+
+      <div class="fontclass">icon__untu</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__uodn"></i>
+
+      <div class="fontclass">icon__uodn</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__uodn2"></i>
+
+      <div class="fontclass">icon__uodn2</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__uoperaudit"></i>
+
+      <div class="fontclass">icon__uoperaudit</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__up"></i>
+
+      <div class="fontclass">icon__up</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__update"></i>
+
+      <div class="fontclass">icon__update</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__uphost"></i>
+
+      <div class="fontclass">icon__uphost</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__upload"></i>
+
+      <div class="fontclass">icon__upload</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__urecord"></i>
+
+      <div class="fontclass">icon__urecord</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__urms"></i>
+
+      <div class="fontclass">icon__urms</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__usa"></i>
+
+      <div class="fontclass">icon__usa</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__usable-area"></i>
+
+      <div class="fontclass">icon__usable-area</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__usafe"></i>
+
+      <div class="fontclass">icon__usafe</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__uscheduler"></i>
+
+      <div class="fontclass">icon__uscheduler</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__usec"></i>
+
+      <div class="fontclass">icon__usec</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__user"></i>
+
+      <div class="fontclass">icon__user</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__userver"></i>
+
+      <div class="fontclass">icon__userver</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__uservice"></i>
+
+      <div class="fontclass">icon__uservice</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__uslpe"></i>
+
+      <div class="fontclass">icon__uslpe</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__ussl"></i>
+
+      <div class="fontclass">icon__ussl</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__uvideo"></i>
+
+      <div class="fontclass">icon__uvideo</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__uvpc"></i>
+
+      <div class="fontclass">icon__uvpc</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__uwaf"></i>
+
+      <div class="fontclass">icon__uwaf</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__uwan"></i>
+
+      <div class="fontclass">icon__uwan</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__uws"></i>
+
+      <div class="fontclass">icon__uws</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__verticle-left"></i>
+
+      <div class="fontclass">icon__verticle-left</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__verticle-right"></i>
+
+      <div class="fontclass">icon__verticle-right</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__video"></i>
+
+      <div class="fontclass">icon__video</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__vitality"></i>
+
+      <div class="fontclass">icon__vitality</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__volume"></i>
+
+      <div class="fontclass">icon__volume</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__vpc"></i>
+
+      <div class="fontclass">icon__vpc</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__watch"></i>
+
+      <div class="fontclass">icon__watch</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__wechat"></i>
+
+      <div class="fontclass">icon__wechat</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__weibo"></i>
+
+      <div class="fontclass">icon__weibo</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__weixing"></i>
+
+      <div class="fontclass">icon__weixing</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__wenqu"></i>
+
+      <div class="fontclass">icon__wenqu</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__windows"></i>
+
+      <div class="fontclass">icon__windows</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__wuqu"></i>
+
+      <div class="fontclass">icon__wuqu</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__www"></i>
+
+      <div class="fontclass">icon__www</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__xuanwu"></i>
+
+      <div class="fontclass">icon__xuanwu</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__yaoguang"></i>
+
+      <div class="fontclass">icon__yaoguang</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__yizhanpz"></i>
+
+      <div class="fontclass">icon__yizhanpz</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__yuangonggl"></i>
+
+      <div class="fontclass">icon__yuangonggl</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__yuheng"></i>
+
+      <div class="fontclass">icon__yuheng</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__ziwei"></i>
+
+      <div class="fontclass">icon__ziwei</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__zjrz"></i>
+
+      <div class="fontclass">icon__zjrz</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__zongduan"></i>
+
+      <div class="fontclass">icon__zongduan</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__zoom-in"></i>
+
+      <div class="fontclass">icon__zoom-in</div>
+    </li>
+    
+    <li>
+      <i class="icon icon__zoom-out"></i>
+
+      <div class="fontclass">icon__zoom-out</div>
+    </li>
+    
+  </ul>
+  <div class="helps">
+    第一步：使用font-face声明字体
+    <pre>
+            @font-face {
+                font-family: "ucicon";
+                src: url('./ucicon.eot');
+                src: url('./ucicon.eot?#iefix') format('eot'),
+                    url('./ucicon.woff') format('woff'),
+                    url('./ucicon.ttf') format('truetype'),
+                    url('./ucicon.svg#ucicon') format('svg');
+            }
+</pre>
+    第二步：定义使用iconfont的样式
+    <pre>
+.icon__{
+    font-family:"ucicon" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+</pre>
+    第三步：挑选相应图标并获取相应class，应用于页面,【icon__xxxx】=【icon__】前缀+【每个图标对应的class】
+    <pre>
+&lt;i class="icon__demo"&gt;&lt;/i&gt;
+</pre>
+  </div>
+</div>
+<script>
+  function createFont(force) {
+    var textDiv = document.getElementById("textDiv");
+    textDiv.innerHTML = '正在确认更新...';
+    document.getElementById('btn').style.display = 'none';
+    var xmlhttp;
+    if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+      xmlhttp = new XMLHttpRequest();
+    }
+    else {// code for IE6, IE5
+      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.timeout = 1000 * 59;
+    xmlhttp.onreadystatechange = function () {
+      if (xmlhttp.readyState == 4) {
+        if(xmlhttp.status == 200) {
+          var result = JSON.parse(xmlhttp.responseText);
+          textDiv.innerHTML = result.message;
+          if (result.status == 0) {
+            location.reload();
+          }
+        }
+      }
+      if(xmlhttp.status == 504) {
+        textDiv.innerHTML = '请求超时，请稍后手动刷新页面，确认版本号是否更新。';
+      }
+    };
+    xmlhttp.ontimeout = function (e) {
+      textDiv.innerHTML = '请求超时，请稍后手动刷新页面，确认版本号是否更新。';
+    };
+    xmlhttp.open("POST", "https://font_api.pre.ucloudadmin.com/font", true);
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.send('force=' + force);
+  }
+
+  //获取最新NPM版本
+  function getLatestVersion() {
+    var versionSpan = document.getElementById("version");
+    var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
+    xhr.responseType = 'json';
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState == 4 && xhr.status == 200) {
+        versionSpan.innerHTML = xhr.response.data;
+      }
+    };
+
+    xhr.open('POST', 'https://font_api.pre.ucloudadmin.com/getLatestVersion', true);
+    xhr.send();
+  }
+
+  getLatestVersion();
+</script>
+</body>
+</html>
