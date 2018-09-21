@@ -30,6 +30,7 @@ jobs:
   - script: npm run build:gh-pages
     name: bulid gh-pages
   - stage: deploy
+    script: skip
     deploy:
       - provider: npm
         email: ZxBing0066@gmail.com
