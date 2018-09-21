@@ -36,6 +36,7 @@
     "jest": "jest",
     "lint:es": "eslint . --ext .js,.jsx",
     "lint:style": "stylelint './src/style/*.js' && stylelint './src/components/**/*.(jsx|js)'",
+    "deploy:gh-pages": "./scripts/gh-pages.sh -p",
     "deploy": "rm -rf dist && npm run build:dist && npm run build:lib && npm publish --registry=http://registry.npm.pre.ucloudadmin.com && npm publish --access public",
     "publish:patch": "standard-version --release-as patch && npm run deploy && git push --follow-tags",
     "publish:minor": "standard-version --release-as minor && npm run deploy && git push --follow-tags",

@@ -4,12 +4,7 @@ set -e
 
 cachepath=".gh-pages-cache"
 
-giturl="git@github.com:UCloud-FE/react-components.git"
-
-if [ "$1" != '-p' ]; then
-    echo "when build just use https url"
-    giturl="https://github.com/UCloud-FE/react-components.git"
-fi
+giturl="https://github.com/UCloud-FE/react-components.git"
 
 echo "clean cache path"
 if [ ! -a $cachepath ]; then
@@ -33,6 +28,8 @@ if [ "$1" != '-p' ]; then
 else
     echo "push to gh-pages"
     cd $cachepath
+    git remote rm origin
+    git remote add origin https://ZxBing0066:${GITHUB_TOKEN}@github.com/UCloud-FE/react-components.git
     git add -A
     git commit -m "update docs"
     git push origin gh-pages

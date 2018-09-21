@@ -50,10 +50,9 @@ jobs:
           tags: true
           repo: UCloud-FE/react-components
           branch: travis
-      - provider: pages
+      - provider: script
         skip-cleanup: true
-        github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-        keep-history: true
+        script: npm run deploy:gh-pages
         on:
           tags: true
           repo: UCloud-FE/react-components
