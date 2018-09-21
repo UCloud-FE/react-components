@@ -9,25 +9,20 @@ branches:
   except:
   - gh-pages
 stages:
-- lint
-- test
-- build
-- deploy
+- lint&test
+- build&deploy
 jobs:
   include:
-  - stage: lint
+  - stage: lint&test
     script:
       - npm run lint:es
       - npm run lint:style
-  - stage: test
-    script: npm run test
-  - stage: build
+      - npm run test
+  - stage: build&deploy
     script: 
       - npm run build:dist
       - npm run build:lib
       - npm run build:gh-pages
-  - stage: deploy
-    script: skip
     deploy:
       - provider: npm
         email: ZxBing0066@gmail.com
