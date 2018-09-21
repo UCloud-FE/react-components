@@ -1,30 +1,55 @@
 language: node_js
 node_js:
-  - "8"
+- '8'
 install:
-  - yarn
+- yarn
 cache:
   yarn: true
 branches:
   except:
   - gh-pages
 stages:
-  - lint
-  - test
-  - build
+- lint
+- test
+- build
 jobs:
   include:
-    - stage: lint
-      script: npm run lint:es
-      name: 'eslint'
-    - script: npm run lint:style
-      name: 'stylelint'
-    - stage: test
-      script: npm run test
-    - stage: build
-      script: npm run build:dist
-      name: 'bulid dist'
-    - script:  npm run build:lib
-      name: 'build lib'
-    - script: npm run build:gh-pages
-      name: 'bulid gh-pages'
+  - stage: lint
+    script: npm run lint:es
+    name: eslint
+  - script: npm run lint:style
+    name: stylelint
+  - stage: test
+    script: npm run test
+  - stage: build
+    script: npm run build:dist
+    name: bulid dist
+  - script: npm run build:lib
+    name: build lib
+  - script: npm run build:gh-pages
+    name: bulid gh-pages
+deploy:
+  - provider: npm
+    email: ZxBing0066@gmail.com
+    api_key:
+      secure: pPDwlqvOL19d0RzKNKEYPVBF8UHidJjVpKTRqz0j6xkp/Aw3LWdvjl+3l4yNg891MVDNXytj+tEwF2/P+4ZeXzpALq5gQAduPISHJ4/5qA4Hc193Xxd9ier3uCUJHNrDsLC3SMBC3bWJEfsnK2AbHmkPwvQ4QNjpkFVD+V9l/VmsjdSN7OhQT48c0uA01Je6RxVWq4wV9plbgOqc0Pw3splPnFQI8cVen1wBo9yLvUJ5Ird/fohXAi8iSNi3GDHinh1cAauDWiDlLY7KomUhoGvKgf21UNno6dvDsoKgwacajlH8XusdSgpXxU1yKa4nDk/6TVHpruzbJG9L4OCHGFlo8JzkEMfc6fGs600KVYV7PDG6vCnNO3taW9habwCrDh8LgxK8qra0kGDZSXroh6fq/N6OssJd7MTqzYWKXIhdKL1ff1CDwyNnpyGVukE9+v5N87Jr4nP06qxSDfV+GJLITeLNghjV/dsuxdqeqF8oJdpf6R+KH65V5dxRHDQFCVcNDetSDZAgQb3BlsempLQyVXlGD7RX9Q267ZMoZOU2snm60qjYMh+VWbTp7NUXweal7DJ98hWHC5ONXvYamQWfx9r78tHwR8QwBu3I/B5Gebyl7vRNKQFU1oqyArZueQDqQxxVQNjp92ZUqzYI8JvHn/ZY+6PuIpNtH4olkbE=
+    on:
+      tags: true
+      repo: UCloud-FE/react-components
+      branch: master
+  - provider: releases
+    api_key:
+      secure: AZmdbAGXGEk1Qi3YpqOmUZRQK3/nnNeSo96bbXzAtMBlb4osWG7Bm1iasjMXITIOXc/fNNf1L0lkfn+naVPHicfg2ZEt/ABGO9vQPXSuhio+ss2SpCkQ5PWxGIB5wXbjC3jXfsKitDQ/wyxAcF8LoWif8VIEYZpd03vik20mBMJKgcBbH5i1+2PV6CkybjhJ4HC2YePb3/LJqBRwBxMnn7lPVd9LAB3a5GmqWLkbmdWpplWSANX1jJz5AvxmznqWbSYV8gn25q2hmuc9knb4vwC/Bz9a70O+MnAC5fgLLozmq67kyjTd96txLQLnY0lXD+z1m+5Bukh3LxiKz9RYMTW32Mip4+iN0B1953Zb5jUoLD/TXrN4DUcPJatpUx7A3Ub4VFYXZnNj3xJOw62VwclNqQIpodUpFYQs//4uPpEPq8JTy9iQ5RsYOcEbVbphT3Hmq3dG/68Q509yVCrIgINcBgkOvT/vT0z9aZWoHd+7zjoZyLkzn62CGf1QZiYDqkoGLKz/bkCo8aXhWPe3UmioYZPTsEl9txmkLHwMeB3WjEB9/xIUVA6VG2QOq9pzy8aPxY2q6LVy2e6uWnEU85IONDAhmMx1bs+Ja/rK1eo3kvYgEKk7/w4oeF+CA/41ZHUUOeLqqinekVBWO4VBFWEJwASzIwAt9mt7brDCUGg=
+    file: build/*
+    on:
+      tags: true
+      repo: UCloud-FE/react-components
+      branch: master
+  - provider: pages
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+    keep-history: true
+    on:
+      tags: true
+      repo: UCloud-FE/react-components
+      branch: master
