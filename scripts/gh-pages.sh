@@ -4,6 +4,13 @@ set -e
 
 cachepath=".gh-pages-cache"
 
+giturl="git@github.com:UCloud-FE/react-components.git"
+
+if [ "$1" != '-p' ]; then
+    echo "when build just use https url"
+    giturl="https://github.com/UCloud-FE/react-components.git"
+fi
+
 echo "clean cache path"
 if [ ! -a $cachepath ]; then
   echo "exist"
@@ -12,7 +19,7 @@ fi
 
 echo "clone gh-pages"
 mkdir $cachepath
-git clone git@github.com:UCloud-FE/react-components.git -b gh-pages $cachepath
+git clone $giturl -b gh-pages $cachepath
 
 # echo "clean old docs"
 # rm -rf "${cachepath}/*"
