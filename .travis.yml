@@ -17,15 +17,15 @@ jobs:
   include:
   - stage: lint
     script:
-      npm run lint:es
-      npm run lint:style
+      - npm run lint:es
+      - npm run lint:style
   - stage: test
     script: npm run test
   - stage: build
     script: 
-      npm run build:dist
-      npm run build:lib
-      npm run build:gh-pages
+      - npm run build:dist
+      - npm run build:lib
+      - npm run build:gh-pages
   - stage: deploy
     script: skip
     deploy:
