@@ -1,0 +1,12 @@
+{
+    "*.{js,jsx}": [
+        "prettier --write",
+        "git add",
+        "stylelint './src/style/*.js'",
+        "stylelint './src/components/**/*.(jsx|js)'",
+        "eslint",
+        "jest --bail --findRelatedTests",
+        "jest --bail --all --testPathPattern=demo.test.js"
+    ],
+    "*.{json,css,md}": ["prettier --write", "git add"]
+}
