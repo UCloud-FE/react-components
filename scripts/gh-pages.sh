@@ -31,7 +31,7 @@ else
     git remote rm origin
     git remote add origin https://ZxBing0066:${GITHUB_TOKEN}@github.com/UCloud-FE/react-components.git
     git add -A
-    git commit -m "docs: Travis auto update docs, $TRAVIS_TAG"
+    git commit -m "docs: Travis CI auto update docs, $TRAVIS_TAG"
     git push origin gh-pages
 fi
 
