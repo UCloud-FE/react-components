@@ -33,7 +33,6 @@
     "build:dist": "export NODE_ENV='production' && npm run build -- --config webpack.dist.config.js",
     "build:styleguide": "styleguidist build",
     "build:gh-pages": "./scripts/gh-pages.sh",
-    "test": "npm run jest",
     "jest": "jest",
     "lint:es": "eslint . --ext .js,.jsx",
     "lint:style": "stylelint './src/style/*.js' && stylelint './src/components/**/*.(jsx|js)'",

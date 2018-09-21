@@ -10,7 +10,7 @@ branches:
   - gh-pages
 stages:
 - lint
-- test
+- jest
 - build
 - deploy
 jobs:
@@ -20,8 +20,8 @@ jobs:
     name: eslint
   - script: npm run lint:style
     name: stylelint
-  - stage: test
-    script: npm run test
+  - stage: jest
+    script: npm run jest
   - stage: build
     script: npm run build:dist
     name: bulid dist
