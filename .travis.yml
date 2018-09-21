@@ -16,19 +16,16 @@ stages:
 jobs:
   include:
   - stage: lint
-    script: npm run lint:es
-    name: eslint
-  - script: npm run lint:style
-    name: stylelint
-  - stage: jest
-    script: npm run jest
+    script:
+      npm run lint:es
+      npm run lint:style
+  - stage: test
+    script: npm run test
   - stage: build
-    script: npm run build:dist
-    name: bulid dist
-  - script: npm run build:lib
-    name: build lib
-  - script: npm run build:gh-pages
-    name: bulid gh-pages
+    script: 
+      npm run build:dist
+      npm run build:lib
+      npm run build:gh-pages
   - stage: deploy
     script: skip
     deploy:
