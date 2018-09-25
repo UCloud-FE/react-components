@@ -1,6 +1,6 @@
 {
   "name": "@ucloud-fe/react-components",
-  "version": "0.3.0",
+  "version": "0.3.1-beta.3",
   "title": "ucloud react components",
   "description": "ucloud react components",
   "keywords": [
@@ -14,12 +14,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.ucloudadmin.com/uweb/react-components"
+    "url": "git+https://github.com/UCloud-FE/react-components.git"
   },
   "bugs": {
-    "url": "https://gitlab.ucloudadmin.com/uweb/react-components/issues"
+    "url": "https://github.com/UCloud-FE/react-components/issues"
   },
-  "homepage": "http://rc.frontend.ucloud.cn/",
+  "homepage": "https://ucloud-fe.github.io/react-components/",
   "scripts": {
     "start": "pm2 startOrReload start-pm2.json",
     "start:withlog": "pm2 startOrReload start-pm2.json && pm2 logs react-components-styleguide",
@@ -32,10 +32,11 @@
     "build:lib": "babel src/ -d lib/ --ignore '__demo__/*,__test__/*'",
     "build:dist": "export NODE_ENV='production' && npm run build -- --config webpack.dist.config.js",
     "build:styleguide": "styleguidist build",
-    "test": "npm run jest",
-    "jest": "jest",
+    "build:gh-pages": "./scripts/gh-pages.sh",
+    "test": "jest",
     "lint:es": "eslint . --ext .js,.jsx",
     "lint:style": "stylelint './src/style/*.js' && stylelint './src/components/**/*.(jsx|js)'",
+    "deploy:gh-pages": "./scripts/gh-pages.sh -p",
     "deploy": "rm -rf dist && npm run build:dist && npm run build:lib && npm publish --registry=http://registry.npm.pre.ucloudadmin.com && npm publish --access public",
     "publish:patch": "standard-version --release-as patch && npm run deploy && git push --follow-tags",
     "publish:minor": "standard-version --release-as minor && npm run deploy && git push --follow-tags",

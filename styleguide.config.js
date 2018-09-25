@@ -43,19 +43,19 @@ module.exports = {
             links: [
                 {
                     rel: 'shortcut icon',
-                    href: '/favicon.ico',
+                    href: './favicon.ico',
                     type: 'image/x-icon'
                 },
                 {
-                    href: '/style.css',
+                    href: './style.css',
                     rel: 'stylesheet'
                 },
                 {
-                    href: '/style/icon.css',
+                    href: './style/icon.css',
                     rel: 'stylesheet'
                 },
                 {
-                    href: '/style/reset.css',
+                    href: './style/reset.css',
                     rel: 'stylesheet'
                 }
             ]
