@@ -132,21 +132,21 @@ export function StyleGuideRenderer({ classes, title, homepageUrl, children, toc,
                             <a
                                 className={classes.headerLink}
                                 target="_blank"
-                                href="https://gitlab.ucloudadmin.com/uweb/react-components"
+                                href="https://github.com/UCloud-FE/react-components"
                             >
-                                Gitlab
+                                GitHub
                             </a>
                             <a
                                 className={classes.headerLink}
                                 target="_blank"
-                                href="https://gitlab.ucloudadmin.com/uweb/react-components/issues"
+                                href="https://github.com/UCloud-FE/react-components/issues"
                             >
                                 Issues
                             </a>
                             <a
                                 className={classes.headerLink}
                                 target="_blank"
-                                href="http://npm.pre.ucloudadmin.com/package/@ucloud-fe/react-components"
+                                href="https://www.npmjs.com/package/@ucloud-fe/react-components"
                             >
                                 NPM
                             </a>
