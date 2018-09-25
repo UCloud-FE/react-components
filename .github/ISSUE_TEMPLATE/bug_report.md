@@ -17,7 +17,7 @@ Steps to reproduce the behavior:
 3. Scroll down to '....'
 4. See error
 
-**Minimal reproduction of the problem with instructions**
+**Minimal demo**
 If the current behavior is a bug and you can reproduce with an example,
 please provide a *MINIMAL DEMO* of the problem via
 https://codesandbox.io/ or similar (you can use this template as a starting point: https://codesandbox.io/s/wnnv1op5yw).
