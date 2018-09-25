@@ -32,7 +32,7 @@ jobs:
         on:
           tags: true
           repo: UCloud-FE/react-components
-          branch: travis
+          branch: master
       - provider: releases
         skip_cleanup: true
         api_key:
@@ -41,11 +41,11 @@ jobs:
         on:
           tags: true
           repo: UCloud-FE/react-components
-          branch: travis
+          branch: master
       - provider: script
         skip-cleanup: true
         script: npm run deploy:gh-pages
         on:
           tags: true
           repo: UCloud-FE/react-components
-          branch: travis
+          branch: master
