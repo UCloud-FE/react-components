@@ -37,9 +37,8 @@
     "lint:es": "eslint . --ext .js,.jsx",
     "lint:style": "stylelint './src/style/*.js' && stylelint './src/components/**/*.(jsx|js)'",
     "deploy:gh-pages": "./scripts/gh-pages.sh -p",
-    "deploy": "rm -rf dist && npm run build:dist && npm run build:lib && npm publish --registry=http://registry.npm.pre.ucloudadmin.com && npm publish --access public",
-    "publish:patch": "standard-version --release-as patch && npm run deploy && git push --follow-tags",
-    "publish:minor": "standard-version --release-as minor && npm run deploy && git push --follow-tags",
+    "publish:patch": "standard-version --release-as patch",
+    "publish:minor": "standard-version --release-as minor",
     "component:add": "./scripts/add_component.sh",
     "font:update": "npm install @ucloud/ucloud-icons --registry=http://registry.npm.pre.ucloudadmin.com --no-save && cp -f node_modules/@ucloud/ucloud-icons/dist/css/icon.min.css static/style/icon.css && cp -rf node_modules/@ucloud/ucloud-icons/dist/fonts/* static/fonts"
   },
