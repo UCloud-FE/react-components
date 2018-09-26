@@ -34,6 +34,11 @@
 ```js {"codepath": "range-options.jsx"}
 ```
 
+*   hideOptions - 隐藏快捷选项框
+
+```js {"codepath": "range-hideOptions.jsx"}
+```
+
 *   onInitialChange
 
 ```js {"codepath": "range-onInitialChange.jsx"}
