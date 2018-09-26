@@ -25,6 +25,19 @@
 
 ### 开发规范
 
+#### Git Commit 规范
+
+*   commit 格式遵循[AngularJS Git Commit Guidelines](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#commits)
+*   Commit 信息格式：
+    ```
+    <type>(<scope>): <subject>
+    <BLANK LINE>
+    <body>
+    <BLANK LINE>
+    <footer>
+    ```
+*   提交时请使用`npm run cm`来替换`git commit`，或者根据`[commitizen 文档](https://github.com/commitizen/cz-cli#conventional-commit-messages-as-a-global-utility)`添加全局命令后使用`git cz`命令
+
 #### API 风格
 
 *   枚举值属性必须在 propTypes 中定义完整可枚举列表，枚举内容需要语义化，便于理解，可枚举列表绑到对应组件下，方便外部获取（参考 Grid justify）
