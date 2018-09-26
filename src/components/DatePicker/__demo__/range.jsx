@@ -16,7 +16,7 @@ class Demo extends React.Component {
         };
     }
     render() {
-        const { size, type, disabled } = this.state;
+        const { size, type, disabled, hideOptions } = this.state;
         const itemLayout = {
             labelCol: {
                 span: 3
@@ -44,6 +44,9 @@ class Demo extends React.Component {
                     </Form.Item>
                     <Form.Item label="disabled" {...itemLayout}>
                         <Switch checked={disabled} onChange={disabled => this.setState({ disabled })} />
+                    </Form.Item>
+                    <Form.Item label="hideOptions" {...itemLayout}>
+                        <Switch checked={hideOptions} onChange={hideOptions => this.setState({ hideOptions })} />
                     </Form.Item>
                 </Form>
                 <div className="demo-wrap">
@@ -80,9 +83,12 @@ class Demo extends React.Component {
                                 }
                             }
                         ]}
-                        size={size}
-                        type={type}
-                        disabled={disabled}
+                        {...{
+                            size,
+                            type,
+                            disabled,
+                            hideOptions
+                        }}
                         rules={{
                             range: [moment().add({ month: -1 }), moment().add({ month: 1 })],
                             maxRange: {

@@ -61,6 +61,8 @@ export default class Range extends Component {
         defaultOption: PropTypes.string,
         /** 选项变化回调 */
         onOptionChange: PropTypes.func,
+        /** 隐藏快捷选项 */
+        hideOptions: PropTypes.bool,
         /** 自定义规则 */
         rules: PropTypes.shape({
             /** 可选值范围 */
@@ -147,6 +149,7 @@ export default class Range extends Component {
             option,
             defaultOption,
             onOptionChange,
+            hideOptions,
             value,
             defaultValue,
             onChange,
@@ -179,13 +182,15 @@ export default class Range extends Component {
 
         return (
             <div {...rest}>
-                <RangeSelect
-                    options={options}
-                    size={size}
-                    value={option}
-                    disabled={disabled}
-                    onChange={this.handleOptionChange}
-                />
+                {!hideOptions && (
+                    <RangeSelect
+                        options={options}
+                        size={size}
+                        value={option}
+                        disabled={disabled}
+                        onChange={this.handleOptionChange}
+                    />
+                )}
                 <Popover
                     visible={visible}
                     popup={
