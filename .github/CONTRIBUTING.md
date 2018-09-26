@@ -45,6 +45,6 @@ To update Jest snapshots
 npx jest -u
 ```
 
-** Don’t forget to add tests and update documentation and update snapshots for your changes. **
+**Don’t forget to add tests and update documentation and update snapshots for your changes.**
 
-** Please update yarn.lock if you add or update dependencies, package-lock.json is being ignored **
+**Please update yarn.lock if you add or update dependencies, package-lock.json is being ignored**
