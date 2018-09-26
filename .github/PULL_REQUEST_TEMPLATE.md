@@ -8,6 +8,8 @@
 
 **Please check if the PR fulfills these requirements**
 
-*   [ ] Fix/Feature: Tests have been added; existing tests pass
+*   [ ] Follow our contributing docs
+*   [ ] Docs have been added/updated
+*   [ ] Tests have been added; existing tests pass
 
 **Other information**:
