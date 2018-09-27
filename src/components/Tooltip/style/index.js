@@ -25,6 +25,7 @@ const arrowMixin = css`
     position: absolute;
     width: 0;
     height: 0;
+    border-width: 0;
     border-color: transparent;
     border-style: solid;
 `;
