@@ -19,6 +19,11 @@
 ```js {"codepath": "range-size.jsx"}
 ```
 
+*   display - 展示格式
+
+```js {"codepath": "range-display.jsx"}
+```
+
 *   rules
 
 ```js {"codepath": "range-rules.jsx"}
