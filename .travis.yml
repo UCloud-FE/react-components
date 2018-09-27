@@ -17,7 +17,7 @@ jobs:
     script:
       - npm run lint:es
       - npm run lint:style
-      - npm run test
+      - npm run test -- -w=2
   - stage: build&deploy
     script: 
       - npm run build:dist
