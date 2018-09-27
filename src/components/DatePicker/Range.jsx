@@ -63,6 +63,8 @@ export default class Range extends Component {
         onOptionChange: PropTypes.func,
         /** 隐藏快捷选项 */
         hideOptions: PropTypes.bool,
+        /** 展示格式，除了range以外的属性会传入DatePicker和Month中（按照type） */
+        display: PropTypes.object,
         /** 自定义规则 */
         rules: PropTypes.shape({
             /** 可选值范围 */
@@ -155,6 +157,7 @@ export default class Range extends Component {
             onChange,
             onInitialChange,
             size,
+            display = {},
             rules = {},
             type,
             disabled,
@@ -177,6 +180,9 @@ export default class Range extends Component {
 
         const Picker = type === 'month' ? MonthPicker : DatePicker;
         const precision = type === 'month' ? 'month' : null;
+
+        const { range: rangeDisplay = {}, ...pickerDisplay } = display;
+        const { format: rangeFormat } = rangeDisplay;
 
         const isValid = isRangeDateValid(cStart, cEnd, rules, precision);
 
@@ -203,6 +209,7 @@ export default class Range extends Component {
                                         range: range,
                                         custom: (date, value) => _c && _c(date, value, cStart, cEnd, 'start')
                                     }}
+                                    display={pickerDisplay}
                                     onChange={v => this.handleChange('start', v)}
                                 />
                             </RangePopupPickerContainer>
@@ -214,6 +221,7 @@ export default class Range extends Component {
                                         range: range,
                                         custom: (date, value) => _c && _c(date, value, cStart, cEnd, 'end')
                                     }}
+                                    display={pickerDisplay}
                                     onChange={v => this.handleChange('end', v)}
                                 />
                             </RangePopupPickerContainer>
@@ -235,9 +243,9 @@ export default class Range extends Component {
                     trigger={['click']}
                 >
                     <RangeDateWrap size={size} modifyAble={modifyAble} disabled={disabled}>
-                        <span>{start.format(formatString[type])}</span>
+                        <span>{start.format(rangeFormat || formatString[type])}</span>
                         <RangeDateSeparator />
-                        <span>{end.format(formatString[type])}</span>
+                        <span>{end.format(rangeFormat || formatString[type])}</span>
                         <PickerIcon type="calendar" color="blue" />
                     </RangeDateWrap>
                 </Popover>
