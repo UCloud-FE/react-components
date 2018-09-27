@@ -17,6 +17,9 @@ export default function Examples({ examples, name, filepath, exampleMode }, { co
                         let code = example.content,
                             { codepath } = example.settings;
                         if (codepath && filepath) {
+                            if (window.navigator.userAgent.indexOf('Windows')) {
+                                filepath = filepath.replace(/\\/g, '/');
+                            }
                             const parentComponentName = filepath.match(new RegExp(`.*\/(\\w*)\/${name}\.jsx?`))[1];
                             code = require(`!raw-loader!../../src/components/${parentComponentName}/${demoPath}/${
                                 example.settings.codepath
