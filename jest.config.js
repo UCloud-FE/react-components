@@ -12,5 +12,8 @@ module.exports = {
         '^tests/(.*)$': '<rootDir>/tests/$1',
         '\\.(css|less)$': '<rootDir>/tests/__mocks__/styleMock.js',
         '^src/(.*)$': '<rootDir>/src/$1'
-    }
+    },
+    coverageDirectory: './coverage/',
+    coveragePathIgnorePatterns: ['/node_modules/', '/__demo__/'],
+    collectCoverage: true
 };
