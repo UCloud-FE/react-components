@@ -7,21 +7,26 @@ references:
       - image: circleci/node:8
     working_directory: ~/react-components
 
-  init_steps: &init_steps
-    - checkout
-    # Download and cache dependencies
-    - restore_cache:
-        keys:
-        - v1-dependencies-{{ checksum "package.json" }}
-        # fallback to using the latest cache if no exact match is found
-        - v1-dependencies-
-    - run: yarn install
-
 jobs:
+  setup:
+    <<: *container_config
+    steps:
+      - checkout
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+      - run: yarn install
+      - persist_to_workspace:
+          root: ~/react-components
+          paths:
+            - .
   test:
     <<: *container_config
     steps:
-      <<: *init_steps
+      - run: sudo npm install -g codecov
       - run:
           name: test
           command: npm run test -- -w=2 && codecov
@@ -34,8 +39,6 @@ jobs:
   build:
     <<: *container_config
     steps:
-      <<: *init_steps
-      # run tests!
       - run:
           name: build dist
           command: npm run build:dist
@@ -46,9 +49,17 @@ jobs:
           name: build gh-pages
           command: npm run build:gh-pages
 
-workflows: 
+workflows:
   version: 2
   test-and-build:
     jobs:
-      - test
-      - build
+      - setup:
+          filters:
+            branches:
+              ignore: gh-pages
+      - test:
+          requires:
+            - setup
+      - build:
+          requires:
+            - setup
