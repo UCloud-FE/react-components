@@ -14,7 +14,7 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
       - run: yarn install
-      - run: npm install -g codecov
+      - run: sudo npm install -g codecov
       - save_cache:
           paths:
             - node_modules
