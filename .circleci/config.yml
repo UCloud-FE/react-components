@@ -26,6 +26,7 @@ jobs:
   test:
     <<: *container_config
     steps:
+      - checkout
       - run: sudo npm install -g codecov
       - run:
           name: test
@@ -39,6 +40,7 @@ jobs:
   build:
     <<: *container_config
     steps:
+      - checkout
       - run:
           name: build dist
           command: npm run build:dist
