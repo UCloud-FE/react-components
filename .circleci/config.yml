@@ -22,7 +22,7 @@ jobs:
       - persist_to_workspace:
           root: ~/react-components
           paths:
-            - .
+            - node_modules
   test:
     <<: *container_config
     steps:
