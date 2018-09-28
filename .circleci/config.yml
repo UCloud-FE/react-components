@@ -26,35 +26,56 @@ jobs:
           root: ~/react-components
           paths:
             - node_modules
+
+  eslint:
+    <<: *container_config
+    steps:
+      - checkout
+      - *attach_workspace
+      - run: npm run lint:es
+  stylelint:
+    <<: *container_config
+    steps:
+      - checkout
+      - *attach_workspace
+      - run: npm run lint:style
   test:
     <<: *container_config
     steps:
       - checkout
       - *attach_workspace
-      - run: sudo npm install -g codecov
-      - run:
-          name: test
-          command: npm run test -- -w=2 && codecov
-      - run:
-          name: eslint
-          command: npm run lint:es
-      - run:
-          name: stylelint
-          command: npm run lint:style
-  build:
+      - run: npm run test -- -w=2
+      - persist_to_workspace:
+          root: ~/react-components
+          paths:
+            - coverage
+
+  codecov:
     <<: *container_config
     steps:
       - checkout
       - *attach_workspace
-      - run:
-          name: build dist
-          command: npm run build:dist
-      - run:
-          name: build lib
-          command: npm run build:lib
-      - run:
-          name: build gh-pages
-          command: npm run build:gh-pages
+      - run: sudo npm install -g codecov
+      - run: codecov
+
+  build dist:
+    <<: *container_config
+    steps:
+      - checkout
+      - *attach_workspace
+      - run: npm run build:dist
+  build lib:
+    <<: *container_config
+    steps:
+      - checkout
+      - *attach_workspace
+      - run: npm run build:lib
+  build gh-pages:
+    <<: *container_config
+    steps:
+      - checkout
+      - *attach_workspace
+      - run: npm run build:gh-pages
 
 workflows:
   version: 2
@@ -64,9 +85,28 @@ workflows:
           filters:
             branches:
               ignore: gh-pages
+      - eslint:
+          requires:
+            - setup
+      - stylelint:
+          requires:
+            - setup
       - test:
           requires:
-            - setup
-      - build:
+            - eslint
+            - stylelint
+      - codecov:
           requires:
-            - setup
+            - test
+      - build dist:
+          requires:
+            - eslint
+            - stylelint
+      - build lib:
+          requires:
+            - eslint
+            - stylelint
+      - build gh-pages:
+          requires:
+            - eslint
+            - stylelint
