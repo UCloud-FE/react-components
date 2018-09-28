@@ -26,6 +26,7 @@ jobs:
       - save_cache:
           paths:
             - ~/.cache/yarn
+            - node_modules
           key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
       - persist_to_workspace:
           root: ~/react-components
