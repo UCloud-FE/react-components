@@ -6,6 +6,9 @@ references:
     docker:
       - image: circleci/node:8
     working_directory: ~/react-components
+  attach_workspace: &attach_workspace
+    attach_workspace:
+      at: ~/react-components
 
 jobs:
   setup:
@@ -27,6 +30,7 @@ jobs:
     <<: *container_config
     steps:
       - checkout
+      - *attach_workspace
       - run: sudo npm install -g codecov
       - run:
           name: test
@@ -41,6 +45,7 @@ jobs:
     <<: *container_config
     steps:
       - checkout
+      - *attach_workspace
       - run:
           name: build dist
           command: npm run build:dist
