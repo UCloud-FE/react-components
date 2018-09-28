@@ -19,14 +19,15 @@ jobs:
       - restore_cache:
           keys:
             # when lock file changes, use increasingly general patterns to restore cache
-            - yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
-            - yarn-packages-v1-{{ .Branch }}-
-            - yarn-packages-v1-
+            - yarn-packages-v1.0-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - yarn-packages-v1.0-{{ .Branch }}-
+            - yarn-packages-v1.0-
       - run: yarn install
       - save_cache:
           paths:
+            - ~/.cache/yarn
             - node_modules
-          key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          key: yarn-packages-v1.0-{{ .Branch }}-{{ checksum "yarn.lock" }}
       - persist_to_workspace:
           root: ~/react-components
           paths:
