@@ -39,12 +39,15 @@ class Month extends Component {
         /** 控件尺寸 */
         size: PropTypes.oneOf(Size),
         /** 是否禁用 */
-        disabled: PropTypes.bool
+        disabled: PropTypes.bool,
+        /** 弹出层的z-index */
+        zIndex: PropTypes.number
     };
     static defaultProps = {
         defaultValue: moment(),
         onChange: () => {},
-        size: 'md'
+        size: 'md',
+        zIndex: 100
     };
     componentWillReceiveProps = nextProps => {
         if ('value' in nextProps) {
@@ -88,7 +91,7 @@ class Month extends Component {
     };
     render() {
         // eslint-disable-next-line no-unused-vars
-        const { rules, value: _v, defaultValue, size, display = {}, onChange, ...rest } = this.props;
+        const { rules, value: _v, defaultValue, size, display = {}, onChange, zIndex, ...rest } = this.props;
         const { date = {} } = display;
         const value = moment(_v);
 
@@ -102,6 +105,7 @@ class Month extends Component {
                     value={value}
                     align={placements.bottomLeft}
                     onChange={onChange}
+                    zIndex={zIndex}
                 >
                     {({ value }) => {
                         return (

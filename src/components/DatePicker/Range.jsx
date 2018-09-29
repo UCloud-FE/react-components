@@ -74,7 +74,9 @@ export default class Range extends Component {
         /** 控件尺寸 */
         size: PropTypes.oneOf(Size),
         /** 是否禁用 */
-        disabled: PropTypes.bool
+        disabled: PropTypes.bool,
+        /** 弹出层的z-index */
+        zIndex: PropTypes.number
     };
     static defaultProps = {
         defaultValue: [moment(), moment()],
@@ -84,7 +86,8 @@ export default class Range extends Component {
         options: [],
         defaultOption: 'custom',
         onOptionChange: () => {},
-        size: 'md'
+        size: 'md',
+        zIndex: 100
     };
     componentDidMount = () => {
         const { option, options, onInitialChange, value } = this.props;
@@ -161,6 +164,7 @@ export default class Range extends Component {
             rules = {},
             type,
             disabled,
+            zIndex,
             ...rest
         } = this.props;
         /* eslint-enable no-unused-vars */
@@ -195,11 +199,13 @@ export default class Range extends Component {
                         value={option}
                         disabled={disabled}
                         onChange={this.handleOptionChange}
+                        popover={{ zIndex }}
                     />
                 )}
                 <Popover
                     visible={visible}
                     getPopupContainer={triggerNode => triggerNode.parentNode}
+                    zIndex={zIndex}
                     popup={
                         <RangePopup>
                             <RangePopupPickerContainer>

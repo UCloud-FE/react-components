@@ -26,7 +26,7 @@ RcPickerWrap.propTypes = {
 export const PickerWrap = styled(RcPickerWrap)`
     user-select: none;
     width: 285px;
-    z-index: 100;
+    z-index: ${props => props.zIndex};
 
     ${calendarMixin};
 `;
