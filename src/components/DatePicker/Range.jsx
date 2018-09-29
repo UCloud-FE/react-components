@@ -199,6 +199,7 @@ export default class Range extends Component {
                 )}
                 <Popover
                     visible={visible}
+                    getPopupContainer={triggerNode => triggerNode.parentNode}
                     popup={
                         <RangePopup>
                             <RangePopupPickerContainer>
