@@ -14,6 +14,5 @@ module.exports = {
         '^src/(.*)$': '<rootDir>/src/$1'
     },
     coverageDirectory: './coverage/',
-    coveragePathIgnorePatterns: ['/node_modules/', '/__demo__/'],
-    collectCoverage: true
+    coveragePathIgnorePatterns: ['/node_modules/', '/__demo__/']
 };

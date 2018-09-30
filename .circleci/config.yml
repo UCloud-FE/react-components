@@ -50,7 +50,7 @@ jobs:
     steps:
       - checkout
       - *attach_workspace
-      - run: npm run test -- -w=2
+      - run: npm run test -- -w=2 --collectCoverage
       - persist_to_workspace:
           root: ~/react-components
           paths:
