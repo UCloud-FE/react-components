@@ -54,12 +54,15 @@ class DatePicker extends Component {
             second: PropTypes.bool
         }),
         /** 是否禁用 */
-        disabled: PropTypes.bool
+        disabled: PropTypes.bool,
+        /** 弹出层的z-index */
+        zIndex: PropTypes.number
     };
     static defaultProps = {
         defaultValue: moment(),
         onChange: () => {},
-        size: 'md'
+        size: 'md',
+        zIndex: 100
     };
     componentWillReceiveProps = nextProps => {
         if ('value' in nextProps) {
@@ -154,7 +157,7 @@ class DatePicker extends Component {
     };
     render() {
         // eslint-disable-next-line no-unused-vars
-        const { rules, value: _v, defaultValue, display = {}, size, onChange, ...rest } = this.props;
+        const { rules, value: _v, defaultValue, display = {}, size, onChange, zIndex, ...rest } = this.props;
         const { date = {} } = display;
         const value = moment(_v);
 
@@ -169,6 +172,7 @@ class DatePicker extends Component {
                         value={value}
                         align={placements.bottomLeft}
                         onChange={onChange}
+                        zIndex={zIndex}
                     >
                         {({ value }) => {
                             return (
