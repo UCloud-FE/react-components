@@ -17,11 +17,11 @@
 
 ```bash
 <!-- install use yarn -->
-yarn add @ucloud-fe/react-components --registry=http://registry.npm.pre.ucloudadmin.com
+yarn add @ucloud-fe/react-components
 <!-- install use npm -->
-npm install @ucloud-fe/react-components --registry=http://registry.npm.pre.ucloudadmin.com
-<!-- install with url -->
-npm install http://registry.npm.pre.ucloudadmin.com/@ucloud-fe/react-components/download/@ucloud-fe/react-components-${version}
+npm install @ucloud-fe/react-components
+<!-- install with a fixed version -->
+yarn add @ucloud-fe/react-components@0.3.1
 ```
 
 *   导入组件并按需导入字体样式并使用
