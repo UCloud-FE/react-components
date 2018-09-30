@@ -43,6 +43,8 @@ class Popover extends Component {
         popupClassName: PropTypes.string,
         /** 弹出层的样式 */
         popupStyle: PropTypes.object,
+        /** 弹出层的z-index */
+        zIndex: PropTypes.number,
         /** 自定义弹出层容器 */
         getPopupContainer: PropTypes.func,
         /**
