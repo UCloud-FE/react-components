@@ -29,7 +29,7 @@
     "precommit": "lint-staged",
     "commitmsg": "commitlint -E GIT_PARAMS",
     "build": "webpack --display-error-details",
-    "build:lib": "babel src/ -d lib/ --ignore '__demo__/*,__test__/*'",
+    "build:lib": "babel src/ -d lib/ --ignore '__demo__/*,__tests__/*'",
     "build:dist": "export NODE_ENV='production' && npm run build -- --config webpack.dist.config.js",
     "build:styleguide": "styleguidist build",
     "build:gh-pages": "./scripts/gh-pages.sh",
