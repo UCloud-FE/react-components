@@ -13,7 +13,7 @@
 
 ### 如何使用
 
-*   从内部 npm 源直接安装
+*   使用 npm 或 yarn 进行安装
 
 ```bash
 <!-- install use yarn -->
