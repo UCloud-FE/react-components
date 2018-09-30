@@ -6,7 +6,7 @@ component_path="${base_path}${component_name}"
 
 # make components dir
 mkdir $component_path
-mkdir "${component_path}/__test__"
+mkdir "${component_path}/__tests__"
 mkdir "${component_path}/__demo__"
 mkdir "${component_path}/style"
 
