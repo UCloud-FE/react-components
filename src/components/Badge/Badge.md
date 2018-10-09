@@ -38,3 +38,8 @@
 
 ```js {"codepath": "customStyle.jsx"}
 ```
+
+*   customValue
+
+```js {"codepath": "customValue.jsx"}
+```

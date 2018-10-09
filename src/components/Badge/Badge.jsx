@@ -59,7 +59,7 @@ class Badge extends Component {
         }
         /* eslint-disable react/no-find-dom-node */
         return (
-            <BadgeWrap ref={ref => (this.target = ref)} {...rest}>
+            <BadgeWrap {...rest}>
                 {children}
                 {hideWhenZero && value === 0 ? null : (
                     <RcAlign ref={innerRef} target={() => ReactDOM.findDOMNode(this)} align={placements[placement]}>
