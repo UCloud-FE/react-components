@@ -6,8 +6,8 @@ install:
 cache:
   yarn: true
 branches:
-  except:
-    - gh-pages
+  only:
+    - master
 stages:
   - lint&test
   - build&deploy
