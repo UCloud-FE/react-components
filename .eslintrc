@@ -19,11 +19,6 @@
         "no-console": ["warn", { "allow": ["warn", "error"] }],
         "no-unused-vars": "warn"
     },
-    "globals": {
-        "test": true,
-        "expect": true,
-        "jest": true
-    },
     "env": {
         "browser": true,
         "node": true,
@@ -34,6 +29,16 @@
             "files": ["**/__demo__/*.jsx"],
             "rules": {
                 "no-console": "off"
+            }
+        },
+        {
+            "files": ["**/*.test.js", "**/*.test.jsx", "tests/**/*"],
+            "globals": {
+                "test": true,
+                "it": true,
+                "expect": true,
+                "jest": true,
+                "describe": true
             }
         }
     ]
