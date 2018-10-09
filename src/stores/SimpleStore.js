@@ -26,8 +26,8 @@ const createStore = initialState => {
     function subscribe(listener) {
         listeners.push(listener);
 
-        return function unsubscribe() {
-            unsubscribe(listener);
+        return {
+            unsubscribe: () => unsubscribe(listener)
         };
     }
     function unsubscribe(listener) {
