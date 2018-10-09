@@ -116,3 +116,9 @@ workflows:
           requires:
             - eslint
             - stylelint
+      - end:
+          requires:
+            - codecov
+            - build dist
+            - build lib
+            - build gh-pages
