@@ -32,6 +32,11 @@ jobs:
           root: ~/react-components
           paths:
             - node_modules
+  
+  end:
+    <<: *container_config
+    steps:
+      - run: echo end
 
   eslint:
     <<: *container_config
@@ -116,3 +121,9 @@ workflows:
           requires:
             - eslint
             - stylelint
+      - end:
+          requires:
+            - codecov
+            - build dist
+            - build lib
+            - build gh-pages
