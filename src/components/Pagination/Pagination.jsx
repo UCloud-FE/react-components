@@ -178,40 +178,6 @@ class Pagination extends Component {
         return isInteger(page) && page >= 1 && page !== this.state.current;
     };
 
-    handleKeyDown = e => {
-        if (e.keyCode === KEYCODE.ARROW_UP || e.keyCode === KEYCODE.ARROW_DOWN) {
-            e.preventDefault();
-        }
-    };
-
-    handleKeyUp = e => {
-        const inputValue = e.target.value;
-        const currentInputValue = this.state.currentInputValue;
-        let value;
-
-        if (inputValue === '') {
-            value = inputValue;
-        } else if (isNaN(Number(inputValue))) {
-            value = currentInputValue;
-        } else {
-            value = Number(inputValue);
-        }
-
-        if (value !== currentInputValue) {
-            this.setState({
-                currentInputValue: value
-            });
-        }
-
-        if (e.keyCode === KEYCODE.ENTER) {
-            this.handleChange(value);
-        } else if (e.keyCode === KEYCODE.ARROW_UP) {
-            this.handleChange(value - 1);
-        } else if (e.keyCode === KEYCODE.ARROW_DOWN) {
-            this.handleChange(value + 1);
-        }
-    };
-
     changePageSize = size => {
         let current = this.state.current;
         const newCurrent = this.calculatePage(size);
@@ -311,12 +277,6 @@ class Pagination extends Component {
 
     runIfEnterJumpNext = e => {
         this.runIfEnter(e, this.jumpNext);
-    };
-
-    handleGoTO = e => {
-        if (e.keyCode === KEYCODE.ENTER || e.type === 'click') {
-            this.handleChange(this.state.currentInputValue);
-        }
     };
 
     render() {
