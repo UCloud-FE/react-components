@@ -4,10 +4,10 @@ import classnames from 'classnames';
 
 import Icon from 'components/Icon';
 import NumberInput from 'components/NumberInput';
+import localConsumerDecorator from 'components/LocaleProvider/localConsumerDecorator';
 
 import Pager from './Pager';
 import Options from './Options';
-import KEYCODE from 'interfaces/KeyCode';
 import LOCALE from './locale/zh_CN';
 import { PaginationWrap, prefixCls } from './style';
 
@@ -29,6 +29,7 @@ function defaultItemRender(page, type, element) {
 }
 const Size = ['sm', 'md', 'lg'];
 
+@localConsumerDecorator({ defaultLocale: LOCALE, localeName: 'Pagination' })
 class Pagination extends Component {
     static propTypes = {
         /** 当前页，受控 */
@@ -85,7 +86,6 @@ class Pagination extends Component {
         showLessItems: false,
         showTitle: true,
         onPageSizeChange: noop,
-        locale: LOCALE,
         itemRender: defaultItemRender,
         size: 'md'
     };
