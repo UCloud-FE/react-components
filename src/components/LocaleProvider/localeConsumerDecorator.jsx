@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-const localeConsumerDecorator = ({ defaultLocale = {}, localeName }) => Child => {
+const localeConsumerDecorator = ({ defaultLocale = {}, localeName, publicFn = [] }) => Child => {
     class LocalConsumerWrappedComponent extends Component {
+        constructor(...args) {
+            super(...args);
+            publicFn.forEach(fnName => {
+                this[fnName] = (...args) => this.child && this.child[fnName](...args);
+            });
+        }
         static propTypes = {
             locale: PropTypes.object
         };
@@ -15,7 +21,13 @@ const localeConsumerDecorator = ({ defaultLocale = {}, localeName }) => Child =>
         render() {
             const { locale, ...rest } = this.props;
             const context = this.context.UC_FE_LOCALE || {};
-            return <Child locale={{ ...defaultLocale, ...context[localeName], ...locale }} {...rest} />;
+            return (
+                <Child
+                    ref={ref => (this.child = ref)}
+                    locale={{ ...defaultLocale, ...context[localeName], ...locale }}
+                    {...rest}
+                />
+            );
         }
     }
     return LocalConsumerWrappedComponent;

@@ -2632,6 +2632,478 @@ exports[`Calendar demo -- controlled 1`] = `
 </div>
 `;
 
+exports[`Calendar demo -- month 1`] = `
+.c0.uc-fe-calendar,
+.c0 .uc-fe-calendar {
+  outline: none;
+  position: relative;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+.c0 .uc-fe-calendar-month-panel,
+.c0 .uc-fe-calendar-year-panel,
+.c0 .uc-fe-calendar-decade-panel {
+  background: #FFF;
+}
+
+.c0 .uc-fe-calendar-header,
+.c0 .uc-fe-calendar-month-panel-header,
+.c0 .uc-fe-calendar-year-panel-header,
+.c0 .uc-fe-calendar-decade-panel-header {
+  width: 100%;
+  height: 38px;
+  line-height: 38px;
+  background-color: #4683e6;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c0 .uc-fe-calendar-month-header-wrap {
+  height: 180px;
+}
+
+.c0 .uc-fe-calendar-month-panel-body {
+  height: 140px;
+}
+
+.c0 .uc-fe-calendar-prev-year-btn,
+.c0 .uc-fe-calendar-prev-month-btn,
+.c0 .uc-fe-calendar-next-year-btn,
+.c0 .uc-fe-calendar-next-month-btn,
+.c0 .uc-fe-calendar-month-panel-prev-year-btn,
+.c0 .uc-fe-calendar-month-panel-next-year-btn,
+.c0 .uc-fe-calendar-year-panel-prev-decade-btn,
+.c0 .uc-fe-calendar-year-panel-next-decade-btn,
+.c0 .uc-fe-calendar-decade-panel-prev-century-btn,
+.c0 .uc-fe-calendar-decade-panel-next-century-btn {
+  cursor: pointer;
+  padding: 0 8px;
+  display: inline-block;
+  color: #FFF;
+  box-sizing: border-box;
+  position: absolute;
+  font-family: Arial,'Hiragino Sans GB','Microsoft Yahei','Microsoft Sans Serif',sans-serif;
+  font-size: 16px;
+}
+
+.c0 .uc-fe-calendar-prev-year-btn,
+.c0 .uc-fe-calendar-month-panel-prev-year-btn,
+.c0 .uc-fe-calendar-year-panel-prev-decade-btn,
+.c0 .uc-fe-calendar-decade-panel-prev-century-btn {
+  left: 0;
+}
+
+.c0 .uc-fe-calendar-prev-month-btn {
+  left: 30px;
+}
+
+.c0 .uc-fe-calendar-next-year-btn,
+.c0 .uc-fe-calendar-month-panel-next-year-btn,
+.c0 .uc-fe-calendar-year-panel-next-decade-btn,
+.c0 .uc-fe-calendar-decade-panel-next-century-btn {
+  right: 0;
+}
+
+.c0 .uc-fe-calendar-next-month-btn {
+  right: 30px;
+}
+
+.c0 .uc-fe-calendar-prev-year-btn::before,
+.c0 .uc-fe-calendar-month-panel-prev-year-btn::before,
+.c0 .uc-fe-calendar-year-panel-prev-decade-btn::before,
+.c0 .uc-fe-calendar-decade-panel-prev-century-btn::before {
+  content: '\\AB';
+}
+
+.c0 .uc-fe-calendar-prev-month-btn::before {
+  content: '\\2039';
+}
+
+.c0 .uc-fe-calendar-next-year-btn::before,
+.c0 .uc-fe-calendar-month-panel-next-year-btn::before,
+.c0 .uc-fe-calendar-year-panel-next-decade-btn::before,
+.c0 .uc-fe-calendar-decade-panel-next-century-btn::before {
+  content: '\\BB';
+}
+
+.c0 .uc-fe-calendar-next-month-btn::before {
+  content: '\\203A';
+}
+
+.c0 .uc-fe-calendar-year-select,
+.c0 .uc-fe-calendar-month-select,
+.c0 .uc-fe-calendar-day-select {
+  margin-right: 8px;
+}
+
+.c0 .uc-fe-calendar-my-select,
+.c0 .uc-fe-calendar-ym-select,
+.c0 .uc-fe-calendar-month-panel-year-select,
+.c0 .uc-fe-calendar-year-panel-decade-select,
+.c0 .uc-fe-calendar-decade-panel-century {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -75px;
+  width: 150px;
+  text-align: center;
+  display: block;
+  color: #FFF;
+}
+
+.c0 .uc-fe-calendar-body {
+  width: 100%;
+  padding: 0 5px 5px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.c0 .uc-fe-calendar-table,
+.c0 .uc-fe-calendar-month-panel-table,
+.c0 .uc-fe-calendar-year-panel-table,
+.c0 .uc-fe-calendar-decade-panel-table {
+  width: 100%;
+}
+
+.c0 .uc-fe-calendar-table > thead,
+.c0 .uc-fe-calendar-month-panel-table > thead {
+  border-bottom: 1px solid #c3cad9;
+}
+
+.c0 .uc-fe-calendar-column-header,
+.c0 .uc-fe-calendar-cell,
+.c0 .uc-fe-calendar-month-panel-cell,
+.c0 .uc-fe-calendar-year-panel-cell,
+.c0 .uc-fe-calendar-decade-panel-cell {
+  cursor: pointer;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+}
+
+.c0 .uc-fe-calendar-last-month-cell,
+.c0 .uc-fe-calendar-month-panel-last-year-cell,
+.c0 .uc-fe-calendar-year-panel-last-decade-cell,
+.c0 .uc-fe-calendar-decade-panel-last-century-cell,
+.c0 .uc-fe-calendar-next-month-btn-day,
+.c0 .uc-fe-calendar-month-panel-next-year-cell,
+.c0 .uc-fe-calendar-year-panel-next-decade-cell,
+.c0 .uc-fe-calendar-decade-panel-next-century-cell {
+  color: #bbb;
+}
+
+.c0 .uc-fe-calendar-disabled-cell,
+.c0 .uc-fe-calendar-month-panel-cell-disabled {
+  color: #bbb;
+}
+
+.c0 .uc-fe-calendar-month-panel,
+.c0 .uc-fe-calendar-year-panel,
+.c0 .uc-fe-calendar-decade-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.c0 .uc-fe-calendar-today,
+.c0 .uc-fe-calendar-month-panel-current-cell {
+  position: relative;
+  color: #4074e1;
+}
+
+.c0 .uc-fe-calendar-today::after,
+.c0 .uc-fe-calendar-month-panel-current-cell::after {
+  content: '•';
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  height: 10px;
+  line-height: 10px;
+  margin: auto;
+}
+
+.c0 .uc-fe-calendar-selected-day {
+  background: #eaf3fd;
+}
+
+.c0 .uc-fe-calendar-selected-date,
+.c0 .uc-fe-calendar-month-panel-selected-cell,
+.c0 .uc-fe-calendar-year-panel-selected-cell,
+.c0 .uc-fe-calendar-decade-panel-selected-cell {
+  color: #FFF;
+  background: #4683e6;
+}
+
+.c0 .uc-fe-calendar-month-panel-year-select-arrow,
+.c0 .uc-fe-calendar-year-panel-decade-select-arrow {
+  display: none;
+}
+
+<div>
+  <div
+    class="uc-fe-calendar c0 uc-fe-calendar-month-calendar"
+    tabindex="0"
+  >
+    <div
+      class="uc-fe-calendar-month-calendar-content"
+    >
+      <div
+        class="uc-fe-calendar-month-header-wrap"
+      >
+        <div
+          class="uc-fe-calendar-header"
+        >
+          <div
+            style="position:relative;"
+          >
+            <a
+              class="uc-fe-calendar-prev-year-btn"
+              role="button"
+              title="上一年 (Control键加左方向键)"
+            />
+            <a
+              class="uc-fe-calendar-prev-month-btn"
+              role="button"
+              title="上个月 (翻页上键)"
+            />
+            <span
+              class="uc-fe-calendar-ym-select"
+            >
+              <a
+                class="uc-fe-calendar-year-select"
+                role="button"
+                title="选择年份"
+              >
+                2018年
+              </a>
+              <a
+                class="uc-fe-calendar-month-select"
+                role="button"
+                title="选择月份"
+              >
+                7月
+              </a>
+            </span>
+            <a
+              class="uc-fe-calendar-next-month-btn"
+              title="下个月 (翻页下键)"
+            />
+            <a
+              class="uc-fe-calendar-next-year-btn"
+              title="下一年 (Control键加右方向键)"
+            />
+          </div>
+          <div
+            class="uc-fe-calendar-month-panel"
+          >
+            <div>
+              <div
+                class="uc-fe-calendar-month-panel-header"
+              >
+                <a
+                  class="uc-fe-calendar-month-panel-prev-year-btn"
+                  role="button"
+                  title="上一年 (Control键加左方向键)"
+                />
+                <a
+                  class="uc-fe-calendar-month-panel-year-select"
+                  role="button"
+                  title="选择年份"
+                >
+                  <span
+                    class="uc-fe-calendar-month-panel-year-select-content"
+                  >
+                    2018
+                  </span>
+                  <span
+                    class="uc-fe-calendar-month-panel-year-select-arrow"
+                  >
+                    x
+                  </span>
+                </a>
+                <a
+                  class="uc-fe-calendar-month-panel-next-year-btn"
+                  role="button"
+                  title="下一年 (Control键加右方向键)"
+                />
+              </div>
+              <div
+                class="uc-fe-calendar-month-panel-body"
+              >
+                <table
+                  cellspacing="0"
+                  class="uc-fe-calendar-month-panel-table"
+                  role="grid"
+                >
+                  <tbody
+                    class="uc-fe-calendar-month-panel-tbody"
+                  >
+                    <tr
+                      role="row"
+                    >
+                      <td
+                        class="uc-fe-calendar-month-panel-cell uc-fe-calendar-month-panel-cell-disabled"
+                        role="gridcell"
+                        title="一月"
+                      >
+                        <a
+                          class="uc-fe-calendar-month-panel-month"
+                        >
+                          一月
+                        </a>
+                      </td>
+                      <td
+                        class="uc-fe-calendar-month-panel-cell uc-fe-calendar-month-panel-cell-disabled"
+                        role="gridcell"
+                        title="二月"
+                      >
+                        <a
+                          class="uc-fe-calendar-month-panel-month"
+                        >
+                          二月
+                        </a>
+                      </td>
+                      <td
+                        class="uc-fe-calendar-month-panel-cell uc-fe-calendar-month-panel-cell-disabled"
+                        role="gridcell"
+                        title="三月"
+                      >
+                        <a
+                          class="uc-fe-calendar-month-panel-month"
+                        >
+                          三月
+                        </a>
+                      </td>
+                    </tr>
+                    <tr
+                      role="row"
+                    >
+                      <td
+                        class="uc-fe-calendar-month-panel-cell uc-fe-calendar-month-panel-cell-disabled"
+                        role="gridcell"
+                        title="四月"
+                      >
+                        <a
+                          class="uc-fe-calendar-month-panel-month"
+                        >
+                          四月
+                        </a>
+                      </td>
+                      <td
+                        class="uc-fe-calendar-month-panel-cell"
+                        role="gridcell"
+                        title="五月"
+                      >
+                        <a
+                          class="uc-fe-calendar-month-panel-month"
+                        >
+                          五月
+                        </a>
+                      </td>
+                      <td
+                        class="uc-fe-calendar-month-panel-cell"
+                        role="gridcell"
+                        title="六月"
+                      >
+                        <a
+                          class="uc-fe-calendar-month-panel-month"
+                        >
+                          六月
+                        </a>
+                      </td>
+                    </tr>
+                    <tr
+                      role="row"
+                    >
+                      <td
+                        class="uc-fe-calendar-month-panel-cell uc-fe-calendar-month-panel-selected-cell uc-fe-calendar-month-panel-current-cell"
+                        role="gridcell"
+                        title="七月"
+                      >
+                        <a
+                          class="uc-fe-calendar-month-panel-month"
+                        >
+                          七月
+                        </a>
+                      </td>
+                      <td
+                        class="uc-fe-calendar-month-panel-cell"
+                        role="gridcell"
+                        title="八月"
+                      >
+                        <a
+                          class="uc-fe-calendar-month-panel-month"
+                        >
+                          八月
+                        </a>
+                      </td>
+                      <td
+                        class="uc-fe-calendar-month-panel-cell"
+                        role="gridcell"
+                        title="九月"
+                      >
+                        <a
+                          class="uc-fe-calendar-month-panel-month"
+                        >
+                          九月
+                        </a>
+                      </td>
+                    </tr>
+                    <tr
+                      role="row"
+                    >
+                      <td
+                        class="uc-fe-calendar-month-panel-cell uc-fe-calendar-month-panel-cell-disabled"
+                        role="gridcell"
+                        title="十月"
+                      >
+                        <a
+                          class="uc-fe-calendar-month-panel-month"
+                        >
+                          十月
+                        </a>
+                      </td>
+                      <td
+                        class="uc-fe-calendar-month-panel-cell uc-fe-calendar-month-panel-cell-disabled"
+                        role="gridcell"
+                        title="十一月"
+                      >
+                        <a
+                          class="uc-fe-calendar-month-panel-month"
+                        >
+                          十一月
+                        </a>
+                      </td>
+                      <td
+                        class="uc-fe-calendar-month-panel-cell uc-fe-calendar-month-panel-cell-disabled"
+                        role="gridcell"
+                        title="十二月"
+                      >
+                        <a
+                          class="uc-fe-calendar-month-panel-month"
+                        >
+                          十二月
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Calendar demo -- rules 1`] = `
 .c0.uc-fe-calendar,
 .c0 .uc-fe-calendar {
