@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import RcCalendar from 'rc-calendar';
+import RcMonthCalendar from 'rc-calendar/lib/MonthCalendar';
 
 import { Color } from 'src/style';
 
@@ -192,5 +193,9 @@ export const calendarMixin = css`
 `;
 
 export const CalendarWrap = styled(RcCalendar)`
+    ${calendarMixin};
+`;
+
+export const MonthCalendarWrap = styled(RcMonthCalendar)`
     ${calendarMixin};
 `;

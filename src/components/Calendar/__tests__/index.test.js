@@ -13,6 +13,7 @@ describe('Calendar', () => {
         const now = moment.now();
         const wrapper = mount(<Calendar onSelect={onSelect} onChange={onChange} />);
 
+        wrapper.instance().focus();
         wrapper.simulate('focus');
         wrapper.simulate('keydown', { keyCode: KEYCODE['ARROW_DOWN'] });
         expect(onChange).toHaveBeenCalledTimes(1);
@@ -26,6 +27,32 @@ describe('Calendar', () => {
         expect(onSelect.mock.calls[0][0].toString()).toBe(
             moment(now)
                 .add({ day: 7 })
+                .toString()
+        );
+    });
+});
+
+describe('Month', () => {
+    test('month keyboard action', () => {
+        const onSelect = jest.fn();
+        const onChange = jest.fn();
+        const now = moment.now();
+        const wrapper = mount(<Calendar.Month onSelect={onSelect} onChange={onChange} />);
+
+        wrapper.instance().focus();
+        wrapper.simulate('focus');
+        wrapper.simulate('keydown', { keyCode: KEYCODE['ARROW_DOWN'] });
+        expect(onChange).toHaveBeenCalledTimes(1);
+        expect(onChange.mock.calls[0][0].toString()).toBe(
+            moment(now)
+                .add({ month: 3 })
+                .toString()
+        );
+        wrapper.simulate('keydown', { keyCode: KEYCODE['ENTER'] });
+        expect(onSelect).toHaveBeenCalledTimes(1);
+        expect(onSelect.mock.calls[0][0].toString()).toBe(
+            moment(now)
+                .add({ month: 3 })
                 .toString()
         );
     });
