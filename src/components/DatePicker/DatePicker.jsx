@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
-import RcCalendar from 'rc-calendar';
 
 import NumberInput from 'components/NumberInput';
-import { calCalendarProps } from 'components/Calendar/Calendar';
+import Calendar from 'components/Calendar/Calendar';
 import placements from 'components/Popover/placements';
 import uncontrolledDecorator from 'decorators/uncontrolled';
 import { animationPrefixCls } from 'src/style/globalAnimation';
@@ -167,7 +166,7 @@ class DatePicker extends Component {
                     <PickerWrap
                         prefixCls={prefixCls}
                         transitionName={`${animationPrefixCls}-fade`}
-                        calendar={<RcCalendar {...calCalendarProps({ rules })} />}
+                        calendar={<Calendar rules={rules} />}
                         getCalendarContainer={triggerNode => triggerNode.parentNode}
                         value={value}
                         align={placements.bottomLeft}
