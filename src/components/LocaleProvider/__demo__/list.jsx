@@ -7,6 +7,7 @@ import LocaleProvider from 'src/components/LocaleProvider';
 import Pagination from 'src/components/Pagination';
 import Calendar from 'src/components/Calendar';
 import DatePicker from 'src/components/DatePicker';
+import Select from 'src/components/Select';
 import zh_CN from 'src/components/LocaleProvider/locale/zh_CN';
 import en_US from 'src/components/LocaleProvider/locale/en_US';
 
@@ -62,6 +63,22 @@ class Demo extends Component {
                 </div>
                 <div className="demo-wrap">
                     <DatePicker.Range value={[moment(), moment()]} />
+                </div>
+                <div className="demo-wrap">
+                    <div className="demo-block">
+                        <Select>
+                            <Select.Option value={1}>1</Select.Option>
+                            <Select.Option value={2}>2</Select.Option>
+                            <Select.Option value={3}>3</Select.Option>
+                        </Select>
+                    </div>
+                    <div className="demo-block">
+                        <Select value={[1, 2]} multiple>
+                            <Select.Option value={1}>1</Select.Option>
+                            <Select.Option value={2}>2</Select.Option>
+                            <Select.Option value={3}>3</Select.Option>
+                        </Select>
+                    </div>
                 </div>
             </div>
         );

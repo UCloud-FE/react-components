@@ -3,17 +3,20 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 import createReactContext from 'create-react-context';
 
-import Popover from 'components/Popover';
+import Popover from 'src/components/Popover';
 import uncontrolledDecorator from 'decorators/uncontrolled';
+import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
+import { getItemTree, rootPrefix } from 'src/components/Menu/Menu';
 
 import Option from './Option';
-import { getItemTree, rootPrefix } from 'src/components/Menu/Menu';
 import { SelectWrap, SelectSearchInput, Selector, Arrow, BlockMenu, MenuWrap } from './style';
+import LOCALE from './locale/zh_CN';
 
 const Size = ['sm', 'md', 'lg'];
 
 export const SelectContext = createReactContext();
 
+@localeConsumerDecorator({ defaultLocale: LOCALE, localeName: 'Select' })
 @uncontrolledDecorator({})
 class Select extends Component {
     constructor(props) {
@@ -81,12 +84,13 @@ class Select extends Component {
         /** 弹出层的popover props */
         popover: PropTypes.object,
         /** @ignore */
-        onVisibleChange: PropTypes.func
+        onVisibleChange: PropTypes.func,
+        /** @ignore */
+        locale: PropTypes.object
     };
     static defaultProps = {
         onChange: () => {},
         size: 'md',
-        placeholder: '请选择',
         onVisibleChange: () => {}
     };
     componentWillReceiveProps(nextProps) {
@@ -154,7 +158,7 @@ class Select extends Component {
         }
     };
     defaultRenderContent = (value, valueChild) => {
-        const { multiple, placeholder } = this.props;
+        const { multiple, locale, placeholder = locale.placeholder } = this.props;
         if (!multiple) {
             if (value === undefined) {
                 return placeholder;
@@ -163,7 +167,7 @@ class Select extends Component {
             }
         } else {
             if (value && value.length) {
-                return `已选择${value.length}项`;
+                return `${locale.selected}${value.length}${locale.items}`;
             } else {
                 return placeholder;
             }
