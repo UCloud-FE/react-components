@@ -1,8 +1,7 @@
-// only for snap test
 import React from 'react';
+
 import LocaleProvider from 'src/components/LocaleProvider';
 import Pagination from 'src/components/Pagination';
-
 import locale from 'src/components/LocaleProvider/locale/en_US';
 
 const Demo = () => (

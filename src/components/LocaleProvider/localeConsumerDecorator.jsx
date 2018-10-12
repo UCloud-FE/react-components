@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-const localConsumerDecorator = ({ defaultLocale = {}, localeName }) => Child => {
+const localeConsumerDecorator = ({ defaultLocale = {}, localeName }) => Child => {
     class LocalConsumerWrappedComponent extends Component {
         static propTypes = {
             locale: PropTypes.object
@@ -21,4 +21,4 @@ const localConsumerDecorator = ({ defaultLocale = {}, localeName }) => Child => 
     return LocalConsumerWrappedComponent;
 };
 
-export default localConsumerDecorator;
+export default localeConsumerDecorator;

@@ -34,13 +34,15 @@ const Demo = () => (
 效果:
 
 ```js noeditor
-const locale = require('src/components/LocaleProvider/locale/en_US').default;
-const Demo = () => (
-    <div>
-        <LocaleProvider locale={locale}>
-            <Pagination total={100} showSizeChanger showQuickJumper={{ goButton: true }} />
-        </LocaleProvider>
-    </div>
-);
+const Demo = require('./__demo__/localefile').default;
+
+<Demo />;
+```
+
+*   全语言列表
+
+```js noeditor
+const Demo = require('./__demo__/list').default;
+
 <Demo />;
 ```
