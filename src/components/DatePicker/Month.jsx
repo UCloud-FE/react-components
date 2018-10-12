@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
-import RcMonthCalendar from 'rc-calendar/lib/MonthCalendar';
 
-import { calCalendarProps } from 'components/Calendar/Calendar';
+import MonthCalendar from 'components/Calendar/Month';
 import placements from 'components/Popover/placements';
 import uncontrolledDecorator from 'decorators/uncontrolled';
 import { animationPrefixCls } from 'src/style/globalAnimation';
@@ -100,7 +99,7 @@ class Month extends Component {
                 <PickerWrap
                     prefixCls={prefixCls}
                     transitionName={`${animationPrefixCls}-fade`}
-                    calendar={<RcMonthCalendar {...calCalendarProps({ rules })} />}
+                    calendar={<MonthCalendar rules={rules} />}
                     getCalendarContainer={triggerNode => triggerNode.parentNode}
                     value={value}
                     align={placements.bottomLeft}

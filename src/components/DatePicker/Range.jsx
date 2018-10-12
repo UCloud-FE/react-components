@@ -3,10 +3,13 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 import moment from 'moment';
 
-import DatePicker from './DatePicker';
-import MonthPicker from './Month';
 import Popover from 'components/Popover';
 import uncontrolledDecorator from 'decorators/uncontrolled';
+import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
+
+import DatePicker from './DatePicker';
+import MonthPicker from './Month';
+import LOCALE from './locale/zh_CN';
 
 const formatString = { date: 'YYYY-MM-DD HH:mm:ss', month: 'YYYY-MM' };
 
@@ -32,6 +35,7 @@ const getDateFromOption = option => {
     }
 };
 
+@localeConsumerDecorator({ defaultLocale: LOCALE, localeName: 'DatePicker' })
 @uncontrolledDecorator(
     { onChangeName: ['onChange', 'onInitialChange'] },
     { valueName: 'option', onChangeName: 'onOptionChange' }
@@ -76,7 +80,9 @@ export default class Range extends Component {
         /** 是否禁用 */
         disabled: PropTypes.bool,
         /** 弹出层的z-index */
-        zIndex: PropTypes.number
+        zIndex: PropTypes.number,
+        /** @ignore */
+        locale: PropTypes.object
     };
     static defaultProps = {
         defaultValue: [moment(), moment()],
@@ -165,22 +171,23 @@ export default class Range extends Component {
             type,
             disabled,
             zIndex,
+            locale,
             ...rest
         } = this.props;
         /* eslint-enable no-unused-vars */
         const options = _options.concat({
-            label: '自定义',
+            label: locale.custom,
             value: 'custom'
         });
         const { range, custom: _c } = rules;
         let modifyAble = option === 'custom';
         let [start, end] = value;
-        start = moment(start);
-        end = moment(end);
+        start = moment(+start);
+        end = moment(+end);
 
         let [cStart, cEnd] = cache;
-        cStart = moment(cStart);
-        cEnd = moment(cEnd);
+        cStart = moment(+cStart);
+        cEnd = moment(+cEnd);
 
         const Picker = type === 'month' ? MonthPicker : DatePicker;
         const precision = type === 'month' ? 'month' : null;
@@ -209,7 +216,7 @@ export default class Range extends Component {
                     popup={
                         <RangePopup>
                             <RangePopupPickerContainer>
-                                <span>起始</span>
+                                <span>{locale.start}</span>
                                 <Picker
                                     value={cStart}
                                     rules={{
@@ -221,7 +228,7 @@ export default class Range extends Component {
                                 />
                             </RangePopupPickerContainer>
                             <RangePopupPickerContainer>
-                                <span>结束</span>
+                                <span>{locale.end}</span>
                                 <Picker
                                     value={cEnd}
                                     rules={{
@@ -234,13 +241,13 @@ export default class Range extends Component {
                             </RangePopupPickerContainer>
                             <RangePopupFooter>
                                 <div>
-                                    {!isValid ? <RangePopupError>请重新选择</RangePopupError> : null}
+                                    {!isValid ? <RangePopupError>{locale.range_error_tip}</RangePopupError> : null}
                                     <RangePopupConfirmButton
                                         styleType="primary"
                                         onClick={this.confirmChange}
                                         disabled={!isValid}
                                     >
-                                        确定
+                                        {locale.range_confirm}
                                     </RangePopupConfirmButton>
                                 </div>
                             </RangePopupFooter>

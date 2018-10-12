@@ -54,6 +54,15 @@ class Demo extends Component {
                 <div className="demo-wrap">
                     <Calendar value={moment()} />
                 </div>
+                <div className="demo-wrap">
+                    <DatePicker value={moment()} />
+                </div>
+                <div className="demo-wrap">
+                    <DatePicker.Month value={moment()} />
+                </div>
+                <div className="demo-wrap">
+                    <DatePicker.Range value={[moment(), moment()]} />
+                </div>
             </div>
         );
         const { localeStr, locale } = this.state;
