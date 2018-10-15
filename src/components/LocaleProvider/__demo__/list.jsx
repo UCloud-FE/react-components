@@ -10,6 +10,7 @@ import Calendar from 'src/components/Calendar';
 import DatePicker from 'src/components/DatePicker';
 import Select from 'src/components/Select';
 import Modal from 'src/components/Modal';
+import Menu from 'src/components/Menu';
 import zh_CN from 'src/components/LocaleProvider/locale/zh_CN';
 import en_US from 'src/components/LocaleProvider/locale/en_US';
 
@@ -96,6 +97,19 @@ class Demo extends Component {
                             confirm
                         </Button>
                     </div>
+                </div>
+                <div className="demo-wrap">
+                    <Menu multiple showSelectAll collapse={{ defaultOpenKeys: ['1', '2'] }}>
+                        <Menu.Item itemKey="1">item 1</Menu.Item>
+                        <Menu.SubMenu subMenuKey="1" title="submenu 1">
+                            <Menu.Item itemKey="1-1">item 1-1</Menu.Item>
+                            <Menu.Item itemKey="1-2">item 1-2</Menu.Item>
+                        </Menu.SubMenu>
+                        <Menu.SubMenu subMenuKey="2" title="submenu 2">
+                            <Menu.Item itemKey="2-1">item 2-1</Menu.Item>
+                            <Menu.Item itemKey="2-2">item 2-2</Menu.Item>
+                        </Menu.SubMenu>
+                    </Menu>
                 </div>
             </div>
         );

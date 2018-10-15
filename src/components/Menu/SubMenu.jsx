@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Popover from 'components/Popover';
 import { getPlacements } from 'components/Popover/placements';
 import Collapse from 'components/Collapse';
+import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
 
 import {
     SubMenuTitleWrap,
@@ -13,9 +14,10 @@ import {
     PopupWrap,
     SelectAllCheckbox
 } from './style';
+import LOCALE from './locale/zh_CN';
 
 const placements = getPlacements(0);
-
+@localeConsumerDecorator({ defaultLocale: LOCALE, localeName: 'Menu' })
 class SubMenu extends Component {
     static propTypes = {
         /** 标题内容 */
@@ -35,7 +37,9 @@ class SubMenu extends Component {
         /** @ignore */
         renderChildren: PropTypes.func,
         /** @ignore */
-        children: PropTypes.node
+        children: PropTypes.node,
+        /** @ignore */
+        locale: PropTypes.object
     };
     static defaultProps = {
         styleType: 'collapse'
@@ -52,6 +56,7 @@ class SubMenu extends Component {
             onMultipleSelect,
             renderChildren,
             children,
+            locale,
             ...rest
         } = this.props;
         const selectAllCheckbox = multiple && (
@@ -59,7 +64,7 @@ class SubMenu extends Component {
                 checked={allSelectedStatus === 'ALL'}
                 onChange={checked => onMultipleSelect(checked, uid)}
             >
-                全选
+                {locale.selectAll}
             </SelectAllCheckbox>
         );
 

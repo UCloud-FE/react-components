@@ -4,8 +4,10 @@ import _ from 'lodash';
 import { ThemeProvider } from 'styled-components';
 
 import uncontrolledDecorator from 'decorators/uncontrolled';
+import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
 
 import { MenuWrap, themeMap, SelectAllCheckbox } from './style';
+import LOCALE from './locale/zh_CN';
 
 export const rootPrefix = 'root';
 
@@ -39,6 +41,7 @@ export const getItemTree = children => {
     return getTree(children, rootPrefix);
 };
 
+@localeConsumerDecorator({ defaultLocale: LOCALE, localeName: 'Menu' })
 @uncontrolledDecorator({
     valueName: 'selectedKeys'
 })
@@ -63,7 +66,9 @@ class Menu extends Component {
         /** @ignore */
         itemTree: PropTypes.any,
         /** @ignore */
-        theme: PropTypes.oneOf(['light', 'dark'])
+        theme: PropTypes.oneOf(['light', 'dark']),
+        /** @ignore */
+        locale: PropTypes.object
     };
     static defaultProps = {
         defaultSelectedKeys: [],
@@ -214,6 +219,7 @@ class Menu extends Component {
             children,
             theme,
             itemTree,
+            locale,
             ...rest
         } = this.props;
         /* eslint-enable no-unused-vars */
@@ -224,7 +230,7 @@ class Menu extends Component {
                     checked={allSelectedStatus === 'ALL'}
                     onChange={checked => this.onMultipleSelect(checked, rootPrefix)}
                 >
-                    全选
+                    {locale.selectAll}
                 </SelectAllCheckbox>
             );
         return (
