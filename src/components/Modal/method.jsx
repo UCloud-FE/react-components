@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 import Button from 'components/Button';
 import Modal from './Modal';
 
@@ -21,6 +22,15 @@ const pop = props => {
 };
 
 const alert = (props, content) => {
+    const AlertFooter = ({ locale }) => (
+        <Button size="lg" styleType="primary" onClick={() => modal.destory()}>
+            {locale.confirm}
+        </Button>
+    );
+    AlertFooter.propTypes = {
+        locale: PropTypes.object.isRequired
+    };
+
     const options = {
         children: content,
         maskClosable: false,
@@ -29,11 +39,7 @@ const alert = (props, content) => {
         onClose: () => {
             modal.destory();
         },
-        footer: (
-            <Button size="lg" styleType="primary" onClick={() => modal.destory()}>
-                确认
-            </Button>
-        )
+        footer: AlertFooter
     };
 
     const modal = pop({

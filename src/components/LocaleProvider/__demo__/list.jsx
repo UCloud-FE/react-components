@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 
+import Button from 'src/components/Button';
 import Radio from 'src/components/Radio';
 import Form from 'src/components/Form';
 import LocaleProvider from 'src/components/LocaleProvider';
@@ -8,6 +9,7 @@ import Pagination from 'src/components/Pagination';
 import Calendar from 'src/components/Calendar';
 import DatePicker from 'src/components/DatePicker';
 import Select from 'src/components/Select';
+import Modal from 'src/components/Modal';
 import zh_CN from 'src/components/LocaleProvider/locale/zh_CN';
 import en_US from 'src/components/LocaleProvider/locale/en_US';
 
@@ -80,13 +82,28 @@ class Demo extends Component {
                         </Select>
                     </div>
                 </div>
+                <div className="demo-wrap">
+                    <div className="demo-block">
+                        <Button className="demo-alert-btn" onClick={() => Modal.alert({ title: 'alert' }, 'content')}>
+                            alert
+                        </Button>
+                    </div>
+                    <div className="demo-block">
+                        <Button
+                            className="demo-confirm-btn"
+                            onClick={() => Modal.confirm({ title: 'confirm' }, 'content')}
+                        >
+                            confirm
+                        </Button>
+                    </div>
+                </div>
             </div>
         );
         const { localeStr, locale } = this.state;
 
         return (
             <div className="noeditor-wrap">
-                <Form className="demo-wrap">
+                <Form className="demo-form">
                     <Form.Item label="locale" {...itemLayout}>
                         <Radio.Group
                             styleType="button"

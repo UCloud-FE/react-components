@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-const localeConsumerDecorator = ({ defaultLocale = {}, localeName, publicFn = [] }) => Child => {
+import { getRuntimeLocale } from './locale/runtime';
+
+const localeConsumerDecorator = ({ defaultLocale = {}, localeName, publicFn = [], requireRuntimeLocale }) => Child => {
     class LocalConsumerWrappedComponent extends Component {
         constructor(...args) {
             super(...args);
@@ -24,7 +26,12 @@ const localeConsumerDecorator = ({ defaultLocale = {}, localeName, publicFn = []
             return (
                 <Child
                     ref={ref => (this.child = ref)}
-                    locale={{ ...defaultLocale, ...context[localeName], ...locale }}
+                    locale={{
+                        ...defaultLocale,
+                        ...context[localeName],
+                        ...(requireRuntimeLocale ? getRuntimeLocale()[localeName] : {}),
+                        ...locale
+                    }}
                     {...rest}
                 />
             );
