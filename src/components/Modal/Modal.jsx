@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import _ from 'lodash';
 
 import Button from 'components/Button';
 import Icon from 'components/Icon';
 import { animationPrefixCls } from 'src/style/globalAnimation';
+import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
 
 import { prefixCls, ModalWrap } from './style';
+import LOCALE from './locale/zh_CN';
 
 const Size = ['sm', 'md', 'lg'];
 
+@localeConsumerDecorator({ defaultLocale: LOCALE, localeName: 'Modal', requireRuntimeLocale: true })
 class Modal extends Component {
     static propTypes = {
         /** @ignore */
@@ -16,7 +20,7 @@ class Modal extends Component {
         /** 头部内容 */
         title: PropTypes.node,
         /** 底部内容 */
-        footer: PropTypes.node,
+        footer: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
         /** 显示与否 */
         visible: PropTypes.bool,
         /** 弹窗尺寸 */
@@ -52,7 +56,9 @@ class Modal extends Component {
         /** 弹窗的内容部分的样式 */
         bodyStyle: PropTypes.object,
         /** 遮罩层的样式 */
-        maskStyle: PropTypes.object
+        maskStyle: PropTypes.object,
+        /** @ignore */
+        locale: PropTypes.object
     };
     static defaultProps = {
         maskAnimation: 'fade',
@@ -62,13 +68,13 @@ class Modal extends Component {
         closable: true
     };
     getDefaultFooter = () => {
-        const { onOk, onClose } = this.props;
+        const { onOk, onClose, locale } = this.props;
         return [
             <Button size="lg" key="cancel" onClick={onClose} style={{ marginRight: 8 }}>
-                取消
+                {locale.cancel}
             </Button>,
             <Button size="lg" key="confirm" onClick={onOk} styleType="primary">
-                确认
+                {locale.confirm}
             </Button>
         ];
     };
@@ -83,6 +89,7 @@ class Modal extends Component {
             closable,
             className,
             onClose,
+            locale,
             ...rest
         } = this.props;
         const width = {
@@ -111,7 +118,7 @@ class Modal extends Component {
                         <Icon key="close" type="circle-cross" className={`${prefixCls}-close`} onClick={onClose} />
                     )
                 ]}
-                footer={footer}
+                footer={_.isFunction(footer) ? footer({ locale }) : footer}
             />
         );
     }
