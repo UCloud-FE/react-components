@@ -6,9 +6,10 @@ import Radio from 'src/components/Radio';
 import Form from 'src/components/Form';
 import LocaleProvider from 'src/components/LocaleProvider';
 import Pagination from 'src/components/Pagination';
-import Calendar from 'src/components/Calendar';
 import DatePicker from 'src/components/DatePicker';
+import Calendar from 'src/components/Calendar';
 import Select from 'src/components/Select';
+import Upload from 'src/components/Upload';
 import Modal from 'src/components/Modal';
 import Menu from 'src/components/Menu';
 import zh_CN from 'src/components/LocaleProvider/locale/zh_CN';
@@ -110,6 +111,9 @@ class Demo extends Component {
                             <Menu.Item itemKey="2-2">item 2-2</Menu.Item>
                         </Menu.SubMenu>
                     </Menu>
+                </div>
+                <div className="demo-wrap">
+                    <Upload />
                 </div>
             </div>
         );
