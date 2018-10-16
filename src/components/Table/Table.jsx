@@ -11,8 +11,10 @@ import Checkbox from 'components/Checkbox';
 import Select from 'components/Select';
 import Icon from 'components/Icon';
 import Popover from 'components/Popover';
+import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
 
 import { prefixCls, TableWrap, PopupContainer } from './style';
+import LOCALE from './locale/zh_CN';
 
 export const TableContext = createReactContext();
 
@@ -51,6 +53,7 @@ TableRow.propTypes = {
     contextMenu: PropTypes.func
 };
 
+@localeConsumerDecorator({ defaultLocale: LOCALE, localeName: 'Table' })
 class Table extends Component {
     constructor(props) {
         super(props);
@@ -150,7 +153,9 @@ class Table extends Component {
         /** @ignore */
         className: PropTypes.string,
         /** @ignore */
-        style: PropTypes.object
+        style: PropTypes.object,
+        /** @ignore */
+        locale: PropTypes.object
     };
     static defaultProps = {
         pagination: {},
@@ -165,8 +170,7 @@ class Table extends Component {
                     .indexOf(searchValue) >= 0
             );
         },
-        rowKey: 'key',
-        emptyContent: <Notice closable={false}>数据为空</Notice>
+        rowKey: 'key'
     };
     componentWillReceiveProps = nextProps => {
         const { rowSelection } = nextProps;
@@ -509,7 +513,7 @@ class Table extends Component {
               };
     };
     renderSearchInfo = option => {
-        const { filters, searchValue, total } = option;
+        const { filters, searchValue, total, locale } = option;
 
         let first = true;
         const renderLabel = (label, multiple) => {
@@ -523,10 +527,18 @@ class Table extends Component {
         return !_.isEmpty(filters) || searchValue ? (
             <div key="search-info" className={`${prefixCls}-tip-wrap`}>
                 <Notice icon={null} closable={false} className={`${prefixCls}-filter-notice`} styleType="info">
-                    {searchValue && <span>搜索: {searchValue}；</span>}
+                    {searchValue && (
+                        <span>
+                            {locale.search}
+                            {locale.colon}
+                            {searchValue}
+                            {locale.semicolon}
+                        </span>
+                    )}
                     {!_.isEmpty(filters) && (
                         <span>
-                            筛选:{' '}
+                            {locale.filter}
+                            {locale.colon}
                             {_.map(
                                 filters,
                                 filter =>
@@ -536,10 +548,16 @@ class Table extends Component {
                             )}；
                         </span>
                     )}
-                    <span>搜索结果: {total}条。</span>
+                    <span>
+                        {locale.searchResult}
+                        {locale.colon}
+                        {total}
+                        {locale.items}
+                        {locale.semicolon}
+                    </span>
                     <span>
                         <a className={`${prefixCls}-reset-link`} onClick={this.clearFilter}>
-                            返回列表
+                            {locale.reset}
                         </a>
                     </span>
                 </Notice>
@@ -583,7 +601,7 @@ class Table extends Component {
     };
     render() {
         /* eslint-disable no-unused-vars */
-        const {
+        let {
             pagination: _p,
             dataSource: _d,
             columns: _c,
@@ -598,8 +616,12 @@ class Table extends Component {
             expandIconAsCell,
             title = () => {},
             footer = () => {},
+            locale,
             ...rest
         } = this.props;
+        if (emptyContent === undefined) {
+            emptyContent = <Notice closable={false}>{locale.emptyTip}</Notice>;
+        }
         /* eslint-enable no-unused-vars */
         const pagination = this.getPagination();
         const { filters = {}, searchValue, columnConfig } = this.state;
@@ -611,7 +633,8 @@ class Table extends Component {
                     columns: _c,
                     columnConfig: columnConfig,
                     onColumnConfigChange: this.onColumnConfigChange,
-                    handleSearch: this.handleSearch
+                    handleSearch: this.handleSearch,
+                    locale
                 }}
             >
                 <TableWrap className={className} style={style}>
@@ -634,7 +657,7 @@ class Table extends Component {
                         expandIconAsCell={!!expandedRowRender || expandIconAsCell}
                         expandedRowRender={expandedRowRender}
                         expandIconColumnIndex={columns[0] && columns[0].key === 'table_row_selection' ? 1 : 0}
-                        title={() => this.renderTitle({ filters, searchValue, total })}
+                        title={() => this.renderTitle({ filters, searchValue, total, locale })}
                         footer={() => this.renderFooter({ dataSource: _d, emptyContent, errorContent })}
                         {...rest}
                     />
