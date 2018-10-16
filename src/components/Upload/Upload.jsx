@@ -1,8 +1,12 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+
+import generateError from 'utils/generateError';
+import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
+
 import Selector from './Selector';
 import List from './List';
-import generateError from 'utils/generateError';
+import LOCALE from './locale/zh_CN';
 
 const fileShape = PropTypes.shape({
     name: PropTypes.string.isRequired,
@@ -15,6 +19,7 @@ const fileShape = PropTypes.shape({
 /**
  * 文件上传控件
  */
+@localeConsumerDecorator({ defaultLocale: LOCALE, localeName: 'Upload' })
 export default class Upload extends PureComponent {
     constructor(props) {
         super(props);
@@ -99,7 +104,9 @@ export default class Upload extends PureComponent {
         /** 文件列表，传入后变为受控组件 */
         fileList: PropTypes.arrayOf(fileShape),
         /** @ignore */
-        className: PropTypes.string
+        className: PropTypes.string,
+        /** @ignore */
+        locale: PropTypes.object
     };
     static defaultProps = {
         onChange: () => {},
@@ -198,7 +205,7 @@ export default class Upload extends PureComponent {
         return (this.props.fileList || this.state.fileList).slice();
     };
     render() {
-        const { disabled, multiple, accept, maxSize, selector, listType, onPreview, ...rest } = this.props;
+        const { disabled, multiple, accept, maxSize, selector, listType, onPreview, locale, ...rest } = this.props;
         /** clean unused rest props for div */
         ['maxCount', 'onChange', 'onAdd', 'onRemove', 'handleUpload', 'onError', 'defaultFileList', 'fileList'].forEach(
             key => {
@@ -216,6 +223,7 @@ export default class Upload extends PureComponent {
                     accept={accept}
                     maxSize={maxSize}
                     selector={selector}
+                    locale={locale}
                 />
                 {listType !== 'none' && (
                     <List
@@ -224,6 +232,7 @@ export default class Upload extends PureComponent {
                         onPreview={onPreview}
                         handleReupload={file => this.handleFilesUpload([file])}
                         disabled={disabled}
+                        locale={locale}
                     />
                 )}
             </div>

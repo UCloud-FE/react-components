@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import Icon from 'components/Icon';
+
 import { UploadIcon, UploadNotice, ListWrap } from './style';
 
 const getIconName = status => {
@@ -28,7 +29,9 @@ export default class List extends PureComponent {
         /** 重新上传文件 */
         handleReupload: PropTypes.func,
         /** 是否禁用 */
-        disabled: PropTypes.bool
+        disabled: PropTypes.bool,
+        /** @ignore */
+        locale: PropTypes.object
     };
     static defaultProps = {
         onError: () => {},
@@ -53,14 +56,14 @@ export default class List extends PureComponent {
         );
     };
     render() {
-        const { fileList, renderFileItem = this.renderFileItem, disabled } = this.props;
+        const { fileList, renderFileItem = this.renderFileItem, disabled, locale } = this.props;
         return (
             <ListWrap>
                 {fileList.length ? (
                     fileList.map((file, index) => renderFileItem(file, index, disabled))
                 ) : (
                     <UploadNotice closable={false} icon={null}>
-                        你还未上传任何内容
+                        {locale.emptyTip}
                     </UploadNotice>
                 )}
             </ListWrap>

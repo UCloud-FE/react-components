@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 
 import generateError from 'utils/generateError';
-
 import Button from 'components/Button';
 
 import { SelectorWrap, TipWrap } from './style';
@@ -55,7 +54,9 @@ export default class Selector extends PureComponent {
         /** 可接受的文件类型，MIME，见Upload */
         accept: PropTypes.string,
         /** 文件大小限制 */
-        maxSize: PropTypes.number
+        maxSize: PropTypes.number,
+        /** @ignore */
+        locale: PropTypes.object
     };
     static defaultProps = {
         onSelect: () => {},
@@ -88,9 +89,9 @@ export default class Selector extends PureComponent {
         onSelect(files);
     };
     render() {
-        const { disabled, multiple, accept, selector } = this.props;
+        const { disabled, multiple, accept, selector, locale, ...rest } = this.props;
         return (
-            <SelectorWrap onClick={this.trigger} disabled={disabled}>
+            <SelectorWrap onClick={this.trigger} disabled={disabled} {...rest}>
                 <input
                     type="file"
                     hidden
@@ -104,9 +105,9 @@ export default class Selector extends PureComponent {
                     ? selector
                     : [
                           <Button size="md" styleType="primary" disabled={disabled} key="button">
-                              请选择文件
+                              {locale.selectFile}
                           </Button>,
-                          <TipWrap key="tip">请选择符合规则的文件</TipWrap>
+                          <TipWrap key="tip">{locale.selectFileTip}</TipWrap>
                       ]}
             </SelectorWrap>
         );
