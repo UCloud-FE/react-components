@@ -9,6 +9,6 @@ export default {
     semicolon: ';',
     colon: ': ',
     columnConfigHeader: 'custom columns',
-    columnConfigTip: 'when you clean cache or change brower, the saving record will lost',
+    columnConfigTip: 'when you clean cache or change brower, the saving record will lost.',
     columnConfigSelected: 'selected'
 };
