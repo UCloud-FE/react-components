@@ -11,6 +11,7 @@ import Calendar from 'src/components/Calendar';
 import Select from 'src/components/Select';
 import Upload from 'src/components/Upload';
 import Modal from 'src/components/Modal';
+import Table from 'src/components/Table';
 import Menu from 'src/components/Menu';
 import zh_CN from 'src/components/LocaleProvider/locale/zh_CN';
 import en_US from 'src/components/LocaleProvider/locale/en_US';
@@ -51,6 +52,12 @@ class Demo extends Component {
                 span: 9
             }
         };
+        const columns = new Array(5).fill(null).map((v, i) => ({
+            title: `title-${i}`,
+            key: `title-${i}`,
+            width: 100,
+            render: record => <span>content {record.index}</span>
+        }));
         const list = (
             <div>
                 <div className="demo-wrap">
@@ -114,6 +121,18 @@ class Demo extends Component {
                 </div>
                 <div className="demo-wrap">
                     <Upload />
+                </div>
+                <div className="demo-wrap">
+                    <Table
+                        columns={columns}
+                        title={() => (
+                            <div className="clear-fixed">
+                                <div style={{ float: 'right' }}>
+                                    <Table.ColumnConfigButton className="test-column-config-btn" />
+                                </div>
+                            </div>
+                        )}
+                    />
                 </div>
             </div>
         );

@@ -35,5 +35,22 @@ describe('LocaleProvider', () => {
         wrapper.find('button.demo-confirm-btn').simulate('click');
         expect(document.querySelectorAll('.uc-fe-modal-wrap').length).toBe(1);
         expect(document.querySelector('.uc-fe-modal-wrap').outerHTML).toMatchSnapshot();
+        document.querySelector('.uc-fe-modal-close').click();
+        await sleep(500);
+    });
+    test('Table', async () => {
+        const wrapper = mount(<Demo />);
+        wrapper.find('.test-column-config-btn button').simulate('click');
+        expect(document.querySelectorAll('.uc-fe-modal-wrap').length).toBe(1);
+        expect(document.querySelector('.uc-fe-modal-wrap').outerHTML).toMatchSnapshot();
+        document.querySelector('.uc-fe-modal-close').click();
+        await sleep(500);
+
+        wrapper.instance().setLocale('en_US');
+        wrapper.find('.test-column-config-btn button').simulate('click');
+        expect(document.querySelectorAll('.uc-fe-modal-wrap').length).toBe(1);
+        expect(document.querySelector('.uc-fe-modal-wrap').outerHTML).toMatchSnapshot();
+        document.querySelector('.uc-fe-modal-close').click();
+        await sleep(500);
     });
 });

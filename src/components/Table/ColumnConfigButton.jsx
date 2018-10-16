@@ -61,14 +61,14 @@ export default class ColumnConfigButton extends PureComponent {
 
         return (
             <TableContext.Consumer>
-                {({ columns, columnConfig, onColumnConfigChange }) => {
+                {({ columns, columnConfig, onColumnConfigChange, locale }) => {
                     this.config = columnConfig;
                     const value = this.convertConfigToValue(columnConfig, columns);
                     return (
                         <ColumnConfigWrap {...rest}>
                             <ColumnConfigButtonWrap icon="cog" onClick={this.showModal} />
                             <Modal
-                                header="自定义列表"
+                                title={locale.columnConfigHeader}
                                 visible={modalVisible}
                                 onClose={this.closeModal}
                                 onOk={() => {
@@ -78,7 +78,11 @@ export default class ColumnConfigButton extends PureComponent {
                                 destroyOnClose
                             >
                                 <ColumnConfigModalNotice closable={false} icon={null}>
-                                    选中：{value.length}/{columns.length}。清除缓存或更换浏览器，自定义列表失效。
+                                    {locale.columnConfigSelected}
+                                    {locale.colon}
+                                    {value.length}/{columns.length}
+                                    {locale.period}
+                                    {locale.columnConfigTip}
                                 </ColumnConfigModalNotice>
                                 <ColumnConfigModalCheckboxGroup
                                     defaultValue={value}
