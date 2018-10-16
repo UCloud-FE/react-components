@@ -56,6 +56,10 @@ class Demo extends Component {
             title: `title-${i}`,
             key: `title-${i}`,
             width: 100,
+            filter: {
+                options: [1, 2],
+                popover: { getPopupContainer: () => document.body }
+            },
             render: record => <span>content {record.index}</span>
         }));
         const list = (
@@ -124,6 +128,7 @@ class Demo extends Component {
                 </div>
                 <div className="demo-wrap">
                     <Table
+                        className="test-table"
                         columns={columns}
                         title={() => (
                             <div className="clear-fixed">

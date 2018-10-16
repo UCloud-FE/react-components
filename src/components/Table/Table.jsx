@@ -532,7 +532,6 @@ class Table extends Component {
                             {locale.search}
                             {locale.colon}
                             {searchValue}
-                            {locale.items}
                             {locale.semicolon}
                         </span>
                     )}

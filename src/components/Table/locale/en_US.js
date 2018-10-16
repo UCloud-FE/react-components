@@ -3,7 +3,7 @@ export default {
     search: 'search',
     filter: 'filter',
     searchResult: 'search result',
-    items: '条',
+    items: 'items',
     reset: 'reset search and filter',
     period: '.',
     semicolon: ';',
