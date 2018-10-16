@@ -532,12 +532,14 @@ class Table extends Component {
                             {locale.search}
                             {locale.colon}
                             {searchValue}
+                            {locale.items}
                             {locale.semicolon}
                         </span>
                     )}
                     {!_.isEmpty(filters) && (
                         <span>
-                            {locale.filter}:{' '}
+                            {locale.filter}
+                            {locale.colon}
                             {_.map(
                                 filters,
                                 filter =>
@@ -548,8 +550,11 @@ class Table extends Component {
                         </span>
                     )}
                     <span>
-                        {locale.searchResult}: {total}
-                        {locale.items}。
+                        {locale.searchResult}
+                        {locale.colon}
+                        {total}
+                        {locale.items}
+                        {locale.semicolon}
                     </span>
                     <span>
                         <a className={`${prefixCls}-reset-link`} onClick={this.clearFilter}>

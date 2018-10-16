@@ -128,6 +128,7 @@ class Demo extends Component {
                         title={() => (
                             <div className="clear-fixed">
                                 <div style={{ float: 'right' }}>
+                                    <Table.SearchInput className="test-search-input" style={{ marginRight: 5 }} />
                                     <Table.ColumnConfigButton className="test-column-config-btn" />
                                 </div>
                             </div>
