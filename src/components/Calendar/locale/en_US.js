@@ -16,7 +16,6 @@ export default {
     dateFormat: 'M/D/YYYY',
     dayFormat: 'D',
     dateTimeFormat: 'M/D/YYYY HH:mm:ss',
-    monthBeforeYear: true,
     previousMonth: 'Previous month (PageUp)',
     nextMonth: 'Next month (PageDown)',
     previousYear: 'Last year (Control + left)',
@@ -24,5 +23,6 @@ export default {
     previousDecade: 'Last decade',
     nextDecade: 'Next decade',
     previousCentury: 'Last century',
-    nextCentury: 'Next century'
+    nextCentury: 'Next century',
+    monthBeforeYear: true
 };
