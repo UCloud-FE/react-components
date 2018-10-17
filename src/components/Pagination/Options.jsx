@@ -32,7 +32,7 @@ class Options extends React.Component {
     }
 
     buildOptionText = value => {
-        return `${value} ${this.props.locale.items_per_page}`;
+        return `${value} ${this.props.locale.itemsPerPage}`;
     };
 
     changeSize = value => {
@@ -110,7 +110,7 @@ class Options extends React.Component {
                             onKeyUp={this.go}
                             size={size}
                         >
-                            {locale.jump_to_confirm}
+                            {locale.jumpToConfirm}
                         </Button>
                     );
                 } else {

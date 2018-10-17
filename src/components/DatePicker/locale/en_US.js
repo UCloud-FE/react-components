@@ -1,7 +1,7 @@
 export default {
     custom: 'custom',
-    range_error_tip: 'please check your select',
-    range_confirm: 'confirm',
+    rangeErrorTip: 'please check your select',
+    rangeConfirm: 'confirm',
     start: 'start',
     end: 'end'
 };
