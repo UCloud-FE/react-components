@@ -5,14 +5,14 @@ import Pagination from 'src/components/Pagination';
 // demo start
 const Demo = () => (
     <div>
-        <LocaleProvider locale={{ Pagination: { items_per_page: 'items per page', jump_to_confirm: 'CONFIRM' } }}>
+        <LocaleProvider locale={{ Pagination: { itemsPerPage: 'items per page', jumpToConfirm: 'CONFIRM' } }}>
             <Pagination
                 total={100}
                 showSizeChanger
                 showQuickJumper={{ goButton: true }}
                 locale={{
-                    items_per_page: 'items/page',
-                    next_page: 'next page'
+                    itemsPerPage: 'items/page',
+                    nextPage: 'next page'
                 }}
             />
         </LocaleProvider>

@@ -362,8 +362,8 @@ class Pagination extends Component {
                 );
             }
         } else {
-            const prevItemTitle = showLessItems ? locale.prev_3 : locale.prev_5;
-            const nextItemTitle = showLessItems ? locale.next_3 : locale.next_5;
+            const prevItemTitle = showLessItems ? locale.prev3 : locale.prev5;
+            const nextItemTitle = showLessItems ? locale.next3 : locale.next5;
             if (showPrevNextJumpers) {
                 jumpPrev = (
                     <li
@@ -478,7 +478,7 @@ class Pagination extends Component {
                 {...rest}
             >
                 <li
-                    title={showTitle ? locale.prev_page : null}
+                    title={showTitle ? locale.prevPage : null}
                     onClick={this.prev}
                     tabIndex={prevDisabled ? null : 0}
                     onKeyPress={this.runIfEnterPrev}
@@ -489,7 +489,7 @@ class Pagination extends Component {
                 </li>
                 {pagerList}
                 <li
-                    title={showTitle ? locale.next_page : null}
+                    title={showTitle ? locale.nextPage : null}
                     onClick={this.next}
                     tabIndex={nextDisabled ? null : 0}
                     onKeyPress={this.runIfEnterNext}

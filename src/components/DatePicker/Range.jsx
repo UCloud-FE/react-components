@@ -241,13 +241,13 @@ export default class Range extends Component {
                             </RangePopupPickerContainer>
                             <RangePopupFooter>
                                 <div>
-                                    {!isValid ? <RangePopupError>{locale.range_error_tip}</RangePopupError> : null}
+                                    {!isValid ? <RangePopupError>{locale.rangeErrorTip}</RangePopupError> : null}
                                     <RangePopupConfirmButton
                                         styleType="primary"
                                         onClick={this.confirmChange}
                                         disabled={!isValid}
                                     >
-                                        {locale.range_confirm}
+                                        {locale.rangeConfirm}
                                     </RangePopupConfirmButton>
                                 </div>
                             </RangePopupFooter>
