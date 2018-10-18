@@ -51,6 +51,7 @@ export const SliderWrap = styled.div`
 
         &-tooltip {
             line-height: normal;
+            user-select: none;
         }
 
         &-handle {
