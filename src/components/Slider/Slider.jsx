@@ -35,6 +35,18 @@ handle.propTypes = {
     tipFormatter: PropTypes.func
 };
 
+const getPrecision = n => {
+    const valueString = n.toString();
+    if (valueString.indexOf('e-') >= 0) {
+        return parseInt(valueString.slice(valueString.indexOf('e-') + 2), 10);
+    }
+    let precision = 0;
+    if (valueString.indexOf('.') >= 0) {
+        precision = valueString.length - valueString.indexOf('.') - 1;
+    }
+    return precision;
+};
+
 class Slider extends Component {
     static propTypes = {
         /** 值，受控 */
@@ -49,7 +61,7 @@ class Slider extends Component {
         min: PropTypes.number,
         /** 最大值 */
         max: PropTypes.number,
-        /** 每次变动的大小，传入的最大值和最小值必须为step的整数倍 */
+        /** 每次变动的大小，传入的(最大值-最小值)必须为step的整数倍，大于0 */
         step: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
         /** 标记 */
         marks: PropTypes.object,
@@ -74,7 +86,9 @@ class Slider extends Component {
     static defaultProps = {
         onChange: () => {},
         step: 1,
-        size: 'md'
+        size: 'md',
+        min: 0,
+        max: 100
     };
     state = {
         value: 'value' in this.props ? this.props.value : this.props.defaultValue
@@ -102,7 +116,18 @@ class Slider extends Component {
         if (number > max) {
             number = max;
         }
-        number = ((number / step) | 0) * step;
+        const stepPrecision = getPrecision(step);
+        const numberPrecision = getPrecision(number);
+        const maxPrecision = getPrecision(max);
+        const minPrecision = getPrecision(min);
+        const precision = Math.max(stepPrecision, numberPrecision, maxPrecision, minPrecision);
+        number = +(((number - min) / step).toFixed(0) * step + min).toFixed(precision);
+        if (number < min) {
+            number = +(number + step).toFixed(precision);
+        }
+        if (number > max) {
+            number = +(number - step).toFixed(precision);
+        }
         return _.isNaN(number) ? 0 : number;
     };
     render() {
