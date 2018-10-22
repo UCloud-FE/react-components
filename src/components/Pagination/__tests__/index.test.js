@@ -1,9 +1,10 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
+import { renderToJson } from 'enzyme-to-json';
 
 import Pagination from 'src/components/Pagination';
-import Select from 'src/components/Select';
 
+jest.unmock('rc-trigger');
 describe('Pagination', () => {
     test('click and keyboard', () => {
         const onChange = jest.fn();
@@ -88,13 +89,55 @@ describe('Pagination', () => {
     });
 
     test('change pagesize', () => {
-        const wrapper = mount(<Pagination pageSize={10} total={100} />);
+        const onPageSizeChange = jest.fn();
+        const wrapper = mount(
+            <Pagination
+                pageSize={10}
+                showSizeChanger
+                onPageSizeChange={onPageSizeChange}
+                total={100}
+                optionsProps={{ select: { popover: { getPopupContainer: () => document.body } } }}
+            />
+        );
 
-        expect(wrapper.find('li').length).toBe(9);
+        expect(wrapper.find('li').length).toBe(10);
         wrapper.setProps({
             pageSize: 30
         });
-        expect(wrapper.find('li').length).toBe(6);
+        expect(wrapper.find('li').length).toBe(7);
+
+        wrapper
+            .find('div.uc-fe-pagination-options-size-changer')
+            .at(0)
+            .childAt(0)
+            .simulate('click');
+        expect(document.querySelectorAll('.uc-fe-popover').length).toBe(1);
+        expect(document.querySelectorAll('.uc-fe-popover.uc-fe-popover-hidden').length).toBe(0);
+        expect(document.querySelectorAll('div.uc-fe-popover>div>div>div').length).toBe(4);
+
+        document.querySelectorAll('div.uc-fe-popover>div>div>div')[1].click();
+
+        expect(onPageSizeChange).toHaveBeenCalledTimes(1);
+        expect(onPageSizeChange).toHaveBeenLastCalledWith(1, 20);
+
+        wrapper.unmount();
+    });
+
+    test('quick jumper', () => {
+        const onChange = jest.fn();
+        const wrapper = mount(<Pagination onChange={onChange} total={100} showQuickJumper={{ goButton: true }} />);
+
+        expect(wrapper.find('input').length).toBe(1);
+        wrapper.find('input').instance().value = '2';
+        wrapper.find('input').simulate('change', 2);
+        wrapper.find('.uc-fe-pagination-options button').simulate('click');
+        expect(onChange).toHaveBeenCalledTimes(1);
+        expect(onChange).toHaveBeenLastCalledWith(2, 10);
+    });
+
+    test('hideOnSinglePage', () => {
+        const wrapper = mount(<Pagination hideOnSinglePage total={0} />);
+        expect(renderToJson(wrapper.render())).toMatchSnapshot();
     });
 
     test('onAdvise', () => {
@@ -120,5 +163,13 @@ describe('Pagination', () => {
         });
         expect(onAdvise).toHaveBeenCalledTimes(2);
         expect(onAdvise).toHaveBeenCalledWith(4, 10);
+
+        const onAdvise2 = jest.fn();
+        const wrapper2 = mount(<Pagination defaultCurrent={5} total={100} onAdvise={onAdvise2} />);
+        wrapper2.setProps({
+            total: 30
+        });
+        expect(onAdvise2).toHaveBeenCalledTimes(1);
+        expect(onAdvise2).toHaveBeenCalledWith(3, 10);
     });
 });
