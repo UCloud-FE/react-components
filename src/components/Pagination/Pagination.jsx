@@ -71,7 +71,9 @@ class Pagination extends Component {
         /** @ignore */
         itemRender: PropTypes.func,
         /** 尺寸 */
-        size: PropTypes.oneOf(Size)
+        size: PropTypes.oneOf(Size),
+        /** @ignore */
+        optionsProps: PropTypes.object
     };
 
     static defaultProps = {
@@ -302,6 +304,7 @@ class Pagination extends Component {
             className,
             itemRender,
             size,
+            optionsProps,
             ...rest
         } = this.props;
         /* eslint-enable no-unused-vars */
@@ -509,6 +512,7 @@ class Pagination extends Component {
                     goButton={goButton}
                     size={size}
                     allPages={allPages}
+                    {...optionsProps}
                 />
             </PaginationWrap>
         );

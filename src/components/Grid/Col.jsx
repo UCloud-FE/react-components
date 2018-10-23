@@ -16,6 +16,8 @@ Col.propTypes = {
     pull: PropTypes.number,
     /** 栅格向右偏移格数，偏移不占位 */
     push: PropTypes.number,
+    /** flex布局下的order */
+    order: PropTypes.number,
     /** @ignore */
     gutter: PropTypes.number,
     /** @ignore */

@@ -16,7 +16,8 @@ class Options extends React.Component {
         buildOptionText: PropTypes.func,
         locale: PropTypes.object,
         size: PropTypes.string,
-        allPages: PropTypes.number
+        allPages: PropTypes.number,
+        select: PropTypes.object
     };
 
     static defaultProps = {
@@ -63,7 +64,7 @@ class Options extends React.Component {
         const props = this.props;
         const state = this.state;
         const locale = props.locale;
-        const { size, allPages } = props;
+        const { size, allPages, select } = props;
         const prefixCls = `${props.rootPrefixCls}-options`;
         const changeSize = props.changeSize;
         const quickGo = props.quickGo;
@@ -92,7 +93,8 @@ class Options extends React.Component {
                     value={pageSize.toString()}
                     onChange={this.changeSize}
                     size={size}
-                    getPopupContainer={triggerNode => triggerNode.parentNode}
+                    popover={{ getPopupContainer: triggerNode => triggerNode.parentNode }}
+                    {...select}
                 >
                     {options}
                 </Select>
