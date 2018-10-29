@@ -22,6 +22,38 @@ class Demo extends React.Component {
                         }}
                     />
                 </div>
+                <div className="demo-wrap">
+                    <Slider
+                        min={10}
+                        max={1000}
+                        defaultValue={12}
+                        marks={{
+                            50: {
+                                label: '50',
+                                step: 2,
+                                ratio: 10
+                            },
+                            100: {
+                                label: '100',
+                                step: 5,
+                                ratio: 10
+                            },
+                            200: {
+                                label: '200',
+                                step: 10,
+                                ratio: 15
+                            },
+                            400: {
+                                label: '400',
+                                step: 20
+                            },
+                            1000: {
+                                label: '1000',
+                                step: 50
+                            }
+                        }}
+                    />
+                </div>
             </div>
         );
     }
