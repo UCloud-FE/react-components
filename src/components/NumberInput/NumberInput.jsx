@@ -48,6 +48,8 @@ class NumberInput extends Component {
         onKeyDown: PropTypes.func,
         /** @ignore */
         onKeyUp: PropTypes.func,
+        /** @ignore */
+        onEnter: PropTypes.func,
         /** 禁用 */
         disabled: PropTypes.bool,
         /** @ignore */
@@ -97,6 +99,7 @@ class NumberInput extends Component {
         onChange: noop,
         onNumberChange: noop,
         onKeyDown: noop,
+        onEnter: noop,
         onFocus: noop,
         onBlur: noop,
         parser: defaultParser,
@@ -185,6 +188,8 @@ class NumberInput extends Component {
             const ratio = this.getRatio(e);
             this.down(e, ratio);
             this.stop();
+        } else if (e.keyCode === KEYCODE['ENTER']) {
+            this.onEnter(e, ...args);
         }
         const { onKeyDown } = this.props;
         if (onKeyDown) {
@@ -225,6 +230,18 @@ class NumberInput extends Component {
         e.persist(); // fix https://github.com/react-component/input-number/issues/51
         this.setValue(value, () => {
             this.props.onBlur(e, ...args);
+            this.props.onNumberChange(value);
+        });
+    };
+
+    onEnter = (e, ...args) => {
+        const value = this.getCurrentValidValue(this.state.inputValue);
+        if (e) {
+            e.persist();
+            e.preventDefault();
+        }
+        this.setValue(value, () => {
+            this.props.onEnter(e, ...args);
             this.props.onNumberChange(value);
         });
     };

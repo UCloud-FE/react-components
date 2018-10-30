@@ -81,6 +81,11 @@ describe('NumberInput', () => {
         expect(onNumberChange).toHaveBeenCalledTimes(++onNumberChangeCallTimes);
         expect(onNumberChange).toHaveBeenLastCalledWith(0);
 
+        input.simulate('keydown', { keyCode: KeyCode['ENTER'] });
+        input.simulate('keyup', { keyCode: KeyCode['ENTER'] });
+        expect(onNumberChange).toHaveBeenCalledTimes(++onNumberChangeCallTimes);
+        expect(onNumberChange).toHaveBeenLastCalledWith(0);
+
         input.simulate('blur');
     });
 });
