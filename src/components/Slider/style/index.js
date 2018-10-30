@@ -45,6 +45,7 @@ export const SliderWrap = styled.div`
             position: absolute;
             left: 0;
             border: 1px solid ${Color.border.blue};
+            border-radius: 2px;
             background: ${Color.bg.blueActive};
             height: ${props => Height[props.size]};
         }
@@ -121,6 +122,7 @@ export const SliderWrap = styled.div`
             text-align: right;
             cursor: pointer;
             color: ${Color.font.default};
+            border-right: 1px solid ${Color.border.default};
             padding: 0 8px;
             box-sizing: border-box;
             pointer-events: none;
@@ -130,10 +132,12 @@ export const SliderWrap = styled.div`
                 disabled &&
                 css`
                     cursor: not-allowed;
+                    border-right-color: ${Color.border.disabled};
                 `};
 
             &-active {
                 color: ${Color.font.blue};
+                border-right-color: ${Color.bg.blue};
             }
         }
 
@@ -145,21 +149,7 @@ export const SliderWrap = styled.div`
         }
 
         &-dot {
-            position: absolute;
-            top: 0;
-            width: 1px;
-            height: 100%;
-            background: ${Color.border.default};
-            vertical-align: middle;
-            ${({ disabled }) =>
-                disabled &&
-                css`
-                    border-color: ${Color.border.disabled};
-                    background: ${Color.bg.white};
-                `};
-            &-active {
-                background: ${Color.bg.blue};
-            }
+            display: none;
         }
     }
 `;

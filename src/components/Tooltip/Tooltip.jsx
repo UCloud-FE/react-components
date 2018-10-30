@@ -39,6 +39,7 @@ class Tooltip extends Component {
         );
     }
     render() {
+        // eslint-disable-next-line no-unused-vars
         const { popup, ...rest } = this.props;
         return (
             <Popover

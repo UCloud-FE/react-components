@@ -131,6 +131,7 @@ exports[`Slider demo -- base 1`] = `
   position: absolute;
   left: 0;
   border: 1px solid #4683e6;
+  border-radius: 2px;
   background: #f4f9ff;
   height: 28px;
 }
@@ -209,6 +210,7 @@ exports[`Slider demo -- base 1`] = `
   text-align: right;
   cursor: pointer;
   color: #6b798e;
+  border-right: 1px solid #c3cad9;
   padding: 0 8px;
   box-sizing: border-box;
   pointer-events: none;
@@ -217,6 +219,7 @@ exports[`Slider demo -- base 1`] = `
 
 .c30 .uc-fe-slider-mark-text-active {
   color: #4074e1;
+  border-right-color: #4683e6;
 }
 
 .c30 .uc-fe-slider-step {
@@ -227,16 +230,7 @@ exports[`Slider demo -- base 1`] = `
 }
 
 .c30 .uc-fe-slider-dot {
-  position: absolute;
-  top: 0;
-  width: 1px;
-  height: 100%;
-  background: #c3cad9;
-  vertical-align: middle;
-}
-
-.c30 .uc-fe-slider-dot-active {
-  background: #4683e6;
+  display: none;
 }
 
 .c10 {
@@ -713,7 +707,7 @@ exports[`Slider demo -- base 1`] = `
         />
         <div
           aria-disabled="false"
-          aria-valuemax="100"
+          aria-valuemax="300"
           aria-valuemin="0"
           aria-valuenow="10"
           class="uc-fe-slider-handle"
@@ -970,6 +964,7 @@ exports[`Slider demo -- disabled 1`] = `
   position: absolute;
   left: 0;
   border: 1px solid #4683e6;
+  border-radius: 2px;
   background: #f4f9ff;
   height: 28px;
 }
@@ -1048,6 +1043,7 @@ exports[`Slider demo -- disabled 1`] = `
   text-align: right;
   cursor: pointer;
   color: #6b798e;
+  border-right: 1px solid #c3cad9;
   padding: 0 8px;
   box-sizing: border-box;
   pointer-events: none;
@@ -1056,6 +1052,7 @@ exports[`Slider demo -- disabled 1`] = `
 
 .c0 .uc-fe-slider-mark-text-active {
   color: #4074e1;
+  border-right-color: #4683e6;
 }
 
 .c0 .uc-fe-slider-step {
@@ -1066,16 +1063,7 @@ exports[`Slider demo -- disabled 1`] = `
 }
 
 .c0 .uc-fe-slider-dot {
-  position: absolute;
-  top: 0;
-  width: 1px;
-  height: 100%;
-  background: #c3cad9;
-  vertical-align: middle;
-}
-
-.c0 .uc-fe-slider-dot-active {
-  background: #4683e6;
+  display: none;
 }
 
 <div>
@@ -1100,7 +1088,7 @@ exports[`Slider demo -- disabled 1`] = `
         />
         <div
           aria-disabled="true"
-          aria-valuemax="20"
+          aria-valuemax="300"
           aria-valuemin="0"
           aria-valuenow="3"
           class="uc-fe-slider-handle"
@@ -1170,7 +1158,7 @@ exports[`Slider demo -- disabled 1`] = `
         />
         <div
           aria-disabled="false"
-          aria-valuemax="20"
+          aria-valuemax="300"
           aria-valuemin="0"
           aria-valuenow="3"
           class="uc-fe-slider-handle"
@@ -1381,6 +1369,7 @@ exports[`Slider demo -- marks 1`] = `
   position: absolute;
   left: 0;
   border: 1px solid #4683e6;
+  border-radius: 2px;
   background: #f4f9ff;
   height: 28px;
 }
@@ -1459,6 +1448,7 @@ exports[`Slider demo -- marks 1`] = `
   text-align: right;
   cursor: pointer;
   color: #6b798e;
+  border-right: 1px solid #c3cad9;
   padding: 0 8px;
   box-sizing: border-box;
   pointer-events: none;
@@ -1467,6 +1457,7 @@ exports[`Slider demo -- marks 1`] = `
 
 .c0 .uc-fe-slider-mark-text-active {
   color: #4074e1;
+  border-right-color: #4683e6;
 }
 
 .c0 .uc-fe-slider-step {
@@ -1477,16 +1468,7 @@ exports[`Slider demo -- marks 1`] = `
 }
 
 .c0 .uc-fe-slider-dot {
-  position: absolute;
-  top: 0;
-  width: 1px;
-  height: 100%;
-  background: #c3cad9;
-  vertical-align: middle;
-}
-
-.c0 .uc-fe-slider-dot-active {
-  background: #4683e6;
+  display: none;
 }
 
 <div>
@@ -1511,7 +1493,7 @@ exports[`Slider demo -- marks 1`] = `
         />
         <div
           aria-disabled="false"
-          aria-valuemax="20"
+          aria-valuemax="300"
           aria-valuemin="0"
           aria-valuenow="3"
           class="uc-fe-slider-handle"
@@ -1593,7 +1575,7 @@ exports[`Slider demo -- marks 1`] = `
         </div>
         <div
           aria-disabled="false"
-          aria-valuemax="20"
+          aria-valuemax="300"
           aria-valuemin="0"
           aria-valuenow="3"
           class="uc-fe-slider-handle"
@@ -1606,19 +1588,19 @@ exports[`Slider demo -- marks 1`] = `
         >
           <span
             class="uc-fe-slider-mark-text"
-            style="width:22.5%;margin-left:-22.5%;left:25%;"
+            style="width:30%;margin-left:-30%;overflow:hidden;left:25%;"
           >
             5个
           </span>
           <span
             class="uc-fe-slider-mark-text"
-            style="width:22.5%;margin-left:-22.5%;left:50%;"
+            style="width:30%;margin-left:-30%;overflow:hidden;left:50%;"
           >
             10个
           </span>
           <span
             class="uc-fe-slider-mark-text"
-            style="width:22.5%;margin-left:-22.5%;left:90%;"
+            style="width:30%;margin-left:-30%;overflow:hidden;left:90%;"
           >
             18个
           </span>
@@ -1655,6 +1637,127 @@ exports[`Slider demo -- marks 1`] = `
             min="0"
             step="1"
             value="3"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="demo-wrap"
+  >
+    <div
+      class="c0"
+    >
+      <div
+        class="uc-fe-slider uc-fe-slider-with-marks"
+      >
+        <div
+          class="uc-fe-slider-rail"
+        />
+        <div
+          class="uc-fe-slider-track"
+          style="left:0%;width:0.6666666666666667%;"
+        />
+        <div
+          class="uc-fe-slider-step"
+        >
+          <span
+            class="uc-fe-slider-dot"
+            style="left:10%;"
+          />
+          <span
+            class="uc-fe-slider-dot"
+            style="left:20%;"
+          />
+          <span
+            class="uc-fe-slider-dot"
+            style="left:35%;"
+          />
+          <span
+            class="uc-fe-slider-dot"
+            style="left:100%;"
+          />
+          <span
+            class="uc-fe-slider-dot"
+            style="left:51.24999999999999%;"
+          />
+        </div>
+        <div
+          aria-disabled="false"
+          aria-valuemax="300"
+          aria-valuemin="0"
+          aria-valuenow="12"
+          class="uc-fe-slider-handle"
+          role="slider"
+          style="left:0.6666666666666667%;"
+          tabindex="0"
+        />
+        <div
+          class="uc-fe-slider-mark"
+        >
+          <span
+            class="uc-fe-slider-mark-text"
+            style="width:30%;margin-left:-30%;overflow:hidden;left:10%;"
+          >
+            50
+          </span>
+          <span
+            class="uc-fe-slider-mark-text"
+            style="width:30%;margin-left:-30%;overflow:hidden;left:20%;"
+          >
+            100
+          </span>
+          <span
+            class="uc-fe-slider-mark-text"
+            style="width:30%;margin-left:-30%;overflow:hidden;left:35%;"
+          >
+            200
+          </span>
+          <span
+            class="uc-fe-slider-mark-text"
+            style="width:30%;margin-left:-30%;overflow:hidden;left:51.24999999999999%;"
+          >
+            400
+          </span>
+          <span
+            class="uc-fe-slider-mark-text"
+            style="width:30%;margin-left:-30%;overflow:hidden;left:100%;border-right:none;"
+          >
+            1000
+          </span>
+        </div>
+      </div>
+      <div
+        class="c1"
+      >
+        <div>
+          <span
+            class="c2 c3"
+            unselectable="unselectable"
+          >
+            <i
+              class="icon__caret-up "
+            />
+          </span>
+          <span
+            class="c4 c5"
+            unselectable="unselectable"
+          >
+            <i
+              class="icon__caret-down "
+            />
+          </span>
+        </div>
+        <div
+          class="c6"
+        >
+          <input
+            autocomplete="off"
+            class="c7 c8"
+            max="1000"
+            min="10"
+            step="1"
+            value="12"
           />
         </div>
       </div>
@@ -1823,6 +1926,7 @@ exports[`Slider demo -- minmax 1`] = `
   position: absolute;
   left: 0;
   border: 1px solid #4683e6;
+  border-radius: 2px;
   background: #f4f9ff;
   height: 28px;
 }
@@ -1901,6 +2005,7 @@ exports[`Slider demo -- minmax 1`] = `
   text-align: right;
   cursor: pointer;
   color: #6b798e;
+  border-right: 1px solid #c3cad9;
   padding: 0 8px;
   box-sizing: border-box;
   pointer-events: none;
@@ -1909,6 +2014,7 @@ exports[`Slider demo -- minmax 1`] = `
 
 .c0 .uc-fe-slider-mark-text-active {
   color: #4074e1;
+  border-right-color: #4683e6;
 }
 
 .c0 .uc-fe-slider-step {
@@ -1919,16 +2025,7 @@ exports[`Slider demo -- minmax 1`] = `
 }
 
 .c0 .uc-fe-slider-dot {
-  position: absolute;
-  top: 0;
-  width: 1px;
-  height: 100%;
-  background: #c3cad9;
-  vertical-align: middle;
-}
-
-.c0 .uc-fe-slider-dot-active {
-  background: #4683e6;
+  display: none;
 }
 
 <div>
@@ -1953,8 +2050,8 @@ exports[`Slider demo -- minmax 1`] = `
         />
         <div
           aria-disabled="false"
-          aria-valuemax="20"
-          aria-valuemin="10"
+          aria-valuemax="300"
+          aria-valuemin="0"
           aria-valuenow="15"
           class="uc-fe-slider-handle"
           role="slider"
@@ -2022,7 +2119,7 @@ exports[`Slider demo -- minmax 1`] = `
         />
         <div
           aria-disabled="false"
-          aria-valuemax="20"
+          aria-valuemax="300"
           aria-valuemin="0"
           aria-valuenow="10"
           class="uc-fe-slider-handle"
@@ -2091,7 +2188,7 @@ exports[`Slider demo -- minmax 1`] = `
         />
         <div
           aria-disabled="false"
-          aria-valuemax="100"
+          aria-valuemax="300"
           aria-valuemin="0"
           aria-valuenow="10"
           class="uc-fe-slider-handle"
@@ -2302,6 +2399,7 @@ exports[`Slider demo -- numberInput 1`] = `
   position: absolute;
   left: 0;
   border: 1px solid #4683e6;
+  border-radius: 2px;
   background: #f4f9ff;
   height: 28px;
 }
@@ -2380,6 +2478,7 @@ exports[`Slider demo -- numberInput 1`] = `
   text-align: right;
   cursor: pointer;
   color: #6b798e;
+  border-right: 1px solid #c3cad9;
   padding: 0 8px;
   box-sizing: border-box;
   pointer-events: none;
@@ -2388,6 +2487,7 @@ exports[`Slider demo -- numberInput 1`] = `
 
 .c0 .uc-fe-slider-mark-text-active {
   color: #4074e1;
+  border-right-color: #4683e6;
 }
 
 .c0 .uc-fe-slider-step {
@@ -2398,16 +2498,7 @@ exports[`Slider demo -- numberInput 1`] = `
 }
 
 .c0 .uc-fe-slider-dot {
-  position: absolute;
-  top: 0;
-  width: 1px;
-  height: 100%;
-  background: #c3cad9;
-  vertical-align: middle;
-}
-
-.c0 .uc-fe-slider-dot-active {
-  background: #4683e6;
+  display: none;
 }
 
 <div>
@@ -2432,7 +2523,7 @@ exports[`Slider demo -- numberInput 1`] = `
         />
         <div
           aria-disabled="false"
-          aria-valuemax="100"
+          aria-valuemax="300"
           aria-valuemin="0"
           aria-valuenow="5"
           class="uc-fe-slider-handle"
@@ -2501,7 +2592,7 @@ exports[`Slider demo -- numberInput 1`] = `
         />
         <div
           aria-disabled="false"
-          aria-valuemax="100"
+          aria-valuemax="300"
           aria-valuemin="0"
           aria-valuenow="10"
           class="uc-fe-slider-handle"
@@ -2712,6 +2803,7 @@ exports[`Slider demo -- step 1`] = `
   position: absolute;
   left: 0;
   border: 1px solid #4683e6;
+  border-radius: 2px;
   background: #f4f9ff;
   height: 28px;
 }
@@ -2790,6 +2882,7 @@ exports[`Slider demo -- step 1`] = `
   text-align: right;
   cursor: pointer;
   color: #6b798e;
+  border-right: 1px solid #c3cad9;
   padding: 0 8px;
   box-sizing: border-box;
   pointer-events: none;
@@ -2798,6 +2891,7 @@ exports[`Slider demo -- step 1`] = `
 
 .c0 .uc-fe-slider-mark-text-active {
   color: #4074e1;
+  border-right-color: #4683e6;
 }
 
 .c0 .uc-fe-slider-step {
@@ -2808,16 +2902,7 @@ exports[`Slider demo -- step 1`] = `
 }
 
 .c0 .uc-fe-slider-dot {
-  position: absolute;
-  top: 0;
-  width: 1px;
-  height: 100%;
-  background: #c3cad9;
-  vertical-align: middle;
-}
-
-.c0 .uc-fe-slider-dot-active {
-  background: #4683e6;
+  display: none;
 }
 
 <div>
@@ -2835,19 +2920,19 @@ exports[`Slider demo -- step 1`] = `
         />
         <div
           class="uc-fe-slider-track"
-          style="left:0%;width:25%;"
+          style="left:0%;width:15%;"
         />
         <div
           class="uc-fe-slider-step"
         />
         <div
           aria-disabled="false"
-          aria-valuemax="20"
+          aria-valuemax="300"
           aria-valuemin="0"
-          aria-valuenow="5"
+          aria-valuenow="3"
           class="uc-fe-slider-handle"
           role="slider"
-          style="left:25%;"
+          style="left:15%;"
           tabindex="0"
         />
         <div
@@ -2911,7 +2996,7 @@ exports[`Slider demo -- step 1`] = `
         />
         <div
           aria-disabled="false"
-          aria-valuemax="20"
+          aria-valuemax="300"
           aria-valuemin="0"
           aria-valuenow="3"
           class="uc-fe-slider-handle"
@@ -3122,6 +3207,7 @@ exports[`Slider demo -- tipFormatter 1`] = `
   position: absolute;
   left: 0;
   border: 1px solid #4683e6;
+  border-radius: 2px;
   background: #f4f9ff;
   height: 28px;
 }
@@ -3200,6 +3286,7 @@ exports[`Slider demo -- tipFormatter 1`] = `
   text-align: right;
   cursor: pointer;
   color: #6b798e;
+  border-right: 1px solid #c3cad9;
   padding: 0 8px;
   box-sizing: border-box;
   pointer-events: none;
@@ -3208,6 +3295,7 @@ exports[`Slider demo -- tipFormatter 1`] = `
 
 .c0 .uc-fe-slider-mark-text-active {
   color: #4074e1;
+  border-right-color: #4683e6;
 }
 
 .c0 .uc-fe-slider-step {
@@ -3218,16 +3306,7 @@ exports[`Slider demo -- tipFormatter 1`] = `
 }
 
 .c0 .uc-fe-slider-dot {
-  position: absolute;
-  top: 0;
-  width: 1px;
-  height: 100%;
-  background: #c3cad9;
-  vertical-align: middle;
-}
-
-.c0 .uc-fe-slider-dot-active {
-  background: #4683e6;
+  display: none;
 }
 
 <div>
@@ -3252,7 +3331,7 @@ exports[`Slider demo -- tipFormatter 1`] = `
         />
         <div
           aria-disabled="false"
-          aria-valuemax="20"
+          aria-valuemax="300"
           aria-valuemin="0"
           aria-valuenow="10"
           class="uc-fe-slider-handle"
@@ -3321,7 +3400,7 @@ exports[`Slider demo -- tipFormatter 1`] = `
         />
         <div
           aria-disabled="false"
-          aria-valuemax="20"
+          aria-valuemax="300"
           aria-valuemin="0"
           aria-valuenow="10"
           class="uc-fe-slider-handle"
@@ -3532,6 +3611,7 @@ exports[`Slider demo -- uncontrolled 1`] = `
   position: absolute;
   left: 0;
   border: 1px solid #4683e6;
+  border-radius: 2px;
   background: #f4f9ff;
   height: 28px;
 }
@@ -3610,6 +3690,7 @@ exports[`Slider demo -- uncontrolled 1`] = `
   text-align: right;
   cursor: pointer;
   color: #6b798e;
+  border-right: 1px solid #c3cad9;
   padding: 0 8px;
   box-sizing: border-box;
   pointer-events: none;
@@ -3618,6 +3699,7 @@ exports[`Slider demo -- uncontrolled 1`] = `
 
 .c0 .uc-fe-slider-mark-text-active {
   color: #4074e1;
+  border-right-color: #4683e6;
 }
 
 .c0 .uc-fe-slider-step {
@@ -3628,16 +3710,7 @@ exports[`Slider demo -- uncontrolled 1`] = `
 }
 
 .c0 .uc-fe-slider-dot {
-  position: absolute;
-  top: 0;
-  width: 1px;
-  height: 100%;
-  background: #c3cad9;
-  vertical-align: middle;
-}
-
-.c0 .uc-fe-slider-dot-active {
-  background: #4683e6;
+  display: none;
 }
 
 <div>
@@ -3662,7 +3735,7 @@ exports[`Slider demo -- uncontrolled 1`] = `
         />
         <div
           aria-disabled="false"
-          aria-valuemax="20"
+          aria-valuemax="300"
           aria-valuemin="0"
           aria-valuenow="5"
           class="uc-fe-slider-handle"
@@ -3731,7 +3804,7 @@ exports[`Slider demo -- uncontrolled 1`] = `
         />
         <div
           aria-disabled="false"
-          aria-valuemax="20"
+          aria-valuemax="300"
           aria-valuemin="0"
           aria-valuenow="10"
           class="uc-fe-slider-handle"
