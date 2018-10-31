@@ -40,7 +40,7 @@ class NumberInput extends Component {
         /** 修改回调 */
         onChange: PropTypes.func,
         /**
-         * 有效的修改回调，使用按钮改变值或者输入后失焦时触发，可防止监听到无效的回调
+         * 有效的修改回调，使用按钮改变值或者输入、回车后失焦时触发，可防止监听到无效的回调
          * @param value - 当前的值，必为有效数字
          */
         onNumberChange: PropTypes.func,
@@ -64,6 +64,10 @@ class NumberInput extends Component {
         min: PropTypes.number,
         /** 按钮每次变动大小 */
         step: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+        /** @ignore */
+        upStep: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+        /** @ignore */
+        downStep: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
         /** 自定义'+'按钮 */
         upHandler: PropTypes.node,
         /** 自定义'-'按钮 */
@@ -411,9 +415,12 @@ class NumberInput extends Component {
     }
 
     upStep(val, rat) {
-        const { step, min } = this.props;
+        let { step, upStep, min } = this.props;
         const precisionFactor = this.getPrecisionFactor(val, rat);
         const precision = Math.abs(this.getMaxPrecision(val, rat));
+        if (upStep != null) {
+            step = upStep;
+        }
         let result;
         if (typeof val === 'number') {
             result = ((precisionFactor * val + precisionFactor * step * rat) / precisionFactor).toFixed(precision);
@@ -424,9 +431,12 @@ class NumberInput extends Component {
     }
 
     downStep(val, rat) {
-        const { step, min } = this.props;
+        let { step, downStep, min } = this.props;
         const precisionFactor = this.getPrecisionFactor(val, rat);
         const precision = Math.abs(this.getMaxPrecision(val, rat));
+        if (downStep != null) {
+            step = downStep;
+        }
         let result;
         if (typeof val === 'number') {
             result = ((precisionFactor * val - precisionFactor * step * rat) / precisionFactor).toFixed(precision);

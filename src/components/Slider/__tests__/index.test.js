@@ -2,12 +2,26 @@ import React from 'react';
 import { mount } from 'enzyme';
 
 import Slider from 'src/components/Slider';
+import KeyCode from 'src/interfaces/KeyCode';
 
 jest.unmock('rc-trigger');
 
 describe('Slider', () => {
+    test('float', () => {
+        const onChange = jest.fn();
+        let onChangeCalledTimes = 0;
+        const wrapper = mount(<Slider min={0} max={100} step={0.1} onChange={onChange} />);
+        const input = wrapper.find('input');
+
+        input.simulate('focus');
+        input.simulate('change', { target: { value: '4.11111111' } });
+        input.simulate('blur');
+        expect(onChange).toHaveBeenCalledTimes(++onChangeCalledTimes);
+        expect(onChange).toHaveBeenCalledWith(4.1);
+    });
     test('marks', () => {
         const onChange = jest.fn();
+        let onChangeCalledTimes = 0;
         const wrapper = mount(
             <Slider
                 min={10}
@@ -62,6 +76,7 @@ describe('Slider', () => {
             target: slider.getDOMNode()
         });
         slider.simulate('mouseup');
+        expect(onChange).toHaveBeenCalledTimes(++onChangeCalledTimes);
         expect(onChange).toHaveBeenLastCalledWith(24);
         slider.simulate('mousedown', {
             type: 'mousedown',
@@ -72,6 +87,7 @@ describe('Slider', () => {
             target: slider.getDOMNode()
         });
         slider.simulate('mouseup');
+        expect(onChange).toHaveBeenCalledTimes(++onChangeCalledTimes);
         expect(onChange).toHaveBeenLastCalledWith(1000);
         slider.simulate('mousedown', {
             type: 'mousedown',
@@ -82,6 +98,7 @@ describe('Slider', () => {
             target: slider.getDOMNode()
         });
         slider.simulate('mouseup');
+        expect(onChange).toHaveBeenCalledTimes(++onChangeCalledTimes);
         expect(onChange).toHaveBeenLastCalledWith(100);
         slider.simulate('mousedown', {
             type: 'mousedown',
@@ -93,7 +110,7 @@ describe('Slider', () => {
         });
         slider.simulate('mouseup');
         expect(onChange).toHaveBeenLastCalledWith(24);
-        expect(onChange).toHaveBeenCalledTimes(4);
+        expect(onChange).toHaveBeenCalledTimes(++onChangeCalledTimes);
 
         wrapper.setProps({
             value: 10
@@ -108,10 +125,36 @@ describe('Slider', () => {
         });
         expect(sliderHandler.instance().style.left).toBe('100%');
 
+        const input = wrapper.find('input');
+
+        expect(input.length).toBe(1);
+        input.simulate('change', { target: { value: '123' } });
+        expect(onChange).toHaveBeenCalledTimes(onChangeCalledTimes);
+        input.simulate('keydown', { keyCode: KeyCode['ENTER'] });
+        expect(onChange).toHaveBeenCalledTimes(++onChangeCalledTimes);
+        expect(onChange).toHaveBeenLastCalledWith(120);
+
+        input.simulate('change', { target: { value: '1001' } });
+        expect(onChange).toHaveBeenCalledTimes(onChangeCalledTimes);
+        input.simulate('keydown', { keyCode: KeyCode['ENTER'] });
+        expect(onChange).toHaveBeenCalledTimes(++onChangeCalledTimes);
+        expect(onChange).toHaveBeenLastCalledWith(1000);
+
+        input.simulate('change', { target: { value: '1000' } });
+        expect(onChange).toHaveBeenCalledTimes(onChangeCalledTimes);
+        input.simulate('keydown', { keyCode: KeyCode['ENTER'] });
+        expect(onChange).toHaveBeenCalledTimes(++onChangeCalledTimes);
+        expect(onChange).toHaveBeenLastCalledWith(1000);
+
+        input.simulate('change', { target: { value: '123' } });
+        expect(onChange).toHaveBeenCalledTimes(onChangeCalledTimes);
+        input.simulate('keydown', { keyCode: KeyCode['ENTER'] });
+        expect(onChange).toHaveBeenCalledTimes(++onChangeCalledTimes);
+        expect(onChange).toHaveBeenLastCalledWith(120);
+
         wrapper.setProps({
             marks: {}
         });
-
         slider.simulate('mousedown', {
             type: 'mousedown',
             pageX: 60,
@@ -122,6 +165,18 @@ describe('Slider', () => {
         });
         slider.simulate('mouseup');
         expect(onChange).toHaveBeenLastCalledWith((1000 - 10) / 5 + 10);
-        expect(onChange).toHaveBeenCalledTimes(5);
+        expect(onChange).toHaveBeenCalledTimes(++onChangeCalledTimes);
+
+        input.simulate('change', { target: { value: '1001' } });
+        expect(onChange).toHaveBeenCalledTimes(onChangeCalledTimes);
+        input.simulate('keydown', { keyCode: KeyCode['ENTER'] });
+        expect(onChange).toHaveBeenCalledTimes(++onChangeCalledTimes);
+        expect(onChange).toHaveBeenLastCalledWith(1000);
+
+        input.simulate('change', { target: { value: '123' } });
+        expect(onChange).toHaveBeenCalledTimes(onChangeCalledTimes);
+        input.simulate('keydown', { keyCode: KeyCode['ENTER'] });
+        expect(onChange).toHaveBeenCalledTimes(++onChangeCalledTimes);
+        expect(onChange).toHaveBeenLastCalledWith(123);
     });
 });

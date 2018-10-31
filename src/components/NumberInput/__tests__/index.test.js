@@ -1,6 +1,5 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { renderToJson } from 'enzyme-to-json';
 
 import NumberInput from 'src/components/NumberInput';
 import KeyCode from 'src/interfaces/KeyCode';
@@ -11,6 +10,7 @@ describe('NumberInput', () => {
         const onNumberChange = jest.fn();
         const onFocus = jest.fn();
         const onBlur = jest.fn();
+        const onEnter = jest.fn();
 
         let onNumberChangeCallTimes = 0;
 
@@ -21,6 +21,7 @@ describe('NumberInput', () => {
                 onNumberChange={onNumberChange}
                 onFocus={onFocus}
                 onBlur={onBlur}
+                onEnter={onEnter}
             />
         );
 
@@ -48,9 +49,11 @@ describe('NumberInput', () => {
 
         const input = wrapper.find('input');
         input.simulate('focus');
-        input.simulate('change', 'aaa');
+        input.simulate('change', { target: { value: 'aaa' } });
+        expect(onChange).toHaveBeenLastCalledWith('aaa');
         input.simulate('blur');
-
+        expect(onChange).toHaveBeenLastCalledWith(0);
+        expect(onChange).toHaveBeenCalledTimes(4);
         expect(onFocus).toHaveBeenCalledTimes(1);
         expect(onBlur).toHaveBeenCalledTimes(1);
         expect(onNumberChange).toHaveBeenCalledTimes(++onNumberChangeCallTimes);
@@ -86,6 +89,21 @@ describe('NumberInput', () => {
         expect(onNumberChange).toHaveBeenCalledTimes(++onNumberChangeCallTimes);
         expect(onNumberChange).toHaveBeenLastCalledWith(0);
 
+        input.simulate('change', { target: { value: 'aaa' } });
+        expect(onChange).toHaveBeenLastCalledWith('aaa');
         input.simulate('blur');
+        expect(onNumberChange).toHaveBeenCalledTimes(++onNumberChangeCallTimes);
+        expect(onNumberChange).toHaveBeenLastCalledWith(0);
+
+        input.simulate('focus');
+        input.simulate('change', { target: { value: 'aaa' } });
+        expect(onChange).toHaveBeenLastCalledWith('aaa');
+        input.simulate('keydown', { keyCode: KeyCode['ENTER'] });
+        input.simulate('keyup', { keyCode: KeyCode['ENTER'] });
+        expect(onNumberChange).toHaveBeenCalledTimes(++onNumberChangeCallTimes);
+        expect(onNumberChange).toHaveBeenLastCalledWith(0);
+        input.simulate('blur');
+
+        expect(onEnter).toHaveBeenCalledTimes(2);
     });
 });
