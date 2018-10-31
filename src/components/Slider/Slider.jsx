@@ -99,28 +99,33 @@ class Slider extends Component {
     constructor(props) {
         super(props);
         this.state = {};
-        this.state.cacheMarks = { ...props.marks };
+        this.state.cacheMarks = this.simpleClone(props.marks);
         this.state.marks = this.computeMarks(props.marks);
         this.state.marksForSlider = this.computeMarksForSlider(this.state.marks);
-        this.cache = {
-            valueToSliderValueMap: {},
-            sliderValueToValueMap: {}
-        };
+        this.resetCache();
     }
+    simpleClone = (obj = null) => {
+        return JSON.parse(JSON.stringify(obj));
+    };
     componentWillReceiveProps(nextProps) {
-        if (!_.isEqual(nextProps.marks, this.props.marks)) {
+        if (!(nextProps.marks == this.state.cacheMarks || _.isEqual(nextProps.marks, this.state.cacheMarks))) {
             const marks = this.computeMarks(nextProps.marks);
             this.setState({
-                cacheMarks: { ...nextProps.marks },
+                cacheMarks: this.simpleClone(nextProps.marks),
                 marks,
                 marksForSlider: this.computeMarksForSlider(marks)
             });
-            this.cache = {
-                valueToSliderValueMap: {},
-                sliderValueToValueMap: {}
-            };
+            this.resetCache();
         }
     }
+    resetCache = () => {
+        this.cache = {
+            valueToSliderValueMap: {},
+            sliderValueToValueMap: {},
+            numberInputValueToValueMap: {},
+            valueToValueStepMap: {}
+        };
+    };
     computeMarks = _marks => {
         if (_.isEmpty(_marks)) {
             return null;
@@ -143,6 +148,8 @@ class Slider extends Component {
                 info = {
                     label: info
                 };
+            } else {
+                info = { ...info };
             }
             const range = [];
             if (i === 0) {
@@ -202,8 +209,7 @@ class Slider extends Component {
     };
     onNumberChange = v => {
         const { onChange } = this.props;
-        const value = this.computeValidNumber(v);
-        onChange(value);
+        onChange(v);
     };
     onSliderChange = v => {
         const { onChange } = this.props;
@@ -234,11 +240,11 @@ class Slider extends Component {
                 }
             });
             if (!mark) mark = marks[0];
-            const { ratioBefore, range, ratio } = mark;
+            const { ratioBefore, range, ratio, step } = mark;
             value = this.computeValidNumber((vRatio - ratioBefore) / ratio * (range[1] - range[0]) + range[0], {
                 min: range[0],
                 max: range[1],
-                step: mark.step
+                step: step
             });
         }
         this.cache.sliderValueToValueMap[v] = value;
@@ -269,25 +275,96 @@ class Slider extends Component {
         this.cache.valueToSliderValueMap[v] = value;
         return value;
     };
+    translateNumberInputValueToValue = v => {
+        if (v in this.cache.numberInputValueToValueMap) {
+            return this.cache.numberInputValueToValueMap[v];
+        }
+        const { marks } = this.state;
+        const { min, max, step } = this.props;
+        let value;
+        if (_.isEmpty(marks)) {
+            value = this.computeValidNumber(v, {
+                step,
+                min,
+                max
+            });
+        } else if (v === max) {
+            value = max;
+        } else {
+            let mark = marks[0];
+            for (let i in marks) {
+                i = +i;
+                const _mark = marks[i];
+                const { range } = _mark;
+                if (v >= range[0] && v < range[1]) {
+                    mark = _mark;
+                }
+            }
+            const { range, step } = mark;
+            value = this.computeValidNumber(v, {
+                min: range[0],
+                max: range[1],
+                step: step
+            });
+        }
+        this.cache.numberInputValueToValueMap[v] = value;
+        return value;
+    };
+    getValueStep = v => {
+        if (v in this.cache.valueToValueStepMap) {
+            return this.cache.valueToValueStepMap[v];
+        }
+        const { marks } = this.state;
+        const { step } = this.props;
+        let valueStep = { step };
+        if (!_.isEmpty(marks)) {
+            const l = marks.length;
+            for (let i in marks) {
+                i = +i;
+                const mark = marks[i];
+                const { range, step: markStep } = mark;
+                if (+v === +range[0]) {
+                    valueStep = {
+                        upStep: markStep,
+                        downStep: i > 0 ? marks[i - 1].step : step
+                    };
+                    break;
+                } else if (v > range[0] && v < range[1]) {
+                    valueStep = {
+                        upStep: markStep,
+                        downStep: markStep
+                    };
+                    break;
+                } else if (+v === +range[1]) {
+                    valueStep = {
+                        upStep: i < l - 1 ? marks[i + 1].step : step,
+                        downStep: markStep
+                    };
+                    break;
+                }
+            }
+        }
+        this.cache.valueToValueStepMap[v] = valueStep;
+        return valueStep;
+    };
     computeValidNumber = (number, options) => {
         let { step, min, max } = options || this.props;
         if (number < min) {
-            number = min;
+            return min;
         }
         if (number > max) {
-            number = max;
+            return max;
         }
         const stepPrecision = getPrecision(step);
-        const numberPrecision = getPrecision(number);
         const maxPrecision = getPrecision(max);
         const minPrecision = getPrecision(min);
-        const precision = Math.max(stepPrecision, numberPrecision, maxPrecision, minPrecision);
+        const precision = Math.max(stepPrecision, maxPrecision, minPrecision);
         number = +(((number - min) / step).toFixed(0) * step + min).toFixed(precision);
         if (number < min) {
-            number = +(number + step).toFixed(precision);
+            return min;
         }
         if (number > max) {
-            number = +(number - step).toFixed(precision);
+            return max;
         }
         return _.isNaN(number) ? 0 : number;
     };
@@ -326,12 +403,13 @@ class Slider extends Component {
             ..._inputProps,
             min,
             max,
-            step,
+            ...this.getValueStep(value),
             value,
             onNumberChange: this.onNumberChange,
             size,
-            computeValidNumber: this.computeValidNumber
+            computeValidNumber: this.translateNumberInputValueToValue
         };
+
         return (
             <SliderWrap style={style} size={size}>
                 <RcSlider
