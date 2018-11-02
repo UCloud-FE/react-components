@@ -66,3 +66,8 @@
     1.  对于完整演示 demo，命名为`组件名.jsx`
     2.  对于单个 props、功能的样式 demo，命名为`组件名-(props名称|功能名称).jsx`，主组件的组件名可不写
 *   demo 中需抛出`Demo`组件，用于文档中展示，import 和 export 等代码写在头尾，主体内容用`// demo start`和`// demo end`包裹
+
+#### 如何发布
+
+*   发布使用`standard-version`，可直接快速执行`npm run publish:version`来快速生成`changelog`，并修改版本号
+*   review `changelog`无误后 `git push --follow-tags` 到 github，等待执行测试编译无问题后，等待`ci`自动发布
