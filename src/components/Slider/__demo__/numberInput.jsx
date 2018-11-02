@@ -17,6 +17,9 @@ class Demo extends React.Component {
                     />
                 </div>
                 <div className="demo-wrap">
+                    <Slider defaultValue={5} numberInput={null} />
+                </div>
+                <div className="demo-wrap">
                     <Slider defaultValue={10} />
                 </div>
             </div>

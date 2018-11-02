@@ -6,8 +6,10 @@ import RcSlider from 'rce-slider';
 import Tooltip from 'components/Tooltip';
 import NumberInput from 'components/NumberInput';
 import uncontrolledDecorator from 'src/decorators/uncontrolled';
+import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
 
 import { prefixCls, SliderWrap } from './style';
+import LOCALE from './locale/zh_CN';
 
 const Handle = RcSlider.Handle;
 
@@ -24,7 +26,6 @@ const handle = props => {
             key={index}
             theme="dark"
             getPopupContainer={triggerNode => triggerNode}
-            forceAlignWhenUpdate
         >
             <Handle value={value} {...restProps} />
         </Tooltip>
@@ -51,6 +52,7 @@ const getPrecision = n => {
 
 const sliderSplit = 300;
 
+@localeConsumerDecorator({ defaultLocale: LOCALE, localeName: 'Slider' })
 @uncontrolledDecorator({})
 class Slider extends Component {
     static propTypes = {
@@ -78,15 +80,24 @@ class Slider extends Component {
         sliderClassName: PropTypes.string,
         /** slider 样式 */
         sliderStyle: PropTypes.object,
-        /** number input 的自定义 props */
+        /** number input 的自定义 props，为null时隐藏 */
         numberInput: PropTypes.object,
+        /** 是否灵敏的触发onChange，为true时当NumberInput中事实输入有效值时会触发onChange */
+        isSensitive: PropTypes.bool,
+        /**
+         * 输入框提示语格式化，传入null隐藏
+         * @param option - 包含当前值、生效值等
+         */
+        numberInputTipFormatter: PropTypes.func,
         /**
          * 提示语格式化，传入null隐藏
          * @param value - 当前值
          */
         tipFormatter: PropTypes.func,
         /** 尺寸 */
-        size: PropTypes.oneOf(Size)
+        size: PropTypes.oneOf(Size),
+        /** @ignore */
+        locale: PropTypes.object
     };
     static defaultProps = {
         onChange: () => {},
@@ -207,14 +218,41 @@ class Slider extends Component {
         });
         return marks;
     };
-    onNumberChange = v => {
-        const { onChange } = this.props;
-        onChange(v);
+    handleChange = v => {
+        const { onChange, value } = this.props;
+        if (v + '' !== value + '') {
+            onChange(v);
+        }
+    };
+    onNumberInputNumberChange = v => {
+        this.handleChange(v);
+    };
+    onNumberInputChange = v => {
+        const { isSensitive } = this.props;
+        if (isSensitive) {
+            const validValue = this.translateNumberInputValueToValue(v);
+            if (validValue + '' === v + '') {
+                this.handleChange(v);
+            }
+        }
+        this.setState({
+            numberInputValue: v
+        });
+    };
+    onNumberInputFocus = () => {
+        this.setState({
+            numberInputValue: this.props.value,
+            isNumberInputFocused: true
+        });
+    };
+    onNumberInputBlur = () => {
+        this.setState({
+            isNumberInputFocused: false
+        });
     };
     onSliderChange = v => {
-        const { onChange } = this.props;
         const value = this.translateSliderValueToValue(v);
-        onChange(value);
+        this.handleChange(value);
     };
     translateSliderValueToValue = v => {
         if (v in this.cache.sliderValueToValueMap) {
@@ -281,6 +319,9 @@ class Slider extends Component {
         }
         const { marks } = this.state;
         const { min, max, step } = this.props;
+        if (isNaN(v) || v + '' !== +v + '') {
+            return min;
+        }
         let value;
         if (_.isEmpty(marks)) {
             value = this.computeValidNumber(v, {
@@ -383,13 +424,16 @@ class Slider extends Component {
             sliderClassName,
             sliderStyle,
             numberInput: _inputProps,
+            numberInputTipFormatter,
             tipFormatter,
             size,
             marks: _marks,
+            isSensitive,
+            locale,
             ...rest
         } = this.props;
         /* eslint-enable no-unused-vars */
-        const { marksForSlider } = this.state;
+        const { marksForSlider, isNumberInputFocused, numberInputValue } = this.state;
         const sharingProps = {
             disabled
         };
@@ -403,13 +447,16 @@ class Slider extends Component {
             ..._inputProps,
             min,
             max,
-            ...this.getValueStep(value),
-            value,
-            onNumberChange: this.onNumberChange,
             size,
+            value: isNumberInputFocused ? numberInputValue : value,
+            ...this.getValueStep(value),
+            onChange: this.onNumberInputChange,
+            ...(isSensitive ? {} : { onNumberChange: this.onNumberInputNumberChange }),
+            onFocus: this.onNumberInputFocus,
+            onBlur: this.onNumberInputBlur,
             computeValidNumber: this.translateNumberInputValueToValue
         };
-
+        const isNumberInputValid = numberInputValue + '' === value + '';
         return (
             <SliderWrap style={style} size={size}>
                 <RcSlider
@@ -444,7 +491,34 @@ class Slider extends Component {
                     {...sliderProps}
                     {...sharingProps}
                 />
-                <NumberInput {...inputProps} {...sharingProps} />
+                {_inputProps === null ? null : (
+                    <Tooltip
+                        popupClassName={`${prefixCls}-tooltip`}
+                        popup={
+                            _.isFunction(numberInputTipFormatter)
+                                ? numberInputTipFormatter({
+                                      currentValue: value,
+                                      inputValue: numberInputValue,
+                                      isSensitive,
+                                      locale
+                                  })
+                                : `${locale.currentValueIs}${value}${locale.comma}${
+                                      locale.inputValueIs
+                                  }${numberInputValue}` +
+                                  (isSensitive
+                                      ? `${locale.comma}${locale.input}${
+                                            isNumberInputValid ? locale.isValid : locale.isUnvalid
+                                        }${isNumberInputValid ? '' : `${locale.comma}${locale.tip}`}`
+                                      : '')
+                        }
+                        visible={isNumberInputFocused && numberInputTipFormatter !== null}
+                        placement="top"
+                        theme="dark"
+                        getPopupContainer={triggerNode => triggerNode.parentNode}
+                    >
+                        <NumberInput {...inputProps} {...sharingProps} />
+                    </Tooltip>
+                )}
             </SliderWrap>
         );
     }
