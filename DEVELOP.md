@@ -70,5 +70,4 @@
 #### 如何发布
 
 *   发布使用`standard-version`，可直接快速执行`npm run publish:version`来快速生成`changelog`，并修改版本号
-*   review `changelog`无误后 `git push` 到 github，等待执行测试编译无问题
-*   执行`git push --follow-tags`，等待`ci`自动发布
+*   review `changelog`无误后 `git push --follow-tags` 到 github，等待执行测试编译无问题，，等待`ci`自动发布
