@@ -1,0 +1,25 @@
+version: 2
+
+references:
+  container_config: &container_config
+    docker:
+      - image: circleci/node:8
+    working_directory: ~/react-components
+  attach_workspace: &attach_workspace
+    attach_workspace:
+      at: ~/react-components
+
+jobs:
+  setup:
+    <<: *container_config
+    steps:
+      - checkout
+
+workflows:
+  version: 2
+  test-and-build:
+    jobs:
+      - setup:
+          filters:
+            branches:
+              ignore: gh-pages
