@@ -70,4 +70,23 @@ describe('LocaleProvider', () => {
         document.querySelector('.uc-fe-modal-close').click();
         await sleep(500);
     });
+    test('Slider', () => {
+        const wrapper = mount(<Demo />);
+        const slider1 = wrapper.find('div.test-slider');
+        const slider2 = wrapper.find('div.test-slider-sensitive');
+        const input1 = slider1.find('input');
+        const input2 = slider2.find('input');
+
+        input1.simulate('focus');
+        expect(renderToJson(slider1.render())).toMatchSnapshot();
+        input2.simulate('focus');
+        expect(renderToJson(slider2.render())).toMatchSnapshot();
+
+        wrapper.instance().setLocale('en_US');
+
+        input1.simulate('focus');
+        expect(renderToJson(slider1.render())).toMatchSnapshot();
+        input2.simulate('focus');
+        expect(renderToJson(slider2.render())).toMatchSnapshot();
+    });
 });

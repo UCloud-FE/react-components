@@ -28,7 +28,7 @@ class Demo extends React.Component {
         };
     }
     render() {
-        const { disabled, size, min, max, step } = this.state;
+        const { disabled, size, min, max, step, isSensitive, hideNumberInput } = this.state;
         return (
             <div>
                 <Form className="demo-form">
@@ -44,6 +44,19 @@ class Demo extends React.Component {
                             disabled
                         </Switch>
                     </Form.Item>
+                    <Form.Item label="isSensitive" {...itemLayout}>
+                        <Switch checked={isSensitive} onChange={isSensitive => this.setState({ isSensitive })}>
+                            isSensitive
+                        </Switch>
+                    </Form.Item>
+                    <Form.Item label="hideNumberInput" {...itemLayout}>
+                        <Switch
+                            checked={hideNumberInput}
+                            onChange={hideNumberInput => this.setState({ hideNumberInput })}
+                        >
+                            hideNumberInput
+                        </Switch>
+                    </Form.Item>
                     <Form.Item label="min" {...itemLayout}>
                         <NumberInput value={min} onChange={v => this.setState({ min: v })} />
                     </Form.Item>
@@ -51,11 +64,16 @@ class Demo extends React.Component {
                         <NumberInput value={max} onChange={v => this.setState({ max: v })} />
                     </Form.Item>
                     <Form.Item label="step" {...itemLayout}>
-                        <NumberInput value={step} onChange={v => this.setState({ step: v })} />
+                        <NumberInput min={0.0001} value={step} onNumberChange={v => this.setState({ step: v })} />
                     </Form.Item>
                 </Form>
                 <div className="demo-wrap">
-                    <Slider defaultValue={10} {...this.state} />
+                    <Slider
+                        defaultValue={10}
+                        {...this.state}
+                        numberInput={hideNumberInput ? null : {}}
+                        onChange={console.log}
+                    />
                 </div>
             </div>
         );

@@ -6,7 +6,7 @@
 
 *   普通使用
 
-```js {"codepath": "base.jsx"}
+```js {"codepath": "slider.jsx"}
 ```
 
 *   value / defaultValue - 受控 / 非受控
@@ -29,6 +29,11 @@
 ```js {"codepath": "disabled.jsx"}
 ```
 
+*   isSensitive - 实时反馈
+
+```js {"codepath": "isSensitive.jsx"}
+```
+
 *   step - 步长
 
 ```js {"codepath": "step.jsx"}
@@ -42,4 +47,9 @@
 *   numberInput - 自定义 NumberInput
 
 ```js {"codepath": "numberInput.jsx"}
+```
+
+*   numberInputTipFormatter - 提示语格式化
+
+```js {"codepath": "numberInputTipFormatter.jsx"}
 ```

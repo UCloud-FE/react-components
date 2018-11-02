@@ -10,6 +10,7 @@ import DatePicker from 'src/components/DatePicker';
 import Calendar from 'src/components/Calendar';
 import Select from 'src/components/Select';
 import Upload from 'src/components/Upload';
+import Slider from 'src/components/Slider';
 import Modal from 'src/components/Modal';
 import Table from 'src/components/Table';
 import Menu from 'src/components/Menu';
@@ -139,6 +140,14 @@ class Demo extends Component {
                             </div>
                         )}
                     />
+                </div>
+                <div className="demo-wrap">
+                    <div style={{ marginBottom: 10 }}>
+                        <Slider className="test-slider" />
+                    </div>
+                    <div>
+                        <Slider className="test-slider-sensitive" isSensitive />
+                    </div>
                 </div>
             </div>
         );
