@@ -8,6 +8,7 @@ cache:
 branches:
   only:
     - master
+    - /^v\d+\.\d+\.\d+$/
 stages:
   - lint&test
   - build&deploy
