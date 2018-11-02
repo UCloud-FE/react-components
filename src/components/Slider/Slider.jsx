@@ -458,7 +458,7 @@ class Slider extends Component {
         };
         const isNumberInputValid = numberInputValue + '' === value + '';
         return (
-            <SliderWrap style={style} size={size}>
+            <SliderWrap style={style} className={className} size={size}>
                 <RcSlider
                     min={0}
                     max={sliderSplit}

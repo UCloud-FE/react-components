@@ -143,10 +143,10 @@ class Demo extends Component {
                 </div>
                 <div className="demo-wrap">
                     <div style={{ marginBottom: 10 }}>
-                        <Slider />
+                        <Slider className="test-slider" />
                     </div>
                     <div>
-                        <Slider isSensitive />
+                        <Slider className="test-slider-sensitive" isSensitive />
                     </div>
                 </div>
             </div>

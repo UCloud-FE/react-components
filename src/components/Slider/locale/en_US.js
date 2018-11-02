@@ -6,7 +6,7 @@ export default {
     colon: ':',
     comma: ', ',
     input: 'input',
-    isValid: 'is valid',
-    isUnvalid: 'is unvalid',
+    isValid: ' is valid',
+    isUnvalid: ' is unvalid',
     tip: 'please press enter or click other place to accept valid value'
 };
