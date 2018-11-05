@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.3"></a>
+
+## [0.3.3](https://github.com/UCloud-FE/react-components/compare/v0.3.2-deploy...v0.3.3) (2018-11-05)
+
+### Features
+
+*   **Slider:** add onLastChange ([4278aca](https://github.com/UCloud-FE/react-components/commit/4278aca)), closes [#63](https://github.com/UCloud-FE/react-components/issues/63)
+
 <a name="0.3.2"></a>
 
 ## [0.3.2](https://github.com/UCloud-FE/react-components/compare/v0.3.1...v0.3.2) (2018-11-02)
