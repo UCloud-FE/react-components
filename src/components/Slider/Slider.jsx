@@ -62,6 +62,8 @@ class Slider extends Component {
         defaultValue: PropTypes.number,
         /** 修改回调 */
         onChange: PropTypes.func,
+        /** 拖拽结束、输入回车、输入失焦、数字输入框上下按钮等时触发 */
+        onLastChange: PropTypes.func,
         /** 是否禁用 */
         disabled: PropTypes.bool,
         /** 最小值 */
@@ -101,6 +103,7 @@ class Slider extends Component {
     };
     static defaultProps = {
         onChange: () => {},
+        onLastChange: () => {},
         defaultValue: 0,
         step: 1,
         size: 'md',
@@ -218,14 +221,17 @@ class Slider extends Component {
         });
         return marks;
     };
-    handleChange = v => {
-        const { onChange, value } = this.props;
+    handleChange = (v, lastest) => {
+        const { onChange, onLastChange, value } = this.props;
         if (v + '' !== value + '') {
             onChange(v);
         }
+        if (lastest) {
+            onLastChange(v);
+        }
     };
     onNumberInputNumberChange = v => {
-        this.handleChange(v);
+        this.handleChange(v, true);
     };
     onNumberInputChange = v => {
         const { isSensitive } = this.props;
@@ -250,9 +256,9 @@ class Slider extends Component {
             isNumberInputFocused: false
         });
     };
-    onSliderChange = v => {
+    onSliderChange = (v, lastest) => {
         const value = this.translateSliderValueToValue(v);
-        this.handleChange(value);
+        this.handleChange(value, lastest);
     };
     translateSliderValueToValue = v => {
         if (v in this.cache.sliderValueToValueMap) {
@@ -430,6 +436,7 @@ class Slider extends Component {
             marks: _marks,
             isSensitive,
             locale,
+            onLastChange,
             ...rest
         } = this.props;
         /* eslint-enable no-unused-vars */
@@ -441,7 +448,8 @@ class Slider extends Component {
             ...rest,
             className: sliderClassName,
             style: sliderStyle,
-            onChange: this.onSliderChange
+            onChange: this.onSliderChange,
+            onAfterChange: (...args) => this.onSliderChange(...args, true)
         };
         const inputProps = {
             ..._inputProps,
@@ -451,7 +459,7 @@ class Slider extends Component {
             value: isNumberInputFocused ? numberInputValue : value,
             ...this.getValueStep(value),
             onChange: this.onNumberInputChange,
-            ...(isSensitive ? {} : { onNumberChange: this.onNumberInputNumberChange }),
+            onNumberChange: this.onNumberInputNumberChange,
             onFocus: this.onNumberInputFocus,
             onBlur: this.onNumberInputBlur,
             computeValidNumber: this.translateNumberInputValueToValue

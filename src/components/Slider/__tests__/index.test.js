@@ -21,6 +21,65 @@ describe('Slider', () => {
         expect(onChange).toHaveBeenCalledTimes(++onChangeCalledTimes);
         expect(onChange).toHaveBeenCalledWith(4.1);
     });
+    test('onLastChange', () => {
+        const onChange = jest.fn(v => (currentValue = v));
+        const onLastChange = jest.fn();
+        let onChangeCalledTimes = 0;
+        let onLastChangeCalledTimes = 0;
+        let currentValue = 12;
+        const wrapper = mount(
+            <Slider
+                min={10}
+                max={1000}
+                onChange={onChange}
+                onLastChange={onLastChange}
+                isSensitive
+                defaultValue={currentValue}
+            />
+        );
+
+        const input = wrapper.find('input');
+
+        expect(input.length).toBe(1);
+        input.simulate('focus');
+
+        const testChange = shouldTriggerChange => {
+            expect(onChange).toHaveBeenCalledTimes(shouldTriggerChange ? ++onChangeCalledTimes : onChangeCalledTimes);
+        };
+        const changeAndEnter = (v, matchRule, shouldTriggerChange = true) => {
+            input.simulate('change', { target: { value: v } });
+            testChange(matchRule && shouldTriggerChange);
+            input.simulate('keydown', { keyCode: KeyCode['ENTER'] });
+            testChange(!matchRule && shouldTriggerChange);
+            expect(onLastChange).toHaveBeenCalledTimes(++onLastChangeCalledTimes);
+            expect(`input: ${v}, after press enter, value is: ${currentValue}`).toMatchSnapshot();
+        };
+
+        changeAndEnter('13.12312312312');
+        changeAndEnter('3.12312312312');
+        changeAndEnter('sdasdsa1231(*)@!', false, false);
+        changeAndEnter('101001010');
+        changeAndEnter('999', true);
+        changeAndEnter('950', true);
+        changeAndEnter('');
+        changeAndEnter(' dsadas --', false, false);
+
+        input.simulate('change', { target: { value: '123' } });
+        expect(onChange).toHaveBeenCalledTimes(++onChangeCalledTimes);
+        expect(onLastChange).toHaveBeenCalledTimes(onLastChangeCalledTimes);
+        input.simulate('change', { target: { value: '111' } });
+        expect(onChange).toHaveBeenCalledTimes(++onChangeCalledTimes);
+        expect(onLastChange).toHaveBeenCalledTimes(onLastChangeCalledTimes);
+        input.simulate('change', { target: { value: '213' } });
+        expect(onChange).toHaveBeenCalledTimes(++onChangeCalledTimes);
+        expect(onLastChange).toHaveBeenCalledTimes(onLastChangeCalledTimes);
+        input.simulate('keydown', { keyCode: KeyCode['ENTER'] });
+        expect(onChange).toHaveBeenCalledTimes(onChangeCalledTimes);
+        expect(onLastChange).toHaveBeenCalledTimes(++onLastChangeCalledTimes);
+        input.simulate('keydown', { keyCode: KeyCode['ENTER'] });
+        expect(onChange).toHaveBeenCalledTimes(onChangeCalledTimes);
+        expect(onLastChange).toHaveBeenCalledTimes(++onLastChangeCalledTimes);
+    });
     test('controlled', () => {
         const onChange = jest.fn();
         const wrapper = mount(
