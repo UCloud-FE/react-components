@@ -103,6 +103,29 @@ class Table extends Component {
         expandedRowRender: PropTypes.func,
         /** 额外表展开按钮是否独立占据一格，data有children时有效 */
         expandIconAsCell: PropTypes.bool,
+        /** 隐藏扩展列按钮 */
+        hideExpandIcon: PropTypes.bool,
+        /** 默认展开项，非受控 */
+        defaultExpandedRowKeys: PropTypes.array,
+        /** 展开项，受控 */
+        expandedRowKeys: PropTypes.array,
+        /** 是否默认展开所有列 */
+        defaultExpandAllRows: PropTypes.bool,
+        /** 展开事件 */
+        onExpandedRowsChange: PropTypes.func,
+        /** 展开按钮点击事件 */
+        onExpand: PropTypes.func,
+        /**
+         * 设置行props
+         * @argument record - 行数据
+         * @argument key - 行key
+         */
+        onRow: PropTypes.func,
+        /** 设置表头props
+         * @argument record - 行数据
+         * @argument key - 行key
+         */
+        onHeaderRow: PropTypes.func,
         /** 列表可选选项配置 */
         rowSelection: PropTypes.oneOfType([
             PropTypes.shape({
@@ -617,6 +640,7 @@ class Table extends Component {
             title = () => {},
             footer = () => {},
             locale,
+            hideExpandIcon,
             ...rest
         } = this.props;
         if (emptyContent === undefined) {
@@ -637,7 +661,7 @@ class Table extends Component {
                     locale
                 }}
             >
-                <TableWrap className={className} style={style}>
+                <TableWrap className={className} style={style} hideExpandIcon={hideExpandIcon}>
                     <PopupContainer innerRef={_ref => (this.popupContainer = _ref)} />
                     <RcTable
                         prefixCls={prefixCls}

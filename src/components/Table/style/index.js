@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { clearFixMixin, Color, FontSize, inlineBlockWithVerticalMixin } from 'style';
 
 import Button from 'components/Button';
@@ -104,6 +104,16 @@ export const TableWrap = styled.div`
         &-row-expand-icon-cell .${prefixCls}-row-expand-icon {
             margin: 0;
         }
+        
+        ${({ hideExpandIcon }) =>
+            hideExpandIcon &&
+            css`
+                &-row-expand-icon-cell,
+                &-expand-icon-th,
+                &-expanded-row > td:first-child {
+                    display: none;
+                }
+            `}
 
         &-fixed-header .${prefixCls}-header {
             min-width: 100%;
