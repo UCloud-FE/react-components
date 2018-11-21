@@ -79,6 +79,31 @@
 ```js {"codepath": "expandedRowRender.jsx"}
 ```
 
+*   hideExpandIcon - 隐藏扩展列展开按钮
+
+```js {"codepath": "hideExpandIcon.jsx"}
+```
+
+*   expandedRowKeys - 展开列
+
+```js {"codepath": "expandedRowKeys.jsx"}
+```
+
+*   defaultExpandAllRows - 默认展开扩展列
+
+```js {"codepath": "defaultExpandAllRows.jsx"}
+```
+
+*   onRow - 设置行 props
+
+```js {"codepath": "onRow.jsx"}
+```
+
+*   onHeaderRow - 设置表头 props
+
+```js {"codepath": "onHeaderRow.jsx"}
+```
+
 *   rowSelection
 
 ```js {"codepath": "rowSelection.jsx"}
