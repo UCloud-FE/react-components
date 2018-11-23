@@ -425,10 +425,14 @@ class Table extends Component {
             total
         };
     };
-    handleToggleCurrentPage = (enableDataSourceOfCurrentPage, checked) => {
+    handleToggleCurrentPage = (dataSourceOfCurrentPage, checked) => {
         const { selectedRowKeyMap } = this.state;
+        const { rowSelection = {} } = this.props;
         const extendSelectedRowKeyMap = {};
-        _.each(enableDataSourceOfCurrentPage, (record, index) => {
+        _.each(dataSourceOfCurrentPage, (record, index) => {
+            if (rowSelection.getDisabledOfRow && rowSelection.getDisabledOfRow(record)) {
+                return;
+            }
             const key = this.getRowKey(record, index);
             extendSelectedRowKeyMap[key] = checked;
         });
@@ -485,22 +489,31 @@ class Table extends Component {
 
         if (rowSelection) {
             let enableDataSourceOfCurrentPage = dataSourceOfCurrentPage;
+            let selectedEnableDataSourceOfCurrentPage;
             if (rowSelection.getDisabledOfRow) {
                 enableDataSourceOfCurrentPage = _.filter(
                     dataSourceOfCurrentPage,
                     record => !rowSelection.getDisabledOfRow(record)
                 );
+                selectedEnableDataSourceOfCurrentPage = _.filter(
+                    dataSourceOfCurrentPage,
+                    (record, index) =>
+                        !rowSelection.getDisabledOfRow(record) && selectedRowKeyMap[this.getRowKey(record, index)]
+                );
+            } else {
+                selectedEnableDataSourceOfCurrentPage = _.filter(
+                    dataSourceOfCurrentPage,
+                    (record, index) => selectedRowKeyMap[this.getRowKey(record, index)]
+                );
             }
-            const selectedCountOfCurrentPage = _.filter(
-                enableDataSourceOfCurrentPage,
-                (record, index) => selectedRowKeyMap[this.getRowKey(record, index)]
-            ).length;
+            const selectedEnableDataSourceOfCurrentPageCount = selectedEnableDataSourceOfCurrentPage.length;
             const isAllSelected =
-                selectedCountOfCurrentPage === enableDataSourceOfCurrentPage.length && selectedCountOfCurrentPage > 0;
+                selectedEnableDataSourceOfCurrentPageCount === enableDataSourceOfCurrentPage.length &&
+                selectedEnableDataSourceOfCurrentPageCount > 0;
             newColumns.unshift({
                 title: (
                     <Checkbox
-                        onChange={() => this.handleToggleCurrentPage(enableDataSourceOfCurrentPage, !isAllSelected)}
+                        onChange={() => this.handleToggleCurrentPage(dataSourceOfCurrentPage, !isAllSelected)}
                         checked={isAllSelected}
                     />
                 ),
