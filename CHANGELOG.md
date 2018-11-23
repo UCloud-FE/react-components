@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.4"></a>
+
+## [0.3.4](https://github.com/UCloud-FE/react-components/compare/v0.3.3...v0.3.4) (2018-11-23)
+
+### Bug Fixes
+
+*   **Table:** fix record key when there is no key to use ([3d795f9](https://github.com/UCloud-FE/react-components/commit/3d795f9)), closes [#67](https://github.com/UCloud-FE/react-components/issues/67)
+
+### Features
+
+*   **Table:** add hideExpandIcon ([b2ccb7c](https://github.com/UCloud-FE/react-components/commit/b2ccb7c)), closes [#66](https://github.com/UCloud-FE/react-components/issues/66)
+
 <a name="0.3.3"></a>
 
 ## [0.3.3](https://github.com/UCloud-FE/react-components/compare/v0.3.2-deploy...v0.3.3) (2018-11-05)
