@@ -682,12 +682,13 @@ class Table extends Component {
                         columns={columns}
                         onRow={record => {
                             return {
-                                record
+                                record,
+                                contextMenu
                             };
                         }}
                         components={{
                             body: {
-                                row: props => <TableRow contextMenu={contextMenu} {...props} />
+                                row: TableRow
                             }
                         }}
                         emptyText={null}
