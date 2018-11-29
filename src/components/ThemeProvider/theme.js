@@ -14,7 +14,7 @@ const colors = {
     blueGray2: '#93a2c4',
     blueGray3: '#abb4c3',
     blueGray4: '#c3cad9',
-    blueGray5: '#e1e6fo',
+    blueGray5: '#e1e6f0',
     red1: '#f44336',
     red2: '#fff0f0',
     red3: '#fed4d4',
@@ -111,7 +111,7 @@ const colorMap = {
     }
 };
 
-const component = {
+const componentTheme = {
     Button: {
         primary: {
             text: semanticColors.white,
@@ -163,10 +163,11 @@ const component = {
 };
 
 export default {
+    ...componentTheme,
     colorMap: colorMap,
-    colorList: colors,
-    component,
+    colorList: semanticColors,
     fontSize: '12px',
+    titleFontSize: '14px',
     Height: {
         sm: '22px',
         md: '28px',
