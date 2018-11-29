@@ -1,18 +1,12 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Icon from 'components/Icon';
 
-import { Color } from 'style';
-
-const NoticeColor = {
-    border: { default: 'default', warning: 'yellow', error: 'red', info: 'blueBright' },
-    bg: { default: 'default', warning: 'yellow', error: 'red', info: 'blueLight' }
-};
-const IconColor = {
-    font: { default: 'default', warning: 'yellow', error: 'red', info: 'blue' }
-};
-
-const getColor = (map, styleName, type) => {
-    return Color[styleName][map[styleName][type]] || '';
+const map = {
+    default: 'info',
+    success: 'success',
+    warning: 'warning',
+    error: 'error',
+    info: 'success'
 };
 
 export const NoticeWrap = styled.div`
@@ -26,9 +20,13 @@ export const NoticeWrap = styled.div`
     line-height: 18px;
     overflow: hidden;
 
-    color: ${Color.font.default};
-    background-color: ${({ styleType }) => getColor(NoticeColor, 'bg', styleType)};
-    border: 1px solid ${({ styleType }) => getColor(NoticeColor, 'border', styleType)};
+    ${({ styleType, theme: { colorMap } }) => {
+        const color = colorMap[map[styleType]];
+        return css`
+            background-color: ${color.background};
+            border: 1px solid ${color.border};
+        `;
+    }};
 `;
 
 export const NoticeIconWrap = styled.span`
@@ -41,7 +39,7 @@ export const NoticeIconWrap = styled.span`
 `;
 
 export const NoticeIcon = styled(Icon)`
-    color: ${({ styleType }) => getColor(IconColor, 'font', styleType)};
+    color: ${({ styleType, theme: { colorMap } }) => colorMap[map[styleType]].icon};
 `;
 
 export const ContentWrap = styled.div`

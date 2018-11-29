@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
 import _ from 'lodash';
 
-const StyleType = ['default', 'info', 'warning', 'error'];
+import withTheme from 'src/components/ThemeProvider/withTheme';
+import deprecatedLog from 'src/utils/deprecatedLog';
 
 import { NoticeWrap, NoticeIconWrap, ContentWrap, ActionWrap, CloseWrap, CloseIcon, NoticeIcon } from './style';
 
+const StyleType = ['default', 'success', 'warning', 'error'];
+
+@withTheme
 class Notice extends Component {
     state = {
         closed: false
@@ -39,6 +42,12 @@ class Notice extends Component {
         });
         onClose(e);
     };
+    componentWillMount() {
+        const { styleType } = this.props;
+        if (styleType === 'info') {
+            deprecatedLog('styleType "info"', '"success"');
+        }
+    }
     render() {
         // eslint-disable-next-line no-unused-vars
         const { closable, icon: _icon, children, onClose, styleType, action, ...rest } = this.props;
