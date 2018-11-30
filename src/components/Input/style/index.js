@@ -28,7 +28,7 @@ const themeMixin = ({ theme: { colorMap, colorList, Height }, disabled, size, wi
         ${withIcon && `padding-right: ${Height[size]}`};
 
         &::placeholder {
-            color: ${colorList.secondary3};
+            color: ${colorList.placeholder};
         }
         &:hover {
             border-color: ${colorMap.active.border};

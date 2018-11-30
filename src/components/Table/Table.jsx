@@ -562,7 +562,7 @@ class Table extends Component {
         };
         return !_.isEmpty(filters) || searchValue ? (
             <div key="search-info" className={`${prefixCls}-tip-wrap`}>
-                <Notice icon={null} closable={false} className={`${prefixCls}-filter-notice`} styleType="info">
+                <Notice icon={null} closable={false} className={`${prefixCls}-filter-notice`} styleType="success">
                     {searchValue && (
                         <span>
                             {locale.search}

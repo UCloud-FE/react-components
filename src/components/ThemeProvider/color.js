@@ -58,6 +58,7 @@ export const colorList = {
     white: colors.white,
     title: '#0a1633',
     subtitle: colors.blueGray4,
+    placeholder: colors.blueGray3,
     link: colors.blue
 };
 
@@ -76,7 +77,8 @@ export const colorMap = {
         icon: colorList.disabled1
     },
     active: {
-        border: colorList.primary2
+        border: colorList.primary2,
+        icon: colorList.primary
     },
     info: {
         background: colorList.primary6,

@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 
-import { Color, inlineBlockWithVerticalMixin, Height, calculateSize } from 'src/style';
+import defaultTheme from 'src/components/ThemeProvider/theme';
+import { inlineBlockWithVerticalMixin, calculateSize } from 'src/style';
 
 /* stylelint-disable no-duplicate-selectors, selector-type-no-unknown, no-descending-specificity */
 
@@ -13,20 +14,6 @@ export const Input = styled.input`
     outline: none;
     padding: 0;
     color: inherit;
-
-    line-height: ${({ size }) => calculateSize(Height[size], -2)};
-
-    ${inlineBlockWithVerticalMixin};
-
-    ${({ disabled }) =>
-        disabled &&
-        css`
-            background: ${Color.bg.disabled};
-        `};
-
-    &::placeholder {
-        color: ${Color.font.grayLight};
-    }
 `;
 
 export const InputSuffix = styled.span`
@@ -46,16 +33,7 @@ const handlerMixin = css`
     cursor: pointer;
     background: #fff;
 
-    border-color: ${Color.border.default};
-
     ${inlineBlockWithVerticalMixin};
-
-    ${({ disabled }) =>
-        disabled &&
-        css`
-            cursor: not-allowed;
-            pointer-events: none;
-        `};
 `;
 
 export const HandlerUp = styled.span`
@@ -66,42 +44,59 @@ export const HandlerDown = styled.span`
     ${handlerMixin};
 `;
 
-export const NumberInputWrap = styled.div`
-    position: relative;
-    box-sizing: border-box;
-    border-radius: 2px;
+const propsMixin = ({ theme: { colorList, colorMap, Height }, styleType, focused, size, hideHandler, disabled }) => css`
+    color: ${colorMap.default.text};
+    height: ${Height[size]};
 
-    color: ${Color.font.default};
-    height: ${({ size }) => Height[size]};
-
-    ${inlineBlockWithVerticalMixin};
-
-    ${({ disabled }) =>
-        disabled &&
+    ${disabled &&
         css`
             pointer-events: none;
-            color: ${Color.font.disabled};
+            color: ${colorMap.disabled.text};
         `};
 
-    ${({ styleType, focused, size, hideHandler, disabled }) =>
-        styleType === 'default' &&
-        css`
-            border: 1px solid ${Color.border.default};
+    ${Input} {
+        line-height: ${calculateSize(Height[size], -2)};
 
+        ${inlineBlockWithVerticalMixin};
+
+        ${({ disabled }) =>
+            disabled &&
+            css`
+                background: ${colorMap.disabled.background};
+            `};
+
+        &::placeholder {
+            color: ${colorList.placeholder};
+        }
+    }
+
+    ${HandlerUp}, ${HandlerDown} {
+        border-color: ${colorMap.default.border};
+
+        ${disabled &&
+            css`
+                cursor: not-allowed;
+                pointer-events: none;
+            `};
+    }
+
+    ${styleType === 'default' &&
+        css`
+            border: 1px solid ${colorMap.default.border};
             padding-right: ${calculateSize(Height[size], -6)};
 
             &:hover {
-                border-color: ${Color.border.blue};
+                border-color: ${colorMap.active.border};
             }
 
             ${focused &&
                 css`
-                    border-color: ${Color.border.blue};
+                    border-color: ${colorMap.active.border};
                 `};
 
             ${disabled &&
                 css`
-                    border-color: ${Color.border.disabled};
+                    border-color: ${colorMap.disabled.border};
                 `};
 
             ${Input} {
@@ -119,7 +114,7 @@ export const NumberInputWrap = styled.div`
                 width: ${calculateSize(Height[size], -6)};
 
                 &:hover {
-                    color: ${Color.font.blue};
+                    color: ${colorMap.active.icon};
                 }
             }
 
@@ -138,8 +133,7 @@ export const NumberInputWrap = styled.div`
                 `};
         `};
 
-    ${({ styleType, focused, size, hideHandler, disabled }) =>
-        styleType === 'split' &&
+    ${styleType === 'split' &&
         css`
             padding: 0 ${Height[size]};
             ${Input} {
@@ -150,19 +144,19 @@ export const NumberInputWrap = styled.div`
                 width: ${calculateSize(Height[size], 6)};
             }
             ${InputWrap} {
-                border: 1px solid ${Color.border.default};
+                border: 1px solid ${colorMap.default.border};
                 margin: 0 -1px 0 -1px;
                 &:hover {
-                    border-color: ${Color.border.blue};
+                    border-color: ${colorMap.active.border};
                     z-index: 1;
                 }
                 ${focused &&
                     css`
-                        border-color: ${Color.border.blue};
+                        border-color: ${colorMap.active.border};
                     `};
                 ${disabled &&
                     css`
-                        border-color: ${Color.border.disabled};
+                        border-color: ${colorMap.disabled.border};
                     `};
             }
             ${HandlerUp}, ${HandlerDown} {
@@ -173,8 +167,8 @@ export const NumberInputWrap = styled.div`
                 line-height: ${calculateSize(Height[size], -2)};
 
                 &:hover {
-                    color: ${Color.font.blue};
-                    border-color: ${Color.border.blue};
+                    color: ${colorMap.active.icon};
+                    border-color: ${colorMap.active.border};
                     z-index: 1;
                 }
             }
@@ -192,37 +186,36 @@ export const NumberInputWrap = styled.div`
                 `};
         `};
 
-    ${({ styleType, focused, size, hideHandler, disabled }) =>
-        styleType === 'pagination' &&
+    ${styleType === 'pagination' &&
         css`
             padding: 0 ${Height[size]};
             ${Input} {
                 text-align: center;
-                border: 1px solid ${Color.border.default};
+                border: 1px solid ${colorMap.default.border};
                 margin: 0 4px;
 
                 height: ${calculateSize(Height[size], -2)};
                 width: ${calculateSize(Height[size], -2)};
 
                 &:hover {
-                    border-color: ${Color.border.blue};
+                    border-color: ${colorMap.active.border};
                     z-index: 1;
                 }
                 ${focused &&
                     css`
-                        border-color: ${Color.border.blue};
+                        border-color: ${colorMap.active.border};
                     `};
                 ${disabled &&
                     css`
-                        border-color: ${Color.border.disabled};
+                        border-color: ${colorMap.disabled.border};
                     `};
             }
             ${HandlerUp}, ${HandlerDown} {
                 text-align: center;
                 top: 0;
                 &:hover {
-                    color: ${Color.font.blue};
-                    border-color: ${Color.border.blue};
+                    color: ${colorMap.active.icon};
+                    border-color: ${colorMap.active.border};
                     z-index: 1;
                 }
                 height: ${Height[size]};
@@ -255,3 +248,14 @@ export const NumberInputWrap = styled.div`
                 `};
         `};
 `;
+
+export const NumberInputWrap = styled.div`
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 2px;
+    ${inlineBlockWithVerticalMixin};
+    ${propsMixin};
+`;
+NumberInputWrap.defaultProps = {
+    theme: defaultTheme
+};
