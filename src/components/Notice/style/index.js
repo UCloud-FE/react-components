@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
-import Icon from 'components/Icon';
+
+import Icon from 'src/components/Icon';
+import defaultTheme from 'src/components/ThemeProvider/theme';
 
 const map = {
     default: 'info',
@@ -8,26 +10,6 @@ const map = {
     error: 'error',
     info: 'success'
 };
-
-export const NoticeWrap = styled.div`
-    display: table;
-    position: relative;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 10px 16px;
-    margin: 0;
-    border-radius: 1px;
-    line-height: 18px;
-    overflow: hidden;
-
-    ${({ styleType, theme: { colorMap } }) => {
-        const color = colorMap[map[styleType]];
-        return css`
-            background-color: ${color.background};
-            border: 1px solid ${color.border};
-        `;
-    }};
-`;
 
 export const NoticeIconWrap = styled.span`
     display: table-cell;
@@ -39,7 +21,7 @@ export const NoticeIconWrap = styled.span`
 `;
 
 export const NoticeIcon = styled(Icon)`
-    color: ${({ styleType, theme: { colorMap } }) => colorMap[map[styleType]].icon};
+    /* empty */
 `;
 
 export const ContentWrap = styled.div`
@@ -65,3 +47,31 @@ export const CloseWrap = styled.div`
 export const CloseIcon = styled(Icon)`
     cursor: pointer;
 `;
+
+const themeMixin = ({ styleType, theme: { colorMap } }) => {
+    const color = colorMap[map[styleType]];
+    return css`
+        background-color: ${color.background};
+        border: 1px solid ${color.border};
+        ${/* sc-sel */ NoticeIcon} {
+            color: ${colorMap[map[styleType]].icon};
+        }
+    `;
+};
+
+export const NoticeWrap = styled.div`
+    display: table;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 16px;
+    margin: 0;
+    border-radius: 1px;
+    line-height: 18px;
+    overflow: hidden;
+
+    ${themeMixin};
+`;
+NoticeWrap.defaultProps = {
+    theme: defaultTheme
+};

@@ -1,83 +1,94 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Card demo -- card 1`] = `
-.c1 {
+.c2 {
   line-height: 28px;
-  color: #0a1633;
-  font-size: 14px;
   font-weight: bold;
   padding: 0 16px;
   margin-top: 12px;
 }
 
-.c1:before,
-.c1:after {
+.c2:before,
+.c2:after {
   content: ' ';
   display: table;
 }
 
-.c1:after {
+.c2:after {
   clear: both;
 }
 
-.c2 {
+.c4 {
   display: block;
   line-height: 22px;
-  font-size: 12px;
   font-weight: normal;
-  color: #c3cad9;
 }
 
-.c3 {
+.c5 {
   line-height: 28px;
   padding: 0 16px;
   margin-top: 12px;
 }
 
-.c3:before,
-.c3:after {
+.c5:before,
+.c5:after {
   content: ' ';
   display: table;
 }
 
-.c3:after {
+.c5:after {
   clear: both;
 }
 
-.c5 {
+.c7 {
   min-height: 30px;
   padding: 0 16px;
   margin-top: 12px;
 }
 
-.c6 {
-  border-top: 1px solid #e1e6f0;
+.c9 {
   line-height: 1;
   padding: 0 16px;
   margin-top: 12px;
   padding-top: 12px;
 }
 
-.c6:before,
-.c6:after {
+.c9:before,
+.c9:after {
   content: ' ';
   display: table;
 }
 
-.c6:after {
+.c9:after {
   clear: both;
 }
 
 .c0 {
   box-sizing: border-box;
-  border: 1px solid #e1e6f0;
   border-radius: 4px;
-  background-color: #FFF;
   text-align: left;
   padding-bottom: 12px;
+  border: 1px solid #e1e6f0;
+  background: #ffffff;
+  font-size: 12px;
+  color: #6b798e;
 }
 
-.c4 {
+.c0 .c1 {
+  color: #0a1633;
+  font-size: 14px;
+}
+
+.c0 .c3 {
+  color: #c3cad9;
+  font-size: 12px;
+}
+
+.c0 .c8 {
+  border-top: 1px solid #e1e6f0;
+}
+
+.c6 {
   box-sizing: border-box;
   border-radius: 2px;
   border-width: 1px;
@@ -92,21 +103,22 @@ exports[`Card demo -- card 1`] = `
   vertical-align: middle;
   color: #6b798e;
   border-color: #c3cad9;
-  background-color: #FFF;
+  background: #ffffff;
   height: 28px;
   line-height: 26px;
   padding: 0 8px;
 }
 
-.c4:hover {
+.c6:hover {
   color: #4074e1;
   border-color: #4683e6;
+  background: #ffffff;
 }
 
-.c4[disabled] {
+.c6[disabled] {
   border-color: #d9d9d9;
-  background-color: #f7f7f7;
-  color: #bbb;
+  background: #f7f7f7;
+  color: #bbbbbb;
   cursor: not-allowed;
   pointer-events: none;
 }
@@ -115,35 +127,35 @@ exports[`Card demo -- card 1`] = `
   class="c0"
 >
   <div
-    class="c1"
+    class="c1 c2"
   >
     <div>
       This is the title
     </div>
     <div
-      class="c2"
+      class="c3 c4"
     >
       This is the comment
     </div>
   </div>
   <div
-    class="c3"
+    class="c5"
   >
     <button
-      class="c4"
+      class="c6"
       type="button"
     >
       This is a action button
     </button>
     <button
-      class="c4"
+      class="c6"
       type="button"
     >
       This is a action button
     </button>
   </div>
   <div
-    class="c5"
+    class="c7"
   >
     <div
       style="background:#e1e6f0;height:50px;padding:10px;"
@@ -152,10 +164,10 @@ exports[`Card demo -- card 1`] = `
     </div>
   </div>
   <div
-    class="c6"
+    class="c8 c9"
   >
     <button
-      class="c4"
+      class="c6"
       style="float:right;"
       type="button"
     >
@@ -166,31 +178,27 @@ exports[`Card demo -- card 1`] = `
 `;
 
 exports[`Card demo -- custom 1`] = `
-.c4 {
+.c5 {
   line-height: 28px;
-  color: #0a1633;
-  font-size: 14px;
   font-weight: bold;
   padding: 0 16px;
   margin-top: 12px;
 }
 
-.c4:before,
-.c4:after {
+.c5:before,
+.c5:after {
   content: ' ';
   display: table;
 }
 
-.c4:after {
+.c5:after {
   clear: both;
 }
 
-.c5 {
+.c7 {
   display: block;
   line-height: 22px;
-  font-size: 12px;
   font-weight: normal;
-  color: #c3cad9;
 }
 
 .c2 {
@@ -215,31 +223,46 @@ exports[`Card demo -- custom 1`] = `
   margin-top: 12px;
 }
 
-.c6 {
-  border-top: 1px solid #e1e6f0;
+.c9 {
   line-height: 1;
   padding: 0 16px;
   margin-top: 12px;
   padding-top: 12px;
 }
 
-.c6:before,
-.c6:after {
+.c9:before,
+.c9:after {
   content: ' ';
   display: table;
 }
 
-.c6:after {
+.c9:after {
   clear: both;
 }
 
 .c0 {
   box-sizing: border-box;
-  border: 1px solid #e1e6f0;
   border-radius: 4px;
-  background-color: #FFF;
   text-align: left;
   padding-bottom: 12px;
+  border: 1px solid #e1e6f0;
+  background: #ffffff;
+  font-size: 12px;
+  color: #6b798e;
+}
+
+.c0 .c4 {
+  color: #0a1633;
+  font-size: 14px;
+}
+
+.c0 .c6 {
+  color: #c3cad9;
+  font-size: 12px;
+}
+
+.c0 .c8 {
+  border-top: 1px solid #e1e6f0;
 }
 
 .c3 {
@@ -257,7 +280,7 @@ exports[`Card demo -- custom 1`] = `
   vertical-align: middle;
   color: #6b798e;
   border-color: #c3cad9;
-  background-color: #FFF;
+  background: #ffffff;
   height: 28px;
   line-height: 26px;
   padding: 0 8px;
@@ -266,12 +289,13 @@ exports[`Card demo -- custom 1`] = `
 .c3:hover {
   color: #4074e1;
   border-color: #4683e6;
+  background: #ffffff;
 }
 
 .c3[disabled] {
   border-color: #d9d9d9;
-  background-color: #f7f7f7;
-  color: #bbb;
+  background: #f7f7f7;
+  color: #bbbbbb;
   cursor: not-allowed;
   pointer-events: none;
 }
@@ -305,19 +329,19 @@ exports[`Card demo -- custom 1`] = `
     </button>
   </div>
   <div
-    class="c4"
+    class="c4 c5"
   >
     <div>
       This is the title
     </div>
     <div
-      class="c5"
+      class="c6 c7"
     >
       This is the comment
     </div>
   </div>
   <div
-    class="c6"
+    class="c8 c9"
   >
     <button
       class="c3"

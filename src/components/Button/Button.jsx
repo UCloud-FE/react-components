@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
-import withTheme from 'src/components/ThemeProvider/withTheme';
 import Icon from 'components/Icon';
 
 import { ButtonWrap } from './style';
@@ -11,7 +10,6 @@ const StyleType = ['primary', 'border', 'border-gray'];
 const Size = ['sm', 'md', 'lg'];
 const Shape = ['circle'];
 
-@withTheme
 export default class Button extends PureComponent {
     static propTypes = {
         /** 按钮类型 */

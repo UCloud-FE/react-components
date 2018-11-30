@@ -2,14 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
-import withTheme from 'src/components/ThemeProvider/withTheme';
 import deprecatedLog from 'src/utils/deprecatedLog';
 
 import { NoticeWrap, NoticeIconWrap, ContentWrap, ActionWrap, CloseWrap, CloseIcon, NoticeIcon } from './style';
 
 const StyleType = ['default', 'success', 'warning', 'error'];
 
-@withTheme
 class Notice extends Component {
     state = {
         closed: false

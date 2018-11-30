@@ -425,7 +425,7 @@ exports[`Select demo -- renderSelector 1`] = `
   vertical-align: middle;
   color: #6b798e;
   border-color: #c3cad9;
-  background-color: #FFF;
+  background: #ffffff;
   height: 28px;
   line-height: 26px;
   padding: 0 8px;
@@ -434,12 +434,13 @@ exports[`Select demo -- renderSelector 1`] = `
 .c1:hover {
   color: #4074e1;
   border-color: #4683e6;
+  background: #ffffff;
 }
 
 .c1[disabled] {
   border-color: #d9d9d9;
-  background-color: #f7f7f7;
-  color: #bbb;
+  background: #f7f7f7;
+  color: #bbbbbb;
   cursor: not-allowed;
   pointer-events: none;
 }
@@ -552,9 +553,9 @@ exports[`Select demo -- search 1`] = `
 exports[`Select demo -- select 1`] = `
 .c12 {
   position: relative;
-  color: #6b798e;
   display: inline-block;
   vertical-align: middle;
+  color: #6b798e;
 }
 
 .c12 input {
@@ -563,12 +564,15 @@ exports[`Select demo -- select 1`] = `
   width: 100%;
   padding: 4px 8px;
   margin: 0;
-  border: 1px solid #c3cad9;
   border-radius: 2px;
-  background: #FFF;
   font-size: inherit;
   outline: none;
   color: inherit;
+}
+
+.c12 input {
+  border: 1px solid #c3cad9;
+  background: #ffffff;
   height: 28px;
 }
 
@@ -594,6 +598,12 @@ exports[`Select demo -- select 1`] = `
 
 .c12 input:focus {
   border-color: #4683e6;
+}
+
+.c12 .style__IconWrap-hppXiF {
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
 }
 
 .c25 {

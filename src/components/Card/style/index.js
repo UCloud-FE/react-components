@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 
+import defaultTheme from 'src/components/ThemeProvider/theme';
 import { clearFixMixin } from 'src/style';
 
 const sharedGutter = css`
@@ -7,26 +8,19 @@ const sharedGutter = css`
     margin-top: 12px;
 `;
 
-export const HeaderWrap = styled.div(
-    ({ theme: { colorList, titleFontSize } }) => css`
-        line-height: 28px;
-        color: ${colorList.title};
-        font-size: ${titleFontSize};
-        font-weight: bold;
-        ${clearFixMixin};
-        ${sharedGutter};
-    `
-);
+export const HeaderWrap = styled.div`
+    line-height: 28px;
+    font-weight: bold;
+    ${clearFixMixin};
+    ${sharedGutter};
+`;
 
-export const CommentWrap = styled.div(
-    ({ theme: { colorMap, fontSize } }) => css`
-        display: block;
-        line-height: 22px;
-        font-size: ${fontSize};
-        font-weight: normal;
-        color: ${colorMap.default.border};
-    `
-);
+export const CommentWrap = styled.div`
+    display: block;
+    line-height: 22px;
+
+    font-weight: normal;
+`;
 
 export const ActionWrap = styled.div`
     line-height: 28px;
@@ -39,24 +33,40 @@ export const ContentWrap = styled.div`
     ${sharedGutter};
 `;
 
-export const FooterWrap = styled.div(
-    ({ theme: { Card: cardTheme } }) => css`
-        border-top: 1px solid ${cardTheme.border};
-        line-height: 1;
-        ${sharedGutter};
-        padding-top: 12px;
-        ${clearFixMixin};
-    `
-);
+export const FooterWrap = styled.div`
+    line-height: 1;
+    ${sharedGutter};
+    padding-top: 12px;
+    ${clearFixMixin};
+`;
 
-export const CardWrap = styled.div(
-    ({ theme: { colorList, fontSize, Card: cardTheme } }) => css`
-        box-sizing: border-box;
-        border: 1px solid ${cardTheme.border};
-        border-radius: 4px;
-        background: ${colorList.white};
-        text-align: left;
-        padding-bottom: 12px;
+/* stylelint-disable no-duplicate-selectors */
+const themeMixin = ({ theme: { colorList, colorMap, fontSize, Card: cardTheme, titleFontSize } }) => css`
+    border: 1px solid ${cardTheme.border};
+    background: ${colorList.white};
+    font-size: ${fontSize};
+    color: ${colorMap.default.text};
+    ${HeaderWrap} {
+        color: ${colorList.title};
+        font-size: ${titleFontSize};
+    }
+    ${CommentWrap} {
+        color: ${colorList.subtitle};
         font-size: ${fontSize};
-    `
-);
+    }
+    ${FooterWrap} {
+        border-top: 1px solid ${cardTheme.border};
+    }
+`;
+/* stylelint-enable no-duplicate-selectors */
+
+export const CardWrap = styled.div`
+    box-sizing: border-box;
+    border-radius: 4px;
+    text-align: left;
+    padding-bottom: 12px;
+    ${themeMixin};
+`;
+CardWrap.defaultProps = {
+    theme: defaultTheme
+};
