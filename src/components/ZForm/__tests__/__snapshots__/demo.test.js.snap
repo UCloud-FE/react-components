@@ -689,22 +689,15 @@ exports[`ZForm demo -- uhost 1`] = `
   word-break: break-all;
 }
 
-.c22 {
+.c23 {
   border-radius: 2px;
   cursor: pointer;
   padding: 0 8px;
-  border: 1px solid #c3cad9;
   padding-right: 40px;
   box-sizing: border-box;
-  height: 28px;
-  line-height: 28px;
 }
 
-.c22:hover {
-  border: 1px solid #4683e6;
-}
-
-.c23 {
+.c24 {
   position: absolute;
   right: 8px;
   top: 50%;
@@ -715,10 +708,26 @@ exports[`ZForm demo -- uhost 1`] = `
   box-sizing: border-box;
   position: relative;
   font-size: 12px;
-  color: #6b798e;
-  background-color: #FFF;
   display: inline-block;
   vertical-align: middle;
+  font-size: 12px;
+  color: #6b798e;
+  background-color: #fff;
+}
+
+.c21 .c22 {
+  height: 28px;
+  line-height: 28px;
+  border: 1px solid #c3cad9;
+}
+
+.c21 .c22:hover {
+  border-color: #4683e6;
+}
+
+.c21 .style__MenuWrap-jpnfrZ {
+  background: #fff;
+  border: 1px solid #c3cad9;
 }
 
 .c12 {
@@ -862,7 +871,7 @@ exports[`ZForm demo -- uhost 1`] = `
   pointer-events: none;
 }
 
-.c24 {
+.c25 {
   box-sizing: border-box;
   border-radius: 2px;
   border-width: 1px;
@@ -883,13 +892,13 @@ exports[`ZForm demo -- uhost 1`] = `
   padding: 0 8px;
 }
 
-.c24:hover {
+.c25:hover {
   color: #fff;
   border-color: #3664c8;
   background: #3664c8;
 }
 
-.c24[disabled] {
+.c25[disabled] {
   border-color: #d9d9d9;
   background: #f7f7f7;
   color: #bbb;
@@ -1222,13 +1231,13 @@ exports[`ZForm demo -- uhost 1`] = `
       >
         <div>
           <div
-            class="c22"
+            class="c22 c23"
           >
             <div>
               请选择
             </div>
             <i
-              class="icon__down c23 "
+              class="icon__down c24 "
             />
           </div>
         </div>
@@ -1239,7 +1248,7 @@ exports[`ZForm demo -- uhost 1`] = `
     class="u-red"
   />
   <button
-    class="c24"
+    class="c25"
     type="button"
   >
     submit

@@ -1,9 +1,10 @@
 import styled, { css } from 'styled-components';
 
-import Input from 'components/Input';
-import Icon from 'components/Icon';
-import Menu from 'components/Menu';
-import { Color, Height, inlineBlockWithVerticalMixin } from 'src/style';
+import defaultTheme from 'src/components/ThemeProvider/theme';
+import Input from 'src/components/Input';
+import Icon from 'src/components/Icon';
+import Menu from 'src/components/Menu';
+import { inlineBlockWithVerticalMixin } from 'src/style';
 
 export const SelectSearchInput = styled(Input.Search)`
     min-width: 100px;
@@ -11,23 +12,12 @@ export const SelectSearchInput = styled(Input.Search)`
     margin-top: 10px;
 `;
 
-const sizeMixin = ({ size }) => css`
-    height: ${Height[size]};
-    line-height: ${Height[size]};
-`;
-
 export const Selector = styled.div`
     border-radius: 2px;
     cursor: pointer;
     padding: 0 8px;
-    border: 1px solid #c3cad9;
     padding-right: 40px;
     box-sizing: border-box;
-    &:hover {
-        border: 1px solid ${Color.border.blue};
-    }
-
-    ${sizeMixin};
 `;
 
 export const Arrow = styled(Icon)`
@@ -44,8 +34,7 @@ export const OptionWrap = styled(Menu.Item)`
         `};
 `;
 export const MenuWrap = styled.div`
-    background: ${Color.bg.white};
-    border: 1px solid ${Color.border.default};
+    /* empty */
 `;
 
 export const BlockMenu = styled(Menu)`
@@ -54,23 +43,49 @@ export const BlockMenu = styled(Menu)`
     max-height: 380px;
 `;
 
+/* stylelint-disable no-duplicate-selectors */
+const propsMixin = ({ theme: { colorMap, Height, fontSize }, size, disabled }) => css`
+    font-size: ${fontSize};
+    color: ${colorMap.default.text};
+    background-color: ${colorMap.default.background};
+
+    ${Selector} {
+        height: ${Height[size]};
+        line-height: ${Height[size]};
+        border: 1px solid ${colorMap.default.border};
+
+        &:hover {
+            border-color: ${colorMap.active.border};
+        }
+    }
+
+    ${MenuWrap} {
+        background: ${colorMap.default.background};
+        border: 1px solid ${colorMap.default.border};
+    }
+
+    ${disabled &&
+        css`
+            pointer-events: none;
+            color: ${colorMap.disabled.text};
+
+            ${Selector} {
+                background: ${colorMap.disabled.background};
+                border-color: ${colorMap.disabled.border};
+            }
+        `};
+`;
+/* stylelint-enable no-duplicate-selectors */
+
 export const SelectWrap = styled.div`
     box-sizing: border-box;
     position: relative;
     font-size: 12px;
-    color: ${Color.font.default};
-    background-color: ${Color.bg.white};
 
     ${inlineBlockWithVerticalMixin};
-    ${({ disabled }) =>
-        disabled &&
-        css`
-            pointer-events: none;
-            color: ${Color.font.disabled};
-
-            ${/*sc-sel*/ Selector} {
-                background: ${Color.bg.disabled};
-                border-color: ${Color.border.disabled};
-            }
-        `};
+    ${propsMixin};
 `;
+
+SelectWrap.defaultProps = {
+    theme: defaultTheme
+};

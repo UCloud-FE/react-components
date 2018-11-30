@@ -247,7 +247,6 @@ class Select extends Component {
         const {
             children,
             options,
-            size,
             onChange,
             search,
             value,
