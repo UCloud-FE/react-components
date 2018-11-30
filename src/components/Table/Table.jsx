@@ -654,6 +654,7 @@ class Table extends Component {
             footer = () => {},
             locale,
             hideExpandIcon,
+            onRow = () => {},
             ...rest
         } = this.props;
         if (emptyContent === undefined) {
@@ -677,11 +678,13 @@ class Table extends Component {
                 <TableWrap className={className} style={style} hideExpandIcon={hideExpandIcon}>
                     <PopupContainer innerRef={_ref => (this.popupContainer = _ref)} />
                     <RcTable
+                        {...rest}
                         prefixCls={prefixCls}
                         data={dataSource}
                         columns={columns}
                         onRow={record => {
                             return {
+                                ...onRow(record),
                                 record,
                                 contextMenu
                             };
@@ -697,7 +700,6 @@ class Table extends Component {
                         expandIconColumnIndex={columns[0] && columns[0].key === 'table_row_selection' ? 1 : 0}
                         title={() => this.renderTitle({ filters, searchValue, total, locale })}
                         footer={() => this.renderFooter({ dataSource: _d, emptyContent, errorContent })}
-                        {...rest}
                     />
                     {pagination === null ? null : (
                         <Pagination
