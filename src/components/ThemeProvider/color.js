@@ -23,8 +23,8 @@ const colors = {
     green2: '#edfff2',
     gray1: '#d9d9d9',
     gray2: '#f7f7f7',
-    gray3: '#bbbbbb',
-    white: '#ffffff'
+    gray3: '#bbb',
+    white: '#fff'
 };
 
 // semantic colors

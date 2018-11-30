@@ -1,30 +1,35 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-import { Color, FontSize } from 'src/style';
+import defaultTheme from 'src/components/ThemeProvider/theme';
+
+const themeMixin = ({ theme: { colorMap, fontSize } }) => css`
+    font-size: ${fontSize};
+    color: ${colorMap.default.text};
+    border: 1px solid ${colorMap.default.border};
+    background: ${colorMap.default.background};
+    &:hover,
+    &:focus {
+        border-color: ${colorMap.active.border};
+    }
+    &[disabled] {
+        border-color: ${colorMap.disabled.border};
+        background: ${colorMap.disabled.background};
+        color: ${colorMap.disabled.text};
+    }
+`;
 
 export const TextareaWrap = styled.textarea`
-    font-size: ${FontSize.xs};
-    color: ${Color.font.default};
     display: block;
     box-sizing: border-box;
     width: 100%;
     padding: 4px 8px;
-    border: 1px solid ${Color.border.default};
     border-radius: 2px;
-    background: ${Color.bg.white};
     line-height: 1.5;
     min-height: ${12 * 1.5 + (4 + 1) * 2}px;
     resize: vertical;
     outline: none;
-
-    &:hover,
-    &:focus {
-        border-color: ${Color.border.blue};
-    }
-
-    &[disabled] {
-        border-color: ${Color.border.disabled};
-        background: ${Color.bg.disabled};
-        color: ${Color.font.disabled};
-    }
+    ${themeMixin};
 `;
+TextareaWrap.defaultProps = {
+    theme: defaultTheme
+};
