@@ -77,6 +77,8 @@ export const colorMap = {
         icon: colorList.disabled1
     },
     active: {
+        text: colorList.primary,
+        background: colorList.primary3,
         border: colorList.primary2,
         icon: colorList.primary
     },

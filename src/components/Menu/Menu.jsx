@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { ThemeProvider } from 'styled-components';
 
-import uncontrolledDecorator from 'decorators/uncontrolled';
+import uncontrolledDecorator from 'src/decorators/uncontrolled';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
+import defaultTheme from 'src/components/ThemeProvider/theme';
 
-import { MenuWrap, themeMap, SelectAllCheckbox } from './style';
+import { MenuWrap, SelectAllCheckbox } from './style';
 import LOCALE from './locale/zh_CN';
 
 export const rootPrefix = 'root';
@@ -217,7 +218,7 @@ class Menu extends Component {
             showSelectAll,
             collapse,
             children,
-            theme,
+            theme: themeStyle,
             itemTree,
             locale,
             ...rest
@@ -234,7 +235,13 @@ class Menu extends Component {
                 </SelectAllCheckbox>
             );
         return (
-            <ThemeProvider theme={_.isString(theme) ? themeMap[theme] : theme}>
+            <ThemeProvider
+                theme={theme =>
+                    _.isEmpty(theme)
+                        ? { ...defaultTheme, Menu: defaultTheme.Menu[themeStyle] }
+                        : { ...theme, Menu: theme.Menu[themeStyle] }
+                }
+            >
                 <MenuWrap {...rest} {...collapse}>
                     {selectAllCheckbox}
                     {this.renderChildren(children, rootPrefix)}

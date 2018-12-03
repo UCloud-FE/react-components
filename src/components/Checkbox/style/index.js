@@ -15,7 +15,6 @@ const sizeMixin = ({ size }) => css`
 `;
 
 export const CheckboxWrap = styled.span`
-    font-size: 14px;
     cursor: pointer;
     position: relative;
 

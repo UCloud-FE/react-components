@@ -9,9 +9,11 @@ const theme = {
     },
     'default:hover': {},
     ink: {
+        // ink bar color
         bar: colorList.primary
     },
     'ink:active': {
+        // ink active text color
         text: colorList.primary
     }
 };
