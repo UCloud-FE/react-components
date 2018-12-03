@@ -609,7 +609,7 @@ class Table extends Component {
                 </div>
             );
         }
-        if (!dataSource || !dataSource.length) {
+        if ((!dataSource || !dataSource.length) && emptyContent) {
             return (
                 <div key="tip-info" className={`${prefixCls}-tip-wrap`}>
                     <div className={`${prefixCls}-empty-content-wrap`}>{emptyContent}</div>
