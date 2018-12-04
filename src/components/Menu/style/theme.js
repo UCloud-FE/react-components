@@ -6,8 +6,7 @@ export default {
         background: colorMap.default.background,
         // item hover colors
         'item:hover': {
-            background: colorMap.active.background,
-            text: 'unset'
+            background: colorMap.active.background
         },
         // item active colors
         'item:active': {

@@ -13,7 +13,6 @@ const propsMixin = ({ theme: { Height, colorMap, fontSize }, size, disabled, che
     height: ${Height[size]};
     line-height: ${Height[size]};
     font-size: ${fontSize};
-    color: ${colorMap.default.text};
 
     ${disabled &&
         css`

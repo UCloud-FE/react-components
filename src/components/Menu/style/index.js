@@ -104,7 +104,6 @@ const propsMixin = ({ theme: { colorMap, Menu: menuTheme, fontSize } }) => css`
     ${/*sc-sel*/ SelectAllCheckbox} {
         :hover {
             background: ${menuTheme['item:hover'].background};
-            color: ${menuTheme['item:hover'].text};
         }
     }
 `;
