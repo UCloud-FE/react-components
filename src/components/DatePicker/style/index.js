@@ -30,6 +30,9 @@ export const PickerWrap = styled(RcPickerWrap)`
 
     ${calendarMixin};
 `;
+PickerWrap.defaultProps = {
+    theme: defaultTheme
+};
 
 export const DateWrap = styled.div(
     ({ theme: { Height, colorMap }, size }) => css`
