@@ -2,6 +2,7 @@ import Tabs from 'src/components/Tabs/style/theme';
 import Button from 'src/components/Button/style/theme';
 import Card from 'src/components/Card/style/theme';
 import Menu from 'src/components/Menu/style/theme';
+import Switch from 'src/components/Switch/style/theme';
 
 import { colorList, colorMap } from './color';
 
@@ -9,7 +10,8 @@ const componentTheme = {
     Button,
     Tabs,
     Card,
-    Menu
+    Menu,
+    Switch
 };
 
 export default {
