@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
 
-import { Color } from 'src/style';
-import Notice from 'components/Notice';
-import Icon from 'components/Icon';
+import Notice from 'src/components/Notice';
+import Icon from 'src/components/Icon';
+import defaultTheme from 'src/components/ThemeProvider/theme';
 
 const disabledMixin = css`
     pointer-events: none;
@@ -21,9 +21,12 @@ export const TipWrap = styled.span`
 export const ListWrap = styled.div`
     max-height: 200px;
     overflow: auto;
-    border: 1px solid ${Color.border.default};
+    border: 1px solid ${({ theme: { colorMap } }) => colorMap.default.border};
     margin-top: 6px;
 `;
+ListWrap.defaultProps = {
+    theme: defaultTheme
+};
 
 export const UploadIcon = styled(Icon)`
     vertical-align: baseline;
