@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 import Tabs from 'src/components/Tabs/style/theme';
 import Button from 'src/components/Button/style/theme';
 import Card from 'src/components/Card/style/theme';
@@ -14,7 +16,7 @@ const componentTheme = {
     Switch
 };
 
-export default {
+const theme = {
     // theme of components
     ...componentTheme,
     // map of color and status
@@ -38,3 +40,7 @@ export default {
         lg: '12px'
     }
 };
+
+theme.HeightNumber = _.mapValues(theme.Height, v => +v.replace('px', ''));
+
+export default theme;

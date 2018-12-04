@@ -1,155 +1,157 @@
 import styled, { css } from 'styled-components';
-import config from 'config';
 
-import { inlineBlockWithVerticalMixin, Color, Height, calculateSize, HeightNumber } from 'src/style';
+import config from 'src/config';
+import { inlineBlockWithVerticalMixin, calculateSize } from 'src/style';
 import { tint } from 'src/style/color';
+import defaultTheme from 'src/components/ThemeProvider/theme';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-slider';
 
-export const SliderWrap = styled.div`
-    .${prefixCls} {
-        position: relative;
-        width: 300px;
-        border-radius: 2px;
-        touch-action: none;
-        margin-right: 12px;
-        background: ${Color.bg.white};
-        height: ${props => Height[props.size]};
-
-        ${({ disabled }) =>
-            disabled &&
-            css`
-                background: ${Color.bg.disabled};
-            `};
-        ${inlineBlockWithVerticalMixin};
-
-        &-rail {
-            box-sizing: border-box;
-            position: absolute;
-            width: 100%;
+export const SliderWrap = styled.div(
+    ({ theme: { colorMap, Height, HeightNumber, colorList }, size, disabled }) => css`
+        .${prefixCls} {
+            position: relative;
+            width: 300px;
             border-radius: 2px;
-            background: #e9e9e9;
-            border: 1px solid ${Color.border.default};
-            height: ${props => Height[props.size]};
+            touch-action: none;
+            margin-right: 12px;
+            background: ${colorMap.default.background};
+            height: ${Height[size]};
 
-            ${({ disabled }) =>
-                disabled &&
+            ${disabled &&
                 css`
-                    background: ${Color.bg.disabled};
+                    background: ${colorMap.disabled.background};
                 `};
-        }
+            ${inlineBlockWithVerticalMixin};
 
-        &-track {
-            box-sizing: border-box;
-            position: absolute;
-            left: 0;
-            border: 1px solid ${Color.border.blue};
-            border-radius: 2px;
-            background: ${Color.bg.blueActive};
-            height: ${props => Height[props.size]};
-        }
+            &-rail {
+                box-sizing: border-box;
+                position: absolute;
+                width: 100%;
+                border-radius: 2px;
+                background: #e9e9e9;
+                border: 1px solid ${colorMap.default.border};
+                height: ${Height[size]};
 
-        &-tooltip {
-            line-height: normal;
-            user-select: none;
-        }
+                ${disabled &&
+                    css`
+                        background: ${colorMap.disabled.background};
+                    `};
+            }
 
-        &-handle {
-            box-sizing: border-box;
-            position: absolute;
-            margin-left: -10px;
-            margin-top: -3px;
-            width: 20px;
-            cursor: pointer;
-            cursor: grab;
-            text-align: center;
-            border: 1px solid #c3cad9;
-            background: ${Color.bg.white};
-            touch-action: pan-x;
-            z-index: 1;
-            height: ${props => calculateSize(Height[props.size], 6)};
-            line-height: ${props => calculateSize(Height[props.size], 8)};
+            &-track {
+                box-sizing: border-box;
+                position: absolute;
+                left: 0;
+                border: 1px solid ${colorMap.active.border};
+                border-radius: 2px;
+                background: ${colorList.primary5};
+                height: ${Height[size]};
+            }
 
-            ${({ disabled }) =>
-                disabled &&
-                css`
-                    box-shadow: none;
-                    border-color: ${Color.border.disabled};
-                    cursor: not-allowed;
-                `};
+            &-tooltip {
+                line-height: normal;
+                user-select: none;
+            }
 
-            &::before,
-            &::after {
-                content: '';
+            &-handle {
+                box-sizing: border-box;
+                position: absolute;
+                margin-left: -10px;
+                margin-top: -3px;
+                width: 20px;
+                cursor: pointer;
+                cursor: grab;
+                text-align: center;
+                border: 1px solid #c3cad9;
+                background: ${colorMap.default.background};
+                touch-action: pan-x;
+                z-index: 1;
+                height: ${calculateSize(Height[size], 6)};
+                line-height: ${calculateSize(Height[size], 8)};
+
+                ${disabled &&
+                    css`
+                        box-shadow: none;
+                        border-color: ${colorMap.disabled.border};
+                        cursor: not-allowed;
+                    `};
+
+                &::before,
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    width: 1px;
+                    height: 16px;
+                    background: #dbdcdf;
+                    margin-top: ${(HeightNumber[size] + 6 - 2 - 16) / 2}px;
+                }
+                &::after {
+                    margin-left: 4px;
+                }
+
+                &:hover {
+                    border-color: ${tint(colorMap.active.border, 0.2)};
+                }
+                &:active {
+                    border-color: ${tint(colorMap.active.border, 0.2)};
+                    box-shadow: 0 0 5px ${tint(colorMap.active.border, 0.2)};
+                    cursor: grabbing;
+                }
+                &:focus {
+                    border-color: ${tint(colorMap.active.border, 0.2)};
+                    box-shadow: 0 0 5px ${tint(colorMap.active.border, 0.5)};
+                    outline: none;
+                }
+            }
+
+            &-mark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                font-size: 12px;
+            }
+
+            &-mark-text {
+                position: absolute;
                 display: inline-block;
-                width: 1px;
-                height: 16px;
-                background: #dbdcdf;
-                margin-top: ${props => (HeightNumber[props.size] + 6 - 2 - 16) / 2}px;
-            }
-            &::after {
-                margin-left: 4px;
+                vertical-align: middle;
+                text-align: right;
+                cursor: pointer;
+                color: ${colorMap.default.text};
+                border-right: 1px solid ${colorMap.default.border};
+                padding: 0 8px;
+                box-sizing: border-box;
+                pointer-events: none;
+                line-height: ${Height[size]};
+
+                ${disabled &&
+                    css`
+                        cursor: not-allowed;
+                        border-right-color: ${colorMap.disabled.border};
+                    `};
+
+                &-active {
+                    color: ${colorMap.active.text};
+                    border-right-color: ${colorMap.active.border};
+                }
             }
 
-            &:hover {
-                border-color: ${tint(Color.border.blue, 0.2)};
+            &-step {
+                position: absolute;
+                width: 100%;
+                background: transparent;
+                height: ${Height[size]};
             }
-            &:active {
-                border-color: ${tint(Color.border.blue, 0.2)};
-                box-shadow: 0 0 5px ${tint(Color.border.blue, 0.2)};
-                cursor: grabbing;
-            }
-            &:focus {
-                border-color: ${tint(Color.border.blue, 0.2)};
-                box-shadow: 0 0 5px ${tint(Color.border.blue, 0.5)};
-                outline: none;
-            }
-        }
 
-        &-mark {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            font-size: 12px;
-        }
-
-        &-mark-text {
-            position: absolute;
-            display: inline-block;
-            vertical-align: middle;
-            text-align: right;
-            cursor: pointer;
-            color: ${Color.font.default};
-            border-right: 1px solid ${Color.border.default};
-            padding: 0 8px;
-            box-sizing: border-box;
-            pointer-events: none;
-            line-height: ${props => Height[props.size]};
-
-            ${({ disabled }) =>
-                disabled &&
-                css`
-                    cursor: not-allowed;
-                    border-right-color: ${Color.border.disabled};
-                `};
-
-            &-active {
-                color: ${Color.font.blue};
-                border-right-color: ${Color.bg.blue};
+            &-dot {
+                display: none;
             }
         }
-
-        &-step {
-            position: absolute;
-            width: 100%;
-            background: transparent;
-            height: ${props => Height[props.size]};
-        }
-
-        &-dot {
-            display: none;
-        }
-    }
-`;
+    `
+);
+SliderWrap.defaultProps = {
+    theme: defaultTheme
+};
