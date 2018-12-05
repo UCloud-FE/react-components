@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import Icon from 'components/Icon';
-import NumberInput from 'components/NumberInput';
-import localeConsumerDecorator from 'components/LocaleProvider/localeConsumerDecorator';
+import Icon from 'src/components/Icon';
+import NumberInput from 'src/components/NumberInput';
+import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
+import InnerDefaultThemeProvider from 'src/components/ThemeProvider/InnerDefaultThemeProvider';
 
 import Pager from './Pager';
 import Options from './Options';
@@ -473,48 +474,50 @@ class Pagination extends Component {
         const prevDisabled = !this.hasPrev();
         const nextDisabled = !this.hasNext();
         return (
-            <PaginationWrap
-                size={size}
-                className={wrapClassName}
-                unselectable="unselectable"
-                innerRef={this.savePaginationNode}
-                {...rest}
-            >
-                <li
-                    title={showTitle ? locale.prevPage : null}
-                    onClick={this.prev}
-                    tabIndex={prevDisabled ? null : 0}
-                    onKeyPress={this.runIfEnterPrev}
-                    className={`${!prevDisabled ? '' : `${prefixCls}-disabled`} ${prefixCls}-prev`}
-                    aria-disabled={prevDisabled}
-                >
-                    {itemRender(prevPage, 'prev', <a className={`${prefixCls}-item-link`} />)}
-                </li>
-                {pagerList}
-                <li
-                    title={showTitle ? locale.nextPage : null}
-                    onClick={this.next}
-                    tabIndex={nextDisabled ? null : 0}
-                    onKeyPress={this.runIfEnterNext}
-                    className={`${!nextDisabled ? '' : `${prefixCls}-disabled`} ${prefixCls}-next`}
-                    aria-disabled={nextDisabled}
-                >
-                    {itemRender(nextPage, 'next', <a className={`${prefixCls}-item-link`} />)}
-                </li>
-                <Options
-                    locale={locale}
-                    rootPrefixCls={prefixCls}
-                    changeSize={showSizeChanger ? this.changePageSize : null}
-                    current={current}
-                    pageSize={pageSize}
-                    pageSizeOptions={pageSizeOptions}
-                    quickGo={showQuickJumper ? this.handleChange : null}
-                    goButton={goButton}
+            <InnerDefaultThemeProvider>
+                <PaginationWrap
                     size={size}
-                    allPages={allPages}
-                    {...optionsProps}
-                />
-            </PaginationWrap>
+                    className={wrapClassName}
+                    unselectable="unselectable"
+                    innerRef={this.savePaginationNode}
+                    {...rest}
+                >
+                    <li
+                        title={showTitle ? locale.prevPage : null}
+                        onClick={this.prev}
+                        tabIndex={prevDisabled ? null : 0}
+                        onKeyPress={this.runIfEnterPrev}
+                        className={`${!prevDisabled ? '' : `${prefixCls}-disabled`} ${prefixCls}-prev`}
+                        aria-disabled={prevDisabled}
+                    >
+                        {itemRender(prevPage, 'prev', <a className={`${prefixCls}-item-link`} />)}
+                    </li>
+                    {pagerList}
+                    <li
+                        title={showTitle ? locale.nextPage : null}
+                        onClick={this.next}
+                        tabIndex={nextDisabled ? null : 0}
+                        onKeyPress={this.runIfEnterNext}
+                        className={`${!nextDisabled ? '' : `${prefixCls}-disabled`} ${prefixCls}-next`}
+                        aria-disabled={nextDisabled}
+                    >
+                        {itemRender(nextPage, 'next', <a className={`${prefixCls}-item-link`} />)}
+                    </li>
+                    <Options
+                        locale={locale}
+                        rootPrefixCls={prefixCls}
+                        changeSize={showSizeChanger ? this.changePageSize : null}
+                        current={current}
+                        pageSize={pageSize}
+                        pageSizeOptions={pageSizeOptions}
+                        quickGo={showQuickJumper ? this.handleChange : null}
+                        goButton={goButton}
+                        size={size}
+                        allPages={allPages}
+                        {...optionsProps}
+                    />
+                </PaginationWrap>
+            </InnerDefaultThemeProvider>
         );
     }
 }
