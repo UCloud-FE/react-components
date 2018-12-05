@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import InnerDefaultThemeProvider from 'src/components/ThemeProvider/InnerDefaultThemeProvider';
+
 import { Outer, Inner, TextWrap, EndText, Bg, CurrentText } from './style';
 
 class Progress extends Component {
@@ -21,19 +23,21 @@ class Progress extends Component {
         let { percent, format, ...rest } = this.props;
         percent = percent < 0 ? 0 : percent > 100 ? 100 : percent;
         return (
-            <div {...rest}>
-                <Outer>
-                    <Inner>
-                        <Bg percent={percent}>
-                            <CurrentText>{format(percent)}</CurrentText>
-                        </Bg>
-                    </Inner>
-                </Outer>
-                <TextWrap>
-                    <span>{format(0)}</span>
-                    <EndText>{format(100)}</EndText>
-                </TextWrap>
-            </div>
+            <InnerDefaultThemeProvider>
+                <div {...rest}>
+                    <Outer>
+                        <Inner>
+                            <Bg percent={percent}>
+                                <CurrentText>{format(percent)}</CurrentText>
+                            </Bg>
+                        </Inner>
+                    </Outer>
+                    <TextWrap>
+                        <span>{format(0)}</span>
+                        <EndText>{format(100)}</EndText>
+                    </TextWrap>
+                </div>
+            </InnerDefaultThemeProvider>
         );
     }
 }
