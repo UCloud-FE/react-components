@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components';
 import { TransitionGroup } from 'react-transition-group';
 
-import { Color } from 'src/style';
 import { fadeIn, fadeOut } from 'src/style/animation';
 
 export const animationDuration = 500;
@@ -20,44 +19,33 @@ export const ContentWrap = styled.div`
     vertical-align: middle;
 `;
 
-const IconColorMap = {
-    default: 'default',
-    error: 'red',
-    warning: 'yellow',
-    info: 'blue'
+const map = {
+    default: 'info',
+    success: 'success',
+    warning: 'warning',
+    error: 'error',
+    info: 'success'
 };
 
-const BorderColorMap = {
-    default: 'default',
-    error: 'red',
-    warning: 'yellow',
-    info: 'blueBright'
-};
-const BgColorMap = {
-    default: 'default',
-    error: 'red',
-    warning: 'yellow',
-    info: 'blueLight'
-};
+export const MessageWrap = styled.div(({ styleType, theme: { colorMap } }) => {
+    const color = colorMap[map[styleType]];
+    return css`
+        word-break: break-all;
+        line-height: 16px;
+        font-size: 14px;
+        padding: 10px;
+        border-radius: 2px;
+        border: 1px solid ${colorMap.default.border};
+        color: ${colorMap.default.text};
 
-export const MessageWrap = styled.div`
-    word-break: break-all;
-    line-height: 16px;
-    font-size: 14px;
-    padding: 10px;
-    border-radius: 2px;
-    border: 1px solid ${Color.border.default};
-    color: ${Color.font.default};
-
-    ${({ styleType }) => css`
-        border-color: ${Color.border[BorderColorMap[styleType]]};
-        background: ${Color.bg[BgColorMap[styleType]]};
+        border-color: ${color.border};
+        background: ${color.background};
 
         ${/*sc-sel*/ IconWrap} {
-            color: ${Color.font[IconColorMap[styleType]]};
+            color: ${color.icon};
         }
-    `};
-`;
+    `;
+});
 
 export const MessageContentWrap = styled(TransitionGroup)`
     position: fixed;

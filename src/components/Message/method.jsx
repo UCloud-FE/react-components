@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ThemeProvider } from 'styled-components';
+
+import deprecatedLog from 'src/utils/deprecatedLog';
+import { getRuntimeTheme } from 'src/components/ThemeProvider/runtime';
 
 import Message from './Message';
-
 import MessageContainer from './MessageContainer';
 
 const config = {
@@ -16,7 +19,7 @@ let messageContainerDom = document.createElement('div');
 const mainContainerDom = config.getContainer();
 let containerRef;
 ReactDOM.render(
-    <MessageContainer ref={ref => (containerRef = ref)} id="uc-message-content-wrap" top={config.top} />,
+    <MessageContainer ref={ref => (containerRef = ref)} id="uc-fe-message-content-wrap" top={config.top} />,
     messageContainerDom
 );
 
@@ -31,9 +34,11 @@ const showMessage = (styleType, content, duration = config.duration, onClose = (
         newStyle.zIndex = zIndex;
     }
     const messageUid = containerRef.appendMessage(
-        <Message styleType={styleType} style={newStyle} className={className}>
-            {content}
-        </Message>
+        <ThemeProvider theme={getRuntimeTheme()}>
+            <Message styleType={styleType} style={newStyle} className={className}>
+                {content}
+            </Message>
+        </ThemeProvider>
     );
     const destory = () => {
         containerRef.removeMessage(messageUid) && onClose();
@@ -50,7 +55,11 @@ const showMessage = (styleType, content, duration = config.duration, onClose = (
 
 const message = (...args) => showMessage('default', ...args);
 const warning = (...args) => showMessage('warning', ...args);
-const info = (...args) => showMessage('info', ...args);
+const info = (...args) => {
+    deprecatedLog('styleType "info"', '"success"');
+    return showMessage('success', ...args);
+};
+const success = (...args) => showMessage('success', ...args);
 const error = (...args) => showMessage('error', ...args);
 
-export { message, warning, info, error };
+export { message, warning, success, info, error };

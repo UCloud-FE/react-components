@@ -4,6 +4,7 @@ import _ from 'lodash';
 import { ThemeProvider as SCThemeProvider } from 'styled-components';
 
 import defaultTheme from './theme';
+import { setRuntimeTheme } from './runtime';
 
 const extend = (source, target) => {
     const cloneSource = JSON.parse(JSON.stringify(source));
@@ -21,20 +22,39 @@ const extend = (source, target) => {
 };
 
 class ThemeProvider extends Component {
+    constructor(props) {
+        super(props);
+        const theme = this.getMergedTheme(props.theme);
+        this.state = {
+            theme
+        };
+        setRuntimeTheme(theme);
+    }
     static propTypes = {
-        theme: PropTypes.object
+        theme: PropTypes.object.isRequired
     };
-    shouldComponentUpdate = nextProps => {
-        if (JSON.stringify(nextProps.theme) === this.cache) {
-            return false;
-        }
-        return true;
-    };
-
-    render() {
-        const { theme, ...rest } = this.props;
+    getMergedTheme = theme => {
         this.cache = JSON.stringify(theme);
-        return <SCThemeProvider theme={extend(defaultTheme, theme)} {...rest} />;
+        return extend(defaultTheme, theme);
+    };
+    componentWillReceiveProps(nextProps) {
+        const { theme } = nextProps;
+        const mergedTheme = this.getMergedTheme(theme);
+        if (JSON.stringify(theme) !== this.cache) {
+            this.setState({
+                theme: mergedTheme
+            });
+            setRuntimeTheme(mergedTheme);
+        }
+    }
+    componentWillUnmount = () => {
+        setRuntimeTheme(defaultTheme);
+    };
+    render() {
+        // eslint-disable-next-line no-unused-vars
+        const { theme: _theme, ...rest } = this.props;
+        const { theme } = this.state;
+        return <SCThemeProvider theme={theme} {...rest} />;
     }
 }
 

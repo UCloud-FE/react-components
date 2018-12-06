@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import Icon from 'components/Icon';
+import Icon from 'src/components/Icon';
+import deprecatedLog from 'src/utils/deprecatedLog';
+import InnerDefaultThemeProvider from 'src/components/ThemeProvider/InnerDefaultThemeProvider';
 
 import { MessageWrap, IconWrap, ContentWrap } from './style';
 
-const StyleType = ['default', 'info', 'warning', 'error'];
+const StyleType = ['default', 'success', 'warning', 'error'];
 
 class Message extends Component {
     static propTypes = {
@@ -19,15 +21,24 @@ class Message extends Component {
     static defaultProps = {
         styleType: 'default'
     };
+    componentWillMount = () => {
+        const { styleType } = this.props;
+        if (styleType === 'info') {
+            deprecatedLog('styleType "info"', '"success"');
+        }
+    };
+
     render() {
         const { children, ...rest } = this.props;
         return (
-            <MessageWrap {...rest}>
-                <IconWrap>
-                    <Icon type="circle-mark2" />
-                </IconWrap>
-                <ContentWrap>{children}</ContentWrap>
-            </MessageWrap>
+            <InnerDefaultThemeProvider>
+                <MessageWrap {...rest}>
+                    <IconWrap>
+                        <Icon type="circle-mark2" />
+                    </IconWrap>
+                    <ContentWrap>{children}</ContentWrap>
+                </MessageWrap>
+            </InnerDefaultThemeProvider>
         );
     }
 }

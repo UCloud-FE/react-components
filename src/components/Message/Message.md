@@ -2,7 +2,7 @@
 
 *   Message 用来弹出提示框。
 
-*   有 message, warning, info, error 四种不同的方法。
+*   有 message, warning, success, error 四种不同的方法。
 
 ### 演示
 
