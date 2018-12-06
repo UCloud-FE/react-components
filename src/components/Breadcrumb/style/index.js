@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import { inlineBlockWithVerticalMixin, Color, FontSize } from 'src/style';
+import { inlineBlockWithVerticalMixin } from 'src/style';
 
 const textStyleMixin = css`
     font-size: 14px;
@@ -9,26 +9,26 @@ const textStyleMixin = css`
     ${inlineBlockWithVerticalMixin};
 `;
 
-export const ItemWrapA = styled.a`
-    cursor: pointer;
-    text-decoration: none;
+export const ItemWrapA = styled.a(
+    ({ theme: { colorMap }, disabled, current }) => css`
+        cursor: pointer;
+        text-decoration: none;
 
-    ${textStyleMixin};
-    color: ${Color.font.blue};
+        ${textStyleMixin};
+        color: ${colorMap.active.text};
 
-    ${({ current }) =>
-        current &&
-        css`
-            pointer-events: none;
-            color: ${Color.font.default};
-        `};
-    ${({ disabled }) =>
-        disabled &&
-        css`
-            pointer-events: none;
-            color: ${Color.font.disabled};
-        `};
-`;
+        ${current &&
+            css`
+                pointer-events: none;
+                color: ${colorMap.default.text};
+            `};
+        ${disabled &&
+            css`
+                pointer-events: none;
+                color: ${colorMap.disabled.text};
+            `};
+    `
+);
 
 export const ItemWrapSpan = ItemWrapA.withComponent('span');
 
@@ -36,8 +36,10 @@ export const SeparatorWrap = styled.span`
     ${textStyleMixin};
 `;
 
-export const BreadcrumbWrap = styled.div`
-    font-size: ${FontSize.sm};
-    color: ${Color.font.default};
-    vertical-align: baseline;
-`;
+export const BreadcrumbWrap = styled.div(
+    ({ theme: { colorMap, fontSize } }) => css`
+        font-size: ${fontSize};
+        color: ${colorMap.default.text};
+        vertical-align: baseline;
+    `
+);

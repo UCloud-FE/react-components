@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { SeparatorWrap, BreadcrumbWrap } from 'components/Breadcrumb/style';
+import InnerDefaultThemeProvider from 'src/components/ThemeProvider/InnerDefaultThemeProvider';
+
+import { SeparatorWrap, BreadcrumbWrap } from './style';
 
 class Breadcrumb extends Component {
     static propTypes = {
@@ -17,17 +19,19 @@ class Breadcrumb extends Component {
         const { separator, children, ...rest } = this.props;
         let isFirstItem;
         return (
-            <BreadcrumbWrap {...rest}>
-                {React.Children.map(children, child => {
-                    if (React.isValidElement(child) && child.type.__IS_BREADCRUMB_ITEM) {
-                        isFirstItem = isFirstItem === undefined ? true : false;
-                        if (!isFirstItem) {
-                            return [<SeparatorWrap key="separator">{separator}</SeparatorWrap>, child];
+            <InnerDefaultThemeProvider>
+                <BreadcrumbWrap {...rest}>
+                    {React.Children.map(children, child => {
+                        if (React.isValidElement(child) && child.type.__IS_BREADCRUMB_ITEM) {
+                            isFirstItem = isFirstItem === undefined ? true : false;
+                            if (!isFirstItem) {
+                                return [<SeparatorWrap key="separator">{separator}</SeparatorWrap>, child];
+                            }
                         }
-                    }
-                    return child;
-                })}
-            </BreadcrumbWrap>
+                        return child;
+                    })}
+                </BreadcrumbWrap>
+            </InnerDefaultThemeProvider>
         );
     }
 }
