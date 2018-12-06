@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components';
 
 import { calculateSize, inlineBlockWithVerticalMixin } from 'src/style';
-import defaultTheme from 'src/components/ThemeProvider/theme';
 
 const styleTypeMixin = ({ styleType, theme: { Button: buttonTheme } }) => css`
     color: ${buttonTheme[styleType].text};
@@ -83,7 +82,3 @@ export const ButtonWrap = styled.button(
         }
     `
 );
-
-ButtonWrap.defaultProps = {
-    theme: defaultTheme
-};

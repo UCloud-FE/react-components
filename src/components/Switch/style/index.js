@@ -20,10 +20,10 @@ export const Text = styled.span`
     display: block;
 `;
 
-export const OnText = Text.extend`
+export const OnText = styled(Text)`
     /* empty */
 `;
-export const OffText = Text.extend`
+export const OffText = styled(Text)`
     /* empty */
 `;
 

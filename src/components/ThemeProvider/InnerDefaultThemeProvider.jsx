@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
-import ThemeGetter from './ThemeGetter';
+import defaultTheme from './theme';
 
 export default class InnerDefaultThemeProvider extends Component {
     static propTypes = {
@@ -10,6 +10,6 @@ export default class InnerDefaultThemeProvider extends Component {
     };
     render() {
         const { children } = this.props;
-        return <ThemeGetter>{theme => <ThemeProvider theme={theme}>{children}</ThemeProvider>}</ThemeGetter>;
+        return <ThemeProvider theme={theme => theme || defaultTheme}>{children}</ThemeProvider>;
     }
 }

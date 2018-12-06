@@ -17,7 +17,7 @@ export const BaseBadge = styled.span`
     color: white;
 `;
 
-export const DotBadge = BaseBadge.extend`
+export const DotBadge = styled(BaseBadge)`
     width: 10px;
     height: 10px;
     padding: 0;

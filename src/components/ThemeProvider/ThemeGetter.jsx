@@ -1,16 +1,13 @@
-import { PureComponent } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { withTheme } from 'styled-components';
 
-import defaultTheme from './theme';
+import InnerDefaultThemeProvider from './InnerDefaultThemeProvider';
 
 class ThemeGetter extends PureComponent {
     static propTypes = {
         theme: PropTypes.object,
         children: PropTypes.func.isRequired
-    };
-    static defaultProps = {
-        theme: defaultTheme
     };
     render() {
         const { theme, children, ...rest } = this.props;
@@ -18,4 +15,12 @@ class ThemeGetter extends PureComponent {
     }
 }
 
-export default withTheme(ThemeGetter);
+const ThemeGetterWithTheme = withTheme(ThemeGetter);
+
+const ThemeGetterWithDefaultTheme = props => (
+    <InnerDefaultThemeProvider>
+        <ThemeGetterWithTheme {...props} />
+    </InnerDefaultThemeProvider>
+);
+
+export default ThemeGetterWithDefaultTheme;
