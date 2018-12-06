@@ -73,6 +73,7 @@ module.exports = {
         StyleGuideRenderer: path.join(__dirname, '.styleguide/components/StyleGuideRenderer'),
         ReactComponentRenderer: path.join(__dirname, '.styleguide/components/ReactComponentRenderer'),
         Examples: path.join(__dirname, '.styleguide/components/Examples'),
+        ReactExample: path.join(__dirname, '.styleguide/components/ReactExample'),
         'slots/IsolateButton': path.join(__dirname, '.styleguide/components/IsolateButton')
     },
     require: [path.join(__dirname, '.styleguide/setup.js')],

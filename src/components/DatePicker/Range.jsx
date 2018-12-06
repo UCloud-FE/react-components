@@ -40,7 +40,7 @@ const getDateFromOption = option => {
     { onChangeName: ['onChange', 'onInitialChange'] },
     { valueName: 'option', onChangeName: 'onOptionChange' }
 )
-export default class Range extends Component {
+class Range extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -269,3 +269,5 @@ export default class Range extends Component {
 }
 
 Range.Type = ['date', 'month'];
+
+export default Range;
