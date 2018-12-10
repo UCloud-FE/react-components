@@ -1,34 +1,37 @@
 import { colorList } from 'src/components/ThemeProvider/color';
 
+/**
+ * theme style for styleType
+ */
 export default {
     primary: {
-        text: colorList.white,
+        color: colorList.white,
         background: colorList.primary2,
-        border: colorList.primary2
+        borderColor: colorList.primary2
     },
     'primary:hover': {
-        text: colorList.white,
+        color: colorList.white,
         background: colorList.primary1,
-        border: colorList.primary1
+        borderColor: colorList.primary1
     },
     border: {
-        text: colorList.secondary1,
+        color: colorList.secondary1,
         background: colorList.white,
-        border: colorList.secondary4
+        borderColor: colorList.secondary4
     },
     'border:hover': {
-        text: colorList.primary,
+        color: colorList.primary,
         background: colorList.white,
-        border: colorList.primary2
+        borderColor: colorList.primary2
     },
     'border-gray': {
-        text: colorList.secondary1,
+        color: colorList.secondary1,
         background: colorList.primary4,
-        border: colorList.secondary4
+        borderColor: colorList.secondary4
     },
     'border-gray:hover': {
-        text: colorList.primary2,
+        color: colorList.primary2,
         background: colorList.primary4,
-        border: colorList.primary2
+        borderColor: colorList.primary2
     }
 };

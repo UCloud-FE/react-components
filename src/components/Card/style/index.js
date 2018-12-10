@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import defaultTheme from 'src/components/ThemeProvider/theme';
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 import { clearFixMixin } from 'src/style';
 
 const sharedGutter = css`
@@ -18,7 +18,6 @@ export const HeaderWrap = styled.div`
 export const CommentWrap = styled.div`
     display: block;
     line-height: 22px;
-
     font-weight: normal;
 `;
 
@@ -41,8 +40,8 @@ export const FooterWrap = styled.div`
 `;
 
 /* stylelint-disable no-duplicate-selectors */
-const themeMixin = ({ theme: { colorList, colorMap, fontSize, Card: cardTheme, titleFontSize } }) => css`
-    border: 1px solid ${cardTheme.border};
+const themeMixin = ({ theme: { colorList, colorMap, fontSize, titleFontSize } }) => css`
+    border: 1px solid ${colorList.secondary5};
     background: ${colorList.white};
     font-size: ${fontSize};
     color: ${colorMap.default.text};
@@ -55,7 +54,7 @@ const themeMixin = ({ theme: { colorList, colorMap, fontSize, Card: cardTheme, t
         font-size: ${fontSize};
     }
     ${FooterWrap} {
-        border-top: 1px solid ${cardTheme.border};
+        border-top: 1px solid ${colorList.secondary5};
     }
 `;
 /* stylelint-enable no-duplicate-selectors */
@@ -67,6 +66,5 @@ export const CardWrap = styled.div`
     padding-bottom: 12px;
     ${themeMixin};
 `;
-CardWrap.defaultProps = {
-    theme: defaultTheme
-};
+
+addDefaultThemeProps(CardWrap);

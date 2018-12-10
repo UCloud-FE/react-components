@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 
 import Icon from 'src/components/Icon';
 import { fadeIn, fadeOut } from 'src/style/animation';
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
 export const animationDuration = 500;
 export const animationName = 'uc-fe-animation-fade';
@@ -61,3 +62,5 @@ export const TipWrap = styled.p(
         margin-top: 5px;
     `
 );
+
+addDefaultThemeProps(TipWrap, LoadingIcon);

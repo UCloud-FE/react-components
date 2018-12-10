@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { CSSTransition } from 'react-transition-group';
 
-import InnerDefaultThemeProvider from 'src/components/ThemeProvider/InnerDefaultThemeProvider';
-
 import { LoadingWrap, Mask, IndicatorWrap, LoadingIcon, TipWrap } from './style';
 
 export const animationDuration = 500;
@@ -31,21 +29,19 @@ class Loading extends Component {
     render() {
         const { loading, children, indicator, tip, maskStyle, maskClassName, ...rest } = this.props;
         return (
-            <InnerDefaultThemeProvider>
-                <LoadingWrap {...rest}>
-                    {children}
-                    <CSSTransition in={loading} unmountOnExit classNames={animationName} timeout={animationDuration}>
-                        <Mask style={maskStyle} maskClassName={maskClassName}>
-                            <IndicatorWrap>
-                                <div>
-                                    {indicator}
-                                    {tip && <TipWrap>{tip}</TipWrap>}
-                                </div>
-                            </IndicatorWrap>
-                        </Mask>
-                    </CSSTransition>
-                </LoadingWrap>
-            </InnerDefaultThemeProvider>
+            <LoadingWrap {...rest}>
+                {children}
+                <CSSTransition in={loading} unmountOnExit classNames={animationName} timeout={animationDuration}>
+                    <Mask style={maskStyle} maskClassName={maskClassName}>
+                        <IndicatorWrap>
+                            <div>
+                                {indicator}
+                                {tip && <TipWrap>{tip}</TipWrap>}
+                            </div>
+                        </IndicatorWrap>
+                    </Mask>
+                </CSSTransition>
+            </LoadingWrap>
         );
     }
 }

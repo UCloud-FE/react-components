@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 
 import Icon from 'src/components/Icon';
-import InnerDefaultThemeProvider from 'src/components/ThemeProvider/InnerDefaultThemeProvider';
 
 import { ButtonWrap } from './style';
 
@@ -49,12 +48,10 @@ export default class Button extends PureComponent {
             btnIcon = <Icon type="loading" spin />;
         }
         return (
-            <InnerDefaultThemeProvider>
-                <ButtonWrap loading={loading} {...rest}>
-                    {btnIcon}
-                    {children}
-                </ButtonWrap>
-            </InnerDefaultThemeProvider>
+            <ButtonWrap loading={loading} {...rest}>
+                {btnIcon}
+                {children}
+            </ButtonWrap>
         );
     }
 }

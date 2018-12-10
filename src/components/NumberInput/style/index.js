@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 import defaultTheme from 'src/components/ThemeProvider/theme';
-import { inlineBlockWithVerticalMixin, calculateSize } from 'src/style';
+import { inlineBlockWithVerticalMixin } from 'src/style';
 
 /* stylelint-disable no-duplicate-selectors, selector-type-no-unknown, no-descending-specificity */
 
@@ -44,7 +44,14 @@ export const HandlerDown = styled.span`
     ${handlerMixin};
 `;
 
-const propsMixin = ({ theme: { colorList, colorMap, Height }, styleType, focused, size, hideHandler, disabled }) => css`
+const propsMixin = ({
+    theme: { colorList, colorMap, Height, HeightNumber },
+    styleType,
+    focused,
+    size,
+    hideHandler,
+    disabled
+}) => css`
     color: ${colorMap.default.text};
     height: ${Height[size]};
 
@@ -55,7 +62,7 @@ const propsMixin = ({ theme: { colorList, colorMap, Height }, styleType, focused
         `};
 
     ${Input} {
-        line-height: ${calculateSize(Height[size], -2)};
+        line-height: ${HeightNumber[size] - 2}px;
 
         ${inlineBlockWithVerticalMixin};
 
@@ -83,7 +90,7 @@ const propsMixin = ({ theme: { colorList, colorMap, Height }, styleType, focused
     ${styleType === 'default' &&
         css`
             border: 1px solid ${colorMap.default.border};
-            padding-right: ${calculateSize(Height[size], -6)};
+            padding-right: ${HeightNumber[size] - 6}px;
 
             &:hover {
                 border-color: ${colorMap.active.border};
@@ -103,7 +110,7 @@ const propsMixin = ({ theme: { colorList, colorMap, Height }, styleType, focused
                 padding: 0 0 0 8px;
                 text-align: left;
 
-                width: ${calculateSize(Height[size], 6)};
+                width: ${HeightNumber[size] + 6}px;
             }
 
             ${HandlerUp}, ${HandlerDown} {
@@ -111,7 +118,7 @@ const propsMixin = ({ theme: { colorList, colorMap, Height }, styleType, focused
 
                 height: ${(+Height[size].replace('px', '') - 2) / 2}px;
                 line-height: ${(+Height[size].replace('px', '') - 2) / 2}px;
-                width: ${calculateSize(Height[size], -6)};
+                width: ${HeightNumber[size] - 6}px;
 
                 &:hover {
                     color: ${colorMap.active.icon};
@@ -140,8 +147,8 @@ const propsMixin = ({ theme: { colorList, colorMap, Height }, styleType, focused
                 padding: 0 8px;
                 text-align: left;
 
-                height: ${calculateSize(Height[size], -2)};
-                width: ${calculateSize(Height[size], 6)};
+                height: ${HeightNumber[size] - 2}px;
+                width: ${HeightNumber[size] + 6}px;
             }
             ${InputWrap} {
                 border: 1px solid ${colorMap.default.border};
@@ -164,7 +171,7 @@ const propsMixin = ({ theme: { colorList, colorMap, Height }, styleType, focused
                 top: 0;
                 height: ${Height[size]};
                 width: ${Height[size]};
-                line-height: ${calculateSize(Height[size], -2)};
+                line-height: ${HeightNumber[size] - 2}px;
 
                 &:hover {
                     color: ${colorMap.active.icon};
@@ -194,8 +201,8 @@ const propsMixin = ({ theme: { colorList, colorMap, Height }, styleType, focused
                 border: 1px solid ${colorMap.default.border};
                 margin: 0 4px;
 
-                height: ${calculateSize(Height[size], -2)};
-                width: ${calculateSize(Height[size], -2)};
+                height: ${HeightNumber[size] - 2}px;
+                width: ${HeightNumber[size] - 2}px;
 
                 &:hover {
                     border-color: ${colorMap.active.border};
@@ -220,7 +227,7 @@ const propsMixin = ({ theme: { colorList, colorMap, Height }, styleType, focused
                 }
                 height: ${Height[size]};
                 width: ${Height[size]};
-                line-height: ${calculateSize(Height[size], -2)};
+                line-height: ${HeightNumber[size] - 2}px;
             }
             ${HandlerUp} {
                 right: 0;

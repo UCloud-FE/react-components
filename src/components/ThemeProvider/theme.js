@@ -2,7 +2,6 @@ import _ from 'lodash';
 
 import Tabs from 'src/components/Tabs/style/theme';
 import Button from 'src/components/Button/style/theme';
-import Card from 'src/components/Card/style/theme';
 import Menu from 'src/components/Menu/style/theme';
 import Switch from 'src/components/Switch/style/theme';
 import Tooltip from 'src/components/Tooltip/style/theme';
@@ -12,7 +11,6 @@ import { colorList, colorMap } from './color';
 const componentTheme = {
     Button,
     Tabs,
-    Card,
     Menu,
     Switch,
     Tooltip
@@ -29,13 +27,13 @@ const theme = {
     fontSize: '12px',
     // font-size of title
     titleFontSize: '14px',
-    // height of size
+    // height of size (px)
     Height: {
         sm: '22px',
         md: '28px',
         lg: '34px'
     },
-    // padding of size
+    // padding of size (px)
     Padding: {
         sm: '8px',
         md: '8px',

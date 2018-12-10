@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 import moment from 'moment';
 
-import Popover from 'components/Popover';
-import uncontrolledDecorator from 'decorators/uncontrolled';
+import Popover from 'src/components/Popover';
+import uncontrolledDecorator from 'src/decorators/uncontrolled';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
+import InnerDefaultThemeProvider from 'src/components/ThemeProvider/InnerDefaultThemeProvider';
 
 import DatePicker from './DatePicker';
 import MonthPicker from './Month';
@@ -198,72 +199,74 @@ class Range extends Component {
         const isValid = isRangeDateValid(cStart, cEnd, rules, precision);
 
         return (
-            <div {...rest}>
-                {!hideOptions && (
-                    <RangeSelect
-                        options={options}
-                        size={size}
-                        value={option}
-                        disabled={disabled}
-                        onChange={this.handleOptionChange}
-                        popover={{ zIndex }}
-                    />
-                )}
-                <Popover
-                    visible={visible}
-                    getPopupContainer={triggerNode => triggerNode.parentNode}
-                    zIndex={zIndex}
-                    popup={
-                        <RangePopup>
-                            <RangePopupPickerContainer>
-                                <span>{locale.start}</span>
-                                <Picker
-                                    value={cStart}
-                                    rules={{
-                                        range: range,
-                                        custom: (date, value) => _c && _c(date, value, cStart, cEnd, 'start')
-                                    }}
-                                    display={pickerDisplay}
-                                    onChange={v => this.handleChange('start', v)}
-                                />
-                            </RangePopupPickerContainer>
-                            <RangePopupPickerContainer>
-                                <span>{locale.end}</span>
-                                <Picker
-                                    value={cEnd}
-                                    rules={{
-                                        range: range,
-                                        custom: (date, value) => _c && _c(date, value, cStart, cEnd, 'end')
-                                    }}
-                                    display={pickerDisplay}
-                                    onChange={v => this.handleChange('end', v)}
-                                />
-                            </RangePopupPickerContainer>
-                            <RangePopupFooter>
-                                <div>
-                                    {!isValid ? <RangePopupError>{locale.rangeErrorTip}</RangePopupError> : null}
-                                    <RangePopupConfirmButton
-                                        styleType="primary"
-                                        onClick={this.confirmChange}
-                                        disabled={!isValid}
-                                    >
-                                        {locale.rangeConfirm}
-                                    </RangePopupConfirmButton>
-                                </div>
-                            </RangePopupFooter>
-                        </RangePopup>
-                    }
-                    onVisibleChange={this.handleVisibleChange}
-                    trigger={['click']}
-                >
-                    <RangeDateWrap size={size} modifyAble={modifyAble} disabled={disabled}>
-                        <span>{start.format(rangeFormat || formatString[type])}</span>
-                        <RangeDateSeparator />
-                        <span>{end.format(rangeFormat || formatString[type])}</span>
-                        <PickerIcon type="calendar" color="blue" />
-                    </RangeDateWrap>
-                </Popover>
-            </div>
+            <InnerDefaultThemeProvider>
+                <div {...rest}>
+                    {!hideOptions && (
+                        <RangeSelect
+                            options={options}
+                            size={size}
+                            value={option}
+                            disabled={disabled}
+                            onChange={this.handleOptionChange}
+                            popover={{ zIndex }}
+                        />
+                    )}
+                    <Popover
+                        visible={visible}
+                        getPopupContainer={triggerNode => triggerNode.parentNode}
+                        zIndex={zIndex}
+                        popup={
+                            <RangePopup>
+                                <RangePopupPickerContainer>
+                                    <span>{locale.start}</span>
+                                    <Picker
+                                        value={cStart}
+                                        rules={{
+                                            range: range,
+                                            custom: (date, value) => _c && _c(date, value, cStart, cEnd, 'start')
+                                        }}
+                                        display={pickerDisplay}
+                                        onChange={v => this.handleChange('start', v)}
+                                    />
+                                </RangePopupPickerContainer>
+                                <RangePopupPickerContainer>
+                                    <span>{locale.end}</span>
+                                    <Picker
+                                        value={cEnd}
+                                        rules={{
+                                            range: range,
+                                            custom: (date, value) => _c && _c(date, value, cStart, cEnd, 'end')
+                                        }}
+                                        display={pickerDisplay}
+                                        onChange={v => this.handleChange('end', v)}
+                                    />
+                                </RangePopupPickerContainer>
+                                <RangePopupFooter>
+                                    <div>
+                                        {!isValid ? <RangePopupError>{locale.rangeErrorTip}</RangePopupError> : null}
+                                        <RangePopupConfirmButton
+                                            styleType="primary"
+                                            onClick={this.confirmChange}
+                                            disabled={!isValid}
+                                        >
+                                            {locale.rangeConfirm}
+                                        </RangePopupConfirmButton>
+                                    </div>
+                                </RangePopupFooter>
+                            </RangePopup>
+                        }
+                        onVisibleChange={this.handleVisibleChange}
+                        trigger={['click']}
+                    >
+                        <RangeDateWrap size={size} modifyAble={modifyAble} disabled={disabled}>
+                            <span>{start.format(rangeFormat || formatString[type])}</span>
+                            <RangeDateSeparator />
+                            <span>{end.format(rangeFormat || formatString[type])}</span>
+                            <PickerIcon type="calendar" color="blue" />
+                        </RangeDateWrap>
+                    </Popover>
+                </div>
+            </InnerDefaultThemeProvider>
         );
     }
 }

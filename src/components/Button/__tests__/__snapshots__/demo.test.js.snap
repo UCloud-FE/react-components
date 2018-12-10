@@ -9,31 +9,23 @@ exports[`Button demo -- button 1`] = `
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 12px;
   cursor: pointer;
   outline: none;
+  font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  color: #fff;
-  border-color: #4683e6;
-  background: #4683e6;
   height: 22px;
   line-height: 20px;
   padding: 0 8px;
+  color: #fff;
+  background: #4683e6;
+  border-color: #4683e6;
 }
 
 .c22:hover {
   color: #fff;
-  border-color: #3664c8;
   background: #3664c8;
-}
-
-.c22[disabled] {
-  border-color: #d9d9d9;
-  background: #f7f7f7;
-  color: #bbb;
-  cursor: not-allowed;
-  pointer-events: none;
+  border-color: #3664c8;
 }
 
 .c4 {
@@ -524,26 +516,54 @@ exports[`Button demo -- disabled 1`] = `
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 12px;
   cursor: pointer;
   outline: none;
+  font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  color: #6b798e;
-  border-color: #c3cad9;
-  background: #fff;
   height: 28px;
   line-height: 26px;
   padding: 0 8px;
+  color: #6b798e;
+  background: #fff;
+  border-color: #c3cad9;
 }
 
 .c0:hover {
   color: #4074e1;
-  border-color: #4683e6;
   background: #fff;
+  border-color: #4683e6;
 }
 
-.c0[disabled] {
+.c1 {
+  box-sizing: border-box;
+  border-radius: 2px;
+  border-width: 1px;
+  border-style: solid;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 28px;
+  line-height: 26px;
+  padding: 0 8px;
+  color: #6b798e;
+  background: #fff;
+  border-color: #c3cad9;
+}
+
+.c1:hover {
+  color: #4074e1;
+  background: #fff;
+  border-color: #4683e6;
+}
+
+.c1:disabled,
+.c1[disabled] {
   border-color: #d9d9d9;
   background: #f7f7f7;
   color: #bbb;
@@ -559,7 +579,7 @@ exports[`Button demo -- disabled 1`] = `
     Button
   </button>
   <button
-    class="c0"
+    class="c1"
     disabled=""
     type="button"
   >
@@ -583,31 +603,23 @@ exports[`Button demo -- icon 1`] = `
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 12px;
   cursor: pointer;
   outline: none;
+  font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  color: #6b798e;
-  border-color: #c3cad9;
-  background: #fff;
   height: 28px;
   line-height: 26px;
   padding: 0 8px;
+  color: #6b798e;
+  background: #fff;
+  border-color: #c3cad9;
 }
 
 .c0:hover {
   color: #4074e1;
-  border-color: #4683e6;
   background: #fff;
-}
-
-.c0[disabled] {
-  border-color: #d9d9d9;
-  background: #f7f7f7;
-  color: #bbb;
-  cursor: not-allowed;
-  pointer-events: none;
+  border-color: #4683e6;
 }
 
 <div>
@@ -713,25 +725,25 @@ exports[`Button demo -- loading 1`] = `
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 12px;
   cursor: pointer;
   outline: none;
+  font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  color: #6b798e;
-  border-color: #c3cad9;
-  background: #fff;
   height: 28px;
   line-height: 26px;
   padding: 0 8px;
+  color: #6b798e;
+  background: #fff;
+  border-color: #c3cad9;
   position: relative;
   pointer-events: none;
 }
 
 .c0:hover {
   color: #4074e1;
-  border-color: #4683e6;
   background: #fff;
+  border-color: #4683e6;
 }
 
 .c0:before {
@@ -750,14 +762,6 @@ exports[`Button demo -- loading 1`] = `
   pointer-events: none;
 }
 
-.c0[disabled] {
-  border-color: #d9d9d9;
-  background: #f7f7f7;
-  color: #bbb;
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
 .c2 {
   box-sizing: border-box;
   border-radius: 2px;
@@ -766,25 +770,25 @@ exports[`Button demo -- loading 1`] = `
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 12px;
   cursor: pointer;
   outline: none;
+  font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  color: #fff;
-  border-color: #4683e6;
-  background: #4683e6;
   height: 28px;
   line-height: 26px;
   padding: 0 8px;
+  color: #fff;
+  background: #4683e6;
+  border-color: #4683e6;
   position: relative;
   pointer-events: none;
 }
 
 .c2:hover {
   color: #fff;
-  border-color: #3664c8;
   background: #3664c8;
+  border-color: #3664c8;
 }
 
 .c2:before {
@@ -800,14 +804,6 @@ exports[`Button demo -- loading 1`] = `
   z-index: 1;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
-  pointer-events: none;
-}
-
-.c2[disabled] {
-  border-color: #d9d9d9;
-  background: #f7f7f7;
-  color: #bbb;
-  cursor: not-allowed;
   pointer-events: none;
 }
 
@@ -849,17 +845,17 @@ exports[`Button demo -- shape 1`] = `
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 12px;
   cursor: pointer;
   outline: none;
+  font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  color: #6b798e;
-  border-color: #c3cad9;
-  background: #fff;
   height: 34px;
   line-height: 32px;
   padding: 0 12px;
+  color: #6b798e;
+  background: #fff;
+  border-color: #c3cad9;
   border-radius: 50%;
   padding: 0;
   overflow: hidden;
@@ -868,16 +864,8 @@ exports[`Button demo -- shape 1`] = `
 
 .c0:hover {
   color: #4074e1;
-  border-color: #4683e6;
   background: #fff;
-}
-
-.c0[disabled] {
-  border-color: #d9d9d9;
-  background: #f7f7f7;
-  color: #bbb;
-  cursor: not-allowed;
-  pointer-events: none;
+  border-color: #4683e6;
 }
 
 .c1 {
@@ -888,17 +876,17 @@ exports[`Button demo -- shape 1`] = `
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 12px;
   cursor: pointer;
   outline: none;
+  font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  color: #fff;
-  border-color: #4683e6;
-  background: #4683e6;
   height: 34px;
   line-height: 32px;
   padding: 0 12px;
+  color: #fff;
+  background: #4683e6;
+  border-color: #4683e6;
   border-radius: 50%;
   padding: 0;
   overflow: hidden;
@@ -907,16 +895,8 @@ exports[`Button demo -- shape 1`] = `
 
 .c1:hover {
   color: #fff;
-  border-color: #3664c8;
   background: #3664c8;
-}
-
-.c1[disabled] {
-  border-color: #d9d9d9;
-  background: #f7f7f7;
-  color: #bbb;
-  cursor: not-allowed;
-  pointer-events: none;
+  border-color: #3664c8;
 }
 
 <div>
@@ -957,31 +937,23 @@ exports[`Button demo -- size 1`] = `
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 12px;
   cursor: pointer;
   outline: none;
+  font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  color: #6b798e;
-  border-color: #c3cad9;
-  background: #fff;
   height: 28px;
   line-height: 26px;
   padding: 0 8px;
+  color: #6b798e;
+  background: #fff;
+  border-color: #c3cad9;
 }
 
 .c1:hover {
   color: #4074e1;
-  border-color: #4683e6;
   background: #fff;
-}
-
-.c1[disabled] {
-  border-color: #d9d9d9;
-  background: #f7f7f7;
-  color: #bbb;
-  cursor: not-allowed;
-  pointer-events: none;
+  border-color: #4683e6;
 }
 
 .c0 {
@@ -992,31 +964,23 @@ exports[`Button demo -- size 1`] = `
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 12px;
   cursor: pointer;
   outline: none;
+  font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  color: #6b798e;
-  border-color: #c3cad9;
-  background: #fff;
   height: 22px;
   line-height: 20px;
   padding: 0 8px;
+  color: #6b798e;
+  background: #fff;
+  border-color: #c3cad9;
 }
 
 .c0:hover {
   color: #4074e1;
-  border-color: #4683e6;
   background: #fff;
-}
-
-.c0[disabled] {
-  border-color: #d9d9d9;
-  background: #f7f7f7;
-  color: #bbb;
-  cursor: not-allowed;
-  pointer-events: none;
+  border-color: #4683e6;
 }
 
 .c2 {
@@ -1027,31 +991,23 @@ exports[`Button demo -- size 1`] = `
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 12px;
   cursor: pointer;
   outline: none;
+  font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  color: #6b798e;
-  border-color: #c3cad9;
-  background: #fff;
   height: 34px;
   line-height: 32px;
   padding: 0 12px;
+  color: #6b798e;
+  background: #fff;
+  border-color: #c3cad9;
 }
 
 .c2:hover {
   color: #4074e1;
-  border-color: #4683e6;
   background: #fff;
-}
-
-.c2[disabled] {
-  border-color: #d9d9d9;
-  background: #f7f7f7;
-  color: #bbb;
-  cursor: not-allowed;
-  pointer-events: none;
+  border-color: #4683e6;
 }
 
 <div>
@@ -1085,31 +1041,23 @@ exports[`Button demo -- styleType 1`] = `
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 12px;
   cursor: pointer;
   outline: none;
+  font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  color: #6b798e;
-  border-color: #c3cad9;
-  background: #fff;
   height: 28px;
   line-height: 26px;
   padding: 0 8px;
+  color: #6b798e;
+  background: #fff;
+  border-color: #c3cad9;
 }
 
 .c1:hover {
   color: #4074e1;
-  border-color: #4683e6;
   background: #fff;
-}
-
-.c1[disabled] {
-  border-color: #d9d9d9;
-  background: #f7f7f7;
-  color: #bbb;
-  cursor: not-allowed;
-  pointer-events: none;
+  border-color: #4683e6;
 }
 
 .c0 {
@@ -1120,31 +1068,23 @@ exports[`Button demo -- styleType 1`] = `
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 12px;
   cursor: pointer;
   outline: none;
+  font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  color: #fff;
-  border-color: #4683e6;
-  background: #4683e6;
   height: 28px;
   line-height: 26px;
   padding: 0 8px;
+  color: #fff;
+  background: #4683e6;
+  border-color: #4683e6;
 }
 
 .c0:hover {
   color: #fff;
-  border-color: #3664c8;
   background: #3664c8;
-}
-
-.c0[disabled] {
-  border-color: #d9d9d9;
-  background: #f7f7f7;
-  color: #bbb;
-  cursor: not-allowed;
-  pointer-events: none;
+  border-color: #3664c8;
 }
 
 .c2 {
@@ -1155,31 +1095,23 @@ exports[`Button demo -- styleType 1`] = `
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
-  font-size: 12px;
   cursor: pointer;
   outline: none;
+  font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  color: #6b798e;
-  border-color: #c3cad9;
-  background: #f2f6fc;
   height: 28px;
   line-height: 26px;
   padding: 0 8px;
+  color: #6b798e;
+  background: #f2f6fc;
+  border-color: #c3cad9;
 }
 
 .c2:hover {
   color: #4683e6;
-  border-color: #4683e6;
   background: #f2f6fc;
-}
-
-.c2[disabled] {
-  border-color: #d9d9d9;
-  background: #f7f7f7;
-  color: #bbb;
-  cursor: not-allowed;
-  pointer-events: none;
+  border-color: #4683e6;
 }
 
 <div>

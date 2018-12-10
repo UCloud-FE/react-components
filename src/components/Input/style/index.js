@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
 
-import defaultTheme from 'src/components/ThemeProvider/theme';
 import { inlineBlockWithVerticalMixin } from 'src/style';
 import Icon from 'src/components/Icon';
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
 /* stylelint-disable no-descending-specificity */
 
@@ -81,6 +81,5 @@ export const InputWrap = styled.span`
 
     ${themeMixin};
 `;
-InputWrap.defaultProps = {
-    theme: defaultTheme
-};
+
+addDefaultThemeProps(InputWrap);

@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 import config from 'src/config';
-import { inlineBlockWithVerticalMixin, calculateSize } from 'src/style';
+import { inlineBlockWithVerticalMixin } from 'src/style';
 import { tint } from 'src/style/color';
 import defaultTheme from 'src/components/ThemeProvider/theme';
 
@@ -68,8 +68,8 @@ export const SliderWrap = styled.div(
                 background: ${colorMap.default.background};
                 touch-action: pan-x;
                 z-index: 1;
-                height: ${calculateSize(Height[size], 6)};
-                line-height: ${calculateSize(Height[size], 8)};
+                height: ${HeightNumber[size] + 6}px;
+                line-height: ${HeightNumber[size] + 8}px;
 
                 ${disabled &&
                     css`

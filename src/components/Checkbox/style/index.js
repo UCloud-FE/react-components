@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 import Icon from 'src/components/Icon';
 import { inlineBlockWithVerticalMixin } from 'src/style';
-import defaultTheme from 'src/components/ThemeProvider/theme';
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
 export const CheckboxIcon = styled(Icon)`
     margin-right: 8px;
@@ -33,9 +33,6 @@ export const CheckboxWrap = styled.span`
     ${inlineBlockWithVerticalMixin};
     ${propsMixin};
 `;
-CheckboxWrap.defaultProps = {
-    theme: defaultTheme
-};
 
 export const CheckboxGroupWrap = styled.div`
     ${/* sc-sel */ CheckboxWrap} {
@@ -46,3 +43,5 @@ export const CheckboxGroupWrap = styled.div`
         }
     }
 `;
+
+addDefaultThemeProps(CheckboxWrap);

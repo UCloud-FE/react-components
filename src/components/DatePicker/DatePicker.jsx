@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
-import NumberInput from 'components/NumberInput';
-import Calendar from 'components/Calendar/Calendar';
-import placements from 'components/Popover/placements';
-import uncontrolledDecorator from 'decorators/uncontrolled';
+import NumberInput from 'src/components/NumberInput';
+import Calendar from 'src/components/Calendar/Calendar';
+import placements from 'src/components/Popover/placements';
+import uncontrolledDecorator from 'src/decorators/uncontrolled';
 import { animationPrefixCls } from 'src/style/globalAnimation';
+import InnerDefaultThemeProvider from 'src/components/ThemeProvider/InnerDefaultThemeProvider';
 
 import { isDateDisabled, getValidDate } from './utils';
 import {
@@ -161,30 +162,32 @@ class DatePicker extends Component {
         const value = moment(_v);
 
         return (
-            <PickerContainer {...rest}>
-                {date.show !== false && (
-                    <PickerWrap
-                        prefixCls={prefixCls}
-                        transitionName={`${animationPrefixCls}-fade`}
-                        calendar={<Calendar rules={rules} />}
-                        getCalendarContainer={triggerNode => triggerNode.parentNode}
-                        value={value}
-                        align={placements.bottomLeft}
-                        onChange={onChange}
-                        zIndex={zIndex}
-                    >
-                        {({ value }) => {
-                            return (
-                                <DateWrap size={size}>
-                                    <DateSpan>{value.format(date.format || 'YYYY-MM-DD')}</DateSpan>
-                                    <PickerIcon type="calendar" color="blue" />
-                                </DateWrap>
-                            );
-                        }}
-                    </PickerWrap>
-                )}
-                {this.renderTimePicker(value, display)}
-            </PickerContainer>
+            <InnerDefaultThemeProvider>
+                <PickerContainer {...rest}>
+                    {date.show !== false && (
+                        <PickerWrap
+                            prefixCls={prefixCls}
+                            transitionName={`${animationPrefixCls}-fade`}
+                            calendar={<Calendar rules={rules} />}
+                            getCalendarContainer={triggerNode => triggerNode.parentNode}
+                            value={value}
+                            align={placements.bottomLeft}
+                            onChange={onChange}
+                            zIndex={zIndex}
+                        >
+                            {({ value }) => {
+                                return (
+                                    <DateWrap size={size}>
+                                        <DateSpan>{value.format(date.format || 'YYYY-MM-DD')}</DateSpan>
+                                        <PickerIcon type="calendar" color="blue" />
+                                    </DateWrap>
+                                );
+                            }}
+                        </PickerWrap>
+                    )}
+                    {this.renderTimePicker(value, display)}
+                </PickerContainer>
+            </InnerDefaultThemeProvider>
         );
     }
 }

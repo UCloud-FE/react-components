@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 
 import { inlineBlockWithVerticalMixin } from 'src/style';
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
 const textStyleMixin = css`
     font-size: 14px;
@@ -43,3 +44,5 @@ export const BreadcrumbWrap = styled.div(
         vertical-align: baseline;
     `
 );
+
+addDefaultThemeProps(ItemWrapA, ItemWrapSpan, BreadcrumbWrap);

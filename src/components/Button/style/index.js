@@ -1,22 +1,28 @@
 import styled, { css } from 'styled-components';
 
-import { calculateSize, inlineBlockWithVerticalMixin } from 'src/style';
+import { inlineBlockWithVerticalMixin } from 'src/style';
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
-const styleTypeMixin = ({ styleType, theme: { Button: buttonTheme } }) => css`
-    color: ${buttonTheme[styleType].text};
-    border-color: ${buttonTheme[styleType].border};
-    background: ${buttonTheme[styleType].background};
-    &:hover {
-        color: ${buttonTheme[styleType + ':hover'].text};
-        border-color: ${buttonTheme[styleType + ':hover'].border};
-        background: ${buttonTheme[styleType + ':hover'].background};
-    }
+const sizeMixin = ({ size, theme: { Height, HeightNumber, Padding } }) => css`
+    height: ${Height[size]};
+    line-height: ${HeightNumber[size] - 2}px;
+    padding: 0 ${Padding[size]};
 `;
 
-const sizeMixin = ({ size, theme: { Height, Padding } }) => css`
-    height: ${Height[size]};
-    line-height: ${calculateSize(Height[size], -2)};
-    padding: 0 ${Padding[size]};
+const styleTypeMixin = ({ theme: { Button: buttonTheme }, styleType }) => {
+    return css`
+        ${buttonTheme[styleType]};
+        :hover {
+            ${buttonTheme[styleType + ':hover']};
+        }
+    `;
+};
+
+const shapeCircleMixin = ({ size, theme: { Height } }) => css`
+    border-radius: 50%;
+    padding: 0;
+    overflow: hidden;
+    width: ${Height[size]};
 `;
 
 const loadingMixin = css`
@@ -39,46 +45,39 @@ const loadingMixin = css`
     }
 `;
 
-const shapeMixin = ({ shape, size, theme: { Height } }) => {
-    if (shape === 'circle') {
-        return css`
-            border-radius: 50%;
-            padding: 0;
-            overflow: hidden;
-            width: ${Height[size]};
-        `;
+const disabledMixin = ({
+    theme: {
+        colorMap: { disabled: disabledColorMap }
     }
-};
+}) => css`
+    :disabled,
+    &[disabled] {
+        border-color: ${disabledColorMap.border};
+        background: ${disabledColorMap.background};
+        color: ${disabledColorMap.text};
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+`;
 
 export const ButtonWrap = styled.button(
-    ({
-        theme: {
-            fontSize,
-            colorMap: { disabled: disabledColorMap }
-        }
-    }) => css`
+    ({ theme: { fontSize }, loading, shape, disabled }) => css`
         box-sizing: border-box;
         border-radius: 2px;
         border-width: 1px;
         border-style: solid;
         text-align: center;
         text-decoration: none;
-        font-size: ${fontSize};
         cursor: pointer;
         outline: none;
-
+        font-size: ${fontSize};
         ${inlineBlockWithVerticalMixin};
-        ${styleTypeMixin};
-        ${sizeMixin};
-        ${shapeMixin};
-        ${({ loading }) => loading && loadingMixin};
 
-        &[disabled] {
-            border-color: ${disabledColorMap.border};
-            background: ${disabledColorMap.background};
-            color: ${disabledColorMap.text};
-            cursor: not-allowed;
-            pointer-events: none;
-        }
+        ${sizeMixin};
+        ${styleTypeMixin};
+        ${shape === 'circle' && shapeCircleMixin};
+        ${loading && loadingMixin};
+        ${disabled && disabledMixin};
     `
 );
+addDefaultThemeProps(ButtonWrap);

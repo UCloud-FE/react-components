@@ -3,7 +3,7 @@ import RcCalendar from 'rc-calendar';
 import RcMonthCalendar from 'rc-calendar/lib/MonthCalendar';
 
 import config from 'src/config';
-import defaultTheme from 'src/components/ThemeProvider/theme';
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-calendar';
@@ -193,13 +193,9 @@ export const calendarMixin = ({ theme: { colorMap, colorList } }) => css`
 export const CalendarWrap = styled(RcCalendar)`
     ${calendarMixin};
 `;
-CalendarWrap.defaultProps = {
-    theme: defaultTheme
-};
 
 export const MonthCalendarWrap = styled(RcMonthCalendar)`
     ${calendarMixin};
 `;
-MonthCalendarWrap.defaultProps = {
-    theme: defaultTheme
-};
+
+addDefaultThemeProps(CalendarWrap, MonthCalendarWrap);

@@ -4,12 +4,12 @@ import classnames from 'classnames';
 import styled, { css } from 'styled-components';
 import RcPicker from 'rc-calendar/lib/Picker';
 
-import defaultTheme from 'src/components/ThemeProvider/theme';
 import Icon from 'src/components/Icon';
 import Select from 'src/components/Select';
 import Button from 'src/components/Button';
 import { calendarMixin } from 'src/components/Calendar/style';
-import { calculateSize, inlineBlockWithVerticalMixin, clearFixMixin } from 'src/style';
+import { inlineBlockWithVerticalMixin, clearFixMixin } from 'src/style';
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 import config from 'src/config';
 
 const { prefixCls: _prefixCls } = config;
@@ -30,14 +30,11 @@ export const PickerWrap = styled(RcPickerWrap)`
 
     ${calendarMixin};
 `;
-PickerWrap.defaultProps = {
-    theme: defaultTheme
-};
 
 export const DateWrap = styled.div(
-    ({ theme: { Height, colorMap }, size }) => css`
+    ({ theme: { Height, HeightNumber, colorMap }, size }) => css`
         height: ${Height[size]};
-        line-height: ${calculateSize(Height[size], -2)};
+        line-height: ${HeightNumber[size] - 2}px;
         padding: 0 8px;
         border: 1px solid ${colorMap.default.border};
         border-radius: 2px;
@@ -47,9 +44,6 @@ export const DateWrap = styled.div(
         ${inlineBlockWithVerticalMixin};
     `
 );
-DateWrap.defaultProps = {
-    theme: defaultTheme
-};
 
 export const DateSpan = styled.span`
     ${inlineBlockWithVerticalMixin};
@@ -85,9 +79,6 @@ export const PickerContainer = styled.div(
             `};
     `
 );
-PickerContainer.defaultProps = {
-    theme: defaultTheme
-};
 
 export const RangePopup = styled.div(
     ({ theme: { colorMap } }) => css`
@@ -99,29 +90,25 @@ export const RangePopup = styled.div(
         padding: 0;
     `
 );
-RangePopup.defaultProps = {
-    theme: defaultTheme
-};
 
 export const RangeSelect = styled(Select)`
     margin-right: 8px;
 `;
 
 export const RangeDateWrap = styled.div(
-    ({ theme: { Height, colorMap }, size }) => css`
+    ({ theme: { Height, HeightNumber, colorMap }, size, modifyAble, disabled }) => css`
         border: 1px solid ${colorMap.default.border};
         padding: 0 8px;
         border-radius: 2px;
         cursor: pointer;
         box-sizing: border-box;
         height: ${Height[size]};
-        line-height: ${calculateSize(Height[size], -2)};
+        line-height: ${HeightNumber[size] - 2}px;
         color: ${colorMap.default.text};
 
         ${inlineBlockWithVerticalMixin};
 
-        ${({ disabled }) =>
-            disabled &&
+        ${disabled &&
             css`
                 pointer-events: none;
                 background: ${colorMap.disabled.background};
@@ -129,8 +116,7 @@ export const RangeDateWrap = styled.div(
                 color: ${colorMap.disabled.text};
             `};
 
-        ${({ modifyAble }) =>
-            !modifyAble &&
+        ${!modifyAble &&
             css`
                 pointer-events: none;
                 border: none;
@@ -142,9 +128,6 @@ export const RangeDateWrap = styled.div(
             `};
     `
 );
-RangeDateWrap.defaultProps = {
-    theme: defaultTheme
-};
 export const RangeDateSeparator = styled.span(
     ({ theme: { colorMap } }) => css`
         margin: 0 4px;
@@ -155,9 +138,6 @@ export const RangeDateSeparator = styled.span(
         ${inlineBlockWithVerticalMixin};
     `
 );
-RangeDateSeparator.defaultProps = {
-    theme: defaultTheme
-};
 
 export const RangePopupPickerContainer = styled.div`
     margin: 10px 10px 0 10px;
@@ -179,9 +159,6 @@ export const RangePopupFooter = styled.div(
         ${clearFixMixin};
     `
 );
-RangePopupFooter.defaultProps = {
-    theme: defaultTheme
-};
 
 export const RangePopupError = styled.p(
     ({ theme: { colorMap } }) => css`
@@ -190,6 +167,14 @@ export const RangePopupError = styled.p(
         line-height: 28px;
     `
 );
-RangePopupError.defaultProps = {
-    theme: defaultTheme
-};
+
+addDefaultThemeProps(
+    PickerWrap,
+    DateWrap,
+    PickerContainer,
+    RangePopup,
+    RangeDateWrap,
+    RangeDateSeparator,
+    RangePopupFooter,
+    RangePopupError
+);

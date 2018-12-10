@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import { calculateSize, inlineBlockWithVerticalMixin } from 'src/style';
+import { inlineBlockWithVerticalMixin } from 'src/style';
 import config from 'src/config';
 
 const { prefixCls: _prefixCls } = config;
@@ -8,7 +8,7 @@ const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-pagination';
 
 export const PaginationWrap = styled.ul(
-    ({ theme: { colorMap, colorList, fontSize, Height } }) => css`
+    ({ theme: { colorMap, colorList, fontSize, Height, HeightNumber } }) => css`
         color: ${colorMap.default.text};
         font-size: ${fontSize};
         user-select: none;
@@ -33,7 +33,7 @@ export const PaginationWrap = styled.ul(
                 ${({ size }) => css`
                     min-width: ${Height[size]};
                     height: ${Height[size]};
-                    line-height: ${calculateSize(Height[size], -2)};
+                    line-height: ${HeightNumber[size] - 2}px;
                 `};
             }
 
