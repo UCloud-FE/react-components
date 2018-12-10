@@ -6,6 +6,7 @@ import Notice from 'src/components/Notice';
 import Checkbox from 'src/components/Checkbox';
 import { Col } from 'src/components/Grid';
 import config from 'src/config';
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-table';
@@ -217,3 +218,4 @@ export const ColumnConfigModalSplitLine = styled(Col)`
 export const ActionButton = styled(Button)`
     margin-right: 4px;
 `;
+addDefaultThemeProps(TableWrap, ColumnConfigButtonWrap, ColumnConfigModalSplitLine);

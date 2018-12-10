@@ -12,7 +12,6 @@ import Select from 'src/components/Select';
 import Icon from 'src/components/Icon';
 import Popover from 'src/components/Popover';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
-import InnerDefaultThemeProvider from 'src/components/ThemeProvider/InnerDefaultThemeProvider';
 
 import { prefixCls, TableWrap, PopupContainer } from './style';
 import LOCALE from './locale/zh_CN';
@@ -666,75 +665,73 @@ class Table extends Component {
         const { dataSource, total } = this.getDataSource();
         const columns = this.getColumns(dataSource);
         return (
-            <InnerDefaultThemeProvider>
-                <TableContext.Provider
-                    value={{
-                        columns: _c,
-                        columnConfig: columnConfig,
-                        onColumnConfigChange: this.onColumnConfigChange,
-                        handleSearch: this.handleSearch,
-                        locale
-                    }}
-                >
-                    <TableWrap className={className} style={style} hideExpandIcon={hideExpandIcon}>
-                        <PopupContainer innerRef={_ref => (this.popupContainer = _ref)} />
-                        <RcTable
-                            prefixCls={prefixCls}
-                            data={dataSource}
-                            columns={columns}
-                            onRow={record => {
-                                return {
-                                    record,
-                                    contextMenu
-                                };
+            <TableContext.Provider
+                value={{
+                    columns: _c,
+                    columnConfig: columnConfig,
+                    onColumnConfigChange: this.onColumnConfigChange,
+                    handleSearch: this.handleSearch,
+                    locale
+                }}
+            >
+                <TableWrap className={className} style={style} hideExpandIcon={hideExpandIcon}>
+                    <PopupContainer innerRef={_ref => (this.popupContainer = _ref)} />
+                    <RcTable
+                        prefixCls={prefixCls}
+                        data={dataSource}
+                        columns={columns}
+                        onRow={record => {
+                            return {
+                                record,
+                                contextMenu
+                            };
+                        }}
+                        components={{
+                            body: {
+                                row: TableRow
+                            }
+                        }}
+                        emptyText={null}
+                        expandIconAsCell={!!expandedRowRender || expandIconAsCell}
+                        expandedRowRender={expandedRowRender}
+                        expandIconColumnIndex={columns[0] && columns[0].key === 'table_row_selection' ? 1 : 0}
+                        title={() => this.renderTitle({ filters, searchValue, total, locale })}
+                        footer={() => this.renderFooter({ dataSource: _d, emptyContent, errorContent })}
+                        {...rest}
+                    />
+                    {pagination === null ? null : (
+                        <Pagination
+                            size="sm"
+                            total={total}
+                            {...{
+                                hideOnSinglePage: false,
+                                showQuickJumper: true,
+                                showSizeChanger: true
                             }}
-                            components={{
-                                body: {
-                                    row: TableRow
-                                }
+                            {...pagination}
+                            className={`${prefixCls}-pagination`}
+                            onChange={(current, pageSize) => {
+                                this.setState({
+                                    pagination: { current, pageSize }
+                                });
+                                pagination.onChange && pagination.onChange(current, pageSize);
                             }}
-                            emptyText={null}
-                            expandIconAsCell={!!expandedRowRender || expandIconAsCell}
-                            expandedRowRender={expandedRowRender}
-                            expandIconColumnIndex={columns[0] && columns[0].key === 'table_row_selection' ? 1 : 0}
-                            title={() => this.renderTitle({ filters, searchValue, total, locale })}
-                            footer={() => this.renderFooter({ dataSource: _d, emptyContent, errorContent })}
-                            {...rest}
+                            onPageSizeChange={(current, pageSize) => {
+                                this.setState({
+                                    pagination: { current, pageSize }
+                                });
+                                pagination.onPageSizeChange && pagination.onPageSizeChange(current, pageSize);
+                            }}
+                            onAdvise={(current, pageSize) => {
+                                this.setState({
+                                    pagination: { current, pageSize }
+                                });
+                                pagination.onAdvise && pagination.onAdvise(current, pageSize);
+                            }}
                         />
-                        {pagination === null ? null : (
-                            <Pagination
-                                size="sm"
-                                total={total}
-                                {...{
-                                    hideOnSinglePage: false,
-                                    showQuickJumper: true,
-                                    showSizeChanger: true
-                                }}
-                                {...pagination}
-                                className={`${prefixCls}-pagination`}
-                                onChange={(current, pageSize) => {
-                                    this.setState({
-                                        pagination: { current, pageSize }
-                                    });
-                                    pagination.onChange && pagination.onChange(current, pageSize);
-                                }}
-                                onPageSizeChange={(current, pageSize) => {
-                                    this.setState({
-                                        pagination: { current, pageSize }
-                                    });
-                                    pagination.onPageSizeChange && pagination.onPageSizeChange(current, pageSize);
-                                }}
-                                onAdvise={(current, pageSize) => {
-                                    this.setState({
-                                        pagination: { current, pageSize }
-                                    });
-                                    pagination.onAdvise && pagination.onAdvise(current, pageSize);
-                                }}
-                            />
-                        )}
-                    </TableWrap>
-                </TableContext.Provider>
-            </InnerDefaultThemeProvider>
+                    )}
+                </TableWrap>
+            </TableContext.Provider>
         );
     }
 }

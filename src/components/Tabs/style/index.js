@@ -3,7 +3,7 @@ import RcTabs from 'rc-tabs';
 
 import config from 'src/config';
 import { clearFixMixin } from 'src/style';
-import defaultTheme from 'src/components/ThemeProvider/theme';
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-tabs';
@@ -293,6 +293,4 @@ export const TabsWrap = styled(RcTabs)(
         }
     `
 );
-TabsWrap.defaultProps = {
-    theme: defaultTheme
-};
+addDefaultThemeProps(TabsWrap);

@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 import Notice from 'src/components/Notice';
 import Icon from 'src/components/Icon';
-import defaultTheme from 'src/components/ThemeProvider/theme';
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
 const disabledMixin = css`
     pointer-events: none;
@@ -24,9 +24,6 @@ export const ListWrap = styled.div`
     border: 1px solid ${({ theme: { colorMap } }) => colorMap.default.border};
     margin-top: 6px;
 `;
-ListWrap.defaultProps = {
-    theme: defaultTheme
-};
 
 export const UploadIcon = styled(Icon)`
     vertical-align: baseline;
@@ -42,3 +39,4 @@ export const UploadNotice = styled(Notice)`
             cursor: pointer;
         `};
 `;
+addDefaultThemeProps(ListWrap);

@@ -6,6 +6,7 @@ import RcDialog from 'rc-dialog';
 
 import config from 'src/config';
 import 'src/style/globalAnimation';
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-modal';
@@ -109,3 +110,4 @@ export const ModalWrap = styled(RcDialogWrap)(
         }
     `
 );
+addDefaultThemeProps(ModalWrap);

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 import Icon from 'src/components/Icon';
 import deprecatedLog from 'src/utils/deprecatedLog';
-import InnerDefaultThemeProvider from 'src/components/ThemeProvider/InnerDefaultThemeProvider';
 
 import { MessageWrap, IconWrap, ContentWrap } from './style';
 
@@ -31,14 +30,12 @@ class Message extends Component {
     render() {
         const { children, ...rest } = this.props;
         return (
-            <InnerDefaultThemeProvider>
-                <MessageWrap {...rest}>
-                    <IconWrap>
-                        <Icon type="circle-mark2" />
-                    </IconWrap>
-                    <ContentWrap>{children}</ContentWrap>
-                </MessageWrap>
-            </InnerDefaultThemeProvider>
+            <MessageWrap {...rest}>
+                <IconWrap>
+                    <Icon type="circle-mark2" />
+                </IconWrap>
+                <ContentWrap>{children}</ContentWrap>
+            </MessageWrap>
         );
     }
 }

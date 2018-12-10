@@ -6,7 +6,6 @@ import MonthCalendar from 'src/components/Calendar/Month';
 import placements from 'src/components/Popover/placements';
 import uncontrolledDecorator from 'src/decorators/uncontrolled';
 import { animationPrefixCls } from 'src/style/globalAnimation';
-import InnerDefaultThemeProvider from 'src/components/ThemeProvider/InnerDefaultThemeProvider';
 
 import { isDateDisabled, getValidDate } from './utils';
 import { prefixCls, PickerWrap, PickerContainer, DateWrap, DateSpan, PickerIcon } from './style';
@@ -96,29 +95,27 @@ class Month extends Component {
         const value = moment(_v);
 
         return (
-            <InnerDefaultThemeProvider>
-                <PickerContainer {...rest}>
-                    <PickerWrap
-                        prefixCls={prefixCls}
-                        transitionName={`${animationPrefixCls}-fade`}
-                        calendar={<MonthCalendar rules={rules} />}
-                        getCalendarContainer={triggerNode => triggerNode.parentNode}
-                        value={value}
-                        align={placements.bottomLeft}
-                        onChange={onChange}
-                        zIndex={zIndex}
-                    >
-                        {({ value }) => {
-                            return (
-                                <DateWrap size={size}>
-                                    <DateSpan>{value.format(date.format || 'YYYY-MM')}</DateSpan>
-                                    <PickerIcon type="calendar" color="blue" />
-                                </DateWrap>
-                            );
-                        }}
-                    </PickerWrap>
-                </PickerContainer>
-            </InnerDefaultThemeProvider>
+            <PickerContainer {...rest}>
+                <PickerWrap
+                    prefixCls={prefixCls}
+                    transitionName={`${animationPrefixCls}-fade`}
+                    calendar={<MonthCalendar rules={rules} />}
+                    getCalendarContainer={triggerNode => triggerNode.parentNode}
+                    value={value}
+                    align={placements.bottomLeft}
+                    onChange={onChange}
+                    zIndex={zIndex}
+                >
+                    {({ value }) => {
+                        return (
+                            <DateWrap size={size}>
+                                <DateSpan>{value.format(date.format || 'YYYY-MM')}</DateSpan>
+                                <PickerIcon type="calendar" color="blue" />
+                            </DateWrap>
+                        );
+                    }}
+                </PickerWrap>
+            </PickerContainer>
         );
     }
 }

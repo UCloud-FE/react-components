@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import { inlineBlockWithVerticalMixin } from 'src/style';
 import Icon from 'src/components/Icon';
 import Button from 'src/components/Button';
-import defaultTheme from 'src/components/ThemeProvider/theme';
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
 export const RadioIcon = styled(Icon)`
     margin-right: 8px;
@@ -49,9 +49,6 @@ export const RadioWrap = styled.div`
             }
         `};
 `;
-RadioWrap.defaultProps = {
-    theme: defaultTheme
-};
 
 export const RadioButtonWrap = styled(Button)`
     min-width: 50px;
@@ -79,9 +76,6 @@ export const RadioButtonWrap = styled(Button)`
         z-index: 3;
     }
 `;
-RadioButtonWrap.defaultProps = {
-    theme: defaultTheme
-};
 
 export const RadioTagWrap = styled.div`
     padding: 0 8px;
@@ -109,9 +103,6 @@ export const RadioTagWrap = styled.div`
             pointer-events: none;
         `};
 `;
-RadioTagWrap.defaultProps = {
-    theme: defaultTheme
-};
 
 export const RadioGroupWrap = styled.div`
     ${/* sc-sel */ RadioWrap}, ${/* sc-sel */ RadioTagWrap} {
@@ -133,3 +124,5 @@ export const RadioGroupWrap = styled.div`
         }
     }
 `;
+
+addDefaultThemeProps(RadioWrap, RadioButtonWrap, RadioTagWrap);

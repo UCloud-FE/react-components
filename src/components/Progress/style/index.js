@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 
 import { clearFixMixin } from 'src/style';
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
 export const Outer = styled.div`
     height: 8px;
@@ -44,3 +45,5 @@ export const TextWrap = styled.span`
 export const EndText = styled.span`
     float: right;
 `;
+
+addDefaultThemeProps(Inner, Bg);

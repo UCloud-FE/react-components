@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 import { TransitionGroup } from 'react-transition-group';
 
 import { fadeIn, fadeOut } from 'src/style/animation';
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
 export const animationDuration = 500;
 export const animationName = 'uc-fe-animation-fade';
@@ -70,3 +71,5 @@ export const MessageContentWrap = styled(TransitionGroup)`
         margin-bottom: 10px;
     }
 `;
+
+addDefaultThemeProps(MessageWrap);

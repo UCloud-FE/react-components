@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import defaultTheme from 'src/components/ThemeProvider/theme';
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 import Input from 'src/components/Input';
 import Icon from 'src/components/Icon';
 import Menu from 'src/components/Menu';
@@ -86,6 +86,4 @@ export const SelectWrap = styled.div`
     ${propsMixin};
 `;
 
-SelectWrap.defaultProps = {
-    theme: defaultTheme
-};
+addDefaultThemeProps(SelectWrap);

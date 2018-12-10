@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 import { inlineBlockWithVerticalMixin, calculateSize } from 'src/style';
-import defaultTheme from 'src/components/ThemeProvider/theme';
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
 export const Inner = styled.div`
     position: relative;
@@ -172,6 +172,5 @@ export const SwitchWrap = styled.div`
     ${inlineBlockWithVerticalMixin};
     ${propsMixin};
 `;
-SwitchWrap.defaultProps = {
-    theme: defaultTheme
-};
+
+addDefaultThemeProps(SwitchWrap);

@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import config from 'src/config';
 import { inlineBlockWithVerticalMixin } from 'src/style';
 import { tint } from 'src/style/color';
-import defaultTheme from 'src/components/ThemeProvider/theme';
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-slider';
@@ -152,6 +152,4 @@ export const SliderWrap = styled.div(
         }
     `
 );
-SliderWrap.defaultProps = {
-    theme: defaultTheme
-};
+addDefaultThemeProps(SliderWrap);

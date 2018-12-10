@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 
 import { inlineBlockWithVerticalMixin } from 'src/style';
 import config from 'src/config';
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
 const { prefixCls: _prefixCls } = config;
 
@@ -90,3 +91,4 @@ export const PaginationWrap = styled.ul(
         }
     `
 );
+addDefaultThemeProps(PaginationWrap);

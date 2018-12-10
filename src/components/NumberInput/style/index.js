@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import defaultTheme from 'src/components/ThemeProvider/theme';
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 import { inlineBlockWithVerticalMixin } from 'src/style';
 
 /* stylelint-disable no-duplicate-selectors, selector-type-no-unknown, no-descending-specificity */
@@ -263,6 +263,4 @@ export const NumberInputWrap = styled.div`
     ${inlineBlockWithVerticalMixin};
     ${propsMixin};
 `;
-NumberInputWrap.defaultProps = {
-    theme: defaultTheme
-};
+addDefaultThemeProps(NumberInputWrap);

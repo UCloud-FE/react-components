@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import defaultTheme from 'src/components/ThemeProvider/theme';
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
 const themeMixin = ({ theme: { colorMap, fontSize } }) => css`
     font-size: ${fontSize};
@@ -30,6 +30,4 @@ export const TextareaWrap = styled.textarea`
     outline: none;
     ${themeMixin};
 `;
-TextareaWrap.defaultProps = {
-    theme: defaultTheme
-};
+addDefaultThemeProps(TextareaWrap);

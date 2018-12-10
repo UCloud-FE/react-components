@@ -1,6 +1,8 @@
 import styled, { css } from 'styled-components';
 import _ from 'lodash';
 
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
+
 /* stylelint-disable property-no-unknown,no-duplicate-selectors */
 const arrowWidth = '6px';
 const borderWidth = '1px';
@@ -111,3 +113,4 @@ export const TooltipWrap = styled.div(({ theme: { Tooltip: tooltipTheme }, theme
             `};
     `;
 });
+addDefaultThemeProps(ContentWrap, TooltipWrap);

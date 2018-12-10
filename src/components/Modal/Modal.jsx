@@ -6,7 +6,6 @@ import Button from 'src/components/Button';
 import Icon from 'src/components/Icon';
 import { animationPrefixCls } from 'src/style/globalAnimation';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
-import InnerDefaultThemeProvider from 'src/components/ThemeProvider/InnerDefaultThemeProvider';
 
 import { prefixCls, ModalWrap } from './style';
 import LOCALE from './locale/zh_CN';
@@ -99,30 +98,28 @@ class Modal extends Component {
             lg: 800
         }[size];
         return (
-            <InnerDefaultThemeProvider>
-                <ModalWrap
-                    {...rest}
-                    trueClassName={className}
-                    style={{
-                        width: width,
-                        ...style
-                    }}
-                    prefixCls={prefixCls}
-                    closable={false}
-                    maskTransitionName={`${animationPrefixCls}-${maskAnimation}`}
-                    transitionName={`${animationPrefixCls}-${animation}`}
-                    onClose={onClose}
-                    title={[
-                        <div key="content" className={`${prefixCls}-title-content`}>
-                            {title}
-                        </div>,
-                        closable && (
-                            <Icon key="close" type="circle-cross" className={`${prefixCls}-close`} onClick={onClose} />
-                        )
-                    ]}
-                    footer={_.isFunction(footer) ? footer({ locale }) : footer}
-                />
-            </InnerDefaultThemeProvider>
+            <ModalWrap
+                {...rest}
+                trueClassName={className}
+                style={{
+                    width: width,
+                    ...style
+                }}
+                prefixCls={prefixCls}
+                closable={false}
+                maskTransitionName={`${animationPrefixCls}-${maskAnimation}`}
+                transitionName={`${animationPrefixCls}-${animation}`}
+                onClose={onClose}
+                title={[
+                    <div key="content" className={`${prefixCls}-title-content`}>
+                        {title}
+                    </div>,
+                    closable && (
+                        <Icon key="close" type="circle-cross" className={`${prefixCls}-close`} onClick={onClose} />
+                    )
+                ]}
+                footer={_.isFunction(footer) ? footer({ locale }) : footer}
+            />
         );
     }
 }

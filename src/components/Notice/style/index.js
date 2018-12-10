@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 import Icon from 'src/components/Icon';
-import defaultTheme from 'src/components/ThemeProvider/theme';
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
 const map = {
     default: 'info',
@@ -72,6 +72,4 @@ export const NoticeWrap = styled.div`
 
     ${themeMixin};
 `;
-NoticeWrap.defaultProps = {
-    theme: defaultTheme
-};
+addDefaultThemeProps(NoticeWrap);
