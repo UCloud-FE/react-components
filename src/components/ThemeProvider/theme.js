@@ -6,21 +6,9 @@ import Menu from 'src/components/Menu/style/theme';
 import Switch from 'src/components/Switch/style/theme';
 import Tooltip from 'src/components/Tooltip/style/theme';
 
-import { colorList, colorMap } from './color';
+import { generateColorTheme, defaultColorList } from './color';
 
-const componentTheme = {
-    Button,
-    Tabs,
-    Menu,
-    Switch,
-    Tooltip
-};
-
-const theme = {
-    // list of all color
-    colorList,
-    // map of color and status
-    colorMap,
+const sizeTheme = {
     // default font-size
     fontSize: '12px',
     // font-size of title
@@ -36,11 +24,58 @@ const theme = {
         sm: '8px',
         md: '8px',
         lg: '12px'
-    },
-    // theme of components
-    ...componentTheme
+    }
 };
 
-theme.HeightNumber = _.mapValues(theme.Height, v => +v.replace('px', ''));
+sizeTheme.HeightNumber = _.mapValues(sizeTheme.Height, v => +v.replace('px', ''));
 
-export default theme;
+const componentThemeGeneratorMap = {
+    Button,
+    Tabs,
+    Menu,
+    Switch,
+    Tooltip
+};
+
+const extend = (source, target) => {
+    const cloneSource = JSON.parse(JSON.stringify(source));
+    const _extend = (source, target) => {
+        _.each(target, (v, k) => {
+            if (_.isObject(v) && _.isObject(source[k])) {
+                source[k] = _extend(source[k], v);
+            } else {
+                source[k] = v;
+            }
+        });
+        return source;
+    };
+    return _extend(cloneSource, target);
+};
+
+export const generateTheme = (originTheme = {}) => {
+    const { colorList, colorMap } = generateColorTheme(originTheme.colorList);
+
+    let theme = {
+        colorList,
+        colorMap,
+        ...sizeTheme
+    };
+    const componentNames = _.keys(componentThemeGeneratorMap);
+    theme = extend(theme, _.omit(originTheme, componentNames));
+
+    const componentTheme = _.mapValues(componentThemeGeneratorMap, componentThemeGenerator => {
+        return componentThemeGenerator(theme);
+    });
+
+    return extend(
+        {
+            ...theme,
+            ...componentTheme
+        },
+        _.pick(originTheme, componentNames)
+    );
+};
+
+const defaultTheme = generateTheme({ colorList: defaultColorList });
+
+export default defaultTheme;

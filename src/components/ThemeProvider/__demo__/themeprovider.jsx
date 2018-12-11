@@ -16,14 +16,6 @@ import Table from 'src/components/Table';
 import Menu from 'src/components/Menu';
 
 // demo start
-const itemLayout = {
-    labelCol: {
-        span: 3
-    },
-    controllerCol: {
-        span: 9
-    }
-};
 const columns = new Array(5).fill(null).map((v, i) => ({
     title: `title-${i}`,
     key: `title-${i}`,
@@ -40,14 +32,15 @@ const Demo = () => (
     <div>
         <ThemeProvider
             theme={{
-                fontSize: '16px',
-                titleFontSize: '20px',
-                colorMap: {
-                    default: {
-                        text: 'black',
-                        background: 'yellow',
-                        border: 'red'
-                    }
+                colorList: {
+                    primary: '#168a7e',
+                    primary1: '#02976d',
+                    primary2: '#168a7e',
+                    primary3: '#fbfffe',
+                    primary4: '#fbfbfb',
+                    primary5: '#e9fff9',
+                    primary6: '#fcfcfd',
+                    primary7: '#e2e3e3'
                 }
             }}
         >

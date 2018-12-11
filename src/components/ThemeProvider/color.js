@@ -28,7 +28,7 @@ const colors = {
 };
 
 // semantic colors
-export const colorList = {
+export const defaultColorList = {
     primary: colors.blue,
     primary1: colors.blue1,
     primary2: colors.blue2,
@@ -62,56 +62,51 @@ export const colorList = {
     link: colors.blue
 };
 
-// map of status and color
-export const colorMap = {
-    default: {
-        text: colorList.secondary1,
-        background: colorList.white,
-        border: colorList.secondary4,
-        icon: colorList.secondary
-    },
-    disabled: {
-        text: colorList.disabled3,
-        background: colorList.disabled2,
-        border: colorList.disabled1,
-        icon: colorList.disabled1
-    },
-    active: {
-        text: colorList.primary,
-        background: colorList.primary3,
-        border: colorList.primary2,
-        icon: colorList.primary
-    },
-    info: {
-        background: colorList.primary6,
-        border: colorList.secondary4,
-        icon: colorList.secondary1
-    },
-    success: {
-        background: colorList.success2,
-        border: colorList.success3,
-        icon: colorList.success1
-    },
-    warning: {
-        background: colorList.warning2,
-        border: colorList.warning3,
-        icon: colorList.warning1
-    },
-    error: {
-        background: colorList.error2,
-        border: colorList.error3,
-        icon: colorList.error1
-    }
+export const generateColorTheme = colorList => {
+    colorList = { ...defaultColorList, ...colorList };
+    // map of status and color
+    const colorMap = {
+        default: {
+            text: colorList.secondary1,
+            background: colorList.white,
+            border: colorList.secondary4,
+            icon: colorList.secondary
+        },
+        disabled: {
+            text: colorList.disabled3,
+            background: colorList.disabled2,
+            border: colorList.disabled1,
+            icon: colorList.disabled1
+        },
+        active: {
+            text: colorList.primary,
+            background: colorList.primary3,
+            border: colorList.primary2,
+            icon: colorList.primary
+        },
+        info: {
+            background: colorList.primary6,
+            border: colorList.secondary4,
+            icon: colorList.secondary1
+        },
+        success: {
+            background: colorList.success2,
+            border: colorList.success3,
+            icon: colorList.success1
+        },
+        warning: {
+            background: colorList.warning2,
+            border: colorList.warning3,
+            icon: colorList.warning1
+        },
+        error: {
+            background: colorList.error2,
+            border: colorList.error3,
+            icon: colorList.error1
+        }
+    };
+    return {
+        colorList,
+        colorMap
+    };
 };
-
-// ['default', 'success', 'warning', 'error'].forEach(type => {
-//     const color = ColorMap[type];
-//     const lightness = Color(color).lightness();
-//     ColorMap.textColor[type] = color;
-//     ColorMap.background[type] = Color(color)
-//         .lighten(0.96 / (lightness / 100) - 1)
-//         .hex();
-//     ColorMap.border[type] = Color(color)
-//         .lighten(0.9 / (lightness / 100) - 1)
-//         .hex();
-// });

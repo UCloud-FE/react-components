@@ -4,22 +4,8 @@ import _ from 'lodash';
 import { ThemeProvider as SCThemeProvider } from 'styled-components';
 
 import defaultTheme from './theme';
+import { generateTheme } from './theme';
 import { setRuntimeTheme } from './runtime';
-
-const extend = (source, target) => {
-    const cloneSource = JSON.parse(JSON.stringify(source));
-    const _extend = (source, target) => {
-        _.each(target, (v, k) => {
-            if (_.isObject(v) && _.isObject(source[k])) {
-                source[k] = _extend(source[k], v);
-            } else {
-                source[k] = v;
-            }
-        });
-        return source;
-    };
-    return _extend(cloneSource, target);
-};
 
 class ThemeProvider extends Component {
     constructor(props) {
@@ -35,7 +21,8 @@ class ThemeProvider extends Component {
     };
     getMergedTheme = theme => {
         this.cache = JSON.stringify(theme);
-        return extend(defaultTheme, theme);
+        console.log(generateTheme(theme));
+        return generateTheme(theme);
     };
     componentWillReceiveProps(nextProps) {
         const { theme } = nextProps;

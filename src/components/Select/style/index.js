@@ -33,9 +33,12 @@ export const OptionWrap = styled(Menu.Item)`
             display: none;
         `};
 `;
-export const MenuWrap = styled.div`
-    /* empty */
-`;
+export const MenuWrap = styled.div(
+    ({ theme: { colorMap } }) => css`
+        background: ${colorMap.default.background};
+        border: 1px solid ${colorMap.default.border};
+    `
+);
 
 export const BlockMenu = styled(Menu)`
     display: block;
@@ -57,11 +60,6 @@ const propsMixin = ({ theme: { colorMap, Height, fontSize }, size, disabled }) =
         &:hover {
             border-color: ${colorMap.active.border};
         }
-    }
-
-    ${MenuWrap} {
-        background: ${colorMap.default.background};
-        border: 1px solid ${colorMap.default.border};
     }
 
     ${disabled &&
@@ -86,4 +84,4 @@ export const SelectWrap = styled.div`
     ${propsMixin};
 `;
 
-addDefaultThemeProps(SelectWrap);
+addDefaultThemeProps(SelectWrap, MenuWrap);

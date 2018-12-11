@@ -1,9 +1,7 @@
-import { colorList } from 'src/components/ThemeProvider/color';
-
 /**
  * theme style for styleType
  */
-export default {
+export default ({ colorList }) => ({
     primary: {
         color: colorList.white,
         background: colorList.primary2,
@@ -34,4 +32,4 @@ export default {
         background: colorList.primary4,
         borderColor: colorList.primary2
     }
-};
+});

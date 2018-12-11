@@ -1,6 +1,4 @@
-import { colorMap } from 'src/components/ThemeProvider/color';
-
-export default {
+export default ({ colorMap }) => ({
     Width: {
         sm: '45px',
         md: '80px',
@@ -54,4 +52,4 @@ export default {
     'Line:disabled': {
         background: '#f7f7f7'
     }
-};
+});

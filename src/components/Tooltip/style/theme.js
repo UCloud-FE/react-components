@@ -1,6 +1,4 @@
-import { colorList, colorMap } from 'src/components/ThemeProvider/color';
-
-export default {
+export default ({ colorList, colorMap }) => ({
     light: {
         arrow: {
             background: colorMap.default.background,
@@ -23,4 +21,4 @@ export default {
             text: colorList.white
         }
     }
-};
+});

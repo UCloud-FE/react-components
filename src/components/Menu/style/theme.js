@@ -1,6 +1,4 @@
-import { colorMap } from 'src/components/ThemeProvider/color';
-
-export default {
+export default ({ colorMap }) => ({
     light: {
         text: colorMap.default.text,
         background: colorMap.default.background,
@@ -31,4 +29,4 @@ export default {
             border: '#163255'
         }
     }
-};
+});
