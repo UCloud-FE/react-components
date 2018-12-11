@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { SeparatorWrap, BreadcrumbWrap } from 'components/Breadcrumb/style';
+import { SeparatorWrap, BreadcrumbWrap } from './style';
 
 class Breadcrumb extends Component {
     static propTypes = {

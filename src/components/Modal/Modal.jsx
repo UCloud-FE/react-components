@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
-import Button from 'components/Button';
-import Icon from 'components/Icon';
+import Button from 'src/components/Button';
+import Icon from 'src/components/Icon';
 import { animationPrefixCls } from 'src/style/globalAnimation';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
 

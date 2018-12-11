@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 import moment from 'moment';
 
-import Popover from 'components/Popover';
-import uncontrolledDecorator from 'decorators/uncontrolled';
+import Popover from 'src/components/Popover';
+import uncontrolledDecorator from 'src/decorators/uncontrolled';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
 
 import DatePicker from './DatePicker';
@@ -40,7 +40,7 @@ const getDateFromOption = option => {
     { onChangeName: ['onChange', 'onInitialChange'] },
     { valueName: 'option', onChangeName: 'onOptionChange' }
 )
-export default class Range extends Component {
+class Range extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -269,3 +269,5 @@ export default class Range extends Component {
 }
 
 Range.Type = ['date', 'month'];
+
+export default Range;

@@ -2,19 +2,19 @@
 
 exports[`Textarea demo -- disabled 1`] = `
 .c0 {
-  font-size: 12px;
-  color: #6b798e;
   display: block;
   box-sizing: border-box;
   width: 100%;
   padding: 4px 8px;
-  border: 1px solid #c3cad9;
   border-radius: 2px;
-  background: #FFF;
   line-height: 1.5;
   min-height: 28px;
   resize: vertical;
   outline: none;
+  font-size: 12px;
+  color: #6b798e;
+  border: 1px solid #c3cad9;
+  background: #fff;
 }
 
 .c0:hover,
@@ -49,19 +49,19 @@ exports[`Textarea demo -- disabled 1`] = `
 
 exports[`Textarea demo -- textarea 1`] = `
 .c16 {
-  font-size: 12px;
-  color: #6b798e;
   display: block;
   box-sizing: border-box;
   width: 100%;
   padding: 4px 8px;
-  border: 1px solid #c3cad9;
   border-radius: 2px;
-  background: #FFF;
   line-height: 1.5;
   min-height: 28px;
   resize: vertical;
   outline: none;
+  font-size: 12px;
+  color: #6b798e;
+  border: 1px solid #c3cad9;
+  background: #fff;
 }
 
 .c16:hover,
@@ -136,34 +136,21 @@ exports[`Textarea demo -- textarea 1`] = `
   word-break: break-all;
 }
 
-.c7 {
+.c8 {
   position: relative;
   height: 100%;
   width: 100%;
   border-radius: 2px;
-  border: 1px solid #c3cad9;
   box-sizing: border-box;
-  background: #ebedf0;
 }
 
-.c9 {
+.c10 {
   width: 100%;
   height: 100%;
   text-align: center;
   line-height: 22px;
   box-sizing: border-box;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.c11 {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  line-height: 22px;
-  box-sizing: border-box;
-  display: inline-block;
-  vertical-align: middle;
+  display: block;
 }
 
 .c13 {
@@ -171,10 +158,7 @@ exports[`Textarea demo -- textarea 1`] = `
   display: inline-block;
   left: -1px;
   top: -2px;
-  background-color: #fff;
-  box-shadow: 0 0.5px 0.5px #c3cad9;
   border-radius: 2px;
-  border: 1px solid #c3cad9;
   box-sizing: border-box;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -188,7 +172,6 @@ exports[`Textarea demo -- textarea 1`] = `
   width: 2px;
   height: 16px;
   border-radius: 1px;
-  background-color: #e69b9b;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -199,11 +182,11 @@ exports[`Textarea demo -- textarea 1`] = `
   overflow: hidden;
   box-sizing: border-box;
   cursor: pointer;
-  background: #FFF;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
   vertical-align: middle;
+  background: #fff;
   height: 28px;
   width: 80px;
   padding: 4px;
@@ -216,29 +199,39 @@ exports[`Textarea demo -- textarea 1`] = `
 }
 
 .c6 .c12 {
+  background-color: #fff;
+  box-shadow: 0 0.5px 0.5px #c3cad9;
+  border: 1px solid #c3cad9;
   width: 20px;
   height: 20px;
 }
 
 .c6 .c14 {
+  background-color: #e69b9b;
   left: 13px;
   height: 10px;
 }
 
-.c6 .c8,
-.c6 .c10 {
+.c6 .c7 {
+  border: 1px solid #c3cad9;
+  background-color: #ebedf0;
+  color: #6b798e;
+}
+
+.c6 .c9,
+.c6 .c11 {
   line-height: 16px;
 }
 
-.c6 .c8 {
+.c6 .c9 {
   padding-right: 20px;
 }
 
-.c6 .c10 {
+.c6 .c11 {
   padding-left: 20px;
 }
 
-.c6 .c8 {
+.c6 .c9 {
   display: none;
 }
 
@@ -263,15 +256,15 @@ exports[`Textarea demo -- textarea 1`] = `
           class="c6"
         >
           <div
-            class="c7"
+            class="c7 c8"
           >
             <span
-              class="c8 c9"
+              class="c9 c10"
             >
               ON
             </span>
             <span
-              class="c10 c11"
+              class="c11 c10"
             >
               OFF
             </span>

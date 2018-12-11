@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
-import ScrollableInkTabBar from 'rc-tabs/lib/ScrollableInkTabBar';
 import TabContent from 'rc-tabs/lib/TabContent';
+import ScrollableInkTabBar from 'rc-tabs/lib/ScrollableInkTabBar';
 
 import { prefixCls, TabsWrap } from './style';
 
@@ -25,17 +24,21 @@ class Tabs extends Component {
         destroyInactiveTabPane: PropTypes.bool
     };
     static defaultProps = {
-        styleType: StyleType[0]
+        styleType: StyleType[0],
+        tabBarPosition: 'top'
     };
     render() {
-        const { styleType, ...rest } = this.props;
+        const { styleType, tabBarPosition, ...rest } = this.props;
         return (
             <TabsWrap
                 {...rest}
                 styleType={styleType}
                 prefixCls={prefixCls}
-                renderTabBar={() => <ScrollableInkTabBar />}
-                renderTabContent={() => <TabContent animated={false} />}
+                tabBarPosition={tabBarPosition}
+                renderTabBar={() => <ScrollableInkTabBar className={`${prefixCls}-${tabBarPosition}-bar`} />}
+                renderTabContent={() => (
+                    <TabContent className={`${prefixCls}-${tabBarPosition}-content`} animated={false} />
+                )}
             />
         );
     }

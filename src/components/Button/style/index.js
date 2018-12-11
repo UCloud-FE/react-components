@@ -1,37 +1,28 @@
 import styled, { css } from 'styled-components';
-import { Color, FontSize, Height, Padding, calculateSize, inlineBlockWithVerticalMixin } from 'style';
 
-const ButtonColor = {
-    font: { primary: 'white', border: 'default', 'border-gray': 'default' },
-    border: { primary: 'blue', border: 'default', 'border-gray': 'default' },
-    bg: { primary: 'blue', border: 'white', 'border-gray': 'content' }
-};
+import { inlineBlockWithVerticalMixin } from 'src/style';
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
-const ButtonHoverColor = {
-    font: { primary: '', border: 'blue', 'border-gray': 'blue' },
-    border: { primary: '', border: 'blue', 'border-gray': 'blue' },
-    bg: { primary: 'blueBold', border: '', 'border-gray': '' }
-};
-
-const getColor = (map, styleName, type) => {
-    return Color[styleName][map[styleName][type]] || '';
-};
-
-const styleTypeMixin = ({ styleType }) => css`
-    color: ${getColor(ButtonColor, 'font', styleType)};
-    border-color: ${getColor(ButtonColor, 'border', styleType)};
-    background-color: ${getColor(ButtonColor, 'bg', styleType)};
-    &:hover {
-        color: ${getColor(ButtonHoverColor, 'font', styleType)};
-        border-color: ${getColor(ButtonHoverColor, 'border', styleType)};
-        background-color: ${getColor(ButtonHoverColor, 'bg', styleType)};
-    }
+const sizeMixin = ({ size, theme: { Height, HeightNumber, Padding } }) => css`
+    height: ${Height[size]};
+    line-height: ${HeightNumber[size] - 2}px;
+    padding: 0 ${Padding[size]};
 `;
 
-const sizeMixin = ({ size }) => css`
-    height: ${Height[size]};
-    line-height: ${calculateSize(Height[size], -2)};
-    padding: 0 ${Padding[size]};
+const styleTypeMixin = ({ theme: { Button: buttonTheme }, styleType }) => {
+    return css`
+        ${buttonTheme[styleType]};
+        :hover {
+            ${buttonTheme[styleType + ':hover']};
+        }
+    `;
+};
+
+const shapeCircleMixin = ({ size, theme: { Height } }) => css`
+    border-radius: 50%;
+    padding: 0;
+    overflow: hidden;
+    width: ${Height[size]};
 `;
 
 const loadingMixin = css`
@@ -44,7 +35,7 @@ const loadingMixin = css`
         left: -1px;
         bottom: -1px;
         right: -1px;
-        background: #fff;
+        background: white;
         opacity: 0.35;
         content: '';
         border-radius: inherit;
@@ -54,39 +45,39 @@ const loadingMixin = css`
     }
 `;
 
-const shapeMixin = ({ shape, size }) => {
-    if (shape === 'circle') {
-        return css`
-            border-radius: 50%;
-            padding: 0;
-            overflow: hidden;
-            width: ${Height[size]};
-        `;
+const disabledMixin = ({
+    theme: {
+        colorMap: { disabled: disabledColorMap }
     }
-};
-
-export const ButtonWrap = styled.button`
-    box-sizing: border-box;
-    border-radius: 2px;
-    border-width: 1px;
-    border-style: solid;
-    text-align: center;
-    text-decoration: none;
-    font-size: ${FontSize.xs};
-    cursor: pointer;
-    outline: none;
-
-    ${inlineBlockWithVerticalMixin};
-    ${styleTypeMixin};
-    ${sizeMixin};
-    ${shapeMixin};
-    ${({ loading }) => loading && loadingMixin};
-
+}) => css`
+    :disabled,
     &[disabled] {
-        border-color: ${Color.border.disabled};
-        background-color: ${Color.bg.disabled};
-        color: ${Color.font.disabled};
+        border-color: ${disabledColorMap.border};
+        background: ${disabledColorMap.background};
+        color: ${disabledColorMap.text};
         cursor: not-allowed;
         pointer-events: none;
     }
 `;
+
+export const ButtonWrap = styled.button(
+    ({ theme: { fontSize }, loading, shape, disabled }) => css`
+        box-sizing: border-box;
+        border-radius: 2px;
+        border-width: 1px;
+        border-style: solid;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        outline: none;
+        font-size: ${fontSize};
+        ${inlineBlockWithVerticalMixin};
+
+        ${sizeMixin};
+        ${styleTypeMixin};
+        ${shape === 'circle' && shapeCircleMixin};
+        ${loading && loadingMixin};
+        ${disabled && disabledMixin};
+    `
+);
+addDefaultThemeProps(ButtonWrap);

@@ -1,27 +1,33 @@
 import styled, { css } from 'styled-components';
-import { Color, clearFixMixin } from 'src/style';
+
+import { clearFixMixin } from 'src/style';
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
 export const Outer = styled.div`
     height: 8px;
 `;
-export const Inner = styled.div`
-    width: 100%;
-    height: 100%;
-    border: 1px solid ${Color.border.default};
-    border-radius: 6px;
-    background: ${Color.bg.white};
-`;
-export const Bg = styled.div`
-    background: ${Color.bg.blue};
-    height: 100%;
-    border-radius: 6px;
-    transition: width 0.5s;
-    position: relative;
+export const Inner = styled.div(
+    ({ theme: { colorMap } }) => css`
+        width: 100%;
+        height: 100%;
+        border: 1px solid ${colorMap.default.border};
+        border-radius: 6px;
+        background: ${colorMap.default.background};
+    `
+);
+export const Bg = styled.div(
+    ({ theme: { colorList } }) => css`
+        background: ${colorList.primary2};
+        height: 100%;
+        border-radius: 6px;
+        transition: width 0.5s;
+        position: relative;
 
-    ${({ percent }) => css`
-        width: ${percent}%;
-    `};
-`;
+        ${({ percent }) => css`
+            width: ${percent}%;
+        `};
+    `
+);
 export const CurrentText = styled.span`
     position: absolute;
     right: 0;
@@ -39,3 +45,5 @@ export const TextWrap = styled.span`
 export const EndText = styled.span`
     float: right;
 `;
+
+addDefaultThemeProps(Inner, Bg);

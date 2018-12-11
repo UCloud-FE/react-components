@@ -35,3 +35,8 @@
 
 ```js {"codepath": "tabs-uncontrolled.jsx"}
 ```
+
+*   child - 嵌套
+
+```js {"codepath": "tabs-child.jsx"}
+```

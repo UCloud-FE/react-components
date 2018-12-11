@@ -20,7 +20,7 @@ const fileShape = PropTypes.shape({
  * 文件上传控件
  */
 @localeConsumerDecorator({ defaultLocale: LOCALE, localeName: 'Upload' })
-export default class Upload extends PureComponent {
+class Upload extends PureComponent {
     constructor(props) {
         super(props);
         /** 判定组件是否为controlled */
@@ -240,4 +240,5 @@ export default class Upload extends PureComponent {
     }
 }
 
+export default Upload;
 export { Selector, List };

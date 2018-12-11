@@ -2,16 +2,14 @@ import styled, { css } from 'styled-components';
 import RcCalendar from 'rc-calendar';
 import RcMonthCalendar from 'rc-calendar/lib/MonthCalendar';
 
-import { Color } from 'src/style';
-
-import config from 'config';
+import config from 'src/config';
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-calendar';
 
 /* stylelint-disable no-duplicate-selectors */
-
-export const calendarMixin = css`
+export const calendarMixin = ({ theme: { colorMap, colorList } }) => css`
     &.${prefixCls}, .${prefixCls} {
         outline: none;
         position: relative;
@@ -19,7 +17,7 @@ export const calendarMixin = css`
     }
 
     .${prefixCls}-month-panel, .${prefixCls}-year-panel, .${prefixCls}-decade-panel {
-        background: ${Color.bg.white};
+        background: ${colorMap.default.background};
     }
 
     .${prefixCls}-header,
@@ -29,7 +27,7 @@ export const calendarMixin = css`
         width: 100%;
         height: 38px;
         line-height: 38px;
-        background-color: #4683e6;
+        background-color: ${colorList.primary2};
         user-select: none;
     }
     .${prefixCls}-month-header-wrap {
@@ -51,7 +49,7 @@ export const calendarMixin = css`
         cursor: pointer;
         padding: 0 8px;
         display: inline-block;
-        color: ${Color.font.white};
+        color: ${colorList.white};
         box-sizing: border-box;
         position: absolute;
         font-family: Arial, 'Hiragino Sans GB', 'Microsoft Yahei', 'Microsoft Sans Serif', sans-serif;
@@ -108,13 +106,13 @@ export const calendarMixin = css`
         width: 150px;
         text-align: center;
         display: block;
-        color: ${Color.font.white};
+        color: ${colorList.white};
     }
 
     .${prefixCls}-body {
         width: 100%;
         padding: 0 5px 5px;
-        background-color: #fff;
+        background-color: ${colorMap.default.background};
         box-sizing: border-box;
     }
     .${prefixCls}-table,
@@ -126,7 +124,7 @@ export const calendarMixin = css`
 
     .${prefixCls}-table > thead,
     .${prefixCls}-month-panel-table > thead {
-        border-bottom: 1px solid #c3cad9;
+        border-bottom: 1px solid ${colorMap.default.border};
     }
     .${prefixCls}-column-header,
         .${prefixCls}-cell,
@@ -146,11 +144,11 @@ export const calendarMixin = css`
         .${prefixCls}-month-panel-next-year-cell,
         .${prefixCls}-year-panel-next-decade-cell,
         .${prefixCls}-decade-panel-next-century-cell {
-        color: ${Color.font.disabled};
+        color: ${colorMap.disabled.text};
     }
 
     .${prefixCls}-disabled-cell, .${prefixCls}-month-panel-cell-disabled {
-        color: ${Color.font.disabled};
+        color: ${colorMap.disabled.text};
     }
 
     .${prefixCls}-month-panel, .${prefixCls}-year-panel, .${prefixCls}-decade-panel {
@@ -164,7 +162,7 @@ export const calendarMixin = css`
 
     .${prefixCls}-today, .${prefixCls}-month-panel-current-cell {
         position: relative;
-        color: ${Color.font.blue};
+        color: ${colorMap.active.text};
     }
 
     .${prefixCls}-today::after, .${prefixCls}-month-panel-current-cell::after {
@@ -178,14 +176,14 @@ export const calendarMixin = css`
         margin: auto;
     }
     .${prefixCls}-selected-day {
-        background: ${Color.bg.blueLight};
+        background: ${colorMap.active.background};
     }
     .${prefixCls}-selected-date,
         .${prefixCls}-month-panel-selected-cell,
         .${prefixCls}-year-panel-selected-cell,
         .${prefixCls}-decade-panel-selected-cell {
-        color: ${Color.font.white};
-        background: ${Color.bg.blue};
+        color: ${colorList.white};
+        background: ${colorList.primary2};
     }
     .${prefixCls}-month-panel-year-select-arrow, .${prefixCls}-year-panel-decade-select-arrow {
         display: none;
@@ -199,3 +197,5 @@ export const CalendarWrap = styled(RcCalendar)`
 export const MonthCalendarWrap = styled(RcMonthCalendar)`
     ${calendarMixin};
 `;
+
+addDefaultThemeProps(CalendarWrap, MonthCalendarWrap);

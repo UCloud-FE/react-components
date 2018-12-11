@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
-import itemDecorator from 'decorators/selectableWithStore/item';
-import uncontrolledDecorator from 'decorators/uncontrolled';
+import itemDecorator from 'src/decorators/selectableWithStore/item';
+import uncontrolledDecorator from 'src/decorators/uncontrolled';
 
 import { PanelWrap } from './style';
 import { StoreContext } from './Collapse';

@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import Icon from 'components/Icon';
-import NumberInput from 'components/NumberInput';
-import localeConsumerDecorator from 'components/LocaleProvider/localeConsumerDecorator';
+import Icon from 'src/components/Icon';
+import NumberInput from 'src/components/NumberInput';
+import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
 
 import Pager from './Pager';
 import Options from './Options';

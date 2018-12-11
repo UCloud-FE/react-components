@@ -1,24 +1,25 @@
 import styled, { css } from 'styled-components';
 import _ from 'lodash';
 
-import { Color } from 'src/style';
-/* stylelint-disable property-no-unknown,no-duplicate-selectors */
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
+/* stylelint-disable property-no-unknown,no-duplicate-selectors */
 const arrowWidth = '6px';
 const borderWidth = '1px';
 
-export const ContentWrap = styled.div`
-    padding: 8px 10px;
-    text-align: left;
-    text-decoration: none;
-    border-radius: 3px;
+export const ContentWrap = styled.div(({ theme: { Tooltip: tooltipTheme }, themeType }) => {
+    tooltipTheme = tooltipTheme[themeType];
+    return css`
+        padding: 8px 10px;
+        text-align: left;
+        text-decoration: none;
+        border-radius: 3px;
 
-    ${({ theme }) => css`
-        background-color: ${theme.content.background};
-        border: ${borderWidth} solid ${theme.content.borderColor};
-        color: ${theme.content.color};
-    `};
-`;
+        background-color: ${tooltipTheme.content.background};
+        border: ${borderWidth} solid ${tooltipTheme.content.border};
+        color: ${tooltipTheme.content.text};
+    `;
+});
 
 const arrowMixin = css`
     display: inline-block;
@@ -44,13 +45,15 @@ const offsetPosition = (position, offset) => {
     return Position[(index + offset) % 4];
 };
 
-export const TooltipWrap = styled.div`
-    ${({ placement, theme }) => {
-        let position = placement.match(/([a-z]+)[A-Z]*/);
-        if (!position) return;
-        position = position[1];
+export const TooltipWrap = styled.div(({ theme: { Tooltip: tooltipTheme }, themeType, placement }) => {
+    tooltipTheme = tooltipTheme[themeType];
+    let positions = placement.match(/([a-z]+)([A-Za-z]*)/);
+    return css`
+        ${() => {
+            if (!positions) return;
+            let position = positions[1];
 
-        return css`
+            return css`
             ${Arrow} {
                 ${offsetPosition(position, 2)}: -${arrowWidth};
                 margin-${offsetPosition({ bottom: 'top', left: 'right' }[position] || position, 3)}: -${arrowWidth};
@@ -58,7 +61,7 @@ export const TooltipWrap = styled.div`
                 border-${offsetPosition(position, 1)}-width: ${arrowWidth};
                 border-${offsetPosition(position, 3)}-width: ${arrowWidth};
 
-                border-${position}-color: ${theme.arrow.borderColor};
+                border-${position}-color: ${tooltipTheme.arrow.border};
             }
 
             ${ArrowInner} {
@@ -68,74 +71,46 @@ export const TooltipWrap = styled.div`
                 border-${offsetPosition(position, 1)}-width: ${arrowWidth};
                 border-${offsetPosition(position, 3)}-width: ${arrowWidth};
 
-                border-${position}-color: ${theme.arrow.background};
+                border-${position}-color: ${tooltipTheme.arrow.background};
             }
         `;
-    }};
+        }};
 
-    ${({ placement }) => {
-        let position = placement.match(/([a-z]+)([A-Za-z]*)/);
-        if (!position || position[2]) return;
-        position = position[1];
+        ${() => {
+            if (!positions || positions[2]) return;
+            let position = positions[1];
 
-        return css`
-            ${Arrow} {
-                ${offsetPosition({ bottom: 'top', left: 'right' }[position] || position, 3)}: 50%;
-            }
-        `;
-    }};
-    ${({ placement }) =>
-        /Left$/.test(placement) &&
-        css`
-            ${Arrow} {
-                left: 15%;
-            }
-        `};
-    ${({ placement }) =>
-        /Right$/.test(placement) &&
-        css`
-            ${Arrow} {
-                right: 15%;
-            }
-        `};
-    ${({ placement }) =>
-        /Top$/.test(placement) &&
-        css`
-            ${Arrow} {
-                top: 15%;
-                margin-top: 0;
-            }
-        `};
-    ${({ placement }) =>
-        /Bottom$/.test(placement) &&
-        css`
-            ${Arrow} {
-                bottom: 15%;
-            }
-        `};
-`;
-
-export const themeMap = {
-    light: {
-        arrow: {
-            background: Color.bg.white,
-            borderColor: Color.border.default
-        },
-        content: {
-            background: Color.bg.white,
-            borderColor: Color.border.default,
-            color: Color.font.default
-        }
-    },
-    dark: {
-        arrow: {
-            background: Color.bg.black,
-            borderColor: Color.border.black
-        },
-        content: {
-            background: Color.bg.black,
-            borderColor: Color.border.black,
-            color: Color.font.white
-        }
-    }
-};
+            return css`
+                ${Arrow} {
+                    ${offsetPosition({ bottom: 'top', left: 'right' }[position] || position, 3)}: 50%;
+                }
+            `;
+        }};
+        ${/Left$/.test(placement) &&
+            css`
+                ${Arrow} {
+                    left: 15%;
+                }
+            `};
+        ${/Right$/.test(placement) &&
+            css`
+                ${Arrow} {
+                    right: 15%;
+                }
+            `};
+        ${/Top$/.test(placement) &&
+            css`
+                ${Arrow} {
+                    top: 15%;
+                    margin-top: 0;
+                }
+            `};
+        ${/Bottom$/.test(placement) &&
+            css`
+                ${Arrow} {
+                    bottom: 15%;
+                }
+            `};
+    `;
+});
+addDefaultThemeProps(ContentWrap, TooltipWrap);

@@ -1,7 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import Button from 'components/Button';
+import { ThemeProvider } from 'styled-components';
+
+import Button from 'src/components/Button';
+import { getRuntimeTheme } from 'src/components/ThemeProvider/runtime';
+
 import Modal from './Modal';
 
 const pop = props => {
@@ -14,7 +18,12 @@ const pop = props => {
         }
     };
 
-    ReactDOM.render(<Modal {...props} visible />, container);
+    ReactDOM.render(
+        <ThemeProvider theme={getRuntimeTheme()}>
+            <Modal {...props} visible />
+        </ThemeProvider>,
+        container
+    );
 
     return {
         destory

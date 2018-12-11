@@ -10,7 +10,7 @@ import { CheckboxGroupWrap } from './style';
 
 @uncontrolledDecorator({ valueName: 'value' })
 @storeDecorator({ StoreContext })
-export default class Group extends Component {
+class Group extends Component {
     static propTypes = {
         /** 当前值，controlled */
         value: PropTypes.array,
@@ -74,3 +74,4 @@ export default class Group extends Component {
         );
     }
 }
+export default Group;

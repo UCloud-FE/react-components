@@ -82,8 +82,8 @@ describe('Pagination', () => {
         const warn = (global.console.warn = jest.fn());
         mount(<Pagination current={1} total={100} />);
 
-        expect(warn).toHaveBeenCalledTimes(1);
-        expect(warn).toHaveBeenLastCalledWith(
+        expect(warn).toHaveBeenCalled();
+        expect(warn).toHaveBeenCalledWith(
             'Warning: You provided a `current` prop to a Pagination component without an `onChange` handler. This will render a read-only component.'
         );
     });

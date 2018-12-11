@@ -1,35 +1,15 @@
-import styled from 'styled-components';
-import Icon from 'components/Icon';
+import styled, { css } from 'styled-components';
 
-import { Color } from 'style';
+import Icon from 'src/components/Icon';
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
-const NoticeColor = {
-    border: { default: 'default', warning: 'yellow', error: 'red', info: 'blueBright' },
-    bg: { default: 'default', warning: 'yellow', error: 'red', info: 'blueLight' }
+const map = {
+    default: 'info',
+    success: 'success',
+    warning: 'warning',
+    error: 'error',
+    info: 'success'
 };
-const IconColor = {
-    font: { default: 'default', warning: 'yellow', error: 'red', info: 'blue' }
-};
-
-const getColor = (map, styleName, type) => {
-    return Color[styleName][map[styleName][type]] || '';
-};
-
-export const NoticeWrap = styled.div`
-    display: table;
-    position: relative;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 10px 16px;
-    margin: 0;
-    border-radius: 1px;
-    line-height: 18px;
-    overflow: hidden;
-
-    color: ${Color.font.default};
-    background-color: ${({ styleType }) => getColor(NoticeColor, 'bg', styleType)};
-    border: 1px solid ${({ styleType }) => getColor(NoticeColor, 'border', styleType)};
-`;
 
 export const NoticeIconWrap = styled.span`
     display: table-cell;
@@ -41,7 +21,7 @@ export const NoticeIconWrap = styled.span`
 `;
 
 export const NoticeIcon = styled(Icon)`
-    color: ${({ styleType }) => getColor(IconColor, 'font', styleType)};
+    /* empty */
 `;
 
 export const ContentWrap = styled.div`
@@ -67,3 +47,29 @@ export const CloseWrap = styled.div`
 export const CloseIcon = styled(Icon)`
     cursor: pointer;
 `;
+
+const themeMixin = ({ styleType, theme: { colorMap } }) => {
+    const color = colorMap[map[styleType]];
+    return css`
+        background-color: ${color.background};
+        border: 1px solid ${color.border};
+        ${/* sc-sel */ NoticeIcon} {
+            color: ${colorMap[map[styleType]].icon};
+        }
+    `;
+};
+
+export const NoticeWrap = styled.div`
+    display: table;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 16px;
+    margin: 0;
+    border-radius: 1px;
+    line-height: 18px;
+    overflow: hidden;
+
+    ${themeMixin};
+`;
+addDefaultThemeProps(NoticeWrap);

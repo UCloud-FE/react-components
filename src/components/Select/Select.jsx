@@ -173,7 +173,7 @@ class Select extends Component {
             }
         }
     };
-    renderPopup = () => {
+    renderPopup = theme => {
         const { search, children, onChange, multiple, showSelectAll, value, options } = this.props;
         const { searchValue, itemTree } = this.state;
         const Options = this.renderOptions(options);
@@ -247,7 +247,6 @@ class Select extends Component {
         const {
             children,
             options,
-            size,
             onChange,
             search,
             value,

@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
-import Icon from 'components/Icon';
+import Icon from 'src/components/Icon';
 
 import { ButtonWrap } from './style';
 

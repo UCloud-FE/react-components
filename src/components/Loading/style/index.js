@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import Icon from 'src/components/Icon';
 import { fadeIn, fadeOut } from 'src/style/animation';
-import { Color, FontSize } from 'src/style';
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
 export const animationDuration = 500;
 export const animationName = 'uc-fe-animation-fade';
@@ -44,17 +44,23 @@ export const IndicatorWrap = styled.div`
     }
 `;
 
-export const LoadingIcon = styled(Icon)`
-    font-size: 20px;
-    color: ${Color.font.default};
-`;
+export const LoadingIcon = styled(Icon)(
+    ({ theme: { colorMap } }) => css`
+        font-size: 20px;
+        color: ${colorMap.default.icon};
+    `
+);
 
 export const ContentWrap = styled.div`
     position: relative;
 `;
 
-export const TipWrap = styled.p`
-    text-align: center;
-    font-size: ${FontSize.sm};
-    margin-top: 5px;
-`;
+export const TipWrap = styled.p(
+    ({ theme: { fontSize } }) => css`
+        text-align: center;
+        font-size: ${fontSize};
+        margin-top: 5px;
+    `
+);
+
+addDefaultThemeProps(TipWrap, LoadingIcon);

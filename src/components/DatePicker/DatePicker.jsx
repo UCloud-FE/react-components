@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
-import NumberInput from 'components/NumberInput';
-import Calendar from 'components/Calendar/Calendar';
-import placements from 'components/Popover/placements';
-import uncontrolledDecorator from 'decorators/uncontrolled';
+import NumberInput from 'src/components/NumberInput';
+import Calendar from 'src/components/Calendar/Calendar';
+import placements from 'src/components/Popover/placements';
+import uncontrolledDecorator from 'src/decorators/uncontrolled';
 import { animationPrefixCls } from 'src/style/globalAnimation';
 
 import { isDateDisabled, getValidDate } from './utils';

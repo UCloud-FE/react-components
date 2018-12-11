@@ -1,21 +1,23 @@
 import styled, { css } from 'styled-components';
 
-import { Height, Color, FontSize, inlineBlockWithVerticalMixin } from 'src/style';
-import Icon from 'components/Icon';
-import Button from 'components/Button';
+import { inlineBlockWithVerticalMixin } from 'src/style';
+import Icon from 'src/components/Icon';
+import Button from 'src/components/Button';
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
 export const RadioIcon = styled(Icon)`
     margin-right: 8px;
+    font-size: 14px;
 `;
 
-const radioCommonStyleMixin = css`
-    color: ${Color.font.default};
-    font-size: ${FontSize.sm};
+const radioCommonStyleMixin = ({ theme: { colorMap, fontSize } }) => css`
+    color: ${colorMap.default.text};
+    font-size: ${fontSize};
     position: relative;
     cursor: pointer;
 `;
 
-const sizeMixin = ({ size }) => css`
+const sizeMixin = ({ theme: { Height }, size }) => css`
     height: ${Height[size]};
     line-height: ${Height[size]};
 `;
@@ -27,23 +29,23 @@ export const RadioWrap = styled.div`
 
     ${sizeMixin};
 
-    ${({ checked }) =>
+    ${({ checked, theme: { colorMap } }) =>
         checked &&
         css`
             ${/* sc-sel */ RadioIcon} {
-                color: ${Color.font.blue};
+                color: ${colorMap.active.icon};
             }
         `};
 
-    ${({ disabled }) =>
+    ${({ disabled, theme: { colorMap } }) =>
         disabled &&
         css`
-            color: ${Color.font.disabled};
+            color: ${colorMap.disabled.text};
             cursor: not-allowed;
             pointer-events: none;
 
             ${/* sc-sel */ RadioIcon} {
-                color: ${Color.font.disabled};
+                color: ${colorMap.disabled.icon};
             }
         `};
 `;
@@ -51,7 +53,7 @@ export const RadioWrap = styled.div`
 export const RadioButtonWrap = styled(Button)`
     min-width: 50px;
     text-align: center;
-    border: 1px solid ${Color.border.default};
+    border: 1px solid ${({ theme: { colorMap } }) => colorMap.default.border};
     border-radius: 0;
 
     ${radioCommonStyleMixin};
@@ -62,11 +64,11 @@ export const RadioButtonWrap = styled(Button)`
             z-index: 1;
         `};
 
-    ${({ checked }) =>
+    ${({ checked, theme: { colorMap } }) =>
         checked &&
         css`
-            border-color: ${Color.border.blue};
-            color: ${Color.font.blue};
+            border-color: ${colorMap.active.border};
+            color: ${colorMap.active.text};
             z-index: 2;
         `};
 
@@ -86,17 +88,17 @@ export const RadioTagWrap = styled.div`
 
     ${sizeMixin};
 
-    ${({ checked }) =>
+    ${({ checked, theme: { colorMap } }) =>
         checked &&
         css`
-            background-color: ${Color.bg.blueActive};
-            color: ${Color.font.blue};
+            background-color: ${colorMap.active.background};
+            color: ${colorMap.active.text};
         `};
 
-    ${({ disabled }) =>
+    ${({ disabled, theme: { colorMap } }) =>
         disabled &&
         css`
-            color: ${Color.font.disabled};
+            color: ${colorMap.disabled.text};
             cursor: not-allowed;
             pointer-events: none;
         `};
@@ -122,3 +124,5 @@ export const RadioGroupWrap = styled.div`
         }
     }
 `;
+
+addDefaultThemeProps(RadioWrap, RadioButtonWrap, RadioTagWrap);

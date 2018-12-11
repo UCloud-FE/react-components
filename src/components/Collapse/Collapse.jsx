@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import createReactContext from 'create-react-context';
 
-import storeDecorator from 'decorators/selectableWithStore/store';
-import uncontrolledDecorator from 'decorators/uncontrolled';
+import storeDecorator from 'src/decorators/selectableWithStore/store';
+import uncontrolledDecorator from 'src/decorators/uncontrolled';
 
 export const StoreContext = createReactContext();
 

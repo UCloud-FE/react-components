@@ -6,7 +6,7 @@ import Button from 'components/Button';
 const Demo = () => {
     return (
         <div>
-            {['message', 'warning', 'info', 'error'].map(type => (
+            {['message', 'warning', 'success', 'error'].map(type => (
                 <div className="demo-wrap" key={type}>
                     <Button
                         style={{ width: 150 }}

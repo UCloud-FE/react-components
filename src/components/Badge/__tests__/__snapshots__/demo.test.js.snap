@@ -81,11 +81,12 @@ exports[`Badge demo -- badge 1`] = `
 
 .c29 {
   margin-right: 8px;
+  font-size: 14px;
 }
 
 .c27 {
   color: #6b798e;
-  font-size: 14px;
+  font-size: 12px;
   position: relative;
   cursor: pointer;
   display: inline-block;
@@ -100,7 +101,7 @@ exports[`Badge demo -- badge 1`] = `
 
 .c30 {
   color: #6b798e;
-  font-size: 14px;
+  font-size: 12px;
   position: relative;
   cursor: pointer;
   display: inline-block;
@@ -134,9 +135,9 @@ exports[`Badge demo -- badge 1`] = `
 
 .c6 {
   position: relative;
-  color: #6b798e;
   display: inline-block;
   vertical-align: middle;
+  color: #6b798e;
 }
 
 .c6 input {
@@ -145,12 +146,15 @@ exports[`Badge demo -- badge 1`] = `
   width: 100%;
   padding: 4px 8px;
   margin: 0;
-  border: 1px solid #c3cad9;
   border-radius: 2px;
-  background: #FFF;
   font-size: inherit;
   outline: none;
   color: inherit;
+}
+
+.c6 input {
+  border: 1px solid #c3cad9;
+  background: #fff;
   height: 28px;
 }
 
@@ -178,6 +182,12 @@ exports[`Badge demo -- badge 1`] = `
   border-color: #4683e6;
 }
 
+.c6 .style__IconWrap-hppXiF {
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+}
+
 .c12 {
   position: relative;
 }
@@ -187,25 +197,6 @@ exports[`Badge demo -- badge 1`] = `
   outline: none;
   padding: 0;
   color: inherit;
-  line-height: 26px;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.c14::-webkit-input-placeholder {
-  color: #abb4c3;
-}
-
-.c14::-moz-placeholder {
-  color: #abb4c3;
-}
-
-.c14:-ms-input-placeholder {
-  color: #abb4c3;
-}
-
-.c14::placeholder {
-  color: #abb4c3;
 }
 
 .c9 {
@@ -217,7 +208,6 @@ exports[`Badge demo -- badge 1`] = `
   color: inherit;
   cursor: pointer;
   background: #fff;
-  border-color: #c3cad9;
   display: inline-block;
   vertical-align: middle;
 }
@@ -231,7 +221,6 @@ exports[`Badge demo -- badge 1`] = `
   color: inherit;
   cursor: pointer;
   background: #fff;
-  border-color: #c3cad9;
   display: inline-block;
   vertical-align: middle;
 }
@@ -240,12 +229,39 @@ exports[`Badge demo -- badge 1`] = `
   position: relative;
   box-sizing: border-box;
   border-radius: 2px;
-  color: #6b798e;
-  height: 28px;
   display: inline-block;
   vertical-align: middle;
+  color: #6b798e;
+  height: 28px;
   border: 1px solid #c3cad9;
   padding-right: 22px;
+}
+
+.c7 .c13 {
+  line-height: 26px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.c7 .c13::-webkit-input-placeholder {
+  color: #abb4c3;
+}
+
+.c7 .c13::-moz-placeholder {
+  color: #abb4c3;
+}
+
+.c7 .c13:-ms-input-placeholder {
+  color: #abb4c3;
+}
+
+.c7 .c13::placeholder {
+  color: #abb4c3;
+}
+
+.c7 .c8,
+.c7 .c10 {
+  border-color: #c3cad9;
 }
 
 .c7:hover {
@@ -281,34 +297,21 @@ exports[`Badge demo -- badge 1`] = `
   bottom: 0;
 }
 
-.c16 {
+.c17 {
   position: relative;
   height: 100%;
   width: 100%;
   border-radius: 2px;
-  border: 1px solid #c3cad9;
   box-sizing: border-box;
-  background: #ebedf0;
 }
 
-.c18 {
+.c19 {
   width: 100%;
   height: 100%;
   text-align: center;
   line-height: 22px;
   box-sizing: border-box;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.c20 {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  line-height: 22px;
-  box-sizing: border-box;
-  display: inline-block;
-  vertical-align: middle;
+  display: block;
 }
 
 .c22 {
@@ -316,10 +319,7 @@ exports[`Badge demo -- badge 1`] = `
   display: inline-block;
   left: -1px;
   top: -2px;
-  background-color: #fff;
-  box-shadow: 0 0.5px 0.5px #c3cad9;
   border-radius: 2px;
-  border: 1px solid #c3cad9;
   box-sizing: border-box;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -333,7 +333,6 @@ exports[`Badge demo -- badge 1`] = `
   width: 2px;
   height: 16px;
   border-radius: 1px;
-  background-color: #e69b9b;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -344,11 +343,11 @@ exports[`Badge demo -- badge 1`] = `
   overflow: hidden;
   box-sizing: border-box;
   cursor: pointer;
-  background: #FFF;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
   vertical-align: middle;
+  background: #fff;
   height: 28px;
   width: 80px;
   padding: 4px;
@@ -361,29 +360,39 @@ exports[`Badge demo -- badge 1`] = `
 }
 
 .c15 .c21 {
+  background-color: #fff;
+  box-shadow: 0 0.5px 0.5px #c3cad9;
+  border: 1px solid #c3cad9;
   width: 20px;
   height: 20px;
 }
 
 .c15 .c23 {
+  background-color: #e69b9b;
   left: 13px;
   height: 10px;
 }
 
-.c15 .c17,
-.c15 .c19 {
+.c15 .c16 {
+  border: 1px solid #c3cad9;
+  background-color: #ebedf0;
+  color: #6b798e;
+}
+
+.c15 .c18,
+.c15 .c20 {
   line-height: 16px;
 }
 
-.c15 .c17 {
+.c15 .c18 {
   padding-right: 20px;
 }
 
-.c15 .c19 {
+.c15 .c20 {
   padding-left: 20px;
 }
 
-.c15 .c17 {
+.c15 .c18 {
   display: none;
 }
 
@@ -478,15 +487,15 @@ exports[`Badge demo -- badge 1`] = `
           class="c15"
         >
           <div
-            class="c16"
+            class="c16 c17"
           >
             <span
-              class="c17 c18"
+              class="c18 c19"
             >
               ON
             </span>
             <span
-              class="c19 c20"
+              class="c20 c19"
             >
               OFF
             </span>
@@ -518,15 +527,15 @@ exports[`Badge demo -- badge 1`] = `
           class="c15"
         >
           <div
-            class="c16"
+            class="c16 c17"
           >
             <span
-              class="c17 c18"
+              class="c18 c19"
             >
               ON
             </span>
             <span
-              class="c19 c20"
+              class="c20 c19"
             >
               OFF
             </span>
@@ -558,15 +567,15 @@ exports[`Badge demo -- badge 1`] = `
           class="c15"
         >
           <div
-            class="c16"
+            class="c16 c17"
           >
             <span
-              class="c17 c18"
+              class="c18 c19"
             >
               ON
             </span>
             <span
-              class="c19 c20"
+              class="c20 c19"
             >
               OFF
             </span>
@@ -713,15 +722,6 @@ exports[`Badge demo -- customStyle 1`] = `
 }
 
 .c2 {
-  display: inline-block;
-  min-height: 20px;
-  line-height: 20px;
-  min-width: 10px;
-  padding: 0 5px;
-  border-radius: 10px;
-  text-align: center;
-  background: red;
-  color: white;
   width: 10px;
   height: 10px;
   padding: 0;
@@ -762,7 +762,7 @@ exports[`Badge demo -- customStyle 1`] = `
       style="position:absolute;"
     >
       <span
-        class="c2"
+        class="c2 c1"
         style="background:blue;"
       />
     </div>
@@ -851,15 +851,6 @@ exports[`Badge demo -- dot 1`] = `
 }
 
 .c2 {
-  display: inline-block;
-  min-height: 20px;
-  line-height: 20px;
-  min-width: 10px;
-  padding: 0 5px;
-  border-radius: 10px;
-  text-align: center;
-  background: red;
-  color: white;
   width: 10px;
   height: 10px;
   padding: 0;
@@ -899,7 +890,7 @@ exports[`Badge demo -- dot 1`] = `
       style="position:absolute;"
     >
       <span
-        class="c2"
+        class="c2 c1"
       />
     </div>
   </div>

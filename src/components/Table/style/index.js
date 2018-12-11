@@ -1,23 +1,24 @@
 import styled, { css } from 'styled-components';
-import { clearFixMixin, Color, FontSize, inlineBlockWithVerticalMixin } from 'style';
 
-import Button from 'components/Button';
-import Notice from 'components/Notice';
-import Checkbox from 'components/Checkbox';
-import { Col } from 'components/Grid';
-
-import config from 'config';
+import { clearFixMixin, inlineBlockWithVerticalMixin } from 'src/style';
+import Button from 'src/components/Button';
+import Notice from 'src/components/Notice';
+import Checkbox from 'src/components/Checkbox';
+import { Col } from 'src/components/Grid';
+import config from 'src/config';
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-table';
 
-export const TableWrap = styled.div`
+export const TableWrap = styled.div(
+    ({ theme: { colorMap, colorList, fontSize } }) => css`
     ${clearFixMixin};
     padding: 15px;
 
     .${prefixCls} {
         border-radius: 2px;
-        background-color: ${Color.bg.white};
+        background-color: ${colorMap.default.background};
         &-scroll table {
             min-width: 100%;
         }
@@ -31,8 +32,7 @@ export const TableWrap = styled.div`
             cursor: pointer;
         }
         table {
-            font-size: ${FontSize.xs};
-            background-color: ${Color.bg.white};
+            font-size: ${fontSize};
             border-collapse: separate;
             border-spacing: 0;
             width: 100%;
@@ -49,7 +49,7 @@ export const TableWrap = styled.div`
             margin: 40px auto;
         }
         &-reset-link {
-            color: ${Color.font.blue};
+            color: ${colorMap.active.text};
             cursor: pointer;
         }
         &-fixed-left,
@@ -71,13 +71,13 @@ export const TableWrap = styled.div`
             box-shadow: -4px 0 4px rgba(100, 100, 100, 0.1);
         }
         &-row-expand-icon {
-            border: 1px solid ${Color.border.default};
+            border: 1px solid ${colorMap.default.border};
             ${inlineBlockWithVerticalMixin};
             width: 18px;
             height: 18px;
             line-height: 18px;
             text-align: center;
-            color: #6b798e;
+            color: ${colorList.secondary1};
             cursor: pointer;
 
             &-cell {
@@ -163,14 +163,14 @@ export const TableWrap = styled.div`
         }
 
         &-tip-wrap {
-            border-bottom: 1px solid ${Color.border.default};
+            border-bottom: 1px solid ${colorMap.default.border};
         }
         &-fixed-left .${prefixCls}-tip-wrap, &-fixed-right .${prefixCls}-tip-wrap {
             display: none;
         }
 
         table > tbody > .${prefixCls}-row-hover, table > tbody > .${prefixCls}-row:hover {
-            background-color: ${Color.bg.blueLight};
+            background-color: ${colorMap.active.background};
         }
 
         &-scroll-position-left .${prefixCls}-fixed-left {
@@ -184,7 +184,8 @@ export const TableWrap = styled.div`
             display: none;
         }
     }
-`;
+`
+);
 
 export const PopupContainer = styled.div`
     position: relative;
@@ -195,7 +196,7 @@ export const ColumnConfigWrap = styled.span`
 `;
 
 export const ColumnConfigButtonWrap = styled(Button)`
-    border-color: ${Color.border.default};
+    border-color: ${({ theme: { colorMap } }) => colorMap.default.border};
 `;
 
 export const ColumnConfigModalNotice = styled(Notice)`
@@ -212,9 +213,10 @@ export const ColumnConfigModalCheckbox = styled(Checkbox)`
 
 export const ColumnConfigModalSplitLine = styled(Col)`
     height: 1px;
-    background: ${Color.border.default};
+    background: ${({ theme: { colorMap } }) => colorMap.default.background};
 `;
 
 export const ActionButton = styled(Button)`
     margin-right: 4px;
 `;
+addDefaultThemeProps(TableWrap, ColumnConfigButtonWrap, ColumnConfigModalSplitLine);

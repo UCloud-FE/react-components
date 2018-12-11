@@ -72,12 +72,14 @@ class Checkbox extends Component {
                     } = props;
                     /* eslint-enable no-unused-vars */
                     return (
-                        <CheckboxWrap disabled={disabled} size={size} onClick={this.onClick} {...rest}>
-                            <CheckboxIcon
-                                checked={checked}
-                                disabled={disabled}
-                                type={checked ? 'checkbox-ed' : 'checkbox'}
-                            />
+                        <CheckboxWrap
+                            checked={checked}
+                            disabled={disabled}
+                            size={size}
+                            onClick={this.onClick}
+                            {...rest}
+                        >
+                            <CheckboxIcon disabled={disabled} type={checked ? 'checkbox-ed' : 'checkbox'} />
                             {children}
                         </CheckboxWrap>
                     );

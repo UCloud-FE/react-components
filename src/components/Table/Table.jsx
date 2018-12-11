@@ -5,12 +5,12 @@ import RcTable from 'rc-table';
 import createReactContext from 'create-react-context';
 
 import deprecatedLog from 'src/utils/deprecatedLog';
-import Pagination from 'components/Pagination';
-import Notice from 'components/Notice';
-import Checkbox from 'components/Checkbox';
-import Select from 'components/Select';
-import Icon from 'components/Icon';
-import Popover from 'components/Popover';
+import Pagination from 'src/components/Pagination';
+import Notice from 'src/components/Notice';
+import Checkbox from 'src/components/Checkbox';
+import Select from 'src/components/Select';
+import Icon from 'src/components/Icon';
+import Popover from 'src/components/Popover';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
 
 import { prefixCls, TableWrap, PopupContainer } from './style';
@@ -562,7 +562,7 @@ class Table extends Component {
         };
         return !_.isEmpty(filters) || searchValue ? (
             <div key="search-info" className={`${prefixCls}-tip-wrap`}>
-                <Notice icon={null} closable={false} className={`${prefixCls}-filter-notice`} styleType="info">
+                <Notice icon={null} closable={false} className={`${prefixCls}-filter-notice`} styleType="success">
                     {searchValue && (
                         <span>
                             {locale.search}

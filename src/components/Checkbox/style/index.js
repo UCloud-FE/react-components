@@ -1,33 +1,37 @@
 import styled, { css } from 'styled-components';
 
-import Icon from 'components/Icon';
-import { inlineBlockWithVerticalMixin, Color, Height } from 'src/style';
+import Icon from 'src/components/Icon';
+import { inlineBlockWithVerticalMixin } from 'src/style';
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
-const disabledMixin = css`
-    color: ${Color.font.disabled};
-    cursor: not-allowed;
-    pointer-events: none;
+export const CheckboxIcon = styled(Icon)`
+    margin-right: 8px;
+    font-size: 14px;
 `;
 
-const sizeMixin = ({ size }) => css`
+const propsMixin = ({ theme: { Height, colorMap, fontSize }, size, disabled, checked }) => css`
     height: ${Height[size]};
     line-height: ${Height[size]};
+    font-size: ${fontSize};
+
+    ${disabled &&
+        css`
+            color: ${colorMap.disabled.text};
+            cursor: not-allowed;
+            pointer-events: none;
+        `};
+
+    ${/*sc-sel */ CheckboxIcon} {
+        color: ${disabled ? colorMap.disabled.icon : checked ? colorMap.active.icon : colorMap.default.icon};
+    }
 `;
 
 export const CheckboxWrap = styled.span`
-    font-size: 14px;
     cursor: pointer;
     position: relative;
 
     ${inlineBlockWithVerticalMixin};
-    ${sizeMixin};
-    ${({ disabled }) => disabled && disabledMixin};
-`;
-
-export const CheckboxIcon = styled(Icon)`
-    margin-right: 8px;
-
-    color: ${props => (props.disabled ? Color.font.disabled : props.checked ? Color.font.blue : Color.font.default)};
+    ${propsMixin};
 `;
 
 export const CheckboxGroupWrap = styled.div`
@@ -39,3 +43,5 @@ export const CheckboxGroupWrap = styled.div`
         }
     }
 `;
+
+addDefaultThemeProps(CheckboxWrap);

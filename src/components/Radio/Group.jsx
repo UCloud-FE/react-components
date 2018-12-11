@@ -14,7 +14,7 @@ import { RadioGroupWrap } from './style';
     getValue: v => (v === undefined ? [] : [v]),
     setValue: v => v[0]
 })
-export default class Group extends Component {
+class Group extends Component {
     static propTypes = {
         /** @ignore */
         children: PropTypes.node,
@@ -80,3 +80,5 @@ export default class Group extends Component {
         );
     }
 }
+
+export default Group;

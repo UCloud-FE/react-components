@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
-import MonthCalendar from 'components/Calendar/Month';
-import placements from 'components/Popover/placements';
-import uncontrolledDecorator from 'decorators/uncontrolled';
+import MonthCalendar from 'src/components/Calendar/Month';
+import placements from 'src/components/Popover/placements';
+import uncontrolledDecorator from 'src/decorators/uncontrolled';
 import { animationPrefixCls } from 'src/style/globalAnimation';
 
 import { isDateDisabled, getValidDate } from './utils';
