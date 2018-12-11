@@ -17,12 +17,10 @@ const componentTheme = {
 };
 
 const theme = {
-    // theme of components
-    ...componentTheme,
-    // map of color and status
-    colorMap,
     // list of all color
     colorList,
+    // map of color and status
+    colorMap,
     // default font-size
     fontSize: '12px',
     // font-size of title
@@ -38,7 +36,9 @@ const theme = {
         sm: '8px',
         md: '8px',
         lg: '12px'
-    }
+    },
+    // theme of components
+    ...componentTheme
 };
 
 theme.HeightNumber = _.mapValues(theme.Height, v => +v.replace('px', ''));

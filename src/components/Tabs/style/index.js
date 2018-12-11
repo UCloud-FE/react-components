@@ -10,7 +10,7 @@ export const prefixCls = _prefixCls + '-tabs';
 
 /* stylelint-disable no-descending-specificity */
 export const TabsWrap = styled(RcTabs)(
-    ({ theme: { colorMap, colorList, Tabs: tabsTheme } }) => css`
+    ({ theme: { colorMap, colorList, Tabs: tabsTheme }, styleType, tabBarPosition }) => css`
         overflow: hidden;
         ${clearFixMixin};
 
@@ -39,6 +39,7 @@ export const TabsWrap = styled(RcTabs)(
             &-nav {
                 display: inline-block;
                 white-space: nowrap;
+                position: relative;
             }
             &-nav-animated {
                 transition: transform 0.2s cubic-bezier(0.35, 0, 0.25, 1);
@@ -78,219 +79,220 @@ export const TabsWrap = styled(RcTabs)(
                 color: ${colorMap.disabled.text};
             }
 
-            ${({ styleType }) =>
-                styleType === 'default' &&
+            ${styleType === 'default' &&
                 css`
                     &-ink-bar {
                         display: none !important;
                     }
                     &-tab:hover {
-                        background-color: ${tabsTheme['default:hover'].text};
+                        background-color: ${tabsTheme['default:hover'].background};
                         border-color: ${tabsTheme['default:hover'].border};
                     }
                     &-tab-active,
                     &-tab-active:hover {
-                        color: ${tabsTheme['default:active'].text};
-                        border-color: ${tabsTheme['default:active'].border};
-                        background-color: ${colorList.primary4};
+                        ${tabsTheme['default:active']};
                     }
                 `};
 
-            ${({ styleType }) =>
-                styleType === 'ink' &&
+            ${styleType === 'ink' &&
                 css`
                     &-ink-bar {
                         width: 2px;
                         height: 2px;
                         position: absolute;
-                        background-color: ${tabsTheme.ink.bar};
                         transition: transform 0.3s;
+                        ${tabsTheme.inkBar};
                     }
                     &-tab:hover {
-                        color: ${tabsTheme['ink:active'].text};
+                        ${tabsTheme['ink:hover']};
                     }
                     &-tab-active {
-                        color: ${tabsTheme['ink:active'].text};
+                        ${tabsTheme['ink:active']};
                     }
                 `};
         }
 
         &.${prefixCls} {
-            &-top .${prefixCls} {
-                &-bar {
-                    border-bottom: 1px solid ${colorList.secondary4};
-                }
-                &-nav-container {
-                    margin-bottom: -1px;
-                }
-                &-tab {
-                    margin-bottom: -1px;
-                    display: inline-block;
+            ${tabBarPosition === 'top' &&
+                css`
+                    .${prefixCls}-top-bar {
+                        border-bottom: 1px solid ${colorList.secondary4};
+                        .${prefixCls} {
+                            &-nav-container {
+                                margin-bottom: -1px;
+                            }
+                            &-tab {
+                                margin-bottom: -1px;
+                                display: inline-block;
 
-                    &:hover {
-                        border-bottom-color: ${colorList.secondary4};
+                                &:hover {
+                                    border-bottom-color: ${colorList.secondary4};
+                                }
+                                &-active,
+                                &-active:hover {
+                                    border-bottom-color: ${colorList.primary4};
+                                }
+                            }
+                            &-ink-bar {
+                                bottom: 0;
+                            }
+                        }
                     }
-                    &-active,
-                    &-active:hover {
-                        border-bottom-color: ${colorList.primary4};
+                    .${prefixCls}-top-content {
+                        width: 100%;
                     }
-                }
-                &-content {
-                    width: 100%;
-                }
-                &-ink-bar {
-                    bottom: 0;
-                }
-            }
+                `}
 
-            &-bottom .${prefixCls} {
-                &-bar {
-                    border-top: 1px solid ${colorList.secondary4};
-                }
-                &-nav-container {
-                    margin-top: -1px;
-                }
-                &-tab {
-                    margin-top: -1px;
-                    display: inline-block;
+            ${tabBarPosition === 'bottom' &&
+                css`
+                    .${prefixCls}-bottom-bar {
+                        border-top: 1px solid ${colorList.secondary4};
+                        .${prefixCls} {
+                            &-nav-container {
+                                margin-top: -1px;
+                            }
+                            &-tab {
+                                margin-top: -1px;
+                                display: inline-block;
 
-                    &:hover {
-                        border-top-color: ${colorList.secondary4};
+                                &:hover {
+                                    border-top-color: ${colorList.secondary4};
+                                }
+                                &-active,
+                                &-active:hover {
+                                    border-top-color: ${colorList.primary4};
+                                }
+                            }
+                            &-ink-bar {
+                                top: 0;
+                            }
+                        }
                     }
-                    &-active,
-                    &-active:hover {
-                        border-top-color: ${colorList.primary4};
+                    .${prefixCls}-bottom-content {
+                        width: 100%;
                     }
-                }
-                &-content {
-                    width: 100%;
-                }
-                &-ink-bar {
-                    top: 0;
-                }
-            }
+                `}
 
-            &-left .${prefixCls} {
-                &-bar {
-                    border-right: 1px solid ${colorList.secondary4};
-                    float: left;
-                    height: 100%;
-                }
-                &-nav-container {
-                    margin-right: -1px;
-                }
-                &-tab {
-                    margin-right: -1px;
+            ${tabBarPosition === 'left' &&
+                css`
+                    .${prefixCls}-left-bar {
+                        border-right: 1px solid ${colorList.secondary4};
+                        float: left;
+                        height: 100%;
+                        .${prefixCls} {
+                            &-nav-container {
+                                margin-right: -1px;
+                            }
+                            &-tab {
+                                margin-right: -1px;
 
-                    &:hover {
-                        border-right-color: ${colorList.secondary4};
+                                &:hover {
+                                    border-right-color: ${colorList.secondary4};
+                                }
+                                &-active,
+                                &-active:hover {
+                                    border-right-color: ${colorList.primary4};
+                                }
+                            }
+                            &-ink-bar {
+                                right: 0;
+                            }
+                        }
                     }
-                    &-active,
-                    &-active:hover {
-                        border-right-color: ${colorList.primary4};
+                    .${prefixCls}-left-content {
+                        overflow: hidden;
+                        height: 100%;
                     }
-                }
-                &-content {
-                    overflow: hidden;
-                    height: 100%;
-                }
-                &-ink-bar {
-                    right: 0;
-                }
-            }
+                `}
 
-            &-right .${prefixCls} {
-                &-bar {
-                    border-left: 1px solid ${colorList.secondary4};
-                    float: right;
-                    height: 100%;
-                }
-                &-nav-container {
-                    margin-left: -1px;
-                }
-                &-tab {
-                    margin-left: -1px;
+            ${tabBarPosition === 'right' &&
+                css`
+                    .${prefixCls}-right-bar {
+                        border-left: 1px solid ${colorList.secondary4};
+                        float: right;
+                        height: 100%;
+                        .${prefixCls} {
+                            &-nav-container {
+                                margin-left: -1px;
+                            }
+                            &-tab {
+                                margin-left: -1px;
 
-                    &:hover {
-                        border-left-color: ${colorList.secondary4};
+                                &:hover {
+                                    border-left-color: ${colorList.secondary4};
+                                }
+                                &-active,
+                                &-active:hover {
+                                    border-left-color: ${colorList.primary4};
+                                }
+                            }
+                            &-ink-bar {
+                                left: 0;
+                            }
+                        }
                     }
-                    &-active,
-                    &-active:hover {
-                        border-left-color: ${colorList.primary4};
+                    .${prefixCls}-right-content {
+                        overflow: hidden;
+                        height: 100%;
                     }
-                }
-                &-content {
-                    overflow: hidden;
-                    height: 100%;
-                }
-                &-ink-bar {
-                    left: 0;
-                }
-            }
-
-            &-top .${prefixCls}-nav-scroll, &-bottom .${prefixCls}-nav-scroll {
-                width: 100%;
-            }
-            &-left .${prefixCls}-nav-scroll, &-right .${prefixCls}-nav-scroll {
-                height: 100%;
-            }
-
-            &-left .${prefixCls}-nav-container-scrolling, &-right .${prefixCls}-nav-container-scrolling {
-                padding: 20px 0;
-            }
-            &-top .${prefixCls}-nav-container-scrolling, &-bottom .${prefixCls}-nav-container-scrolling {
-                padding: 0 20px;
-            }
-            &-top .${prefixCls}-tab-prev, &-bottom .${prefixCls}-tab-prev {
-                left: 0;
-            }
-            &-top .${prefixCls}-tab-next, &-bottom .${prefixCls}-tab-next {
-                right: 0;
-            }
-            &-top
-                .${prefixCls}-tab-prev,
-                &-bottom
-                .${prefixCls}-tab-prev,
-                &-top
-                .${prefixCls}-tab-next,
-                &-bottom
-                .${prefixCls}-tab-next {
-                top: 50%;
-                margin-top: -10px;
-            }
-            &-left
-                .${prefixCls}-tab-prev,
-                &-right
-                .${prefixCls}-tab-prev,
-                &-left
-                .${prefixCls}-tab-next,
-                &-right
-                .${prefixCls}-tab-next {
-                left: 50%;
-                margin-left: -10px;
-                transform: rotate(90deg);
-            }
-
-            &-right .${prefixCls}-tab-prev, &-left .${prefixCls}-tab-prev {
-                top: 0;
-            }
-            &-right .${prefixCls}-tab-next, &-left .${prefixCls}-tab-next {
-                bottom: 0;
-            }
-
-            &-left .${prefixCls}-tab-prev-icon:before, &-right .${prefixCls}-tab-prev-icon:before {
-                content: '\\2039';
-            }
-            &-left .${prefixCls}-tab-next-icon:before, &-right .${prefixCls}-tab-next-icon:before {
-                content: '\\203A';
-            }
-            &-top .${prefixCls}-tab-prev-icon:before, &-bottom .${prefixCls}-tab-prev-icon:before {
-                content: '\\2039';
-            }
-            &-top .${prefixCls}-tab-next-icon:before, &-bottom .${prefixCls}-tab-next-icon:before {
-                content: '\\203A';
-            }
+                `}
+            ${(tabBarPosition === 'top' || tabBarPosition === 'bottom') &&
+                css`
+                    .${prefixCls}-top-bar, .${prefixCls}-bottom-bar {
+                        .${prefixCls}-nav-scroll {
+                            width: 100%;
+                        }
+                        .${prefixCls}-nav-container-scrolling {
+                            padding: 0 20px;
+                        }
+                        .${prefixCls}-tab-prev {
+                            left: 0;
+                        }
+                        .${prefixCls}-tab-next {
+                            right: 0;
+                        }
+                        .${prefixCls}-tab-prev, .${prefixCls}-tab-next {
+                            top: 50%;
+                            margin-top: -10px;
+                        }
+                        .${prefixCls}-tab-prev-icon:before {
+                            content: '\\2039';
+                        }
+                        .${prefixCls}-tab-next-icon:before {
+                            content: '\\203A';
+                        }
+                    }
+                `}
+            ${(tabBarPosition === 'left' || tabBarPosition === 'right') &&
+                css`
+                    .${prefixCls}-left-bar, .${prefixCls}-right-bar {
+                        .${prefixCls}-nav-scroll {
+                            height: 100%;
+                        }
+                        .${prefixCls}-nav-container-scrolling {
+                            padding: 20px 0;
+                        }
+                        .${prefixCls}-tab-prev {
+                            top: 0;
+                        }
+                        .${prefixCls}-tab-next {
+                            bottom: 0;
+                        }
+                        .${prefixCls}-tab-prev, .${prefixCls}-tab-next {
+                            left: 50%;
+                            margin-left: -10px;
+                            transform: rotate(90deg);
+                        }
+                        .${prefixCls}-tab-prev-icon:before {
+                            content: '\\2039';
+                        }
+                        .${prefixCls}-tab-next-icon:before {
+                            content: '\\203A';
+                        }
+                    }
+                `}
         }
     `
 );
+
 addDefaultThemeProps(TabsWrap);
