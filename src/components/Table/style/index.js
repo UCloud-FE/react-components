@@ -110,6 +110,7 @@ export const TableWrap = styled.div(
             css`
                 &-row-expand-icon-cell,
                 &-expand-icon-th,
+                &-expand-icon-col,
                 &-expanded-row > td:first-child {
                     display: none;
                 }

@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.5"></a>
+
+## [0.3.5](https://github.com/UCloud-FE/react-components/compare/v0.3.4...v0.3.5) (2018-12-03)
+
+### Bug Fixes
+
+*   **Table:** fix override of onRow affect contextMenu ([6f69094](https://github.com/UCloud-FE/react-components/commit/6f69094)), closes [#69](https://github.com/UCloud-FE/react-components/issues/69)
+*   **Table:** fix Table Row compnent allways recreate bug ([96fbc5a](https://github.com/UCloud-FE/react-components/commit/96fbc5a)), closes [#68](https://github.com/UCloud-FE/react-components/issues/68)
+*   **Table:** fix when table hideExpandIcon. width is not wrong ([1e90e1f](https://github.com/UCloud-FE/react-components/commit/1e90e1f)), closes [#71](https://github.com/UCloud-FE/react-components/issues/71)
+*   **Table:** hide tip wrap when emptyContent is null ([8735a3b](https://github.com/UCloud-FE/react-components/commit/8735a3b)), closes [#70](https://github.com/UCloud-FE/react-components/issues/70)
+
 <a name="0.3.4"></a>
 
 ## [0.3.4](https://github.com/UCloud-FE/react-components/compare/v0.3.3...v0.3.4) (2018-11-23)
