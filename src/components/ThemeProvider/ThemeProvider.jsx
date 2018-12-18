@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import _ from 'lodash';
 import { ThemeProvider as SCThemeProvider } from 'styled-components';
 
 import defaultTheme from './theme';
@@ -21,7 +20,6 @@ class ThemeProvider extends Component {
     };
     getMergedTheme = theme => {
         this.cache = JSON.stringify(theme);
-        console.log(generateTheme(theme));
         return generateTheme(theme);
     };
     componentWillReceiveProps(nextProps) {
