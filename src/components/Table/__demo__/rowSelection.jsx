@@ -27,6 +27,18 @@ class Demo extends React.Component {
                         columns={columns}
                     />
                 </div>
+                <div className="demo-wrap">
+                    <Table
+                        rowSelection={{
+                            multiple: false,
+                            defaultSelectedRowKeys: [1],
+                            onChange: console.log,
+                            getDisabledOfRow: record => record.key < 4
+                        }}
+                        dataSource={dataSource}
+                        columns={columns}
+                    />
+                </div>
             </div>
         );
     }
