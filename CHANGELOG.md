@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.0-beta.1"></a>
+
+# [0.4.0-beta.1](https://github.com/UCloud-FE/react-components/compare/v0.4.0-beta.0...v0.4.0-beta.1) (2018-12-18)
+
+### Bug Fixes
+
+*   **Table:** fix table missing background when x is scrollable ([279a802](https://github.com/UCloud-FE/react-components/commit/279a802)), closes [#76](https://github.com/UCloud-FE/react-components/issues/76)
+
+### Features
+
+*   **Table:** add single select table selection ([7311815](https://github.com/UCloud-FE/react-components/commit/7311815)), closes [#72](https://github.com/UCloud-FE/react-components/issues/72) [#75](https://github.com/UCloud-FE/react-components/issues/75)
+
 <a name="0.4.0-beta.0"></a>
 
 # [0.4.0-beta.0](https://github.com/UCloud-FE/react-components/compare/v0.3.5...v0.4.0-beta.0) (2018-12-11)
