@@ -52,12 +52,23 @@ class Radio extends Component {
     };
     renderRadio(props) {
         /* eslint-disable no-unused-vars */
-        const { children, checked, defaultChecked, value, onChange, onClick, multiple, styleType, ...rest } = props;
+        const {
+            children,
+            checked,
+            defaultChecked,
+            value,
+            onChange,
+            onClick,
+            multiple,
+            styleType,
+            disabled,
+            ...rest
+        } = props;
         /* eslint-enable no-unused-vars */
 
         return (
-            <RadioWrap checked={checked} {...rest} onClick={this.onClick}>
-                <RadioIcon type={checked ? 'cbox-ed' : 'circle'} />
+            <RadioWrap checked={checked} disabled={disabled} {...rest} onClick={this.onClick}>
+                <RadioIcon type={checked ? 'cbox-ed' : 'circle'} disabled={disabled} />
                 {children}
             </RadioWrap>
         );

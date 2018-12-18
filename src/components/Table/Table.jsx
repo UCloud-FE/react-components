@@ -8,6 +8,7 @@ import deprecatedLog from 'src/utils/deprecatedLog';
 import Pagination from 'src/components/Pagination';
 import Notice from 'src/components/Notice';
 import Checkbox from 'src/components/Checkbox';
+import Radio from 'src/components/Radio';
 import Select from 'src/components/Select';
 import Icon from 'src/components/Icon';
 import Popover from 'src/components/Popover';
@@ -118,12 +119,12 @@ class Table extends Component {
         /**
          * 设置行props
          * @argument record - 行数据
-         * @argument key - 行key
+         * @argument index - 行当前翻页中的index 不可作为key使用 不建议使用
          */
         onRow: PropTypes.func,
         /** 设置表头props
          * @argument record - 行数据
-         * @argument key - 行key
+         * @argument index - 表头行的index 表示存在分组时(column.children)的表头层级
          */
         onHeaderRow: PropTypes.func,
         /** 列表可选选项配置 */
@@ -138,7 +139,12 @@ class Table extends Component {
                 /** 当前选中项，controlled */
                 selectedRowKeys: PropTypes.array,
                 /** 获取当前行选中禁用状态 */
-                getDisabledOfRow: PropTypes.func
+                getDisabledOfRow: PropTypes.func,
+                /**
+                 * 是否多选
+                 * @default true
+                 */
+                multiple: PropTypes.bool
             }),
             PropTypes.oneOf([true])
         ]),
@@ -442,11 +448,18 @@ class Table extends Component {
         });
     };
     handleSelectRecord = (key, checked) => {
+        const { rowSelection } = this.props;
         const { selectedRowKeyMap } = this.state;
-        this.onSelectedRowKeysChange({
-            ...selectedRowKeyMap,
-            [key]: checked === undefined ? !selectedRowKeyMap[key] : checked
-        });
+        if (rowSelection.multiple === false) {
+            this.onSelectedRowKeysChange({
+                [key]: true
+            });
+        } else {
+            this.onSelectedRowKeysChange({
+                ...selectedRowKeyMap,
+                [key]: checked
+            });
+        }
     };
     getRowKey = (record, index) => {
         const rowKey = this.props.rowKey;
@@ -511,12 +524,13 @@ class Table extends Component {
                 selectedEnableDataSourceOfCurrentPageCount === enableDataSourceOfCurrentPage.length &&
                 selectedEnableDataSourceOfCurrentPageCount > 0;
             newColumns.unshift({
-                title: (
-                    <Checkbox
-                        onChange={() => this.handleToggleCurrentPage(dataSourceOfCurrentPage, !isAllSelected)}
-                        checked={isAllSelected}
-                    />
-                ),
+                title:
+                    rowSelection.multiple === false ? null : (
+                        <Checkbox
+                            onChange={() => this.handleToggleCurrentPage(dataSourceOfCurrentPage, !isAllSelected)}
+                            checked={isAllSelected}
+                        />
+                    ),
                 key: 'table_row_selection',
                 width: 46,
                 fixed: rowSelection.fixed,
@@ -526,7 +540,13 @@ class Table extends Component {
                     if (rowSelection.getDisabledOfRow) {
                         disabled = rowSelection.getDisabledOfRow(record);
                     }
-                    return (
+                    return rowSelection.multiple === false ? (
+                        <Radio
+                            disabled={disabled}
+                            onChange={() => this.handleSelectRecord(rowKey)}
+                            checked={selectedRowKeyMap[rowKey]}
+                        />
+                    ) : (
                         <Checkbox
                             disabled={disabled}
                             onChange={() => this.handleSelectRecord(rowKey, !selectedRowKeyMap[rowKey])}
@@ -682,9 +702,9 @@ class Table extends Component {
                         prefixCls={prefixCls}
                         data={dataSource}
                         columns={columns}
-                        onRow={record => {
+                        onRow={(record, index) => {
                             return {
-                                ...onRow(record),
+                                ...onRow(record, index),
                                 record,
                                 contextMenu
                             };
