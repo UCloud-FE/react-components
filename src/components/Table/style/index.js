@@ -57,6 +57,7 @@ export const TableWrap = styled.div(
             position: absolute;
             top: 0;
             overflow: hidden;
+            background: ${colorMap.default.background};
 
             table {
                 width: auto;
