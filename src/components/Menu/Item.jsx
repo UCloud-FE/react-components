@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import Checkbox from 'components/Checkbox';
+import Checkbox from 'src/components/Checkbox';
 
 import { ItemWrap } from './style';
 
-class Item extends Component {
+class Item extends PureComponent {
     static propTypes = {
         /** item的唯一键 */
         itemKey: PropTypes.any,
