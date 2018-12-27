@@ -10,6 +10,7 @@ class ThemeProvider extends Component {
     constructor(props) {
         super(props);
         const theme = this.getMergedTheme(props.theme);
+        this.cache = JSON.stringify(theme);
         this.state = {
             theme
         };
@@ -19,13 +20,13 @@ class ThemeProvider extends Component {
         theme: PropTypes.object.isRequired
     };
     getMergedTheme = theme => {
-        this.cache = JSON.stringify(theme);
         return generateTheme(theme);
     };
     componentWillReceiveProps(nextProps) {
         const { theme } = nextProps;
-        const mergedTheme = this.getMergedTheme(theme);
         if (JSON.stringify(theme) !== this.cache) {
+            const mergedTheme = this.getMergedTheme(theme);
+            this.cache = JSON.stringify(theme);
             this.setState({
                 theme: mergedTheme
             });
