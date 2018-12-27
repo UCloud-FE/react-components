@@ -5,6 +5,11 @@ import Markdown from 'rsg-components/Markdown';
 import Styled from 'rsg-components/Styled';
 import cx from 'classnames';
 import Ribbon from 'rsg-components/Ribbon';
+import _ from 'lodash';
+import themeIcon from '!url-loader!./theme.svg';
+
+import Popover from 'src/components/Popover';
+import { themeList, themeColor, changeTheme } from './ReactExample';
 
 const xsmall = '@media (max-width: 600px)';
 
@@ -53,6 +58,7 @@ const styles = ({
     },
     headerLink: {
         '&, &:link, &:visited': {
+            padding: '.5em 0',
             marginLeft: '0.5em',
             marginRight: '0.5em',
             fontFamily: font,
@@ -62,6 +68,27 @@ const styles = ({
             color: '#fff',
             cursor: 'pointer'
         }
+    },
+    themeIcon: {
+        width: '2em',
+        height: '2em',
+        marginLeft: '0.5em',
+        verticalAlign: 'middle',
+        cursor: 'pointer'
+    },
+    themeWrap: {
+        width: '10em',
+        height: '10em',
+        background: '#fff',
+        border: '1px solid #ccc',
+        boxSizing: 'unset'
+    },
+    themeButton: {
+        display: 'inline-block',
+        width: '4em',
+        height: '4em',
+        borderRadius: '2em',
+        margin: '.5em'
     },
     hasSidebar: {
         paddingLeft: sidebarWidth,
@@ -150,6 +177,23 @@ export function StyleGuideRenderer({ classes, title, homepageUrl, children, toc,
                             >
                                 NPM
                             </a>
+                            <Popover
+                                popup={
+                                    <div className={classes.themeWrap}>
+                                        {_.map(themeList, (theme, themeType) => (
+                                            <span
+                                                key={themeType}
+                                                title={themeType}
+                                                className={classes.themeButton}
+                                                style={{ background: themeColor[themeType] }}
+                                                onClick={() => changeTheme(themeType)}
+                                            />
+                                        ))}
+                                    </div>
+                                }
+                            >
+                                <img src={themeIcon} className={cx(classes.themeIcon)} alt="switch theme icon" />
+                            </Popover>
                         </nav>
                     </div>
                 </div>

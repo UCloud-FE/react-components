@@ -3,7 +3,11 @@ import PropTypes from 'prop-types';
 import { transform } from 'buble';
 import Wrapper from 'rsg-components/Wrapper';
 import splitExampleCode from 'react-styleguidist/lib/utils/splitExampleCode';
+
 import ThemeProvider from 'src/components/ThemeProvider';
+import greenTheme from 'src/components/ThemeProvider/green';
+import oceanTheme from 'src/components/ThemeProvider/ocean';
+import materialTheme from 'src/components/ThemeProvider/material';
 
 /* eslint-disable no-invalid-this, react/no-multi-comp */
 
@@ -28,6 +32,29 @@ class StateHolder extends Component {
     }
 }
 
+export const themeList = {
+    blue: {},
+    green: greenTheme,
+    ocean: oceanTheme,
+    material: materialTheme
+};
+
+export const themeColor = {
+    blue: '#4074e1',
+    green: greenTheme.colorList.primary,
+    ocean: oceanTheme.colorList.primary,
+    material: '#415bf5'
+};
+
+let currentThemeType = 'green';
+export const changeTheme = themeType => {
+    currentThemeType = themeType;
+    _.each(themeListeners, listener => {
+        listener(themeType);
+    });
+};
+let themeListeners = [];
+
 export default class ReactExample extends Component {
     static propTypes = {
         code: PropTypes.string.isRequired,
@@ -36,9 +63,24 @@ export default class ReactExample extends Component {
         compilerConfig: PropTypes.object
     };
     static contextTypes = {};
+    state = {
+        theme: currentThemeType
+    };
+    componentDidMount() {
+        const listener = themeType => {
+            this.setState({
+                theme: themeType
+            });
+        };
+        this.removeListener = () => (themeListeners = _.filter(themeListeners, _listener => listener !== _listener));
+        themeListeners.push(listener);
+    }
+    componentWillUnmount = () => {
+        this.removeListener && this.removeListener();
+    };
 
-    shouldComponentUpdate(nextProps) {
-        return this.props.code !== nextProps.code;
+    shouldComponentUpdate(nextProps, nextState) {
+        return this.props.code !== nextProps.code || this.state.theme !== nextState.theme;
     }
 
     // Eval the code to extract the value of the initial state
@@ -86,11 +128,11 @@ export default class ReactExample extends Component {
         const initialState = this.getExampleInitialState(head);
         const exampleComponent = this.getExampleComponent(example);
         const wrappedComponent = (
-            // <ThemeProvider theme={{ fontSize: '15px', colorMap: { default: { text: '#000' } } }}>
-            <Wrapper onError={this.props.onError}>
-                <StateHolder component={exampleComponent} initialState={initialState} />
-            </Wrapper>
-            // </ThemeProvider>
+            <ThemeProvider theme={themeList[this.state.theme]}>
+                <Wrapper onError={this.props.onError}>
+                    <StateHolder component={exampleComponent} initialState={initialState} />
+                </Wrapper>
+            </ThemeProvider>
         );
         return wrappedComponent;
     }
