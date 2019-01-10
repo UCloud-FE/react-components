@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.0-beta.2"></a>
+
+# [0.4.0-beta.2](https://github.com/UCloud-FE/react-components/compare/v0.4.0-beta.1...v0.4.0-beta.2) (2019-01-10)
+
+### Bug Fixes
+
+*   **ThemeProvider:** fix themeProvider bug when change theme ([314ef06](https://github.com/UCloud-FE/react-components/commit/314ef06)), closes [#79](https://github.com/UCloud-FE/react-components/issues/79)
+
+### Features
+
+*   **ThemeProvider:** add material theme ([886719a](https://github.com/UCloud-FE/react-components/commit/886719a)), closes [#80](https://github.com/UCloud-FE/react-components/issues/80)
+
+### Performance Improvements
+
+*   **Menu:** change some component to PureComponent ([a698833](https://github.com/UCloud-FE/react-components/commit/a698833)), closes [#77](https://github.com/UCloud-FE/react-components/issues/77)
+
 <a name="0.4.0-beta.1"></a>
 
 # [0.4.0-beta.1](https://github.com/UCloud-FE/react-components/compare/v0.4.0-beta.0...v0.4.0-beta.1) (2018-12-18)
