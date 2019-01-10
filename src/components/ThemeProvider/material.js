@@ -225,7 +225,7 @@ export default theme => {
         '&': {
             [`.${datePickerPrefixCls}-date-wrap`]: {
                 boxShadow: materialVars.whiteBoxShadow,
-                borderWidth: '0',
+                borderWidth: 0,
                 paddingTop: '1px',
                 paddingBottom: '1px'
             },
@@ -236,13 +236,16 @@ export default theme => {
         },
         Range: {
             [`.${datePickerPrefixCls}-range-date-wrap`]: {
-                borderWidth: '0px',
+                borderWidth: 0,
                 boxShadow: materialVars.whiteBoxShadow,
                 ':hover': {
                     boxShadow: materialVars.whiteBoxShadowActive
                 }
             },
-            [`&.${datePickerPrefixCls}-range-disabled .${datePickerPrefixCls}-range-date-wrap`]: {
+            [`.${datePickerPrefixCls}-range-date-wrap-readonly`]: {
+                boxShadow: 'none'
+            },
+            [`.${datePickerPrefixCls}-range-date-wrap-disabled`]: {
                 borderWidth: '1px',
                 boxShadow: 'none'
             }
