@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.0-beta.3"></a>
+
+# [0.4.0-beta.3](https://github.com/UCloud-FE/react-components/compare/v0.4.0-beta.2...v0.4.0-beta.3) (2019-01-10)
+
+### Bug Fixes
+
+*   **DatePicker:** fix wrong style ([934ed6c](https://github.com/UCloud-FE/react-components/commit/934ed6c)), closes [#81](https://github.com/UCloud-FE/react-components/issues/81)
+
 <a name="0.4.0-beta.2"></a>
 
 # [0.4.0-beta.2](https://github.com/UCloud-FE/react-components/compare/v0.4.0-beta.1...v0.4.0-beta.2) (2019-01-10)
