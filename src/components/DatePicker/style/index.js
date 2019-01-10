@@ -23,15 +23,24 @@ RcPickerWrap.propTypes = {
     dropdownClassName: PropTypes.string
 };
 
-export const PickerWrap = styled(RcPickerWrap)`
-    user-select: none;
-    width: 285px;
-    z-index: ${props => props.zIndex};
+export const PickerWrap = styled(RcPickerWrap).attrs({
+    className: `${prefixCls}-popup-wrap`
+})(
+    ({ zIndex, isMonth }) => css`
+        user-select: none;
+        width: 285px;
+        z-index: ${zIndex};
+        ${isMonth &&
+            css`
+                width: 220px;
+            `};
+        ${calendarMixin};
+    `
+);
 
-    ${calendarMixin};
-`;
-
-export const DateWrap = styled.div(
+export const DateWrap = styled.div.attrs({
+    className: `${prefixCls}-date-wrap`
+})(
     ({ theme: { Height, HeightNumber, colorMap }, size }) => css`
         height: ${Height[size]};
         line-height: ${HeightNumber[size] - 2}px;
@@ -46,12 +55,12 @@ export const DateWrap = styled.div(
 );
 
 export const DateSpan = styled.span`
-    ${inlineBlockWithVerticalMixin};
+    display: inline-block;
 `;
 
 export const PickerIcon = styled(Icon)`
     margin-left: 5px;
-    ${inlineBlockWithVerticalMixin};
+    display: inline-block;
 `;
 
 export const TimeWrap = styled.div`
@@ -64,8 +73,10 @@ export const TimeSeparator = styled.span`
     margin: 0 4px;
 `;
 
-export const PickerContainer = styled.div(
-    ({ theme: { colorMap }, disabled }) => css`
+export const PickerContainer = styled.div.attrs({
+    className: ({ disabled }) => classnames(disabled && `${prefixCls}-disabled`)
+})(
+    ({ theme: { colorMap, DatePicker: datePickerTheme = {} }, disabled }) => css`
         ${inlineBlockWithVerticalMixin};
 
         ${disabled &&
@@ -77,17 +88,29 @@ export const PickerContainer = styled.div(
                     background: ${colorMap.disabled.background};
                 }
             `};
+        ${datePickerTheme['&']};
     `
 );
 
-export const RangePopup = styled.div(
-    ({ theme: { colorMap } }) => css`
+export const RangeContainer = styled.div.attrs({
+    className: ({ disabled }) => classnames(`${prefixCls}-range`, disabled && `${prefixCls}-range-disabled`)
+})(
+    ({ theme: { DatePicker: datePickerTheme = {} } }) => css`
+        ${datePickerTheme['Range']};
+    `
+);
+
+export const RangePopup = styled.div.attrs({
+    className: `${prefixCls}-range-popup`
+})(
+    ({ theme: { colorMap, DatePicker: datePickerTheme = {} } }) => css`
         background: ${colorMap.default.background};
         display: inline-block;
         border: 1px solid ${colorMap.default.border};
         box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
         border-radius: 2px;
         padding: 0;
+        ${datePickerTheme['RangePopup']};
     `
 );
 
@@ -95,7 +118,9 @@ export const RangeSelect = styled(Select)`
     margin-right: 8px;
 `;
 
-export const RangeDateWrap = styled.div(
+export const RangeDateWrap = styled.div.attrs({
+    className: `${prefixCls}-range-date-wrap`
+})(
     ({ theme: { Height, HeightNumber, colorMap }, size, modifyAble, disabled }) => css`
         border: 1px solid ${colorMap.default.border};
         padding: 0 8px;

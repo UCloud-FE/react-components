@@ -3,12 +3,14 @@
 exports[`Icon demo -- customStyle 1`] = `
 <div>
   <i
-    class="icon__link "
+    class="uc-fe-icon icon__link "
     style="margin-right:10px;"
+    type="link"
   />
   <i
-    class="icon__link test_cls "
+    class="test_cls uc-fe-icon icon__link "
     style="color:red;font-size:20px;"
+    type="link"
   />
 </div>
 `;
@@ -107,24 +109,24 @@ exports[`Icon demo -- icon 1`] = `
 }
 
 .c6 .c7,
-.c6 .style__RadioTagWrap-VWxju {
+.c6 .style__RadioTagWrap-sc-25j3mq-3 {
   margin-right: 8px;
 }
 
 .c6 .c7:last-child,
-.c6 .style__RadioTagWrap-VWxju:last-child {
+.c6 .style__RadioTagWrap-sc-25j3mq-3:last-child {
   margin-right: 0;
 }
 
-.c6 .style__RadioButtonWrap-sjeVo {
+.c6 .c30 {
   margin-right: -1px;
 }
 
-.c6 .style__RadioButtonWrap-sjeVo:first-child {
+.c6 .c30:first-child {
   border-radius: 2px 0 0 2px;
 }
 
-.c6 .style__RadioButtonWrap-sjeVo:last-child {
+.c6 .c30:last-child {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
 }
@@ -184,6 +186,7 @@ exports[`Icon demo -- icon 1`] = `
   width: 80px;
   padding: 4px;
   border: 1px solid #c3cad9;
+  border-width: 1px;
   line-height: 16px;
 }
 
@@ -250,6 +253,7 @@ exports[`Icon demo -- icon 1`] = `
   background: #fff;
   display: inline-block;
   vertical-align: middle;
+  border-color: #c3cad9;
 }
 
 .c26 {
@@ -263,6 +267,10 @@ exports[`Icon demo -- icon 1`] = `
   background: #fff;
   display: inline-block;
   vertical-align: middle;
+  border-color: #c3cad9;
+  cursor: not-allowed;
+  pointer-events: none;
+  color: #bbb;
 }
 
 .c22 {
@@ -297,11 +305,6 @@ exports[`Icon demo -- icon 1`] = `
 
 .c22 .c28::placeholder {
   color: #abb4c3;
-}
-
-.c22 .c23,
-.c22 .c25 {
-  border-color: #c3cad9;
 }
 
 .c22:hover {
@@ -362,7 +365,8 @@ exports[`Icon demo -- icon 1`] = `
             class="c7 c8"
           >
             <i
-              class="icon__cbox-ed c9 c10 "
+              class="c9 c10 uc-fe-icon icon__cbox-ed "
+              type="cbox-ed"
             />
             circle-fill
           </div>
@@ -370,7 +374,8 @@ exports[`Icon demo -- icon 1`] = `
             class="c7 c11"
           >
             <i
-              class="icon__circle c9 c10 "
+              class="c9 c10 uc-fe-icon icon__circle "
+              type="circle"
             />
             circle
           </div>
@@ -378,7 +383,8 @@ exports[`Icon demo -- icon 1`] = `
             class="c7 c11"
           >
             <i
-              class="icon__circle c9 c10 "
+              class="c9 c10 uc-fe-icon icon__circle "
+              type="circle"
             />
             loading
           </div>
@@ -439,33 +445,35 @@ exports[`Icon demo -- icon 1`] = `
         span="9"
       >
         <div
-          class="c22"
+          class="uc-fe-numberinput uc-fe-numberinput-styletype-default c22"
         >
           <div>
             <span
-              class="c23 c24"
+              class="c23 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c24"
               unselectable="unselectable"
             >
               <i
-                class="icon__caret-up "
+                class="uc-fe-icon icon__caret-up "
+                type="caret-up"
               />
             </span>
             <span
-              class="c25 c26"
+              class="c25 uc-fe-numberinput-handler-down uc-fe-numberinput-handler uc-fe-numberinput-handler-disabled c26"
               disabled=""
               unselectable="unselectable"
             >
               <i
-                class="icon__caret-down "
+                class="uc-fe-icon icon__caret-down "
+                type="caret-down"
               />
             </span>
           </div>
           <div
-            class="c27"
+            class="uc-fe-numberinput-input-wrap c27"
           >
             <input
               autocomplete="off"
-              class="c28 c29"
+              class="c28 uc-fe-numberinput-input c29"
               max="100"
               min="12"
               step="1"
@@ -499,8 +507,9 @@ exports[`Icon demo -- icon 1`] = `
     class="demo-wrap"
   >
     <i
-      class="icon__circle-fill "
+      class="uc-fe-icon icon__circle-fill "
       style="font-size:12px;color:#000;"
+      type="circle-fill"
     />
   </div>
 </div>
@@ -515,28 +524,34 @@ exports[`Icon demo -- spin 1`] = `
 
 <div>
   <i
-    class="icon__link c0"
+    class="uc-fe-icon icon__link uc-fe-icon-spin c0"
     style="margin-right:10px;"
+    type="link"
   />
   <i
-    class="icon__check c0"
+    class="uc-fe-icon icon__check uc-fe-icon-spin c0"
     style="margin-right:10px;"
+    type="check"
   />
   <i
-    class="icon__circle-check c0"
+    class="uc-fe-icon icon__circle-check uc-fe-icon-spin c0"
     style="margin-right:10px;"
+    type="circle-check"
   />
   <i
-    class="icon__arrow-left c0"
+    class="uc-fe-icon icon__arrow-left uc-fe-icon-spin c0"
     style="margin-right:10px;"
+    type="arrow-left"
   />
   <i
-    class="icon__checkbox c0"
+    class="uc-fe-icon icon__checkbox uc-fe-icon-spin c0"
     style="margin-right:10px;"
+    type="checkbox"
   />
   <i
-    class="icon__loading c0"
+    class="uc-fe-icon icon__loading uc-fe-icon-spin c0"
     style="margin-right:10px;"
+    type="loading"
   />
 </div>
 `;
@@ -544,28 +559,34 @@ exports[`Icon demo -- spin 1`] = `
 exports[`Icon demo -- type 1`] = `
 <div>
   <i
-    class="icon__link "
+    class="uc-fe-icon icon__link "
     style="margin-right:10px;"
+    type="link"
   />
   <i
-    class="icon__check "
+    class="uc-fe-icon icon__check "
     style="margin-right:10px;"
+    type="check"
   />
   <i
-    class="icon__circle-check "
+    class="uc-fe-icon icon__circle-check "
     style="margin-right:10px;"
+    type="circle-check"
   />
   <i
-    class="icon__arrow-left "
+    class="uc-fe-icon icon__arrow-left "
     style="margin-right:10px;"
+    type="arrow-left"
   />
   <i
-    class="icon__checkbox "
+    class="uc-fe-icon icon__checkbox "
     style="margin-right:10px;"
+    type="checkbox"
   />
   <i
-    class="icon__loading "
+    class="uc-fe-icon icon__loading "
     style="margin-right:10px;"
+    type="loading"
   />
 </div>
 `;

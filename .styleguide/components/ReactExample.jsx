@@ -7,7 +7,13 @@ import splitExampleCode from 'react-styleguidist/lib/utils/splitExampleCode';
 import ThemeProvider from 'src/components/ThemeProvider';
 import greenTheme from 'src/components/ThemeProvider/green';
 import oceanTheme from 'src/components/ThemeProvider/ocean';
-import materialTheme from 'src/components/ThemeProvider/material';
+import generateMaterialTheme from 'src/components/ThemeProvider/material';
+
+const materialTheme = generateMaterialTheme({
+    colorList: {
+        primary: '#3555f6'
+    }
+});
 
 /* eslint-disable no-invalid-this, react/no-multi-comp */
 
@@ -46,7 +52,7 @@ export const themeColor = {
     material: '#415bf5'
 };
 
-let currentThemeType = 'green';
+let currentThemeType = 'blue';
 export const changeTheme = themeType => {
     currentThemeType = themeType;
     _.each(themeListeners, listener => {
@@ -123,17 +129,21 @@ export default class ReactExample extends Component {
         if (!compiledCode) {
             return null;
         }
-
         const { head, example } = splitExampleCode(compiledCode);
         const initialState = this.getExampleInitialState(head);
         const exampleComponent = this.getExampleComponent(example);
-        const wrappedComponent = (
-            <ThemeProvider theme={themeList[this.state.theme]}>
+        const wrappedComponent =
+            this.state.theme === 'blue' ? (
                 <Wrapper onError={this.props.onError}>
                     <StateHolder component={exampleComponent} initialState={initialState} />
                 </Wrapper>
-            </ThemeProvider>
-        );
+            ) : (
+                <ThemeProvider theme={themeList[this.state.theme]}>
+                    <Wrapper onError={this.props.onError}>
+                        <StateHolder component={exampleComponent} initialState={initialState} />
+                    </Wrapper>
+                </ThemeProvider>
+            );
         return wrappedComponent;
     }
 }

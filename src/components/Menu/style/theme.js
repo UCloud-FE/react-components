@@ -1,32 +1,48 @@
+import config from 'src/config';
+
+const { prefixCls: _prefixCls } = config;
+const prefixCls = _prefixCls + '-menu';
+
 export default ({ colorMap }) => ({
-    light: {
-        text: colorMap.default.text,
-        background: colorMap.default.background,
-        // item hover colors
-        'item:hover': {
-            background: colorMap.active.background
+    themeType: {
+        light: {
+            '&': {
+                [`&, .${prefixCls}-popup-content-wrap`]: {
+                    color: colorMap.default.text,
+                    background: colorMap.default.background
+                },
+                [`.${prefixCls}-item, .${prefixCls}-submenu-title-content, .${prefixCls}-selectall-checkbox`]: {
+                    ':hover': {
+                        background: colorMap.active.background
+                    }
+                },
+                [`.${prefixCls}-item-selected, .${prefixCls}-submenu-title-selected, .${prefixCls}-selectall-checkbox-checked`]: {
+                    color: colorMap.active.text
+                },
+                [`.${prefixCls}-submenu-title-content-collapse`]: {
+                    borderColor: colorMap.default.border
+                }
+            }
         },
-        // item active colors
-        'item:active': {
-            text: colorMap.active.text
-        },
-        // colors of collapse sub menu
-        collapse: {
-            border: colorMap.default.border
-        }
-    },
-    dark: {
-        text: 'rgba(255, 255, 255, 0.65)',
-        background: '#001529',
-        'item:hover': {
-            background: '#1890ff',
-            text: 'white'
-        },
-        'item:active': {
-            text: 'white'
-        },
-        collapse: {
-            border: '#163255'
+        dark: {
+            '&': {
+                [`&, .${prefixCls}-popup-content-wrap`]: {
+                    color: 'rgba(255, 255, 255, 0.65)',
+                    background: '#001529'
+                },
+                [`.${prefixCls}-item, .${prefixCls}-submenu-title-content, .${prefixCls}-selectall-checkbox`]: {
+                    ':hover': {
+                        background: '#1890ff',
+                        color: 'white'
+                    }
+                },
+                [`.${prefixCls}-item-selected, .${prefixCls}-submenu-title-selected, .${prefixCls}-selectall-checkbox-checked`]: {
+                    color: 'white'
+                },
+                [`.${prefixCls}-submenu-title-content-collapse`]: {
+                    borderColor: '#163255'
+                }
+            }
         }
     }
 });

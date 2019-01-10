@@ -9,7 +9,9 @@ const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-tabs';
 
 /* stylelint-disable no-descending-specificity */
-export const TabsWrap = styled(RcTabs)(
+export const TabsWrap = styled(RcTabs).attrs({
+    className: ({ styleType }) => `${prefixCls}-styletype-${styleType}`
+})(
     ({ theme: { colorMap, colorList, Tabs: tabsTheme }, styleType, tabBarPosition }) => css`
         overflow: hidden;
         ${clearFixMixin};
@@ -292,6 +294,7 @@ export const TabsWrap = styled(RcTabs)(
                     }
                 `}
         }
+        ${tabsTheme['&']};
     `
 );
 

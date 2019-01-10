@@ -23,7 +23,8 @@ import {
     RangePopupConfirmButton,
     RangePopupError,
     RangePopupFooter,
-    RangePopupPickerContainer
+    RangePopupPickerContainer,
+    RangeContainer
 } from './style';
 import { Size } from './DatePicker';
 
@@ -43,9 +44,10 @@ const getDateFromOption = option => {
 class Range extends Component {
     constructor(props) {
         super(props);
+        const { value = [moment(), moment()] } = props;
         this.state = {
             visible: false,
-            cache: props.value
+            cache: value
         };
     }
     static propTypes = {
@@ -85,7 +87,6 @@ class Range extends Component {
         locale: PropTypes.object
     };
     static defaultProps = {
-        defaultValue: [moment(), moment()],
         onChange: () => {},
         onInitialChange: () => {},
         type: 'date',
@@ -96,7 +97,7 @@ class Range extends Component {
         zIndex: 100
     };
     componentDidMount = () => {
-        const { option, options, onInitialChange, value } = this.props;
+        const { option, options, onInitialChange, value = [moment(), moment()] } = this.props;
         if (option !== 'custom') {
             const optionInfo = _.find(options, _option => _option.value === option);
             if (optionInfo && optionInfo.range) {
@@ -161,7 +162,7 @@ class Range extends Component {
             defaultOption,
             onOptionChange,
             hideOptions,
-            value,
+            value = [moment(), moment()],
             defaultValue,
             onChange,
             onInitialChange,
@@ -198,7 +199,7 @@ class Range extends Component {
         const isValid = isRangeDateValid(cStart, cEnd, rules, precision);
 
         return (
-            <div {...rest}>
+            <RangeContainer {...rest} disabled={disabled}>
                 {!hideOptions && (
                     <RangeSelect
                         options={options}
@@ -263,7 +264,7 @@ class Range extends Component {
                         <PickerIcon type="calendar" color="blue" />
                     </RangeDateWrap>
                 </Popover>
-            </div>
+            </RangeContainer>
         );
     }
 }

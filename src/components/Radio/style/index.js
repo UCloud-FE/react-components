@@ -22,6 +22,7 @@ const sizeMixin = ({ theme: { Height }, size }) => css`
     line-height: ${Height[size]};
 `;
 
+/* stylelint-disable no-duplicate-selectors */
 export const RadioWrap = styled.div`
     ${radioCommonStyleMixin};
 
@@ -32,7 +33,7 @@ export const RadioWrap = styled.div`
     ${({ checked, theme: { colorMap } }) =>
         checked &&
         css`
-            ${/* sc-sel */ RadioIcon} {
+            ${RadioIcon} {
                 color: ${colorMap.active.icon};
             }
         `};
@@ -44,7 +45,7 @@ export const RadioWrap = styled.div`
             cursor: not-allowed;
             pointer-events: none;
 
-            ${/* sc-sel */ RadioIcon} {
+            ${RadioIcon} {
                 color: ${colorMap.disabled.icon};
             }
         `};
@@ -105,7 +106,7 @@ export const RadioTagWrap = styled.div`
 `;
 
 export const RadioGroupWrap = styled.div`
-    ${/* sc-sel */ RadioWrap}, ${/* sc-sel */ RadioTagWrap} {
+    ${RadioWrap}, ${/* sc-sel */ RadioTagWrap} {
         margin-right: 8px;
 
         &:last-child {
@@ -113,7 +114,7 @@ export const RadioGroupWrap = styled.div`
         }
     }
 
-    ${/* sc-custom */ RadioButtonWrap} {
+    ${RadioButtonWrap} {
         margin-right: -1px;
         &:first-child {
             border-radius: 2px 0 0 2px;

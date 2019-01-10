@@ -9,7 +9,7 @@ const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-calendar';
 
 /* stylelint-disable no-duplicate-selectors */
-export const calendarMixin = ({ theme: { colorMap, colorList } }) => css`
+export const calendarMixin = ({ theme: { colorMap, colorList, Calendar: calendarTheme = {} } }) => css`
     &.${prefixCls}, .${prefixCls} {
         outline: none;
         position: relative;
@@ -132,8 +132,9 @@ export const calendarMixin = ({ theme: { colorMap, colorList } }) => css`
         .${prefixCls}-year-panel-cell,
         .${prefixCls}-decade-panel-cell {
         cursor: pointer;
-        height: 35px;
-        line-height: 35px;
+        height: 25px;
+        line-height: 25px;
+        padding: 5px;
         text-align: center;
     }
     .${prefixCls}-last-month-cell,
@@ -175,19 +176,29 @@ export const calendarMixin = ({ theme: { colorMap, colorList } }) => css`
         line-height: 10px;
         margin: auto;
     }
-    .${prefixCls}-selected-day {
+    .${prefixCls}-selected-day.${prefixCls}-today::after,
+        .${prefixCls}-selected-date.${prefixCls}-today::after,
+        .${prefixCls}-month-panel-selected-cell.${prefixCls}-month-panel-current-cell::after {
+        display: none;
+    }
+    .${prefixCls}-selected-day .${prefixCls}-date {
         background: ${colorMap.active.background};
     }
-    .${prefixCls}-selected-date,
-        .${prefixCls}-month-panel-selected-cell,
-        .${prefixCls}-year-panel-selected-cell,
-        .${prefixCls}-decade-panel-selected-cell {
+    .${prefixCls}-selected-date
+        .${prefixCls}-date,
+        .${prefixCls}-month-panel-selected-cell
+        .${prefixCls}-month-panel-month,
+        .${prefixCls}-year-panel-selected-cell
+        .${prefixCls}-year-panel-year,
+        .${prefixCls}-decade-panel-selected-cell
+        .${prefixCls}-decade-panel-decade {
         color: ${colorList.white};
         background: ${colorList.primary2};
     }
     .${prefixCls}-month-panel-year-select-arrow, .${prefixCls}-year-panel-decade-select-arrow {
         display: none;
     }
+    ${calendarTheme['&']};
 `;
 
 export const CalendarWrap = styled(RcCalendar)`
@@ -196,6 +207,9 @@ export const CalendarWrap = styled(RcCalendar)`
 
 export const MonthCalendarWrap = styled(RcMonthCalendar)`
     ${calendarMixin};
+    .${prefixCls}-month-panel-body {
+        padding-top: 5px;
+    }
 `;
 
 addDefaultThemeProps(CalendarWrap, MonthCalendarWrap);

@@ -40,7 +40,7 @@ export const FooterWrap = styled.div`
 `;
 
 /* stylelint-disable no-duplicate-selectors */
-const themeMixin = ({ theme: { colorList, colorMap, fontSize, titleFontSize } }) => css`
+const themeMixin = ({ theme: { colorList, colorMap, fontSize, titleFontSize, Card: cardTheme = {} } }) => css`
     border: 1px solid ${colorList.secondary5};
     background: ${colorList.white};
     font-size: ${fontSize};
@@ -48,14 +48,24 @@ const themeMixin = ({ theme: { colorList, colorMap, fontSize, titleFontSize } })
     ${HeaderWrap} {
         color: ${colorList.title};
         font-size: ${titleFontSize};
+        ${cardTheme['Header']};
     }
     ${CommentWrap} {
         color: ${colorList.subtitle};
         font-size: ${fontSize};
+        ${cardTheme['Comment']};
+    }
+    ${ActionWrap} {
+        ${cardTheme['Action']};
+    }
+    ${ContentWrap} {
+        ${cardTheme['Content']};
     }
     ${FooterWrap} {
         border-top: 1px solid ${colorList.secondary5};
+        ${cardTheme['Footer']};
     }
+    ${cardTheme['&']};
 `;
 /* stylelint-enable no-duplicate-selectors */
 

@@ -8,7 +8,7 @@ import Tooltip from 'src/components/Tooltip/style/theme';
 
 import { generateColorTheme, defaultColorList } from './color';
 
-const sizeTheme = {
+const defaultSizeTheme = {
     // default font-size
     fontSize: '12px',
     // font-size of title
@@ -26,8 +26,6 @@ const sizeTheme = {
         lg: '12px'
     }
 };
-
-sizeTheme.HeightNumber = _.mapValues(sizeTheme.Height, v => +v.replace('px', ''));
 
 const componentThemeGeneratorMap = {
     Button,
@@ -54,12 +52,16 @@ const extend = (source, target) => {
 
 export const generateTheme = (originTheme = {}) => {
     const { colorList, colorMap } = generateColorTheme(originTheme.colorList);
+    const sizeTheme = _.pick(originTheme, ['fontSize', 'titleFontSize', 'Height', 'Padding']);
 
     let theme = {
         colorList,
         colorMap,
+        ...defaultSizeTheme,
         ...sizeTheme
     };
+    theme.HeightNumber = _.mapValues(theme.Height, v => +v.replace('px', ''));
+
     const componentNames = _.keys(componentThemeGeneratorMap);
     theme = extend(theme, _.omit(originTheme, componentNames));
 

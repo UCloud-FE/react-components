@@ -1,25 +1,27 @@
 import styled, { css } from 'styled-components';
+import classnames from 'classnames';
 
+import config from 'src/config';
 import { inlineBlockWithVerticalMixin } from 'src/style';
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
-const sizeMixin = ({ size, theme: { Height, HeightNumber, Padding } }) => css`
+const { prefixCls: _prefixCls } = config;
+const prefixCls = _prefixCls + '-button';
+
+const sizeMixin = ({ size, theme: { Height, Padding } }) => css`
     height: ${Height[size]};
-    line-height: ${HeightNumber[size] - 2}px;
     padding: 0 ${Padding[size]};
 `;
 
-const styleTypeMixin = ({ theme: { Button: buttonTheme }, styleType }) => {
+const styleTypeMixin = ({ theme: { Button: buttonTheme = {} }, styleType }) => {
+    const styleTypeTheme = buttonTheme.styleType || {};
     return css`
-        ${buttonTheme[styleType]};
-        :hover {
-            ${buttonTheme[styleType + ':hover']};
-        }
+        ${styleTypeTheme[styleType]};
     `;
 };
 
 const shapeCircleMixin = ({ size, theme: { Height } }) => css`
-    border-radius: 50%;
+    border-radius: 50% !important;
     padding: 0;
     overflow: hidden;
     width: ${Height[size]};
@@ -60,8 +62,18 @@ const disabledMixin = ({
     }
 `;
 
-export const ButtonWrap = styled.button(
-    ({ theme: { fontSize }, loading, shape, disabled }) => css`
+export const ButtonWrap = styled.button.attrs({
+    className: ({ size, styleType, shape, loading, disabled }) =>
+        classnames(
+            prefixCls,
+            `${prefixCls}-size-${size}`,
+            `${prefixCls}-styletype-${styleType}`,
+            shape && `${prefixCls}-${shape}`,
+            loading && `${prefixCls}-loading`,
+            disabled && `${prefixCls}-disabled`
+        )
+})(
+    ({ theme: { fontSize, Button: buttonTheme = {} }, loading, shape, disabled }) => css`
         box-sizing: border-box;
         border-radius: 2px;
         border-width: 1px;
@@ -78,6 +90,8 @@ export const ButtonWrap = styled.button(
         ${shape === 'circle' && shapeCircleMixin};
         ${loading && loadingMixin};
         ${disabled && disabledMixin};
+
+        ${buttonTheme['&']};
     `
 );
 addDefaultThemeProps(ButtonWrap);
