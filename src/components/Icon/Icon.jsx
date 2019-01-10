@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
 
 import { IconWrap } from './style';
 
@@ -15,18 +14,7 @@ export default class Icon extends PureComponent {
         className: PropTypes.string
     };
     render() {
-        const { type, spin, className, ...rest } = this.props;
-        return (
-            <IconWrap
-                spin={spin}
-                className={classnames(
-                    {
-                        [`icon__${type}`]: type
-                    },
-                    className
-                )}
-                {...rest}
-            />
-        );
+        const { ...rest } = this.props;
+        return <IconWrap {...rest} />;
     }
 }

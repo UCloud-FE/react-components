@@ -43,7 +43,6 @@ class Month extends Component {
         zIndex: PropTypes.number
     };
     static defaultProps = {
-        defaultValue: moment(),
         onChange: () => {},
         size: 'md',
         zIndex: 100
@@ -105,6 +104,7 @@ class Month extends Component {
                     align={placements.bottomLeft}
                     onChange={onChange}
                     zIndex={zIndex}
+                    isMonth
                 >
                     {({ value }) => {
                         return (

@@ -135,7 +135,8 @@ exports[`Pagination demo -- pageSize 1`] = `
         title="上一页"
       >
         <i
-          class="icon__left uc-fe-pagination-prev-icon "
+          class="uc-fe-pagination-prev-icon uc-fe-icon icon__left "
+          type="left"
         />
       </li>
       <li
@@ -190,7 +191,8 @@ exports[`Pagination demo -- pageSize 1`] = `
         title="下一页"
       >
         <i
-          class="icon__right uc-fe-pagination-next-icon "
+          class="uc-fe-pagination-next-icon uc-fe-icon icon__right "
+          type="right"
         />
       </li>
       <li
@@ -207,7 +209,8 @@ exports[`Pagination demo -- pageSize 1`] = `
                 20 条/页
               </div>
               <i
-                class="icon__down c4 "
+                class="c4 uc-fe-icon icon__down "
+                type="down"
               />
             </div>
           </div>
@@ -228,7 +231,8 @@ exports[`Pagination demo -- pageSize 1`] = `
         title="上一页"
       >
         <i
-          class="icon__left uc-fe-pagination-prev-icon "
+          class="uc-fe-pagination-prev-icon uc-fe-icon icon__left "
+          type="left"
         />
       </li>
       <li
@@ -283,7 +287,8 @@ exports[`Pagination demo -- pageSize 1`] = `
         title="下一页"
       >
         <i
-          class="icon__right uc-fe-pagination-next-icon "
+          class="uc-fe-pagination-next-icon uc-fe-icon icon__right "
+          type="right"
         />
       </li>
       <li
@@ -300,7 +305,8 @@ exports[`Pagination demo -- pageSize 1`] = `
                 20 条/页
               </div>
               <i
-                class="icon__down c4 "
+                class="c4 uc-fe-icon icon__down "
+                type="down"
               />
             </div>
           </div>
@@ -446,7 +452,8 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
         title="上一页"
       >
         <i
-          class="icon__left uc-fe-pagination-prev-icon "
+          class="uc-fe-pagination-prev-icon uc-fe-icon icon__left "
+          type="left"
         />
       </li>
       <li
@@ -500,7 +507,8 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
         title="向后 5 页"
       >
         <i
-          class="icon__more-three uc-fe-pagination-jump-icon "
+          class="uc-fe-pagination-jump-icon uc-fe-icon icon__more-three "
+          type="more-three"
         />
       </li>
       <li
@@ -519,7 +527,8 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
         title="下一页"
       >
         <i
-          class="icon__right uc-fe-pagination-next-icon "
+          class="uc-fe-pagination-next-icon uc-fe-icon icon__right "
+          type="right"
         />
       </li>
       <li
@@ -536,7 +545,8 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
                 10 条/页
               </div>
               <i
-                class="icon__down c4 "
+                class="c4 uc-fe-icon icon__down "
+                type="down"
               />
             </div>
           </div>
@@ -557,7 +567,8 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
         title="上一页"
       >
         <i
-          class="icon__left uc-fe-pagination-prev-icon "
+          class="uc-fe-pagination-prev-icon uc-fe-icon icon__left "
+          type="left"
         />
       </li>
       <li
@@ -611,7 +622,8 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
         title="向后 5 页"
       >
         <i
-          class="icon__more-three uc-fe-pagination-jump-icon "
+          class="uc-fe-pagination-jump-icon uc-fe-icon icon__more-three "
+          type="more-three"
         />
       </li>
       <li
@@ -630,7 +642,8 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
         title="下一页"
       >
         <i
-          class="icon__right uc-fe-pagination-next-icon "
+          class="uc-fe-pagination-next-icon uc-fe-icon icon__right "
+          type="right"
         />
       </li>
       <li
@@ -647,7 +660,8 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
                 10 条/页
               </div>
               <i
-                class="icon__down c4 "
+                class="c4 uc-fe-icon icon__down "
+                type="down"
               />
             </div>
           </div>
@@ -659,11 +673,11 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
 `;
 
 exports[`Pagination demo -- pagination 1`] = `
-.c27 {
+.c26 {
   position: relative;
 }
 
-.c29 {
+.c28 {
   border: none;
   outline: none;
   padding: 0;
@@ -681,19 +695,7 @@ exports[`Pagination demo -- pagination 1`] = `
   background: #fff;
   display: inline-block;
   vertical-align: middle;
-}
-
-.c26 {
-  position: absolute;
-  box-sizing: border-box;
-  text-align: center;
-  border-radius: 2px;
-  border-style: solid;
-  color: inherit;
-  cursor: pointer;
-  background: #fff;
-  display: inline-block;
-  vertical-align: middle;
+  border-color: #c3cad9;
 }
 
 .c22 {
@@ -708,38 +710,33 @@ exports[`Pagination demo -- pagination 1`] = `
   padding-right: 22px;
 }
 
-.c22 .c28 {
+.c22 .c27 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c22 .c28::-webkit-input-placeholder {
+.c22 .c27::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c22 .c28::-moz-placeholder {
+.c22 .c27::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c22 .c28:-ms-input-placeholder {
+.c22 .c27:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c22 .c28::placeholder {
+.c22 .c27::placeholder {
   color: #abb4c3;
-}
-
-.c22 .c23,
-.c22 .c25 {
-  border-color: #c3cad9;
 }
 
 .c22:hover {
   border-color: #4683e6;
 }
 
-.c22 .c28 {
+.c22 .c27 {
   padding: 0 0 0 8px;
   text-align: left;
   width: 34px;
@@ -768,7 +765,7 @@ exports[`Pagination demo -- pagination 1`] = `
   bottom: 0;
 }
 
-.c30 {
+.c29 {
   color: #6b798e;
   font-size: 12px;
   -webkit-user-select: none;
@@ -779,11 +776,11 @@ exports[`Pagination demo -- pagination 1`] = `
   vertical-align: middle;
 }
 
-.c30 .uc-fe-pagination-item,
-.c30 .uc-fe-pagination-prev,
-.c30 .uc-fe-pagination-next,
-.c30 .uc-fe-pagination-jump-prev,
-.c30 .uc-fe-pagination-jump-next {
+.c29 .uc-fe-pagination-item,
+.c29 .uc-fe-pagination-prev,
+.c29 .uc-fe-pagination-next,
+.c29 .uc-fe-pagination-jump-prev,
+.c29 .uc-fe-pagination-jump-next {
   outline: none;
   box-sizing: border-box;
   background-color: #fff;
@@ -799,56 +796,56 @@ exports[`Pagination demo -- pagination 1`] = `
   line-height: 26px;
 }
 
-.c30 .uc-fe-pagination-item,
-.c30 .uc-fe-pagination-prev,
-.c30 .uc-fe-pagination-next {
+.c29 .uc-fe-pagination-item,
+.c29 .uc-fe-pagination-prev,
+.c29 .uc-fe-pagination-next {
   border: 1px solid #c3cad9;
 }
 
-.c30 .uc-fe-pagination-item:hover,
-.c30 .uc-fe-pagination-prev:hover,
-.c30 .uc-fe-pagination-next:hover {
+.c29 .uc-fe-pagination-item:hover,
+.c29 .uc-fe-pagination-prev:hover,
+.c29 .uc-fe-pagination-next:hover {
   border-color: #4683e6;
   color: #4074e1;
 }
 
-.c30 .uc-fe-pagination-jump-prev:hover,
-.c30 .uc-fe-pagination-jump-next:hover {
+.c29 .uc-fe-pagination-jump-prev:hover,
+.c29 .uc-fe-pagination-jump-next:hover {
   color: #4074e1;
 }
 
-.c30 .uc-fe-pagination-item-active,
-.c30 .uc-fe-pagination-item-active:hover {
+.c29 .uc-fe-pagination-item-active,
+.c29 .uc-fe-pagination-item-active:hover {
   border-color: #4683e6;
   color: #4074e1;
   background-color: #f4f9ff;
   cursor: default;
 }
 
-.c30 .uc-fe-pagination-disabled,
-.c30 .uc-fe-pagination-disabled:hover {
+.c29 .uc-fe-pagination-disabled,
+.c29 .uc-fe-pagination-disabled:hover {
   border-color: #d9d9d9;
   background-color: #f7f7f7;
   cursor: not-allowed;
 }
 
-.c30 .uc-fe-pagination-prev-icon,
-.c30 .uc-fe-pagination-next-icon {
+.c29 .uc-fe-pagination-prev-icon,
+.c29 .uc-fe-pagination-next-icon {
   cursor: inherit;
 }
 
-.c30 .uc-fe-pagination-options,
-.c30 .uc-fe-pagination-options-size-changer,
-.c30 .uc-fe-pagination-options-quick-jumper {
+.c29 .uc-fe-pagination-options,
+.c29 .uc-fe-pagination-options-size-changer,
+.c29 .uc-fe-pagination-options-quick-jumper {
   display: inline-block;
   vertical-align: middle;
 }
 
-.c30 .uc-fe-pagination-options-size-changer {
+.c29 .uc-fe-pagination-options-size-changer {
   margin-right: 5px;
 }
 
-.c30 .uc-fe-pagination-options-gobutton {
+.c29 .uc-fe-pagination-options-gobutton {
   margin-left: 5px;
 }
 
@@ -884,24 +881,24 @@ exports[`Pagination demo -- pagination 1`] = `
 }
 
 .c6 .c7,
-.c6 .style__RadioTagWrap-VWxju {
+.c6 .style__RadioTagWrap-sc-25j3mq-3 {
   margin-right: 8px;
 }
 
 .c6 .c7:last-child,
-.c6 .style__RadioTagWrap-VWxju:last-child {
+.c6 .style__RadioTagWrap-sc-25j3mq-3:last-child {
   margin-right: 0;
 }
 
-.c6 .style__RadioButtonWrap-sjeVo {
+.c6 .c30 {
   margin-right: -1px;
 }
 
-.c6 .style__RadioButtonWrap-sjeVo:first-child {
+.c6 .c30:first-child {
   border-radius: 2px 0 0 2px;
 }
 
-.c6 .style__RadioButtonWrap-sjeVo:last-child {
+.c6 .c30:last-child {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
 }
@@ -961,6 +958,7 @@ exports[`Pagination demo -- pagination 1`] = `
   width: 80px;
   padding: 4px;
   border: 1px solid #c3cad9;
+  border-width: 1px;
   line-height: 16px;
 }
 
@@ -1090,7 +1088,8 @@ exports[`Pagination demo -- pagination 1`] = `
             class="c7 c8"
           >
             <i
-              class="icon__circle c9 c10 "
+              class="c9 c10 uc-fe-icon icon__circle "
+              type="circle"
             />
             sm
           </div>
@@ -1099,7 +1098,8 @@ exports[`Pagination demo -- pagination 1`] = `
             class="c7 c11"
           >
             <i
-              class="icon__cbox-ed c9 c10 "
+              class="c9 c10 uc-fe-icon icon__cbox-ed "
+              type="cbox-ed"
             />
             md
           </div>
@@ -1107,7 +1107,8 @@ exports[`Pagination demo -- pagination 1`] = `
             class="c7 c8"
           >
             <i
-              class="icon__circle c9 c10 "
+              class="c9 c10 uc-fe-icon icon__circle "
+              type="circle"
             />
             lg
           </div>
@@ -1368,32 +1369,34 @@ exports[`Pagination demo -- pagination 1`] = `
         span="10"
       >
         <div
-          class="c22"
+          class="uc-fe-numberinput uc-fe-numberinput-styletype-default c22"
         >
           <div>
             <span
-              class="c23 c24"
+              class="c23 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c24"
               unselectable="unselectable"
             >
               <i
-                class="icon__caret-up "
+                class="uc-fe-icon icon__caret-up "
+                type="caret-up"
               />
             </span>
             <span
-              class="c25 c26"
+              class="c25 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c24"
               unselectable="unselectable"
             >
               <i
-                class="icon__caret-down "
+                class="uc-fe-icon icon__caret-down "
+                type="caret-down"
               />
             </span>
           </div>
           <div
-            class="c27"
+            class="uc-fe-numberinput-input-wrap c26"
           >
             <input
               autocomplete="off"
-              class="c28 c29"
+              class="c27 uc-fe-numberinput-input c28"
               min="-9007199254740991"
               step="1"
               value="100"
@@ -1407,7 +1410,7 @@ exports[`Pagination demo -- pagination 1`] = `
     class="demo-wrap"
   >
     <ul
-      class="uc-fe-pagination uc-fe-pagination-md c30"
+      class="uc-fe-pagination uc-fe-pagination-md c29"
       unselectable="unselectable"
     >
       <li
@@ -1415,7 +1418,8 @@ exports[`Pagination demo -- pagination 1`] = `
         class="uc-fe-pagination-disabled uc-fe-pagination-prev"
       >
         <i
-          class="icon__left uc-fe-pagination-prev-icon "
+          class="uc-fe-pagination-prev-icon uc-fe-icon icon__left "
+          type="left"
         />
       </li>
       <li
@@ -1464,7 +1468,8 @@ exports[`Pagination demo -- pagination 1`] = `
         tabindex="0"
       >
         <i
-          class="icon__right uc-fe-pagination-next-icon "
+          class="uc-fe-pagination-next-icon uc-fe-icon icon__right "
+          type="right"
         />
       </li>
     </ul>
@@ -1571,7 +1576,8 @@ exports[`Pagination demo -- showLessItems 1`] = `
         title="上一页"
       >
         <i
-          class="icon__left uc-fe-pagination-prev-icon "
+          class="uc-fe-pagination-prev-icon uc-fe-icon icon__left "
+          type="left"
         />
       </li>
       <li
@@ -1625,7 +1631,8 @@ exports[`Pagination demo -- showLessItems 1`] = `
         title="向后 5 页"
       >
         <i
-          class="icon__more-three uc-fe-pagination-jump-icon "
+          class="uc-fe-pagination-jump-icon uc-fe-icon icon__more-three "
+          type="more-three"
         />
       </li>
       <li
@@ -1644,7 +1651,8 @@ exports[`Pagination demo -- showLessItems 1`] = `
         title="下一页"
       >
         <i
-          class="icon__right uc-fe-pagination-next-icon "
+          class="uc-fe-pagination-next-icon uc-fe-icon icon__right "
+          type="right"
         />
       </li>
     </ul>
@@ -1662,7 +1670,8 @@ exports[`Pagination demo -- showLessItems 1`] = `
         title="上一页"
       >
         <i
-          class="icon__left uc-fe-pagination-prev-icon "
+          class="uc-fe-pagination-prev-icon uc-fe-icon icon__left "
+          type="left"
         />
       </li>
       <li
@@ -1698,7 +1707,8 @@ exports[`Pagination demo -- showLessItems 1`] = `
         title="向后 3 页"
       >
         <i
-          class="icon__more-three uc-fe-pagination-jump-icon "
+          class="uc-fe-pagination-jump-icon uc-fe-icon icon__more-three "
+          type="more-three"
         />
       </li>
       <li
@@ -1717,7 +1727,8 @@ exports[`Pagination demo -- showLessItems 1`] = `
         title="下一页"
       >
         <i
-          class="icon__right uc-fe-pagination-next-icon "
+          class="uc-fe-pagination-next-icon uc-fe-icon icon__right "
+          type="right"
         />
       </li>
     </ul>
@@ -1824,7 +1835,8 @@ exports[`Pagination demo -- showPrevNextJumpers 1`] = `
         title="上一页"
       >
         <i
-          class="icon__left uc-fe-pagination-prev-icon "
+          class="uc-fe-pagination-prev-icon uc-fe-icon icon__left "
+          type="left"
         />
       </li>
       <li
@@ -1878,7 +1890,8 @@ exports[`Pagination demo -- showPrevNextJumpers 1`] = `
         title="向后 5 页"
       >
         <i
-          class="icon__more-three uc-fe-pagination-jump-icon "
+          class="uc-fe-pagination-jump-icon uc-fe-icon icon__more-three "
+          type="more-three"
         />
       </li>
       <li
@@ -1897,7 +1910,8 @@ exports[`Pagination demo -- showPrevNextJumpers 1`] = `
         title="下一页"
       >
         <i
-          class="icon__right uc-fe-pagination-next-icon "
+          class="uc-fe-pagination-next-icon uc-fe-icon icon__right "
+          type="right"
         />
       </li>
     </ul>
@@ -1915,7 +1929,8 @@ exports[`Pagination demo -- showPrevNextJumpers 1`] = `
         title="上一页"
       >
         <i
-          class="icon__left uc-fe-pagination-prev-icon "
+          class="uc-fe-pagination-prev-icon uc-fe-icon icon__left "
+          type="left"
         />
       </li>
       <li
@@ -1970,7 +1985,8 @@ exports[`Pagination demo -- showPrevNextJumpers 1`] = `
         title="下一页"
       >
         <i
-          class="icon__right uc-fe-pagination-next-icon "
+          class="uc-fe-pagination-next-icon uc-fe-icon icon__right "
+          type="right"
         />
       </li>
     </ul>
@@ -1997,29 +2013,29 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
   vertical-align: middle;
 }
 
-.kfzOho .c3 {
+.c8 .c3 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.kfzOho .c3::-webkit-input-placeholder {
+.c8 .c3::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.kfzOho .c3::-moz-placeholder {
+.c8 .c3::-moz-placeholder {
   color: #abb4c3;
 }
 
-.kfzOho .c3:-ms-input-placeholder {
+.c8 .c3:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.kfzOho .c3::placeholder {
+.c8 .c3::placeholder {
   color: #abb4c3;
 }
 
-.kfzOho .c3 {
+.c8 .c3 {
   padding: 0 0 0 8px;
   text-align: left;
   width: 34px;
@@ -2060,11 +2076,6 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
   color: #abb4c3;
 }
 
-.c1 .style__HandlerUp-laNuFx,
-.c1 .style__HandlerDown-gQSTYw {
-  border-color: #c3cad9;
-}
-
 .c1 .c3 {
   text-align: center;
   border: 1px solid #c3cad9;
@@ -2078,8 +2089,8 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
   z-index: 1;
 }
 
-.c1 .style__HandlerUp-laNuFx,
-.c1 .style__HandlerDown-gQSTYw {
+.c1 .c9,
+.c1 .c10 {
   text-align: center;
   top: 0;
   height: 28px;
@@ -2087,19 +2098,19 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
   line-height: 26px;
 }
 
-.c1 .style__HandlerUp-laNuFx:hover,
-.c1 .style__HandlerDown-gQSTYw:hover {
+.c1 .c9:hover,
+.c1 .c10:hover {
   color: #4074e1;
   border-color: #4683e6;
   z-index: 1;
 }
 
-.c1 .style__HandlerUp-laNuFx {
+.c1 .c9 {
   right: 0;
   border-width: 1px;
 }
 
-.c1 .style__HandlerDown-gQSTYw {
+.c1 .c10 {
   left: 0;
   border-width: 1px;
 }
@@ -2131,7 +2142,6 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
   display: inline-block;
   vertical-align: middle;
   height: 28px;
-  line-height: 26px;
   padding: 0 8px;
   color: #fff;
   background: #4683e6;
@@ -2242,7 +2252,8 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
         title="上一页"
       >
         <i
-          class="icon__left uc-fe-pagination-prev-icon "
+          class="uc-fe-pagination-prev-icon uc-fe-icon icon__left "
+          type="left"
         />
       </li>
       <li
@@ -2296,7 +2307,8 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
         title="向后 5 页"
       >
         <i
-          class="icon__more-three uc-fe-pagination-jump-icon "
+          class="uc-fe-pagination-jump-icon uc-fe-icon icon__more-three "
+          type="more-three"
         />
       </li>
       <li
@@ -2315,7 +2327,8 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
         title="下一页"
       >
         <i
-          class="icon__right uc-fe-pagination-next-icon "
+          class="uc-fe-pagination-next-icon uc-fe-icon icon__right "
+          type="right"
         />
       </li>
     </ul>
@@ -2333,7 +2346,8 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
         title="上一页"
       >
         <i
-          class="icon__left uc-fe-pagination-prev-icon "
+          class="uc-fe-pagination-prev-icon uc-fe-icon icon__left "
+          type="left"
         />
       </li>
       <li
@@ -2387,7 +2401,8 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
         title="向后 5 页"
       >
         <i
-          class="icon__more-three uc-fe-pagination-jump-icon "
+          class="uc-fe-pagination-jump-icon uc-fe-icon icon__more-three "
+          type="more-three"
         />
       </li>
       <li
@@ -2406,7 +2421,8 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
         title="下一页"
       >
         <i
-          class="icon__right uc-fe-pagination-next-icon "
+          class="uc-fe-pagination-next-icon uc-fe-icon icon__right "
+          type="right"
         />
       </li>
       <li
@@ -2416,21 +2432,21 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
           class="uc-fe-pagination-options-quick-jumper"
         >
           <div
-            class="c1"
+            class="uc-fe-numberinput uc-fe-numberinput-styletype-pagination c1"
           >
             <div
-              class="c2"
+              class="uc-fe-numberinput-input-wrap c2"
             >
               <input
                 autocomplete="off"
-                class="c3 c4"
+                class="c3 uc-fe-numberinput-input c4"
                 max="10"
                 min="1"
                 step="1"
                 value=""
               />
               <span
-                class="c5 c6"
+                class="c5 uc-fe-numberinput-suffix c6"
               >
                 <span
                   class="uc-fe-pagination-options-quick-jumper-text"
@@ -2457,7 +2473,8 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
         title="上一页"
       >
         <i
-          class="icon__left uc-fe-pagination-prev-icon "
+          class="uc-fe-pagination-prev-icon uc-fe-icon icon__left "
+          type="left"
         />
       </li>
       <li
@@ -2511,7 +2528,8 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
         title="向后 5 页"
       >
         <i
-          class="icon__more-three uc-fe-pagination-jump-icon "
+          class="uc-fe-pagination-jump-icon uc-fe-icon icon__more-three "
+          type="more-three"
         />
       </li>
       <li
@@ -2530,7 +2548,8 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
         title="下一页"
       >
         <i
-          class="icon__right uc-fe-pagination-next-icon "
+          class="uc-fe-pagination-next-icon uc-fe-icon icon__right "
+          type="right"
         />
       </li>
       <li
@@ -2540,21 +2559,21 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
           class="uc-fe-pagination-options-quick-jumper"
         >
           <div
-            class="c1"
+            class="uc-fe-numberinput uc-fe-numberinput-styletype-pagination c1"
           >
             <div
-              class="c2"
+              class="uc-fe-numberinput-input-wrap c2"
             >
               <input
                 autocomplete="off"
-                class="c3 c4"
+                class="c3 uc-fe-numberinput-input c4"
                 max="10"
                 min="1"
                 step="1"
                 value=""
               />
               <span
-                class="c5 c6"
+                class="c5 uc-fe-numberinput-suffix c6"
               >
                 <span
                   class="uc-fe-pagination-options-quick-jumper-text"
@@ -2565,7 +2584,7 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
             </div>
           </div>
           <button
-            class="uc-fe-pagination-options-gobutton c7"
+            class="uc-fe-pagination-options-gobutton uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary c7"
             type="button"
           >
             确定
@@ -2712,7 +2731,8 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
         title="上一页"
       >
         <i
-          class="icon__left uc-fe-pagination-prev-icon "
+          class="uc-fe-pagination-prev-icon uc-fe-icon icon__left "
+          type="left"
         />
       </li>
       <li
@@ -2766,7 +2786,8 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
         title="向后 5 页"
       >
         <i
-          class="icon__more-three uc-fe-pagination-jump-icon "
+          class="uc-fe-pagination-jump-icon uc-fe-icon icon__more-three "
+          type="more-three"
         />
       </li>
       <li
@@ -2785,7 +2806,8 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
         title="下一页"
       >
         <i
-          class="icon__right uc-fe-pagination-next-icon "
+          class="uc-fe-pagination-next-icon uc-fe-icon icon__right "
+          type="right"
         />
       </li>
     </ul>
@@ -2803,7 +2825,8 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
         title="上一页"
       >
         <i
-          class="icon__left uc-fe-pagination-prev-icon "
+          class="uc-fe-pagination-prev-icon uc-fe-icon icon__left "
+          type="left"
         />
       </li>
       <li
@@ -2857,7 +2880,8 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
         title="向后 5 页"
       >
         <i
-          class="icon__more-three uc-fe-pagination-jump-icon "
+          class="uc-fe-pagination-jump-icon uc-fe-icon icon__more-three "
+          type="more-three"
         />
       </li>
       <li
@@ -2876,7 +2900,8 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
         title="下一页"
       >
         <i
-          class="icon__right uc-fe-pagination-next-icon "
+          class="uc-fe-pagination-next-icon uc-fe-icon icon__right "
+          type="right"
         />
       </li>
       <li
@@ -2893,7 +2918,8 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
                 10 条/页
               </div>
               <i
-                class="icon__down c4 "
+                class="c4 uc-fe-icon icon__down "
+                type="down"
               />
             </div>
           </div>
@@ -3003,7 +3029,8 @@ exports[`Pagination demo -- showTitle 1`] = `
         title="上一页"
       >
         <i
-          class="icon__left uc-fe-pagination-prev-icon "
+          class="uc-fe-pagination-prev-icon uc-fe-icon icon__left "
+          type="left"
         />
       </li>
       <li
@@ -3057,7 +3084,8 @@ exports[`Pagination demo -- showTitle 1`] = `
         title="向后 5 页"
       >
         <i
-          class="icon__more-three uc-fe-pagination-jump-icon "
+          class="uc-fe-pagination-jump-icon uc-fe-icon icon__more-three "
+          type="more-three"
         />
       </li>
       <li
@@ -3076,7 +3104,8 @@ exports[`Pagination demo -- showTitle 1`] = `
         title="下一页"
       >
         <i
-          class="icon__right uc-fe-pagination-next-icon "
+          class="uc-fe-pagination-next-icon uc-fe-icon icon__right "
+          type="right"
         />
       </li>
     </ul>
@@ -3093,7 +3122,8 @@ exports[`Pagination demo -- showTitle 1`] = `
         class="uc-fe-pagination-disabled uc-fe-pagination-prev"
       >
         <i
-          class="icon__left uc-fe-pagination-prev-icon "
+          class="uc-fe-pagination-prev-icon uc-fe-icon icon__left "
+          type="left"
         />
       </li>
       <li
@@ -3141,7 +3171,8 @@ exports[`Pagination demo -- showTitle 1`] = `
         tabindex="0"
       >
         <i
-          class="icon__more-three uc-fe-pagination-jump-icon "
+          class="uc-fe-pagination-jump-icon uc-fe-icon icon__more-three "
+          type="more-three"
         />
       </li>
       <li
@@ -3158,7 +3189,8 @@ exports[`Pagination demo -- showTitle 1`] = `
         tabindex="0"
       >
         <i
-          class="icon__right uc-fe-pagination-next-icon "
+          class="uc-fe-pagination-next-icon uc-fe-icon icon__right "
+          type="right"
         />
       </li>
     </ul>
@@ -3196,6 +3228,7 @@ exports[`Pagination demo -- simple 1`] = `
   background: #fff;
   display: inline-block;
   vertical-align: middle;
+  border-color: #c3cad9;
 }
 
 .c5 {
@@ -3209,92 +3242,86 @@ exports[`Pagination demo -- simple 1`] = `
   background: #fff;
   display: inline-block;
   vertical-align: middle;
+  border-color: #c3cad9;
+  cursor: not-allowed;
+  pointer-events: none;
+  color: #bbb;
 }
 
-.kfzOho .c7 {
+.c11 .c7 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.kfzOho .c7::-webkit-input-placeholder {
+.c11 .c7::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.kfzOho .c7::-moz-placeholder {
+.c11 .c7::-moz-placeholder {
   color: #abb4c3;
 }
 
-.kfzOho .c7:-ms-input-placeholder {
+.c11 .c7:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.kfzOho .c7::placeholder {
+.c11 .c7::placeholder {
   color: #abb4c3;
 }
 
-.kfzOho .c2,
-.kfzOho .c4 {
-  border-color: #c3cad9;
-}
-
-.kfzOho .c7 {
+.c11 .c7 {
   padding: 0 0 0 8px;
   text-align: left;
   width: 34px;
 }
 
-.kfzOho .c2,
-.kfzOho .c4 {
+.c11 .c2,
+.c11 .c4 {
   right: 0;
   height: 13px;
   line-height: 13px;
   width: 22px;
 }
 
-.kfzOho .c2:hover,
-.kfzOho .c4:hover {
+.c11 .c2:hover,
+.c11 .c4:hover {
   color: #4074e1;
 }
 
-.kfzOho .c2 {
+.c11 .c2 {
   border-width: 0 0 0 1px;
   top: 0;
 }
 
-.kfzOho .c4 {
+.c11 .c4 {
   border-width: 1px 0 0 1px;
   bottom: 0;
 }
 
-.hJXUuV .c7 {
+.c12 .c7 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.hJXUuV .c7::-webkit-input-placeholder {
+.c12 .c7::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.hJXUuV .c7::-moz-placeholder {
+.c12 .c7::-moz-placeholder {
   color: #abb4c3;
 }
 
-.hJXUuV .c7:-ms-input-placeholder {
+.c12 .c7:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.hJXUuV .c7::placeholder {
+.c12 .c7::placeholder {
   color: #abb4c3;
 }
 
-.hJXUuV .c2,
-.hJXUuV .c4 {
-  border-color: #c3cad9;
-}
-
-.hJXUuV .c7 {
+.c12 .c7 {
   text-align: center;
   border: 1px solid #c3cad9;
   margin: 0 4px;
@@ -3302,13 +3329,13 @@ exports[`Pagination demo -- simple 1`] = `
   width: 26px;
 }
 
-.hJXUuV .c7:hover {
+.c12 .c7:hover {
   border-color: #4683e6;
   z-index: 1;
 }
 
-.hJXUuV .c2,
-.hJXUuV .c4 {
+.c12 .c2,
+.c12 .c4 {
   text-align: center;
   top: 0;
   height: 28px;
@@ -3316,32 +3343,32 @@ exports[`Pagination demo -- simple 1`] = `
   line-height: 26px;
 }
 
-.hJXUuV .c2:hover,
-.hJXUuV .c4:hover {
+.c12 .c2:hover,
+.c12 .c4:hover {
   color: #4074e1;
   border-color: #4683e6;
   z-index: 1;
 }
 
-.hJXUuV .c2 {
+.c12 .c2 {
   right: 0;
   border-width: 1px;
 }
 
-.hJXUuV .c4 {
+.c12 .c4 {
   left: 0;
   border-width: 1px;
 }
 
-.hJXUuV .c9 {
+.c12 .c9 {
   margin-left: 0;
 }
 
-.hJXUuV .c7 {
+.c12 .c7 {
   margin: 0;
 }
 
-.hJXUuV .c9 {
+.c12 .c9 {
   margin-left: 4px;
   margin-right: 0px;
 }
@@ -3377,11 +3404,6 @@ exports[`Pagination demo -- simple 1`] = `
 
 .c1 .c7::placeholder {
   color: #abb4c3;
-}
-
-.c1 .c2,
-.c1 .c4 {
-  border-color: #c3cad9;
 }
 
 .c1 .c7 {
@@ -3525,7 +3547,8 @@ exports[`Pagination demo -- simple 1`] = `
         title="上一页"
       >
         <i
-          class="icon__left uc-fe-pagination-prev-icon "
+          class="uc-fe-pagination-prev-icon uc-fe-icon icon__left "
+          type="left"
         />
       </li>
       <li
@@ -3579,7 +3602,8 @@ exports[`Pagination demo -- simple 1`] = `
         title="向后 5 页"
       >
         <i
-          class="icon__more-three uc-fe-pagination-jump-icon "
+          class="uc-fe-pagination-jump-icon uc-fe-icon icon__more-three "
+          type="more-three"
         />
       </li>
       <li
@@ -3598,7 +3622,8 @@ exports[`Pagination demo -- simple 1`] = `
         title="下一页"
       >
         <i
-          class="icon__right uc-fe-pagination-next-icon "
+          class="uc-fe-pagination-next-icon uc-fe-icon icon__right "
+          type="right"
         />
       </li>
     </ul>
@@ -3611,40 +3636,42 @@ exports[`Pagination demo -- simple 1`] = `
       unselectable="unselectable"
     >
       <div
-        class="c1"
+        class="uc-fe-numberinput uc-fe-numberinput-styletype-pagination c1"
       >
         <div>
           <span
-            class="c2 c3"
+            class="c2 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c3"
             unselectable="unselectable"
           >
             <i
-              class="icon__right "
+              class="uc-fe-icon icon__right "
+              type="right"
             />
           </span>
           <span
-            class="c4 c5"
+            class="c4 uc-fe-numberinput-handler-down uc-fe-numberinput-handler uc-fe-numberinput-handler-disabled c5"
             disabled=""
             unselectable="unselectable"
           >
             <i
-              class="icon__left "
+              class="uc-fe-icon icon__left "
+              type="left"
             />
           </span>
         </div>
         <div
-          class="c6"
+          class="uc-fe-numberinput-input-wrap c6"
         >
           <input
             autocomplete="off"
-            class="c7 c8"
+            class="c7 uc-fe-numberinput-input c8"
             max="10"
             min="1"
             step="1"
             value="1"
           />
           <span
-            class="c9 c10"
+            class="c9 uc-fe-numberinput-suffix c10"
           >
             <span
               class="uc-fe-pagination-quick-jumper-text"
@@ -3926,7 +3953,8 @@ exports[`Pagination demo -- size 1`] = `
         title="上一页"
       >
         <i
-          class="icon__left uc-fe-pagination-prev-icon "
+          class="uc-fe-pagination-prev-icon uc-fe-icon icon__left "
+          type="left"
         />
       </li>
       <li
@@ -3980,7 +4008,8 @@ exports[`Pagination demo -- size 1`] = `
         title="向后 5 页"
       >
         <i
-          class="icon__more-three uc-fe-pagination-jump-icon "
+          class="uc-fe-pagination-jump-icon uc-fe-icon icon__more-three "
+          type="more-three"
         />
       </li>
       <li
@@ -3999,7 +4028,8 @@ exports[`Pagination demo -- size 1`] = `
         title="下一页"
       >
         <i
-          class="icon__right uc-fe-pagination-next-icon "
+          class="uc-fe-pagination-next-icon uc-fe-icon icon__right "
+          type="right"
         />
       </li>
     </ul>
@@ -4017,7 +4047,8 @@ exports[`Pagination demo -- size 1`] = `
         title="上一页"
       >
         <i
-          class="icon__left uc-fe-pagination-prev-icon "
+          class="uc-fe-pagination-prev-icon uc-fe-icon icon__left "
+          type="left"
         />
       </li>
       <li
@@ -4071,7 +4102,8 @@ exports[`Pagination demo -- size 1`] = `
         title="向后 5 页"
       >
         <i
-          class="icon__more-three uc-fe-pagination-jump-icon "
+          class="uc-fe-pagination-jump-icon uc-fe-icon icon__more-three "
+          type="more-three"
         />
       </li>
       <li
@@ -4090,7 +4122,8 @@ exports[`Pagination demo -- size 1`] = `
         title="下一页"
       >
         <i
-          class="icon__right uc-fe-pagination-next-icon "
+          class="uc-fe-pagination-next-icon uc-fe-icon icon__right "
+          type="right"
         />
       </li>
     </ul>
@@ -4108,7 +4141,8 @@ exports[`Pagination demo -- size 1`] = `
         title="上一页"
       >
         <i
-          class="icon__left uc-fe-pagination-prev-icon "
+          class="uc-fe-pagination-prev-icon uc-fe-icon icon__left "
+          type="left"
         />
       </li>
       <li
@@ -4162,7 +4196,8 @@ exports[`Pagination demo -- size 1`] = `
         title="向后 5 页"
       >
         <i
-          class="icon__more-three uc-fe-pagination-jump-icon "
+          class="uc-fe-pagination-jump-icon uc-fe-icon icon__more-three "
+          type="more-three"
         />
       </li>
       <li
@@ -4181,7 +4216,8 @@ exports[`Pagination demo -- size 1`] = `
         title="下一页"
       >
         <i
-          class="icon__right uc-fe-pagination-next-icon "
+          class="uc-fe-pagination-next-icon uc-fe-icon icon__right "
+          type="right"
         />
       </li>
     </ul>
@@ -4288,7 +4324,8 @@ exports[`Pagination demo -- total 1`] = `
         title="上一页"
       >
         <i
-          class="icon__left uc-fe-pagination-prev-icon "
+          class="uc-fe-pagination-prev-icon uc-fe-icon icon__left "
+          type="left"
         />
       </li>
       <li
@@ -4342,7 +4379,8 @@ exports[`Pagination demo -- total 1`] = `
         title="向后 5 页"
       >
         <i
-          class="icon__more-three uc-fe-pagination-jump-icon "
+          class="uc-fe-pagination-jump-icon uc-fe-icon icon__more-three "
+          type="more-three"
         />
       </li>
       <li
@@ -4361,7 +4399,8 @@ exports[`Pagination demo -- total 1`] = `
         title="下一页"
       >
         <i
-          class="icon__right uc-fe-pagination-next-icon "
+          class="uc-fe-pagination-next-icon uc-fe-icon icon__right "
+          type="right"
         />
       </li>
     </ul>
@@ -4379,7 +4418,8 @@ exports[`Pagination demo -- total 1`] = `
         title="上一页"
       >
         <i
-          class="icon__left uc-fe-pagination-prev-icon "
+          class="uc-fe-pagination-prev-icon uc-fe-icon icon__left "
+          type="left"
         />
       </li>
       <li
@@ -4416,7 +4456,8 @@ exports[`Pagination demo -- total 1`] = `
         title="下一页"
       >
         <i
-          class="icon__right uc-fe-pagination-next-icon "
+          class="uc-fe-pagination-next-icon uc-fe-icon icon__right "
+          type="right"
         />
       </li>
     </ul>
@@ -4523,7 +4564,8 @@ exports[`Pagination demo -- uncontrolled 1`] = `
         title="上一页"
       >
         <i
-          class="icon__left uc-fe-pagination-prev-icon "
+          class="uc-fe-pagination-prev-icon uc-fe-icon icon__left "
+          type="left"
         />
       </li>
       <li
@@ -4577,7 +4619,8 @@ exports[`Pagination demo -- uncontrolled 1`] = `
         title="向后 5 页"
       >
         <i
-          class="icon__more-three uc-fe-pagination-jump-icon "
+          class="uc-fe-pagination-jump-icon uc-fe-icon icon__more-three "
+          type="more-three"
         />
       </li>
       <li
@@ -4596,7 +4639,8 @@ exports[`Pagination demo -- uncontrolled 1`] = `
         title="下一页"
       >
         <i
-          class="icon__right uc-fe-pagination-next-icon "
+          class="uc-fe-pagination-next-icon uc-fe-icon icon__right "
+          type="right"
         />
       </li>
     </ul>
@@ -4614,7 +4658,8 @@ exports[`Pagination demo -- uncontrolled 1`] = `
         title="上一页"
       >
         <i
-          class="icon__left uc-fe-pagination-prev-icon "
+          class="uc-fe-pagination-prev-icon uc-fe-icon icon__left "
+          type="left"
         />
       </li>
       <li
@@ -4668,7 +4713,8 @@ exports[`Pagination demo -- uncontrolled 1`] = `
         title="向后 5 页"
       >
         <i
-          class="icon__more-three uc-fe-pagination-jump-icon "
+          class="uc-fe-pagination-jump-icon uc-fe-icon icon__more-three "
+          type="more-three"
         />
       </li>
       <li
@@ -4687,7 +4733,8 @@ exports[`Pagination demo -- uncontrolled 1`] = `
         title="下一页"
       >
         <i
-          class="icon__right uc-fe-pagination-next-icon "
+          class="uc-fe-pagination-next-icon uc-fe-icon icon__right "
+          type="right"
         />
       </li>
     </ul>

@@ -533,7 +533,7 @@ class NumberInput extends Component {
 
         return (
             <div>
-                <HandlerUp unselectable="unselectable" disabled={upDisabled} {...upEvents}>
+                <HandlerUp unselectable="unselectable" disabled={disabled || upDisabled} {...upEvents}>
                     {upHandler || (
                         <Icon
                             type={
@@ -546,9 +546,17 @@ class NumberInput extends Component {
                         />
                     )}
                 </HandlerUp>
-                <HandlerDown unselectable="unselectable" disabled={downDisabled} {...downEvents}>
+                <HandlerDown unselectable="unselectable" disabled={disabled || downDisabled} {...downEvents}>
                     {downHandler || (
-                        <Icon type={{ default: 'caret-down', split: 'minus', pagination: 'left' }[styleType]} />
+                        <Icon
+                            type={
+                                {
+                                    default: 'caret-down',
+                                    split: 'minus',
+                                    pagination: 'left'
+                                }[styleType]
+                            }
+                        />
                     )}
                 </HandlerDown>
             </div>

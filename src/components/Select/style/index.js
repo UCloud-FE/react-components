@@ -34,20 +34,24 @@ export const OptionWrap = styled(Menu.Item)`
         `};
 `;
 export const MenuWrap = styled.div(
-    ({ theme: { colorMap } }) => css`
+    ({ theme: { colorMap, Select: selectTheme = {} } }) => css`
         background: ${colorMap.default.background};
         border: 1px solid ${colorMap.default.border};
+        ${selectTheme['MenuWrap']};
     `
 );
 
-export const BlockMenu = styled(Menu)`
-    display: block;
-    border: none;
-    max-height: 380px;
-`;
+export const BlockMenu = styled(Menu)(
+    ({ theme: { Select: selectTheme = {} } }) => css`
+        display: block;
+        border: none;
+        max-height: 380px;
+        ${selectTheme['Menu']};
+    `
+);
 
 /* stylelint-disable no-duplicate-selectors */
-const propsMixin = ({ theme: { colorMap, Height, fontSize }, size, disabled }) => css`
+const propsMixin = ({ theme: { colorMap, Height, fontSize, Select: selectTheme = {} }, size, disabled }) => css`
     font-size: ${fontSize};
     color: ${colorMap.default.text};
     background-color: ${colorMap.default.background};
@@ -60,6 +64,8 @@ const propsMixin = ({ theme: { colorMap, Height, fontSize }, size, disabled }) =
         &:hover {
             border-color: ${colorMap.active.border};
         }
+
+        ${selectTheme['Selector']};
     }
 
     ${disabled &&
@@ -72,6 +78,8 @@ const propsMixin = ({ theme: { colorMap, Height, fontSize }, size, disabled }) =
                 border-color: ${colorMap.disabled.border};
             }
         `};
+
+    ${selectTheme['&']};
 `;
 /* stylelint-enable no-duplicate-selectors */
 

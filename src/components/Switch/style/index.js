@@ -50,7 +50,7 @@ export const Line = styled.span`
 
 /* stylelint-disable no-duplicate-selectors */
 const propsMixin = ({ theme: { colorMap, Height, Switch: switchTheme }, disabled, size, checked }) => {
-    const { Width, Padding, BtnSize, LineLeft, LineHeight, Border } = switchTheme;
+    const { Width, Padding, BtnSize, LineLeft, LineHeight, BorderWidth } = switchTheme;
     return css`
         background: ${colorMap.default.background};
 
@@ -61,7 +61,8 @@ const propsMixin = ({ theme: { colorMap, Height, Switch: switchTheme }, disabled
         height: ${Height[size]};
         width: ${Width[size]};
         padding: ${Padding[size]};
-        border: ${Border[size]};
+        border: 1px solid ${colorMap.default.border};
+        border-width: ${BorderWidth[size]};
 
         ${ButtonWrap} {
             background-color: ${colorMap.default.background};

@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { ThemeProvider } from 'styled-components';
-
 import uncontrolledDecorator from 'src/decorators/uncontrolled';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
 import defaultTheme from 'src/components/ThemeProvider/theme';
+import deprecatedLog from 'src/utils/deprecatedLog';
 
 import { MenuWrap, SelectAllCheckbox } from './style';
 import LOCALE from './locale/zh_CN';
@@ -69,13 +69,15 @@ class Menu extends Component {
         /** @ignore */
         theme: PropTypes.oneOf(['light', 'dark']),
         /** @ignore */
+        themeType: PropTypes.oneOf(['light', 'dark']),
+        /** @ignore */
         locale: PropTypes.object
     };
     static defaultProps = {
         defaultSelectedKeys: [],
         onChange: () => {},
         selectable: true,
-        theme: 'light'
+        themeType: 'light'
     };
     constructor(props) {
         super(props);
@@ -84,6 +86,9 @@ class Menu extends Component {
             this.itemTree = props.itemTree;
         } else {
             this.itemTree = getItemTree(children);
+        }
+        if ('theme' in props) {
+            deprecatedLog('theme', 'themeType');
         }
     }
     componentWillReceiveProps(nextProps) {
@@ -209,7 +214,7 @@ class Menu extends Component {
 
     render() {
         /* eslint-disable no-unused-vars */
-        const {
+        let {
             selectedKeys,
             defaultSelectedKeys,
             onChange,
@@ -218,12 +223,16 @@ class Menu extends Component {
             showSelectAll,
             collapse,
             children,
-            theme: themeStyle,
+            theme: _themeType,
+            themeType,
             itemTree,
             locale,
             ...rest
         } = this.props;
         /* eslint-enable no-unused-vars */
+        if (_themeType) {
+            themeType = _themeType;
+        }
         const allSelectedStatus = this.getAllSelectedStatus(rootPrefix);
         const selectAllCheckbox = multiple &&
             showSelectAll && (
@@ -236,11 +245,13 @@ class Menu extends Component {
             );
         return (
             <ThemeProvider
-                theme={theme =>
-                    _.isEmpty(theme)
-                        ? { ...defaultTheme, Menu: defaultTheme.Menu[themeStyle] }
-                        : { ...theme, Menu: theme.Menu[themeStyle] }
-                }
+                theme={theme => {
+                    const usedTheme = _.isEmpty(theme) ? defaultTheme : theme;
+                    return {
+                        ...usedTheme,
+                        menuThemeType: themeType
+                    };
+                }}
             >
                 <MenuWrap {...rest} {...collapse}>
                     {selectAllCheckbox}

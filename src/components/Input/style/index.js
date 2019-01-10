@@ -18,7 +18,12 @@ export const SearchIcon = styled(Icon)`
     cursor: pointer;
 `;
 
-const themeMixin = ({ theme: { colorMap, colorList, Height }, disabled, size, withIcon }) => css`
+const themeMixin = ({
+    theme: { colorMap, colorList, Height, Input: inputTheme = {} },
+    disabled,
+    size,
+    withIcon
+}) => css`
     color: ${colorMap.default.text};
 
     input {
@@ -55,6 +60,8 @@ const themeMixin = ({ theme: { colorMap, colorList, Height }, disabled, size, wi
         height: ${props => Height[props.size]};
         line-height: ${props => Height[props.size]};
     }
+
+    ${inputTheme['&']};
 `;
 
 export const InputWrap = styled.span`

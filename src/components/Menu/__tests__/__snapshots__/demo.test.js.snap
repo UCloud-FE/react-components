@@ -1,6 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Menu demo -- item-disabled 1`] = `
+.c1 {
+  padding: 0 8px;
+  margin: 0 8px;
+  display: block;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 .c2 {
   padding: 0 8px;
   margin: 0 8px;
@@ -13,37 +25,14 @@ exports[`Menu demo -- item-disabled 1`] = `
   overflow: hidden;
 }
 
-.c3 {
-  padding: 0 8px;
-  margin: 0 8px;
-  display: block;
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.c3.c3.c3 {
+.c2.c2.c2 {
   pointer-events: none;
   color: #bbb;
 }
 
 .c0 {
   line-height: 26px;
-  display: inline-block;
-  box-sizing: border-box;
-  max-width: 360px;
-  min-width: 64px;
-  overflow: auto;
-  padding: 10px 0;
-  border-radius: 2px;
-  text-align: left;
   font-size: 12px;
-}
-
-.c0 .style__PopupContentWrap-jUSLTy {
   display: inline-block;
   box-sizing: border-box;
   max-width: 360px;
@@ -55,16 +44,30 @@ exports[`Menu demo -- item-disabled 1`] = `
 }
 
 .c0,
-.c0 .style__PopupContentWrap-jUSLTy {
+.c0 .style__PopupContentWrap-ulx11w-2 {
   border: 1px solid #c3cad9;
+}
+
+.c0,
+.c0 .uc-fe-menu-popup-content-wrap {
   color: #6b798e;
   background: #fff;
 }
 
-.c0 .c1:hover,
-.c0 .style__TitleContentWrap-jTzrop:hover,
-.c0 .style__SelectAllCheckbox-fLLnPQ:hover {
+.c0 .uc-fe-menu-item:hover,
+.c0 .uc-fe-menu-submenu-title-content:hover,
+.c0 .uc-fe-menu-selectall-checkbox:hover {
   background: #eaf3fd;
+}
+
+.c0 .uc-fe-menu-item-selected,
+.c0 .uc-fe-menu-submenu-title-selected,
+.c0 .uc-fe-menu-selectall-checkbox-checked {
+  color: #4074e1;
+}
+
+.c0 .uc-fe-menu-submenu-title-content-collapse {
+  border-color: #c3cad9;
 }
 
 <div>
@@ -75,23 +78,23 @@ exports[`Menu demo -- item-disabled 1`] = `
       class="c0"
     >
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         Menu 1
       </div>
       <div
-        class="c1 c3"
+        class="uc-fe-menu-item c2"
         disabled=""
       >
         Menu 2 - disabled
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         Menu 3
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         Menu 4
       </div>
@@ -101,7 +104,7 @@ exports[`Menu demo -- item-disabled 1`] = `
 `;
 
 exports[`Menu demo -- menu 1`] = `
-.c24 {
+.c22 {
   position: absolute;
   right: 8px;
   top: 50%;
@@ -109,7 +112,7 @@ exports[`Menu demo -- menu 1`] = `
   font-size: 14px;
 }
 
-.c20 {
+.c19 {
   padding: 0 8px;
   margin: 0 8px;
   display: block;
@@ -121,13 +124,13 @@ exports[`Menu demo -- menu 1`] = `
   overflow: hidden;
 }
 
-.c21 {
+.c20 {
   padding: 0 8px;
   display: block;
   cursor: pointer;
 }
 
-.c23 {
+.c21 {
   padding: 0 8px;
   padding-right: 40px;
   position: relative;
@@ -140,18 +143,7 @@ exports[`Menu demo -- menu 1`] = `
 
 .c18 {
   line-height: 26px;
-  display: inline-block;
-  box-sizing: border-box;
-  max-width: 360px;
-  min-width: 64px;
-  overflow: auto;
-  padding: 10px 0;
-  border-radius: 2px;
-  text-align: left;
   font-size: 12px;
-}
-
-.c18 .style__PopupContentWrap-jUSLTy {
   display: inline-block;
   box-sizing: border-box;
   max-width: 360px;
@@ -163,16 +155,30 @@ exports[`Menu demo -- menu 1`] = `
 }
 
 .c18,
-.c18 .style__PopupContentWrap-jUSLTy {
+.c18 .style__PopupContentWrap-ulx11w-2 {
   border: 1px solid #c3cad9;
+}
+
+.c18,
+.c18 .uc-fe-menu-popup-content-wrap {
   color: #6b798e;
   background: #fff;
 }
 
-.c18 .c19:hover,
-.c18 .c22:hover,
-.c18 .style__SelectAllCheckbox-fLLnPQ:hover {
+.c18 .uc-fe-menu-item:hover,
+.c18 .uc-fe-menu-submenu-title-content:hover,
+.c18 .uc-fe-menu-selectall-checkbox:hover {
   background: #eaf3fd;
+}
+
+.c18 .uc-fe-menu-item-selected,
+.c18 .uc-fe-menu-submenu-title-selected,
+.c18 .uc-fe-menu-selectall-checkbox-checked {
+  color: #4074e1;
+}
+
+.c18 .uc-fe-menu-submenu-title-content-collapse {
+  border-color: #c3cad9;
 }
 
 .c4 {
@@ -250,7 +256,6 @@ exports[`Menu demo -- menu 1`] = `
   display: inline-block;
   vertical-align: middle;
   height: 28px;
-  line-height: 26px;
   padding: 0 8px;
   color: #6b798e;
   background: #fff;
@@ -318,6 +323,7 @@ exports[`Menu demo -- menu 1`] = `
   width: 80px;
   padding: 4px;
   border: 1px solid #c3cad9;
+  border-width: 1px;
   line-height: 16px;
 }
 
@@ -377,6 +383,7 @@ exports[`Menu demo -- menu 1`] = `
   width: 80px;
   padding: 4px;
   border: 1px solid #c3cad9;
+  border-width: 1px;
   line-height: 16px;
 }
 
@@ -575,7 +582,7 @@ exports[`Menu demo -- menu 1`] = `
         span="9"
       >
         <button
-          class="c17"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c17"
           type="button"
         >
           refreshMenuData
@@ -590,31 +597,32 @@ exports[`Menu demo -- menu 1`] = `
       class="c18"
     >
       <div
-        class="c19 c20"
+        class="uc-fe-menu-item c19"
       >
         root-0-item
       </div>
       <div
-        class="c19 c20"
+        class="uc-fe-menu-item c19"
       >
         root-1-item
       </div>
       <div
-        class="c19 c20"
+        class="uc-fe-menu-item c19"
       >
         root-2-item
       </div>
       <div>
         <div>
           <div
-            class="c21"
+            class="uc-fe-menu-submenu-title c20"
           >
             <div
-              class="c22 c23"
+              class="uc-fe-menu-submenu-title-content c21"
             >
               root-0-subMenu
               <i
-                class="icon__caret-right c24 "
+                class="c22 uc-fe-icon icon__caret-right "
+                type="caret-right"
               />
             </div>
           </div>
@@ -623,14 +631,15 @@ exports[`Menu demo -- menu 1`] = `
       <div>
         <div>
           <div
-            class="c21"
+            class="uc-fe-menu-submenu-title c20"
           >
             <div
-              class="c22 c23"
+              class="uc-fe-menu-submenu-title-content c21"
             >
               root-1-subMenu
               <i
-                class="icon__caret-right c24 "
+                class="c22 uc-fe-icon icon__caret-right "
+                type="caret-right"
               />
             </div>
           </div>
@@ -642,12 +651,12 @@ exports[`Menu demo -- menu 1`] = `
 `;
 
 exports[`Menu demo -- menu-collapse 1`] = `
-.c5 {
+.c4 {
   margin-right: 8px;
   font-size: 14px;
 }
 
-.c3 {
+.c2 {
   cursor: pointer;
   position: relative;
   display: inline-block;
@@ -657,11 +666,11 @@ exports[`Menu demo -- menu-collapse 1`] = `
   font-size: 12px;
 }
 
-.c3 .c4 {
+.c2 .c3 {
   color: #526075;
 }
 
-.c9 {
+.c7 {
   position: absolute;
   right: 8px;
   top: 50%;
@@ -669,7 +678,7 @@ exports[`Menu demo -- menu-collapse 1`] = `
   font-size: 14px;
 }
 
-.c2 {
+.c1 {
   padding: 0 8px;
   margin: 0 8px;
   display: block;
@@ -681,17 +690,17 @@ exports[`Menu demo -- menu-collapse 1`] = `
   overflow: hidden;
 }
 
-.c6 {
+.c5 {
   padding: 0 8px;
   display: block;
   cursor: pointer;
 }
 
-.c8 {
+.c6 {
   padding: 0 8px;
   padding-right: 40px;
   position: relative;
-  border-bottom: 1px solid #c3cad9;
+  border-bottom: 1px solid;
   margin: 8px 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -700,7 +709,7 @@ exports[`Menu demo -- menu-collapse 1`] = `
   overflow: hidden;
 }
 
-.c11 {
+.c8 {
   padding: 0 8px;
   margin: 0 8px;
   display: block;
@@ -709,18 +718,7 @@ exports[`Menu demo -- menu-collapse 1`] = `
 
 .c0 {
   line-height: 26px;
-  display: inline-block;
-  box-sizing: border-box;
-  max-width: 360px;
-  min-width: 64px;
-  overflow: auto;
-  padding: 10px 0;
-  border-radius: 2px;
-  text-align: left;
   font-size: 12px;
-}
-
-.c0 .style__PopupContentWrap-jUSLTy {
   display: inline-block;
   box-sizing: border-box;
   max-width: 360px;
@@ -732,16 +730,30 @@ exports[`Menu demo -- menu-collapse 1`] = `
 }
 
 .c0,
-.c0 .style__PopupContentWrap-jUSLTy {
+.c0 .style__PopupContentWrap-ulx11w-2 {
   border: 1px solid #c3cad9;
+}
+
+.c0,
+.c0 .uc-fe-menu-popup-content-wrap {
   color: #6b798e;
   background: #fff;
 }
 
-.c0 .c1:hover,
-.c0 .c7:hover,
-.c0 .c10:hover {
+.c0 .uc-fe-menu-item:hover,
+.c0 .uc-fe-menu-submenu-title-content:hover,
+.c0 .uc-fe-menu-selectall-checkbox:hover {
   background: #eaf3fd;
+}
+
+.c0 .uc-fe-menu-item-selected,
+.c0 .uc-fe-menu-submenu-title-selected,
+.c0 .uc-fe-menu-selectall-checkbox-checked {
+  color: #4074e1;
+}
+
+.c0 .uc-fe-menu-submenu-title-content-collapse {
+  border-color: #c3cad9;
 }
 
 <div>
@@ -752,13 +764,14 @@ exports[`Menu demo -- menu-collapse 1`] = `
       class="c0"
     >
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         <span
-          class="c3"
+          class="c2"
         >
           <i
-            class="icon__checkbox c4 c5 "
+            class="c3 c4 uc-fe-icon icon__checkbox "
+            type="checkbox"
           />
           Menu 1
         </span>
@@ -768,14 +781,15 @@ exports[`Menu demo -- menu-collapse 1`] = `
           <div>
             <div>
               <div
-                class="c6"
+                class="uc-fe-menu-submenu-title c5"
               >
                 <div
-                  class="c7 c8"
+                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c6"
                 >
                   SubMenu 1
                   <i
-                    class="icon__up c9 "
+                    class="c7 uc-fe-icon icon__up "
+                    type="up"
                   />
                 </div>
               </div>
@@ -785,57 +799,62 @@ exports[`Menu demo -- menu-collapse 1`] = `
               open=""
             >
               <span
-                class="c10 c11 c3"
+                class="uc-fe-menu-selectall-checkbox c8 c2"
               >
                 <i
-                  class="icon__checkbox c4 c5 "
+                  class="c3 c4 uc-fe-icon icon__checkbox "
+                  type="checkbox"
                 />
                 全选
               </span>
               <div
-                class="c1 c2"
+                class="uc-fe-menu-item c1"
               >
                 <span
-                  class="c3"
+                  class="c2"
                 >
                   <i
-                    class="icon__checkbox c4 c5 "
+                    class="c3 c4 uc-fe-icon icon__checkbox "
+                    type="checkbox"
                   />
                   Menu 1
                 </span>
               </div>
               <div
-                class="c1 c2"
+                class="uc-fe-menu-item c1"
               >
                 <span
-                  class="c3"
+                  class="c2"
                 >
                   <i
-                    class="icon__checkbox c4 c5 "
+                    class="c3 c4 uc-fe-icon icon__checkbox "
+                    type="checkbox"
                   />
                   Menu 2
                 </span>
               </div>
               <div
-                class="c1 c2"
+                class="uc-fe-menu-item c1"
               >
                 <span
-                  class="c3"
+                  class="c2"
                 >
                   <i
-                    class="icon__checkbox c4 c5 "
+                    class="c3 c4 uc-fe-icon icon__checkbox "
+                    type="checkbox"
                   />
                   Menu 3
                 </span>
               </div>
               <div
-                class="c1 c2"
+                class="uc-fe-menu-item c1"
               >
                 <span
-                  class="c3"
+                  class="c2"
                 >
                   <i
-                    class="icon__checkbox c4 c5 "
+                    class="c3 c4 uc-fe-icon icon__checkbox "
+                    type="checkbox"
                   />
                   Menu 4
                 </span>
@@ -849,14 +868,15 @@ exports[`Menu demo -- menu-collapse 1`] = `
           <div>
             <div>
               <div
-                class="c6"
+                class="uc-fe-menu-submenu-title c5"
               >
                 <div
-                  class="c7 c8"
+                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c6"
                 >
                   SubMenu 2
                   <i
-                    class="icon__up c9 "
+                    class="c7 uc-fe-icon icon__up "
+                    type="up"
                   />
                 </div>
               </div>
@@ -866,57 +886,62 @@ exports[`Menu demo -- menu-collapse 1`] = `
               open=""
             >
               <span
-                class="c10 c11 c3"
+                class="uc-fe-menu-selectall-checkbox c8 c2"
               >
                 <i
-                  class="icon__checkbox c4 c5 "
+                  class="c3 c4 uc-fe-icon icon__checkbox "
+                  type="checkbox"
                 />
                 全选
               </span>
               <div
-                class="c1 c2"
+                class="uc-fe-menu-item c1"
               >
                 <span
-                  class="c3"
+                  class="c2"
                 >
                   <i
-                    class="icon__checkbox c4 c5 "
+                    class="c3 c4 uc-fe-icon icon__checkbox "
+                    type="checkbox"
                   />
                   Menu 1
                 </span>
               </div>
               <div
-                class="c1 c2"
+                class="uc-fe-menu-item c1"
               >
                 <span
-                  class="c3"
+                  class="c2"
                 >
                   <i
-                    class="icon__checkbox c4 c5 "
+                    class="c3 c4 uc-fe-icon icon__checkbox "
+                    type="checkbox"
                   />
                   Menu 2
                 </span>
               </div>
               <div
-                class="c1 c2"
+                class="uc-fe-menu-item c1"
               >
                 <span
-                  class="c3"
+                  class="c2"
                 >
                   <i
-                    class="icon__checkbox c4 c5 "
+                    class="c3 c4 uc-fe-icon icon__checkbox "
+                    type="checkbox"
                   />
                   Menu 3
                 </span>
               </div>
               <div
-                class="c1 c2"
+                class="uc-fe-menu-item c1"
               >
                 <span
-                  class="c3"
+                  class="c2"
                 >
                   <i
-                    class="icon__checkbox c4 c5 "
+                    class="c3 c4 uc-fe-icon icon__checkbox "
+                    type="checkbox"
                   />
                   Menu 4
                 </span>
@@ -930,14 +955,15 @@ exports[`Menu demo -- menu-collapse 1`] = `
           <div>
             <div>
               <div
-                class="c6"
+                class="uc-fe-menu-submenu-title c5"
               >
                 <div
-                  class="c7 c8"
+                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c6"
                 >
                   SubMenu 3
                   <i
-                    class="icon__down c9 "
+                    class="c7 uc-fe-icon icon__down "
+                    type="down"
                   />
                 </div>
               </div>
@@ -954,13 +980,14 @@ exports[`Menu demo -- menu-collapse 1`] = `
       class="c0"
     >
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         <span
-          class="c3"
+          class="c2"
         >
           <i
-            class="icon__checkbox c4 c5 "
+            class="c3 c4 uc-fe-icon icon__checkbox "
+            type="checkbox"
           />
           Menu 1
         </span>
@@ -970,14 +997,15 @@ exports[`Menu demo -- menu-collapse 1`] = `
           <div>
             <div>
               <div
-                class="c6"
+                class="uc-fe-menu-submenu-title c5"
               >
                 <div
-                  class="c7 c8"
+                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c6"
                 >
                   SubMenu 1
                   <i
-                    class="icon__down c9 "
+                    class="c7 uc-fe-icon icon__down "
+                    type="down"
                   />
                 </div>
               </div>
@@ -990,14 +1018,15 @@ exports[`Menu demo -- menu-collapse 1`] = `
           <div>
             <div>
               <div
-                class="c6"
+                class="uc-fe-menu-submenu-title c5"
               >
                 <div
-                  class="c7 c8"
+                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c6"
                 >
                   SubMenu 2
                   <i
-                    class="icon__down c9 "
+                    class="c7 uc-fe-icon icon__down "
+                    type="down"
                   />
                 </div>
               </div>
@@ -1010,14 +1039,15 @@ exports[`Menu demo -- menu-collapse 1`] = `
           <div>
             <div>
               <div
-                class="c6"
+                class="uc-fe-menu-submenu-title c5"
               >
                 <div
-                  class="c7 c8"
+                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c6"
                 >
                   SubMenu 3
                   <i
-                    class="icon__down c9 "
+                    class="c7 uc-fe-icon icon__down "
+                    type="down"
                   />
                 </div>
               </div>
@@ -1031,12 +1061,12 @@ exports[`Menu demo -- menu-collapse 1`] = `
 `;
 
 exports[`Menu demo -- menu-controlled 1`] = `
-.c5 {
+.c4 {
   margin-right: 8px;
   font-size: 14px;
 }
 
-.c7 {
+.c5 {
   cursor: pointer;
   position: relative;
   display: inline-block;
@@ -1046,11 +1076,11 @@ exports[`Menu demo -- menu-controlled 1`] = `
   font-size: 12px;
 }
 
-.c7 .c4 {
+.c5 .c3 {
   color: #526075;
 }
 
-.c3 {
+.c2 {
   cursor: pointer;
   position: relative;
   display: inline-block;
@@ -1060,11 +1090,11 @@ exports[`Menu demo -- menu-controlled 1`] = `
   font-size: 12px;
 }
 
-.c3 .c4 {
+.c2 .c3 {
   color: #4074e1;
 }
 
-.c6 {
+.c1 {
   padding: 0 8px;
   margin: 0 8px;
   display: block;
@@ -1074,38 +1104,11 @@ exports[`Menu demo -- menu-controlled 1`] = `
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-}
-
-.c2 {
-  padding: 0 8px;
-  margin: 0 8px;
-  display: block;
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.c2.c2.c2 {
-  color: #4074e1;
 }
 
 .c0 {
   line-height: 26px;
-  display: inline-block;
-  box-sizing: border-box;
-  max-width: 360px;
-  min-width: 64px;
-  overflow: auto;
-  padding: 10px 0;
-  border-radius: 2px;
-  text-align: left;
   font-size: 12px;
-}
-
-.c0 .style__PopupContentWrap-jUSLTy {
   display: inline-block;
   box-sizing: border-box;
   max-width: 360px;
@@ -1117,16 +1120,30 @@ exports[`Menu demo -- menu-controlled 1`] = `
 }
 
 .c0,
-.c0 .style__PopupContentWrap-jUSLTy {
+.c0 .style__PopupContentWrap-ulx11w-2 {
   border: 1px solid #c3cad9;
+}
+
+.c0,
+.c0 .uc-fe-menu-popup-content-wrap {
   color: #6b798e;
   background: #fff;
 }
 
-.c0 .c1:hover,
-.c0 .style__TitleContentWrap-jTzrop:hover,
-.c0 .style__SelectAllCheckbox-fLLnPQ:hover {
+.c0 .uc-fe-menu-item:hover,
+.c0 .uc-fe-menu-submenu-title-content:hover,
+.c0 .uc-fe-menu-selectall-checkbox:hover {
   background: #eaf3fd;
+}
+
+.c0 .uc-fe-menu-item-selected,
+.c0 .uc-fe-menu-submenu-title-selected,
+.c0 .uc-fe-menu-selectall-checkbox-checked {
+  color: #4074e1;
+}
+
+.c0 .uc-fe-menu-submenu-title-content-collapse {
+  border-color: #c3cad9;
 }
 
 <div>
@@ -1137,53 +1154,57 @@ exports[`Menu demo -- menu-controlled 1`] = `
       class="c0"
     >
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item uc-fe-menu-item-selected c1"
         selected=""
       >
         <span
           checked=""
-          class="c3"
+          class="c2"
         >
           <i
-            class="icon__checkbox-ed c4 c5 "
+            class="c3 c4 uc-fe-icon icon__checkbox-ed "
+            type="checkbox-ed"
           />
           Menu 1
         </span>
       </div>
       <div
-        class="c1 c6"
+        class="uc-fe-menu-item c1"
       >
         <span
-          class="c7"
+          class="c5"
         >
           <i
-            class="icon__checkbox c4 c5 "
+            class="c3 c4 uc-fe-icon icon__checkbox "
+            type="checkbox"
           />
           Menu 2
         </span>
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item uc-fe-menu-item-selected c1"
         selected=""
       >
         <span
           checked=""
-          class="c3"
+          class="c2"
         >
           <i
-            class="icon__checkbox-ed c4 c5 "
+            class="c3 c4 uc-fe-icon icon__checkbox-ed "
+            type="checkbox-ed"
           />
           Menu 3
         </span>
       </div>
       <div
-        class="c1 c6"
+        class="uc-fe-menu-item c1"
       >
         <span
-          class="c7"
+          class="c5"
         >
           <i
-            class="icon__checkbox c4 c5 "
+            class="c3 c4 uc-fe-icon icon__checkbox "
+            type="checkbox"
           />
           Menu 4
         </span>
@@ -1197,53 +1218,57 @@ exports[`Menu demo -- menu-controlled 1`] = `
       class="c0"
     >
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item uc-fe-menu-item-selected c1"
         selected=""
       >
         <span
           checked=""
-          class="c3"
+          class="c2"
         >
           <i
-            class="icon__checkbox-ed c4 c5 "
+            class="c3 c4 uc-fe-icon icon__checkbox-ed "
+            type="checkbox-ed"
           />
           Menu 1
         </span>
       </div>
       <div
-        class="c1 c6"
+        class="uc-fe-menu-item c1"
       >
         <span
-          class="c7"
+          class="c5"
         >
           <i
-            class="icon__checkbox c4 c5 "
+            class="c3 c4 uc-fe-icon icon__checkbox "
+            type="checkbox"
           />
           Menu 2
         </span>
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item uc-fe-menu-item-selected c1"
         selected=""
       >
         <span
           checked=""
-          class="c3"
+          class="c2"
         >
           <i
-            class="icon__checkbox-ed c4 c5 "
+            class="c3 c4 uc-fe-icon icon__checkbox-ed "
+            type="checkbox-ed"
           />
           Menu 3
         </span>
       </div>
       <div
-        class="c1 c6"
+        class="uc-fe-menu-item c1"
       >
         <span
-          class="c7"
+          class="c5"
         >
           <i
-            class="icon__checkbox c4 c5 "
+            class="c3 c4 uc-fe-icon icon__checkbox "
+            type="checkbox"
           />
           Menu 4
         </span>
@@ -1254,12 +1279,12 @@ exports[`Menu demo -- menu-controlled 1`] = `
 `;
 
 exports[`Menu demo -- menu-multiple 1`] = `
-.c5 {
+.c4 {
   margin-right: 8px;
   font-size: 14px;
 }
 
-.c3 {
+.c2 {
   cursor: pointer;
   position: relative;
   display: inline-block;
@@ -1269,15 +1294,15 @@ exports[`Menu demo -- menu-multiple 1`] = `
   font-size: 12px;
 }
 
-.c3 .c4 {
+.c2 .c3 {
   color: #526075;
 }
 
-.dEagjx .c4 {
+.c5 .c3 {
   color: #4074e1;
 }
 
-.c2 {
+.c1 {
   padding: 0 8px;
   margin: 0 8px;
   display: block;
@@ -1291,18 +1316,7 @@ exports[`Menu demo -- menu-multiple 1`] = `
 
 .c0 {
   line-height: 26px;
-  display: inline-block;
-  box-sizing: border-box;
-  max-width: 360px;
-  min-width: 64px;
-  overflow: auto;
-  padding: 10px 0;
-  border-radius: 2px;
-  text-align: left;
   font-size: 12px;
-}
-
-.c0 .style__PopupContentWrap-jUSLTy {
   display: inline-block;
   box-sizing: border-box;
   max-width: 360px;
@@ -1314,16 +1328,30 @@ exports[`Menu demo -- menu-multiple 1`] = `
 }
 
 .c0,
-.c0 .style__PopupContentWrap-jUSLTy {
+.c0 .style__PopupContentWrap-ulx11w-2 {
   border: 1px solid #c3cad9;
+}
+
+.c0,
+.c0 .uc-fe-menu-popup-content-wrap {
   color: #6b798e;
   background: #fff;
 }
 
-.c0 .c1:hover,
-.c0 .style__TitleContentWrap-jTzrop:hover,
-.c0 .style__SelectAllCheckbox-fLLnPQ:hover {
+.c0 .uc-fe-menu-item:hover,
+.c0 .uc-fe-menu-submenu-title-content:hover,
+.c0 .uc-fe-menu-selectall-checkbox:hover {
   background: #eaf3fd;
+}
+
+.c0 .uc-fe-menu-item-selected,
+.c0 .uc-fe-menu-submenu-title-selected,
+.c0 .uc-fe-menu-selectall-checkbox-checked {
+  color: #4074e1;
+}
+
+.c0 .uc-fe-menu-submenu-title-content-collapse {
+  border-color: #c3cad9;
 }
 
 <div>
@@ -1334,22 +1362,22 @@ exports[`Menu demo -- menu-multiple 1`] = `
       class="c0"
     >
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         Menu 1
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         Menu 2
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         Menu 3
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         Menu 4
       </div>
@@ -1362,49 +1390,53 @@ exports[`Menu demo -- menu-multiple 1`] = `
       class="c0"
     >
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         <span
-          class="c3"
+          class="c2"
         >
           <i
-            class="icon__checkbox c4 c5 "
+            class="c3 c4 uc-fe-icon icon__checkbox "
+            type="checkbox"
           />
           Menu 1
         </span>
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         <span
-          class="c3"
+          class="c2"
         >
           <i
-            class="icon__checkbox c4 c5 "
+            class="c3 c4 uc-fe-icon icon__checkbox "
+            type="checkbox"
           />
           Menu 2
         </span>
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         <span
-          class="c3"
+          class="c2"
         >
           <i
-            class="icon__checkbox c4 c5 "
+            class="c3 c4 uc-fe-icon icon__checkbox "
+            type="checkbox"
           />
           Menu 3
         </span>
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         <span
-          class="c3"
+          class="c2"
         >
           <i
-            class="icon__checkbox c4 c5 "
+            class="c3 c4 uc-fe-icon icon__checkbox "
+            type="checkbox"
           />
           Menu 4
         </span>
@@ -1415,12 +1447,12 @@ exports[`Menu demo -- menu-multiple 1`] = `
 `;
 
 exports[`Menu demo -- menu-selectable 1`] = `
-.c5 {
+.c4 {
   margin-right: 8px;
   font-size: 14px;
 }
 
-.c3 {
+.c2 {
   cursor: pointer;
   position: relative;
   display: inline-block;
@@ -1430,15 +1462,15 @@ exports[`Menu demo -- menu-selectable 1`] = `
   font-size: 12px;
 }
 
-.c3 .c4 {
+.c2 .c3 {
   color: #526075;
 }
 
-.dEagjx .c4 {
+.c5 .c3 {
   color: #4074e1;
 }
 
-.c2 {
+.c1 {
   padding: 0 8px;
   margin: 0 8px;
   display: block;
@@ -1452,18 +1484,7 @@ exports[`Menu demo -- menu-selectable 1`] = `
 
 .c0 {
   line-height: 26px;
-  display: inline-block;
-  box-sizing: border-box;
-  max-width: 360px;
-  min-width: 64px;
-  overflow: auto;
-  padding: 10px 0;
-  border-radius: 2px;
-  text-align: left;
   font-size: 12px;
-}
-
-.c0 .style__PopupContentWrap-jUSLTy {
   display: inline-block;
   box-sizing: border-box;
   max-width: 360px;
@@ -1475,16 +1496,30 @@ exports[`Menu demo -- menu-selectable 1`] = `
 }
 
 .c0,
-.c0 .style__PopupContentWrap-jUSLTy {
+.c0 .style__PopupContentWrap-ulx11w-2 {
   border: 1px solid #c3cad9;
+}
+
+.c0,
+.c0 .uc-fe-menu-popup-content-wrap {
   color: #6b798e;
   background: #fff;
 }
 
-.c0 .c1:hover,
-.c0 .style__TitleContentWrap-jTzrop:hover,
-.c0 .style__SelectAllCheckbox-fLLnPQ:hover {
+.c0 .uc-fe-menu-item:hover,
+.c0 .uc-fe-menu-submenu-title-content:hover,
+.c0 .uc-fe-menu-selectall-checkbox:hover {
   background: #eaf3fd;
+}
+
+.c0 .uc-fe-menu-item-selected,
+.c0 .uc-fe-menu-submenu-title-selected,
+.c0 .uc-fe-menu-selectall-checkbox-checked {
+  color: #4074e1;
+}
+
+.c0 .uc-fe-menu-submenu-title-content-collapse {
+  border-color: #c3cad9;
 }
 
 <div>
@@ -1495,49 +1530,53 @@ exports[`Menu demo -- menu-selectable 1`] = `
       class="c0"
     >
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         <span
-          class="c3"
+          class="c2"
         >
           <i
-            class="icon__checkbox c4 c5 "
+            class="c3 c4 uc-fe-icon icon__checkbox "
+            type="checkbox"
           />
           Menu 1
         </span>
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         <span
-          class="c3"
+          class="c2"
         >
           <i
-            class="icon__checkbox c4 c5 "
+            class="c3 c4 uc-fe-icon icon__checkbox "
+            type="checkbox"
           />
           Menu 2
         </span>
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         <span
-          class="c3"
+          class="c2"
         >
           <i
-            class="icon__checkbox c4 c5 "
+            class="c3 c4 uc-fe-icon icon__checkbox "
+            type="checkbox"
           />
           Menu 3
         </span>
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         <span
-          class="c3"
+          class="c2"
         >
           <i
-            class="icon__checkbox c4 c5 "
+            class="c3 c4 uc-fe-icon icon__checkbox "
+            type="checkbox"
           />
           Menu 4
         </span>
@@ -1551,49 +1590,53 @@ exports[`Menu demo -- menu-selectable 1`] = `
       class="c0"
     >
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         <span
-          class="c3"
+          class="c2"
         >
           <i
-            class="icon__checkbox c4 c5 "
+            class="c3 c4 uc-fe-icon icon__checkbox "
+            type="checkbox"
           />
           Menu 1
         </span>
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         <span
-          class="c3"
+          class="c2"
         >
           <i
-            class="icon__checkbox c4 c5 "
+            class="c3 c4 uc-fe-icon icon__checkbox "
+            type="checkbox"
           />
           Menu 2
         </span>
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         <span
-          class="c3"
+          class="c2"
         >
           <i
-            class="icon__checkbox c4 c5 "
+            class="c3 c4 uc-fe-icon icon__checkbox "
+            type="checkbox"
           />
           Menu 3
         </span>
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         <span
-          class="c3"
+          class="c2"
         >
           <i
-            class="icon__checkbox c4 c5 "
+            class="c3 c4 uc-fe-icon icon__checkbox "
+            type="checkbox"
           />
           Menu 4
         </span>
@@ -1604,12 +1647,12 @@ exports[`Menu demo -- menu-selectable 1`] = `
 `;
 
 exports[`Menu demo -- menu-showSelectAll 1`] = `
-.c5 {
+.c4 {
   margin-right: 8px;
   font-size: 14px;
 }
 
-.c3 {
+.c2 {
   cursor: pointer;
   position: relative;
   display: inline-block;
@@ -1619,15 +1662,15 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
   font-size: 12px;
 }
 
-.c3 .c4 {
+.c2 .c3 {
   color: #526075;
 }
 
-.dEagjx .c4 {
+.c10 .c3 {
   color: #4074e1;
 }
 
-.c9 {
+.c7 {
   position: absolute;
   right: 8px;
   top: 50%;
@@ -1635,7 +1678,7 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
   font-size: 14px;
 }
 
-.c2 {
+.c1 {
   padding: 0 8px;
   margin: 0 8px;
   display: block;
@@ -1647,17 +1690,17 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
   overflow: hidden;
 }
 
-.c6 {
+.c5 {
   padding: 0 8px;
   display: block;
   cursor: pointer;
 }
 
-.c8 {
+.c6 {
   padding: 0 8px;
   padding-right: 40px;
   position: relative;
-  border-bottom: 1px solid #c3cad9;
+  border-bottom: 1px solid;
   margin: 8px 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1666,7 +1709,7 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
   overflow: hidden;
 }
 
-.c10 {
+.c8 {
   padding: 0 8px;
   padding-right: 40px;
   position: relative;
@@ -1677,7 +1720,7 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
   overflow: hidden;
 }
 
-.c12 {
+.c9 {
   padding: 0 8px;
   margin: 0 8px;
   display: block;
@@ -1686,18 +1729,7 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
 
 .c0 {
   line-height: 26px;
-  display: inline-block;
-  box-sizing: border-box;
-  max-width: 360px;
-  min-width: 64px;
-  overflow: auto;
-  padding: 10px 0;
-  border-radius: 2px;
-  text-align: left;
   font-size: 12px;
-}
-
-.c0 .style__PopupContentWrap-jUSLTy {
   display: inline-block;
   box-sizing: border-box;
   max-width: 360px;
@@ -1709,16 +1741,30 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
 }
 
 .c0,
-.c0 .style__PopupContentWrap-jUSLTy {
+.c0 .style__PopupContentWrap-ulx11w-2 {
   border: 1px solid #c3cad9;
+}
+
+.c0,
+.c0 .uc-fe-menu-popup-content-wrap {
   color: #6b798e;
   background: #fff;
 }
 
-.c0 .c1:hover,
-.c0 .c7:hover,
-.c0 .c11:hover {
+.c0 .uc-fe-menu-item:hover,
+.c0 .uc-fe-menu-submenu-title-content:hover,
+.c0 .uc-fe-menu-selectall-checkbox:hover {
   background: #eaf3fd;
+}
+
+.c0 .uc-fe-menu-item-selected,
+.c0 .uc-fe-menu-submenu-title-selected,
+.c0 .uc-fe-menu-selectall-checkbox-checked {
+  color: #4074e1;
+}
+
+.c0 .uc-fe-menu-submenu-title-content-collapse {
+  border-color: #c3cad9;
 }
 
 <div>
@@ -1729,49 +1775,53 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
       class="c0"
     >
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         <span
-          class="c3"
+          class="c2"
         >
           <i
-            class="icon__checkbox c4 c5 "
+            class="c3 c4 uc-fe-icon icon__checkbox "
+            type="checkbox"
           />
           Menu 1
         </span>
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         <span
-          class="c3"
+          class="c2"
         >
           <i
-            class="icon__checkbox c4 c5 "
+            class="c3 c4 uc-fe-icon icon__checkbox "
+            type="checkbox"
           />
           Menu 2
         </span>
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         <span
-          class="c3"
+          class="c2"
         >
           <i
-            class="icon__checkbox c4 c5 "
+            class="c3 c4 uc-fe-icon icon__checkbox "
+            type="checkbox"
           />
           Menu 3
         </span>
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         <span
-          class="c3"
+          class="c2"
         >
           <i
-            class="icon__checkbox c4 c5 "
+            class="c3 c4 uc-fe-icon icon__checkbox "
+            type="checkbox"
           />
           Menu 4
         </span>
@@ -1781,14 +1831,15 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
           <div>
             <div>
               <div
-                class="c6"
+                class="uc-fe-menu-submenu-title c5"
               >
                 <div
-                  class="c7 c8"
+                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c6"
                 >
                   SubMenu 1
                   <i
-                    class="icon__down c9 "
+                    class="c7 uc-fe-icon icon__down "
+                    type="down"
                   />
                 </div>
               </div>
@@ -1801,14 +1852,15 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
           <div>
             <div>
               <div
-                class="c6"
+                class="uc-fe-menu-submenu-title c5"
               >
                 <div
-                  class="c7 c8"
+                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c6"
                 >
                   SubMenu 2
                   <i
-                    class="icon__down c9 "
+                    class="c7 uc-fe-icon icon__down "
+                    type="down"
                   />
                 </div>
               </div>
@@ -1819,14 +1871,15 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
       <div>
         <div>
           <div
-            class="c6"
+            class="uc-fe-menu-submenu-title c5"
           >
             <div
-              class="c7 c10"
+              class="uc-fe-menu-submenu-title-content c8"
             >
               SubMenu 3
               <i
-                class="icon__caret-right c9 "
+                class="c7 uc-fe-icon icon__caret-right "
+                type="caret-right"
               />
             </div>
           </div>
@@ -1841,57 +1894,62 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
       class="c0"
     >
       <span
-        class="c11 c12 c3"
+        class="uc-fe-menu-selectall-checkbox c9 c2"
       >
         <i
-          class="icon__checkbox c4 c5 "
+          class="c3 c4 uc-fe-icon icon__checkbox "
+          type="checkbox"
         />
         全选
       </span>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         <span
-          class="c3"
+          class="c2"
         >
           <i
-            class="icon__checkbox c4 c5 "
+            class="c3 c4 uc-fe-icon icon__checkbox "
+            type="checkbox"
           />
           Menu 1
         </span>
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         <span
-          class="c3"
+          class="c2"
         >
           <i
-            class="icon__checkbox c4 c5 "
+            class="c3 c4 uc-fe-icon icon__checkbox "
+            type="checkbox"
           />
           Menu 2
         </span>
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         <span
-          class="c3"
+          class="c2"
         >
           <i
-            class="icon__checkbox c4 c5 "
+            class="c3 c4 uc-fe-icon icon__checkbox "
+            type="checkbox"
           />
           Menu 3
         </span>
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         <span
-          class="c3"
+          class="c2"
         >
           <i
-            class="icon__checkbox c4 c5 "
+            class="c3 c4 uc-fe-icon icon__checkbox "
+            type="checkbox"
           />
           Menu 4
         </span>
@@ -1901,14 +1959,15 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
           <div>
             <div>
               <div
-                class="c6"
+                class="uc-fe-menu-submenu-title c5"
               >
                 <div
-                  class="c7 c8"
+                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c6"
                 >
                   SubMenu 1
                   <i
-                    class="icon__down c9 "
+                    class="c7 uc-fe-icon icon__down "
+                    type="down"
                   />
                 </div>
               </div>
@@ -1921,14 +1980,15 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
           <div>
             <div>
               <div
-                class="c6"
+                class="uc-fe-menu-submenu-title c5"
               >
                 <div
-                  class="c7 c8"
+                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c6"
                 >
                   SubMenu 2
                   <i
-                    class="icon__down c9 "
+                    class="c7 uc-fe-icon icon__down "
+                    type="down"
                   />
                 </div>
               </div>
@@ -1939,14 +1999,15 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
       <div>
         <div>
           <div
-            class="c6"
+            class="uc-fe-menu-submenu-title c5"
           >
             <div
-              class="c7 c10"
+              class="uc-fe-menu-submenu-title-content c8"
             >
               SubMenu 3
               <i
-                class="icon__caret-right c9 "
+                class="c7 uc-fe-icon icon__caret-right "
+                type="caret-right"
               />
             </div>
           </div>
@@ -1961,22 +2022,22 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
       class="c0"
     >
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         Menu 1
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         Menu 2
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         Menu 3
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         Menu 4
       </div>
@@ -1985,14 +2046,15 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
           <div>
             <div>
               <div
-                class="c6"
+                class="uc-fe-menu-submenu-title c5"
               >
                 <div
-                  class="c7 c8"
+                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c6"
                 >
                   SubMenu 1
                   <i
-                    class="icon__down c9 "
+                    class="c7 uc-fe-icon icon__down "
+                    type="down"
                   />
                 </div>
               </div>
@@ -2005,14 +2067,15 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
           <div>
             <div>
               <div
-                class="c6"
+                class="uc-fe-menu-submenu-title c5"
               >
                 <div
-                  class="c7 c8"
+                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c6"
                 >
                   SubMenu 2
                   <i
-                    class="icon__down c9 "
+                    class="c7 uc-fe-icon icon__down "
+                    type="down"
                   />
                 </div>
               </div>
@@ -2023,14 +2086,15 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
       <div>
         <div>
           <div
-            class="c6"
+            class="uc-fe-menu-submenu-title c5"
           >
             <div
-              class="c7 c10"
+              class="uc-fe-menu-submenu-title-content c8"
             >
               SubMenu 3
               <i
-                class="icon__caret-right c9 "
+                class="c7 uc-fe-icon icon__caret-right "
+                type="caret-right"
               />
             </div>
           </div>
@@ -2045,22 +2109,22 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
       class="c0"
     >
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         Menu 1
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         Menu 2
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         Menu 3
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         Menu 4
       </div>
@@ -2069,14 +2133,15 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
           <div>
             <div>
               <div
-                class="c6"
+                class="uc-fe-menu-submenu-title c5"
               >
                 <div
-                  class="c7 c8"
+                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c6"
                 >
                   SubMenu 1
                   <i
-                    class="icon__down c9 "
+                    class="c7 uc-fe-icon icon__down "
+                    type="down"
                   />
                 </div>
               </div>
@@ -2089,14 +2154,15 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
           <div>
             <div>
               <div
-                class="c6"
+                class="uc-fe-menu-submenu-title c5"
               >
                 <div
-                  class="c7 c8"
+                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c6"
                 >
                   SubMenu 2
                   <i
-                    class="icon__down c9 "
+                    class="c7 uc-fe-icon icon__down "
+                    type="down"
                   />
                 </div>
               </div>
@@ -2107,14 +2173,15 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
       <div>
         <div>
           <div
-            class="c6"
+            class="uc-fe-menu-submenu-title c5"
           >
             <div
-              class="c7 c10"
+              class="uc-fe-menu-submenu-title-content c8"
             >
               SubMenu 3
               <i
-                class="icon__caret-right c9 "
+                class="c7 uc-fe-icon icon__caret-right "
+                type="caret-right"
               />
             </div>
           </div>
@@ -2126,7 +2193,7 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
 `;
 
 exports[`Menu demo -- submenu-styleType 1`] = `
-.c6 {
+.c4 {
   position: absolute;
   right: 8px;
   top: 50%;
@@ -2134,7 +2201,7 @@ exports[`Menu demo -- submenu-styleType 1`] = `
   font-size: 14px;
 }
 
-.c2 {
+.c1 {
   padding: 0 8px;
   margin: 0 8px;
   display: block;
@@ -2146,17 +2213,17 @@ exports[`Menu demo -- submenu-styleType 1`] = `
   overflow: hidden;
 }
 
-.c3 {
+.c2 {
   padding: 0 8px;
   display: block;
   cursor: pointer;
 }
 
-.c5 {
+.c3 {
   padding: 0 8px;
   padding-right: 40px;
   position: relative;
-  border-bottom: 1px solid #c3cad9;
+  border-bottom: 1px solid;
   margin: 8px 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2165,7 +2232,7 @@ exports[`Menu demo -- submenu-styleType 1`] = `
   overflow: hidden;
 }
 
-.c7 {
+.c5 {
   padding: 0 8px;
   padding-right: 40px;
   position: relative;
@@ -2178,18 +2245,7 @@ exports[`Menu demo -- submenu-styleType 1`] = `
 
 .c0 {
   line-height: 26px;
-  display: inline-block;
-  box-sizing: border-box;
-  max-width: 360px;
-  min-width: 64px;
-  overflow: auto;
-  padding: 10px 0;
-  border-radius: 2px;
-  text-align: left;
   font-size: 12px;
-}
-
-.c0 .style__PopupContentWrap-jUSLTy {
   display: inline-block;
   box-sizing: border-box;
   max-width: 360px;
@@ -2201,16 +2257,30 @@ exports[`Menu demo -- submenu-styleType 1`] = `
 }
 
 .c0,
-.c0 .style__PopupContentWrap-jUSLTy {
+.c0 .style__PopupContentWrap-ulx11w-2 {
   border: 1px solid #c3cad9;
+}
+
+.c0,
+.c0 .uc-fe-menu-popup-content-wrap {
   color: #6b798e;
   background: #fff;
 }
 
-.c0 .c1:hover,
-.c0 .c4:hover,
-.c0 .style__SelectAllCheckbox-fLLnPQ:hover {
+.c0 .uc-fe-menu-item:hover,
+.c0 .uc-fe-menu-submenu-title-content:hover,
+.c0 .uc-fe-menu-selectall-checkbox:hover {
   background: #eaf3fd;
+}
+
+.c0 .uc-fe-menu-item-selected,
+.c0 .uc-fe-menu-submenu-title-selected,
+.c0 .uc-fe-menu-selectall-checkbox-checked {
+  color: #4074e1;
+}
+
+.c0 .uc-fe-menu-submenu-title-content-collapse {
+  border-color: #c3cad9;
 }
 
 <div>
@@ -2221,22 +2291,22 @@ exports[`Menu demo -- submenu-styleType 1`] = `
       class="c0"
     >
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         Menu 1
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         Menu 2
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         Menu 3
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         Menu 4
       </div>
@@ -2245,14 +2315,15 @@ exports[`Menu demo -- submenu-styleType 1`] = `
           <div>
             <div>
               <div
-                class="c3"
+                class="uc-fe-menu-submenu-title c2"
               >
                 <div
-                  class="c4 c5"
+                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c3"
                 >
                   SubMenu 1 - default
                   <i
-                    class="icon__down c6 "
+                    class="c4 uc-fe-icon icon__down "
+                    type="down"
                   />
                 </div>
               </div>
@@ -2265,14 +2336,15 @@ exports[`Menu demo -- submenu-styleType 1`] = `
           <div>
             <div>
               <div
-                class="c3"
+                class="uc-fe-menu-submenu-title c2"
               >
                 <div
-                  class="c4 c5"
+                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c3"
                 >
                   SubMenu 2 - collapse
                   <i
-                    class="icon__down c6 "
+                    class="c4 uc-fe-icon icon__down "
+                    type="down"
                   />
                 </div>
               </div>
@@ -2283,14 +2355,15 @@ exports[`Menu demo -- submenu-styleType 1`] = `
       <div>
         <div>
           <div
-            class="c3"
+            class="uc-fe-menu-submenu-title c2"
           >
             <div
-              class="c4 c7"
+              class="uc-fe-menu-submenu-title-content c5"
             >
               SubMenu 3 - popover
               <i
-                class="icon__caret-right c6 "
+                class="c4 uc-fe-icon icon__caret-right "
+                type="caret-right"
               />
             </div>
           </div>
@@ -2302,13 +2375,13 @@ exports[`Menu demo -- submenu-styleType 1`] = `
 `;
 
 exports[`Menu demo -- submenu-title 1`] = `
-.c7.c7.c7 {
+.c5.c5.c5 {
   -webkit-animation: iVXCSc 1.2s infinite linear;
   animation: iVXCSc 1.2s infinite linear;
   line-height: normal;
 }
 
-.c6 {
+.c4 {
   position: absolute;
   right: 8px;
   top: 50%;
@@ -2316,7 +2389,7 @@ exports[`Menu demo -- submenu-title 1`] = `
   font-size: 14px;
 }
 
-.c2 {
+.c1 {
   padding: 0 8px;
   margin: 0 8px;
   display: block;
@@ -2328,17 +2401,17 @@ exports[`Menu demo -- submenu-title 1`] = `
   overflow: hidden;
 }
 
-.c3 {
+.c2 {
   padding: 0 8px;
   display: block;
   cursor: pointer;
 }
 
-.c5 {
+.c3 {
   padding: 0 8px;
   padding-right: 40px;
   position: relative;
-  border-bottom: 1px solid #c3cad9;
+  border-bottom: 1px solid;
   margin: 8px 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2349,18 +2422,7 @@ exports[`Menu demo -- submenu-title 1`] = `
 
 .c0 {
   line-height: 26px;
-  display: inline-block;
-  box-sizing: border-box;
-  max-width: 360px;
-  min-width: 64px;
-  overflow: auto;
-  padding: 10px 0;
-  border-radius: 2px;
-  text-align: left;
   font-size: 12px;
-}
-
-.c0 .style__PopupContentWrap-jUSLTy {
   display: inline-block;
   box-sizing: border-box;
   max-width: 360px;
@@ -2372,16 +2434,30 @@ exports[`Menu demo -- submenu-title 1`] = `
 }
 
 .c0,
-.c0 .style__PopupContentWrap-jUSLTy {
+.c0 .style__PopupContentWrap-ulx11w-2 {
   border: 1px solid #c3cad9;
+}
+
+.c0,
+.c0 .uc-fe-menu-popup-content-wrap {
   color: #6b798e;
   background: #fff;
 }
 
-.c0 .c1:hover,
-.c0 .c4:hover,
-.c0 .style__SelectAllCheckbox-fLLnPQ:hover {
+.c0 .uc-fe-menu-item:hover,
+.c0 .uc-fe-menu-submenu-title-content:hover,
+.c0 .uc-fe-menu-selectall-checkbox:hover {
   background: #eaf3fd;
+}
+
+.c0 .uc-fe-menu-item-selected,
+.c0 .uc-fe-menu-submenu-title-selected,
+.c0 .uc-fe-menu-selectall-checkbox-checked {
+  color: #4074e1;
+}
+
+.c0 .uc-fe-menu-submenu-title-content-collapse {
+  border-color: #c3cad9;
 }
 
 <div>
@@ -2392,22 +2468,22 @@ exports[`Menu demo -- submenu-title 1`] = `
       class="c0"
     >
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         Menu 1
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         Menu 2
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         Menu 3
       </div>
       <div
-        class="c1 c2"
+        class="uc-fe-menu-item c1"
       >
         Menu 4
       </div>
@@ -2416,14 +2492,15 @@ exports[`Menu demo -- submenu-title 1`] = `
           <div>
             <div>
               <div
-                class="c3"
+                class="uc-fe-menu-submenu-title c2"
               >
                 <div
-                  class="c4 c5"
+                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c3"
                 >
                   SubMenu 1
                   <i
-                    class="icon__down c6 "
+                    class="c4 uc-fe-icon icon__down "
+                    type="down"
                   />
                 </div>
               </div>
@@ -2436,16 +2513,18 @@ exports[`Menu demo -- submenu-title 1`] = `
           <div>
             <div>
               <div
-                class="c3"
+                class="uc-fe-menu-submenu-title c2"
               >
                 <div
-                  class="c4 c5"
+                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c3"
                 >
                   <i
-                    class="icon__loading c7"
+                    class="uc-fe-icon icon__loading uc-fe-icon-spin c5"
+                    type="loading"
                   />
                   <i
-                    class="icon__down c6 "
+                    class="c4 uc-fe-icon icon__down "
+                    type="down"
                   />
                 </div>
               </div>

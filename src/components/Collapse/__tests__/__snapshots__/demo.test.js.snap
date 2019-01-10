@@ -117,6 +117,7 @@ exports[`Collapse demo -- collapse 1`] = `
   width: 80px;
   padding: 4px;
   border: 1px solid #c3cad9;
+  border-width: 1px;
   line-height: 16px;
 }
 
@@ -217,11 +218,11 @@ exports[`Collapse demo -- collapse 1`] = `
   margin-right: 0;
 }
 
-.c27 {
+.c26 {
   position: relative;
 }
 
-.c29 {
+.c28 {
   border: none;
   outline: none;
   padding: 0;
@@ -239,19 +240,7 @@ exports[`Collapse demo -- collapse 1`] = `
   background: #fff;
   display: inline-block;
   vertical-align: middle;
-}
-
-.c26 {
-  position: absolute;
-  box-sizing: border-box;
-  text-align: center;
-  border-radius: 2px;
-  border-style: solid;
-  color: inherit;
-  cursor: pointer;
-  background: #fff;
-  display: inline-block;
-  vertical-align: middle;
+  border-color: #c3cad9;
 }
 
 .c22 {
@@ -266,38 +255,33 @@ exports[`Collapse demo -- collapse 1`] = `
   padding-right: 22px;
 }
 
-.c22 .c28 {
+.c22 .c27 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c22 .c28::-webkit-input-placeholder {
+.c22 .c27::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c22 .c28::-moz-placeholder {
+.c22 .c27::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c22 .c28:-ms-input-placeholder {
+.c22 .c27:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c22 .c28::placeholder {
+.c22 .c27::placeholder {
   color: #abb4c3;
-}
-
-.c22 .c23,
-.c22 .c25 {
-  border-color: #c3cad9;
 }
 
 .c22:hover {
   border-color: #4683e6;
 }
 
-.c22 .c28 {
+.c22 .c27 {
   padding: 0 0 0 8px;
   text-align: left;
   width: 34px;
@@ -392,7 +376,8 @@ exports[`Collapse demo -- collapse 1`] = `
             class="c17 c18"
           >
             <i
-              class="icon__checkbox-ed c19 c20 "
+              class="c19 c20 uc-fe-icon icon__checkbox-ed "
+              type="checkbox-ed"
             />
             0
           </span>
@@ -400,7 +385,8 @@ exports[`Collapse demo -- collapse 1`] = `
             class="c17 c21"
           >
             <i
-              class="icon__checkbox c19 c20 "
+              class="c19 c20 uc-fe-icon icon__checkbox "
+              type="checkbox"
             />
             1
           </span>
@@ -408,7 +394,8 @@ exports[`Collapse demo -- collapse 1`] = `
             class="c17 c21"
           >
             <i
-              class="icon__checkbox c19 c20 "
+              class="c19 c20 uc-fe-icon icon__checkbox "
+              type="checkbox"
             />
             2
           </span>
@@ -416,7 +403,8 @@ exports[`Collapse demo -- collapse 1`] = `
             class="c17 c21"
           >
             <i
-              class="icon__checkbox c19 c20 "
+              class="c19 c20 uc-fe-icon icon__checkbox "
+              type="checkbox"
             />
             3
           </span>
@@ -424,7 +412,8 @@ exports[`Collapse demo -- collapse 1`] = `
             class="c17 c21"
           >
             <i
-              class="icon__checkbox c19 c20 "
+              class="c19 c20 uc-fe-icon icon__checkbox "
+              type="checkbox"
             />
             4
           </span>
@@ -445,32 +434,34 @@ exports[`Collapse demo -- collapse 1`] = `
         span="9"
       >
         <div
-          class="c22"
+          class="uc-fe-numberinput uc-fe-numberinput-styletype-default c22"
         >
           <div>
             <span
-              class="c23 c24"
+              class="c23 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c24"
               unselectable="unselectable"
             >
               <i
-                class="icon__caret-up "
+                class="uc-fe-icon icon__caret-up "
+                type="caret-up"
               />
             </span>
             <span
-              class="c25 c26"
+              class="c25 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c24"
               unselectable="unselectable"
             >
               <i
-                class="icon__caret-down "
+                class="uc-fe-icon icon__caret-down "
+                type="caret-down"
               />
             </span>
           </div>
           <div
-            class="c27"
+            class="uc-fe-numberinput-input-wrap c26"
           >
             <input
               autocomplete="off"
-              class="c28 c29"
+              class="c27 uc-fe-numberinput-input c28"
               min="1"
               step="1"
               value="5"
@@ -769,6 +760,7 @@ exports[`Collapse demo -- panel 1`] = `
   width: 80px;
   padding: 4px;
   border: 1px solid #c3cad9;
+  border-width: 1px;
   line-height: 16px;
 }
 
@@ -843,6 +835,7 @@ exports[`Collapse demo -- panel 1`] = `
   width: 80px;
   padding: 4px;
   border: 1px solid #c3cad9;
+  border-width: 1px;
   line-height: 16px;
 }
 
@@ -1046,7 +1039,6 @@ exports[`Collapse demo -- panel-customTitle 1`] = `
   display: inline-block;
   vertical-align: middle;
   height: 28px;
-  line-height: 26px;
   padding: 0 8px;
   color: #6b798e;
   background: #fff;
@@ -1067,7 +1059,7 @@ exports[`Collapse demo -- panel-customTitle 1`] = `
       >
         title
         <button
-          class="c0"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c0"
           style="float:right;"
           type="button"
         >

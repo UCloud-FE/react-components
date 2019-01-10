@@ -232,6 +232,7 @@ exports[`Tabs demo -- pane 1`] = `
   width: 80px;
   padding: 4px;
   border: 1px solid #c3cad9;
+  border-width: 1px;
   line-height: 16px;
 }
 
@@ -426,7 +427,7 @@ exports[`Tabs demo -- pane 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-tabs uc-fe-tabs-top c16"
+      class="uc-fe-tabs uc-fe-tabs-top uc-fe-tabs-styletype-default c16"
       style="height:300px;"
     >
       <div
@@ -824,7 +825,7 @@ exports[`Tabs demo -- pane-disabled 1`] = `
 
 <div>
   <div
-    class="uc-fe-tabs uc-fe-tabs-top c0"
+    class="uc-fe-tabs uc-fe-tabs-top uc-fe-tabs-styletype-default c0"
   >
     <div
       class="uc-fe-tabs-bar uc-fe-tabs-top-bar"
@@ -939,7 +940,7 @@ exports[`Tabs demo -- pane-disabled 1`] = `
     />
   </div>
   <div
-    class="uc-fe-tabs uc-fe-tabs-top c0"
+    class="uc-fe-tabs uc-fe-tabs-top uc-fe-tabs-styletype-default c0"
   >
     <div
       class="uc-fe-tabs-bar uc-fe-tabs-top-bar"
@@ -1238,7 +1239,7 @@ exports[`Tabs demo -- pane-forceRender 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-tabs uc-fe-tabs-top c0"
+      class="uc-fe-tabs uc-fe-tabs-top uc-fe-tabs-styletype-default c0"
     >
       <div
         class="uc-fe-tabs-bar uc-fe-tabs-top-bar"
@@ -1357,7 +1358,7 @@ exports[`Tabs demo -- pane-forceRender 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-tabs uc-fe-tabs-top c0"
+      class="uc-fe-tabs uc-fe-tabs-top uc-fe-tabs-styletype-default c0"
     >
       <div
         class="uc-fe-tabs-bar uc-fe-tabs-top-bar"
@@ -1480,26 +1481,26 @@ exports[`Tabs demo -- pane-forceRender 1`] = `
 `;
 
 exports[`Tabs demo -- tabs 1`] = `
-.c30 {
+.c29 {
   overflow: hidden;
 }
 
-.c30:before,
-.c30:after {
+.c29:before,
+.c29:after {
   content: ' ';
   display: table;
 }
 
-.c30:after {
+.c29:after {
   clear: both;
 }
 
-.c30 .uc-fe-tabs-bar {
+.c29 .uc-fe-tabs-bar {
   outline: none;
   position: relative;
 }
 
-.c30 .uc-fe-tabs-tabpane {
+.c29 .uc-fe-tabs-tabpane {
   width: 100%;
   height: 100%;
   -webkit-flex-shrink: 0;
@@ -1508,11 +1509,11 @@ exports[`Tabs demo -- tabs 1`] = `
   box-sizing: border-box;
 }
 
-.c30 .uc-fe-tabs-tabpane-inactive {
+.c29 .uc-fe-tabs-tabpane-inactive {
   display: none;
 }
 
-.c30 .uc-fe-tabs-tab {
+.c29 .uc-fe-tabs-tab {
   padding: 8px 12px;
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
@@ -1521,31 +1522,31 @@ exports[`Tabs demo -- tabs 1`] = `
   cursor: pointer;
 }
 
-.c30 .uc-fe-tabs-nav {
+.c29 .uc-fe-tabs-nav {
   display: inline-block;
   white-space: nowrap;
   position: relative;
 }
 
-.c30 .uc-fe-tabs-nav-animated {
+.c29 .uc-fe-tabs-nav-animated {
   -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.35,0,0.25,1);
   -webkit-transition: transform 0.2s cubic-bezier(0.35,0,0.25,1);
   transition: transform 0.2s cubic-bezier(0.35,0,0.25,1);
 }
 
-.c30 .uc-fe-tabs-nav-wrap {
+.c29 .uc-fe-tabs-nav-wrap {
   overflow: hidden;
   height: 100%;
 }
 
-.c30 .uc-fe-tabs-nav-container {
+.c29 .uc-fe-tabs-nav-container {
   position: relative;
   height: 100%;
   box-sizing: border-box;
 }
 
-.c30 .uc-fe-tabs-tab-prev,
-.c30 .uc-fe-tabs-tab-next {
+.c29 .uc-fe-tabs-tab-prev,
+.c29 .uc-fe-tabs-tab-next {
   display: none;
   position: absolute;
   font-size: 16px;
@@ -1556,94 +1557,94 @@ exports[`Tabs demo -- tabs 1`] = `
   cursor: pointer;
 }
 
-.c30 .uc-fe-tabs-tab-btn-disabled {
+.c29 .uc-fe-tabs-tab-btn-disabled {
   pointer-events: none;
   color: #bbb;
 }
 
-.c30 .uc-fe-tabs-tab-prev.uc-fe-tabs-tab-arrow-show,
-.c30 .uc-fe-tabs-tab-next.uc-fe-tabs-tab-arrow-show {
+.c29 .uc-fe-tabs-tab-prev.uc-fe-tabs-tab-arrow-show,
+.c29 .uc-fe-tabs-tab-next.uc-fe-tabs-tab-arrow-show {
   display: inline-block;
 }
 
-.c30 .uc-fe-tabs-tab-disabled {
+.c29 .uc-fe-tabs-tab-disabled {
   cursor: not-allowed;
   pointer-events: none;
   color: #bbb;
 }
 
-.c30 .uc-fe-tabs-ink-bar {
+.c29 .uc-fe-tabs-ink-bar {
   display: none !important;
 }
 
-.c30 .uc-fe-tabs-tab:hover {
+.c29 .uc-fe-tabs-tab:hover {
   background-color: rgba(242,246,252,0.2);
   border-color: rgba(195,202,217,0.2);
 }
 
-.c30 .uc-fe-tabs-tab-active,
-.c30 .uc-fe-tabs-tab-active:hover {
+.c29 .uc-fe-tabs-tab-active,
+.c29 .uc-fe-tabs-tab-active:hover {
   color: #4074e1;
   border-color: #c3cad9;
   background: #f2f6fc;
 }
 
-.c30.uc-fe-tabs .uc-fe-tabs-left-bar {
+.c29.uc-fe-tabs .uc-fe-tabs-left-bar {
   border-right: 1px solid #c3cad9;
   float: left;
   height: 100%;
 }
 
-.c30.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-nav-container {
+.c29.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-nav-container {
   margin-right: -1px;
 }
 
-.c30.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab {
+.c29.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab {
   margin-right: -1px;
 }
 
-.c30.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab:hover {
+.c29.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab:hover {
   border-right-color: #c3cad9;
 }
 
-.c30.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-active,
-.c30.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-active:hover {
+.c29.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-active,
+.c29.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-active:hover {
   border-right-color: #f2f6fc;
 }
 
-.c30.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-ink-bar {
+.c29.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-ink-bar {
   right: 0;
 }
 
-.c30.uc-fe-tabs .uc-fe-tabs-left-content {
+.c29.uc-fe-tabs .uc-fe-tabs-left-content {
   overflow: hidden;
   height: 100%;
 }
 
-.c30.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-nav-scroll,
-.c30.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-nav-scroll {
+.c29.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-nav-scroll,
+.c29.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-nav-scroll {
   height: 100%;
 }
 
-.c30.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-nav-container-scrolling,
-.c30.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-nav-container-scrolling {
+.c29.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-nav-container-scrolling,
+.c29.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-nav-container-scrolling {
   padding: 20px 0;
 }
 
-.c30.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-prev,
-.c30.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-prev {
+.c29.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-prev,
+.c29.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-prev {
   top: 0;
 }
 
-.c30.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-next,
-.c30.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-next {
+.c29.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-next,
+.c29.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-next {
   bottom: 0;
 }
 
-.c30.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-prev,
-.c30.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-prev,
-.c30.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-next,
-.c30.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-next {
+.c29.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-prev,
+.c29.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-prev,
+.c29.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-next,
+.c29.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-next {
   left: 50%;
   margin-left: -10px;
   -webkit-transform: rotate(90deg);
@@ -1651,13 +1652,13 @@ exports[`Tabs demo -- tabs 1`] = `
   transform: rotate(90deg);
 }
 
-.c30.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-prev-icon:before,
-.c30.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-prev-icon:before {
+.c29.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-prev-icon:before,
+.c29.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-prev-icon:before {
   content: '\\2039';
 }
 
-.c30.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-next-icon:before,
-.c30.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-next-icon:before {
+.c29.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-next-icon:before,
+.c29.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-next-icon:before {
   content: '\\203A';
 }
 
@@ -1716,6 +1717,7 @@ exports[`Tabs demo -- tabs 1`] = `
   width: 80px;
   padding: 4px;
   border: 1px solid #c3cad9;
+  border-width: 1px;
   line-height: 16px;
 }
 
@@ -1853,33 +1855,33 @@ exports[`Tabs demo -- tabs 1`] = `
 }
 
 .c6 .c7,
-.c6 .style__RadioTagWrap-VWxju {
+.c6 .style__RadioTagWrap-sc-25j3mq-3 {
   margin-right: 8px;
 }
 
 .c6 .c7:last-child,
-.c6 .style__RadioTagWrap-VWxju:last-child {
+.c6 .style__RadioTagWrap-sc-25j3mq-3:last-child {
   margin-right: 0;
 }
 
-.c6 .style__RadioButtonWrap-sjeVo {
+.c6 .c30 {
   margin-right: -1px;
 }
 
-.c6 .style__RadioButtonWrap-sjeVo:first-child {
+.c6 .c30:first-child {
   border-radius: 2px 0 0 2px;
 }
 
-.c6 .style__RadioButtonWrap-sjeVo:last-child {
+.c6 .c30:last-child {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
 }
 
-.c27 {
+.c26 {
   position: relative;
 }
 
-.c29 {
+.c28 {
   border: none;
   outline: none;
   padding: 0;
@@ -1897,19 +1899,7 @@ exports[`Tabs demo -- tabs 1`] = `
   background: #fff;
   display: inline-block;
   vertical-align: middle;
-}
-
-.c26 {
-  position: absolute;
-  box-sizing: border-box;
-  text-align: center;
-  border-radius: 2px;
-  border-style: solid;
-  color: inherit;
-  cursor: pointer;
-  background: #fff;
-  display: inline-block;
-  vertical-align: middle;
+  border-color: #c3cad9;
 }
 
 .c22 {
@@ -1924,38 +1914,33 @@ exports[`Tabs demo -- tabs 1`] = `
   padding-right: 22px;
 }
 
-.c22 .c28 {
+.c22 .c27 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c22 .c28::-webkit-input-placeholder {
+.c22 .c27::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c22 .c28::-moz-placeholder {
+.c22 .c27::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c22 .c28:-ms-input-placeholder {
+.c22 .c27:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c22 .c28::placeholder {
+.c22 .c27::placeholder {
   color: #abb4c3;
-}
-
-.c22 .c23,
-.c22 .c25 {
-  border-color: #c3cad9;
 }
 
 .c22:hover {
   border-color: #4683e6;
 }
 
-.c22 .c28 {
+.c22 .c27 {
   padding: 0 0 0 8px;
   text-align: left;
   width: 34px;
@@ -2009,7 +1994,8 @@ exports[`Tabs demo -- tabs 1`] = `
             class="c7 c8"
           >
             <i
-              class="icon__cbox-ed c9 c10 "
+              class="c9 c10 uc-fe-icon icon__cbox-ed "
+              type="cbox-ed"
             />
             left
           </div>
@@ -2017,7 +2003,8 @@ exports[`Tabs demo -- tabs 1`] = `
             class="c7 c11"
           >
             <i
-              class="icon__circle c9 c10 "
+              class="c9 c10 uc-fe-icon icon__circle "
+              type="circle"
             />
             right
           </div>
@@ -2025,7 +2012,8 @@ exports[`Tabs demo -- tabs 1`] = `
             class="c7 c11"
           >
             <i
-              class="icon__circle c9 c10 "
+              class="c9 c10 uc-fe-icon icon__circle "
+              type="circle"
             />
             top
           </div>
@@ -2033,7 +2021,8 @@ exports[`Tabs demo -- tabs 1`] = `
             class="c7 c11"
           >
             <i
-              class="icon__circle c9 c10 "
+              class="c9 c10 uc-fe-icon icon__circle "
+              type="circle"
             />
             bottom
           </div>
@@ -2061,7 +2050,8 @@ exports[`Tabs demo -- tabs 1`] = `
             class="c7 c8"
           >
             <i
-              class="icon__cbox-ed c9 c10 "
+              class="c9 c10 uc-fe-icon icon__cbox-ed "
+              type="cbox-ed"
             />
             default
           </div>
@@ -2069,7 +2059,8 @@ exports[`Tabs demo -- tabs 1`] = `
             class="c7 c11"
           >
             <i
-              class="icon__circle c9 c10 "
+              class="c9 c10 uc-fe-icon icon__circle "
+              type="circle"
             />
             ink
           </div>
@@ -2130,32 +2121,34 @@ exports[`Tabs demo -- tabs 1`] = `
         span="9"
       >
         <div
-          class="c22"
+          class="uc-fe-numberinput uc-fe-numberinput-styletype-default c22"
         >
           <div>
             <span
-              class="c23 c24"
+              class="c23 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c24"
               unselectable="unselectable"
             >
               <i
-                class="icon__caret-up "
+                class="uc-fe-icon icon__caret-up "
+                type="caret-up"
               />
             </span>
             <span
-              class="c25 c26"
+              class="c25 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c24"
               unselectable="unselectable"
             >
               <i
-                class="icon__caret-down "
+                class="uc-fe-icon icon__caret-down "
+                type="caret-down"
               />
             </span>
           </div>
           <div
-            class="c27"
+            class="uc-fe-numberinput-input-wrap c26"
           >
             <input
               autocomplete="off"
-              class="c28 c29"
+              class="c27 uc-fe-numberinput-input c28"
               min="0"
               step="1"
               value="10"
@@ -2178,32 +2171,34 @@ exports[`Tabs demo -- tabs 1`] = `
         span="9"
       >
         <div
-          class="c22"
+          class="uc-fe-numberinput uc-fe-numberinput-styletype-default c22"
         >
           <div>
             <span
-              class="c23 c24"
+              class="c23 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c24"
               unselectable="unselectable"
             >
               <i
-                class="icon__caret-up "
+                class="uc-fe-icon icon__caret-up "
+                type="caret-up"
               />
             </span>
             <span
-              class="c25 c26"
+              class="c25 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c24"
               unselectable="unselectable"
             >
               <i
-                class="icon__caret-down "
+                class="uc-fe-icon icon__caret-down "
+                type="caret-down"
               />
             </span>
           </div>
           <div
-            class="c27"
+            class="uc-fe-numberinput-input-wrap c26"
           >
             <input
               autocomplete="off"
-              class="c28 c29"
+              class="c27 uc-fe-numberinput-input c28"
               max="9"
               min="0"
               step="1"
@@ -2218,7 +2213,7 @@ exports[`Tabs demo -- tabs 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-tabs uc-fe-tabs-left c30"
+      class="uc-fe-tabs uc-fe-tabs-left uc-fe-tabs-styletype-default c29"
       style="height:300px;"
     >
       <div
@@ -2792,7 +2787,7 @@ exports[`Tabs demo -- tabs-child 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-tabs uc-fe-tabs-top c0"
+      class="uc-fe-tabs uc-fe-tabs-top uc-fe-tabs-styletype-default c0"
     >
       <div
         class="uc-fe-tabs-bar uc-fe-tabs-top-bar"
@@ -2889,7 +2884,7 @@ exports[`Tabs demo -- tabs-child 1`] = `
             tabindex="0"
           />
           <div
-            class="uc-fe-tabs uc-fe-tabs-left c1"
+            class="uc-fe-tabs uc-fe-tabs-left uc-fe-tabs-styletype-default c1"
           >
             <div
               class="uc-fe-tabs-bar uc-fe-tabs-left-bar"
@@ -3220,7 +3215,7 @@ exports[`Tabs demo -- tabs-destroyInactiveTabPane 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-tabs uc-fe-tabs-top c0"
+      class="uc-fe-tabs uc-fe-tabs-top uc-fe-tabs-styletype-default c0"
     >
       <div
         class="uc-fe-tabs-bar uc-fe-tabs-top-bar"
@@ -3997,7 +3992,7 @@ exports[`Tabs demo -- tabs-destroyInactiveTabPane 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-tabs uc-fe-tabs-top c0"
+      class="uc-fe-tabs uc-fe-tabs-top uc-fe-tabs-styletype-default c0"
     >
       <div
         class="uc-fe-tabs-bar uc-fe-tabs-top-bar"
@@ -5493,7 +5488,7 @@ exports[`Tabs demo -- tabs-position 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-tabs uc-fe-tabs-left c0"
+      class="uc-fe-tabs uc-fe-tabs-left uc-fe-tabs-styletype-default c0"
     >
       <div
         class="uc-fe-tabs-bar uc-fe-tabs-left-bar"
@@ -5612,7 +5607,7 @@ exports[`Tabs demo -- tabs-position 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-tabs uc-fe-tabs-right c1"
+      class="uc-fe-tabs uc-fe-tabs-right uc-fe-tabs-styletype-default c1"
     >
       <div
         class="uc-fe-tabs-bar uc-fe-tabs-right-bar"
@@ -5731,7 +5726,7 @@ exports[`Tabs demo -- tabs-position 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-tabs uc-fe-tabs-top c2"
+      class="uc-fe-tabs uc-fe-tabs-top uc-fe-tabs-styletype-default c2"
     >
       <div
         class="uc-fe-tabs-bar uc-fe-tabs-top-bar"
@@ -5850,7 +5845,7 @@ exports[`Tabs demo -- tabs-position 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-tabs uc-fe-tabs-bottom c3"
+      class="uc-fe-tabs uc-fe-tabs-bottom uc-fe-tabs-styletype-default c3"
     >
       <div
         role="presentation"
@@ -6331,7 +6326,7 @@ exports[`Tabs demo -- tabs-scroll 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-tabs uc-fe-tabs-top c0"
+      class="uc-fe-tabs uc-fe-tabs-top uc-fe-tabs-styletype-default c0"
     >
       <div
         class="uc-fe-tabs-bar uc-fe-tabs-top-bar"
@@ -7108,7 +7103,7 @@ exports[`Tabs demo -- tabs-scroll 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-tabs uc-fe-tabs-left c1"
+      class="uc-fe-tabs uc-fe-tabs-left uc-fe-tabs-styletype-default c1"
       style="height:300px;"
     >
       <div
@@ -8245,7 +8240,7 @@ exports[`Tabs demo -- tabs-styleType 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-tabs uc-fe-tabs-top c0"
+      class="uc-fe-tabs uc-fe-tabs-top uc-fe-tabs-styletype-default c0"
     >
       <div
         class="uc-fe-tabs-bar uc-fe-tabs-top-bar"
@@ -8364,7 +8359,7 @@ exports[`Tabs demo -- tabs-styleType 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-tabs uc-fe-tabs-top c1"
+      class="uc-fe-tabs uc-fe-tabs-top uc-fe-tabs-styletype-ink c1"
     >
       <div
         class="uc-fe-tabs-bar uc-fe-tabs-top-bar"
@@ -8664,7 +8659,7 @@ exports[`Tabs demo -- tabs-uncontrolled 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-tabs uc-fe-tabs-top c0"
+      class="uc-fe-tabs uc-fe-tabs-top uc-fe-tabs-styletype-default c0"
     >
       <div
         class="uc-fe-tabs-bar uc-fe-tabs-top-bar"
@@ -8783,7 +8778,7 @@ exports[`Tabs demo -- tabs-uncontrolled 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-tabs uc-fe-tabs-top c0"
+      class="uc-fe-tabs uc-fe-tabs-top uc-fe-tabs-styletype-default c0"
     >
       <div
         class="uc-fe-tabs-bar uc-fe-tabs-top-bar"

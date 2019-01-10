@@ -85,6 +85,7 @@ const styles = ({
     },
     themeButton: {
         display: 'inline-block',
+        cursor: 'pointer',
         width: '4em',
         height: '4em',
         borderRadius: '2em',

@@ -58,7 +58,6 @@ class DatePicker extends Component {
         zIndex: PropTypes.number
     };
     static defaultProps = {
-        defaultValue: moment(),
         onChange: () => {},
         size: 'md',
         zIndex: 100

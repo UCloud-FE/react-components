@@ -1,11 +1,20 @@
 import styled from 'styled-components';
 
-export const BadgeWrap = styled.div`
+import config from 'src/config';
+
+const { prefixCls: _prefixCls } = config;
+const prefixCls = _prefixCls + '-badge';
+
+export const BadgeWrap = styled.div.attrs({
+    className: prefixCls
+})`
     position: relative;
     display: inline-block;
 `;
 
-export const BaseBadge = styled.span`
+export const BaseBadge = styled.span.attrs({
+    className: prefixCls + '-badge'
+})`
     display: inline-block;
     min-height: 20px;
     line-height: 20px;
@@ -17,7 +26,9 @@ export const BaseBadge = styled.span`
     color: white;
 `;
 
-export const DotBadge = styled(BaseBadge)`
+export const DotBadge = styled(BaseBadge).attrs({
+    className: prefixCls + '-badge-dot'
+})`
     width: 10px;
     height: 10px;
     padding: 0;

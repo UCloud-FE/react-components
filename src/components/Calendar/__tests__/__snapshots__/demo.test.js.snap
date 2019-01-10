@@ -146,8 +146,9 @@ exports[`Calendar demo -- base 1`] = `
 .c0 .uc-fe-calendar-year-panel-cell,
 .c0 .uc-fe-calendar-decade-panel-cell {
   cursor: pointer;
-  height: 35px;
-  line-height: 35px;
+  height: 25px;
+  line-height: 25px;
+  padding: 5px;
   text-align: center;
 }
 
@@ -196,14 +197,20 @@ exports[`Calendar demo -- base 1`] = `
   margin: auto;
 }
 
-.c0 .uc-fe-calendar-selected-day {
+.c0 .uc-fe-calendar-selected-day.uc-fe-calendar-today::after,
+.c0 .uc-fe-calendar-selected-date.uc-fe-calendar-today::after,
+.c0 .uc-fe-calendar-month-panel-selected-cell.uc-fe-calendar-month-panel-current-cell::after {
+  display: none;
+}
+
+.c0 .uc-fe-calendar-selected-day .uc-fe-calendar-date {
   background: #eaf3fd;
 }
 
-.c0 .uc-fe-calendar-selected-date,
-.c0 .uc-fe-calendar-month-panel-selected-cell,
-.c0 .uc-fe-calendar-year-panel-selected-cell,
-.c0 .uc-fe-calendar-decade-panel-selected-cell {
+.c0 .uc-fe-calendar-selected-date .uc-fe-calendar-date,
+.c0 .uc-fe-calendar-month-panel-selected-cell .uc-fe-calendar-month-panel-month,
+.c0 .uc-fe-calendar-year-panel-selected-cell .uc-fe-calendar-year-panel-year,
+.c0 .uc-fe-calendar-decade-panel-selected-cell .uc-fe-calendar-decade-panel-decade {
   color: #fff;
   background: #4683e6;
 }
@@ -1093,8 +1100,9 @@ exports[`Calendar demo -- controlled 1`] = `
 .c0 .uc-fe-calendar-year-panel-cell,
 .c0 .uc-fe-calendar-decade-panel-cell {
   cursor: pointer;
-  height: 35px;
-  line-height: 35px;
+  height: 25px;
+  line-height: 25px;
+  padding: 5px;
   text-align: center;
 }
 
@@ -1143,14 +1151,20 @@ exports[`Calendar demo -- controlled 1`] = `
   margin: auto;
 }
 
-.c0 .uc-fe-calendar-selected-day {
+.c0 .uc-fe-calendar-selected-day.uc-fe-calendar-today::after,
+.c0 .uc-fe-calendar-selected-date.uc-fe-calendar-today::after,
+.c0 .uc-fe-calendar-month-panel-selected-cell.uc-fe-calendar-month-panel-current-cell::after {
+  display: none;
+}
+
+.c0 .uc-fe-calendar-selected-day .uc-fe-calendar-date {
   background: #eaf3fd;
 }
 
-.c0 .uc-fe-calendar-selected-date,
-.c0 .uc-fe-calendar-month-panel-selected-cell,
-.c0 .uc-fe-calendar-year-panel-selected-cell,
-.c0 .uc-fe-calendar-decade-panel-selected-cell {
+.c0 .uc-fe-calendar-selected-date .uc-fe-calendar-date,
+.c0 .uc-fe-calendar-month-panel-selected-cell .uc-fe-calendar-month-panel-month,
+.c0 .uc-fe-calendar-year-panel-selected-cell .uc-fe-calendar-year-panel-year,
+.c0 .uc-fe-calendar-decade-panel-selected-cell .uc-fe-calendar-decade-panel-decade {
   color: #fff;
   background: #4683e6;
 }
@@ -2778,8 +2792,9 @@ exports[`Calendar demo -- month 1`] = `
 .c0 .uc-fe-calendar-year-panel-cell,
 .c0 .uc-fe-calendar-decade-panel-cell {
   cursor: pointer;
-  height: 35px;
-  line-height: 35px;
+  height: 25px;
+  line-height: 25px;
+  padding: 5px;
   text-align: center;
 }
 
@@ -2828,14 +2843,20 @@ exports[`Calendar demo -- month 1`] = `
   margin: auto;
 }
 
-.c0 .uc-fe-calendar-selected-day {
+.c0 .uc-fe-calendar-selected-day.uc-fe-calendar-today::after,
+.c0 .uc-fe-calendar-selected-date.uc-fe-calendar-today::after,
+.c0 .uc-fe-calendar-month-panel-selected-cell.uc-fe-calendar-month-panel-current-cell::after {
+  display: none;
+}
+
+.c0 .uc-fe-calendar-selected-day .uc-fe-calendar-date {
   background: #eaf3fd;
 }
 
-.c0 .uc-fe-calendar-selected-date,
-.c0 .uc-fe-calendar-month-panel-selected-cell,
-.c0 .uc-fe-calendar-year-panel-selected-cell,
-.c0 .uc-fe-calendar-decade-panel-selected-cell {
+.c0 .uc-fe-calendar-selected-date .uc-fe-calendar-date,
+.c0 .uc-fe-calendar-month-panel-selected-cell .uc-fe-calendar-month-panel-month,
+.c0 .uc-fe-calendar-year-panel-selected-cell .uc-fe-calendar-year-panel-year,
+.c0 .uc-fe-calendar-decade-panel-selected-cell .uc-fe-calendar-decade-panel-decade {
   color: #fff;
   background: #4683e6;
 }
@@ -2843,6 +2864,10 @@ exports[`Calendar demo -- month 1`] = `
 .c0 .uc-fe-calendar-month-panel-year-select-arrow,
 .c0 .uc-fe-calendar-year-panel-decade-select-arrow {
   display: none;
+}
+
+.c0 .uc-fe-calendar-month-panel-body {
+  padding-top: 5px;
 }
 
 <div>
@@ -3250,8 +3275,9 @@ exports[`Calendar demo -- rules 1`] = `
 .c0 .uc-fe-calendar-year-panel-cell,
 .c0 .uc-fe-calendar-decade-panel-cell {
   cursor: pointer;
-  height: 35px;
-  line-height: 35px;
+  height: 25px;
+  line-height: 25px;
+  padding: 5px;
   text-align: center;
 }
 
@@ -3300,14 +3326,20 @@ exports[`Calendar demo -- rules 1`] = `
   margin: auto;
 }
 
-.c0 .uc-fe-calendar-selected-day {
+.c0 .uc-fe-calendar-selected-day.uc-fe-calendar-today::after,
+.c0 .uc-fe-calendar-selected-date.uc-fe-calendar-today::after,
+.c0 .uc-fe-calendar-month-panel-selected-cell.uc-fe-calendar-month-panel-current-cell::after {
+  display: none;
+}
+
+.c0 .uc-fe-calendar-selected-day .uc-fe-calendar-date {
   background: #eaf3fd;
 }
 
-.c0 .uc-fe-calendar-selected-date,
-.c0 .uc-fe-calendar-month-panel-selected-cell,
-.c0 .uc-fe-calendar-year-panel-selected-cell,
-.c0 .uc-fe-calendar-decade-panel-selected-cell {
+.c0 .uc-fe-calendar-selected-date .uc-fe-calendar-date,
+.c0 .uc-fe-calendar-month-panel-selected-cell .uc-fe-calendar-month-panel-month,
+.c0 .uc-fe-calendar-year-panel-selected-cell .uc-fe-calendar-year-panel-year,
+.c0 .uc-fe-calendar-decade-panel-selected-cell .uc-fe-calendar-decade-panel-decade {
   color: #fff;
   background: #4683e6;
 }

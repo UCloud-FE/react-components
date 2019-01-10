@@ -1,47 +1,80 @@
 import styled, { css } from 'styled-components';
+import classnames from 'classnames';
 
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 import { inlineBlockWithVerticalMixin } from 'src/style';
+import config from 'src/config';
+
+const { prefixCls: _prefixCls } = config;
+
+export const prefixCls = _prefixCls + '-numberinput';
 
 /* stylelint-disable no-duplicate-selectors, selector-type-no-unknown, no-descending-specificity */
 
-export const InputWrap = styled.div`
+export const InputWrap = styled.div.attrs({
+    className: `${prefixCls}-input-wrap`
+})`
     position: relative;
 `;
 
-export const Input = styled.input`
+export const Input = styled.input.attrs({
+    className: `${prefixCls}-input`
+})`
     border: none;
     outline: none;
     padding: 0;
     color: inherit;
 `;
 
-export const InputSuffix = styled.span`
+export const InputSuffix = styled.span.attrs({
+    className: `${prefixCls}-suffix`
+})`
     color: #c3cad9;
     margin: 0 4px;
 
     ${inlineBlockWithVerticalMixin};
 `;
 
-const handlerMixin = css`
-    position: absolute;
-    box-sizing: border-box;
-    text-align: center;
-    border-radius: 2px;
-    border-style: solid;
-    color: inherit;
-    cursor: pointer;
-    background: #fff;
+const Handler = styled.span.attrs({
+    className: ({ disabled }) =>
+        classnames({
+            [`${prefixCls}-handler`]: true,
+            [`${prefixCls}-handler-disabled`]: disabled
+        })
+})(
+    ({ disabled, theme: { colorMap } }) => css`
+        position: absolute;
+        box-sizing: border-box;
+        text-align: center;
+        border-radius: 2px;
+        border-style: solid;
+        color: inherit;
+        cursor: pointer;
+        background: #fff;
 
-    ${inlineBlockWithVerticalMixin};
+        ${inlineBlockWithVerticalMixin};
+
+        border-color: ${colorMap.default.border};
+
+        ${disabled &&
+            css`
+                cursor: not-allowed;
+                pointer-events: none;
+                color: ${colorMap.disabled.text};
+            `};
+    `
+);
+
+export const HandlerUp = styled(Handler).attrs({
+    className: `${prefixCls}-handler-up`
+})`
+    /* empty */
 `;
 
-export const HandlerUp = styled.span`
-    ${handlerMixin};
-`;
-
-export const HandlerDown = styled.span`
-    ${handlerMixin};
+export const HandlerDown = styled(Handler).attrs({
+    className: `${prefixCls}-handler-down`
+})`
+    /* empty */
 `;
 
 const propsMixin = ({
@@ -75,16 +108,6 @@ const propsMixin = ({
         &::placeholder {
             color: ${colorList.placeholder};
         }
-    }
-
-    ${HandlerUp}, ${HandlerDown} {
-        border-color: ${colorMap.default.border};
-
-        ${disabled &&
-            css`
-                cursor: not-allowed;
-                pointer-events: none;
-            `};
     }
 
     ${styleType === 'default' &&
@@ -256,11 +279,15 @@ const propsMixin = ({
         `};
 `;
 
-export const NumberInputWrap = styled.div`
+export const NumberInputWrap = styled.div.attrs({
+    className: ({ styleType, focused }) =>
+        classnames(prefixCls, `${prefixCls}-styletype-${styleType}`, focused && `${prefixCls}-focused`)
+})`
     position: relative;
     box-sizing: border-box;
     border-radius: 2px;
     ${inlineBlockWithVerticalMixin};
     ${propsMixin};
+    ${({ theme: { NumberInput: numberInputTheme = {} } }) => numberInputTheme['&']};
 `;
-addDefaultThemeProps(NumberInputWrap);
+addDefaultThemeProps(NumberInputWrap, Handler);
