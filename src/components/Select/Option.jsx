@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import { OptionWrap } from './style';
 import { SelectContext } from './Select';
 
-class Option extends Component {
+class Option extends PureComponent {
     static propTypes = {
         /** 值 */
         value: PropTypes.any,

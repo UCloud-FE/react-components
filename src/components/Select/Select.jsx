@@ -173,7 +173,7 @@ class Select extends Component {
             }
         }
     };
-    renderPopup = theme => {
+    renderPopup = () => {
         const { search, children, onChange, multiple, showSelectAll, value, options } = this.props;
         const { searchValue, itemTree } = this.state;
         const Options = this.renderOptions(options);
