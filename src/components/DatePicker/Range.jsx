@@ -181,7 +181,7 @@ class Range extends Component {
             value: 'custom'
         });
         const { range, custom: _c } = rules;
-        let modifyAble = option === 'custom';
+        let readonly = option !== 'custom';
         let [start, end] = value;
         start = moment(+start);
         end = moment(+end);
@@ -257,7 +257,7 @@ class Range extends Component {
                     onVisibleChange={this.handleVisibleChange}
                     trigger={['click']}
                 >
-                    <RangeDateWrap size={size} modifyAble={modifyAble} disabled={disabled}>
+                    <RangeDateWrap size={size} readonly={readonly} disabled={disabled}>
                         <span>{start.format(rangeFormat || formatString[type])}</span>
                         <RangeDateSeparator />
                         <span>{end.format(rangeFormat || formatString[type])}</span>

@@ -5,7 +5,7 @@
         "stylelint './src/style/*.js'",
         "stylelint './src/components/**/*.(jsx|js)'",
         "eslint",
-        "jest --bail --findRelatedTests"
+        "jest --bail --findRelatedTests --collectCoverage"
     ],
     "*.{json,css,md}": ["prettier --write", "git add"]
 }

@@ -119,9 +119,14 @@ export const RangeSelect = styled(Select)`
 `;
 
 export const RangeDateWrap = styled.div.attrs({
-    className: `${prefixCls}-range-date-wrap`
+    className: ({ readonly, disabled }) =>
+        classnames(
+            `${prefixCls}-range-date-wrap`,
+            readonly && `${prefixCls}-range-date-wrap-readonly`,
+            disabled && `${prefixCls}-range-date-wrap-disabled`
+        )
 })(
-    ({ theme: { Height, HeightNumber, colorMap }, size, modifyAble, disabled }) => css`
+    ({ theme: { Height, HeightNumber, colorMap }, size, readonly, disabled }) => css`
         border: 1px solid ${colorMap.default.border};
         padding: 0 8px;
         border-radius: 2px;
@@ -133,23 +138,24 @@ export const RangeDateWrap = styled.div.attrs({
 
         ${inlineBlockWithVerticalMixin};
 
-        ${disabled &&
+        ${readonly &&
             css`
                 pointer-events: none;
-                background: ${colorMap.disabled.background};
-                border-color: ${colorMap.disabled.border};
-                color: ${colorMap.disabled.text};
-            `};
-
-        ${!modifyAble &&
-            css`
-                pointer-events: none;
-                border: none;
+                border-width: 0;
                 line-height: ${Height[size]};
 
                 ${/* sc-sel */ PickerIcon} {
                     display: none;
                 }
+            `};
+
+        ${disabled &&
+            css`
+                pointer-events: none;
+                background: ${colorMap.disabled.background};
+                border-color: ${colorMap.disabled.border};
+                border-width: 1px;
+                color: ${colorMap.disabled.text};
             `};
     `
 );
