@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import RcAlign from 'rc-align';
 import _ from 'lodash';
 
-import { BadgeWrap, BaseBadge, DotBadge } from './style';
+import { Wrap, BadgeWrap, BaseBadge, DotBadge } from './style';
 import placements from './placements';
 
 const Placement = _.keys(placements);
@@ -55,18 +55,18 @@ class Badge extends Component {
         /* eslint-enable no-unused-vars */
         const badge = this.renderBadge();
         if (!children) {
-            return <BadgeWrap {...rest}>{badge}</BadgeWrap>;
+            return <Wrap {...rest}>{badge}</Wrap>;
         }
         /* eslint-disable react/no-find-dom-node */
         return (
-            <BadgeWrap {...rest}>
+            <Wrap {...rest}>
                 {children}
                 {hideWhenZero && value === 0 ? null : (
                     <RcAlign ref={innerRef} target={() => ReactDOM.findDOMNode(this)} align={placements[placement]}>
-                        <div style={{ position: 'absolute' }}>{badge}</div>
+                        <BadgeWrap>{badge}</BadgeWrap>
                     </RcAlign>
                 )}
-            </BadgeWrap>
+            </Wrap>
         );
         /* eslint-enable react/no-find-dom-node */
     }
