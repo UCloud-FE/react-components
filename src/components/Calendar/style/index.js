@@ -137,6 +137,16 @@ export const calendarMixin = ({ theme: { colorMap, colorList, Calendar: calendar
         padding: 5px;
         text-align: center;
     }
+    .${prefixCls}-cell
+        .${prefixCls}-date,
+        .${prefixCls}-month-panel-cell
+        .${prefixCls}-month-panel-month,
+        .${prefixCls}-year-panel-cell
+        .${prefixCls}-year-panel-year,
+        .${prefixCls}-decade-panel-cell
+        .${prefixCls}-decade-panel-decade {
+        display: block;
+    }
     .${prefixCls}-last-month-cell,
         .${prefixCls}-month-panel-last-year-cell,
         .${prefixCls}-year-panel-last-decade-cell,
