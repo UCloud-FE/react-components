@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.0-beta.4"></a>
+
+# [0.4.0-beta.4](https://github.com/UCloud-FE/react-components/compare/v0.4.0-beta.3...v0.4.0-beta.4) (2019-01-14)
+
+### Bug Fixes
+
+*   **ThemeProvider:** fix missing theme props after generate material ([7fd09fb](https://github.com/UCloud-FE/react-components/commit/7fd09fb)), closes [#82](https://github.com/UCloud-FE/react-components/issues/82)
+
 <a name="0.4.0-beta.3"></a>
 
 # [0.4.0-beta.3](https://github.com/UCloud-FE/react-components/compare/v0.4.0-beta.2...v0.4.0-beta.3) (2019-01-10)
