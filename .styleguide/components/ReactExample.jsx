@@ -12,6 +12,16 @@ import generateMaterialTheme from 'src/components/ThemeProvider/material';
 const materialTheme = generateMaterialTheme({
     colorList: {
         primary: '#3555f6'
+    },
+    Height: {
+        sm: '24px',
+        md: '28px',
+        lg: '32px'
+    },
+    Padding: {
+        sm: '8px',
+        md: '8px',
+        lg: '16px'
     }
 });
 

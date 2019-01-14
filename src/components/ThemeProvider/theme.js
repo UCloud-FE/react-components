@@ -35,7 +35,7 @@ const componentThemeGeneratorMap = {
     Tooltip
 };
 
-const extend = (source, target) => {
+export const extend = (source, target) => {
     const cloneSource = JSON.parse(JSON.stringify(source));
     const _extend = (source, target) => {
         _.each(target, (v, k) => {
