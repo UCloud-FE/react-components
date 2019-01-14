@@ -1,4 +1,4 @@
-import { generateTheme } from './theme';
+import { generateTheme, extend } from './theme';
 import config from 'src/config';
 
 const { prefixCls } = config;
@@ -20,22 +20,12 @@ const defaultMaterialVars = {
     transitionFlat: '.16s cubic-bezier(.4,0,.2,1)'
 };
 
-export default theme => {
-    theme = generateTheme(theme);
-    const { colorList, colorMap, materialVars = defaultMaterialVars } = theme;
+export default originTheme => {
+    const theme = generateTheme(originTheme);
+    let { colorList, colorMap, materialVars } = theme;
+    materialVars = { ...defaultMaterialVars, ...materialVars };
 
-    const materialTheme = {
-        Height: {
-            sm: '24px',
-            md: '28px',
-            lg: '32px'
-        },
-        Padding: {
-            sm: '8px',
-            md: '8px',
-            lg: '16px'
-        }
-    };
+    const materialTheme = {};
     materialTheme['Input'] = {
         '&': {
             input: {
@@ -296,5 +286,5 @@ export default theme => {
             }
         }
     };
-    return materialTheme;
+    return extend(extend(theme, materialTheme), originTheme);
 };
