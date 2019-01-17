@@ -2,37 +2,55 @@ import styled, { css } from 'styled-components';
 
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 import { clearFixMixin } from 'src/style';
+import config from 'src/config';
+
+const { prefixCls: _prefixCls } = config;
+const prefixCls = _prefixCls + '-card';
 
 const sharedGutter = css`
     padding: 0 16px;
     margin-top: 12px;
 `;
 
-export const HeaderWrap = styled.div`
-    line-height: 28px;
-    font-weight: bold;
+export const HeaderWrap = styled.div.attrs({
+    className: prefixCls + '-header'
+})`
     ${clearFixMixin};
     ${sharedGutter};
 `;
 
-export const CommentWrap = styled.div`
-    display: block;
+export const TitleWrap = styled.div.attrs({
+    className: prefixCls + '-title'
+})`
+    line-height: 28px;
+    font-weight: bold;
+`;
+
+export const CommentWrap = styled.div.attrs({
+    className: prefixCls + '-comment'
+})`
     line-height: 22px;
     font-weight: normal;
 `;
 
-export const ActionWrap = styled.div`
+export const ActionWrap = styled.div.attrs({
+    className: prefixCls + '-action'
+})`
     line-height: 28px;
     ${clearFixMixin};
     ${sharedGutter};
 `;
 
-export const ContentWrap = styled.div`
+export const ContentWrap = styled.div.attrs({
+    className: prefixCls + '-content'
+})`
     min-height: 30px;
     ${sharedGutter};
 `;
 
-export const FooterWrap = styled.div`
+export const FooterWrap = styled.div.attrs({
+    className: prefixCls + '-footer'
+})`
     line-height: 1;
     ${sharedGutter};
     padding-top: 12px;
@@ -69,7 +87,9 @@ const themeMixin = ({ theme: { colorList, colorMap, fontSize, titleFontSize, Car
 `;
 /* stylelint-enable no-duplicate-selectors */
 
-export const CardWrap = styled.div`
+export const CardWrap = styled.div.attrs({
+    className: prefixCls
+})`
     box-sizing: border-box;
     border-radius: 4px;
     text-align: left;
