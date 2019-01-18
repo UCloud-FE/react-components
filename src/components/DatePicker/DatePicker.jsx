@@ -10,7 +10,7 @@ import { animationPrefixCls } from 'src/style/globalAnimation';
 
 import { isDateDisabled, getValidDate } from './utils';
 import {
-    prefixCls,
+    pickerPrefixCls,
     PickerWrap,
     PickerContainer,
     DateWrap,
@@ -163,7 +163,7 @@ class DatePicker extends Component {
             <PickerContainer {...rest}>
                 {date.show !== false && (
                     <PickerWrap
-                        prefixCls={prefixCls}
+                        prefixCls={pickerPrefixCls}
                         transitionName={`${animationPrefixCls}-fade`}
                         calendar={<Calendar rules={rules} />}
                         getCalendarContainer={triggerNode => triggerNode.parentNode}

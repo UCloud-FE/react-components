@@ -8,7 +8,7 @@ import uncontrolledDecorator from 'src/decorators/uncontrolled';
 import { animationPrefixCls } from 'src/style/globalAnimation';
 
 import { isDateDisabled, getValidDate } from './utils';
-import { prefixCls, PickerWrap, PickerContainer, DateWrap, DateSpan, PickerIcon } from './style';
+import { monthPickerPrefixCls, PickerWrap, PickerContainer, DateWrap, DateSpan, PickerIcon } from './style';
 import { Size } from './DatePicker';
 
 @uncontrolledDecorator({})
@@ -94,9 +94,9 @@ class Month extends Component {
         const value = moment(_v);
 
         return (
-            <PickerContainer {...rest}>
+            <PickerContainer isMonth {...rest}>
                 <PickerWrap
-                    prefixCls={prefixCls}
+                    prefixCls={monthPickerPrefixCls}
                     transitionName={`${animationPrefixCls}-fade`}
                     calendar={<MonthCalendar rules={rules} />}
                     getCalendarContainer={triggerNode => triggerNode.parentNode}
