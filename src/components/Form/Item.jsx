@@ -1,15 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Col } from 'components/Grid';
-
-import { ItemWrap, LabelWrap } from './style';
+import { ItemWrap, LabelWrap, ControllerWrap } from './style';
 
 const Item = ({ label, children, labelCol, controllerCol, ...rest }) => {
     return (
         <ItemWrap {...rest}>
             <LabelWrap {...labelCol}>{label}</LabelWrap>
-            <Col {...controllerCol}>{children}</Col>
+            <ControllerWrap {...controllerCol}>{children}</ControllerWrap>
         </ItemWrap>
     );
 };
