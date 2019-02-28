@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.0-beta.5"></a>
+
+# [0.4.0-beta.5](https://github.com/UCloud-FE/react-components/compare/v0.4.0-beta.4...v0.4.0-beta.5) (2019-02-28)
+
+### Features
+
+*   **Card:** add checkbox & radio with card style ([e6f1dbc](https://github.com/UCloud-FE/react-components/commit/e6f1dbc)), closes [#86](https://github.com/UCloud-FE/react-components/issues/86)
+
 <a name="0.4.0-beta.4"></a>
 
 # [0.4.0-beta.4](https://github.com/UCloud-FE/react-components/compare/v0.4.0-beta.3...v0.4.0-beta.4) (2019-01-14)
