@@ -24,6 +24,8 @@ class Group extends Component {
         disabled: PropTypes.bool,
         /** 尺寸 */
         size: PropTypes.oneOf(Checkbox.Size),
+        /** 样式风格 */
+        styleType: PropTypes.oneOf(Checkbox.StyleType),
         /** @ignore */
         children: PropTypes.node,
         /** @ignore */
@@ -64,11 +66,12 @@ class Group extends Component {
             multiple,
             disabled,
             size,
+            styleType,
             ...rest
         } = this.props;
         /* eslint-enable no-unused-vars */
         return (
-            <CheckboxContext.Provider value={{ ..._.pick(this.props, ['disabled', 'size']) }}>
+            <CheckboxContext.Provider value={{ ..._.pick(this.props, ['disabled', 'size', 'styleType']) }}>
                 <CheckboxGroupWrap {...rest}>{this.renderOptions()}</CheckboxGroupWrap>
             </CheckboxContext.Provider>
         );

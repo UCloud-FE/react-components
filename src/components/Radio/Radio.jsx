@@ -5,12 +5,13 @@ import createReactContext from 'create-react-context';
 import itemDecorator from 'decorators/selectableWithStore/item';
 import uncontrolledDecorator from 'decorators/uncontrolled';
 import { RadioWrap, RadioIcon, RadioButtonWrap, RadioTagWrap } from 'components/Radio/style';
+import Card from './Card';
 
 export const StoreContext = createReactContext();
 export const RadioContext = createReactContext();
 
 const Size = ['sm', 'md', 'lg'];
-const StyleType = ['default', 'button', 'tag'];
+const StyleType = ['default', 'button', 'tag', 'card'];
 
 @uncontrolledDecorator({ valueName: 'checked' })
 @itemDecorator({ StoreContext })
@@ -32,8 +33,12 @@ class Radio extends Component {
         value: PropTypes.any,
         /** 样式风格 */
         styleType: PropTypes.oneOf(StyleType),
-        /** 尺寸 */
+        /** 尺寸，styleType为card时无效 */
         size: PropTypes.oneOf(Size),
+        /** 标题，styleType为card时使用 */
+        title: PropTypes.node,
+        /** 禁用标识，styleType为card时使用 */
+        disabledLabel: PropTypes.node,
         /** @ignore */
         multiple: PropTypes.bool
     };
@@ -62,6 +67,7 @@ class Radio extends Component {
             multiple,
             styleType,
             disabled,
+            title,
             ...rest
         } = props;
         /* eslint-enable no-unused-vars */
@@ -75,36 +81,45 @@ class Radio extends Component {
     }
     renderRadioButton(props) {
         /* eslint-disable no-unused-vars */
-        const { defaultChecked, value, onChange, onClick, multiple, styleType, ...rest } = props;
+        const { title, disabledLabel, ...rest } = props;
         /* eslint-enable no-unused-vars */
 
         return <RadioButtonWrap {...rest} onClick={this.onClick} />;
     }
     renderRadioTag(props) {
         /* eslint-disable no-unused-vars */
-        const { defaultChecked, value, onChange, onClick, multiple, styleType, ...rest } = props;
+        const { title, disabledLabel, ...rest } = props;
         /* eslint-enable no-unused-vars */
 
         return <RadioTagWrap {...rest} onClick={this.onClick} />;
+    }
+    renderRadioCard(props) {
+        return <Card {...props} onClick={this.onClick} />;
     }
     render() {
         return (
             <RadioContext.Consumer>
                 {context => {
+                    /* eslint-disable no-unused-vars */
+                    const { defaultChecked, value, onChange, onClick, multiple, ...restProps } = this.props;
+                    /* eslint-enable no-unused-vars */
                     const props = {
                         size: 'md',
                         styleType: 'default',
                         ...context,
-                        ...this.props
+                        ...restProps
                     };
 
-                    const { styleType } = props;
-                    if (styleType === 'button') {
-                        return this.renderRadioButton(props);
-                    } else if (styleType === 'tag') {
-                        return this.renderRadioTag(props);
-                    } else {
-                        return this.renderRadio(props);
+                    const { styleType, ...rest } = props;
+                    switch (styleType) {
+                        case 'button':
+                            return this.renderRadioButton(rest);
+                        case 'tag':
+                            return this.renderRadioTag(rest);
+                        case 'card':
+                            return this.renderRadioCard(rest);
+                        default:
+                            return this.renderRadio(rest);
                     }
                 }}
             </RadioContext.Consumer>
