@@ -50,7 +50,11 @@ class Demo extends React.Component {
                     </Form.Item>
                 </Form>
                 <div className="demo-wrap">
-                    <Radio {...this.state} onChange={checked => this.setState({ checked })}>
+                    <Radio
+                        {...this.state}
+                        title={this.state.styleType}
+                        onChange={checked => this.setState({ checked })}
+                    >
                         checked
                     </Radio>
                 </div>

@@ -24,6 +24,11 @@
 ```js {"codepath": "checkbox-size.jsx"}
 ```
 
+*   styleType
+
+```js {"codepath": "checkbox-styleType.jsx"}
+```
+
 *   uncontrolled
 
 ```js {"codepath": "checkbox-uncontrolled.jsx"}

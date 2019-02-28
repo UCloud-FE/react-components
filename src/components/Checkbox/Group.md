@@ -17,6 +17,11 @@
 ```js {"codepath": "group-size.jsx"}
 ```
 
+*   styleType
+
+```js {"codepath": "group-styleType.jsx"}
+```
+
 *   disabled
 
 ```js {"codepath": "group-disabled.jsx"}
