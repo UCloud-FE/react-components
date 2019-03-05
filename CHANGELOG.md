@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.0-beta.7"></a>
+
+# [0.4.0-beta.7](https://github.com/UCloud-FE/react-components/compare/v0.4.0-beta.6...v0.4.0-beta.7) (2019-03-05)
+
 <a name="0.4.0-beta.6"></a>
 
 # [0.4.0-beta.6](https://github.com/UCloud-FE/react-components/compare/v0.4.0-beta.5...v0.4.0-beta.6) (2019-03-05)
