@@ -85,6 +85,12 @@ const config = {
             commonjs: 'react-dom',
             commonjs2: 'react-dom'
         },
+        'styled-components': {
+            root: 'StyledComponents',
+            amd: 'styled-components',
+            commonjs: 'styled-components',
+            commonjs2: 'styled-components'
+        },
         moment: {
             root: 'moment',
             amd: 'moment',
