@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.0-beta.8"></a>
+
+# [0.4.0-beta.8](https://github.com/UCloud-FE/react-components/compare/v0.4.0-beta.7...0.4.0-beta.8) (2019-03-07)
+
+### Features
+
+*   **Package:** move styles-components to peer & external ([f7fce36](https://github.com/UCloud-FE/react-components/commit/f7fce36)), closes [#88](https://github.com/UCloud-FE/react-components/issues/88)
+
+### BREAKING CHANGES
+
+*   **Package:** must install styled-components in your project
+
 <a name="0.4.0-beta.7"></a>
 
 # [0.4.0-beta.7](https://github.com/UCloud-FE/react-components/compare/v0.4.0-beta.6...v0.4.0-beta.7) (2019-03-05)
