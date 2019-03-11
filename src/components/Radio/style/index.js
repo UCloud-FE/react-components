@@ -115,21 +115,33 @@ export const RadioCardContent = styled.div`
     padding: 16px;
     min-height: 20px;
 `;
+const RadioCardTipPosition = css`
+    position: absolute;
+    right: 12px;
+    top: 10px;
+`;
 export const RadioCardIcon = styled(Icon)`
     font-size: 16px;
-    position: absolute;
-    right: 10px;
-    top: 10px;
+    color: #c3cad9;
+    ${RadioCardTipPosition};
 `;
 export const RadioCardDisabledLabelWrap = styled.span`
     font-weight: bold;
     line-height: 16px;
-    position: absolute;
-    right: 10px;
-    top: 10px;
+    ${RadioCardTipPosition};
 `;
 const propsMixin = ({ theme: { colorMap, colorList, titleFontSize }, disabled, checked }) => css`
     border: 1px solid ${colorMap.default.border};
+
+    ${!checked &&
+        !disabled &&
+        css`
+            :hover {
+                box-shadow: 0px 2px 4px 0px rgba(228, 229, 242, 1), 0px 1px 1px 0px rgba(162, 166, 191, 0.32),
+                    0px 1px 0px 0px rgba(223, 224, 241, 0.7);
+                border-color: transparent;
+            }
+        `};
 
     ${RadioCardHeader} {
         background: #f6f6fb;
@@ -139,12 +151,21 @@ const propsMixin = ({ theme: { colorMap, colorList, titleFontSize }, disabled, c
     ${checked &&
         css`
             border-color: ${colorMap.active.border};
+            box-shadow: 0px 2px 4px 0px rgba(228, 229, 242, 1), 0px 1px 1px 0px rgba(162, 166, 191, 0.32);
             ${RadioCardHeader} {
                 background: ${colorList.primary};
                 color: white;
             }
             ${RadioCardIcon} {
                 color: white;
+            }
+        `};
+    ${!disabled &&
+        !checked &&
+        css`
+            ${RadioCardIcon} {
+                border-radius: 50%;
+                background: white;
             }
         `};
     ${disabled &&
@@ -183,8 +204,10 @@ export const RadioCardWrap = styled.div`
 `;
 
 export const RadioGroupWrap = styled.div`
+    margin-bottom: -8px;
     ${RadioWrap}, ${/* sc-sel */ RadioTagWrap}, ${RadioCardWrap} {
         margin-right: 8px;
+        margin-bottom: 8px;
 
         &:last-child {
             margin-right: 0;
@@ -193,6 +216,7 @@ export const RadioGroupWrap = styled.div`
 
     ${RadioButtonWrap} {
         margin-right: -1px;
+        margin-bottom: 8px;
         &:first-child {
             border-radius: 2px 0 0 2px;
         }
