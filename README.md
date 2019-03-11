@@ -13,6 +13,8 @@
 
 ### 如何使用
 
+*   组件依赖于 react、react-dom、styled-components（^3.5.10），请注意引入对应依赖
+
 *   使用 npm 或 yarn 进行安装
 
 ```bash
