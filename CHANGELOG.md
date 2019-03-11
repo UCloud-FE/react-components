@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.0-beta.9"></a>
+
+# [0.4.0-beta.9](https://github.com/UCloud-FE/react-components/compare/v0.4.0-beta.8...v0.4.0-beta.9) (2019-03-11)
+
+### Bug Fixes
+
+*   **Radio:** fix radio card style ([9fdfd91](https://github.com/UCloud-FE/react-components/commit/9fdfd91)), closes [#89](https://github.com/UCloud-FE/react-components/issues/89)
+
+### Features
+
+*   **Icon:** update icon ([aa79b35](https://github.com/UCloud-FE/react-components/commit/aa79b35)), closes [#90](https://github.com/UCloud-FE/react-components/issues/90)
+
 <a name="0.4.0-beta.8"></a>
 
 # [0.4.0-beta.8](https://github.com/UCloud-FE/react-components/compare/v0.4.0-beta.7...0.4.0-beta.8) (2019-03-07)
