@@ -93,6 +93,8 @@ jobs:
     steps:
       - checkout
       - *attach_workspace
+      - run: npm run build:dist
+      - run: npm run build:lib
       - run: npm run test -- --testRegex '.*' tests/lib.test.manual.js
 
 workflows:
