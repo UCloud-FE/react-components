@@ -29,7 +29,7 @@
     "precommit": "lint-staged",
     "commitmsg": "commitlint -E GIT_PARAMS",
     "build": "webpack --display-error-details",
-    "build:lib": "babel src/ -d lib/ --ignore '__demo__/*,__tests__/*'",
+    "build:lib": "babel src/ -d lib/ --ignore '__demo__/*,__tests__/*' && node build-index.js",
     "build:dist": "export NODE_ENV='production' && npm run build -- --config webpack.dist.config.js",
     "build:styleguide": "styleguidist build",
     "build:gh-pages": "./scripts/gh-pages.sh",
@@ -42,7 +42,7 @@
     "component:add": "./scripts/add_component.sh",
     "font:update": "npm install @ucloud/ucloud-icons --registry=http://registry.npm.pre.ucloudadmin.com --no-save && cp -f node_modules/@ucloud/ucloud-icons/dist/css/icon.min.css static/style/icon.css && cp -rf node_modules/@ucloud/ucloud-icons/dist/fonts/* static/fonts"
   },
-  "main": "dist/main.min.js",
+  "main": "dist/index.js",
   "files": [
     "README.md",
     "dist/",

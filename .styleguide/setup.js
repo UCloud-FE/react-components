@@ -1,7 +1,7 @@
 require('file-loader?name=[name].[ext]!./favicon.ico');
 require('!file-loader?name=[name].[ext]!./style.css');
 
-import components from '../src/';
+const components = require('../index');
 Object.assign(global, components);
 
 global._ = require('lodash');

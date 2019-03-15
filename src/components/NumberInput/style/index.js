@@ -23,6 +23,7 @@ export const Input = styled.input.attrs({
     border: none;
     outline: none;
     padding: 0;
+    margin: 0;
     color: inherit;
 `;
 
