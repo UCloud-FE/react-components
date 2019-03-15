@@ -130,8 +130,8 @@ workflows:
             - stylelint
       - test lib:
           requires:
-            - dist
-            - lib
+            - build dist
+            - build lib
       - end:
           requires:
             - codecov
