@@ -124,7 +124,7 @@ export const TabsWrap = styled(RcTabs).attrs({
                                 margin-bottom: -1px;
                             }
                             &-tab {
-                                margin-bottom: -1px;
+                                bottom: -1px;
                                 display: inline-block;
 
                                 &:hover {
@@ -154,7 +154,7 @@ export const TabsWrap = styled(RcTabs).attrs({
                                 margin-top: -1px;
                             }
                             &-tab {
-                                margin-top: -1px;
+                                top: -1px;
                                 display: inline-block;
 
                                 &:hover {
@@ -186,7 +186,7 @@ export const TabsWrap = styled(RcTabs).attrs({
                                 margin-right: -1px;
                             }
                             &-tab {
-                                margin-right: -1px;
+                                right: -1px;
 
                                 &:hover {
                                     border-right-color: ${colorList.secondary4};
@@ -218,7 +218,7 @@ export const TabsWrap = styled(RcTabs).attrs({
                                 margin-left: -1px;
                             }
                             &-tab {
-                                margin-left: -1px;
+                                left: -1px;
 
                                 &:hover {
                                     border-left-color: ${colorList.secondary4};
