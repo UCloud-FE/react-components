@@ -123,10 +123,9 @@ export const TabsWrap = styled(RcTabs).attrs({
                         border-bottom: 1px solid ${colorList.secondary4};
                         .${prefixCls} {
                             &-nav-container {
-                                margin-bottom: -1px;
+                                bottom: -1px;
                             }
                             &-tab {
-                                bottom: -1px;
                                 display: inline-block;
 
                                 &:hover {
@@ -153,10 +152,9 @@ export const TabsWrap = styled(RcTabs).attrs({
                         border-top: 1px solid ${colorList.secondary4};
                         .${prefixCls} {
                             &-nav-container {
-                                margin-top: -1px;
+                                top: -1px;
                             }
                             &-tab {
-                                top: -1px;
                                 display: inline-block;
 
                                 &:hover {
@@ -185,11 +183,9 @@ export const TabsWrap = styled(RcTabs).attrs({
                         height: 100%;
                         .${prefixCls} {
                             &-nav-container {
-                                margin-right: -1px;
+                                right: -1px;
                             }
                             &-tab {
-                                right: -1px;
-
                                 &:hover {
                                     border-right-color: ${colorList.secondary4};
                                 }
@@ -217,11 +213,9 @@ export const TabsWrap = styled(RcTabs).attrs({
                         height: 100%;
                         .${prefixCls} {
                             &-nav-container {
-                                margin-left: -1px;
+                                left: -1px;
                             }
                             &-tab {
-                                left: -1px;
-
                                 &:hover {
                                     border-left-color: ${colorList.secondary4};
                                 }
