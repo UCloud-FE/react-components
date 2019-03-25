@@ -647,13 +647,7 @@ class Table extends Component {
         );
     };
     renderFooter = option => {
-        const { footer = () => {} } = this.props;
-        return (
-            <div>
-                {this.renderEmptyAndErrorInfo(option)}
-                {footer()}
-            </div>
-        );
+        return <div>{this.renderEmptyAndErrorInfo(option)}</div>;
     };
     render() {
         /* eslint-disable no-unused-vars */
@@ -721,6 +715,7 @@ class Table extends Component {
                         title={() => this.renderTitle({ filters, searchValue, total, locale })}
                         footer={() => this.renderFooter({ dataSource: _d, emptyContent, errorContent })}
                     />
+                    {footer()}
                     {pagination === null ? null : (
                         <Pagination
                             size="sm"
