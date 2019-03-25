@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.1"></a>
+
+## [0.4.1](https://github.com/UCloud-FE/react-components/compare/v0.4.0...v0.4.1) (2019-03-25)
+
+### Bug Fixes
+
+*   **Tabs:** fix tabs tab bar style ([727057d](https://github.com/UCloud-FE/react-components/commit/727057d)), closes [#98](https://github.com/UCloud-FE/react-components/issues/98)
+*   **Tabs:** fix tabs tab bar style ([5616831](https://github.com/UCloud-FE/react-components/commit/5616831))
+
 <a name="0.4.0"></a>
 
 # [0.4.0](https://github.com/UCloud-FE/react-components/compare/v0.4.0-beta.11...v0.4.0) (2019-03-25)
