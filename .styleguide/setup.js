@@ -2,6 +2,11 @@ require('file-loader?name=[name].[ext]!./favicon.ico');
 require('!file-loader?name=[name].[ext]!./style.css');
 
 const components = require('../index');
+
+import ResizableTH from 'src/components/Table/ResizableTH';
+
+components.Table.ResizableTH = ResizableTH;
+
 Object.assign(global, components);
 
 global._ = require('lodash');

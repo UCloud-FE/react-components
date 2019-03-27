@@ -174,6 +174,12 @@ class Table extends Component {
         }),
         /** 定义如何获取每行的键值 */
         rowKey: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+        // 自定义表格组件
+        components: PropTypes.shape({
+            header: PropTypes.shape({
+                cell: PropTypes.any
+            })
+        }),
         /**
          * 右键菜单
          * @param record - 该行的记录值
@@ -484,7 +490,7 @@ class Table extends Component {
                 return {
                     ...column,
                     title: (
-                        <span>
+                        <div>
                             {title}
                             {this.renderFilter(filter, key, dataIndex)}
                             {this.renderOrder(
@@ -493,7 +499,7 @@ class Table extends Component {
                                 dataIndex,
                                 currentOrder && currentOrder.key === key ? currentOrder.state : 'none'
                             )}
-                        </span>
+                        </div>
                     )
                 };
             }
@@ -669,6 +675,7 @@ class Table extends Component {
             locale,
             hideExpandIcon,
             onRow = () => {},
+            components,
             ...rest
         } = this.props;
         if (emptyContent === undefined) {
@@ -703,11 +710,11 @@ class Table extends Component {
                                 contextMenu
                             };
                         }}
-                        components={{
+                        components={_.extend(components, {
                             body: {
                                 row: TableRow
                             }
-                        }}
+                        })}
                         emptyText={null}
                         expandIconAsCell={!!expandedRowRender || expandIconAsCell}
                         expandedRowRender={expandedRowRender}
