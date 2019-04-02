@@ -19,6 +19,11 @@ export const TableWrap = styled.div(
     .${prefixCls} {
         border-radius: 2px;
         background-color: ${colorMap.default.background};
+
+        &-body {
+            background-color: ${colorMap.default.background};
+        }
+
         &-scroll table {
             min-width: 100%;
         }
