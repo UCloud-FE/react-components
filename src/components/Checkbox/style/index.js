@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 
 import Icon from 'src/components/Icon';
+import Card from 'src/components/Radio/Card';
 import { inlineBlockWithVerticalMixin } from 'src/style';
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 import config from 'src/config';
@@ -42,10 +43,13 @@ export const CheckboxWrap = styled.span.attrs({
     ${propsMixin};
 `;
 
+export const CheckboxCardWrap = styled(Card)`
+    /* empty */
+`;
 export const CheckboxGroupWrap = styled.div.attrs({
     className: prefixCls + '-group'
 })`
-    ${/* sc-sel */ CheckboxWrap} {
+    ${/* sc-sel */ CheckboxWrap}, ${CheckboxCardWrap} {
         margin-right: 8px;
 
         &:last-child {

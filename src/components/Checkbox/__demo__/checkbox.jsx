@@ -5,18 +5,19 @@ import Switch from 'components/Switch';
 import Form from 'components/Form';
 
 // demo start
-const { Size } = Checkbox;
+const { Size, StyleType } = Checkbox;
 class Demo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             checked: true,
             size: 'md',
+            styleType: 'default',
             disabled: false
         };
     }
     render() {
-        const { checked, size, disabled } = this.state;
+        const { checked, size, styleType, disabled } = this.state;
         const itemLayout = {
             labelCol: {
                 span: 3
@@ -35,6 +36,13 @@ class Demo extends React.Component {
                             onChange={size => this.setState({ size })}
                         />
                     </Form.Item>
+                    <Form.Item label="styleTyle" {...itemLayout}>
+                        <Radio.Group
+                            options={StyleType.map(styleType => ({ value: styleType }))}
+                            value={styleType}
+                            onChange={styleType => this.setState({ styleType })}
+                        />
+                    </Form.Item>
                     <Form.Item label="disabled" {...itemLayout}>
                         <Switch checked={disabled} onChange={disabled => this.setState({ disabled })} />
                     </Form.Item>
@@ -46,7 +54,10 @@ class Demo extends React.Component {
                     <Checkbox
                         checked={checked}
                         size={size}
+                        styleType={styleType}
                         disabled={disabled}
+                        title="title"
+                        disabledLabel="disabled label"
                         onChange={checked => {
                             console.log(checked);
                             this.setState({ checked });

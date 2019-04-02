@@ -174,6 +174,12 @@ class Table extends Component {
         }),
         /** 定义如何获取每行的键值 */
         rowKey: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+        // 自定义表格组件
+        components: PropTypes.shape({
+            header: PropTypes.shape({
+                cell: PropTypes.any
+            })
+        }),
         /**
          * 右键菜单
          * @param record - 该行的记录值
@@ -484,7 +490,7 @@ class Table extends Component {
                 return {
                     ...column,
                     title: (
-                        <span>
+                        <div>
                             {title}
                             {this.renderFilter(filter, key, dataIndex)}
                             {this.renderOrder(
@@ -493,7 +499,7 @@ class Table extends Component {
                                 dataIndex,
                                 currentOrder && currentOrder.key === key ? currentOrder.state : 'none'
                             )}
-                        </span>
+                        </div>
                     )
                 };
             }
@@ -647,13 +653,7 @@ class Table extends Component {
         );
     };
     renderFooter = option => {
-        const { footer = () => {} } = this.props;
-        return (
-            <div>
-                {this.renderEmptyAndErrorInfo(option)}
-                {footer()}
-            </div>
-        );
+        return <div>{this.renderEmptyAndErrorInfo(option)}</div>;
     };
     render() {
         /* eslint-disable no-unused-vars */
@@ -675,6 +675,7 @@ class Table extends Component {
             locale,
             hideExpandIcon,
             onRow = () => {},
+            components,
             ...rest
         } = this.props;
         if (emptyContent === undefined) {
@@ -709,11 +710,11 @@ class Table extends Component {
                                 contextMenu
                             };
                         }}
-                        components={{
+                        components={_.extend(components, {
                             body: {
                                 row: TableRow
                             }
-                        }}
+                        })}
                         emptyText={null}
                         expandIconAsCell={!!expandedRowRender || expandIconAsCell}
                         expandedRowRender={expandedRowRender}
@@ -721,6 +722,7 @@ class Table extends Component {
                         title={() => this.renderTitle({ filters, searchValue, total, locale })}
                         footer={() => this.renderFooter({ dataSource: _d, emptyContent, errorContent })}
                     />
+                    {footer()}
                     {pagination === null ? null : (
                         <Pagination
                             size="sm"

@@ -105,9 +105,111 @@ export const RadioTagWrap = styled.div`
         `};
 `;
 
+export const RadioCardHeader = styled.div`
+    position: relative;
+    padding: 8px 16px;
+    line-height: 22px;
+    min-height: 22px;
+`;
+export const RadioCardContent = styled.div`
+    padding: 16px;
+    min-height: 20px;
+`;
+const RadioCardTipPosition = css`
+    position: absolute;
+    right: 12px;
+    top: 10px;
+`;
+export const RadioCardIcon = styled(Icon)`
+    font-size: 16px;
+    color: #c3cad9;
+    ${RadioCardTipPosition};
+`;
+export const RadioCardDisabledLabelWrap = styled.span`
+    font-weight: bold;
+    line-height: 16px;
+    ${RadioCardTipPosition};
+`;
+const propsMixin = ({ theme: { colorMap, colorList, titleFontSize }, disabled, checked }) => css`
+    border: 1px solid ${colorMap.default.border};
+
+    ${!checked &&
+        !disabled &&
+        css`
+            :hover {
+                box-shadow: 0px 2px 4px 0px rgba(228, 229, 242, 1), 0px 1px 1px 0px rgba(162, 166, 191, 0.32),
+                    0px 1px 0px 0px rgba(223, 224, 241, 0.7);
+                border-color: transparent;
+            }
+        `};
+
+    ${RadioCardHeader} {
+        background: #f6f6fb;
+        color: ${colorList.title};
+        font-size: ${titleFontSize};
+    }
+    ${checked &&
+        css`
+            border-color: ${colorMap.active.border};
+            box-shadow: 0px 2px 4px 0px rgba(228, 229, 242, 1), 0px 1px 1px 0px rgba(162, 166, 191, 0.32);
+            ${RadioCardHeader} {
+                background: ${colorList.primary};
+                color: white;
+            }
+            ${RadioCardIcon} {
+                color: white;
+            }
+        `};
+    ${!disabled &&
+        !checked &&
+        css`
+            ${RadioCardIcon} {
+                border-radius: 50%;
+                background: white;
+            }
+        `};
+    ${disabled &&
+        css`
+            cursor: not-allowed;
+        `};
+    ${disabled &&
+        !checked &&
+        css`
+            border-color: ${colorMap.disabled.border};
+            ${RadioCardHeader} {
+                background: #bbb;
+                color: white;
+            }
+            ${RadioCardContent} {
+                background: #f7f7f7;
+                color: #bbb;
+            }
+        `};
+    ${disabled &&
+        checked &&
+        css`
+            ${RadioCardIcon} {
+                color: #adbaf3;
+            }
+        `};
+`;
+export const RadioCardWrap = styled.div`
+    border-radius: 4px;
+    overflow: hidden;
+    min-width: 150px;
+    display: inline-block;
+    cursor: pointer;
+
+    ${propsMixin};
+`;
+
 export const RadioGroupWrap = styled.div`
-    ${RadioWrap}, ${/* sc-sel */ RadioTagWrap} {
+    position: relative;
+    z-index: 1;
+    margin-bottom: -8px;
+    ${RadioWrap}, ${/* sc-sel */ RadioTagWrap}, ${RadioCardWrap} {
         margin-right: 8px;
+        margin-bottom: 8px;
 
         &:last-child {
             margin-right: 0;
@@ -116,6 +218,7 @@ export const RadioGroupWrap = styled.div`
 
     ${RadioButtonWrap} {
         margin-right: -1px;
+        margin-bottom: 8px;
         &:first-child {
             border-radius: 2px 0 0 2px;
         }
@@ -126,4 +229,4 @@ export const RadioGroupWrap = styled.div`
     }
 `;
 
-addDefaultThemeProps(RadioWrap, RadioButtonWrap, RadioTagWrap);
+addDefaultThemeProps(RadioWrap, RadioButtonWrap, RadioTagWrap, RadioCardWrap);

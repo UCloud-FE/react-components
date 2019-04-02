@@ -93,7 +93,14 @@ export const CardWrap = styled.div.attrs({
     box-sizing: border-box;
     border-radius: 4px;
     text-align: left;
-    padding-bottom: 12px;
+
+    ${/* sc-sel */ HeaderWrap}:last-child,
+        ${/* sc-sel */ ActionWrap}:last-child,
+        ${/* sc-sel */ ContentWrap}:last-child,
+        ${/* sc-sel */ FooterWrap}:last-child {
+        margin-bottom: 12px;
+    }
+
     ${themeMixin};
 `;
 

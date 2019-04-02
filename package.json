@@ -1,6 +1,6 @@
 {
   "name": "@ucloud-fe/react-components",
-  "version": "0.4.0-beta.4",
+  "version": "0.4.1",
   "title": "UCloud react components",
   "description": "UCloud react components",
   "keywords": [
@@ -29,7 +29,7 @@
     "precommit": "lint-staged",
     "commitmsg": "commitlint -E GIT_PARAMS",
     "build": "webpack --display-error-details",
-    "build:lib": "babel src/ -d lib/ --ignore '__demo__/*,__tests__/*'",
+    "build:lib": "babel src/ -d lib/ --ignore '__demo__/*,__tests__/*' && node build-index.js",
     "build:dist": "export NODE_ENV='production' && npm run build -- --config webpack.dist.config.js",
     "build:styleguide": "styleguidist build",
     "build:gh-pages": "./scripts/gh-pages.sh",
@@ -42,7 +42,7 @@
     "component:add": "./scripts/add_component.sh",
     "font:update": "npm install @ucloud/ucloud-icons --registry=http://registry.npm.pre.ucloudadmin.com --no-save && cp -f node_modules/@ucloud/ucloud-icons/dist/css/icon.min.css static/style/icon.css && cp -rf node_modules/@ucloud/ucloud-icons/dist/fonts/* static/fonts"
   },
-  "main": "dist/main.min.js",
+  "main": "lib/index.js",
   "files": [
     "README.md",
     "dist/",
@@ -64,8 +64,7 @@
     "rc-trigger": "^2.5.3",
     "rce-slider": "^8.6.2",
     "react-lifecycles-compat": "^3.0.3",
-    "react-transition-group": "^2.4.0",
-    "styled-components": "^3.4.10"
+    "react-transition-group": "^2.4.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.1.2",
@@ -103,10 +102,12 @@
     "raw-loader": "^0.5.1",
     "react": "^15",
     "react-dom": "^15",
+    "react-resizable": "^1.7.5",
     "react-styleguidist": "^8.0.6",
     "react-test-renderer": "^15",
     "standard-version": "^4.4.0",
     "style-loader": "^0.20.3",
+    "styled-components": "^3.4.10",
     "stylelint": "^9.9.0",
     "stylelint-config-recommended": "^2.1.0",
     "stylelint-config-styled-components": "^0.1.1",
@@ -114,6 +115,11 @@
     "url-loader": "^1.0.1",
     "webpack": "^4.5.0",
     "webpack-cli": "^2.0.14"
+  },
+  "peerDependencies": {
+    "react": "^15||^16",
+    "react-dom": "^15||^16",
+    "styled-components": "^3.4.10"
   },
   "config": {
     "commitizen": {

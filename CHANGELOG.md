@@ -2,6 +2,80 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.1"></a>
+
+## [0.4.1](https://github.com/UCloud-FE/react-components/compare/v0.4.0...v0.4.1) (2019-03-25)
+
+### Bug Fixes
+
+*   **Tabs:** fix tabs tab bar style ([727057d](https://github.com/UCloud-FE/react-components/commit/727057d)), closes [#98](https://github.com/UCloud-FE/react-components/issues/98)
+*   **Tabs:** fix tabs tab bar style ([5616831](https://github.com/UCloud-FE/react-components/commit/5616831))
+
+<a name="0.4.0"></a>
+
+# [0.4.0](https://github.com/UCloud-FE/react-components/compare/v0.4.0-beta.11...v0.4.0) (2019-03-25)
+
+### Bug Fixes
+
+*   **Tabs:** fix style bug when nest two diffrence styleType tabs ([9e008ed](https://github.com/UCloud-FE/react-components/commit/9e008ed)), closes [#97](https://github.com/UCloud-FE/react-components/issues/97)
+*   **Tabs:** fix tabs tab height style bug ([ca13437](https://github.com/UCloud-FE/react-components/commit/ca13437)), closes [#96](https://github.com/UCloud-FE/react-components/issues/96)
+
+<a name="0.4.0-beta.11"></a>
+
+# [0.4.0-beta.11](https://github.com/UCloud-FE/react-components/compare/v0.4.0-beta.10...v0.4.0-beta.11) (2019-03-18)
+
+### Bug Fixes
+
+*   **npm:** fix npm index file ([89394c7](https://github.com/UCloud-FE/react-components/commit/89394c7))
+
+<a name="0.4.0-beta.10"></a>
+
+# [0.4.0-beta.10](https://github.com/UCloud-FE/react-components/compare/v0.4.0-beta.9...v0.4.0-beta.10) (2019-03-18)
+
+<a name="0.4.0-beta.9"></a>
+
+# [0.4.0-beta.9](https://github.com/UCloud-FE/react-components/compare/v0.4.0-beta.8...v0.4.0-beta.9) (2019-03-11)
+
+### Bug Fixes
+
+*   **Radio:** fix radio card style ([9fdfd91](https://github.com/UCloud-FE/react-components/commit/9fdfd91)), closes [#89](https://github.com/UCloud-FE/react-components/issues/89)
+
+### Features
+
+*   **Icon:** update icon ([aa79b35](https://github.com/UCloud-FE/react-components/commit/aa79b35)), closes [#90](https://github.com/UCloud-FE/react-components/issues/90)
+
+<a name="0.4.0-beta.8"></a>
+
+# [0.4.0-beta.8](https://github.com/UCloud-FE/react-components/compare/v0.4.0-beta.7...0.4.0-beta.8) (2019-03-07)
+
+### Features
+
+*   **Package:** move styles-components to peer & external ([f7fce36](https://github.com/UCloud-FE/react-components/commit/f7fce36)), closes [#88](https://github.com/UCloud-FE/react-components/issues/88)
+
+### BREAKING CHANGES
+
+*   **Package:** must install styled-components in your project
+
+<a name="0.4.0-beta.7"></a>
+
+# [0.4.0-beta.7](https://github.com/UCloud-FE/react-components/compare/v0.4.0-beta.6...v0.4.0-beta.7) (2019-03-05)
+
+<a name="0.4.0-beta.6"></a>
+
+# [0.4.0-beta.6](https://github.com/UCloud-FE/react-components/compare/v0.4.0-beta.5...v0.4.0-beta.6) (2019-03-05)
+
+### Bug Fixes
+
+*   **Table:** fix table actionlist disable bug ([a6125b9](https://github.com/UCloud-FE/react-components/commit/a6125b9)), closes [#87](https://github.com/UCloud-FE/react-components/issues/87)
+
+<a name="0.4.0-beta.5"></a>
+
+# [0.4.0-beta.5](https://github.com/UCloud-FE/react-components/compare/v0.4.0-beta.4...v0.4.0-beta.5) (2019-02-28)
+
+### Features
+
+*   **Card:** add checkbox & radio with card style ([e6f1dbc](https://github.com/UCloud-FE/react-components/commit/e6f1dbc)), closes [#86](https://github.com/UCloud-FE/react-components/issues/86)
+
 <a name="0.4.0-beta.4"></a>
 
 # [0.4.0-beta.4](https://github.com/UCloud-FE/react-components/compare/v0.4.0-beta.3...v0.4.0-beta.4) (2019-01-14)

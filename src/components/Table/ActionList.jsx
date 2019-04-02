@@ -27,9 +27,9 @@ export default class ActionList extends Component {
     state = {};
     renderButtonList = (list, size) => {
         return list.map((info, i) => {
-            const { label, onClick, ...rest } = info;
+            const { label, ...rest } = info;
             return (
-                <ActionButton key={i} size={size} styleType="border-gray" onClick={onClick} {...rest}>
+                <ActionButton key={i} size={size} styleType="border-gray" {...rest}>
                     {label}
                 </ActionButton>
             );
@@ -49,9 +49,10 @@ export default class ActionList extends Component {
                         </Menu.SubMenu>
                     );
                 }
+                const { label, ...rest } = info;
                 return (
-                    <Menu.Item key={i} onClick={info.onClick}>
-                        {info.label}
+                    <Menu.Item key={i} {...rest}>
+                        {label}
                     </Menu.Item>
                 );
             });

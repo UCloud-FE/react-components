@@ -19,6 +19,11 @@ export const TableWrap = styled.div(
     .${prefixCls} {
         border-radius: 2px;
         background-color: ${colorMap.default.background};
+
+        &-body {
+            background-color: ${colorMap.default.background};
+        }
+
         &-scroll table {
             min-width: 100%;
         }
@@ -146,7 +151,6 @@ export const TableWrap = styled.div(
             line-height: 22px;
             text-align: left;
             font-weight: 400;
-            word-break: break-all;
         }
         &-row > td {
             position: relative;
@@ -156,7 +160,6 @@ export const TableWrap = styled.div(
             padding: 12px;
             line-height: 22px;
             text-align: left;
-            word-break: break-all;
         }
 
         &-fixed-header .${prefixCls}-scroll .${prefixCls}-header {
@@ -220,4 +223,5 @@ export const ColumnConfigModalSplitLine = styled(Col)`
 export const ActionButton = styled(Button)`
     margin-right: 4px;
 `;
+
 addDefaultThemeProps(TableWrap, ColumnConfigButtonWrap, ColumnConfigModalSplitLine);

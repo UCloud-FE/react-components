@@ -87,6 +87,15 @@ jobs:
       - checkout
       - *attach_workspace
       - run: npm run build:gh-pages
+  
+  test lib:
+    <<: *container_config
+    steps:
+      - checkout
+      - *attach_workspace
+      - run: npm run build:dist
+      - run: npm run build:lib
+      - run: npm run test -- --testRegex '.*' tests/lib.test.manual.js
 
 workflows:
   version: 2
@@ -121,9 +130,14 @@ workflows:
           requires:
             - eslint
             - stylelint
+      - test lib:
+          requires:
+            - build dist
+            - build lib
       - end:
           requires:
             - codecov
             - build dist
             - build lib
             - build gh-pages
+            - test lib
