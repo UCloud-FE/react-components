@@ -41897,7 +41897,6 @@ exports[`Table demo -- resizableTH 1`] = `
 .c2 {
   position: relative;
   box-sizing: border-box;
-  border-right: 1px solid transparent;
 }
 
 .c2 .react-resizable-handle {
@@ -41907,11 +41906,11 @@ exports[`Table demo -- resizableTH 1`] = `
   bottom: 0;
   right: 0;
   cursor: col-resize;
+  border-right: 1px solid transparent;
 }
 
-.c2:hover {
-  background: rgba(250,250,252);
-  border-right-color: rgba(210,214,234);
+.c2:hover .react-resizable-handle {
+  border-right-color: #d2d6ea;
 }
 
 <div>

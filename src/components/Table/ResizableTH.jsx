@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Resizable } from 'react-resizable';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-const ResizableTHWrap = styled(Resizable)`
+// eslint-disable-next-line no-unused-vars
+const FilteredResizable = ({ resizing, ...rest }) => <Resizable {...rest} />;
+FilteredResizable.propTypes = { resizing: PropTypes.bool };
+
+const ResizableTHWrap = styled(FilteredResizable)`
     position: relative;
     box-sizing: border-box;
-    border-right: 1px solid transparent;
 
     .react-resizable-handle {
         position: absolute;
@@ -15,11 +18,22 @@ const ResizableTHWrap = styled(Resizable)`
         bottom: 0;
         right: 0;
         cursor: col-resize;
+        border-right: 1px solid transparent;
     }
     :hover {
-        background: rgba(250, 250, 252);
-        border-right-color: rgba(210, 214, 234);
+        .react-resizable-handle {
+            border-right-color: #d2d6ea;
+        }
     }
+
+    ${({ resizing }) =>
+        resizing &&
+        css`
+            background: #fafafc;
+            .react-resizable-handle {
+                border-right-color: #d2d6ea;
+            }
+        `};
 `;
 
 export default class ResizableTH extends Component {
@@ -35,6 +49,7 @@ export default class ResizableTH extends Component {
         /** 调整时的回调 */
         onResize: PropTypes.func
     };
+    state = {};
     onResize = (e, { size }) => {
         const { onResize = () => {} } = this.props;
         onResize(size.width);
@@ -42,14 +57,18 @@ export default class ResizableTH extends Component {
     render() {
         // eslint-disable-next-line no-unused-vars
         const { width, resizeAble, onResize, minWidth = 20, maxWidth = Infinity, ...rest } = this.props;
+        const { resizing } = this.state;
 
         return resizeAble ? (
             <ResizableTHWrap
                 width={width}
                 height={0}
                 onResize={this.onResize}
+                onResizeStart={() => this.setState({ resizing: true })}
+                onResizeStop={() => this.setState({ resizing: false })}
                 minConstraints={[minWidth, 0]}
                 maxConstraints={[maxWidth, 0]}
+                resizing={resizing}
             >
                 <th {...rest} />
             </ResizableTHWrap>
