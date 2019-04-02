@@ -8,6 +8,8 @@ const prefixCls = _prefixCls + '-compact';
 export const controllerPrefix = prefixCls + '-controller';
 
 export const CompactWrap = styled.div`
+    position: relative;
+    z-index: 1;
     margin-left: 1px;
 
     .${controllerPrefix} {
