@@ -78,7 +78,8 @@ export default class ActionList extends Component {
         );
     };
     render() {
-        const { actionList, exposeCount, size, smart, ...rest } = this.props;
+        // eslint-disable-next-line no-unused-vars
+        const { actionList, exposeCount, size, smart, buttonStyleType, ...rest } = this.props;
         const l = actionList.length;
         let buttonList, menuList;
         if (l > exposeCount + 1) {
