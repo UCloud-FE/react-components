@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.2"></a>
+
+## [0.4.2](https://github.com/UCloud-FE/react-components/compare/v0.4.1...v0.4.2) (2019-04-08)
+
+### Bug Fixes
+
+*   **All:** fix zindex override bug ([996d790](https://github.com/UCloud-FE/react-components/commit/996d790)), closes [#103](https://github.com/UCloud-FE/react-components/issues/103)
+*   **Calendar:** fix outline of calendar popover ([592861c](https://github.com/UCloud-FE/react-components/commit/592861c)), closes [#104](https://github.com/UCloud-FE/react-components/issues/104)
+*   **Table:** fix scroll bar visible in windows ([7bd9474](https://github.com/UCloud-FE/react-components/commit/7bd9474)), closes [#102](https://github.com/UCloud-FE/react-components/issues/102)
+
+### Features
+
+*   **All:** add classname ([d42af4a](https://github.com/UCloud-FE/react-components/commit/d42af4a)), closes [#85](https://github.com/UCloud-FE/react-components/issues/85)
+*   **Table:** add resizableTH for table td resize ([5ca6219](https://github.com/UCloud-FE/react-components/commit/5ca6219)), closes [#101](https://github.com/UCloud-FE/react-components/issues/101)
+*   **Table:** move footer outside of table content ([3e6a382](https://github.com/UCloud-FE/react-components/commit/3e6a382)), closes [#99](https://github.com/UCloud-FE/react-components/issues/99)
+
 <a name="0.4.1"></a>
 
 ## [0.4.1](https://github.com/UCloud-FE/react-components/compare/v0.4.0...v0.4.1) (2019-03-25)
