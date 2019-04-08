@@ -264,7 +264,6 @@ export default originTheme => {
             .${calendarPrefixCls}-month-panel-cell .${calendarPrefixCls}-month-panel-month,
             .${calendarPrefixCls}-year-panel-cell .${calendarPrefixCls}-year-panel-year,
             .${calendarPrefixCls}-decade-panel-cell .${calendarPrefixCls}-decade-panel-decade`]: {
-                display: 'block',
                 borderRadius: '2px'
             }
         }

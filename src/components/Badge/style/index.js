@@ -5,11 +5,17 @@ import config from 'src/config';
 const { prefixCls: _prefixCls } = config;
 const prefixCls = _prefixCls + '-badge';
 
-export const BadgeWrap = styled.div.attrs({
+export const Wrap = styled.div.attrs({
     className: prefixCls
 })`
     position: relative;
     display: inline-block;
+`;
+
+export const BadgeWrap = styled.div.attrs({
+    className: prefixCls + '-badge-wrap'
+})`
+    position: absolute;
 `;
 
 export const BaseBadge = styled.span.attrs({

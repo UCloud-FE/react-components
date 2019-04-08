@@ -2,8 +2,6 @@
 
 exports[`Card demo -- card 1`] = `
 .c2 {
-  line-height: 28px;
-  font-weight: bold;
   padding: 0 16px;
   margin-top: 12px;
 }
@@ -18,48 +16,52 @@ exports[`Card demo -- card 1`] = `
   clear: both;
 }
 
-.c4 {
-  display: block;
+.c3 {
+  line-height: 28px;
+  font-weight: bold;
+}
+
+.c5 {
   line-height: 22px;
   font-weight: normal;
 }
 
-.c6 {
+.c7 {
   line-height: 28px;
   padding: 0 16px;
   margin-top: 12px;
 }
 
-.c6:before,
-.c6:after {
+.c7:before,
+.c7:after {
   content: ' ';
   display: table;
 }
 
-.c6:after {
+.c7:after {
   clear: both;
 }
 
-.c9 {
+.c10 {
   min-height: 30px;
   padding: 0 16px;
   margin-top: 12px;
 }
 
-.c11 {
+.c12 {
   line-height: 1;
   padding: 0 16px;
   margin-top: 12px;
   padding-top: 12px;
 }
 
-.c11:before,
-.c11:after {
+.c12:before,
+.c12:after {
   content: ' ';
   display: table;
 }
 
-.c11:after {
+.c12:after {
   clear: both;
 }
 
@@ -74,9 +76,9 @@ exports[`Card demo -- card 1`] = `
 }
 
 .c0 .c1:last-child,
-.c0 .c5:last-child,
-.c0 .c8:last-child,
-.c0 .c10:last-child {
+.c0 .c6:last-child,
+.c0 .c9:last-child,
+.c0 .c11:last-child {
   margin-bottom: 12px;
 }
 
@@ -85,16 +87,16 @@ exports[`Card demo -- card 1`] = `
   font-size: 14px;
 }
 
-.c0 .c3 {
+.c0 .c4 {
   color: #c3cad9;
   font-size: 12px;
 }
 
-.c0 .c10 {
+.c0 .c11 {
   border-top: 1px solid #e1e6f0;
 }
 
-.c7 {
+.c8 {
   box-sizing: border-box;
   border-radius: 2px;
   border-width: 1px;
@@ -114,45 +116,47 @@ exports[`Card demo -- card 1`] = `
   border-color: #c3cad9;
 }
 
-.c7:hover {
+.c8:hover {
   color: #4074e1;
   background: #fff;
   border-color: #4683e6;
 }
 
 <div
-  class="c0"
+  class="uc-fe-card c0"
 >
   <div
-    class="c1 c2"
+    class="c1 uc-fe-card-header c2"
   >
-    <div>
+    <div
+      class="uc-fe-card-title c3"
+    >
       This is the title
     </div>
     <div
-      class="c3 c4"
+      class="c4 uc-fe-card-comment c5"
     >
       This is the comment
     </div>
   </div>
   <div
-    class="c5 c6"
+    class="c6 uc-fe-card-action c7"
   >
     <button
-      class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c7"
+      class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c8"
       type="button"
     >
       This is a action button
     </button>
     <button
-      class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c7"
+      class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c8"
       type="button"
     >
       This is a action button
     </button>
   </div>
   <div
-    class="c8 c9"
+    class="c9 uc-fe-card-content c10"
   >
     <div
       style="background:#e1e6f0;height:50px;padding:10px;"
@@ -161,10 +165,10 @@ exports[`Card demo -- card 1`] = `
     </div>
   </div>
   <div
-    class="c10 c11"
+    class="c11 uc-fe-card-footer c12"
   >
     <button
-      class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c7"
+      class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c8"
       style="float:right;"
       type="button"
     >
@@ -176,8 +180,6 @@ exports[`Card demo -- card 1`] = `
 
 exports[`Card demo -- custom 1`] = `
 .c7 {
-  line-height: 28px;
-  font-weight: bold;
   padding: 0 16px;
   margin-top: 12px;
 }
@@ -192,8 +194,12 @@ exports[`Card demo -- custom 1`] = `
   clear: both;
 }
 
-.c9 {
-  display: block;
+.c8 {
+  line-height: 28px;
+  font-weight: bold;
+}
+
+.c10 {
   line-height: 22px;
   font-weight: normal;
 }
@@ -220,20 +226,20 @@ exports[`Card demo -- custom 1`] = `
   margin-top: 12px;
 }
 
-.c11 {
+.c12 {
   line-height: 1;
   padding: 0 16px;
   margin-top: 12px;
   padding-top: 12px;
 }
 
-.c11:before,
-.c11:after {
+.c12:before,
+.c12:after {
   content: ' ';
   display: table;
 }
 
-.c11:after {
+.c12:after {
   clear: both;
 }
 
@@ -250,7 +256,7 @@ exports[`Card demo -- custom 1`] = `
 .c0 .c6:last-child,
 .c0 .c3:last-child,
 .c0 .c1:last-child,
-.c0 .c10:last-child {
+.c0 .c11:last-child {
   margin-bottom: 12px;
 }
 
@@ -259,12 +265,12 @@ exports[`Card demo -- custom 1`] = `
   font-size: 14px;
 }
 
-.c0 .c8 {
+.c0 .c9 {
   color: #c3cad9;
   font-size: 12px;
 }
 
-.c0 .c10 {
+.c0 .c11 {
   border-top: 1px solid #e1e6f0;
 }
 
@@ -295,10 +301,10 @@ exports[`Card demo -- custom 1`] = `
 }
 
 <div
-  class="c0"
+  class="uc-fe-card c0"
 >
   <div
-    class="c1 c2"
+    class="c1 uc-fe-card-content c2"
   >
     <div
       style="background:#e1e6f0;height:50px;padding:10px;"
@@ -307,7 +313,7 @@ exports[`Card demo -- custom 1`] = `
     </div>
   </div>
   <div
-    class="c3 c4"
+    class="c3 uc-fe-card-action c4"
   >
     <button
       class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c5"
@@ -323,19 +329,21 @@ exports[`Card demo -- custom 1`] = `
     </button>
   </div>
   <div
-    class="c6 c7"
+    class="c6 uc-fe-card-header c7"
   >
-    <div>
+    <div
+      class="uc-fe-card-title c8"
+    >
       This is the title
     </div>
     <div
-      class="c8 c9"
+      class="c9 uc-fe-card-comment c10"
     >
       This is the comment
     </div>
   </div>
   <div
-    class="c10 c11"
+    class="c11 uc-fe-card-footer c12"
   >
     <button
       class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c5"

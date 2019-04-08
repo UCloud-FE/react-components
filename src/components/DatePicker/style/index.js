@@ -14,6 +14,8 @@ import config from 'src/config';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-datepicker';
+export const pickerPrefixCls = prefixCls + '–picker';
+export const monthPickerPrefixCls = prefixCls + '-month-picker';
 
 const RcPickerWrap = ({ className, dropdownClassName, ...rest }) => (
     <RcPicker dropdownClassName={classnames(className, dropdownClassName)} {...rest} />
@@ -63,7 +65,9 @@ export const PickerIcon = styled(Icon)`
     display: inline-block;
 `;
 
-export const TimeWrap = styled.div`
+export const TimeWrap = styled.div.attrs({
+    className: `${prefixCls}-time-wrap`
+})`
     margin-left: 8px;
 
     ${inlineBlockWithVerticalMixin};
@@ -74,7 +78,8 @@ export const TimeSeparator = styled.span`
 `;
 
 export const PickerContainer = styled.div.attrs({
-    className: ({ disabled }) => classnames(disabled && `${prefixCls}-disabled`)
+    className: ({ disabled, isMonth }) =>
+        classnames(prefixCls, isMonth && `${prefixCls}-month`, disabled && `${prefixCls}-disabled`)
 })(
     ({ theme: { colorMap, DatePicker: datePickerTheme = {} }, disabled }) => css`
         ${inlineBlockWithVerticalMixin};

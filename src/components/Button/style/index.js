@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import classnames from 'classnames';
 
+import Icon from 'src/components/Icon';
 import config from 'src/config';
 import { inlineBlockWithVerticalMixin } from 'src/style';
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
@@ -94,4 +95,11 @@ export const ButtonWrap = styled.button.attrs({
         ${buttonTheme['&']};
     `
 );
+
+export const ButtonIcon = styled(Icon).attrs({
+    className: prefixCls + '-icon'
+})`
+    /* empty */
+`;
+
 addDefaultThemeProps(ButtonWrap);

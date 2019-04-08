@@ -1,7 +1,9 @@
 import React from 'react';
 
+import { FormWrap } from './style';
+
 const Form = ({ ...rest }) => {
-    return <form {...rest} />;
+    return <FormWrap {...rest} />;
 };
 
 export default Form;

@@ -1423,6 +1423,13 @@ exports[`LocaleProvider demo -- list 1`] = `
   text-align: center;
 }
 
+.c23 .uc-fe-calendar-cell .uc-fe-calendar-date,
+.c23 .uc-fe-calendar-month-panel-cell .uc-fe-calendar-month-panel-month,
+.c23 .uc-fe-calendar-year-panel-cell .uc-fe-calendar-year-panel-year,
+.c23 .uc-fe-calendar-decade-panel-cell .uc-fe-calendar-decade-panel-decade {
+  display: block;
+}
+
 .c23 .uc-fe-calendar-last-month-cell,
 .c23 .uc-fe-calendar-month-panel-last-year-cell,
 .c23 .uc-fe-calendar-year-panel-last-decade-cell,
@@ -1951,19 +1958,19 @@ exports[`LocaleProvider demo -- list 1`] = `
   class="noeditor-wrap"
 >
   <form
-    class="demo-form"
+    class="demo-form uc-fe-form "
   >
     <div
-      class="c0 c1"
+      class="uc-fe-form-item c0 uc-fe-row c1"
     >
       <div
-        class="c2 c3 c4"
+        class="uc-fe-form-label c2 c3 uc-fe-col c4"
         span="3"
       >
         locale
       </div>
       <div
-        class="c3 c5"
+        class="uc-fe-form-controller c3 uc-fe-col c5"
         span="9"
       >
         <div
@@ -2876,7 +2883,7 @@ exports[`LocaleProvider demo -- list 1`] = `
         class="demo-wrap"
       >
         <div
-          class="c24"
+          class="uc-fe-datepicker c24"
         >
           <div
             class="uc-fe-datepicker-date-wrap c25"
@@ -2893,7 +2900,7 @@ exports[`LocaleProvider demo -- list 1`] = `
             />
           </div>
           <div
-            class="c28"
+            class="uc-fe-datepicker-time-wrap c28"
           >
             <div
               class="uc-fe-numberinput uc-fe-numberinput-styletype-pagination c16"
@@ -2957,7 +2964,7 @@ exports[`LocaleProvider demo -- list 1`] = `
         class="demo-wrap"
       >
         <div
-          class="c24"
+          class="uc-fe-datepicker uc-fe-datepicker-month c24"
         >
           <div
             class="uc-fe-datepicker-date-wrap c25"
@@ -3095,10 +3102,10 @@ exports[`LocaleProvider demo -- list 1`] = `
           class="c33"
         >
           <span
-            class="uc-fe-menu-selectall-checkbox c34 c35"
+            class="uc-fe-menu-selectall-checkbox c34 uc-fe-checkbox c35"
           >
             <i
-              class="c36 c37 uc-fe-icon icon__checkbox "
+              class="c36 uc-fe-checkbox-icon c37 uc-fe-icon icon__checkbox "
               type="checkbox"
             />
             全选
@@ -3107,10 +3114,10 @@ exports[`LocaleProvider demo -- list 1`] = `
             class="uc-fe-menu-item c38"
           >
             <span
-              class="c35"
+              class="uc-fe-checkbox c35"
             >
               <i
-                class="c36 c37 uc-fe-icon icon__checkbox "
+                class="c36 uc-fe-checkbox-icon c37 uc-fe-icon icon__checkbox "
                 type="checkbox"
               />
               item 1
@@ -3139,10 +3146,10 @@ exports[`LocaleProvider demo -- list 1`] = `
                   open=""
                 >
                   <span
-                    class="uc-fe-menu-selectall-checkbox c34 c35"
+                    class="uc-fe-menu-selectall-checkbox c34 uc-fe-checkbox c35"
                   >
                     <i
-                      class="c36 c37 uc-fe-icon icon__checkbox "
+                      class="c36 uc-fe-checkbox-icon c37 uc-fe-icon icon__checkbox "
                       type="checkbox"
                     />
                     全选
@@ -3151,10 +3158,10 @@ exports[`LocaleProvider demo -- list 1`] = `
                     class="uc-fe-menu-item c38"
                   >
                     <span
-                      class="c35"
+                      class="uc-fe-checkbox c35"
                     >
                       <i
-                        class="c36 c37 uc-fe-icon icon__checkbox "
+                        class="c36 uc-fe-checkbox-icon c37 uc-fe-icon icon__checkbox "
                         type="checkbox"
                       />
                       item 1-1
@@ -3164,10 +3171,10 @@ exports[`LocaleProvider demo -- list 1`] = `
                     class="uc-fe-menu-item c38"
                   >
                     <span
-                      class="c35"
+                      class="uc-fe-checkbox c35"
                     >
                       <i
-                        class="c36 c37 uc-fe-icon icon__checkbox "
+                        class="c36 uc-fe-checkbox-icon c37 uc-fe-icon icon__checkbox "
                         type="checkbox"
                       />
                       item 1-2
@@ -3200,10 +3207,10 @@ exports[`LocaleProvider demo -- list 1`] = `
                   open=""
                 >
                   <span
-                    class="uc-fe-menu-selectall-checkbox c34 c35"
+                    class="uc-fe-menu-selectall-checkbox c34 uc-fe-checkbox c35"
                   >
                     <i
-                      class="c36 c37 uc-fe-icon icon__checkbox "
+                      class="c36 uc-fe-checkbox-icon c37 uc-fe-icon icon__checkbox "
                       type="checkbox"
                     />
                     全选
@@ -3212,10 +3219,10 @@ exports[`LocaleProvider demo -- list 1`] = `
                     class="uc-fe-menu-item c38"
                   >
                     <span
-                      class="c35"
+                      class="uc-fe-checkbox c35"
                     >
                       <i
-                        class="c36 c37 uc-fe-icon icon__checkbox "
+                        class="c36 uc-fe-checkbox-icon c37 uc-fe-icon icon__checkbox "
                         type="checkbox"
                       />
                       item 2-1
@@ -3225,10 +3232,10 @@ exports[`LocaleProvider demo -- list 1`] = `
                     class="uc-fe-menu-item c38"
                   >
                     <span
-                      class="c35"
+                      class="uc-fe-checkbox c35"
                     >
                       <i
-                        class="c36 c37 uc-fe-icon icon__checkbox "
+                        class="c36 uc-fe-checkbox-icon c37 uc-fe-icon icon__checkbox "
                         type="checkbox"
                       />
                       item 2-2
@@ -3322,7 +3329,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                         type="button"
                       >
                         <i
-                          class="uc-fe-icon icon__cog "
+                          class="uc-fe-button-icon uc-fe-icon icon__cog "
                           type="cog"
                         />
                       </button>
