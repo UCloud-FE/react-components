@@ -161,7 +161,9 @@ export const calendarMixin = ({ theme: { colorMap, colorList, Calendar: calendar
     .${prefixCls}-disabled-cell, .${prefixCls}-month-panel-cell-disabled {
         color: ${colorMap.disabled.text};
     }
-
+    .${prefixCls}-date-panel {
+        outline: none;
+    }
     .${prefixCls}-month-panel, .${prefixCls}-year-panel, .${prefixCls}-decade-panel {
         position: absolute;
         top: 0;
