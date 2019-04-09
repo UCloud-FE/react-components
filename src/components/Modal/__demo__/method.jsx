@@ -11,7 +11,9 @@ class Demo extends React.Component {
                     onClick={() =>
                         Modal.alert(
                             {
-                                title: 'this is alert'
+                                title: 'this is alert',
+                                onClose: () => console.log('close'),
+                                onOk: () => console.log('ok')
                             },
                             <div>this is content</div>
                         )
@@ -24,6 +26,7 @@ class Demo extends React.Component {
                         Modal.confirm(
                             {
                                 title: 'this is confirm',
+                                onClose: () => console.log('close'),
                                 onOk: () => console.log('ok')
                             },
                             <div>this is content</div>
@@ -31,6 +34,54 @@ class Demo extends React.Component {
                     }
                 >
                     confirm
+                </Button>
+                <Button
+                    onClick={() =>
+                        Modal.alert(
+                            {
+                                title: 'this is promise alert',
+                                onClose: () =>
+                                    new Promise(resolve => {
+                                        setTimeout(() => {
+                                            resolve();
+                                        }, 3000);
+                                    }),
+                                onOk: () =>
+                                    new Promise(resolve => {
+                                        setTimeout(() => {
+                                            resolve();
+                                        }, 3000);
+                                    })
+                            },
+                            <div>this is content</div>
+                        )
+                    }
+                >
+                    promise alert
+                </Button>
+                <Button
+                    onClick={() =>
+                        Modal.confirm(
+                            {
+                                title: 'this is promise confirm',
+                                onClose: () =>
+                                    new Promise(resolve => {
+                                        setTimeout(() => {
+                                            resolve();
+                                        }, 3000);
+                                    }),
+                                onOk: () =>
+                                    new Promise(resolve => {
+                                        setTimeout(() => {
+                                            resolve();
+                                        }, 3000);
+                                    })
+                            },
+                            <div>this is content</div>
+                        )
+                    }
+                >
+                    promise confirm
                 </Button>
             </div>
         );
