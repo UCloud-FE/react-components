@@ -26,10 +26,10 @@ const Demo = () => (
             </Item>
         </Group>
         <Group title="Group 2">
-            <Item label="upload" {...horizontalLayout}>
+            <Item label="slider" {...horizontalLayout}>
                 <Slider defaultValue={10} />
             </Item>
-            <Item label="switch" {...horizontalLayout}>
+            <Item label="input" {...horizontalLayout}>
                 <Input />
             </Item>
         </Group>

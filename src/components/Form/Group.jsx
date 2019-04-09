@@ -5,8 +5,9 @@ import { GroupWrap, GroupTitle } from './style';
 
 export default class Group extends Component {
     static propTypes = {
-        // 标题项
-        title: PropTypes.node.isRequired,
+        /** 标题项 */
+        title: PropTypes.node,
+        /** @ignore */
         children: PropTypes.node
     };
 
