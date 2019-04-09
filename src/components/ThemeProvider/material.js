@@ -143,6 +143,15 @@ export default originTheme => {
             }
         }
     };
+    const radioPrefixCls = `${prefixCls}-radio`;
+    materialTheme['Radio'] = {
+        '&': {
+            [`&.${radioPrefixCls}-styletype-button`]: {
+                boxShadow: 'none'
+            }
+        }
+    };
+
     const numberInputPrefixCls = `${prefixCls}-numberinput`;
     materialTheme['NumberInput'] = {
         '&': {

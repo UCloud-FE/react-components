@@ -65,7 +65,6 @@ class Radio extends Component {
             onChange,
             onClick,
             multiple,
-            styleType,
             disabled,
             title,
             ...rest
@@ -110,16 +109,16 @@ class Radio extends Component {
                         ...restProps
                     };
 
-                    const { styleType, ...rest } = props;
+                    const { styleType } = props;
                     switch (styleType) {
                         case 'button':
-                            return this.renderRadioButton(rest);
+                            return this.renderRadioButton(props);
                         case 'tag':
-                            return this.renderRadioTag(rest);
+                            return this.renderRadioTag(props);
                         case 'card':
-                            return this.renderRadioCard(rest);
+                            return this.renderRadioCard(props);
                         default:
-                            return this.renderRadio(rest);
+                            return this.renderRadio(props);
                     }
                 }}
             </RadioContext.Consumer>

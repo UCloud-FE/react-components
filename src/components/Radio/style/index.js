@@ -1,9 +1,16 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
+import classnames from 'classnames';
 
+import config from 'src/config';
 import { inlineBlockWithVerticalMixin } from 'src/style';
 import Icon from 'src/components/Icon';
 import Button from 'src/components/Button';
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
+
+const { prefixCls: _prefixCls } = config;
+const prefixCls = _prefixCls + '-radio';
 
 export const RadioIcon = styled(Icon)`
     margin-right: 8px;
@@ -22,8 +29,22 @@ const sizeMixin = ({ theme: { Height }, size }) => css`
     line-height: ${Height[size]};
 `;
 
+const sharedClassName = ({ disabled, checked, size, styleType }) =>
+    classnames({
+        [`${prefixCls}`]: true,
+        [`${prefixCls}-disabled`]: disabled,
+        [`${prefixCls}-checked`]: checked,
+        [`${prefixCls}-size-${size}`]: true,
+        [`${prefixCls}-styletype-${styleType}`]: true
+    });
+
+const sharedStyle = ({ theme: { Radio: radioTheme = {} } }) => css`
+    ${radioTheme['&']};
+`;
 /* stylelint-disable no-duplicate-selectors */
-export const RadioWrap = styled.div`
+export const RadioWrap = styled.div.attrs({
+    className: sharedClassName
+})`
     ${radioCommonStyleMixin};
 
     ${inlineBlockWithVerticalMixin};
@@ -49,9 +70,19 @@ export const RadioWrap = styled.div`
                 color: ${colorMap.disabled.icon};
             }
         `};
+
+    ${sharedStyle};
 `;
 
-export const RadioButtonWrap = styled(Button)`
+// eslint-disable-next-line no-unused-vars
+const FilterStyleTypeButton = ({ styleType, ...rest }) => <Button {...rest} />;
+FilterStyleTypeButton.propTypes = {
+    styleType: PropTypes.string
+};
+
+export const RadioButtonWrap = styled(FilterStyleTypeButton).attrs({
+    className: sharedClassName
+})`
     min-width: 50px;
     text-align: center;
     border: 1px solid ${({ theme: { colorMap } }) => colorMap.default.border};
@@ -76,9 +107,12 @@ export const RadioButtonWrap = styled(Button)`
     &:hover {
         z-index: 3;
     }
+    ${sharedStyle};
 `;
 
-export const RadioTagWrap = styled.div`
+export const RadioTagWrap = styled.div.attrs({
+    className: sharedClassName
+})`
     padding: 0 8px;
     cursor: pointer;
     border-radius: 2px;
@@ -103,6 +137,7 @@ export const RadioTagWrap = styled.div`
             cursor: not-allowed;
             pointer-events: none;
         `};
+    ${sharedStyle};
 `;
 
 export const RadioCardHeader = styled.div`
@@ -193,7 +228,9 @@ const propsMixin = ({ theme: { colorMap, colorList, titleFontSize }, disabled, c
             }
         `};
 `;
-export const RadioCardWrap = styled.div`
+export const RadioCardWrap = styled.div.attrs({
+    className: sharedClassName
+})`
     border-radius: 4px;
     overflow: hidden;
     min-width: 150px;
@@ -201,6 +238,7 @@ export const RadioCardWrap = styled.div`
     cursor: pointer;
 
     ${propsMixin};
+    ${sharedStyle};
 `;
 
 export const RadioGroupWrap = styled.div`

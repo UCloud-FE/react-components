@@ -81,7 +81,7 @@ export const TabsWrap = styled(RcTabs).attrs({
                 color: ${colorMap.disabled.text};
             }
 
-            &-styleType-default-bar {
+            &-styletype-default-bar {
                 .${prefixCls} {
                     &-ink-bar {
                         display: none !important;
@@ -97,7 +97,7 @@ export const TabsWrap = styled(RcTabs).attrs({
                 }
             }
 
-            &-styleType-ink-bar {
+            &-styletype-ink-bar {
                 .${prefixCls} {
                     &-ink-bar {
                         width: 2px;
