@@ -3,9 +3,12 @@ import styled, { css } from 'styled-components';
 import { inlineBlockWithVerticalMixin } from 'src/style';
 import Icon from 'src/components/Icon';
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
+import config from 'src/config';
+
+const { prefixCls: _prefixCls } = config;
+const prefixCls = _prefixCls + '-input';
 
 /* stylelint-disable no-descending-specificity */
-
 export const IconWrap = styled.span`
     position: absolute;
     right: 0;
@@ -64,7 +67,9 @@ const themeMixin = ({
     ${inputTheme['&']};
 `;
 
-export const InputWrap = styled.span`
+export const InputWrap = styled.span.attrs({
+    className: prefixCls
+})`
     position: relative;
     ${inlineBlockWithVerticalMixin};
 
