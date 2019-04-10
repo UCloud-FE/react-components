@@ -23,7 +23,7 @@ const columns = new Array(5).fill(null).map((v, i) => ({
     width: 100,
     filter: {
         options: [1, 2],
-        popover: { getPopupContainer: () => document.body }
+        popoverProps: { getPopupContainer: () => document.body }
     },
     render: function Column(record) {
         return <span>content {record.index}</span>;

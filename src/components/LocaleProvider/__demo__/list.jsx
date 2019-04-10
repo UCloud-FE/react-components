@@ -59,7 +59,7 @@ class Demo extends Component {
             width: 100,
             filter: {
                 options: [1, 2],
-                popover: { getPopupContainer: () => document.body }
+                popoverProps: { getPopupContainer: () => document.body }
             },
             render: record => <span>content {record.index}</span>
         }));

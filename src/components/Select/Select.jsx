@@ -7,6 +7,7 @@ import Popover from 'src/components/Popover';
 import uncontrolledDecorator from 'decorators/uncontrolled';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
 import { getItemTree, rootPrefix } from 'src/components/Menu/Menu';
+import deprecatedLog from 'src/utils/deprecatedLog';
 
 import Option from './Option';
 import { SelectWrap, SelectSearchInput, Selector, Arrow, BlockMenu, MenuWrap } from './style';
@@ -33,6 +34,9 @@ class Select extends Component {
             searchValue: '',
             itemTree
         };
+        if ('popover' in props) {
+            deprecatedLog('popover', 'popoverProps');
+        }
     }
     static propTypes = {
         /** @ignore */
@@ -81,8 +85,13 @@ class Select extends Component {
         ]),
         /** 尺寸 */
         size: PropTypes.oneOf(Size),
-        /** 弹出层的popover props */
+        /**
+         * 弹出层的popover props
+         * @deprecated 请使用popoverProps替换
+         */
         popover: PropTypes.object,
+        /** 弹出层的popover props */
+        popoverProps: PropTypes.object,
         /** @ignore */
         onVisibleChange: PropTypes.func,
         /** @ignore */
@@ -256,6 +265,7 @@ class Select extends Component {
             renderContent,
             renderSelector,
             popover,
+            popoverProps,
             ...rest
         } = this.props;
         /* eslint-enable no-unused-vars */
@@ -277,6 +287,7 @@ class Select extends Component {
                         getPopupContainer={triggerNode => triggerNode.parentNode}
                         visible={visible}
                         {...popover}
+                        {...popoverProps}
                     >
                         <div>{this.renderSelector()}</div>
                     </Popover>

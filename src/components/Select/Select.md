@@ -49,7 +49,7 @@
 ```js {"codepath": "showSelectAll.jsx"}
 ```
 
-*   popover - 弹出层的 popover props
+*   popoverProps - 弹出层的 popover props
 
-```js {"codepath": "popover.jsx"}
+```js {"codepath": "popoverProps.jsx"}
 ```
