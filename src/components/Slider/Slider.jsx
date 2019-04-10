@@ -122,7 +122,12 @@ class Slider extends Component {
         return JSON.parse(JSON.stringify(obj));
     };
     componentWillReceiveProps(nextProps) {
-        if (!(nextProps.marks == this.state.cacheMarks || _.isEqual(nextProps.marks, this.state.cacheMarks))) {
+        if (
+            !(nextProps.marks == this.state.cacheMarks || _.isEqual(nextProps.marks, this.state.cacheMarks)) ||
+            nextProps.max !== this.props.max ||
+            nextProps.min !== this.props.min ||
+            nextProps.step !== this.props.step
+        ) {
             const marks = this.computeMarks(nextProps.marks);
             this.setState({
                 cacheMarks: this.simpleClone(nextProps.marks),
