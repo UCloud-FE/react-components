@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.3"></a>
+
+## [0.4.3](https://github.com/UCloud-FE/react-components/compare/v0.4.2...v0.4.3) (2019-04-10)
+
+### Bug Fixes
+
+*   **Textarea:** fix placeholder color ([f5e47bc](https://github.com/UCloud-FE/react-components/commit/f5e47bc)), closes [#109](https://github.com/UCloud-FE/react-components/issues/109)
+
+### Features
+
+*   **DatePicker:** add getCalendarContainer to set popover container ([3334611](https://github.com/UCloud-FE/react-components/commit/3334611)), closes [#65](https://github.com/UCloud-FE/react-components/issues/65) [#110](https://github.com/UCloud-FE/react-components/issues/110)
+*   **Form:** add Group of form ([9be9ede](https://github.com/UCloud-FE/react-components/commit/9be9ede)), closes [#106](https://github.com/UCloud-FE/react-components/issues/106)
+*   **Input:** add classname ([5a044b3](https://github.com/UCloud-FE/react-components/commit/5a044b3)), closes [#111](https://github.com/UCloud-FE/react-components/issues/111)
+*   **Modal:** support promise when use modal method ([a73e51f](https://github.com/UCloud-FE/react-components/commit/a73e51f)), closes [#108](https://github.com/UCloud-FE/react-components/issues/108)
+*   **Radio:** add classnames ([176bb87](https://github.com/UCloud-FE/react-components/commit/176bb87)), closes [#107](https://github.com/UCloud-FE/react-components/issues/107)
+*   **Table:** add button styleType to actionList ([86a65f8](https://github.com/UCloud-FE/react-components/commit/86a65f8)), closes [#105](https://github.com/UCloud-FE/react-components/issues/105)
+
 <a name="0.4.2"></a>
 
 ## [0.4.2](https://github.com/UCloud-FE/react-components/compare/v0.4.1...v0.4.2) (2019-04-08)
