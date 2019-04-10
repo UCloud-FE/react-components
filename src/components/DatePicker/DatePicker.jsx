@@ -55,12 +55,15 @@ class DatePicker extends Component {
         /** 是否禁用 */
         disabled: PropTypes.bool,
         /** 弹出层的z-index */
-        zIndex: PropTypes.number
+        zIndex: PropTypes.number,
+        /** 弹出层容器，参考popover.getPopupContainer */
+        getCalendarContainer: PropTypes.func
     };
     static defaultProps = {
         onChange: () => {},
         size: 'md',
-        zIndex: 100
+        zIndex: 100,
+        getCalendarContainer: triggerNode => triggerNode.parentNode
     };
     componentWillReceiveProps = nextProps => {
         if ('value' in nextProps) {
@@ -154,8 +157,18 @@ class DatePicker extends Component {
         return <TimeWrap>{picker}</TimeWrap>;
     };
     render() {
-        // eslint-disable-next-line no-unused-vars
-        const { rules, value: _v, defaultValue, display = {}, size, onChange, zIndex, ...rest } = this.props;
+        const {
+            rules,
+            value: _v,
+            // eslint-disable-next-line no-unused-vars
+            defaultValue,
+            display = {},
+            size,
+            onChange,
+            zIndex,
+            getCalendarContainer,
+            ...rest
+        } = this.props;
         const { date = {} } = display;
         const value = moment(_v);
 
@@ -166,7 +179,7 @@ class DatePicker extends Component {
                         prefixCls={pickerPrefixCls}
                         transitionName={`${animationPrefixCls}-fade`}
                         calendar={<Calendar rules={rules} />}
-                        getCalendarContainer={triggerNode => triggerNode.parentNode}
+                        getCalendarContainer={getCalendarContainer}
                         value={value}
                         align={placements.bottomLeft}
                         onChange={onChange}

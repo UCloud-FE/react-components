@@ -96,7 +96,7 @@ describe('Pagination', () => {
                 showSizeChanger
                 onPageSizeChange={onPageSizeChange}
                 total={100}
-                optionsProps={{ select: { popover: { getPopupContainer: () => document.body } } }}
+                optionsProps={{ select: { popoverProps: { getPopupContainer: () => document.body } } }}
             />
         );
 

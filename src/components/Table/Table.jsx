@@ -302,7 +302,7 @@ class Table extends Component {
                 renderSelector={(content, visible) => {
                     return <Icon key="icon" type="filter" size="xs" color={visible ? 'blue' : null} />;
                 }}
-                popover={{ getPopupContainer: () => this.popupContainer }}
+                popoverProps={{ getPopupContainer: () => this.popupContainer }}
                 multiple={multiple}
                 {...rest}
             />
