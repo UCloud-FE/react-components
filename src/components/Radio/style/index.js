@@ -243,7 +243,6 @@ export const RadioCardWrap = styled.div.attrs({
 
 export const RadioGroupWrap = styled.div`
     position: relative;
-    z-index: 1;
     margin-bottom: -8px;
     ${RadioWrap}, ${/* sc-sel */ RadioTagWrap}, ${RadioCardWrap} {
         margin-right: 8px;

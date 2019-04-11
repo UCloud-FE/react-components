@@ -67,7 +67,7 @@ export const SliderWrap = styled.div(
                 border: 1px solid #c3cad9;
                 background: ${colorMap.default.background};
                 touch-action: pan-x;
-                z-index: 1;
+                z-index: 9;
                 height: ${HeightNumber[size] + 6}px;
                 line-height: ${HeightNumber[size] + 8}px;
 
