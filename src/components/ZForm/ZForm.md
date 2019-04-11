@@ -46,6 +46,26 @@
     </ZForm>;
     ```
 
+*   controllerDecorator 包裹的控件为 controlled 状态，value 和 onChange 被 form 托管，组件内定义的默认值将无法生效，如一些控件依赖默认值（如 Slider、Input）必须要注意默认值的传入
+
+    ```js static
+    class Input extends React.Component {
+        render() {
+            return <input {...this.props} />;
+        }
+    }
+    const ZInput = controllerDecorator({
+        // 不传会导致uncontrolled变换为controlled告警
+        initialValue: ''
+    })(Input);
+
+    <ZForm form={form}>
+        <Item>
+            <ZInput zName="input" />
+        </Item>
+    </ZForm>;
+    ```
+
 *   controllerDecorator 支持传入 option
 
     *   valuePropName - 组件的值的 prop 名称
