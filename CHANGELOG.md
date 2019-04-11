@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.4"></a>
+
+## [0.4.4](https://github.com/UCloud-FE/react-components/compare/v0.4.3...v0.4.4) (2019-04-11)
+
+### Bug Fixes
+
+*   **NumberInput:** fix when onHandle return 2 arguments ([fd3bdaa](https://github.com/UCloud-FE/react-components/commit/fd3bdaa)), closes [#114](https://github.com/UCloud-FE/react-components/issues/114)
+*   **Select:** fix search input width and menu max width ([600b5fb](https://github.com/UCloud-FE/react-components/commit/600b5fb)), closes [#115](https://github.com/UCloud-FE/react-components/issues/115)
+*   **Slider:** fix slider bug when update max min or step ([93fd186](https://github.com/UCloud-FE/react-components/commit/93fd186)), closes [#112](https://github.com/UCloud-FE/react-components/issues/112)
+*   **Slider:** ZForm dec bug & style bug ([2b430ed](https://github.com/UCloud-FE/react-components/commit/2b430ed)), closes [#83](https://github.com/UCloud-FE/react-components/issues/83) [#113](https://github.com/UCloud-FE/react-components/issues/113)
+
 <a name="0.4.3"></a>
 
 ## [0.4.3](https://github.com/UCloud-FE/react-components/compare/v0.4.2...v0.4.3) (2019-04-10)
