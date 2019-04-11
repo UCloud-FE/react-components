@@ -8,6 +8,7 @@ import { inlineBlockWithVerticalMixin } from 'src/style';
 
 export const SelectSearchInput = styled(Input.Search)`
     min-width: 100px;
+    display: block;
     margin: 0 8px;
     margin-top: 10px;
 `;
@@ -46,6 +47,7 @@ export const BlockMenu = styled(Menu)(
         display: block;
         border: none;
         max-height: 380px;
+        max-width: unset;
         ${selectTheme['Menu']};
     `
 );
