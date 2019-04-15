@@ -281,8 +281,13 @@ const propsMixin = ({
 `;
 
 export const NumberInputWrap = styled.div.attrs({
-    className: ({ styleType, focused }) =>
-        classnames(prefixCls, `${prefixCls}-styletype-${styleType}`, focused && `${prefixCls}-focused`)
+    className: ({ styleType, focused, disabled }) =>
+        classnames(
+            prefixCls,
+            `${prefixCls}-styletype-${styleType}`,
+            focused && `${prefixCls}-focused`,
+            disabled && `${prefixCls}-disabled`
+        )
 })`
     position: relative;
     box-sizing: border-box;

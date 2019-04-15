@@ -75,7 +75,7 @@ export default originTheme => {
     materialTheme['Menu'] = {
         '&': {
             [`&, .${menuPrefixCls}-popup-content-wrap`]: {
-                borderStyle: 'none !important',
+                borderStyle: 'none',
                 boxShadow: materialVars.whiteBoxShadow
             }
         },
@@ -153,20 +153,6 @@ export default originTheme => {
     const numberInputPrefixCls = `${prefixCls}-numberinput`;
     materialTheme['NumberInput'] = {
         '&': {
-            [`.${numberInputPrefixCls}-input`]: {
-                boxShadow: materialVars.innerShadow,
-                transition: materialVars.transitionDown,
-                backgroundColor: '#fafafc',
-                ':hover': {
-                    backgroundColor: '#f6f6fb'
-                },
-                ':focus': {
-                    backgroundColor: '#f6f6fb'
-                },
-                ':disabled,&[disabled]': {
-                    boxShadow: 'none'
-                }
-            },
             [`&.${numberInputPrefixCls}-styletype-default`]: {
                 borderColor: '#dfe0f1',
                 borderRightWidth: '0',
@@ -175,7 +161,10 @@ export default originTheme => {
                     borderColor: '#c3cad9'
                 },
                 [`&.${numberInputPrefixCls}-focused`]: {
-                    borderColor: colorMap.active.border
+                    borderColor: colorMap.active.border,
+                    [`.${numberInputPrefixCls}-input-wrap`]: {
+                        backgroundColor: '#f6f6fb'
+                    }
                 },
                 [`.${numberInputPrefixCls}-handler`]: {
                     boxSizing: 'content-box',
@@ -184,35 +173,83 @@ export default originTheme => {
                 [`.${numberInputPrefixCls}-handler-up`]: {
                     top: '-1px',
                     paddingTop: '1px'
-                }
-            },
-            [`&.${numberInputPrefixCls}-styletype-split .${numberInputPrefixCls}-input-wrap`]: {
-                borderColor: '#dfe0f1',
-                transition: materialVars.transitionDown,
-                margin: 0,
-                ':hover': {
-                    borderColor: '#c3cad9'
-                }
-            },
-            [`&.${numberInputPrefixCls}-styletype-split.${numberInputPrefixCls}-focused .${numberInputPrefixCls}-input-wrap`]: {
-                borderColor: colorMap.active.border
-            },
-            [`&.${numberInputPrefixCls}-styletype-pagination .${numberInputPrefixCls}-input`]: {
-                borderColor: '#dfe0f1',
-                ':hover': {
-                    borderColor: '#c3cad9'
                 },
-                ':focus': {
-                    borderColor: colorMap.active.border
+                [`.${numberInputPrefixCls}-handler-down`]: {
+                    borderTopWidth: '1px',
+                    borderTopColor: '#e8e9f5'
+                },
+                [`.${numberInputPrefixCls}-input-wrap`]: {
+                    boxShadow: materialVars.innerShadow,
+                    background: '#fafafc',
+                    ':hover': {
+                        backgroundColor: '#f6f6fb'
+                    }
+                },
+                [`.${numberInputPrefixCls}-input`]: {
+                    boxShadow: 'none',
+                    background: 'transparent'
+                },
+                [`&.${numberInputPrefixCls}-disabled`]: {
+                    [`.${numberInputPrefixCls}-input-wrap`]: {
+                        boxShadow: 'none'
+                    }
+                }
+            },
+            [`&.${numberInputPrefixCls}-styletype-split`]: {
+                [`.${numberInputPrefixCls}-input-wrap`]: {
+                    boxShadow: materialVars.innerShadow,
+                    background: '#fafafc',
+                    borderColor: '#dfe0f1',
+                    transition: materialVars.transitionDown,
+                    margin: 0,
+                    ':hover': {
+                        borderColor: '#c3cad9',
+                        backgroundColor: '#f6f6fb'
+                    }
+                },
+                [`.${numberInputPrefixCls}-input`]: {
+                    boxShadow: 'none',
+                    background: 'transparent'
+                },
+                [`.${numberInputPrefixCls}-handler`]: {
+                    borderColor: 'transparent'
+                },
+                [`&.${numberInputPrefixCls}-focused`]: {
+                    [`.${numberInputPrefixCls}-input-wrap`]: {
+                        backgroundColor: '#f6f6fb',
+                        borderColor: colorMap.active.border
+                    }
+                },
+                [`&.${numberInputPrefixCls}-disabled`]: {
+                    [`.${numberInputPrefixCls}-input-wrap`]: {
+                        boxShadow: 'none'
+                    }
+                }
+            },
+            [`&.${numberInputPrefixCls}-styletype-pagination`]: {
+                [`.${numberInputPrefixCls}-input`]: {
+                    boxShadow: materialVars.innerShadow,
+                    transition: materialVars.transitionDown,
+                    backgroundColor: '#fafafc',
+                    borderColor: '#dfe0f1',
+                    ':hover': {
+                        backgroundColor: '#f6f6fb',
+                        borderColor: '#c3cad9'
+                    },
+                    ':focus': {
+                        backgroundColor: '#f6f6fb',
+                        borderColor: colorMap.active.border
+                    },
+                    ':disabled,&[disabled]': {
+                        boxShadow: 'none'
+                    }
+                },
+                [`.${numberInputPrefixCls}-handler`]: {
+                    borderColor: 'transparent'
                 }
             },
             [`.${numberInputPrefixCls}-handler`]: {
-                boxShadow: '0 2px 4px 0 #e4e5f2, 0 1px 1px 0 rgba(162,166,191,.32), 0 1px 0 0 rgba(223,224,241,.7)',
-                borderWidth: '0'
-            },
-            [`&.${numberInputPrefixCls}-styletype-default .${numberInputPrefixCls}-handler-down`]: {
-                borderTopWidth: '1px',
-                borderTopColor: '#e8e9f5'
+                boxShadow: '0 2px 4px 0 #e4e5f2, 0 1px 1px 0 rgba(162,166,191,.32), 0 1px 0 0 rgba(223,224,241,.7)'
             }
         }
     };
