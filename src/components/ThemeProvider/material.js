@@ -75,7 +75,7 @@ export default originTheme => {
     materialTheme['Menu'] = {
         '&': {
             [`&, .${menuPrefixCls}-popup-content-wrap`]: {
-                borderStyle: 'none',
+                borderStyle: 'none !important',
                 boxShadow: materialVars.whiteBoxShadow
             }
         },
