@@ -111,6 +111,7 @@ export default originTheme => {
             boxShadow: 'none'
         }
     };
+    const buttonPrefixCls = prefixCls + '-button';
     materialTheme['Button'] = {
         styleType: {
             primary: {
@@ -132,7 +133,13 @@ export default originTheme => {
                 }
             },
             'border-gray': {
-                transition: `all ${materialVars.transitionFlat}`
+                transition: `all ${materialVars.transitionFlat}`,
+                background: '#fafafc',
+                [`:hover,&.${buttonPrefixCls}-checked`]: {
+                    background: '#fff',
+                    color: colorList.primary,
+                    borderColor: colorList.primary
+                }
             }
         },
         '&': {
@@ -143,15 +150,6 @@ export default originTheme => {
             }
         }
     };
-    const radioPrefixCls = `${prefixCls}-radio`;
-    materialTheme['Radio'] = {
-        '&': {
-            [`&.${radioPrefixCls}-styletype-button`]: {
-                boxShadow: 'none'
-            }
-        }
-    };
-
     const numberInputPrefixCls = `${prefixCls}-numberinput`;
     materialTheme['NumberInput'] = {
         '&': {

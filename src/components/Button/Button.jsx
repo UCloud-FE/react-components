@@ -22,6 +22,11 @@ export default class Button extends PureComponent {
         icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
         /** 设置原生的button上type属性 */
         type: PropTypes.string,
+        /**
+         * @ignore
+         * 选中状态
+         */
+        checked: PropTypes.bool,
         /** @ignore */
         className: PropTypes.string,
         /** @ignore */
