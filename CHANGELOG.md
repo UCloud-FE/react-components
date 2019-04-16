@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.5"></a>
+
+## [0.4.5](https://github.com/UCloud-FE/react-components/compare/v0.4.4...v0.4.5) (2019-04-16)
+
+### Bug Fixes
+
+*   **Radio:** fix style of button ([81e6c2d](https://github.com/UCloud-FE/react-components/commit/81e6c2d)), closes [#117](https://github.com/UCloud-FE/react-components/issues/117)
+
+### Features
+
+*   **Icon:** reset icon style ([191a7ca](https://github.com/UCloud-FE/react-components/commit/191a7ca)), closes [#118](https://github.com/UCloud-FE/react-components/issues/118)
+
 <a name="0.4.4"></a>
 
 ## [0.4.4](https://github.com/UCloud-FE/react-components/compare/v0.4.3...v0.4.4) (2019-04-11)
