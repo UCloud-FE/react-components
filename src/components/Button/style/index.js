@@ -63,18 +63,25 @@ const disabledMixin = ({
     }
 `;
 
+const checkedMixin = ({ theme: { colorList } }) => css`
+    color: ${colorList.primary2};
+    background: ${colorList.primary4};
+    border-color: ${colorList.primary2};
+`;
+
 export const ButtonWrap = styled.button.attrs({
-    className: ({ size, styleType, shape, loading, disabled }) =>
+    className: ({ size, styleType, shape, loading, disabled, checked }) =>
         classnames(
             prefixCls,
             `${prefixCls}-size-${size}`,
             `${prefixCls}-styletype-${styleType}`,
             shape && `${prefixCls}-${shape}`,
             loading && `${prefixCls}-loading`,
-            disabled && `${prefixCls}-disabled`
+            disabled && `${prefixCls}-disabled`,
+            checked && `${prefixCls}-checked`
         )
 })(
-    ({ theme: { fontSize, Button: buttonTheme = {} }, loading, shape, disabled }) => css`
+    ({ theme: { fontSize, Button: buttonTheme = {} }, loading, shape, disabled, checked }) => css`
         box-sizing: border-box;
         border-radius: 2px;
         border-width: 1px;
@@ -90,6 +97,7 @@ export const ButtonWrap = styled.button.attrs({
         ${styleTypeMixin};
         ${shape === 'circle' && shapeCircleMixin};
         ${loading && loadingMixin};
+        ${checked && checkedMixin};
         ${disabled && disabledMixin};
 
         ${buttonTheme['&']};

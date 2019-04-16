@@ -75,7 +75,7 @@ export const RadioWrap = styled.div.attrs({
 `;
 
 // eslint-disable-next-line no-unused-vars
-const FilterStyleTypeButton = ({ styleType, ...rest }) => <Button {...rest} />;
+const FilterStyleTypeButton = ({ styleType, ...rest }) => <Button styleType="border-gray" {...rest} />;
 FilterStyleTypeButton.propTypes = {
     styleType: PropTypes.string
 };
@@ -83,31 +83,34 @@ FilterStyleTypeButton.propTypes = {
 export const RadioButtonWrap = styled(FilterStyleTypeButton).attrs({
     className: sharedClassName
 })`
-    min-width: 50px;
-    text-align: center;
-    border: 1px solid ${({ theme: { colorMap } }) => colorMap.default.border};
-    border-radius: 0;
+    && {
+        min-width: 50px;
+        text-align: center;
+        border-radius: 0;
+        ${({ theme: { fontSize } }) =>
+            css`
+                font-size: ${fontSize};
+            `};
+        position: relative;
+        cursor: pointer;
 
-    ${radioCommonStyleMixin};
+        ${({ disabled }) =>
+            disabled &&
+            css`
+                z-index: 1;
+            `};
 
-    ${({ disabled }) =>
-        disabled &&
-        css`
-            z-index: 1;
-        `};
+        ${({ checked }) =>
+            checked &&
+            css`
+                z-index: 2;
+            `};
 
-    ${({ checked, theme: { colorMap } }) =>
-        checked &&
-        css`
-            border-color: ${colorMap.active.border};
-            color: ${colorMap.active.text};
-            z-index: 2;
-        `};
-
-    &:hover {
-        z-index: 3;
+        &:hover {
+            z-index: 3;
+        }
+        ${sharedStyle};
     }
-    ${sharedStyle};
 `;
 
 export const RadioTagWrap = styled.div.attrs({
@@ -165,7 +168,7 @@ export const RadioCardDisabledLabelWrap = styled.span`
     line-height: 16px;
     ${RadioCardTipPosition};
 `;
-const propsMixin = ({ theme: { colorMap, colorList, titleFontSize }, disabled, checked }) => css`
+const cardPropsMixin = ({ theme: { colorMap, colorList, titleFontSize }, disabled, checked }) => css`
     border: 1px solid ${colorMap.default.border};
 
     ${!checked &&
@@ -237,7 +240,7 @@ export const RadioCardWrap = styled.div.attrs({
     display: inline-block;
     cursor: pointer;
 
-    ${propsMixin};
+    ${cardPropsMixin};
     ${sharedStyle};
 `;
 
