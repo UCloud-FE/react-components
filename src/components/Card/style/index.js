@@ -44,7 +44,6 @@ export const ActionWrap = styled.div.attrs({
 export const ContentWrap = styled.div.attrs({
     className: prefixCls + '-content'
 })`
-    min-height: 30px;
     ${sharedGutter};
 `;
 
