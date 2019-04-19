@@ -243,6 +243,57 @@ export const RadioCardWrap = styled.div.attrs({
     ${cardPropsMixin};
     ${sharedStyle};
 `;
+export const RadioTextWrap = styled.div.attrs({
+    className: sharedClassName
+})`
+    padding: 2px 0;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    > span {
+        display: table;
+        height: 100%;
+        > span {
+            ${({ theme: { colorMap } }) => css`
+                padding: 0 12px;
+                border-color: ${colorMap.default.border};
+                border-style: solid;
+                border-width: 0 1px;
+                height: 100%;
+                display: table-cell;
+                vertical-align: middle;
+            `};
+        }
+    }
+
+    ${radioCommonStyleMixin};
+
+    ${inlineBlockWithVerticalMixin};
+
+    ${sizeMixin};
+    line-height: normal;
+
+    ${({ theme: { colorMap } }) => css`
+        :hover {
+            color: ${colorMap.active.text};
+        }
+    `};
+
+    ${({ checked, theme: { colorMap } }) =>
+        checked &&
+        css`
+            color: ${colorMap.active.text};
+        `};
+
+    ${({ disabled, theme: { colorMap } }) =>
+        disabled &&
+        css`
+            color: ${colorMap.disabled.text};
+            cursor: not-allowed;
+            pointer-events: none;
+        `};
+    ${sharedStyle};
+`;
 
 export const RadioGroupWrap = styled.div`
     position: relative;
@@ -254,6 +305,9 @@ export const RadioGroupWrap = styled.div`
         &:last-child {
             margin-right: 0;
         }
+    }
+    ${RadioTextWrap}+${RadioTextWrap} {
+        margin-left: -1px;
     }
 
     ${RadioButtonWrap} {
@@ -269,4 +323,4 @@ export const RadioGroupWrap = styled.div`
     }
 `;
 
-addDefaultThemeProps(RadioWrap, RadioButtonWrap, RadioTagWrap, RadioCardWrap);
+addDefaultThemeProps(RadioWrap, RadioButtonWrap, RadioTagWrap, RadioCardWrap, RadioTextWrap);

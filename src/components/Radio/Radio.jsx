@@ -4,14 +4,14 @@ import createReactContext from 'create-react-context';
 
 import itemDecorator from 'decorators/selectableWithStore/item';
 import uncontrolledDecorator from 'decorators/uncontrolled';
-import { RadioWrap, RadioIcon, RadioButtonWrap, RadioTagWrap } from 'components/Radio/style';
+import { RadioWrap, RadioIcon, RadioButtonWrap, RadioTagWrap, RadioTextWrap } from 'components/Radio/style';
 import Card from './Card';
 
 export const StoreContext = createReactContext();
 export const RadioContext = createReactContext();
 
 const Size = ['sm', 'md', 'lg'];
-const StyleType = ['default', 'button', 'tag', 'card'];
+const StyleType = ['default', 'button', 'tag', 'card', 'text'];
 
 @uncontrolledDecorator({ valueName: 'checked' })
 @itemDecorator({ StoreContext })
@@ -95,6 +95,18 @@ class Radio extends Component {
     renderRadioCard(props) {
         return <Card {...props} onClick={this.onClick} />;
     }
+    renderRadioText(props) {
+        /* eslint-disable no-unused-vars */
+        const { title, disabledLabel, children, ...rest } = props;
+        /* eslint-enable no-unused-vars */
+        return (
+            <RadioTextWrap {...rest} onClick={this.onClick}>
+                <span>
+                    <span>{children}</span>
+                </span>
+            </RadioTextWrap>
+        );
+    }
     render() {
         return (
             <RadioContext.Consumer>
@@ -117,6 +129,8 @@ class Radio extends Component {
                             return this.renderRadioTag(props);
                         case 'card':
                             return this.renderRadioCard(props);
+                        case 'text':
+                            return this.renderRadioText(props);
                         default:
                             return this.renderRadio(props);
                     }
