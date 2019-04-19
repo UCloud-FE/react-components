@@ -48,8 +48,8 @@ class Checkbox extends Component {
         onChange: () => {},
         onClick: () => {}
     };
-    onClick = e => {
-        const { onChange, onClick, checked, disabled } = this.props;
+    onClick = (props, e) => {
+        const { onChange, onClick, checked, disabled } = props;
 
         if (disabled) return;
         onClick(e);
@@ -61,21 +61,26 @@ class Checkbox extends Component {
         /* eslint-enable no-unused-vars */
 
         return (
-            <CheckboxWrap checked={checked} disabled={disabled} {...rest} onClick={this.onClick}>
+            <CheckboxWrap
+                checked={checked}
+                disabled={disabled}
+                {...rest}
+                onClick={(...args) => this.onClick(props, ...args)}
+            >
                 <CheckboxIcon disabled={disabled} type={checked ? 'checkbox-ed' : 'checkbox'} />
                 {children}
             </CheckboxWrap>
         );
     }
     renderCheckboxCard(props) {
-        return <CheckboxCardWrap {...props} onClick={this.onClick} multiple />;
+        return <CheckboxCardWrap {...props} onClick={(...args) => this.onClick(props, ...args)} multiple />;
     }
     render() {
         return (
             <CheckboxContext.Consumer>
                 {context => {
                     /* eslint-disable no-unused-vars */
-                    const { defaultChecked, onChange, onClick, value, multiple, ...restProps } = this.props;
+                    const { defaultChecked, value, multiple, ...restProps } = this.props;
                     /* eslint-enable no-unused-vars */
                     const props = {
                         size: 'md',
