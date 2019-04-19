@@ -182,20 +182,20 @@ const cardPropsMixin = ({ theme: { colorMap, colorList, titleFontSize }, disable
         `};
 
     ${RadioCardHeader} {
-        background: #f6f6fb;
         color: ${colorList.title};
         font-size: ${titleFontSize};
+        border-bottom: 1px solid ${colorMap.default.border};
     }
     ${checked &&
         css`
             border-color: ${colorMap.active.border};
             box-shadow: 0px 2px 4px 0px rgba(228, 229, 242, 1), 0px 1px 1px 0px rgba(162, 166, 191, 0.32);
             ${RadioCardHeader} {
-                background: ${colorList.primary};
-                color: white;
+                color: ${colorMap.active.text};
+                border-color: ${colorMap.active.border};
             }
             ${RadioCardIcon} {
-                color: white;
+                color: ${colorMap.active.text};
             }
         `};
     ${!disabled &&

@@ -18,12 +18,14 @@ class Card extends PureComponent {
             <RadioCardWrap {...{ checked, disabled }} {...rest}>
                 <RadioCardHeader>
                     {title}
-                    {checked ? (
-                        <RadioCardIcon type="circle-check_hover" />
-                    ) : disabled ? (
+                    {disabled && disabledLabel ? (
                         <RadioCardDisabledLabelWrap>{disabledLabel}</RadioCardDisabledLabelWrap>
                     ) : multiple ? (
-                        <RadioCardIcon type="cbox" />
+                        checked ? (
+                            <RadioCardIcon type="checkbox-ed" />
+                        ) : (
+                            <RadioCardIcon type="checkbox" />
+                        )
                     ) : null}
                 </RadioCardHeader>
                 <RadioCardContent>{children}</RadioCardContent>
