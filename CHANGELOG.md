@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.6"></a>
+
+## [0.4.6](https://github.com/UCloud-FE/react-components/compare/v0.4.5...v0.4.6) (2019-04-19)
+
+### Bug Fixes
+
+*   **NumberInput:** fix style of suffix ([2a9271f](https://github.com/UCloud-FE/react-components/commit/2a9271f)), closes [#116](https://github.com/UCloud-FE/react-components/issues/116)
+
+### Features
+
+*   **Card:** remove min height of card content ([06a3d00](https://github.com/UCloud-FE/react-components/commit/06a3d00)), closes [#119](https://github.com/UCloud-FE/react-components/issues/119)
+*   **Radio:** add text radio ([2f1da9e](https://github.com/UCloud-FE/react-components/commit/2f1da9e)), closes [#120](https://github.com/UCloud-FE/react-components/issues/120)
+*   **Radio:** change card style ([186fe37](https://github.com/UCloud-FE/react-components/commit/186fe37)), closes [#121](https://github.com/UCloud-FE/react-components/issues/121)
+
 <a name="0.4.5"></a>
 
 ## [0.4.5](https://github.com/UCloud-FE/react-components/compare/v0.4.4...v0.4.5) (2019-04-16)
