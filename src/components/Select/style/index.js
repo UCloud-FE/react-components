@@ -17,7 +17,7 @@ export const Selector = styled.div`
     border-radius: 2px;
     cursor: pointer;
     padding: 0 8px;
-    padding-right: 40px;
+    padding-right: 28px;
     box-sizing: border-box;
 `;
 
