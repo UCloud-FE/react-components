@@ -82,6 +82,7 @@ export const ButtonWrap = styled.button.attrs({
         )
 })(
     ({ theme: { fontSize, Button: buttonTheme = {} }, loading, shape, disabled, checked }) => css`
+        margin: 0;
         box-sizing: border-box;
         border-radius: 2px;
         border-width: 1px;
