@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.7"></a>
+
+## [0.4.7](https://github.com/UCloud-FE/react-components/compare/v0.4.6...v0.4.7) (2019-04-29)
+
+### Bug Fixes
+
+*   **Button:** fix safari button wrong margin ([43e50a2](https://github.com/UCloud-FE/react-components/commit/43e50a2)), closes [#123](https://github.com/UCloud-FE/react-components/issues/123)
+
+### Features
+
+*   **Select:** reduce padding of select ([7023ca8](https://github.com/UCloud-FE/react-components/commit/7023ca8)), closes [#122](https://github.com/UCloud-FE/react-components/issues/122)
+
 <a name="0.4.6"></a>
 
 ## [0.4.6](https://github.com/UCloud-FE/react-components/compare/v0.4.5...v0.4.6) (2019-04-19)
