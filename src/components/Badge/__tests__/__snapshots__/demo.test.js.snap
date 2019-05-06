@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Badge demo -- badge 1`] = `
-.c31 {
+.c32 {
   position: relative;
   display: inline-block;
 }
 
-.c32 {
+.c33 {
   position: absolute;
 }
 
-.c33 {
+.c34 {
   display: inline-block;
   min-height: 20px;
   line-height: 20px;
@@ -87,12 +87,12 @@ exports[`Badge demo -- badge 1`] = `
   vertical-align: baseline;
 }
 
-.c29 {
+.c30 {
   margin-right: 8px;
   font-size: 14px;
 }
 
-.c27 {
+.c28 {
   color: #6b798e;
   font-size: 12px;
   position: relative;
@@ -103,11 +103,11 @@ exports[`Badge demo -- badge 1`] = `
   line-height: 28px;
 }
 
-.c27 .c28 {
+.c28 .c29 {
   color: #4074e1;
 }
 
-.c30 {
+.c31 {
   color: #6b798e;
   font-size: 12px;
   position: relative;
@@ -118,38 +118,38 @@ exports[`Badge demo -- badge 1`] = `
   line-height: 28px;
 }
 
-.c25 {
+.c26 {
   position: relative;
   margin-bottom: -8px;
 }
 
-.c25 .c26,
-.c25 .style__RadioTagWrap-sc-25j3mq-3,
-.c25 .style__RadioCardWrap-sc-25j3mq-8 {
+.c26 .c27,
+.c26 .style__RadioTagWrap-sc-25j3mq-3,
+.c26 .style__RadioCardWrap-sc-25j3mq-8 {
   margin-right: 8px;
   margin-bottom: 8px;
 }
 
-.c25 .c26:last-child,
-.c25 .style__RadioTagWrap-sc-25j3mq-3:last-child,
-.c25 .style__RadioCardWrap-sc-25j3mq-8:last-child {
+.c26 .c27:last-child,
+.c26 .style__RadioTagWrap-sc-25j3mq-3:last-child,
+.c26 .style__RadioCardWrap-sc-25j3mq-8:last-child {
   margin-right: 0;
 }
 
-.c25 .c35+.c35 {
+.c26 .c36+.c36 {
   margin-left: -1px;
 }
 
-.c25 .c34 {
+.c26 .c35 {
   margin-right: -1px;
   margin-bottom: 8px;
 }
 
-.c25 .c34:first-child {
+.c26 .c35:first-child {
   border-radius: 2px 0 0 2px;
 }
 
-.c25 .c34:last-child {
+.c26 .c35:last-child {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
 }
@@ -174,9 +174,27 @@ exports[`Badge demo -- badge 1`] = `
 }
 
 .c6 input {
-  border: 1px solid #c3cad9;
-  background: #fff;
+  border: 1px solid #dfe0f1;
+  background: #fafafc;
   height: 28px;
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+}
+
+.c6 input:hover {
+  border-color: #c3cad9;
+  background-color: #f6f6fb;
+}
+
+.c6 input:focus {
+  border-color: #4683e6;
+  background-color: #f6f6fb;
+}
+
+.c6 input:disabled,
+.c6 input[disabled] {
+  box-shadow: none;
 }
 
 .c6 input::-webkit-input-placeholder {
@@ -195,25 +213,17 @@ exports[`Badge demo -- badge 1`] = `
   color: #abb4c3;
 }
 
-.c6 input:hover {
-  border-color: #4683e6;
-}
-
-.c6 input:focus {
-  border-color: #4683e6;
-}
-
-.c6 .c36 {
+.c6 .c37 {
   width: 28px;
   height: 28px;
   line-height: 28px;
 }
 
-.c12 {
+.c13 {
   position: relative;
 }
 
-.c14 {
+.c15 {
   border: none;
   outline: none;
   padding: 0;
@@ -230,6 +240,7 @@ exports[`Badge demo -- badge 1`] = `
   color: inherit;
   cursor: pointer;
   background: #fff;
+  box-shadow: 0 2px 4px 0 #e4e5f2,0 1px 1px 0 rgba(162,166,191,0.32),0 1px 0 0 rgba(223,224,241,0.7);
   display: inline-block;
   vertical-align: middle;
   border-color: #c3cad9;
@@ -243,45 +254,59 @@ exports[`Badge demo -- badge 1`] = `
   vertical-align: middle;
   color: #6b798e;
   height: 28px;
-  border: 1px solid #c3cad9;
+  border: 1px solid #dfe0f1;
   padding-right: 22px;
+  border-right-width: 0;
 }
 
-.c7 .c13 {
+.c7 .c14 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c7 .c13::-webkit-input-placeholder {
+.c7 .c14::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c7 .c13::-moz-placeholder {
+.c7 .c14::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c7 .c13:-ms-input-placeholder {
+.c7 .c14:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c7 .c13::placeholder {
+.c7 .c14::placeholder {
   color: #abb4c3;
 }
 
 .c7:hover {
-  border-color: #4683e6;
+  border-color: #c3cad9;
 }
 
-.c7 .c13 {
+.c7 .c12 {
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  background: #fafafc;
+}
+
+.c7 .c12:hover {
+  background: #f6f6fb;
+}
+
+.c7 .c14 {
   padding: 0 0 0 8px;
   text-align: left;
+  box-shadow: none;
+  background: transparent;
   width: 34px;
 }
 
 .c7 .c8,
 .c7 .c11 {
   right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
   height: 13px;
   line-height: 13px;
   width: 22px;
@@ -294,15 +319,17 @@ exports[`Badge demo -- badge 1`] = `
 
 .c7 .c8 {
   border-width: 0 0 0 1px;
-  top: 0;
+  top: -1px;
+  padding-top: 1px;
 }
 
 .c7 .c11 {
   border-width: 1px 0 0 1px;
   bottom: 0;
+  border-top-color: #e8e9f5;
 }
 
-.c17 {
+.c18 {
   position: relative;
   height: 100%;
   width: 100%;
@@ -310,7 +337,7 @@ exports[`Badge demo -- badge 1`] = `
   box-sizing: border-box;
 }
 
-.c19 {
+.c20 {
   width: 100%;
   height: 100%;
   text-align: center;
@@ -319,7 +346,7 @@ exports[`Badge demo -- badge 1`] = `
   display: block;
 }
 
-.c22 {
+.c23 {
   position: absolute;
   display: inline-block;
   left: -1px;
@@ -330,7 +357,7 @@ exports[`Badge demo -- badge 1`] = `
   transition: all 0.3s;
 }
 
-.c24 {
+.c25 {
   position: absolute;
   display: inline-block;
   left: 18px;
@@ -342,7 +369,7 @@ exports[`Badge demo -- badge 1`] = `
   transition: all 0.3s;
 }
 
-.c15 {
+.c16 {
   position: relative;
   border-radius: 2px;
   overflow: hidden;
@@ -361,11 +388,11 @@ exports[`Badge demo -- badge 1`] = `
   line-height: 16px;
 }
 
-.c15:hover {
+.c16:hover {
   border-color: #4683e6;
 }
 
-.c15 .c21 {
+.c16 .c22 {
   background-color: #fff;
   box-shadow: 0 0.5px 0.5px #c3cad9;
   border: 1px solid #c3cad9;
@@ -373,32 +400,32 @@ exports[`Badge demo -- badge 1`] = `
   height: 20px;
 }
 
-.c15 .c23 {
+.c16 .c24 {
   background-color: #e69b9b;
   left: 13px;
   height: 10px;
 }
 
-.c15 .c16 {
+.c16 .c17 {
   border: 1px solid #c3cad9;
   background-color: #ebedf0;
   color: #6b798e;
 }
 
-.c15 .c18,
-.c15 .c20 {
+.c16 .c19,
+.c16 .c21 {
   line-height: 16px;
 }
 
-.c15 .c18 {
+.c16 .c19 {
   padding-right: 20px;
 }
 
-.c15 .c20 {
+.c16 .c21 {
   padding-left: 20px;
 }
 
-.c15 .c18 {
+.c16 .c19 {
   display: none;
 }
 
@@ -465,11 +492,11 @@ exports[`Badge demo -- badge 1`] = `
             </span>
           </div>
           <div
-            class="uc-fe-numberinput-input-wrap c12"
+            class="c12 uc-fe-numberinput-input-wrap c13"
           >
             <input
               autocomplete="off"
-              class="c13 uc-fe-numberinput-input c14"
+              class="c14 uc-fe-numberinput-input c15"
               min="-9007199254740991"
               step="1"
               value="99"
@@ -492,26 +519,26 @@ exports[`Badge demo -- badge 1`] = `
         span="9"
       >
         <div
-          class="c15"
+          class="c16"
         >
           <div
-            class="c16 c17"
+            class="c17 c18"
           >
             <span
-              class="c18 c19"
+              class="c19 c20"
             >
               ON
             </span>
             <span
-              class="c20 c19"
+              class="c21 c20"
             >
               OFF
             </span>
             <span
-              class="c21 c22"
+              class="c22 c23"
             >
               <span
-                class="c23 c24"
+                class="c24 c25"
               />
             </span>
           </div>
@@ -532,26 +559,26 @@ exports[`Badge demo -- badge 1`] = `
         span="9"
       >
         <div
-          class="c15"
+          class="c16"
         >
           <div
-            class="c16 c17"
+            class="c17 c18"
           >
             <span
-              class="c18 c19"
+              class="c19 c20"
             >
               ON
             </span>
             <span
-              class="c20 c19"
+              class="c21 c20"
             >
               OFF
             </span>
             <span
-              class="c21 c22"
+              class="c22 c23"
             >
               <span
-                class="c23 c24"
+                class="c24 c25"
               />
             </span>
           </div>
@@ -572,26 +599,26 @@ exports[`Badge demo -- badge 1`] = `
         span="9"
       >
         <div
-          class="c15"
+          class="c16"
         >
           <div
-            class="c16 c17"
+            class="c17 c18"
           >
             <span
-              class="c18 c19"
+              class="c19 c20"
             >
               ON
             </span>
             <span
-              class="c20 c19"
+              class="c21 c20"
             >
               OFF
             </span>
             <span
-              class="c21 c22"
+              class="c22 c23"
             >
               <span
-                class="c23 c24"
+                class="c24 c25"
               />
             </span>
           </div>
@@ -612,41 +639,41 @@ exports[`Badge demo -- badge 1`] = `
         span="9"
       >
         <div
-          class="c25"
+          class="c26"
         >
           <div
             checked=""
-            class="c26 uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default c27"
+            class="c27 uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default c28"
           >
             <i
-              class="c28 c29 uc-fe-icon icon__cbox-ed c10"
+              class="c29 c30 uc-fe-icon icon__cbox-ed c10"
               type="cbox-ed"
             />
             topRight
           </div>
           <div
-            class="c26 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c30"
+            class="c27 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c31"
           >
             <i
-              class="c28 c29 uc-fe-icon icon__circle c10"
+              class="c29 c30 uc-fe-icon icon__circle c10"
               type="circle"
             />
             topLeft
           </div>
           <div
-            class="c26 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c30"
+            class="c27 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c31"
           >
             <i
-              class="c28 c29 uc-fe-icon icon__circle c10"
+              class="c29 c30 uc-fe-icon icon__circle c10"
               type="circle"
             />
             bottomRight
           </div>
           <div
-            class="c26 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c30"
+            class="c27 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c31"
           >
             <i
-              class="c28 c29 uc-fe-icon icon__circle c10"
+              class="c29 c30 uc-fe-icon icon__circle c10"
               type="circle"
             />
             bottomLeft
@@ -695,17 +722,17 @@ exports[`Badge demo -- badge 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-badge c31"
+      class="uc-fe-badge c32"
       style="margin:10px;"
     >
       <div
         style="width:50px;height:50px;background:#ddd;"
       />
       <div
-        class="uc-fe-badge-badge-wrap c32"
+        class="uc-fe-badge-badge-wrap c33"
       >
         <span
-          class="uc-fe-badge-badge c33"
+          class="uc-fe-badge-badge c34"
         >
           1
         </span>

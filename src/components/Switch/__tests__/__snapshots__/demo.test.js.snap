@@ -1619,9 +1619,27 @@ exports[`Switch demo -- switch 1`] = `
 }
 
 .c24 input {
-  border: 1px solid #c3cad9;
-  background: #fff;
+  border: 1px solid #dfe0f1;
+  background: #fafafc;
   height: 28px;
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+}
+
+.c24 input:hover {
+  border-color: #c3cad9;
+  background-color: #f6f6fb;
+}
+
+.c24 input:focus {
+  border-color: #4683e6;
+  background-color: #f6f6fb;
+}
+
+.c24 input:disabled,
+.c24 input[disabled] {
+  box-shadow: none;
 }
 
 .c24 input::-webkit-input-placeholder {
@@ -1638,14 +1656,6 @@ exports[`Switch demo -- switch 1`] = `
 
 .c24 input::placeholder {
   color: #abb4c3;
-}
-
-.c24 input:hover {
-  border-color: #4683e6;
-}
-
-.c24 input:focus {
-  border-color: #4683e6;
 }
 
 .c24 .c30 {
