@@ -68,10 +68,11 @@ exports[`Card demo -- card 1`] = `
   box-sizing: border-box;
   border-radius: 4px;
   text-align: left;
-  border: 1px solid #e1e6f0;
+  border: 1px solid transparent;
   background: #fff;
   font-size: 12px;
   color: #6b798e;
+  box-shadow: 0px 1px 0px 0px rgba(223,224,241,1),0px 1px 3px 0px rgba(182,188,224,0.5),0px 4px 12px 0px rgba(218,221,238,0.5);
 }
 
 .c0 .c1:last-child,
@@ -84,6 +85,8 @@ exports[`Card demo -- card 1`] = `
 .c0 .c1 {
   color: #0a1633;
   font-size: 14px;
+  padding: 0 24px;
+  margin-top: 14px;
 }
 
 .c0 .c4 {
@@ -91,8 +94,21 @@ exports[`Card demo -- card 1`] = `
   font-size: 12px;
 }
 
+.c0 .c6 {
+  padding: 0 24px;
+  margin-top: 14px;
+}
+
+.c0 .c9 {
+  padding: 0 24px;
+  margin-top: 14px;
+}
+
 .c0 .c11 {
   border-top: 1px solid #e1e6f0;
+  padding: 0 24px;
+  margin-top: 14px;
+  padding-top: 14px;
 }
 
 .c8 {
@@ -114,12 +130,17 @@ exports[`Card demo -- card 1`] = `
   color: #6b798e;
   background: #fff;
   border-color: #c3cad9;
+  border: none;
+  box-shadow: 0 -1px 0 0 rgba(223,224,241,0.5),0 1px 0 0 rgba(223,224,241,.3),0 1px 1px 0 rgba(162,166,191,.5),0 2px 4px 0 rgba(228,229,242,.6);
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
 }
 
 .c8:hover {
   color: #4074e1;
   background: #fff;
   border-color: #4683e6;
+  box-shadow: 0 1px 10px 0 rgba(162,166,191,.12),0 2px 4px -1px rgba(162,166,191,.2),0 4px 5px 0 rgba(162,166,191,.14);
 }
 
 <div
@@ -246,10 +267,11 @@ exports[`Card demo -- custom 1`] = `
   box-sizing: border-box;
   border-radius: 4px;
   text-align: left;
-  border: 1px solid #e1e6f0;
+  border: 1px solid transparent;
   background: #fff;
   font-size: 12px;
   color: #6b798e;
+  box-shadow: 0px 1px 0px 0px rgba(223,224,241,1),0px 1px 3px 0px rgba(182,188,224,0.5),0px 4px 12px 0px rgba(218,221,238,0.5);
 }
 
 .c0 .c6:last-child,
@@ -262,6 +284,8 @@ exports[`Card demo -- custom 1`] = `
 .c0 .c6 {
   color: #0a1633;
   font-size: 14px;
+  padding: 0 24px;
+  margin-top: 14px;
 }
 
 .c0 .c9 {
@@ -269,8 +293,21 @@ exports[`Card demo -- custom 1`] = `
   font-size: 12px;
 }
 
+.c0 .c3 {
+  padding: 0 24px;
+  margin-top: 14px;
+}
+
+.c0 .c1 {
+  padding: 0 24px;
+  margin-top: 14px;
+}
+
 .c0 .c11 {
   border-top: 1px solid #e1e6f0;
+  padding: 0 24px;
+  margin-top: 14px;
+  padding-top: 14px;
 }
 
 .c5 {
@@ -292,12 +329,17 @@ exports[`Card demo -- custom 1`] = `
   color: #6b798e;
   background: #fff;
   border-color: #c3cad9;
+  border: none;
+  box-shadow: 0 -1px 0 0 rgba(223,224,241,0.5),0 1px 0 0 rgba(223,224,241,.3),0 1px 1px 0 rgba(162,166,191,.5),0 2px 4px 0 rgba(228,229,242,.6);
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
 }
 
 .c5:hover {
   color: #4074e1;
   background: #fff;
   border-color: #4683e6;
+  box-shadow: 0 1px 10px 0 rgba(162,166,191,.12),0 2px 4px -1px rgba(162,166,191,.2),0 4px 5px 0 rgba(162,166,191,.14);
 }
 
 <div

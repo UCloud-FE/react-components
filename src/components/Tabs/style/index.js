@@ -12,7 +12,7 @@ export const prefixCls = _prefixCls + '-tabs';
 export const TabsWrap = styled(RcTabs).attrs({
     className: ({ styleType }) => `${prefixCls}-styletype-${styleType}`
 })(
-    ({ theme: { colorMap, colorList, Tabs: tabsTheme }, tabBarPosition }) => css`
+    ({ theme: { colorMap, colorList, Tabs: tabsTheme }, tabBarPosition, styleType }) => css`
         overflow: hidden;
         ${clearFixMixin};
 
@@ -290,6 +290,21 @@ export const TabsWrap = styled(RcTabs).attrs({
                     }
                 `}
         }
+        ${styleType === 'ink' &&
+            (tabBarPosition === 'top' || tabBarPosition === 'bottom') &&
+            css`
+                .${prefixCls}-tab+.${prefixCls}-tab {
+                    margin-left: 12px;
+                }
+            `};
+
+        ${styleType === 'ink' &&
+            (tabBarPosition === 'left' || tabBarPosition === 'right') &&
+            css`
+                .${prefixCls}-tab+.${prefixCls}-tab {
+                    margin-top: 6px;
+                }
+            `};
         ${tabsTheme['&']};
     `
 );

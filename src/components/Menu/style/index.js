@@ -38,23 +38,23 @@ const itemWrapMixin = ({ disabled, theme: { colorMap } }) => css`
 export const ItemWrap = styled.div.attrs({
     className: ({ selected }) => classnames(prefixCls + '-item', selected && prefixCls + '-item-selected')
 })(
-    ({ theme: { Menu: menuTheme = {} } }) => css`
+    () => css`
         padding: 0 8px;
         margin: 0 8px;
+        border-radius: 2px;
 
         ${itemWrapMixin};
         ${ellipsisMixin};
-        ${menuTheme['Item']};
     `
 );
 export const SubMenuTitleWrap = styled.div.attrs({
     className: ({ selected }) =>
         classnames(prefixCls + '-submenu-title', selected && prefixCls + '-submenu-title-selected')
 })(
-    ({ theme: { Menu: menuTheme = {} } }) => css`
+    () => css`
         padding: 0 8px;
+        border-radius: 2px;
         ${itemWrapMixin};
-        ${menuTheme['SubMenuTitle']};
     `
 );
 
@@ -84,16 +84,16 @@ export const SelectAllCheckbox = styled(Checkbox).attrs({
     className: ({ checked }) =>
         classnames(prefixCls + '-selectall-checkbox', checked && prefixCls + '-selectall-checkbox-checked')
 })(
-    ({ theme: { Menu: menuTheme = {} } }) => css`
+    () => css`
         padding: 0 8px;
         margin: 0 8px;
+        border-radius: 2px;
         ${itemWrapMixin};
-        ${menuTheme['SelectAllCheckbox']};
     `
 );
 /* stylelint-disable no-duplicate-selectors */
 
-const menuWrapMixin = css`
+const menuWrapMixin = ({ theme: { materialVars = {} } }) => css`
     display: inline-block;
     box-sizing: border-box;
     max-width: 360px;
@@ -102,6 +102,8 @@ const menuWrapMixin = css`
     padding: 10px 0;
     border-radius: 2px;
     text-align: left;
+    border-style: none !important;
+    box-shadow: ${materialVars.whiteBoxShadow};
 `;
 
 export const PopupContentWrap = styled.div.attrs({

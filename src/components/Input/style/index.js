@@ -22,7 +22,7 @@ export const SearchIcon = styled(Icon)`
 `;
 
 const themeMixin = ({
-    theme: { colorMap, colorList, Height, Input: inputTheme = {} },
+    theme: { colorMap, colorList, Height, materialVars, Input: inputTheme = {} },
     disabled,
     size,
     withIcon
@@ -30,19 +30,27 @@ const themeMixin = ({
     color: ${colorMap.default.text};
 
     input {
-        border: 1px solid ${colorMap.default.border};
-        background: ${colorMap.default.background};
+        border: 1px solid #dfe0f1;
+        background: #fafafc;
         height: ${Height[size]};
         ${withIcon && `padding-right: ${Height[size]}`};
+        box-shadow: ${materialVars.innerShadow};
+        transition: ${materialVars.transitionDown};
+        :hover {
+            border-color: #c3cad9;
+            background-color: #f6f6fb;
+        }
+        :focus {
+            border-color: ${colorMap.active.border};
+            background-color: #f6f6fb;
+        }
+        :disabled,
+        &[disabled] {
+            box-shadow: none;
+        }
 
         &::placeholder {
             color: ${colorList.placeholder};
-        }
-        &:hover {
-            border-color: ${colorMap.active.border};
-        }
-        &:focus {
-            border-color: ${colorMap.active.border};
         }
     }
     ${disabled &&

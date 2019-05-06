@@ -34,11 +34,15 @@ exports[`Pagination demo -- pageSize 1`] = `
 .c2 .c3 {
   height: 28px;
   line-height: 28px;
-  border: 1px solid #c3cad9;
+  border: 1px none #c3cad9;
+  box-shadow: 0 -1px 0 0 rgba(223,224,241,0.5),0 1px 0 0 rgba(223,224,241,.3),0 1px 1px 0 rgba(162,166,191,.5),0 2px 4px 0 rgba(228,229,242,.6);
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
 }
 
 .c2 .c3:hover {
   border-color: #4683e6;
+  box-shadow: 0 1px 10px 0 rgba(162,166,191,.12),0 2px 4px -1px rgba(162,166,191,.2),0 4px 5px 0 rgba(162,166,191,.14);
 }
 
 .c0 {
@@ -355,11 +359,15 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
 .c2 .c3 {
   height: 28px;
   line-height: 28px;
-  border: 1px solid #c3cad9;
+  border: 1px none #c3cad9;
+  box-shadow: 0 -1px 0 0 rgba(223,224,241,0.5),0 1px 0 0 rgba(223,224,241,.3),0 1px 1px 0 rgba(162,166,191,.5),0 2px 4px 0 rgba(228,229,242,.6);
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
 }
 
 .c2 .c3:hover {
   border-color: #4683e6;
+  box-shadow: 0 1px 10px 0 rgba(162,166,191,.12),0 2px 4px -1px rgba(162,166,191,.2),0 4px 5px 0 rgba(162,166,191,.14);
 }
 
 .c0 {
@@ -685,11 +693,11 @@ exports[`Pagination demo -- pagination 1`] = `
   vertical-align: baseline;
 }
 
-.c27 {
+.c28 {
   position: relative;
 }
 
-.c29 {
+.c30 {
   border: none;
   outline: none;
   padding: 0;
@@ -706,6 +714,7 @@ exports[`Pagination demo -- pagination 1`] = `
   color: inherit;
   cursor: pointer;
   background: #fff;
+  box-shadow: 0 2px 4px 0 #e4e5f2,0 1px 1px 0 rgba(162,166,191,0.32),0 1px 0 0 rgba(223,224,241,0.7);
   display: inline-block;
   vertical-align: middle;
   border-color: #c3cad9;
@@ -719,45 +728,59 @@ exports[`Pagination demo -- pagination 1`] = `
   vertical-align: middle;
   color: #6b798e;
   height: 28px;
-  border: 1px solid #c3cad9;
+  border: 1px solid #dfe0f1;
   padding-right: 22px;
+  border-right-width: 0;
 }
 
-.c23 .c28 {
+.c23 .c29 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c23 .c28::-webkit-input-placeholder {
+.c23 .c29::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c23 .c28::-moz-placeholder {
+.c23 .c29::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c23 .c28:-ms-input-placeholder {
+.c23 .c29:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c23 .c28::placeholder {
+.c23 .c29::placeholder {
   color: #abb4c3;
 }
 
 .c23:hover {
-  border-color: #4683e6;
+  border-color: #c3cad9;
 }
 
-.c23 .c28 {
+.c23 .c27 {
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  background: #fafafc;
+}
+
+.c23 .c27:hover {
+  background: #f6f6fb;
+}
+
+.c23 .c29 {
   padding: 0 0 0 8px;
   text-align: left;
+  box-shadow: none;
+  background: transparent;
   width: 34px;
 }
 
 .c23 .c24,
 .c23 .c26 {
   right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
   height: 13px;
   line-height: 13px;
   width: 22px;
@@ -770,12 +793,14 @@ exports[`Pagination demo -- pagination 1`] = `
 
 .c23 .c24 {
   border-width: 0 0 0 1px;
-  top: 0;
+  top: -1px;
+  padding-top: 1px;
 }
 
 .c23 .c26 {
   border-width: 1px 0 0 1px;
   bottom: 0;
+  border-top-color: #e8e9f5;
 }
 
 .c10 {
@@ -827,25 +852,25 @@ exports[`Pagination demo -- pagination 1`] = `
   margin-right: 0;
 }
 
-.c6 .c32+.c32 {
+.c6 .c33+.c33 {
   margin-left: -1px;
 }
 
-.c6 .c31 {
+.c6 .c32 {
   margin-right: -1px;
   margin-bottom: 8px;
 }
 
-.c6 .c31:first-child {
+.c6 .c32:first-child {
   border-radius: 2px 0 0 2px;
 }
 
-.c6 .c31:last-child {
+.c6 .c32:last-child {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
 }
 
-.c30 {
+.c31 {
   color: #6b798e;
   font-size: 12px;
   -webkit-user-select: none;
@@ -856,11 +881,11 @@ exports[`Pagination demo -- pagination 1`] = `
   vertical-align: middle;
 }
 
-.c30 .uc-fe-pagination-item,
-.c30 .uc-fe-pagination-prev,
-.c30 .uc-fe-pagination-next,
-.c30 .uc-fe-pagination-jump-prev,
-.c30 .uc-fe-pagination-jump-next {
+.c31 .uc-fe-pagination-item,
+.c31 .uc-fe-pagination-prev,
+.c31 .uc-fe-pagination-next,
+.c31 .uc-fe-pagination-jump-prev,
+.c31 .uc-fe-pagination-jump-next {
   outline: none;
   box-sizing: border-box;
   background-color: #fff;
@@ -876,56 +901,56 @@ exports[`Pagination demo -- pagination 1`] = `
   line-height: 26px;
 }
 
-.c30 .uc-fe-pagination-item,
-.c30 .uc-fe-pagination-prev,
-.c30 .uc-fe-pagination-next {
+.c31 .uc-fe-pagination-item,
+.c31 .uc-fe-pagination-prev,
+.c31 .uc-fe-pagination-next {
   border: 1px solid #c3cad9;
 }
 
-.c30 .uc-fe-pagination-item:hover,
-.c30 .uc-fe-pagination-prev:hover,
-.c30 .uc-fe-pagination-next:hover {
+.c31 .uc-fe-pagination-item:hover,
+.c31 .uc-fe-pagination-prev:hover,
+.c31 .uc-fe-pagination-next:hover {
   border-color: #4683e6;
   color: #4074e1;
 }
 
-.c30 .uc-fe-pagination-jump-prev:hover,
-.c30 .uc-fe-pagination-jump-next:hover {
+.c31 .uc-fe-pagination-jump-prev:hover,
+.c31 .uc-fe-pagination-jump-next:hover {
   color: #4074e1;
 }
 
-.c30 .uc-fe-pagination-item-active,
-.c30 .uc-fe-pagination-item-active:hover {
+.c31 .uc-fe-pagination-item-active,
+.c31 .uc-fe-pagination-item-active:hover {
   border-color: #4683e6;
   color: #4074e1;
   background-color: #f4f9ff;
   cursor: default;
 }
 
-.c30 .uc-fe-pagination-disabled,
-.c30 .uc-fe-pagination-disabled:hover {
+.c31 .uc-fe-pagination-disabled,
+.c31 .uc-fe-pagination-disabled:hover {
   border-color: #d9d9d9;
   background-color: #f7f7f7;
   cursor: not-allowed;
 }
 
-.c30 .uc-fe-pagination-prev-icon,
-.c30 .uc-fe-pagination-next-icon {
+.c31 .uc-fe-pagination-prev-icon,
+.c31 .uc-fe-pagination-next-icon {
   cursor: inherit;
 }
 
-.c30 .uc-fe-pagination-options,
-.c30 .uc-fe-pagination-options-size-changer,
-.c30 .uc-fe-pagination-options-quick-jumper {
+.c31 .uc-fe-pagination-options,
+.c31 .uc-fe-pagination-options-size-changer,
+.c31 .uc-fe-pagination-options-quick-jumper {
   display: inline-block;
   vertical-align: middle;
 }
 
-.c30 .uc-fe-pagination-options-size-changer {
+.c31 .uc-fe-pagination-options-size-changer {
   margin-right: 5px;
 }
 
-.c30 .uc-fe-pagination-options-gobutton {
+.c31 .uc-fe-pagination-options-gobutton {
   margin-left: 5px;
 }
 
@@ -1418,11 +1443,11 @@ exports[`Pagination demo -- pagination 1`] = `
             </span>
           </div>
           <div
-            class="uc-fe-numberinput-input-wrap c27"
+            class="c27 uc-fe-numberinput-input-wrap c28"
           >
             <input
               autocomplete="off"
-              class="c28 uc-fe-numberinput-input c29"
+              class="c29 uc-fe-numberinput-input c30"
               min="-9007199254740991"
               step="1"
               value="100"
@@ -1436,7 +1461,7 @@ exports[`Pagination demo -- pagination 1`] = `
     class="demo-wrap"
   >
     <ul
-      class="uc-fe-pagination uc-fe-pagination-md c30"
+      class="uc-fe-pagination uc-fe-pagination-md c31"
       unselectable="unselectable"
     >
       <li
@@ -2033,11 +2058,11 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
   vertical-align: baseline;
 }
 
-.c3 {
+.c4 {
   position: relative;
 }
 
-.c5 {
+.c6 {
   border: none;
   outline: none;
   padding: 0;
@@ -2045,38 +2070,49 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
   color: inherit;
 }
 
-.c7 {
+.c8 {
   color: #c3cad9;
   margin: 0 4px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c9 .c4 {
+.c10 .c5 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c9 .c4::-webkit-input-placeholder {
+.c10 .c5::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c9 .c4::-moz-placeholder {
+.c10 .c5::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c9 .c4:-ms-input-placeholder {
+.c10 .c5:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c9 .c4::placeholder {
+.c10 .c5::placeholder {
   color: #abb4c3;
 }
 
-.c9 .c4 {
+.c10 .c3 {
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  background: #fafafc;
+}
+
+.c10 .c3:hover {
+  background: #f6f6fb;
+}
+
+.c10 .c5 {
   padding: 0 0 0 8px;
   text-align: left;
+  box-shadow: none;
+  background: transparent;
   width: 34px;
 }
 
@@ -2093,81 +2129,86 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
   margin: 0;
 }
 
-.c2 .c4 {
+.c2 .c5 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c2 .c4::-webkit-input-placeholder {
+.c2 .c5::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c2 .c4::-moz-placeholder {
+.c2 .c5::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c2 .c4:-ms-input-placeholder {
+.c2 .c5:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c2 .c4::placeholder {
+.c2 .c5::placeholder {
   color: #abb4c3;
 }
 
-.c2 .c4 {
+.c2 .c5 {
   text-align: center;
-  border: 1px solid #c3cad9;
+  border: 1px solid #dfe0f1;
   margin: 0 4px;
   height: 26px;
   width: 26px;
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+  background: #fafafc;
 }
 
-.c2 .c4:hover {
-  border-color: #4683e6;
+.c2 .c5:hover {
   z-index: 1;
+  background: #f6f6fb;
+  border-color: #c3cad9;
 }
 
-.c2 .c10,
-.c2 .c11 {
+.c2 .c11,
+.c2 .c12 {
   text-align: center;
   top: 0;
   height: 28px;
   width: 28px;
   line-height: 26px;
+  border-color: transparent;
 }
 
-.c2 .c10:hover,
-.c2 .c11:hover {
+.c2 .c11:hover,
+.c2 .c12:hover {
   color: #4074e1;
-  border-color: #4683e6;
   z-index: 1;
 }
 
-.c2 .c10 {
+.c2 .c11 {
   right: 0;
   border-width: 1px;
 }
 
-.c2 .c11 {
+.c2 .c12 {
   left: 0;
   border-width: 1px;
 }
 
-.c2 .c6 {
+.c2 .c7 {
   margin-left: 0;
 }
 
-.c2 .c4 {
+.c2 .c5 {
   margin: 0;
 }
 
-.c2 .c6 {
+.c2 .c7 {
   margin-left: 4px;
   margin-right: 0px;
 }
 
-.c8 {
+.c9 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -2184,14 +2225,19 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
   height: 28px;
   padding: 0 8px;
   color: #fff;
-  background: #4683e6;
   border-color: #4683e6;
+  border: none;
+  background: linear-gradient(135deg,#5c8af7,#385ef5);
+  box-shadow: 0 1px 5px 0 rgba(21,56,195,.12),0 2px 2px 0 rgba(8,155,140,0.24),0 3px 1px -3px rgba(58,96,245,.34);
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
 }
 
-.c8:hover {
+.c9:hover {
   color: #fff;
-  background: #3664c8;
   border-color: #3664c8;
+  background: linear-gradient(135deg,#5e95fb,#3a72f9);
+  box-shadow: 0 1px 10px 0 rgba(21,56,195,.12),0 2px 4px -1px rgba(21,56,195,.2),0 4px 5px 0 rgba(21,56,195,.14);
 }
 
 .c0 {
@@ -2475,18 +2521,18 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
             class="uc-fe-numberinput uc-fe-numberinput-styletype-pagination c2"
           >
             <div
-              class="uc-fe-numberinput-input-wrap c3"
+              class="c3 uc-fe-numberinput-input-wrap c4"
             >
               <input
                 autocomplete="off"
-                class="c4 uc-fe-numberinput-input c5"
+                class="c5 uc-fe-numberinput-input c6"
                 max="10"
                 min="1"
                 step="1"
                 value=""
               />
               <span
-                class="c6 uc-fe-numberinput-suffix c7"
+                class="c7 uc-fe-numberinput-suffix c8"
               >
                 <span
                   class="uc-fe-pagination-options-quick-jumper-text"
@@ -2602,18 +2648,18 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
             class="uc-fe-numberinput uc-fe-numberinput-styletype-pagination c2"
           >
             <div
-              class="uc-fe-numberinput-input-wrap c3"
+              class="c3 uc-fe-numberinput-input-wrap c4"
             >
               <input
                 autocomplete="off"
-                class="c4 uc-fe-numberinput-input c5"
+                class="c5 uc-fe-numberinput-input c6"
                 max="10"
                 min="1"
                 step="1"
                 value=""
               />
               <span
-                class="c6 uc-fe-numberinput-suffix c7"
+                class="c7 uc-fe-numberinput-suffix c8"
               >
                 <span
                   class="uc-fe-pagination-options-quick-jumper-text"
@@ -2624,7 +2670,7 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
             </div>
           </div>
           <button
-            class="uc-fe-pagination-options-gobutton uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary c8"
+            class="uc-fe-pagination-options-gobutton uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary c9"
             type="button"
           >
             确定
@@ -2670,11 +2716,15 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
 .c2 .c3 {
   height: 28px;
   line-height: 28px;
-  border: 1px solid #c3cad9;
+  border: 1px none #c3cad9;
+  box-shadow: 0 -1px 0 0 rgba(223,224,241,0.5),0 1px 0 0 rgba(223,224,241,.3),0 1px 1px 0 rgba(162,166,191,.5),0 2px 4px 0 rgba(228,229,242,.6);
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
 }
 
 .c2 .c3:hover {
   border-color: #4683e6;
+  box-shadow: 0 1px 10px 0 rgba(162,166,191,.12),0 2px 4px -1px rgba(162,166,191,.2),0 4px 5px 0 rgba(162,166,191,.14);
 }
 
 .c0 {
@@ -3251,11 +3301,11 @@ exports[`Pagination demo -- simple 1`] = `
   vertical-align: baseline;
 }
 
-.c7 {
+.c8 {
   position: relative;
 }
 
-.c9 {
+.c10 {
   border: none;
   outline: none;
   padding: 0;
@@ -3263,7 +3313,7 @@ exports[`Pagination demo -- simple 1`] = `
   color: inherit;
 }
 
-.c11 {
+.c12 {
   color: #c3cad9;
   margin: 0 4px;
   display: inline-block;
@@ -3279,6 +3329,7 @@ exports[`Pagination demo -- simple 1`] = `
   color: inherit;
   cursor: pointer;
   background: #fff;
+  box-shadow: 0 2px 4px 0 #e4e5f2,0 1px 1px 0 rgba(162,166,191,0.32),0 1px 0 0 rgba(223,224,241,0.7);
   display: inline-block;
   vertical-align: middle;
   border-color: #c3cad9;
@@ -3293,6 +3344,7 @@ exports[`Pagination demo -- simple 1`] = `
   color: inherit;
   cursor: pointer;
   background: #fff;
+  box-shadow: 0 2px 4px 0 #e4e5f2,0 1px 1px 0 rgba(162,166,191,0.32),0 1px 0 0 rgba(223,224,241,0.7);
   display: inline-block;
   vertical-align: middle;
   border-color: #c3cad9;
@@ -3301,127 +3353,147 @@ exports[`Pagination demo -- simple 1`] = `
   color: #bbb;
 }
 
-.c12 .c8 {
+.c13 .c9 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c12 .c8::-webkit-input-placeholder {
+.c13 .c9::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c12 .c8::-moz-placeholder {
+.c13 .c9::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c12 .c8:-ms-input-placeholder {
+.c13 .c9:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c12 .c8::placeholder {
+.c13 .c9::placeholder {
   color: #abb4c3;
 }
 
-.c12 .c8 {
+.c13 .c7 {
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  background: #fafafc;
+}
+
+.c13 .c7:hover {
+  background: #f6f6fb;
+}
+
+.c13 .c9 {
   padding: 0 0 0 8px;
   text-align: left;
+  box-shadow: none;
+  background: transparent;
   width: 34px;
 }
 
-.c12 .c3,
-.c12 .c5 {
+.c13 .c3,
+.c13 .c5 {
   right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
   height: 13px;
   line-height: 13px;
   width: 22px;
 }
 
-.c12 .c3:hover,
-.c12 .c5:hover {
+.c13 .c3:hover,
+.c13 .c5:hover {
   color: #4074e1;
 }
 
-.c12 .c3 {
+.c13 .c3 {
   border-width: 0 0 0 1px;
-  top: 0;
+  top: -1px;
+  padding-top: 1px;
 }
 
-.c12 .c5 {
+.c13 .c5 {
   border-width: 1px 0 0 1px;
   bottom: 0;
+  border-top-color: #e8e9f5;
 }
 
-.c13 .c8 {
+.c14 .c9 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c13 .c8::-webkit-input-placeholder {
+.c14 .c9::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c13 .c8::-moz-placeholder {
+.c14 .c9::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c13 .c8:-ms-input-placeholder {
+.c14 .c9:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c13 .c8::placeholder {
+.c14 .c9::placeholder {
   color: #abb4c3;
 }
 
-.c13 .c8 {
+.c14 .c9 {
   text-align: center;
-  border: 1px solid #c3cad9;
+  border: 1px solid #dfe0f1;
   margin: 0 4px;
   height: 26px;
   width: 26px;
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+  background: #fafafc;
 }
 
-.c13 .c8:hover {
-  border-color: #4683e6;
+.c14 .c9:hover {
   z-index: 1;
+  background: #f6f6fb;
+  border-color: #c3cad9;
 }
 
-.c13 .c3,
-.c13 .c5 {
+.c14 .c3,
+.c14 .c5 {
   text-align: center;
   top: 0;
   height: 28px;
   width: 28px;
   line-height: 26px;
+  border-color: transparent;
 }
 
-.c13 .c3:hover,
-.c13 .c5:hover {
+.c14 .c3:hover,
+.c14 .c5:hover {
   color: #4074e1;
-  border-color: #4683e6;
   z-index: 1;
 }
 
-.c13 .c3 {
+.c14 .c3 {
   right: 0;
   border-width: 1px;
 }
 
-.c13 .c5 {
+.c14 .c5 {
   left: 0;
   border-width: 1px;
 }
 
-.c13 .c10 {
+.c14 .c11 {
   margin-left: 0;
 }
 
-.c13 .c8 {
+.c14 .c9 {
   margin: 0;
 }
 
-.c13 .c10 {
+.c14 .c11 {
   margin-left: 4px;
   margin-right: 0px;
 }
@@ -3437,39 +3509,44 @@ exports[`Pagination demo -- simple 1`] = `
   padding: 0 28px;
 }
 
-.c2 .c8 {
+.c2 .c9 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c2 .c8::-webkit-input-placeholder {
+.c2 .c9::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c2 .c8::-moz-placeholder {
+.c2 .c9::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c2 .c8:-ms-input-placeholder {
+.c2 .c9:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c2 .c8::placeholder {
+.c2 .c9::placeholder {
   color: #abb4c3;
 }
 
-.c2 .c8 {
+.c2 .c9 {
   text-align: center;
-  border: 1px solid #c3cad9;
+  border: 1px solid #dfe0f1;
   margin: 0 4px;
   height: 26px;
   width: 26px;
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+  background: #fafafc;
 }
 
-.c2 .c8:hover {
-  border-color: #4683e6;
+.c2 .c9:hover {
   z-index: 1;
+  background: #f6f6fb;
+  border-color: #c3cad9;
 }
 
 .c2 .c3,
@@ -3479,12 +3556,12 @@ exports[`Pagination demo -- simple 1`] = `
   height: 28px;
   width: 28px;
   line-height: 26px;
+  border-color: transparent;
 }
 
 .c2 .c3:hover,
 .c2 .c5:hover {
   color: #4074e1;
-  border-color: #4683e6;
   z-index: 1;
 }
 
@@ -3498,7 +3575,7 @@ exports[`Pagination demo -- simple 1`] = `
   border-width: 1px;
 }
 
-.c2 .c10 {
+.c2 .c11 {
   margin-left: 0;
 }
 
@@ -3713,18 +3790,18 @@ exports[`Pagination demo -- simple 1`] = `
           </span>
         </div>
         <div
-          class="uc-fe-numberinput-input-wrap c7"
+          class="c7 uc-fe-numberinput-input-wrap c8"
         >
           <input
             autocomplete="off"
-            class="c8 uc-fe-numberinput-input c9"
+            class="c9 uc-fe-numberinput-input c10"
             max="10"
             min="1"
             step="1"
             value="1"
           />
           <span
-            class="c10 uc-fe-numberinput-suffix c11"
+            class="c11 uc-fe-numberinput-suffix c12"
           >
             <span
               class="uc-fe-pagination-quick-jumper-text"

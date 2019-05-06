@@ -60,13 +60,16 @@ const disabledMixin = ({
         color: ${disabledColorMap.text};
         cursor: not-allowed;
         pointer-events: none;
+        border-width: 1px;
+        border-style: solid;
+        box-shadow: none;
     }
 `;
 
 const checkedMixin = ({ theme: { colorList } }) => css`
-    color: ${colorList.primary2};
-    background: ${colorList.primary4};
-    border-color: ${colorList.primary2};
+    color: ${colorList.primary};
+    background: #fff;
+    border-color: ${colorList.primary};
 `;
 
 export const ButtonWrap = styled.button.attrs({

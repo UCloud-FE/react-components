@@ -61,15 +61,20 @@ exports[`LocaleProvider demo -- componentlocale 1`] = `
 
 .c6 .c8 {
   text-align: center;
-  border: 1px solid #c3cad9;
+  border: 1px solid #dfe0f1;
   margin: 0 4px;
   height: 26px;
   width: 26px;
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+  background: #fafafc;
 }
 
 .c6 .c8:hover {
-  border-color: #4683e6;
   z-index: 1;
+  background: #f6f6fb;
+  border-color: #c3cad9;
 }
 
 .c6 .c13,
@@ -79,12 +84,12 @@ exports[`LocaleProvider demo -- componentlocale 1`] = `
   height: 28px;
   width: 28px;
   line-height: 26px;
+  border-color: transparent;
 }
 
 .c6 .c13:hover,
 .c6 .c14:hover {
   color: #4074e1;
-  border-color: #4683e6;
   z-index: 1;
 }
 
@@ -128,14 +133,19 @@ exports[`LocaleProvider demo -- componentlocale 1`] = `
   height: 28px;
   padding: 0 8px;
   color: #fff;
-  background: #4683e6;
   border-color: #4683e6;
+  border: none;
+  background: linear-gradient(135deg,#5c8af7,#385ef5);
+  box-shadow: 0 1px 5px 0 rgba(21,56,195,.12),0 2px 2px 0 rgba(8,155,140,0.24),0 3px 1px -3px rgba(58,96,245,.34);
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
 }
 
 .c12:hover {
   color: #fff;
-  background: #3664c8;
   border-color: #3664c8;
+  background: linear-gradient(135deg,#5e95fb,#3a72f9);
+  box-shadow: 0 1px 10px 0 rgba(21,56,195,.12),0 2px 4px -1px rgba(21,56,195,.2),0 4px 5px 0 rgba(21,56,195,.14);
 }
 
 .c4 {
@@ -167,11 +177,15 @@ exports[`LocaleProvider demo -- componentlocale 1`] = `
 .c2 .c3 {
   height: 28px;
   line-height: 28px;
-  border: 1px solid #c3cad9;
+  border: 1px none #c3cad9;
+  box-shadow: 0 -1px 0 0 rgba(223,224,241,0.5),0 1px 0 0 rgba(223,224,241,.3),0 1px 1px 0 rgba(162,166,191,.5),0 2px 4px 0 rgba(228,229,242,.6);
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
 }
 
 .c2 .c3:hover {
   border-color: #4683e6;
+  box-shadow: 0 1px 10px 0 rgba(162,166,191,.12),0 2px 4px -1px rgba(162,166,191,.2),0 4px 5px 0 rgba(162,166,191,.14);
 }
 
 .c0 {
@@ -413,11 +427,11 @@ exports[`LocaleProvider demo -- list 1`] = `
   vertical-align: baseline;
 }
 
-.c19 {
+.c20 {
   position: relative;
 }
 
-.c21 {
+.c22 {
   border: none;
   outline: none;
   padding: 0;
@@ -425,14 +439,14 @@ exports[`LocaleProvider demo -- list 1`] = `
   color: inherit;
 }
 
-.c23 {
+.c24 {
   color: #c3cad9;
   margin: 0 4px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c67 {
+.c68 {
   position: absolute;
   box-sizing: border-box;
   text-align: center;
@@ -441,12 +455,13 @@ exports[`LocaleProvider demo -- list 1`] = `
   color: inherit;
   cursor: pointer;
   background: #fff;
+  box-shadow: 0 2px 4px 0 #e4e5f2,0 1px 1px 0 rgba(162,166,191,0.32),0 1px 0 0 rgba(223,224,241,0.7);
   display: inline-block;
   vertical-align: middle;
   border-color: #c3cad9;
 }
 
-.c69 {
+.c70 {
   position: absolute;
   box-sizing: border-box;
   text-align: center;
@@ -455,6 +470,7 @@ exports[`LocaleProvider demo -- list 1`] = `
   color: inherit;
   cursor: pointer;
   background: #fff;
+  box-shadow: 0 2px 4px 0 #e4e5f2,0 1px 1px 0 rgba(162,166,191,0.32),0 1px 0 0 rgba(223,224,241,0.7);
   display: inline-block;
   vertical-align: middle;
   border-color: #c3cad9;
@@ -476,81 +492,86 @@ exports[`LocaleProvider demo -- list 1`] = `
   margin: 0;
 }
 
-.c18 .c20 {
+.c18 .c21 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c18 .c20::-webkit-input-placeholder {
+.c18 .c21::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c18 .c20::-moz-placeholder {
+.c18 .c21::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c18 .c20:-ms-input-placeholder {
+.c18 .c21:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c18 .c20::placeholder {
+.c18 .c21::placeholder {
   color: #abb4c3;
 }
 
-.c18 .c20 {
+.c18 .c21 {
   text-align: center;
-  border: 1px solid #c3cad9;
+  border: 1px solid #dfe0f1;
   margin: 0 4px;
   height: 26px;
   width: 26px;
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+  background: #fafafc;
 }
 
-.c18 .c20:hover {
-  border-color: #4683e6;
+.c18 .c21:hover {
   z-index: 1;
+  background: #f6f6fb;
+  border-color: #c3cad9;
 }
 
-.c18 .c66,
-.c18 .c68 {
+.c18 .c67,
+.c18 .c69 {
   text-align: center;
   top: 0;
   height: 28px;
   width: 28px;
   line-height: 26px;
+  border-color: transparent;
 }
 
-.c18 .c66:hover,
-.c18 .c68:hover {
+.c18 .c67:hover,
+.c18 .c69:hover {
   color: #4074e1;
-  border-color: #4683e6;
   z-index: 1;
 }
 
-.c18 .c66 {
+.c18 .c67 {
   right: 0;
   border-width: 1px;
 }
 
-.c18 .c68 {
+.c18 .c69 {
   left: 0;
   border-width: 1px;
 }
 
-.c18 .c22 {
+.c18 .c23 {
   margin-left: 0;
 }
 
-.c18 .c20 {
+.c18 .c21 {
   margin: 0;
 }
 
-.c18 .c22 {
+.c18 .c23 {
   margin-left: 4px;
   margin-right: 0px;
 }
 
-.c63 {
+.c64 {
   position: relative;
   box-sizing: border-box;
   border-radius: 2px;
@@ -563,81 +584,86 @@ exports[`LocaleProvider demo -- list 1`] = `
   margin: 0;
 }
 
-.c63 .c20 {
+.c64 .c21 {
   line-height: 20px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c63 .c20::-webkit-input-placeholder {
+.c64 .c21::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c63 .c20::-moz-placeholder {
+.c64 .c21::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c63 .c20:-ms-input-placeholder {
+.c64 .c21:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c63 .c20::placeholder {
+.c64 .c21::placeholder {
   color: #abb4c3;
 }
 
-.c63 .c20 {
+.c64 .c21 {
   text-align: center;
-  border: 1px solid #c3cad9;
+  border: 1px solid #dfe0f1;
   margin: 0 4px;
   height: 20px;
   width: 20px;
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+  background: #fafafc;
 }
 
-.c63 .c20:hover {
-  border-color: #4683e6;
+.c64 .c21:hover {
   z-index: 1;
+  background: #f6f6fb;
+  border-color: #c3cad9;
 }
 
-.c63 .c66,
-.c63 .c68 {
+.c64 .c67,
+.c64 .c69 {
   text-align: center;
   top: 0;
   height: 22px;
   width: 22px;
   line-height: 20px;
+  border-color: transparent;
 }
 
-.c63 .c66:hover,
-.c63 .c68:hover {
+.c64 .c67:hover,
+.c64 .c69:hover {
   color: #4074e1;
-  border-color: #4683e6;
   z-index: 1;
 }
 
-.c63 .c66 {
+.c64 .c67 {
   right: 0;
   border-width: 1px;
 }
 
-.c63 .c68 {
+.c64 .c69 {
   left: 0;
   border-width: 1px;
 }
 
-.c63 .c22 {
+.c64 .c23 {
   margin-left: 0;
 }
 
-.c63 .c20 {
+.c64 .c21 {
   margin: 0;
 }
 
-.c63 .c22 {
+.c64 .c23 {
   margin-left: 4px;
   margin-right: 0px;
 }
 
-.c65 {
+.c66 {
   position: relative;
   box-sizing: border-box;
   border-radius: 2px;
@@ -645,66 +671,82 @@ exports[`LocaleProvider demo -- list 1`] = `
   vertical-align: middle;
   color: #6b798e;
   height: 28px;
-  border: 1px solid #c3cad9;
+  border: 1px solid #dfe0f1;
   padding-right: 22px;
+  border-right-width: 0;
 }
 
-.c65 .c20 {
+.c66 .c21 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c65 .c20::-webkit-input-placeholder {
+.c66 .c21::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c65 .c20::-moz-placeholder {
+.c66 .c21::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c65 .c20:-ms-input-placeholder {
+.c66 .c21:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c65 .c20::placeholder {
+.c66 .c21::placeholder {
   color: #abb4c3;
 }
 
-.c65:hover {
-  border-color: #4683e6;
+.c66:hover {
+  border-color: #c3cad9;
 }
 
-.c65 .c20 {
+.c66 .c19 {
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  background: #fafafc;
+}
+
+.c66 .c19:hover {
+  background: #f6f6fb;
+}
+
+.c66 .c21 {
   padding: 0 0 0 8px;
   text-align: left;
+  box-shadow: none;
+  background: transparent;
   width: 34px;
 }
 
-.c65 .c66,
-.c65 .c68 {
+.c66 .c67,
+.c66 .c69 {
   right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
   height: 13px;
   line-height: 13px;
   width: 22px;
 }
 
-.c65 .c66:hover,
-.c65 .c68:hover {
+.c66 .c67:hover,
+.c66 .c69:hover {
   color: #4074e1;
 }
 
-.c65 .c66 {
+.c66 .c67 {
   border-width: 0 0 0 1px;
-  top: 0;
+  top: -1px;
+  padding-top: 1px;
 }
 
-.c65 .c68 {
+.c66 .c69 {
   border-width: 1px 0 0 1px;
   bottom: 0;
+  border-top-color: #e8e9f5;
 }
 
-.c24 {
+.c25 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -721,14 +763,19 @@ exports[`LocaleProvider demo -- list 1`] = `
   height: 28px;
   padding: 0 8px;
   color: #fff;
-  background: #4683e6;
   border-color: #4683e6;
+  border: none;
+  background: linear-gradient(135deg,#5c8af7,#385ef5);
+  box-shadow: 0 1px 5px 0 rgba(21,56,195,.12),0 2px 2px 0 rgba(8,155,140,0.24),0 3px 1px -3px rgba(58,96,245,.34);
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
 }
 
-.c24:hover {
+.c25:hover {
   color: #fff;
-  background: #3664c8;
   border-color: #3664c8;
+  background: linear-gradient(135deg,#5e95fb,#3a72f9);
+  box-shadow: 0 1px 10px 0 rgba(21,56,195,.12),0 2px 4px -1px rgba(21,56,195,.2),0 4px 5px 0 rgba(21,56,195,.14);
 }
 
 .c9 {
@@ -748,17 +795,19 @@ exports[`LocaleProvider demo -- list 1`] = `
   height: 28px;
   padding: 0 8px;
   color: #6b798e;
-  background: #f2f6fc;
   border-color: #c3cad9;
-  color: #4683e6;
-  background: #f2f6fc;
-  border-color: #4683e6;
+  -webkit-transition: all .16s cubic-bezier(.4,0,.2,1);
+  transition: all .16s cubic-bezier(.4,0,.2,1);
+  background: #fafafc;
+  color: #4074e1;
+  background: #fff;
+  border-color: #4074e1;
 }
 
 .c9:hover {
-  color: #4683e6;
-  background: #f2f6fc;
-  border-color: #4683e6;
+  background: #fff;
+  color: #4074e1;
+  border-color: #4074e1;
 }
 
 .c11 {
@@ -778,17 +827,19 @@ exports[`LocaleProvider demo -- list 1`] = `
   height: 28px;
   padding: 0 8px;
   color: #6b798e;
-  background: #f2f6fc;
   border-color: #c3cad9;
+  -webkit-transition: all .16s cubic-bezier(.4,0,.2,1);
+  transition: all .16s cubic-bezier(.4,0,.2,1);
+  background: #fafafc;
 }
 
 .c11:hover {
-  color: #4683e6;
-  background: #f2f6fc;
-  border-color: #4683e6;
+  background: #fff;
+  color: #4074e1;
+  border-color: #4074e1;
 }
 
-.c35 {
+.c36 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -807,12 +858,17 @@ exports[`LocaleProvider demo -- list 1`] = `
   color: #6b798e;
   background: #fff;
   border-color: #c3cad9;
+  border: none;
+  box-shadow: 0 -1px 0 0 rgba(223,224,241,0.5),0 1px 0 0 rgba(223,224,241,.3),0 1px 1px 0 rgba(162,166,191,.5),0 2px 4px 0 rgba(228,229,242,.6);
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
 }
 
-.c35:hover {
+.c36:hover {
   color: #4074e1;
   background: #fff;
   border-color: #4683e6;
+  box-shadow: 0 1px 10px 0 rgba(162,166,191,.12),0 2px 4px -1px rgba(162,166,191,.2),0 4px 5px 0 rgba(162,166,191,.14);
 }
 
 .c8.c8 {
@@ -847,20 +903,20 @@ exports[`LocaleProvider demo -- list 1`] = `
   margin-bottom: -8px;
 }
 
-.c6 .c70,
+.c6 .c71,
 .c6 .style__RadioTagWrap-sc-25j3mq-3,
 .c6 .style__RadioCardWrap-sc-25j3mq-8 {
   margin-right: 8px;
   margin-bottom: 8px;
 }
 
-.c6 .c70:last-child,
+.c6 .c71:last-child,
 .c6 .style__RadioTagWrap-sc-25j3mq-3:last-child,
 .c6 .style__RadioCardWrap-sc-25j3mq-8:last-child {
   margin-right: 0;
 }
 
-.c6 .c71+.c71 {
+.c6 .c72+.c72 {
   margin-left: -1px;
 }
 
@@ -878,12 +934,12 @@ exports[`LocaleProvider demo -- list 1`] = `
   margin-right: 0;
 }
 
-.c40 {
+.c41 {
   margin-right: 8px;
   font-size: 14px;
 }
 
-.c38 {
+.c39 {
   cursor: pointer;
   position: relative;
   display: inline-block;
@@ -893,11 +949,11 @@ exports[`LocaleProvider demo -- list 1`] = `
   font-size: 12px;
 }
 
-.c38 .c39 {
+.c39 .c40 {
   color: #526075;
 }
 
-.c44 {
+.c45 {
   position: absolute;
   right: 8px;
   top: 50%;
@@ -905,9 +961,10 @@ exports[`LocaleProvider demo -- list 1`] = `
   font-size: 14px;
 }
 
-.c41 {
+.c42 {
   padding: 0 8px;
   margin: 0 8px;
+  border-radius: 2px;
   display: block;
   cursor: pointer;
   -webkit-text-decoration: none;
@@ -917,13 +974,14 @@ exports[`LocaleProvider demo -- list 1`] = `
   overflow: hidden;
 }
 
-.c42 {
+.c43 {
   padding: 0 8px;
+  border-radius: 2px;
   display: block;
   cursor: pointer;
 }
 
-.c43 {
+.c44 {
   padding: 0 8px;
   padding-right: 40px;
   position: relative;
@@ -936,14 +994,15 @@ exports[`LocaleProvider demo -- list 1`] = `
   overflow: hidden;
 }
 
-.c37 {
+.c38 {
   padding: 0 8px;
   margin: 0 8px;
+  border-radius: 2px;
   display: block;
   cursor: pointer;
 }
 
-.c36 {
+.c37 {
   line-height: 26px;
   font-size: 12px;
   display: inline-block;
@@ -954,36 +1013,38 @@ exports[`LocaleProvider demo -- list 1`] = `
   padding: 10px 0;
   border-radius: 2px;
   text-align: left;
+  border-style: none !important;
+  box-shadow: 0 -1px 0 0 rgba(223,224,241,0.5),0 1px 0 0 rgba(223,224,241,.3),0 1px 1px 0 rgba(162,166,191,.5),0 2px 4px 0 rgba(228,229,242,.6);
 }
 
-.c36,
-.c36 .style__PopupContentWrap-ulx11w-2 {
+.c37,
+.c37 .style__PopupContentWrap-ulx11w-2 {
   border: 1px solid #c3cad9;
 }
 
-.c36,
-.c36 .uc-fe-menu-popup-content-wrap {
+.c37,
+.c37 .uc-fe-menu-popup-content-wrap {
   color: #6b798e;
   background: #fff;
 }
 
-.c36 .uc-fe-menu-item:hover,
-.c36 .uc-fe-menu-submenu-title-content:hover,
-.c36 .uc-fe-menu-selectall-checkbox:hover {
+.c37 .uc-fe-menu-item:hover,
+.c37 .uc-fe-menu-submenu-title-content:hover,
+.c37 .uc-fe-menu-selectall-checkbox:hover {
   background: #eaf3fd;
 }
 
-.c36 .uc-fe-menu-item-selected,
-.c36 .uc-fe-menu-submenu-title-selected,
-.c36 .uc-fe-menu-selectall-checkbox-checked {
+.c37 .uc-fe-menu-item-selected,
+.c37 .uc-fe-menu-submenu-title-selected,
+.c37 .uc-fe-menu-selectall-checkbox-checked {
   color: #4074e1;
 }
 
-.c36 .uc-fe-menu-submenu-title-content-collapse {
+.c37 .uc-fe-menu-submenu-title-content-collapse {
   border-color: #c3cad9;
 }
 
-.c55 {
+.c56 {
   position: absolute;
   right: 0;
   top: 0;
@@ -991,18 +1052,18 @@ exports[`LocaleProvider demo -- list 1`] = `
   color: inherit;
 }
 
-.c56 {
+.c57 {
   cursor: pointer;
 }
 
-.c53 {
+.c54 {
   position: relative;
   display: inline-block;
   vertical-align: middle;
   color: #6b798e;
 }
 
-.c53 input {
+.c54 input {
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -1014,38 +1075,48 @@ exports[`LocaleProvider demo -- list 1`] = `
   color: inherit;
 }
 
-.c53 input {
-  border: 1px solid #c3cad9;
-  background: #fff;
+.c54 input {
+  border: 1px solid #dfe0f1;
+  background: #fafafc;
   height: 28px;
   padding-right: 28px;
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
 }
 
-.c53 input::-webkit-input-placeholder {
-  color: #abb4c3;
+.c54 input:hover {
+  border-color: #c3cad9;
+  background-color: #f6f6fb;
 }
 
-.c53 input::-moz-placeholder {
-  color: #abb4c3;
-}
-
-.c53 input:-ms-input-placeholder {
-  color: #abb4c3;
-}
-
-.c53 input::placeholder {
-  color: #abb4c3;
-}
-
-.c53 input:hover {
+.c54 input:focus {
   border-color: #4683e6;
+  background-color: #f6f6fb;
 }
 
-.c53 input:focus {
-  border-color: #4683e6;
+.c54 input:disabled,
+.c54 input[disabled] {
+  box-shadow: none;
 }
 
-.c53 .c54 {
+.c54 input::-webkit-input-placeholder {
+  color: #abb4c3;
+}
+
+.c54 input::-moz-placeholder {
+  color: #abb4c3;
+}
+
+.c54 input:-ms-input-placeholder {
+  color: #abb4c3;
+}
+
+.c54 input::placeholder {
+  color: #abb4c3;
+}
+
+.c54 .c55 {
   width: 28px;
   height: 28px;
   line-height: 28px;
@@ -1080,14 +1151,18 @@ exports[`LocaleProvider demo -- list 1`] = `
 .c14 .c15 {
   height: 28px;
   line-height: 28px;
-  border: 1px solid #c3cad9;
+  border: 1px none #c3cad9;
+  box-shadow: 0 -1px 0 0 rgba(223,224,241,0.5),0 1px 0 0 rgba(223,224,241,.3),0 1px 1px 0 rgba(162,166,191,.5),0 2px 4px 0 rgba(228,229,242,.6);
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
 }
 
 .c14 .c15:hover {
   border-color: #4683e6;
+  box-shadow: 0 1px 10px 0 rgba(162,166,191,.12),0 2px 4px -1px rgba(162,166,191,.2),0 4px 5px 0 rgba(162,166,191,.14);
 }
 
-.c62 {
+.c63 {
   box-sizing: border-box;
   position: relative;
   font-size: 12px;
@@ -1098,14 +1173,18 @@ exports[`LocaleProvider demo -- list 1`] = `
   background-color: #fff;
 }
 
-.c62 .c15 {
+.c63 .c15 {
   height: 22px;
   line-height: 22px;
-  border: 1px solid #c3cad9;
+  border: 1px none #c3cad9;
+  box-shadow: 0 -1px 0 0 rgba(223,224,241,0.5),0 1px 0 0 rgba(223,224,241,.3),0 1px 1px 0 rgba(162,166,191,.5),0 2px 4px 0 rgba(228,229,242,.6);
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
 }
 
-.c62 .c15:hover {
+.c63 .c15:hover {
   border-color: #4683e6;
+  box-shadow: 0 1px 10px 0 rgba(162,166,191,.12),0 2px 4px -1px rgba(162,166,191,.2),0 4px 5px 0 rgba(162,166,191,.14);
 }
 
 .c12 {
@@ -1192,7 +1271,7 @@ exports[`LocaleProvider demo -- list 1`] = `
   margin-left: 5px;
 }
 
-.c61 {
+.c62 {
   color: #6b798e;
   font-size: 12px;
   -webkit-user-select: none;
@@ -1203,11 +1282,11 @@ exports[`LocaleProvider demo -- list 1`] = `
   vertical-align: middle;
 }
 
-.c61 .uc-fe-pagination-item,
-.c61 .uc-fe-pagination-prev,
-.c61 .uc-fe-pagination-next,
-.c61 .uc-fe-pagination-jump-prev,
-.c61 .uc-fe-pagination-jump-next {
+.c62 .uc-fe-pagination-item,
+.c62 .uc-fe-pagination-prev,
+.c62 .uc-fe-pagination-next,
+.c62 .uc-fe-pagination-jump-prev,
+.c62 .uc-fe-pagination-jump-next {
   outline: none;
   box-sizing: border-box;
   background-color: #fff;
@@ -1223,56 +1302,56 @@ exports[`LocaleProvider demo -- list 1`] = `
   line-height: 20px;
 }
 
-.c61 .uc-fe-pagination-item,
-.c61 .uc-fe-pagination-prev,
-.c61 .uc-fe-pagination-next {
+.c62 .uc-fe-pagination-item,
+.c62 .uc-fe-pagination-prev,
+.c62 .uc-fe-pagination-next {
   border: 1px solid #c3cad9;
 }
 
-.c61 .uc-fe-pagination-item:hover,
-.c61 .uc-fe-pagination-prev:hover,
-.c61 .uc-fe-pagination-next:hover {
+.c62 .uc-fe-pagination-item:hover,
+.c62 .uc-fe-pagination-prev:hover,
+.c62 .uc-fe-pagination-next:hover {
   border-color: #4683e6;
   color: #4074e1;
 }
 
-.c61 .uc-fe-pagination-jump-prev:hover,
-.c61 .uc-fe-pagination-jump-next:hover {
+.c62 .uc-fe-pagination-jump-prev:hover,
+.c62 .uc-fe-pagination-jump-next:hover {
   color: #4074e1;
 }
 
-.c61 .uc-fe-pagination-item-active,
-.c61 .uc-fe-pagination-item-active:hover {
+.c62 .uc-fe-pagination-item-active,
+.c62 .uc-fe-pagination-item-active:hover {
   border-color: #4683e6;
   color: #4074e1;
   background-color: #f4f9ff;
   cursor: default;
 }
 
-.c61 .uc-fe-pagination-disabled,
-.c61 .uc-fe-pagination-disabled:hover {
+.c62 .uc-fe-pagination-disabled,
+.c62 .uc-fe-pagination-disabled:hover {
   border-color: #d9d9d9;
   background-color: #f7f7f7;
   cursor: not-allowed;
 }
 
-.c61 .uc-fe-pagination-prev-icon,
-.c61 .uc-fe-pagination-next-icon {
+.c62 .uc-fe-pagination-prev-icon,
+.c62 .uc-fe-pagination-next-icon {
   cursor: inherit;
 }
 
-.c61 .uc-fe-pagination-options,
-.c61 .uc-fe-pagination-options-size-changer,
-.c61 .uc-fe-pagination-options-quick-jumper {
+.c62 .uc-fe-pagination-options,
+.c62 .uc-fe-pagination-options-size-changer,
+.c62 .uc-fe-pagination-options-quick-jumper {
   display: inline-block;
   vertical-align: middle;
 }
 
-.c61 .uc-fe-pagination-options-size-changer {
+.c62 .uc-fe-pagination-options-size-changer {
   margin-right: 5px;
 }
 
-.c61 .uc-fe-pagination-options-gobutton {
+.c62 .uc-fe-pagination-options-gobutton {
   margin-left: 5px;
 }
 
@@ -1337,51 +1416,51 @@ exports[`LocaleProvider demo -- list 1`] = `
   word-break: break-all;
 }
 
-.c25.uc-fe-calendar,
-.c25 .uc-fe-calendar {
+.c26.uc-fe-calendar,
+.c26 .uc-fe-calendar {
   outline: none;
   position: relative;
   box-shadow: 0 0 8px rgba(0,0,0,0.2);
 }
 
-.c25 .uc-fe-calendar-month-panel,
-.c25 .uc-fe-calendar-year-panel,
-.c25 .uc-fe-calendar-decade-panel {
+.c26 .uc-fe-calendar-month-panel,
+.c26 .uc-fe-calendar-year-panel,
+.c26 .uc-fe-calendar-decade-panel {
   background: #fff;
 }
 
-.c25 .uc-fe-calendar-header,
-.c25 .uc-fe-calendar-month-panel-header,
-.c25 .uc-fe-calendar-year-panel-header,
-.c25 .uc-fe-calendar-decade-panel-header {
+.c26 .uc-fe-calendar-header,
+.c26 .uc-fe-calendar-month-panel-header,
+.c26 .uc-fe-calendar-year-panel-header,
+.c26 .uc-fe-calendar-decade-panel-header {
   width: 100%;
   height: 38px;
   line-height: 38px;
-  background-color: #4683e6;
+  background-color: #4074e1;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
 
-.c25 .uc-fe-calendar-month-header-wrap {
+.c26 .uc-fe-calendar-month-header-wrap {
   height: 180px;
 }
 
-.c25 .uc-fe-calendar-month-panel-body {
+.c26 .uc-fe-calendar-month-panel-body {
   height: 140px;
 }
 
-.c25 .uc-fe-calendar-prev-year-btn,
-.c25 .uc-fe-calendar-prev-month-btn,
-.c25 .uc-fe-calendar-next-year-btn,
-.c25 .uc-fe-calendar-next-month-btn,
-.c25 .uc-fe-calendar-month-panel-prev-year-btn,
-.c25 .uc-fe-calendar-month-panel-next-year-btn,
-.c25 .uc-fe-calendar-year-panel-prev-decade-btn,
-.c25 .uc-fe-calendar-year-panel-next-decade-btn,
-.c25 .uc-fe-calendar-decade-panel-prev-century-btn,
-.c25 .uc-fe-calendar-decade-panel-next-century-btn {
+.c26 .uc-fe-calendar-prev-year-btn,
+.c26 .uc-fe-calendar-prev-month-btn,
+.c26 .uc-fe-calendar-next-year-btn,
+.c26 .uc-fe-calendar-next-month-btn,
+.c26 .uc-fe-calendar-month-panel-prev-year-btn,
+.c26 .uc-fe-calendar-month-panel-next-year-btn,
+.c26 .uc-fe-calendar-year-panel-prev-decade-btn,
+.c26 .uc-fe-calendar-year-panel-next-decade-btn,
+.c26 .uc-fe-calendar-decade-panel-prev-century-btn,
+.c26 .uc-fe-calendar-decade-panel-next-century-btn {
   cursor: pointer;
   padding: 0 8px;
   display: inline-block;
@@ -1392,61 +1471,61 @@ exports[`LocaleProvider demo -- list 1`] = `
   font-size: 16px;
 }
 
-.c25 .uc-fe-calendar-prev-year-btn,
-.c25 .uc-fe-calendar-month-panel-prev-year-btn,
-.c25 .uc-fe-calendar-year-panel-prev-decade-btn,
-.c25 .uc-fe-calendar-decade-panel-prev-century-btn {
+.c26 .uc-fe-calendar-prev-year-btn,
+.c26 .uc-fe-calendar-month-panel-prev-year-btn,
+.c26 .uc-fe-calendar-year-panel-prev-decade-btn,
+.c26 .uc-fe-calendar-decade-panel-prev-century-btn {
   left: 0;
 }
 
-.c25 .uc-fe-calendar-prev-month-btn {
+.c26 .uc-fe-calendar-prev-month-btn {
   left: 30px;
 }
 
-.c25 .uc-fe-calendar-next-year-btn,
-.c25 .uc-fe-calendar-month-panel-next-year-btn,
-.c25 .uc-fe-calendar-year-panel-next-decade-btn,
-.c25 .uc-fe-calendar-decade-panel-next-century-btn {
+.c26 .uc-fe-calendar-next-year-btn,
+.c26 .uc-fe-calendar-month-panel-next-year-btn,
+.c26 .uc-fe-calendar-year-panel-next-decade-btn,
+.c26 .uc-fe-calendar-decade-panel-next-century-btn {
   right: 0;
 }
 
-.c25 .uc-fe-calendar-next-month-btn {
+.c26 .uc-fe-calendar-next-month-btn {
   right: 30px;
 }
 
-.c25 .uc-fe-calendar-prev-year-btn::before,
-.c25 .uc-fe-calendar-month-panel-prev-year-btn::before,
-.c25 .uc-fe-calendar-year-panel-prev-decade-btn::before,
-.c25 .uc-fe-calendar-decade-panel-prev-century-btn::before {
+.c26 .uc-fe-calendar-prev-year-btn::before,
+.c26 .uc-fe-calendar-month-panel-prev-year-btn::before,
+.c26 .uc-fe-calendar-year-panel-prev-decade-btn::before,
+.c26 .uc-fe-calendar-decade-panel-prev-century-btn::before {
   content: '\\AB';
 }
 
-.c25 .uc-fe-calendar-prev-month-btn::before {
+.c26 .uc-fe-calendar-prev-month-btn::before {
   content: '\\2039';
 }
 
-.c25 .uc-fe-calendar-next-year-btn::before,
-.c25 .uc-fe-calendar-month-panel-next-year-btn::before,
-.c25 .uc-fe-calendar-year-panel-next-decade-btn::before,
-.c25 .uc-fe-calendar-decade-panel-next-century-btn::before {
+.c26 .uc-fe-calendar-next-year-btn::before,
+.c26 .uc-fe-calendar-month-panel-next-year-btn::before,
+.c26 .uc-fe-calendar-year-panel-next-decade-btn::before,
+.c26 .uc-fe-calendar-decade-panel-next-century-btn::before {
   content: '\\BB';
 }
 
-.c25 .uc-fe-calendar-next-month-btn::before {
+.c26 .uc-fe-calendar-next-month-btn::before {
   content: '\\203A';
 }
 
-.c25 .uc-fe-calendar-year-select,
-.c25 .uc-fe-calendar-month-select,
-.c25 .uc-fe-calendar-day-select {
+.c26 .uc-fe-calendar-year-select,
+.c26 .uc-fe-calendar-month-select,
+.c26 .uc-fe-calendar-day-select {
   margin-right: 8px;
 }
 
-.c25 .uc-fe-calendar-my-select,
-.c25 .uc-fe-calendar-ym-select,
-.c25 .uc-fe-calendar-month-panel-year-select,
-.c25 .uc-fe-calendar-year-panel-decade-select,
-.c25 .uc-fe-calendar-decade-panel-century {
+.c26 .uc-fe-calendar-my-select,
+.c26 .uc-fe-calendar-ym-select,
+.c26 .uc-fe-calendar-month-panel-year-select,
+.c26 .uc-fe-calendar-year-panel-decade-select,
+.c26 .uc-fe-calendar-decade-panel-century {
   position: absolute;
   top: 0;
   left: 50%;
@@ -1457,30 +1536,30 @@ exports[`LocaleProvider demo -- list 1`] = `
   color: #fff;
 }
 
-.c25 .uc-fe-calendar-body {
+.c26 .uc-fe-calendar-body {
   width: 100%;
   padding: 0 5px 5px;
   background-color: #fff;
   box-sizing: border-box;
 }
 
-.c25 .uc-fe-calendar-table,
-.c25 .uc-fe-calendar-month-panel-table,
-.c25 .uc-fe-calendar-year-panel-table,
-.c25 .uc-fe-calendar-decade-panel-table {
+.c26 .uc-fe-calendar-table,
+.c26 .uc-fe-calendar-month-panel-table,
+.c26 .uc-fe-calendar-year-panel-table,
+.c26 .uc-fe-calendar-decade-panel-table {
   width: 100%;
 }
 
-.c25 .uc-fe-calendar-table > thead,
-.c25 .uc-fe-calendar-month-panel-table > thead {
+.c26 .uc-fe-calendar-table > thead,
+.c26 .uc-fe-calendar-month-panel-table > thead {
   border-bottom: 1px solid #c3cad9;
 }
 
-.c25 .uc-fe-calendar-column-header,
-.c25 .uc-fe-calendar-cell,
-.c25 .uc-fe-calendar-month-panel-cell,
-.c25 .uc-fe-calendar-year-panel-cell,
-.c25 .uc-fe-calendar-decade-panel-cell {
+.c26 .uc-fe-calendar-column-header,
+.c26 .uc-fe-calendar-cell,
+.c26 .uc-fe-calendar-month-panel-cell,
+.c26 .uc-fe-calendar-year-panel-cell,
+.c26 .uc-fe-calendar-decade-panel-cell {
   cursor: pointer;
   height: 25px;
   line-height: 25px;
@@ -1488,36 +1567,37 @@ exports[`LocaleProvider demo -- list 1`] = `
   text-align: center;
 }
 
-.c25 .uc-fe-calendar-cell .uc-fe-calendar-date,
-.c25 .uc-fe-calendar-month-panel-cell .uc-fe-calendar-month-panel-month,
-.c25 .uc-fe-calendar-year-panel-cell .uc-fe-calendar-year-panel-year,
-.c25 .uc-fe-calendar-decade-panel-cell .uc-fe-calendar-decade-panel-decade {
+.c26 .uc-fe-calendar-cell .uc-fe-calendar-date,
+.c26 .uc-fe-calendar-month-panel-cell .uc-fe-calendar-month-panel-month,
+.c26 .uc-fe-calendar-year-panel-cell .uc-fe-calendar-year-panel-year,
+.c26 .uc-fe-calendar-decade-panel-cell .uc-fe-calendar-decade-panel-decade {
   display: block;
+  border-radius: 2px;
 }
 
-.c25 .uc-fe-calendar-last-month-cell,
-.c25 .uc-fe-calendar-month-panel-last-year-cell,
-.c25 .uc-fe-calendar-year-panel-last-decade-cell,
-.c25 .uc-fe-calendar-decade-panel-last-century-cell,
-.c25 .uc-fe-calendar-next-month-btn-day,
-.c25 .uc-fe-calendar-month-panel-next-year-cell,
-.c25 .uc-fe-calendar-year-panel-next-decade-cell,
-.c25 .uc-fe-calendar-decade-panel-next-century-cell {
+.c26 .uc-fe-calendar-last-month-cell,
+.c26 .uc-fe-calendar-month-panel-last-year-cell,
+.c26 .uc-fe-calendar-year-panel-last-decade-cell,
+.c26 .uc-fe-calendar-decade-panel-last-century-cell,
+.c26 .uc-fe-calendar-next-month-btn-day,
+.c26 .uc-fe-calendar-month-panel-next-year-cell,
+.c26 .uc-fe-calendar-year-panel-next-decade-cell,
+.c26 .uc-fe-calendar-decade-panel-next-century-cell {
   color: #bbb;
 }
 
-.c25 .uc-fe-calendar-disabled-cell,
-.c25 .uc-fe-calendar-month-panel-cell-disabled {
+.c26 .uc-fe-calendar-disabled-cell,
+.c26 .uc-fe-calendar-month-panel-cell-disabled {
   color: #bbb;
 }
 
-.c25 .uc-fe-calendar-date-panel {
+.c26 .uc-fe-calendar-date-panel {
   outline: none;
 }
 
-.c25 .uc-fe-calendar-month-panel,
-.c25 .uc-fe-calendar-year-panel,
-.c25 .uc-fe-calendar-decade-panel {
+.c26 .uc-fe-calendar-month-panel,
+.c26 .uc-fe-calendar-year-panel,
+.c26 .uc-fe-calendar-decade-panel {
   position: absolute;
   top: 0;
   left: 0;
@@ -1526,14 +1606,14 @@ exports[`LocaleProvider demo -- list 1`] = `
   z-index: 1;
 }
 
-.c25 .uc-fe-calendar-today,
-.c25 .uc-fe-calendar-month-panel-current-cell {
+.c26 .uc-fe-calendar-today,
+.c26 .uc-fe-calendar-month-panel-current-cell {
   position: relative;
   color: #4074e1;
 }
 
-.c25 .uc-fe-calendar-today::after,
-.c25 .uc-fe-calendar-month-panel-current-cell::after {
+.c26 .uc-fe-calendar-today::after,
+.c26 .uc-fe-calendar-month-panel-current-cell::after {
   content: '•';
   position: absolute;
   bottom: 0px;
@@ -1544,71 +1624,72 @@ exports[`LocaleProvider demo -- list 1`] = `
   margin: auto;
 }
 
-.c25 .uc-fe-calendar-selected-day.uc-fe-calendar-today::after,
-.c25 .uc-fe-calendar-selected-date.uc-fe-calendar-today::after,
-.c25 .uc-fe-calendar-month-panel-selected-cell.uc-fe-calendar-month-panel-current-cell::after {
+.c26 .uc-fe-calendar-selected-day.uc-fe-calendar-today::after,
+.c26 .uc-fe-calendar-selected-date.uc-fe-calendar-today::after,
+.c26 .uc-fe-calendar-month-panel-selected-cell.uc-fe-calendar-month-panel-current-cell::after {
   display: none;
 }
 
-.c25 .uc-fe-calendar-selected-day .uc-fe-calendar-date {
+.c26 .uc-fe-calendar-selected-day .uc-fe-calendar-date {
   background: #eaf3fd;
 }
 
-.c25 .uc-fe-calendar-selected-date .uc-fe-calendar-date,
-.c25 .uc-fe-calendar-month-panel-selected-cell .uc-fe-calendar-month-panel-month,
-.c25 .uc-fe-calendar-year-panel-selected-cell .uc-fe-calendar-year-panel-year,
-.c25 .uc-fe-calendar-decade-panel-selected-cell .uc-fe-calendar-decade-panel-decade {
+.c26 .uc-fe-calendar-selected-date .uc-fe-calendar-date,
+.c26 .uc-fe-calendar-month-panel-selected-cell .uc-fe-calendar-month-panel-month,
+.c26 .uc-fe-calendar-year-panel-selected-cell .uc-fe-calendar-year-panel-year,
+.c26 .uc-fe-calendar-decade-panel-selected-cell .uc-fe-calendar-decade-panel-decade {
   color: #fff;
-  background: #4683e6;
+  background: #4074e1;
 }
 
-.c25 .uc-fe-calendar-month-panel-year-select-arrow,
-.c25 .uc-fe-calendar-year-panel-decade-select-arrow {
+.c26 .uc-fe-calendar-month-panel-year-select-arrow,
+.c26 .uc-fe-calendar-year-panel-decade-select-arrow {
   display: none;
 }
 
-.c27 {
+.c28 {
   height: 28px;
   line-height: 26px;
-  padding: 0 8px;
-  border: 1px solid #c3cad9;
+  padding: 1px 8px;
+  border: 0px solid #c3cad9;
   border-radius: 2px;
   cursor: pointer;
   box-sizing: border-box;
+  box-shadow: 0 -1px 0 0 rgba(223,224,241,0.5),0 1px 0 0 rgba(223,224,241,.3),0 1px 1px 0 rgba(162,166,191,.5),0 2px 4px 0 rgba(228,229,242,.6);
   display: inline-block;
   vertical-align: middle;
 }
 
-.c28 {
-  display: inline-block;
-}
-
 .c29 {
-  margin-left: 5px;
   display: inline-block;
 }
 
 .c30 {
+  margin-left: 5px;
+  display: inline-block;
+}
+
+.c31 {
   margin-left: 8px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c31 {
+.c32 {
   margin: 0 4px;
 }
 
-.c26 {
+.c27 {
   display: inline-block;
   vertical-align: middle;
 }
 
-.c32 {
+.c33 {
   margin-right: 8px;
 }
 
-.c33 {
-  border: 1px solid #c3cad9;
+.c34 {
+  border: 0 solid #c3cad9;
   padding: 0 8px;
   border-radius: 2px;
   cursor: pointer;
@@ -1616,11 +1697,16 @@ exports[`LocaleProvider demo -- list 1`] = `
   height: 28px;
   line-height: 26px;
   color: #6b798e;
+  box-shadow: 0 -1px 0 0 rgba(223,224,241,0.5),0 1px 0 0 rgba(223,224,241,.3),0 1px 1px 0 rgba(162,166,191,.5),0 2px 4px 0 rgba(228,229,242,.6);
   display: inline-block;
   vertical-align: middle;
 }
 
-.c34 {
+.c34:hover {
+  box-shadow: 0 1px 10px 0 rgba(162,166,191,.12),0 2px 4px -1px rgba(162,166,191,.2),0 4px 5px 0 rgba(162,166,191,.14);
+}
+
+.c35 {
   margin: 0 4px;
   width: 12px;
   height: 1px;
@@ -1629,7 +1715,7 @@ exports[`LocaleProvider demo -- list 1`] = `
   vertical-align: middle;
 }
 
-.c59 {
+.c60 {
   display: table-cell;
   font-size: 15px;
   width: 15px;
@@ -1638,12 +1724,12 @@ exports[`LocaleProvider demo -- list 1`] = `
   padding-top: 2px;
 }
 
-.c50 {
+.c51 {
   display: table-cell;
   vertical-align: middle;
 }
 
-.c49 {
+.c50 {
   display: table;
   position: relative;
   box-sizing: border-box;
@@ -1657,31 +1743,31 @@ exports[`LocaleProvider demo -- list 1`] = `
   border: 1px solid #c3cad9;
 }
 
-.c49 .c60 {
+.c50 .c61 {
   color: #6b798e;
 }
 
-.c45 {
+.c46 {
   display: inline-block;
   cursor: pointer;
 }
 
-.c46 {
+.c47 {
   margin-left: 5px;
 }
 
-.c47 {
+.c48 {
   max-height: 200px;
   overflow: auto;
   border: 1px solid #c3cad9;
   margin-top: 6px;
 }
 
-.c48 {
+.c49 {
   border: none;
 }
 
-.c64 .uc-fe-slider {
+.c65 .uc-fe-slider {
   position: relative;
   width: 300px;
   border-radius: 2px;
@@ -1693,7 +1779,7 @@ exports[`LocaleProvider demo -- list 1`] = `
   vertical-align: middle;
 }
 
-.c64 .uc-fe-slider-rail {
+.c65 .uc-fe-slider-rail {
   box-sizing: border-box;
   position: absolute;
   width: 100%;
@@ -1703,7 +1789,7 @@ exports[`LocaleProvider demo -- list 1`] = `
   height: 28px;
 }
 
-.c64 .uc-fe-slider-track {
+.c65 .uc-fe-slider-track {
   box-sizing: border-box;
   position: absolute;
   left: 0;
@@ -1713,7 +1799,7 @@ exports[`LocaleProvider demo -- list 1`] = `
   height: 28px;
 }
 
-.c64 .uc-fe-slider-tooltip {
+.c65 .uc-fe-slider-tooltip {
   line-height: normal;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1721,7 +1807,7 @@ exports[`LocaleProvider demo -- list 1`] = `
   user-select: none;
 }
 
-.c64 .uc-fe-slider-handle {
+.c65 .uc-fe-slider-handle {
   box-sizing: border-box;
   position: absolute;
   margin-left: -10px;
@@ -1740,8 +1826,8 @@ exports[`LocaleProvider demo -- list 1`] = `
   line-height: 36px;
 }
 
-.c64 .uc-fe-slider-handle::before,
-.c64 .uc-fe-slider-handle::after {
+.c65 .uc-fe-slider-handle::before,
+.c65 .uc-fe-slider-handle::after {
   content: '';
   display: inline-block;
   width: 1px;
@@ -1750,15 +1836,15 @@ exports[`LocaleProvider demo -- list 1`] = `
   margin-top: 8px;
 }
 
-.c64 .uc-fe-slider-handle::after {
+.c65 .uc-fe-slider-handle::after {
   margin-left: 4px;
 }
 
-.c64 .uc-fe-slider-handle:hover {
+.c65 .uc-fe-slider-handle:hover {
   border-color: rgb(107,156,235);
 }
 
-.c64 .uc-fe-slider-handle:active {
+.c65 .uc-fe-slider-handle:active {
   border-color: rgb(107,156,235);
   box-shadow: 0 0 5px rgb(107,156,235);
   cursor: -webkit-grabbing;
@@ -1766,13 +1852,13 @@ exports[`LocaleProvider demo -- list 1`] = `
   cursor: grabbing;
 }
 
-.c64 .uc-fe-slider-handle:focus {
+.c65 .uc-fe-slider-handle:focus {
   border-color: rgb(107,156,235);
   box-shadow: 0 0 5px rgb(163,193,243);
   outline: none;
 }
 
-.c64 .uc-fe-slider-mark {
+.c65 .uc-fe-slider-mark {
   position: absolute;
   top: 0;
   left: 0;
@@ -1780,7 +1866,7 @@ exports[`LocaleProvider demo -- list 1`] = `
   font-size: 12px;
 }
 
-.c64 .uc-fe-slider-mark-text {
+.c65 .uc-fe-slider-mark-text {
   position: absolute;
   display: inline-block;
   vertical-align: middle;
@@ -1794,109 +1880,109 @@ exports[`LocaleProvider demo -- list 1`] = `
   line-height: 28px;
 }
 
-.c64 .uc-fe-slider-mark-text-active {
+.c65 .uc-fe-slider-mark-text-active {
   color: #4074e1;
   border-right-color: #4683e6;
 }
 
-.c64 .uc-fe-slider-step {
+.c65 .uc-fe-slider-step {
   position: absolute;
   width: 100%;
   background: transparent;
   height: 28px;
 }
 
-.c64 .uc-fe-slider-dot {
+.c65 .uc-fe-slider-dot {
   display: none;
 }
 
-.c51 {
+.c52 {
   padding: 15px;
 }
 
-.c51:before,
-.c51:after {
+.c52:before,
+.c52:after {
   content: ' ';
   display: table;
 }
 
-.c51:after {
+.c52:after {
   clear: both;
 }
 
-.c51 .uc-fe-table {
+.c52 .uc-fe-table {
   border-radius: 2px;
   background-color: #fff;
 }
 
-.c51 .uc-fe-table-body {
+.c52 .uc-fe-table-body {
   background-color: #fff;
 }
 
-.c51 .uc-fe-table-scroll table {
+.c52 .uc-fe-table-scroll table {
   min-width: 100%;
 }
 
-.c51 .uc-fe-table-pagination {
+.c52 .uc-fe-table-pagination {
   float: right;
   margin-top: 8px;
 }
 
-.c51 .uc-fe-table-filter {
+.c52 .uc-fe-table-filter {
   border: none;
   padding: 0;
   cursor: pointer;
 }
 
-.c51 .uc-fe-table table {
+.c52 .uc-fe-table table {
   font-size: 12px;
   border-collapse: separate;
   border-spacing: 0;
   width: 100%;
 }
 
-.c51 .uc-fe-table-filter-notice,
-.c51 .uc-fe-table-empty-content-wrap,
-.c51 .uc-fe-table-error-content-wrap {
+.c52 .uc-fe-table-filter-notice,
+.c52 .uc-fe-table-empty-content-wrap,
+.c52 .uc-fe-table-error-content-wrap {
   width: 400px;
   margin: 12px auto;
   text-align: center;
 }
 
-.c51 .uc-fe-table-empty-content-wrap,
-.c51 .uc-fe-table-error-content-wrap {
+.c52 .uc-fe-table-empty-content-wrap,
+.c52 .uc-fe-table-error-content-wrap {
   margin: 40px auto;
 }
 
-.c51 .uc-fe-table-reset-link {
+.c52 .uc-fe-table-reset-link {
   color: #4074e1;
   cursor: pointer;
 }
 
-.c51 .uc-fe-table-fixed-left,
-.c51 .uc-fe-table-fixed-right {
+.c52 .uc-fe-table-fixed-left,
+.c52 .uc-fe-table-fixed-right {
   position: absolute;
   top: 0;
   overflow: hidden;
   background: #fff;
 }
 
-.c51 .uc-fe-table-fixed-left table,
-.c51 .uc-fe-table-fixed-right table {
+.c52 .uc-fe-table-fixed-left table,
+.c52 .uc-fe-table-fixed-right table {
   width: auto;
 }
 
-.c51 .uc-fe-table-fixed-left {
+.c52 .uc-fe-table-fixed-left {
   left: 0;
   box-shadow: 4px 0 4px rgba(100,100,100,0.1);
 }
 
-.c51 .uc-fe-table-fixed-right {
+.c52 .uc-fe-table-fixed-right {
   right: 0;
   box-shadow: -4px 0 4px rgba(100,100,100,0.1);
 }
 
-.c51 .uc-fe-table-row-expand-icon {
+.c52 .uc-fe-table-row-expand-icon {
   border: 1px solid #c3cad9;
   display: inline-block;
   vertical-align: middle;
@@ -1908,58 +1994,58 @@ exports[`LocaleProvider demo -- list 1`] = `
   cursor: pointer;
 }
 
-.c51 .uc-fe-table-row-expand-icon-cell {
+.c52 .uc-fe-table-row-expand-icon-cell {
   width: 20px;
 }
 
-.c51 .uc-fe-table-row-expand-icon:before {
+.c52 .uc-fe-table-row-expand-icon:before {
   content: '+';
 }
 
-.c51 .uc-fe-table-expand-icon-th {
+.c52 .uc-fe-table-expand-icon-th {
   width: 20px;
 }
 
-.c51 .uc-fe-table-row-expand-icon.uc-fe-table-row-expanded:before {
+.c52 .uc-fe-table-row-expand-icon.uc-fe-table-row-expanded:before {
   content: '-';
 }
 
-.c51 .uc-fe-table-row-spaced {
+.c52 .uc-fe-table-row-spaced {
   visibility: hidden;
 }
 
-.c51 .uc-fe-table-row-expanded,
-.c51 .uc-fe-table-row-collapsed {
+.c52 .uc-fe-table-row-expanded,
+.c52 .uc-fe-table-row-collapsed {
   margin-right: 8px;
 }
 
-.c51 .uc-fe-table-row-expand-icon-cell .uc-fe-table-row-expand-icon {
+.c52 .uc-fe-table-row-expand-icon-cell .uc-fe-table-row-expand-icon {
   margin: 0;
 }
 
-.c51 .uc-fe-table-fixed-header .uc-fe-table-header {
+.c52 .uc-fe-table-fixed-header .uc-fe-table-header {
   min-width: 100%;
   overflow: auto;
   padding-bottom: 20px;
   margin-bottom: -20px;
 }
 
-.c51 .uc-fe-table-fixed-left .uc-fe-table-body-inner {
+.c52 .uc-fe-table-fixed-left .uc-fe-table-body-inner {
   margin-right: -20px;
   padding-right: 20px;
 }
 
-.c51 .uc-fe-table-fixed-header .uc-fe-table-fixed-left .uc-fe-table-body-inner {
+.c52 .uc-fe-table-fixed-header .uc-fe-table-fixed-left .uc-fe-table-body-inner {
   padding-right: 0;
 }
 
-.c51 .uc-fe-table-content {
+.c52 .uc-fe-table-content {
   position: relative;
   overflow: hidden;
   width: 100%;
 }
 
-.c51 .uc-fe-table-thead > tr > th {
+.c52 .uc-fe-table-thead > tr > th {
   position: relative;
   vertical-align: middle;
   border-bottom: 1px solid #c3cad9;
@@ -1970,7 +2056,7 @@ exports[`LocaleProvider demo -- list 1`] = `
   font-weight: 400;
 }
 
-.c51 .uc-fe-table-row > td {
+.c52 .uc-fe-table-row > td {
   position: relative;
   vertical-align: middle;
   border-bottom: 1px solid #e1e6f0;
@@ -1980,46 +2066,46 @@ exports[`LocaleProvider demo -- list 1`] = `
   text-align: left;
 }
 
-.c51 .uc-fe-table-fixed-header .uc-fe-table-scroll .uc-fe-table-header {
+.c52 .uc-fe-table-fixed-header .uc-fe-table-scroll .uc-fe-table-header {
   overflow: scroll;
 }
 
-.c51 .uc-fe-table-tip-wrap {
+.c52 .uc-fe-table-tip-wrap {
   border-bottom: 1px solid #c3cad9;
 }
 
-.c51 .uc-fe-table-fixed-left .uc-fe-table-tip-wrap,
-.c51 .uc-fe-table-fixed-right .uc-fe-table-tip-wrap {
+.c52 .uc-fe-table-fixed-left .uc-fe-table-tip-wrap,
+.c52 .uc-fe-table-fixed-right .uc-fe-table-tip-wrap {
   display: none;
 }
 
-.c51 .uc-fe-table table > tbody > .uc-fe-table-row-hover,
-.c51 .uc-fe-table table > tbody > .uc-fe-table-row:hover {
+.c52 .uc-fe-table table > tbody > .uc-fe-table-row-hover,
+.c52 .uc-fe-table table > tbody > .uc-fe-table-row:hover {
   background-color: #eaf3fd;
 }
 
-.c51 .uc-fe-table-scroll-position-left .uc-fe-table-fixed-left {
+.c52 .uc-fe-table-scroll-position-left .uc-fe-table-fixed-left {
   box-shadow: none;
 }
 
-.c51 .uc-fe-table-scroll-position-right .uc-fe-table-fixed-right {
+.c52 .uc-fe-table-scroll-position-right .uc-fe-table-fixed-right {
   box-shadow: none;
 }
 
-.c51 .uc-fe-table-row-indent.indent-level-0 {
+.c52 .uc-fe-table-row-indent.indent-level-0 {
   display: none;
 }
 
-.c52 {
+.c53 {
   position: relative;
 }
 
-.c57 {
+.c58 {
   display: inline-block;
   vertical-align: middle;
 }
 
-.c58 {
+.c59 {
   border-color: #c3cad9;
 }
 
@@ -2183,18 +2269,18 @@ exports[`LocaleProvider demo -- list 1`] = `
                 class="uc-fe-numberinput uc-fe-numberinput-styletype-pagination c18"
               >
                 <div
-                  class="uc-fe-numberinput-input-wrap c19"
+                  class="c19 uc-fe-numberinput-input-wrap c20"
                 >
                   <input
                     autocomplete="off"
-                    class="c20 uc-fe-numberinput-input c21"
+                    class="c21 uc-fe-numberinput-input c22"
                     max="10"
                     min="1"
                     step="1"
                     value=""
                   />
                   <span
-                    class="c22 uc-fe-numberinput-suffix c23"
+                    class="c23 uc-fe-numberinput-suffix c24"
                   >
                     <span
                       class="uc-fe-pagination-options-quick-jumper-text"
@@ -2205,7 +2291,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                 </div>
               </div>
               <button
-                class="uc-fe-pagination-options-gobutton uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary c24"
+                class="uc-fe-pagination-options-gobutton uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary c25"
                 type="button"
               >
                 确定
@@ -2218,7 +2304,7 @@ exports[`LocaleProvider demo -- list 1`] = `
         class="demo-wrap"
       >
         <div
-          class="uc-fe-calendar c25"
+          class="uc-fe-calendar c26"
           tabindex="0"
         >
           <div
@@ -2952,34 +3038,34 @@ exports[`LocaleProvider demo -- list 1`] = `
         class="demo-wrap"
       >
         <div
-          class="uc-fe-datepicker c26"
+          class="uc-fe-datepicker c27"
         >
           <div
-            class="uc-fe-datepicker-date-wrap c27"
+            class="uc-fe-datepicker-date-wrap c28"
           >
             <span
-              class="c28"
+              class="c29"
             >
               2018-07-21
             </span>
             <i
-              class="c29 uc-fe-icon icon__calendar c13"
+              class="c30 uc-fe-icon icon__calendar c13"
               color="blue"
               type="calendar"
             />
           </div>
           <div
-            class="uc-fe-datepicker-time-wrap c30"
+            class="uc-fe-datepicker-time-wrap c31"
           >
             <div
               class="uc-fe-numberinput uc-fe-numberinput-styletype-pagination c18"
             >
               <div
-                class="uc-fe-numberinput-input-wrap c19"
+                class="c19 uc-fe-numberinput-input-wrap c20"
               >
                 <input
                   autocomplete="off"
-                  class="c20 uc-fe-numberinput-input c21"
+                  class="c21 uc-fe-numberinput-input c22"
                   min="-9007199254740991"
                   step="1"
                   value="19"
@@ -2987,7 +3073,7 @@ exports[`LocaleProvider demo -- list 1`] = `
               </div>
             </div>
             <span
-              class="c31"
+              class="c32"
             >
               :
             </span>
@@ -2995,11 +3081,11 @@ exports[`LocaleProvider demo -- list 1`] = `
               class="uc-fe-numberinput uc-fe-numberinput-styletype-pagination c18"
             >
               <div
-                class="uc-fe-numberinput-input-wrap c19"
+                class="c19 uc-fe-numberinput-input-wrap c20"
               >
                 <input
                   autocomplete="off"
-                  class="c20 uc-fe-numberinput-input c21"
+                  class="c21 uc-fe-numberinput-input c22"
                   min="-9007199254740991"
                   step="1"
                   value="55"
@@ -3007,7 +3093,7 @@ exports[`LocaleProvider demo -- list 1`] = `
               </div>
             </div>
             <span
-              class="c31"
+              class="c32"
             >
               :
             </span>
@@ -3015,11 +3101,11 @@ exports[`LocaleProvider demo -- list 1`] = `
               class="uc-fe-numberinput uc-fe-numberinput-styletype-pagination c18"
             >
               <div
-                class="uc-fe-numberinput-input-wrap c19"
+                class="c19 uc-fe-numberinput-input-wrap c20"
               >
                 <input
                   autocomplete="off"
-                  class="c20 uc-fe-numberinput-input c21"
+                  class="c21 uc-fe-numberinput-input c22"
                   min="-9007199254740991"
                   step="1"
                   value="21"
@@ -3033,18 +3119,18 @@ exports[`LocaleProvider demo -- list 1`] = `
         class="demo-wrap"
       >
         <div
-          class="uc-fe-datepicker uc-fe-datepicker-month c26"
+          class="uc-fe-datepicker uc-fe-datepicker-month c27"
         >
           <div
-            class="uc-fe-datepicker-date-wrap c27"
+            class="uc-fe-datepicker-date-wrap c28"
           >
             <span
-              class="c28"
+              class="c29"
             >
               2018-07
             </span>
             <i
-              class="c29 uc-fe-icon icon__calendar c13"
+              class="c30 uc-fe-icon icon__calendar c13"
               color="blue"
               type="calendar"
             />
@@ -3058,7 +3144,7 @@ exports[`LocaleProvider demo -- list 1`] = `
           class="uc-fe-datepicker-range "
         >
           <div
-            class="c32 c14"
+            class="c33 c14"
           >
             <div>
               <div
@@ -3075,19 +3161,19 @@ exports[`LocaleProvider demo -- list 1`] = `
             </div>
           </div>
           <div
-            class="uc-fe-datepicker-range-date-wrap c33"
+            class="uc-fe-datepicker-range-date-wrap c34"
           >
             <span>
               2018-07-21 19:55:21
             </span>
             <span
-              class="c34"
+              class="c35"
             />
             <span>
               2018-07-21 19:55:21
             </span>
             <i
-              class="c29 uc-fe-icon icon__calendar c13"
+              class="c30 uc-fe-icon icon__calendar c13"
               color="blue"
               type="calendar"
             />
@@ -3147,7 +3233,7 @@ exports[`LocaleProvider demo -- list 1`] = `
           class="demo-block"
         >
           <button
-            class="demo-alert-btn uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c35"
+            class="demo-alert-btn uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c36"
             type="button"
           >
             alert
@@ -3157,7 +3243,7 @@ exports[`LocaleProvider demo -- list 1`] = `
           class="demo-block"
         >
           <button
-            class="demo-confirm-btn uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c35"
+            class="demo-confirm-btn uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c36"
             type="button"
           >
             confirm
@@ -3168,25 +3254,25 @@ exports[`LocaleProvider demo -- list 1`] = `
         class="demo-wrap"
       >
         <div
-          class="c36"
+          class="c37"
         >
           <span
-            class="uc-fe-menu-selectall-checkbox c37 uc-fe-checkbox c38"
+            class="uc-fe-menu-selectall-checkbox c38 uc-fe-checkbox c39"
           >
             <i
-              class="c39 uc-fe-checkbox-icon c40 uc-fe-icon icon__checkbox c13"
+              class="c40 uc-fe-checkbox-icon c41 uc-fe-icon icon__checkbox c13"
               type="checkbox"
             />
             全选
           </span>
           <div
-            class="uc-fe-menu-item c41"
+            class="uc-fe-menu-item c42"
           >
             <span
-              class="uc-fe-checkbox c38"
+              class="uc-fe-checkbox c39"
             >
               <i
-                class="c39 uc-fe-checkbox-icon c40 uc-fe-icon icon__checkbox c13"
+                class="c40 uc-fe-checkbox-icon c41 uc-fe-icon icon__checkbox c13"
                 type="checkbox"
               />
               item 1
@@ -3197,14 +3283,14 @@ exports[`LocaleProvider demo -- list 1`] = `
               <div>
                 <div>
                   <div
-                    class="uc-fe-menu-submenu-title c42"
+                    class="uc-fe-menu-submenu-title c43"
                   >
                     <div
-                      class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c43"
+                      class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c44"
                     >
                       submenu 1
                       <i
-                        class="c44 uc-fe-icon icon__up c13"
+                        class="c45 uc-fe-icon icon__up c13"
                         type="up"
                       />
                     </div>
@@ -3215,35 +3301,35 @@ exports[`LocaleProvider demo -- list 1`] = `
                   open=""
                 >
                   <span
-                    class="uc-fe-menu-selectall-checkbox c37 uc-fe-checkbox c38"
+                    class="uc-fe-menu-selectall-checkbox c38 uc-fe-checkbox c39"
                   >
                     <i
-                      class="c39 uc-fe-checkbox-icon c40 uc-fe-icon icon__checkbox c13"
+                      class="c40 uc-fe-checkbox-icon c41 uc-fe-icon icon__checkbox c13"
                       type="checkbox"
                     />
                     全选
                   </span>
                   <div
-                    class="uc-fe-menu-item c41"
+                    class="uc-fe-menu-item c42"
                   >
                     <span
-                      class="uc-fe-checkbox c38"
+                      class="uc-fe-checkbox c39"
                     >
                       <i
-                        class="c39 uc-fe-checkbox-icon c40 uc-fe-icon icon__checkbox c13"
+                        class="c40 uc-fe-checkbox-icon c41 uc-fe-icon icon__checkbox c13"
                         type="checkbox"
                       />
                       item 1-1
                     </span>
                   </div>
                   <div
-                    class="uc-fe-menu-item c41"
+                    class="uc-fe-menu-item c42"
                   >
                     <span
-                      class="uc-fe-checkbox c38"
+                      class="uc-fe-checkbox c39"
                     >
                       <i
-                        class="c39 uc-fe-checkbox-icon c40 uc-fe-icon icon__checkbox c13"
+                        class="c40 uc-fe-checkbox-icon c41 uc-fe-icon icon__checkbox c13"
                         type="checkbox"
                       />
                       item 1-2
@@ -3258,14 +3344,14 @@ exports[`LocaleProvider demo -- list 1`] = `
               <div>
                 <div>
                   <div
-                    class="uc-fe-menu-submenu-title c42"
+                    class="uc-fe-menu-submenu-title c43"
                   >
                     <div
-                      class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c43"
+                      class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c44"
                     >
                       submenu 2
                       <i
-                        class="c44 uc-fe-icon icon__up c13"
+                        class="c45 uc-fe-icon icon__up c13"
                         type="up"
                       />
                     </div>
@@ -3276,35 +3362,35 @@ exports[`LocaleProvider demo -- list 1`] = `
                   open=""
                 >
                   <span
-                    class="uc-fe-menu-selectall-checkbox c37 uc-fe-checkbox c38"
+                    class="uc-fe-menu-selectall-checkbox c38 uc-fe-checkbox c39"
                   >
                     <i
-                      class="c39 uc-fe-checkbox-icon c40 uc-fe-icon icon__checkbox c13"
+                      class="c40 uc-fe-checkbox-icon c41 uc-fe-icon icon__checkbox c13"
                       type="checkbox"
                     />
                     全选
                   </span>
                   <div
-                    class="uc-fe-menu-item c41"
+                    class="uc-fe-menu-item c42"
                   >
                     <span
-                      class="uc-fe-checkbox c38"
+                      class="uc-fe-checkbox c39"
                     >
                       <i
-                        class="c39 uc-fe-checkbox-icon c40 uc-fe-icon icon__checkbox c13"
+                        class="c40 uc-fe-checkbox-icon c41 uc-fe-icon icon__checkbox c13"
                         type="checkbox"
                       />
                       item 2-1
                     </span>
                   </div>
                   <div
-                    class="uc-fe-menu-item c41"
+                    class="uc-fe-menu-item c42"
                   >
                     <span
-                      class="uc-fe-checkbox c38"
+                      class="uc-fe-checkbox c39"
                     >
                       <i
-                        class="c39 uc-fe-checkbox-icon c40 uc-fe-icon icon__checkbox c13"
+                        class="c40 uc-fe-checkbox-icon c41 uc-fe-icon icon__checkbox c13"
                         type="checkbox"
                       />
                       item 2-2
@@ -3321,32 +3407,32 @@ exports[`LocaleProvider demo -- list 1`] = `
       >
         <div>
           <div
-            class="c45"
+            class="c46"
           >
             <input
               hidden=""
               type="file"
             />
             <button
-              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary c24"
+              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary c25"
               type="button"
             >
               请选择文件
             </button>
             <span
-              class="c46"
+              class="c47"
             >
               请选择符合规则的文件
             </span>
           </div>
           <div
-            class="c47"
+            class="c48"
           >
             <div
-              class="c48 c49"
+              class="c49 c50"
             >
               <div
-                class="c50"
+                class="c51"
               >
                 你还未上传任何内容
               </div>
@@ -3358,10 +3444,10 @@ exports[`LocaleProvider demo -- list 1`] = `
         class="demo-wrap"
       >
         <div
-          class="test-table c51"
+          class="test-table c52"
         >
           <div
-            class="c52"
+            class="c53"
           />
           <div
             class="uc-fe-table uc-fe-table-scroll-position-left"
@@ -3377,24 +3463,24 @@ exports[`LocaleProvider demo -- list 1`] = `
                     style="float:right;"
                   >
                     <span
-                      class="test-search-input uc-fe-input c53"
+                      class="test-search-input uc-fe-input c54"
                       style="margin-right:5px;"
                     >
                       <input />
                       <span
-                        class="c54 c55"
+                        class="c55 c56"
                       >
                         <i
-                          class="c56 uc-fe-icon icon__search c13"
+                          class="c57 uc-fe-icon icon__search c13"
                           type="search"
                         />
                       </span>
                     </span>
                     <span
-                      class="test-column-config-btn c57"
+                      class="test-column-config-btn c58"
                     >
                       <button
-                        class="c58 uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c35"
+                        class="c59 uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c36"
                         type="button"
                       >
                         <i
@@ -3543,18 +3629,18 @@ exports[`LocaleProvider demo -- list 1`] = `
                       class="uc-fe-table-empty-content-wrap"
                     >
                       <div
-                        class="c49"
+                        class="c50"
                       >
                         <span
-                          class="c59"
+                          class="c60"
                         >
                           <i
-                            class="c60 uc-fe-icon icon__circle-mark2 c13"
+                            class="c61 uc-fe-icon icon__circle-mark2 c13"
                             type="circle-mark2"
                           />
                         </span>
                         <div
-                          class="c50"
+                          class="c51"
                         >
                           数据为空
                         </div>
@@ -3566,7 +3652,7 @@ exports[`LocaleProvider demo -- list 1`] = `
             </div>
           </div>
           <ul
-            class="uc-fe-pagination uc-fe-table-pagination uc-fe-pagination-sm c61"
+            class="uc-fe-pagination uc-fe-table-pagination uc-fe-pagination-sm c62"
             unselectable="unselectable"
           >
             <li
@@ -3602,7 +3688,7 @@ exports[`LocaleProvider demo -- list 1`] = `
               class="uc-fe-pagination-options"
             >
               <div
-                class="uc-fe-pagination-options-size-changer c62"
+                class="uc-fe-pagination-options-size-changer c63"
               >
                 <div>
                   <div
@@ -3622,21 +3708,21 @@ exports[`LocaleProvider demo -- list 1`] = `
                 class="uc-fe-pagination-options-quick-jumper"
               >
                 <div
-                  class="uc-fe-numberinput uc-fe-numberinput-styletype-pagination c63"
+                  class="uc-fe-numberinput uc-fe-numberinput-styletype-pagination c64"
                 >
                   <div
-                    class="uc-fe-numberinput-input-wrap c19"
+                    class="c19 uc-fe-numberinput-input-wrap c20"
                   >
                     <input
                       autocomplete="off"
-                      class="c20 uc-fe-numberinput-input c21"
+                      class="c21 uc-fe-numberinput-input c22"
                       max="1"
                       min="1"
                       step="1"
                       value=""
                     />
                     <span
-                      class="c22 uc-fe-numberinput-suffix c23"
+                      class="c23 uc-fe-numberinput-suffix c24"
                     >
                       <span
                         class="uc-fe-pagination-options-quick-jumper-text"
@@ -3658,7 +3744,7 @@ exports[`LocaleProvider demo -- list 1`] = `
           style="margin-bottom:10px;"
         >
           <div
-            class="test-slider c64"
+            class="test-slider c65"
           >
             <div
               class="uc-fe-slider"
@@ -3688,11 +3774,11 @@ exports[`LocaleProvider demo -- list 1`] = `
               />
             </div>
             <div
-              class="uc-fe-numberinput uc-fe-numberinput-styletype-default c65"
+              class="uc-fe-numberinput uc-fe-numberinput-styletype-default c66"
             >
               <div>
                 <span
-                  class="c66 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c67"
+                  class="c67 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c68"
                   unselectable="unselectable"
                 >
                   <i
@@ -3701,7 +3787,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                   />
                 </span>
                 <span
-                  class="c68 uc-fe-numberinput-handler-down uc-fe-numberinput-handler uc-fe-numberinput-handler-disabled c69"
+                  class="c69 uc-fe-numberinput-handler-down uc-fe-numberinput-handler uc-fe-numberinput-handler-disabled c70"
                   disabled=""
                   unselectable="unselectable"
                 >
@@ -3712,11 +3798,11 @@ exports[`LocaleProvider demo -- list 1`] = `
                 </span>
               </div>
               <div
-                class="uc-fe-numberinput-input-wrap c19"
+                class="c19 uc-fe-numberinput-input-wrap c20"
               >
                 <input
                   autocomplete="off"
-                  class="c20 uc-fe-numberinput-input c21"
+                  class="c21 uc-fe-numberinput-input c22"
                   max="100"
                   min="0"
                   step="1"
@@ -3728,7 +3814,7 @@ exports[`LocaleProvider demo -- list 1`] = `
         </div>
         <div>
           <div
-            class="test-slider-sensitive c64"
+            class="test-slider-sensitive c65"
           >
             <div
               class="uc-fe-slider"
@@ -3758,11 +3844,11 @@ exports[`LocaleProvider demo -- list 1`] = `
               />
             </div>
             <div
-              class="uc-fe-numberinput uc-fe-numberinput-styletype-default c65"
+              class="uc-fe-numberinput uc-fe-numberinput-styletype-default c66"
             >
               <div>
                 <span
-                  class="c66 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c67"
+                  class="c67 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c68"
                   unselectable="unselectable"
                 >
                   <i
@@ -3771,7 +3857,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                   />
                 </span>
                 <span
-                  class="c68 uc-fe-numberinput-handler-down uc-fe-numberinput-handler uc-fe-numberinput-handler-disabled c69"
+                  class="c69 uc-fe-numberinput-handler-down uc-fe-numberinput-handler uc-fe-numberinput-handler-disabled c70"
                   disabled=""
                   unselectable="unselectable"
                 >
@@ -3782,11 +3868,11 @@ exports[`LocaleProvider demo -- list 1`] = `
                 </span>
               </div>
               <div
-                class="uc-fe-numberinput-input-wrap c19"
+                class="c19 uc-fe-numberinput-input-wrap c20"
               >
                 <input
                   autocomplete="off"
-                  class="c20 uc-fe-numberinput-input c21"
+                  class="c21 uc-fe-numberinput-input c22"
                   max="100"
                   min="0"
                   step="1"
@@ -3807,11 +3893,11 @@ exports[`LocaleProvider demo -- localefile 1`] = `
   vertical-align: baseline;
 }
 
-.c7 {
+.c8 {
   position: relative;
 }
 
-.c9 {
+.c10 {
   border: none;
   outline: none;
   padding: 0;
@@ -3819,7 +3905,7 @@ exports[`LocaleProvider demo -- localefile 1`] = `
   color: inherit;
 }
 
-.c11 {
+.c12 {
   color: #c3cad9;
   margin: 0 4px;
   display: inline-block;
@@ -3839,157 +3925,178 @@ exports[`LocaleProvider demo -- localefile 1`] = `
   margin: 0;
 }
 
-.c6 .c8 {
+.c6 .c9 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c6 .c8::-webkit-input-placeholder {
+.c6 .c9::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c6 .c8::-moz-placeholder {
+.c6 .c9::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c6 .c8:-ms-input-placeholder {
+.c6 .c9:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c6 .c8::placeholder {
+.c6 .c9::placeholder {
   color: #abb4c3;
 }
 
-.c6 .c8 {
+.c6 .c9 {
   text-align: center;
-  border: 1px solid #c3cad9;
+  border: 1px solid #dfe0f1;
   margin: 0 4px;
   height: 26px;
   width: 26px;
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+  background: #fafafc;
 }
 
-.c6 .c8:hover {
-  border-color: #4683e6;
+.c6 .c9:hover {
   z-index: 1;
+  background: #f6f6fb;
+  border-color: #c3cad9;
 }
 
-.c6 .c16,
-.c6 .c17 {
+.c6 .c17,
+.c6 .c18 {
   text-align: center;
   top: 0;
   height: 28px;
   width: 28px;
   line-height: 26px;
+  border-color: transparent;
 }
 
-.c6 .c16:hover,
-.c6 .c17:hover {
+.c6 .c17:hover,
+.c6 .c18:hover {
   color: #4074e1;
-  border-color: #4683e6;
   z-index: 1;
 }
 
-.c6 .c16 {
+.c6 .c17 {
   right: 0;
   border-width: 1px;
 }
 
-.c6 .c17 {
+.c6 .c18 {
   left: 0;
   border-width: 1px;
 }
 
-.c6 .c10 {
+.c6 .c11 {
   margin-left: 0;
 }
 
-.c6 .c8 {
+.c6 .c9 {
   margin: 0;
 }
 
-.c6 .c10 {
+.c6 .c11 {
   margin-left: 4px;
   margin-right: 0px;
 }
 
-.c13 .c8 {
+.c14 .c9 {
   line-height: 20px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c13 .c8::-webkit-input-placeholder {
+.c14 .c9::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c13 .c8::-moz-placeholder {
+.c14 .c9::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c13 .c8:-ms-input-placeholder {
+.c14 .c9:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c13 .c8::placeholder {
+.c14 .c9::placeholder {
   color: #abb4c3;
 }
 
-.c13 .c8 {
+.c14 .c9 {
   text-align: center;
-  border: 1px solid #c3cad9;
+  border: 1px solid #dfe0f1;
   margin: 0 4px;
   height: 20px;
   width: 20px;
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+  background: #fafafc;
 }
 
-.c13 .c8:hover {
-  border-color: #4683e6;
+.c14 .c9:hover {
   z-index: 1;
+  background: #f6f6fb;
+  border-color: #c3cad9;
 }
 
-.c13 .c10 {
+.c14 .c11 {
   margin-left: 0;
 }
 
-.c13 .c8 {
+.c14 .c9 {
   margin: 0;
 }
 
-.c13 .c10 {
+.c14 .c11 {
   margin-left: 4px;
   margin-right: 0px;
 }
 
-.c14 .c8 {
+.c15 .c9 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c14 .c8::-webkit-input-placeholder {
+.c15 .c9::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c14 .c8::-moz-placeholder {
+.c15 .c9::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c14 .c8:-ms-input-placeholder {
+.c15 .c9:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c14 .c8::placeholder {
+.c15 .c9::placeholder {
   color: #abb4c3;
 }
 
-.c14 .c8 {
+.c15 .c7 {
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  background: #fafafc;
+}
+
+.c15 .c7:hover {
+  background: #f6f6fb;
+}
+
+.c15 .c9 {
   padding: 0 0 0 8px;
   text-align: left;
+  box-shadow: none;
+  background: transparent;
   width: 34px;
 }
 
-.c12 {
+.c13 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -4006,14 +4113,19 @@ exports[`LocaleProvider demo -- localefile 1`] = `
   height: 28px;
   padding: 0 8px;
   color: #fff;
-  background: #4683e6;
   border-color: #4683e6;
+  border: none;
+  background: linear-gradient(135deg,#5c8af7,#385ef5);
+  box-shadow: 0 1px 5px 0 rgba(21,56,195,.12),0 2px 2px 0 rgba(8,155,140,0.24),0 3px 1px -3px rgba(58,96,245,.34);
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
 }
 
-.c12:hover {
+.c13:hover {
   color: #fff;
-  background: #3664c8;
   border-color: #3664c8;
+  background: linear-gradient(135deg,#5e95fb,#3a72f9);
+  box-shadow: 0 1px 10px 0 rgba(21,56,195,.12),0 2px 4px -1px rgba(21,56,195,.2),0 4px 5px 0 rgba(21,56,195,.14);
 }
 
 .c4 {
@@ -4045,21 +4157,29 @@ exports[`LocaleProvider demo -- localefile 1`] = `
 .c2 .c3 {
   height: 28px;
   line-height: 28px;
-  border: 1px solid #c3cad9;
+  border: 1px none #c3cad9;
+  box-shadow: 0 -1px 0 0 rgba(223,224,241,0.5),0 1px 0 0 rgba(223,224,241,.3),0 1px 1px 0 rgba(162,166,191,.5),0 2px 4px 0 rgba(228,229,242,.6);
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
 }
 
 .c2 .c3:hover {
   border-color: #4683e6;
+  box-shadow: 0 1px 10px 0 rgba(162,166,191,.12),0 2px 4px -1px rgba(162,166,191,.2),0 4px 5px 0 rgba(162,166,191,.14);
 }
 
-.c15 .c3 {
+.c16 .c3 {
   height: 22px;
   line-height: 22px;
-  border: 1px solid #c3cad9;
+  border: 1px none #c3cad9;
+  box-shadow: 0 -1px 0 0 rgba(223,224,241,0.5),0 1px 0 0 rgba(223,224,241,.3),0 1px 1px 0 rgba(162,166,191,.5),0 2px 4px 0 rgba(228,229,242,.6);
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
 }
 
-.c15 .c3:hover {
+.c16 .c3:hover {
   border-color: #4683e6;
+  box-shadow: 0 1px 10px 0 rgba(162,166,191,.12),0 2px 4px -1px rgba(162,166,191,.2),0 4px 5px 0 rgba(162,166,191,.14);
 }
 
 .c0 {
@@ -4263,18 +4383,18 @@ exports[`LocaleProvider demo -- localefile 1`] = `
           class="uc-fe-numberinput uc-fe-numberinput-styletype-pagination c6"
         >
           <div
-            class="uc-fe-numberinput-input-wrap c7"
+            class="c7 uc-fe-numberinput-input-wrap c8"
           >
             <input
               autocomplete="off"
-              class="c8 uc-fe-numberinput-input c9"
+              class="c9 uc-fe-numberinput-input c10"
               max="10"
               min="1"
               step="1"
               value=""
             />
             <span
-              class="c10 uc-fe-numberinput-suffix c11"
+              class="c11 uc-fe-numberinput-suffix c12"
             >
               <span
                 class="uc-fe-pagination-options-quick-jumper-text"
@@ -4285,7 +4405,7 @@ exports[`LocaleProvider demo -- localefile 1`] = `
           </div>
         </div>
         <button
-          class="uc-fe-pagination-options-gobutton uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary c12"
+          class="uc-fe-pagination-options-gobutton uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary c13"
           type="button"
         >
           confirm
@@ -4301,11 +4421,11 @@ exports[`LocaleProvider demo -- localeprovider 1`] = `
   vertical-align: baseline;
 }
 
-.c7 {
+.c8 {
   position: relative;
 }
 
-.c9 {
+.c10 {
   border: none;
   outline: none;
   padding: 0;
@@ -4313,7 +4433,7 @@ exports[`LocaleProvider demo -- localeprovider 1`] = `
   color: inherit;
 }
 
-.c11 {
+.c12 {
   color: #c3cad9;
   margin: 0 4px;
   display: inline-block;
@@ -4333,157 +4453,178 @@ exports[`LocaleProvider demo -- localeprovider 1`] = `
   margin: 0;
 }
 
-.c6 .c8 {
+.c6 .c9 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c6 .c8::-webkit-input-placeholder {
+.c6 .c9::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c6 .c8::-moz-placeholder {
+.c6 .c9::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c6 .c8:-ms-input-placeholder {
+.c6 .c9:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c6 .c8::placeholder {
+.c6 .c9::placeholder {
   color: #abb4c3;
 }
 
-.c6 .c8 {
+.c6 .c9 {
   text-align: center;
-  border: 1px solid #c3cad9;
+  border: 1px solid #dfe0f1;
   margin: 0 4px;
   height: 26px;
   width: 26px;
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+  background: #fafafc;
 }
 
-.c6 .c8:hover {
-  border-color: #4683e6;
+.c6 .c9:hover {
   z-index: 1;
+  background: #f6f6fb;
+  border-color: #c3cad9;
 }
 
-.c6 .c16,
-.c6 .c17 {
+.c6 .c17,
+.c6 .c18 {
   text-align: center;
   top: 0;
   height: 28px;
   width: 28px;
   line-height: 26px;
+  border-color: transparent;
 }
 
-.c6 .c16:hover,
-.c6 .c17:hover {
+.c6 .c17:hover,
+.c6 .c18:hover {
   color: #4074e1;
-  border-color: #4683e6;
   z-index: 1;
 }
 
-.c6 .c16 {
+.c6 .c17 {
   right: 0;
   border-width: 1px;
 }
 
-.c6 .c17 {
+.c6 .c18 {
   left: 0;
   border-width: 1px;
 }
 
-.c6 .c10 {
+.c6 .c11 {
   margin-left: 0;
 }
 
-.c6 .c8 {
+.c6 .c9 {
   margin: 0;
 }
 
-.c6 .c10 {
+.c6 .c11 {
   margin-left: 4px;
   margin-right: 0px;
 }
 
-.c13 .c8 {
+.c14 .c9 {
   line-height: 20px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c13 .c8::-webkit-input-placeholder {
+.c14 .c9::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c13 .c8::-moz-placeholder {
+.c14 .c9::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c13 .c8:-ms-input-placeholder {
+.c14 .c9:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c13 .c8::placeholder {
+.c14 .c9::placeholder {
   color: #abb4c3;
 }
 
-.c13 .c8 {
+.c14 .c9 {
   text-align: center;
-  border: 1px solid #c3cad9;
+  border: 1px solid #dfe0f1;
   margin: 0 4px;
   height: 20px;
   width: 20px;
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+  background: #fafafc;
 }
 
-.c13 .c8:hover {
-  border-color: #4683e6;
+.c14 .c9:hover {
   z-index: 1;
+  background: #f6f6fb;
+  border-color: #c3cad9;
 }
 
-.c13 .c10 {
+.c14 .c11 {
   margin-left: 0;
 }
 
-.c13 .c8 {
+.c14 .c9 {
   margin: 0;
 }
 
-.c13 .c10 {
+.c14 .c11 {
   margin-left: 4px;
   margin-right: 0px;
 }
 
-.c14 .c8 {
+.c15 .c9 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c14 .c8::-webkit-input-placeholder {
+.c15 .c9::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c14 .c8::-moz-placeholder {
+.c15 .c9::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c14 .c8:-ms-input-placeholder {
+.c15 .c9:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c14 .c8::placeholder {
+.c15 .c9::placeholder {
   color: #abb4c3;
 }
 
-.c14 .c8 {
+.c15 .c7 {
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  background: #fafafc;
+}
+
+.c15 .c7:hover {
+  background: #f6f6fb;
+}
+
+.c15 .c9 {
   padding: 0 0 0 8px;
   text-align: left;
+  box-shadow: none;
+  background: transparent;
   width: 34px;
 }
 
-.c12 {
+.c13 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -4500,14 +4641,19 @@ exports[`LocaleProvider demo -- localeprovider 1`] = `
   height: 28px;
   padding: 0 8px;
   color: #fff;
-  background: #4683e6;
   border-color: #4683e6;
+  border: none;
+  background: linear-gradient(135deg,#5c8af7,#385ef5);
+  box-shadow: 0 1px 5px 0 rgba(21,56,195,.12),0 2px 2px 0 rgba(8,155,140,0.24),0 3px 1px -3px rgba(58,96,245,.34);
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
 }
 
-.c12:hover {
+.c13:hover {
   color: #fff;
-  background: #3664c8;
   border-color: #3664c8;
+  background: linear-gradient(135deg,#5e95fb,#3a72f9);
+  box-shadow: 0 1px 10px 0 rgba(21,56,195,.12),0 2px 4px -1px rgba(21,56,195,.2),0 4px 5px 0 rgba(21,56,195,.14);
 }
 
 .c4 {
@@ -4539,21 +4685,29 @@ exports[`LocaleProvider demo -- localeprovider 1`] = `
 .c2 .c3 {
   height: 28px;
   line-height: 28px;
-  border: 1px solid #c3cad9;
+  border: 1px none #c3cad9;
+  box-shadow: 0 -1px 0 0 rgba(223,224,241,0.5),0 1px 0 0 rgba(223,224,241,.3),0 1px 1px 0 rgba(162,166,191,.5),0 2px 4px 0 rgba(228,229,242,.6);
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
 }
 
 .c2 .c3:hover {
   border-color: #4683e6;
+  box-shadow: 0 1px 10px 0 rgba(162,166,191,.12),0 2px 4px -1px rgba(162,166,191,.2),0 4px 5px 0 rgba(162,166,191,.14);
 }
 
-.c15 .c3 {
+.c16 .c3 {
   height: 22px;
   line-height: 22px;
-  border: 1px solid #c3cad9;
+  border: 1px none #c3cad9;
+  box-shadow: 0 -1px 0 0 rgba(223,224,241,0.5),0 1px 0 0 rgba(223,224,241,.3),0 1px 1px 0 rgba(162,166,191,.5),0 2px 4px 0 rgba(228,229,242,.6);
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
 }
 
-.c15 .c3:hover {
+.c16 .c3:hover {
   border-color: #4683e6;
+  box-shadow: 0 1px 10px 0 rgba(162,166,191,.12),0 2px 4px -1px rgba(162,166,191,.2),0 4px 5px 0 rgba(162,166,191,.14);
 }
 
 .c0 {
@@ -4757,18 +4911,18 @@ exports[`LocaleProvider demo -- localeprovider 1`] = `
           class="uc-fe-numberinput uc-fe-numberinput-styletype-pagination c6"
         >
           <div
-            class="uc-fe-numberinput-input-wrap c7"
+            class="c7 uc-fe-numberinput-input-wrap c8"
           >
             <input
               autocomplete="off"
-              class="c8 uc-fe-numberinput-input c9"
+              class="c9 uc-fe-numberinput-input c10"
               max="10"
               min="1"
               step="1"
               value=""
             />
             <span
-              class="c10 uc-fe-numberinput-suffix c11"
+              class="c11 uc-fe-numberinput-suffix c12"
             >
               <span
                 class="uc-fe-pagination-options-quick-jumper-text"
@@ -4779,7 +4933,7 @@ exports[`LocaleProvider demo -- localeprovider 1`] = `
           </div>
         </div>
         <button
-          class="uc-fe-pagination-options-gobutton uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary c12"
+          class="uc-fe-pagination-options-gobutton uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary c13"
           type="button"
         >
           CONFIRM

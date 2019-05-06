@@ -58,29 +58,35 @@ export const FooterWrap = styled.div.attrs({
 
 /* stylelint-disable no-duplicate-selectors */
 const themeMixin = ({ theme: { colorList, colorMap, fontSize, titleFontSize, Card: cardTheme = {} } }) => css`
-    border: 1px solid ${colorList.secondary5};
+    border: 1px solid transparent;
     background: ${colorList.white};
     font-size: ${fontSize};
     color: ${colorMap.default.text};
+    box-shadow: 0px 1px 0px 0px rgba(223, 224, 241, 1), 0px 1px 3px 0px rgba(182, 188, 224, 0.5),
+        0px 4px 12px 0px rgba(218, 221, 238, 0.5);
     ${HeaderWrap} {
         color: ${colorList.title};
         font-size: ${titleFontSize};
-        ${cardTheme['Header']};
+        padding: 0 24px;
+        margin-top: 14px;
     }
     ${CommentWrap} {
         color: ${colorList.subtitle};
         font-size: ${fontSize};
-        ${cardTheme['Comment']};
     }
     ${ActionWrap} {
-        ${cardTheme['Action']};
+        padding: 0 24px;
+        margin-top: 14px;
     }
     ${ContentWrap} {
-        ${cardTheme['Content']};
+        padding: 0 24px;
+        margin-top: 14px;
     }
     ${FooterWrap} {
         border-top: 1px solid ${colorList.secondary5};
-        ${cardTheme['Footer']};
+        padding: 0 24px;
+        margin-top: 14px;
+        padding-top: 14px;
     }
     ${cardTheme['&']};
 `;
@@ -93,10 +99,8 @@ export const CardWrap = styled.div.attrs({
     border-radius: 4px;
     text-align: left;
 
-    ${/* sc-sel */ HeaderWrap}:last-child,
-        ${/* sc-sel */ ActionWrap}:last-child,
-        ${/* sc-sel */ ContentWrap}:last-child,
-        ${/* sc-sel */ FooterWrap}:last-child {
+    /* stylelint-disable selector-type-no-unknown*/
+    ${HeaderWrap}:last-child, ${ActionWrap}:last-child, ${ContentWrap}:last-child, ${FooterWrap}:last-child {
         margin-bottom: 12px;
     }
 
