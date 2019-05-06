@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.0"></a>
+
+# [0.5.0](https://github.com/UCloud-FE/react-components/compare/v0.4.7...v0.5.0) (2019-05-06)
+
+### Features
+
+*   **merge material theme:** merge material theme into default theme ([a57ee4f](https://github.com/UCloud-FE/react-components/commit/a57ee4f)), closes [#124](https://github.com/UCloud-FE/react-components/issues/124)
+*   **merge material theme:** merge material theme into default theme ([8a7d520](https://github.com/UCloud-FE/react-components/commit/8a7d520))
+
 <a name="0.4.7"></a>
 
 ## [0.4.7](https://github.com/UCloud-FE/react-components/compare/v0.4.6...v0.4.7) (2019-04-29)
