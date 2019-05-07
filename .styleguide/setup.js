@@ -19,6 +19,8 @@ global.moment = require('moment');
 
 global.StyledComponents = require('styled-components');
 
-import generateMaterialTheme from 'src/components/ThemeProvider/material';
+import greenTheme from 'src/components/ThemeProvider/green';
+import oceanTheme from 'src/components/ThemeProvider/ocean';
 
-global.generateMaterialTheme = generateMaterialTheme;
+global.greenTheme = greenTheme;
+global.oceanTheme = oceanTheme;
