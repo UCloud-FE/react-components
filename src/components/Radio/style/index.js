@@ -84,7 +84,9 @@ export const RadioButtonWrap = styled(FilterStyleTypeButton).attrs({
     className: sharedClassName
 })`
     && {
-        min-width: 50px;
+        ${({ size }) => css`
+            min-width: ${{ lg: 80, md: 68, sm: 56 }[size]}px;
+        `};
         text-align: center;
         border-radius: 0;
         ${({ theme: { fontSize } }) =>
@@ -236,7 +238,6 @@ export const RadioCardWrap = styled.div.attrs({
 })`
     border-radius: 4px;
     overflow: hidden;
-    min-width: 150px;
     display: inline-block;
     cursor: pointer;
 
