@@ -7,26 +7,17 @@ import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemePr
 const { prefixCls: _prefixCls } = config;
 const prefixCls = _prefixCls + '-form';
 
-export const FormWrap = styled.form.attrs({
-    className: prefixCls
-})`
-    /* empty */
-`;
-
 export const ItemWrap = styled(Row).attrs({
     className: prefixCls + '-item'
 })`
-    margin-bottom: 16px;
-    &:last-child {
-        margin-bottom: 0;
-    }
+    /* empty */
 `;
 
 export const LabelWrap = styled(Col).attrs({
     className: prefixCls + '-label'
 })`
-    padding-top: 5px;
-    line-height: 1.5;
+    padding-top: 4px;
+    line-height: 20px;
     word-break: break-all;
 `;
 
@@ -59,5 +50,29 @@ export const GroupTitle = styled.div.attrs({
         color: ${colorList.title};
     `};
 `;
+
+export const FormWrap = styled.form.attrs({
+    className: prefixCls
+})(
+    ({ size }) => css`
+        ${ItemWrap} {
+            margin-bottom: 16px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        ${size === 'lg' &&
+            css`
+                ${ItemWrap} {
+                    margin-bottom: 24px;
+                }
+                ${LabelWrap} {
+                    padding-top: 6px;
+                }
+            `};
+    `
+);
 
 addDefaultThemeProps(GroupTitle);
