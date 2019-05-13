@@ -17,7 +17,7 @@ const defaultSizeTheme = {
     Height: {
         sm: '22px',
         md: '28px',
-        lg: '34px'
+        lg: '32px'
     },
     // padding of size (px)
     Padding: {
