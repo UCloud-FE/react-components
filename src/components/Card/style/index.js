@@ -8,8 +8,8 @@ const { prefixCls: _prefixCls } = config;
 const prefixCls = _prefixCls + '-card';
 
 const sharedGutter = css`
-    padding: 0 16px;
-    margin-top: 12px;
+    padding: 0 24px;
+    margin-top: 16px;
 `;
 
 export const HeaderWrap = styled.div.attrs({
@@ -29,7 +29,7 @@ export const TitleWrap = styled.div.attrs({
 export const CommentWrap = styled.div.attrs({
     className: prefixCls + '-comment'
 })`
-    line-height: 22px;
+    line-height: 20px;
     font-weight: normal;
 `;
 
@@ -57,8 +57,7 @@ export const FooterWrap = styled.div.attrs({
 `;
 
 /* stylelint-disable no-duplicate-selectors */
-const themeMixin = ({ theme: { colorList, colorMap, fontSize, titleFontSize, Card: cardTheme = {} } }) => css`
-    border: 1px solid transparent;
+const themeMixin = ({ theme: { colorList, colorMap, fontSize, Card: cardTheme = {} } }) => css`
     background: ${colorList.white};
     font-size: ${fontSize};
     color: ${colorMap.default.text};
@@ -66,27 +65,16 @@ const themeMixin = ({ theme: { colorList, colorMap, fontSize, titleFontSize, Car
         0px 4px 12px 0px rgba(218, 221, 238, 0.5);
     ${HeaderWrap} {
         color: ${colorList.title};
-        font-size: ${titleFontSize};
-        padding: 0 24px;
-        margin-top: 14px;
+        font-size: 16px;
     }
     ${CommentWrap} {
         color: ${colorList.subtitle};
         font-size: ${fontSize};
     }
-    ${ActionWrap} {
-        padding: 0 24px;
-        margin-top: 14px;
-    }
-    ${ContentWrap} {
-        padding: 0 24px;
-        margin-top: 14px;
-    }
     ${FooterWrap} {
         border-top: 1px solid ${colorList.secondary5};
-        padding: 0 24px;
-        margin-top: 14px;
-        padding-top: 14px;
+        padding: 16px 24px;
+        margin-top: 24px;
     }
     ${cardTheme['&']};
 `;
@@ -98,10 +86,15 @@ export const CardWrap = styled.div.attrs({
     box-sizing: border-box;
     border-radius: 4px;
     text-align: left;
+    overflow: auto;
 
     /* stylelint-disable selector-type-no-unknown*/
-    ${HeaderWrap}:last-child, ${ActionWrap}:last-child, ${ContentWrap}:last-child, ${FooterWrap}:last-child {
-        margin-bottom: 12px;
+    ${HeaderWrap}:last-child, ${ActionWrap}:last-child, ${ContentWrap}:last-child {
+        margin-bottom: 24px;
+    }
+
+    ${HeaderWrap}:first-child, ${ActionWrap}:first-child, ${ContentWrap}:first-child {
+        margin-top: 24px;
     }
 
     ${themeMixin};
