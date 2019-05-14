@@ -18,7 +18,7 @@ export default ({ colorList, materialVars }) => ({
             }
         },
         border: {
-            color: colorList.secondary1,
+            color: colorList.black,
             background: colorList.white,
             borderColor: colorList.secondary4,
             border: 'none',

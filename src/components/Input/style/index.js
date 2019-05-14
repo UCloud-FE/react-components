@@ -27,7 +27,7 @@ const themeMixin = ({
     size,
     withIcon
 }) => css`
-    color: ${colorMap.default.text};
+    color: ${colorList.black};
 
     input {
         border: 1px solid #dfe0f1;
