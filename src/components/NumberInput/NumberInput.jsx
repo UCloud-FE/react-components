@@ -521,14 +521,14 @@ class NumberInput extends Component {
         let downEvents;
 
         upEvents = {
-            onMouseDown: editable && !upDisabled ? this.up : noop,
-            onMouseUp: this.stop,
-            onMouseLeave: this.stop
+            onMouseDown: e => (editable && !upDisabled ? this.up(e) : noop()),
+            onMouseUp: e => this.stop(e),
+            onMouseLeave: e => this.stop(e)
         };
         downEvents = {
-            onMouseDown: editable && !downDisabled ? this.down : noop,
-            onMouseUp: this.stop,
-            onMouseLeave: this.stop
+            onMouseDown: e => (editable && !downDisabled ? this.down(e) : noop()),
+            onMouseUp: e => this.stop(e),
+            onMouseLeave: e => this.stop(e)
         };
 
         return (

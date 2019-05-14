@@ -1,26 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tabs demo -- pane 1`] = `
-.c16 {
+.c17 {
   overflow: hidden;
 }
 
-.c16:before,
-.c16:after {
+.c17:before,
+.c17:after {
   content: ' ';
   display: table;
 }
 
-.c16:after {
+.c17:after {
   clear: both;
 }
 
-.c16 .uc-fe-tabs-bar {
+.c17 .uc-fe-tabs-bar {
   outline: none;
   position: relative;
 }
 
-.c16 .uc-fe-tabs-tabpane {
+.c17 .uc-fe-tabs-tabpane {
   width: 100%;
   height: 100%;
   -webkit-flex-shrink: 0;
@@ -29,11 +29,11 @@ exports[`Tabs demo -- pane 1`] = `
   box-sizing: border-box;
 }
 
-.c16 .uc-fe-tabs-tabpane-inactive {
+.c17 .uc-fe-tabs-tabpane-inactive {
   display: none;
 }
 
-.c16 .uc-fe-tabs-tab {
+.c17 .uc-fe-tabs-tab {
   padding: 8px 12px;
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
@@ -42,31 +42,31 @@ exports[`Tabs demo -- pane 1`] = `
   cursor: pointer;
 }
 
-.c16 .uc-fe-tabs-nav {
+.c17 .uc-fe-tabs-nav {
   display: inline-block;
   white-space: nowrap;
   position: relative;
 }
 
-.c16 .uc-fe-tabs-nav-animated {
+.c17 .uc-fe-tabs-nav-animated {
   -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.35,0,0.25,1);
   -webkit-transition: transform 0.2s cubic-bezier(0.35,0,0.25,1);
   transition: transform 0.2s cubic-bezier(0.35,0,0.25,1);
 }
 
-.c16 .uc-fe-tabs-nav-wrap {
+.c17 .uc-fe-tabs-nav-wrap {
   overflow: hidden;
   height: 100%;
 }
 
-.c16 .uc-fe-tabs-nav-container {
+.c17 .uc-fe-tabs-nav-container {
   position: relative;
   height: 100%;
   box-sizing: border-box;
 }
 
-.c16 .uc-fe-tabs-tab-prev,
-.c16 .uc-fe-tabs-tab-next {
+.c17 .uc-fe-tabs-tab-prev,
+.c17 .uc-fe-tabs-tab-next {
   display: none;
   position: absolute;
   font-size: 16px;
@@ -77,107 +77,124 @@ exports[`Tabs demo -- pane 1`] = `
   cursor: pointer;
 }
 
-.c16 .uc-fe-tabs-tab-btn-disabled {
+.c17 .uc-fe-tabs-tab-btn-disabled {
   pointer-events: none;
   color: #bbb;
 }
 
-.c16 .uc-fe-tabs-tab-prev.uc-fe-tabs-tab-arrow-show,
-.c16 .uc-fe-tabs-tab-next.uc-fe-tabs-tab-arrow-show {
+.c17 .uc-fe-tabs-tab-prev.uc-fe-tabs-tab-arrow-show,
+.c17 .uc-fe-tabs-tab-next.uc-fe-tabs-tab-arrow-show {
   display: inline-block;
 }
 
-.c16 .uc-fe-tabs-tab-disabled {
+.c17 .uc-fe-tabs-tab-disabled {
   cursor: not-allowed;
   pointer-events: none;
   color: #bbb;
 }
 
-.c16 .uc-fe-tabs-ink-bar {
+.c17 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-ink-bar {
   display: none !important;
 }
 
-.c16 .uc-fe-tabs-tab:hover {
+.c17 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab:hover {
   background-color: rgba(242,246,252,0.2);
   border-color: rgba(195,202,217,0.2);
 }
 
-.c16 .uc-fe-tabs-tab-active,
-.c16 .uc-fe-tabs-tab-active:hover {
-  color: #4074e1;
+.c17 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active,
+.c17 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active:hover {
+  color: #3555f6;
   border-color: #c3cad9;
   background: #f2f6fc;
 }
 
-.c16.uc-fe-tabs .uc-fe-tabs-top-bar {
+.c17 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-ink-bar {
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+  background: #3555f6;
+}
+
+.c17 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab:hover {
+  color: #3555f6;
+}
+
+.c17 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab-active {
+  color: #3555f6;
+}
+
+.c17.uc-fe-tabs .uc-fe-tabs-top-bar {
   border-bottom: 1px solid #c3cad9;
 }
 
-.c16.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-nav-container {
-  margin-bottom: -1px;
+.c17.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-nav-container {
+  bottom: -1px;
 }
 
-.c16.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab {
-  margin-bottom: -1px;
+.c17.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab {
   display: inline-block;
 }
 
-.c16.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab:hover {
+.c17.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab:hover {
   border-bottom-color: #c3cad9;
 }
 
-.c16.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab-active,
-.c16.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab-active:hover {
+.c17.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab-active,
+.c17.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab-active:hover {
   border-bottom-color: #f2f6fc;
 }
 
-.c16.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-ink-bar {
+.c17.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-ink-bar {
   bottom: 0;
 }
 
-.c16.uc-fe-tabs .uc-fe-tabs-top-content {
+.c17.uc-fe-tabs .uc-fe-tabs-top-content {
   width: 100%;
 }
 
-.c16.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-nav-scroll,
-.c16.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-nav-scroll {
+.c17.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-nav-scroll,
+.c17.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-nav-scroll {
   width: 100%;
 }
 
-.c16.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-nav-container-scrolling,
-.c16.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-nav-container-scrolling {
+.c17.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-nav-container-scrolling,
+.c17.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-nav-container-scrolling {
   padding: 0 20px;
 }
 
-.c16.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab-prev,
-.c16.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-tab-prev {
+.c17.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab-prev,
+.c17.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-tab-prev {
   left: 0;
 }
 
-.c16.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab-next,
-.c16.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-tab-next {
+.c17.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab-next,
+.c17.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-tab-next {
   right: 0;
 }
 
-.c16.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab-prev,
-.c16.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-tab-prev,
-.c16.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab-next,
-.c16.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-tab-next {
+.c17.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab-prev,
+.c17.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-tab-prev,
+.c17.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab-next,
+.c17.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-tab-next {
   top: 50%;
   margin-top: -10px;
 }
 
-.c16.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab-prev-icon:before,
-.c16.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-tab-prev-icon:before {
+.c17.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab-prev-icon:before,
+.c17.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-tab-prev-icon:before {
   content: '\\2039';
 }
 
-.c16.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab-next-icon:before,
-.c16.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-tab-next-icon:before {
+.c17.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab-next-icon:before,
+.c17.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-tab-next-icon:before {
   content: '\\203A';
 }
 
-.c8 {
+.c9 {
   position: relative;
   height: 100%;
   width: 100%;
@@ -185,7 +202,7 @@ exports[`Tabs demo -- pane 1`] = `
   box-sizing: border-box;
 }
 
-.c10 {
+.c11 {
   width: 100%;
   height: 100%;
   text-align: center;
@@ -194,7 +211,7 @@ exports[`Tabs demo -- pane 1`] = `
   display: block;
 }
 
-.c13 {
+.c14 {
   position: absolute;
   display: inline-block;
   left: -1px;
@@ -205,7 +222,7 @@ exports[`Tabs demo -- pane 1`] = `
   transition: all 0.3s;
 }
 
-.c15 {
+.c16 {
   position: absolute;
   display: inline-block;
   left: 18px;
@@ -217,7 +234,7 @@ exports[`Tabs demo -- pane 1`] = `
   transition: all 0.3s;
 }
 
-.c6 {
+.c7 {
   position: relative;
   border-radius: 2px;
   overflow: hidden;
@@ -236,11 +253,11 @@ exports[`Tabs demo -- pane 1`] = `
   line-height: 16px;
 }
 
-.c6:hover {
+.c7:hover {
   border-color: #4683e6;
 }
 
-.c6 .c12 {
+.c7 .c13 {
   background-color: #fff;
   box-shadow: 0 0.5px 0.5px #c3cad9;
   border: 1px solid #c3cad9;
@@ -248,45 +265,33 @@ exports[`Tabs demo -- pane 1`] = `
   height: 20px;
 }
 
-.c6 .c14 {
+.c7 .c15 {
   background-color: #e69b9b;
   left: 13px;
   height: 10px;
 }
 
-.c6 .c7 {
+.c7 .c8 {
   border: 1px solid #c3cad9;
   background-color: #ebedf0;
   color: #6b798e;
 }
 
-.c6 .c9,
-.c6 .c11 {
+.c7 .c10,
+.c7 .c12 {
   line-height: 16px;
 }
 
-.c6 .c9 {
+.c7 .c10 {
   padding-right: 20px;
 }
 
-.c6 .c11 {
+.c7 .c12 {
   padding-left: 20px;
 }
 
-.c6 .c9 {
+.c7 .c10 {
   display: none;
-}
-
-.c4 {
-  position: relative;
-  display: block;
-  box-sizing: border-box;
-  min-height: 1px;
-  float: left;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  width: 25%;
 }
 
 .c5 {
@@ -298,10 +303,22 @@ exports[`Tabs demo -- pane 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+  width: 25%;
+}
+
+.c6 {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  min-height: 1px;
+  float: left;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   width: 75%;
 }
 
-.c1 {
+.c2 {
   position: relative;
   display: block;
   height: auto;
@@ -309,73 +326,73 @@ exports[`Tabs demo -- pane 1`] = `
   margin-right: -8px;
 }
 
-.c1:before,
-.c1:after {
+.c2:before,
+.c2:after {
   content: ' ';
   display: table;
 }
 
-.c1:after {
+.c2:after {
   clear: both;
 }
 
-.c1 .c3 {
+.c2 .c4 {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.c0 {
+.c3 {
+  padding-top: 4px;
+  line-height: 20px;
+  word-break: break-all;
+}
+
+.c0 .c1 {
   margin-bottom: 16px;
 }
 
-.c0:last-child {
+.c0 .c1:last-child {
   margin-bottom: 0;
-}
-
-.c2 {
-  padding-top: 5px;
-  line-height: 1.5;
-  word-break: break-all;
 }
 
 <div>
   <form
-    class="demo-form"
+    class="demo-form uc-fe-form c0"
   >
     <div
-      class="c0 c1"
+      class="c1 uc-fe-form-item uc-fe-row c2"
     >
       <div
-        class="c2 c3 c4"
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
         forceRender
       </div>
       <div
-        class="c3 c5"
+        class="uc-fe-form-controller c4 uc-fe-col c6"
         span="9"
       >
         <div
-          class="c6"
+          class="c7"
         >
           <div
-            class="c7 c8"
+            class="c8 c9"
           >
             <span
-              class="c9 c10"
+              class="c10 c11"
             >
               ON
             </span>
             <span
-              class="c11 c10"
+              class="c12 c11"
             >
               OFF
             </span>
             <span
-              class="c12 c13"
+              class="c13 c14"
             >
               <span
-                class="c14 c15"
+                class="c15 c16"
               />
             </span>
           </div>
@@ -383,39 +400,39 @@ exports[`Tabs demo -- pane 1`] = `
       </div>
     </div>
     <div
-      class="c0 c1"
+      class="c1 uc-fe-form-item uc-fe-row c2"
     >
       <div
-        class="c2 c3 c4"
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
         disabled
       </div>
       <div
-        class="c3 c5"
+        class="uc-fe-form-controller c4 uc-fe-col c6"
         span="9"
       >
         <div
-          class="c6"
+          class="c7"
         >
           <div
-            class="c7 c8"
+            class="c8 c9"
           >
             <span
-              class="c9 c10"
+              class="c10 c11"
             >
               ON
             </span>
             <span
-              class="c11 c10"
+              class="c12 c11"
             >
               OFF
             </span>
             <span
-              class="c12 c13"
+              class="c13 c14"
             >
               <span
-                class="c14 c15"
+                class="c15 c16"
               />
             </span>
           </div>
@@ -427,11 +444,11 @@ exports[`Tabs demo -- pane 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-tabs uc-fe-tabs-top uc-fe-tabs-styletype-default c16"
+      class="uc-fe-tabs uc-fe-tabs-top uc-fe-tabs-styletype-default c17"
       style="height:300px;"
     >
       <div
-        class="uc-fe-tabs-bar uc-fe-tabs-top-bar"
+        class="uc-fe-tabs-bar uc-fe-tabs-top-bar uc-fe-tabs-styletype-default-bar"
         role="tablist"
         tabindex="0"
       >
@@ -559,7 +576,7 @@ exports[`Tabs demo -- pane 1`] = `
         tabindex="0"
       />
       <div
-        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-top-content"
+        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-top-content uc-fe-tabs-styletype-default-content"
       >
         <div
           aria-hidden="false"
@@ -739,20 +756,38 @@ exports[`Tabs demo -- pane-disabled 1`] = `
   color: #bbb;
 }
 
-.c0 .uc-fe-tabs-ink-bar {
+.c0 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-ink-bar {
   display: none !important;
 }
 
-.c0 .uc-fe-tabs-tab:hover {
+.c0 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab:hover {
   background-color: rgba(242,246,252,0.2);
   border-color: rgba(195,202,217,0.2);
 }
 
-.c0 .uc-fe-tabs-tab-active,
-.c0 .uc-fe-tabs-tab-active:hover {
-  color: #4074e1;
+.c0 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active,
+.c0 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active:hover {
+  color: #3555f6;
   border-color: #c3cad9;
   background: #f2f6fc;
+}
+
+.c0 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-ink-bar {
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+  background: #3555f6;
+}
+
+.c0 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab:hover {
+  color: #3555f6;
+}
+
+.c0 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab-active {
+  color: #3555f6;
 }
 
 .c0.uc-fe-tabs .uc-fe-tabs-top-bar {
@@ -760,11 +795,10 @@ exports[`Tabs demo -- pane-disabled 1`] = `
 }
 
 .c0.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-nav-container {
-  margin-bottom: -1px;
+  bottom: -1px;
 }
 
 .c0.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab {
-  margin-bottom: -1px;
   display: inline-block;
 }
 
@@ -828,7 +862,7 @@ exports[`Tabs demo -- pane-disabled 1`] = `
     class="uc-fe-tabs uc-fe-tabs-top uc-fe-tabs-styletype-default c0"
   >
     <div
-      class="uc-fe-tabs-bar uc-fe-tabs-top-bar"
+      class="uc-fe-tabs-bar uc-fe-tabs-top-bar uc-fe-tabs-styletype-default-bar"
       role="tablist"
       tabindex="0"
     >
@@ -900,7 +934,7 @@ exports[`Tabs demo -- pane-disabled 1`] = `
       tabindex="0"
     />
     <div
-      class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-top-content"
+      class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-top-content uc-fe-tabs-styletype-default-content"
     >
       <div
         aria-hidden="false"
@@ -943,7 +977,7 @@ exports[`Tabs demo -- pane-disabled 1`] = `
     class="uc-fe-tabs uc-fe-tabs-top uc-fe-tabs-styletype-default c0"
   >
     <div
-      class="uc-fe-tabs-bar uc-fe-tabs-top-bar"
+      class="uc-fe-tabs-bar uc-fe-tabs-top-bar uc-fe-tabs-styletype-default-bar"
       role="tablist"
       tabindex="0"
     >
@@ -1015,7 +1049,7 @@ exports[`Tabs demo -- pane-disabled 1`] = `
       tabindex="0"
     />
     <div
-      class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-top-content"
+      class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-top-content uc-fe-tabs-styletype-default-content"
     >
       <div
         aria-hidden="false"
@@ -1150,20 +1184,38 @@ exports[`Tabs demo -- pane-forceRender 1`] = `
   color: #bbb;
 }
 
-.c0 .uc-fe-tabs-ink-bar {
+.c0 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-ink-bar {
   display: none !important;
 }
 
-.c0 .uc-fe-tabs-tab:hover {
+.c0 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab:hover {
   background-color: rgba(242,246,252,0.2);
   border-color: rgba(195,202,217,0.2);
 }
 
-.c0 .uc-fe-tabs-tab-active,
-.c0 .uc-fe-tabs-tab-active:hover {
-  color: #4074e1;
+.c0 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active,
+.c0 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active:hover {
+  color: #3555f6;
   border-color: #c3cad9;
   background: #f2f6fc;
+}
+
+.c0 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-ink-bar {
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+  background: #3555f6;
+}
+
+.c0 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab:hover {
+  color: #3555f6;
+}
+
+.c0 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab-active {
+  color: #3555f6;
 }
 
 .c0.uc-fe-tabs .uc-fe-tabs-top-bar {
@@ -1171,11 +1223,10 @@ exports[`Tabs demo -- pane-forceRender 1`] = `
 }
 
 .c0.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-nav-container {
-  margin-bottom: -1px;
+  bottom: -1px;
 }
 
 .c0.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab {
-  margin-bottom: -1px;
   display: inline-block;
 }
 
@@ -1242,7 +1293,7 @@ exports[`Tabs demo -- pane-forceRender 1`] = `
       class="uc-fe-tabs uc-fe-tabs-top uc-fe-tabs-styletype-default c0"
     >
       <div
-        class="uc-fe-tabs-bar uc-fe-tabs-top-bar"
+        class="uc-fe-tabs-bar uc-fe-tabs-top-bar uc-fe-tabs-styletype-default-bar"
         role="tablist"
         tabindex="0"
       >
@@ -1314,7 +1365,7 @@ exports[`Tabs demo -- pane-forceRender 1`] = `
         tabindex="0"
       />
       <div
-        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-top-content"
+        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-top-content uc-fe-tabs-styletype-default-content"
       >
         <div
           aria-hidden="false"
@@ -1361,7 +1412,7 @@ exports[`Tabs demo -- pane-forceRender 1`] = `
       class="uc-fe-tabs uc-fe-tabs-top uc-fe-tabs-styletype-default c0"
     >
       <div
-        class="uc-fe-tabs-bar uc-fe-tabs-top-bar"
+        class="uc-fe-tabs-bar uc-fe-tabs-top-bar uc-fe-tabs-styletype-default-bar"
         role="tablist"
         tabindex="0"
       >
@@ -1433,7 +1484,7 @@ exports[`Tabs demo -- pane-forceRender 1`] = `
         tabindex="0"
       />
       <div
-        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-top-content"
+        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-top-content uc-fe-tabs-styletype-default-content"
       >
         <div
           aria-hidden="false"
@@ -1481,26 +1532,26 @@ exports[`Tabs demo -- pane-forceRender 1`] = `
 `;
 
 exports[`Tabs demo -- tabs 1`] = `
-.c29 {
+.c32 {
   overflow: hidden;
 }
 
-.c29:before,
-.c29:after {
+.c32:before,
+.c32:after {
   content: ' ';
   display: table;
 }
 
-.c29:after {
+.c32:after {
   clear: both;
 }
 
-.c29 .uc-fe-tabs-bar {
+.c32 .uc-fe-tabs-bar {
   outline: none;
   position: relative;
 }
 
-.c29 .uc-fe-tabs-tabpane {
+.c32 .uc-fe-tabs-tabpane {
   width: 100%;
   height: 100%;
   -webkit-flex-shrink: 0;
@@ -1509,11 +1560,11 @@ exports[`Tabs demo -- tabs 1`] = `
   box-sizing: border-box;
 }
 
-.c29 .uc-fe-tabs-tabpane-inactive {
+.c32 .uc-fe-tabs-tabpane-inactive {
   display: none;
 }
 
-.c29 .uc-fe-tabs-tab {
+.c32 .uc-fe-tabs-tab {
   padding: 8px 12px;
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
@@ -1522,31 +1573,31 @@ exports[`Tabs demo -- tabs 1`] = `
   cursor: pointer;
 }
 
-.c29 .uc-fe-tabs-nav {
+.c32 .uc-fe-tabs-nav {
   display: inline-block;
   white-space: nowrap;
   position: relative;
 }
 
-.c29 .uc-fe-tabs-nav-animated {
+.c32 .uc-fe-tabs-nav-animated {
   -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.35,0,0.25,1);
   -webkit-transition: transform 0.2s cubic-bezier(0.35,0,0.25,1);
   transition: transform 0.2s cubic-bezier(0.35,0,0.25,1);
 }
 
-.c29 .uc-fe-tabs-nav-wrap {
+.c32 .uc-fe-tabs-nav-wrap {
   overflow: hidden;
   height: 100%;
 }
 
-.c29 .uc-fe-tabs-nav-container {
+.c32 .uc-fe-tabs-nav-container {
   position: relative;
   height: 100%;
   box-sizing: border-box;
 }
 
-.c29 .uc-fe-tabs-tab-prev,
-.c29 .uc-fe-tabs-tab-next {
+.c32 .uc-fe-tabs-tab-prev,
+.c32 .uc-fe-tabs-tab-next {
   display: none;
   position: absolute;
   font-size: 16px;
@@ -1557,94 +1608,108 @@ exports[`Tabs demo -- tabs 1`] = `
   cursor: pointer;
 }
 
-.c29 .uc-fe-tabs-tab-btn-disabled {
+.c32 .uc-fe-tabs-tab-btn-disabled {
   pointer-events: none;
   color: #bbb;
 }
 
-.c29 .uc-fe-tabs-tab-prev.uc-fe-tabs-tab-arrow-show,
-.c29 .uc-fe-tabs-tab-next.uc-fe-tabs-tab-arrow-show {
+.c32 .uc-fe-tabs-tab-prev.uc-fe-tabs-tab-arrow-show,
+.c32 .uc-fe-tabs-tab-next.uc-fe-tabs-tab-arrow-show {
   display: inline-block;
 }
 
-.c29 .uc-fe-tabs-tab-disabled {
+.c32 .uc-fe-tabs-tab-disabled {
   cursor: not-allowed;
   pointer-events: none;
   color: #bbb;
 }
 
-.c29 .uc-fe-tabs-ink-bar {
+.c32 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-ink-bar {
   display: none !important;
 }
 
-.c29 .uc-fe-tabs-tab:hover {
+.c32 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab:hover {
   background-color: rgba(242,246,252,0.2);
   border-color: rgba(195,202,217,0.2);
 }
 
-.c29 .uc-fe-tabs-tab-active,
-.c29 .uc-fe-tabs-tab-active:hover {
-  color: #4074e1;
+.c32 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active,
+.c32 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active:hover {
+  color: #3555f6;
   border-color: #c3cad9;
   background: #f2f6fc;
 }
 
-.c29.uc-fe-tabs .uc-fe-tabs-left-bar {
+.c32 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-ink-bar {
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+  background: #3555f6;
+}
+
+.c32 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab:hover {
+  color: #3555f6;
+}
+
+.c32 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab-active {
+  color: #3555f6;
+}
+
+.c32.uc-fe-tabs .uc-fe-tabs-left-bar {
   border-right: 1px solid #c3cad9;
   float: left;
   height: 100%;
 }
 
-.c29.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-nav-container {
-  margin-right: -1px;
+.c32.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-nav-container {
+  right: -1px;
 }
 
-.c29.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab {
-  margin-right: -1px;
-}
-
-.c29.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab:hover {
+.c32.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab:hover {
   border-right-color: #c3cad9;
 }
 
-.c29.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-active,
-.c29.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-active:hover {
+.c32.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-active,
+.c32.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-active:hover {
   border-right-color: #f2f6fc;
 }
 
-.c29.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-ink-bar {
+.c32.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-ink-bar {
   right: 0;
 }
 
-.c29.uc-fe-tabs .uc-fe-tabs-left-content {
+.c32.uc-fe-tabs .uc-fe-tabs-left-content {
   overflow: hidden;
   height: 100%;
 }
 
-.c29.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-nav-scroll,
-.c29.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-nav-scroll {
+.c32.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-nav-scroll,
+.c32.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-nav-scroll {
   height: 100%;
 }
 
-.c29.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-nav-container-scrolling,
-.c29.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-nav-container-scrolling {
+.c32.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-nav-container-scrolling,
+.c32.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-nav-container-scrolling {
   padding: 20px 0;
 }
 
-.c29.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-prev,
-.c29.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-prev {
+.c32.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-prev,
+.c32.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-prev {
   top: 0;
 }
 
-.c29.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-next,
-.c29.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-next {
+.c32.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-next,
+.c32.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-next {
   bottom: 0;
 }
 
-.c29.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-prev,
-.c29.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-prev,
-.c29.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-next,
-.c29.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-next {
+.c32.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-prev,
+.c32.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-prev,
+.c32.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-next,
+.c32.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-next {
   left: 50%;
   margin-left: -10px;
   -webkit-transform: rotate(90deg);
@@ -1652,17 +1717,17 @@ exports[`Tabs demo -- tabs 1`] = `
   transform: rotate(90deg);
 }
 
-.c29.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-prev-icon:before,
-.c29.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-prev-icon:before {
+.c32.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-prev-icon:before,
+.c32.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-prev-icon:before {
   content: '\\2039';
 }
 
-.c29.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-next-icon:before,
-.c29.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-next-icon:before {
+.c32.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-next-icon:before,
+.c32.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-next-icon:before {
   content: '\\203A';
 }
 
-.c14 {
+.c16 {
   position: relative;
   height: 100%;
   width: 100%;
@@ -1670,7 +1735,7 @@ exports[`Tabs demo -- tabs 1`] = `
   box-sizing: border-box;
 }
 
-.c16 {
+.c18 {
   width: 100%;
   height: 100%;
   text-align: center;
@@ -1679,7 +1744,7 @@ exports[`Tabs demo -- tabs 1`] = `
   display: block;
 }
 
-.c19 {
+.c21 {
   position: absolute;
   display: inline-block;
   left: -1px;
@@ -1690,7 +1755,7 @@ exports[`Tabs demo -- tabs 1`] = `
   transition: all 0.3s;
 }
 
-.c21 {
+.c23 {
   position: absolute;
   display: inline-block;
   left: 18px;
@@ -1702,7 +1767,7 @@ exports[`Tabs demo -- tabs 1`] = `
   transition: all 0.3s;
 }
 
-.c12 {
+.c14 {
   position: relative;
   border-radius: 2px;
   overflow: hidden;
@@ -1721,11 +1786,11 @@ exports[`Tabs demo -- tabs 1`] = `
   line-height: 16px;
 }
 
-.c12:hover {
+.c14:hover {
   border-color: #4683e6;
 }
 
-.c12 .c18 {
+.c14 .c20 {
   background-color: #fff;
   box-shadow: 0 0.5px 0.5px #c3cad9;
   border: 1px solid #c3cad9;
@@ -1733,45 +1798,33 @@ exports[`Tabs demo -- tabs 1`] = `
   height: 20px;
 }
 
-.c12 .c20 {
+.c14 .c22 {
   background-color: #e69b9b;
   left: 13px;
   height: 10px;
 }
 
-.c12 .c13 {
+.c14 .c15 {
   border: 1px solid #c3cad9;
   background-color: #ebedf0;
   color: #6b798e;
 }
 
-.c12 .c15,
-.c12 .c17 {
+.c14 .c17,
+.c14 .c19 {
   line-height: 16px;
 }
 
-.c12 .c15 {
+.c14 .c17 {
   padding-right: 20px;
 }
 
-.c12 .c17 {
+.c14 .c19 {
   padding-left: 20px;
 }
 
-.c12 .c15 {
+.c14 .c17 {
   display: none;
-}
-
-.c4 {
-  position: relative;
-  display: block;
-  box-sizing: border-box;
-  min-height: 1px;
-  float: left;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  width: 25%;
 }
 
 .c5 {
@@ -1783,10 +1836,22 @@ exports[`Tabs demo -- tabs 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+  width: 25%;
+}
+
+.c6 {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  min-height: 1px;
+  float: left;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   width: 75%;
 }
 
-.c1 {
+.c2 {
   position: relative;
   display: block;
   height: auto;
@@ -1794,41 +1859,45 @@ exports[`Tabs demo -- tabs 1`] = `
   margin-right: -8px;
 }
 
-.c1:before,
-.c1:after {
+.c2:before,
+.c2:after {
   content: ' ';
   display: table;
 }
 
-.c1:after {
+.c2:after {
   clear: both;
 }
 
-.c1 .c3 {
+.c2 .c4 {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.c0 {
-  margin-bottom: 16px;
-}
-
-.c0:last-child {
-  margin-bottom: 0;
-}
-
-.c2 {
-  padding-top: 5px;
-  line-height: 1.5;
+.c3 {
+  padding-top: 4px;
+  line-height: 20px;
   word-break: break-all;
 }
 
-.c10 {
+.c0 .c1 {
+  margin-bottom: 16px;
+}
+
+.c0 .c1:last-child {
+  margin-bottom: 0;
+}
+
+.c12 {
+  vertical-align: baseline;
+}
+
+.c11 {
   margin-right: 8px;
   font-size: 14px;
 }
 
-.c8 {
+.c9 {
   color: #6b798e;
   font-size: 12px;
   position: relative;
@@ -1839,11 +1908,11 @@ exports[`Tabs demo -- tabs 1`] = `
   line-height: 28px;
 }
 
-.c8 .c9 {
-  color: #4074e1;
+.c9 .c10 {
+  color: #3555f6;
 }
 
-.c11 {
+.c13 {
   color: #6b798e;
   font-size: 12px;
   position: relative;
@@ -1854,42 +1923,54 @@ exports[`Tabs demo -- tabs 1`] = `
   line-height: 28px;
 }
 
-.c6 {
+.c7 {
+  position: relative;
   margin-bottom: -8px;
 }
 
-.c6 .c7,
-.c6 .style__RadioTagWrap-sc-25j3mq-3,
-.c6 .style__RadioCardWrap-sc-25j3mq-8 {
+.c7 .c8,
+.c7 .style__RadioTagWrap-sc-25j3mq-3 {
   margin-right: 8px;
   margin-bottom: 8px;
 }
 
-.c6 .c7:last-child,
-.c6 .style__RadioTagWrap-sc-25j3mq-3:last-child,
-.c6 .style__RadioCardWrap-sc-25j3mq-8:last-child {
+.c7 .c8:last-child,
+.c7 .style__RadioTagWrap-sc-25j3mq-3:last-child {
   margin-right: 0;
 }
 
-.c6 .c30 {
+.c7 .c34 {
+  margin-right: 12px;
+  margin-bottom: 8px;
+}
+
+.c7 .c34:last-child {
+  margin-right: 0;
+}
+
+.c7 .c35+.c35 {
+  margin-left: -1px;
+}
+
+.c7 .c33 {
   margin-right: -1px;
   margin-bottom: 8px;
 }
 
-.c6 .c30:first-child {
+.c7 .c33:first-child {
   border-radius: 2px 0 0 2px;
 }
 
-.c6 .c30:last-child {
+.c7 .c33:last-child {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
 }
 
-.c26 {
+.c29 {
   position: relative;
 }
 
-.c28 {
+.c31 {
   border: none;
   outline: none;
   padding: 0;
@@ -1897,7 +1978,7 @@ exports[`Tabs demo -- tabs 1`] = `
   color: inherit;
 }
 
-.c24 {
+.c26 {
   position: absolute;
   box-sizing: border-box;
   text-align: center;
@@ -1906,12 +1987,13 @@ exports[`Tabs demo -- tabs 1`] = `
   color: inherit;
   cursor: pointer;
   background: #fff;
+  box-shadow: 0 2px 4px 0 #e4e5f2,0 1px 1px 0 rgba(162,166,191,0.32),0 1px 0 0 rgba(223,224,241,0.7);
   display: inline-block;
   vertical-align: middle;
   border-color: #c3cad9;
 }
 
-.c22 {
+.c24 {
   position: relative;
   box-sizing: border-box;
   border-radius: 2px;
@@ -1919,118 +2001,134 @@ exports[`Tabs demo -- tabs 1`] = `
   vertical-align: middle;
   color: #6b798e;
   height: 28px;
-  border: 1px solid #c3cad9;
+  border: 1px solid #dfe0f1;
   padding-right: 22px;
+  border-right-width: 0;
 }
 
-.c22 .c27 {
+.c24 .c30 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c22 .c27::-webkit-input-placeholder {
+.c24 .c30::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c22 .c27::-moz-placeholder {
+.c24 .c30::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c22 .c27:-ms-input-placeholder {
+.c24 .c30:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c22 .c27::placeholder {
+.c24 .c30::placeholder {
   color: #abb4c3;
 }
 
-.c22:hover {
-  border-color: #4683e6;
+.c24:hover {
+  border-color: #c3cad9;
 }
 
-.c22 .c27 {
+.c24 .c28 {
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  background: #fafafc;
+}
+
+.c24 .c28:hover {
+  background: #f6f6fb;
+}
+
+.c24 .c30 {
   padding: 0 0 0 8px;
   text-align: left;
+  box-shadow: none;
+  background: transparent;
   width: 34px;
 }
 
-.c22 .c23,
-.c22 .c25 {
+.c24 .c25,
+.c24 .c27 {
   right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
   height: 13px;
   line-height: 13px;
   width: 22px;
 }
 
-.c22 .c23:hover,
-.c22 .c25:hover {
-  color: #4074e1;
+.c24 .c25:hover,
+.c24 .c27:hover {
+  color: #3555f6;
 }
 
-.c22 .c23 {
+.c24 .c25 {
   border-width: 0 0 0 1px;
-  top: 0;
+  top: -1px;
+  padding-top: 1px;
 }
 
-.c22 .c25 {
+.c24 .c27 {
   border-width: 1px 0 0 1px;
   bottom: 0;
+  border-top-color: #e8e9f5;
 }
 
 <div>
   <form
-    class="demo-form"
+    class="demo-form uc-fe-form c0"
   >
     <div
-      class="c0 c1"
+      class="c1 uc-fe-form-item uc-fe-row c2"
     >
       <div
-        class="c2 c3 c4"
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
         position
       </div>
       <div
-        class="c3 c5"
+        class="uc-fe-form-controller c4 uc-fe-col c6"
         span="9"
       >
         <div
-          class="c6"
+          class="c7"
         >
           <div
             checked=""
-            class="c7 c8"
+            class="c8 uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
             <i
-              class="c9 c10 uc-fe-icon icon__cbox-ed "
+              class="c10 c11 uc-fe-icon icon__cbox-ed c12"
               type="cbox-ed"
             />
             left
           </div>
           <div
-            class="c7 c11"
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
           >
             <i
-              class="c9 c10 uc-fe-icon icon__circle "
+              class="c10 c11 uc-fe-icon icon__circle c12"
               type="circle"
             />
             right
           </div>
           <div
-            class="c7 c11"
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
           >
             <i
-              class="c9 c10 uc-fe-icon icon__circle "
+              class="c10 c11 uc-fe-icon icon__circle c12"
               type="circle"
             />
             top
           </div>
           <div
-            class="c7 c11"
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
           >
             <i
-              class="c9 c10 uc-fe-icon icon__circle "
+              class="c10 c11 uc-fe-icon icon__circle c12"
               type="circle"
             />
             bottom
@@ -2039,36 +2137,36 @@ exports[`Tabs demo -- tabs 1`] = `
       </div>
     </div>
     <div
-      class="c0 c1"
+      class="c1 uc-fe-form-item uc-fe-row c2"
     >
       <div
-        class="c2 c3 c4"
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
         styleType
       </div>
       <div
-        class="c3 c5"
+        class="uc-fe-form-controller c4 uc-fe-col c6"
         span="9"
       >
         <div
-          class="c6"
+          class="c7"
         >
           <div
             checked=""
-            class="c7 c8"
+            class="c8 uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
             <i
-              class="c9 c10 uc-fe-icon icon__cbox-ed "
+              class="c10 c11 uc-fe-icon icon__cbox-ed c12"
               type="cbox-ed"
             />
             default
           </div>
           <div
-            class="c7 c11"
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
           >
             <i
-              class="c9 c10 uc-fe-icon icon__circle "
+              class="c10 c11 uc-fe-icon icon__circle c12"
               type="circle"
             />
             ink
@@ -2077,39 +2175,39 @@ exports[`Tabs demo -- tabs 1`] = `
       </div>
     </div>
     <div
-      class="c0 c1"
+      class="c1 uc-fe-form-item uc-fe-row c2"
     >
       <div
-        class="c2 c3 c4"
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
         destroyInactiveTabPane
       </div>
       <div
-        class="c3 c5"
+        class="uc-fe-form-controller c4 uc-fe-col c6"
         span="9"
       >
         <div
-          class="c12"
+          class="c14"
         >
           <div
-            class="c13 c14"
+            class="c15 c16"
           >
             <span
-              class="c15 c16"
+              class="c17 c18"
             >
               ON
             </span>
             <span
-              class="c17 c16"
+              class="c19 c18"
             >
               OFF
             </span>
             <span
-              class="c18 c19"
+              class="c20 c21"
             >
               <span
-                class="c20 c21"
+                class="c22 c23"
               />
             </span>
           </div>
@@ -2117,47 +2215,47 @@ exports[`Tabs demo -- tabs 1`] = `
       </div>
     </div>
     <div
-      class="c0 c1"
+      class="c1 uc-fe-form-item uc-fe-row c2"
     >
       <div
-        class="c2 c3 c4"
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
         tabCount
       </div>
       <div
-        class="c3 c5"
+        class="uc-fe-form-controller c4 uc-fe-col c6"
         span="9"
       >
         <div
-          class="uc-fe-numberinput uc-fe-numberinput-styletype-default c22"
+          class="uc-fe-numberinput uc-fe-numberinput-styletype-default c24"
         >
           <div>
             <span
-              class="c23 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c24"
+              class="c25 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c26"
               unselectable="unselectable"
             >
               <i
-                class="uc-fe-icon icon__caret-up "
+                class="uc-fe-icon icon__caret-up c12"
                 type="caret-up"
               />
             </span>
             <span
-              class="c25 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c24"
+              class="c27 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c26"
               unselectable="unselectable"
             >
               <i
-                class="uc-fe-icon icon__caret-down "
+                class="uc-fe-icon icon__caret-down c12"
                 type="caret-down"
               />
             </span>
           </div>
           <div
-            class="uc-fe-numberinput-input-wrap c26"
+            class="c28 uc-fe-numberinput-input-wrap c29"
           >
             <input
               autocomplete="off"
-              class="c27 uc-fe-numberinput-input c28"
+              class="c30 uc-fe-numberinput-input c31"
               min="0"
               step="1"
               value="10"
@@ -2167,47 +2265,47 @@ exports[`Tabs demo -- tabs 1`] = `
       </div>
     </div>
     <div
-      class="c0 c1"
+      class="c1 uc-fe-form-item uc-fe-row c2"
     >
       <div
-        class="c2 c3 c4"
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
         activeKey
       </div>
       <div
-        class="c3 c5"
+        class="uc-fe-form-controller c4 uc-fe-col c6"
         span="9"
       >
         <div
-          class="uc-fe-numberinput uc-fe-numberinput-styletype-default c22"
+          class="uc-fe-numberinput uc-fe-numberinput-styletype-default c24"
         >
           <div>
             <span
-              class="c23 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c24"
+              class="c25 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c26"
               unselectable="unselectable"
             >
               <i
-                class="uc-fe-icon icon__caret-up "
+                class="uc-fe-icon icon__caret-up c12"
                 type="caret-up"
               />
             </span>
             <span
-              class="c25 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c24"
+              class="c27 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c26"
               unselectable="unselectable"
             >
               <i
-                class="uc-fe-icon icon__caret-down "
+                class="uc-fe-icon icon__caret-down c12"
                 type="caret-down"
               />
             </span>
           </div>
           <div
-            class="uc-fe-numberinput-input-wrap c26"
+            class="c28 uc-fe-numberinput-input-wrap c29"
           >
             <input
               autocomplete="off"
-              class="c27 uc-fe-numberinput-input c28"
+              class="c30 uc-fe-numberinput-input c31"
               max="9"
               min="0"
               step="1"
@@ -2222,11 +2320,11 @@ exports[`Tabs demo -- tabs 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-tabs uc-fe-tabs-left uc-fe-tabs-styletype-default c29"
+      class="uc-fe-tabs uc-fe-tabs-left uc-fe-tabs-styletype-default c32"
       style="height:300px;"
     >
       <div
-        class="uc-fe-tabs-bar uc-fe-tabs-left-bar"
+        class="uc-fe-tabs-bar uc-fe-tabs-left-bar uc-fe-tabs-styletype-default-bar"
         role="tablist"
         tabindex="0"
       >
@@ -2354,7 +2452,7 @@ exports[`Tabs demo -- tabs 1`] = `
         tabindex="0"
       />
       <div
-        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-left-content"
+        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-left-content uc-fe-tabs-styletype-default-content"
       >
         <div
           aria-hidden="true"
@@ -2526,20 +2624,38 @@ exports[`Tabs demo -- tabs-child 1`] = `
   color: #bbb;
 }
 
-.c0 .uc-fe-tabs-ink-bar {
+.c0 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-ink-bar {
   display: none !important;
 }
 
-.c0 .uc-fe-tabs-tab:hover {
+.c0 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab:hover {
   background-color: rgba(242,246,252,0.2);
   border-color: rgba(195,202,217,0.2);
 }
 
-.c0 .uc-fe-tabs-tab-active,
-.c0 .uc-fe-tabs-tab-active:hover {
-  color: #4074e1;
+.c0 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active,
+.c0 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active:hover {
+  color: #3555f6;
   border-color: #c3cad9;
   background: #f2f6fc;
+}
+
+.c0 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-ink-bar {
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+  background: #3555f6;
+}
+
+.c0 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab:hover {
+  color: #3555f6;
+}
+
+.c0 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab-active {
+  color: #3555f6;
 }
 
 .c0.uc-fe-tabs .uc-fe-tabs-top-bar {
@@ -2547,11 +2663,10 @@ exports[`Tabs demo -- tabs-child 1`] = `
 }
 
 .c0.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-nav-container {
-  margin-bottom: -1px;
+  bottom: -1px;
 }
 
 .c0.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab {
-  margin-bottom: -1px;
   display: inline-block;
 }
 
@@ -2702,20 +2817,38 @@ exports[`Tabs demo -- tabs-child 1`] = `
   color: #bbb;
 }
 
-.c1 .uc-fe-tabs-ink-bar {
+.c1 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-ink-bar {
   display: none !important;
 }
 
-.c1 .uc-fe-tabs-tab:hover {
+.c1 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab:hover {
   background-color: rgba(242,246,252,0.2);
   border-color: rgba(195,202,217,0.2);
 }
 
-.c1 .uc-fe-tabs-tab-active,
-.c1 .uc-fe-tabs-tab-active:hover {
-  color: #4074e1;
+.c1 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active,
+.c1 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active:hover {
+  color: #3555f6;
   border-color: #c3cad9;
   background: #f2f6fc;
+}
+
+.c1 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-ink-bar {
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+  background: #3555f6;
+}
+
+.c1 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab:hover {
+  color: #3555f6;
+}
+
+.c1 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab-active {
+  color: #3555f6;
 }
 
 .c1.uc-fe-tabs .uc-fe-tabs-left-bar {
@@ -2725,11 +2858,7 @@ exports[`Tabs demo -- tabs-child 1`] = `
 }
 
 .c1.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-nav-container {
-  margin-right: -1px;
-}
-
-.c1.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab {
-  margin-right: -1px;
+  right: -1px;
 }
 
 .c1.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab:hover {
@@ -2791,6 +2920,402 @@ exports[`Tabs demo -- tabs-child 1`] = `
   content: '\\203A';
 }
 
+.c2 {
+  overflow: hidden;
+}
+
+.c2:before,
+.c2:after {
+  content: ' ';
+  display: table;
+}
+
+.c2:after {
+  clear: both;
+}
+
+.c2 .uc-fe-tabs-bar {
+  outline: none;
+  position: relative;
+}
+
+.c2 .uc-fe-tabs-tabpane {
+  width: 100%;
+  height: 100%;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.c2 .uc-fe-tabs-tabpane-inactive {
+  display: none;
+}
+
+.c2 .uc-fe-tabs-tab {
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: 2px 2px 0 0;
+  font-size: 14px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.c2 .uc-fe-tabs-nav {
+  display: inline-block;
+  white-space: nowrap;
+  position: relative;
+}
+
+.c2 .uc-fe-tabs-nav-animated {
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.35,0,0.25,1);
+  -webkit-transition: transform 0.2s cubic-bezier(0.35,0,0.25,1);
+  transition: transform 0.2s cubic-bezier(0.35,0,0.25,1);
+}
+
+.c2 .uc-fe-tabs-nav-wrap {
+  overflow: hidden;
+  height: 100%;
+}
+
+.c2 .uc-fe-tabs-nav-container {
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.c2 .uc-fe-tabs-tab-prev,
+.c2 .uc-fe-tabs-tab-next {
+  display: none;
+  position: absolute;
+  font-size: 16px;
+  line-height: 20px;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.c2 .uc-fe-tabs-tab-btn-disabled {
+  pointer-events: none;
+  color: #bbb;
+}
+
+.c2 .uc-fe-tabs-tab-prev.uc-fe-tabs-tab-arrow-show,
+.c2 .uc-fe-tabs-tab-next.uc-fe-tabs-tab-arrow-show {
+  display: inline-block;
+}
+
+.c2 .uc-fe-tabs-tab-disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  color: #bbb;
+}
+
+.c2 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-ink-bar {
+  display: none !important;
+}
+
+.c2 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab:hover {
+  background-color: rgba(242,246,252,0.2);
+  border-color: rgba(195,202,217,0.2);
+}
+
+.c2 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active,
+.c2 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active:hover {
+  color: #3555f6;
+  border-color: #c3cad9;
+  background: #f2f6fc;
+}
+
+.c2 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-ink-bar {
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+  background: #3555f6;
+}
+
+.c2 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab:hover {
+  color: #3555f6;
+}
+
+.c2 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab-active {
+  color: #3555f6;
+}
+
+.c2.uc-fe-tabs .uc-fe-tabs-top-bar {
+  border-bottom: 1px solid #c3cad9;
+}
+
+.c2.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-nav-container {
+  bottom: -1px;
+}
+
+.c2.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab {
+  display: inline-block;
+}
+
+.c2.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab:hover {
+  border-bottom-color: #c3cad9;
+}
+
+.c2.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab-active,
+.c2.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab-active:hover {
+  border-bottom-color: #f2f6fc;
+}
+
+.c2.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-ink-bar {
+  bottom: 0;
+}
+
+.c2.uc-fe-tabs .uc-fe-tabs-top-content {
+  width: 100%;
+}
+
+.c2.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-nav-scroll,
+.c2.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-nav-scroll {
+  width: 100%;
+}
+
+.c2.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-nav-container-scrolling,
+.c2.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-nav-container-scrolling {
+  padding: 0 20px;
+}
+
+.c2.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab-prev,
+.c2.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-tab-prev {
+  left: 0;
+}
+
+.c2.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab-next,
+.c2.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-tab-next {
+  right: 0;
+}
+
+.c2.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab-prev,
+.c2.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-tab-prev,
+.c2.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab-next,
+.c2.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-tab-next {
+  top: 50%;
+  margin-top: -10px;
+}
+
+.c2.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab-prev-icon:before,
+.c2.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-tab-prev-icon:before {
+  content: '\\2039';
+}
+
+.c2.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab-next-icon:before,
+.c2.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-tab-next-icon:before {
+  content: '\\203A';
+}
+
+.c2 .uc-fe-tabs-tab+.uc-fe-tabs-tab {
+  margin-left: 12px;
+}
+
+.c3 {
+  overflow: hidden;
+}
+
+.c3:before,
+.c3:after {
+  content: ' ';
+  display: table;
+}
+
+.c3:after {
+  clear: both;
+}
+
+.c3 .uc-fe-tabs-bar {
+  outline: none;
+  position: relative;
+}
+
+.c3 .uc-fe-tabs-tabpane {
+  width: 100%;
+  height: 100%;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.c3 .uc-fe-tabs-tabpane-inactive {
+  display: none;
+}
+
+.c3 .uc-fe-tabs-tab {
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: 2px 2px 0 0;
+  font-size: 14px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.c3 .uc-fe-tabs-nav {
+  display: inline-block;
+  white-space: nowrap;
+  position: relative;
+}
+
+.c3 .uc-fe-tabs-nav-animated {
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.35,0,0.25,1);
+  -webkit-transition: transform 0.2s cubic-bezier(0.35,0,0.25,1);
+  transition: transform 0.2s cubic-bezier(0.35,0,0.25,1);
+}
+
+.c3 .uc-fe-tabs-nav-wrap {
+  overflow: hidden;
+  height: 100%;
+}
+
+.c3 .uc-fe-tabs-nav-container {
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.c3 .uc-fe-tabs-tab-prev,
+.c3 .uc-fe-tabs-tab-next {
+  display: none;
+  position: absolute;
+  font-size: 16px;
+  line-height: 20px;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.c3 .uc-fe-tabs-tab-btn-disabled {
+  pointer-events: none;
+  color: #bbb;
+}
+
+.c3 .uc-fe-tabs-tab-prev.uc-fe-tabs-tab-arrow-show,
+.c3 .uc-fe-tabs-tab-next.uc-fe-tabs-tab-arrow-show {
+  display: inline-block;
+}
+
+.c3 .uc-fe-tabs-tab-disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  color: #bbb;
+}
+
+.c3 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-ink-bar {
+  display: none !important;
+}
+
+.c3 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab:hover {
+  background-color: rgba(242,246,252,0.2);
+  border-color: rgba(195,202,217,0.2);
+}
+
+.c3 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active,
+.c3 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active:hover {
+  color: #3555f6;
+  border-color: #c3cad9;
+  background: #f2f6fc;
+}
+
+.c3 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-ink-bar {
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+  background: #3555f6;
+}
+
+.c3 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab:hover {
+  color: #3555f6;
+}
+
+.c3 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab-active {
+  color: #3555f6;
+}
+
+.c3.uc-fe-tabs .uc-fe-tabs-left-bar {
+  border-right: 1px solid #c3cad9;
+  float: left;
+  height: 100%;
+}
+
+.c3.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-nav-container {
+  right: -1px;
+}
+
+.c3.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab:hover {
+  border-right-color: #c3cad9;
+}
+
+.c3.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-active,
+.c3.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-active:hover {
+  border-right-color: #f2f6fc;
+}
+
+.c3.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-ink-bar {
+  right: 0;
+}
+
+.c3.uc-fe-tabs .uc-fe-tabs-left-content {
+  overflow: hidden;
+  height: 100%;
+}
+
+.c3.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-nav-scroll,
+.c3.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-nav-scroll {
+  height: 100%;
+}
+
+.c3.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-nav-container-scrolling,
+.c3.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-nav-container-scrolling {
+  padding: 20px 0;
+}
+
+.c3.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-prev,
+.c3.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-prev {
+  top: 0;
+}
+
+.c3.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-next,
+.c3.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-next {
+  bottom: 0;
+}
+
+.c3.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-prev,
+.c3.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-prev,
+.c3.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-next,
+.c3.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-next {
+  left: 50%;
+  margin-left: -10px;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.c3.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-prev-icon:before,
+.c3.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-prev-icon:before {
+  content: '\\2039';
+}
+
+.c3.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-next-icon:before,
+.c3.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-next-icon:before {
+  content: '\\203A';
+}
+
+.c3 .uc-fe-tabs-tab+.uc-fe-tabs-tab {
+  margin-top: 6px;
+}
+
 <div>
   <div
     class="demo-wrap"
@@ -2799,7 +3324,7 @@ exports[`Tabs demo -- tabs-child 1`] = `
       class="uc-fe-tabs uc-fe-tabs-top uc-fe-tabs-styletype-default c0"
     >
       <div
-        class="uc-fe-tabs-bar uc-fe-tabs-top-bar"
+        class="uc-fe-tabs-bar uc-fe-tabs-top-bar uc-fe-tabs-styletype-default-bar"
         role="tablist"
         tabindex="0"
       >
@@ -2879,7 +3404,7 @@ exports[`Tabs demo -- tabs-child 1`] = `
         tabindex="0"
       />
       <div
-        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-top-content"
+        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-top-content uc-fe-tabs-styletype-default-content"
       >
         <div
           aria-hidden="false"
@@ -2896,7 +3421,7 @@ exports[`Tabs demo -- tabs-child 1`] = `
             class="uc-fe-tabs uc-fe-tabs-left uc-fe-tabs-styletype-default c1"
           >
             <div
-              class="uc-fe-tabs-bar uc-fe-tabs-left-bar"
+              class="uc-fe-tabs-bar uc-fe-tabs-left-bar uc-fe-tabs-styletype-default-bar"
               role="tablist"
               tabindex="0"
             >
@@ -2968,7 +3493,501 @@ exports[`Tabs demo -- tabs-child 1`] = `
               tabindex="0"
             />
             <div
-              class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-left-content"
+              class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-left-content uc-fe-tabs-styletype-default-content"
+            >
+              <div
+                aria-hidden="false"
+                class="uc-fe-tabs-tabpane uc-fe-tabs-tabpane-active"
+                role="tabpanel"
+                style="padding:16px;"
+              >
+                <div
+                  role="presentation"
+                  style="width:0;height:0;overflow:hidden;"
+                  tabindex="0"
+                />
+                Pane 1
+                <div
+                  role="presentation"
+                  style="width:0;height:0;overflow:hidden;"
+                  tabindex="0"
+                />
+              </div>
+              <div
+                aria-hidden="true"
+                class="uc-fe-tabs-tabpane uc-fe-tabs-tabpane-inactive"
+                role="tabpanel"
+                style="padding:16px;"
+              />
+              <div
+                aria-hidden="true"
+                class="uc-fe-tabs-tabpane uc-fe-tabs-tabpane-inactive"
+                role="tabpanel"
+                style="padding:16px;"
+              />
+            </div>
+            <div
+              role="presentation"
+              style="width:0;height:0;overflow:hidden;"
+              tabindex="0"
+            />
+          </div>
+          <div
+            role="presentation"
+            style="width:0;height:0;overflow:hidden;"
+            tabindex="0"
+          />
+        </div>
+        <div
+          aria-hidden="true"
+          class="uc-fe-tabs-tabpane uc-fe-tabs-tabpane-inactive"
+          role="tabpanel"
+          style="padding:16px;border-width:0px 1px 1px 1px;border-style:solid;border-color:#ccc;"
+        />
+        <div
+          aria-hidden="true"
+          class="uc-fe-tabs-tabpane uc-fe-tabs-tabpane-inactive"
+          role="tabpanel"
+          style="padding:16px;border-width:0px 1px 1px 1px;border-style:solid;border-color:#ccc;"
+        />
+        <div
+          aria-hidden="true"
+          class="uc-fe-tabs-tabpane uc-fe-tabs-tabpane-inactive"
+          role="tabpanel"
+          style="padding:16px;border-width:0px 1px 1px 1px;border-style:solid;border-color:#ccc;"
+        />
+      </div>
+      <div
+        role="presentation"
+        style="width:0;height:0;overflow:hidden;"
+        tabindex="0"
+      />
+    </div>
+  </div>
+  <div
+    class="demo-wrap"
+  >
+    <div
+      class="uc-fe-tabs uc-fe-tabs-top uc-fe-tabs-styletype-ink c2"
+    >
+      <div
+        class="uc-fe-tabs-bar uc-fe-tabs-top-bar uc-fe-tabs-styletype-ink-bar"
+        role="tablist"
+        tabindex="0"
+      >
+        <div
+          class="uc-fe-tabs-nav-container"
+        >
+          <span
+            class="uc-fe-tabs-tab-prev uc-fe-tabs-tab-btn-disabled"
+            unselectable="unselectable"
+          >
+            <span
+              class="uc-fe-tabs-tab-prev-icon"
+            />
+          </span>
+          <span
+            class="uc-fe-tabs-tab-next uc-fe-tabs-tab-btn-disabled"
+            unselectable="unselectable"
+          >
+            <span
+              class="uc-fe-tabs-tab-next-icon"
+            />
+          </span>
+          <div
+            class="uc-fe-tabs-nav-wrap"
+          >
+            <div
+              class="uc-fe-tabs-nav-scroll"
+            >
+              <div
+                class="uc-fe-tabs-nav uc-fe-tabs-nav-animated"
+              >
+                <div>
+                  <div
+                    aria-disabled="false"
+                    aria-selected="true"
+                    class="uc-fe-tabs-tab-active uc-fe-tabs-tab"
+                    role="tab"
+                  >
+                    tab 0
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-selected="false"
+                    class=" uc-fe-tabs-tab"
+                    role="tab"
+                  >
+                    tab 1
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-selected="false"
+                    class=" uc-fe-tabs-tab"
+                    role="tab"
+                  >
+                    tab 2
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-selected="false"
+                    class=" uc-fe-tabs-tab"
+                    role="tab"
+                  >
+                    tab 3
+                  </div>
+                </div>
+                <div
+                  class="uc-fe-tabs-ink-bar uc-fe-tabs-ink-bar-animated"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        role="presentation"
+        style="width:0;height:0;overflow:hidden;"
+        tabindex="0"
+      />
+      <div
+        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-top-content uc-fe-tabs-styletype-ink-content"
+      >
+        <div
+          aria-hidden="false"
+          class="uc-fe-tabs-tabpane uc-fe-tabs-tabpane-active"
+          role="tabpanel"
+          style="padding:16px;border-width:0px 1px 1px 1px;border-style:solid;border-color:#ccc;"
+        >
+          <div
+            role="presentation"
+            style="width:0;height:0;overflow:hidden;"
+            tabindex="0"
+          />
+          <div
+            class="uc-fe-tabs uc-fe-tabs-left uc-fe-tabs-styletype-default c1"
+          >
+            <div
+              class="uc-fe-tabs-bar uc-fe-tabs-left-bar uc-fe-tabs-styletype-default-bar"
+              role="tablist"
+              tabindex="0"
+            >
+              <div
+                class="uc-fe-tabs-nav-container"
+              >
+                <span
+                  class="uc-fe-tabs-tab-prev uc-fe-tabs-tab-btn-disabled"
+                  unselectable="unselectable"
+                >
+                  <span
+                    class="uc-fe-tabs-tab-prev-icon"
+                  />
+                </span>
+                <span
+                  class="uc-fe-tabs-tab-next uc-fe-tabs-tab-btn-disabled"
+                  unselectable="unselectable"
+                >
+                  <span
+                    class="uc-fe-tabs-tab-next-icon"
+                  />
+                </span>
+                <div
+                  class="uc-fe-tabs-nav-wrap"
+                >
+                  <div
+                    class="uc-fe-tabs-nav-scroll"
+                  >
+                    <div
+                      class="uc-fe-tabs-nav uc-fe-tabs-nav-animated"
+                    >
+                      <div>
+                        <div
+                          aria-disabled="false"
+                          aria-selected="true"
+                          class="uc-fe-tabs-tab-active uc-fe-tabs-tab"
+                          role="tab"
+                        >
+                          tab 1
+                        </div>
+                        <div
+                          aria-disabled="false"
+                          aria-selected="false"
+                          class=" uc-fe-tabs-tab"
+                          role="tab"
+                        >
+                          tab 2
+                        </div>
+                        <div
+                          aria-disabled="false"
+                          aria-selected="false"
+                          class=" uc-fe-tabs-tab"
+                          role="tab"
+                        >
+                          tab 3
+                        </div>
+                      </div>
+                      <div
+                        class="uc-fe-tabs-ink-bar uc-fe-tabs-ink-bar-animated"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              role="presentation"
+              style="width:0;height:0;overflow:hidden;"
+              tabindex="0"
+            />
+            <div
+              class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-left-content uc-fe-tabs-styletype-default-content"
+            >
+              <div
+                aria-hidden="false"
+                class="uc-fe-tabs-tabpane uc-fe-tabs-tabpane-active"
+                role="tabpanel"
+                style="padding:16px;"
+              >
+                <div
+                  role="presentation"
+                  style="width:0;height:0;overflow:hidden;"
+                  tabindex="0"
+                />
+                Pane 1
+                <div
+                  role="presentation"
+                  style="width:0;height:0;overflow:hidden;"
+                  tabindex="0"
+                />
+              </div>
+              <div
+                aria-hidden="true"
+                class="uc-fe-tabs-tabpane uc-fe-tabs-tabpane-inactive"
+                role="tabpanel"
+                style="padding:16px;"
+              />
+              <div
+                aria-hidden="true"
+                class="uc-fe-tabs-tabpane uc-fe-tabs-tabpane-inactive"
+                role="tabpanel"
+                style="padding:16px;"
+              />
+            </div>
+            <div
+              role="presentation"
+              style="width:0;height:0;overflow:hidden;"
+              tabindex="0"
+            />
+          </div>
+          <div
+            role="presentation"
+            style="width:0;height:0;overflow:hidden;"
+            tabindex="0"
+          />
+        </div>
+        <div
+          aria-hidden="true"
+          class="uc-fe-tabs-tabpane uc-fe-tabs-tabpane-inactive"
+          role="tabpanel"
+          style="padding:16px;border-width:0px 1px 1px 1px;border-style:solid;border-color:#ccc;"
+        />
+        <div
+          aria-hidden="true"
+          class="uc-fe-tabs-tabpane uc-fe-tabs-tabpane-inactive"
+          role="tabpanel"
+          style="padding:16px;border-width:0px 1px 1px 1px;border-style:solid;border-color:#ccc;"
+        />
+        <div
+          aria-hidden="true"
+          class="uc-fe-tabs-tabpane uc-fe-tabs-tabpane-inactive"
+          role="tabpanel"
+          style="padding:16px;border-width:0px 1px 1px 1px;border-style:solid;border-color:#ccc;"
+        />
+      </div>
+      <div
+        role="presentation"
+        style="width:0;height:0;overflow:hidden;"
+        tabindex="0"
+      />
+    </div>
+  </div>
+  <div
+    class="demo-wrap"
+  >
+    <div
+      class="uc-fe-tabs uc-fe-tabs-top uc-fe-tabs-styletype-default c0"
+    >
+      <div
+        class="uc-fe-tabs-bar uc-fe-tabs-top-bar uc-fe-tabs-styletype-default-bar"
+        role="tablist"
+        tabindex="0"
+      >
+        <div
+          class="uc-fe-tabs-nav-container"
+        >
+          <span
+            class="uc-fe-tabs-tab-prev uc-fe-tabs-tab-btn-disabled"
+            unselectable="unselectable"
+          >
+            <span
+              class="uc-fe-tabs-tab-prev-icon"
+            />
+          </span>
+          <span
+            class="uc-fe-tabs-tab-next uc-fe-tabs-tab-btn-disabled"
+            unselectable="unselectable"
+          >
+            <span
+              class="uc-fe-tabs-tab-next-icon"
+            />
+          </span>
+          <div
+            class="uc-fe-tabs-nav-wrap"
+          >
+            <div
+              class="uc-fe-tabs-nav-scroll"
+            >
+              <div
+                class="uc-fe-tabs-nav uc-fe-tabs-nav-animated"
+              >
+                <div>
+                  <div
+                    aria-disabled="false"
+                    aria-selected="true"
+                    class="uc-fe-tabs-tab-active uc-fe-tabs-tab"
+                    role="tab"
+                  >
+                    tab 0
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-selected="false"
+                    class=" uc-fe-tabs-tab"
+                    role="tab"
+                  >
+                    tab 1
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-selected="false"
+                    class=" uc-fe-tabs-tab"
+                    role="tab"
+                  >
+                    tab 2
+                  </div>
+                  <div
+                    aria-disabled="false"
+                    aria-selected="false"
+                    class=" uc-fe-tabs-tab"
+                    role="tab"
+                  >
+                    tab 3
+                  </div>
+                </div>
+                <div
+                  class="uc-fe-tabs-ink-bar uc-fe-tabs-ink-bar-animated"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        role="presentation"
+        style="width:0;height:0;overflow:hidden;"
+        tabindex="0"
+      />
+      <div
+        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-top-content uc-fe-tabs-styletype-default-content"
+      >
+        <div
+          aria-hidden="false"
+          class="uc-fe-tabs-tabpane uc-fe-tabs-tabpane-active"
+          role="tabpanel"
+          style="padding:16px;border-width:0px 1px 1px 1px;border-style:solid;border-color:#ccc;"
+        >
+          <div
+            role="presentation"
+            style="width:0;height:0;overflow:hidden;"
+            tabindex="0"
+          />
+          <div
+            class="uc-fe-tabs uc-fe-tabs-left uc-fe-tabs-styletype-ink c3"
+          >
+            <div
+              class="uc-fe-tabs-bar uc-fe-tabs-left-bar uc-fe-tabs-styletype-ink-bar"
+              role="tablist"
+              tabindex="0"
+            >
+              <div
+                class="uc-fe-tabs-nav-container"
+              >
+                <span
+                  class="uc-fe-tabs-tab-prev uc-fe-tabs-tab-btn-disabled"
+                  unselectable="unselectable"
+                >
+                  <span
+                    class="uc-fe-tabs-tab-prev-icon"
+                  />
+                </span>
+                <span
+                  class="uc-fe-tabs-tab-next uc-fe-tabs-tab-btn-disabled"
+                  unselectable="unselectable"
+                >
+                  <span
+                    class="uc-fe-tabs-tab-next-icon"
+                  />
+                </span>
+                <div
+                  class="uc-fe-tabs-nav-wrap"
+                >
+                  <div
+                    class="uc-fe-tabs-nav-scroll"
+                  >
+                    <div
+                      class="uc-fe-tabs-nav uc-fe-tabs-nav-animated"
+                    >
+                      <div>
+                        <div
+                          aria-disabled="false"
+                          aria-selected="true"
+                          class="uc-fe-tabs-tab-active uc-fe-tabs-tab"
+                          role="tab"
+                        >
+                          tab 1
+                        </div>
+                        <div
+                          aria-disabled="false"
+                          aria-selected="false"
+                          class=" uc-fe-tabs-tab"
+                          role="tab"
+                        >
+                          tab 2
+                        </div>
+                        <div
+                          aria-disabled="false"
+                          aria-selected="false"
+                          class=" uc-fe-tabs-tab"
+                          role="tab"
+                        >
+                          tab 3
+                        </div>
+                      </div>
+                      <div
+                        class="uc-fe-tabs-ink-bar uc-fe-tabs-ink-bar-animated"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              role="presentation"
+              style="width:0;height:0;overflow:hidden;"
+              tabindex="0"
+            />
+            <div
+              class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-left-content uc-fe-tabs-styletype-ink-content"
             >
               <div
                 aria-hidden="false"
@@ -3135,20 +4154,38 @@ exports[`Tabs demo -- tabs-destroyInactiveTabPane 1`] = `
   color: #bbb;
 }
 
-.c0 .uc-fe-tabs-ink-bar {
+.c0 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-ink-bar {
   display: none !important;
 }
 
-.c0 .uc-fe-tabs-tab:hover {
+.c0 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab:hover {
   background-color: rgba(242,246,252,0.2);
   border-color: rgba(195,202,217,0.2);
 }
 
-.c0 .uc-fe-tabs-tab-active,
-.c0 .uc-fe-tabs-tab-active:hover {
-  color: #4074e1;
+.c0 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active,
+.c0 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active:hover {
+  color: #3555f6;
   border-color: #c3cad9;
   background: #f2f6fc;
+}
+
+.c0 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-ink-bar {
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+  background: #3555f6;
+}
+
+.c0 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab:hover {
+  color: #3555f6;
+}
+
+.c0 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab-active {
+  color: #3555f6;
 }
 
 .c0.uc-fe-tabs .uc-fe-tabs-top-bar {
@@ -3156,11 +4193,10 @@ exports[`Tabs demo -- tabs-destroyInactiveTabPane 1`] = `
 }
 
 .c0.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-nav-container {
-  margin-bottom: -1px;
+  bottom: -1px;
 }
 
 .c0.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab {
-  margin-bottom: -1px;
   display: inline-block;
 }
 
@@ -3227,7 +4263,7 @@ exports[`Tabs demo -- tabs-destroyInactiveTabPane 1`] = `
       class="uc-fe-tabs uc-fe-tabs-top uc-fe-tabs-styletype-default c0"
     >
       <div
-        class="uc-fe-tabs-bar uc-fe-tabs-top-bar"
+        class="uc-fe-tabs-bar uc-fe-tabs-top-bar uc-fe-tabs-styletype-default-bar"
         role="tablist"
         tabindex="0"
       >
@@ -3675,7 +4711,7 @@ exports[`Tabs demo -- tabs-destroyInactiveTabPane 1`] = `
         tabindex="0"
       />
       <div
-        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-top-content"
+        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-top-content uc-fe-tabs-styletype-default-content"
       >
         <div
           aria-hidden="false"
@@ -4004,7 +5040,7 @@ exports[`Tabs demo -- tabs-destroyInactiveTabPane 1`] = `
       class="uc-fe-tabs uc-fe-tabs-top uc-fe-tabs-styletype-default c0"
     >
       <div
-        class="uc-fe-tabs-bar uc-fe-tabs-top-bar"
+        class="uc-fe-tabs-bar uc-fe-tabs-top-bar uc-fe-tabs-styletype-default-bar"
         role="tablist"
         tabindex="0"
       >
@@ -4452,7 +5488,7 @@ exports[`Tabs demo -- tabs-destroyInactiveTabPane 1`] = `
         tabindex="0"
       />
       <div
-        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-top-content"
+        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-top-content uc-fe-tabs-styletype-default-content"
       >
         <div
           aria-hidden="false"
@@ -4870,20 +5906,38 @@ exports[`Tabs demo -- tabs-position 1`] = `
   color: #bbb;
 }
 
-.c2 .uc-fe-tabs-ink-bar {
+.c2 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-ink-bar {
   display: none !important;
 }
 
-.c2 .uc-fe-tabs-tab:hover {
+.c2 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab:hover {
   background-color: rgba(242,246,252,0.2);
   border-color: rgba(195,202,217,0.2);
 }
 
-.c2 .uc-fe-tabs-tab-active,
-.c2 .uc-fe-tabs-tab-active:hover {
-  color: #4074e1;
+.c2 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active,
+.c2 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active:hover {
+  color: #3555f6;
   border-color: #c3cad9;
   background: #f2f6fc;
+}
+
+.c2 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-ink-bar {
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+  background: #3555f6;
+}
+
+.c2 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab:hover {
+  color: #3555f6;
+}
+
+.c2 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab-active {
+  color: #3555f6;
 }
 
 .c2.uc-fe-tabs .uc-fe-tabs-top-bar {
@@ -4891,11 +5945,10 @@ exports[`Tabs demo -- tabs-position 1`] = `
 }
 
 .c2.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-nav-container {
-  margin-bottom: -1px;
+  bottom: -1px;
 }
 
 .c2.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab {
-  margin-bottom: -1px;
   display: inline-block;
 }
 
@@ -5046,20 +6099,38 @@ exports[`Tabs demo -- tabs-position 1`] = `
   color: #bbb;
 }
 
-.c0 .uc-fe-tabs-ink-bar {
+.c0 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-ink-bar {
   display: none !important;
 }
 
-.c0 .uc-fe-tabs-tab:hover {
+.c0 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab:hover {
   background-color: rgba(242,246,252,0.2);
   border-color: rgba(195,202,217,0.2);
 }
 
-.c0 .uc-fe-tabs-tab-active,
-.c0 .uc-fe-tabs-tab-active:hover {
-  color: #4074e1;
+.c0 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active,
+.c0 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active:hover {
+  color: #3555f6;
   border-color: #c3cad9;
   background: #f2f6fc;
+}
+
+.c0 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-ink-bar {
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+  background: #3555f6;
+}
+
+.c0 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab:hover {
+  color: #3555f6;
+}
+
+.c0 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab-active {
+  color: #3555f6;
 }
 
 .c0.uc-fe-tabs .uc-fe-tabs-left-bar {
@@ -5069,11 +6140,7 @@ exports[`Tabs demo -- tabs-position 1`] = `
 }
 
 .c0.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-nav-container {
-  margin-right: -1px;
-}
-
-.c0.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab {
-  margin-right: -1px;
+  right: -1px;
 }
 
 .c0.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab:hover {
@@ -5227,20 +6294,38 @@ exports[`Tabs demo -- tabs-position 1`] = `
   color: #bbb;
 }
 
-.c1 .uc-fe-tabs-ink-bar {
+.c1 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-ink-bar {
   display: none !important;
 }
 
-.c1 .uc-fe-tabs-tab:hover {
+.c1 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab:hover {
   background-color: rgba(242,246,252,0.2);
   border-color: rgba(195,202,217,0.2);
 }
 
-.c1 .uc-fe-tabs-tab-active,
-.c1 .uc-fe-tabs-tab-active:hover {
-  color: #4074e1;
+.c1 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active,
+.c1 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active:hover {
+  color: #3555f6;
   border-color: #c3cad9;
   background: #f2f6fc;
+}
+
+.c1 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-ink-bar {
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+  background: #3555f6;
+}
+
+.c1 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab:hover {
+  color: #3555f6;
+}
+
+.c1 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab-active {
+  color: #3555f6;
 }
 
 .c1.uc-fe-tabs .uc-fe-tabs-right-bar {
@@ -5250,11 +6335,7 @@ exports[`Tabs demo -- tabs-position 1`] = `
 }
 
 .c1.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-nav-container {
-  margin-left: -1px;
-}
-
-.c1.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab {
-  margin-left: -1px;
+  left: -1px;
 }
 
 .c1.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab:hover {
@@ -5408,20 +6489,38 @@ exports[`Tabs demo -- tabs-position 1`] = `
   color: #bbb;
 }
 
-.c3 .uc-fe-tabs-ink-bar {
+.c3 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-ink-bar {
   display: none !important;
 }
 
-.c3 .uc-fe-tabs-tab:hover {
+.c3 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab:hover {
   background-color: rgba(242,246,252,0.2);
   border-color: rgba(195,202,217,0.2);
 }
 
-.c3 .uc-fe-tabs-tab-active,
-.c3 .uc-fe-tabs-tab-active:hover {
-  color: #4074e1;
+.c3 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active,
+.c3 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active:hover {
+  color: #3555f6;
   border-color: #c3cad9;
   background: #f2f6fc;
+}
+
+.c3 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-ink-bar {
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+  background: #3555f6;
+}
+
+.c3 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab:hover {
+  color: #3555f6;
+}
+
+.c3 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab-active {
+  color: #3555f6;
 }
 
 .c3.uc-fe-tabs .uc-fe-tabs-bottom-bar {
@@ -5429,11 +6528,10 @@ exports[`Tabs demo -- tabs-position 1`] = `
 }
 
 .c3.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-nav-container {
-  margin-top: -1px;
+  top: -1px;
 }
 
 .c3.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-tab {
-  margin-top: -1px;
   display: inline-block;
 }
 
@@ -5500,7 +6598,7 @@ exports[`Tabs demo -- tabs-position 1`] = `
       class="uc-fe-tabs uc-fe-tabs-left uc-fe-tabs-styletype-default c0"
     >
       <div
-        class="uc-fe-tabs-bar uc-fe-tabs-left-bar"
+        class="uc-fe-tabs-bar uc-fe-tabs-left-bar uc-fe-tabs-styletype-default-bar"
         role="tablist"
         tabindex="0"
       >
@@ -5572,7 +6670,7 @@ exports[`Tabs demo -- tabs-position 1`] = `
         tabindex="0"
       />
       <div
-        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-left-content"
+        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-left-content uc-fe-tabs-styletype-default-content"
       >
         <div
           aria-hidden="false"
@@ -5619,7 +6717,7 @@ exports[`Tabs demo -- tabs-position 1`] = `
       class="uc-fe-tabs uc-fe-tabs-right uc-fe-tabs-styletype-default c1"
     >
       <div
-        class="uc-fe-tabs-bar uc-fe-tabs-right-bar"
+        class="uc-fe-tabs-bar uc-fe-tabs-right-bar uc-fe-tabs-styletype-default-bar"
         role="tablist"
         tabindex="0"
       >
@@ -5691,7 +6789,7 @@ exports[`Tabs demo -- tabs-position 1`] = `
         tabindex="0"
       />
       <div
-        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-right-content"
+        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-right-content uc-fe-tabs-styletype-default-content"
       >
         <div
           aria-hidden="false"
@@ -5738,7 +6836,7 @@ exports[`Tabs demo -- tabs-position 1`] = `
       class="uc-fe-tabs uc-fe-tabs-top uc-fe-tabs-styletype-default c2"
     >
       <div
-        class="uc-fe-tabs-bar uc-fe-tabs-top-bar"
+        class="uc-fe-tabs-bar uc-fe-tabs-top-bar uc-fe-tabs-styletype-default-bar"
         role="tablist"
         tabindex="0"
       >
@@ -5810,7 +6908,7 @@ exports[`Tabs demo -- tabs-position 1`] = `
         tabindex="0"
       />
       <div
-        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-top-content"
+        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-top-content uc-fe-tabs-styletype-default-content"
       >
         <div
           aria-hidden="false"
@@ -5862,7 +6960,7 @@ exports[`Tabs demo -- tabs-position 1`] = `
         tabindex="0"
       />
       <div
-        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-bottom-content"
+        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-bottom-content uc-fe-tabs-styletype-default-content"
       >
         <div
           aria-hidden="false"
@@ -5901,7 +6999,7 @@ exports[`Tabs demo -- tabs-position 1`] = `
         tabindex="0"
       />
       <div
-        class="uc-fe-tabs-bar uc-fe-tabs-bottom-bar"
+        class="uc-fe-tabs-bar uc-fe-tabs-bottom-bar uc-fe-tabs-styletype-default-bar"
         role="tablist"
         tabindex="0"
       >
@@ -6065,20 +7163,38 @@ exports[`Tabs demo -- tabs-scroll 1`] = `
   color: #bbb;
 }
 
-.c0 .uc-fe-tabs-ink-bar {
+.c0 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-ink-bar {
   display: none !important;
 }
 
-.c0 .uc-fe-tabs-tab:hover {
+.c0 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab:hover {
   background-color: rgba(242,246,252,0.2);
   border-color: rgba(195,202,217,0.2);
 }
 
-.c0 .uc-fe-tabs-tab-active,
-.c0 .uc-fe-tabs-tab-active:hover {
-  color: #4074e1;
+.c0 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active,
+.c0 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active:hover {
+  color: #3555f6;
   border-color: #c3cad9;
   background: #f2f6fc;
+}
+
+.c0 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-ink-bar {
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+  background: #3555f6;
+}
+
+.c0 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab:hover {
+  color: #3555f6;
+}
+
+.c0 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab-active {
+  color: #3555f6;
 }
 
 .c0.uc-fe-tabs .uc-fe-tabs-top-bar {
@@ -6086,11 +7202,10 @@ exports[`Tabs demo -- tabs-scroll 1`] = `
 }
 
 .c0.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-nav-container {
-  margin-bottom: -1px;
+  bottom: -1px;
 }
 
 .c0.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab {
-  margin-bottom: -1px;
   display: inline-block;
 }
 
@@ -6241,20 +7356,38 @@ exports[`Tabs demo -- tabs-scroll 1`] = `
   color: #bbb;
 }
 
-.c1 .uc-fe-tabs-ink-bar {
+.c1 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-ink-bar {
   display: none !important;
 }
 
-.c1 .uc-fe-tabs-tab:hover {
+.c1 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab:hover {
   background-color: rgba(242,246,252,0.2);
   border-color: rgba(195,202,217,0.2);
 }
 
-.c1 .uc-fe-tabs-tab-active,
-.c1 .uc-fe-tabs-tab-active:hover {
-  color: #4074e1;
+.c1 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active,
+.c1 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active:hover {
+  color: #3555f6;
   border-color: #c3cad9;
   background: #f2f6fc;
+}
+
+.c1 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-ink-bar {
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+  background: #3555f6;
+}
+
+.c1 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab:hover {
+  color: #3555f6;
+}
+
+.c1 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab-active {
+  color: #3555f6;
 }
 
 .c1.uc-fe-tabs .uc-fe-tabs-left-bar {
@@ -6264,11 +7397,7 @@ exports[`Tabs demo -- tabs-scroll 1`] = `
 }
 
 .c1.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-nav-container {
-  margin-right: -1px;
-}
-
-.c1.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab {
-  margin-right: -1px;
+  right: -1px;
 }
 
 .c1.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab:hover {
@@ -6338,7 +7467,7 @@ exports[`Tabs demo -- tabs-scroll 1`] = `
       class="uc-fe-tabs uc-fe-tabs-top uc-fe-tabs-styletype-default c0"
     >
       <div
-        class="uc-fe-tabs-bar uc-fe-tabs-top-bar"
+        class="uc-fe-tabs-bar uc-fe-tabs-top-bar uc-fe-tabs-styletype-default-bar"
         role="tablist"
         tabindex="0"
       >
@@ -6786,7 +7915,7 @@ exports[`Tabs demo -- tabs-scroll 1`] = `
         tabindex="0"
       />
       <div
-        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-top-content"
+        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-top-content uc-fe-tabs-styletype-default-content"
       >
         <div
           aria-hidden="false"
@@ -7116,7 +8245,7 @@ exports[`Tabs demo -- tabs-scroll 1`] = `
       style="height:300px;"
     >
       <div
-        class="uc-fe-tabs-bar uc-fe-tabs-left-bar"
+        class="uc-fe-tabs-bar uc-fe-tabs-left-bar uc-fe-tabs-styletype-default-bar"
         role="tablist"
         tabindex="0"
       >
@@ -7564,7 +8693,7 @@ exports[`Tabs demo -- tabs-scroll 1`] = `
         tabindex="0"
       />
       <div
-        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-left-content"
+        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-left-content uc-fe-tabs-styletype-default-content"
       >
         <div
           aria-hidden="false"
@@ -7982,20 +9111,38 @@ exports[`Tabs demo -- tabs-styleType 1`] = `
   color: #bbb;
 }
 
-.c0 .uc-fe-tabs-ink-bar {
+.c0 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-ink-bar {
   display: none !important;
 }
 
-.c0 .uc-fe-tabs-tab:hover {
+.c0 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab:hover {
   background-color: rgba(242,246,252,0.2);
   border-color: rgba(195,202,217,0.2);
 }
 
-.c0 .uc-fe-tabs-tab-active,
-.c0 .uc-fe-tabs-tab-active:hover {
-  color: #4074e1;
+.c0 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active,
+.c0 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active:hover {
+  color: #3555f6;
   border-color: #c3cad9;
   background: #f2f6fc;
+}
+
+.c0 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-ink-bar {
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+  background: #3555f6;
+}
+
+.c0 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab:hover {
+  color: #3555f6;
+}
+
+.c0 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab-active {
+  color: #3555f6;
 }
 
 .c0.uc-fe-tabs .uc-fe-tabs-top-bar {
@@ -8003,11 +9150,10 @@ exports[`Tabs demo -- tabs-styleType 1`] = `
 }
 
 .c0.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-nav-container {
-  margin-bottom: -1px;
+  bottom: -1px;
 }
 
 .c0.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab {
-  margin-bottom: -1px;
   display: inline-block;
 }
 
@@ -8158,22 +9304,38 @@ exports[`Tabs demo -- tabs-styleType 1`] = `
   color: #bbb;
 }
 
-.c1 .uc-fe-tabs-ink-bar {
+.c1 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-ink-bar {
+  display: none !important;
+}
+
+.c1 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab:hover {
+  background-color: rgba(242,246,252,0.2);
+  border-color: rgba(195,202,217,0.2);
+}
+
+.c1 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active,
+.c1 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active:hover {
+  color: #3555f6;
+  border-color: #c3cad9;
+  background: #f2f6fc;
+}
+
+.c1 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-ink-bar {
   width: 2px;
   height: 2px;
   position: absolute;
   -webkit-transition: -webkit-transform 0.3s;
   -webkit-transition: transform 0.3s;
   transition: transform 0.3s;
-  background: #4074e1;
+  background: #3555f6;
 }
 
-.c1 .uc-fe-tabs-tab:hover {
-  color: #4074e1;
+.c1 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab:hover {
+  color: #3555f6;
 }
 
-.c1 .uc-fe-tabs-tab-active {
-  color: #4074e1;
+.c1 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab-active {
+  color: #3555f6;
 }
 
 .c1.uc-fe-tabs .uc-fe-tabs-top-bar {
@@ -8181,11 +9343,10 @@ exports[`Tabs demo -- tabs-styleType 1`] = `
 }
 
 .c1.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-nav-container {
-  margin-bottom: -1px;
+  bottom: -1px;
 }
 
 .c1.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab {
-  margin-bottom: -1px;
   display: inline-block;
 }
 
@@ -8244,6 +9405,10 @@ exports[`Tabs demo -- tabs-styleType 1`] = `
   content: '\\203A';
 }
 
+.c1 .uc-fe-tabs-tab+.uc-fe-tabs-tab {
+  margin-left: 12px;
+}
+
 <div>
   <div
     class="demo-wrap"
@@ -8252,7 +9417,7 @@ exports[`Tabs demo -- tabs-styleType 1`] = `
       class="uc-fe-tabs uc-fe-tabs-top uc-fe-tabs-styletype-default c0"
     >
       <div
-        class="uc-fe-tabs-bar uc-fe-tabs-top-bar"
+        class="uc-fe-tabs-bar uc-fe-tabs-top-bar uc-fe-tabs-styletype-default-bar"
         role="tablist"
         tabindex="0"
       >
@@ -8324,7 +9489,7 @@ exports[`Tabs demo -- tabs-styleType 1`] = `
         tabindex="0"
       />
       <div
-        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-top-content"
+        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-top-content uc-fe-tabs-styletype-default-content"
       >
         <div
           aria-hidden="false"
@@ -8371,7 +9536,7 @@ exports[`Tabs demo -- tabs-styleType 1`] = `
       class="uc-fe-tabs uc-fe-tabs-top uc-fe-tabs-styletype-ink c1"
     >
       <div
-        class="uc-fe-tabs-bar uc-fe-tabs-top-bar"
+        class="uc-fe-tabs-bar uc-fe-tabs-top-bar uc-fe-tabs-styletype-ink-bar"
         role="tablist"
         tabindex="0"
       >
@@ -8443,7 +9608,7 @@ exports[`Tabs demo -- tabs-styleType 1`] = `
         tabindex="0"
       />
       <div
-        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-top-content"
+        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-top-content uc-fe-tabs-styletype-ink-content"
       >
         <div
           aria-hidden="false"
@@ -8579,20 +9744,38 @@ exports[`Tabs demo -- tabs-uncontrolled 1`] = `
   color: #bbb;
 }
 
-.c0 .uc-fe-tabs-ink-bar {
+.c0 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-ink-bar {
   display: none !important;
 }
 
-.c0 .uc-fe-tabs-tab:hover {
+.c0 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab:hover {
   background-color: rgba(242,246,252,0.2);
   border-color: rgba(195,202,217,0.2);
 }
 
-.c0 .uc-fe-tabs-tab-active,
-.c0 .uc-fe-tabs-tab-active:hover {
-  color: #4074e1;
+.c0 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active,
+.c0 .uc-fe-tabs-styletype-default-bar .uc-fe-tabs-tab-active:hover {
+  color: #3555f6;
   border-color: #c3cad9;
   background: #f2f6fc;
+}
+
+.c0 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-ink-bar {
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+  background: #3555f6;
+}
+
+.c0 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab:hover {
+  color: #3555f6;
+}
+
+.c0 .uc-fe-tabs-styletype-ink-bar .uc-fe-tabs-tab-active {
+  color: #3555f6;
 }
 
 .c0.uc-fe-tabs .uc-fe-tabs-top-bar {
@@ -8600,11 +9783,10 @@ exports[`Tabs demo -- tabs-uncontrolled 1`] = `
 }
 
 .c0.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-nav-container {
-  margin-bottom: -1px;
+  bottom: -1px;
 }
 
 .c0.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab {
-  margin-bottom: -1px;
   display: inline-block;
 }
 
@@ -8671,7 +9853,7 @@ exports[`Tabs demo -- tabs-uncontrolled 1`] = `
       class="uc-fe-tabs uc-fe-tabs-top uc-fe-tabs-styletype-default c0"
     >
       <div
-        class="uc-fe-tabs-bar uc-fe-tabs-top-bar"
+        class="uc-fe-tabs-bar uc-fe-tabs-top-bar uc-fe-tabs-styletype-default-bar"
         role="tablist"
         tabindex="0"
       >
@@ -8743,7 +9925,7 @@ exports[`Tabs demo -- tabs-uncontrolled 1`] = `
         tabindex="0"
       />
       <div
-        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-top-content"
+        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-top-content uc-fe-tabs-styletype-default-content"
       >
         <div
           aria-hidden="true"
@@ -8790,7 +9972,7 @@ exports[`Tabs demo -- tabs-uncontrolled 1`] = `
       class="uc-fe-tabs uc-fe-tabs-top uc-fe-tabs-styletype-default c0"
     >
       <div
-        class="uc-fe-tabs-bar uc-fe-tabs-top-bar"
+        class="uc-fe-tabs-bar uc-fe-tabs-top-bar uc-fe-tabs-styletype-default-bar"
         role="tablist"
         tabindex="0"
       >
@@ -8862,7 +10044,7 @@ exports[`Tabs demo -- tabs-uncontrolled 1`] = `
         tabindex="0"
       />
       <div
-        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-top-content"
+        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-top-content uc-fe-tabs-styletype-default-content"
       >
         <div
           aria-hidden="true"

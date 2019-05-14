@@ -13,3 +13,8 @@
 
 ```js {"codepath": "custom.jsx"}
 ```
+
+*   拆分展示
+
+```js {"codepath": "single.jsx"}
+```

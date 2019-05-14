@@ -2,10 +2,8 @@
 
 exports[`Card demo -- card 1`] = `
 .c2 {
-  line-height: 28px;
-  font-weight: bold;
-  padding: 0 16px;
-  margin-top: 12px;
+  padding: 0 24px;
+  margin-top: 16px;
 }
 
 .c2:before,
@@ -18,48 +16,51 @@ exports[`Card demo -- card 1`] = `
   clear: both;
 }
 
-.c4 {
-  display: block;
-  line-height: 22px;
+.c3 {
+  line-height: 28px;
+  font-weight: bold;
+}
+
+.c5 {
+  line-height: 20px;
   font-weight: normal;
 }
 
-.c6 {
+.c7 {
   line-height: 28px;
-  padding: 0 16px;
-  margin-top: 12px;
+  padding: 0 24px;
+  margin-top: 16px;
 }
 
-.c6:before,
-.c6:after {
+.c7:before,
+.c7:after {
   content: ' ';
   display: table;
 }
 
-.c6:after {
+.c7:after {
   clear: both;
 }
 
-.c9 {
-  min-height: 30px;
-  padding: 0 16px;
-  margin-top: 12px;
+.c10 {
+  padding: 0 24px;
+  margin-top: 16px;
 }
 
-.c11 {
+.c12 {
   line-height: 1;
-  padding: 0 16px;
-  margin-top: 12px;
+  padding: 0 24px;
+  margin-top: 16px;
   padding-top: 12px;
 }
 
-.c11:before,
-.c11:after {
+.c12:before,
+.c12:after {
   content: ' ';
   display: table;
 }
 
-.c11:after {
+.c12:after {
   clear: both;
 }
 
@@ -67,34 +68,43 @@ exports[`Card demo -- card 1`] = `
   box-sizing: border-box;
   border-radius: 4px;
   text-align: left;
-  border: 1px solid #e1e6f0;
+  overflow: auto;
   background: #fff;
   font-size: 12px;
   color: #6b798e;
+  box-shadow: 0px 1px 0px 0px rgba(223,224,241,1),0px 1px 3px 0px rgba(182,188,224,0.5),0px 4px 12px 0px rgba(218,221,238,0.5);
 }
 
 .c0 .c1:last-child,
-.c0 .c5:last-child,
-.c0 .c8:last-child,
-.c0 .c10:last-child {
-  margin-bottom: 12px;
+.c0 .c6:last-child,
+.c0 .c9:last-child {
+  margin-bottom: 24px;
+}
+
+.c0 .c1:first-child,
+.c0 .c6:first-child,
+.c0 .c9:first-child {
+  margin-top: 24px;
 }
 
 .c0 .c1 {
   color: #0a1633;
-  font-size: 14px;
+  font-size: 16px;
 }
 
-.c0 .c3 {
+.c0 .c4 {
   color: #c3cad9;
   font-size: 12px;
 }
 
-.c0 .c10 {
+.c0 .c11 {
   border-top: 1px solid #e1e6f0;
+  padding: 16px 24px;
+  margin-top: 24px;
 }
 
-.c7 {
+.c8 {
+  margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
   border-width: 1px;
@@ -109,50 +119,57 @@ exports[`Card demo -- card 1`] = `
   vertical-align: middle;
   height: 28px;
   padding: 0 8px;
-  color: #6b798e;
+  color: #0a1633;
   background: #fff;
   border-color: #c3cad9;
+  border: none;
+  box-shadow: 0 -1px 0 0 rgba(223,224,241,0.5),0 1px 0 0 rgba(223,224,241,.3),0 1px 1px 0 rgba(162,166,191,.5),0 2px 4px 0 rgba(228,229,242,.6);
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
 }
 
-.c7:hover {
-  color: #4074e1;
+.c8:hover {
+  color: #3555f6;
   background: #fff;
   border-color: #4683e6;
+  box-shadow: 0 1px 10px 0 rgba(162,166,191,.12),0 2px 4px -1px rgba(162,166,191,.2),0 4px 5px 0 rgba(162,166,191,.14);
 }
 
 <div
-  class="c0"
+  class="uc-fe-card c0"
 >
   <div
-    class="c1 c2"
+    class="c1 uc-fe-card-header c2"
   >
-    <div>
+    <div
+      class="uc-fe-card-title c3"
+    >
       This is the title
     </div>
     <div
-      class="c3 c4"
+      class="c4 uc-fe-card-comment c5"
     >
       This is the comment
     </div>
   </div>
   <div
-    class="c5 c6"
+    class="c6 uc-fe-card-action c7"
   >
     <button
-      class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c7"
+      class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c8"
       type="button"
     >
       This is a action button
     </button>
     <button
-      class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c7"
+      class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c8"
       type="button"
     >
       This is a action button
     </button>
   </div>
   <div
-    class="c8 c9"
+    class="c9 uc-fe-card-content c10"
   >
     <div
       style="background:#e1e6f0;height:50px;padding:10px;"
@@ -161,10 +178,10 @@ exports[`Card demo -- card 1`] = `
     </div>
   </div>
   <div
-    class="c10 c11"
+    class="c11 uc-fe-card-footer c12"
   >
     <button
-      class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c7"
+      class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c8"
       style="float:right;"
       type="button"
     >
@@ -176,10 +193,8 @@ exports[`Card demo -- card 1`] = `
 
 exports[`Card demo -- custom 1`] = `
 .c7 {
-  line-height: 28px;
-  font-weight: bold;
-  padding: 0 16px;
-  margin-top: 12px;
+  padding: 0 24px;
+  margin-top: 16px;
 }
 
 .c7:before,
@@ -192,16 +207,20 @@ exports[`Card demo -- custom 1`] = `
   clear: both;
 }
 
-.c9 {
-  display: block;
-  line-height: 22px;
+.c8 {
+  line-height: 28px;
+  font-weight: bold;
+}
+
+.c10 {
+  line-height: 20px;
   font-weight: normal;
 }
 
 .c4 {
   line-height: 28px;
-  padding: 0 16px;
-  margin-top: 12px;
+  padding: 0 24px;
+  margin-top: 16px;
 }
 
 .c4:before,
@@ -215,25 +234,24 @@ exports[`Card demo -- custom 1`] = `
 }
 
 .c2 {
-  min-height: 30px;
-  padding: 0 16px;
-  margin-top: 12px;
+  padding: 0 24px;
+  margin-top: 16px;
 }
 
-.c11 {
+.c12 {
   line-height: 1;
-  padding: 0 16px;
-  margin-top: 12px;
+  padding: 0 24px;
+  margin-top: 16px;
   padding-top: 12px;
 }
 
-.c11:before,
-.c11:after {
+.c12:before,
+.c12:after {
   content: ' ';
   display: table;
 }
 
-.c11:after {
+.c12:after {
   clear: both;
 }
 
@@ -241,34 +259,43 @@ exports[`Card demo -- custom 1`] = `
   box-sizing: border-box;
   border-radius: 4px;
   text-align: left;
-  border: 1px solid #e1e6f0;
+  overflow: auto;
   background: #fff;
   font-size: 12px;
   color: #6b798e;
+  box-shadow: 0px 1px 0px 0px rgba(223,224,241,1),0px 1px 3px 0px rgba(182,188,224,0.5),0px 4px 12px 0px rgba(218,221,238,0.5);
 }
 
 .c0 .c6:last-child,
 .c0 .c3:last-child,
-.c0 .c1:last-child,
-.c0 .c10:last-child {
-  margin-bottom: 12px;
+.c0 .c1:last-child {
+  margin-bottom: 24px;
+}
+
+.c0 .c6:first-child,
+.c0 .c3:first-child,
+.c0 .c1:first-child {
+  margin-top: 24px;
 }
 
 .c0 .c6 {
   color: #0a1633;
-  font-size: 14px;
+  font-size: 16px;
 }
 
-.c0 .c8 {
+.c0 .c9 {
   color: #c3cad9;
   font-size: 12px;
 }
 
-.c0 .c10 {
+.c0 .c11 {
   border-top: 1px solid #e1e6f0;
+  padding: 16px 24px;
+  margin-top: 24px;
 }
 
 .c5 {
+  margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
   border-width: 1px;
@@ -283,22 +310,27 @@ exports[`Card demo -- custom 1`] = `
   vertical-align: middle;
   height: 28px;
   padding: 0 8px;
-  color: #6b798e;
+  color: #0a1633;
   background: #fff;
   border-color: #c3cad9;
+  border: none;
+  box-shadow: 0 -1px 0 0 rgba(223,224,241,0.5),0 1px 0 0 rgba(223,224,241,.3),0 1px 1px 0 rgba(162,166,191,.5),0 2px 4px 0 rgba(228,229,242,.6);
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
 }
 
 .c5:hover {
-  color: #4074e1;
+  color: #3555f6;
   background: #fff;
   border-color: #4683e6;
+  box-shadow: 0 1px 10px 0 rgba(162,166,191,.12),0 2px 4px -1px rgba(162,166,191,.2),0 4px 5px 0 rgba(162,166,191,.14);
 }
 
 <div
-  class="c0"
+  class="uc-fe-card c0"
 >
   <div
-    class="c1 c2"
+    class="c1 uc-fe-card-content c2"
   >
     <div
       style="background:#e1e6f0;height:50px;padding:10px;"
@@ -307,7 +339,7 @@ exports[`Card demo -- custom 1`] = `
     </div>
   </div>
   <div
-    class="c3 c4"
+    class="c3 uc-fe-card-action c4"
   >
     <button
       class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c5"
@@ -323,19 +355,21 @@ exports[`Card demo -- custom 1`] = `
     </button>
   </div>
   <div
-    class="c6 c7"
+    class="c6 uc-fe-card-header c7"
   >
-    <div>
+    <div
+      class="uc-fe-card-title c8"
+    >
       This is the title
     </div>
     <div
-      class="c8 c9"
+      class="c9 uc-fe-card-comment c10"
     >
       This is the comment
     </div>
   </div>
   <div
-    class="c10 c11"
+    class="c11 uc-fe-card-footer c12"
   >
     <button
       class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c5"
@@ -344,6 +378,186 @@ exports[`Card demo -- custom 1`] = `
     >
       This is a footer button
     </button>
+  </div>
+</div>
+`;
+
+exports[`Card demo -- single 1`] = `
+.c4 {
+  padding: 0 24px;
+  margin-top: 16px;
+}
+
+.c4:before,
+.c4:after {
+  content: ' ';
+  display: table;
+}
+
+.c4:after {
+  clear: both;
+}
+
+.c5 {
+  line-height: 28px;
+  font-weight: bold;
+}
+
+.c7 {
+  line-height: 20px;
+  font-weight: normal;
+}
+
+.c9 {
+  line-height: 28px;
+  padding: 0 24px;
+  margin-top: 16px;
+}
+
+.c9:before,
+.c9:after {
+  content: ' ';
+  display: table;
+}
+
+.c9:after {
+  clear: both;
+}
+
+.c2 {
+  padding: 0 24px;
+  margin-top: 16px;
+}
+
+.c0 {
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-align: left;
+  overflow: auto;
+  background: #fff;
+  font-size: 12px;
+  color: #6b798e;
+  box-shadow: 0px 1px 0px 0px rgba(223,224,241,1),0px 1px 3px 0px rgba(182,188,224,0.5),0px 4px 12px 0px rgba(218,221,238,0.5);
+}
+
+.c0 .c3:last-child,
+.c0 .c8:last-child,
+.c0 .c1:last-child {
+  margin-bottom: 24px;
+}
+
+.c0 .c3:first-child,
+.c0 .c8:first-child,
+.c0 .c1:first-child {
+  margin-top: 24px;
+}
+
+.c0 .c3 {
+  color: #0a1633;
+  font-size: 16px;
+}
+
+.c0 .c6 {
+  color: #c3cad9;
+  font-size: 12px;
+}
+
+.c0 .c11 {
+  border-top: 1px solid #e1e6f0;
+  padding: 16px 24px;
+  margin-top: 24px;
+}
+
+.c10 {
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  border-width: 1px;
+  border-style: solid;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 28px;
+  padding: 0 8px;
+  color: #0a1633;
+  background: #fff;
+  border-color: #c3cad9;
+  border: none;
+  box-shadow: 0 -1px 0 0 rgba(223,224,241,0.5),0 1px 0 0 rgba(223,224,241,.3),0 1px 1px 0 rgba(162,166,191,.5),0 2px 4px 0 rgba(228,229,242,.6);
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
+}
+
+.c10:hover {
+  color: #3555f6;
+  background: #fff;
+  border-color: #4683e6;
+  box-shadow: 0 1px 10px 0 rgba(162,166,191,.12),0 2px 4px -1px rgba(162,166,191,.2),0 4px 5px 0 rgba(162,166,191,.14);
+}
+
+<div>
+  <div
+    class="uc-fe-card c0"
+  >
+    <div
+      class="c1 uc-fe-card-content c2"
+    >
+      <div
+        style="background:#e1e6f0;height:50px;padding:10px;"
+      >
+        This is the content
+      </div>
+    </div>
+  </div>
+  <div
+    class="uc-fe-card c0"
+    style="margin-top:12px;"
+  >
+    <div
+      class="c3 uc-fe-card-header c4"
+    >
+      <div
+        class="uc-fe-card-title c5"
+      >
+        This is the title
+      </div>
+      <div
+        class="c6 uc-fe-card-comment c7"
+      >
+        This is the comment
+      </div>
+    </div>
+    <div
+      class="c8 uc-fe-card-action c9"
+    >
+      <button
+        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c10"
+        type="button"
+      >
+        This is a action button
+      </button>
+      <button
+        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c10"
+        type="button"
+      >
+        This is a action button
+      </button>
+    </div>
+  </div>
+  <div
+    class="uc-fe-card c0"
+    style="margin-top:12px;"
+  >
+    <div
+      style="background:#e1e6f0;height:50px;padding:10px;"
+    >
+      卡片本身无间距
+    </div>
   </div>
 </div>
 `;

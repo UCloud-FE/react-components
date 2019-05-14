@@ -53,3 +53,8 @@
 
 ```js {"codepath": "range-uncontrolled.jsx"}
 ```
+
+*   popoverProps
+
+```js {"codepath": "range-popoverprops.jsx"}
+```

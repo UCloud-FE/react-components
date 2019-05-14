@@ -1,14 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Icon demo -- customStyle 1`] = `
+.c0 {
+  vertical-align: baseline;
+}
+
 <div>
   <i
-    class="uc-fe-icon icon__link "
+    class="uc-fe-icon icon__link c0"
     style="margin-right:10px;"
     type="link"
   />
   <i
-    class="test_cls uc-fe-icon icon__link "
+    class="test_cls uc-fe-icon icon__link c0"
     style="color:red;font-size:20px;"
     type="link"
   />
@@ -16,16 +20,8 @@ exports[`Icon demo -- customStyle 1`] = `
 `;
 
 exports[`Icon demo -- icon 1`] = `
-.c4 {
-  position: relative;
-  display: block;
-  box-sizing: border-box;
-  min-height: 1px;
-  float: left;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  width: 25%;
+.c12 {
+  vertical-align: baseline;
 }
 
 .c5 {
@@ -37,10 +33,22 @@ exports[`Icon demo -- icon 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+  width: 25%;
+}
+
+.c6 {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  min-height: 1px;
+  float: left;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   width: 75%;
 }
 
-.c1 {
+.c2 {
   position: relative;
   display: block;
   height: auto;
@@ -48,41 +56,41 @@ exports[`Icon demo -- icon 1`] = `
   margin-right: -8px;
 }
 
-.c1:before,
-.c1:after {
+.c2:before,
+.c2:after {
   content: ' ';
   display: table;
 }
 
-.c1:after {
+.c2:after {
   clear: both;
 }
 
-.c1 .c3 {
+.c2 .c4 {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.c0 {
-  margin-bottom: 16px;
-}
-
-.c0:last-child {
-  margin-bottom: 0;
-}
-
-.c2 {
-  padding-top: 5px;
-  line-height: 1.5;
+.c3 {
+  padding-top: 4px;
+  line-height: 20px;
   word-break: break-all;
 }
 
-.c10 {
+.c0 .c1 {
+  margin-bottom: 16px;
+}
+
+.c0 .c1:last-child {
+  margin-bottom: 0;
+}
+
+.c11 {
   margin-right: 8px;
   font-size: 14px;
 }
 
-.c8 {
+.c9 {
   color: #6b798e;
   font-size: 12px;
   position: relative;
@@ -93,11 +101,11 @@ exports[`Icon demo -- icon 1`] = `
   line-height: 28px;
 }
 
-.c8 .c9 {
-  color: #4074e1;
+.c9 .c10 {
+  color: #3555f6;
 }
 
-.c11 {
+.c13 {
   color: #6b798e;
   font-size: 12px;
   position: relative;
@@ -108,38 +116,50 @@ exports[`Icon demo -- icon 1`] = `
   line-height: 28px;
 }
 
-.c6 {
+.c7 {
+  position: relative;
   margin-bottom: -8px;
 }
 
-.c6 .c7,
-.c6 .style__RadioTagWrap-sc-25j3mq-3,
-.c6 .style__RadioCardWrap-sc-25j3mq-8 {
+.c7 .c8,
+.c7 .style__RadioTagWrap-sc-25j3mq-3 {
   margin-right: 8px;
   margin-bottom: 8px;
 }
 
-.c6 .c7:last-child,
-.c6 .style__RadioTagWrap-sc-25j3mq-3:last-child,
-.c6 .style__RadioCardWrap-sc-25j3mq-8:last-child {
+.c7 .c8:last-child,
+.c7 .style__RadioTagWrap-sc-25j3mq-3:last-child {
   margin-right: 0;
 }
 
-.c6 .c30 {
+.c7 .c34 {
+  margin-right: 12px;
+  margin-bottom: 8px;
+}
+
+.c7 .c34:last-child {
+  margin-right: 0;
+}
+
+.c7 .c35+.c35 {
+  margin-left: -1px;
+}
+
+.c7 .c33 {
   margin-right: -1px;
   margin-bottom: 8px;
 }
 
-.c6 .c30:first-child {
+.c7 .c33:first-child {
   border-radius: 2px 0 0 2px;
 }
 
-.c6 .c30:last-child {
+.c7 .c33:last-child {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
 }
 
-.c14 {
+.c16 {
   position: relative;
   height: 100%;
   width: 100%;
@@ -147,7 +167,7 @@ exports[`Icon demo -- icon 1`] = `
   box-sizing: border-box;
 }
 
-.c16 {
+.c18 {
   width: 100%;
   height: 100%;
   text-align: center;
@@ -156,7 +176,7 @@ exports[`Icon demo -- icon 1`] = `
   display: block;
 }
 
-.c19 {
+.c21 {
   position: absolute;
   display: inline-block;
   left: -1px;
@@ -167,7 +187,7 @@ exports[`Icon demo -- icon 1`] = `
   transition: all 0.3s;
 }
 
-.c21 {
+.c23 {
   position: absolute;
   display: inline-block;
   left: 18px;
@@ -179,7 +199,7 @@ exports[`Icon demo -- icon 1`] = `
   transition: all 0.3s;
 }
 
-.c12 {
+.c14 {
   position: relative;
   border-radius: 2px;
   overflow: hidden;
@@ -198,11 +218,11 @@ exports[`Icon demo -- icon 1`] = `
   line-height: 16px;
 }
 
-.c12:hover {
+.c14:hover {
   border-color: #4683e6;
 }
 
-.c12 .c18 {
+.c14 .c20 {
   background-color: #fff;
   box-shadow: 0 0.5px 0.5px #c3cad9;
   border: 1px solid #c3cad9;
@@ -210,59 +230,45 @@ exports[`Icon demo -- icon 1`] = `
   height: 20px;
 }
 
-.c12 .c20 {
+.c14 .c22 {
   background-color: #e69b9b;
   left: 13px;
   height: 10px;
 }
 
-.c12 .c13 {
+.c14 .c15 {
   border: 1px solid #c3cad9;
   background-color: #ebedf0;
   color: #6b798e;
 }
 
-.c12 .c15,
-.c12 .c17 {
+.c14 .c17,
+.c14 .c19 {
   line-height: 16px;
 }
 
-.c12 .c15 {
+.c14 .c17 {
   padding-right: 20px;
 }
 
-.c12 .c17 {
+.c14 .c19 {
   padding-left: 20px;
 }
 
-.c12 .c15 {
+.c14 .c17 {
   display: none;
 }
 
-.c27 {
+.c30 {
   position: relative;
 }
 
-.c29 {
+.c32 {
   border: none;
   outline: none;
   padding: 0;
   margin: 0;
   color: inherit;
-}
-
-.c24 {
-  position: absolute;
-  box-sizing: border-box;
-  text-align: center;
-  border-radius: 2px;
-  border-style: solid;
-  color: inherit;
-  cursor: pointer;
-  background: #fff;
-  display: inline-block;
-  vertical-align: middle;
-  border-color: #c3cad9;
 }
 
 .c26 {
@@ -274,6 +280,22 @@ exports[`Icon demo -- icon 1`] = `
   color: inherit;
   cursor: pointer;
   background: #fff;
+  box-shadow: 0 2px 4px 0 #e4e5f2,0 1px 1px 0 rgba(162,166,191,0.32),0 1px 0 0 rgba(223,224,241,0.7);
+  display: inline-block;
+  vertical-align: middle;
+  border-color: #c3cad9;
+}
+
+.c28 {
+  position: absolute;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 2px;
+  border-style: solid;
+  color: inherit;
+  cursor: pointer;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 #e4e5f2,0 1px 1px 0 rgba(162,166,191,0.32),0 1px 0 0 rgba(223,224,241,0.7);
   display: inline-block;
   vertical-align: middle;
   border-color: #c3cad9;
@@ -282,7 +304,7 @@ exports[`Icon demo -- icon 1`] = `
   color: #bbb;
 }
 
-.c22 {
+.c24 {
   position: relative;
   box-sizing: border-box;
   border-radius: 2px;
@@ -290,109 +312,125 @@ exports[`Icon demo -- icon 1`] = `
   vertical-align: middle;
   color: #6b798e;
   height: 28px;
-  border: 1px solid #c3cad9;
+  border: 1px solid #dfe0f1;
   padding-right: 22px;
+  border-right-width: 0;
 }
 
-.c22 .c28 {
+.c24 .c31 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c22 .c28::-webkit-input-placeholder {
+.c24 .c31::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c22 .c28::-moz-placeholder {
+.c24 .c31::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c22 .c28:-ms-input-placeholder {
+.c24 .c31:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c22 .c28::placeholder {
+.c24 .c31::placeholder {
   color: #abb4c3;
 }
 
-.c22:hover {
-  border-color: #4683e6;
+.c24:hover {
+  border-color: #c3cad9;
 }
 
-.c22 .c28 {
+.c24 .c29 {
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  background: #fafafc;
+}
+
+.c24 .c29:hover {
+  background: #f6f6fb;
+}
+
+.c24 .c31 {
   padding: 0 0 0 8px;
   text-align: left;
+  box-shadow: none;
+  background: transparent;
   width: 34px;
 }
 
-.c22 .c23,
-.c22 .c25 {
+.c24 .c25,
+.c24 .c27 {
   right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
   height: 13px;
   line-height: 13px;
   width: 22px;
 }
 
-.c22 .c23:hover,
-.c22 .c25:hover {
-  color: #4074e1;
+.c24 .c25:hover,
+.c24 .c27:hover {
+  color: #3555f6;
 }
 
-.c22 .c23 {
+.c24 .c25 {
   border-width: 0 0 0 1px;
-  top: 0;
+  top: -1px;
+  padding-top: 1px;
 }
 
-.c22 .c25 {
+.c24 .c27 {
   border-width: 1px 0 0 1px;
   bottom: 0;
+  border-top-color: #e8e9f5;
 }
 
 <div>
   <form
-    class="demo-form"
+    class="demo-form uc-fe-form c0"
   >
     <div
-      class="c0 c1"
+      class="c1 uc-fe-form-item uc-fe-row c2"
     >
       <div
-        class="c2 c3 c4"
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
         type
       </div>
       <div
-        class="c3 c5"
+        class="uc-fe-form-controller c4 uc-fe-col c6"
         span="9"
       >
         <div
-          class="c6"
+          class="c7"
         >
           <div
             checked=""
-            class="c7 c8"
+            class="c8 uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
             <i
-              class="c9 c10 uc-fe-icon icon__cbox-ed "
+              class="c10 c11 uc-fe-icon icon__cbox-ed c12"
               type="cbox-ed"
             />
             circle-fill
           </div>
           <div
-            class="c7 c11"
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
           >
             <i
-              class="c9 c10 uc-fe-icon icon__circle "
+              class="c10 c11 uc-fe-icon icon__circle c12"
               type="circle"
             />
             circle
           </div>
           <div
-            class="c7 c11"
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
           >
             <i
-              class="c9 c10 uc-fe-icon icon__circle "
+              class="c10 c11 uc-fe-icon icon__circle c12"
               type="circle"
             />
             loading
@@ -401,39 +439,39 @@ exports[`Icon demo -- icon 1`] = `
       </div>
     </div>
     <div
-      class="c0 c1"
+      class="c1 uc-fe-form-item uc-fe-row c2"
     >
       <div
-        class="c2 c3 c4"
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
         spin
       </div>
       <div
-        class="c3 c5"
+        class="uc-fe-form-controller c4 uc-fe-col c6"
         span="9"
       >
         <div
-          class="c12"
+          class="c14"
         >
           <div
-            class="c13 c14"
+            class="c15 c16"
           >
             <span
-              class="c15 c16"
+              class="c17 c18"
             >
               ON
             </span>
             <span
-              class="c17 c16"
+              class="c19 c18"
             >
               OFF
             </span>
             <span
-              class="c18 c19"
+              class="c20 c21"
             >
               <span
-                class="c20 c21"
+                class="c22 c23"
               />
             </span>
           </div>
@@ -441,48 +479,48 @@ exports[`Icon demo -- icon 1`] = `
       </div>
     </div>
     <div
-      class="c0 c1"
+      class="c1 uc-fe-form-item uc-fe-row c2"
     >
       <div
-        class="c2 c3 c4"
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
         fontSize
       </div>
       <div
-        class="c3 c5"
+        class="uc-fe-form-controller c4 uc-fe-col c6"
         span="9"
       >
         <div
-          class="uc-fe-numberinput uc-fe-numberinput-styletype-default c22"
+          class="uc-fe-numberinput uc-fe-numberinput-styletype-default c24"
         >
           <div>
             <span
-              class="c23 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c24"
+              class="c25 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c26"
               unselectable="unselectable"
             >
               <i
-                class="uc-fe-icon icon__caret-up "
+                class="uc-fe-icon icon__caret-up c12"
                 type="caret-up"
               />
             </span>
             <span
-              class="c25 uc-fe-numberinput-handler-down uc-fe-numberinput-handler uc-fe-numberinput-handler-disabled c26"
+              class="c27 uc-fe-numberinput-handler-down uc-fe-numberinput-handler uc-fe-numberinput-handler-disabled c28"
               disabled=""
               unselectable="unselectable"
             >
               <i
-                class="uc-fe-icon icon__caret-down "
+                class="uc-fe-icon icon__caret-down c12"
                 type="caret-down"
               />
             </span>
           </div>
           <div
-            class="uc-fe-numberinput-input-wrap c27"
+            class="c29 uc-fe-numberinput-input-wrap c30"
           >
             <input
               autocomplete="off"
-              class="c28 uc-fe-numberinput-input c29"
+              class="c31 uc-fe-numberinput-input c32"
               max="100"
               min="12"
               step="1"
@@ -493,16 +531,16 @@ exports[`Icon demo -- icon 1`] = `
       </div>
     </div>
     <div
-      class="c0 c1"
+      class="c1 uc-fe-form-item uc-fe-row c2"
     >
       <div
-        class="c2 c3 c4"
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
         color
       </div>
       <div
-        class="c3 c5"
+        class="uc-fe-form-controller c4 uc-fe-col c6"
         span="9"
       >
         <input
@@ -516,7 +554,7 @@ exports[`Icon demo -- icon 1`] = `
     class="demo-wrap"
   >
     <i
-      class="uc-fe-icon icon__circle-fill "
+      class="uc-fe-icon icon__circle-fill c12"
       style="font-size:12px;color:#000;"
       type="circle-fill"
     />
@@ -525,6 +563,10 @@ exports[`Icon demo -- icon 1`] = `
 `;
 
 exports[`Icon demo -- spin 1`] = `
+.c0 {
+  vertical-align: baseline;
+}
+
 .c0.c0.c0 {
   -webkit-animation: iVXCSc 1.2s infinite linear;
   animation: iVXCSc 1.2s infinite linear;
@@ -566,34 +608,38 @@ exports[`Icon demo -- spin 1`] = `
 `;
 
 exports[`Icon demo -- type 1`] = `
+.c0 {
+  vertical-align: baseline;
+}
+
 <div>
   <i
-    class="uc-fe-icon icon__link "
+    class="uc-fe-icon icon__link c0"
     style="margin-right:10px;"
     type="link"
   />
   <i
-    class="uc-fe-icon icon__check "
+    class="uc-fe-icon icon__check c0"
     style="margin-right:10px;"
     type="check"
   />
   <i
-    class="uc-fe-icon icon__circle-check "
+    class="uc-fe-icon icon__circle-check c0"
     style="margin-right:10px;"
     type="circle-check"
   />
   <i
-    class="uc-fe-icon icon__arrow-left "
+    class="uc-fe-icon icon__arrow-left c0"
     style="margin-right:10px;"
     type="arrow-left"
   />
   <i
-    class="uc-fe-icon icon__checkbox "
+    class="uc-fe-icon icon__checkbox c0"
     style="margin-right:10px;"
     type="checkbox"
   />
   <i
-    class="uc-fe-icon icon__loading "
+    class="uc-fe-icon icon__loading c0"
     style="margin-right:10px;"
     type="loading"
   />

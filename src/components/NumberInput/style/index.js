@@ -52,7 +52,7 @@ const Handler = styled.span.attrs({
         color: inherit;
         cursor: pointer;
         background: #fff;
-
+        box-shadow: 0 2px 4px 0 #e4e5f2, 0 1px 1px 0 rgba(162, 166, 191, 0.32), 0 1px 0 0 rgba(223, 224, 241, 0.7);
         ${inlineBlockWithVerticalMixin};
 
         border-color: ${colorMap.default.border};
@@ -79,7 +79,7 @@ export const HandlerDown = styled(Handler).attrs({
 `;
 
 const propsMixin = ({
-    theme: { colorList, colorMap, Height, HeightNumber },
+    theme: { colorList, colorMap, Height, HeightNumber, materialVars = {} },
     styleType,
     focused,
     size,
@@ -113,33 +113,54 @@ const propsMixin = ({
 
     ${styleType === 'default' &&
         css`
-            border: 1px solid ${colorMap.default.border};
+            border: 1px solid #dfe0f1;
             padding-right: ${HeightNumber[size] - 6}px;
+            border-right-width: 0;
+            transition: ${materialVars.transitiondown};
 
             &:hover {
-                border-color: ${colorMap.active.border};
+                border-color: #c3cad9;
             }
 
+            ${InputWrap} {
+                box-shadow: ${materialVars.innerShadow};
+                background: #fafafc;
+                :hover {
+                    background: #f6f6fb;
+                }
+            }
             ${focused &&
                 css`
-                    border-color: ${colorMap.active.border};
+                    &,
+                    &:hover {
+                        border-color: ${colorMap.active.border};
+                    }
+                    ${InputWrap} {
+                        background: #f6f6fb;
+                    }
                 `};
 
             ${disabled &&
                 css`
                     border-color: ${colorMap.disabled.border};
+                    ${InputWrap} {
+                        box-shadow: none;
+                    }
                 `};
 
             ${Input} {
                 padding: 0 0 0 8px;
                 text-align: left;
+                box-shadow: none;
+                background: transparent;
 
                 width: ${HeightNumber[size] + 6}px;
             }
 
             ${HandlerUp}, ${HandlerDown} {
                 right: 0;
-
+                box-sizing: content-box;
+                border-radius: 0;
                 height: ${(+Height[size].replace('px', '') - 2) / 2}px;
                 line-height: ${(+Height[size].replace('px', '') - 2) / 2}px;
                 width: ${HeightNumber[size] - 6}px;
@@ -151,11 +172,13 @@ const propsMixin = ({
 
             ${HandlerUp} {
                 border-width: 0 0 0 1px;
-                top: 0;
+                top: -1px;
+                padding-top: 1px;
             }
             ${HandlerDown} {
                 border-width: 1px 0 0 1px;
                 bottom: 0;
+                border-top-color: #e8e9f5;
             }
 
             ${hideHandler &&
@@ -170,6 +193,8 @@ const propsMixin = ({
             ${Input} {
                 padding: 0 8px;
                 text-align: left;
+                box-shadow: none;
+                background: transparent;
 
                 height: ${HeightNumber[size] - 2}px;
                 width: ${HeightNumber[size] + 6}px;
@@ -177,9 +202,15 @@ const propsMixin = ({
             ${InputWrap} {
                 border: 1px solid ${colorMap.default.border};
                 margin: 0 -1px 0 -1px;
+                box-shadow: ${materialVars.innerShadow};
+                background: #fafafc;
+                border-color: #dfe0f1;
+                transition: ${materialVars.transitionDown};
+                margin: 0;
                 &:hover {
-                    border-color: ${colorMap.active.border};
+                    border-color: #c3cad9;
                     z-index: 1;
+                    background: #f6f6fb;
                 }
                 ${focused &&
                     css`
@@ -196,10 +227,10 @@ const propsMixin = ({
                 height: ${Height[size]};
                 width: ${Height[size]};
                 line-height: ${HeightNumber[size] - 2}px;
+                border-color: transparent;
 
                 &:hover {
                     color: ${colorMap.active.icon};
-                    border-color: ${colorMap.active.border};
                     z-index: 1;
                 }
             }
@@ -211,6 +242,17 @@ const propsMixin = ({
                 left: 0;
                 border-width: 1px;
             }
+            ${focused &&
+                css`
+                    ${InputWrap}, ${InputWrap}:hover {
+                        background-color: #f6f6fb;
+                        border-color: ${colorMap.active.border};
+                    }
+                `};
+            ${disabled &&
+                css`
+                    box-shadow: none;
+                `};
             ${hideHandler &&
                 css`
                     padding: 0;
@@ -222,36 +264,44 @@ const propsMixin = ({
             padding: 0 ${Height[size]};
             ${Input} {
                 text-align: center;
-                border: 1px solid ${colorMap.default.border};
+                border: 1px solid #dfe0f1;
                 margin: 0 4px;
-
                 height: ${HeightNumber[size] - 2}px;
                 width: ${HeightNumber[size] - 2}px;
+                box-shadow: ${materialVars.innerShadow};
+                transition: ${materialVars.transitionDown};
+                background: #fafafc;
 
                 &:hover {
-                    border-color: ${colorMap.active.border};
                     z-index: 1;
+                    background: #f6f6fb;
+                    border-color: #c3cad9;
                 }
                 ${focused &&
                     css`
-                        border-color: ${colorMap.active.border};
+                        &,
+                        &:hover {
+                            background: #f6f6fb;
+                            border-color: ${colorMap.active.border};
+                        }
                     `};
                 ${disabled &&
                     css`
                         border-color: ${colorMap.disabled.border};
+                        box-shadow: none;
                     `};
             }
             ${HandlerUp}, ${HandlerDown} {
                 text-align: center;
                 top: 0;
-                &:hover {
-                    color: ${colorMap.active.icon};
-                    border-color: ${colorMap.active.border};
-                    z-index: 1;
-                }
                 height: ${Height[size]};
                 width: ${Height[size]};
                 line-height: ${HeightNumber[size] - 2}px;
+                border-color: transparent;
+                &:hover {
+                    color: ${colorMap.active.icon};
+                    z-index: 1;
+                }
             }
             ${HandlerUp} {
                 right: 0;
@@ -281,8 +331,13 @@ const propsMixin = ({
 `;
 
 export const NumberInputWrap = styled.div.attrs({
-    className: ({ styleType, focused }) =>
-        classnames(prefixCls, `${prefixCls}-styletype-${styleType}`, focused && `${prefixCls}-focused`)
+    className: ({ styleType, focused, disabled }) =>
+        classnames(
+            prefixCls,
+            `${prefixCls}-styletype-${styleType}`,
+            focused && `${prefixCls}-focused`,
+            disabled && `${prefixCls}-disabled`
+        )
 })`
     position: relative;
     box-sizing: border-box;

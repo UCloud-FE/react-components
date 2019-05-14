@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { HeaderWrap, CommentWrap } from './style';
+import { HeaderWrap, TitleWrap, CommentWrap } from './style';
 
 const Header = ({ comment, children, ...rest }) => {
     return (
         <HeaderWrap {...rest}>
-            <div>{children}</div>
+            <TitleWrap>{children}</TitleWrap>
             <CommentWrap>{comment}</CommentWrap>
         </HeaderWrap>
     );

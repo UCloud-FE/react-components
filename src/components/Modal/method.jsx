@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
+import _ from 'lodash';
 
 import Button from 'src/components/Button';
 import { getRuntimeTheme } from 'src/components/ThemeProvider/runtime';
@@ -30,9 +31,25 @@ const pop = props => {
     };
 };
 
-const alert = (props, content) => {
+const isPromise = promiseLike => {
+    return promiseLike && promiseLike.then && _.isFunction(promiseLike.then);
+};
+
+const promiseJudgeHandle = (promiseLike, handle) => {
+    if (isPromise(promiseLike)) {
+        promiseLike.then(res => {
+            handle();
+            return res;
+        });
+    } else {
+        handle();
+    }
+};
+const alert = ({ onOk = () => {}, onClose = () => {}, ...rest }, content) => {
+    const _onClose = () => promiseJudgeHandle(onClose(), () => modal.destory());
+    const _onOk = () => promiseJudgeHandle(onOk(), () => modal.destory());
     const AlertFooter = ({ locale }) => (
-        <Button size="lg" styleType="primary" onClick={() => modal.destory()}>
+        <Button size="lg" styleType="primary" onClick={_onOk}>
             {locale.confirm}
         </Button>
     );
@@ -45,32 +62,28 @@ const alert = (props, content) => {
         maskClosable: false,
         size: 'sm',
         title: 'Alert',
-        onClose: () => {
-            modal.destory();
-        },
+        onClose: _onClose,
         footer: AlertFooter
     };
 
     const modal = pop({
         ...options,
-        ...props
+        ...rest
     });
     return modal;
 };
 
-const confirm = ({ onOk = () => {}, ...rest }, content) => {
+const confirm = ({ onOk = () => {}, onClose = () => {}, ...rest }, content) => {
+    const _onClose = () => promiseJudgeHandle(onClose(), () => modal.destory());
+    const _onOk = () => promiseJudgeHandle(onOk(), () => modal.destory());
+
     const options = {
         children: content,
         maskClosable: false,
         size: 'sm',
         title: 'Confirm',
-        onClose: () => {
-            modal.destory();
-        },
-        onOk: () => {
-            modal.destory();
-            onOk();
-        }
+        onClose: _onClose,
+        onOk: _onOk
     };
 
     const modal = pop({

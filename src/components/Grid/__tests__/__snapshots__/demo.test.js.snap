@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Grid demo -- col 1`] = `
-.c15 {
+.c18 {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -11,18 +11,6 @@ exports[`Grid demo -- col 1`] = `
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   width: 8.33333333%;
-}
-
-.c4 {
-  position: relative;
-  display: block;
-  box-sizing: border-box;
-  min-height: 1px;
-  float: left;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  width: 16.66666667%;
 }
 
 .c5 {
@@ -34,10 +22,22 @@ exports[`Grid demo -- col 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+  width: 16.66666667%;
+}
+
+.c6 {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  min-height: 1px;
+  float: left;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   width: 83.33333333%;
 }
 
-.c16 {
+.c19 {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -49,7 +49,7 @@ exports[`Grid demo -- col 1`] = `
   width: 8.33333333%;
 }
 
-.c1 {
+.c2 {
   position: relative;
   display: block;
   height: auto;
@@ -57,22 +57,22 @@ exports[`Grid demo -- col 1`] = `
   margin-right: -8px;
 }
 
-.c1:before,
-.c1:after {
+.c2:before,
+.c2:after {
   content: ' ';
   display: table;
 }
 
-.c1:after {
+.c2:after {
   clear: both;
 }
 
-.c1 .c3 {
+.c2 .c4 {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.c14 {
+.c17 {
   position: relative;
   display: block;
   height: auto;
@@ -87,16 +87,20 @@ exports[`Grid demo -- col 1`] = `
   margin-right: -8px;
 }
 
-.c14 .c3 {
+.c17 .c4 {
   padding-left: 8px;
   padding-right: 8px;
 }
 
 .c10 {
+  vertical-align: baseline;
+}
+
+.c13 {
   position: relative;
 }
 
-.c12 {
+.c15 {
   border: none;
   outline: none;
   padding: 0;
@@ -104,7 +108,7 @@ exports[`Grid demo -- col 1`] = `
   color: inherit;
 }
 
-.c8 {
+.c9 {
   position: absolute;
   box-sizing: border-box;
   text-align: center;
@@ -113,12 +117,13 @@ exports[`Grid demo -- col 1`] = `
   color: inherit;
   cursor: pointer;
   background: #fff;
+  box-shadow: 0 2px 4px 0 #e4e5f2,0 1px 1px 0 rgba(162,166,191,0.32),0 1px 0 0 rgba(223,224,241,0.7);
   display: inline-block;
   vertical-align: middle;
   border-color: #c3cad9;
 }
 
-.c13 {
+.c16 {
   position: absolute;
   box-sizing: border-box;
   text-align: center;
@@ -127,6 +132,7 @@ exports[`Grid demo -- col 1`] = `
   color: inherit;
   cursor: pointer;
   background: #fff;
+  box-shadow: 0 2px 4px 0 #e4e5f2,0 1px 1px 0 rgba(162,166,191,0.32),0 1px 0 0 rgba(223,224,241,0.7);
   display: inline-block;
   vertical-align: middle;
   border-color: #c3cad9;
@@ -135,7 +141,7 @@ exports[`Grid demo -- col 1`] = `
   color: #bbb;
 }
 
-.c6 {
+.c7 {
   position: relative;
   box-sizing: border-box;
   border-radius: 2px;
@@ -143,125 +149,141 @@ exports[`Grid demo -- col 1`] = `
   vertical-align: middle;
   color: #6b798e;
   height: 28px;
-  border: 1px solid #c3cad9;
+  border: 1px solid #dfe0f1;
   padding-right: 22px;
+  border-right-width: 0;
 }
 
-.c6 .c11 {
+.c7 .c14 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c6 .c11::-webkit-input-placeholder {
+.c7 .c14::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c6 .c11::-moz-placeholder {
+.c7 .c14::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c6 .c11:-ms-input-placeholder {
+.c7 .c14:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c6 .c11::placeholder {
+.c7 .c14::placeholder {
   color: #abb4c3;
 }
 
-.c6:hover {
-  border-color: #4683e6;
+.c7:hover {
+  border-color: #c3cad9;
 }
 
-.c6 .c11 {
+.c7 .c12 {
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  background: #fafafc;
+}
+
+.c7 .c12:hover {
+  background: #f6f6fb;
+}
+
+.c7 .c14 {
   padding: 0 0 0 8px;
   text-align: left;
+  box-shadow: none;
+  background: transparent;
   width: 34px;
 }
 
-.c6 .c7,
-.c6 .c9 {
+.c7 .c8,
+.c7 .c11 {
   right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
   height: 13px;
   line-height: 13px;
   width: 22px;
 }
 
-.c6 .c7:hover,
-.c6 .c9:hover {
-  color: #4074e1;
+.c7 .c8:hover,
+.c7 .c11:hover {
+  color: #3555f6;
 }
 
-.c6 .c7 {
+.c7 .c8 {
   border-width: 0 0 0 1px;
-  top: 0;
+  top: -1px;
+  padding-top: 1px;
 }
 
-.c6 .c9 {
+.c7 .c11 {
   border-width: 1px 0 0 1px;
   bottom: 0;
+  border-top-color: #e8e9f5;
 }
 
-.c0 {
+.c3 {
+  padding-top: 4px;
+  line-height: 20px;
+  word-break: break-all;
+}
+
+.c0 .c1 {
   margin-bottom: 16px;
 }
 
-.c0:last-child {
+.c0 .c1:last-child {
   margin-bottom: 0;
-}
-
-.c2 {
-  padding-top: 5px;
-  line-height: 1.5;
-  word-break: break-all;
 }
 
 <div>
   <form
-    class="demo-form"
+    class="demo-form uc-fe-form c0"
   >
     <div
-      class="c0 c1"
+      class="c1 uc-fe-form-item uc-fe-row c2"
     >
       <div
-        class="c2 c3 c4"
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="2"
       >
         span
       </div>
       <div
-        class="c3 c5"
+        class="uc-fe-form-controller c4 uc-fe-col c6"
         span="10"
       >
         <div
-          class="uc-fe-numberinput uc-fe-numberinput-styletype-default c6"
+          class="uc-fe-numberinput uc-fe-numberinput-styletype-default c7"
         >
           <div>
             <span
-              class="c7 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c8"
+              class="c8 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c9"
               unselectable="unselectable"
             >
               <i
-                class="uc-fe-icon icon__caret-up "
+                class="uc-fe-icon icon__caret-up c10"
                 type="caret-up"
               />
             </span>
             <span
-              class="c9 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c8"
+              class="c11 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c9"
               unselectable="unselectable"
             >
               <i
-                class="uc-fe-icon icon__caret-down "
+                class="uc-fe-icon icon__caret-down c10"
                 type="caret-down"
               />
             </span>
           </div>
           <div
-            class="uc-fe-numberinput-input-wrap c10"
+            class="c12 uc-fe-numberinput-input-wrap c13"
           >
             <input
               autocomplete="off"
-              class="c11 uc-fe-numberinput-input c12"
+              class="c14 uc-fe-numberinput-input c15"
               max="12"
               min="0"
               step="1"
@@ -272,48 +294,48 @@ exports[`Grid demo -- col 1`] = `
       </div>
     </div>
     <div
-      class="c0 c1"
+      class="c1 uc-fe-form-item uc-fe-row c2"
     >
       <div
-        class="c2 c3 c4"
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="2"
       >
         offset
       </div>
       <div
-        class="c3 c5"
+        class="uc-fe-form-controller c4 uc-fe-col c6"
         span="10"
       >
         <div
-          class="uc-fe-numberinput uc-fe-numberinput-styletype-default c6"
+          class="uc-fe-numberinput uc-fe-numberinput-styletype-default c7"
         >
           <div>
             <span
-              class="c7 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c8"
+              class="c8 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c9"
               unselectable="unselectable"
             >
               <i
-                class="uc-fe-icon icon__caret-up "
+                class="uc-fe-icon icon__caret-up c10"
                 type="caret-up"
               />
             </span>
             <span
-              class="c9 uc-fe-numberinput-handler-down uc-fe-numberinput-handler uc-fe-numberinput-handler-disabled c13"
+              class="c11 uc-fe-numberinput-handler-down uc-fe-numberinput-handler uc-fe-numberinput-handler-disabled c16"
               disabled=""
               unselectable="unselectable"
             >
               <i
-                class="uc-fe-icon icon__caret-down "
+                class="uc-fe-icon icon__caret-down c10"
                 type="caret-down"
               />
             </span>
           </div>
           <div
-            class="uc-fe-numberinput-input-wrap c10"
+            class="c12 uc-fe-numberinput-input-wrap c13"
           >
             <input
               autocomplete="off"
-              class="c11 uc-fe-numberinput-input c12"
+              class="c14 uc-fe-numberinput-input c15"
               max="12"
               min="0"
               step="1"
@@ -324,48 +346,48 @@ exports[`Grid demo -- col 1`] = `
       </div>
     </div>
     <div
-      class="c0 c1"
+      class="c1 uc-fe-form-item uc-fe-row c2"
     >
       <div
-        class="c2 c3 c4"
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="2"
       >
         pull
       </div>
       <div
-        class="c3 c5"
+        class="uc-fe-form-controller c4 uc-fe-col c6"
         span="10"
       >
         <div
-          class="uc-fe-numberinput uc-fe-numberinput-styletype-default c6"
+          class="uc-fe-numberinput uc-fe-numberinput-styletype-default c7"
         >
           <div>
             <span
-              class="c7 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c8"
+              class="c8 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c9"
               unselectable="unselectable"
             >
               <i
-                class="uc-fe-icon icon__caret-up "
+                class="uc-fe-icon icon__caret-up c10"
                 type="caret-up"
               />
             </span>
             <span
-              class="c9 uc-fe-numberinput-handler-down uc-fe-numberinput-handler uc-fe-numberinput-handler-disabled c13"
+              class="c11 uc-fe-numberinput-handler-down uc-fe-numberinput-handler uc-fe-numberinput-handler-disabled c16"
               disabled=""
               unselectable="unselectable"
             >
               <i
-                class="uc-fe-icon icon__caret-down "
+                class="uc-fe-icon icon__caret-down c10"
                 type="caret-down"
               />
             </span>
           </div>
           <div
-            class="uc-fe-numberinput-input-wrap c10"
+            class="c12 uc-fe-numberinput-input-wrap c13"
           >
             <input
               autocomplete="off"
-              class="c11 uc-fe-numberinput-input c12"
+              class="c14 uc-fe-numberinput-input c15"
               max="12"
               min="0"
               step="1"
@@ -376,48 +398,48 @@ exports[`Grid demo -- col 1`] = `
       </div>
     </div>
     <div
-      class="c0 c1"
+      class="c1 uc-fe-form-item uc-fe-row c2"
     >
       <div
-        class="c2 c3 c4"
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="2"
       >
         push
       </div>
       <div
-        class="c3 c5"
+        class="uc-fe-form-controller c4 uc-fe-col c6"
         span="10"
       >
         <div
-          class="uc-fe-numberinput uc-fe-numberinput-styletype-default c6"
+          class="uc-fe-numberinput uc-fe-numberinput-styletype-default c7"
         >
           <div>
             <span
-              class="c7 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c8"
+              class="c8 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c9"
               unselectable="unselectable"
             >
               <i
-                class="uc-fe-icon icon__caret-up "
+                class="uc-fe-icon icon__caret-up c10"
                 type="caret-up"
               />
             </span>
             <span
-              class="c9 uc-fe-numberinput-handler-down uc-fe-numberinput-handler uc-fe-numberinput-handler-disabled c13"
+              class="c11 uc-fe-numberinput-handler-down uc-fe-numberinput-handler uc-fe-numberinput-handler-disabled c16"
               disabled=""
               unselectable="unselectable"
             >
               <i
-                class="uc-fe-icon icon__caret-down "
+                class="uc-fe-icon icon__caret-down c10"
                 type="caret-down"
               />
             </span>
           </div>
           <div
-            class="uc-fe-numberinput-input-wrap c10"
+            class="c12 uc-fe-numberinput-input-wrap c13"
           >
             <input
               autocomplete="off"
-              class="c11 uc-fe-numberinput-input c12"
+              class="c14 uc-fe-numberinput-input c15"
               max="12"
               min="0"
               step="1"
@@ -432,11 +454,11 @@ exports[`Grid demo -- col 1`] = `
     style="padding:10px 0;border:1px solid #ccc;"
   >
     <div
-      class="c14"
+      class="uc-fe-row c17"
       type="flex"
     >
       <div
-        class="c3 c15"
+        class="c4 uc-fe-col c18"
         span="1"
       >
         <div
@@ -444,7 +466,7 @@ exports[`Grid demo -- col 1`] = `
         />
       </div>
       <div
-        class="c3 c16"
+        class="c4 uc-fe-col c19"
         offset="0"
         span="1"
         style="z-index:10;"
@@ -456,7 +478,7 @@ exports[`Grid demo -- col 1`] = `
         </div>
       </div>
       <div
-        class="c3 c15"
+        class="c4 uc-fe-col c18"
         span="1"
       >
         <div
@@ -546,11 +568,11 @@ exports[`Grid demo -- col-offset 1`] = `
 
 <div>
   <div
-    class="c0"
+    class="uc-fe-row c0"
     style="margin-bottom:10px;"
   >
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       offset="1"
       span="2"
     >
@@ -562,11 +584,11 @@ exports[`Grid demo -- col-offset 1`] = `
     </div>
   </div>
   <div
-    class="c0"
+    class="uc-fe-row c0"
     style="margin-bottom:10px;"
   >
     <div
-      class="c1 c3"
+      class="c1 uc-fe-col c3"
       offset="2"
       span="2"
     >
@@ -578,11 +600,11 @@ exports[`Grid demo -- col-offset 1`] = `
     </div>
   </div>
   <div
-    class="c0"
+    class="uc-fe-row c0"
     style="margin-bottom:10px;"
   >
     <div
-      class="c1 c4"
+      class="c1 uc-fe-col c4"
       offset="3"
       span="2"
     >
@@ -594,11 +616,11 @@ exports[`Grid demo -- col-offset 1`] = `
     </div>
   </div>
   <div
-    class="c0"
+    class="uc-fe-row c0"
     style="margin-bottom:10px;"
   >
     <div
-      class="c1 c5"
+      class="c1 uc-fe-col c5"
       offset="4"
       span="2"
     >
@@ -698,11 +720,11 @@ exports[`Grid demo -- col-order 1`] = `
 
 <div>
   <div
-    class="c0"
+    class="uc-fe-row c0"
     style="margin-bottom:10px;"
   >
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       order="4"
       span="2"
     >
@@ -713,7 +735,7 @@ exports[`Grid demo -- col-order 1`] = `
       </div>
     </div>
     <div
-      class="c1 c3"
+      class="c1 uc-fe-col c3"
       order="3"
       span="2"
     >
@@ -724,7 +746,7 @@ exports[`Grid demo -- col-order 1`] = `
       </div>
     </div>
     <div
-      class="c1 c4"
+      class="c1 uc-fe-col c4"
       order="2"
       span="2"
     >
@@ -735,7 +757,7 @@ exports[`Grid demo -- col-order 1`] = `
       </div>
     </div>
     <div
-      class="c1 c5"
+      class="c1 uc-fe-col c5"
       order="1"
       span="2"
     >
@@ -879,11 +901,11 @@ exports[`Grid demo -- col-pullAndPush 1`] = `
 
 <div>
   <div
-    class="c0"
+    class="uc-fe-row c0"
     style="margin-bottom:10px;"
   >
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="2"
     >
       <div
@@ -893,7 +915,7 @@ exports[`Grid demo -- col-pullAndPush 1`] = `
       </div>
     </div>
     <div
-      class="c1 c3"
+      class="c1 uc-fe-col c3"
       span="2"
     >
       <div
@@ -903,7 +925,7 @@ exports[`Grid demo -- col-pullAndPush 1`] = `
       </div>
     </div>
     <div
-      class="c1 c4"
+      class="c1 uc-fe-col c4"
       span="2"
     >
       <div
@@ -913,7 +935,7 @@ exports[`Grid demo -- col-pullAndPush 1`] = `
       </div>
     </div>
     <div
-      class="c1 c5"
+      class="c1 uc-fe-col c5"
       span="2"
     >
       <div
@@ -924,11 +946,11 @@ exports[`Grid demo -- col-pullAndPush 1`] = `
     </div>
   </div>
   <div
-    class="c0"
+    class="uc-fe-row c0"
     style="margin-bottom:10px;"
   >
     <div
-      class="c1 c6"
+      class="c1 uc-fe-col c6"
       span="2"
     >
       <div
@@ -938,7 +960,7 @@ exports[`Grid demo -- col-pullAndPush 1`] = `
       </div>
     </div>
     <div
-      class="c1 c7"
+      class="c1 uc-fe-col c7"
       span="2"
     >
       <div
@@ -948,7 +970,7 @@ exports[`Grid demo -- col-pullAndPush 1`] = `
       </div>
     </div>
     <div
-      class="c1 c8"
+      class="c1 uc-fe-col c8"
       span="2"
     >
       <div
@@ -958,7 +980,7 @@ exports[`Grid demo -- col-pullAndPush 1`] = `
       </div>
     </div>
     <div
-      class="c1 c9"
+      class="c1 uc-fe-col c9"
       span="2"
     >
       <div
@@ -1093,10 +1115,10 @@ exports[`Grid demo -- col-span 1`] = `
 
 <div>
   <div
-    class="c0"
+    class="uc-fe-row c0"
   >
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="1"
     >
       <div
@@ -1106,7 +1128,7 @@ exports[`Grid demo -- col-span 1`] = `
       </div>
     </div>
     <div
-      class="c1 c3"
+      class="c1 uc-fe-col c3"
       span="2"
     >
       <div
@@ -1116,7 +1138,7 @@ exports[`Grid demo -- col-span 1`] = `
       </div>
     </div>
     <div
-      class="c1 c4"
+      class="c1 uc-fe-col c4"
       span="3"
     >
       <div
@@ -1126,7 +1148,7 @@ exports[`Grid demo -- col-span 1`] = `
       </div>
     </div>
     <div
-      class="c1 c5"
+      class="c1 uc-fe-col c5"
       span="4"
     >
       <div
@@ -1136,7 +1158,7 @@ exports[`Grid demo -- col-span 1`] = `
       </div>
     </div>
     <div
-      class="c1 c6"
+      class="c1 uc-fe-col c6"
       span="5"
     >
       <div
@@ -1146,7 +1168,7 @@ exports[`Grid demo -- col-span 1`] = `
       </div>
     </div>
     <div
-      class="c1 c7"
+      class="c1 uc-fe-col c7"
       span="6"
     >
       <div
@@ -1156,7 +1178,7 @@ exports[`Grid demo -- col-span 1`] = `
       </div>
     </div>
     <div
-      class="c1 c8"
+      class="c1 uc-fe-col c8"
       span="7"
     >
       <div
@@ -1166,7 +1188,7 @@ exports[`Grid demo -- col-span 1`] = `
       </div>
     </div>
     <div
-      class="c1 c9"
+      class="c1 uc-fe-col c9"
       span="8"
     >
       <div
@@ -1180,7 +1202,7 @@ exports[`Grid demo -- col-span 1`] = `
 `;
 
 exports[`Grid demo -- row 1`] = `
-.c4 {
+.c5 {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -1192,7 +1214,7 @@ exports[`Grid demo -- row 1`] = `
   width: 16.66666667%;
 }
 
-.c30 {
+.c33 {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -1204,7 +1226,7 @@ exports[`Grid demo -- row 1`] = `
   width: 25%;
 }
 
-.c5 {
+.c6 {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -1216,7 +1238,7 @@ exports[`Grid demo -- row 1`] = `
   width: 83.33333333%;
 }
 
-.c1 {
+.c2 {
   position: relative;
   display: block;
   height: auto;
@@ -1224,87 +1246,87 @@ exports[`Grid demo -- row 1`] = `
   margin-right: -8px;
 }
 
-.c1:before,
-.c1:after {
+.c2:before,
+.c2:after {
   content: ' ';
   display: table;
 }
 
-.c1:after {
+.c2:after {
   clear: both;
 }
 
-.c1 .c3 {
+.c2 .c4 {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.c31 .c3 {
+.c34 .c4 {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.c32 .c3 {
+.c35 .c4 {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.c33 .c3 {
+.c36 .c4 {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.c34 .c3 {
+.c37 .c4 {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.c35 .c3 {
+.c38 .c4 {
   padding-left: 0px;
   padding-right: 0px;
 }
 
-.c36 .c3 {
+.c39 .c4 {
   padding-left: 1px;
   padding-right: 1px;
 }
 
-.c37 .c3 {
+.c40 .c4 {
   padding-left: 2px;
   padding-right: 2px;
 }
 
-.c38 .c3 {
+.c41 .c4 {
   padding-left: 4px;
   padding-right: 4px;
 }
 
-.c39 .c3 {
+.c42 .c4 {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.c40 .c3 {
+.c43 .c4 {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.c41 .c3 {
+.c44 .c4 {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.c42 .c3 {
+.c45 .c4 {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.c43 .c3 {
+.c46 .c4 {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.c29 {
+.c32 {
   position: relative;
   display: block;
   height: auto;
@@ -1320,26 +1342,30 @@ exports[`Grid demo -- row 1`] = `
   align-items: flex-start;
 }
 
-.c29:before,
-.c29:after {
+.c32:before,
+.c32:after {
   content: ' ';
   display: table;
 }
 
-.c29:after {
+.c32:after {
   clear: both;
 }
 
-.c29 .c3 {
+.c32 .c4 {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.c26 {
+.c22 {
+  vertical-align: baseline;
+}
+
+.c29 {
   position: relative;
 }
 
-.c28 {
+.c31 {
   border: none;
   outline: none;
   padding: 0;
@@ -1347,7 +1373,7 @@ exports[`Grid demo -- row 1`] = `
   color: inherit;
 }
 
-.c24 {
+.c26 {
   position: absolute;
   box-sizing: border-box;
   text-align: center;
@@ -1356,12 +1382,13 @@ exports[`Grid demo -- row 1`] = `
   color: inherit;
   cursor: pointer;
   background: #fff;
+  box-shadow: 0 2px 4px 0 #e4e5f2,0 1px 1px 0 rgba(162,166,191,0.32),0 1px 0 0 rgba(223,224,241,0.7);
   display: inline-block;
   vertical-align: middle;
   border-color: #c3cad9;
 }
 
-.c22 {
+.c24 {
   position: relative;
   box-sizing: border-box;
   border-radius: 2px;
@@ -1369,85 +1396,101 @@ exports[`Grid demo -- row 1`] = `
   vertical-align: middle;
   color: #6b798e;
   height: 28px;
-  border: 1px solid #c3cad9;
+  border: 1px solid #dfe0f1;
   padding-right: 22px;
+  border-right-width: 0;
 }
 
-.c22 .c27 {
+.c24 .c30 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c22 .c27::-webkit-input-placeholder {
+.c24 .c30::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c22 .c27::-moz-placeholder {
+.c24 .c30::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c22 .c27:-ms-input-placeholder {
+.c24 .c30:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c22 .c27::placeholder {
+.c24 .c30::placeholder {
   color: #abb4c3;
 }
 
-.c22:hover {
-  border-color: #4683e6;
+.c24:hover {
+  border-color: #c3cad9;
 }
 
-.c22 .c27 {
+.c24 .c28 {
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  background: #fafafc;
+}
+
+.c24 .c28:hover {
+  background: #f6f6fb;
+}
+
+.c24 .c30 {
   padding: 0 0 0 8px;
   text-align: left;
+  box-shadow: none;
+  background: transparent;
   width: 34px;
 }
 
-.c22 .c23,
-.c22 .c25 {
+.c24 .c25,
+.c24 .c27 {
   right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
   height: 13px;
   line-height: 13px;
   width: 22px;
 }
 
-.c22 .c23:hover,
-.c22 .c25:hover {
-  color: #4074e1;
+.c24 .c25:hover,
+.c24 .c27:hover {
+  color: #3555f6;
 }
 
-.c22 .c23 {
+.c24 .c25 {
   border-width: 0 0 0 1px;
-  top: 0;
+  top: -1px;
+  padding-top: 1px;
 }
 
-.c22 .c25 {
+.c24 .c27 {
   border-width: 1px 0 0 1px;
   bottom: 0;
+  border-top-color: #e8e9f5;
 }
 
-.c0 {
-  margin-bottom: 16px;
-}
-
-.c0:last-child {
-  margin-bottom: 0;
-}
-
-.c2 {
-  padding-top: 5px;
-  line-height: 1.5;
+.c3 {
+  padding-top: 4px;
+  line-height: 20px;
   word-break: break-all;
 }
 
-.c20 {
+.c0 .c1 {
+  margin-bottom: 16px;
+}
+
+.c0 .c1:last-child {
+  margin-bottom: 0;
+}
+
+.c21 {
   margin-right: 8px;
   font-size: 14px;
 }
 
-.c18 {
+.c19 {
   color: #6b798e;
   font-size: 12px;
   position: relative;
@@ -1458,11 +1501,11 @@ exports[`Grid demo -- row 1`] = `
   line-height: 28px;
 }
 
-.c18 .c19 {
-  color: #4074e1;
+.c19 .c20 {
+  color: #3555f6;
 }
 
-.c21 {
+.c23 {
   color: #6b798e;
   font-size: 12px;
   position: relative;
@@ -1473,38 +1516,50 @@ exports[`Grid demo -- row 1`] = `
   line-height: 28px;
 }
 
-.c16 {
+.c17 {
+  position: relative;
   margin-bottom: -8px;
 }
 
-.c16 .c17,
-.c16 .style__RadioTagWrap-sc-25j3mq-3,
-.c16 .style__RadioCardWrap-sc-25j3mq-8 {
+.c17 .c18,
+.c17 .style__RadioTagWrap-sc-25j3mq-3 {
   margin-right: 8px;
   margin-bottom: 8px;
 }
 
-.c16 .c17:last-child,
-.c16 .style__RadioTagWrap-sc-25j3mq-3:last-child,
-.c16 .style__RadioCardWrap-sc-25j3mq-8:last-child {
+.c17 .c18:last-child,
+.c17 .style__RadioTagWrap-sc-25j3mq-3:last-child {
   margin-right: 0;
 }
 
-.c16 .c44 {
+.c17 .c48 {
+  margin-right: 12px;
+  margin-bottom: 8px;
+}
+
+.c17 .c48:last-child {
+  margin-right: 0;
+}
+
+.c17 .c49+.c49 {
+  margin-left: -1px;
+}
+
+.c17 .c47 {
   margin-right: -1px;
   margin-bottom: 8px;
 }
 
-.c16 .c44:first-child {
+.c17 .c47:first-child {
   border-radius: 2px 0 0 2px;
 }
 
-.c16 .c44:last-child {
+.c17 .c47:last-child {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
 }
 
-.c8 {
+.c9 {
   position: relative;
   height: 100%;
   width: 100%;
@@ -1512,7 +1567,7 @@ exports[`Grid demo -- row 1`] = `
   box-sizing: border-box;
 }
 
-.c10 {
+.c11 {
   width: 100%;
   height: 100%;
   text-align: center;
@@ -1521,7 +1576,7 @@ exports[`Grid demo -- row 1`] = `
   display: block;
 }
 
-.c13 {
+.c14 {
   position: absolute;
   display: inline-block;
   left: -1px;
@@ -1532,7 +1587,7 @@ exports[`Grid demo -- row 1`] = `
   transition: all 0.3s;
 }
 
-.c15 {
+.c16 {
   position: absolute;
   display: inline-block;
   left: 18px;
@@ -1544,7 +1599,7 @@ exports[`Grid demo -- row 1`] = `
   transition: all 0.3s;
 }
 
-.c6 {
+.c7 {
   position: relative;
   border-radius: 2px;
   overflow: hidden;
@@ -1563,11 +1618,11 @@ exports[`Grid demo -- row 1`] = `
   line-height: 16px;
 }
 
-.c6:hover {
+.c7:hover {
   border-color: #4683e6;
 }
 
-.c6 .c12 {
+.c7 .c13 {
   background-color: #fff;
   box-shadow: 0 0.5px 0.5px #c3cad9;
   border: 1px solid #c3cad9;
@@ -1575,73 +1630,73 @@ exports[`Grid demo -- row 1`] = `
   height: 20px;
 }
 
-.c6 .c14 {
+.c7 .c15 {
   background-color: #e69b9b;
   left: 13px;
   height: 10px;
 }
 
-.c6 .c7 {
+.c7 .c8 {
   border: 1px solid #c3cad9;
   background-color: #ebedf0;
   color: #6b798e;
 }
 
-.c6 .c9,
-.c6 .c11 {
+.c7 .c10,
+.c7 .c12 {
   line-height: 16px;
 }
 
-.c6 .c9 {
+.c7 .c10 {
   padding-right: 20px;
 }
 
-.c6 .c11 {
+.c7 .c12 {
   padding-left: 20px;
 }
 
-.c6 .c9 {
+.c7 .c10 {
   display: none;
 }
 
 <div>
   <form
-    class="demo-form"
+    class="demo-form uc-fe-form c0"
   >
     <div
-      class="c0 c1"
+      class="c1 uc-fe-form-item uc-fe-row c2"
     >
       <div
-        class="c2 c3 c4"
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="2"
       >
         flex
       </div>
       <div
-        class="c3 c5"
+        class="uc-fe-form-controller c4 uc-fe-col c6"
         span="10"
       >
         <div
-          class="c6"
+          class="c7"
         >
           <div
-            class="c7 c8"
+            class="c8 c9"
           >
             <span
-              class="c9 c10"
+              class="c10 c11"
             >
               ON
             </span>
             <span
-              class="c11 c10"
+              class="c12 c11"
             >
               OFF
             </span>
             <span
-              class="c12 c13"
+              class="c13 c14"
             >
               <span
-                class="c14 c15"
+                class="c15 c16"
               />
             </span>
           </div>
@@ -1649,45 +1704,45 @@ exports[`Grid demo -- row 1`] = `
       </div>
     </div>
     <div
-      class="c0 c1"
+      class="c1 uc-fe-form-item uc-fe-row c2"
     >
       <div
-        class="c2 c3 c4"
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="2"
       >
         align
       </div>
       <div
-        class="c3 c5"
+        class="uc-fe-form-controller c4 uc-fe-col c6"
         span="10"
       >
         <div
-          class="c16"
+          class="c17"
         >
           <div
             checked=""
-            class="c17 c18"
+            class="c18 uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default c19"
           >
             <i
-              class="c19 c20 uc-fe-icon icon__cbox-ed "
+              class="c20 c21 uc-fe-icon icon__cbox-ed c22"
               type="cbox-ed"
             />
             top
           </div>
           <div
-            class="c17 c21"
+            class="c18 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c23"
           >
             <i
-              class="c19 c20 uc-fe-icon icon__circle "
+              class="c20 c21 uc-fe-icon icon__circle c22"
               type="circle"
             />
             middle
           </div>
           <div
-            class="c17 c21"
+            class="c18 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c23"
           >
             <i
-              class="c19 c20 uc-fe-icon icon__circle "
+              class="c20 c21 uc-fe-icon icon__circle c22"
               type="circle"
             />
             bottom
@@ -1696,63 +1751,63 @@ exports[`Grid demo -- row 1`] = `
       </div>
     </div>
     <div
-      class="c0 c1"
+      class="c1 uc-fe-form-item uc-fe-row c2"
     >
       <div
-        class="c2 c3 c4"
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="2"
       >
         justify
       </div>
       <div
-        class="c3 c5"
+        class="uc-fe-form-controller c4 uc-fe-col c6"
         span="10"
       >
         <div
-          class="c16"
+          class="c17"
         >
           <div
             checked=""
-            class="c17 c18"
+            class="c18 uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default c19"
           >
             <i
-              class="c19 c20 uc-fe-icon icon__cbox-ed "
+              class="c20 c21 uc-fe-icon icon__cbox-ed c22"
               type="cbox-ed"
             />
             start
           </div>
           <div
-            class="c17 c21"
+            class="c18 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c23"
           >
             <i
-              class="c19 c20 uc-fe-icon icon__circle "
+              class="c20 c21 uc-fe-icon icon__circle c22"
               type="circle"
             />
             end
           </div>
           <div
-            class="c17 c21"
+            class="c18 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c23"
           >
             <i
-              class="c19 c20 uc-fe-icon icon__circle "
+              class="c20 c21 uc-fe-icon icon__circle c22"
               type="circle"
             />
             center
           </div>
           <div
-            class="c17 c21"
+            class="c18 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c23"
           >
             <i
-              class="c19 c20 uc-fe-icon icon__circle "
+              class="c20 c21 uc-fe-icon icon__circle c22"
               type="circle"
             />
             space-around
           </div>
           <div
-            class="c17 c21"
+            class="c18 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c23"
           >
             <i
-              class="c19 c20 uc-fe-icon icon__circle "
+              class="c20 c21 uc-fe-icon icon__circle c22"
               type="circle"
             />
             space-between
@@ -1761,47 +1816,47 @@ exports[`Grid demo -- row 1`] = `
       </div>
     </div>
     <div
-      class="c0 c1"
+      class="c1 uc-fe-form-item uc-fe-row c2"
     >
       <div
-        class="c2 c3 c4"
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="2"
       >
         gutter
       </div>
       <div
-        class="c3 c5"
+        class="uc-fe-form-controller c4 uc-fe-col c6"
         span="10"
       >
         <div
-          class="uc-fe-numberinput uc-fe-numberinput-styletype-default c22"
+          class="uc-fe-numberinput uc-fe-numberinput-styletype-default c24"
         >
           <div>
             <span
-              class="c23 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c24"
+              class="c25 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c26"
               unselectable="unselectable"
             >
               <i
-                class="uc-fe-icon icon__caret-up "
+                class="uc-fe-icon icon__caret-up c22"
                 type="caret-up"
               />
             </span>
             <span
-              class="c25 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c24"
+              class="c27 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c26"
               unselectable="unselectable"
             >
               <i
-                class="uc-fe-icon icon__caret-down "
+                class="uc-fe-icon icon__caret-down c22"
                 type="caret-down"
               />
             </span>
           </div>
           <div
-            class="uc-fe-numberinput-input-wrap c26"
+            class="c28 uc-fe-numberinput-input-wrap c29"
           >
             <input
               autocomplete="off"
-              class="c27 uc-fe-numberinput-input c28"
+              class="c30 uc-fe-numberinput-input c31"
               min="0"
               step="1"
               value="16"
@@ -1815,11 +1870,11 @@ exports[`Grid demo -- row 1`] = `
     style="height:40px;border:1px solid #ccc;"
   >
     <div
-      class="c29"
+      class="uc-fe-row c32"
       style="height:100%;"
     >
       <div
-        class="c3 c30"
+        class="c4 uc-fe-col c33"
         span="3"
       >
         <div
@@ -1827,7 +1882,7 @@ exports[`Grid demo -- row 1`] = `
         />
       </div>
       <div
-        class="c3 c30"
+        class="c4 uc-fe-col c33"
         span="3"
       >
         <div
@@ -1835,7 +1890,7 @@ exports[`Grid demo -- row 1`] = `
         />
       </div>
       <div
-        class="c3 c30"
+        class="c4 uc-fe-col c33"
         span="3"
       >
         <div
@@ -1944,12 +1999,12 @@ exports[`Grid demo -- row-align 1`] = `
 
 <div>
   <div
-    class="c0"
+    class="uc-fe-row c0"
     style="margin-bottom:10px;height:40px;border:1px solid #ccc;"
     type="flex"
   >
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="4"
     >
       <div
@@ -1957,7 +2012,7 @@ exports[`Grid demo -- row-align 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="4"
     >
       <div
@@ -1966,12 +2021,12 @@ exports[`Grid demo -- row-align 1`] = `
     </div>
   </div>
   <div
-    class="c3"
+    class="uc-fe-row c3"
     style="margin-bottom:10px;height:40px;border:1px solid #ccc;"
     type="flex"
   >
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="4"
     >
       <div
@@ -1979,7 +2034,7 @@ exports[`Grid demo -- row-align 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="4"
     >
       <div
@@ -1988,12 +2043,12 @@ exports[`Grid demo -- row-align 1`] = `
     </div>
   </div>
   <div
-    class="c4"
+    class="uc-fe-row c4"
     style="margin-bottom:10px;height:40px;border:1px solid #ccc;"
     type="flex"
   >
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="4"
     >
       <div
@@ -2001,7 +2056,7 @@ exports[`Grid demo -- row-align 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="4"
     >
       <div
@@ -2142,11 +2197,11 @@ exports[`Grid demo -- row-base 1`] = `
 
 <div>
   <div
-    class="c0"
+    class="uc-fe-row c0"
     style="margin-bottom:10px;"
   >
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="6"
     >
       <div
@@ -2154,7 +2209,7 @@ exports[`Grid demo -- row-base 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="6"
     >
       <div
@@ -2163,11 +2218,11 @@ exports[`Grid demo -- row-base 1`] = `
     </div>
   </div>
   <div
-    class="c0"
+    class="uc-fe-row c0"
     style="margin-bottom:10px;"
   >
     <div
-      class="c1 c3"
+      class="c1 uc-fe-col c3"
       span="8"
     >
       <div
@@ -2175,7 +2230,7 @@ exports[`Grid demo -- row-base 1`] = `
       />
     </div>
     <div
-      class="c1 c4"
+      class="c1 uc-fe-col c4"
       span="3"
     >
       <div
@@ -2184,11 +2239,11 @@ exports[`Grid demo -- row-base 1`] = `
     </div>
   </div>
   <div
-    class="c0"
+    class="uc-fe-row c0"
     style="margin-bottom:10px;"
   >
     <div
-      class="c1 c5"
+      class="c1 uc-fe-col c5"
       span="1"
     >
       <div
@@ -2196,7 +2251,7 @@ exports[`Grid demo -- row-base 1`] = `
       />
     </div>
     <div
-      class="c1 c6"
+      class="c1 uc-fe-col c6"
       span="2"
     >
       <div
@@ -2204,7 +2259,7 @@ exports[`Grid demo -- row-base 1`] = `
       />
     </div>
     <div
-      class="c1 c7"
+      class="c1 uc-fe-col c7"
       span="4"
     >
       <div
@@ -2212,7 +2267,7 @@ exports[`Grid demo -- row-base 1`] = `
       />
     </div>
     <div
-      class="c1 c8"
+      class="c1 uc-fe-col c8"
       span="5"
     >
       <div
@@ -2221,11 +2276,11 @@ exports[`Grid demo -- row-base 1`] = `
     </div>
   </div>
   <div
-    class="c0"
+    class="uc-fe-row c0"
     style="margin-bottom:10px;"
   >
     <div
-      class="c1 c7"
+      class="c1 uc-fe-col c7"
       span="4"
     >
       <div
@@ -2233,7 +2288,7 @@ exports[`Grid demo -- row-base 1`] = `
       />
     </div>
     <div
-      class="c1 c6"
+      class="c1 uc-fe-col c6"
       span="2"
     >
       <div
@@ -2241,7 +2296,7 @@ exports[`Grid demo -- row-base 1`] = `
       />
     </div>
     <div
-      class="c1 c4"
+      class="c1 uc-fe-col c4"
       span="3"
     >
       <div
@@ -2249,7 +2304,7 @@ exports[`Grid demo -- row-base 1`] = `
       />
     </div>
     <div
-      class="c1 c6"
+      class="c1 uc-fe-col c6"
       span="2"
     >
       <div
@@ -2257,7 +2312,7 @@ exports[`Grid demo -- row-base 1`] = `
       />
     </div>
     <div
-      class="c1 c5"
+      class="c1 uc-fe-col c5"
       span="1"
     >
       <div
@@ -2418,11 +2473,11 @@ exports[`Grid demo -- row-gutter 1`] = `
 
 <div>
   <div
-    class="c0"
+    class="uc-fe-row c0"
     style="margin-bottom:10px;"
   >
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="3"
     >
       <div
@@ -2430,7 +2485,7 @@ exports[`Grid demo -- row-gutter 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="3"
     >
       <div
@@ -2438,7 +2493,7 @@ exports[`Grid demo -- row-gutter 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="3"
     >
       <div
@@ -2446,7 +2501,7 @@ exports[`Grid demo -- row-gutter 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="3"
     >
       <div
@@ -2455,11 +2510,11 @@ exports[`Grid demo -- row-gutter 1`] = `
     </div>
   </div>
   <div
-    class="c3"
+    class="uc-fe-row c3"
     style="margin-bottom:10px;"
   >
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="3"
     >
       <div
@@ -2467,7 +2522,7 @@ exports[`Grid demo -- row-gutter 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="3"
     >
       <div
@@ -2475,7 +2530,7 @@ exports[`Grid demo -- row-gutter 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="3"
     >
       <div
@@ -2483,7 +2538,7 @@ exports[`Grid demo -- row-gutter 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="3"
     >
       <div
@@ -2492,11 +2547,11 @@ exports[`Grid demo -- row-gutter 1`] = `
     </div>
   </div>
   <div
-    class="c4"
+    class="uc-fe-row c4"
     style="margin-bottom:10px;"
   >
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="3"
     >
       <div
@@ -2504,7 +2559,7 @@ exports[`Grid demo -- row-gutter 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="3"
     >
       <div
@@ -2512,7 +2567,7 @@ exports[`Grid demo -- row-gutter 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="3"
     >
       <div
@@ -2520,7 +2575,7 @@ exports[`Grid demo -- row-gutter 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="3"
     >
       <div
@@ -2529,11 +2584,11 @@ exports[`Grid demo -- row-gutter 1`] = `
     </div>
   </div>
   <div
-    class="c5"
+    class="uc-fe-row c5"
     style="margin-bottom:10px;"
   >
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="3"
     >
       <div
@@ -2541,7 +2596,7 @@ exports[`Grid demo -- row-gutter 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="3"
     >
       <div
@@ -2549,7 +2604,7 @@ exports[`Grid demo -- row-gutter 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="3"
     >
       <div
@@ -2557,7 +2612,7 @@ exports[`Grid demo -- row-gutter 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="3"
     >
       <div
@@ -2566,11 +2621,11 @@ exports[`Grid demo -- row-gutter 1`] = `
     </div>
   </div>
   <div
-    class="c6"
+    class="uc-fe-row c6"
     style="margin-bottom:10px;"
   >
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="3"
     >
       <div
@@ -2578,7 +2633,7 @@ exports[`Grid demo -- row-gutter 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="3"
     >
       <div
@@ -2586,7 +2641,7 @@ exports[`Grid demo -- row-gutter 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="3"
     >
       <div
@@ -2594,7 +2649,7 @@ exports[`Grid demo -- row-gutter 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="3"
     >
       <div
@@ -2805,12 +2860,12 @@ exports[`Grid demo -- row-justify 1`] = `
 
 <div>
   <div
-    class="c0"
+    class="uc-fe-row c0"
     style="margin-bottom:10px;height:40px;border:1px solid #ccc;"
     type="flex"
   >
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="2"
     >
       <div
@@ -2818,7 +2873,7 @@ exports[`Grid demo -- row-justify 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="2"
     >
       <div
@@ -2826,7 +2881,7 @@ exports[`Grid demo -- row-justify 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="2"
     >
       <div
@@ -2834,7 +2889,7 @@ exports[`Grid demo -- row-justify 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="2"
     >
       <div
@@ -2843,12 +2898,12 @@ exports[`Grid demo -- row-justify 1`] = `
     </div>
   </div>
   <div
-    class="c3"
+    class="uc-fe-row c3"
     style="margin-bottom:10px;height:40px;border:1px solid #ccc;"
     type="flex"
   >
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="2"
     >
       <div
@@ -2856,7 +2911,7 @@ exports[`Grid demo -- row-justify 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="2"
     >
       <div
@@ -2864,7 +2919,7 @@ exports[`Grid demo -- row-justify 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="2"
     >
       <div
@@ -2872,7 +2927,7 @@ exports[`Grid demo -- row-justify 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="2"
     >
       <div
@@ -2881,12 +2936,12 @@ exports[`Grid demo -- row-justify 1`] = `
     </div>
   </div>
   <div
-    class="c4"
+    class="uc-fe-row c4"
     style="margin-bottom:10px;height:40px;border:1px solid #ccc;"
     type="flex"
   >
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="2"
     >
       <div
@@ -2894,7 +2949,7 @@ exports[`Grid demo -- row-justify 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="2"
     >
       <div
@@ -2902,7 +2957,7 @@ exports[`Grid demo -- row-justify 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="2"
     >
       <div
@@ -2910,7 +2965,7 @@ exports[`Grid demo -- row-justify 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="2"
     >
       <div
@@ -2919,12 +2974,12 @@ exports[`Grid demo -- row-justify 1`] = `
     </div>
   </div>
   <div
-    class="c5"
+    class="uc-fe-row c5"
     style="margin-bottom:10px;height:40px;border:1px solid #ccc;"
     type="flex"
   >
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="2"
     >
       <div
@@ -2932,7 +2987,7 @@ exports[`Grid demo -- row-justify 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="2"
     >
       <div
@@ -2940,7 +2995,7 @@ exports[`Grid demo -- row-justify 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="2"
     >
       <div
@@ -2948,7 +3003,7 @@ exports[`Grid demo -- row-justify 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="2"
     >
       <div
@@ -2957,12 +3012,12 @@ exports[`Grid demo -- row-justify 1`] = `
     </div>
   </div>
   <div
-    class="c6"
+    class="uc-fe-row c6"
     style="margin-bottom:10px;height:40px;border:1px solid #ccc;"
     type="flex"
   >
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="2"
     >
       <div
@@ -2970,7 +3025,7 @@ exports[`Grid demo -- row-justify 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="2"
     >
       <div
@@ -2978,7 +3033,7 @@ exports[`Grid demo -- row-justify 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="2"
     >
       <div
@@ -2986,7 +3041,7 @@ exports[`Grid demo -- row-justify 1`] = `
       />
     </div>
     <div
-      class="c1 c2"
+      class="c1 uc-fe-col c2"
       span="2"
     >
       <div

@@ -83,6 +83,12 @@ class Range extends Component {
         disabled: PropTypes.bool,
         /** 弹出层的z-index */
         zIndex: PropTypes.number,
+        /** 自定义默认选项props */
+        selectProps: PropTypes.object,
+        /** 自定义时间选择框弹出层props */
+        popoverProps: PropTypes.object,
+        /** 自定义datepicker的props */
+        datePickerProps: PropTypes.object,
         /** @ignore */
         locale: PropTypes.object
     };
@@ -93,6 +99,9 @@ class Range extends Component {
         options: [],
         defaultOption: 'custom',
         onOptionChange: () => {},
+        selectProps: {},
+        popoverProps: {},
+        datePickerProps: {},
         size: 'md',
         zIndex: 100
     };
@@ -173,6 +182,9 @@ class Range extends Component {
             disabled,
             zIndex,
             locale,
+            selectProps,
+            datePickerProps,
+            popoverProps,
             ...rest
         } = this.props;
         /* eslint-enable no-unused-vars */
@@ -207,7 +219,7 @@ class Range extends Component {
                         value={option}
                         disabled={disabled}
                         onChange={this.handleOptionChange}
-                        popover={{ zIndex }}
+                        popoverProps={{ zIndex, ...selectProps.popoverProps }}
                     />
                 )}
                 <Popover
@@ -256,6 +268,7 @@ class Range extends Component {
                     }
                     onVisibleChange={this.handleVisibleChange}
                     trigger={['click']}
+                    {..._.pick(popoverProps, ['getPopupContainer'])}
                 >
                     <RangeDateWrap size={size} readonly={readonly} disabled={disabled}>
                         <span>{start.format(rangeFormat || formatString[type])}</span>

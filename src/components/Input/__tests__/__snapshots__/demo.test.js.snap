@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Input demo -- input 1`] = `
-.c24 {
+.c12 {
+  vertical-align: baseline;
+}
+
+.c26 {
   position: absolute;
   right: 0;
   top: 0;
@@ -9,20 +13,20 @@ exports[`Input demo -- input 1`] = `
   color: inherit;
 }
 
-.c25 .c23 {
+.c27 .c25 {
   width: 28px;
   height: 28px;
   line-height: 28px;
 }
 
-.c22 {
+.c24 {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  color: #6b798e;
+  color: #0a1633;
 }
 
-.c22 input {
+.c24 input {
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -34,67 +38,77 @@ exports[`Input demo -- input 1`] = `
   color: inherit;
 }
 
-.c22 input {
-  border: 1px solid #c3cad9;
-  background: #fff;
+.c24 input {
+  border: 1px solid #dfe0f1;
+  background: #fafafc;
   height: 28px;
   padding-right: 28px;
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
 }
 
-.c22 input::-webkit-input-placeholder {
-  color: #abb4c3;
+.c24 input:hover {
+  border-color: #c3cad9;
+  background-color: #f6f6fb;
 }
 
-.c22 input::-moz-placeholder {
-  color: #abb4c3;
-}
-
-.c22 input:-ms-input-placeholder {
-  color: #abb4c3;
-}
-
-.c22 input::placeholder {
-  color: #abb4c3;
-}
-
-.c22 input:hover {
+.c24 input:focus {
   border-color: #4683e6;
+  background-color: #f6f6fb;
 }
 
-.c22 input:focus {
-  border-color: #4683e6;
+.c24 input:disabled,
+.c24 input[disabled] {
+  box-shadow: none;
 }
 
-.c22 .c23 {
+.c24 input::-webkit-input-placeholder {
+  color: #abb4c3;
+}
+
+.c24 input::-moz-placeholder {
+  color: #abb4c3;
+}
+
+.c24 input:-ms-input-placeholder {
+  color: #abb4c3;
+}
+
+.c24 input::placeholder {
+  color: #abb4c3;
+}
+
+.c24 .c25 {
   width: 28px;
   height: 28px;
   line-height: 28px;
 }
 
-.c26 .c23 {
+.c28 .c25 {
   width: 22px;
   height: 22px;
   line-height: 22px;
 }
 
-.c27 .c23 {
+.c29 .c25 {
   width: 28px;
   height: 28px;
   line-height: 28px;
 }
 
-.c28 .c23 {
-  width: 34px;
-  height: 34px;
-  line-height: 34px;
+.c30 .c25 {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
 }
 
-.c10 {
+.c11 {
   margin-right: 8px;
   font-size: 14px;
 }
 
-.c8 {
+.c9 {
   color: #6b798e;
   font-size: 12px;
   position: relative;
@@ -105,7 +119,7 @@ exports[`Input demo -- input 1`] = `
   line-height: 28px;
 }
 
-.c11 {
+.c13 {
   color: #6b798e;
   font-size: 12px;
   position: relative;
@@ -116,51 +130,51 @@ exports[`Input demo -- input 1`] = `
   line-height: 28px;
 }
 
-.c11 .c9 {
-  color: #4074e1;
+.c13 .c10 {
+  color: #3555f6;
 }
 
-.c6 {
+.c7 {
+  position: relative;
   margin-bottom: -8px;
 }
 
-.c6 .c7,
-.c6 .style__RadioTagWrap-sc-25j3mq-3,
-.c6 .style__RadioCardWrap-sc-25j3mq-8 {
+.c7 .c8,
+.c7 .style__RadioTagWrap-sc-25j3mq-3 {
   margin-right: 8px;
   margin-bottom: 8px;
 }
 
-.c6 .c7:last-child,
-.c6 .style__RadioTagWrap-sc-25j3mq-3:last-child,
-.c6 .style__RadioCardWrap-sc-25j3mq-8:last-child {
+.c7 .c8:last-child,
+.c7 .style__RadioTagWrap-sc-25j3mq-3:last-child {
   margin-right: 0;
 }
 
-.c6 .c29 {
+.c7 .c32 {
+  margin-right: 12px;
+  margin-bottom: 8px;
+}
+
+.c7 .c32:last-child {
+  margin-right: 0;
+}
+
+.c7 .c33+.c33 {
+  margin-left: -1px;
+}
+
+.c7 .c31 {
   margin-right: -1px;
   margin-bottom: 8px;
 }
 
-.c6 .c29:first-child {
+.c7 .c31:first-child {
   border-radius: 2px 0 0 2px;
 }
 
-.c6 .c29:last-child {
+.c7 .c31:last-child {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
-}
-
-.c4 {
-  position: relative;
-  display: block;
-  box-sizing: border-box;
-  min-height: 1px;
-  float: left;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  width: 25%;
 }
 
 .c5 {
@@ -172,10 +186,22 @@ exports[`Input demo -- input 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+  width: 25%;
+}
+
+.c6 {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  min-height: 1px;
+  float: left;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   width: 75%;
 }
 
-.c1 {
+.c2 {
   position: relative;
   display: block;
   height: auto;
@@ -183,36 +209,36 @@ exports[`Input demo -- input 1`] = `
   margin-right: -8px;
 }
 
-.c1:before,
-.c1:after {
+.c2:before,
+.c2:after {
   content: ' ';
   display: table;
 }
 
-.c1:after {
+.c2:after {
   clear: both;
 }
 
-.c1 .c3 {
+.c2 .c4 {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.c0 {
-  margin-bottom: 16px;
-}
-
-.c0:last-child {
-  margin-bottom: 0;
-}
-
-.c2 {
-  padding-top: 5px;
-  line-height: 1.5;
+.c3 {
+  padding-top: 4px;
+  line-height: 20px;
   word-break: break-all;
 }
 
-.c14 {
+.c0 .c1 {
+  margin-bottom: 16px;
+}
+
+.c0 .c1:last-child {
+  margin-bottom: 0;
+}
+
+.c16 {
   position: relative;
   height: 100%;
   width: 100%;
@@ -220,7 +246,7 @@ exports[`Input demo -- input 1`] = `
   box-sizing: border-box;
 }
 
-.c16 {
+.c18 {
   width: 100%;
   height: 100%;
   text-align: center;
@@ -229,7 +255,7 @@ exports[`Input demo -- input 1`] = `
   display: block;
 }
 
-.c19 {
+.c21 {
   position: absolute;
   display: inline-block;
   left: -1px;
@@ -240,7 +266,7 @@ exports[`Input demo -- input 1`] = `
   transition: all 0.3s;
 }
 
-.c21 {
+.c23 {
   position: absolute;
   display: inline-block;
   left: 18px;
@@ -252,7 +278,7 @@ exports[`Input demo -- input 1`] = `
   transition: all 0.3s;
 }
 
-.c12 {
+.c14 {
   position: relative;
   border-radius: 2px;
   overflow: hidden;
@@ -271,11 +297,11 @@ exports[`Input demo -- input 1`] = `
   line-height: 16px;
 }
 
-.c12:hover {
+.c14:hover {
   border-color: #4683e6;
 }
 
-.c12 .c18 {
+.c14 .c20 {
   background-color: #fff;
   box-shadow: 0 0.5px 0.5px #c3cad9;
   border: 1px solid #c3cad9;
@@ -283,79 +309,79 @@ exports[`Input demo -- input 1`] = `
   height: 20px;
 }
 
-.c12 .c20 {
+.c14 .c22 {
   background-color: #e69b9b;
   left: 13px;
   height: 10px;
 }
 
-.c12 .c13 {
+.c14 .c15 {
   border: 1px solid #c3cad9;
   background-color: #ebedf0;
   color: #6b798e;
 }
 
-.c12 .c15,
-.c12 .c17 {
+.c14 .c17,
+.c14 .c19 {
   line-height: 16px;
 }
 
-.c12 .c15 {
+.c14 .c17 {
   padding-right: 20px;
 }
 
-.c12 .c17 {
+.c14 .c19 {
   padding-left: 20px;
 }
 
-.c12 .c15 {
+.c14 .c17 {
   display: none;
 }
 
 <div>
   <form
-    class="demo-form"
+    class="demo-form uc-fe-form c0"
   >
     <div
-      class="c0 c1"
+      class="c1 uc-fe-form-item uc-fe-row c2"
     >
       <div
-        class="c2 c3 c4"
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
         size
       </div>
       <div
-        class="c3 c5"
+        class="uc-fe-form-controller c4 uc-fe-col c6"
         span="9"
       >
         <div
-          class="c6"
+          class="c7"
         >
           <div
-            class="c7 c8"
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
             <i
-              class="c9 c10 uc-fe-icon icon__circle "
+              class="c10 c11 uc-fe-icon icon__circle c12"
               type="circle"
             />
             sm
           </div>
           <div
             checked=""
-            class="c7 c11"
+            class="c8 uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
           >
             <i
-              class="c9 c10 uc-fe-icon icon__cbox-ed "
+              class="c10 c11 uc-fe-icon icon__cbox-ed c12"
               type="cbox-ed"
             />
             md
           </div>
           <div
-            class="c7 c8"
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
             <i
-              class="c9 c10 uc-fe-icon icon__circle "
+              class="c10 c11 uc-fe-icon icon__circle c12"
               type="circle"
             />
             lg
@@ -364,45 +390,45 @@ exports[`Input demo -- input 1`] = `
       </div>
     </div>
     <div
-      class="c0 c1"
+      class="c1 uc-fe-form-item uc-fe-row c2"
     >
       <div
-        class="c2 c3 c4"
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
         icon
       </div>
       <div
-        class="c3 c5"
+        class="uc-fe-form-controller c4 uc-fe-col c6"
         span="9"
       >
         <div
-          class="c6"
+          class="c7"
         >
           <div
             checked=""
-            class="c7 c11"
+            class="c8 uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
           >
             <i
-              class="c9 c10 uc-fe-icon icon__cbox-ed "
+              class="c10 c11 uc-fe-icon icon__cbox-ed c12"
               type="cbox-ed"
             />
             circle-fill
           </div>
           <div
-            class="c7 c8"
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
             <i
-              class="c9 c10 uc-fe-icon icon__circle "
+              class="c10 c11 uc-fe-icon icon__circle c12"
               type="circle"
             />
             circle
           </div>
           <div
-            class="c7 c8"
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
             <i
-              class="c9 c10 uc-fe-icon icon__circle "
+              class="c10 c11 uc-fe-icon icon__circle c12"
               type="circle"
             />
             loading
@@ -411,39 +437,39 @@ exports[`Input demo -- input 1`] = `
       </div>
     </div>
     <div
-      class="c0 c1"
+      class="c1 uc-fe-form-item uc-fe-row c2"
     >
       <div
-        class="c2 c3 c4"
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
         disabled
       </div>
       <div
-        class="c3 c5"
+        class="uc-fe-form-controller c4 uc-fe-col c6"
         span="9"
       >
         <div
-          class="c12"
+          class="c14"
         >
           <div
-            class="c13 c14"
+            class="c15 c16"
           >
             <span
-              class="c15 c16"
+              class="c17 c18"
             >
               ON
             </span>
             <span
-              class="c17 c16"
+              class="c19 c18"
             >
               OFF
             </span>
             <span
-              class="c18 c19"
+              class="c20 c21"
             >
               <span
-                class="c20 c21"
+                class="c22 c23"
               />
             </span>
           </div>
@@ -455,14 +481,14 @@ exports[`Input demo -- input 1`] = `
     class="demo-wrap"
   >
     <span
-      class="c22"
+      class="uc-fe-input c24"
     >
       <input />
       <span
-        class="c23 c24"
+        class="c25 c26"
       >
         <i
-          class="uc-fe-icon icon__circle-fill "
+          class="uc-fe-icon icon__circle-fill c12"
           type="circle-fill"
         />
       </span>
@@ -472,6 +498,10 @@ exports[`Input demo -- input 1`] = `
 `;
 
 exports[`Input demo -- input-disabled 1`] = `
+.c3 {
+  vertical-align: baseline;
+}
+
 .c2 {
   position: absolute;
   right: 0;
@@ -485,7 +515,7 @@ exports[`Input demo -- input-disabled 1`] = `
   display: inline-block;
   vertical-align: middle;
   pointer-events: none;
-  color: #6b798e;
+  color: #0a1633;
   color: #bbb;
 }
 
@@ -502,10 +532,28 @@ exports[`Input demo -- input-disabled 1`] = `
 }
 
 .c0 input {
-  border: 1px solid #c3cad9;
-  background: #fff;
+  border: 1px solid #dfe0f1;
+  background: #fafafc;
   height: 28px;
   padding-right: 28px;
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+}
+
+.c0 input:hover {
+  border-color: #c3cad9;
+  background-color: #f6f6fb;
+}
+
+.c0 input:focus {
+  border-color: #4683e6;
+  background-color: #f6f6fb;
+}
+
+.c0 input:disabled,
+.c0 input[disabled] {
+  box-shadow: none;
 }
 
 .c0 input::-webkit-input-placeholder {
@@ -522,14 +570,6 @@ exports[`Input demo -- input-disabled 1`] = `
 
 .c0 input::placeholder {
   color: #abb4c3;
-}
-
-.c0 input:hover {
-  border-color: #4683e6;
-}
-
-.c0 input:focus {
-  border-color: #4683e6;
 }
 
 .c0 input,
@@ -545,14 +585,14 @@ exports[`Input demo -- input-disabled 1`] = `
   line-height: 28px;
 }
 
-.c3 {
+.c4 {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  color: #6b798e;
+  color: #0a1633;
 }
 
-.c3 input {
+.c4 input {
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -564,38 +604,48 @@ exports[`Input demo -- input-disabled 1`] = `
   color: inherit;
 }
 
-.c3 input {
-  border: 1px solid #c3cad9;
-  background: #fff;
+.c4 input {
+  border: 1px solid #dfe0f1;
+  background: #fafafc;
   height: 28px;
   padding-right: 28px;
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
 }
 
-.c3 input::-webkit-input-placeholder {
-  color: #abb4c3;
+.c4 input:hover {
+  border-color: #c3cad9;
+  background-color: #f6f6fb;
 }
 
-.c3 input::-moz-placeholder {
-  color: #abb4c3;
-}
-
-.c3 input:-ms-input-placeholder {
-  color: #abb4c3;
-}
-
-.c3 input::placeholder {
-  color: #abb4c3;
-}
-
-.c3 input:hover {
+.c4 input:focus {
   border-color: #4683e6;
+  background-color: #f6f6fb;
 }
 
-.c3 input:focus {
-  border-color: #4683e6;
+.c4 input:disabled,
+.c4 input[disabled] {
+  box-shadow: none;
 }
 
-.c3 .c1 {
+.c4 input::-webkit-input-placeholder {
+  color: #abb4c3;
+}
+
+.c4 input::-moz-placeholder {
+  color: #abb4c3;
+}
+
+.c4 input:-ms-input-placeholder {
+  color: #abb4c3;
+}
+
+.c4 input::placeholder {
+  color: #abb4c3;
+}
+
+.c4 .c1 {
   width: 28px;
   height: 28px;
   line-height: 28px;
@@ -606,7 +656,7 @@ exports[`Input demo -- input-disabled 1`] = `
     class="demo-wrap"
   >
     <span
-      class="c0"
+      class="uc-fe-input c0"
       disabled=""
     >
       <input
@@ -616,7 +666,7 @@ exports[`Input demo -- input-disabled 1`] = `
         class="c1 c2"
       >
         <i
-          class="uc-fe-icon icon__circle "
+          class="uc-fe-icon icon__circle c3"
           type="circle"
         />
       </span>
@@ -626,14 +676,14 @@ exports[`Input demo -- input-disabled 1`] = `
     class="demo-wrap"
   >
     <span
-      class="c3"
+      class="uc-fe-input c4"
     >
       <input />
       <span
         class="c1 c2"
       >
         <i
-          class="uc-fe-icon icon__circle "
+          class="uc-fe-icon icon__circle c3"
           type="circle"
         />
       </span>
@@ -643,6 +693,10 @@ exports[`Input demo -- input-disabled 1`] = `
 `;
 
 exports[`Input demo -- input-icon 1`] = `
+.c3 {
+  vertical-align: baseline;
+}
+
 .c2 {
   position: absolute;
   right: 0;
@@ -651,7 +705,7 @@ exports[`Input demo -- input-icon 1`] = `
   color: inherit;
 }
 
-.c3 .c1 {
+.c4 .c1 {
   width: 28px;
   height: 28px;
   line-height: 28px;
@@ -661,7 +715,7 @@ exports[`Input demo -- input-icon 1`] = `
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  color: #6b798e;
+  color: #0a1633;
 }
 
 .c0 input {
@@ -677,10 +731,28 @@ exports[`Input demo -- input-icon 1`] = `
 }
 
 .c0 input {
-  border: 1px solid #c3cad9;
-  background: #fff;
+  border: 1px solid #dfe0f1;
+  background: #fafafc;
   height: 28px;
   padding-right: 28px;
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+}
+
+.c0 input:hover {
+  border-color: #c3cad9;
+  background-color: #f6f6fb;
+}
+
+.c0 input:focus {
+  border-color: #4683e6;
+  background-color: #f6f6fb;
+}
+
+.c0 input:disabled,
+.c0 input[disabled] {
+  box-shadow: none;
 }
 
 .c0 input::-webkit-input-placeholder {
@@ -697,14 +769,6 @@ exports[`Input demo -- input-icon 1`] = `
 
 .c0 input::placeholder {
   color: #abb4c3;
-}
-
-.c0 input:hover {
-  border-color: #4683e6;
-}
-
-.c0 input:focus {
-  border-color: #4683e6;
 }
 
 .c0 .c1 {
@@ -718,14 +782,14 @@ exports[`Input demo -- input-icon 1`] = `
     class="demo-wrap"
   >
     <span
-      class="c0"
+      class="uc-fe-input c0"
     >
       <input />
       <span
         class="c1 c2"
       >
         <i
-          class="uc-fe-icon icon__circle-fill "
+          class="uc-fe-icon icon__circle-fill c3"
           type="circle-fill"
         />
       </span>
@@ -735,14 +799,14 @@ exports[`Input demo -- input-icon 1`] = `
     class="demo-wrap"
   >
     <span
-      class="c0"
+      class="uc-fe-input c0"
     >
       <input />
       <span
         class="c1 c2"
       >
         <i
-          class="uc-fe-icon icon__circle "
+          class="uc-fe-icon icon__circle c3"
           type="circle"
         />
       </span>
@@ -752,14 +816,14 @@ exports[`Input demo -- input-icon 1`] = `
     class="demo-wrap"
   >
     <span
-      class="c0"
+      class="uc-fe-input c0"
     >
       <input />
       <span
         class="c1 c2"
       >
         <i
-          class="uc-fe-icon icon__loading "
+          class="uc-fe-icon icon__loading c3"
           type="loading"
         />
       </span>
@@ -773,7 +837,7 @@ exports[`Input demo -- input-size 1`] = `
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  color: #6b798e;
+  color: #0a1633;
 }
 
 .c0 input {
@@ -789,9 +853,27 @@ exports[`Input demo -- input-size 1`] = `
 }
 
 .c0 input {
-  border: 1px solid #c3cad9;
-  background: #fff;
+  border: 1px solid #dfe0f1;
+  background: #fafafc;
   height: 22px;
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+}
+
+.c0 input:hover {
+  border-color: #c3cad9;
+  background-color: #f6f6fb;
+}
+
+.c0 input:focus {
+  border-color: #4683e6;
+  background-color: #f6f6fb;
+}
+
+.c0 input:disabled,
+.c0 input[disabled] {
+  box-shadow: none;
 }
 
 .c0 input::-webkit-input-placeholder {
@@ -810,14 +892,6 @@ exports[`Input demo -- input-size 1`] = `
   color: #abb4c3;
 }
 
-.c0 input:hover {
-  border-color: #4683e6;
-}
-
-.c0 input:focus {
-  border-color: #4683e6;
-}
-
 .c0 .c3 {
   width: 22px;
   height: 22px;
@@ -828,7 +902,7 @@ exports[`Input demo -- input-size 1`] = `
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  color: #6b798e;
+  color: #0a1633;
 }
 
 .c1 input {
@@ -844,9 +918,27 @@ exports[`Input demo -- input-size 1`] = `
 }
 
 .c1 input {
-  border: 1px solid #c3cad9;
-  background: #fff;
+  border: 1px solid #dfe0f1;
+  background: #fafafc;
   height: 28px;
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+}
+
+.c1 input:hover {
+  border-color: #c3cad9;
+  background-color: #f6f6fb;
+}
+
+.c1 input:focus {
+  border-color: #4683e6;
+  background-color: #f6f6fb;
+}
+
+.c1 input:disabled,
+.c1 input[disabled] {
+  box-shadow: none;
 }
 
 .c1 input::-webkit-input-placeholder {
@@ -865,14 +957,6 @@ exports[`Input demo -- input-size 1`] = `
   color: #abb4c3;
 }
 
-.c1 input:hover {
-  border-color: #4683e6;
-}
-
-.c1 input:focus {
-  border-color: #4683e6;
-}
-
 .c1 .c3 {
   width: 28px;
   height: 28px;
@@ -883,7 +967,7 @@ exports[`Input demo -- input-size 1`] = `
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  color: #6b798e;
+  color: #0a1633;
 }
 
 .c2 input {
@@ -899,9 +983,27 @@ exports[`Input demo -- input-size 1`] = `
 }
 
 .c2 input {
-  border: 1px solid #c3cad9;
-  background: #fff;
-  height: 34px;
+  border: 1px solid #dfe0f1;
+  background: #fafafc;
+  height: 32px;
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+}
+
+.c2 input:hover {
+  border-color: #c3cad9;
+  background-color: #f6f6fb;
+}
+
+.c2 input:focus {
+  border-color: #4683e6;
+  background-color: #f6f6fb;
+}
+
+.c2 input:disabled,
+.c2 input[disabled] {
+  box-shadow: none;
 }
 
 .c2 input::-webkit-input-placeholder {
@@ -920,18 +1022,10 @@ exports[`Input demo -- input-size 1`] = `
   color: #abb4c3;
 }
 
-.c2 input:hover {
-  border-color: #4683e6;
-}
-
-.c2 input:focus {
-  border-color: #4683e6;
-}
-
 .c2 .c3 {
-  width: 34px;
-  height: 34px;
-  line-height: 34px;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
 }
 
 <div>
@@ -939,7 +1033,7 @@ exports[`Input demo -- input-size 1`] = `
     class="demo-wrap"
   >
     <span
-      class="c0"
+      class="uc-fe-input c0"
     >
       <input />
     </span>
@@ -948,7 +1042,7 @@ exports[`Input demo -- input-size 1`] = `
     class="demo-wrap"
   >
     <span
-      class="c1"
+      class="uc-fe-input c1"
     >
       <input />
     </span>
@@ -957,7 +1051,7 @@ exports[`Input demo -- input-size 1`] = `
     class="demo-wrap"
   >
     <span
-      class="c2"
+      class="uc-fe-input c2"
     >
       <input />
     </span>
@@ -966,7 +1060,11 @@ exports[`Input demo -- input-size 1`] = `
 `;
 
 exports[`Input demo -- search 1`] = `
-.c24 {
+.c12 {
+  vertical-align: baseline;
+}
+
+.c26 {
   position: absolute;
   right: 0;
   top: 0;
@@ -974,24 +1072,24 @@ exports[`Input demo -- search 1`] = `
   color: inherit;
 }
 
-.c25 {
+.c27 {
   cursor: pointer;
 }
 
-.c26 .c23 {
+.c28 .c25 {
   width: 28px;
   height: 28px;
   line-height: 28px;
 }
 
-.c22 {
+.c24 {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  color: #6b798e;
+  color: #0a1633;
 }
 
-.c22 input {
+.c24 input {
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -1003,79 +1101,89 @@ exports[`Input demo -- search 1`] = `
   color: inherit;
 }
 
-.c22 input {
-  border: 1px solid #c3cad9;
-  background: #fff;
+.c24 input {
+  border: 1px solid #dfe0f1;
+  background: #fafafc;
   height: 28px;
   padding-right: 28px;
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
 }
 
-.c22 input::-webkit-input-placeholder {
-  color: #abb4c3;
+.c24 input:hover {
+  border-color: #c3cad9;
+  background-color: #f6f6fb;
 }
 
-.c22 input::-moz-placeholder {
-  color: #abb4c3;
-}
-
-.c22 input:-ms-input-placeholder {
-  color: #abb4c3;
-}
-
-.c22 input::placeholder {
-  color: #abb4c3;
-}
-
-.c22 input:hover {
+.c24 input:focus {
   border-color: #4683e6;
+  background-color: #f6f6fb;
 }
 
-.c22 input:focus {
-  border-color: #4683e6;
+.c24 input:disabled,
+.c24 input[disabled] {
+  box-shadow: none;
 }
 
-.c22 .c23 {
+.c24 input::-webkit-input-placeholder {
+  color: #abb4c3;
+}
+
+.c24 input::-moz-placeholder {
+  color: #abb4c3;
+}
+
+.c24 input:-ms-input-placeholder {
+  color: #abb4c3;
+}
+
+.c24 input::placeholder {
+  color: #abb4c3;
+}
+
+.c24 .c25 {
   width: 28px;
   height: 28px;
   line-height: 28px;
 }
 
-.c27 .c23 {
+.c29 .c25 {
   width: 22px;
   height: 22px;
   line-height: 22px;
 }
 
-.c28 .c23 {
+.c30 .c25 {
   width: 28px;
   height: 28px;
   line-height: 28px;
 }
 
-.c29 .c23 {
-  width: 34px;
-  height: 34px;
-  line-height: 34px;
+.c31 .c25 {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
 }
 
-.c30 .c23 {
+.c32 .c25 {
   width: 22px;
   height: 22px;
   line-height: 22px;
 }
 
-.c31 .c23 {
-  width: 34px;
-  height: 34px;
-  line-height: 34px;
+.c33 .c25 {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
 }
 
-.c10 {
+.c11 {
   margin-right: 8px;
   font-size: 14px;
 }
 
-.c8 {
+.c9 {
   color: #6b798e;
   font-size: 12px;
   position: relative;
@@ -1086,7 +1194,7 @@ exports[`Input demo -- search 1`] = `
   line-height: 28px;
 }
 
-.c11 {
+.c13 {
   color: #6b798e;
   font-size: 12px;
   position: relative;
@@ -1097,51 +1205,51 @@ exports[`Input demo -- search 1`] = `
   line-height: 28px;
 }
 
-.c11 .c9 {
-  color: #4074e1;
+.c13 .c10 {
+  color: #3555f6;
 }
 
-.c6 {
+.c7 {
+  position: relative;
   margin-bottom: -8px;
 }
 
-.c6 .c7,
-.c6 .style__RadioTagWrap-sc-25j3mq-3,
-.c6 .style__RadioCardWrap-sc-25j3mq-8 {
+.c7 .c8,
+.c7 .style__RadioTagWrap-sc-25j3mq-3 {
   margin-right: 8px;
   margin-bottom: 8px;
 }
 
-.c6 .c7:last-child,
-.c6 .style__RadioTagWrap-sc-25j3mq-3:last-child,
-.c6 .style__RadioCardWrap-sc-25j3mq-8:last-child {
+.c7 .c8:last-child,
+.c7 .style__RadioTagWrap-sc-25j3mq-3:last-child {
   margin-right: 0;
 }
 
-.c6 .c32 {
+.c7 .c35 {
+  margin-right: 12px;
+  margin-bottom: 8px;
+}
+
+.c7 .c35:last-child {
+  margin-right: 0;
+}
+
+.c7 .c36+.c36 {
+  margin-left: -1px;
+}
+
+.c7 .c34 {
   margin-right: -1px;
   margin-bottom: 8px;
 }
 
-.c6 .c32:first-child {
+.c7 .c34:first-child {
   border-radius: 2px 0 0 2px;
 }
 
-.c6 .c32:last-child {
+.c7 .c34:last-child {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
-}
-
-.c4 {
-  position: relative;
-  display: block;
-  box-sizing: border-box;
-  min-height: 1px;
-  float: left;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  width: 25%;
 }
 
 .c5 {
@@ -1153,10 +1261,22 @@ exports[`Input demo -- search 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+  width: 25%;
+}
+
+.c6 {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  min-height: 1px;
+  float: left;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   width: 75%;
 }
 
-.c1 {
+.c2 {
   position: relative;
   display: block;
   height: auto;
@@ -1164,36 +1284,36 @@ exports[`Input demo -- search 1`] = `
   margin-right: -8px;
 }
 
-.c1:before,
-.c1:after {
+.c2:before,
+.c2:after {
   content: ' ';
   display: table;
 }
 
-.c1:after {
+.c2:after {
   clear: both;
 }
 
-.c1 .c3 {
+.c2 .c4 {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.c0 {
-  margin-bottom: 16px;
-}
-
-.c0:last-child {
-  margin-bottom: 0;
-}
-
-.c2 {
-  padding-top: 5px;
-  line-height: 1.5;
+.c3 {
+  padding-top: 4px;
+  line-height: 20px;
   word-break: break-all;
 }
 
-.c14 {
+.c0 .c1 {
+  margin-bottom: 16px;
+}
+
+.c0 .c1:last-child {
+  margin-bottom: 0;
+}
+
+.c16 {
   position: relative;
   height: 100%;
   width: 100%;
@@ -1201,7 +1321,7 @@ exports[`Input demo -- search 1`] = `
   box-sizing: border-box;
 }
 
-.c16 {
+.c18 {
   width: 100%;
   height: 100%;
   text-align: center;
@@ -1210,7 +1330,7 @@ exports[`Input demo -- search 1`] = `
   display: block;
 }
 
-.c19 {
+.c21 {
   position: absolute;
   display: inline-block;
   left: -1px;
@@ -1221,7 +1341,7 @@ exports[`Input demo -- search 1`] = `
   transition: all 0.3s;
 }
 
-.c21 {
+.c23 {
   position: absolute;
   display: inline-block;
   left: 18px;
@@ -1233,7 +1353,7 @@ exports[`Input demo -- search 1`] = `
   transition: all 0.3s;
 }
 
-.c12 {
+.c14 {
   position: relative;
   border-radius: 2px;
   overflow: hidden;
@@ -1252,11 +1372,11 @@ exports[`Input demo -- search 1`] = `
   line-height: 16px;
 }
 
-.c12:hover {
+.c14:hover {
   border-color: #4683e6;
 }
 
-.c12 .c18 {
+.c14 .c20 {
   background-color: #fff;
   box-shadow: 0 0.5px 0.5px #c3cad9;
   border: 1px solid #c3cad9;
@@ -1264,79 +1384,79 @@ exports[`Input demo -- search 1`] = `
   height: 20px;
 }
 
-.c12 .c20 {
+.c14 .c22 {
   background-color: #e69b9b;
   left: 13px;
   height: 10px;
 }
 
-.c12 .c13 {
+.c14 .c15 {
   border: 1px solid #c3cad9;
   background-color: #ebedf0;
   color: #6b798e;
 }
 
-.c12 .c15,
-.c12 .c17 {
+.c14 .c17,
+.c14 .c19 {
   line-height: 16px;
 }
 
-.c12 .c15 {
+.c14 .c17 {
   padding-right: 20px;
 }
 
-.c12 .c17 {
+.c14 .c19 {
   padding-left: 20px;
 }
 
-.c12 .c15 {
+.c14 .c17 {
   display: none;
 }
 
 <div>
   <form
-    class="demo-form"
+    class="demo-form uc-fe-form c0"
   >
     <div
-      class="c0 c1"
+      class="c1 uc-fe-form-item uc-fe-row c2"
     >
       <div
-        class="c2 c3 c4"
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
         size
       </div>
       <div
-        class="c3 c5"
+        class="uc-fe-form-controller c4 uc-fe-col c6"
         span="9"
       >
         <div
-          class="c6"
+          class="c7"
         >
           <div
-            class="c7 c8"
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
             <i
-              class="c9 c10 uc-fe-icon icon__circle "
+              class="c10 c11 uc-fe-icon icon__circle c12"
               type="circle"
             />
             sm
           </div>
           <div
             checked=""
-            class="c7 c11"
+            class="c8 uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
           >
             <i
-              class="c9 c10 uc-fe-icon icon__cbox-ed "
+              class="c10 c11 uc-fe-icon icon__cbox-ed c12"
               type="cbox-ed"
             />
             md
           </div>
           <div
-            class="c7 c8"
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
             <i
-              class="c9 c10 uc-fe-icon icon__circle "
+              class="c10 c11 uc-fe-icon icon__circle c12"
               type="circle"
             />
             lg
@@ -1345,39 +1465,39 @@ exports[`Input demo -- search 1`] = `
       </div>
     </div>
     <div
-      class="c0 c1"
+      class="c1 uc-fe-form-item uc-fe-row c2"
     >
       <div
-        class="c2 c3 c4"
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
         disabled
       </div>
       <div
-        class="c3 c5"
+        class="uc-fe-form-controller c4 uc-fe-col c6"
         span="9"
       >
         <div
-          class="c12"
+          class="c14"
         >
           <div
-            class="c13 c14"
+            class="c15 c16"
           >
             <span
-              class="c15 c16"
+              class="c17 c18"
             >
               ON
             </span>
             <span
-              class="c17 c16"
+              class="c19 c18"
             >
               OFF
             </span>
             <span
-              class="c18 c19"
+              class="c20 c21"
             >
               <span
-                class="c20 c21"
+                class="c22 c23"
               />
             </span>
           </div>
@@ -1389,14 +1509,14 @@ exports[`Input demo -- search 1`] = `
     class="demo-wrap"
   >
     <span
-      class="c22"
+      class="uc-fe-input c24"
     >
       <input />
       <span
-        class="c23 c24"
+        class="c25 c26"
       >
         <i
-          class="c25 uc-fe-icon icon__search "
+          class="c27 uc-fe-icon icon__search c12"
           type="search"
         />
       </span>
@@ -1406,6 +1526,10 @@ exports[`Input demo -- search 1`] = `
 `;
 
 exports[`Input demo -- search-disabled 1`] = `
+.c4 {
+  vertical-align: baseline;
+}
+
 .c2 {
   position: absolute;
   right: 0;
@@ -1423,7 +1547,7 @@ exports[`Input demo -- search-disabled 1`] = `
   display: inline-block;
   vertical-align: middle;
   pointer-events: none;
-  color: #6b798e;
+  color: #0a1633;
   color: #bbb;
 }
 
@@ -1440,10 +1564,28 @@ exports[`Input demo -- search-disabled 1`] = `
 }
 
 .c0 input {
-  border: 1px solid #c3cad9;
-  background: #fff;
+  border: 1px solid #dfe0f1;
+  background: #fafafc;
   height: 28px;
   padding-right: 28px;
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+}
+
+.c0 input:hover {
+  border-color: #c3cad9;
+  background-color: #f6f6fb;
+}
+
+.c0 input:focus {
+  border-color: #4683e6;
+  background-color: #f6f6fb;
+}
+
+.c0 input:disabled,
+.c0 input[disabled] {
+  box-shadow: none;
 }
 
 .c0 input::-webkit-input-placeholder {
@@ -1460,14 +1602,6 @@ exports[`Input demo -- search-disabled 1`] = `
 
 .c0 input::placeholder {
   color: #abb4c3;
-}
-
-.c0 input:hover {
-  border-color: #4683e6;
-}
-
-.c0 input:focus {
-  border-color: #4683e6;
 }
 
 .c0 input,
@@ -1483,275 +1617,11 @@ exports[`Input demo -- search-disabled 1`] = `
   line-height: 28px;
 }
 
-.c4 {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  color: #6b798e;
-}
-
-.c4 input {
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 4px 8px;
-  margin: 0;
-  border-radius: 2px;
-  font-size: inherit;
-  outline: none;
-  color: inherit;
-}
-
-.c4 input {
-  border: 1px solid #c3cad9;
-  background: #fff;
-  height: 28px;
-  padding-right: 28px;
-}
-
-.c4 input::-webkit-input-placeholder {
-  color: #abb4c3;
-}
-
-.c4 input::-moz-placeholder {
-  color: #abb4c3;
-}
-
-.c4 input:-ms-input-placeholder {
-  color: #abb4c3;
-}
-
-.c4 input::placeholder {
-  color: #abb4c3;
-}
-
-.c4 input:hover {
-  border-color: #4683e6;
-}
-
-.c4 input:focus {
-  border-color: #4683e6;
-}
-
-.c4 .c1 {
-  width: 28px;
-  height: 28px;
-  line-height: 28px;
-}
-
-.c5 .c1 {
-  width: 22px;
-  height: 22px;
-  line-height: 22px;
-}
-
-.c6 .c1 {
-  width: 28px;
-  height: 28px;
-  line-height: 28px;
-}
-
-.c7 .c1 {
-  width: 34px;
-  height: 34px;
-  line-height: 34px;
-}
-
-<div>
-  <div
-    class="demo-wrap"
-  >
-    <span
-      class="c0"
-      disabled=""
-    >
-      <input
-        disabled=""
-      />
-      <span
-        class="c1 c2"
-      >
-        <i
-          class="c3 uc-fe-icon icon__search "
-          type="search"
-        />
-      </span>
-    </span>
-  </div>
-  <div
-    class="demo-wrap"
-  >
-    <span
-      class="c4"
-    >
-      <input />
-      <span
-        class="c1 c2"
-      >
-        <i
-          class="c3 uc-fe-icon icon__search "
-          type="search"
-        />
-      </span>
-    </span>
-  </div>
-</div>
-`;
-
-exports[`Input demo -- search-size 1`] = `
-.c2 {
-  position: absolute;
-  right: 0;
-  top: 0;
-  text-align: center;
-  color: inherit;
-}
-
-.c3 {
-  cursor: pointer;
-}
-
-.c6 .c1 {
-  width: 28px;
-  height: 28px;
-  line-height: 28px;
-}
-
-.c4 {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  color: #6b798e;
-}
-
-.c4 input {
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 4px 8px;
-  margin: 0;
-  border-radius: 2px;
-  font-size: inherit;
-  outline: none;
-  color: inherit;
-}
-
-.c4 input {
-  border: 1px solid #c3cad9;
-  background: #fff;
-  height: 28px;
-  padding-right: 28px;
-}
-
-.c4 input::-webkit-input-placeholder {
-  color: #abb4c3;
-}
-
-.c4 input::-moz-placeholder {
-  color: #abb4c3;
-}
-
-.c4 input:-ms-input-placeholder {
-  color: #abb4c3;
-}
-
-.c4 input::placeholder {
-  color: #abb4c3;
-}
-
-.c4 input:hover {
-  border-color: #4683e6;
-}
-
-.c4 input:focus {
-  border-color: #4683e6;
-}
-
-.c4 .c1 {
-  width: 28px;
-  height: 28px;
-  line-height: 28px;
-}
-
-.c7 .c1 {
-  width: 22px;
-  height: 22px;
-  line-height: 22px;
-}
-
-.c8 .c1 {
-  width: 28px;
-  height: 28px;
-  line-height: 28px;
-}
-
-.c9 .c1 {
-  width: 34px;
-  height: 34px;
-  line-height: 34px;
-}
-
-.c0 {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  color: #6b798e;
-}
-
-.c0 input {
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 4px 8px;
-  margin: 0;
-  border-radius: 2px;
-  font-size: inherit;
-  outline: none;
-  color: inherit;
-}
-
-.c0 input {
-  border: 1px solid #c3cad9;
-  background: #fff;
-  height: 22px;
-  padding-right: 22px;
-}
-
-.c0 input::-webkit-input-placeholder {
-  color: #abb4c3;
-}
-
-.c0 input::-moz-placeholder {
-  color: #abb4c3;
-}
-
-.c0 input:-ms-input-placeholder {
-  color: #abb4c3;
-}
-
-.c0 input::placeholder {
-  color: #abb4c3;
-}
-
-.c0 input:hover {
-  border-color: #4683e6;
-}
-
-.c0 input:focus {
-  border-color: #4683e6;
-}
-
-.c0 .c1 {
-  width: 22px;
-  height: 22px;
-  line-height: 22px;
-}
-
 .c5 {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  color: #6b798e;
+  color: #0a1633;
 }
 
 .c5 input {
@@ -1767,10 +1637,28 @@ exports[`Input demo -- search-size 1`] = `
 }
 
 .c5 input {
-  border: 1px solid #c3cad9;
-  background: #fff;
-  height: 34px;
-  padding-right: 34px;
+  border: 1px solid #dfe0f1;
+  background: #fafafc;
+  height: 28px;
+  padding-right: 28px;
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+}
+
+.c5 input:hover {
+  border-color: #c3cad9;
+  background-color: #f6f6fb;
+}
+
+.c5 input:focus {
+  border-color: #4683e6;
+  background-color: #f6f6fb;
+}
+
+.c5 input:disabled,
+.c5 input[disabled] {
+  box-shadow: none;
 }
 
 .c5 input::-webkit-input-placeholder {
@@ -1789,18 +1677,28 @@ exports[`Input demo -- search-size 1`] = `
   color: #abb4c3;
 }
 
-.c5 input:hover {
-  border-color: #4683e6;
-}
-
-.c5 input:focus {
-  border-color: #4683e6;
-}
-
 .c5 .c1 {
-  width: 34px;
-  height: 34px;
-  line-height: 34px;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+}
+
+.c6 .c1 {
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+}
+
+.c7 .c1 {
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+}
+
+.c8 .c1 {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
 }
 
 <div>
@@ -1808,14 +1706,17 @@ exports[`Input demo -- search-size 1`] = `
     class="demo-wrap"
   >
     <span
-      class="c0"
+      class="uc-fe-input c0"
+      disabled=""
     >
-      <input />
+      <input
+        disabled=""
+      />
       <span
         class="c1 c2"
       >
         <i
-          class="c3 uc-fe-icon icon__search "
+          class="c3 uc-fe-icon icon__search c4"
           type="search"
         />
       </span>
@@ -1825,14 +1726,274 @@ exports[`Input demo -- search-size 1`] = `
     class="demo-wrap"
   >
     <span
-      class="c4"
+      class="uc-fe-input c5"
     >
       <input />
       <span
         class="c1 c2"
       >
         <i
-          class="c3 uc-fe-icon icon__search "
+          class="c3 uc-fe-icon icon__search c4"
+          type="search"
+        />
+      </span>
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Input demo -- search-size 1`] = `
+.c4 {
+  vertical-align: baseline;
+}
+
+.c2 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-align: center;
+  color: inherit;
+}
+
+.c3 {
+  cursor: pointer;
+}
+
+.c7 .c1 {
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+}
+
+.c5 {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  color: #0a1633;
+}
+
+.c5 input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 4px 8px;
+  margin: 0;
+  border-radius: 2px;
+  font-size: inherit;
+  outline: none;
+  color: inherit;
+}
+
+.c5 input {
+  border: 1px solid #dfe0f1;
+  background: #fafafc;
+  height: 28px;
+  padding-right: 28px;
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+}
+
+.c5 input:hover {
+  border-color: #c3cad9;
+  background-color: #f6f6fb;
+}
+
+.c5 input:focus {
+  border-color: #4683e6;
+  background-color: #f6f6fb;
+}
+
+.c5 input:disabled,
+.c5 input[disabled] {
+  box-shadow: none;
+}
+
+.c5 input::-webkit-input-placeholder {
+  color: #abb4c3;
+}
+
+.c5 input::-moz-placeholder {
+  color: #abb4c3;
+}
+
+.c5 input:-ms-input-placeholder {
+  color: #abb4c3;
+}
+
+.c5 input::placeholder {
+  color: #abb4c3;
+}
+
+.c5 .c1 {
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+}
+
+.c8 .c1 {
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+}
+
+.c9 .c1 {
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+}
+
+.c10 .c1 {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+}
+
+.c0 {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  color: #0a1633;
+}
+
+.c0 input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 4px 8px;
+  margin: 0;
+  border-radius: 2px;
+  font-size: inherit;
+  outline: none;
+  color: inherit;
+}
+
+.c0 input {
+  border: 1px solid #dfe0f1;
+  background: #fafafc;
+  height: 22px;
+  padding-right: 22px;
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+}
+
+.c0 input:hover {
+  border-color: #c3cad9;
+  background-color: #f6f6fb;
+}
+
+.c0 input:focus {
+  border-color: #4683e6;
+  background-color: #f6f6fb;
+}
+
+.c0 input:disabled,
+.c0 input[disabled] {
+  box-shadow: none;
+}
+
+.c0 input::-webkit-input-placeholder {
+  color: #abb4c3;
+}
+
+.c0 input::-moz-placeholder {
+  color: #abb4c3;
+}
+
+.c0 input:-ms-input-placeholder {
+  color: #abb4c3;
+}
+
+.c0 input::placeholder {
+  color: #abb4c3;
+}
+
+.c0 .c1 {
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+}
+
+.c6 {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  color: #0a1633;
+}
+
+.c6 input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 4px 8px;
+  margin: 0;
+  border-radius: 2px;
+  font-size: inherit;
+  outline: none;
+  color: inherit;
+}
+
+.c6 input {
+  border: 1px solid #dfe0f1;
+  background: #fafafc;
+  height: 32px;
+  padding-right: 32px;
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+}
+
+.c6 input:hover {
+  border-color: #c3cad9;
+  background-color: #f6f6fb;
+}
+
+.c6 input:focus {
+  border-color: #4683e6;
+  background-color: #f6f6fb;
+}
+
+.c6 input:disabled,
+.c6 input[disabled] {
+  box-shadow: none;
+}
+
+.c6 input::-webkit-input-placeholder {
+  color: #abb4c3;
+}
+
+.c6 input::-moz-placeholder {
+  color: #abb4c3;
+}
+
+.c6 input:-ms-input-placeholder {
+  color: #abb4c3;
+}
+
+.c6 input::placeholder {
+  color: #abb4c3;
+}
+
+.c6 .c1 {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+}
+
+<div>
+  <div
+    class="demo-wrap"
+  >
+    <span
+      class="uc-fe-input c0"
+    >
+      <input />
+      <span
+        class="c1 c2"
+      >
+        <i
+          class="c3 uc-fe-icon icon__search c4"
           type="search"
         />
       </span>
@@ -1842,14 +2003,31 @@ exports[`Input demo -- search-size 1`] = `
     class="demo-wrap"
   >
     <span
-      class="c5"
+      class="uc-fe-input c5"
     >
       <input />
       <span
         class="c1 c2"
       >
         <i
-          class="c3 uc-fe-icon icon__search "
+          class="c3 uc-fe-icon icon__search c4"
+          type="search"
+        />
+      </span>
+    </span>
+  </div>
+  <div
+    class="demo-wrap"
+  >
+    <span
+      class="uc-fe-input c6"
+    >
+      <input />
+      <span
+        class="c1 c2"
+      >
+        <i
+          class="c3 uc-fe-icon icon__search c4"
           type="search"
         />
       </span>

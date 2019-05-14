@@ -93,7 +93,7 @@ class Options extends React.Component {
                     value={pageSize.toString()}
                     onChange={this.changeSize}
                     size={size}
-                    popover={{ getPopupContainer: triggerNode => triggerNode.parentNode }}
+                    popoverProps={{ getPopupContainer: triggerNode => triggerNode.parentNode }}
                     {...select}
                 >
                     {options}

@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import classnames from 'classnames';
 
+import Icon from 'src/components/Icon';
 import config from 'src/config';
 import { inlineBlockWithVerticalMixin } from 'src/style';
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
@@ -59,21 +60,32 @@ const disabledMixin = ({
         color: ${disabledColorMap.text};
         cursor: not-allowed;
         pointer-events: none;
+        border-width: 1px;
+        border-style: solid;
+        box-shadow: none;
     }
 `;
 
+const checkedMixin = ({ theme: { colorList } }) => css`
+    color: ${colorList.primary};
+    background: #fff;
+    border-color: ${colorList.primary};
+`;
+
 export const ButtonWrap = styled.button.attrs({
-    className: ({ size, styleType, shape, loading, disabled }) =>
+    className: ({ size, styleType, shape, loading, disabled, checked }) =>
         classnames(
             prefixCls,
             `${prefixCls}-size-${size}`,
             `${prefixCls}-styletype-${styleType}`,
             shape && `${prefixCls}-${shape}`,
             loading && `${prefixCls}-loading`,
-            disabled && `${prefixCls}-disabled`
+            disabled && `${prefixCls}-disabled`,
+            checked && `${prefixCls}-checked`
         )
 })(
-    ({ theme: { fontSize, Button: buttonTheme = {} }, loading, shape, disabled }) => css`
+    ({ theme: { fontSize, Button: buttonTheme = {} }, loading, shape, disabled, checked }) => css`
+        margin: 0;
         box-sizing: border-box;
         border-radius: 2px;
         border-width: 1px;
@@ -89,9 +101,17 @@ export const ButtonWrap = styled.button.attrs({
         ${styleTypeMixin};
         ${shape === 'circle' && shapeCircleMixin};
         ${loading && loadingMixin};
+        ${checked && checkedMixin};
         ${disabled && disabledMixin};
 
         ${buttonTheme['&']};
     `
 );
+
+export const ButtonIcon = styled(Icon).attrs({
+    className: prefixCls + '-icon'
+})`
+    /* empty */
+`;
+
 addDefaultThemeProps(ButtonWrap);

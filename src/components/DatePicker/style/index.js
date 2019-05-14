@@ -14,6 +14,8 @@ import config from 'src/config';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-datepicker';
+export const pickerPrefixCls = prefixCls + '–picker';
+export const monthPickerPrefixCls = prefixCls + '-month-picker';
 
 const RcPickerWrap = ({ className, dropdownClassName, ...rest }) => (
     <RcPicker dropdownClassName={classnames(className, dropdownClassName)} {...rest} />
@@ -41,15 +43,15 @@ export const PickerWrap = styled(RcPickerWrap).attrs({
 export const DateWrap = styled.div.attrs({
     className: `${prefixCls}-date-wrap`
 })(
-    ({ theme: { Height, HeightNumber, colorMap }, size }) => css`
+    ({ theme: { Height, HeightNumber, colorMap, materialVars }, size }) => css`
         height: ${Height[size]};
         line-height: ${HeightNumber[size] - 2}px;
-        padding: 0 8px;
-        border: 1px solid ${colorMap.default.border};
+        padding: 1px 8px;
+        border: 0px solid ${colorMap.default.border};
         border-radius: 2px;
         cursor: pointer;
         box-sizing: border-box;
-
+        box-shadow: ${materialVars.whiteBoxShadow};
         ${inlineBlockWithVerticalMixin};
     `
 );
@@ -63,7 +65,9 @@ export const PickerIcon = styled(Icon)`
     display: inline-block;
 `;
 
-export const TimeWrap = styled.div`
+export const TimeWrap = styled.div.attrs({
+    className: `${prefixCls}-time-wrap`
+})`
     margin-left: 8px;
 
     ${inlineBlockWithVerticalMixin};
@@ -74,7 +78,8 @@ export const TimeSeparator = styled.span`
 `;
 
 export const PickerContainer = styled.div.attrs({
-    className: ({ disabled }) => classnames(disabled && `${prefixCls}-disabled`)
+    className: ({ disabled, isMonth }) =>
+        classnames(prefixCls, isMonth && `${prefixCls}-month`, disabled && `${prefixCls}-disabled`)
 })(
     ({ theme: { colorMap, DatePicker: datePickerTheme = {} }, disabled }) => css`
         ${inlineBlockWithVerticalMixin};
@@ -86,6 +91,8 @@ export const PickerContainer = styled.div.attrs({
                     color: ${colorMap.disabled.text};
                     border-color: ${colorMap.disabled.border};
                     background: ${colorMap.disabled.background};
+                    box-shadow: none;
+                    border-width: 1px;
                 }
             `};
         ${datePickerTheme['&']};
@@ -95,22 +102,21 @@ export const PickerContainer = styled.div.attrs({
 export const RangeContainer = styled.div.attrs({
     className: ({ disabled }) => classnames(`${prefixCls}-range`, disabled && `${prefixCls}-range-disabled`)
 })(
-    ({ theme: { DatePicker: datePickerTheme = {} } }) => css`
-        ${datePickerTheme['Range']};
+    () => css`
+        /* empty */
     `
 );
 
 export const RangePopup = styled.div.attrs({
     className: `${prefixCls}-range-popup`
 })(
-    ({ theme: { colorMap, DatePicker: datePickerTheme = {} } }) => css`
+    ({ theme: { colorMap, materialVars } }) => css`
         background: ${colorMap.default.background};
         display: inline-block;
-        border: 1px solid ${colorMap.default.border};
-        box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+        border: 0 solid ${colorMap.default.border};
         border-radius: 2px;
         padding: 0;
-        ${datePickerTheme['RangePopup']};
+        box-shadow: ${materialVars.whiteBoxShadowActive};
     `
 );
 
@@ -126,8 +132,8 @@ export const RangeDateWrap = styled.div.attrs({
             disabled && `${prefixCls}-range-date-wrap-disabled`
         )
 })(
-    ({ theme: { Height, HeightNumber, colorMap }, size, readonly, disabled }) => css`
-        border: 1px solid ${colorMap.default.border};
+    ({ theme: { Height, HeightNumber, colorMap, materialVars }, size, readonly, disabled }) => css`
+        border: 0 solid ${colorMap.default.border};
         padding: 0 8px;
         border-radius: 2px;
         cursor: pointer;
@@ -135,6 +141,10 @@ export const RangeDateWrap = styled.div.attrs({
         height: ${Height[size]};
         line-height: ${HeightNumber[size] - 2}px;
         color: ${colorMap.default.text};
+        box-shadow: ${materialVars.whiteBoxShadow};
+        :hover {
+            box-shadow: ${materialVars.whiteBoxShadowActive};
+        }
 
         ${inlineBlockWithVerticalMixin};
 
@@ -143,6 +153,7 @@ export const RangeDateWrap = styled.div.attrs({
                 pointer-events: none;
                 border-width: 0;
                 line-height: ${Height[size]};
+                box-shadow: none;
 
                 ${/* sc-sel */ PickerIcon} {
                     display: none;
@@ -156,6 +167,7 @@ export const RangeDateWrap = styled.div.attrs({
                 border-color: ${colorMap.disabled.border};
                 border-width: 1px;
                 color: ${colorMap.disabled.text};
+                box-shadow: none;
             `};
     `
 );

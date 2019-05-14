@@ -1,9 +1,16 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
+import classnames from 'classnames';
 
+import config from 'src/config';
 import { inlineBlockWithVerticalMixin } from 'src/style';
 import Icon from 'src/components/Icon';
 import Button from 'src/components/Button';
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
+
+const { prefixCls: _prefixCls } = config;
+const prefixCls = _prefixCls + '-radio';
 
 export const RadioIcon = styled(Icon)`
     margin-right: 8px;
@@ -22,8 +29,22 @@ const sizeMixin = ({ theme: { Height }, size }) => css`
     line-height: ${Height[size]};
 `;
 
+const sharedClassName = ({ disabled, checked, size, styleType }) =>
+    classnames({
+        [`${prefixCls}`]: true,
+        [`${prefixCls}-disabled`]: disabled,
+        [`${prefixCls}-checked`]: checked,
+        [`${prefixCls}-size-${size}`]: true,
+        [`${prefixCls}-styletype-${styleType}`]: true
+    });
+
+const sharedStyle = ({ theme: { Radio: radioTheme = {} } }) => css`
+    ${radioTheme['&']};
+`;
 /* stylelint-disable no-duplicate-selectors */
-export const RadioWrap = styled.div`
+export const RadioWrap = styled.div.attrs({
+    className: sharedClassName
+})`
     ${radioCommonStyleMixin};
 
     ${inlineBlockWithVerticalMixin};
@@ -49,36 +70,54 @@ export const RadioWrap = styled.div`
                 color: ${colorMap.disabled.icon};
             }
         `};
+
+    ${sharedStyle};
 `;
 
-export const RadioButtonWrap = styled(Button)`
-    min-width: 50px;
-    text-align: center;
-    border: 1px solid ${({ theme: { colorMap } }) => colorMap.default.border};
-    border-radius: 0;
+// eslint-disable-next-line no-unused-vars
+const FilterStyleTypeButton = ({ styleType, ...rest }) => <Button styleType="border-gray" {...rest} />;
+FilterStyleTypeButton.propTypes = {
+    styleType: PropTypes.string
+};
 
-    ${radioCommonStyleMixin};
-
-    ${({ disabled }) =>
-        disabled &&
-        css`
-            z-index: 1;
+export const RadioButtonWrap = styled(FilterStyleTypeButton).attrs({
+    className: sharedClassName
+})`
+    && {
+        ${({ size }) => css`
+            min-width: ${{ lg: 80, md: 68, sm: 56 }[size]}px;
         `};
+        text-align: center;
+        border-radius: 0;
+        ${({ theme: { fontSize } }) =>
+            css`
+                font-size: ${fontSize};
+            `};
+        position: relative;
+        cursor: pointer;
 
-    ${({ checked, theme: { colorMap } }) =>
-        checked &&
-        css`
-            border-color: ${colorMap.active.border};
-            color: ${colorMap.active.text};
-            z-index: 2;
-        `};
+        ${({ disabled }) =>
+            disabled &&
+            css`
+                z-index: 1;
+            `};
 
-    &:hover {
-        z-index: 3;
+        ${({ checked }) =>
+            checked &&
+            css`
+                z-index: 2;
+            `};
+
+        &:hover {
+            z-index: 3;
+        }
+        ${sharedStyle};
     }
 `;
 
-export const RadioTagWrap = styled.div`
+export const RadioTagWrap = styled.div.attrs({
+    className: sharedClassName
+})`
     padding: 0 8px;
     cursor: pointer;
     border-radius: 2px;
@@ -103,6 +142,7 @@ export const RadioTagWrap = styled.div`
             cursor: not-allowed;
             pointer-events: none;
         `};
+    ${sharedStyle};
 `;
 
 export const RadioCardHeader = styled.div`
@@ -130,7 +170,7 @@ export const RadioCardDisabledLabelWrap = styled.span`
     line-height: 16px;
     ${RadioCardTipPosition};
 `;
-const propsMixin = ({ theme: { colorMap, colorList, titleFontSize }, disabled, checked }) => css`
+const cardPropsMixin = ({ theme: { colorMap, colorList, titleFontSize }, disabled, checked }) => css`
     border: 1px solid ${colorMap.default.border};
 
     ${!checked &&
@@ -144,20 +184,20 @@ const propsMixin = ({ theme: { colorMap, colorList, titleFontSize }, disabled, c
         `};
 
     ${RadioCardHeader} {
-        background: #f6f6fb;
         color: ${colorList.title};
         font-size: ${titleFontSize};
+        border-bottom: 1px solid ${colorMap.default.border};
     }
     ${checked &&
         css`
             border-color: ${colorMap.active.border};
             box-shadow: 0px 2px 4px 0px rgba(228, 229, 242, 1), 0px 1px 1px 0px rgba(162, 166, 191, 0.32);
             ${RadioCardHeader} {
-                background: ${colorList.primary};
-                color: white;
+                color: ${colorMap.active.text};
+                border-color: ${colorMap.active.border};
             }
             ${RadioCardIcon} {
-                color: white;
+                color: ${colorMap.active.text};
             }
         `};
     ${!disabled &&
@@ -193,25 +233,90 @@ const propsMixin = ({ theme: { colorMap, colorList, titleFontSize }, disabled, c
             }
         `};
 `;
-export const RadioCardWrap = styled.div`
+export const RadioCardWrap = styled.div.attrs({
+    className: sharedClassName
+})`
     border-radius: 4px;
     overflow: hidden;
-    min-width: 150px;
     display: inline-block;
     cursor: pointer;
 
-    ${propsMixin};
+    ${cardPropsMixin};
+    ${sharedStyle};
+`;
+export const RadioTextWrap = styled.div.attrs({
+    className: sharedClassName
+})`
+    padding: 2px 0;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    > span {
+        display: table;
+        height: 100%;
+        > span {
+            ${({ theme: { colorMap } }) => css`
+                padding: 0 12px;
+                border-color: ${colorMap.default.border};
+                border-style: solid;
+                border-width: 0 1px;
+                height: 100%;
+                display: table-cell;
+                vertical-align: middle;
+            `};
+        }
+    }
+
+    ${radioCommonStyleMixin};
+
+    ${inlineBlockWithVerticalMixin};
+
+    ${sizeMixin};
+    line-height: normal;
+
+    ${({ theme: { colorMap } }) => css`
+        :hover {
+            color: ${colorMap.active.text};
+        }
+    `};
+
+    ${({ checked, theme: { colorMap } }) =>
+        checked &&
+        css`
+            color: ${colorMap.active.text};
+        `};
+
+    ${({ disabled, theme: { colorMap } }) =>
+        disabled &&
+        css`
+            color: ${colorMap.disabled.text};
+            cursor: not-allowed;
+            pointer-events: none;
+        `};
+    ${sharedStyle};
 `;
 
 export const RadioGroupWrap = styled.div`
+    position: relative;
     margin-bottom: -8px;
-    ${RadioWrap}, ${/* sc-sel */ RadioTagWrap}, ${RadioCardWrap} {
+    ${RadioWrap}, ${/* sc-sel */ RadioTagWrap} {
         margin-right: 8px;
         margin-bottom: 8px;
 
         &:last-child {
             margin-right: 0;
         }
+    }
+    ${RadioCardWrap} {
+        margin-right: 12px;
+        margin-bottom: 8px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    ${RadioTextWrap}+${RadioTextWrap} {
+        margin-left: -1px;
     }
 
     ${RadioButtonWrap} {
@@ -227,4 +332,4 @@ export const RadioGroupWrap = styled.div`
     }
 `;
 
-addDefaultThemeProps(RadioWrap, RadioButtonWrap, RadioTagWrap, RadioCardWrap);
+addDefaultThemeProps(RadioWrap, RadioButtonWrap, RadioTagWrap, RadioCardWrap, RadioTextWrap);

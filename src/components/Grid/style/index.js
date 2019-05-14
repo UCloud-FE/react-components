@@ -1,6 +1,11 @@
 import styled, { css } from 'styled-components';
 
 import { clearFixMixin } from 'src/style';
+import config from 'src/config';
+
+const { prefixCls: _prefixCls } = config;
+const colPrefixCls = _prefixCls + '-col';
+const rowPrefixCls = _prefixCls + '-row';
 
 const maxColumns = 12;
 
@@ -49,7 +54,9 @@ const alignMixin = css`
     align-items: ${({ align }) => ({ top: 'flex-start', middle: 'center', bottom: 'flex-end' }[align])};
 `;
 
-export const ColWrap = styled.div`
+export const ColWrap = styled.div.attrs({
+    className: colPrefixCls
+})`
     position: relative;
     display: block;
     box-sizing: border-box;
@@ -62,7 +69,9 @@ export const ColWrap = styled.div`
     ${props => props.order && orderMixin};
 `;
 
-export const RowWrap = styled.div`
+export const RowWrap = styled.div.attrs({
+    className: rowPrefixCls
+})`
     position: relative;
     display: block;
     height: auto;

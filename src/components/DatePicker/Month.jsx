@@ -8,7 +8,7 @@ import uncontrolledDecorator from 'src/decorators/uncontrolled';
 import { animationPrefixCls } from 'src/style/globalAnimation';
 
 import { isDateDisabled, getValidDate } from './utils';
-import { prefixCls, PickerWrap, PickerContainer, DateWrap, DateSpan, PickerIcon } from './style';
+import { monthPickerPrefixCls, PickerWrap, PickerContainer, DateWrap, DateSpan, PickerIcon } from './style';
 import { Size } from './DatePicker';
 
 @uncontrolledDecorator({})
@@ -40,12 +40,15 @@ class Month extends Component {
         /** 是否禁用 */
         disabled: PropTypes.bool,
         /** 弹出层的z-index */
-        zIndex: PropTypes.number
+        zIndex: PropTypes.number,
+        /** 弹出层容器，参考popover.getPopupContainer */
+        getCalendarContainer: PropTypes.func
     };
     static defaultProps = {
         onChange: () => {},
         size: 'md',
-        zIndex: 100
+        zIndex: 100,
+        getCalendarContainer: triggerNode => triggerNode.parentNode
     };
     componentWillReceiveProps = nextProps => {
         if ('value' in nextProps) {
@@ -88,18 +91,28 @@ class Month extends Component {
         }
     };
     render() {
-        // eslint-disable-next-line no-unused-vars
-        const { rules, value: _v, defaultValue, size, display = {}, onChange, zIndex, ...rest } = this.props;
+        const {
+            rules,
+            value: _v,
+            // eslint-disable-next-line no-unused-vars
+            defaultValue,
+            size,
+            display = {},
+            onChange,
+            zIndex,
+            getCalendarContainer,
+            ...rest
+        } = this.props;
         const { date = {} } = display;
         const value = moment(_v);
 
         return (
-            <PickerContainer {...rest}>
+            <PickerContainer isMonth {...rest}>
                 <PickerWrap
-                    prefixCls={prefixCls}
+                    prefixCls={monthPickerPrefixCls}
                     transitionName={`${animationPrefixCls}-fade`}
                     calendar={<MonthCalendar rules={rules} />}
-                    getCalendarContainer={triggerNode => triggerNode.parentNode}
+                    getCalendarContainer={getCalendarContainer}
                     value={value}
                     align={placements.bottomLeft}
                     onChange={onChange}

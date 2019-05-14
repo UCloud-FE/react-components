@@ -22,11 +22,14 @@ class Demo extends React.Component {
                     <Checkbox
                         styleType="card"
                         title="title"
-                        disabledLabel="售罄"
+                        disabledLabel="必选"
                         disabled
                         checked
                         style={{ marginRight: 8 }}
                     >
+                        checkbox
+                    </Checkbox>
+                    <Checkbox styleType="card" title="title" disabled checked style={{ marginRight: 8 }}>
                         checkbox
                     </Checkbox>
                 </div>

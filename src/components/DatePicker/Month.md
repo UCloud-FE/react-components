@@ -33,3 +33,8 @@
 
 ```js {"codepath": "month-uncontrolled.jsx"}
 ```
+
+*   getCalendarContainer
+
+```js {"codepath": "month-getcalendarcontainer.jsx"}
+```

@@ -2,6 +2,115 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.0"></a>
+
+# [0.5.0](https://github.com/UCloud-FE/react-components/compare/v0.4.7...v0.5.0) (2019-05-06)
+
+### Features
+
+*   **merge material theme:** merge material theme into default theme ([a57ee4f](https://github.com/UCloud-FE/react-components/commit/a57ee4f)), closes [#124](https://github.com/UCloud-FE/react-components/issues/124)
+*   **merge material theme:** merge material theme into default theme ([8a7d520](https://github.com/UCloud-FE/react-components/commit/8a7d520))
+
+<a name="0.4.7"></a>
+
+## [0.4.7](https://github.com/UCloud-FE/react-components/compare/v0.4.6...v0.4.7) (2019-04-29)
+
+### Bug Fixes
+
+*   **Button:** fix safari button wrong margin ([43e50a2](https://github.com/UCloud-FE/react-components/commit/43e50a2)), closes [#123](https://github.com/UCloud-FE/react-components/issues/123)
+
+### Features
+
+*   **Select:** reduce padding of select ([7023ca8](https://github.com/UCloud-FE/react-components/commit/7023ca8)), closes [#122](https://github.com/UCloud-FE/react-components/issues/122)
+
+<a name="0.4.6"></a>
+
+## [0.4.6](https://github.com/UCloud-FE/react-components/compare/v0.4.5...v0.4.6) (2019-04-19)
+
+### Bug Fixes
+
+*   **NumberInput:** fix style of suffix ([2a9271f](https://github.com/UCloud-FE/react-components/commit/2a9271f)), closes [#116](https://github.com/UCloud-FE/react-components/issues/116)
+
+### Features
+
+*   **Card:** remove min height of card content ([06a3d00](https://github.com/UCloud-FE/react-components/commit/06a3d00)), closes [#119](https://github.com/UCloud-FE/react-components/issues/119)
+*   **Radio:** add text radio ([2f1da9e](https://github.com/UCloud-FE/react-components/commit/2f1da9e)), closes [#120](https://github.com/UCloud-FE/react-components/issues/120)
+*   **Radio:** change card style ([186fe37](https://github.com/UCloud-FE/react-components/commit/186fe37)), closes [#121](https://github.com/UCloud-FE/react-components/issues/121)
+
+<a name="0.4.5"></a>
+
+## [0.4.5](https://github.com/UCloud-FE/react-components/compare/v0.4.4...v0.4.5) (2019-04-16)
+
+### Bug Fixes
+
+*   **Radio:** fix style of button ([81e6c2d](https://github.com/UCloud-FE/react-components/commit/81e6c2d)), closes [#117](https://github.com/UCloud-FE/react-components/issues/117)
+
+### Features
+
+*   **Icon:** reset icon style ([191a7ca](https://github.com/UCloud-FE/react-components/commit/191a7ca)), closes [#118](https://github.com/UCloud-FE/react-components/issues/118)
+
+<a name="0.4.4"></a>
+
+## [0.4.4](https://github.com/UCloud-FE/react-components/compare/v0.4.3...v0.4.4) (2019-04-11)
+
+### Bug Fixes
+
+*   **NumberInput:** fix when onHandle return 2 arguments ([fd3bdaa](https://github.com/UCloud-FE/react-components/commit/fd3bdaa)), closes [#114](https://github.com/UCloud-FE/react-components/issues/114)
+*   **Select:** fix search input width and menu max width ([600b5fb](https://github.com/UCloud-FE/react-components/commit/600b5fb)), closes [#115](https://github.com/UCloud-FE/react-components/issues/115)
+*   **Slider:** fix slider bug when update max min or step ([93fd186](https://github.com/UCloud-FE/react-components/commit/93fd186)), closes [#112](https://github.com/UCloud-FE/react-components/issues/112)
+*   **Slider:** ZForm dec bug & style bug ([2b430ed](https://github.com/UCloud-FE/react-components/commit/2b430ed)), closes [#83](https://github.com/UCloud-FE/react-components/issues/83) [#113](https://github.com/UCloud-FE/react-components/issues/113)
+
+<a name="0.4.3"></a>
+
+## [0.4.3](https://github.com/UCloud-FE/react-components/compare/v0.4.2...v0.4.3) (2019-04-10)
+
+### Bug Fixes
+
+*   **Textarea:** fix placeholder color ([f5e47bc](https://github.com/UCloud-FE/react-components/commit/f5e47bc)), closes [#109](https://github.com/UCloud-FE/react-components/issues/109)
+
+### Features
+
+*   **DatePicker:** add getCalendarContainer to set popover container ([3334611](https://github.com/UCloud-FE/react-components/commit/3334611)), closes [#65](https://github.com/UCloud-FE/react-components/issues/65) [#110](https://github.com/UCloud-FE/react-components/issues/110)
+*   **Form:** add Group of form ([9be9ede](https://github.com/UCloud-FE/react-components/commit/9be9ede)), closes [#106](https://github.com/UCloud-FE/react-components/issues/106)
+*   **Input:** add classname ([5a044b3](https://github.com/UCloud-FE/react-components/commit/5a044b3)), closes [#111](https://github.com/UCloud-FE/react-components/issues/111)
+*   **Modal:** support promise when use modal method ([a73e51f](https://github.com/UCloud-FE/react-components/commit/a73e51f)), closes [#108](https://github.com/UCloud-FE/react-components/issues/108)
+*   **Radio:** add classnames ([176bb87](https://github.com/UCloud-FE/react-components/commit/176bb87)), closes [#107](https://github.com/UCloud-FE/react-components/issues/107)
+*   **Table:** add button styleType to actionList ([86a65f8](https://github.com/UCloud-FE/react-components/commit/86a65f8)), closes [#105](https://github.com/UCloud-FE/react-components/issues/105)
+
+<a name="0.4.2"></a>
+
+## [0.4.2](https://github.com/UCloud-FE/react-components/compare/v0.4.1...v0.4.2) (2019-04-08)
+
+### Bug Fixes
+
+*   **All:** fix zindex override bug ([996d790](https://github.com/UCloud-FE/react-components/commit/996d790)), closes [#103](https://github.com/UCloud-FE/react-components/issues/103)
+*   **Calendar:** fix outline of calendar popover ([592861c](https://github.com/UCloud-FE/react-components/commit/592861c)), closes [#104](https://github.com/UCloud-FE/react-components/issues/104)
+*   **Table:** fix scroll bar visible in windows ([7bd9474](https://github.com/UCloud-FE/react-components/commit/7bd9474)), closes [#102](https://github.com/UCloud-FE/react-components/issues/102)
+
+### Features
+
+*   **All:** add classname ([d42af4a](https://github.com/UCloud-FE/react-components/commit/d42af4a)), closes [#85](https://github.com/UCloud-FE/react-components/issues/85)
+*   **Table:** add resizableTH for table td resize ([5ca6219](https://github.com/UCloud-FE/react-components/commit/5ca6219)), closes [#101](https://github.com/UCloud-FE/react-components/issues/101)
+*   **Table:** move footer outside of table content ([3e6a382](https://github.com/UCloud-FE/react-components/commit/3e6a382)), closes [#99](https://github.com/UCloud-FE/react-components/issues/99)
+
+<a name="0.4.1"></a>
+
+## [0.4.1](https://github.com/UCloud-FE/react-components/compare/v0.4.0...v0.4.1) (2019-03-25)
+
+### Bug Fixes
+
+*   **Tabs:** fix tabs tab bar style ([727057d](https://github.com/UCloud-FE/react-components/commit/727057d)), closes [#98](https://github.com/UCloud-FE/react-components/issues/98)
+*   **Tabs:** fix tabs tab bar style ([5616831](https://github.com/UCloud-FE/react-components/commit/5616831))
+
+<a name="0.4.0"></a>
+
+# [0.4.0](https://github.com/UCloud-FE/react-components/compare/v0.4.0-beta.11...v0.4.0) (2019-03-25)
+
+### Bug Fixes
+
+*   **Tabs:** fix style bug when nest two diffrence styleType tabs ([9e008ed](https://github.com/UCloud-FE/react-components/commit/9e008ed)), closes [#97](https://github.com/UCloud-FE/react-components/issues/97)
+*   **Tabs:** fix tabs tab height style bug ([ca13437](https://github.com/UCloud-FE/react-components/commit/ca13437)), closes [#96](https://github.com/UCloud-FE/react-components/issues/96)
+
 <a name="0.4.0-beta.11"></a>
 
 # [0.4.0-beta.11](https://github.com/UCloud-FE/react-components/compare/v0.4.0-beta.10...v0.4.0-beta.11) (2019-03-18)

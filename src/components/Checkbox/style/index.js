@@ -4,8 +4,14 @@ import Icon from 'src/components/Icon';
 import Card from 'src/components/Radio/Card';
 import { inlineBlockWithVerticalMixin } from 'src/style';
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
+import config from 'src/config';
 
-export const CheckboxIcon = styled(Icon)`
+const { prefixCls: _prefixCls } = config;
+const prefixCls = _prefixCls + '-checkbox';
+
+export const CheckboxIcon = styled(Icon).attrs({
+    className: prefixCls + '-icon'
+})`
     margin-right: 8px;
     font-size: 14px;
 `;
@@ -27,7 +33,9 @@ const propsMixin = ({ theme: { Height, colorMap, fontSize }, size, disabled, che
     }
 `;
 
-export const CheckboxWrap = styled.span`
+export const CheckboxWrap = styled.span.attrs({
+    className: prefixCls
+})`
     cursor: pointer;
     position: relative;
 
@@ -38,7 +46,9 @@ export const CheckboxWrap = styled.span`
 export const CheckboxCardWrap = styled(Card)`
     /* empty */
 `;
-export const CheckboxGroupWrap = styled.div`
+export const CheckboxGroupWrap = styled.div.attrs({
+    className: prefixCls + '-group'
+})`
     ${/* sc-sel */ CheckboxWrap}, ${CheckboxCardWrap} {
         margin-right: 8px;
 

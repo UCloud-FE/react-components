@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
-const themeMixin = ({ theme: { colorMap, fontSize } }) => css`
+const themeMixin = ({ theme: { colorList, colorMap, fontSize } }) => css`
     font-size: ${fontSize};
     color: ${colorMap.default.text};
     border: 1px solid ${colorMap.default.border};
@@ -10,6 +10,9 @@ const themeMixin = ({ theme: { colorMap, fontSize } }) => css`
     &:hover,
     &:focus {
         border-color: ${colorMap.active.border};
+    }
+    &::placeholder {
+        color: ${colorList.placeholder};
     }
     &[disabled] {
         border-color: ${colorMap.disabled.border};
