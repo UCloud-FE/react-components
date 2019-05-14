@@ -3,12 +3,12 @@ import config from 'src/config';
 const { prefixCls: _prefixCls } = config;
 const prefixCls = _prefixCls + '-menu';
 
-export default ({ colorMap }) => ({
+export default ({ colorMap, colorList }) => ({
     themeType: {
         light: {
             '&': {
                 [`&, .${prefixCls}-popup-content-wrap`]: {
-                    color: colorMap.default.text,
+                    color: colorList.black,
                     background: colorMap.default.background
                 },
                 [`.${prefixCls}-item, .${prefixCls}-submenu-title-content, .${prefixCls}-selectall-checkbox`]: {

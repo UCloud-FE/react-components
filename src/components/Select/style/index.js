@@ -56,12 +56,12 @@ export const BlockMenu = styled(Menu)(
 
 /* stylelint-disable no-duplicate-selectors */
 const propsMixin = ({
-    theme: { colorMap, Height, fontSize, materialVars, Select: selectTheme = {} },
+    theme: { colorMap, colorList, Height, fontSize, materialVars, Select: selectTheme = {} },
     size,
     disabled
 }) => css`
     font-size: ${fontSize};
-    color: ${colorMap.default.text};
+    color: ${colorList.black};
     background-color: ${colorMap.default.background};
 
     ${Selector} {
