@@ -150,6 +150,7 @@ export const RadioCardHeader = styled.div`
     padding: 8px 16px;
     line-height: 22px;
     min-height: 22px;
+    font-weight: bold;
 `;
 export const RadioCardContent = styled.div`
     padding: 16px;

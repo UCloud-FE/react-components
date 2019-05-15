@@ -66,10 +66,11 @@ const disabledMixin = ({
     }
 `;
 
-const checkedMixin = ({ theme: { colorList } }) => css`
+const checkedMixin = ({ theme: { colorList, materialVars } }) => css`
     color: ${colorList.primary};
     background: #fff;
     border-color: ${colorList.primary};
+    box-shadow: ${materialVars.whiteBoxShadowActive};
 `;
 
 export const ButtonWrap = styled.button.attrs({
