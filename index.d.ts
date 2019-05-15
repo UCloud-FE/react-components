@@ -526,7 +526,7 @@ declare module '@ucloud-fe/react-components' {
         closable?: boolean;
         icon?: string | React.ReactNode;
         onClose?: Function;
-        styleType?: 'default' | 'suceess' | 'warning' | 'error';
+        styleType?: 'default' | 'success' | 'warning' | 'error';
         action?: React.ReactNode;
         style?: React.CSSProperties;
     }
@@ -679,6 +679,7 @@ declare module '@ucloud-fe/react-components' {
 
     // Progress
     interface ProgressProps {
+        className?: string;
         percent?: number;
         format?: Function;
     }
