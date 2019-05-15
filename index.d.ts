@@ -642,9 +642,9 @@ declare module '@ucloud-fe/react-components' {
         className?: string;
         rowClassName?: string;
         pagination?: null | PaginationProps;
-        dataSource?: Object[];
-        columns?: Object[];
-        defaultColumnConfig?: Object[];
+        dataSource?: any[];
+        columns?: any[];
+        defaultColumnConfig?: any[];
         onColumnConfigChange?: Function;
         expandedRowRender?: Function;
         expandIconAsCell?: boolean;
