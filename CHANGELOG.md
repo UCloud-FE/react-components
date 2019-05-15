@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.1"></a>
+
+## [0.5.1](https://github.com/UCloud-FE/react-components/compare/v0.5.0...v0.5.1) (2019-05-15)
+
+### Features
+
+*   **All:** change some style ([c5d853b](https://github.com/UCloud-FE/react-components/commit/c5d853b)), closes [#131](https://github.com/UCloud-FE/react-components/issues/131)
+*   **All:** change text color of select,input and radio.button ([8577c04](https://github.com/UCloud-FE/react-components/commit/8577c04)), closes [#129](https://github.com/UCloud-FE/react-components/issues/129)
+*   **Card:** update card style ([6004434](https://github.com/UCloud-FE/react-components/commit/6004434)), closes [#126](https://github.com/UCloud-FE/react-components/issues/126)
+*   **Form:** add size to form ([30f109c](https://github.com/UCloud-FE/react-components/commit/30f109c)), closes [#127](https://github.com/UCloud-FE/react-components/issues/127)
+*   **Radio:** change radio min-width size ([79f9184](https://github.com/UCloud-FE/react-components/commit/79f9184)), closes [#128](https://github.com/UCloud-FE/react-components/issues/128)
+*   **Slider:** change slider wrap ([16c87d2](https://github.com/UCloud-FE/react-components/commit/16c87d2)), closes [#132](https://github.com/UCloud-FE/react-components/issues/132)
+
 <a name="0.5.0"></a>
 
 # [0.5.0](https://github.com/UCloud-FE/react-components/compare/v0.4.7...v0.5.0) (2019-05-06)
