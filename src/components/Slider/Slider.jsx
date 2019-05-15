@@ -20,7 +20,7 @@ const handle = props => {
     return (
         <Tooltip
             popupClassName={`${prefixCls}-tooltip`}
-            popup={_.isFunction(tipFormatter) ? tipFormatter(value) : value}
+            popup={_.isFunction(tipFormatter) ? tipFormatter(value) : value == null ? '' : value}
             visible={dragging && tipFormatter !== null}
             placement="top"
             key={index}
@@ -122,7 +122,12 @@ class Slider extends Component {
         return JSON.parse(JSON.stringify(obj));
     };
     componentWillReceiveProps(nextProps) {
-        if (!(nextProps.marks == this.state.cacheMarks || _.isEqual(nextProps.marks, this.state.cacheMarks))) {
+        if (
+            !(nextProps.marks == this.state.cacheMarks || _.isEqual(nextProps.marks, this.state.cacheMarks)) ||
+            nextProps.max !== this.props.max ||
+            nextProps.min !== this.props.min ||
+            nextProps.step !== this.props.step
+        ) {
             const marks = this.computeMarks(nextProps.marks);
             this.setState({
                 cacheMarks: this.simpleClone(nextProps.marks),
@@ -301,7 +306,9 @@ class Slider extends Component {
         const { marks } = this.state;
         const { min, max } = this.props;
         let value;
-        if (_.isEmpty(marks)) {
+        if (v == undefined) {
+            value = 0;
+        } else if (_.isEmpty(marks)) {
             value = (v - min) / (max - min) * sliderSplit;
         } else if (v == max) {
             value = sliderSplit;

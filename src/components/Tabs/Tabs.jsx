@@ -35,9 +35,16 @@ class Tabs extends Component {
                 styleType={styleType}
                 prefixCls={prefixCls}
                 tabBarPosition={tabBarPosition}
-                renderTabBar={() => <ScrollableInkTabBar className={`${prefixCls}-${tabBarPosition}-bar`} />}
+                renderTabBar={() => (
+                    <ScrollableInkTabBar
+                        className={`${prefixCls}-${tabBarPosition}-bar ${prefixCls}-styletype-${styleType}-bar`}
+                    />
+                )}
                 renderTabContent={() => (
-                    <TabContent className={`${prefixCls}-${tabBarPosition}-content`} animated={false} />
+                    <TabContent
+                        className={`${prefixCls}-${tabBarPosition}-content ${prefixCls}-styletype-${styleType}-content`}
+                        animated={false}
+                    />
                 )}
             />
         );

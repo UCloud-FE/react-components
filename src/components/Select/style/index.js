@@ -8,6 +8,7 @@ import { inlineBlockWithVerticalMixin } from 'src/style';
 
 export const SelectSearchInput = styled(Input.Search)`
     min-width: 100px;
+    display: block;
     margin: 0 8px;
     margin-top: 10px;
 `;
@@ -16,7 +17,7 @@ export const Selector = styled.div`
     border-radius: 2px;
     cursor: pointer;
     padding: 0 8px;
-    padding-right: 40px;
+    padding-right: 28px;
     box-sizing: border-box;
 `;
 
@@ -34,38 +35,46 @@ export const OptionWrap = styled(Menu.Item)`
         `};
 `;
 export const MenuWrap = styled.div(
-    ({ theme: { colorMap, Select: selectTheme = {} } }) => css`
+    ({ theme: { colorMap, materialVars } }) => css`
         background: ${colorMap.default.background};
-        border: 1px solid ${colorMap.default.border};
-        ${selectTheme['MenuWrap']};
+        border: 1px none ${colorMap.default.border};
+        box-shadow: ${materialVars.whiteBoxShadowActive};
+        border-radius: 2px;
+        display: inline-block;
     `
 );
 
 export const BlockMenu = styled(Menu)(
-    ({ theme: { Select: selectTheme = {} } }) => css`
+    () => css`
         display: block;
         border: none;
         max-height: 380px;
-        ${selectTheme['Menu']};
+        max-width: unset;
+        box-shadow: none;
     `
 );
 
 /* stylelint-disable no-duplicate-selectors */
-const propsMixin = ({ theme: { colorMap, Height, fontSize, Select: selectTheme = {} }, size, disabled }) => css`
+const propsMixin = ({
+    theme: { colorMap, colorList, Height, fontSize, materialVars, Select: selectTheme = {} },
+    size,
+    disabled
+}) => css`
     font-size: ${fontSize};
-    color: ${colorMap.default.text};
+    color: ${colorList.black};
     background-color: ${colorMap.default.background};
 
     ${Selector} {
         height: ${Height[size]};
         line-height: ${Height[size]};
-        border: 1px solid ${colorMap.default.border};
+        border: 1px none ${colorMap.default.border};
+        box-shadow: ${materialVars.whiteBoxShadow};
+        transition: all ${materialVars.transitionUp};
 
         &:hover {
             border-color: ${colorMap.active.border};
+            box-shadow: ${materialVars.whiteBoxShadowActive};
         }
-
-        ${selectTheme['Selector']};
     }
 
     ${disabled &&
@@ -76,6 +85,8 @@ const propsMixin = ({ theme: { colorMap, Height, fontSize, Select: selectTheme =
             ${Selector} {
                 background: ${colorMap.disabled.background};
                 border-color: ${colorMap.disabled.border};
+                box-shadow: none;
+                border-style: solid;
             }
         `};
 

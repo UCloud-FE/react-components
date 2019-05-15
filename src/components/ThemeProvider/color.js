@@ -1,5 +1,5 @@
 const colors = {
-    blue: '#4074e1',
+    blue: '#3555f6',
     blue1: '#3664c8',
     blue2: '#4683e6',
     blue3: '#eaf3fd',
@@ -24,7 +24,8 @@ const colors = {
     gray1: '#d9d9d9',
     gray2: '#f7f7f7',
     gray3: '#bbb',
-    white: '#fff'
+    white: '#fff',
+    black: '#0a1633'
 };
 
 // semantic colors
@@ -56,7 +57,8 @@ export const defaultColorList = {
     disabled2: colors.gray2,
     disabled3: colors.gray3,
     white: colors.white,
-    title: '#0a1633',
+    black: colors.black,
+    title: colors.black,
     subtitle: colors.blueGray4,
     placeholder: colors.blueGray3,
     link: colors.blue

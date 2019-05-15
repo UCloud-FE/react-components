@@ -33,3 +33,8 @@
 
 ```js {"codepath": "datepicker-uncontrolled.jsx"}
 ```
+
+*   getCalendarContainer
+
+```js {"codepath": "datepicker-getcalendarcontainer.jsx"}
+```

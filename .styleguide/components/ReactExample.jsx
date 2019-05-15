@@ -7,23 +7,6 @@ import splitExampleCode from 'react-styleguidist/lib/utils/splitExampleCode';
 import ThemeProvider from 'src/components/ThemeProvider';
 import greenTheme from 'src/components/ThemeProvider/green';
 import oceanTheme from 'src/components/ThemeProvider/ocean';
-import generateMaterialTheme from 'src/components/ThemeProvider/material';
-
-const materialTheme = generateMaterialTheme({
-    colorList: {
-        primary: '#3555f6'
-    },
-    Height: {
-        sm: '24px',
-        md: '28px',
-        lg: '32px'
-    },
-    Padding: {
-        sm: '8px',
-        md: '8px',
-        lg: '16px'
-    }
-});
 
 /* eslint-disable no-invalid-this, react/no-multi-comp */
 
@@ -51,20 +34,17 @@ class StateHolder extends Component {
 export const themeList = {
     blue: {},
     green: greenTheme,
-    ocean: oceanTheme,
-    material: materialTheme
+    ocean: oceanTheme
 };
 
 export const themeColor = {
-    blue: '#4074e1',
+    blue: '#3555f6',
     green: greenTheme.colorList.primary,
-    ocean: oceanTheme.colorList.primary,
-    material: '#415bf5'
+    ocean: oceanTheme.colorList.primary
 };
 
-let currentThemeType = 'blue';
+let defaultThemeType = 'blue';
 export const changeTheme = themeType => {
-    currentThemeType = themeType;
     _.each(themeListeners, listener => {
         listener(themeType);
     });
@@ -80,7 +60,7 @@ export default class ReactExample extends Component {
     };
     static contextTypes = {};
     state = {
-        theme: currentThemeType
+        theme: defaultThemeType
     };
     componentDidMount() {
         const listener = themeType => {
@@ -135,6 +115,7 @@ export default class ReactExample extends Component {
     }
 
     render() {
+        const { theme } = this.state;
         const compiledCode = this.compileCode(this.props.code);
         if (!compiledCode) {
             return null;
@@ -143,12 +124,12 @@ export default class ReactExample extends Component {
         const initialState = this.getExampleInitialState(head);
         const exampleComponent = this.getExampleComponent(example);
         const wrappedComponent =
-            this.state.theme === 'blue' ? (
+            theme === 'blue' ? (
                 <Wrapper onError={this.props.onError}>
                     <StateHolder component={exampleComponent} initialState={initialState} />
                 </Wrapper>
             ) : (
-                <ThemeProvider theme={themeList[this.state.theme]}>
+                <ThemeProvider theme={themeList[theme]}>
                     <Wrapper onError={this.props.onError}>
                         <StateHolder component={exampleComponent} initialState={initialState} />
                     </Wrapper>

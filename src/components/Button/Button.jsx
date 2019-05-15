@@ -2,9 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
-import Icon from 'src/components/Icon';
-
-import { ButtonWrap } from './style';
+import { ButtonWrap, ButtonIcon } from './style';
 
 const StyleType = ['primary', 'border', 'border-gray'];
 const Size = ['sm', 'md', 'lg'];
@@ -24,6 +22,11 @@ export default class Button extends PureComponent {
         icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
         /** 设置原生的button上type属性 */
         type: PropTypes.string,
+        /**
+         * @ignore
+         * 选中状态
+         */
+        checked: PropTypes.bool,
         /** @ignore */
         className: PropTypes.string,
         /** @ignore */
@@ -40,12 +43,12 @@ export default class Button extends PureComponent {
         const { loading, icon, children, ...rest } = this.props;
         let btnIcon = null;
         if (_.isString(icon)) {
-            btnIcon = <Icon type={icon} />;
+            btnIcon = <ButtonIcon type={icon} />;
         } else {
             btnIcon = icon;
         }
         if (loading) {
-            btnIcon = <Icon type="loading" spin />;
+            btnIcon = <ButtonIcon type="loading" spin />;
         }
         return (
             <ButtonWrap loading={loading} {...rest}>

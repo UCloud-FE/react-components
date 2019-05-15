@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Breadcrumb demo -- base 1`] = `
-.c1 {
+.c2 {
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -10,19 +10,7 @@ exports[`Breadcrumb demo -- base 1`] = `
   margin-right: 5px;
   display: inline-block;
   vertical-align: middle;
-  color: #4074e1;
-}
-
-.c3 {
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 700;
-  margin-right: 5px;
-  display: inline-block;
-  vertical-align: middle;
-  color: #4074e1;
+  color: #3555f6;
 }
 
 .c4 {
@@ -34,9 +22,7 @@ exports[`Breadcrumb demo -- base 1`] = `
   margin-right: 5px;
   display: inline-block;
   vertical-align: middle;
-  color: #4074e1;
-  pointer-events: none;
-  color: #bbb;
+  color: #3555f6;
 }
 
 .c5 {
@@ -48,12 +34,26 @@ exports[`Breadcrumb demo -- base 1`] = `
   margin-right: 5px;
   display: inline-block;
   vertical-align: middle;
-  color: #4074e1;
+  color: #3555f6;
+  pointer-events: none;
+  color: #bbb;
+}
+
+.c6 {
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  color: #3555f6;
   pointer-events: none;
   color: #6b798e;
 }
 
-.c2 {
+.c3 {
   font-size: 14px;
   font-weight: 700;
   margin-right: 5px;
@@ -67,49 +67,53 @@ exports[`Breadcrumb demo -- base 1`] = `
   vertical-align: baseline;
 }
 
+.c1 {
+  vertical-align: baseline;
+}
+
 <div
   class="c0"
 >
   <i
-    class="uc-fe-icon icon__left "
+    class="uc-fe-icon icon__left c1"
     style="border:1px solid #c3cad9;font-size:16px;margin-right:5px;"
     type="left"
   />
   <a
-    class="c1"
+    class="c2"
     href="https://www.google.com"
     target="_blank"
   >
     google
   </a>
   <span
-    class="c2"
-  >
-    /
-  </span>
-  <span
-    class="-span c3"
-  >
-    reload
-  </span>
-  <span
-    class="c2"
+    class="c3"
   >
     /
   </span>
   <span
     class="-span c4"
-    disabled=""
   >
-    google
+    reload
   </span>
   <span
-    class="c2"
+    class="c3"
   >
     /
   </span>
   <span
     class="-span c5"
+    disabled=""
+  >
+    google
+  </span>
+  <span
+    class="c3"
+  >
+    /
+  </span>
+  <span
+    class="-span c6"
   >
     current
   </span>

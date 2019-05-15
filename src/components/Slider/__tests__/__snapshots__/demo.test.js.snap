@@ -1,11 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Slider demo -- disabled 1`] = `
-.c5 {
-  position: relative;
+.c4 {
+  vertical-align: baseline;
 }
 
 .c7 {
+  position: relative;
+}
+
+.c9 {
   border: none;
   outline: none;
   padding: 0;
@@ -22,6 +26,7 @@ exports[`Slider demo -- disabled 1`] = `
   color: inherit;
   cursor: pointer;
   background: #fff;
+  box-shadow: 0 2px 4px 0 #e4e5f2,0 1px 1px 0 rgba(162,166,191,0.32),0 1px 0 0 rgba(223,224,241,0.7);
   display: inline-block;
   vertical-align: middle;
   border-color: #c3cad9;
@@ -30,7 +35,7 @@ exports[`Slider demo -- disabled 1`] = `
   color: #bbb;
 }
 
-.c9 {
+.c11 {
   position: absolute;
   box-sizing: border-box;
   text-align: center;
@@ -39,6 +44,7 @@ exports[`Slider demo -- disabled 1`] = `
   color: inherit;
   cursor: pointer;
   background: #fff;
+  box-shadow: 0 2px 4px 0 #e4e5f2,0 1px 1px 0 rgba(162,166,191,0.32),0 1px 0 0 rgba(223,224,241,0.7);
   display: inline-block;
   vertical-align: middle;
   border-color: #c3cad9;
@@ -54,68 +60,88 @@ exports[`Slider demo -- disabled 1`] = `
   height: 28px;
   pointer-events: none;
   color: #bbb;
-  border: 1px solid #c3cad9;
+  border: 1px solid #dfe0f1;
   padding-right: 22px;
+  border-right-width: 0;
   border-color: #d9d9d9;
 }
 
-.c1 .c6 {
+.c1 .c8 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
   background: #f7f7f7;
 }
 
-.c1 .c6::-webkit-input-placeholder {
+.c1 .c8::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c1 .c6::-moz-placeholder {
+.c1 .c8::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c1 .c6:-ms-input-placeholder {
+.c1 .c8:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c1 .c6::placeholder {
+.c1 .c8::placeholder {
   color: #abb4c3;
 }
 
 .c1:hover {
-  border-color: #4683e6;
+  border-color: #c3cad9;
 }
 
 .c1 .c6 {
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  background: #fafafc;
+}
+
+.c1 .c6:hover {
+  background: #f6f6fb;
+}
+
+.c1 .c6 {
+  box-shadow: none;
+}
+
+.c1 .c8 {
   padding: 0 0 0 8px;
   text-align: left;
+  box-shadow: none;
+  background: transparent;
   width: 34px;
 }
 
 .c1 .c2,
-.c1 .c4 {
+.c1 .c5 {
   right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
   height: 13px;
   line-height: 13px;
   width: 22px;
 }
 
 .c1 .c2:hover,
-.c1 .c4:hover {
-  color: #4074e1;
+.c1 .c5:hover {
+  color: #3555f6;
 }
 
 .c1 .c2 {
   border-width: 0 0 0 1px;
-  top: 0;
+  top: -1px;
+  padding-top: 1px;
 }
 
-.c1 .c4 {
+.c1 .c5 {
   border-width: 1px 0 0 1px;
   bottom: 0;
+  border-top-color: #e8e9f5;
 }
 
-.c8 {
+.c10 {
   position: relative;
   box-sizing: border-box;
   border-radius: 2px;
@@ -123,63 +149,79 @@ exports[`Slider demo -- disabled 1`] = `
   vertical-align: middle;
   color: #6b798e;
   height: 28px;
-  border: 1px solid #c3cad9;
+  border: 1px solid #dfe0f1;
   padding-right: 22px;
+  border-right-width: 0;
 }
 
-.c8 .c6 {
+.c10 .c8 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c8 .c6::-webkit-input-placeholder {
+.c10 .c8::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6::-moz-placeholder {
+.c10 .c8::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6:-ms-input-placeholder {
+.c10 .c8:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6::placeholder {
+.c10 .c8::placeholder {
   color: #abb4c3;
 }
 
-.c8:hover {
-  border-color: #4683e6;
+.c10:hover {
+  border-color: #c3cad9;
 }
 
-.c8 .c6 {
+.c10 .c6 {
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  background: #fafafc;
+}
+
+.c10 .c6:hover {
+  background: #f6f6fb;
+}
+
+.c10 .c8 {
   padding: 0 0 0 8px;
   text-align: left;
+  box-shadow: none;
+  background: transparent;
   width: 34px;
 }
 
-.c8 .c2,
-.c8 .c4 {
+.c10 .c2,
+.c10 .c5 {
   right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
   height: 13px;
   line-height: 13px;
   width: 22px;
 }
 
-.c8 .c2:hover,
-.c8 .c4:hover {
-  color: #4074e1;
+.c10 .c2:hover,
+.c10 .c5:hover {
+  color: #3555f6;
 }
 
-.c8 .c2 {
+.c10 .c2 {
   border-width: 0 0 0 1px;
-  top: 0;
+  top: -1px;
+  padding-top: 1px;
 }
 
-.c8 .c4 {
+.c10 .c5 {
   border-width: 1px 0 0 1px;
   bottom: 0;
+  border-top-color: #e8e9f5;
 }
 
 .c0 .uc-fe-slider {
@@ -236,7 +278,7 @@ exports[`Slider demo -- disabled 1`] = `
   border: 1px solid #c3cad9;
   background: #fff;
   touch-action: pan-x;
-  z-index: 1;
+  z-index: 9;
   height: 34px;
   line-height: 36px;
 }
@@ -296,7 +338,7 @@ exports[`Slider demo -- disabled 1`] = `
 }
 
 .c0 .uc-fe-slider-mark-text-active {
-  color: #4074e1;
+  color: #3555f6;
   border-right-color: #4683e6;
 }
 
@@ -345,7 +387,7 @@ exports[`Slider demo -- disabled 1`] = `
         />
       </div>
       <div
-        class="uc-fe-numberinput uc-fe-numberinput-styletype-default c1"
+        class="uc-fe-numberinput uc-fe-numberinput-styletype-default uc-fe-numberinput-disabled c1"
         disabled=""
       >
         <div>
@@ -355,27 +397,27 @@ exports[`Slider demo -- disabled 1`] = `
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-up "
+              class="uc-fe-icon icon__caret-up c4"
               type="caret-up"
             />
           </span>
           <span
-            class="c4 uc-fe-numberinput-handler-down uc-fe-numberinput-handler uc-fe-numberinput-handler-disabled c3"
+            class="c5 uc-fe-numberinput-handler-down uc-fe-numberinput-handler uc-fe-numberinput-handler-disabled c3"
             disabled=""
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-down "
+              class="uc-fe-icon icon__caret-down c4"
               type="caret-down"
             />
           </span>
         </div>
         <div
-          class="uc-fe-numberinput-input-wrap c5"
+          class="c6 uc-fe-numberinput-input-wrap c7"
         >
           <input
             autocomplete="off"
-            class="c6 uc-fe-numberinput-input c7"
+            class="c8 uc-fe-numberinput-input c9"
             disabled=""
             max="20"
             min="0"
@@ -420,34 +462,34 @@ exports[`Slider demo -- disabled 1`] = `
         />
       </div>
       <div
-        class="uc-fe-numberinput uc-fe-numberinput-styletype-default c8"
+        class="uc-fe-numberinput uc-fe-numberinput-styletype-default c10"
       >
         <div>
           <span
-            class="c2 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c9"
+            class="c2 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c11"
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-up "
+              class="uc-fe-icon icon__caret-up c4"
               type="caret-up"
             />
           </span>
           <span
-            class="c4 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c9"
+            class="c5 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c11"
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-down "
+              class="uc-fe-icon icon__caret-down c4"
               type="caret-down"
             />
           </span>
         </div>
         <div
-          class="uc-fe-numberinput-input-wrap c5"
+          class="c6 uc-fe-numberinput-input-wrap c7"
         >
           <input
             autocomplete="off"
-            class="c6 uc-fe-numberinput-input c7"
+            class="c8 uc-fe-numberinput-input c9"
             max="20"
             min="0"
             step="1"
@@ -461,11 +503,15 @@ exports[`Slider demo -- disabled 1`] = `
 `;
 
 exports[`Slider demo -- isSensitive 1`] = `
-.c5 {
-  position: relative;
+.c4 {
+  vertical-align: baseline;
 }
 
 .c7 {
+  position: relative;
+}
+
+.c9 {
   border: none;
   outline: none;
   padding: 0;
@@ -482,61 +528,81 @@ exports[`Slider demo -- isSensitive 1`] = `
   color: inherit;
   cursor: pointer;
   background: #fff;
+  box-shadow: 0 2px 4px 0 #e4e5f2,0 1px 1px 0 rgba(162,166,191,0.32),0 1px 0 0 rgba(223,224,241,0.7);
   display: inline-block;
   vertical-align: middle;
   border-color: #c3cad9;
 }
 
-.c8 .c6 {
+.c10 .c8 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
   background: #f7f7f7;
 }
 
-.c8 .c6::-webkit-input-placeholder {
+.c10 .c8::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6::-moz-placeholder {
+.c10 .c8::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6:-ms-input-placeholder {
+.c10 .c8:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6::placeholder {
+.c10 .c8::placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6 {
+.c10 .c6 {
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  background: #fafafc;
+}
+
+.c10 .c6:hover {
+  background: #f6f6fb;
+}
+
+.c10 .c6 {
+  box-shadow: none;
+}
+
+.c10 .c8 {
   padding: 0 0 0 8px;
   text-align: left;
+  box-shadow: none;
+  background: transparent;
   width: 34px;
 }
 
-.c8 .c2,
-.c8 .c4 {
+.c10 .c2,
+.c10 .c5 {
   right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
   height: 13px;
   line-height: 13px;
   width: 22px;
 }
 
-.c8 .c2:hover,
-.c8 .c4:hover {
-  color: #4074e1;
+.c10 .c2:hover,
+.c10 .c5:hover {
+  color: #3555f6;
 }
 
-.c8 .c2 {
+.c10 .c2 {
   border-width: 0 0 0 1px;
-  top: 0;
+  top: -1px;
+  padding-top: 1px;
 }
 
-.c8 .c4 {
+.c10 .c5 {
   border-width: 1px 0 0 1px;
   bottom: 0;
+  border-top-color: #e8e9f5;
 }
 
 .c1 {
@@ -547,63 +613,79 @@ exports[`Slider demo -- isSensitive 1`] = `
   vertical-align: middle;
   color: #6b798e;
   height: 28px;
-  border: 1px solid #c3cad9;
+  border: 1px solid #dfe0f1;
   padding-right: 22px;
+  border-right-width: 0;
 }
 
-.c1 .c6 {
+.c1 .c8 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c1 .c6::-webkit-input-placeholder {
+.c1 .c8::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c1 .c6::-moz-placeholder {
+.c1 .c8::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c1 .c6:-ms-input-placeholder {
+.c1 .c8:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c1 .c6::placeholder {
+.c1 .c8::placeholder {
   color: #abb4c3;
 }
 
 .c1:hover {
-  border-color: #4683e6;
+  border-color: #c3cad9;
 }
 
 .c1 .c6 {
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  background: #fafafc;
+}
+
+.c1 .c6:hover {
+  background: #f6f6fb;
+}
+
+.c1 .c8 {
   padding: 0 0 0 8px;
   text-align: left;
+  box-shadow: none;
+  background: transparent;
   width: 34px;
 }
 
 .c1 .c2,
-.c1 .c4 {
+.c1 .c5 {
   right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
   height: 13px;
   line-height: 13px;
   width: 22px;
 }
 
 .c1 .c2:hover,
-.c1 .c4:hover {
-  color: #4074e1;
+.c1 .c5:hover {
+  color: #3555f6;
 }
 
 .c1 .c2 {
   border-width: 0 0 0 1px;
-  top: 0;
+  top: -1px;
+  padding-top: 1px;
 }
 
-.c1 .c4 {
+.c1 .c5 {
   border-width: 1px 0 0 1px;
   bottom: 0;
+  border-top-color: #e8e9f5;
 }
 
 .c0 .uc-fe-slider {
@@ -660,7 +742,7 @@ exports[`Slider demo -- isSensitive 1`] = `
   border: 1px solid #c3cad9;
   background: #fff;
   touch-action: pan-x;
-  z-index: 1;
+  z-index: 9;
   height: 34px;
   line-height: 36px;
 }
@@ -720,7 +802,7 @@ exports[`Slider demo -- isSensitive 1`] = `
 }
 
 .c0 .uc-fe-slider-mark-text-active {
-  color: #4074e1;
+  color: #3555f6;
   border-right-color: #4683e6;
 }
 
@@ -778,26 +860,26 @@ exports[`Slider demo -- isSensitive 1`] = `
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-up "
+              class="uc-fe-icon icon__caret-up c4"
               type="caret-up"
             />
           </span>
           <span
-            class="c4 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
+            class="c5 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-down "
+              class="uc-fe-icon icon__caret-down c4"
               type="caret-down"
             />
           </span>
         </div>
         <div
-          class="uc-fe-numberinput-input-wrap c5"
+          class="c6 uc-fe-numberinput-input-wrap c7"
         >
           <input
             autocomplete="off"
-            class="c6 uc-fe-numberinput-input c7"
+            class="c8 uc-fe-numberinput-input c9"
             max="20"
             min="0"
             step="1"
@@ -849,26 +931,26 @@ exports[`Slider demo -- isSensitive 1`] = `
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-up "
+              class="uc-fe-icon icon__caret-up c4"
               type="caret-up"
             />
           </span>
           <span
-            class="c4 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
+            class="c5 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-down "
+              class="uc-fe-icon icon__caret-down c4"
               type="caret-down"
             />
           </span>
         </div>
         <div
-          class="uc-fe-numberinput-input-wrap c5"
+          class="c6 uc-fe-numberinput-input-wrap c7"
         >
           <input
             autocomplete="off"
-            class="c6 uc-fe-numberinput-input c7"
+            class="c8 uc-fe-numberinput-input c9"
             max="20"
             min="0"
             step="1"
@@ -882,11 +964,15 @@ exports[`Slider demo -- isSensitive 1`] = `
 `;
 
 exports[`Slider demo -- marks 1`] = `
-.c5 {
-  position: relative;
+.c4 {
+  vertical-align: baseline;
 }
 
 .c7 {
+  position: relative;
+}
+
+.c9 {
   border: none;
   outline: none;
   padding: 0;
@@ -903,61 +989,81 @@ exports[`Slider demo -- marks 1`] = `
   color: inherit;
   cursor: pointer;
   background: #fff;
+  box-shadow: 0 2px 4px 0 #e4e5f2,0 1px 1px 0 rgba(162,166,191,0.32),0 1px 0 0 rgba(223,224,241,0.7);
   display: inline-block;
   vertical-align: middle;
   border-color: #c3cad9;
 }
 
-.c8 .c6 {
+.c10 .c8 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
   background: #f7f7f7;
 }
 
-.c8 .c6::-webkit-input-placeholder {
+.c10 .c8::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6::-moz-placeholder {
+.c10 .c8::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6:-ms-input-placeholder {
+.c10 .c8:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6::placeholder {
+.c10 .c8::placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6 {
+.c10 .c6 {
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  background: #fafafc;
+}
+
+.c10 .c6:hover {
+  background: #f6f6fb;
+}
+
+.c10 .c6 {
+  box-shadow: none;
+}
+
+.c10 .c8 {
   padding: 0 0 0 8px;
   text-align: left;
+  box-shadow: none;
+  background: transparent;
   width: 34px;
 }
 
-.c8 .c2,
-.c8 .c4 {
+.c10 .c2,
+.c10 .c5 {
   right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
   height: 13px;
   line-height: 13px;
   width: 22px;
 }
 
-.c8 .c2:hover,
-.c8 .c4:hover {
-  color: #4074e1;
+.c10 .c2:hover,
+.c10 .c5:hover {
+  color: #3555f6;
 }
 
-.c8 .c2 {
+.c10 .c2 {
   border-width: 0 0 0 1px;
-  top: 0;
+  top: -1px;
+  padding-top: 1px;
 }
 
-.c8 .c4 {
+.c10 .c5 {
   border-width: 1px 0 0 1px;
   bottom: 0;
+  border-top-color: #e8e9f5;
 }
 
 .c1 {
@@ -968,63 +1074,79 @@ exports[`Slider demo -- marks 1`] = `
   vertical-align: middle;
   color: #6b798e;
   height: 28px;
-  border: 1px solid #c3cad9;
+  border: 1px solid #dfe0f1;
   padding-right: 22px;
+  border-right-width: 0;
 }
 
-.c1 .c6 {
+.c1 .c8 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c1 .c6::-webkit-input-placeholder {
+.c1 .c8::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c1 .c6::-moz-placeholder {
+.c1 .c8::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c1 .c6:-ms-input-placeholder {
+.c1 .c8:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c1 .c6::placeholder {
+.c1 .c8::placeholder {
   color: #abb4c3;
 }
 
 .c1:hover {
-  border-color: #4683e6;
+  border-color: #c3cad9;
 }
 
 .c1 .c6 {
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  background: #fafafc;
+}
+
+.c1 .c6:hover {
+  background: #f6f6fb;
+}
+
+.c1 .c8 {
   padding: 0 0 0 8px;
   text-align: left;
+  box-shadow: none;
+  background: transparent;
   width: 34px;
 }
 
 .c1 .c2,
-.c1 .c4 {
+.c1 .c5 {
   right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
   height: 13px;
   line-height: 13px;
   width: 22px;
 }
 
 .c1 .c2:hover,
-.c1 .c4:hover {
-  color: #4074e1;
+.c1 .c5:hover {
+  color: #3555f6;
 }
 
 .c1 .c2 {
   border-width: 0 0 0 1px;
-  top: 0;
+  top: -1px;
+  padding-top: 1px;
 }
 
-.c1 .c4 {
+.c1 .c5 {
   border-width: 1px 0 0 1px;
   bottom: 0;
+  border-top-color: #e8e9f5;
 }
 
 .c0 .uc-fe-slider {
@@ -1081,7 +1203,7 @@ exports[`Slider demo -- marks 1`] = `
   border: 1px solid #c3cad9;
   background: #fff;
   touch-action: pan-x;
-  z-index: 1;
+  z-index: 9;
   height: 34px;
   line-height: 36px;
 }
@@ -1141,7 +1263,7 @@ exports[`Slider demo -- marks 1`] = `
 }
 
 .c0 .uc-fe-slider-mark-text-active {
-  color: #4074e1;
+  color: #3555f6;
   border-right-color: #4683e6;
 }
 
@@ -1199,26 +1321,26 @@ exports[`Slider demo -- marks 1`] = `
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-up "
+              class="uc-fe-icon icon__caret-up c4"
               type="caret-up"
             />
           </span>
           <span
-            class="c4 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
+            class="c5 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-down "
+              class="uc-fe-icon icon__caret-down c4"
               type="caret-down"
             />
           </span>
         </div>
         <div
-          class="uc-fe-numberinput-input-wrap c5"
+          class="c6 uc-fe-numberinput-input-wrap c7"
         >
           <input
             autocomplete="off"
-            class="c6 uc-fe-numberinput-input c7"
+            class="c8 uc-fe-numberinput-input c9"
             max="20"
             min="0"
             step="1"
@@ -1302,26 +1424,26 @@ exports[`Slider demo -- marks 1`] = `
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-up "
+              class="uc-fe-icon icon__caret-up c4"
               type="caret-up"
             />
           </span>
           <span
-            class="c4 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
+            class="c5 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-down "
+              class="uc-fe-icon icon__caret-down c4"
               type="caret-down"
             />
           </span>
         </div>
         <div
-          class="uc-fe-numberinput-input-wrap c5"
+          class="c6 uc-fe-numberinput-input-wrap c7"
         >
           <input
             autocomplete="off"
-            class="c6 uc-fe-numberinput-input c7"
+            class="c8 uc-fe-numberinput-input c9"
             max="20"
             min="0"
             step="1"
@@ -1425,26 +1547,26 @@ exports[`Slider demo -- marks 1`] = `
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-up "
+              class="uc-fe-icon icon__caret-up c4"
               type="caret-up"
             />
           </span>
           <span
-            class="c4 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
+            class="c5 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-down "
+              class="uc-fe-icon icon__caret-down c4"
               type="caret-down"
             />
           </span>
         </div>
         <div
-          class="uc-fe-numberinput-input-wrap c5"
+          class="c6 uc-fe-numberinput-input-wrap c7"
         >
           <input
             autocomplete="off"
-            class="c6 uc-fe-numberinput-input c7"
+            class="c8 uc-fe-numberinput-input c9"
             max="1000"
             min="10"
             step="1"
@@ -1458,11 +1580,15 @@ exports[`Slider demo -- marks 1`] = `
 `;
 
 exports[`Slider demo -- minmax 1`] = `
-.c5 {
-  position: relative;
+.c4 {
+  vertical-align: baseline;
 }
 
 .c7 {
+  position: relative;
+}
+
+.c9 {
   border: none;
   outline: none;
   padding: 0;
@@ -1479,61 +1605,81 @@ exports[`Slider demo -- minmax 1`] = `
   color: inherit;
   cursor: pointer;
   background: #fff;
+  box-shadow: 0 2px 4px 0 #e4e5f2,0 1px 1px 0 rgba(162,166,191,0.32),0 1px 0 0 rgba(223,224,241,0.7);
   display: inline-block;
   vertical-align: middle;
   border-color: #c3cad9;
 }
 
-.c8 .c6 {
+.c10 .c8 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
   background: #f7f7f7;
 }
 
-.c8 .c6::-webkit-input-placeholder {
+.c10 .c8::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6::-moz-placeholder {
+.c10 .c8::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6:-ms-input-placeholder {
+.c10 .c8:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6::placeholder {
+.c10 .c8::placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6 {
+.c10 .c6 {
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  background: #fafafc;
+}
+
+.c10 .c6:hover {
+  background: #f6f6fb;
+}
+
+.c10 .c6 {
+  box-shadow: none;
+}
+
+.c10 .c8 {
   padding: 0 0 0 8px;
   text-align: left;
+  box-shadow: none;
+  background: transparent;
   width: 34px;
 }
 
-.c8 .c2,
-.c8 .c4 {
+.c10 .c2,
+.c10 .c5 {
   right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
   height: 13px;
   line-height: 13px;
   width: 22px;
 }
 
-.c8 .c2:hover,
-.c8 .c4:hover {
-  color: #4074e1;
+.c10 .c2:hover,
+.c10 .c5:hover {
+  color: #3555f6;
 }
 
-.c8 .c2 {
+.c10 .c2 {
   border-width: 0 0 0 1px;
-  top: 0;
+  top: -1px;
+  padding-top: 1px;
 }
 
-.c8 .c4 {
+.c10 .c5 {
   border-width: 1px 0 0 1px;
   bottom: 0;
+  border-top-color: #e8e9f5;
 }
 
 .c1 {
@@ -1544,63 +1690,79 @@ exports[`Slider demo -- minmax 1`] = `
   vertical-align: middle;
   color: #6b798e;
   height: 28px;
-  border: 1px solid #c3cad9;
+  border: 1px solid #dfe0f1;
   padding-right: 22px;
+  border-right-width: 0;
 }
 
-.c1 .c6 {
+.c1 .c8 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c1 .c6::-webkit-input-placeholder {
+.c1 .c8::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c1 .c6::-moz-placeholder {
+.c1 .c8::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c1 .c6:-ms-input-placeholder {
+.c1 .c8:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c1 .c6::placeholder {
+.c1 .c8::placeholder {
   color: #abb4c3;
 }
 
 .c1:hover {
-  border-color: #4683e6;
+  border-color: #c3cad9;
 }
 
 .c1 .c6 {
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  background: #fafafc;
+}
+
+.c1 .c6:hover {
+  background: #f6f6fb;
+}
+
+.c1 .c8 {
   padding: 0 0 0 8px;
   text-align: left;
+  box-shadow: none;
+  background: transparent;
   width: 34px;
 }
 
 .c1 .c2,
-.c1 .c4 {
+.c1 .c5 {
   right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
   height: 13px;
   line-height: 13px;
   width: 22px;
 }
 
 .c1 .c2:hover,
-.c1 .c4:hover {
-  color: #4074e1;
+.c1 .c5:hover {
+  color: #3555f6;
 }
 
 .c1 .c2 {
   border-width: 0 0 0 1px;
-  top: 0;
+  top: -1px;
+  padding-top: 1px;
 }
 
-.c1 .c4 {
+.c1 .c5 {
   border-width: 1px 0 0 1px;
   bottom: 0;
+  border-top-color: #e8e9f5;
 }
 
 .c0 .uc-fe-slider {
@@ -1657,7 +1819,7 @@ exports[`Slider demo -- minmax 1`] = `
   border: 1px solid #c3cad9;
   background: #fff;
   touch-action: pan-x;
-  z-index: 1;
+  z-index: 9;
   height: 34px;
   line-height: 36px;
 }
@@ -1717,7 +1879,7 @@ exports[`Slider demo -- minmax 1`] = `
 }
 
 .c0 .uc-fe-slider-mark-text-active {
-  color: #4074e1;
+  color: #3555f6;
   border-right-color: #4683e6;
 }
 
@@ -1775,26 +1937,26 @@ exports[`Slider demo -- minmax 1`] = `
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-up "
+              class="uc-fe-icon icon__caret-up c4"
               type="caret-up"
             />
           </span>
           <span
-            class="c4 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
+            class="c5 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-down "
+              class="uc-fe-icon icon__caret-down c4"
               type="caret-down"
             />
           </span>
         </div>
         <div
-          class="uc-fe-numberinput-input-wrap c5"
+          class="c6 uc-fe-numberinput-input-wrap c7"
         >
           <input
             autocomplete="off"
-            class="c6 uc-fe-numberinput-input c7"
+            class="c8 uc-fe-numberinput-input c9"
             max="20"
             min="10"
             step="1"
@@ -1846,26 +2008,26 @@ exports[`Slider demo -- minmax 1`] = `
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-up "
+              class="uc-fe-icon icon__caret-up c4"
               type="caret-up"
             />
           </span>
           <span
-            class="c4 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
+            class="c5 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-down "
+              class="uc-fe-icon icon__caret-down c4"
               type="caret-down"
             />
           </span>
         </div>
         <div
-          class="uc-fe-numberinput-input-wrap c5"
+          class="c6 uc-fe-numberinput-input-wrap c7"
         >
           <input
             autocomplete="off"
-            class="c6 uc-fe-numberinput-input c7"
+            class="c8 uc-fe-numberinput-input c9"
             max="20"
             min="0"
             step="1"
@@ -1917,26 +2079,26 @@ exports[`Slider demo -- minmax 1`] = `
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-up "
+              class="uc-fe-icon icon__caret-up c4"
               type="caret-up"
             />
           </span>
           <span
-            class="c4 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
+            class="c5 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-down "
+              class="uc-fe-icon icon__caret-down c4"
               type="caret-down"
             />
           </span>
         </div>
         <div
-          class="uc-fe-numberinput-input-wrap c5"
+          class="c6 uc-fe-numberinput-input-wrap c7"
         >
           <input
             autocomplete="off"
-            class="c6 uc-fe-numberinput-input c7"
+            class="c8 uc-fe-numberinput-input c9"
             max="100"
             min="0"
             step="1"
@@ -1950,11 +2112,15 @@ exports[`Slider demo -- minmax 1`] = `
 `;
 
 exports[`Slider demo -- numberInput 1`] = `
-.c5 {
-  position: relative;
+.c4 {
+  vertical-align: baseline;
 }
 
 .c7 {
+  position: relative;
+}
+
+.c9 {
   border: none;
   outline: none;
   padding: 0;
@@ -1971,61 +2137,81 @@ exports[`Slider demo -- numberInput 1`] = `
   color: inherit;
   cursor: pointer;
   background: #fff;
+  box-shadow: 0 2px 4px 0 #e4e5f2,0 1px 1px 0 rgba(162,166,191,0.32),0 1px 0 0 rgba(223,224,241,0.7);
   display: inline-block;
   vertical-align: middle;
   border-color: #c3cad9;
 }
 
-.c8 .c6 {
+.c10 .c8 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
   background: #f7f7f7;
 }
 
-.c8 .c6::-webkit-input-placeholder {
+.c10 .c8::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6::-moz-placeholder {
+.c10 .c8::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6:-ms-input-placeholder {
+.c10 .c8:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6::placeholder {
+.c10 .c8::placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6 {
+.c10 .c6 {
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  background: #fafafc;
+}
+
+.c10 .c6:hover {
+  background: #f6f6fb;
+}
+
+.c10 .c6 {
+  box-shadow: none;
+}
+
+.c10 .c8 {
   padding: 0 0 0 8px;
   text-align: left;
+  box-shadow: none;
+  background: transparent;
   width: 34px;
 }
 
-.c8 .c2,
-.c8 .c4 {
+.c10 .c2,
+.c10 .c5 {
   right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
   height: 13px;
   line-height: 13px;
   width: 22px;
 }
 
-.c8 .c2:hover,
-.c8 .c4:hover {
-  color: #4074e1;
+.c10 .c2:hover,
+.c10 .c5:hover {
+  color: #3555f6;
 }
 
-.c8 .c2 {
+.c10 .c2 {
   border-width: 0 0 0 1px;
-  top: 0;
+  top: -1px;
+  padding-top: 1px;
 }
 
-.c8 .c4 {
+.c10 .c5 {
   border-width: 1px 0 0 1px;
   bottom: 0;
+  border-top-color: #e8e9f5;
 }
 
 .c1 {
@@ -2036,63 +2222,79 @@ exports[`Slider demo -- numberInput 1`] = `
   vertical-align: middle;
   color: #6b798e;
   height: 28px;
-  border: 1px solid #c3cad9;
+  border: 1px solid #dfe0f1;
   padding-right: 22px;
+  border-right-width: 0;
 }
 
-.c1 .c6 {
+.c1 .c8 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c1 .c6::-webkit-input-placeholder {
+.c1 .c8::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c1 .c6::-moz-placeholder {
+.c1 .c8::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c1 .c6:-ms-input-placeholder {
+.c1 .c8:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c1 .c6::placeholder {
+.c1 .c8::placeholder {
   color: #abb4c3;
 }
 
 .c1:hover {
-  border-color: #4683e6;
+  border-color: #c3cad9;
 }
 
 .c1 .c6 {
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  background: #fafafc;
+}
+
+.c1 .c6:hover {
+  background: #f6f6fb;
+}
+
+.c1 .c8 {
   padding: 0 0 0 8px;
   text-align: left;
+  box-shadow: none;
+  background: transparent;
   width: 34px;
 }
 
 .c1 .c2,
-.c1 .c4 {
+.c1 .c5 {
   right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
   height: 13px;
   line-height: 13px;
   width: 22px;
 }
 
 .c1 .c2:hover,
-.c1 .c4:hover {
-  color: #4074e1;
+.c1 .c5:hover {
+  color: #3555f6;
 }
 
 .c1 .c2 {
   border-width: 0 0 0 1px;
-  top: 0;
+  top: -1px;
+  padding-top: 1px;
 }
 
-.c1 .c4 {
+.c1 .c5 {
   border-width: 1px 0 0 1px;
   bottom: 0;
+  border-top-color: #e8e9f5;
 }
 
 .c0 .uc-fe-slider {
@@ -2149,7 +2351,7 @@ exports[`Slider demo -- numberInput 1`] = `
   border: 1px solid #c3cad9;
   background: #fff;
   touch-action: pan-x;
-  z-index: 1;
+  z-index: 9;
   height: 34px;
   line-height: 36px;
 }
@@ -2209,7 +2411,7 @@ exports[`Slider demo -- numberInput 1`] = `
 }
 
 .c0 .uc-fe-slider-mark-text-active {
-  color: #4074e1;
+  color: #3555f6;
   border-right-color: #4683e6;
 }
 
@@ -2267,26 +2469,26 @@ exports[`Slider demo -- numberInput 1`] = `
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__arrow-up "
+              class="uc-fe-icon icon__arrow-up c4"
               type="arrow-up"
             />
           </span>
           <span
-            class="c4 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
+            class="c5 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__arrow-down "
+              class="uc-fe-icon icon__arrow-down c4"
               type="arrow-down"
             />
           </span>
         </div>
         <div
-          class="uc-fe-numberinput-input-wrap c5"
+          class="c6 uc-fe-numberinput-input-wrap c7"
         >
           <input
             autocomplete="off"
-            class="c6 uc-fe-numberinput-input c7"
+            class="c8 uc-fe-numberinput-input c9"
             max="100"
             min="0"
             step="1"
@@ -2373,26 +2575,26 @@ exports[`Slider demo -- numberInput 1`] = `
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-up "
+              class="uc-fe-icon icon__caret-up c4"
               type="caret-up"
             />
           </span>
           <span
-            class="c4 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
+            class="c5 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-down "
+              class="uc-fe-icon icon__caret-down c4"
               type="caret-down"
             />
           </span>
         </div>
         <div
-          class="uc-fe-numberinput-input-wrap c5"
+          class="c6 uc-fe-numberinput-input-wrap c7"
         >
           <input
             autocomplete="off"
-            class="c6 uc-fe-numberinput-input c7"
+            class="c8 uc-fe-numberinput-input c9"
             max="100"
             min="0"
             step="1"
@@ -2406,11 +2608,15 @@ exports[`Slider demo -- numberInput 1`] = `
 `;
 
 exports[`Slider demo -- numberInputTipFormatter 1`] = `
-.c5 {
-  position: relative;
+.c4 {
+  vertical-align: baseline;
 }
 
 .c7 {
+  position: relative;
+}
+
+.c9 {
   border: none;
   outline: none;
   padding: 0;
@@ -2427,61 +2633,81 @@ exports[`Slider demo -- numberInputTipFormatter 1`] = `
   color: inherit;
   cursor: pointer;
   background: #fff;
+  box-shadow: 0 2px 4px 0 #e4e5f2,0 1px 1px 0 rgba(162,166,191,0.32),0 1px 0 0 rgba(223,224,241,0.7);
   display: inline-block;
   vertical-align: middle;
   border-color: #c3cad9;
 }
 
-.c8 .c6 {
+.c10 .c8 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
   background: #f7f7f7;
 }
 
-.c8 .c6::-webkit-input-placeholder {
+.c10 .c8::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6::-moz-placeholder {
+.c10 .c8::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6:-ms-input-placeholder {
+.c10 .c8:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6::placeholder {
+.c10 .c8::placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6 {
+.c10 .c6 {
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  background: #fafafc;
+}
+
+.c10 .c6:hover {
+  background: #f6f6fb;
+}
+
+.c10 .c6 {
+  box-shadow: none;
+}
+
+.c10 .c8 {
   padding: 0 0 0 8px;
   text-align: left;
+  box-shadow: none;
+  background: transparent;
   width: 34px;
 }
 
-.c8 .c2,
-.c8 .c4 {
+.c10 .c2,
+.c10 .c5 {
   right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
   height: 13px;
   line-height: 13px;
   width: 22px;
 }
 
-.c8 .c2:hover,
-.c8 .c4:hover {
-  color: #4074e1;
+.c10 .c2:hover,
+.c10 .c5:hover {
+  color: #3555f6;
 }
 
-.c8 .c2 {
+.c10 .c2 {
   border-width: 0 0 0 1px;
-  top: 0;
+  top: -1px;
+  padding-top: 1px;
 }
 
-.c8 .c4 {
+.c10 .c5 {
   border-width: 1px 0 0 1px;
   bottom: 0;
+  border-top-color: #e8e9f5;
 }
 
 .c1 {
@@ -2492,63 +2718,79 @@ exports[`Slider demo -- numberInputTipFormatter 1`] = `
   vertical-align: middle;
   color: #6b798e;
   height: 28px;
-  border: 1px solid #c3cad9;
+  border: 1px solid #dfe0f1;
   padding-right: 22px;
+  border-right-width: 0;
 }
 
-.c1 .c6 {
+.c1 .c8 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c1 .c6::-webkit-input-placeholder {
+.c1 .c8::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c1 .c6::-moz-placeholder {
+.c1 .c8::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c1 .c6:-ms-input-placeholder {
+.c1 .c8:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c1 .c6::placeholder {
+.c1 .c8::placeholder {
   color: #abb4c3;
 }
 
 .c1:hover {
-  border-color: #4683e6;
+  border-color: #c3cad9;
 }
 
 .c1 .c6 {
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  background: #fafafc;
+}
+
+.c1 .c6:hover {
+  background: #f6f6fb;
+}
+
+.c1 .c8 {
   padding: 0 0 0 8px;
   text-align: left;
+  box-shadow: none;
+  background: transparent;
   width: 34px;
 }
 
 .c1 .c2,
-.c1 .c4 {
+.c1 .c5 {
   right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
   height: 13px;
   line-height: 13px;
   width: 22px;
 }
 
 .c1 .c2:hover,
-.c1 .c4:hover {
-  color: #4074e1;
+.c1 .c5:hover {
+  color: #3555f6;
 }
 
 .c1 .c2 {
   border-width: 0 0 0 1px;
-  top: 0;
+  top: -1px;
+  padding-top: 1px;
 }
 
-.c1 .c4 {
+.c1 .c5 {
   border-width: 1px 0 0 1px;
   bottom: 0;
+  border-top-color: #e8e9f5;
 }
 
 .c0 .uc-fe-slider {
@@ -2605,7 +2847,7 @@ exports[`Slider demo -- numberInputTipFormatter 1`] = `
   border: 1px solid #c3cad9;
   background: #fff;
   touch-action: pan-x;
-  z-index: 1;
+  z-index: 9;
   height: 34px;
   line-height: 36px;
 }
@@ -2665,7 +2907,7 @@ exports[`Slider demo -- numberInputTipFormatter 1`] = `
 }
 
 .c0 .uc-fe-slider-mark-text-active {
-  color: #4074e1;
+  color: #3555f6;
   border-right-color: #4683e6;
 }
 
@@ -2723,26 +2965,26 @@ exports[`Slider demo -- numberInputTipFormatter 1`] = `
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-up "
+              class="uc-fe-icon icon__caret-up c4"
               type="caret-up"
             />
           </span>
           <span
-            class="c4 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
+            class="c5 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-down "
+              class="uc-fe-icon icon__caret-down c4"
               type="caret-down"
             />
           </span>
         </div>
         <div
-          class="uc-fe-numberinput-input-wrap c5"
+          class="c6 uc-fe-numberinput-input-wrap c7"
         >
           <input
             autocomplete="off"
-            class="c6 uc-fe-numberinput-input c7"
+            class="c8 uc-fe-numberinput-input c9"
             max="20"
             min="0"
             step="1"
@@ -2794,26 +3036,26 @@ exports[`Slider demo -- numberInputTipFormatter 1`] = `
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-up "
+              class="uc-fe-icon icon__caret-up c4"
               type="caret-up"
             />
           </span>
           <span
-            class="c4 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
+            class="c5 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-down "
+              class="uc-fe-icon icon__caret-down c4"
               type="caret-down"
             />
           </span>
         </div>
         <div
-          class="uc-fe-numberinput-input-wrap c5"
+          class="c6 uc-fe-numberinput-input-wrap c7"
         >
           <input
             autocomplete="off"
-            class="c6 uc-fe-numberinput-input c7"
+            class="c8 uc-fe-numberinput-input c9"
             max="20"
             min="0"
             step="1"
@@ -2827,11 +3069,15 @@ exports[`Slider demo -- numberInputTipFormatter 1`] = `
 `;
 
 exports[`Slider demo -- slider 1`] = `
-.c26 {
+.c12 {
+  vertical-align: baseline;
+}
+
+.c29 {
   position: relative;
 }
 
-.c28 {
+.c31 {
   border: none;
   outline: none;
   padding: 0;
@@ -2839,7 +3085,7 @@ exports[`Slider demo -- slider 1`] = `
   color: inherit;
 }
 
-.c24 {
+.c26 {
   position: absolute;
   box-sizing: border-box;
   text-align: center;
@@ -2848,64 +3094,84 @@ exports[`Slider demo -- slider 1`] = `
   color: inherit;
   cursor: pointer;
   background: #fff;
+  box-shadow: 0 2px 4px 0 #e4e5f2,0 1px 1px 0 rgba(162,166,191,0.32),0 1px 0 0 rgba(223,224,241,0.7);
   display: inline-block;
   vertical-align: middle;
   border-color: #c3cad9;
 }
 
-.c30 .c27 {
+.c33 .c30 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
   background: #f7f7f7;
 }
 
-.c30 .c27::-webkit-input-placeholder {
+.c33 .c30::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c30 .c27::-moz-placeholder {
+.c33 .c30::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c30 .c27:-ms-input-placeholder {
+.c33 .c30:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c30 .c27::placeholder {
+.c33 .c30::placeholder {
   color: #abb4c3;
 }
 
-.c30 .c27 {
+.c33 .c28 {
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  background: #fafafc;
+}
+
+.c33 .c28:hover {
+  background: #f6f6fb;
+}
+
+.c33 .c28 {
+  box-shadow: none;
+}
+
+.c33 .c30 {
   padding: 0 0 0 8px;
   text-align: left;
+  box-shadow: none;
+  background: transparent;
   width: 34px;
 }
 
-.c30 .c23,
-.c30 .c25 {
+.c33 .c25,
+.c33 .c27 {
   right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
   height: 13px;
   line-height: 13px;
   width: 22px;
 }
 
-.c30 .c23:hover,
-.c30 .c25:hover {
-  color: #4074e1;
+.c33 .c25:hover,
+.c33 .c27:hover {
+  color: #3555f6;
 }
 
-.c30 .c23 {
+.c33 .c25 {
   border-width: 0 0 0 1px;
-  top: 0;
+  top: -1px;
+  padding-top: 1px;
 }
 
-.c30 .c25 {
+.c33 .c27 {
   border-width: 1px 0 0 1px;
   bottom: 0;
+  border-top-color: #e8e9f5;
 }
 
-.c22 {
+.c24 {
   position: relative;
   box-sizing: border-box;
   border-radius: 2px;
@@ -2913,66 +3179,82 @@ exports[`Slider demo -- slider 1`] = `
   vertical-align: middle;
   color: #6b798e;
   height: 28px;
-  border: 1px solid #c3cad9;
+  border: 1px solid #dfe0f1;
   padding-right: 22px;
+  border-right-width: 0;
 }
 
-.c22 .c27 {
+.c24 .c30 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c22 .c27::-webkit-input-placeholder {
+.c24 .c30::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c22 .c27::-moz-placeholder {
+.c24 .c30::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c22 .c27:-ms-input-placeholder {
+.c24 .c30:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c22 .c27::placeholder {
+.c24 .c30::placeholder {
   color: #abb4c3;
 }
 
-.c22:hover {
-  border-color: #4683e6;
+.c24:hover {
+  border-color: #c3cad9;
 }
 
-.c22 .c27 {
+.c24 .c28 {
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  background: #fafafc;
+}
+
+.c24 .c28:hover {
+  background: #f6f6fb;
+}
+
+.c24 .c30 {
   padding: 0 0 0 8px;
   text-align: left;
+  box-shadow: none;
+  background: transparent;
   width: 34px;
 }
 
-.c22 .c23,
-.c22 .c25 {
+.c24 .c25,
+.c24 .c27 {
   right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
   height: 13px;
   line-height: 13px;
   width: 22px;
 }
 
-.c22 .c23:hover,
-.c22 .c25:hover {
-  color: #4074e1;
+.c24 .c25:hover,
+.c24 .c27:hover {
+  color: #3555f6;
 }
 
-.c22 .c23 {
+.c24 .c25 {
   border-width: 0 0 0 1px;
-  top: 0;
+  top: -1px;
+  padding-top: 1px;
 }
 
-.c22 .c25 {
+.c24 .c27 {
   border-width: 1px 0 0 1px;
   bottom: 0;
+  border-top-color: #e8e9f5;
 }
 
-.c29 .uc-fe-slider {
+.c32 .uc-fe-slider {
   position: relative;
   width: 300px;
   border-radius: 2px;
@@ -2984,7 +3266,7 @@ exports[`Slider demo -- slider 1`] = `
   vertical-align: middle;
 }
 
-.c29 .uc-fe-slider-rail {
+.c32 .uc-fe-slider-rail {
   box-sizing: border-box;
   position: absolute;
   width: 100%;
@@ -2994,7 +3276,7 @@ exports[`Slider demo -- slider 1`] = `
   height: 28px;
 }
 
-.c29 .uc-fe-slider-track {
+.c32 .uc-fe-slider-track {
   box-sizing: border-box;
   position: absolute;
   left: 0;
@@ -3004,7 +3286,7 @@ exports[`Slider demo -- slider 1`] = `
   height: 28px;
 }
 
-.c29 .uc-fe-slider-tooltip {
+.c32 .uc-fe-slider-tooltip {
   line-height: normal;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3012,7 +3294,7 @@ exports[`Slider demo -- slider 1`] = `
   user-select: none;
 }
 
-.c29 .uc-fe-slider-handle {
+.c32 .uc-fe-slider-handle {
   box-sizing: border-box;
   position: absolute;
   margin-left: -10px;
@@ -3026,13 +3308,13 @@ exports[`Slider demo -- slider 1`] = `
   border: 1px solid #c3cad9;
   background: #fff;
   touch-action: pan-x;
-  z-index: 1;
+  z-index: 9;
   height: 34px;
   line-height: 36px;
 }
 
-.c29 .uc-fe-slider-handle::before,
-.c29 .uc-fe-slider-handle::after {
+.c32 .uc-fe-slider-handle::before,
+.c32 .uc-fe-slider-handle::after {
   content: '';
   display: inline-block;
   width: 1px;
@@ -3041,15 +3323,15 @@ exports[`Slider demo -- slider 1`] = `
   margin-top: 8px;
 }
 
-.c29 .uc-fe-slider-handle::after {
+.c32 .uc-fe-slider-handle::after {
   margin-left: 4px;
 }
 
-.c29 .uc-fe-slider-handle:hover {
+.c32 .uc-fe-slider-handle:hover {
   border-color: rgb(107,156,235);
 }
 
-.c29 .uc-fe-slider-handle:active {
+.c32 .uc-fe-slider-handle:active {
   border-color: rgb(107,156,235);
   box-shadow: 0 0 5px rgb(107,156,235);
   cursor: -webkit-grabbing;
@@ -3057,13 +3339,13 @@ exports[`Slider demo -- slider 1`] = `
   cursor: grabbing;
 }
 
-.c29 .uc-fe-slider-handle:focus {
+.c32 .uc-fe-slider-handle:focus {
   border-color: rgb(107,156,235);
   box-shadow: 0 0 5px rgb(163,193,243);
   outline: none;
 }
 
-.c29 .uc-fe-slider-mark {
+.c32 .uc-fe-slider-mark {
   position: absolute;
   top: 0;
   left: 0;
@@ -3071,7 +3353,7 @@ exports[`Slider demo -- slider 1`] = `
   font-size: 12px;
 }
 
-.c29 .uc-fe-slider-mark-text {
+.c32 .uc-fe-slider-mark-text {
   position: absolute;
   display: inline-block;
   vertical-align: middle;
@@ -3085,28 +3367,28 @@ exports[`Slider demo -- slider 1`] = `
   line-height: 28px;
 }
 
-.c29 .uc-fe-slider-mark-text-active {
-  color: #4074e1;
+.c32 .uc-fe-slider-mark-text-active {
+  color: #3555f6;
   border-right-color: #4683e6;
 }
 
-.c29 .uc-fe-slider-step {
+.c32 .uc-fe-slider-step {
   position: absolute;
   width: 100%;
   background: transparent;
   height: 28px;
 }
 
-.c29 .uc-fe-slider-dot {
+.c32 .uc-fe-slider-dot {
   display: none;
 }
 
-.c10 {
+.c11 {
   margin-right: 8px;
   font-size: 14px;
 }
 
-.c8 {
+.c9 {
   color: #6b798e;
   font-size: 12px;
   position: relative;
@@ -3117,7 +3399,7 @@ exports[`Slider demo -- slider 1`] = `
   line-height: 28px;
 }
 
-.c11 {
+.c13 {
   color: #6b798e;
   font-size: 12px;
   position: relative;
@@ -3128,42 +3410,54 @@ exports[`Slider demo -- slider 1`] = `
   line-height: 28px;
 }
 
-.c11 .c9 {
-  color: #4074e1;
+.c13 .c10 {
+  color: #3555f6;
 }
 
-.c6 {
+.c7 {
+  position: relative;
   margin-bottom: -8px;
 }
 
-.c6 .c7,
-.c6 .style__RadioTagWrap-sc-25j3mq-3,
-.c6 .style__RadioCardWrap-sc-25j3mq-8 {
+.c7 .c8,
+.c7 .style__RadioTagWrap-sc-25j3mq-3 {
   margin-right: 8px;
   margin-bottom: 8px;
 }
 
-.c6 .c7:last-child,
-.c6 .style__RadioTagWrap-sc-25j3mq-3:last-child,
-.c6 .style__RadioCardWrap-sc-25j3mq-8:last-child {
+.c7 .c8:last-child,
+.c7 .style__RadioTagWrap-sc-25j3mq-3:last-child {
   margin-right: 0;
 }
 
-.c6 .c31 {
+.c7 .c35 {
+  margin-right: 12px;
+  margin-bottom: 8px;
+}
+
+.c7 .c35:last-child {
+  margin-right: 0;
+}
+
+.c7 .c36+.c36 {
+  margin-left: -1px;
+}
+
+.c7 .c34 {
   margin-right: -1px;
   margin-bottom: 8px;
 }
 
-.c6 .c31:first-child {
+.c7 .c34:first-child {
   border-radius: 2px 0 0 2px;
 }
 
-.c6 .c31:last-child {
+.c7 .c34:last-child {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
 }
 
-.c14 {
+.c16 {
   position: relative;
   height: 100%;
   width: 100%;
@@ -3171,7 +3465,7 @@ exports[`Slider demo -- slider 1`] = `
   box-sizing: border-box;
 }
 
-.c16 {
+.c18 {
   width: 100%;
   height: 100%;
   text-align: center;
@@ -3180,7 +3474,7 @@ exports[`Slider demo -- slider 1`] = `
   display: block;
 }
 
-.c19 {
+.c21 {
   position: absolute;
   display: inline-block;
   left: -1px;
@@ -3191,7 +3485,7 @@ exports[`Slider demo -- slider 1`] = `
   transition: all 0.3s;
 }
 
-.c21 {
+.c23 {
   position: absolute;
   display: inline-block;
   left: 18px;
@@ -3203,7 +3497,7 @@ exports[`Slider demo -- slider 1`] = `
   transition: all 0.3s;
 }
 
-.c12 {
+.c14 {
   position: relative;
   border-radius: 2px;
   overflow: hidden;
@@ -3222,11 +3516,11 @@ exports[`Slider demo -- slider 1`] = `
   line-height: 16px;
 }
 
-.c12:hover {
+.c14:hover {
   border-color: #4683e6;
 }
 
-.c12 .c18 {
+.c14 .c20 {
   background-color: #fff;
   box-shadow: 0 0.5px 0.5px #c3cad9;
   border: 1px solid #c3cad9;
@@ -3234,45 +3528,33 @@ exports[`Slider demo -- slider 1`] = `
   height: 20px;
 }
 
-.c12 .c20 {
+.c14 .c22 {
   background-color: #e69b9b;
   left: 13px;
   height: 10px;
 }
 
-.c12 .c13 {
+.c14 .c15 {
   border: 1px solid #c3cad9;
   background-color: #ebedf0;
   color: #6b798e;
 }
 
-.c12 .c15,
-.c12 .c17 {
+.c14 .c17,
+.c14 .c19 {
   line-height: 16px;
 }
 
-.c12 .c15 {
+.c14 .c17 {
   padding-right: 20px;
 }
 
-.c12 .c17 {
+.c14 .c19 {
   padding-left: 20px;
 }
 
-.c12 .c15 {
+.c14 .c17 {
   display: none;
-}
-
-.c4 {
-  position: relative;
-  display: block;
-  box-sizing: border-box;
-  min-height: 1px;
-  float: left;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  width: 25%;
 }
 
 .c5 {
@@ -3284,10 +3566,22 @@ exports[`Slider demo -- slider 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+  width: 25%;
+}
+
+.c6 {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  min-height: 1px;
+  float: left;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   width: 75%;
 }
 
-.c1 {
+.c2 {
   position: relative;
   display: block;
   height: auto;
@@ -3295,79 +3589,79 @@ exports[`Slider demo -- slider 1`] = `
   margin-right: -8px;
 }
 
-.c1:before,
-.c1:after {
+.c2:before,
+.c2:after {
   content: ' ';
   display: table;
 }
 
-.c1:after {
+.c2:after {
   clear: both;
 }
 
-.c1 .c3 {
+.c2 .c4 {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.c0 {
+.c3 {
+  padding-top: 4px;
+  line-height: 20px;
+  word-break: break-all;
+}
+
+.c0 .c1 {
   margin-bottom: 16px;
 }
 
-.c0:last-child {
+.c0 .c1:last-child {
   margin-bottom: 0;
-}
-
-.c2 {
-  padding-top: 5px;
-  line-height: 1.5;
-  word-break: break-all;
 }
 
 <div>
   <form
-    class="demo-form"
+    class="demo-form uc-fe-form c0"
   >
     <div
-      class="c0 c1"
+      class="c1 uc-fe-form-item uc-fe-row c2"
     >
       <div
-        class="c2 c3 c4"
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
         size
       </div>
       <div
-        class="c3 c5"
+        class="uc-fe-form-controller c4 uc-fe-col c6"
         span="9"
       >
         <div
-          class="c6"
+          class="c7"
         >
           <div
-            class="c7 c8"
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
             <i
-              class="c9 c10 uc-fe-icon icon__circle "
+              class="c10 c11 uc-fe-icon icon__circle c12"
               type="circle"
             />
             sm
           </div>
           <div
             checked=""
-            class="c7 c11"
+            class="c8 uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
           >
             <i
-              class="c9 c10 uc-fe-icon icon__cbox-ed "
+              class="c10 c11 uc-fe-icon icon__cbox-ed c12"
               type="cbox-ed"
             />
             md
           </div>
           <div
-            class="c7 c8"
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
             <i
-              class="c9 c10 uc-fe-icon icon__circle "
+              class="c10 c11 uc-fe-icon icon__circle c12"
               type="circle"
             />
             lg
@@ -3376,39 +3670,39 @@ exports[`Slider demo -- slider 1`] = `
       </div>
     </div>
     <div
-      class="c0 c1"
+      class="c1 uc-fe-form-item uc-fe-row c2"
     >
       <div
-        class="c2 c3 c4"
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
         disabled
       </div>
       <div
-        class="c3 c5"
+        class="uc-fe-form-controller c4 uc-fe-col c6"
         span="9"
       >
         <div
-          class="c12"
+          class="c14"
         >
           <div
-            class="c13 c14"
+            class="c15 c16"
           >
             <span
-              class="c15 c16"
+              class="c17 c18"
             >
               ON
             </span>
             <span
-              class="c17 c16"
+              class="c19 c18"
             >
               OFF
             </span>
             <span
-              class="c18 c19"
+              class="c20 c21"
             >
               <span
-                class="c20 c21"
+                class="c22 c23"
               />
             </span>
           </div>
@@ -3416,39 +3710,39 @@ exports[`Slider demo -- slider 1`] = `
       </div>
     </div>
     <div
-      class="c0 c1"
+      class="c1 uc-fe-form-item uc-fe-row c2"
     >
       <div
-        class="c2 c3 c4"
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
         isSensitive
       </div>
       <div
-        class="c3 c5"
+        class="uc-fe-form-controller c4 uc-fe-col c6"
         span="9"
       >
         <div
-          class="c12"
+          class="c14"
         >
           <div
-            class="c13 c14"
+            class="c15 c16"
           >
             <span
-              class="c15 c16"
+              class="c17 c18"
             >
               ON
             </span>
             <span
-              class="c17 c16"
+              class="c19 c18"
             >
               OFF
             </span>
             <span
-              class="c18 c19"
+              class="c20 c21"
             >
               <span
-                class="c20 c21"
+                class="c22 c23"
               />
             </span>
           </div>
@@ -3456,39 +3750,39 @@ exports[`Slider demo -- slider 1`] = `
       </div>
     </div>
     <div
-      class="c0 c1"
+      class="c1 uc-fe-form-item uc-fe-row c2"
     >
       <div
-        class="c2 c3 c4"
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
         hideNumberInput
       </div>
       <div
-        class="c3 c5"
+        class="uc-fe-form-controller c4 uc-fe-col c6"
         span="9"
       >
         <div
-          class="c12"
+          class="c14"
         >
           <div
-            class="c13 c14"
+            class="c15 c16"
           >
             <span
-              class="c15 c16"
+              class="c17 c18"
             >
               ON
             </span>
             <span
-              class="c17 c16"
+              class="c19 c18"
             >
               OFF
             </span>
             <span
-              class="c18 c19"
+              class="c20 c21"
             >
               <span
-                class="c20 c21"
+                class="c22 c23"
               />
             </span>
           </div>
@@ -3496,47 +3790,47 @@ exports[`Slider demo -- slider 1`] = `
       </div>
     </div>
     <div
-      class="c0 c1"
+      class="c1 uc-fe-form-item uc-fe-row c2"
     >
       <div
-        class="c2 c3 c4"
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
         min
       </div>
       <div
-        class="c3 c5"
+        class="uc-fe-form-controller c4 uc-fe-col c6"
         span="9"
       >
         <div
-          class="uc-fe-numberinput uc-fe-numberinput-styletype-default c22"
+          class="uc-fe-numberinput uc-fe-numberinput-styletype-default c24"
         >
           <div>
             <span
-              class="c23 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c24"
+              class="c25 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c26"
               unselectable="unselectable"
             >
               <i
-                class="uc-fe-icon icon__caret-up "
+                class="uc-fe-icon icon__caret-up c12"
                 type="caret-up"
               />
             </span>
             <span
-              class="c25 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c24"
+              class="c27 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c26"
               unselectable="unselectable"
             >
               <i
-                class="uc-fe-icon icon__caret-down "
+                class="uc-fe-icon icon__caret-down c12"
                 type="caret-down"
               />
             </span>
           </div>
           <div
-            class="uc-fe-numberinput-input-wrap c26"
+            class="c28 uc-fe-numberinput-input-wrap c29"
           >
             <input
               autocomplete="off"
-              class="c27 uc-fe-numberinput-input c28"
+              class="c30 uc-fe-numberinput-input c31"
               min="-9007199254740991"
               step="1"
               value="0"
@@ -3546,47 +3840,47 @@ exports[`Slider demo -- slider 1`] = `
       </div>
     </div>
     <div
-      class="c0 c1"
+      class="c1 uc-fe-form-item uc-fe-row c2"
     >
       <div
-        class="c2 c3 c4"
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
         max
       </div>
       <div
-        class="c3 c5"
+        class="uc-fe-form-controller c4 uc-fe-col c6"
         span="9"
       >
         <div
-          class="uc-fe-numberinput uc-fe-numberinput-styletype-default c22"
+          class="uc-fe-numberinput uc-fe-numberinput-styletype-default c24"
         >
           <div>
             <span
-              class="c23 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c24"
+              class="c25 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c26"
               unselectable="unselectable"
             >
               <i
-                class="uc-fe-icon icon__caret-up "
+                class="uc-fe-icon icon__caret-up c12"
                 type="caret-up"
               />
             </span>
             <span
-              class="c25 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c24"
+              class="c27 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c26"
               unselectable="unselectable"
             >
               <i
-                class="uc-fe-icon icon__caret-down "
+                class="uc-fe-icon icon__caret-down c12"
                 type="caret-down"
               />
             </span>
           </div>
           <div
-            class="uc-fe-numberinput-input-wrap c26"
+            class="c28 uc-fe-numberinput-input-wrap c29"
           >
             <input
               autocomplete="off"
-              class="c27 uc-fe-numberinput-input c28"
+              class="c30 uc-fe-numberinput-input c31"
               min="-9007199254740991"
               step="1"
               value="100"
@@ -3596,47 +3890,47 @@ exports[`Slider demo -- slider 1`] = `
       </div>
     </div>
     <div
-      class="c0 c1"
+      class="c1 uc-fe-form-item uc-fe-row c2"
     >
       <div
-        class="c2 c3 c4"
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
         step
       </div>
       <div
-        class="c3 c5"
+        class="uc-fe-form-controller c4 uc-fe-col c6"
         span="9"
       >
         <div
-          class="uc-fe-numberinput uc-fe-numberinput-styletype-default c22"
+          class="uc-fe-numberinput uc-fe-numberinput-styletype-default c24"
         >
           <div>
             <span
-              class="c23 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c24"
+              class="c25 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c26"
               unselectable="unselectable"
             >
               <i
-                class="uc-fe-icon icon__caret-up "
+                class="uc-fe-icon icon__caret-up c12"
                 type="caret-up"
               />
             </span>
             <span
-              class="c25 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c24"
+              class="c27 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c26"
               unselectable="unselectable"
             >
               <i
-                class="uc-fe-icon icon__caret-down "
+                class="uc-fe-icon icon__caret-down c12"
                 type="caret-down"
               />
             </span>
           </div>
           <div
-            class="uc-fe-numberinput-input-wrap c26"
+            class="c28 uc-fe-numberinput-input-wrap c29"
           >
             <input
               autocomplete="off"
-              class="c27 uc-fe-numberinput-input c28"
+              class="c30 uc-fe-numberinput-input c31"
               min="0.0001"
               step="1"
               value="1"
@@ -3650,7 +3944,7 @@ exports[`Slider demo -- slider 1`] = `
     class="demo-wrap"
   >
     <div
-      class="c29"
+      class="c32"
     >
       <div
         class="uc-fe-slider"
@@ -3680,34 +3974,34 @@ exports[`Slider demo -- slider 1`] = `
         />
       </div>
       <div
-        class="uc-fe-numberinput uc-fe-numberinput-styletype-default c22"
+        class="uc-fe-numberinput uc-fe-numberinput-styletype-default c24"
       >
         <div>
           <span
-            class="c23 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c24"
+            class="c25 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c26"
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-up "
+              class="uc-fe-icon icon__caret-up c12"
               type="caret-up"
             />
           </span>
           <span
-            class="c25 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c24"
+            class="c27 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c26"
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-down "
+              class="uc-fe-icon icon__caret-down c12"
               type="caret-down"
             />
           </span>
         </div>
         <div
-          class="uc-fe-numberinput-input-wrap c26"
+          class="c28 uc-fe-numberinput-input-wrap c29"
         >
           <input
             autocomplete="off"
-            class="c27 uc-fe-numberinput-input c28"
+            class="c30 uc-fe-numberinput-input c31"
             max="100"
             min="0"
             step="1"
@@ -3721,11 +4015,15 @@ exports[`Slider demo -- slider 1`] = `
 `;
 
 exports[`Slider demo -- step 1`] = `
-.c5 {
-  position: relative;
+.c4 {
+  vertical-align: baseline;
 }
 
 .c7 {
+  position: relative;
+}
+
+.c9 {
   border: none;
   outline: none;
   padding: 0;
@@ -3742,61 +4040,81 @@ exports[`Slider demo -- step 1`] = `
   color: inherit;
   cursor: pointer;
   background: #fff;
+  box-shadow: 0 2px 4px 0 #e4e5f2,0 1px 1px 0 rgba(162,166,191,0.32),0 1px 0 0 rgba(223,224,241,0.7);
   display: inline-block;
   vertical-align: middle;
   border-color: #c3cad9;
 }
 
-.c8 .c6 {
+.c10 .c8 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
   background: #f7f7f7;
 }
 
-.c8 .c6::-webkit-input-placeholder {
+.c10 .c8::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6::-moz-placeholder {
+.c10 .c8::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6:-ms-input-placeholder {
+.c10 .c8:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6::placeholder {
+.c10 .c8::placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6 {
+.c10 .c6 {
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  background: #fafafc;
+}
+
+.c10 .c6:hover {
+  background: #f6f6fb;
+}
+
+.c10 .c6 {
+  box-shadow: none;
+}
+
+.c10 .c8 {
   padding: 0 0 0 8px;
   text-align: left;
+  box-shadow: none;
+  background: transparent;
   width: 34px;
 }
 
-.c8 .c2,
-.c8 .c4 {
+.c10 .c2,
+.c10 .c5 {
   right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
   height: 13px;
   line-height: 13px;
   width: 22px;
 }
 
-.c8 .c2:hover,
-.c8 .c4:hover {
-  color: #4074e1;
+.c10 .c2:hover,
+.c10 .c5:hover {
+  color: #3555f6;
 }
 
-.c8 .c2 {
+.c10 .c2 {
   border-width: 0 0 0 1px;
-  top: 0;
+  top: -1px;
+  padding-top: 1px;
 }
 
-.c8 .c4 {
+.c10 .c5 {
   border-width: 1px 0 0 1px;
   bottom: 0;
+  border-top-color: #e8e9f5;
 }
 
 .c1 {
@@ -3807,63 +4125,79 @@ exports[`Slider demo -- step 1`] = `
   vertical-align: middle;
   color: #6b798e;
   height: 28px;
-  border: 1px solid #c3cad9;
+  border: 1px solid #dfe0f1;
   padding-right: 22px;
+  border-right-width: 0;
 }
 
-.c1 .c6 {
+.c1 .c8 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c1 .c6::-webkit-input-placeholder {
+.c1 .c8::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c1 .c6::-moz-placeholder {
+.c1 .c8::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c1 .c6:-ms-input-placeholder {
+.c1 .c8:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c1 .c6::placeholder {
+.c1 .c8::placeholder {
   color: #abb4c3;
 }
 
 .c1:hover {
-  border-color: #4683e6;
+  border-color: #c3cad9;
 }
 
 .c1 .c6 {
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  background: #fafafc;
+}
+
+.c1 .c6:hover {
+  background: #f6f6fb;
+}
+
+.c1 .c8 {
   padding: 0 0 0 8px;
   text-align: left;
+  box-shadow: none;
+  background: transparent;
   width: 34px;
 }
 
 .c1 .c2,
-.c1 .c4 {
+.c1 .c5 {
   right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
   height: 13px;
   line-height: 13px;
   width: 22px;
 }
 
 .c1 .c2:hover,
-.c1 .c4:hover {
-  color: #4074e1;
+.c1 .c5:hover {
+  color: #3555f6;
 }
 
 .c1 .c2 {
   border-width: 0 0 0 1px;
-  top: 0;
+  top: -1px;
+  padding-top: 1px;
 }
 
-.c1 .c4 {
+.c1 .c5 {
   border-width: 1px 0 0 1px;
   bottom: 0;
+  border-top-color: #e8e9f5;
 }
 
 .c0 .uc-fe-slider {
@@ -3920,7 +4254,7 @@ exports[`Slider demo -- step 1`] = `
   border: 1px solid #c3cad9;
   background: #fff;
   touch-action: pan-x;
-  z-index: 1;
+  z-index: 9;
   height: 34px;
   line-height: 36px;
 }
@@ -3980,7 +4314,7 @@ exports[`Slider demo -- step 1`] = `
 }
 
 .c0 .uc-fe-slider-mark-text-active {
-  color: #4074e1;
+  color: #3555f6;
   border-right-color: #4683e6;
 }
 
@@ -4038,26 +4372,26 @@ exports[`Slider demo -- step 1`] = `
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-up "
+              class="uc-fe-icon icon__caret-up c4"
               type="caret-up"
             />
           </span>
           <span
-            class="c4 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
+            class="c5 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-down "
+              class="uc-fe-icon icon__caret-down c4"
               type="caret-down"
             />
           </span>
         </div>
         <div
-          class="uc-fe-numberinput-input-wrap c5"
+          class="c6 uc-fe-numberinput-input-wrap c7"
         >
           <input
             autocomplete="off"
-            class="c6 uc-fe-numberinput-input c7"
+            class="c8 uc-fe-numberinput-input c9"
             max="20"
             min="0"
             step="5"
@@ -4109,26 +4443,26 @@ exports[`Slider demo -- step 1`] = `
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-up "
+              class="uc-fe-icon icon__caret-up c4"
               type="caret-up"
             />
           </span>
           <span
-            class="c4 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
+            class="c5 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-down "
+              class="uc-fe-icon icon__caret-down c4"
               type="caret-down"
             />
           </span>
         </div>
         <div
-          class="uc-fe-numberinput-input-wrap c5"
+          class="c6 uc-fe-numberinput-input-wrap c7"
         >
           <input
             autocomplete="off"
-            class="c6 uc-fe-numberinput-input c7"
+            class="c8 uc-fe-numberinput-input c9"
             max="20"
             min="0"
             step="1"
@@ -4142,11 +4476,15 @@ exports[`Slider demo -- step 1`] = `
 `;
 
 exports[`Slider demo -- tipFormatter 1`] = `
-.c5 {
-  position: relative;
+.c4 {
+  vertical-align: baseline;
 }
 
 .c7 {
+  position: relative;
+}
+
+.c9 {
   border: none;
   outline: none;
   padding: 0;
@@ -4163,61 +4501,81 @@ exports[`Slider demo -- tipFormatter 1`] = `
   color: inherit;
   cursor: pointer;
   background: #fff;
+  box-shadow: 0 2px 4px 0 #e4e5f2,0 1px 1px 0 rgba(162,166,191,0.32),0 1px 0 0 rgba(223,224,241,0.7);
   display: inline-block;
   vertical-align: middle;
   border-color: #c3cad9;
 }
 
-.c8 .c6 {
+.c10 .c8 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
   background: #f7f7f7;
 }
 
-.c8 .c6::-webkit-input-placeholder {
+.c10 .c8::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6::-moz-placeholder {
+.c10 .c8::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6:-ms-input-placeholder {
+.c10 .c8:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6::placeholder {
+.c10 .c8::placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6 {
+.c10 .c6 {
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  background: #fafafc;
+}
+
+.c10 .c6:hover {
+  background: #f6f6fb;
+}
+
+.c10 .c6 {
+  box-shadow: none;
+}
+
+.c10 .c8 {
   padding: 0 0 0 8px;
   text-align: left;
+  box-shadow: none;
+  background: transparent;
   width: 34px;
 }
 
-.c8 .c2,
-.c8 .c4 {
+.c10 .c2,
+.c10 .c5 {
   right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
   height: 13px;
   line-height: 13px;
   width: 22px;
 }
 
-.c8 .c2:hover,
-.c8 .c4:hover {
-  color: #4074e1;
+.c10 .c2:hover,
+.c10 .c5:hover {
+  color: #3555f6;
 }
 
-.c8 .c2 {
+.c10 .c2 {
   border-width: 0 0 0 1px;
-  top: 0;
+  top: -1px;
+  padding-top: 1px;
 }
 
-.c8 .c4 {
+.c10 .c5 {
   border-width: 1px 0 0 1px;
   bottom: 0;
+  border-top-color: #e8e9f5;
 }
 
 .c1 {
@@ -4228,63 +4586,79 @@ exports[`Slider demo -- tipFormatter 1`] = `
   vertical-align: middle;
   color: #6b798e;
   height: 28px;
-  border: 1px solid #c3cad9;
+  border: 1px solid #dfe0f1;
   padding-right: 22px;
+  border-right-width: 0;
 }
 
-.c1 .c6 {
+.c1 .c8 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c1 .c6::-webkit-input-placeholder {
+.c1 .c8::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c1 .c6::-moz-placeholder {
+.c1 .c8::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c1 .c6:-ms-input-placeholder {
+.c1 .c8:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c1 .c6::placeholder {
+.c1 .c8::placeholder {
   color: #abb4c3;
 }
 
 .c1:hover {
-  border-color: #4683e6;
+  border-color: #c3cad9;
 }
 
 .c1 .c6 {
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  background: #fafafc;
+}
+
+.c1 .c6:hover {
+  background: #f6f6fb;
+}
+
+.c1 .c8 {
   padding: 0 0 0 8px;
   text-align: left;
+  box-shadow: none;
+  background: transparent;
   width: 34px;
 }
 
 .c1 .c2,
-.c1 .c4 {
+.c1 .c5 {
   right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
   height: 13px;
   line-height: 13px;
   width: 22px;
 }
 
 .c1 .c2:hover,
-.c1 .c4:hover {
-  color: #4074e1;
+.c1 .c5:hover {
+  color: #3555f6;
 }
 
 .c1 .c2 {
   border-width: 0 0 0 1px;
-  top: 0;
+  top: -1px;
+  padding-top: 1px;
 }
 
-.c1 .c4 {
+.c1 .c5 {
   border-width: 1px 0 0 1px;
   bottom: 0;
+  border-top-color: #e8e9f5;
 }
 
 .c0 .uc-fe-slider {
@@ -4341,7 +4715,7 @@ exports[`Slider demo -- tipFormatter 1`] = `
   border: 1px solid #c3cad9;
   background: #fff;
   touch-action: pan-x;
-  z-index: 1;
+  z-index: 9;
   height: 34px;
   line-height: 36px;
 }
@@ -4401,7 +4775,7 @@ exports[`Slider demo -- tipFormatter 1`] = `
 }
 
 .c0 .uc-fe-slider-mark-text-active {
-  color: #4074e1;
+  color: #3555f6;
   border-right-color: #4683e6;
 }
 
@@ -4459,26 +4833,26 @@ exports[`Slider demo -- tipFormatter 1`] = `
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-up "
+              class="uc-fe-icon icon__caret-up c4"
               type="caret-up"
             />
           </span>
           <span
-            class="c4 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
+            class="c5 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-down "
+              class="uc-fe-icon icon__caret-down c4"
               type="caret-down"
             />
           </span>
         </div>
         <div
-          class="uc-fe-numberinput-input-wrap c5"
+          class="c6 uc-fe-numberinput-input-wrap c7"
         >
           <input
             autocomplete="off"
-            class="c6 uc-fe-numberinput-input c7"
+            class="c8 uc-fe-numberinput-input c9"
             max="20"
             min="0"
             step="1"
@@ -4530,26 +4904,26 @@ exports[`Slider demo -- tipFormatter 1`] = `
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-up "
+              class="uc-fe-icon icon__caret-up c4"
               type="caret-up"
             />
           </span>
           <span
-            class="c4 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
+            class="c5 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-down "
+              class="uc-fe-icon icon__caret-down c4"
               type="caret-down"
             />
           </span>
         </div>
         <div
-          class="uc-fe-numberinput-input-wrap c5"
+          class="c6 uc-fe-numberinput-input-wrap c7"
         >
           <input
             autocomplete="off"
-            class="c6 uc-fe-numberinput-input c7"
+            class="c8 uc-fe-numberinput-input c9"
             max="20"
             min="0"
             step="1"
@@ -4563,11 +4937,15 @@ exports[`Slider demo -- tipFormatter 1`] = `
 `;
 
 exports[`Slider demo -- uncontrolled 1`] = `
-.c5 {
-  position: relative;
+.c4 {
+  vertical-align: baseline;
 }
 
 .c7 {
+  position: relative;
+}
+
+.c9 {
   border: none;
   outline: none;
   padding: 0;
@@ -4584,61 +4962,81 @@ exports[`Slider demo -- uncontrolled 1`] = `
   color: inherit;
   cursor: pointer;
   background: #fff;
+  box-shadow: 0 2px 4px 0 #e4e5f2,0 1px 1px 0 rgba(162,166,191,0.32),0 1px 0 0 rgba(223,224,241,0.7);
   display: inline-block;
   vertical-align: middle;
   border-color: #c3cad9;
 }
 
-.c8 .c6 {
+.c10 .c8 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
   background: #f7f7f7;
 }
 
-.c8 .c6::-webkit-input-placeholder {
+.c10 .c8::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6::-moz-placeholder {
+.c10 .c8::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6:-ms-input-placeholder {
+.c10 .c8:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6::placeholder {
+.c10 .c8::placeholder {
   color: #abb4c3;
 }
 
-.c8 .c6 {
+.c10 .c6 {
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  background: #fafafc;
+}
+
+.c10 .c6:hover {
+  background: #f6f6fb;
+}
+
+.c10 .c6 {
+  box-shadow: none;
+}
+
+.c10 .c8 {
   padding: 0 0 0 8px;
   text-align: left;
+  box-shadow: none;
+  background: transparent;
   width: 34px;
 }
 
-.c8 .c2,
-.c8 .c4 {
+.c10 .c2,
+.c10 .c5 {
   right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
   height: 13px;
   line-height: 13px;
   width: 22px;
 }
 
-.c8 .c2:hover,
-.c8 .c4:hover {
-  color: #4074e1;
+.c10 .c2:hover,
+.c10 .c5:hover {
+  color: #3555f6;
 }
 
-.c8 .c2 {
+.c10 .c2 {
   border-width: 0 0 0 1px;
-  top: 0;
+  top: -1px;
+  padding-top: 1px;
 }
 
-.c8 .c4 {
+.c10 .c5 {
   border-width: 1px 0 0 1px;
   bottom: 0;
+  border-top-color: #e8e9f5;
 }
 
 .c1 {
@@ -4649,63 +5047,79 @@ exports[`Slider demo -- uncontrolled 1`] = `
   vertical-align: middle;
   color: #6b798e;
   height: 28px;
-  border: 1px solid #c3cad9;
+  border: 1px solid #dfe0f1;
   padding-right: 22px;
+  border-right-width: 0;
 }
 
-.c1 .c6 {
+.c1 .c8 {
   line-height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c1 .c6::-webkit-input-placeholder {
+.c1 .c8::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c1 .c6::-moz-placeholder {
+.c1 .c8::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c1 .c6:-ms-input-placeholder {
+.c1 .c8:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c1 .c6::placeholder {
+.c1 .c8::placeholder {
   color: #abb4c3;
 }
 
 .c1:hover {
-  border-color: #4683e6;
+  border-color: #c3cad9;
 }
 
 .c1 .c6 {
+  box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
+  background: #fafafc;
+}
+
+.c1 .c6:hover {
+  background: #f6f6fb;
+}
+
+.c1 .c8 {
   padding: 0 0 0 8px;
   text-align: left;
+  box-shadow: none;
+  background: transparent;
   width: 34px;
 }
 
 .c1 .c2,
-.c1 .c4 {
+.c1 .c5 {
   right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
   height: 13px;
   line-height: 13px;
   width: 22px;
 }
 
 .c1 .c2:hover,
-.c1 .c4:hover {
-  color: #4074e1;
+.c1 .c5:hover {
+  color: #3555f6;
 }
 
 .c1 .c2 {
   border-width: 0 0 0 1px;
-  top: 0;
+  top: -1px;
+  padding-top: 1px;
 }
 
-.c1 .c4 {
+.c1 .c5 {
   border-width: 1px 0 0 1px;
   bottom: 0;
+  border-top-color: #e8e9f5;
 }
 
 .c0 .uc-fe-slider {
@@ -4762,7 +5176,7 @@ exports[`Slider demo -- uncontrolled 1`] = `
   border: 1px solid #c3cad9;
   background: #fff;
   touch-action: pan-x;
-  z-index: 1;
+  z-index: 9;
   height: 34px;
   line-height: 36px;
 }
@@ -4822,7 +5236,7 @@ exports[`Slider demo -- uncontrolled 1`] = `
 }
 
 .c0 .uc-fe-slider-mark-text-active {
-  color: #4074e1;
+  color: #3555f6;
   border-right-color: #4683e6;
 }
 
@@ -4880,26 +5294,26 @@ exports[`Slider demo -- uncontrolled 1`] = `
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-up "
+              class="uc-fe-icon icon__caret-up c4"
               type="caret-up"
             />
           </span>
           <span
-            class="c4 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
+            class="c5 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-down "
+              class="uc-fe-icon icon__caret-down c4"
               type="caret-down"
             />
           </span>
         </div>
         <div
-          class="uc-fe-numberinput-input-wrap c5"
+          class="c6 uc-fe-numberinput-input-wrap c7"
         >
           <input
             autocomplete="off"
-            class="c6 uc-fe-numberinput-input c7"
+            class="c8 uc-fe-numberinput-input c9"
             max="20"
             min="0"
             step="1"
@@ -4951,26 +5365,26 @@ exports[`Slider demo -- uncontrolled 1`] = `
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-up "
+              class="uc-fe-icon icon__caret-up c4"
               type="caret-up"
             />
           </span>
           <span
-            class="c4 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
+            class="c5 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c3"
             unselectable="unselectable"
           >
             <i
-              class="uc-fe-icon icon__caret-down "
+              class="uc-fe-icon icon__caret-down c4"
               type="caret-down"
             />
           </span>
         </div>
         <div
-          class="uc-fe-numberinput-input-wrap c5"
+          class="c6 uc-fe-numberinput-input-wrap c7"
         >
           <input
             autocomplete="off"
-            class="c6 uc-fe-numberinput-input c7"
+            class="c8 uc-fe-numberinput-input c9"
             max="20"
             min="0"
             step="1"

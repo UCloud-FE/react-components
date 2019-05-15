@@ -3,9 +3,12 @@ import styled, { css } from 'styled-components';
 import { inlineBlockWithVerticalMixin } from 'src/style';
 import Icon from 'src/components/Icon';
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
+import config from 'src/config';
+
+const { prefixCls: _prefixCls } = config;
+const prefixCls = _prefixCls + '-input';
 
 /* stylelint-disable no-descending-specificity */
-
 export const IconWrap = styled.span`
     position: absolute;
     right: 0;
@@ -19,27 +22,35 @@ export const SearchIcon = styled(Icon)`
 `;
 
 const themeMixin = ({
-    theme: { colorMap, colorList, Height, Input: inputTheme = {} },
+    theme: { colorMap, colorList, Height, materialVars, Input: inputTheme = {} },
     disabled,
     size,
     withIcon
 }) => css`
-    color: ${colorMap.default.text};
+    color: ${colorList.black};
 
     input {
-        border: 1px solid ${colorMap.default.border};
-        background: ${colorMap.default.background};
+        border: 1px solid #dfe0f1;
+        background: #fafafc;
         height: ${Height[size]};
         ${withIcon && `padding-right: ${Height[size]}`};
+        box-shadow: ${materialVars.innerShadow};
+        transition: ${materialVars.transitionDown};
+        :hover {
+            border-color: #c3cad9;
+            background-color: #f6f6fb;
+        }
+        :focus {
+            border-color: ${colorMap.active.border};
+            background-color: #f6f6fb;
+        }
+        :disabled,
+        &[disabled] {
+            box-shadow: none;
+        }
 
         &::placeholder {
             color: ${colorList.placeholder};
-        }
-        &:hover {
-            border-color: ${colorMap.active.border};
-        }
-        &:focus {
-            border-color: ${colorMap.active.border};
         }
     }
     ${disabled &&
@@ -64,7 +75,9 @@ const themeMixin = ({
     ${inputTheme['&']};
 `;
 
-export const InputWrap = styled.span`
+export const InputWrap = styled.span.attrs({
+    className: prefixCls
+})`
     position: relative;
     ${inlineBlockWithVerticalMixin};
 

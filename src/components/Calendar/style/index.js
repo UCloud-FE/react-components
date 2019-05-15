@@ -27,7 +27,7 @@ export const calendarMixin = ({ theme: { colorMap, colorList, Calendar: calendar
         width: 100%;
         height: 38px;
         line-height: 38px;
-        background-color: ${colorList.primary2};
+        background-color: ${colorList.primary};
         user-select: none;
     }
     .${prefixCls}-month-header-wrap {
@@ -137,6 +137,17 @@ export const calendarMixin = ({ theme: { colorMap, colorList, Calendar: calendar
         padding: 5px;
         text-align: center;
     }
+    .${prefixCls}-cell
+        .${prefixCls}-date,
+        .${prefixCls}-month-panel-cell
+        .${prefixCls}-month-panel-month,
+        .${prefixCls}-year-panel-cell
+        .${prefixCls}-year-panel-year,
+        .${prefixCls}-decade-panel-cell
+        .${prefixCls}-decade-panel-decade {
+        display: block;
+        border-radius: 2px;
+    }
     .${prefixCls}-last-month-cell,
         .${prefixCls}-month-panel-last-year-cell,
         .${prefixCls}-year-panel-last-decade-cell,
@@ -151,7 +162,9 @@ export const calendarMixin = ({ theme: { colorMap, colorList, Calendar: calendar
     .${prefixCls}-disabled-cell, .${prefixCls}-month-panel-cell-disabled {
         color: ${colorMap.disabled.text};
     }
-
+    .${prefixCls}-date-panel {
+        outline: none;
+    }
     .${prefixCls}-month-panel, .${prefixCls}-year-panel, .${prefixCls}-decade-panel {
         position: absolute;
         top: 0;
@@ -193,7 +206,7 @@ export const calendarMixin = ({ theme: { colorMap, colorList, Calendar: calendar
         .${prefixCls}-decade-panel-selected-cell
         .${prefixCls}-decade-panel-decade {
         color: ${colorList.white};
-        background: ${colorList.primary2};
+        background: ${colorList.primary};
     }
     .${prefixCls}-month-panel-year-select-arrow, .${prefixCls}-year-panel-decade-select-arrow {
         display: none;

@@ -8,6 +8,7 @@ import Popover from 'src/components/Popover';
 import { ActionButton } from './style';
 
 const Size = ['sm', 'md', 'lg'];
+const ButtonStyleType = Button.StyleType;
 export default class ActionList extends Component {
     static propTypes = {
         /** 操作列表 */
@@ -16,20 +17,24 @@ export default class ActionList extends Component {
         exposeCount: PropTypes.number,
         /** 控件尺寸 */
         size: PropTypes.oneOf(Size),
+        /** 按钮样式类别，参考Button的styleType */
+        buttonStyleType: PropTypes.oneOf(ButtonStyleType),
         /** 操作数量等于size+1时是否直接显示按钮而不是显示下拉菜单 */
         smart: PropTypes.bool
     };
     static defaultProps = {
         exposeCount: 3,
         size: 'sm',
+        buttonStyleType: 'border-gray',
         smart: true
     };
     state = {};
     renderButtonList = (list, size) => {
+        const { buttonStyleType } = this.props;
         return list.map((info, i) => {
             const { label, ...rest } = info;
             return (
-                <ActionButton key={i} size={size} styleType="border-gray" {...rest}>
+                <ActionButton key={i} size={size} styleType={buttonStyleType} {...rest}>
                     {label}
                 </ActionButton>
             );
@@ -39,6 +44,7 @@ export default class ActionList extends Component {
         if (!list.length) {
             return null;
         }
+        const { buttonStyleType } = this.props;
         const { visible } = this.state;
         const renderList = list =>
             list.map((info, i) => {
@@ -67,12 +73,13 @@ export default class ActionList extends Component {
                     </Menu>
                 }
             >
-                <Button size={size} styleType="border-gray" icon="ellipsis" />
+                <Button size={size} styleType={buttonStyleType} icon="ellipsis" />
             </Popover>
         );
     };
     render() {
-        const { actionList, exposeCount, size, smart, ...rest } = this.props;
+        // eslint-disable-next-line no-unused-vars
+        const { actionList, exposeCount, size, smart, buttonStyleType, ...rest } = this.props;
         const l = actionList.length;
         let buttonList, menuList;
         if (l > exposeCount + 1) {

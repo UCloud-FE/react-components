@@ -22,6 +22,22 @@ exports[`Textarea demo -- disabled 1`] = `
   border-color: #4683e6;
 }
 
+.c0::-webkit-input-placeholder {
+  color: #abb4c3;
+}
+
+.c0::-moz-placeholder {
+  color: #abb4c3;
+}
+
+.c0:-ms-input-placeholder {
+  color: #abb4c3;
+}
+
+.c0::placeholder {
+  color: #abb4c3;
+}
+
 .c0[disabled] {
   border-color: #d9d9d9;
   background: #f7f7f7;
@@ -48,7 +64,7 @@ exports[`Textarea demo -- disabled 1`] = `
 `;
 
 exports[`Textarea demo -- textarea 1`] = `
-.c16 {
+.c17 {
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -64,27 +80,31 @@ exports[`Textarea demo -- textarea 1`] = `
   background: #fff;
 }
 
-.c16:hover,
-.c16:focus {
+.c17:hover,
+.c17:focus {
   border-color: #4683e6;
 }
 
-.c16[disabled] {
+.c17::-webkit-input-placeholder {
+  color: #abb4c3;
+}
+
+.c17::-moz-placeholder {
+  color: #abb4c3;
+}
+
+.c17:-ms-input-placeholder {
+  color: #abb4c3;
+}
+
+.c17::placeholder {
+  color: #abb4c3;
+}
+
+.c17[disabled] {
   border-color: #d9d9d9;
   background: #f7f7f7;
   color: #bbb;
-}
-
-.c4 {
-  position: relative;
-  display: block;
-  box-sizing: border-box;
-  min-height: 1px;
-  float: left;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  width: 25%;
 }
 
 .c5 {
@@ -96,10 +116,22 @@ exports[`Textarea demo -- textarea 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+  width: 25%;
+}
+
+.c6 {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  min-height: 1px;
+  float: left;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   width: 75%;
 }
 
-.c1 {
+.c2 {
   position: relative;
   display: block;
   height: auto;
@@ -107,36 +139,36 @@ exports[`Textarea demo -- textarea 1`] = `
   margin-right: -8px;
 }
 
-.c1:before,
-.c1:after {
+.c2:before,
+.c2:after {
   content: ' ';
   display: table;
 }
 
-.c1:after {
+.c2:after {
   clear: both;
 }
 
-.c1 .c3 {
+.c2 .c4 {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.c0 {
-  margin-bottom: 16px;
-}
-
-.c0:last-child {
-  margin-bottom: 0;
-}
-
-.c2 {
-  padding-top: 5px;
-  line-height: 1.5;
+.c3 {
+  padding-top: 4px;
+  line-height: 20px;
   word-break: break-all;
 }
 
-.c8 {
+.c0 .c1 {
+  margin-bottom: 16px;
+}
+
+.c0 .c1:last-child {
+  margin-bottom: 0;
+}
+
+.c9 {
   position: relative;
   height: 100%;
   width: 100%;
@@ -144,7 +176,7 @@ exports[`Textarea demo -- textarea 1`] = `
   box-sizing: border-box;
 }
 
-.c10 {
+.c11 {
   width: 100%;
   height: 100%;
   text-align: center;
@@ -153,7 +185,7 @@ exports[`Textarea demo -- textarea 1`] = `
   display: block;
 }
 
-.c13 {
+.c14 {
   position: absolute;
   display: inline-block;
   left: -1px;
@@ -164,7 +196,7 @@ exports[`Textarea demo -- textarea 1`] = `
   transition: all 0.3s;
 }
 
-.c15 {
+.c16 {
   position: absolute;
   display: inline-block;
   left: 18px;
@@ -176,7 +208,7 @@ exports[`Textarea demo -- textarea 1`] = `
   transition: all 0.3s;
 }
 
-.c6 {
+.c7 {
   position: relative;
   border-radius: 2px;
   overflow: hidden;
@@ -195,11 +227,11 @@ exports[`Textarea demo -- textarea 1`] = `
   line-height: 16px;
 }
 
-.c6:hover {
+.c7:hover {
   border-color: #4683e6;
 }
 
-.c6 .c12 {
+.c7 .c13 {
   background-color: #fff;
   box-shadow: 0 0.5px 0.5px #c3cad9;
   border: 1px solid #c3cad9;
@@ -207,73 +239,73 @@ exports[`Textarea demo -- textarea 1`] = `
   height: 20px;
 }
 
-.c6 .c14 {
+.c7 .c15 {
   background-color: #e69b9b;
   left: 13px;
   height: 10px;
 }
 
-.c6 .c7 {
+.c7 .c8 {
   border: 1px solid #c3cad9;
   background-color: #ebedf0;
   color: #6b798e;
 }
 
-.c6 .c9,
-.c6 .c11 {
+.c7 .c10,
+.c7 .c12 {
   line-height: 16px;
 }
 
-.c6 .c9 {
+.c7 .c10 {
   padding-right: 20px;
 }
 
-.c6 .c11 {
+.c7 .c12 {
   padding-left: 20px;
 }
 
-.c6 .c9 {
+.c7 .c10 {
   display: none;
 }
 
 <div>
   <form
-    class="demo-form"
+    class="demo-form uc-fe-form c0"
   >
     <div
-      class="c0 c1"
+      class="c1 uc-fe-form-item uc-fe-row c2"
     >
       <div
-        class="c2 c3 c4"
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
         disabled
       </div>
       <div
-        class="c3 c5"
+        class="uc-fe-form-controller c4 uc-fe-col c6"
         span="9"
       >
         <div
-          class="c6"
+          class="c7"
         >
           <div
-            class="c7 c8"
+            class="c8 c9"
           >
             <span
-              class="c9 c10"
+              class="c10 c11"
             >
               ON
             </span>
             <span
-              class="c11 c10"
+              class="c12 c11"
             >
               OFF
             </span>
             <span
-              class="c12 c13"
+              class="c13 c14"
             >
               <span
-                class="c14 c15"
+                class="c15 c16"
               />
             </span>
           </div>
@@ -285,7 +317,7 @@ exports[`Textarea demo -- textarea 1`] = `
     class="demo-wrap"
   >
     <textarea
-      class="c16"
+      class="c17"
       placeholder="please input here"
     />
   </div>

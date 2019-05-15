@@ -4,21 +4,24 @@ import Switch from 'components/Switch';
 import Form from 'components/Form';
 import Radio from 'components/Radio';
 import NumberInput from 'components/NumberInput';
+import Button from 'components/Button';
 
 // demo start
 const { Size } = Table.ActionList;
+const { StyleType } = Button;
 class Demo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             size: 'sm',
             smart: true,
+            buttonStyleType: 'border-gray',
             exposeCount: 3,
             actionListLength: 5
         };
     }
     render() {
-        const { size, smart, exposeCount, actionListLength } = this.state;
+        const { size, buttonStyleType, smart, exposeCount, actionListLength } = this.state;
         const itemLayout = {
             labelCol: {
                 span: 3
@@ -50,7 +53,8 @@ class Demo extends React.Component {
                     {...{
                         size,
                         smart,
-                        exposeCount
+                        exposeCount,
+                        buttonStyleType
                     }}
                 />
             )
@@ -63,6 +67,13 @@ class Demo extends React.Component {
                             options={Size.map(size => ({ value: size }))}
                             value={size}
                             onChange={size => this.setState({ size })}
+                        />
+                    </Form.Item>
+                    <Form.Item label={'button styleType'} {...itemLayout}>
+                        <Radio.Group
+                            options={StyleType.map(styleType => ({ value: styleType }))}
+                            value={buttonStyleType}
+                            onChange={buttonStyleType => this.setState({ buttonStyleType })}
                         />
                     </Form.Item>
                     <Form.Item label="smart" {...itemLayout}>
