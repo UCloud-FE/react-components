@@ -5,11 +5,19 @@ import Button from 'src/components/Button';
 import Notice from 'src/components/Notice';
 import Checkbox from 'src/components/Checkbox';
 import { Col } from 'src/components/Grid';
+import Icon from 'src/components/Icon';
 import config from 'src/config';
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-table';
+
+export const SortIcon = styled(Icon)(
+    ({ theme: { colorList } }) => css`
+        vertical-align: middle;
+        color: ${colorList.black};
+    `
+);
 
 export const TableWrap = styled.div(
     ({ theme: { colorMap, colorList, fontSize } }) => css`
@@ -224,4 +232,4 @@ export const ActionButton = styled(Button)`
     margin-right: 4px;
 `;
 
-addDefaultThemeProps(TableWrap, ColumnConfigButtonWrap, ColumnConfigModalSplitLine);
+addDefaultThemeProps(TableWrap, ColumnConfigButtonWrap, ColumnConfigModalSplitLine, SortIcon);

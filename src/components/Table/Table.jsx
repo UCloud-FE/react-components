@@ -14,7 +14,7 @@ import Icon from 'src/components/Icon';
 import Popover from 'src/components/Popover';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
 
-import { prefixCls, TableWrap, PopupContainer } from './style';
+import { prefixCls, TableWrap, PopupContainer, SortIcon } from './style';
 import LOCALE from './locale/zh_CN';
 
 export const TableContext = createReactContext();
@@ -332,7 +332,7 @@ class Table extends Component {
         }
         const { handleOrder } = order;
         return (
-            <Icon
+            <SortIcon
                 type={
                     {
                         none: 'sort',
@@ -352,22 +352,24 @@ class Table extends Component {
     };
     handleOrder = (key, { dataIndex, handleOrder, state }) => {
         this.setState({
-            order: {
-                key,
-                dataIndex,
-                handleOrder,
-                state: {
-                    none: 'desc',
-                    desc: 'asc',
-                    asc: 'desc'
-                }[state]
-            }
+            order:
+                state === 'asc'
+                    ? null
+                    : {
+                          key,
+                          dataIndex,
+                          handleOrder,
+                          state: {
+                              none: 'desc',
+                              desc: 'asc'
+                          }[state]
+                      }
         });
     };
     getDataSource = () => {
         const { dataSource, handleSearch } = this.props;
         const { filters, order, searchValue } = this.state;
-        let data = dataSource;
+        let data = _.clone(dataSource);
         const doFilter = (dataSource, filter) => {
             const {
                 dataIndex,
