@@ -8,7 +8,7 @@ import NumberInput from 'components/NumberInput';
 import uncontrolledDecorator from 'src/decorators/uncontrolled';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
 
-import { prefixCls, SliderWrap } from './style';
+import { prefixCls, SliderWrap, RcSliderWrap } from './style';
 import LOCALE from './locale/zh_CN';
 
 const Handle = RcSlider.Handle;
@@ -474,38 +474,40 @@ class Slider extends Component {
         const isNumberInputValid = numberInputValue + '' === value + '';
         return (
             <SliderWrap style={style} className={className} size={size}>
-                <RcSlider
-                    min={0}
-                    max={sliderSplit}
-                    step={1}
-                    value={this.translateValueToSliderValue(value)}
-                    prefixCls={prefixCls}
-                    handle={handleProps =>
-                        handle({
-                            ...handleProps,
-                            value,
-                            tipFormatter
-                        })
-                    }
-                    computeMarkStyle={(info, vertical) => {
-                        const { point, min, range } = info;
-                        const bottomStyle = {
-                            marginBottom: '-50%',
-                            bottom: `${(point - min) / range * 100}%`
-                        };
-                        const leftStyle = {
-                            width: `30%`,
-                            marginLeft: `-30%`,
-                            overflow: 'hidden',
-                            left: `${(point - min) / range * 100}%`
-                        };
-                        const style = vertical ? bottomStyle : leftStyle;
-                        return style;
-                    }}
-                    marks={marksForSlider || {}}
-                    {...sliderProps}
-                    {...sharingProps}
-                />
+                <RcSliderWrap>
+                    <RcSlider
+                        min={0}
+                        max={sliderSplit}
+                        step={1}
+                        value={this.translateValueToSliderValue(value)}
+                        prefixCls={prefixCls}
+                        handle={handleProps =>
+                            handle({
+                                ...handleProps,
+                                value,
+                                tipFormatter
+                            })
+                        }
+                        computeMarkStyle={(info, vertical) => {
+                            const { point, min, range } = info;
+                            const bottomStyle = {
+                                marginBottom: '-50%',
+                                bottom: `${(point - min) / range * 100}%`
+                            };
+                            const leftStyle = {
+                                width: `30%`,
+                                marginLeft: `-30%`,
+                                overflow: 'hidden',
+                                left: `${(point - min) / range * 100}%`
+                            };
+                            const style = vertical ? bottomStyle : leftStyle;
+                            return style;
+                        }}
+                        marks={marksForSlider || {}}
+                        {...sliderProps}
+                        {...sharingProps}
+                    />
+                </RcSliderWrap>
                 {_inputProps === null ? null : (
                     <Tooltip
                         popupClassName={`${prefixCls}-tooltip`}

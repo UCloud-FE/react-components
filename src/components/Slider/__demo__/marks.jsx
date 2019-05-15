@@ -18,6 +18,19 @@ class Demo extends React.Component {
                         marks={{
                             5: '5个',
                             10: '10个',
+                            15: '15个',
+                            20: '20个'
+                        }}
+                    />
+                </div>
+                <div className="demo-wrap">
+                    <Slider
+                        min={0}
+                        max={20}
+                        defaultValue={3}
+                        marks={{
+                            5: '5个',
+                            10: '10个',
                             18: '18个'
                         }}
                     />

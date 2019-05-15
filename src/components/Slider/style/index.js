@@ -8,6 +8,12 @@ import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemePr
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-slider';
 
+export const RcSliderWrap = styled.div`
+    ${inlineBlockWithVerticalMixin};
+    margin-right: 12px;
+    padding: 0 10px;
+`;
+
 export const SliderWrap = styled.div(
     ({ theme: { colorMap, Height, HeightNumber, colorList }, size, disabled }) => css`
         .${prefixCls} {
@@ -15,7 +21,6 @@ export const SliderWrap = styled.div(
             width: 300px;
             border-radius: 2px;
             touch-action: none;
-            margin-right: 12px;
             background: ${colorMap.default.background};
             height: ${Height[size]};
 
@@ -23,21 +28,48 @@ export const SliderWrap = styled.div(
                 css`
                     background: ${colorMap.disabled.background};
                 `};
-            ${inlineBlockWithVerticalMixin};
 
             &-rail {
                 box-sizing: border-box;
                 position: absolute;
                 width: 100%;
-                border-radius: 2px;
+
                 background: #e9e9e9;
                 border: 1px solid ${colorMap.default.border};
                 height: ${Height[size]};
+                border-left: 0;
+                border-right: 0;
 
                 ${disabled &&
                     css`
                         background: ${colorMap.disabled.background};
+                        ::before,
+                        ::after {
+                            background: ${colorMap.disabled.background};
+                        }
                     `};
+
+                ::before,
+                ::after {
+                    content: '';
+                    display: inline-block;
+                    width: 10px;
+                    height: 100%;
+                    position: absolute;
+                    border: 1px solid ${colorMap.default.border};
+                    top: -1px;
+                    background: #e9e9e9;
+                }
+                ::before {
+                    left: -10px;
+                    border-radius: 2px 0 0 2px;
+                    border-right: 0;
+                }
+                ::after {
+                    right: -10px;
+                    border-radius: 0 2px 2px 0;
+                    border-left: 0;
+                }
             }
 
             &-track {
@@ -45,9 +77,23 @@ export const SliderWrap = styled.div(
                 position: absolute;
                 left: 0;
                 border: 1px solid ${colorMap.active.border};
-                border-radius: 2px;
                 background: ${colorList.primary5};
                 height: ${Height[size]};
+                border-left: 0;
+                border-right: 0;
+                ::before {
+                    content: '';
+                    display: inline-block;
+                    width: 10px;
+                    height: 100%;
+                    position: absolute;
+                    border: 1px solid ${colorMap.active.border};
+                    top: -1px;
+                    background: ${colorList.primary5};
+                    left: -10px;
+                    border-radius: 2px 0 0 2px;
+                    border-right: 0;
+                }
             }
 
             &-tooltip {
