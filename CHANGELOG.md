@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.2"></a>
+
+## [0.5.2](https://github.com/UCloud-FE/react-components/compare/v0.5.1...v0.5.2) (2019-05-17)
+
+### Bug Fixes
+
+*   **DatePicker:** fix datepicker.range bug ([dbc0f13](https://github.com/UCloud-FE/react-components/commit/dbc0f13)), closes [#135](https://github.com/UCloud-FE/react-components/issues/135)
+
+### Features
+
+*   **All:** add typescript declaration file ([a71ebe8](https://github.com/UCloud-FE/react-components/commit/a71ebe8)), closes [#130](https://github.com/UCloud-FE/react-components/issues/130)
+*   **DatePicker:** add rangeTip & some error tips ([24468fd](https://github.com/UCloud-FE/react-components/commit/24468fd)), closes [#136](https://github.com/UCloud-FE/react-components/issues/136)
+*   **Table:** change table ColumnConfig tip change logic ([6b0c912](https://github.com/UCloud-FE/react-components/commit/6b0c912)), closes [#133](https://github.com/UCloud-FE/react-components/issues/133)
+*   **Table:** change table sort icon color & change order logic ([2300b12](https://github.com/UCloud-FE/react-components/commit/2300b12)), closes [#92](https://github.com/UCloud-FE/react-components/issues/92) [#134](https://github.com/UCloud-FE/react-components/issues/134)
+
 <a name="0.5.1"></a>
 
 ## [0.5.1](https://github.com/UCloud-FE/react-components/compare/v0.5.0...v0.5.1) (2019-05-15)
