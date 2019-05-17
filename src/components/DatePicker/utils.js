@@ -21,7 +21,7 @@ const isRangeDateDisabled = (date, value, rules, start, end, tag) => {
     if (!rules) {
         return false;
     }
-    const { range, custom: _c, maxRange, minRange } = rules;
+    const { range, custom: _c, minRange } = rules;
 
     const custom = (date, value) => {
         if (!_.isEmpty(range)) {
@@ -85,7 +85,7 @@ const isRangeDateValid = (start, end, rules, precision) => {
     const { range, maxRange, minRange } = rules;
 
     if (start > end) {
-        return false;
+        return 'startGreaterThanEnd';
     }
     if (range) {
         let [s, e] = range;
@@ -96,17 +96,17 @@ const isRangeDateValid = (start, end, rules, precision) => {
             e.set(resetMap);
         }
         if (s != null && start < s) {
-            return false;
+            return 'rangeError';
         }
         if (e != null && end > e) {
-            return false;
+            return 'rangeError';
         }
     }
     if (maxRange && moment(start).add(maxRange) < end) {
-        return false;
+        return 'maxRangeError';
     }
     if (minRange && moment(end).subtract(minRange) < start) {
-        return false;
+        return 'minRangeError';
     }
     return true;
 };
