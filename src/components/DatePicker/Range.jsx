@@ -22,6 +22,7 @@ import {
     RangeDateSeparator,
     RangePopupConfirmButton,
     RangePopupError,
+    RangePopupTip,
     RangePopupFooter,
     RangePopupPickerContainer,
     RangeContainer
@@ -96,7 +97,9 @@ class Range extends Component {
         /** 自定义datepicker的props */
         datePickerProps: PropTypes.object,
         /** @ignore */
-        locale: PropTypes.object
+        locale: PropTypes.object,
+        /** 提示信息,展示在时间选择弹窗中 */
+        rangeTip: PropTypes.node
     };
     static defaultProps = {
         onChange: () => {},
@@ -204,6 +207,7 @@ class Range extends Component {
             selectProps,
             datePickerProps,
             popoverProps,
+            rangeTip,
             ...rest
         } = this.props;
         /* eslint-enable no-unused-vars */
@@ -227,7 +231,9 @@ class Range extends Component {
         const { range: rangeDisplay = {}, ...pickerDisplay } = display;
         const { format: rangeFormat } = rangeDisplay;
 
-        const isValid = isRangeDateValid(cStart, cEnd, rules, precision);
+        const rangeDateValidResult = isRangeDateValid(cStart, cEnd, rules, precision);
+        const isValid = rangeDateValidResult === true;
+        const errorTip = isValid === true ? null : locale[`${rangeDateValidResult}Tip`];
 
         return (
             <RangeContainer {...rest} disabled={disabled}>
@@ -273,7 +279,11 @@ class Range extends Component {
                             </RangePopupPickerContainer>
                             <RangePopupFooter>
                                 <div>
-                                    {!isValid ? <RangePopupError>{locale.rangeErrorTip}</RangePopupError> : null}
+                                    {isValid ? (
+                                        <RangePopupTip>{rangeTip}</RangePopupTip>
+                                    ) : (
+                                        <RangePopupError>{errorTip}</RangePopupError>
+                                    )}
                                     <RangePopupConfirmButton
                                         styleType="primary"
                                         onClick={this.confirmChange}

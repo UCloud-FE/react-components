@@ -203,6 +203,14 @@ export const RangePopupFooter = styled.div(
     `
 );
 
+export const RangePopupTip = styled.p(
+    ({ theme: { colorMap } }) => css`
+        color: ${colorMap.default.text};
+        display: inline-block;
+        line-height: 28px;
+    `
+);
+
 export const RangePopupError = styled.p(
     ({ theme: { colorMap } }) => css`
         color: ${colorMap.error.text};
@@ -219,5 +227,6 @@ addDefaultThemeProps(
     RangeDateWrap,
     RangeDateSeparator,
     RangePopupFooter,
-    RangePopupError
+    RangePopupError,
+    RangePopupTip
 );
