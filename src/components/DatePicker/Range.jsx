@@ -36,6 +36,10 @@ const getDateFromOption = option => {
     }
 };
 
+const cloneDateRange = (range = []) => {
+    return range.map(v => moment(v));
+};
+
 @localeConsumerDecorator({ defaultLocale: LOCALE, localeName: 'DatePicker' })
 @uncontrolledDecorator(
     { onChangeName: ['onChange', 'onInitialChange'] },
@@ -44,7 +48,9 @@ const getDateFromOption = option => {
 class Range extends Component {
     constructor(props) {
         super(props);
-        const { value = [moment(), moment()] } = props;
+        this.now = +moment();
+        this.defaultValue = cloneDateRange([this.now, this.now]);
+        const { value = cloneDateRange(this.defaultValue) } = props;
         this.state = {
             visible: false,
             cache: value
@@ -106,7 +112,7 @@ class Range extends Component {
         zIndex: 100
     };
     componentDidMount = () => {
-        const { option, options, onInitialChange, value = [moment(), moment()] } = this.props;
+        const { option, options, onInitialChange, value = cloneDateRange(this.defaultValue) } = this.props;
         if (option !== 'custom') {
             const optionInfo = _.find(options, _option => _option.value === option);
             if (optionInfo && optionInfo.range) {
@@ -117,7 +123,18 @@ class Range extends Component {
             onInitialChange(value);
         }
     };
-
+    componentWillReceiveProps(nextProps) {
+        const { visible } = this.state;
+        if (!visible) {
+            this.updateCacheFromProps(nextProps);
+        }
+    }
+    updateCacheFromProps = props => {
+        const { value = cloneDateRange(this.defaultValue) } = props || this.props;
+        this.setState({
+            cache: value
+        });
+    };
     handleChange = (tag, value) => {
         const { cache } = this.state;
         const [start, end] = cache;
@@ -143,7 +160,6 @@ class Range extends Component {
             const optionInfo = _.find(options, _option => _option.value === option);
             if (optionInfo && optionInfo.range) {
                 const range = optionInfo.range;
-
                 onChange([getDateFromOption(range.start), getDateFromOption(range.end)]);
             }
         }
@@ -160,6 +176,9 @@ class Range extends Component {
         this.setState({
             visible
         });
+        if (!visible) {
+            this.updateCacheFromProps();
+        }
     };
 
     render() {
@@ -171,7 +190,7 @@ class Range extends Component {
             defaultOption,
             onOptionChange,
             hideOptions,
-            value = [moment(), moment()],
+            value = cloneDateRange(this.defaultValue),
             defaultValue,
             onChange,
             onInitialChange,

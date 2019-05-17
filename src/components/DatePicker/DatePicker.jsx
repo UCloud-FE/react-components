@@ -24,13 +24,6 @@ export const Size = ['sm', 'md', 'lg'];
 
 @uncontrolledDecorator({})
 class DatePicker extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            visible: false
-        };
-        this.state.cache = this.state.value;
-    }
     static propTypes = {
         /** 当前值，受控 */
         value: PropTypes.oneOfType([PropTypes.object, PropTypes.number]),
@@ -65,13 +58,6 @@ class DatePicker extends Component {
         zIndex: 100,
         getCalendarContainer: triggerNode => triggerNode.parentNode
     };
-    componentWillReceiveProps = nextProps => {
-        if ('value' in nextProps) {
-            this.setState({
-                value: nextProps.value
-            });
-        }
-    };
     handleChange = value => {
         const { onChange, rules } = this.props;
 
@@ -80,30 +66,7 @@ class DatePicker extends Component {
         }
         value = getValidDate(value, rules);
 
-        if (!('value' in this.props)) {
-            this.setState({
-                value
-            });
-        }
-        this.setState({
-            cache: value
-        });
         onChange(value);
-    };
-    handleCache = value => {
-        this.setState({
-            cache: value
-        });
-    };
-    togglePopup = visible => {
-        this.setState({
-            visible: visible
-        });
-        if (!visible) {
-            this.setState({
-                cache: this.state.value
-            });
-        }
     };
     renderTimePicker = (value, display) => {
         const { size, disabled } = this.props;
