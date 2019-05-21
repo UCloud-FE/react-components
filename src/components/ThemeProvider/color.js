@@ -83,7 +83,7 @@ export const generateColorTheme = colorList => {
         active: {
             text: colorList.primary,
             background: colorList.primary3,
-            border: colorList.primary2,
+            border: colorList.primary,
             icon: colorList.primary
         },
         info: {
