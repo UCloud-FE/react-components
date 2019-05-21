@@ -6,7 +6,7 @@ import Popover from 'src/components/Popover';
 import { getPlacements } from 'src/components/Popover/placements';
 import ThemeGetter from 'src/components/ThemeProvider/ThemeGetter';
 
-import { TooltipWrap, Arrow, ArrowInner, ContentWrap } from './style';
+import { TooltipWrap, Arrow, ArrowInner, ContentWrap, tooltipPopupClassName } from './style';
 
 const { Animation, Trigger, Placement } = Popover;
 const placements = getPlacements(7);
@@ -18,6 +18,8 @@ class Tooltip extends Component {
         popup: PropTypes.node.isRequired,
         /** @ignore */
         placement: PropTypes.oneOf(Placement),
+        /** @ignore */
+        popupClassName: PropTypes.string,
         /** 主题风格 */
         theme: PropTypes.oneOfType([PropTypes.oneOf(Theme), PropTypes.object])
     };
@@ -40,13 +42,14 @@ class Tooltip extends Component {
     }
     render() {
         // eslint-disable-next-line no-unused-vars
-        const { popup, theme: themeType, ...rest } = this.props;
+        const { popup, theme: themeType, popupClassName = '', ...rest } = this.props;
         return (
             <ThemeGetter>
                 {theme => (
                     <Popover
                         getPopupContainer={triggerNode => triggerNode.parentNode}
                         {...rest}
+                        popupClassName={`${tooltipPopupClassName} ${popupClassName}`}
                         builtinPlacements={placements}
                         popup={this.renderPopup(theme)}
                     />
