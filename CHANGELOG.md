@@ -8,11 +8,11 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
+*   **DatePicker:** fix change error ([a6ee7ae](https://github.com/UCloud-FE/react-components/commit/a6ee7ae)), closes [#140](https://github.com/UCloud-FE/react-components/issues/140)
 *   **Tooltip:** fix tooltip auto align style ([558b4ba](https://github.com/UCloud-FE/react-components/commit/558b4ba)), closes [#4](https://github.com/UCloud-FE/react-components/issues/4) [#138](https://github.com/UCloud-FE/react-components/issues/138)
 
 ### Features
 
-*   **DatePicker:** fix change error ([a6ee7ae](https://github.com/UCloud-FE/react-components/commit/a6ee7ae)), closes [#140](https://github.com/UCloud-FE/react-components/issues/140)
 *   **style:** change active border color ([0fae02b](https://github.com/UCloud-FE/react-components/commit/0fae02b)), closes [#139](https://github.com/UCloud-FE/react-components/issues/139)
 
 <a name="0.5.2"></a>
