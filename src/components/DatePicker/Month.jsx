@@ -7,7 +7,6 @@ import placements from 'src/components/Popover/placements';
 import uncontrolledDecorator from 'src/decorators/uncontrolled';
 import { animationPrefixCls } from 'src/style/globalAnimation';
 
-import { isDateDisabled, getValidDate } from './utils';
 import { monthPickerPrefixCls, PickerWrap, PickerContainer, DateWrap, DateSpan, PickerIcon } from './style';
 import { Size } from './DatePicker';
 
@@ -42,16 +41,6 @@ class Month extends Component {
         size: 'md',
         zIndex: 100,
         getCalendarContainer: triggerNode => triggerNode.parentNode
-    };
-    handleChange = value => {
-        const { onChange, rules } = this.props;
-
-        if (isDateDisabled(value, this.state.value, rules)) {
-            return;
-        }
-        value = getValidDate(value, rules);
-
-        onChange(value);
     };
     render() {
         const {

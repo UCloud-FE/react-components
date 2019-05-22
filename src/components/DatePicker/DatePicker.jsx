@@ -61,7 +61,7 @@ class DatePicker extends Component {
     handleChange = value => {
         const { onChange, rules } = this.props;
 
-        if (isDateDisabled(value, this.state.value, rules)) {
+        if (isDateDisabled(value, this.props.value, rules)) {
             return;
         }
         value = getValidDate(value, rules);
