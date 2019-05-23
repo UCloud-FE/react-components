@@ -159,9 +159,6 @@ export const calendarMixin = ({ theme: { colorMap, colorList, Calendar: calendar
         color: ${colorMap.disabled.text};
     }
 
-    .${prefixCls}-disabled-cell, .${prefixCls}-month-panel-cell-disabled {
-        color: ${colorMap.disabled.text};
-    }
     .${prefixCls}-date-panel {
         outline: none;
     }
@@ -207,6 +204,9 @@ export const calendarMixin = ({ theme: { colorMap, colorList, Calendar: calendar
         .${prefixCls}-decade-panel-decade {
         color: ${colorList.white};
         background: ${colorList.primary};
+    }
+    .${prefixCls}-disabled-cell, .${prefixCls}-month-panel-cell-disabled {
+        color: ${colorMap.disabled.text};
     }
     .${prefixCls}-month-panel-year-select-arrow, .${prefixCls}-year-panel-decade-select-arrow {
         display: none;
