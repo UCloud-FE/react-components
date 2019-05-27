@@ -173,7 +173,9 @@ export const TableWrap = styled.div(
         &-fixed-header .${prefixCls}-scroll .${prefixCls}-header {
             overflow: scroll;
         }
-
+        &-title {
+            margin-bottom: 4px;
+        }
         &-tip-wrap {
             border-bottom: 1px solid ${colorMap.default.border};
         }
