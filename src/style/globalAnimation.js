@@ -26,7 +26,7 @@ injectGlobal`
         }
 
 
-    &-bounce {
+        &-bounce {
             &-enter,
             &-appear,
             &-leave {
