@@ -148,7 +148,6 @@ const propsMixin = ({ theme: { colorMap, Height, Switch: switchTheme }, disabled
             css`
                 border-color: ${colorMap.disabled.border};
                 cursor: not-allowed;
-                pointer-events: none;
 
                 ${Inner} {
                     border-color: ${switchTheme['Inner:disabled'].border};

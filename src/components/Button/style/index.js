@@ -44,7 +44,6 @@ const loadingMixin = css`
         border-radius: inherit;
         z-index: 1;
         transition: opacity 0.2s;
-        pointer-events: none;
     }
 `;
 
@@ -59,7 +58,6 @@ const disabledMixin = ({
         background: ${disabledColorMap.background};
         color: ${disabledColorMap.text};
         cursor: not-allowed;
-        pointer-events: none;
         border-width: 1px;
         border-style: solid;
         box-shadow: none;

@@ -11,19 +11,26 @@ class Search extends Component {
         /** 搜索回调 */
         onSearch: PropTypes.func,
         /** @ignore */
-        onKeyDown: PropTypes.func
+        onKeyDown: PropTypes.func,
+        /** @ignore */
+        disabled: PropTypes.bool
     };
     static defaultProps = {
         onSearch: () => {}
     };
+    onSearch = () => {
+        const { onSearch, disabled } = this.props;
+        !disabled && onSearch(this.input.input.value);
+    };
     render() {
+        // eslint-disable-next-line no-unused-vars
         const { onSearch, onKeyDown, ...rest } = this.props;
         return (
             <Input
                 {...rest}
                 onKeyDown={e => {
                     if (e.keyCode === KEYCODE['ENTER']) {
-                        onSearch(this.input.input.value);
+                        this.onSearch();
                         e.preventDefault();
                     }
                     if (onKeyDown) {
@@ -31,7 +38,7 @@ class Search extends Component {
                     }
                 }}
                 ref={ref => (this.input = ref)}
-                icon={<SearchIcon type="search" onClick={() => onSearch(this.input.input.value)} />}
+                icon={<SearchIcon type="search" onClick={this.onSearch} />}
             />
         );
     }

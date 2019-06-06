@@ -46,8 +46,8 @@ class Radio extends Component {
         onChange: () => {},
         onClick: () => {}
     };
-    onClick = e => {
-        const { onChange, onClick, disabled, checked } = this.props;
+    onClick = (props, e) => {
+        const { onChange, onClick, disabled, checked } = props;
 
         if (disabled) return;
 
@@ -72,7 +72,12 @@ class Radio extends Component {
         /* eslint-enable no-unused-vars */
 
         return (
-            <RadioWrap checked={checked} disabled={disabled} {...rest} onClick={this.onClick}>
+            <RadioWrap
+                checked={checked}
+                disabled={disabled}
+                {...rest}
+                onClick={(...args) => this.onClick(props, ...args)}
+            >
                 <RadioIcon type={checked ? 'cbox-ed' : 'circle'} disabled={disabled} />
                 {children}
             </RadioWrap>
@@ -80,27 +85,30 @@ class Radio extends Component {
     }
     renderRadioButton(props) {
         /* eslint-disable no-unused-vars */
-        const { title, disabledLabel, ...rest } = props;
+        const { title, disabledLabel, onChange, ...rest } = props;
         /* eslint-enable no-unused-vars */
 
-        return <RadioButtonWrap {...rest} onClick={this.onClick} />;
+        return <RadioButtonWrap {...rest} onClick={(...args) => this.onClick(props, ...args)} />;
     }
     renderRadioTag(props) {
         /* eslint-disable no-unused-vars */
-        const { title, disabledLabel, ...rest } = props;
+        const { title, disabledLabel, onChange, ...rest } = props;
         /* eslint-enable no-unused-vars */
 
-        return <RadioTagWrap {...rest} onClick={this.onClick} />;
+        return <RadioTagWrap {...rest} onClick={(...args) => this.onClick(props, ...args)} />;
     }
     renderRadioCard(props) {
-        return <Card {...props} onClick={this.onClick} />;
+        /* eslint-disable no-unused-vars */
+        const { onChange, ...rest } = props;
+        /* eslint-enable no-unused-vars */
+        return <Card {...rest} onClick={(...args) => this.onClick(props, ...args)} />;
     }
     renderRadioText(props) {
         /* eslint-disable no-unused-vars */
-        const { title, disabledLabel, children, ...rest } = props;
+        const { title, disabledLabel, children, onChange, ...rest } = props;
         /* eslint-enable no-unused-vars */
         return (
-            <RadioTextWrap {...rest} onClick={this.onClick}>
+            <RadioTextWrap {...rest} onClick={(...args) => this.onClick(props, ...args)}>
                 <span>
                     <span>{children}</span>
                 </span>
@@ -112,7 +120,7 @@ class Radio extends Component {
             <RadioContext.Consumer>
                 {context => {
                     /* eslint-disable no-unused-vars */
-                    const { defaultChecked, value, onChange, onClick, multiple, ...restProps } = this.props;
+                    const { defaultChecked, value, multiple, ...restProps } = this.props;
                     /* eslint-enable no-unused-vars */
                     const props = {
                         size: 'md',

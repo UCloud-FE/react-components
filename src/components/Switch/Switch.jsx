@@ -30,21 +30,16 @@ class Switch extends Component {
         onText: 'ON',
         offText: 'OFF'
     };
-
+    onClick = () => {
+        const { checked, disabled, onChange } = this.props;
+        if (disabled) return;
+        onChange(!checked);
+    };
     render() {
         // eslint-disable-next-line no-unused-vars
         const { checked, disabled, defaultChecked, onChange, size, onText, offText, ...rest } = this.props;
         return (
-            <SwitchWrap
-                {...rest}
-                checked={checked}
-                disabled={disabled}
-                size={size}
-                onClick={() => {
-                    if (disabled) return;
-                    onChange(!checked);
-                }}
-            >
+            <SwitchWrap {...rest} checked={checked} disabled={disabled} size={size} onClick={this.onClick}>
                 <Inner>
                     <OnText>{onText}</OnText>
                     <OffText>{offText}</OffText>

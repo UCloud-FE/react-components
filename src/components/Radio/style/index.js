@@ -64,7 +64,6 @@ export const RadioWrap = styled.div.attrs({
         css`
             color: ${colorMap.disabled.text};
             cursor: not-allowed;
-            pointer-events: none;
 
             ${RadioIcon} {
                 color: ${colorMap.disabled.icon};
@@ -94,7 +93,6 @@ export const RadioButtonWrap = styled(FilterStyleTypeButton).attrs({
                 font-size: ${fontSize};
             `};
         position: relative;
-        cursor: pointer;
 
         ${({ disabled }) =>
             disabled &&
@@ -140,7 +138,6 @@ export const RadioTagWrap = styled.div.attrs({
         css`
             color: ${colorMap.disabled.text};
             cursor: not-allowed;
-            pointer-events: none;
         `};
     ${sharedStyle};
 `;
@@ -290,9 +287,10 @@ export const RadioTextWrap = styled.div.attrs({
     ${({ disabled, theme: { colorMap } }) =>
         disabled &&
         css`
-            color: ${colorMap.disabled.text};
-            cursor: not-allowed;
-            pointer-events: none;
+            && {
+                color: ${colorMap.disabled.text};
+                cursor: not-allowed;
+            }
         `};
     ${sharedStyle};
 `;
