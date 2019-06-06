@@ -57,7 +57,7 @@ class Checkbox extends Component {
     };
     renderCheckbox(props) {
         /* eslint-disable no-unused-vars */
-        const { checked, disabled, children, title, disabledLabel, ...rest } = props; /* eslint-enable no-unused-vars */
+        const { checked, disabled, children, title, disabledLabel, onChange, ...rest } = props;
         /* eslint-enable no-unused-vars */
 
         return (
@@ -73,7 +73,10 @@ class Checkbox extends Component {
         );
     }
     renderCheckboxCard(props) {
-        return <CheckboxCardWrap {...props} onClick={(...args) => this.onClick(props, ...args)} multiple />;
+        /* eslint-disable no-unused-vars */
+        const { onChange, ...rest } = props;
+        /* eslint-enable no-unused-vars */
+        return <CheckboxCardWrap {...rest} onClick={(...args) => this.onClick(props, ...args)} multiple />;
     }
     render() {
         return (

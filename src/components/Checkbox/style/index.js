@@ -25,7 +25,6 @@ const propsMixin = ({ theme: { Height, colorMap, fontSize }, size, disabled, che
         css`
             color: ${colorMap.disabled.text};
             cursor: not-allowed;
-            pointer-events: none;
         `};
 
     ${/*sc-sel */ CheckboxIcon} {

@@ -84,7 +84,11 @@ export const InputWrap = styled.span.attrs({
     ${({ disabled }) =>
         disabled &&
         css`
-            pointer-events: none;
+            &,
+            input,
+            ${SearchIcon} {
+                cursor: not-allowed;
+            }
         `};
 
     input {
