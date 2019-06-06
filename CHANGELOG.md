@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.4"></a>
+
+## [0.5.4](https://github.com/UCloud-FE/react-components/compare/v0.5.3...v0.5.4) (2019-06-06)
+
+### Bug Fixes
+
+*   **Calendar:** fix calendar cell disabled style when current & active ([4fd4024](https://github.com/UCloud-FE/react-components/commit/4fd4024)), closes [#141](https://github.com/UCloud-FE/react-components/issues/141)
+
+### Features
+
+*   **All:** remove some pointer-event none ([c887e5b](https://github.com/UCloud-FE/react-components/commit/c887e5b)), closes [#145](https://github.com/UCloud-FE/react-components/issues/145)
+*   **Drawer:** add Drawer ([4cb0aa7](https://github.com/UCloud-FE/react-components/commit/4cb0aa7)), closes [#144](https://github.com/UCloud-FE/react-components/issues/144)
+*   **Table:** add style for title to avoid cover of table ([e15a757](https://github.com/UCloud-FE/react-components/commit/e15a757)), closes [#142](https://github.com/UCloud-FE/react-components/issues/142)
+
 <a name="0.5.3"></a>
 
 ## [0.5.3](https://github.com/UCloud-FE/react-components/compare/v0.5.2...v0.5.3) (2019-05-22)
