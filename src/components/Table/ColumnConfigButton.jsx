@@ -21,7 +21,8 @@ class ConfigModal extends PureComponent {
         columns: PropTypes.array.isRequired,
         locale: PropTypes.object.isRequired,
         onColumnConfigChange: PropTypes.func.isRequired,
-        closeModal: PropTypes.func.isRequired
+        closeModal: PropTypes.func.isRequired,
+        modalProps: PropTypes.object
     };
     constructor(props) {
         super(props);
@@ -59,10 +60,11 @@ class ConfigModal extends PureComponent {
             .map(info => info.key);
     };
     render() {
-        const { columns, locale, onColumnConfigChange, closeModal } = this.props;
+        const { columns, locale, onColumnConfigChange, closeModal, modalProps } = this.props;
         const { value, config } = this.state;
         return (
             <Modal
+                {...modalProps}
                 title={locale.columnConfigHeader}
                 visible={true}
                 onClose={closeModal}
@@ -117,6 +119,10 @@ class ConfigModal extends PureComponent {
 }
 
 export default class ColumnConfigButton extends PureComponent {
+    static propTypes = {
+        /** 弹窗的props */
+        modalProps: PropTypes.object
+    };
     state = {
         modalVisible: false
     };
@@ -132,7 +138,7 @@ export default class ColumnConfigButton extends PureComponent {
     };
     render() {
         const { modalVisible } = this.state;
-        const { ...rest } = this.props;
+        const { modalProps, ...rest } = this.props;
 
         return (
             <ColumnConfigWrap {...rest}>
@@ -141,6 +147,7 @@ export default class ColumnConfigButton extends PureComponent {
                     <TableContext.Consumer>
                         {({ columns, columnConfig, onColumnConfigChange, locale }) => (
                             <ConfigModal
+                                modalProps={modalProps}
                                 {...{
                                     columns,
                                     columnConfig,

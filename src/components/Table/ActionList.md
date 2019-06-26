@@ -28,3 +28,8 @@
 
 ```js {"codepath": "actionList-actionChildren.jsx"}
 ```
+
+*   popoverProps - 弹出层 props
+
+```js {"codepath": "actionList-popoverProps.jsx"}
+```

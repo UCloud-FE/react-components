@@ -20,7 +20,9 @@ export default class ActionList extends Component {
         /** 按钮样式类别，参考Button的styleType */
         buttonStyleType: PropTypes.oneOf(ButtonStyleType),
         /** 操作数量等于size+1时是否直接显示按钮而不是显示下拉菜单 */
-        smart: PropTypes.bool
+        smart: PropTypes.bool,
+        /** 弹出层的popover props */
+        popoverProps: PropTypes.object
     };
     static defaultProps = {
         exposeCount: 3,
@@ -44,7 +46,7 @@ export default class ActionList extends Component {
         if (!list.length) {
             return null;
         }
-        const { buttonStyleType } = this.props;
+        const { buttonStyleType, popoverProps } = this.props;
         const { visible } = this.state;
         const renderList = list =>
             list.map((info, i) => {
@@ -65,6 +67,7 @@ export default class ActionList extends Component {
         return (
             <Popover
                 trigger={['click']}
+                {...popoverProps}
                 visible={visible}
                 onVisibleChange={visible => this.setState({ visible })}
                 popup={
@@ -79,7 +82,7 @@ export default class ActionList extends Component {
     };
     render() {
         // eslint-disable-next-line no-unused-vars
-        const { actionList, exposeCount, size, smart, buttonStyleType, ...rest } = this.props;
+        const { actionList, exposeCount, size, smart, buttonStyleType, popoverProps, ...rest } = this.props;
         const l = actionList.length;
         let buttonList, menuList;
         if (l > exposeCount + 1) {
