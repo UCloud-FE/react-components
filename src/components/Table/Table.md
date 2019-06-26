@@ -58,11 +58,6 @@
 ```js {"codepath": "contextMenu.jsx"}
 ```
 
-*   handleSearch
-
-```js {"codepath": "handleSearch.jsx"}
-```
-
 *   filter
 
 ```js {"codepath": "filter.jsx"}
@@ -71,11 +66,6 @@
 *   order
 
 ```js {"codepath": "order.jsx"}
-```
-
-*   columnConfig
-
-```js {"codepath": "columnConfig.jsx"}
 ```
 
 *   expandedRowRender
