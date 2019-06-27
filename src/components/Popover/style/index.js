@@ -50,7 +50,7 @@ export const PopoverWrap = styled(RcTriggerWrap)`
         position: absolute;
         left: -9999px;
         top: -9999px;
-        z-index: 100;
+        z-index: 1030;
         display: block;
 
         &-hidden {
