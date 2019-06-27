@@ -286,6 +286,7 @@ class Select extends Component {
                         trigger={['click']}
                         getPopupContainer={triggerNode => triggerNode.parentNode}
                         visible={visible}
+                        zIndex={100}
                         {...popover}
                         {...popoverProps}
                     >
