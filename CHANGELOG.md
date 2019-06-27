@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.5"></a>
+
+## [0.5.5](https://github.com/UCloud-FE/react-components/compare/v0.5.4...v0.5.5) (2019-06-27)
+
+### Features
+
+*   **Popover:** change default zIndex to 1030 of popover ([e9bbccc](https://github.com/UCloud-FE/react-components/commit/e9bbccc)), closes [#150](https://github.com/UCloud-FE/react-components/issues/150)
+*   **Popover:** change default zIndex to 1030 of popover ([cd3c1aa](https://github.com/UCloud-FE/react-components/commit/cd3c1aa))
+*   **Popover:** change default zIndex to 1030 of popover ([8a8f7b5](https://github.com/UCloud-FE/react-components/commit/8a8f7b5))
+*   **Table:** add modalProps & popoverProps ([a0f13e7](https://github.com/UCloud-FE/react-components/commit/a0f13e7)), closes [#148](https://github.com/UCloud-FE/react-components/issues/148)
+*   **Table:** support selectAll of children & add expandIconColumnIndex ([873ee5d](https://github.com/UCloud-FE/react-components/commit/873ee5d)), closes [#149](https://github.com/UCloud-FE/react-components/issues/149)
+*   **Table:** support selectAll of children & add expandIconColumnIndex ([2003c33](https://github.com/UCloud-FE/react-components/commit/2003c33))
+
 <a name="0.5.4"></a>
 
 ## [0.5.4](https://github.com/UCloud-FE/react-components/compare/v0.5.3...v0.5.4) (2019-06-06)
