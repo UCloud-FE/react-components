@@ -115,8 +115,9 @@ export default App;
 
 ### zIndex 说明
 
-*   Modal 默认的 zIndex 为 1010
+*   Modal,Drawer 默认的 zIndex 为 1010
+*   Popover，Tooltip 默认的 zIndex 为 1030，包括其他的用到 Popover 且默认容器为 body 的地方，如 Table.ActionList、Table 的 contxtMenu 等
 *   Message 默认的 zIndex 为 1060
-*   Popover 默认的 zIndex 为 100
+*   Select、DatePicker 等的弹出层默认容器为组件内部，所以 zIndex 比较低为 100
 *   Loading 默认的 zIndex 为 10
 *   其余内部使用的 zIndex 为 10 以下
