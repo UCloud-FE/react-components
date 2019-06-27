@@ -61,6 +61,18 @@ class Demo extends React.Component {
                 <div className="demo-wrap">
                     <Table columns={this.columns} dataSource={this.state.data} expandIconAsCell />
                 </div>
+                <div className="demo-wrap">
+                    <Table
+                        columns={this.columns}
+                        dataSource={this.state.data}
+                        expandIconAsCell
+                        rowSelection={{
+                            defaultSelectedRowKeys: [1, 2, 4, 5],
+                            onChange: console.log,
+                            getDisabledOfRow: record => record.key < 4
+                        }}
+                    />
+                </div>
             </div>
         );
     }

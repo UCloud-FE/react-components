@@ -104,6 +104,8 @@ class Table extends Component {
         expandedRowRender: PropTypes.func,
         /** 额外表展开按钮是否独立占据一格，data有children时有效 */
         expandIconAsCell: PropTypes.bool,
+        /** 展开按钮的塞入的column index，expandIconAsCell为false时生效 */
+        expandIconColumnIndex: PropTypes.number,
         /** 隐藏扩展列按钮 */
         hideExpandIcon: PropTypes.bool,
         /** 默认展开项，非受控 */
@@ -366,6 +368,33 @@ class Table extends Component {
                       }
         });
     };
+    flatDataSource = (dataSource = [], childrenName = 'children') => {
+        const result = [];
+        const push = record => {
+            const index = result.length;
+            result.push({
+                record,
+                index,
+                key: this.getRowKey(record, index)
+            });
+        };
+        const loop = array => {
+            array.forEach(record => {
+                if (record[childrenName]) {
+                    const newRecord = { ...record };
+                    delete newRecord[childrenName];
+                    push(newRecord);
+                    if (record[childrenName].length > 0) {
+                        loop(record[childrenName]);
+                    }
+                } else {
+                    push(record);
+                }
+            });
+        };
+        loop(dataSource);
+        return result;
+    };
     getDataSource = () => {
         const { dataSource, handleSearch } = this.props;
         const { filters, order, searchValue } = this.state;
@@ -439,15 +468,10 @@ class Table extends Component {
             total
         };
     };
-    handleToggleCurrentPage = (dataSourceOfCurrentPage, checked) => {
+    handleToggleCurrentPage = (enableKeysOfCurrentPage, checked) => {
         const { selectedRowKeyMap } = this.state;
-        const { rowSelection = {} } = this.props;
         const extendSelectedRowKeyMap = {};
-        _.each(dataSourceOfCurrentPage, (record, index) => {
-            if (rowSelection.getDisabledOfRow && rowSelection.getDisabledOfRow(record)) {
-                return;
-            }
-            const key = this.getRowKey(record, index);
+        _.each(enableKeysOfCurrentPage, key => {
             extendSelectedRowKeyMap[key] = checked;
         });
         this.onSelectedRowKeysChange({
@@ -509,24 +533,20 @@ class Table extends Component {
         newColumns = newColumns.map(generateColumnTitle);
 
         if (rowSelection) {
-            let enableDataSourceOfCurrentPage = dataSourceOfCurrentPage;
-            let selectedEnableDataSourceOfCurrentPage;
+            let flatDataSourceOfCurrentPage = this.flatDataSource(dataSourceOfCurrentPage);
+            let enableDataSourceOfCurrentPage = flatDataSourceOfCurrentPage;
+
             if (rowSelection.getDisabledOfRow) {
                 enableDataSourceOfCurrentPage = _.filter(
-                    dataSourceOfCurrentPage,
-                    record => !rowSelection.getDisabledOfRow(record)
-                );
-                selectedEnableDataSourceOfCurrentPage = _.filter(
-                    dataSourceOfCurrentPage,
-                    (record, index) =>
-                        !rowSelection.getDisabledOfRow(record) && selectedRowKeyMap[this.getRowKey(record, index)]
-                );
-            } else {
-                selectedEnableDataSourceOfCurrentPage = _.filter(
-                    dataSourceOfCurrentPage,
-                    (record, index) => selectedRowKeyMap[this.getRowKey(record, index)]
+                    flatDataSourceOfCurrentPage,
+                    item => !rowSelection.getDisabledOfRow(item.record)
                 );
             }
+            let selectedEnableDataSourceOfCurrentPage = _.filter(
+                enableDataSourceOfCurrentPage,
+                item => selectedRowKeyMap[item.key]
+            );
+
             const selectedEnableDataSourceOfCurrentPageCount = selectedEnableDataSourceOfCurrentPage.length;
             const isAllSelected =
                 selectedEnableDataSourceOfCurrentPageCount === enableDataSourceOfCurrentPage.length &&
@@ -535,7 +555,10 @@ class Table extends Component {
                 title:
                     rowSelection.multiple === false ? null : (
                         <Checkbox
-                            onChange={() => this.handleToggleCurrentPage(dataSourceOfCurrentPage, !isAllSelected)}
+                            onChange={() => {
+                                const enableKeysOfCurrentPage = enableDataSourceOfCurrentPage.map(item => item.key);
+                                this.handleToggleCurrentPage(enableKeysOfCurrentPage, !isAllSelected);
+                            }}
                             checked={isAllSelected}
                         />
                     ),
@@ -672,6 +695,7 @@ class Table extends Component {
             style,
             expandedRowRender,
             expandIconAsCell,
+            expandIconColumnIndex,
             title = () => {},
             footer = () => {},
             locale,
@@ -720,7 +744,13 @@ class Table extends Component {
                         emptyText={null}
                         expandIconAsCell={!!expandedRowRender || expandIconAsCell}
                         expandedRowRender={expandedRowRender}
-                        expandIconColumnIndex={columns[0] && columns[0].key === 'table_row_selection' ? 1 : 0}
+                        expandIconColumnIndex={
+                            expandIconColumnIndex === undefined
+                                ? columns[0] && columns[0].key === 'table_row_selection'
+                                    ? 1
+                                    : 0
+                                : expandIconColumnIndex
+                        }
                         title={() => this.renderTitle({ filters, searchValue, total, locale })}
                         footer={() => this.renderFooter({ dataSource: _d, emptyContent, errorContent })}
                     />
