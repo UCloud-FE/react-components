@@ -16,18 +16,20 @@ class Card extends PureComponent {
         const { title, children, checked, disabled, multiple, disabledLabel, ...rest } = this.props;
         return (
             <RadioCardWrap {...{ checked, disabled }} {...rest}>
-                <RadioCardHeader>
-                    {title}
-                    {disabled && disabledLabel ? (
-                        <RadioCardDisabledLabelWrap>{disabledLabel}</RadioCardDisabledLabelWrap>
-                    ) : multiple ? (
-                        checked ? (
-                            <RadioCardIcon type="checkbox-ed" />
-                        ) : (
-                            <RadioCardIcon type="checkbox" />
-                        )
-                    ) : null}
-                </RadioCardHeader>
+                {title == null ? null : (
+                    <RadioCardHeader>
+                        {title}
+                        {disabled && disabledLabel ? (
+                            <RadioCardDisabledLabelWrap>{disabledLabel}</RadioCardDisabledLabelWrap>
+                        ) : multiple ? (
+                            checked ? (
+                                <RadioCardIcon type="checkbox-ed" />
+                            ) : (
+                                <RadioCardIcon type="checkbox" />
+                            )
+                        ) : null}
+                    </RadioCardHeader>
+                )}
                 <RadioCardContent>{children}</RadioCardContent>
             </RadioCardWrap>
         );
