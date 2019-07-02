@@ -10,6 +10,9 @@ const Demo = () => (
                 <Radio styleType={styleType}>{styleType}</Radio>
             </div>
         ))}
+        <div className="demo-wrap">
+            <Radio styleType="card" title="card" />
+        </div>
     </div>
 );
 // demo end

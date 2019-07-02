@@ -11,6 +11,9 @@ const Demo = () => (
                 <Radio.Group styleType={styleType} options={options.map(v => ({ value: v }))} />
             </div>
         ))}
+        <div className="demo-wrap">
+            <Radio.Group styleType="card" options={options.map(v => ({ value: v, title: 'card' }))} />
+        </div>
     </div>
 );
 // demo end
