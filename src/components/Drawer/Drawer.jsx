@@ -73,7 +73,6 @@ class Drawer extends Component {
             !destory && (
                 <DrawerWrap
                     {...rest}
-                    atuoFocus
                     open={visible}
                     onMaskClick={this.onMaskClick}
                     showMask={mask}
