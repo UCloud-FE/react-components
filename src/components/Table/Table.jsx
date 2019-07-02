@@ -219,6 +219,17 @@ class Table extends Component {
             });
         }
     };
+    getExpandedRowKeys = (dataSource, changedUnExpandedRowKeys) => {
+        const flatDataSource = this.flatDataSource(dataSource);
+        const expandedRowKeys = [];
+        _.each(flatDataSource, item => {
+            const { key } = item;
+            if (!changedUnExpandedRowKeys[key]) {
+                expandedRowKeys.push(key);
+            }
+        });
+        return expandedRowKeys;
+    };
     /**
      * @deprecated
      */
@@ -680,6 +691,22 @@ class Table extends Component {
     renderFooter = option => {
         return <div>{this.renderEmptyAndErrorInfo(option)}</div>;
     };
+    onExpandHandler = (expanded, record) => {
+        const { changedUnExpandedRowKeys = {} } = this.state;
+        const { onExpand } = this.props;
+        const rowKey = this.getRowKey(record);
+        if (expanded) {
+            delete changedUnExpandedRowKeys[rowKey];
+        } else {
+            changedUnExpandedRowKeys[rowKey] = true;
+        }
+        this.setState({
+            changedUnExpandedRowKeys
+        });
+        if (onExpand) {
+            onExpand(expanded, record);
+        }
+    };
     render() {
         /* eslint-disable no-unused-vars */
         let {
@@ -696,12 +723,14 @@ class Table extends Component {
             expandedRowRender,
             expandIconAsCell,
             expandIconColumnIndex,
+            defaultExpandAllRows,
             title = () => {},
             footer = () => {},
             locale,
             hideExpandIcon,
             onRow = () => {},
             components,
+            onExpand,
             ...rest
         } = this.props;
         if (emptyContent === undefined) {
@@ -712,6 +741,18 @@ class Table extends Component {
         const { filters = {}, searchValue, columnConfig } = this.state;
         const { dataSource, total } = this.getDataSource();
         const columns = this.getColumns(dataSource);
+        const defaultExpandAllRowsProps = !defaultExpandAllRows
+            ? null
+            : (() => {
+                  const { changedUnExpandedRowKeys = {} } = this.state;
+                  const expandedRowKeys = this.getExpandedRowKeys(dataSource, changedUnExpandedRowKeys);
+
+                  return {
+                      expandedRowKeys,
+                      onExpand: this.onExpandHandler
+                  };
+              })();
+
         return (
             <TableContext.Provider
                 value={{
@@ -725,6 +766,7 @@ class Table extends Component {
                 <TableWrap className={className} style={style} hideExpandIcon={hideExpandIcon}>
                     <PopupContainer innerRef={_ref => (this.popupContainer = _ref)} />
                     <RcTable
+                        {...defaultExpandAllRowsProps}
                         {...rest}
                         prefixCls={prefixCls}
                         data={dataSource}
