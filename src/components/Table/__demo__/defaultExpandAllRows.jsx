@@ -20,7 +20,6 @@ class Demo extends React.Component {
                     <Table
                         defaultExpandAllRows
                         expandedRowRender={record => <p>this is the expandedRow of {record.key}</p>}
-                        onExpandedRowsChange={(...args) => console.log('onExpandedRowsChange: ', ...args)}
                         onExpand={(...args) => console.log('onExpand: ', ...args)}
                         dataSource={dataSource}
                         columns={columns}
