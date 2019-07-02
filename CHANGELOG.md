@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.6"></a>
+
+## [0.5.6](https://github.com/UCloud-FE/react-components/compare/v0.5.5...v0.5.6) (2019-07-02)
+
+### Bug Fixes
+
+*   **Drawer:** fix Drawer unmount not trigger bug ([d1a8050](https://github.com/UCloud-FE/react-components/commit/d1a8050))
+*   **Table:** fix defaultExpandAllRows ([eb9b767](https://github.com/UCloud-FE/react-components/commit/eb9b767)), closes [#154](https://github.com/UCloud-FE/react-components/issues/154)
+
+### Features
+
+*   **Radio:** change card style when title is null ([8d50bcb](https://github.com/UCloud-FE/react-components/commit/8d50bcb)), closes [#152](https://github.com/UCloud-FE/react-components/issues/152)
+
 <a name="0.5.5"></a>
 
 ## [0.5.5](https://github.com/UCloud-FE/react-components/compare/v0.5.4...v0.5.5) (2019-06-27)
