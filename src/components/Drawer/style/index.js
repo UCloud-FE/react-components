@@ -1,6 +1,7 @@
+import React from 'react';
 import styled, { css } from 'styled-components';
-import RcDrawer from 'rc-drawer';
 
+import RcDrawer from 'src/libs/rc-drawer';
 import config from 'src/config';
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
@@ -31,8 +32,13 @@ const propsMixin = ({ zIndex = 1010, show, theme: { materialVars }, getContainer
           `};
 `;
 
+// eslint-disable-next-line react/prop-types,no-unused-vars
+const CleanPropsRcDrawer = ({ show, theme, ...rest }) => {
+    return <RcDrawer {...rest} />;
+};
+
 /* stylelint-disable no-descending-specificity */
-export const DrawerWrap = styled(RcDrawer).attrs({
+export const DrawerWrap = styled(CleanPropsRcDrawer).attrs({
     prefixCls: prefixCls
 })`
     outline: none;

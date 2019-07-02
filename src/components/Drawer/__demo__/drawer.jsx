@@ -8,6 +8,18 @@ import NumberInput from 'components/NumberInput';
 
 // demo start
 const { Placement } = Drawer;
+class Container extends React.Component {
+    constructor(props) {
+        super(props);
+        console.log('new container');
+    }
+    componentWillUnmount() {
+        console.log('ummount');
+    }
+    render() {
+        return <div {...this.props} />;
+    }
+}
 class Demo extends React.Component {
     constructor(props) {
         super(props);
@@ -81,7 +93,7 @@ class Demo extends React.Component {
                         {...this.state}
                         onClose={() => this.close()}
                     >
-                        content
+                        <Container>content</Container>
                     </Drawer>
                 </div>
             </div>

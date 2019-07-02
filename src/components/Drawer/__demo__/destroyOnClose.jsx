@@ -8,6 +8,9 @@ class Container extends React.Component {
         super(props);
         console.log('new container');
     }
+    componentWillUnmount() {
+        console.log('ummount');
+    }
     render() {
         return <div {...this.props} />;
     }
