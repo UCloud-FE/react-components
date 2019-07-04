@@ -535,6 +535,46 @@ exports[`Button demo -- button 1`] = `
         </div>
       </div>
     </div>
+    <div
+      class="c1 uc-fe-form-item uc-fe-row c2"
+    >
+      <div
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
+        span="3"
+      >
+        fakeDisabled
+      </div>
+      <div
+        class="uc-fe-form-controller c4 uc-fe-col c6"
+        span="9"
+      >
+        <div
+          class="c14"
+        >
+          <div
+            class="c15 c16"
+          >
+            <span
+              class="c17 c18"
+            >
+              ON
+            </span>
+            <span
+              class="c19 c18"
+            >
+              OFF
+            </span>
+            <span
+              class="c20 c21"
+            >
+              <span
+                class="c22 c23"
+              />
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
   </form>
   <button
     class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-primary c24"
@@ -614,8 +654,7 @@ exports[`Button demo -- disabled 1`] = `
   box-shadow: 0 1px 10px 0 rgba(162,166,191,.12),0 2px 4px -1px rgba(162,166,191,.2),0 4px 5px 0 rgba(162,166,191,.14);
 }
 
-.c1:disabled,
-.c1[disabled] {
+.c1.c1 {
   border-color: #d9d9d9;
   background: #f7f7f7;
   color: #bbb;
@@ -635,6 +674,104 @@ exports[`Button demo -- disabled 1`] = `
   <button
     class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-disabled c1"
     disabled=""
+    type="button"
+  >
+    Button
+  </button>
+</div>
+`;
+
+exports[`Button demo -- fakeDisabled 1`] = `
+.c0 {
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  border-width: 1px;
+  border-style: solid;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 28px;
+  padding: 0 8px;
+  color: #0a1633;
+  background: #fff;
+  border-color: #c3cad9;
+  border: none;
+  box-shadow: 0 -1px 0 0 rgba(223,224,241,0.5),0 1px 0 0 rgba(223,224,241,.3),0 1px 1px 0 rgba(162,166,191,.5),0 2px 4px 0 rgba(228,229,242,.6);
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
+}
+
+.c0:hover {
+  color: #3555f6;
+  background: #fff;
+  border-color: #4683e6;
+  box-shadow: 0 1px 10px 0 rgba(162,166,191,.12),0 2px 4px -1px rgba(162,166,191,.2),0 4px 5px 0 rgba(162,166,191,.14);
+}
+
+.c1 {
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  border-width: 1px;
+  border-style: solid;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 28px;
+  padding: 0 8px;
+  color: #0a1633;
+  background: #fff;
+  border-color: #c3cad9;
+  border: none;
+  box-shadow: 0 -1px 0 0 rgba(223,224,241,0.5),0 1px 0 0 rgba(223,224,241,.3),0 1px 1px 0 rgba(162,166,191,.5),0 2px 4px 0 rgba(228,229,242,.6);
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
+}
+
+.c1:hover {
+  color: #3555f6;
+  background: #fff;
+  border-color: #4683e6;
+  box-shadow: 0 1px 10px 0 rgba(162,166,191,.12),0 2px 4px -1px rgba(162,166,191,.2),0 4px 5px 0 rgba(162,166,191,.14);
+}
+
+.c1.c1 {
+  border-color: #d9d9d9;
+  background: #f7f7f7;
+  color: #bbb;
+  cursor: not-allowed;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: none;
+}
+
+<div>
+  <button
+    class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c0"
+    type="button"
+  >
+    Button
+  </button>
+  <button
+    class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-disabled c1"
+    disabled=""
+    type="button"
+  >
+    Button
+  </button>
+  <button
+    class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-disabled uc-fe-button-disabled-fake c1"
     type="button"
   >
     Button

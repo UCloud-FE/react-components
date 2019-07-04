@@ -1,3 +1,4 @@
+import React from 'react';
 import styled, { css } from 'styled-components';
 import classnames from 'classnames';
 
@@ -52,8 +53,7 @@ const disabledMixin = ({
         colorMap: { disabled: disabledColorMap }
     }
 }) => css`
-    :disabled,
-    &[disabled] {
+    && {
         border-color: ${disabledColorMap.border};
         background: ${disabledColorMap.background};
         color: ${disabledColorMap.text};
@@ -71,8 +71,13 @@ const checkedMixin = ({ theme: { colorList, materialVars } }) => css`
     box-shadow: ${materialVars.whiteBoxShadowActive};
 `;
 
-export const ButtonWrap = styled.button.attrs({
-    className: ({ size, styleType, shape, loading, disabled, checked }) =>
+// eslint-disable-next-line react/prop-types, no-unused-vars
+const Button = ({ loading, styleType, theme, disabled, fakeDisabled, onClick, ...rest }) => (
+    <button disabled={disabled && !fakeDisabled} onClick={!disabled ? onClick : null} {...rest} />
+);
+
+export const ButtonWrap = styled(Button).attrs({
+    className: ({ size, styleType, shape, loading, disabled, fakeDisabled, checked }) =>
         classnames(
             prefixCls,
             `${prefixCls}-size-${size}`,
@@ -80,6 +85,7 @@ export const ButtonWrap = styled.button.attrs({
             shape && `${prefixCls}-${shape}`,
             loading && `${prefixCls}-loading`,
             disabled && `${prefixCls}-disabled`,
+            fakeDisabled && `${prefixCls}-disabled-fake`,
             checked && `${prefixCls}-checked`
         )
 })(

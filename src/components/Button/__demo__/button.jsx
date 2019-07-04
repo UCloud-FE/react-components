@@ -15,11 +15,12 @@ class Demo extends React.Component {
             size: Size[0],
             shape: 'undefined',
             icon: IconType[0],
-            disabled: false
+            disabled: false,
+            fakeDisabled: false
         };
     }
     render() {
-        const { styleType, size, shape, icon, loading, disabled } = this.state;
+        const { styleType, size, shape, icon, loading, disabled, fakeDisabled } = this.state;
         const itemLayout = {
             labelCol: {
                 span: 3
@@ -34,7 +35,8 @@ class Demo extends React.Component {
             size,
             icon,
             loading,
-            disabled
+            disabled,
+            fakeDisabled
         };
         if (shape === 'undefined') {
             delete props.shape;
@@ -75,6 +77,9 @@ class Demo extends React.Component {
                     </Form.Item>
                     <Form.Item label="disabled" {...itemLayout}>
                         <Switch checked={disabled} onChange={disabled => this.setState({ disabled })} />
+                    </Form.Item>
+                    <Form.Item label="fakeDisabled" {...itemLayout}>
+                        <Switch checked={fakeDisabled} onChange={fakeDisabled => this.setState({ fakeDisabled })} />
                     </Form.Item>
                 </Form>
                 <Button {...props} onClick={console.log}>

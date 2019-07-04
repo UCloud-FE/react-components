@@ -34,6 +34,11 @@
 ```js {"codepath": "disabled.jsx"}
 ```
 
+*   fakeDisabled
+
+```js {"codepath": "fakeDisabled.jsx"}
+```
+
 *   icon
 
 ```js {"codepath": "icon.jsx"}
