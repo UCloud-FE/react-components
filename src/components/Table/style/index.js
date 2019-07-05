@@ -147,7 +147,6 @@ export const TableWrap = styled.div(
 
         &-content {
             position: relative;
-            overflow: hidden;
             width: 100%;
         }
         &-thead > tr > th {
