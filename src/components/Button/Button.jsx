@@ -18,6 +18,14 @@ export default class Button extends PureComponent {
         shape: PropTypes.oneOf(Shape),
         /** 是否加载中 */
         loading: PropTypes.bool,
+        /**
+         * 伪装disabled，配合disabled一起使用。
+         *
+         * 添加后disabled时除了onClick事件，其它的事件会正常触发，且生成的button上不会出现disabled属性。
+         *
+         * button的disabled会将所有事件全部屏蔽，有时会导致一些问题，比如tooltip里嵌入disabled button时，无法获取事件导致无法正常显示。
+         */
+        fakeDisabled: PropTypes.bool,
         /** 图标，传入string时为图标类型，也可直接传入图标组件，需要图标位置等更多自定义请直接放在children中 */
         icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
         /** 设置原生的button上type属性 */
