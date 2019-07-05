@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.7"></a>
+
+## [0.5.7](https://github.com/UCloud-FE/react-components/compare/v0.5.6...v0.5.7) (2019-07-05)
+
+### Features
+
+*   **Button:** add fakeDisabled to avoid disabled button wrong usage ([f71aca8](https://github.com/UCloud-FE/react-components/commit/f71aca8)), closes [#155](https://github.com/UCloud-FE/react-components/issues/155)
+*   **Table:** remove table content overflow style ([fb01a6d](https://github.com/UCloud-FE/react-components/commit/fb01a6d)), closes [#156](https://github.com/UCloud-FE/react-components/issues/156)
+
 <a name="0.5.6"></a>
 
 ## [0.5.6](https://github.com/UCloud-FE/react-components/compare/v0.5.5...v0.5.6) (2019-07-02)
