@@ -10,5 +10,8 @@ Table.SearchInput = SearchInput;
 import ActionList from './ActionList';
 Table.ActionList = ActionList;
 
+import ExpandedRowContent from './ExpandedRowContent';
+Table.ExpandedRowContent = ExpandedRowContent;
+
 import * as utils from './utils';
 Object.assign(Table, utils);

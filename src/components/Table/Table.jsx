@@ -14,7 +14,7 @@ import Icon from 'src/components/Icon';
 import Popover from 'src/components/Popover';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
 
-import { prefixCls, TableWrap, PopupContainer, SortIcon } from './style';
+import { prefixCls, TableWrap, PopupContainer, SortIcon, selectIconCellCls, selectIconHeaderCls } from './style';
 import LOCALE from './locale/zh_CN';
 
 export const TableContext = createReactContext();
@@ -576,6 +576,8 @@ class Table extends Component {
                 key: 'table_row_selection',
                 width: 46,
                 fixed: rowSelection.fixed,
+                onHeaderCell: () => ({ className: selectIconHeaderCls }),
+                onCell: () => ({ className: selectIconCellCls }),
                 render: (value, record, index) => {
                     const rowKey = this.getRowKey(record, index);
                     let disabled = false;
