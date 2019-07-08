@@ -19,7 +19,7 @@ export const SortIcon = styled(Icon)(
     `
 );
 
-export const selectIconCellCls = prefixCls + '-select-icon-cell';
+export const selectIconCellCls = prefixCls + '-row-select-icon-cell';
 export const selectIconHeaderCls = prefixCls + '-select-icon-th';
 
 const expandedRowContentCls = prefixCls + '-expanded-row-content';
