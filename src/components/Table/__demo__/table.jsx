@@ -19,6 +19,7 @@ class Demo extends React.Component {
             removeLastButOneColumnWidth: false,
             showHeader: true,
             showPagination: true,
+            zebraCrossing: false,
             scroll: {
                 x: false,
                 y: false
@@ -38,7 +39,8 @@ class Demo extends React.Component {
             removeLastButOneColumnWidth,
             showHeader,
             showPagination,
-            scroll
+            scroll,
+            zebraCrossing
         } = this.state;
         let dataSource = [];
         dataSource.length = dataLength;
@@ -80,7 +82,7 @@ class Demo extends React.Component {
             delete columns[columnLength - 2].width;
         }
 
-        const tableProps = { columns, dataSource, showHeader, scroll };
+        const tableProps = { columns, dataSource, showHeader, scroll, zebraCrossing };
         if (rowSelection) {
             tableProps.rowSelection = {
                 fixed: fixedFirstColumn
@@ -203,6 +205,16 @@ class Demo extends React.Component {
                             onChange={fixedLastColumn =>
                                 this.setState({
                                     fixedLastColumn
+                                })
+                            }
+                        />
+                    </Form.Item>
+                    <Form.Item label="zebraCrossing" {...itemLayout}>
+                        <Switch
+                            checked={zebraCrossing}
+                            onChange={zebraCrossing =>
+                                this.setState({
+                                    zebraCrossing
                                 })
                             }
                         />

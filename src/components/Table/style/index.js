@@ -36,7 +36,7 @@ export const ExpandedRowContent = styled.div.attrs({
 );
 
 export const TableWrap = styled.div(
-    ({ theme: { colorMap, colorList, fontSize } }) => css`
+    ({ theme: { colorMap, colorList, fontSize }, zebraCrossing }) => css`
     ${clearFixMixin};
     padding: 15px;
 
@@ -207,8 +207,11 @@ export const TableWrap = styled.div(
             display: none;
         }
 
-        table > tbody > .${prefixCls}-row-hover, table > tbody > .${prefixCls}-row:hover {
+        table > tbody > .${prefixCls}-row-hover > td, table > tbody > .${prefixCls}-row:hover > td {
             background-color: ${colorMap.active.background};
+            &.${prefixCls}-row-expand-icon-cell, &.${selectIconCellCls} {
+                background-color: unset;
+            }
         }
 
         &-scroll-position-left .${prefixCls}-fixed-left {
@@ -221,7 +224,18 @@ export const TableWrap = styled.div(
         &-row-indent.indent-level-0 {
             display: none;
         }
+        
+        ${zebraCrossing &&
+            css`
+                &-row:nth-child(odd) > td {
+                    background-color: #f7f9fc;
+                    &.${prefixCls}-row-expand-icon-cell, &.${selectIconCellCls} {
+                        background-color: unset;
+                    }
+                }
+            `};
     }
+
 `
 );
 

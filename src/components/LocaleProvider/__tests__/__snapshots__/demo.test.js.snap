@@ -2143,9 +2143,16 @@ exports[`LocaleProvider demo -- list 1`] = `
   display: none;
 }
 
-.c53 .uc-fe-table table > tbody > .uc-fe-table-row-hover,
-.c53 .uc-fe-table table > tbody > .uc-fe-table-row:hover {
+.c53 .uc-fe-table table > tbody > .uc-fe-table-row-hover > td,
+.c53 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td {
   background-color: #eaf3fd;
+}
+
+.c53 .uc-fe-table table > tbody > .uc-fe-table-row-hover > td.uc-fe-table-row-expand-icon-cell,
+.c53 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-expand-icon-cell,
+.c53 .uc-fe-table table > tbody > .uc-fe-table-row-hover > td.uc-fe-table-row-select-icon-cell,
+.c53 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-select-icon-cell {
+  background-color: unset;
 }
 
 .c53 .uc-fe-table-scroll-position-left .uc-fe-table-fixed-left {
