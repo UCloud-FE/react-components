@@ -176,7 +176,9 @@ class Table extends Component {
         }),
         /** 定义如何获取每行的键值 */
         rowKey: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-        // 自定义表格组件
+        /** 是否有斑马线，存在子表格时，斑马线样式可能会错乱 */
+        zebraCrossing: PropTypes.bool,
+        /** 自定义表格组件，慎用 */
         components: PropTypes.shape({
             header: PropTypes.shape({
                 cell: PropTypes.any
@@ -733,6 +735,7 @@ class Table extends Component {
             onRow = () => {},
             components,
             onExpand,
+            zebraCrossing,
             ...rest
         } = this.props;
         if (emptyContent === undefined) {
@@ -765,7 +768,12 @@ class Table extends Component {
                     locale
                 }}
             >
-                <TableWrap className={className} style={style} hideExpandIcon={hideExpandIcon}>
+                <TableWrap
+                    className={className}
+                    style={style}
+                    hideExpandIcon={hideExpandIcon}
+                    zebraCrossing={zebraCrossing}
+                >
                     <PopupContainer innerRef={_ref => (this.popupContainer = _ref)} />
                     <RcTable
                         {...defaultExpandAllRowsProps}
