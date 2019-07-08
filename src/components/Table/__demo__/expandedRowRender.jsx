@@ -18,7 +18,9 @@ class Demo extends React.Component {
             <div>
                 <div className="demo-wrap">
                     <Table
-                        expandedRowRender={record => <p>this is the expandedRow of {record.key}</p>}
+                        expandedRowRender={record => (
+                            <Table.ExpandedRowContent>this is the expandedRow of {record.key}</Table.ExpandedRowContent>
+                        )}
                         dataSource={dataSource}
                         columns={columns}
                     />

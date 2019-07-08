@@ -19,6 +19,22 @@ export const SortIcon = styled(Icon)(
     `
 );
 
+export const selectIconCellCls = prefixCls + '-select-icon-cell';
+export const selectIconHeaderCls = prefixCls + '-select-icon-th';
+
+const expandedRowContentCls = prefixCls + '-expanded-row-content';
+export const ExpandedRowContent = styled.div.attrs({
+    className: expandedRowContentCls
+})(
+    ({ theme: { colorList } }) => css`
+        border-bottom: 1px solid ${colorList.secondary5};
+        background: ${colorList.primary6};
+        color: ${colorList.secondary2};
+        padding: 12px;
+        line-height: 20px;
+    `
+);
+
 export const TableWrap = styled.div(
     ({ theme: { colorMap, colorList, fontSize } }) => css`
     ${clearFixMixin};
@@ -153,21 +169,29 @@ export const TableWrap = styled.div(
         &-thead > tr > th {
             position: relative;
             vertical-align: middle;
-            border-bottom: 1px solid #c3cad9;
+            border-bottom: 1px solid ${colorList.secondary4};
             color: #6b798e;
             padding: 12px;
             line-height: 22px;
             text-align: left;
             font-weight: 400;
+            &.${prefixCls}-expand-icon-th,
+            &.${selectIconHeaderCls} {
+                border-color: transparent;
+            }
         }
         &-row > td {
             position: relative;
             vertical-align: middle;
-            border-bottom: 1px solid #e1e6f0;
+            border-bottom: 1px solid ${colorList.secondary5};
             color: #0a1633;
             padding: 12px;
             line-height: 22px;
             text-align: left;
+            &.${prefixCls}-row-expand-icon-cell,
+            &.${selectIconCellCls} {
+                border-color: transparent;
+            }
         }
 
         &-fixed-header .${prefixCls}-scroll .${prefixCls}-header {
@@ -234,4 +258,4 @@ export const ActionButton = styled(Button)`
     margin-right: 4px;
 `;
 
-addDefaultThemeProps(TableWrap, ColumnConfigButtonWrap, ColumnConfigModalSplitLine, SortIcon);
+addDefaultThemeProps(TableWrap, ColumnConfigButtonWrap, ColumnConfigModalSplitLine, SortIcon, ExpandedRowContent);
