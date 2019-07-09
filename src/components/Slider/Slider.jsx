@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
-import RcSlider from 'rce-slider';
+import RcSlider from 'rc-slider';
 
 import Tooltip from 'components/Tooltip';
 import NumberInput from 'components/NumberInput';
@@ -217,11 +217,12 @@ class Slider extends Component {
             const value = (baseRatio += _mark.ratio) / 100 * sliderSplit;
             const mark = {
                 label: _mark.label,
-                style: _mark.style
+                style: {
+                    transform: 'none',
+                    ...(_mark.value == max ? { borderRight: 'none' } : {}),
+                    ..._mark.style
+                }
             };
-            if (_mark.value == max) {
-                mark.style = { ..._mark.style, borderRight: 'none' };
-            }
             marks[value] = mark;
         });
         return marks;
@@ -488,21 +489,6 @@ class Slider extends Component {
                                 tipFormatter
                             })
                         }
-                        computeMarkStyle={(info, vertical) => {
-                            const { point, min, range } = info;
-                            const bottomStyle = {
-                                marginBottom: '-50%',
-                                bottom: `${(point - min) / range * 100}%`
-                            };
-                            const leftStyle = {
-                                width: `30%`,
-                                marginLeft: `-30%`,
-                                overflow: 'hidden',
-                                left: `${(point - min) / range * 100}%`
-                            };
-                            const style = vertical ? bottomStyle : leftStyle;
-                            return style;
-                        }}
                         marks={marksForSlider || {}}
                         {...sliderProps}
                         {...sharingProps}
