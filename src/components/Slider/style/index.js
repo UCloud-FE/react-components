@@ -165,6 +165,9 @@ export const SliderWrap = styled.div(
                 display: inline-block;
                 vertical-align: middle;
                 text-align: right;
+                width: 30%;
+                margin-left: -30%;
+                overflow: hidden;
                 cursor: pointer;
                 color: ${colorMap.default.text};
                 border-right: 1px solid ${colorMap.default.border};
