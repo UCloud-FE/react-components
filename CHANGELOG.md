@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.8"></a>
+
+## [0.5.8](https://github.com/UCloud-FE/react-components/compare/v0.5.7...v0.5.8) (2019-07-09)
+
+### Bug Fixes
+
+*   **Table:** add clear both to table content to fix title float ([3b364c9](https://github.com/UCloud-FE/react-components/commit/3b364c9)), closes [#157](https://github.com/UCloud-FE/react-components/issues/157)
+
+### Features
+
+*   **Table:** add ExpandedRowContent|remove border of action icon ([320ddee](https://github.com/UCloud-FE/react-components/commit/320ddee)), closes [#158](https://github.com/UCloud-FE/react-components/issues/158)
+*   **Table:** add zebraCrossing ([ab68740](https://github.com/UCloud-FE/react-components/commit/ab68740)), closes [#159](https://github.com/UCloud-FE/react-components/issues/159)
+
 <a name="0.5.7"></a>
 
 ## [0.5.7](https://github.com/UCloud-FE/react-components/compare/v0.5.6...v0.5.7) (2019-07-05)
