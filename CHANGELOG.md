@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.9"></a>
+
+## [0.5.9](https://github.com/UCloud-FE/react-components/compare/v0.5.8...v0.5.9) (2019-07-16)
+
+### Bug Fixes
+
+*   **Slider:** fix slider click offset when horiz scrolled ([c1b7fff](https://github.com/UCloud-FE/react-components/commit/c1b7fff)), closes [#160](https://github.com/UCloud-FE/react-components/issues/160)
+
 <a name="0.5.8"></a>
 
 ## [0.5.8](https://github.com/UCloud-FE/react-components/compare/v0.5.7...v0.5.8) (2019-07-09)
