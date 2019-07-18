@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.10"></a>
+
+## [0.5.10](https://github.com/UCloud-FE/react-components/compare/v0.5.9...v0.5.10) (2019-07-18)
+
+### Bug Fixes
+
+*   **Modal:** fix version of rc-dialog to avoid bug ([5b41d62](https://github.com/UCloud-FE/react-components/commit/5b41d62)), closes [#161](https://github.com/UCloud-FE/react-components/issues/161)
+
 <a name="0.5.9"></a>
 
 ## [0.5.9](https://github.com/UCloud-FE/react-components/compare/v0.5.8...v0.5.9) (2019-07-16)
