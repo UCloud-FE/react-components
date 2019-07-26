@@ -121,7 +121,22 @@
 ```js {"codepath": "subTable.jsx"}
 ```
 
+*   onConditionChange - 由于 pagination 的某些设计，onConditionChange 返回值中不包含 pagination 变化，要监听 pagination 请使用 pagination 参数
+
+```js {"codepath": "onConditionChange.jsx"}
+```
+
+*   doNotHandleCondition
+
+```js {"codepath": "doNotHandleCondition.jsx"}
+```
+
 *   远程加载数据
 
 ```js {"codepath": "loadingDataFromRemote.jsx"}
+```
+
+*   后端分页、搜索、筛选、排序
+
+```js {"codepath": "fullRemoteTable.jsx"}
 ```

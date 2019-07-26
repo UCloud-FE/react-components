@@ -185,6 +185,18 @@ class Table extends Component {
             })
         }),
         /**
+         * 表格的筛选等条件变更时的回调
+         * @param condition - 变更的数据
+         * @param condition.order - 排序
+         * @param condition.filter - 筛选
+         * @param condition.searchValue - 搜索
+         */
+        onConditionChange: PropTypes.func,
+        /**
+         * order、filter、searchValue、pagination变化时表格内部不处理
+         */
+        doNotHandleCondition: PropTypes.bool,
+        /**
          * 右键菜单
          * @param record - 该行的记录值
          */
@@ -269,10 +281,29 @@ class Table extends Component {
     handleSearch = v => {
         if (v !== this.state.searchValue) {
             this.setState({
-                searchValue: v,
                 pagination: { ...this.state.pagination, current: 1 }
             });
+            this.handleConditionChange({ searchValue: v });
         }
+    };
+    handleConditionChange = condition => {
+        this.setState({
+            ...condition
+        });
+        const { onConditionChange } = this.props;
+        condition = {
+            ..._.pick(this.state, ['order', 'filters', 'searchValue']),
+            ...condition
+        };
+
+        let { order, filters, searchValue } = condition;
+
+        onConditionChange &&
+            onConditionChange({
+                order: order ? _.pick(order, ['key', 'state']) : null,
+                filters: _.map(filters, (filter, key) => ({ key, value: filter.value })),
+                searchValue
+            });
     };
     renderFilter = (filter, key, dataIndex) => {
         if (!filter) {
@@ -331,15 +362,12 @@ class Table extends Component {
             filters[key] = filter;
         }
         this.setState({
-            filters: filters,
             pagination: { ...this.state.pagination, current: 1 }
         });
+        this.handleConditionChange({ filters });
     };
     clearFilter = () => {
-        this.setState({
-            filters: {},
-            searchValue: ''
-        });
+        this.handleConditionChange({ filters: {}, searchValue: '' });
     };
     renderOrder = (order, key, dataIndex, state = 'none') => {
         if (!order) {
@@ -366,7 +394,7 @@ class Table extends Component {
         );
     };
     handleOrder = (key, { dataIndex, handleOrder, state }) => {
-        this.setState({
+        this.handleConditionChange({
             order:
                 state === 'asc'
                     ? null
@@ -409,7 +437,7 @@ class Table extends Component {
         return result;
     };
     getDataSource = () => {
-        const { dataSource, handleSearch } = this.props;
+        const { dataSource, handleSearch, doNotHandleCondition } = this.props;
         const { filters, order, searchValue } = this.state;
         let data = _.clone(dataSource);
         const doFilter = (dataSource, filter) => {
@@ -442,7 +470,7 @@ class Table extends Component {
                 return handleFilter(record[dataIndex], record, value, multiple);
             });
         };
-        if (!_.isEmpty(filters)) {
+        if (!doNotHandleCondition && !_.isEmpty(filters)) {
             _.forEach(filters, (filter, key) => (data = doFilter(data, filter, key)));
         }
         const doSearch = (dataSource, searchValue) => {
@@ -450,7 +478,7 @@ class Table extends Component {
                 return handleSearch(record, searchValue);
             });
         };
-        if (searchValue && searchValue.trim()) {
+        if (!doNotHandleCondition && searchValue && searchValue.trim()) {
             data = doSearch(data, searchValue.trim());
         }
         const doOrder = (dataSource, order) => {
@@ -464,13 +492,13 @@ class Table extends Component {
                       }[state]
             );
         };
-        if (order) {
+        if (!doNotHandleCondition && order) {
             data = doOrder(data, order);
         }
 
         const total = data.length;
         const pagination = this.getPagination();
-        if (pagination !== null) {
+        if (!doNotHandleCondition && pagination !== null) {
             const { current, pageSize } = pagination;
             const from = (current - 1) * pageSize;
             const to = from + pageSize;
@@ -744,7 +772,10 @@ class Table extends Component {
         /* eslint-enable no-unused-vars */
         const pagination = this.getPagination();
         const { filters = {}, searchValue, columnConfig } = this.state;
-        const { dataSource, total } = this.getDataSource();
+        let { dataSource, total } = this.getDataSource();
+        if (pagination && 'total' in pagination) {
+            total = pagination.total;
+        }
         const columns = this.getColumns(dataSource);
         const defaultExpandAllRowsProps = !defaultExpandAllRows
             ? null
