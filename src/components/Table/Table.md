@@ -14,6 +14,11 @@
 ```js {"codepath": "table.jsx"}
 ```
 
+*   columns
+
+```js {"codepath": "columns.jsx"}
+```
+
 *   普通使用
 
 ```js {"codepath": "base.jsx"}
