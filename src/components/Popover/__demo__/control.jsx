@@ -3,7 +3,11 @@ import PropTypes from 'prop-types';
 import Popover from 'components/Popover';
 
 // demo start
-const Popup = () => <div style={{ height: 30, border: '1px solid #ddd', background: '#fff' }}>This is a popup</div>;
+const Popup = () => (
+    <div style={{ maxHeight: 200, border: '1px solid #ddd', background: '#fff', overflow: 'auto' }}>
+        <div style={{ height: 10000, background: '#ddd' }}>This is a popup</div>
+    </div>
+);
 const Content = props => (
     <div style={{ width: 80, height: 50, background: '#ddd', display: 'inline-block', marginLeft: 5 }} {...props} />
 );
