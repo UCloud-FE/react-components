@@ -547,7 +547,7 @@ class Table extends Component {
             return !columnConfig[key] || !columnConfig[key].hidden;
         });
         const generateColumnTitle = column => {
-            const { filter, dataIndex, key, title, order, children } = column;
+            const { filter, dataIndex, key, title, renderTitle, order, children } = column;
             if (children) {
                 return {
                     ...column,
@@ -558,7 +558,7 @@ class Table extends Component {
                     ...column,
                     title: (
                         <div>
-                            {title}
+                            {renderTitle ? renderTitle(title) : title}
                             {this.renderFilter(filter, key, dataIndex)}
                             {this.renderOrder(
                                 order,
