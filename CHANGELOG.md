@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.11"></a>
+
+## [0.5.11](https://github.com/UCloud-FE/react-components/compare/v0.5.10...v0.5.11) (2019-08-14)
+
+### Bug Fixes
+
+*   **Popover:** fix popover scroll bar blur when scroll ([ba2b24f](https://github.com/UCloud-FE/react-components/commit/ba2b24f)), closes [#163](https://github.com/UCloud-FE/react-components/issues/163)
+
+### Features
+
+*   **Table:** add column.renderTitle & some docs ([b2767ff](https://github.com/UCloud-FE/react-components/commit/b2767ff)), closes [#164](https://github.com/UCloud-FE/react-components/issues/164)
+*   **Table:** add onConditionChange & doNotHandleConditionChange ([14ff4c5](https://github.com/UCloud-FE/react-components/commit/14ff4c5))
+
 <a name="0.5.10"></a>
 
 ## [0.5.10](https://github.com/UCloud-FE/react-components/compare/v0.5.9...v0.5.10) (2019-07-18)
