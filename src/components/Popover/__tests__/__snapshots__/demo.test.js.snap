@@ -212,10 +212,16 @@ exports[`Popover demo -- control 1`] = `
       <div
         class="uc-fe-popover c0 uc-fe-popover-placement-bottomLeft "
       >
-        <div
-          style="height:30px;border:1px solid #ddd;background:#fff;"
-        >
-          This is a popup
+        <div>
+          <div
+            style="max-height:200px;border:1px solid #ddd;background:#fff;overflow:auto;"
+          >
+            <div
+              style="height:10000px;background:#ddd;"
+            >
+              This is a popup
+            </div>
+          </div>
         </div>
       </div>
     </div>
