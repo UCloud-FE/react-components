@@ -15,7 +15,6 @@ class MessageContainer extends Component {
     };
     appendMessage = message => {
         const uid = _.uniqueId('uc_message_');
-        console.log(uid);
         this.setState({
             messages: this.state.messages.concat({
                 message,
