@@ -41,7 +41,8 @@ const showMessage = (styleType, content, duration = config.duration, onClose = (
         </ThemeProvider>
     );
     const destory = () => {
-        containerRef.removeMessage(messageUid) && onClose();
+        containerRef.removeMessage(messageUid);
+        onClose();
     };
     if (duration) {
         setTimeout(() => {

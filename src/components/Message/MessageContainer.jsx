@@ -15,6 +15,7 @@ class MessageContainer extends Component {
     };
     appendMessage = message => {
         const uid = _.uniqueId('uc_message_');
+        console.log(uid);
         this.setState({
             messages: this.state.messages.concat({
                 message,
@@ -28,7 +29,6 @@ class MessageContainer extends Component {
         this.setState({
             messages: newMessages
         });
-        return newMessages.length !== this.state.messages.length;
     };
     render() {
         const { messages } = this.state;
