@@ -24,11 +24,14 @@ class MessageContainer extends Component {
         return uid;
     };
     removeMessage = uid => {
-        const newMessages = this.state.messages.filter(info => info.uid !== uid);
-        this.setState({
-            messages: newMessages
-        });
-        return newMessages.length !== this.state.messages.length;
+        const { messages } = this.state;
+        const newMessages = messages.filter(info => info.uid !== uid);
+        const removed = newMessages.length !== messages.length;
+        removed &&
+            this.setState({
+                messages: newMessages
+            });
+        return removed;
     };
     render() {
         const { messages } = this.state;
