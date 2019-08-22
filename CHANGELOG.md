@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.12"></a>
+
+## [0.5.12](https://github.com/UCloud-FE/react-components/compare/v0.5.11...v0.5.12) (2019-08-22)
+
+### Bug Fixes
+
+*   **Dependences:** fix rc-\* dependences versions ([c765784](https://github.com/UCloud-FE/react-components/commit/c765784))
+
 <a name="0.5.11"></a>
 
 ## [0.5.11](https://github.com/UCloud-FE/react-components/compare/v0.5.10...v0.5.11) (2019-08-14)
