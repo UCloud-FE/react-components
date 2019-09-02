@@ -26,9 +26,16 @@ export const PaginationWrap = styled.ul(
                 background-color: ${colorMap.default.background};
                 text-align: center;
                 border-radius: 2px;
-                margin-right: 5px;
                 cursor: pointer;
                 padding: 0 2px;
+            }
+            &-item,
+            &-prev,
+            &-next,
+            &-jump-prev,
+            &-jump-next,
+            &-total {
+                margin-right: 5px;
 
                 ${inlineBlockWithVerticalMixin};
                 ${({ size }) => css`
@@ -65,7 +72,7 @@ export const PaginationWrap = styled.ul(
             &-disabled:hover {
                 border-color: ${colorMap.disabled.border};
                 background-color: ${colorMap.disabled.background};
-                color: ${colorMap.disabled.color};
+                color: ${colorMap.disabled.text};
                 cursor: not-allowed;
             }
 

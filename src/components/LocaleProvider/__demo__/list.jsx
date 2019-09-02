@@ -66,7 +66,7 @@ class Demo extends Component {
         const list = (
             <div>
                 <div className="demo-wrap">
-                    <Pagination total={100} showSizeChanger showQuickJumper={{ goButton: true }} />
+                    <Pagination total={100} showTotal showSizeChanger showQuickJumper={{ goButton: true }} />
                 </div>
                 <div className="demo-wrap">
                     <Calendar value={moment()} />

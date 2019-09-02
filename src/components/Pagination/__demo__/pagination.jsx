@@ -30,7 +30,8 @@ class Demo extends React.Component {
             showPrevNextJumpers,
             simple,
             goButton,
-            total
+            total,
+            showTotal
         } = this.state;
         const itemLayout = {
             labelCol: {
@@ -56,7 +57,8 @@ class Demo extends React.Component {
                         'goButton',
                         'showSizeChanger',
                         'showPrevNextJumpers',
-                        'simple'
+                        'simple',
+                        'showTotal'
                     ].map(key => (
                         <Form.Item key={key} label={key} {...itemLayout}>
                             <Switch checked={this.state[key]} onChange={v => this.setState({ [key]: v })} />
@@ -75,7 +77,8 @@ class Demo extends React.Component {
                             showSizeChanger,
                             showPrevNextJumpers,
                             total,
-                            simple
+                            simple,
+                            showTotal
                         }}
                         onChange={(...args) => console.log('onChange', ...args)}
                         onPageSizeChange={(...args) => console.log('onPageSizeChange', ...args)}
