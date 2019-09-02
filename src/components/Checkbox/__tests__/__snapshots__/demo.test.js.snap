@@ -52,29 +52,29 @@ exports[`Checkbox demo -- checkbox 1`] = `
   margin-right: 0;
 }
 
-.c7 .c33 {
+.c7 .c34 {
   margin-right: 12px;
   margin-bottom: 8px;
 }
 
-.c7 .c33:last-child {
+.c7 .c34:last-child {
   margin-right: 0;
 }
 
-.c7 .c34+.c34 {
+.c7 .c35+.c35 {
   margin-left: -1px;
 }
 
-.c7 .c32 {
+.c7 .c33 {
   margin-right: -1px;
   margin-bottom: 8px;
 }
 
-.c7 .c32:first-child {
+.c7 .c33:first-child {
   border-radius: 2px 0 0 2px;
 }
 
-.c7 .c32:last-child {
+.c7 .c33:last-child {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
 }
@@ -82,9 +82,11 @@ exports[`Checkbox demo -- checkbox 1`] = `
 .c27 {
   margin-right: 8px;
   font-size: 14px;
+  vertical-align: middle;
 }
 
-.c28 .c26 {
+.c29 .c26 {
+  line-height: 28px;
   color: #526075;
 }
 
@@ -93,25 +95,33 @@ exports[`Checkbox demo -- checkbox 1`] = `
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
+  min-height: 28px;
   font-size: 12px;
 }
 
 .c25 .c26 {
+  line-height: 28px;
   color: #3555f6;
 }
 
-.c29 .c26 {
+.c30 .c26 {
+  line-height: 28px;
   color: #d9d9d9;
 }
 
-.c30 .c26 {
+.c31 .c26 {
+  line-height: 22px;
   color: #526075;
 }
 
-.c31 .c26 {
+.c32 .c26 {
+  line-height: 32px;
   color: #526075;
+}
+
+.c28 {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .c16 {
@@ -532,7 +542,11 @@ exports[`Checkbox demo -- checkbox 1`] = `
         class="c26 uc-fe-checkbox-icon c27 uc-fe-icon icon__checkbox-ed c12"
         type="checkbox-ed"
       />
-      checkbox
+      <div
+        class="uc-fe-checkbox-content c28"
+      >
+        checkbox
+      </div>
     </span>
   </div>
 </div>
@@ -546,6 +560,7 @@ exports[`Checkbox demo -- checkbox-checked 1`] = `
 .c2 {
   margin-right: 8px;
   font-size: 14px;
+  vertical-align: middle;
 }
 
 .c0 {
@@ -553,27 +568,32 @@ exports[`Checkbox demo -- checkbox-checked 1`] = `
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
+  min-height: 28px;
   font-size: 12px;
 }
 
 .c0 .c1 {
+  line-height: 28px;
   color: #526075;
 }
 
-.c4 {
+.c5 {
   cursor: pointer;
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
+  min-height: 28px;
   font-size: 12px;
 }
 
-.c4 .c1 {
+.c5 .c1 {
+  line-height: 28px;
   color: #3555f6;
+}
+
+.c4 {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 <div>
@@ -587,7 +607,11 @@ exports[`Checkbox demo -- checkbox-checked 1`] = `
         class="c1 uc-fe-checkbox-icon c2 uc-fe-icon icon__checkbox c3"
         type="checkbox"
       />
-      unchecked
+      <div
+        class="uc-fe-checkbox-content c4"
+      >
+        unchecked
+      </div>
     </span>
   </div>
   <div
@@ -595,13 +619,17 @@ exports[`Checkbox demo -- checkbox-checked 1`] = `
   >
     <span
       checked=""
-      class="uc-fe-checkbox c4"
+      class="uc-fe-checkbox c5"
     >
       <i
         class="c1 uc-fe-checkbox-icon c2 uc-fe-icon icon__checkbox-ed c3"
         type="checkbox-ed"
       />
-      checked
+      <div
+        class="uc-fe-checkbox-content c4"
+      >
+        checked
+      </div>
     </span>
   </div>
 </div>
@@ -615,6 +643,7 @@ exports[`Checkbox demo -- checkbox-disabled 1`] = `
 .c2 {
   margin-right: 8px;
   font-size: 14px;
+  vertical-align: middle;
 }
 
 .c0 {
@@ -622,33 +651,39 @@ exports[`Checkbox demo -- checkbox-disabled 1`] = `
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
+  min-height: 28px;
   font-size: 12px;
 }
 
 .c0 .c1 {
+  line-height: 28px;
   color: #526075;
 }
 
-.c5 .c1 {
+.c6 .c1 {
+  line-height: 28px;
   color: #3555f6;
 }
 
-.c4 {
+.c5 {
   cursor: pointer;
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
+  min-height: 28px;
   font-size: 12px;
   color: #bbb;
   cursor: not-allowed;
 }
 
-.c4 .c1 {
+.c5 .c1 {
+  line-height: 28px;
   color: #d9d9d9;
+}
+
+.c4 {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 <div>
@@ -662,14 +697,18 @@ exports[`Checkbox demo -- checkbox-disabled 1`] = `
         class="c1 uc-fe-checkbox-icon c2 uc-fe-icon icon__checkbox c3"
         type="checkbox"
       />
-      common
+      <div
+        class="uc-fe-checkbox-content c4"
+      >
+        common
+      </div>
     </span>
   </div>
   <div
     class="demo-wrap"
   >
     <span
-      class="uc-fe-checkbox c4"
+      class="uc-fe-checkbox c5"
       disabled=""
     >
       <i
@@ -677,7 +716,11 @@ exports[`Checkbox demo -- checkbox-disabled 1`] = `
         disabled=""
         type="checkbox"
       />
-      disabled
+      <div
+        class="uc-fe-checkbox-content c4"
+      >
+        disabled
+      </div>
     </span>
   </div>
 </div>
@@ -691,27 +734,30 @@ exports[`Checkbox demo -- checkbox-size 1`] = `
 .c2 {
   margin-right: 8px;
   font-size: 14px;
+  vertical-align: middle;
 }
 
-.c4 {
+.c5 {
   cursor: pointer;
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
+  min-height: 28px;
   font-size: 12px;
 }
 
-.c4 .c1 {
+.c5 .c1 {
+  line-height: 28px;
   color: #526075;
 }
 
-.c6 .c1 {
+.c7 .c1 {
+  line-height: 28px;
   color: #3555f6;
 }
 
-.c7 .c1 {
+.c8 .c1 {
+  line-height: 28px;
   color: #d9d9d9;
 }
 
@@ -720,27 +766,32 @@ exports[`Checkbox demo -- checkbox-size 1`] = `
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  height: 22px;
-  line-height: 22px;
+  min-height: 22px;
   font-size: 12px;
 }
 
 .c0 .c1 {
+  line-height: 22px;
   color: #526075;
 }
 
-.c5 {
+.c6 {
   cursor: pointer;
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  height: 32px;
-  line-height: 32px;
+  min-height: 32px;
   font-size: 12px;
 }
 
-.c5 .c1 {
+.c6 .c1 {
+  line-height: 32px;
   color: #526075;
+}
+
+.c4 {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 <div>
@@ -754,20 +805,11 @@ exports[`Checkbox demo -- checkbox-size 1`] = `
         class="c1 uc-fe-checkbox-icon c2 uc-fe-icon icon__checkbox c3"
         type="checkbox"
       />
-      checkbox
-    </span>
-  </div>
-  <div
-    class="demo-wrap"
-  >
-    <span
-      class="uc-fe-checkbox c4"
-    >
-      <i
-        class="c1 uc-fe-checkbox-icon c2 uc-fe-icon icon__checkbox c3"
-        type="checkbox"
-      />
-      checkbox
+      <div
+        class="uc-fe-checkbox-content c4"
+      >
+        checkbox
+      </div>
     </span>
   </div>
   <div
@@ -780,7 +822,28 @@ exports[`Checkbox demo -- checkbox-size 1`] = `
         class="c1 uc-fe-checkbox-icon c2 uc-fe-icon icon__checkbox c3"
         type="checkbox"
       />
-      checkbox
+      <div
+        class="uc-fe-checkbox-content c4"
+      >
+        checkbox
+      </div>
+    </span>
+  </div>
+  <div
+    class="demo-wrap"
+  >
+    <span
+      class="uc-fe-checkbox c6"
+    >
+      <i
+        class="c1 uc-fe-checkbox-icon c2 uc-fe-icon icon__checkbox c3"
+        type="checkbox"
+      />
+      <div
+        class="uc-fe-checkbox-content c4"
+      >
+        checkbox
+      </div>
     </span>
   </div>
 </div>
@@ -791,7 +854,7 @@ exports[`Checkbox demo -- checkbox-styleType 1`] = `
   vertical-align: baseline;
 }
 
-.c6 {
+.c7 {
   position: relative;
   padding: 8px 16px;
   line-height: 22px;
@@ -799,12 +862,12 @@ exports[`Checkbox demo -- checkbox-styleType 1`] = `
   font-weight: bold;
 }
 
-.c10 {
+.c11 {
   padding: 16px;
   min-height: 20px;
 }
 
-.c8 {
+.c9 {
   font-size: 16px;
   color: #c3cad9;
   position: absolute;
@@ -812,7 +875,7 @@ exports[`Checkbox demo -- checkbox-styleType 1`] = `
   top: 10px;
 }
 
-.c13 {
+.c14 {
   font-weight: bold;
   line-height: 16px;
   position: absolute;
@@ -820,7 +883,7 @@ exports[`Checkbox demo -- checkbox-styleType 1`] = `
   top: 10px;
 }
 
-.c4 {
+.c5 {
   border-radius: 4px;
   overflow: hidden;
   display: inline-block;
@@ -828,23 +891,23 @@ exports[`Checkbox demo -- checkbox-styleType 1`] = `
   border: 1px solid #c3cad9;
 }
 
-.c4:hover {
+.c5:hover {
   box-shadow: 0px 2px 4px 0px rgba(228,229,242,1),0px 1px 1px 0px rgba(162,166,191,0.32),0px 1px 0px 0px rgba(223,224,241,0.7);
   border-color: transparent;
 }
 
-.c4 .c5 {
+.c5 .c6 {
   color: #0a1633;
   font-size: 14px;
   border-bottom: 1px solid #c3cad9;
 }
 
-.c4 .c7 {
+.c5 .c8 {
   border-radius: 50%;
   background: white;
 }
 
-.c11 {
+.c12 {
   border-radius: 4px;
   overflow: hidden;
   display: inline-block;
@@ -854,22 +917,22 @@ exports[`Checkbox demo -- checkbox-styleType 1`] = `
   box-shadow: 0px 2px 4px 0px rgba(228,229,242,1),0px 1px 1px 0px rgba(162,166,191,0.32);
 }
 
-.c11 .c5 {
+.c12 .c6 {
   color: #0a1633;
   font-size: 14px;
   border-bottom: 1px solid #c3cad9;
 }
 
-.c11 .c5 {
+.c12 .c6 {
   color: #3555f6;
   border-color: #3555f6;
 }
 
-.c11 .c7 {
+.c12 .c8 {
   color: #3555f6;
 }
 
-.c12 {
+.c13 {
   border-radius: 4px;
   overflow: hidden;
   display: inline-block;
@@ -879,23 +942,23 @@ exports[`Checkbox demo -- checkbox-styleType 1`] = `
   border-color: #d9d9d9;
 }
 
-.c12 .c5 {
+.c13 .c6 {
   color: #0a1633;
   font-size: 14px;
   border-bottom: 1px solid #c3cad9;
 }
 
-.c12 .c5 {
+.c13 .c6 {
   background: #bbb;
   color: white;
 }
 
-.c12 .c9 {
+.c13 .c10 {
   background: #f7f7f7;
   color: #bbb;
 }
 
-.c14 {
+.c15 {
   border-radius: 4px;
   overflow: hidden;
   display: inline-block;
@@ -906,28 +969,29 @@ exports[`Checkbox demo -- checkbox-styleType 1`] = `
   cursor: not-allowed;
 }
 
-.c14 .c5 {
+.c15 .c6 {
   color: #0a1633;
   font-size: 14px;
   border-bottom: 1px solid #c3cad9;
 }
 
-.c14 .c5 {
+.c15 .c6 {
   color: #3555f6;
   border-color: #3555f6;
 }
 
-.c14 .c7 {
+.c15 .c8 {
   color: #3555f6;
 }
 
-.c14 .c7 {
+.c15 .c8 {
   color: #adbaf3;
 }
 
 .c2 {
   margin-right: 8px;
   font-size: 14px;
+  vertical-align: middle;
 }
 
 .c0 {
@@ -935,29 +999,38 @@ exports[`Checkbox demo -- checkbox-styleType 1`] = `
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
+  min-height: 28px;
   font-size: 12px;
 }
 
 .c0 .c1 {
+  line-height: 28px;
   color: #526075;
-}
-
-.c15 .c1 {
-  color: #3555f6;
 }
 
 .c16 .c1 {
-  color: #d9d9d9;
+  line-height: 28px;
+  color: #3555f6;
 }
 
 .c17 .c1 {
-  color: #526075;
+  line-height: 28px;
+  color: #d9d9d9;
 }
 
 .c18 .c1 {
+  line-height: 22px;
   color: #526075;
+}
+
+.c19 .c1 {
+  line-height: 32px;
+  color: #526075;
+}
+
+.c4 {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 <div>
@@ -971,111 +1044,115 @@ exports[`Checkbox demo -- checkbox-styleType 1`] = `
         class="c1 uc-fe-checkbox-icon c2 uc-fe-icon icon__checkbox c3"
         type="checkbox"
       />
-      checkbox
+      <div
+        class="uc-fe-checkbox-content c4"
+      >
+        checkbox
+      </div>
     </span>
   </div>
   <div
     class="demo-wrap"
   >
     <div
-      class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-undefined c4"
+      class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-undefined c5"
       style="margin-right:8px;"
     >
       <div
-        class="c5 c6"
+        class="c6 c7"
       >
         title
         <i
-          class="c7 c8 uc-fe-icon icon__checkbox c3"
+          class="c8 c9 uc-fe-icon icon__checkbox c3"
           type="checkbox"
         />
       </div>
       <div
-        class="c9 c10"
+        class="c10 c11"
       >
         checkbox
       </div>
     </div>
     <div
       checked=""
-      class="uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-undefined c11"
+      class="uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-undefined c12"
       style="margin-right:8px;"
     >
       <div
-        class="c5 c6"
+        class="c6 c7"
       >
         title
         <i
-          class="c7 c8 uc-fe-icon icon__checkbox-ed c3"
+          class="c8 c9 uc-fe-icon icon__checkbox-ed c3"
           type="checkbox-ed"
         />
       </div>
       <div
-        class="c9 c10"
+        class="c10 c11"
       >
         checkbox
       </div>
     </div>
     <div
-      class="uc-fe-radio uc-fe-radio-disabled uc-fe-radio-size-md uc-fe-radio-styletype-undefined c12"
+      class="uc-fe-radio uc-fe-radio-disabled uc-fe-radio-size-md uc-fe-radio-styletype-undefined c13"
       disabled=""
       style="margin-right:8px;"
     >
       <div
-        class="c5 c6"
+        class="c6 c7"
       >
         title
         <span
-          class="c13"
+          class="c14"
         >
           售罄
         </span>
       </div>
       <div
-        class="c9 c10"
+        class="c10 c11"
       >
         checkbox
       </div>
     </div>
     <div
       checked=""
-      class="uc-fe-radio uc-fe-radio-disabled uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-undefined c14"
+      class="uc-fe-radio uc-fe-radio-disabled uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-undefined c15"
       disabled=""
       style="margin-right:8px;"
     >
       <div
-        class="c5 c6"
+        class="c6 c7"
       >
         title
         <span
-          class="c13"
+          class="c14"
         >
           必选
         </span>
       </div>
       <div
-        class="c9 c10"
+        class="c10 c11"
       >
         checkbox
       </div>
     </div>
     <div
       checked=""
-      class="uc-fe-radio uc-fe-radio-disabled uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-undefined c14"
+      class="uc-fe-radio uc-fe-radio-disabled uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-undefined c15"
       disabled=""
       style="margin-right:8px;"
     >
       <div
-        class="c5 c6"
+        class="c6 c7"
       >
         title
         <i
-          class="c7 c8 uc-fe-icon icon__checkbox-ed c3"
+          class="c8 c9 uc-fe-icon icon__checkbox-ed c3"
           type="checkbox-ed"
         />
       </div>
       <div
-        class="c9 c10"
+        class="c10 c11"
       >
         checkbox
       </div>
@@ -1092,9 +1169,11 @@ exports[`Checkbox demo -- checkbox-uncontrolled 1`] = `
 .c2 {
   margin-right: 8px;
   font-size: 14px;
+  vertical-align: middle;
 }
 
-.c4 .c1 {
+.c5 .c1 {
+  line-height: 28px;
   color: #526075;
 }
 
@@ -1103,25 +1182,33 @@ exports[`Checkbox demo -- checkbox-uncontrolled 1`] = `
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
+  min-height: 28px;
   font-size: 12px;
 }
 
 .c0 .c1 {
+  line-height: 28px;
   color: #3555f6;
 }
 
-.c5 .c1 {
+.c6 .c1 {
+  line-height: 28px;
   color: #d9d9d9;
 }
 
-.c6 .c1 {
+.c7 .c1 {
+  line-height: 22px;
   color: #526075;
 }
 
-.c7 .c1 {
+.c8 .c1 {
+  line-height: 32px;
   color: #526075;
+}
+
+.c4 {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 <div>
@@ -1136,7 +1223,11 @@ exports[`Checkbox demo -- checkbox-uncontrolled 1`] = `
         class="c1 uc-fe-checkbox-icon c2 uc-fe-icon icon__checkbox-ed c3"
         type="checkbox-ed"
       />
-      controlled
+      <div
+        class="uc-fe-checkbox-content c4"
+      >
+        controlled
+      </div>
     </span>
   </div>
   <div
@@ -1150,7 +1241,11 @@ exports[`Checkbox demo -- checkbox-uncontrolled 1`] = `
         class="c1 uc-fe-checkbox-icon c2 uc-fe-icon icon__checkbox-ed c3"
         type="checkbox-ed"
       />
-      uncontrolled
+      <div
+        class="uc-fe-checkbox-content c4"
+      >
+        uncontrolled
+      </div>
     </span>
   </div>
 </div>
@@ -1208,29 +1303,29 @@ exports[`Checkbox demo -- group 1`] = `
   margin-right: 0;
 }
 
-.c7 .c35 {
+.c7 .c36 {
   margin-right: 12px;
   margin-bottom: 8px;
 }
 
-.c7 .c35:last-child {
+.c7 .c36:last-child {
   margin-right: 0;
 }
 
-.c7 .c36+.c36 {
+.c7 .c37+.c37 {
   margin-left: -1px;
 }
 
-.c7 .c34 {
+.c7 .c35 {
   margin-right: -1px;
   margin-bottom: 8px;
 }
 
-.c7 .c34:first-child {
+.c7 .c35:first-child {
   border-radius: 2px 0 0 2px;
 }
 
-.c7 .c34:last-child {
+.c7 .c35:last-child {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
 }
@@ -1238,6 +1333,7 @@ exports[`Checkbox demo -- group 1`] = `
 .c28 {
   margin-right: 8px;
   font-size: 14px;
+  vertical-align: middle;
 }
 
 .c26 {
@@ -1245,38 +1341,47 @@ exports[`Checkbox demo -- group 1`] = `
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
+  min-height: 28px;
   font-size: 12px;
 }
 
 .c26 .c27 {
+  line-height: 28px;
   color: #526075;
-}
-
-.c29 .c27 {
-  color: #3555f6;
 }
 
 .c30 .c27 {
-  color: #d9d9d9;
+  line-height: 28px;
+  color: #3555f6;
 }
 
 .c31 .c27 {
-  color: #526075;
+  line-height: 28px;
+  color: #d9d9d9;
 }
 
 .c32 .c27 {
+  line-height: 22px;
   color: #526075;
 }
 
+.c33 .c27 {
+  line-height: 32px;
+  color: #526075;
+}
+
+.c29 {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .c24 .c25,
-.c24 .style__CheckboxCardWrap-sc-19o5x2n-2 {
+.c24 .style__CheckboxCardWrap-sc-19o5x2n-3 {
   margin-right: 8px;
 }
 
 .c24 .c25:last-child,
-.c24 .style__CheckboxCardWrap-sc-19o5x2n-2:last-child {
+.c24 .style__CheckboxCardWrap-sc-19o5x2n-3:last-child {
   margin-right: 0;
 }
 
@@ -1380,7 +1485,7 @@ exports[`Checkbox demo -- group 1`] = `
   display: none;
 }
 
-.c33 .c20 {
+.c34 .c20 {
   background-color: #fff;
   box-shadow: 0 0.5px 0.5px #c3cad9;
   border: 1px solid #c3cad9;
@@ -1388,47 +1493,47 @@ exports[`Checkbox demo -- group 1`] = `
   height: 20px;
 }
 
-.c33 .c22 {
+.c34 .c22 {
   background-color: #e69b9b;
   left: 13px;
   height: 10px;
 }
 
-.c33 .c15 {
+.c34 .c15 {
   border: 1px solid #c3cad9;
   background-color: #ebedf0;
   color: #6b798e;
 }
 
-.c33 .c17,
-.c33 .c19 {
+.c34 .c17,
+.c34 .c19 {
   line-height: 16px;
 }
 
-.c33 .c17 {
+.c34 .c17 {
   padding-right: 20px;
 }
 
-.c33 .c19 {
+.c34 .c19 {
   padding-left: 20px;
 }
 
-.c33 .c15 {
+.c34 .c15 {
   border-color: #9fecc0;
   background-color: #c3f3d8;
   color: #5cd78e;
 }
 
-.c33 .c20 {
+.c34 .c20 {
   left: 100%;
   margin-left: -19px;
 }
 
-.c33 .c22 {
+.c34 .c22 {
   background: #9fecc0;
 }
 
-.c33 .c19 {
+.c34 .c19 {
   display: none;
 }
 
@@ -1645,7 +1750,11 @@ exports[`Checkbox demo -- group 1`] = `
               class="c27 uc-fe-checkbox-icon c28 uc-fe-icon icon__checkbox c12"
               type="checkbox"
             />
-            1
+            <div
+              class="uc-fe-checkbox-content c29"
+            >
+              1
+            </div>
           </span>
           <span
             class="c25 uc-fe-checkbox c26"
@@ -1654,7 +1763,11 @@ exports[`Checkbox demo -- group 1`] = `
               class="c27 uc-fe-checkbox-icon c28 uc-fe-icon icon__checkbox c12"
               type="checkbox"
             />
-            2
+            <div
+              class="uc-fe-checkbox-content c29"
+            >
+              2
+            </div>
           </span>
           <span
             class="c25 uc-fe-checkbox c26"
@@ -1663,7 +1776,11 @@ exports[`Checkbox demo -- group 1`] = `
               class="c27 uc-fe-checkbox-icon c28 uc-fe-icon icon__checkbox c12"
               type="checkbox"
             />
-            3
+            <div
+              class="uc-fe-checkbox-content c29"
+            >
+              3
+            </div>
           </span>
           <span
             class="c25 uc-fe-checkbox c26"
@@ -1672,7 +1789,11 @@ exports[`Checkbox demo -- group 1`] = `
               class="c27 uc-fe-checkbox-icon c28 uc-fe-icon icon__checkbox c12"
               type="checkbox"
             />
-            4
+            <div
+              class="uc-fe-checkbox-content c29"
+            >
+              4
+            </div>
           </span>
         </div>
       </div>
@@ -1691,7 +1812,11 @@ exports[`Checkbox demo -- group 1`] = `
           class="c27 uc-fe-checkbox-icon c28 uc-fe-icon icon__checkbox c12"
           type="checkbox"
         />
-        1
+        <div
+          class="uc-fe-checkbox-content c29"
+        >
+          1
+        </div>
       </span>
       <span
         class="c25 uc-fe-checkbox c26"
@@ -1700,7 +1825,11 @@ exports[`Checkbox demo -- group 1`] = `
           class="c27 uc-fe-checkbox-icon c28 uc-fe-icon icon__checkbox c12"
           type="checkbox"
         />
-        2
+        <div
+          class="uc-fe-checkbox-content c29"
+        >
+          2
+        </div>
       </span>
       <span
         class="c25 uc-fe-checkbox c26"
@@ -1709,7 +1838,11 @@ exports[`Checkbox demo -- group 1`] = `
           class="c27 uc-fe-checkbox-icon c28 uc-fe-icon icon__checkbox c12"
           type="checkbox"
         />
-        3
+        <div
+          class="uc-fe-checkbox-content c29"
+        >
+          3
+        </div>
       </span>
       <span
         class="c25 uc-fe-checkbox c26"
@@ -1718,7 +1851,11 @@ exports[`Checkbox demo -- group 1`] = `
           class="c27 uc-fe-checkbox-icon c28 uc-fe-icon icon__checkbox c12"
           type="checkbox"
         />
-        4
+        <div
+          class="uc-fe-checkbox-content c29"
+        >
+          4
+        </div>
       </span>
     </div>
   </div>
@@ -1733,6 +1870,7 @@ exports[`Checkbox demo -- group-disabled 1`] = `
 .c4 {
   margin-right: 8px;
   font-size: 14px;
+  vertical-align: middle;
 }
 
 .c2 {
@@ -1740,50 +1878,58 @@ exports[`Checkbox demo -- group-disabled 1`] = `
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
+  min-height: 28px;
   font-size: 12px;
 }
 
 .c2 .c3 {
+  line-height: 28px;
   color: #526075;
 }
 
-.c7 .c3 {
+.c8 .c3 {
+  line-height: 28px;
   color: #3555f6;
 }
 
-.c6 {
+.c7 {
   cursor: pointer;
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
+  min-height: 28px;
   font-size: 12px;
   color: #bbb;
   cursor: not-allowed;
 }
 
-.c6 .c3 {
+.c7 .c3 {
+  line-height: 28px;
   color: #d9d9d9;
 }
 
-.c8 .c3 {
+.c9 .c3 {
+  line-height: 22px;
   color: #526075;
 }
 
-.c9 .c3 {
+.c10 .c3 {
+  line-height: 32px;
   color: #526075;
+}
+
+.c6 {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .c0 .c1,
-.c0 .style__CheckboxCardWrap-sc-19o5x2n-2 {
+.c0 .style__CheckboxCardWrap-sc-19o5x2n-3 {
   margin-right: 8px;
 }
 
 .c0 .c1:last-child,
-.c0 .style__CheckboxCardWrap-sc-19o5x2n-2:last-child {
+.c0 .style__CheckboxCardWrap-sc-19o5x2n-3:last-child {
   margin-right: 0;
 }
 
@@ -1801,7 +1947,11 @@ exports[`Checkbox demo -- group-disabled 1`] = `
           class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
           type="checkbox"
         />
-        1
+        <div
+          class="uc-fe-checkbox-content c6"
+        >
+          1
+        </div>
       </span>
       <span
         class="c1 uc-fe-checkbox c2"
@@ -1810,7 +1960,11 @@ exports[`Checkbox demo -- group-disabled 1`] = `
           class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
           type="checkbox"
         />
-        2
+        <div
+          class="uc-fe-checkbox-content c6"
+        >
+          2
+        </div>
       </span>
       <span
         class="c1 uc-fe-checkbox c2"
@@ -1819,7 +1973,11 @@ exports[`Checkbox demo -- group-disabled 1`] = `
           class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
           type="checkbox"
         />
-        3
+        <div
+          class="uc-fe-checkbox-content c6"
+        >
+          3
+        </div>
       </span>
     </div>
   </div>
@@ -1830,7 +1988,7 @@ exports[`Checkbox demo -- group-disabled 1`] = `
       class="uc-fe-checkbox-group c0"
     >
       <span
-        class="c1 uc-fe-checkbox c6"
+        class="c1 uc-fe-checkbox c7"
         disabled=""
       >
         <i
@@ -1838,10 +1996,14 @@ exports[`Checkbox demo -- group-disabled 1`] = `
           disabled=""
           type="checkbox"
         />
-        1
+        <div
+          class="uc-fe-checkbox-content c6"
+        >
+          1
+        </div>
       </span>
       <span
-        class="c1 uc-fe-checkbox c6"
+        class="c1 uc-fe-checkbox c7"
         disabled=""
       >
         <i
@@ -1849,10 +2011,14 @@ exports[`Checkbox demo -- group-disabled 1`] = `
           disabled=""
           type="checkbox"
         />
-        2
+        <div
+          class="uc-fe-checkbox-content c6"
+        >
+          2
+        </div>
       </span>
       <span
-        class="c1 uc-fe-checkbox c6"
+        class="c1 uc-fe-checkbox c7"
         disabled=""
       >
         <i
@@ -1860,7 +2026,11 @@ exports[`Checkbox demo -- group-disabled 1`] = `
           disabled=""
           type="checkbox"
         />
-        3
+        <div
+          class="uc-fe-checkbox-content c6"
+        >
+          3
+        </div>
       </span>
     </div>
   </div>
@@ -1875,6 +2045,7 @@ exports[`Checkbox demo -- group-options 1`] = `
 .c4 {
   margin-right: 8px;
   font-size: 14px;
+  vertical-align: middle;
 }
 
 .c2 {
@@ -1882,38 +2053,47 @@ exports[`Checkbox demo -- group-options 1`] = `
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
+  min-height: 28px;
   font-size: 12px;
 }
 
 .c2 .c3 {
+  line-height: 28px;
   color: #526075;
-}
-
-.c6 .c3 {
-  color: #3555f6;
 }
 
 .c7 .c3 {
-  color: #d9d9d9;
+  line-height: 28px;
+  color: #3555f6;
 }
 
 .c8 .c3 {
-  color: #526075;
+  line-height: 28px;
+  color: #d9d9d9;
 }
 
 .c9 .c3 {
+  line-height: 22px;
   color: #526075;
 }
 
+.c10 .c3 {
+  line-height: 32px;
+  color: #526075;
+}
+
+.c6 {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .c0 .c1,
-.c0 .style__CheckboxCardWrap-sc-19o5x2n-2 {
+.c0 .style__CheckboxCardWrap-sc-19o5x2n-3 {
   margin-right: 8px;
 }
 
 .c0 .c1:last-child,
-.c0 .style__CheckboxCardWrap-sc-19o5x2n-2:last-child {
+.c0 .style__CheckboxCardWrap-sc-19o5x2n-3:last-child {
   margin-right: 0;
 }
 
@@ -1931,7 +2111,11 @@ exports[`Checkbox demo -- group-options 1`] = `
           class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
           type="checkbox"
         />
-        option-1
+        <div
+          class="uc-fe-checkbox-content c6"
+        >
+          option-1
+        </div>
       </span>
       <span
         class="c1 uc-fe-checkbox c2"
@@ -1940,7 +2124,11 @@ exports[`Checkbox demo -- group-options 1`] = `
           class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
           type="checkbox"
         />
-        option-2
+        <div
+          class="uc-fe-checkbox-content c6"
+        >
+          option-2
+        </div>
       </span>
       <span
         class="c1 uc-fe-checkbox c2"
@@ -1949,7 +2137,11 @@ exports[`Checkbox demo -- group-options 1`] = `
           class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
           type="checkbox"
         />
-        option-3
+        <div
+          class="uc-fe-checkbox-content c6"
+        >
+          option-3
+        </div>
       </span>
     </div>
   </div>
@@ -1966,7 +2158,11 @@ exports[`Checkbox demo -- group-options 1`] = `
           class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
           type="checkbox"
         />
-        checkbox-1
+        <div
+          class="uc-fe-checkbox-content c6"
+        >
+          checkbox-1
+        </div>
       </span>
       <span
         class="c1 uc-fe-checkbox c2"
@@ -1975,7 +2171,11 @@ exports[`Checkbox demo -- group-options 1`] = `
           class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
           type="checkbox"
         />
-        checkbox-2
+        <div
+          class="uc-fe-checkbox-content c6"
+        >
+          checkbox-2
+        </div>
       </span>
       <span
         class="c1 uc-fe-checkbox c2"
@@ -1984,7 +2184,11 @@ exports[`Checkbox demo -- group-options 1`] = `
           class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
           type="checkbox"
         />
-        checkbox-3
+        <div
+          class="uc-fe-checkbox-content c6"
+        >
+          checkbox-3
+        </div>
       </span>
     </div>
   </div>
@@ -1999,27 +2203,30 @@ exports[`Checkbox demo -- group-size 1`] = `
 .c4 {
   margin-right: 8px;
   font-size: 14px;
+  vertical-align: middle;
 }
 
-.c6 {
+.c7 {
   cursor: pointer;
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
+  min-height: 28px;
   font-size: 12px;
 }
 
-.c6 .c3 {
+.c7 .c3 {
+  line-height: 28px;
   color: #526075;
 }
 
-.c8 .c3 {
+.c9 .c3 {
+  line-height: 28px;
   color: #3555f6;
 }
 
-.c9 .c3 {
+.c10 .c3 {
+  line-height: 28px;
   color: #d9d9d9;
 }
 
@@ -2028,36 +2235,41 @@ exports[`Checkbox demo -- group-size 1`] = `
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  height: 22px;
-  line-height: 22px;
+  min-height: 22px;
   font-size: 12px;
 }
 
 .c2 .c3 {
+  line-height: 22px;
   color: #526075;
 }
 
-.c7 {
+.c8 {
   cursor: pointer;
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  height: 32px;
-  line-height: 32px;
+  min-height: 32px;
   font-size: 12px;
 }
 
-.c7 .c3 {
+.c8 .c3 {
+  line-height: 32px;
   color: #526075;
 }
 
+.c6 {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .c0 .c1,
-.c0 .style__CheckboxCardWrap-sc-19o5x2n-2 {
+.c0 .style__CheckboxCardWrap-sc-19o5x2n-3 {
   margin-right: 8px;
 }
 
 .c0 .c1:last-child,
-.c0 .style__CheckboxCardWrap-sc-19o5x2n-2:last-child {
+.c0 .style__CheckboxCardWrap-sc-19o5x2n-3:last-child {
   margin-right: 0;
 }
 
@@ -2075,7 +2287,11 @@ exports[`Checkbox demo -- group-size 1`] = `
           class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
           type="checkbox"
         />
-        1
+        <div
+          class="uc-fe-checkbox-content c6"
+        >
+          1
+        </div>
       </span>
       <span
         class="c1 uc-fe-checkbox c2"
@@ -2084,7 +2300,11 @@ exports[`Checkbox demo -- group-size 1`] = `
           class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
           type="checkbox"
         />
-        2
+        <div
+          class="uc-fe-checkbox-content c6"
+        >
+          2
+        </div>
       </span>
       <span
         class="c1 uc-fe-checkbox c2"
@@ -2093,42 +2313,11 @@ exports[`Checkbox demo -- group-size 1`] = `
           class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
           type="checkbox"
         />
-        3
-      </span>
-    </div>
-  </div>
-  <div
-    class="demo-wrap"
-  >
-    <div
-      class="uc-fe-checkbox-group c0"
-    >
-      <span
-        class="c1 uc-fe-checkbox c6"
-      >
-        <i
-          class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-          type="checkbox"
-        />
-        1
-      </span>
-      <span
-        class="c1 uc-fe-checkbox c6"
-      >
-        <i
-          class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-          type="checkbox"
-        />
-        2
-      </span>
-      <span
-        class="c1 uc-fe-checkbox c6"
-      >
-        <i
-          class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-          type="checkbox"
-        />
-        3
+        <div
+          class="uc-fe-checkbox-content c6"
+        >
+          3
+        </div>
       </span>
     </div>
   </div>
@@ -2145,7 +2334,11 @@ exports[`Checkbox demo -- group-size 1`] = `
           class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
           type="checkbox"
         />
-        1
+        <div
+          class="uc-fe-checkbox-content c6"
+        >
+          1
+        </div>
       </span>
       <span
         class="c1 uc-fe-checkbox c7"
@@ -2154,7 +2347,11 @@ exports[`Checkbox demo -- group-size 1`] = `
           class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
           type="checkbox"
         />
-        2
+        <div
+          class="uc-fe-checkbox-content c6"
+        >
+          2
+        </div>
       </span>
       <span
         class="c1 uc-fe-checkbox c7"
@@ -2163,7 +2360,58 @@ exports[`Checkbox demo -- group-size 1`] = `
           class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
           type="checkbox"
         />
-        3
+        <div
+          class="uc-fe-checkbox-content c6"
+        >
+          3
+        </div>
+      </span>
+    </div>
+  </div>
+  <div
+    class="demo-wrap"
+  >
+    <div
+      class="uc-fe-checkbox-group c0"
+    >
+      <span
+        class="c1 uc-fe-checkbox c8"
+      >
+        <i
+          class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+          type="checkbox"
+        />
+        <div
+          class="uc-fe-checkbox-content c6"
+        >
+          1
+        </div>
+      </span>
+      <span
+        class="c1 uc-fe-checkbox c8"
+      >
+        <i
+          class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+          type="checkbox"
+        />
+        <div
+          class="uc-fe-checkbox-content c6"
+        >
+          2
+        </div>
+      </span>
+      <span
+        class="c1 uc-fe-checkbox c8"
+      >
+        <i
+          class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+          type="checkbox"
+        />
+        <div
+          class="uc-fe-checkbox-content c6"
+        >
+          3
+        </div>
       </span>
     </div>
   </div>
@@ -2175,12 +2423,12 @@ exports[`Checkbox demo -- group-styleType 1`] = `
   vertical-align: baseline;
 }
 
-.c10 {
+.c11 {
   padding: 16px;
   min-height: 20px;
 }
 
-.c8 {
+.c9 {
   border-radius: 4px;
   overflow: hidden;
   display: inline-block;
@@ -2188,39 +2436,40 @@ exports[`Checkbox demo -- group-styleType 1`] = `
   border: 1px solid #c3cad9;
 }
 
-.c8:hover {
+.c9:hover {
   box-shadow: 0px 2px 4px 0px rgba(228,229,242,1),0px 1px 1px 0px rgba(162,166,191,0.32),0px 1px 0px 0px rgba(223,224,241,0.7);
   border-color: transparent;
 }
 
-.c8 .c17 {
+.c9 .c18 {
   color: #0a1633;
   font-size: 14px;
   border-bottom: 1px solid #c3cad9;
 }
 
-.c8 .c18 {
+.c9 .c19 {
   border-radius: 50%;
   background: white;
 }
 
-.c11 .c9 {
+.c12 .c10 {
   background: #f7f7f7;
   color: #bbb;
 }
 
-.c12 .c7 {
+.c13 .c8 {
   margin-right: 12px;
   margin-bottom: 8px;
 }
 
-.c12 .c7:last-child {
+.c13 .c8:last-child {
   margin-right: 0;
 }
 
 .c4 {
   margin-right: 8px;
   font-size: 14px;
+  vertical-align: middle;
 }
 
 .c2 {
@@ -2228,38 +2477,47 @@ exports[`Checkbox demo -- group-styleType 1`] = `
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
+  min-height: 28px;
   font-size: 12px;
 }
 
 .c2 .c3 {
+  line-height: 28px;
   color: #526075;
-}
-
-.c13 .c3 {
-  color: #3555f6;
 }
 
 .c14 .c3 {
-  color: #d9d9d9;
+  line-height: 28px;
+  color: #3555f6;
 }
 
 .c15 .c3 {
-  color: #526075;
+  line-height: 28px;
+  color: #d9d9d9;
 }
 
 .c16 .c3 {
+  line-height: 22px;
   color: #526075;
 }
 
+.c17 .c3 {
+  line-height: 32px;
+  color: #526075;
+}
+
+.c6 {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .c0 .c1,
-.c0 .c6 {
+.c0 .c7 {
   margin-right: 8px;
 }
 
 .c0 .c1:last-child,
-.c0 .c6:last-child {
+.c0 .c7:last-child {
   margin-right: 0;
 }
 
@@ -2277,7 +2535,11 @@ exports[`Checkbox demo -- group-styleType 1`] = `
           class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
           type="checkbox"
         />
-        1
+        <div
+          class="uc-fe-checkbox-content c6"
+        >
+          1
+        </div>
       </span>
       <span
         class="c1 uc-fe-checkbox c2"
@@ -2286,7 +2548,11 @@ exports[`Checkbox demo -- group-styleType 1`] = `
           class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
           type="checkbox"
         />
-        2
+        <div
+          class="uc-fe-checkbox-content c6"
+        >
+          2
+        </div>
       </span>
       <span
         class="c1 uc-fe-checkbox c2"
@@ -2295,7 +2561,11 @@ exports[`Checkbox demo -- group-styleType 1`] = `
           class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
           type="checkbox"
         />
-        3
+        <div
+          class="uc-fe-checkbox-content c6"
+        >
+          3
+        </div>
       </span>
     </div>
   </div>
@@ -2306,28 +2576,28 @@ exports[`Checkbox demo -- group-styleType 1`] = `
       class="uc-fe-checkbox-group c0"
     >
       <div
-        class="c6 c7 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-undefined c8"
+        class="c7 c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-undefined c9"
       >
         <div
-          class="c9 c10"
+          class="c10 c11"
         >
           1
         </div>
       </div>
       <div
-        class="c6 c7 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-undefined c8"
+        class="c7 c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-undefined c9"
       >
         <div
-          class="c9 c10"
+          class="c10 c11"
         >
           2
         </div>
       </div>
       <div
-        class="c6 c7 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-undefined c8"
+        class="c7 c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-undefined c9"
       >
         <div
-          class="c9 c10"
+          class="c10 c11"
         >
           3
         </div>
@@ -2345,6 +2615,7 @@ exports[`Checkbox demo -- group-uncontrolled 1`] = `
 .c4 {
   margin-right: 8px;
   font-size: 14px;
+  vertical-align: middle;
 }
 
 .c2 {
@@ -2352,48 +2623,56 @@ exports[`Checkbox demo -- group-uncontrolled 1`] = `
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
+  min-height: 28px;
   font-size: 12px;
 }
 
 .c2 .c3 {
+  line-height: 28px;
   color: #526075;
 }
 
-.c6 {
+.c7 {
   cursor: pointer;
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
+  min-height: 28px;
   font-size: 12px;
 }
 
-.c6 .c3 {
+.c7 .c3 {
+  line-height: 28px;
   color: #3555f6;
 }
 
-.c7 .c3 {
+.c8 .c3 {
+  line-height: 28px;
   color: #d9d9d9;
 }
 
-.c8 .c3 {
+.c9 .c3 {
+  line-height: 22px;
   color: #526075;
 }
 
-.c9 .c3 {
+.c10 .c3 {
+  line-height: 32px;
   color: #526075;
+}
+
+.c6 {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .c0 .c1,
-.c0 .style__CheckboxCardWrap-sc-19o5x2n-2 {
+.c0 .style__CheckboxCardWrap-sc-19o5x2n-3 {
   margin-right: 8px;
 }
 
 .c0 .c1:last-child,
-.c0 .style__CheckboxCardWrap-sc-19o5x2n-2:last-child {
+.c0 .style__CheckboxCardWrap-sc-19o5x2n-3:last-child {
   margin-right: 0;
 }
 
@@ -2411,27 +2690,39 @@ exports[`Checkbox demo -- group-uncontrolled 1`] = `
           class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
           type="checkbox"
         />
-        1
+        <div
+          class="uc-fe-checkbox-content c6"
+        >
+          1
+        </div>
       </span>
       <span
         checked=""
-        class="c1 uc-fe-checkbox c6"
+        class="c1 uc-fe-checkbox c7"
       >
         <i
           class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox-ed c5"
           type="checkbox-ed"
         />
-        2
+        <div
+          class="uc-fe-checkbox-content c6"
+        >
+          2
+        </div>
       </span>
       <span
         checked=""
-        class="c1 uc-fe-checkbox c6"
+        class="c1 uc-fe-checkbox c7"
       >
         <i
           class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox-ed c5"
           type="checkbox-ed"
         />
-        3
+        <div
+          class="uc-fe-checkbox-content c6"
+        >
+          3
+        </div>
       </span>
     </div>
   </div>
@@ -2443,13 +2734,17 @@ exports[`Checkbox demo -- group-uncontrolled 1`] = `
     >
       <span
         checked=""
-        class="c1 uc-fe-checkbox c6"
+        class="c1 uc-fe-checkbox c7"
       >
         <i
           class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox-ed c5"
           type="checkbox-ed"
         />
-        1
+        <div
+          class="uc-fe-checkbox-content c6"
+        >
+          1
+        </div>
       </span>
       <span
         class="c1 uc-fe-checkbox c2"
@@ -2458,17 +2753,25 @@ exports[`Checkbox demo -- group-uncontrolled 1`] = `
           class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
           type="checkbox"
         />
-        2
+        <div
+          class="uc-fe-checkbox-content c6"
+        >
+          2
+        </div>
       </span>
       <span
         checked=""
-        class="c1 uc-fe-checkbox c6"
+        class="c1 uc-fe-checkbox c7"
       >
         <i
           class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox-ed c5"
           type="checkbox-ed"
         />
-        3
+        <div
+          class="uc-fe-checkbox-content c6"
+        >
+          3
+        </div>
       </span>
     </div>
   </div>

@@ -14,11 +14,11 @@ export const CheckboxIcon = styled(Icon).attrs({
 })`
     margin-right: 8px;
     font-size: 14px;
+    vertical-align: middle;
 `;
 
 const propsMixin = ({ theme: { Height, colorMap, fontSize }, size, disabled, checked }) => css`
-    height: ${Height[size]};
-    line-height: ${Height[size]};
+    min-height: ${Height[size]};
     font-size: ${fontSize};
 
     ${disabled &&
@@ -28,6 +28,7 @@ const propsMixin = ({ theme: { Height, colorMap, fontSize }, size, disabled, che
         `};
 
     ${/*sc-sel */ CheckboxIcon} {
+        line-height: ${Height[size]};
         color: ${disabled ? colorMap.disabled.icon : checked ? colorMap.active.icon : colorMap.default.icon};
     }
 `;
@@ -40,6 +41,12 @@ export const CheckboxWrap = styled.span.attrs({
 
     ${inlineBlockWithVerticalMixin};
     ${propsMixin};
+`;
+
+export const CheckboxContentWrap = styled.div.attrs({
+    className: prefixCls + '-content'
+})`
+    ${inlineBlockWithVerticalMixin};
 `;
 
 export const CheckboxCardWrap = styled(Card)`
