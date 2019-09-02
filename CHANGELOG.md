@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.13"></a>
+
+## [0.5.13](https://github.com/UCloud-FE/react-components/compare/v0.5.12...v0.5.13) (2019-09-02)
+
+### Bug Fixes
+
+*   **Message:** fix message onClose not trigger bug ([8bba21b](https://github.com/UCloud-FE/react-components/commit/8bba21b)), closes [#168](https://github.com/UCloud-FE/react-components/issues/168)
+
+### Features
+
+*   **Checkbox:** add support of multiple content ([eac8321](https://github.com/UCloud-FE/react-components/commit/eac8321)), closes [#170](https://github.com/UCloud-FE/react-components/issues/170)
+*   **Pagination:** add showTotal ([94f1112](https://github.com/UCloud-FE/react-components/commit/94f1112))
+
 <a name="0.5.12"></a>
 
 ## [0.5.12](https://github.com/UCloud-FE/react-components/compare/v0.5.11...v0.5.12) (2019-08-22)
