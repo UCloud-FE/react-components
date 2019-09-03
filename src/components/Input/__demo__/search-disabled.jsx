@@ -7,10 +7,10 @@ class Demo extends React.Component {
         return (
             <div>
                 <div className="demo-wrap">
-                    <Input.Search disabled icon="circle" />
+                    <Input.Search disabled />
                 </div>
                 <div className="demo-wrap">
-                    <Input.Search icon="circle" />
+                    <Input.Search />
                 </div>
             </div>
         );

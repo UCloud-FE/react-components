@@ -1,3 +1,4 @@
+const _ = require('lodash');
 const components = {};
 
 function importAll(r) {
@@ -5,7 +6,7 @@ function importAll(r) {
         const name = key.replace(/(^\.\/)|(\/index\.jsx$)/g, '');
         const all = r(key);
         const component = all.default;
-        components[name] = Object.assign(component, all);
+        components[name] = _.merge(component, all);
     });
 }
 

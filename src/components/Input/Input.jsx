@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 
 import Icon from 'src/components/Icon';
+import deprecatedLog from 'src/utils/deprecatedLog';
 
-import { InputWrap, IconWrap } from './style';
+import { InputWrap, TableWrap, PrefixWrap, SuffixWrap } from './style';
 
 const Size = ['sm', 'md', 'lg'];
 
@@ -12,8 +13,15 @@ class Input extends Component {
     static propTypes = {
         /** @ignore */
         className: PropTypes.string,
-        /** 图标，传入string时为图标类型，也可直接传入图标组件 */
+        /**
+         * @deprecated
+         * 图标，传入string时为图标类型，也可直接传入图标组件
+         */
         icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+        /** 前缀 */
+        prefix: PropTypes.node,
+        /** 后缀 */
+        suffix: PropTypes.node,
         /** 尺寸 */
         size: PropTypes.oneOf(Size),
         /** @ignore */
@@ -24,26 +32,64 @@ class Input extends Component {
     static defaultProps = {
         size: 'md'
     };
-    renderIcon = () => {
-        const { icon, size } = this.props;
-        if (_.isString(icon)) {
+    state = {};
+    renderPrefix = () => {
+        const { prefix } = this.props;
+        return prefix && <PrefixWrap>{prefix}</PrefixWrap>;
+    };
+    renderSuffix = () => {
+        const { icon, size, suffix } = this.props;
+        if (suffix) {
+            return <SuffixWrap>{suffix}</SuffixWrap>;
+        } else if (_.isString(icon)) {
+            deprecatedLog('icon', 'suffix');
             return (
-                <IconWrap size={size}>
+                <SuffixWrap size={size}>
                     <Icon type={icon} />
-                </IconWrap>
+                </SuffixWrap>
             );
         } else if (React.isValidElement(icon)) {
-            return <IconWrap size={size}>{icon}</IconWrap>;
-        } else {
-            return null;
+            deprecatedLog('icon', 'suffix');
+            return <SuffixWrap>{icon}</SuffixWrap>;
         }
     };
+    onFocus = () => {
+        this.setState({
+            focused: true
+        });
+    };
+    onBlur = () => {
+        this.setState({
+            focused: false
+        });
+    };
+    focus = () => {
+        this.input && this.input.focus();
+    };
     render() {
-        const { className, style, disabled, icon, size, ...rest } = this.props;
+        // eslint-disable-next-line no-unused-vars
+        const { className, style, disabled, icon, size, suffix, prefix, ...rest } = this.props;
+        const { focused } = this.state;
         return (
-            <InputWrap withIcon={!!icon} size={size} className={className} style={style} disabled={disabled}>
-                <input {...rest} ref={ref => (this.input = ref)} disabled={disabled} />
-                {this.renderIcon()}
+            <InputWrap
+                size={size}
+                focused={focused}
+                className={className}
+                style={style}
+                disabled={disabled}
+                onClick={this.focus}
+            >
+                <TableWrap>
+                    {this.renderPrefix()}
+                    <input
+                        {...rest}
+                        ref={ref => (this.input = ref)}
+                        onFocus={this.onFocus}
+                        onBlur={this.onBlur}
+                        disabled={disabled}
+                    />
+                    {this.renderSuffix()}
+                </TableWrap>
             </InputWrap>
         );
     }

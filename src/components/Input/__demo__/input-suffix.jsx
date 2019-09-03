@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Input from 'src/components/Input';
 import Icon from 'src/components/Icon';
 
@@ -8,13 +9,10 @@ class Demo extends React.Component {
         return (
             <div>
                 <div className="demo-wrap">
-                    <Input suffix={<Icon type="search" />} prefix="search" />
+                    <Input suffix="suffix" />
                 </div>
                 <div className="demo-wrap">
-                    <Input disabled defaultValue="default value" suffix={<Icon type="search" />} prefix="search" />
-                </div>
-                <div className="demo-wrap">
-                    <Input disabled defaultValue="default value" prefix={<Icon type="search" />} suffix="search" />
+                    <Input suffix={<Icon type="search" />} />
                 </div>
             </div>
         );
