@@ -8,7 +8,7 @@ class Demo extends React.Component {
         return (
             <div>
                 <div className="demo-wrap">
-                    <Input suffix={<Icon type="search" />} prefix="search" />
+                    <Input defaultValue="default value" suffix={<Icon type="search" />} prefix="search" />
                 </div>
                 <div className="demo-wrap">
                     <Input disabled defaultValue="default value" suffix={<Icon type="search" />} prefix="search" />

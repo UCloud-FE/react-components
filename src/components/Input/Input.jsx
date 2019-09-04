@@ -38,13 +38,13 @@ class Input extends Component {
         return prefix && <PrefixWrap>{prefix}</PrefixWrap>;
     };
     renderSuffix = () => {
-        const { icon, size, suffix } = this.props;
+        const { icon, suffix } = this.props;
         if (suffix) {
             return <SuffixWrap>{suffix}</SuffixWrap>;
         } else if (_.isString(icon)) {
             deprecatedLog('icon', 'suffix');
             return (
-                <SuffixWrap size={size}>
+                <SuffixWrap>
                     <Icon type={icon} />
                 </SuffixWrap>
             );
