@@ -1,13 +1,14 @@
 import React from 'react';
-import Tabs from 'components/Tabs';
-import Radio from 'components/Radio';
-import Switch from 'components/Switch';
-import Form from 'components/Form';
-import NumberInput from 'components/NumberInput';
 import _ from 'lodash';
 
+import Tabs from 'src/components/Tabs';
+import Radio from 'src/components/Radio';
+import Switch from 'src/components/Switch';
+import Form from 'src/components/Form';
+import NumberInput from 'src/components/NumberInput';
+
 // demo start
-const { Position, StyleType } = Tabs;
+const { Position, StyleType, Size } = Tabs;
 class PaneContent extends React.Component {
     componentWillUnmount() {
         console.log('Will log this when destroyInactiveTabPane is true');
@@ -22,15 +23,16 @@ class Demo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            position: Position[0],
-            styleType: StyleType[0],
+            position: Tabs.defaultProps.tabBarPosition,
+            styleType: Tabs.defaultProps.styleType,
+            size: Tabs.defaultProps.size,
             tabCount: 10,
             activeKey: '3',
             destroyInactiveTabPane: false
         };
     }
     render() {
-        const { position, styleType, tabCount, activeKey, destroyInactiveTabPane } = this.state;
+        const { position, styleType, size, tabCount, activeKey, destroyInactiveTabPane } = this.state;
         const tabs = [];
         tabs.length = tabCount;
         tabs.fill();
@@ -63,6 +65,17 @@ class Demo extends React.Component {
                             onChange={styleType =>
                                 this.setState({
                                     styleType
+                                })
+                            }
+                        />
+                    </Form.Item>
+                    <Form.Item label="size" {...itemLayout}>
+                        <Radio.Group
+                            value={size}
+                            options={Size.map(v => ({ value: v }))}
+                            onChange={size =>
+                                this.setState({
+                                    size
                                 })
                             }
                         />
@@ -103,6 +116,7 @@ class Demo extends React.Component {
                             this.setState({ activeKey });
                         }}
                         styleType={styleType}
+                        size={size}
                         style={{ height: 300 }}
                     >
                         {_.map(tabs, (tab, index) => (

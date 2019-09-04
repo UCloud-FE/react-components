@@ -34,12 +34,15 @@ exports[`Tabs demo -- pane 1`] = `
 }
 
 .c17 .uc-fe-tabs-tab {
-  padding: 8px 12px;
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
   font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
+  padding: 6px 10px;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: normal;
 }
 
 .c17 .uc-fe-tabs-nav {
@@ -697,12 +700,15 @@ exports[`Tabs demo -- pane-disabled 1`] = `
 }
 
 .c0 .uc-fe-tabs-tab {
-  padding: 8px 12px;
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
   font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
+  padding: 6px 10px;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: normal;
 }
 
 .c0 .uc-fe-tabs-nav {
@@ -1125,12 +1131,15 @@ exports[`Tabs demo -- pane-forceRender 1`] = `
 }
 
 .c0 .uc-fe-tabs-tab {
-  padding: 8px 12px;
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
   font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
+  padding: 6px 10px;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: normal;
 }
 
 .c0 .uc-fe-tabs-nav {
@@ -1565,12 +1574,15 @@ exports[`Tabs demo -- tabs 1`] = `
 }
 
 .c32 .uc-fe-tabs-tab {
-  padding: 8px 12px;
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
   font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
+  padding: 6px 10px;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: normal;
 }
 
 .c32 .uc-fe-tabs-nav {
@@ -1658,72 +1670,70 @@ exports[`Tabs demo -- tabs 1`] = `
   color: #3555f6;
 }
 
-.c32.uc-fe-tabs .uc-fe-tabs-left-bar {
-  border-right: 1px solid #c3cad9;
-  float: left;
-  height: 100%;
+.c32.uc-fe-tabs .uc-fe-tabs-top-bar {
+  border-bottom: 1px solid #c3cad9;
 }
 
-.c32.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-nav-container {
-  right: -1px;
+.c32.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-nav-container {
+  bottom: -1px;
 }
 
-.c32.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab:hover {
-  border-right-color: #c3cad9;
+.c32.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab {
+  display: inline-block;
 }
 
-.c32.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-active,
-.c32.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-active:hover {
-  border-right-color: #f2f6fc;
+.c32.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab:hover {
+  border-bottom-color: #c3cad9;
 }
 
-.c32.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-ink-bar {
-  right: 0;
+.c32.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab-active,
+.c32.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab-active:hover {
+  border-bottom-color: #f2f6fc;
 }
 
-.c32.uc-fe-tabs .uc-fe-tabs-left-content {
-  overflow: hidden;
-  height: 100%;
-}
-
-.c32.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-nav-scroll,
-.c32.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-nav-scroll {
-  height: 100%;
-}
-
-.c32.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-nav-container-scrolling,
-.c32.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-nav-container-scrolling {
-  padding: 20px 0;
-}
-
-.c32.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-prev,
-.c32.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-prev {
-  top: 0;
-}
-
-.c32.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-next,
-.c32.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-next {
+.c32.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-ink-bar {
   bottom: 0;
 }
 
-.c32.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-prev,
-.c32.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-prev,
-.c32.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-next,
-.c32.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-next {
-  left: 50%;
-  margin-left: -10px;
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
+.c32.uc-fe-tabs .uc-fe-tabs-top-content {
+  width: 100%;
 }
 
-.c32.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-prev-icon:before,
-.c32.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-prev-icon:before {
+.c32.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-nav-scroll,
+.c32.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-nav-scroll {
+  width: 100%;
+}
+
+.c32.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-nav-container-scrolling,
+.c32.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-nav-container-scrolling {
+  padding: 0 20px;
+}
+
+.c32.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab-prev,
+.c32.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-tab-prev {
+  left: 0;
+}
+
+.c32.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab-next,
+.c32.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-tab-next {
+  right: 0;
+}
+
+.c32.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab-prev,
+.c32.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-tab-prev,
+.c32.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab-next,
+.c32.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-tab-next {
+  top: 50%;
+  margin-top: -10px;
+}
+
+.c32.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab-prev-icon:before,
+.c32.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-tab-prev-icon:before {
   content: '\\2039';
 }
 
-.c32.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab-next-icon:before,
-.c32.uc-fe-tabs .uc-fe-tabs-right-bar .uc-fe-tabs-tab-next-icon:before {
+.c32.uc-fe-tabs .uc-fe-tabs-top-bar .uc-fe-tabs-tab-next-icon:before,
+.c32.uc-fe-tabs .uc-fe-tabs-bottom-bar .uc-fe-tabs-tab-next-icon:before {
   content: '\\203A';
 }
 
@@ -1908,10 +1918,6 @@ exports[`Tabs demo -- tabs 1`] = `
   line-height: 28px;
 }
 
-.c9 .c10 {
-  color: #3555f6;
-}
-
 .c13 {
   color: #6b798e;
   font-size: 12px;
@@ -1921,6 +1927,10 @@ exports[`Tabs demo -- tabs 1`] = `
   vertical-align: middle;
   height: 28px;
   line-height: 28px;
+}
+
+.c13 .c10 {
+  color: #3555f6;
 }
 
 .c7 {
@@ -2097,17 +2107,16 @@ exports[`Tabs demo -- tabs 1`] = `
           class="c7"
         >
           <div
-            checked=""
-            class="c8 uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
             <i
-              class="c10 c11 uc-fe-icon icon__cbox-ed c12"
-              type="cbox-ed"
+              class="c10 c11 uc-fe-icon icon__circle c12"
+              type="circle"
             />
             left
           </div>
           <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
             <i
               class="c10 c11 uc-fe-icon icon__circle c12"
@@ -2116,16 +2125,17 @@ exports[`Tabs demo -- tabs 1`] = `
             right
           </div>
           <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            checked=""
+            class="c8 uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
           >
             <i
-              class="c10 c11 uc-fe-icon icon__circle c12"
-              type="circle"
+              class="c10 c11 uc-fe-icon icon__cbox-ed c12"
+              type="cbox-ed"
             />
             top
           </div>
           <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
             <i
               class="c10 c11 uc-fe-icon icon__circle c12"
@@ -2154,7 +2164,7 @@ exports[`Tabs demo -- tabs 1`] = `
         >
           <div
             checked=""
-            class="c8 uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
+            class="c8 uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
           >
             <i
               class="c10 c11 uc-fe-icon icon__cbox-ed c12"
@@ -2163,13 +2173,60 @@ exports[`Tabs demo -- tabs 1`] = `
             default
           </div>
           <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
             <i
               class="c10 c11 uc-fe-icon icon__circle c12"
               type="circle"
             />
             ink
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="c1 uc-fe-form-item uc-fe-row c2"
+    >
+      <div
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
+        span="3"
+      >
+        size
+      </div>
+      <div
+        class="uc-fe-form-controller c4 uc-fe-col c6"
+        span="9"
+      >
+        <div
+          class="c7"
+        >
+          <div
+            checked=""
+            class="c8 uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+          >
+            <i
+              class="c10 c11 uc-fe-icon icon__cbox-ed c12"
+              type="cbox-ed"
+            />
+            sm
+          </div>
+          <div
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
+          >
+            <i
+              class="c10 c11 uc-fe-icon icon__circle c12"
+              type="circle"
+            />
+            md
+          </div>
+          <div
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
+          >
+            <i
+              class="c10 c11 uc-fe-icon icon__circle c12"
+              type="circle"
+            />
+            lg
           </div>
         </div>
       </div>
@@ -2320,11 +2377,11 @@ exports[`Tabs demo -- tabs 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-tabs uc-fe-tabs-left uc-fe-tabs-styletype-default c32"
+      class="uc-fe-tabs uc-fe-tabs-top uc-fe-tabs-styletype-default c32"
       style="height:300px;"
     >
       <div
-        class="uc-fe-tabs-bar uc-fe-tabs-left-bar uc-fe-tabs-styletype-default-bar"
+        class="uc-fe-tabs-bar uc-fe-tabs-top-bar uc-fe-tabs-styletype-default-bar"
         role="tablist"
         tabindex="0"
       >
@@ -2452,7 +2509,7 @@ exports[`Tabs demo -- tabs 1`] = `
         tabindex="0"
       />
       <div
-        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-left-content uc-fe-tabs-styletype-default-content"
+        class="uc-fe-tabs-content uc-fe-tabs-content-no-animated uc-fe-tabs-top-content uc-fe-tabs-styletype-default-content"
       >
         <div
           aria-hidden="true"
@@ -2565,12 +2622,15 @@ exports[`Tabs demo -- tabs-child 1`] = `
 }
 
 .c0 .uc-fe-tabs-tab {
-  padding: 8px 12px;
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
   font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
+  padding: 6px 10px;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: normal;
 }
 
 .c0 .uc-fe-tabs-nav {
@@ -2758,12 +2818,15 @@ exports[`Tabs demo -- tabs-child 1`] = `
 }
 
 .c1 .uc-fe-tabs-tab {
-  padding: 8px 12px;
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
   font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
+  padding: 6px 10px;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: normal;
 }
 
 .c1 .uc-fe-tabs-nav {
@@ -2861,6 +2924,10 @@ exports[`Tabs demo -- tabs-child 1`] = `
   right: -1px;
 }
 
+.c1.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab {
+  text-align: right;
+}
+
 .c1.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab:hover {
   border-right-color: #c3cad9;
 }
@@ -2953,12 +3020,15 @@ exports[`Tabs demo -- tabs-child 1`] = `
 }
 
 .c2 .uc-fe-tabs-tab {
-  padding: 8px 12px;
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
   font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
+  padding: 6px 10px;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: normal;
 }
 
 .c2 .uc-fe-tabs-nav {
@@ -3150,12 +3220,15 @@ exports[`Tabs demo -- tabs-child 1`] = `
 }
 
 .c3 .uc-fe-tabs-tab {
-  padding: 8px 12px;
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
   font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
+  padding: 6px 10px;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: normal;
 }
 
 .c3 .uc-fe-tabs-nav {
@@ -3251,6 +3324,10 @@ exports[`Tabs demo -- tabs-child 1`] = `
 
 .c3.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-nav-container {
   right: -1px;
+}
+
+.c3.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab {
+  text-align: right;
 }
 
 .c3.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab:hover {
@@ -4095,12 +4172,15 @@ exports[`Tabs demo -- tabs-destroyInactiveTabPane 1`] = `
 }
 
 .c0 .uc-fe-tabs-tab {
-  padding: 8px 12px;
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
   font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
+  padding: 6px 10px;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: normal;
 }
 
 .c0 .uc-fe-tabs-nav {
@@ -5847,12 +5927,15 @@ exports[`Tabs demo -- tabs-position 1`] = `
 }
 
 .c2 .uc-fe-tabs-tab {
-  padding: 8px 12px;
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
   font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
+  padding: 6px 10px;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: normal;
 }
 
 .c2 .uc-fe-tabs-nav {
@@ -6040,12 +6123,15 @@ exports[`Tabs demo -- tabs-position 1`] = `
 }
 
 .c0 .uc-fe-tabs-tab {
-  padding: 8px 12px;
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
   font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
+  padding: 6px 10px;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: normal;
 }
 
 .c0 .uc-fe-tabs-nav {
@@ -6143,6 +6229,10 @@ exports[`Tabs demo -- tabs-position 1`] = `
   right: -1px;
 }
 
+.c0.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab {
+  text-align: right;
+}
+
 .c0.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab:hover {
   border-right-color: #c3cad9;
 }
@@ -6235,12 +6325,15 @@ exports[`Tabs demo -- tabs-position 1`] = `
 }
 
 .c1 .uc-fe-tabs-tab {
-  padding: 8px 12px;
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
   font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
+  padding: 6px 10px;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: normal;
 }
 
 .c1 .uc-fe-tabs-nav {
@@ -6430,12 +6523,15 @@ exports[`Tabs demo -- tabs-position 1`] = `
 }
 
 .c3 .uc-fe-tabs-tab {
-  padding: 8px 12px;
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
   font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
+  padding: 6px 10px;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: normal;
 }
 
 .c3 .uc-fe-tabs-nav {
@@ -7104,12 +7200,15 @@ exports[`Tabs demo -- tabs-scroll 1`] = `
 }
 
 .c0 .uc-fe-tabs-tab {
-  padding: 8px 12px;
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
   font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
+  padding: 6px 10px;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: normal;
 }
 
 .c0 .uc-fe-tabs-nav {
@@ -7297,12 +7396,15 @@ exports[`Tabs demo -- tabs-scroll 1`] = `
 }
 
 .c1 .uc-fe-tabs-tab {
-  padding: 8px 12px;
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
   font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
+  padding: 6px 10px;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: normal;
 }
 
 .c1 .uc-fe-tabs-nav {
@@ -7398,6 +7500,10 @@ exports[`Tabs demo -- tabs-scroll 1`] = `
 
 .c1.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-nav-container {
   right: -1px;
+}
+
+.c1.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab {
+  text-align: right;
 }
 
 .c1.uc-fe-tabs .uc-fe-tabs-left-bar .uc-fe-tabs-tab:hover {
@@ -9052,12 +9158,15 @@ exports[`Tabs demo -- tabs-styleType 1`] = `
 }
 
 .c0 .uc-fe-tabs-tab {
-  padding: 8px 12px;
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
   font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
+  padding: 6px 10px;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: normal;
 }
 
 .c0 .uc-fe-tabs-nav {
@@ -9245,12 +9354,15 @@ exports[`Tabs demo -- tabs-styleType 1`] = `
 }
 
 .c1 .uc-fe-tabs-tab {
-  padding: 8px 12px;
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
   font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
+  padding: 6px 10px;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: normal;
 }
 
 .c1 .uc-fe-tabs-nav {
@@ -9685,12 +9797,15 @@ exports[`Tabs demo -- tabs-uncontrolled 1`] = `
 }
 
 .c0 .uc-fe-tabs-tab {
-  padding: 8px 12px;
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
   font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
+  padding: 6px 10px;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: normal;
 }
 
 .c0 .uc-fe-tabs-nav {

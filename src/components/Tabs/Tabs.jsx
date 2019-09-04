@@ -7,6 +7,7 @@ import { prefixCls, TabsWrap } from './style';
 
 const Position = ['left', 'right', 'top', 'bottom'];
 const StyleType = ['default', 'ink'];
+const Size = ['sm', 'md', 'lg'];
 
 class Tabs extends Component {
     static propTypes = {
@@ -20,12 +21,15 @@ class Tabs extends Component {
         tabBarPosition: PropTypes.oneOf(Position),
         /** 样式风格 */
         styleType: PropTypes.oneOf(StyleType),
+        /** Tab 尺寸 */
+        size: PropTypes.oneOf(Size),
         /** 是否销毁不展示的tab内容 */
         destroyInactiveTabPane: PropTypes.bool
     };
     static defaultProps = {
         styleType: StyleType[0],
-        tabBarPosition: 'top'
+        tabBarPosition: Position[2],
+        size: Size[0]
     };
     render() {
         const { styleType, tabBarPosition, ...rest } = this.props;
@@ -55,3 +59,4 @@ export default Tabs;
 
 Tabs.Position = Position;
 Tabs.StyleType = StyleType;
+Tabs.Size = Size;

@@ -12,7 +12,7 @@ export const prefixCls = _prefixCls + '-tabs';
 export const TabsWrap = styled(RcTabs).attrs({
     className: ({ styleType }) => `${prefixCls}-styletype-${styleType}`
 })(
-    ({ theme: { colorMap, colorList, Tabs: tabsTheme }, tabBarPosition, styleType }) => css`
+    ({ theme: { colorMap, colorList, Tabs: tabsTheme }, tabBarPosition, styleType, size }) => css`
         overflow: hidden;
         ${clearFixMixin};
 
@@ -31,12 +31,33 @@ export const TabsWrap = styled(RcTabs).attrs({
                 }
             }
             &-tab {
-                padding: 8px 12px;
                 border: 1px solid transparent;
                 border-radius: 2px 2px 0 0;
                 font-size: 14px;
                 box-sizing: border-box;
                 cursor: pointer;
+                ${css`
+                    padding: ${{
+                        sm: '6px 10px',
+                        md: '8px 16px',
+                        lg: '8px 16px'
+                    }[size]};
+                    line-height: ${{
+                        sm: '18px',
+                        md: '20px',
+                        lg: '22px'
+                    }[size]};
+                    font-size: ${{
+                        sm: '12px',
+                        md: '14px',
+                        lg: '16px'
+                    }[size]};
+                    font-weight: ${{
+                        sm: 'normal',
+                        md: 'normal',
+                        lg: 'bold'
+                    }[size]};
+                `}
             }
             &-nav {
                 display: inline-block;
@@ -193,6 +214,7 @@ export const TabsWrap = styled(RcTabs).attrs({
                                 &-active:hover {
                                     border-right-color: ${colorList.primary4};
                                 }
+                                text-align: right;
                             }
                             &-ink-bar {
                                 right: 0;
