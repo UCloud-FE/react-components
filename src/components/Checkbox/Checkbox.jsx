@@ -5,7 +5,7 @@ import createReactContext from 'create-react-context';
 import itemDecorator from 'src/decorators/selectableWithStore/item';
 import uncontrolledDecorator from 'src/decorators/uncontrolled';
 
-import { CheckboxWrap, CheckboxIcon, CheckboxCardWrap } from './style';
+import { CheckboxWrap, CheckboxIcon, CheckboxCardWrap, CheckboxContentWrap } from './style';
 
 const Size = ['sm', 'md', 'lg'];
 const StyleType = ['default', 'card'];
@@ -68,7 +68,7 @@ class Checkbox extends Component {
                 onClick={(...args) => this.onClick(props, ...args)}
             >
                 <CheckboxIcon disabled={disabled} type={checked ? 'checkbox-ed' : 'checkbox'} />
-                {children}
+                <CheckboxContentWrap>{children}</CheckboxContentWrap>
             </CheckboxWrap>
         );
     }

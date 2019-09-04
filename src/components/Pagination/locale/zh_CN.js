@@ -11,5 +11,7 @@ export default {
     prev5: '向前 5 页',
     next5: '向后 5 页',
     prev3: '向前 3 页',
-    next3: '向后 3 页'
+    next3: '向后 3 页',
+    total: '总计',
+    items: '条'
 };

@@ -800,53 +800,45 @@ exports[`Select demo -- select 1`] = `
   margin-right: 0;
 }
 
-.c7 .c31 {
+.c7 .c32 {
   margin-right: 12px;
   margin-bottom: 8px;
 }
 
-.c7 .c31:last-child {
+.c7 .c32:last-child {
   margin-right: 0;
 }
 
-.c7 .c32+.c32 {
+.c7 .c33+.c33 {
   margin-left: -1px;
 }
 
-.c7 .c30 {
+.c7 .c31 {
   margin-right: -1px;
   margin-bottom: 8px;
 }
 
-.c7 .c30:first-child {
+.c7 .c31:first-child {
   border-radius: 2px 0 0 2px;
 }
 
-.c7 .c30:last-child {
+.c7 .c31:last-child {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
+}
+
+.c15 {
+  display: table;
+  width: 100%;
 }
 
 .c14 {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  color: #0a1633;
-}
-
-.c14 input {
-  display: block;
   box-sizing: border-box;
-  width: 100%;
-  padding: 4px 8px;
-  margin: 0;
   border-radius: 2px;
-  font-size: inherit;
-  outline: none;
-  color: inherit;
-}
-
-.c14 input {
+  color: #0a1633;
   border: 1px solid #dfe0f1;
   background: #fafafc;
   height: 28px;
@@ -855,19 +847,28 @@ exports[`Select demo -- select 1`] = `
   transition: .18s cubic-bezier(.4,0,.2,1);
 }
 
-.c14 input:hover {
+.c14 input {
+  vertical-align: middle;
+  display: table-cell;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0px 8px;
+  margin: 0;
+  font-size: inherit;
+  border: none;
+  outline: none;
+  color: inherit;
+  background: none;
+}
+
+.c14:hover {
   border-color: #c3cad9;
   background-color: #f6f6fb;
 }
 
-.c14 input:focus {
-  border-color: #3555f6;
-  background-color: #f6f6fb;
-}
-
-.c14 input:disabled,
-.c14 input[disabled] {
-  box-shadow: none;
+.c14 input {
+  line-height: 26px;
+  height: 26px;
 }
 
 .c14 input::-webkit-input-placeholder {
@@ -886,13 +887,7 @@ exports[`Select demo -- select 1`] = `
   color: #abb4c3;
 }
 
-.c14 .c33 {
-  width: 28px;
-  height: 28px;
-  line-height: 28px;
-}
-
-.c27 {
+.c28 {
   border-radius: 2px;
   cursor: pointer;
   padding: 0 8px;
@@ -900,14 +895,14 @@ exports[`Select demo -- select 1`] = `
   box-sizing: border-box;
 }
 
-.c28 {
+.c29 {
   position: absolute;
   right: 8px;
   top: 50%;
   margin-top: -6px;
 }
 
-.c29 .c26 {
+.c30 .c27 {
   height: 28px;
   line-height: 28px;
   border: 1px none #c3cad9;
@@ -916,19 +911,19 @@ exports[`Select demo -- select 1`] = `
   transition: all .22s cubic-bezier(.4,0,.2,1);
 }
 
-.c29 .c26:hover {
+.c30 .c27:hover {
   border-color: #3555f6;
   box-shadow: 0 1px 10px 0 rgba(162,166,191,.12),0 2px 4px -1px rgba(162,166,191,.2),0 4px 5px 0 rgba(162,166,191,.14);
 }
 
-.c29 .c26 {
+.c30 .c27 {
   background: #f7f7f7;
   border-color: #d9d9d9;
   box-shadow: none;
   border-style: solid;
 }
 
-.c25 {
+.c26 {
   box-sizing: border-box;
   position: relative;
   font-size: 12px;
@@ -939,7 +934,7 @@ exports[`Select demo -- select 1`] = `
   background-color: #fff;
 }
 
-.c25 .c26 {
+.c26 .c27 {
   height: 28px;
   line-height: 28px;
   border: 1px none #c3cad9;
@@ -948,12 +943,12 @@ exports[`Select demo -- select 1`] = `
   transition: all .22s cubic-bezier(.4,0,.2,1);
 }
 
-.c25 .c26:hover {
+.c26 .c27:hover {
   border-color: #3555f6;
   box-shadow: 0 1px 10px 0 rgba(162,166,191,.12),0 2px 4px -1px rgba(162,166,191,.2),0 4px 5px 0 rgba(162,166,191,.14);
 }
 
-.c17 {
+.c18 {
   position: relative;
   height: 100%;
   width: 100%;
@@ -961,7 +956,7 @@ exports[`Select demo -- select 1`] = `
   box-sizing: border-box;
 }
 
-.c19 {
+.c20 {
   width: 100%;
   height: 100%;
   text-align: center;
@@ -970,7 +965,7 @@ exports[`Select demo -- select 1`] = `
   display: block;
 }
 
-.c22 {
+.c23 {
   position: absolute;
   display: inline-block;
   left: -1px;
@@ -981,7 +976,7 @@ exports[`Select demo -- select 1`] = `
   transition: all 0.3s;
 }
 
-.c24 {
+.c25 {
   position: absolute;
   display: inline-block;
   left: 18px;
@@ -993,7 +988,7 @@ exports[`Select demo -- select 1`] = `
   transition: all 0.3s;
 }
 
-.c15 {
+.c16 {
   position: relative;
   border-radius: 2px;
   overflow: hidden;
@@ -1012,11 +1007,11 @@ exports[`Select demo -- select 1`] = `
   line-height: 16px;
 }
 
-.c15:hover {
+.c16:hover {
   border-color: #3555f6;
 }
 
-.c15 .c21 {
+.c16 .c22 {
   background-color: #fff;
   box-shadow: 0 0.5px 0.5px #c3cad9;
   border: 1px solid #c3cad9;
@@ -1024,32 +1019,32 @@ exports[`Select demo -- select 1`] = `
   height: 20px;
 }
 
-.c15 .c23 {
+.c16 .c24 {
   background-color: #e69b9b;
   left: 13px;
   height: 10px;
 }
 
-.c15 .c16 {
+.c16 .c17 {
   border: 1px solid #c3cad9;
   background-color: #ebedf0;
   color: #6b798e;
 }
 
-.c15 .c18,
-.c15 .c20 {
+.c16 .c19,
+.c16 .c21 {
   line-height: 16px;
 }
 
-.c15 .c18 {
+.c16 .c19 {
   padding-right: 20px;
 }
 
-.c15 .c20 {
+.c16 .c21 {
   padding-left: 20px;
 }
 
-.c15 .c18 {
+.c16 .c19 {
   display: none;
 }
 
@@ -1181,9 +1176,13 @@ exports[`Select demo -- select 1`] = `
         <span
           class="uc-fe-input c14"
         >
-          <input
-            value="placeholder"
-          />
+          <span
+            class="c15"
+          >
+            <input
+              value="placeholder"
+            />
+          </span>
         </span>
       </div>
     </div>
@@ -1201,27 +1200,27 @@ exports[`Select demo -- select 1`] = `
         span="9"
       >
         <div
-          class="c15"
+          class="c16"
           value="false"
         >
           <div
-            class="c16 c17"
+            class="c17 c18"
           >
             <span
-              class="c18 c19"
+              class="c19 c20"
             >
               ON
             </span>
             <span
-              class="c20 c19"
+              class="c21 c20"
             >
               OFF
             </span>
             <span
-              class="c21 c22"
+              class="c22 c23"
             >
               <span
-                class="c23 c24"
+                class="c24 c25"
               />
             </span>
           </div>
@@ -1242,26 +1241,26 @@ exports[`Select demo -- select 1`] = `
         span="9"
       >
         <div
-          class="c15"
+          class="c16"
         >
           <div
-            class="c16 c17"
+            class="c17 c18"
           >
             <span
-              class="c18 c19"
+              class="c19 c20"
             >
               ON
             </span>
             <span
-              class="c20 c19"
+              class="c21 c20"
             >
               OFF
             </span>
             <span
-              class="c21 c22"
+              class="c22 c23"
             >
               <span
-                class="c23 c24"
+                class="c24 c25"
               />
             </span>
           </div>
@@ -1282,27 +1281,27 @@ exports[`Select demo -- select 1`] = `
         span="9"
       >
         <div
-          class="c15"
+          class="c16"
           value="false"
         >
           <div
-            class="c16 c17"
+            class="c17 c18"
           >
             <span
-              class="c18 c19"
+              class="c19 c20"
             >
               ON
             </span>
             <span
-              class="c20 c19"
+              class="c21 c20"
             >
               OFF
             </span>
             <span
-              class="c21 c22"
+              class="c22 c23"
             >
               <span
-                class="c23 c24"
+                class="c24 c25"
               />
             </span>
           </div>
@@ -1323,27 +1322,27 @@ exports[`Select demo -- select 1`] = `
         span="9"
       >
         <div
-          class="c15"
+          class="c16"
           value="false"
         >
           <div
-            class="c16 c17"
+            class="c17 c18"
           >
             <span
-              class="c18 c19"
+              class="c19 c20"
             >
               ON
             </span>
             <span
-              class="c20 c19"
+              class="c21 c20"
             >
               OFF
             </span>
             <span
-              class="c21 c22"
+              class="c22 c23"
             >
               <span
-                class="c23 c24"
+                class="c24 c25"
               />
             </span>
           </div>
@@ -1355,18 +1354,18 @@ exports[`Select demo -- select 1`] = `
     class="demo-wrap"
   >
     <div
-      class="c25"
+      class="c26"
       placeholder="placeholder"
     >
       <div>
         <div
-          class="c26 c27"
+          class="c27 c28"
         >
           <div>
             placeholder
           </div>
           <i
-            class="c28 uc-fe-icon icon__down c12"
+            class="c29 uc-fe-icon icon__down c12"
             type="down"
           />
         </div>

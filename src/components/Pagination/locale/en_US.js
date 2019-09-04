@@ -11,5 +11,7 @@ export default {
     prev5: 'prev 5 page',
     next5: 'next 5 page',
     prev3: 'prev 3 page',
-    next3: 'next 3 page'
+    next3: 'next 3 page',
+    total: 'total',
+    items: 'items'
 };

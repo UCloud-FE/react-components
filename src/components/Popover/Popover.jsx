@@ -97,13 +97,37 @@ class Popover extends Component {
         }
     }
 
+    __scroll_lock = false;
+    bindPopupWrap = _ref => {
+        if (this.popupWrap === _ref) return;
+        if (this.popupWrap) {
+            this.popupWrap.removeEventListener('scroll', this.onPopupWrapScroll, true);
+        }
+        this.popupWrap = _ref;
+        if (this.popupWrap) {
+            this.popupWrap.addEventListener('scroll', this.onPopupWrapScroll, true);
+        }
+    };
+    onPopupWrapScroll = () => {
+        this.__scroll_lock = true;
+        this.unlockScroll();
+    };
+    unlockScroll = _.debounce(() => {
+        this.__scroll_lock = false;
+    }, 200);
+
     componentDidMount = () => {
-        document.addEventListener('scroll', this.forceAlign, true);
+        document.addEventListener('scroll', this.onScroll, true);
     };
     componentWillUnmount = () => {
-        document.removeEventListener('scroll', this.forceAlign, true);
+        document.removeEventListener('scroll', this.onScroll, true);
+    };
+    onScroll = () => {
+        if (this.__scroll_lock) return;
+        this.forceAlign();
     };
     forceAlign = _.debounce(() => {
+        if (this.__scroll_lock) return;
         this.trigger && this.trigger.forcePopupAlign();
     }, 100);
 
@@ -132,7 +156,7 @@ class Popover extends Component {
 
     getPopup() {
         const { popup } = this.props;
-        return popup;
+        return <div ref={this.bindPopupWrap}>{popup}</div>;
     }
 
     getPopupDomNode() {
@@ -165,7 +189,7 @@ class Popover extends Component {
                 popupAlign={align}
                 popupTransitionName={transitionName || animation ? animationPrefixCls + '-' + animation : null}
                 popupVisible={popup == null ? false : this.state.visible}
-                popup={popup == null ? <div /> : popup}
+                popup={popup}
                 onPopupVisibleChange={this.onVisibleChange}
                 stretch={stretch.join('')}
                 trueClassName={className}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import _ from 'lodash';
 
 import Icon from 'src/components/Icon';
 import NumberInput from 'src/components/NumberInput';
@@ -38,6 +39,8 @@ class Pagination extends Component {
         defaultCurrent: PropTypes.number,
         /** 总数 */
         total: PropTypes.number,
+        /** 自定义展示 total 值 */
+        showTotal: PropTypes.oneOfType([PropTypes.bool, PropTypes.func]),
         /** 每页数量，受控 */
         pageSize: PropTypes.number,
         /** 默认每页数量，非受控 */
@@ -287,6 +290,7 @@ class Pagination extends Component {
             current: _current,
             defaultCurrent,
             total,
+            showTotal,
             pageSize: _pageSize,
             defaultPageSize,
             onChange,
@@ -470,6 +474,8 @@ class Pagination extends Component {
             }
         }
 
+        const defaultShowTotal = total => `${locale.total} ${total} ${locale.items}`;
+
         const prevDisabled = !this.hasPrev();
         const nextDisabled = !this.hasNext();
         return (
@@ -480,6 +486,11 @@ class Pagination extends Component {
                 innerRef={this.savePaginationNode}
                 {...rest}
             >
+                {showTotal && (
+                    <li className={`${prefixCls}-total`}>
+                        {_.isFunction(showTotal) ? showTotal(total) : defaultShowTotal(total)}
+                    </li>
+                )}
                 <li
                     title={showTitle ? locale.prevPage : null}
                     onClick={this.prev}

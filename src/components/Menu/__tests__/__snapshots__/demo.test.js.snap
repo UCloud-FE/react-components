@@ -676,6 +676,7 @@ exports[`Menu demo -- menu-collapse 1`] = `
 .c4 {
   margin-right: 8px;
   font-size: 14px;
+  vertical-align: middle;
 }
 
 .c2 {
@@ -683,16 +684,21 @@ exports[`Menu demo -- menu-collapse 1`] = `
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
+  min-height: 28px;
   font-size: 12px;
 }
 
 .c2 .c3 {
+  line-height: 28px;
   color: #526075;
 }
 
-.c8 {
+.c6 {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.c9 {
   position: absolute;
   right: 8px;
   top: 50%;
@@ -713,1060 +719,19 @@ exports[`Menu demo -- menu-collapse 1`] = `
   overflow: hidden;
 }
 
-.c6 {
-  padding: 0 8px;
-  border-radius: 2px;
-  display: block;
-  cursor: pointer;
-}
-
 .c7 {
   padding: 0 8px;
-  padding-right: 40px;
-  position: relative;
-  border-bottom: 1px solid;
-  margin: 8px 0;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.c9 {
-  padding: 0 8px;
-  margin: 0 8px;
   border-radius: 2px;
   display: block;
   cursor: pointer;
-}
-
-.c0 {
-  line-height: 26px;
-  font-size: 12px;
-  display: inline-block;
-  box-sizing: border-box;
-  max-width: 360px;
-  min-width: 64px;
-  overflow: auto;
-  padding: 10px 0;
-  border-radius: 2px;
-  text-align: left;
-  border-style: none !important;
-  box-shadow: 0 -1px 0 0 rgba(223,224,241,0.5),0 1px 0 0 rgba(223,224,241,.3),0 1px 1px 0 rgba(162,166,191,.5),0 2px 4px 0 rgba(228,229,242,.6);
-}
-
-.c0,
-.c0 .style__PopupContentWrap-ulx11w-2 {
-  border: 1px solid #c3cad9;
-}
-
-.c0,
-.c0 .uc-fe-menu-popup-content-wrap {
-  color: #0a1633;
-  background: #fff;
-}
-
-.c0 .uc-fe-menu-item:hover,
-.c0 .uc-fe-menu-submenu-title-content:hover,
-.c0 .uc-fe-menu-selectall-checkbox:hover {
-  background: #eaf3fd;
-}
-
-.c0 .uc-fe-menu-item-selected,
-.c0 .uc-fe-menu-submenu-title-selected,
-.c0 .uc-fe-menu-selectall-checkbox-checked {
-  color: #3555f6;
-}
-
-.c0 .uc-fe-menu-submenu-title-content-collapse {
-  border-color: #c3cad9;
-}
-
-<div>
-  <div
-    class="demo-wrap"
-  >
-    <div
-      class="c0"
-    >
-      <div
-        class="uc-fe-menu-item c1"
-      >
-        <span
-          class="uc-fe-checkbox c2"
-        >
-          <i
-            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-            type="checkbox"
-          />
-          Menu 1
-        </span>
-      </div>
-      <div>
-        <div>
-          <div>
-            <div>
-              <div
-                class="uc-fe-menu-submenu-title c6"
-              >
-                <div
-                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c7"
-                >
-                  SubMenu 1
-                  <i
-                    class="c8 uc-fe-icon icon__up c5"
-                    type="up"
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              class=""
-              open=""
-            >
-              <span
-                class="uc-fe-menu-selectall-checkbox c9 uc-fe-checkbox c2"
-              >
-                <i
-                  class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-                  type="checkbox"
-                />
-                全选
-              </span>
-              <div
-                class="uc-fe-menu-item c1"
-              >
-                <span
-                  class="uc-fe-checkbox c2"
-                >
-                  <i
-                    class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-                    type="checkbox"
-                  />
-                  Menu 1
-                </span>
-              </div>
-              <div
-                class="uc-fe-menu-item c1"
-              >
-                <span
-                  class="uc-fe-checkbox c2"
-                >
-                  <i
-                    class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-                    type="checkbox"
-                  />
-                  Menu 2
-                </span>
-              </div>
-              <div
-                class="uc-fe-menu-item c1"
-              >
-                <span
-                  class="uc-fe-checkbox c2"
-                >
-                  <i
-                    class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-                    type="checkbox"
-                  />
-                  Menu 3
-                </span>
-              </div>
-              <div
-                class="uc-fe-menu-item c1"
-              >
-                <span
-                  class="uc-fe-checkbox c2"
-                >
-                  <i
-                    class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-                    type="checkbox"
-                  />
-                  Menu 4
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div>
-          <div>
-            <div>
-              <div
-                class="uc-fe-menu-submenu-title c6"
-              >
-                <div
-                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c7"
-                >
-                  SubMenu 2
-                  <i
-                    class="c8 uc-fe-icon icon__up c5"
-                    type="up"
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              class=""
-              open=""
-            >
-              <span
-                class="uc-fe-menu-selectall-checkbox c9 uc-fe-checkbox c2"
-              >
-                <i
-                  class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-                  type="checkbox"
-                />
-                全选
-              </span>
-              <div
-                class="uc-fe-menu-item c1"
-              >
-                <span
-                  class="uc-fe-checkbox c2"
-                >
-                  <i
-                    class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-                    type="checkbox"
-                  />
-                  Menu 1
-                </span>
-              </div>
-              <div
-                class="uc-fe-menu-item c1"
-              >
-                <span
-                  class="uc-fe-checkbox c2"
-                >
-                  <i
-                    class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-                    type="checkbox"
-                  />
-                  Menu 2
-                </span>
-              </div>
-              <div
-                class="uc-fe-menu-item c1"
-              >
-                <span
-                  class="uc-fe-checkbox c2"
-                >
-                  <i
-                    class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-                    type="checkbox"
-                  />
-                  Menu 3
-                </span>
-              </div>
-              <div
-                class="uc-fe-menu-item c1"
-              >
-                <span
-                  class="uc-fe-checkbox c2"
-                >
-                  <i
-                    class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-                    type="checkbox"
-                  />
-                  Menu 4
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div>
-          <div>
-            <div>
-              <div
-                class="uc-fe-menu-submenu-title c6"
-              >
-                <div
-                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c7"
-                >
-                  SubMenu 3
-                  <i
-                    class="c8 uc-fe-icon icon__down c5"
-                    type="down"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    class="demo-wrap"
-  >
-    <div
-      class="c0"
-    >
-      <div
-        class="uc-fe-menu-item c1"
-      >
-        <span
-          class="uc-fe-checkbox c2"
-        >
-          <i
-            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-            type="checkbox"
-          />
-          Menu 1
-        </span>
-      </div>
-      <div>
-        <div>
-          <div>
-            <div>
-              <div
-                class="uc-fe-menu-submenu-title c6"
-              >
-                <div
-                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c7"
-                >
-                  SubMenu 1
-                  <i
-                    class="c8 uc-fe-icon icon__down c5"
-                    type="down"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div>
-          <div>
-            <div>
-              <div
-                class="uc-fe-menu-submenu-title c6"
-              >
-                <div
-                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c7"
-                >
-                  SubMenu 2
-                  <i
-                    class="c8 uc-fe-icon icon__down c5"
-                    type="down"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div>
-          <div>
-            <div>
-              <div
-                class="uc-fe-menu-submenu-title c6"
-              >
-                <div
-                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c7"
-                >
-                  SubMenu 3
-                  <i
-                    class="c8 uc-fe-icon icon__down c5"
-                    type="down"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Menu demo -- menu-controlled 1`] = `
-.c5 {
-  vertical-align: baseline;
-}
-
-.c4 {
-  margin-right: 8px;
-  font-size: 14px;
-}
-
-.c6 {
-  cursor: pointer;
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
-  font-size: 12px;
-}
-
-.c6 .c3 {
-  color: #526075;
-}
-
-.c2 {
-  cursor: pointer;
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
-  font-size: 12px;
-}
-
-.c2 .c3 {
-  color: #3555f6;
-}
-
-.c1 {
-  padding: 0 8px;
-  margin: 0 8px;
-  border-radius: 2px;
-  display: block;
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.c0 {
-  line-height: 26px;
-  font-size: 12px;
-  display: inline-block;
-  box-sizing: border-box;
-  max-width: 360px;
-  min-width: 64px;
-  overflow: auto;
-  padding: 10px 0;
-  border-radius: 2px;
-  text-align: left;
-  border-style: none !important;
-  box-shadow: 0 -1px 0 0 rgba(223,224,241,0.5),0 1px 0 0 rgba(223,224,241,.3),0 1px 1px 0 rgba(162,166,191,.5),0 2px 4px 0 rgba(228,229,242,.6);
-}
-
-.c0,
-.c0 .style__PopupContentWrap-ulx11w-2 {
-  border: 1px solid #c3cad9;
-}
-
-.c0,
-.c0 .uc-fe-menu-popup-content-wrap {
-  color: #0a1633;
-  background: #fff;
-}
-
-.c0 .uc-fe-menu-item:hover,
-.c0 .uc-fe-menu-submenu-title-content:hover,
-.c0 .uc-fe-menu-selectall-checkbox:hover {
-  background: #eaf3fd;
-}
-
-.c0 .uc-fe-menu-item-selected,
-.c0 .uc-fe-menu-submenu-title-selected,
-.c0 .uc-fe-menu-selectall-checkbox-checked {
-  color: #3555f6;
-}
-
-.c0 .uc-fe-menu-submenu-title-content-collapse {
-  border-color: #c3cad9;
-}
-
-<div>
-  <div
-    class="demo-wrap"
-  >
-    <div
-      class="c0"
-    >
-      <div
-        class="uc-fe-menu-item uc-fe-menu-item-selected c1"
-        selected=""
-      >
-        <span
-          checked=""
-          class="uc-fe-checkbox c2"
-        >
-          <i
-            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox-ed c5"
-            type="checkbox-ed"
-          />
-          Menu 1
-        </span>
-      </div>
-      <div
-        class="uc-fe-menu-item c1"
-      >
-        <span
-          class="uc-fe-checkbox c6"
-        >
-          <i
-            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-            type="checkbox"
-          />
-          Menu 2
-        </span>
-      </div>
-      <div
-        class="uc-fe-menu-item uc-fe-menu-item-selected c1"
-        selected=""
-      >
-        <span
-          checked=""
-          class="uc-fe-checkbox c2"
-        >
-          <i
-            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox-ed c5"
-            type="checkbox-ed"
-          />
-          Menu 3
-        </span>
-      </div>
-      <div
-        class="uc-fe-menu-item c1"
-      >
-        <span
-          class="uc-fe-checkbox c6"
-        >
-          <i
-            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-            type="checkbox"
-          />
-          Menu 4
-        </span>
-      </div>
-    </div>
-  </div>
-  <div
-    class="demo-wrap"
-  >
-    <div
-      class="c0"
-    >
-      <div
-        class="uc-fe-menu-item uc-fe-menu-item-selected c1"
-        selected=""
-      >
-        <span
-          checked=""
-          class="uc-fe-checkbox c2"
-        >
-          <i
-            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox-ed c5"
-            type="checkbox-ed"
-          />
-          Menu 1
-        </span>
-      </div>
-      <div
-        class="uc-fe-menu-item c1"
-      >
-        <span
-          class="uc-fe-checkbox c6"
-        >
-          <i
-            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-            type="checkbox"
-          />
-          Menu 2
-        </span>
-      </div>
-      <div
-        class="uc-fe-menu-item uc-fe-menu-item-selected c1"
-        selected=""
-      >
-        <span
-          checked=""
-          class="uc-fe-checkbox c2"
-        >
-          <i
-            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox-ed c5"
-            type="checkbox-ed"
-          />
-          Menu 3
-        </span>
-      </div>
-      <div
-        class="uc-fe-menu-item c1"
-      >
-        <span
-          class="uc-fe-checkbox c6"
-        >
-          <i
-            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-            type="checkbox"
-          />
-          Menu 4
-        </span>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Menu demo -- menu-multiple 1`] = `
-.c5 {
-  vertical-align: baseline;
-}
-
-.c4 {
-  margin-right: 8px;
-  font-size: 14px;
-}
-
-.c2 {
-  cursor: pointer;
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
-  font-size: 12px;
-}
-
-.c2 .c3 {
-  color: #526075;
-}
-
-.c6 .c3 {
-  color: #3555f6;
-}
-
-.c1 {
-  padding: 0 8px;
-  margin: 0 8px;
-  border-radius: 2px;
-  display: block;
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.c0 {
-  line-height: 26px;
-  font-size: 12px;
-  display: inline-block;
-  box-sizing: border-box;
-  max-width: 360px;
-  min-width: 64px;
-  overflow: auto;
-  padding: 10px 0;
-  border-radius: 2px;
-  text-align: left;
-  border-style: none !important;
-  box-shadow: 0 -1px 0 0 rgba(223,224,241,0.5),0 1px 0 0 rgba(223,224,241,.3),0 1px 1px 0 rgba(162,166,191,.5),0 2px 4px 0 rgba(228,229,242,.6);
-}
-
-.c0,
-.c0 .style__PopupContentWrap-ulx11w-2 {
-  border: 1px solid #c3cad9;
-}
-
-.c0,
-.c0 .uc-fe-menu-popup-content-wrap {
-  color: #0a1633;
-  background: #fff;
-}
-
-.c0 .uc-fe-menu-item:hover,
-.c0 .uc-fe-menu-submenu-title-content:hover,
-.c0 .uc-fe-menu-selectall-checkbox:hover {
-  background: #eaf3fd;
-}
-
-.c0 .uc-fe-menu-item-selected,
-.c0 .uc-fe-menu-submenu-title-selected,
-.c0 .uc-fe-menu-selectall-checkbox-checked {
-  color: #3555f6;
-}
-
-.c0 .uc-fe-menu-submenu-title-content-collapse {
-  border-color: #c3cad9;
-}
-
-<div>
-  <div
-    class="demo-wrap"
-  >
-    <div
-      class="c0"
-    >
-      <div
-        class="uc-fe-menu-item c1"
-      >
-        Menu 1
-      </div>
-      <div
-        class="uc-fe-menu-item c1"
-      >
-        Menu 2
-      </div>
-      <div
-        class="uc-fe-menu-item c1"
-      >
-        Menu 3
-      </div>
-      <div
-        class="uc-fe-menu-item c1"
-      >
-        Menu 4
-      </div>
-    </div>
-  </div>
-  <div
-    class="demo-wrap"
-  >
-    <div
-      class="c0"
-    >
-      <div
-        class="uc-fe-menu-item c1"
-      >
-        <span
-          class="uc-fe-checkbox c2"
-        >
-          <i
-            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-            type="checkbox"
-          />
-          Menu 1
-        </span>
-      </div>
-      <div
-        class="uc-fe-menu-item c1"
-      >
-        <span
-          class="uc-fe-checkbox c2"
-        >
-          <i
-            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-            type="checkbox"
-          />
-          Menu 2
-        </span>
-      </div>
-      <div
-        class="uc-fe-menu-item c1"
-      >
-        <span
-          class="uc-fe-checkbox c2"
-        >
-          <i
-            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-            type="checkbox"
-          />
-          Menu 3
-        </span>
-      </div>
-      <div
-        class="uc-fe-menu-item c1"
-      >
-        <span
-          class="uc-fe-checkbox c2"
-        >
-          <i
-            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-            type="checkbox"
-          />
-          Menu 4
-        </span>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Menu demo -- menu-selectable 1`] = `
-.c5 {
-  vertical-align: baseline;
-}
-
-.c4 {
-  margin-right: 8px;
-  font-size: 14px;
-}
-
-.c2 {
-  cursor: pointer;
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
-  font-size: 12px;
-}
-
-.c2 .c3 {
-  color: #526075;
-}
-
-.c6 .c3 {
-  color: #3555f6;
-}
-
-.c1 {
-  padding: 0 8px;
-  margin: 0 8px;
-  border-radius: 2px;
-  display: block;
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.c0 {
-  line-height: 26px;
-  font-size: 12px;
-  display: inline-block;
-  box-sizing: border-box;
-  max-width: 360px;
-  min-width: 64px;
-  overflow: auto;
-  padding: 10px 0;
-  border-radius: 2px;
-  text-align: left;
-  border-style: none !important;
-  box-shadow: 0 -1px 0 0 rgba(223,224,241,0.5),0 1px 0 0 rgba(223,224,241,.3),0 1px 1px 0 rgba(162,166,191,.5),0 2px 4px 0 rgba(228,229,242,.6);
-}
-
-.c0,
-.c0 .style__PopupContentWrap-ulx11w-2 {
-  border: 1px solid #c3cad9;
-}
-
-.c0,
-.c0 .uc-fe-menu-popup-content-wrap {
-  color: #0a1633;
-  background: #fff;
-}
-
-.c0 .uc-fe-menu-item:hover,
-.c0 .uc-fe-menu-submenu-title-content:hover,
-.c0 .uc-fe-menu-selectall-checkbox:hover {
-  background: #eaf3fd;
-}
-
-.c0 .uc-fe-menu-item-selected,
-.c0 .uc-fe-menu-submenu-title-selected,
-.c0 .uc-fe-menu-selectall-checkbox-checked {
-  color: #3555f6;
-}
-
-.c0 .uc-fe-menu-submenu-title-content-collapse {
-  border-color: #c3cad9;
-}
-
-<div>
-  <div
-    class="demo-wrap"
-  >
-    <div
-      class="c0"
-    >
-      <div
-        class="uc-fe-menu-item c1"
-      >
-        <span
-          class="uc-fe-checkbox c2"
-        >
-          <i
-            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-            type="checkbox"
-          />
-          Menu 1
-        </span>
-      </div>
-      <div
-        class="uc-fe-menu-item c1"
-      >
-        <span
-          class="uc-fe-checkbox c2"
-        >
-          <i
-            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-            type="checkbox"
-          />
-          Menu 2
-        </span>
-      </div>
-      <div
-        class="uc-fe-menu-item c1"
-      >
-        <span
-          class="uc-fe-checkbox c2"
-        >
-          <i
-            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-            type="checkbox"
-          />
-          Menu 3
-        </span>
-      </div>
-      <div
-        class="uc-fe-menu-item c1"
-      >
-        <span
-          class="uc-fe-checkbox c2"
-        >
-          <i
-            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-            type="checkbox"
-          />
-          Menu 4
-        </span>
-      </div>
-    </div>
-  </div>
-  <div
-    class="demo-wrap"
-  >
-    <div
-      class="c0"
-    >
-      <div
-        class="uc-fe-menu-item c1"
-      >
-        <span
-          class="uc-fe-checkbox c2"
-        >
-          <i
-            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-            type="checkbox"
-          />
-          Menu 1
-        </span>
-      </div>
-      <div
-        class="uc-fe-menu-item c1"
-      >
-        <span
-          class="uc-fe-checkbox c2"
-        >
-          <i
-            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-            type="checkbox"
-          />
-          Menu 2
-        </span>
-      </div>
-      <div
-        class="uc-fe-menu-item c1"
-      >
-        <span
-          class="uc-fe-checkbox c2"
-        >
-          <i
-            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-            type="checkbox"
-          />
-          Menu 3
-        </span>
-      </div>
-      <div
-        class="uc-fe-menu-item c1"
-      >
-        <span
-          class="uc-fe-checkbox c2"
-        >
-          <i
-            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-            type="checkbox"
-          />
-          Menu 4
-        </span>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Menu demo -- menu-showSelectAll 1`] = `
-.c5 {
-  vertical-align: baseline;
-}
-
-.c4 {
-  margin-right: 8px;
-  font-size: 14px;
-}
-
-.c2 {
-  cursor: pointer;
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
-  font-size: 12px;
-}
-
-.c2 .c3 {
-  color: #526075;
-}
-
-.c11 .c3 {
-  color: #3555f6;
 }
 
 .c8 {
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  margin-top: -0.5em;
-  font-size: 14px;
-}
-
-.c1 {
-  padding: 0 8px;
-  margin: 0 8px;
-  border-radius: 2px;
-  display: block;
-  cursor: pointer;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.c6 {
-  padding: 0 8px;
-  border-radius: 2px;
-  display: block;
-  cursor: pointer;
-}
-
-.c7 {
   padding: 0 8px;
   padding-right: 40px;
   position: relative;
   border-bottom: 1px solid;
   margin: 8px 0;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.c9 {
-  padding: 0 8px;
-  padding-right: 40px;
-  position: relative;
   -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
@@ -1841,46 +806,11 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
             class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
             type="checkbox"
           />
-          Menu 1
-        </span>
-      </div>
-      <div
-        class="uc-fe-menu-item c1"
-      >
-        <span
-          class="uc-fe-checkbox c2"
-        >
-          <i
-            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-            type="checkbox"
-          />
-          Menu 2
-        </span>
-      </div>
-      <div
-        class="uc-fe-menu-item c1"
-      >
-        <span
-          class="uc-fe-checkbox c2"
-        >
-          <i
-            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-            type="checkbox"
-          />
-          Menu 3
-        </span>
-      </div>
-      <div
-        class="uc-fe-menu-item c1"
-      >
-        <span
-          class="uc-fe-checkbox c2"
-        >
-          <i
-            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
-            type="checkbox"
-          />
-          Menu 4
+          <div
+            class="uc-fe-checkbox-content c6"
+          >
+            Menu 1
+          </div>
         </span>
       </div>
       <div>
@@ -1888,14 +818,274 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
           <div>
             <div>
               <div
-                class="uc-fe-menu-submenu-title c6"
+                class="uc-fe-menu-submenu-title c7"
               >
                 <div
-                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c7"
+                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c8"
                 >
                   SubMenu 1
                   <i
-                    class="c8 uc-fe-icon icon__down c5"
+                    class="c9 uc-fe-icon icon__up c5"
+                    type="up"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class=""
+              open=""
+            >
+              <span
+                class="uc-fe-menu-selectall-checkbox c10 uc-fe-checkbox c2"
+              >
+                <i
+                  class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+                  type="checkbox"
+                />
+                <div
+                  class="uc-fe-checkbox-content c6"
+                >
+                  全选
+                </div>
+              </span>
+              <div
+                class="uc-fe-menu-item c1"
+              >
+                <span
+                  class="uc-fe-checkbox c2"
+                >
+                  <i
+                    class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+                    type="checkbox"
+                  />
+                  <div
+                    class="uc-fe-checkbox-content c6"
+                  >
+                    Menu 1
+                  </div>
+                </span>
+              </div>
+              <div
+                class="uc-fe-menu-item c1"
+              >
+                <span
+                  class="uc-fe-checkbox c2"
+                >
+                  <i
+                    class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+                    type="checkbox"
+                  />
+                  <div
+                    class="uc-fe-checkbox-content c6"
+                  >
+                    Menu 2
+                  </div>
+                </span>
+              </div>
+              <div
+                class="uc-fe-menu-item c1"
+              >
+                <span
+                  class="uc-fe-checkbox c2"
+                >
+                  <i
+                    class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+                    type="checkbox"
+                  />
+                  <div
+                    class="uc-fe-checkbox-content c6"
+                  >
+                    Menu 3
+                  </div>
+                </span>
+              </div>
+              <div
+                class="uc-fe-menu-item c1"
+              >
+                <span
+                  class="uc-fe-checkbox c2"
+                >
+                  <i
+                    class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+                    type="checkbox"
+                  />
+                  <div
+                    class="uc-fe-checkbox-content c6"
+                  >
+                    Menu 4
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div>
+            <div>
+              <div
+                class="uc-fe-menu-submenu-title c7"
+              >
+                <div
+                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c8"
+                >
+                  SubMenu 2
+                  <i
+                    class="c9 uc-fe-icon icon__up c5"
+                    type="up"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class=""
+              open=""
+            >
+              <span
+                class="uc-fe-menu-selectall-checkbox c10 uc-fe-checkbox c2"
+              >
+                <i
+                  class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+                  type="checkbox"
+                />
+                <div
+                  class="uc-fe-checkbox-content c6"
+                >
+                  全选
+                </div>
+              </span>
+              <div
+                class="uc-fe-menu-item c1"
+              >
+                <span
+                  class="uc-fe-checkbox c2"
+                >
+                  <i
+                    class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+                    type="checkbox"
+                  />
+                  <div
+                    class="uc-fe-checkbox-content c6"
+                  >
+                    Menu 1
+                  </div>
+                </span>
+              </div>
+              <div
+                class="uc-fe-menu-item c1"
+              >
+                <span
+                  class="uc-fe-checkbox c2"
+                >
+                  <i
+                    class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+                    type="checkbox"
+                  />
+                  <div
+                    class="uc-fe-checkbox-content c6"
+                  >
+                    Menu 2
+                  </div>
+                </span>
+              </div>
+              <div
+                class="uc-fe-menu-item c1"
+              >
+                <span
+                  class="uc-fe-checkbox c2"
+                >
+                  <i
+                    class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+                    type="checkbox"
+                  />
+                  <div
+                    class="uc-fe-checkbox-content c6"
+                  >
+                    Menu 3
+                  </div>
+                </span>
+              </div>
+              <div
+                class="uc-fe-menu-item c1"
+              >
+                <span
+                  class="uc-fe-checkbox c2"
+                >
+                  <i
+                    class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+                    type="checkbox"
+                  />
+                  <div
+                    class="uc-fe-checkbox-content c6"
+                  >
+                    Menu 4
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div>
+            <div>
+              <div
+                class="uc-fe-menu-submenu-title c7"
+              >
+                <div
+                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c8"
+                >
+                  SubMenu 3
+                  <i
+                    class="c9 uc-fe-icon icon__down c5"
+                    type="down"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="demo-wrap"
+  >
+    <div
+      class="c0"
+    >
+      <div
+        class="uc-fe-menu-item c1"
+      >
+        <span
+          class="uc-fe-checkbox c2"
+        >
+          <i
+            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+            type="checkbox"
+          />
+          <div
+            class="uc-fe-checkbox-content c6"
+          >
+            Menu 1
+          </div>
+        </span>
+      </div>
+      <div>
+        <div>
+          <div>
+            <div>
+              <div
+                class="uc-fe-menu-submenu-title c7"
+              >
+                <div
+                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c8"
+                >
+                  SubMenu 1
+                  <i
+                    class="c9 uc-fe-icon icon__down c5"
                     type="down"
                   />
                 </div>
@@ -1909,14 +1099,1001 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
           <div>
             <div>
               <div
-                class="uc-fe-menu-submenu-title c6"
+                class="uc-fe-menu-submenu-title c7"
               >
                 <div
-                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c7"
+                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c8"
                 >
                   SubMenu 2
                   <i
-                    class="c8 uc-fe-icon icon__down c5"
+                    class="c9 uc-fe-icon icon__down c5"
+                    type="down"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div>
+            <div>
+              <div
+                class="uc-fe-menu-submenu-title c7"
+              >
+                <div
+                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c8"
+                >
+                  SubMenu 3
+                  <i
+                    class="c9 uc-fe-icon icon__down c5"
+                    type="down"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Menu demo -- menu-controlled 1`] = `
+.c5 {
+  vertical-align: baseline;
+}
+
+.c4 {
+  margin-right: 8px;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.c7 {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  min-height: 28px;
+  font-size: 12px;
+}
+
+.c7 .c3 {
+  line-height: 28px;
+  color: #526075;
+}
+
+.c2 {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  min-height: 28px;
+  font-size: 12px;
+}
+
+.c2 .c3 {
+  line-height: 28px;
+  color: #3555f6;
+}
+
+.c6 {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.c1 {
+  padding: 0 8px;
+  margin: 0 8px;
+  border-radius: 2px;
+  display: block;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.c0 {
+  line-height: 26px;
+  font-size: 12px;
+  display: inline-block;
+  box-sizing: border-box;
+  max-width: 360px;
+  min-width: 64px;
+  overflow: auto;
+  padding: 10px 0;
+  border-radius: 2px;
+  text-align: left;
+  border-style: none !important;
+  box-shadow: 0 -1px 0 0 rgba(223,224,241,0.5),0 1px 0 0 rgba(223,224,241,.3),0 1px 1px 0 rgba(162,166,191,.5),0 2px 4px 0 rgba(228,229,242,.6);
+}
+
+.c0,
+.c0 .style__PopupContentWrap-ulx11w-2 {
+  border: 1px solid #c3cad9;
+}
+
+.c0,
+.c0 .uc-fe-menu-popup-content-wrap {
+  color: #0a1633;
+  background: #fff;
+}
+
+.c0 .uc-fe-menu-item:hover,
+.c0 .uc-fe-menu-submenu-title-content:hover,
+.c0 .uc-fe-menu-selectall-checkbox:hover {
+  background: #eaf3fd;
+}
+
+.c0 .uc-fe-menu-item-selected,
+.c0 .uc-fe-menu-submenu-title-selected,
+.c0 .uc-fe-menu-selectall-checkbox-checked {
+  color: #3555f6;
+}
+
+.c0 .uc-fe-menu-submenu-title-content-collapse {
+  border-color: #c3cad9;
+}
+
+<div>
+  <div
+    class="demo-wrap"
+  >
+    <div
+      class="c0"
+    >
+      <div
+        class="uc-fe-menu-item uc-fe-menu-item-selected c1"
+        selected=""
+      >
+        <span
+          checked=""
+          class="uc-fe-checkbox c2"
+        >
+          <i
+            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox-ed c5"
+            type="checkbox-ed"
+          />
+          <div
+            class="uc-fe-checkbox-content c6"
+          >
+            Menu 1
+          </div>
+        </span>
+      </div>
+      <div
+        class="uc-fe-menu-item c1"
+      >
+        <span
+          class="uc-fe-checkbox c7"
+        >
+          <i
+            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+            type="checkbox"
+          />
+          <div
+            class="uc-fe-checkbox-content c6"
+          >
+            Menu 2
+          </div>
+        </span>
+      </div>
+      <div
+        class="uc-fe-menu-item uc-fe-menu-item-selected c1"
+        selected=""
+      >
+        <span
+          checked=""
+          class="uc-fe-checkbox c2"
+        >
+          <i
+            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox-ed c5"
+            type="checkbox-ed"
+          />
+          <div
+            class="uc-fe-checkbox-content c6"
+          >
+            Menu 3
+          </div>
+        </span>
+      </div>
+      <div
+        class="uc-fe-menu-item c1"
+      >
+        <span
+          class="uc-fe-checkbox c7"
+        >
+          <i
+            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+            type="checkbox"
+          />
+          <div
+            class="uc-fe-checkbox-content c6"
+          >
+            Menu 4
+          </div>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    class="demo-wrap"
+  >
+    <div
+      class="c0"
+    >
+      <div
+        class="uc-fe-menu-item uc-fe-menu-item-selected c1"
+        selected=""
+      >
+        <span
+          checked=""
+          class="uc-fe-checkbox c2"
+        >
+          <i
+            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox-ed c5"
+            type="checkbox-ed"
+          />
+          <div
+            class="uc-fe-checkbox-content c6"
+          >
+            Menu 1
+          </div>
+        </span>
+      </div>
+      <div
+        class="uc-fe-menu-item c1"
+      >
+        <span
+          class="uc-fe-checkbox c7"
+        >
+          <i
+            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+            type="checkbox"
+          />
+          <div
+            class="uc-fe-checkbox-content c6"
+          >
+            Menu 2
+          </div>
+        </span>
+      </div>
+      <div
+        class="uc-fe-menu-item uc-fe-menu-item-selected c1"
+        selected=""
+      >
+        <span
+          checked=""
+          class="uc-fe-checkbox c2"
+        >
+          <i
+            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox-ed c5"
+            type="checkbox-ed"
+          />
+          <div
+            class="uc-fe-checkbox-content c6"
+          >
+            Menu 3
+          </div>
+        </span>
+      </div>
+      <div
+        class="uc-fe-menu-item c1"
+      >
+        <span
+          class="uc-fe-checkbox c7"
+        >
+          <i
+            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+            type="checkbox"
+          />
+          <div
+            class="uc-fe-checkbox-content c6"
+          >
+            Menu 4
+          </div>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Menu demo -- menu-multiple 1`] = `
+.c5 {
+  vertical-align: baseline;
+}
+
+.c4 {
+  margin-right: 8px;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.c2 {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  min-height: 28px;
+  font-size: 12px;
+}
+
+.c2 .c3 {
+  line-height: 28px;
+  color: #526075;
+}
+
+.c7 .c3 {
+  line-height: 28px;
+  color: #3555f6;
+}
+
+.c6 {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.c1 {
+  padding: 0 8px;
+  margin: 0 8px;
+  border-radius: 2px;
+  display: block;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.c0 {
+  line-height: 26px;
+  font-size: 12px;
+  display: inline-block;
+  box-sizing: border-box;
+  max-width: 360px;
+  min-width: 64px;
+  overflow: auto;
+  padding: 10px 0;
+  border-radius: 2px;
+  text-align: left;
+  border-style: none !important;
+  box-shadow: 0 -1px 0 0 rgba(223,224,241,0.5),0 1px 0 0 rgba(223,224,241,.3),0 1px 1px 0 rgba(162,166,191,.5),0 2px 4px 0 rgba(228,229,242,.6);
+}
+
+.c0,
+.c0 .style__PopupContentWrap-ulx11w-2 {
+  border: 1px solid #c3cad9;
+}
+
+.c0,
+.c0 .uc-fe-menu-popup-content-wrap {
+  color: #0a1633;
+  background: #fff;
+}
+
+.c0 .uc-fe-menu-item:hover,
+.c0 .uc-fe-menu-submenu-title-content:hover,
+.c0 .uc-fe-menu-selectall-checkbox:hover {
+  background: #eaf3fd;
+}
+
+.c0 .uc-fe-menu-item-selected,
+.c0 .uc-fe-menu-submenu-title-selected,
+.c0 .uc-fe-menu-selectall-checkbox-checked {
+  color: #3555f6;
+}
+
+.c0 .uc-fe-menu-submenu-title-content-collapse {
+  border-color: #c3cad9;
+}
+
+<div>
+  <div
+    class="demo-wrap"
+  >
+    <div
+      class="c0"
+    >
+      <div
+        class="uc-fe-menu-item c1"
+      >
+        Menu 1
+      </div>
+      <div
+        class="uc-fe-menu-item c1"
+      >
+        Menu 2
+      </div>
+      <div
+        class="uc-fe-menu-item c1"
+      >
+        Menu 3
+      </div>
+      <div
+        class="uc-fe-menu-item c1"
+      >
+        Menu 4
+      </div>
+    </div>
+  </div>
+  <div
+    class="demo-wrap"
+  >
+    <div
+      class="c0"
+    >
+      <div
+        class="uc-fe-menu-item c1"
+      >
+        <span
+          class="uc-fe-checkbox c2"
+        >
+          <i
+            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+            type="checkbox"
+          />
+          <div
+            class="uc-fe-checkbox-content c6"
+          >
+            Menu 1
+          </div>
+        </span>
+      </div>
+      <div
+        class="uc-fe-menu-item c1"
+      >
+        <span
+          class="uc-fe-checkbox c2"
+        >
+          <i
+            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+            type="checkbox"
+          />
+          <div
+            class="uc-fe-checkbox-content c6"
+          >
+            Menu 2
+          </div>
+        </span>
+      </div>
+      <div
+        class="uc-fe-menu-item c1"
+      >
+        <span
+          class="uc-fe-checkbox c2"
+        >
+          <i
+            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+            type="checkbox"
+          />
+          <div
+            class="uc-fe-checkbox-content c6"
+          >
+            Menu 3
+          </div>
+        </span>
+      </div>
+      <div
+        class="uc-fe-menu-item c1"
+      >
+        <span
+          class="uc-fe-checkbox c2"
+        >
+          <i
+            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+            type="checkbox"
+          />
+          <div
+            class="uc-fe-checkbox-content c6"
+          >
+            Menu 4
+          </div>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Menu demo -- menu-selectable 1`] = `
+.c5 {
+  vertical-align: baseline;
+}
+
+.c4 {
+  margin-right: 8px;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.c2 {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  min-height: 28px;
+  font-size: 12px;
+}
+
+.c2 .c3 {
+  line-height: 28px;
+  color: #526075;
+}
+
+.c7 .c3 {
+  line-height: 28px;
+  color: #3555f6;
+}
+
+.c6 {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.c1 {
+  padding: 0 8px;
+  margin: 0 8px;
+  border-radius: 2px;
+  display: block;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.c0 {
+  line-height: 26px;
+  font-size: 12px;
+  display: inline-block;
+  box-sizing: border-box;
+  max-width: 360px;
+  min-width: 64px;
+  overflow: auto;
+  padding: 10px 0;
+  border-radius: 2px;
+  text-align: left;
+  border-style: none !important;
+  box-shadow: 0 -1px 0 0 rgba(223,224,241,0.5),0 1px 0 0 rgba(223,224,241,.3),0 1px 1px 0 rgba(162,166,191,.5),0 2px 4px 0 rgba(228,229,242,.6);
+}
+
+.c0,
+.c0 .style__PopupContentWrap-ulx11w-2 {
+  border: 1px solid #c3cad9;
+}
+
+.c0,
+.c0 .uc-fe-menu-popup-content-wrap {
+  color: #0a1633;
+  background: #fff;
+}
+
+.c0 .uc-fe-menu-item:hover,
+.c0 .uc-fe-menu-submenu-title-content:hover,
+.c0 .uc-fe-menu-selectall-checkbox:hover {
+  background: #eaf3fd;
+}
+
+.c0 .uc-fe-menu-item-selected,
+.c0 .uc-fe-menu-submenu-title-selected,
+.c0 .uc-fe-menu-selectall-checkbox-checked {
+  color: #3555f6;
+}
+
+.c0 .uc-fe-menu-submenu-title-content-collapse {
+  border-color: #c3cad9;
+}
+
+<div>
+  <div
+    class="demo-wrap"
+  >
+    <div
+      class="c0"
+    >
+      <div
+        class="uc-fe-menu-item c1"
+      >
+        <span
+          class="uc-fe-checkbox c2"
+        >
+          <i
+            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+            type="checkbox"
+          />
+          <div
+            class="uc-fe-checkbox-content c6"
+          >
+            Menu 1
+          </div>
+        </span>
+      </div>
+      <div
+        class="uc-fe-menu-item c1"
+      >
+        <span
+          class="uc-fe-checkbox c2"
+        >
+          <i
+            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+            type="checkbox"
+          />
+          <div
+            class="uc-fe-checkbox-content c6"
+          >
+            Menu 2
+          </div>
+        </span>
+      </div>
+      <div
+        class="uc-fe-menu-item c1"
+      >
+        <span
+          class="uc-fe-checkbox c2"
+        >
+          <i
+            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+            type="checkbox"
+          />
+          <div
+            class="uc-fe-checkbox-content c6"
+          >
+            Menu 3
+          </div>
+        </span>
+      </div>
+      <div
+        class="uc-fe-menu-item c1"
+      >
+        <span
+          class="uc-fe-checkbox c2"
+        >
+          <i
+            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+            type="checkbox"
+          />
+          <div
+            class="uc-fe-checkbox-content c6"
+          >
+            Menu 4
+          </div>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    class="demo-wrap"
+  >
+    <div
+      class="c0"
+    >
+      <div
+        class="uc-fe-menu-item c1"
+      >
+        <span
+          class="uc-fe-checkbox c2"
+        >
+          <i
+            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+            type="checkbox"
+          />
+          <div
+            class="uc-fe-checkbox-content c6"
+          >
+            Menu 1
+          </div>
+        </span>
+      </div>
+      <div
+        class="uc-fe-menu-item c1"
+      >
+        <span
+          class="uc-fe-checkbox c2"
+        >
+          <i
+            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+            type="checkbox"
+          />
+          <div
+            class="uc-fe-checkbox-content c6"
+          >
+            Menu 2
+          </div>
+        </span>
+      </div>
+      <div
+        class="uc-fe-menu-item c1"
+      >
+        <span
+          class="uc-fe-checkbox c2"
+        >
+          <i
+            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+            type="checkbox"
+          />
+          <div
+            class="uc-fe-checkbox-content c6"
+          >
+            Menu 3
+          </div>
+        </span>
+      </div>
+      <div
+        class="uc-fe-menu-item c1"
+      >
+        <span
+          class="uc-fe-checkbox c2"
+        >
+          <i
+            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+            type="checkbox"
+          />
+          <div
+            class="uc-fe-checkbox-content c6"
+          >
+            Menu 4
+          </div>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Menu demo -- menu-showSelectAll 1`] = `
+.c5 {
+  vertical-align: baseline;
+}
+
+.c4 {
+  margin-right: 8px;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.c2 {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  min-height: 28px;
+  font-size: 12px;
+}
+
+.c2 .c3 {
+  line-height: 28px;
+  color: #526075;
+}
+
+.c12 .c3 {
+  line-height: 28px;
+  color: #3555f6;
+}
+
+.c6 {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.c9 {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  margin-top: -0.5em;
+  font-size: 14px;
+}
+
+.c1 {
+  padding: 0 8px;
+  margin: 0 8px;
+  border-radius: 2px;
+  display: block;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.c7 {
+  padding: 0 8px;
+  border-radius: 2px;
+  display: block;
+  cursor: pointer;
+}
+
+.c8 {
+  padding: 0 8px;
+  padding-right: 40px;
+  position: relative;
+  border-bottom: 1px solid;
+  margin: 8px 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.c10 {
+  padding: 0 8px;
+  padding-right: 40px;
+  position: relative;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.c11 {
+  padding: 0 8px;
+  margin: 0 8px;
+  border-radius: 2px;
+  display: block;
+  cursor: pointer;
+}
+
+.c0 {
+  line-height: 26px;
+  font-size: 12px;
+  display: inline-block;
+  box-sizing: border-box;
+  max-width: 360px;
+  min-width: 64px;
+  overflow: auto;
+  padding: 10px 0;
+  border-radius: 2px;
+  text-align: left;
+  border-style: none !important;
+  box-shadow: 0 -1px 0 0 rgba(223,224,241,0.5),0 1px 0 0 rgba(223,224,241,.3),0 1px 1px 0 rgba(162,166,191,.5),0 2px 4px 0 rgba(228,229,242,.6);
+}
+
+.c0,
+.c0 .style__PopupContentWrap-ulx11w-2 {
+  border: 1px solid #c3cad9;
+}
+
+.c0,
+.c0 .uc-fe-menu-popup-content-wrap {
+  color: #0a1633;
+  background: #fff;
+}
+
+.c0 .uc-fe-menu-item:hover,
+.c0 .uc-fe-menu-submenu-title-content:hover,
+.c0 .uc-fe-menu-selectall-checkbox:hover {
+  background: #eaf3fd;
+}
+
+.c0 .uc-fe-menu-item-selected,
+.c0 .uc-fe-menu-submenu-title-selected,
+.c0 .uc-fe-menu-selectall-checkbox-checked {
+  color: #3555f6;
+}
+
+.c0 .uc-fe-menu-submenu-title-content-collapse {
+  border-color: #c3cad9;
+}
+
+<div>
+  <div
+    class="demo-wrap"
+  >
+    <div
+      class="c0"
+    >
+      <div
+        class="uc-fe-menu-item c1"
+      >
+        <span
+          class="uc-fe-checkbox c2"
+        >
+          <i
+            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+            type="checkbox"
+          />
+          <div
+            class="uc-fe-checkbox-content c6"
+          >
+            Menu 1
+          </div>
+        </span>
+      </div>
+      <div
+        class="uc-fe-menu-item c1"
+      >
+        <span
+          class="uc-fe-checkbox c2"
+        >
+          <i
+            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+            type="checkbox"
+          />
+          <div
+            class="uc-fe-checkbox-content c6"
+          >
+            Menu 2
+          </div>
+        </span>
+      </div>
+      <div
+        class="uc-fe-menu-item c1"
+      >
+        <span
+          class="uc-fe-checkbox c2"
+        >
+          <i
+            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+            type="checkbox"
+          />
+          <div
+            class="uc-fe-checkbox-content c6"
+          >
+            Menu 3
+          </div>
+        </span>
+      </div>
+      <div
+        class="uc-fe-menu-item c1"
+      >
+        <span
+          class="uc-fe-checkbox c2"
+        >
+          <i
+            class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
+            type="checkbox"
+          />
+          <div
+            class="uc-fe-checkbox-content c6"
+          >
+            Menu 4
+          </div>
+        </span>
+      </div>
+      <div>
+        <div>
+          <div>
+            <div>
+              <div
+                class="uc-fe-menu-submenu-title c7"
+              >
+                <div
+                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c8"
+                >
+                  SubMenu 1
+                  <i
+                    class="c9 uc-fe-icon icon__down c5"
+                    type="down"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div>
+            <div>
+              <div
+                class="uc-fe-menu-submenu-title c7"
+              >
+                <div
+                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c8"
+                >
+                  SubMenu 2
+                  <i
+                    class="c9 uc-fe-icon icon__down c5"
                     type="down"
                   />
                 </div>
@@ -1928,14 +2105,14 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
       <div>
         <div>
           <div
-            class="uc-fe-menu-submenu-title c6"
+            class="uc-fe-menu-submenu-title c7"
           >
             <div
-              class="uc-fe-menu-submenu-title-content c9"
+              class="uc-fe-menu-submenu-title-content c10"
             >
               SubMenu 3
               <i
-                class="c8 uc-fe-icon icon__caret-right c5"
+                class="c9 uc-fe-icon icon__caret-right c5"
                 type="caret-right"
               />
             </div>
@@ -1951,13 +2128,17 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
       class="c0"
     >
       <span
-        class="uc-fe-menu-selectall-checkbox c10 uc-fe-checkbox c2"
+        class="uc-fe-menu-selectall-checkbox c11 uc-fe-checkbox c2"
       >
         <i
           class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
           type="checkbox"
         />
-        全选
+        <div
+          class="uc-fe-checkbox-content c6"
+        >
+          全选
+        </div>
       </span>
       <div
         class="uc-fe-menu-item c1"
@@ -1969,7 +2150,11 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
             class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
             type="checkbox"
           />
-          Menu 1
+          <div
+            class="uc-fe-checkbox-content c6"
+          >
+            Menu 1
+          </div>
         </span>
       </div>
       <div
@@ -1982,7 +2167,11 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
             class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
             type="checkbox"
           />
-          Menu 2
+          <div
+            class="uc-fe-checkbox-content c6"
+          >
+            Menu 2
+          </div>
         </span>
       </div>
       <div
@@ -1995,7 +2184,11 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
             class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
             type="checkbox"
           />
-          Menu 3
+          <div
+            class="uc-fe-checkbox-content c6"
+          >
+            Menu 3
+          </div>
         </span>
       </div>
       <div
@@ -2008,7 +2201,11 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
             class="c3 uc-fe-checkbox-icon c4 uc-fe-icon icon__checkbox c5"
             type="checkbox"
           />
-          Menu 4
+          <div
+            class="uc-fe-checkbox-content c6"
+          >
+            Menu 4
+          </div>
         </span>
       </div>
       <div>
@@ -2016,14 +2213,14 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
           <div>
             <div>
               <div
-                class="uc-fe-menu-submenu-title c6"
+                class="uc-fe-menu-submenu-title c7"
               >
                 <div
-                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c7"
+                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c8"
                 >
                   SubMenu 1
                   <i
-                    class="c8 uc-fe-icon icon__down c5"
+                    class="c9 uc-fe-icon icon__down c5"
                     type="down"
                   />
                 </div>
@@ -2037,14 +2234,14 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
           <div>
             <div>
               <div
-                class="uc-fe-menu-submenu-title c6"
+                class="uc-fe-menu-submenu-title c7"
               >
                 <div
-                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c7"
+                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c8"
                 >
                   SubMenu 2
                   <i
-                    class="c8 uc-fe-icon icon__down c5"
+                    class="c9 uc-fe-icon icon__down c5"
                     type="down"
                   />
                 </div>
@@ -2056,14 +2253,14 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
       <div>
         <div>
           <div
-            class="uc-fe-menu-submenu-title c6"
+            class="uc-fe-menu-submenu-title c7"
           >
             <div
-              class="uc-fe-menu-submenu-title-content c9"
+              class="uc-fe-menu-submenu-title-content c10"
             >
               SubMenu 3
               <i
-                class="c8 uc-fe-icon icon__caret-right c5"
+                class="c9 uc-fe-icon icon__caret-right c5"
                 type="caret-right"
               />
             </div>
@@ -2103,14 +2300,14 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
           <div>
             <div>
               <div
-                class="uc-fe-menu-submenu-title c6"
+                class="uc-fe-menu-submenu-title c7"
               >
                 <div
-                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c7"
+                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c8"
                 >
                   SubMenu 1
                   <i
-                    class="c8 uc-fe-icon icon__down c5"
+                    class="c9 uc-fe-icon icon__down c5"
                     type="down"
                   />
                 </div>
@@ -2124,14 +2321,14 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
           <div>
             <div>
               <div
-                class="uc-fe-menu-submenu-title c6"
+                class="uc-fe-menu-submenu-title c7"
               >
                 <div
-                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c7"
+                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c8"
                 >
                   SubMenu 2
                   <i
-                    class="c8 uc-fe-icon icon__down c5"
+                    class="c9 uc-fe-icon icon__down c5"
                     type="down"
                   />
                 </div>
@@ -2143,14 +2340,14 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
       <div>
         <div>
           <div
-            class="uc-fe-menu-submenu-title c6"
+            class="uc-fe-menu-submenu-title c7"
           >
             <div
-              class="uc-fe-menu-submenu-title-content c9"
+              class="uc-fe-menu-submenu-title-content c10"
             >
               SubMenu 3
               <i
-                class="c8 uc-fe-icon icon__caret-right c5"
+                class="c9 uc-fe-icon icon__caret-right c5"
                 type="caret-right"
               />
             </div>
@@ -2190,14 +2387,14 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
           <div>
             <div>
               <div
-                class="uc-fe-menu-submenu-title c6"
+                class="uc-fe-menu-submenu-title c7"
               >
                 <div
-                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c7"
+                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c8"
                 >
                   SubMenu 1
                   <i
-                    class="c8 uc-fe-icon icon__down c5"
+                    class="c9 uc-fe-icon icon__down c5"
                     type="down"
                   />
                 </div>
@@ -2211,14 +2408,14 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
           <div>
             <div>
               <div
-                class="uc-fe-menu-submenu-title c6"
+                class="uc-fe-menu-submenu-title c7"
               >
                 <div
-                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c7"
+                  class="uc-fe-menu-submenu-title-content uc-fe-menu-submenu-title-content-collapse c8"
                 >
                   SubMenu 2
                   <i
-                    class="c8 uc-fe-icon icon__down c5"
+                    class="c9 uc-fe-icon icon__down c5"
                     type="down"
                   />
                 </div>
@@ -2230,14 +2427,14 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
       <div>
         <div>
           <div
-            class="uc-fe-menu-submenu-title c6"
+            class="uc-fe-menu-submenu-title c7"
           >
             <div
-              class="uc-fe-menu-submenu-title-content c9"
+              class="uc-fe-menu-submenu-title-content c10"
             >
               SubMenu 3
               <i
-                class="c8 uc-fe-icon icon__caret-right c5"
+                class="c9 uc-fe-icon icon__caret-right c5"
                 type="caret-right"
               />
             </div>

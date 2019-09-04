@@ -51,7 +51,7 @@ describe('LocaleProvider', () => {
             .at(0)
             .simulate('click');
         expect(document.querySelectorAll('.uc-fe-popover').length).toBe(5);
-        document.querySelector('.uc-fe-popover').children[0].children[0].children[0].click();
+        document.querySelector('.uc-fe-popover').children[0].children[0].children[0].children[0].click();
         expect(renderToJson(wrapper.find('.uc-fe-table-title .uc-fe-table-tip-wrap').render())).toMatchSnapshot();
 
         wrapper.find('.test-column-config-btn button').simulate('click');

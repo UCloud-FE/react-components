@@ -1,5 +1,5 @@
 import React from 'react';
-import Input from 'components/Input';
+import Pagination from 'components/Pagination';
 
 // demo start
 class Demo extends React.Component {
@@ -7,10 +7,10 @@ class Demo extends React.Component {
         return (
             <div>
                 <div className="demo-wrap">
-                    <Input.Search disabled />
+                    <Pagination total={100} showTotal />
                 </div>
                 <div className="demo-wrap">
-                    <Input.Search />
+                    <Pagination total={100} showTotal={total => `总共有 ${total} 条数据`} />
                 </div>
             </div>
         );

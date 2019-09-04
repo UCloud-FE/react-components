@@ -68,7 +68,10 @@ class Demo extends React.Component {
             filter: {
                 options: [1, 2, 3, 4]
             },
-            order: true
+            order: true,
+            render: value => {
+                return <span style={{ wordBreak: 'break-word' }}>{value}</span>;
+            }
         }));
 
         if (fixedFirstColumn) {

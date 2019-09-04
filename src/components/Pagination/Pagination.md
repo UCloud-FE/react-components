@@ -19,6 +19,11 @@
 ```js {"codepath": "total.jsx"}
 ```
 
+*   showTotal
+
+```js {"codepath": "showTotal.jsx"}
+```
+
 *   pageSize
 
 ```js {"codepath": "pageSize.jsx"}
