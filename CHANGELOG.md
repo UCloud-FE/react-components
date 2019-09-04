@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.14"></a>
+
+## [0.5.14](https://github.com/UCloud-FE/react-components/compare/v0.5.13...v0.5.14) (2019-09-04)
+
+### Features
+
+*   **Input:** add suffix & prefix & click to focus ([37211c3](https://github.com/UCloud-FE/react-components/commit/37211c3)), closes [#171](https://github.com/UCloud-FE/react-components/issues/171)
+*   **Tabs:** add size ([9166517](https://github.com/UCloud-FE/react-components/commit/9166517)), closes [#172](https://github.com/UCloud-FE/react-components/issues/172)
+
 <a name="0.5.13"></a>
 
 ## [0.5.13](https://github.com/UCloud-FE/react-components/compare/v0.5.12...v0.5.13) (2019-09-02)
