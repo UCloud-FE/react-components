@@ -71,53 +71,45 @@ exports[`Compact demo -- compact 1`] = `
   margin-right: 0;
 }
 
-.c7 .c31 {
+.c7 .c32 {
   margin-right: 12px;
   margin-bottom: 8px;
 }
 
-.c7 .c31:last-child {
+.c7 .c32:last-child {
   margin-right: 0;
 }
 
-.c7 .c32+.c32 {
+.c7 .c33+.c33 {
   margin-left: -1px;
 }
 
-.c7 .c30 {
+.c7 .c31 {
   margin-right: -1px;
   margin-bottom: 8px;
 }
 
-.c7 .c30:first-child {
+.c7 .c31:first-child {
   border-radius: 2px 0 0 2px;
 }
 
-.c7 .c30:last-child {
+.c7 .c31:last-child {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
+}
+
+.c30 {
+  display: table;
+  width: 100%;
 }
 
 .c29 {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  color: #0a1633;
-}
-
-.c29 input {
-  display: block;
   box-sizing: border-box;
-  width: 100%;
-  padding: 4px 8px;
-  margin: 0;
   border-radius: 2px;
-  font-size: inherit;
-  outline: none;
-  color: inherit;
-}
-
-.c29 input {
+  color: #0a1633;
   border: 1px solid #dfe0f1;
   background: #fafafc;
   height: 28px;
@@ -126,19 +118,28 @@ exports[`Compact demo -- compact 1`] = `
   transition: .18s cubic-bezier(.4,0,.2,1);
 }
 
-.c29 input:hover {
+.c29 input {
+  vertical-align: middle;
+  display: table-cell;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0px 8px;
+  margin: 0;
+  font-size: inherit;
+  border: none;
+  outline: none;
+  color: inherit;
+  background: none;
+}
+
+.c29:hover {
   border-color: #c3cad9;
   background-color: #f6f6fb;
 }
 
-.c29 input:focus {
-  border-color: #3555f6;
-  background-color: #f6f6fb;
-}
-
-.c29 input:disabled,
-.c29 input[disabled] {
-  box-shadow: none;
+.c29 input {
+  line-height: 26px;
+  height: 26px;
 }
 
 .c29 input::-webkit-input-placeholder {
@@ -155,12 +156,6 @@ exports[`Compact demo -- compact 1`] = `
 
 .c29 input::placeholder {
   color: #abb4c3;
-}
-
-.c29 .c33 {
-  width: 28px;
-  height: 28px;
-  line-height: 28px;
 }
 
 .c27 {
@@ -482,7 +477,11 @@ exports[`Compact demo -- compact 1`] = `
       <span
         class="uc-fe-compact-controller uc-fe-input c29"
       >
-        <input />
+        <span
+          class="c30"
+        >
+          <input />
+        </span>
       </span>
     </div>
   </div>
@@ -513,26 +512,18 @@ exports[`Compact demo -- sharedProps 1`] = `
   vertical-align: baseline;
 }
 
-.c8 {
+.c7 {
+  display: table;
+  width: 100%;
+}
+
+.c9 {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  color: #0a1633;
-}
-
-.c8 input {
-  display: block;
   box-sizing: border-box;
-  width: 100%;
-  padding: 4px 8px;
-  margin: 0;
   border-radius: 2px;
-  font-size: inherit;
-  outline: none;
-  color: inherit;
-}
-
-.c8 input {
+  color: #0a1633;
   border: 1px solid #dfe0f1;
   background: #fafafc;
   height: 28px;
@@ -541,63 +532,53 @@ exports[`Compact demo -- sharedProps 1`] = `
   transition: .18s cubic-bezier(.4,0,.2,1);
 }
 
-.c8 input:hover {
+.c9 input {
+  vertical-align: middle;
+  display: table-cell;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0px 8px;
+  margin: 0;
+  font-size: inherit;
+  border: none;
+  outline: none;
+  color: inherit;
+  background: none;
+}
+
+.c9:hover {
   border-color: #c3cad9;
   background-color: #f6f6fb;
 }
 
-.c8 input:focus {
-  border-color: #3555f6;
-  background-color: #f6f6fb;
+.c9 input {
+  line-height: 26px;
+  height: 26px;
 }
 
-.c8 input:disabled,
-.c8 input[disabled] {
-  box-shadow: none;
-}
-
-.c8 input::-webkit-input-placeholder {
+.c9 input::-webkit-input-placeholder {
   color: #abb4c3;
 }
 
-.c8 input::-moz-placeholder {
+.c9 input::-moz-placeholder {
   color: #abb4c3;
 }
 
-.c8 input:-ms-input-placeholder {
+.c9 input:-ms-input-placeholder {
   color: #abb4c3;
 }
 
-.c8 input::placeholder {
+.c9 input::placeholder {
   color: #abb4c3;
-}
-
-.c8 .c9 {
-  width: 28px;
-  height: 28px;
-  line-height: 28px;
 }
 
 .c6 {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  color: #0a1633;
-}
-
-.c6 input {
-  display: block;
   box-sizing: border-box;
-  width: 100%;
-  padding: 4px 8px;
-  margin: 0;
   border-radius: 2px;
-  font-size: inherit;
-  outline: none;
-  color: inherit;
-}
-
-.c6 input {
+  color: #0a1633;
   border: 1px solid #dfe0f1;
   background: #fafafc;
   height: 22px;
@@ -606,19 +587,28 @@ exports[`Compact demo -- sharedProps 1`] = `
   transition: .18s cubic-bezier(.4,0,.2,1);
 }
 
-.c6 input:hover {
+.c6 input {
+  vertical-align: middle;
+  display: table-cell;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0px 8px;
+  margin: 0;
+  font-size: inherit;
+  border: none;
+  outline: none;
+  color: inherit;
+  background: none;
+}
+
+.c6:hover {
   border-color: #c3cad9;
   background-color: #f6f6fb;
 }
 
-.c6 input:focus {
-  border-color: #3555f6;
-  background-color: #f6f6fb;
-}
-
-.c6 input:disabled,
-.c6 input[disabled] {
-  box-shadow: none;
+.c6 input {
+  line-height: 20px;
+  height: 20px;
 }
 
 .c6 input::-webkit-input-placeholder {
@@ -637,12 +627,6 @@ exports[`Compact demo -- sharedProps 1`] = `
   color: #abb4c3;
 }
 
-.c6 .c9 {
-  width: 22px;
-  height: 22px;
-  line-height: 22px;
-}
-
 .c3 {
   border-radius: 2px;
   cursor: pointer;
@@ -658,7 +642,7 @@ exports[`Compact demo -- sharedProps 1`] = `
   margin-top: -6px;
 }
 
-.c7 {
+.c8 {
   box-sizing: border-box;
   position: relative;
   font-size: 12px;
@@ -669,7 +653,7 @@ exports[`Compact demo -- sharedProps 1`] = `
   background-color: #fff;
 }
 
-.c7 .c2 {
+.c8 .c2 {
   height: 28px;
   line-height: 28px;
   border: 1px none #c3cad9;
@@ -678,7 +662,7 @@ exports[`Compact demo -- sharedProps 1`] = `
   transition: all .22s cubic-bezier(.4,0,.2,1);
 }
 
-.c7 .c2:hover {
+.c8 .c2:hover {
   border-color: #3555f6;
   box-shadow: 0 1px 10px 0 rgba(162,166,191,.12),0 2px 4px -1px rgba(162,166,191,.2),0 4px 5px 0 rgba(162,166,191,.14);
 }
@@ -735,7 +719,11 @@ exports[`Compact demo -- sharedProps 1`] = `
       <span
         class="uc-fe-compact-controller uc-fe-input c6"
       >
-        <input />
+        <span
+          class="c7"
+        >
+          <input />
+        </span>
       </span>
     </div>
   </div>
@@ -746,7 +734,7 @@ exports[`Compact demo -- sharedProps 1`] = `
       class="uc-fe-compact c0"
     >
       <div
-        class="uc-fe-compact-controller test_cls c7"
+        class="uc-fe-compact-controller test_cls c8"
       >
         <div>
           <div
@@ -763,9 +751,13 @@ exports[`Compact demo -- sharedProps 1`] = `
         </div>
       </div>
       <span
-        class="uc-fe-compact-controller test_cls uc-fe-input c8"
+        class="uc-fe-compact-controller test_cls uc-fe-input c9"
       >
-        <input />
+        <span
+          class="c7"
+        >
+          <input />
+        </span>
       </span>
     </div>
   </div>

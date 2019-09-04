@@ -1,5 +1,7 @@
 import React from 'react';
-import Input from 'components/Input';
+
+import Input from 'src/components/Input';
+import Icon from 'src/components/Icon';
 
 // demo start
 class Demo extends React.Component {
@@ -7,10 +9,10 @@ class Demo extends React.Component {
         return (
             <div>
                 <div className="demo-wrap">
-                    <Input.Search disabled />
+                    <Input suffix="suffix" />
                 </div>
                 <div className="demo-wrap">
-                    <Input.Search />
+                    <Input suffix={<Icon type="search" />} />
                 </div>
             </div>
         );

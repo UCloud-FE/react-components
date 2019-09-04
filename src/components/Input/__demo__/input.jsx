@@ -1,22 +1,21 @@
 import React from 'react';
-import Input from 'components/Input';
-import Radio from 'components/Radio';
-import Form from 'components/Form';
-import Switch from 'components/Switch';
+import Input from 'src/components/Input';
+import Radio from 'src/components/Radio';
+import Form from 'src/components/Form';
+import Switch from 'src/components/Switch';
+import Icon from 'src/components/Icon';
 
 // demo start
 const { Size } = Input;
-const IconType = ['circle-fill', 'circle', 'loading'];
 class Demo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            size: 'md',
-            icon: IconType[0]
+            size: 'md'
         };
     }
     render() {
-        const { size, icon, disabled } = this.state;
+        const { size, disabled, prefix, suffix } = this.state;
         const itemLayout = {
             labelCol: {
                 span: 3
@@ -37,19 +36,25 @@ class Demo extends React.Component {
                             }))}
                         />
                     </Form.Item>
-                    <Form.Item label="icon" {...itemLayout}>
-                        <Radio.Group
-                            options={IconType.map(icon => ({ value: icon }))}
-                            value={icon}
-                            onChange={icon => this.setState({ icon })}
-                        />
+                    <Form.Item label="prefix" {...itemLayout}>
+                        <Switch checked={prefix} onChange={prefix => this.setState({ prefix })} />
+                    </Form.Item>
+                    <Form.Item label="suffix" {...itemLayout}>
+                        <Switch checked={suffix} onChange={suffix => this.setState({ suffix })} />
                     </Form.Item>
                     <Form.Item label="disabled" {...itemLayout}>
                         <Switch checked={disabled} onChange={disabled => this.setState({ disabled })} />
                     </Form.Item>
                 </Form>
                 <div className="demo-wrap">
-                    <Input size={size} disabled={disabled} icon={icon} />
+                    <Input
+                        {...{
+                            size,
+                            disabled,
+                            prefix: prefix && <Icon type="circle" />,
+                            suffix: suffix && <Icon type="circle" />
+                        }}
+                    />
                 </div>
             </div>
         );

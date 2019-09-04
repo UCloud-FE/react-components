@@ -1066,59 +1066,59 @@ exports[`LocaleProvider demo -- list 1`] = `
 }
 
 .c58 {
-  position: absolute;
-  right: 0;
-  top: 0;
-  text-align: center;
-  color: inherit;
+  vertical-align: middle;
+  display: table-cell;
+  color: #636e83;
+  width: 1px;
+  padding-right: 8px;
 }
 
 .c59 {
   cursor: pointer;
 }
 
+.c57 {
+  display: table;
+  width: 100%;
+}
+
 .c56 {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  color: #0a1633;
-}
-
-.c56 input {
-  display: block;
   box-sizing: border-box;
-  width: 100%;
-  padding: 4px 8px;
-  margin: 0;
   border-radius: 2px;
-  font-size: inherit;
-  outline: none;
-  color: inherit;
-}
-
-.c56 input {
+  color: #0a1633;
   border: 1px solid #dfe0f1;
   background: #fafafc;
   height: 28px;
-  padding-right: 28px;
   box-shadow: inset 0 1px 3px 0 #dedeef,inset 0 0px 2px 0 #f6f6fb;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
 }
 
-.c56 input:hover {
+.c56 input {
+  vertical-align: middle;
+  display: table-cell;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0px 8px;
+  margin: 0;
+  font-size: inherit;
+  border: none;
+  outline: none;
+  color: inherit;
+  background: none;
+}
+
+.c56:hover {
   border-color: #c3cad9;
   background-color: #f6f6fb;
 }
 
-.c56 input:focus {
-  border-color: #3555f6;
-  background-color: #f6f6fb;
-}
-
-.c56 input:disabled,
-.c56 input[disabled] {
-  box-shadow: none;
+.c56 input {
+  line-height: 26px;
+  height: 26px;
 }
 
 .c56 input::-webkit-input-placeholder {
@@ -1135,12 +1135,6 @@ exports[`LocaleProvider demo -- list 1`] = `
 
 .c56 input::placeholder {
   color: #abb4c3;
-}
-
-.c56 .c57 {
-  width: 28px;
-  height: 28px;
-  line-height: 28px;
 }
 
 .c17 {
@@ -3610,14 +3604,18 @@ exports[`LocaleProvider demo -- list 1`] = `
                       class="test-search-input uc-fe-input c56"
                       style="margin-right:5px;"
                     >
-                      <input />
                       <span
-                        class="c57 c58"
+                        class="c57"
                       >
-                        <i
-                          class="c59 uc-fe-icon icon__search c14"
-                          type="search"
-                        />
+                        <input />
+                        <span
+                          class="c58"
+                        >
+                          <i
+                            class="c59 uc-fe-icon icon__search c14"
+                            type="search"
+                          />
+                        </span>
                       </span>
                     </span>
                     <span

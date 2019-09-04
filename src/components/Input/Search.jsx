@@ -38,7 +38,7 @@ class Search extends Component {
                     }
                 }}
                 ref={ref => (this.input = ref)}
-                icon={<SearchIcon type="search" onClick={this.onSearch} />}
+                suffix={<SearchIcon type="search" onClick={this.onSearch} />}
             />
         );
     }

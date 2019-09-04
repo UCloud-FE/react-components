@@ -9,70 +9,80 @@ const { prefixCls: _prefixCls } = config;
 const prefixCls = _prefixCls + '-input';
 
 /* stylelint-disable no-descending-specificity */
-export const IconWrap = styled.span`
-    position: absolute;
-    right: 0;
-    top: 0;
-    text-align: center;
-    color: inherit;
+
+export const FixWrap = styled.span`
+    vertical-align: middle;
+    display: table-cell;
+    color: #636e83;
+    /* auto fix fixwrap to min-width */
+    width: 1px;
 `;
+
+export const PrefixWrap = FixWrap.extend(css`
+    padding-left: 8px;
+`);
+
+export const SuffixWrap = FixWrap.extend(css`
+    padding-right: 8px;
+`);
 
 export const SearchIcon = styled(Icon)`
     cursor: pointer;
 `;
 
 const themeMixin = ({
-    theme: { colorMap, colorList, Height, materialVars, Input: inputTheme = {} },
+    theme: { colorMap, colorList, Height, HeightNumber, materialVars, Input: inputTheme = {} },
     disabled,
     size,
-    withIcon
+    focused
 }) => css`
     color: ${colorList.black};
+    border: 1px solid #dfe0f1;
+    background: #fafafc;
+    height: ${Height[size]};
+    box-shadow: ${materialVars.innerShadow};
+    transition: ${materialVars.transitionDown};
+    :hover {
+        border-color: #c3cad9;
+        background-color: #f6f6fb;
+    }
 
     input {
-        border: 1px solid #dfe0f1;
-        background: #fafafc;
-        height: ${Height[size]};
-        ${withIcon && `padding-right: ${Height[size]}`};
-        box-shadow: ${materialVars.innerShadow};
-        transition: ${materialVars.transitionDown};
-        :hover {
-            border-color: #c3cad9;
-            background-color: #f6f6fb;
-        }
-        :focus {
-            border-color: ${colorMap.active.border};
-            background-color: #f6f6fb;
-        }
-        :disabled,
-        &[disabled] {
-            box-shadow: none;
-        }
-
+        line-height: ${HeightNumber[size] - 2}px;
+        height: ${HeightNumber[size] - 2}px;
         &::placeholder {
             color: ${colorList.placeholder};
         }
     }
+    ${focused &&
+        !disabled &&
+        css`
+            && {
+                border-color: ${colorMap.active.border};
+                background-color: #f6f6fb;
+            }
+        `};
+
     ${disabled &&
         css`
             color: ${colorMap.disabled.text};
-
-            input {
-                &,
-                &:hover,
-                &:focus {
-                    background: ${colorMap.disabled.background};
-                    border-color: ${colorMap.disabled.border};
-                }
+            box-shadow: none;
+            &,
+            &:hover {
+                background: ${colorMap.disabled.background};
+                border-color: ${colorMap.disabled.border};
+            }
+            ${SuffixWrap}, ${PrefixWrap} {
+                color: inherit;
             }
         `};
-    ${/* sc-sel */ IconWrap} {
-        width: ${props => Height[props.size]};
-        height: ${props => Height[props.size]};
-        line-height: ${props => Height[props.size]};
-    }
 
     ${inputTheme['&']};
+`;
+
+export const TableWrap = styled.span`
+    display: table;
+    width: 100%;
 `;
 
 export const InputWrap = styled.span.attrs({
@@ -80,6 +90,8 @@ export const InputWrap = styled.span.attrs({
 })`
     position: relative;
     ${inlineBlockWithVerticalMixin};
+    box-sizing: border-box;
+    border-radius: 2px;
 
     ${({ disabled }) =>
         disabled &&
@@ -92,15 +104,17 @@ export const InputWrap = styled.span.attrs({
         `};
 
     input {
-        display: block;
+        vertical-align: middle;
+        display: table-cell;
         box-sizing: border-box;
         width: 100%;
-        padding: 4px 8px;
+        padding: 0px 8px;
         margin: 0;
-        border-radius: 2px;
         font-size: inherit;
+        border: none;
         outline: none;
         color: inherit;
+        background: none;
     }
 
     ${themeMixin};
