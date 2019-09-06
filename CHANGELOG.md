@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.15"></a>
+
+## [0.5.15](https://github.com/UCloud-FE/react-components/compare/v0.5.14...v0.5.15) (2019-09-06)
+
+### Bug Fixes
+
+*   **Input:** fix missing onFocus & onBlur & override default style ([6f0360a](https://github.com/UCloud-FE/react-components/commit/6f0360a)), closes [#173](https://github.com/UCloud-FE/react-components/issues/173)
+*   **Tabs:** fix nested tabs style bug ([7786b79](https://github.com/UCloud-FE/react-components/commit/7786b79)), closes [#175](https://github.com/UCloud-FE/react-components/issues/175)
+
+### Features
+
+*   **deprecatedLog:** change deprecated log to called only once ([140c895](https://github.com/UCloud-FE/react-components/commit/140c895)), closes [#174](https://github.com/UCloud-FE/react-components/issues/174)
+
 <a name="0.5.14"></a>
 
 ## [0.5.14](https://github.com/UCloud-FE/react-components/compare/v0.5.13...v0.5.14) (2019-09-04)
