@@ -33,7 +33,6 @@ export const TabsWrap = styled(RcTabs).attrs({
             &-tab {
                 border: 1px solid transparent;
                 border-radius: 2px 2px 0 0;
-                font-size: 14px;
                 box-sizing: border-box;
                 cursor: pointer;
                 ${css`
@@ -313,20 +312,19 @@ export const TabsWrap = styled(RcTabs).attrs({
                 `}
         }
         ${styleType === 'ink' &&
-            (tabBarPosition === 'top' || tabBarPosition === 'bottom') &&
             css`
-                .${prefixCls}-tab+.${prefixCls}-tab {
-                    margin-left: 12px;
+                .${prefixCls}-top-bar, .${prefixCls}-bottom-bar {
+                    .${prefixCls}-tab+.${prefixCls}-tab {
+                        margin-left: 12px;
+                    }
+                }
+                .${prefixCls}-left-bar, .${prefixCls}-right-bar {
+                    .${prefixCls}-tab+.${prefixCls}-tab {
+                        margin-top: 8px;
+                    }
                 }
             `};
 
-        ${styleType === 'ink' &&
-            (tabBarPosition === 'left' || tabBarPosition === 'right') &&
-            css`
-                .${prefixCls}-tab+.${prefixCls}-tab {
-                    margin-top: 6px;
-                }
-            `};
         ${tabsTheme['&']};
     `
 );
