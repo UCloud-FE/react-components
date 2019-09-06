@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import _ from 'lodash';
 
 import Icon from 'src/components/Icon';
 import deprecatedLog from 'src/utils/deprecatedLog';
 
 import { MessageWrap, IconWrap, ContentWrap } from './style';
+
+export const deprecatedLogForStyleTypeInfo = _.once(() => deprecatedLog('Message styleType "info"', '"success"'));
 
 const StyleType = ['default', 'success', 'warning', 'error'];
 
@@ -23,7 +26,7 @@ class Message extends Component {
     componentWillMount = () => {
         const { styleType } = this.props;
         if (styleType === 'info') {
-            deprecatedLog('styleType "info"', '"success"');
+            deprecatedLogForStyleTypeInfo();
         }
     };
 

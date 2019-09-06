@@ -17,6 +17,8 @@ import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsume
 import { prefixCls, TableWrap, PopupContainer, SortIcon, selectIconCellCls, selectIconHeaderCls } from './style';
 import LOCALE from './locale/zh_CN';
 
+export const deprecatedLogForOnRowSelect = _.once(() => deprecatedLog('Table onRowSelect', 'rowSelection.onChange'));
+
 export const TableContext = createReactContext();
 
 class TableRow extends PureComponent {
@@ -249,7 +251,7 @@ class Table extends Component {
      */
     deprecatedOnRowSelect = selectedRowKeys => {
         if ('onRowSelect' in this.props) {
-            deprecatedLog('onRowSelect', 'rowSelection.onChange');
+            deprecatedLogForOnRowSelect();
             this.props.onRowSelect(selectedRowKeys);
         }
     };
