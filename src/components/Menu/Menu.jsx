@@ -10,6 +10,8 @@ import deprecatedLog from 'src/utils/deprecatedLog';
 import { MenuWrap, SelectAllCheckbox } from './style';
 import LOCALE from './locale/zh_CN';
 
+const deprecatedLogForTheme = _.once(() => deprecatedLog('Menu theme', 'themeType'));
+
 export const rootPrefix = 'root';
 
 export const getItemTree = children => {
@@ -88,7 +90,7 @@ class Menu extends Component {
             this.itemTree = getItemTree(children);
         }
         if ('theme' in props) {
-            deprecatedLog('theme', 'themeType');
+            deprecatedLogForTheme();
         }
     }
     componentWillReceiveProps(nextProps) {

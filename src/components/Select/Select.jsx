@@ -13,6 +13,8 @@ import Option from './Option';
 import { SelectWrap, SelectSearchInput, Selector, Arrow, BlockMenu, MenuWrap } from './style';
 import LOCALE from './locale/zh_CN';
 
+export const deprecatedLogForPopover = _.once(() => deprecatedLog('Select popover', 'popoverProps'));
+
 const Size = ['sm', 'md', 'lg'];
 
 export const SelectContext = createReactContext();
@@ -35,7 +37,7 @@ class Select extends Component {
             itemTree
         };
         if ('popover' in props) {
-            deprecatedLog('popover', 'popoverProps');
+            deprecatedLogForPopover();
         }
     }
     static propTypes = {

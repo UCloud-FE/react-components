@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { ThemeProvider } from 'styled-components';
 
-import deprecatedLog from 'src/utils/deprecatedLog';
 import { getRuntimeTheme } from 'src/components/ThemeProvider/runtime';
 
 import Message from './Message';
@@ -55,10 +54,7 @@ const showMessage = (styleType, content, duration = config.duration, onClose = (
 
 const message = (...args) => showMessage('default', ...args);
 const warning = (...args) => showMessage('warning', ...args);
-const info = (...args) => {
-    deprecatedLog('styleType "info"', '"success"');
-    return showMessage('success', ...args);
-};
+const info = (...args) => showMessage('info', ...args);
 const success = (...args) => showMessage('success', ...args);
 const error = (...args) => showMessage('error', ...args);
 
