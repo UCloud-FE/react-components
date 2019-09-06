@@ -16,6 +16,8 @@
 
 *   disabled - 禁用
 
+Radio styleType 为 button 且 disabled 时，如需展示 Tooltip 等，请参考 Button 的 fakeDisabled。
+
 ```js {"codepath": "radio-disabled.jsx"}
 ```
 
