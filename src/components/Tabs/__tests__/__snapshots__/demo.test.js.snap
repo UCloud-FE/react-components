@@ -36,7 +36,6 @@ exports[`Tabs demo -- pane 1`] = `
 .c17 .uc-fe-tabs-tab {
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
-  font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
   padding: 6px 10px;
@@ -702,7 +701,6 @@ exports[`Tabs demo -- pane-disabled 1`] = `
 .c0 .uc-fe-tabs-tab {
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
-  font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
   padding: 6px 10px;
@@ -1133,7 +1131,6 @@ exports[`Tabs demo -- pane-forceRender 1`] = `
 .c0 .uc-fe-tabs-tab {
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
-  font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
   padding: 6px 10px;
@@ -1576,7 +1573,6 @@ exports[`Tabs demo -- tabs 1`] = `
 .c32 .uc-fe-tabs-tab {
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
-  font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
   padding: 6px 10px;
@@ -2624,7 +2620,6 @@ exports[`Tabs demo -- tabs-child 1`] = `
 .c0 .uc-fe-tabs-tab {
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
-  font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
   padding: 6px 10px;
@@ -2820,7 +2815,6 @@ exports[`Tabs demo -- tabs-child 1`] = `
 .c1 .uc-fe-tabs-tab {
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
-  font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
   padding: 6px 10px;
@@ -3022,7 +3016,6 @@ exports[`Tabs demo -- tabs-child 1`] = `
 .c2 .uc-fe-tabs-tab {
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
-  font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
   padding: 6px 10px;
@@ -3183,8 +3176,14 @@ exports[`Tabs demo -- tabs-child 1`] = `
   content: '\\203A';
 }
 
-.c2 .uc-fe-tabs-tab+.uc-fe-tabs-tab {
+.c2 .uc-fe-tabs-top-bar .uc-fe-tabs-tab+.uc-fe-tabs-tab,
+.c2 .uc-fe-tabs-bottom-bar .uc-fe-tabs-tab+.uc-fe-tabs-tab {
   margin-left: 12px;
+}
+
+.c2 .uc-fe-tabs-left-bar .uc-fe-tabs-tab+.uc-fe-tabs-tab,
+.c2 .uc-fe-tabs-right-bar .uc-fe-tabs-tab+.uc-fe-tabs-tab {
+  margin-top: 8px;
 }
 
 .c3 {
@@ -3222,7 +3221,6 @@ exports[`Tabs demo -- tabs-child 1`] = `
 .c3 .uc-fe-tabs-tab {
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
-  font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
   padding: 6px 10px;
@@ -3389,8 +3387,14 @@ exports[`Tabs demo -- tabs-child 1`] = `
   content: '\\203A';
 }
 
-.c3 .uc-fe-tabs-tab+.uc-fe-tabs-tab {
-  margin-top: 6px;
+.c3 .uc-fe-tabs-top-bar .uc-fe-tabs-tab+.uc-fe-tabs-tab,
+.c3 .uc-fe-tabs-bottom-bar .uc-fe-tabs-tab+.uc-fe-tabs-tab {
+  margin-left: 12px;
+}
+
+.c3 .uc-fe-tabs-left-bar .uc-fe-tabs-tab+.uc-fe-tabs-tab,
+.c3 .uc-fe-tabs-right-bar .uc-fe-tabs-tab+.uc-fe-tabs-tab {
+  margin-top: 8px;
 }
 
 <div>
@@ -4174,7 +4178,6 @@ exports[`Tabs demo -- tabs-destroyInactiveTabPane 1`] = `
 .c0 .uc-fe-tabs-tab {
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
-  font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
   padding: 6px 10px;
@@ -5929,7 +5932,6 @@ exports[`Tabs demo -- tabs-position 1`] = `
 .c2 .uc-fe-tabs-tab {
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
-  font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
   padding: 6px 10px;
@@ -6125,7 +6127,6 @@ exports[`Tabs demo -- tabs-position 1`] = `
 .c0 .uc-fe-tabs-tab {
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
-  font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
   padding: 6px 10px;
@@ -6327,7 +6328,6 @@ exports[`Tabs demo -- tabs-position 1`] = `
 .c1 .uc-fe-tabs-tab {
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
-  font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
   padding: 6px 10px;
@@ -6525,7 +6525,6 @@ exports[`Tabs demo -- tabs-position 1`] = `
 .c3 .uc-fe-tabs-tab {
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
-  font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
   padding: 6px 10px;
@@ -7202,7 +7201,6 @@ exports[`Tabs demo -- tabs-scroll 1`] = `
 .c0 .uc-fe-tabs-tab {
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
-  font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
   padding: 6px 10px;
@@ -7398,7 +7396,6 @@ exports[`Tabs demo -- tabs-scroll 1`] = `
 .c1 .uc-fe-tabs-tab {
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
-  font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
   padding: 6px 10px;
@@ -9160,7 +9157,6 @@ exports[`Tabs demo -- tabs-styleType 1`] = `
 .c0 .uc-fe-tabs-tab {
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
-  font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
   padding: 6px 10px;
@@ -9356,7 +9352,6 @@ exports[`Tabs demo -- tabs-styleType 1`] = `
 .c1 .uc-fe-tabs-tab {
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
-  font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
   padding: 6px 10px;
@@ -9517,8 +9512,14 @@ exports[`Tabs demo -- tabs-styleType 1`] = `
   content: '\\203A';
 }
 
-.c1 .uc-fe-tabs-tab+.uc-fe-tabs-tab {
+.c1 .uc-fe-tabs-top-bar .uc-fe-tabs-tab+.uc-fe-tabs-tab,
+.c1 .uc-fe-tabs-bottom-bar .uc-fe-tabs-tab+.uc-fe-tabs-tab {
   margin-left: 12px;
+}
+
+.c1 .uc-fe-tabs-left-bar .uc-fe-tabs-tab+.uc-fe-tabs-tab,
+.c1 .uc-fe-tabs-right-bar .uc-fe-tabs-tab+.uc-fe-tabs-tab {
+  margin-top: 8px;
 }
 
 <div>
@@ -9799,7 +9800,6 @@ exports[`Tabs demo -- tabs-uncontrolled 1`] = `
 .c0 .uc-fe-tabs-tab {
   border: 1px solid transparent;
   border-radius: 2px 2px 0 0;
-  font-size: 14px;
   box-sizing: border-box;
   cursor: pointer;
   padding: 6px 10px;
