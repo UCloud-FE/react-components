@@ -7,7 +7,11 @@ import deprecatedLog from 'src/utils/deprecatedLog';
 
 import { InputWrap, TableWrap, PrefixWrap, SuffixWrap } from './style';
 
+const deprecatedLogForIcon = _.once(() => deprecatedLog('Input icon', 'suffix'));
+
 const Size = ['sm', 'md', 'lg'];
+
+const noop = () => {};
 
 class Input extends Component {
     static propTypes = {
@@ -27,7 +31,11 @@ class Input extends Component {
         /** @ignore */
         disabled: PropTypes.bool,
         /** @ignore */
-        style: PropTypes.object
+        style: PropTypes.object,
+        /** @ignore */
+        onFocus: PropTypes.func,
+        /** @ignore */
+        onBlur: PropTypes.func
     };
     static defaultProps = {
         size: 'md'
@@ -39,36 +47,41 @@ class Input extends Component {
     };
     renderSuffix = () => {
         const { icon, suffix } = this.props;
+        if ('icon' in this.props) {
+            deprecatedLogForIcon();
+        }
         if (suffix) {
             return <SuffixWrap>{suffix}</SuffixWrap>;
         } else if (_.isString(icon)) {
-            deprecatedLog('icon', 'suffix');
             return (
                 <SuffixWrap>
                     <Icon type={icon} />
                 </SuffixWrap>
             );
         } else if (React.isValidElement(icon)) {
-            deprecatedLog('icon', 'suffix');
             return <SuffixWrap>{icon}</SuffixWrap>;
         }
     };
-    onFocus = () => {
+    onFocus = (...args) => {
+        const { onFocus = noop } = this.props;
         this.setState({
             focused: true
         });
+        onFocus(...args);
     };
-    onBlur = () => {
+    onBlur = (...args) => {
+        const { onBlur = noop } = this.props;
         this.setState({
             focused: false
         });
+        onBlur(...args);
     };
     focus = () => {
         this.input && this.input.focus();
     };
     render() {
         // eslint-disable-next-line no-unused-vars
-        const { className, style, disabled, icon, size, suffix, prefix, ...rest } = this.props;
+        const { className, style, disabled, icon, size, suffix, prefix, onFocus, onBlur, ...rest } = this.props;
         const { focused } = this.state;
         return (
             <InputWrap

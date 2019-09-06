@@ -18,11 +18,11 @@ export const FixWrap = styled.span`
     width: 1px;
 `;
 
-export const PrefixWrap = FixWrap.extend(css`
+export const PrefixWrap = styled(FixWrap)(css`
     padding-left: 8px;
 `);
 
-export const SuffixWrap = FixWrap.extend(css`
+export const SuffixWrap = styled(FixWrap)(css`
     padding-right: 8px;
 `);
 
@@ -111,10 +111,14 @@ export const InputWrap = styled.span.attrs({
         padding: 0px 8px;
         margin: 0;
         font-size: inherit;
-        border: none;
-        outline: none;
         color: inherit;
-        background: none;
+        &,
+        &:hover,
+        &:focus {
+            border: none;
+            outline: none;
+            background: none;
+        }
     }
 
     ${themeMixin};
