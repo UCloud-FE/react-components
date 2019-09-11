@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.16"></a>
+
+## [0.5.16](https://github.com/UCloud-FE/react-components/compare/v0.5.15...v0.5.16) (2019-09-11)
+
+### Features
+
+*   **Input:** add error status ([8f902fe](https://github.com/UCloud-FE/react-components/commit/8f902fe))
+
 <a name="0.5.15"></a>
 
 ## [0.5.15](https://github.com/UCloud-FE/react-components/compare/v0.5.14...v0.5.15) (2019-09-06)
