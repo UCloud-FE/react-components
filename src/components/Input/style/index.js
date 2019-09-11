@@ -34,7 +34,8 @@ const themeMixin = ({
     theme: { colorMap, colorList, Height, HeightNumber, materialVars, Input: inputTheme = {} },
     disabled,
     size,
-    focused
+    focused,
+    status
 }) => css`
     color: ${colorList.black};
     border: 1px solid #dfe0f1;
@@ -60,6 +61,13 @@ const themeMixin = ({
             && {
                 border-color: ${colorMap.active.border};
                 background-color: #f6f6fb;
+            }
+        `};
+
+    ${status === 'error' &&
+        css`
+            &&& {
+                border-color: #f44336;
             }
         `};
 

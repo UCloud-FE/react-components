@@ -30,3 +30,8 @@
 
 ```js {"codepath": "input-disabled.jsx"}
 ```
+
+*   status
+
+```js {"codepath": "input-status.jsx"}
+```

@@ -10,6 +10,7 @@ import { InputWrap, TableWrap, PrefixWrap, SuffixWrap } from './style';
 const deprecatedLogForIcon = _.once(() => deprecatedLog('Input icon', 'suffix'));
 
 const Size = ['sm', 'md', 'lg'];
+const Status = ['default', 'error'];
 
 const noop = () => {};
 
@@ -28,6 +29,8 @@ class Input extends Component {
         suffix: PropTypes.node,
         /** 尺寸 */
         size: PropTypes.oneOf(Size),
+        /** 状态 */
+        status: PropTypes.oneOf(Status),
         /** @ignore */
         disabled: PropTypes.bool,
         /** @ignore */
@@ -81,17 +84,10 @@ class Input extends Component {
     };
     render() {
         // eslint-disable-next-line no-unused-vars
-        const { className, style, disabled, icon, size, suffix, prefix, onFocus, onBlur, ...rest } = this.props;
+        const { className, style, disabled, icon, size, suffix, prefix, onFocus, onBlur, status, ...rest } = this.props;
         const { focused } = this.state;
         return (
-            <InputWrap
-                size={size}
-                focused={focused}
-                className={className}
-                style={style}
-                disabled={disabled}
-                onClick={this.focus}
-            >
+            <InputWrap onClick={this.focus} {...{ size, focused, className, style, disabled, status }}>
                 <TableWrap>
                     {this.renderPrefix()}
                     <input
@@ -108,4 +104,5 @@ class Input extends Component {
     }
 }
 Input.Size = Size;
+Input.Status = Status;
 export default Input;
