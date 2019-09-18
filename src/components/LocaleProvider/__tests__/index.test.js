@@ -44,7 +44,7 @@ describe('LocaleProvider', () => {
         const wrapper = mount(<Demo />);
         wrapper.find('.test-search-input input').instance().value = 'searchValue';
         wrapper.find('.test-search-input i.icon__search').simulate('click');
-        expect(wrapper.find('.uc-fe-table-title .uc-fe-table-tip-wrap').length).toBe(1);
+        expect(wrapper.find('.uc-fe-table-title .uc-fe-table-search-tip-wrap').length).toBe(1);
         expect(wrapper.find('.uc-fe-table-filter i').length).toBe(5);
         wrapper
             .find('.uc-fe-table-filter i')
@@ -52,7 +52,9 @@ describe('LocaleProvider', () => {
             .simulate('click');
         expect(document.querySelectorAll('.uc-fe-popover').length).toBe(5);
         document.querySelector('.uc-fe-popover').children[0].children[0].children[0].children[0].click();
-        expect(renderToJson(wrapper.find('.uc-fe-table-title .uc-fe-table-tip-wrap').render())).toMatchSnapshot();
+        expect(
+            renderToJson(wrapper.find('.uc-fe-table-title .uc-fe-table-search-tip-wrap').render())
+        ).toMatchSnapshot();
 
         wrapper.find('.test-column-config-btn button').simulate('click');
         expect(document.querySelectorAll('.uc-fe-modal-wrap').length).toBe(1);
@@ -62,7 +64,9 @@ describe('LocaleProvider', () => {
 
         wrapper.instance().setLocale('en_US');
 
-        expect(renderToJson(wrapper.find('.uc-fe-table-title .uc-fe-table-tip-wrap').render())).toMatchSnapshot();
+        expect(
+            renderToJson(wrapper.find('.uc-fe-table-title .uc-fe-table-search-tip-wrap').render())
+        ).toMatchSnapshot();
 
         wrapper.find('.test-column-config-btn button').simulate('click');
         expect(document.querySelectorAll('.uc-fe-modal-wrap').length).toBe(1);
