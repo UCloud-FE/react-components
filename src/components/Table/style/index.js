@@ -94,11 +94,11 @@ export const TableWrap = styled.div(
         }
         &-fixed-left {
             left: 0;
-            box-shadow: 4px 0 4px rgba(100, 100, 100, 0.1);
+            box-shadow: 8px 0px 6px -6px rgba(162, 166, 191, 0.3);
         }
         &-fixed-right {
             right: 0;
-            box-shadow: -4px 0 4px rgba(100, 100, 100, 0.1);
+            box-shadow: -8px 0px 6px -6px rgba(162, 166, 191, 0.3);
         }
         &-row-expand-icon {
             border: 1px solid ${colorMap.default.border};
