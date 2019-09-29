@@ -29,7 +29,7 @@ const propsMixin = ({ theme: { Height, colorMap, fontSize }, size, disabled, che
 
     ${/*sc-sel */ CheckboxIcon} {
         line-height: ${Height[size]};
-        color: ${disabled ? colorMap.disabled.icon : checked ? colorMap.active.icon : colorMap.default.icon};
+        color: ${disabled ? colorMap.disabled.icon : checked ? colorMap.active.icon : colorMap.default.border};
     }
 `;
 
