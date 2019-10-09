@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.17"></a>
+
+## [0.5.17](https://github.com/UCloud-FE/react-components/compare/v0.5.16...v0.5.17) (2019-10-09)
+
+### Features
+
+*   **Checkbox:** change checkbox icon color ([f9b89b4](https://github.com/UCloud-FE/react-components/commit/f9b89b4)), closes [#180](https://github.com/UCloud-FE/react-components/issues/180)
+*   **Table:** change box-shadow of fixed table ([d6ba5e9](https://github.com/UCloud-FE/react-components/commit/d6ba5e9))
+*   **Table:** remove border of search tip ([815616f](https://github.com/UCloud-FE/react-components/commit/815616f)), closes [#178](https://github.com/UCloud-FE/react-components/issues/178)
+
 <a name="0.5.16"></a>
 
 ## [0.5.16](https://github.com/UCloud-FE/react-components/compare/v0.5.15...v0.5.16) (2019-09-11)
