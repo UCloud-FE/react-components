@@ -30,7 +30,9 @@ const itemWrapMixin = ({ theme: { colorMap, colorList }, disabled, current, noAc
             pointer-events: none;
             color: ${colorMap.default.text} !important;
             cursor: default;
-        `} ${current &&
+        `};
+
+    ${current &&
         css`
             pointer-events: none;
             color: ${colorList.black} !important;
@@ -75,7 +77,10 @@ export const BreadcrumbWrap = styled.div(
         vertical-align: baseline;
 
         :hover {
-            ${ItemWrapA}, ${ItemWrapSpan} {
+            ${ItemWrapSpan} {
+                color: ${colorMap.active.text};
+            }
+            ${ItemWrapA} {
                 &,
                 &:hover,
                 &:visited,

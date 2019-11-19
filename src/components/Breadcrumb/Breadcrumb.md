@@ -8,3 +8,8 @@
 
 ```js {"codepath": "breadcrumb.jsx"}
 ```
+
+*   separator
+
+```js {"codepath": "breadcrumb-separator.jsx"}
+```
