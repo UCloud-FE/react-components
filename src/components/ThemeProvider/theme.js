@@ -15,7 +15,7 @@ const defaultSizeTheme = {
     titleFontSize: '14px',
     // height of size (px)
     Height: {
-        sm: '22px',
+        sm: '24px',
         md: '28px',
         lg: '32px'
     },
@@ -83,6 +83,7 @@ export const generateTheme = (originTheme = {}) => {
         materialVars
     };
     theme.HeightNumber = _.mapValues(theme.Height, v => +v.replace('px', ''));
+    theme.PaddingNumber = _.mapValues(theme.Padding, v => +v.replace('px', ''));
 
     const componentNames = _.keys(componentThemeGeneratorMap);
     theme = extend(theme, _.omit(originTheme, componentNames));

@@ -4,7 +4,7 @@
 
 ### 演示
 
-*   普通使用
+*   演示
 
-```js {"codepath": "base.jsx"}
+```js {"codepath": "breadcrumb.jsx"}
 ```
