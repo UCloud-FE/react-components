@@ -22,7 +22,7 @@ const ZInput = controllerDecorator({
     initialValue: ''
 })(Input);
 
-const ZSwitch = controllerDecorator({ initialValue: false })(Switch);
+const ZSwitch = controllerDecorator({ initialValue: false, valuePropName: 'checked' })(Switch);
 
 const ZCheckbox = controllerDecorator({
     valuePropName: 'checked'
