@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.18"></a>
+
+## [0.5.18](https://github.com/UCloud-FE/react-components/compare/v0.5.17...v0.5.18) (2019-11-19)
+
+### Features
+
+*   **Breadcrumb:** add Breadcrumb component ([815292c](https://github.com/UCloud-FE/react-components/commit/815292c)), closes [#182](https://github.com/UCloud-FE/react-components/issues/182)
+
 <a name="0.5.17"></a>
 
 ## [0.5.17](https://github.com/UCloud-FE/react-components/compare/v0.5.16...v0.5.17) (2019-10-09)
