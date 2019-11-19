@@ -2,6 +2,7 @@ import React from 'react';
 
 import Breadcrumb from 'src/components/Breadcrumb';
 import Form from 'src/components/Form';
+import Radio from 'src/components/Radio';
 import Input from 'src/components/Input';
 import Icon from 'src/components/Icon';
 
@@ -14,24 +15,33 @@ const itemLayout = {
         span: 9
     }
 };
+const StyleType = Breadcrumb.StyleType;
 class Demo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            separator: Breadcrumb.defaultProps.separator
+            separator: Breadcrumb.defaultProps.separator,
+            styleType: Breadcrumb.defaultProps.styleType
         };
     }
     render() {
-        const { separator } = this.state;
+        const { separator, styleType } = this.state;
         return (
             <div>
                 <Form className="demo-form">
                     <Form.Item label="separator" {...itemLayout}>
                         <Input value={separator} onChange={e => this.setState({ separator: e.target.value })} />
                     </Form.Item>
+                    <Form.Item label="styleType" {...itemLayout}>
+                        <Radio.Group
+                            options={StyleType.map(styleType => ({ value: styleType }))}
+                            value={styleType}
+                            onChange={styleType => this.setState({ styleType })}
+                        />
+                    </Form.Item>
                 </Form>
                 <div className="demo-wrap">
-                    <Breadcrumb separator={separator}>
+                    <Breadcrumb separator={separator} styleType={styleType}>
                         <Breadcrumb.BackButton type="left" onClick={() => window.history.back()} />
                         <Breadcrumb.Item noAction>
                             <Icon type="home" />

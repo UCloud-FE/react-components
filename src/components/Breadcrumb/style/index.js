@@ -69,14 +69,26 @@ export const SeparatorWrap = styled.span`
     font-weight: bold;
     cursor: default;
 `;
-
-export const BreadcrumbWrap = styled.div(
-    ({ theme: { colorMap, fontSize } }) => css`
-        font-size: ${fontSize};
-        color: ${colorMap.default.text};
-        vertical-align: baseline;
-
-        :hover {
+/* stylelint-disable no-descending-specificity */
+const styleTypeMixin = ({ styleType, theme: { colorMap } }) =>
+    ({
+        'block-hover': css`
+            :hover {
+                ${ItemWrapSpan} {
+                    color: ${colorMap.active.text};
+                }
+                ${ItemWrapA} {
+                    &,
+                    &:hover,
+                    &:visited,
+                    &:link,
+                    &:active {
+                        color: ${colorMap.active.text};
+                    }
+                }
+            }
+        `,
+        active: css`
             ${ItemWrapSpan} {
                 color: ${colorMap.active.text};
             }
@@ -89,7 +101,24 @@ export const BreadcrumbWrap = styled.div(
                     color: ${colorMap.active.text};
                 }
             }
-        }
+        `,
+        hover: css`
+            ${ItemWrapSpan}, ${ItemWrapA} {
+                :hover {
+                    color: ${colorMap.active.text};
+                }
+            }
+        `
+    }[styleType]);
+/* stylelint-enable no-descending-specificity */
+
+export const BreadcrumbWrap = styled.div(
+    ({ theme: { colorMap, fontSize } }) => css`
+        font-size: ${fontSize};
+        color: ${colorMap.default.text};
+        vertical-align: baseline;
+
+        ${styleTypeMixin};
     `
 );
 
