@@ -15,10 +15,15 @@ const sizeMixin = ({ size, theme: { Height, Padding } }) => css`
     padding: 0 ${Padding[size]};
 `;
 
-const styleTypeMixin = ({ theme: { Button: buttonTheme = {} }, styleType }) => {
+const styleTypeMixin = ({ theme: { Button: buttonTheme = {}, PaddingNumber }, styleType, size }) => {
     const styleTypeTheme = buttonTheme.styleType || {};
     return css`
         ${styleTypeTheme[styleType]};
+        ${styleType === 'border-gray' &&
+            css`
+                padding-left: ${PaddingNumber[size] - 1}px;
+                padding-right: ${PaddingNumber[size] - 1}px;
+            `};
     `;
 };
 

@@ -6,6 +6,14 @@ import Input from 'components/Input';
 
 // demo start
 const { Size } = Switch;
+const itemLayout = {
+    labelCol: {
+        span: 3
+    },
+    controllerCol: {
+        span: 9
+    }
+};
 class Demo extends React.Component {
     constructor(props) {
         super(props);
@@ -19,14 +27,6 @@ class Demo extends React.Component {
     }
     render() {
         const { checked, size, disabled, onText, offText } = this.state;
-        const itemLayout = {
-            labelCol: {
-                span: 3
-            },
-            controllerCol: {
-                span: 9
-            }
-        };
         return (
             <div>
                 <Form className="demo-form">
