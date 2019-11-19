@@ -13,3 +13,8 @@
 
 ```js {"codepath": "breadcrumb-separator.jsx"}
 ```
+
+*   styleType
+
+```js {"codepath": "breadcrumb-styleType.jsx"}
+```

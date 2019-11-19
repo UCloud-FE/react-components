@@ -3,15 +3,20 @@ import PropTypes from 'prop-types';
 
 import { SeparatorWrap, BreadcrumbWrap } from './style';
 
+const StyleType = ['block-hover', 'hover', 'active'];
+
 class Breadcrumb extends Component {
     static propTypes = {
         /** 自定义分隔符 */
         separator: PropTypes.node,
+        /** 展示项激活样式的方式 */
+        styleType: PropTypes.oneOf(StyleType),
         /** @ignore */
         children: PropTypes.node
     };
     static defaultProps = {
-        separator: '/'
+        separator: '/',
+        styleType: 'block-hover'
     };
     render() {
         const { separator, children, ...rest } = this.props;
@@ -31,5 +36,7 @@ class Breadcrumb extends Component {
         );
     }
 }
+
+Breadcrumb.StyleType = StyleType;
 
 export default Breadcrumb;

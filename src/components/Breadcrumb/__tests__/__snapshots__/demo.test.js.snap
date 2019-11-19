@@ -197,11 +197,11 @@ exports[`Breadcrumb demo -- backbutton 1`] = `
 `;
 
 exports[`Breadcrumb demo -- breadcrumb 1`] = `
-.c12 {
+.c14 {
   vertical-align: baseline;
 }
 
-.c11 {
+.c18 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -226,18 +226,18 @@ exports[`Breadcrumb demo -- breadcrumb 1`] = `
   padding-right: 7px;
 }
 
-.c11:hover {
+.c18:hover {
   background: #fff;
   color: #3555f6;
   border-color: #3555f6;
 }
 
-.c10 {
+.c17 {
   margin-right: 16px;
   padding: 0 5px;
 }
 
-.c14 {
+.c20 {
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -250,7 +250,7 @@ exports[`Breadcrumb demo -- breadcrumb 1`] = `
   cursor: default;
 }
 
-.c16 {
+.c22 {
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -260,7 +260,7 @@ exports[`Breadcrumb demo -- breadcrumb 1`] = `
   vertical-align: middle;
 }
 
-.c19 {
+.c25 {
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -273,7 +273,7 @@ exports[`Breadcrumb demo -- breadcrumb 1`] = `
   font-weight: bold;
 }
 
-.c18 {
+.c24 {
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -283,15 +283,15 @@ exports[`Breadcrumb demo -- breadcrumb 1`] = `
   vertical-align: middle;
 }
 
-.c18,
-.c18:hover,
-.c18:visited,
-.c18:link,
-.c18:active {
+.c24,
+.c24:hover,
+.c24:visited,
+.c24:link,
+.c24:active {
   color: #6b798e;
 }
 
-.c15 {
+.c21 {
   font-size: 14px;
   margin-right: 6px;
   display: inline-block;
@@ -300,21 +300,38 @@ exports[`Breadcrumb demo -- breadcrumb 1`] = `
   cursor: default;
 }
 
-.c9 {
+.c16 {
   font-size: 12px;
   color: #6b798e;
   vertical-align: baseline;
 }
 
-.c9:hover .c13 {
+.c16:hover .c19 {
   color: #3555f6;
 }
 
-.c9:hover .c17,
-.c9:hover .c17:hover,
-.c9:hover .c17:visited,
-.c9:hover .c17:link,
-.c9:hover .c17:active {
+.c16:hover .c23,
+.c16:hover .c23:hover,
+.c16:hover .c23:visited,
+.c16:hover .c23:link,
+.c16:hover .c23:active {
+  color: #3555f6;
+}
+
+.c26 .c19:hover,
+.c26 .c23:hover {
+  color: #3555f6;
+}
+
+.c27 .c19 {
+  color: #3555f6;
+}
+
+.c27 .c23,
+.c27 .c23:hover,
+.c27 .c23:visited,
+.c27 .c23:link,
+.c27 .c23:active {
   color: #3555f6;
 }
 
@@ -377,6 +394,80 @@ exports[`Breadcrumb demo -- breadcrumb 1`] = `
 
 .c0 .c1:last-child {
   margin-bottom: 0;
+}
+
+.c13 {
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+.c11 {
+  color: #6b798e;
+  font-size: 12px;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  height: 28px;
+  line-height: 28px;
+}
+
+.c11 .c12 {
+  color: #3555f6;
+}
+
+.c15 {
+  color: #6b798e;
+  font-size: 12px;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  height: 28px;
+  line-height: 28px;
+}
+
+.c9 {
+  position: relative;
+  margin-bottom: -8px;
+}
+
+.c9 .c10,
+.c9 .style__RadioTagWrap-sc-25j3mq-3 {
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.c9 .c10:last-child,
+.c9 .style__RadioTagWrap-sc-25j3mq-3:last-child {
+  margin-right: 0;
+}
+
+.c9 .c29 {
+  margin-right: 12px;
+  margin-bottom: 8px;
+}
+
+.c9 .c29:last-child {
+  margin-right: 0;
+}
+
+.c9 .c30+.c30 {
+  margin-left: -1px;
+}
+
+.c9 .c28 {
+  margin-right: -1px;
+  margin-bottom: 8px;
+}
+
+.c9 .c28:first-child {
+  border-radius: 2px 0 0 2px;
+}
+
+.c9 .c28:last-child {
+  border-radius: 0 2px 2px 0;
+  margin-right: 0;
 }
 
 .c8 {
@@ -474,72 +565,119 @@ exports[`Breadcrumb demo -- breadcrumb 1`] = `
         </span>
       </div>
     </div>
+    <div
+      class="c1 uc-fe-form-item uc-fe-row c2"
+    >
+      <div
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
+        span="3"
+      >
+        styleType
+      </div>
+      <div
+        class="uc-fe-form-controller c4 uc-fe-col c6"
+        span="9"
+      >
+        <div
+          class="c9"
+        >
+          <div
+            checked=""
+            class="c10 uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default c11"
+          >
+            <i
+              class="c12 c13 uc-fe-icon icon__cbox-ed c14"
+              type="cbox-ed"
+            />
+            block-hover
+          </div>
+          <div
+            class="c10 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c15"
+          >
+            <i
+              class="c12 c13 uc-fe-icon icon__circle c14"
+              type="circle"
+            />
+            hover
+          </div>
+          <div
+            class="c10 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c15"
+          >
+            <i
+              class="c12 c13 uc-fe-icon icon__circle c14"
+              type="circle"
+            />
+            active
+          </div>
+        </div>
+      </div>
+    </div>
   </form>
   <div
     class="demo-wrap"
   >
     <div
-      class="c9"
+      class="c16"
     >
       <button
-        class="c10 uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border-gray c11"
+        class="c17 uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border-gray c18"
         type="left"
       >
         <i
-          class="uc-fe-button-icon uc-fe-icon icon__left c12"
+          class="uc-fe-button-icon uc-fe-icon icon__left c14"
           type="left"
         />
       </button>
       <span
-        class="c13 c14"
+        class="c19 c20"
       >
         <i
-          class="uc-fe-icon icon__home c12"
+          class="uc-fe-icon icon__home c14"
           type="home"
         />
       </span>
       <span
-        class="c15"
+        class="c21"
       >
         /
       </span>
       <span
-        class="c13 c16"
+        class="c19 c22"
       >
         <i
-          class="uc-fe-icon icon__uhost c12"
+          class="uc-fe-icon icon__uhost c14"
           type="uhost"
         />
       </span>
       <span
-        class="c15"
+        class="c21"
       >
         /
       </span>
       <a
-        class="c17 c18"
+        class="c23 c24"
         href="https://www.google.com"
         target="_blank"
       >
         google
       </a>
       <span
-        class="c15"
+        class="c21"
       >
         /
       </span>
       <span
-        class="c13 c16"
+        class="c19 c22"
       >
         reload
       </span>
       <span
-        class="c15"
+        class="c21"
       >
         /
       </span>
       <span
-        class="c13 c19"
+        class="c19 c25"
       >
         current
       </span>
@@ -1028,6 +1166,371 @@ exports[`Breadcrumb demo -- breadcrumb-separator 1`] = `
 </div>
 `;
 
+exports[`Breadcrumb demo -- breadcrumb-styleType 1`] = `
+.c3 {
+  vertical-align: baseline;
+}
+
+.c2 {
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  border-width: 1px;
+  border-style: solid;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 24px;
+  padding: 0 8px;
+  color: #6b798e;
+  border-color: #c3cad9;
+  -webkit-transition: all .16s cubic-bezier(.4,0,.2,1);
+  transition: all .16s cubic-bezier(.4,0,.2,1);
+  background: #fafafc;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.c2:hover {
+  background: #fff;
+  color: #3555f6;
+  border-color: #3555f6;
+}
+
+.c1 {
+  margin-right: 16px;
+  padding: 0 5px;
+}
+
+.c5 {
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  margin-right: 6px;
+  display: inline-block;
+  vertical-align: middle;
+  pointer-events: none;
+  color: #6b798e !important;
+  cursor: default;
+}
+
+.c7 {
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  margin-right: 6px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.c10 {
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  margin-right: 6px;
+  display: inline-block;
+  vertical-align: middle;
+  pointer-events: none;
+  color: #0a1633 !important;
+  font-weight: bold;
+}
+
+.c9 {
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 14px;
+  margin-right: 6px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.c9,
+.c9:hover,
+.c9:visited,
+.c9:link,
+.c9:active {
+  color: #6b798e;
+}
+
+.c6 {
+  font-size: 14px;
+  margin-right: 6px;
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: bold;
+  cursor: default;
+}
+
+.c0 {
+  font-size: 12px;
+  color: #6b798e;
+  vertical-align: baseline;
+}
+
+.c0:hover .c4 {
+  color: #3555f6;
+}
+
+.c0:hover .c8,
+.c0:hover .c8:hover,
+.c0:hover .c8:visited,
+.c0:hover .c8:link,
+.c0:hover .c8:active {
+  color: #3555f6;
+}
+
+.c11 {
+  font-size: 12px;
+  color: #6b798e;
+  vertical-align: baseline;
+}
+
+.c11 .c4:hover,
+.c11 .c8:hover {
+  color: #3555f6;
+}
+
+.c12 {
+  font-size: 12px;
+  color: #6b798e;
+  vertical-align: baseline;
+}
+
+.c12 .c4 {
+  color: #3555f6;
+}
+
+.c12 .c8,
+.c12 .c8:hover,
+.c12 .c8:visited,
+.c12 .c8:link,
+.c12 .c8:active {
+  color: #3555f6;
+}
+
+<div>
+  <div
+    class="demo-wrap"
+  >
+    <div
+      class="c0"
+    >
+      <button
+        class="c1 uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border-gray c2"
+        type="left"
+      >
+        <i
+          class="uc-fe-button-icon uc-fe-icon icon__left c3"
+          type="left"
+        />
+      </button>
+      <span
+        class="c4 c5"
+      >
+        <i
+          class="uc-fe-icon icon__home c3"
+          type="home"
+        />
+      </span>
+      <span
+        class="c6"
+      >
+        /
+      </span>
+      <span
+        class="c4 c7"
+      >
+        <i
+          class="uc-fe-icon icon__uhost c3"
+          type="uhost"
+        />
+      </span>
+      <span
+        class="c6"
+      >
+        /
+      </span>
+      <a
+        class="c8 c9"
+        href="https://www.google.com"
+        target="_blank"
+      >
+        google
+      </a>
+      <span
+        class="c6"
+      >
+        /
+      </span>
+      <span
+        class="c4 c7"
+      >
+        reload
+      </span>
+      <span
+        class="c6"
+      >
+        /
+      </span>
+      <span
+        class="c4 c10"
+      >
+        current
+      </span>
+    </div>
+  </div>
+  <div
+    class="demo-wrap"
+  >
+    <div
+      class="c11"
+    >
+      <button
+        class="c1 uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border-gray c2"
+        type="left"
+      >
+        <i
+          class="uc-fe-button-icon uc-fe-icon icon__left c3"
+          type="left"
+        />
+      </button>
+      <span
+        class="c4 c5"
+      >
+        <i
+          class="uc-fe-icon icon__home c3"
+          type="home"
+        />
+      </span>
+      <span
+        class="c6"
+      >
+        /
+      </span>
+      <span
+        class="c4 c7"
+      >
+        <i
+          class="uc-fe-icon icon__uhost c3"
+          type="uhost"
+        />
+      </span>
+      <span
+        class="c6"
+      >
+        /
+      </span>
+      <a
+        class="c8 c9"
+        href="https://www.google.com"
+        target="_blank"
+      >
+        google
+      </a>
+      <span
+        class="c6"
+      >
+        /
+      </span>
+      <span
+        class="c4 c7"
+      >
+        reload
+      </span>
+      <span
+        class="c6"
+      >
+        /
+      </span>
+      <span
+        class="c4 c10"
+      >
+        current
+      </span>
+    </div>
+  </div>
+  <div
+    class="demo-wrap"
+  >
+    <div
+      class="c12"
+    >
+      <button
+        class="c1 uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border-gray c2"
+        type="left"
+      >
+        <i
+          class="uc-fe-button-icon uc-fe-icon icon__left c3"
+          type="left"
+        />
+      </button>
+      <span
+        class="c4 c5"
+      >
+        <i
+          class="uc-fe-icon icon__home c3"
+          type="home"
+        />
+      </span>
+      <span
+        class="c6"
+      >
+        /
+      </span>
+      <span
+        class="c4 c7"
+      >
+        <i
+          class="uc-fe-icon icon__uhost c3"
+          type="uhost"
+        />
+      </span>
+      <span
+        class="c6"
+      >
+        /
+      </span>
+      <a
+        class="c8 c9"
+        href="https://www.google.com"
+        target="_blank"
+      >
+        google
+      </a>
+      <span
+        class="c6"
+      >
+        /
+      </span>
+      <span
+        class="c4 c7"
+      >
+        reload
+      </span>
+      <span
+        class="c6"
+      >
+        /
+      </span>
+      <span
+        class="c4 c10"
+      >
+        current
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Breadcrumb demo -- item 1`] = `
 .c20 {
   vertical-align: baseline;
@@ -1111,11 +1614,20 @@ exports[`Breadcrumb demo -- item 1`] = `
   color: #3555f6;
 }
 
-.c17:hover .c25,
-.c17:hover .c25:hover,
-.c17:hover .c25:visited,
-.c17:hover .c25:link,
-.c17:hover .c25:active {
+.c17:hover .c27,
+.c17:hover .c27:hover,
+.c17:hover .c27:visited,
+.c17:hover .c27:link,
+.c17:hover .c27:active {
+  color: #3555f6;
+}
+
+.c25 .c21:hover,
+.c25 .c27:hover {
+  color: #3555f6;
+}
+
+.c26 .c21 {
   color: #3555f6;
 }
 
@@ -1460,11 +1972,20 @@ exports[`Breadcrumb demo -- item-current 1`] = `
   color: #3555f6;
 }
 
-.c0:hover .c4,
-.c0:hover .c4:hover,
-.c0:hover .c4:visited,
-.c0:hover .c4:link,
-.c0:hover .c4:active {
+.c0:hover .c6,
+.c0:hover .c6:hover,
+.c0:hover .c6:visited,
+.c0:hover .c6:link,
+.c0:hover .c6:active {
+  color: #3555f6;
+}
+
+.c4 .c1:hover,
+.c4 .c6:hover {
+  color: #3555f6;
+}
+
+.c5 .c1 {
   color: #3555f6;
 }
 
@@ -1531,11 +2052,20 @@ exports[`Breadcrumb demo -- item-disabled 1`] = `
   color: #3555f6;
 }
 
-.c0:hover .c4,
-.c0:hover .c4:hover,
-.c0:hover .c4:visited,
-.c0:hover .c4:link,
-.c0:hover .c4:active {
+.c0:hover .c6,
+.c0:hover .c6:hover,
+.c0:hover .c6:visited,
+.c0:hover .c6:link,
+.c0:hover .c6:active {
+  color: #3555f6;
+}
+
+.c4 .c1:hover,
+.c4 .c6:hover {
+  color: #3555f6;
+}
+
+.c5 .c1 {
   color: #3555f6;
 }
 
@@ -1604,11 +2134,20 @@ exports[`Breadcrumb demo -- item-noAction 1`] = `
   color: #3555f6;
 }
 
-.c0:hover .c4,
-.c0:hover .c4:hover,
-.c0:hover .c4:visited,
-.c0:hover .c4:link,
-.c0:hover .c4:active {
+.c0:hover .c6,
+.c0:hover .c6:hover,
+.c0:hover .c6:visited,
+.c0:hover .c6:link,
+.c0:hover .c6:active {
+  color: #3555f6;
+}
+
+.c4 .c1:hover,
+.c4 .c6:hover {
+  color: #3555f6;
+}
+
+.c5 .c1 {
   color: #3555f6;
 }
 
