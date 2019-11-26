@@ -125,7 +125,7 @@ describe('Table', () => {
         expect(wrapper.find('.uc-fe-table-tbody i.icon__cbox-ed[disabled=true]').length).toBe(1);
 
         wrapper
-            .find('.uc-fe-table-tbody i.icon__circle')
+            .find('.uc-fe-table-tbody i.icon__cbox')
             .at(5)
             .simulate('click');
         expect(wrapper.find('.uc-fe-table-tbody i.icon__cbox-ed').length).toBe(1);

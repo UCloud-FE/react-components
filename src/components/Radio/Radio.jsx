@@ -78,7 +78,7 @@ class Radio extends Component {
                 {...rest}
                 onClick={(...args) => this.onClick(props, ...args)}
             >
-                <RadioIcon type={checked ? 'cbox-ed' : 'circle'} disabled={disabled} />
+                <RadioIcon type={checked ? 'cbox-ed' : 'cbox'} disabled={disabled} />
                 {children}
             </RadioWrap>
         );
