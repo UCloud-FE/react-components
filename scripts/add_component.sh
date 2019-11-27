@@ -14,8 +14,9 @@ mkdir "${component_path}/style"
 touch "${component_path}/index.jsx"
 touch "${component_path}/${component_name}.jsx"
 touch "${component_path}/${component_name}.md"
-touch "${component_path}/__demo__/base.jsx"
 touch "${component_path}/style/index.js"
+touch "${component_path}/__demo__/base.jsx"
+touch "${component_path}/__tests__/demo.test.js"
 
 # write default file content to components file
 echo "import ${component_name} from './${component_name}';
@@ -24,7 +25,6 @@ export default ${component_name};
 
 echo "import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
 
 class ${component_name} extends Component {
     render() {
@@ -48,7 +48,8 @@ echo "### 说明
 " > "${component_path}/${component_name}.md"
 
 echo "import React from 'react';
-import ${component_name} from 'components/${component_name}';
+
+import ${component_name} from 'src/components/${component_name}';
 
 // demo start
 const Demo = () => (
@@ -58,6 +59,10 @@ const Demo = () => (
 
 export default Demo;
 " > "${component_path}/__demo__/base.jsx"
+
+echo "import demoTest from 'tests/shared/demoTest';
+
+demoTest();" > "${component_path}/__tests__/demo.test.js"
 
 component_name_lowercase=`echo $component_name | tr 'A-Z' 'a-z'`;
 
