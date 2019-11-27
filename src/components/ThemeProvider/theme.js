@@ -6,7 +6,7 @@ import Menu from 'src/components/Menu/style/theme';
 import Switch from 'src/components/Switch/style/theme';
 import Tooltip from 'src/components/Tooltip/style/theme';
 
-import { generateColorTheme, defaultColorList } from './color';
+import { generateColorTheme, defaultColorList, TColorList, TColorMap } from './color';
 
 const defaultSizeTheme = {
     // default font-size
@@ -78,6 +78,8 @@ export const generateTheme = (originTheme = {}) => {
     let theme = {
         colorList,
         colorMap,
+        TColorList,
+        TColorMap,
         ...defaultSizeTheme,
         ...sizeTheme,
         materialVars
