@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
-import { IconWrap } from './style';
+import { IconWrap, prefixCls } from './style';
 
 /** 图标控件 */
 export default class Icon extends PureComponent {
@@ -14,7 +15,12 @@ export default class Icon extends PureComponent {
         className: PropTypes.string
     };
     render() {
-        const { ...rest } = this.props;
-        return <IconWrap {...rest} />;
+        const { type, spin, className, ...rest } = this.props;
+        return (
+            <IconWrap
+                className={classnames(prefixCls, `icon__${type}`, spin && `${prefixCls}-spin`, className)}
+                {...rest}
+            />
+        );
     }
 }
