@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.19"></a>
+
+## [0.5.19](https://github.com/UCloud-FE/react-components/compare/v0.5.18...v0.5.19) (2019-11-27)
+
+### Bug Fixes
+
+*   **Icon:** clean icon props to html ([aafd286](https://github.com/UCloud-FE/react-components/commit/aafd286)), closes [#185](https://github.com/UCloud-FE/react-components/issues/185)
+
+### Features
+
+*   **Breadcrumb:** add styleType ([26a62a0](https://github.com/UCloud-FE/react-components/commit/26a62a0)), closes [#183](https://github.com/UCloud-FE/react-components/issues/183)
+*   **Radio:** change icon for radio ([13f020a](https://github.com/UCloud-FE/react-components/commit/13f020a)), closes [#184](https://github.com/UCloud-FE/react-components/issues/184)
+*   **Steps:** add Steps ([09cbbec](https://github.com/UCloud-FE/react-components/commit/09cbbec)), closes [#186](https://github.com/UCloud-FE/react-components/issues/186)
+
 <a name="0.5.18"></a>
 
 ## [0.5.18](https://github.com/UCloud-FE/react-components/compare/v0.5.17...v0.5.18) (2019-11-19)
