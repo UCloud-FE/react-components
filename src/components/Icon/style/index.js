@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components';
-import { spinMixin } from 'style';
-import classnames from 'classnames';
 
+import { spinMixin } from 'src/style';
 import config from 'src/config';
 
 const { prefixCls: _prefixCls } = config;

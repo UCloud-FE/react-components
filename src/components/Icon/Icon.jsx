@@ -19,6 +19,7 @@ export default class Icon extends PureComponent {
         return (
             <IconWrap
                 className={classnames(prefixCls, `icon__${type}`, spin && `${prefixCls}-spin`, className)}
+                spin={spin}
                 {...rest}
             />
         );
