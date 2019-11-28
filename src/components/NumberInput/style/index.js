@@ -97,6 +97,7 @@ const propsMixin = ({
 
     ${Input} {
         line-height: ${HeightNumber[size] - 2}px;
+        height: ${HeightNumber[size] - 2}px;
 
         ${inlineBlockWithVerticalMixin};
 
