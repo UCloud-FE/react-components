@@ -97,6 +97,7 @@ const propsMixin = ({
 
     ${Input} {
         line-height: ${HeightNumber[size] - 2}px;
+        height: ${HeightNumber[size] - 2}px;
 
         ${inlineBlockWithVerticalMixin};
 
@@ -196,7 +197,6 @@ const propsMixin = ({
                 box-shadow: none;
                 background: transparent;
 
-                height: ${HeightNumber[size] - 2}px;
                 width: ${HeightNumber[size] + 6}px;
             }
             ${InputWrap} {
@@ -266,7 +266,7 @@ const propsMixin = ({
                 text-align: center;
                 border: 1px solid #dfe0f1;
                 margin: 0 4px;
-                height: ${HeightNumber[size] - 2}px;
+
                 width: ${HeightNumber[size] - 2}px;
                 box-shadow: ${materialVars.innerShadow};
                 transition: ${materialVars.transitionDown};
