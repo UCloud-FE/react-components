@@ -1,8 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import LinkIcon from './icons/Link';
-import { LinkWrapper } from './style';
+import { LinkWrapper, Icon } from './style';
 
 export default class Step extends PureComponent {
     static propTypes = {
@@ -13,7 +12,7 @@ export default class Step extends PureComponent {
         const { status, ...rest } = this.props;
         return (
             <LinkWrapper status={status} {...rest}>
-                <LinkIcon />
+                <Icon type="dottedRightArrow" />
             </LinkWrapper>
         );
     }

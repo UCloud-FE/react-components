@@ -1,20 +1,11 @@
 import styled, { css } from 'styled-components';
 
+import SvgIcon from 'src/components/SvgIcon';
 import { spinMixin, inlineBlockWithVerticalMixin } from 'src/style';
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
-export const SvgWrapper = styled.svg.attrs({
-    xmlns: 'http://www.w3.org/2000/svg'
-})`
-    width: 16px;
-    height: 16px;
-    ${inlineBlockWithVerticalMixin};
-
-    ${({ fillColor }) =>
-        fillColor &&
-        css`
-            fill: ${fillColor};
-        `};
+export const Icon = styled(SvgIcon).attrs({ size: '16px' })`
+    /* empty */
 `;
 
 const statusMixin = ({
@@ -119,8 +110,7 @@ const linkStatusMixin = ({
 const stepStatusMixin = ({
     status,
     theme: {
-        TColorMap: { text: TTextColorMap, border: TBorderColorMap, bg: TBgColorMap },
-        TColorList: { brand: TBrandColorList }
+        TColorMap: { text: TTextColorMap }
     }
 }) => {
     if (status === 'error') {

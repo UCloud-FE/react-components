@@ -1,21 +1,21 @@
 declare module '@ucloud-fe/react-components' {
-	import * as React from 'react';
+    import * as React from 'react';
 
-  	/** Base */
-  	// Icon
-  	interface IconProps {
-		type?: string;
-		spin?: boolean;
-		className?: string;
-		onClick?: React.MouseEventHandler<HTMLAnchorElement>;
-		style?: React.CSSProperties;
-  	}
-  	export class Icon extends React.PureComponent<IconProps, {}> {}
+    /** Base */
+    // Icon
+    interface IconProps {
+        type?: string;
+        spin?: boolean;
+        className?: string;
+        onClick?: React.MouseEventHandler<HTMLAnchorElement>;
+        style?: React.CSSProperties;
+    }
+    export class Icon extends React.PureComponent<IconProps, {}> {}
 
     // Button
-    type Size = 'sm'|'md'|'lg'
-    type ButtonType = 'primary'|'border'|'border-gray'
-    type ButtonShape = 'circle'
+    type Size = 'sm' | 'md' | 'lg';
+    type ButtonType = 'primary' | 'border' | 'border-gray';
+    type ButtonShape = 'circle';
 
     interface ButtonProps {
         styleType?: ButtonType;
@@ -32,9 +32,8 @@ declare module '@ucloud-fe/react-components' {
     }
     export class Button extends React.PureComponent<ButtonProps, {}> {}
 
+    /** Layout */
 
-
-    /** Layout */  
     // Row
     interface RowProps {
         type?: 'flex';
@@ -62,10 +61,10 @@ declare module '@ucloud-fe/react-components' {
 
     // Grid
     interface GridProps {
-        Row:typeof Row;
-        Col:typeof Col;
+        Row: typeof Row;
+        Col: typeof Col;
     }
-    export const Grid:GridProps;
+    export const Grid: GridProps;
 
     // Tabs Pane
     type StyleType = 'default' | 'ink';
@@ -103,18 +102,18 @@ declare module '@ucloud-fe/react-components' {
     }
 
     interface PanelProps {
-        title: React.ReactNode | Function
+        title: React.ReactNode | Function;
         children: React.ReactNode;
         onChange: Function;
         open: boolean;
         defaultOpen: boolean;
-        forceRender: boolean;        
+        forceRender: boolean;
         disabled: boolean;
         panelKey: any;
-        titlePosition: 'top'|'bottom';
+        titlePosition: 'top' | 'bottom';
         multiple: boolean;
     }
-    class Panel extends React.Component<PanelProps, {}>{}
+    class Panel extends React.Component<PanelProps, {}> {}
 
     export class Collapse extends React.Component<CollapseProps, {}> {
         static Panel: typeof Panel;
@@ -141,14 +140,14 @@ declare module '@ucloud-fe/react-components' {
         controllerCol?: LabelCol;
         className?: string;
     }
-    class FormItem extends React.Component<FormItemProps, {}>{}
+    class FormItem extends React.Component<FormItemProps, {}> {}
 
     export class Form extends React.Component<FormProps, {}> {
         static Item: typeof FormItem;
     }
 
     // Card
-    interface CardChildProps  extends React.HTMLAttributes<HTMLDivElement>{
+    interface CardChildProps extends React.HTMLAttributes<HTMLDivElement> {
         children?: React.ReactNode;
     }
 
@@ -165,7 +164,7 @@ declare module '@ucloud-fe/react-components' {
 
     interface CardProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-    export class Card extends React.PureComponent<CardProps, {}>{
+    export class Card extends React.PureComponent<CardProps, {}> {
         static Header: typeof CardHeader;
         static Content: typeof CardContent;
         static Footer: typeof CardFooter;
@@ -238,7 +237,7 @@ declare module '@ucloud-fe/react-components' {
         label?: string;
         value?: string;
     }
-    
+
     interface SelectProps {
         value?: string | number | string[] | number[];
         defaultValue?: string | number | string[] | number[];
@@ -256,7 +255,7 @@ declare module '@ucloud-fe/react-components' {
         style?: React.CSSProperties;
         className?: string;
     }
-    
+
     export class SelectOption extends React.Component<any, any> {}
 
     interface SelectGroupProps {
@@ -385,7 +384,7 @@ declare module '@ucloud-fe/react-components' {
     export class Upload extends React.Component<UploadProps, {}> {}
 
     // Calendar
-    
+
     interface CalendarRule {
         range?: Array<string | Date>;
         custom?: Function;
@@ -485,21 +484,21 @@ declare module '@ucloud-fe/react-components' {
     }
 
     interface MenuItemProps {
-        itemKey?:string;
-        key?:string;
+        itemKey?: string;
+        key?: string;
         styleType?: 'collapse' | 'popover';
-        style?:React.CSSProperties;
+        style?: React.CSSProperties;
     }
     export class MenuItem extends React.Component<MenuItemProps, {}> {}
 
     interface MenuSubMenuProps {
-        disabled?:boolean;
-        key?:string;
-        subMenuKey?:string;
-        title:string | React.ReactNode;
-        children?:Array<MenuItem | MenuSubMenu>;
-        onTitleClick?:Function;
-        style?:React.CSSProperties;
+        disabled?: boolean;
+        key?: string;
+        subMenuKey?: string;
+        title: string | React.ReactNode;
+        children?: Array<MenuItem | MenuSubMenu>;
+        onTitleClick?: Function;
+        style?: React.CSSProperties;
         styleType?: 'collapse' | 'popover';
     }
     export class MenuSubMenu extends React.Component<MenuSubMenuProps, {}> {}
@@ -517,7 +516,7 @@ declare module '@ucloud-fe/react-components' {
     export class ZForm extends React.Component<ZFormProps, {}> {
         static formDecorator?: any;
         static controllerDecorator?: any;
-        static formShape?: any
+        static formShape?: any;
     }
 
     /** display */
@@ -547,7 +546,7 @@ declare module '@ucloud-fe/react-components' {
     // Popover
     interface PopupAlign {
         points: string[];
-        offset: number[]
+        offset: number[];
     }
     interface PopoverProps {
         visible?: boolean;
@@ -569,7 +568,19 @@ declare module '@ucloud-fe/react-components' {
 
     // Tooltip
     type TooltipTheme = 'light' | 'dark';
-    type PlacementInfo = 'topLeft' | 'top' | 'topRight' | 'bottomLeft' | 'bottom' | 'bottomRight' | 'leftTop' | 'left' | 'leftBottom' | 'rightTop' | 'right' | 'rightBottom';
+    type PlacementInfo =
+        | 'topLeft'
+        | 'top'
+        | 'topRight'
+        | 'bottomLeft'
+        | 'bottom'
+        | 'bottomRight'
+        | 'leftTop'
+        | 'left'
+        | 'leftBottom'
+        | 'rightTop'
+        | 'right'
+        | 'rightBottom';
 
     interface TooltipProps {
         popup?: React.ReactNode;
@@ -580,7 +591,7 @@ declare module '@ucloud-fe/react-components' {
         getPopupContainer?: Function;
     }
     export class Tooltip extends React.Component<TooltipProps, {}> {
-        static Theme: TooltipTheme[]
+        static Theme: TooltipTheme[];
     }
 
     // Modal
@@ -607,9 +618,9 @@ declare module '@ucloud-fe/react-components' {
         maskStyle?: React.CSSProperties;
     }
     export class Modal extends React.Component<ModalProps, {}> {
-        static confirm : Function;
-        static alert : Function;
-        static info : Function;
+        static confirm: Function;
+        static alert: Function;
+        static info: Function;
     }
 
     // Table
@@ -667,7 +678,7 @@ declare module '@ucloud-fe/react-components' {
         contextMenu?: Function;
     }
 
-    interface SearchInputProps extends InputProps{
+    interface SearchInputProps extends InputProps {
         onSearch?: Function;
     }
     export class SearchInput extends React.Component<SearchInputProps, {}> {}

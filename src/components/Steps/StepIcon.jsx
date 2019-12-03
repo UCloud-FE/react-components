@@ -1,10 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import Loading from './Loading';
-import Right from './Right';
-import Wrong from './Wrong';
-import { IconWrapper, StepCountWrapper } from '../style';
+import { IconWrapper, StepCountWrapper, Icon } from './style';
 
 const STATUS = ['current', 'before', 'after', 'loading', 'error'];
 
@@ -18,20 +15,20 @@ export default class StepIcon extends PureComponent {
     renderContent = (status, content) => {
         switch (status) {
             case 'before':
-                return <Right />;
+                return <Icon type="tick" />;
             case 'after':
             case 'current':
                 return <StepCountWrapper>{content}</StepCountWrapper>;
             case 'loading':
-                return <Loading />;
+                return <Icon type="circleLoading" spin />;
             case 'error':
-                return <Wrong />;
+                return <Icon type="cross" />;
         }
     };
     render() {
         const { step, status, ...rest } = this.props;
         return (
-            <IconWrapper spin={status === 'loading'} status={status} {...rest}>
+            <IconWrapper status={status} {...rest}>
                 {this.renderContent(status, step)}
             </IconWrapper>
         );
