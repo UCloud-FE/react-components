@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.20"></a>
+
+## [0.5.20](https://github.com/UCloud-FE/react-components/compare/v0.5.19...v0.5.20) (2019-12-03)
+
+### Bug Fixes
+
+*   **NumberInput:** fix height in IE ([777abfe](https://github.com/UCloud-FE/react-components/commit/777abfe)), closes [#187](https://github.com/UCloud-FE/react-components/issues/187)
+
+### Features
+
+*   **Steps:** replace icon with svg icon ([450ea8a](https://github.com/UCloud-FE/react-components/commit/450ea8a)), closes [#189](https://github.com/UCloud-FE/react-components/issues/189)
+*   **SvgIcon:** add SvgIcon ([bde5d8f](https://github.com/UCloud-FE/react-components/commit/bde5d8f)), closes [#188](https://github.com/UCloud-FE/react-components/issues/188)
+
 <a name="0.5.19"></a>
 
 ## [0.5.19](https://github.com/UCloud-FE/react-components/compare/v0.5.18...v0.5.19) (2019-11-27)
