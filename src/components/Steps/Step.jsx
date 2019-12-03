@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import StepIcon from './icons/Step';
+import StepIcon from './StepIcon';
 import { StepWrapper, ContentWrapper, TitleWrapper, RemarkWrapper } from './style';
 
 export default class Step extends PureComponent {
