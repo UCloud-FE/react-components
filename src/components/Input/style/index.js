@@ -74,6 +74,7 @@ const themeMixin = ({
     ${disabled &&
         css`
             color: ${colorMap.disabled.text};
+            -webkit-text-fill-color: currentcolor;
             box-shadow: none;
             &,
             &:hover {

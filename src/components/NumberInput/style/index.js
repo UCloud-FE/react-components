@@ -93,6 +93,7 @@ const propsMixin = ({
         css`
             pointer-events: none;
             color: ${colorMap.disabled.text};
+            -webkit-text-fill-color: currentcolor;
         `};
 
     ${Input} {
