@@ -1,9 +1,28 @@
-import React, { Component } from 'react';
+import React, { Component, PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { CSSTransition } from 'react-transition-group';
 
-import { DrawerWrap } from './style';
+import SvgIcon from 'src/components/SvgIcon';
+import { DrawerWrap, CloseHandlerWrapper } from './style';
 
 const Placement = ['left', 'right', 'top', 'bottom'];
+
+class CloseHandler extends PureComponent {
+    static propTypes = {
+        visible: PropTypes.bool,
+        onClose: PropTypes.func.isRequired
+    };
+    render() {
+        const { visible, onClose } = this.props;
+        return (
+            <CSSTransition in={visible} unmountOnExit={false} classNames="uc-fe-animation-fade" timeout={10000}>
+                <CloseHandlerWrapper onClick={onClose}>
+                    <SvgIcon type="boldCross" color="white" />
+                </CloseHandlerWrapper>
+            </CSSTransition>
+        );
+    }
+}
 
 class Drawer extends Component {
     static propTypes = {
@@ -31,6 +50,8 @@ class Drawer extends Component {
         getContainer: PropTypes.func,
         /** 弹出层的z-index */
         zIndex: PropTypes.number,
+        /** 传入 false/null 隐藏关闭控件 */
+        closeHandler: PropTypes.oneOf([null, false]),
         /** @ignore */
         level: PropTypes.any
     };
@@ -38,9 +59,11 @@ class Drawer extends Component {
         visible: false,
         mask: true,
         maskClosable: true,
+        keyboard: false,
         onClose: () => {},
         level: null,
-        placement: 'right'
+        placement: 'right',
+        zIndex: 1010
     };
     state = {
         visible: this.props.visible
@@ -64,9 +87,13 @@ class Drawer extends Component {
         const { visible: visibleState } = this.state;
         return visible || visibleState;
     };
+    renderCloseHandler = ({ closeHandler, onClose, show, visible }) => {
+        if (!show) return null;
+        return closeHandler === undefined ? <CloseHandler visible={visible} onClose={onClose} /> : closeHandler;
+    };
     render() {
         // eslint-disable-next-line no-unused-vars
-        const { children, visible, mask, maskClosable, onClose, destroyOnClose, ...rest } = this.props;
+        const { children, visible, mask, maskClosable, onClose, destroyOnClose, closeHandler, ...rest } = this.props;
         const destory = this.getDestory();
         const show = this.getShow();
         return (
@@ -79,6 +106,7 @@ class Drawer extends Component {
                     handler={false}
                     afterVisibleChange={this.afterVisibleChange}
                     show={show}
+                    closeHandler={this.renderCloseHandler({ closeHandler, onClose, show, visible })}
                 >
                     {children}
                 </DrawerWrap>

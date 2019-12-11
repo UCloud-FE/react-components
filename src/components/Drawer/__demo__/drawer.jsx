@@ -1,13 +1,14 @@
 import React from 'react';
-import Drawer from 'components/Drawer';
-import Button from 'components/Button';
-import Radio from 'components/Radio';
-import Switch from 'components/Switch';
-import Form from 'components/Form';
-import NumberInput from 'components/NumberInput';
+
+import Drawer from 'src/components/Drawer';
+import Button from 'src/components/Button';
+import Radio from 'src/components/Radio';
+import Switch from 'src/components/Switch';
+import Form from 'src/components/Form';
+import NumberInput from 'src/components/NumberInput';
 
 // demo start
-const { Placement } = Drawer;
+const { Placement, defaultProps } = Drawer;
 class Container extends React.Component {
     constructor(props) {
         super(props);
@@ -20,15 +21,19 @@ class Container extends React.Component {
         return <div {...this.props} />;
     }
 }
+
 class Demo extends React.Component {
     constructor(props) {
         super(props);
+        const { visible, mask, maskClosable, keyboard, placement, zIndex } = defaultProps;
         this.state = {
-            visible: false,
-            mask: true,
-            maskClosable: true,
-            keyboard: false,
-            placement: Placement[1]
+            visible,
+            mask,
+            maskClosable,
+            keyboard,
+            placement,
+            zIndex,
+            closeHandler: true
         };
     }
     toggle(visible) {
@@ -43,7 +48,7 @@ class Demo extends React.Component {
         this.toggle(false);
     }
     render() {
-        const { visible, zIndex, mask, maskClosable, keyboard, destroyOnClose, placement } = this.state;
+        const { visible, zIndex, mask, maskClosable, keyboard, destroyOnClose, placement, closeHandler } = this.state;
         const itemLayout = {
             labelCol: {
                 span: 3
@@ -73,6 +78,9 @@ class Demo extends React.Component {
                     <Form.Item label="maskClosable" {...itemLayout}>
                         <Switch checked={maskClosable} onChange={maskClosable => this.setState({ maskClosable })} />
                     </Form.Item>
+                    <Form.Item label="closeHandler" {...itemLayout}>
+                        <Switch checked={closeHandler} onChange={closeHandler => this.setState({ closeHandler })} />
+                    </Form.Item>
                     <Form.Item label="keyboard" {...itemLayout}>
                         <Switch checked={keyboard} onChange={keyboard => this.setState({ keyboard })} />
                     </Form.Item>
@@ -91,6 +99,7 @@ class Demo extends React.Component {
                     <Drawer
                         {...(placement === 'left' || placement === 'right' ? { width: 200 } : { height: 200 })}
                         {...this.state}
+                        closeHandler={closeHandler ? undefined : false}
                         onClose={() => this.close()}
                     >
                         <Container>content</Container>

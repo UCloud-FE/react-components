@@ -14,6 +14,11 @@
 ```js {"codepath": "destroyOnClose.jsx"}
 ```
 
+*   closeHandler
+
+```js {"codepath": "closeHandler.jsx"}
+```
+
 *   getContainer
 
 ```js {"codepath": "getContainer.jsx"}

@@ -43,7 +43,8 @@ class Drawer extends React.PureComponent {
         onHandleClick: PropTypes.func,
         showMask: PropTypes.bool,
         maskStyle: PropTypes.object,
-        keyboard: PropTypes.bool
+        keyboard: PropTypes.bool,
+        closeHandler: PropTypes.node
     };
     static defaultProps = {
         prefixCls: 'drawer',
@@ -446,6 +447,7 @@ class Drawer extends React.PureComponent {
             showMask,
             maskStyle,
             keyboard,
+            closeHandler,
             ...props
         } = this.props;
         /* eslint-enable no-unused-vars */
@@ -526,6 +528,7 @@ class Drawer extends React.PureComponent {
                     >
                         {children}
                     </div>
+                    {closeHandler}
                     {handlerChildren}
                 </div>
             </div>
