@@ -15,7 +15,7 @@ class CloseHandler extends PureComponent {
     render() {
         const { visible, onClose } = this.props;
         return (
-            <CSSTransition in={visible} unmountOnExit={false} classNames="uc-fe-animation-fade" timeout={10000}>
+            <CSSTransition in={visible} unmountOnExit={false} classNames="uc-fe-animation-fade" timeout={100}>
                 <CloseHandlerWrapper onClick={onClose}>
                     <SvgIcon type="boldCross" color="white" />
                 </CloseHandlerWrapper>
