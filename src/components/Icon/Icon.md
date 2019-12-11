@@ -2,6 +2,7 @@
 
 *   传入其它原生的 props 会自动附加到最外层上，如 style、className 等
 *   所有支持图标地址点这里[UCloud Icon Font](https://console-font.pre.ucloudadmin.com/)
+*   配合 prefix，可使用其它字体图标库
 
 ### 演示
 

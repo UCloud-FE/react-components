@@ -11,14 +11,19 @@ export default class Icon extends PureComponent {
         type: PropTypes.string.isRequired,
         /** 是否旋转 */
         spin: PropTypes.bool,
+        /** 自定义 icon 类名前缀，使用自定义图标库时使用 */
+        prefix: PropTypes.string,
         /** @ignore */
         className: PropTypes.string
     };
+    static defaultProps = {
+        prefix: 'icon__'
+    };
     render() {
-        const { type, spin, className, ...rest } = this.props;
+        const { type, spin, className, prefix, ...rest } = this.props;
         return (
             <IconWrap
-                className={classnames(prefixCls, `icon__${type}`, spin && `${prefixCls}-spin`, className)}
+                className={classnames(prefixCls, `${prefix}${type}`, spin && `${prefixCls}-spin`, className)}
                 spin={spin}
                 {...rest}
             />
