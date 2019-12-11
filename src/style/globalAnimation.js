@@ -12,7 +12,8 @@ injectGlobal`
         &-fade {
             &-enter,
             &-appear,
-            &-leave {
+            &-leave,
+            &-exit {
                 animation-duration: ${animationDuration};
                 animation-fill-mode: both;
             }
@@ -20,7 +21,8 @@ injectGlobal`
             &-appear {
                 animation-name: ${fadeIn};
             }
-            &-leave {
+            &-leave,
+            &-exit {
                 animation-name: ${fadeOut};
             }
         }
@@ -29,7 +31,8 @@ injectGlobal`
         &-bounce {
             &-enter,
             &-appear,
-            &-leave {
+            &-leave,
+            &-exit {
                 animation-duration: ${animationDuration};
                 animation-fill-mode: both;
             }
@@ -37,7 +40,8 @@ injectGlobal`
             &-appear {
                 animation-name: ${bounceIn};
             }
-            &-leave {
+            &-leave,
+            &-exit {
                 animation-name: ${bounceOut};
             }
         }
@@ -46,7 +50,8 @@ injectGlobal`
         &-zoom {
             &-enter,
             &-appear,
-            &-leave {
+            &-leave,
+            &-exit {
                 animation-duration: ${animationDuration};
                 animation-fill-mode: both;
             }
@@ -54,7 +59,8 @@ injectGlobal`
             &-appear {
                 animation-name: ${zoomIn};
             }
-            &-leave {
+            &-leave,
+            &-exit {
                 animation-name: ${zoomOut};
             }
         }
@@ -62,7 +68,8 @@ injectGlobal`
         &-slide-down {
             &-enter,
             &-appear,
-            &-leave {
+            &-leave,
+            &-exit {
                 animation-duration: ${animationDuration};
                 animation-fill-mode: both;
             }
@@ -70,7 +77,8 @@ injectGlobal`
             &-appear {
                 animation-name: ${slideDownIn};
             }
-            &-leave {
+            &-leave,
+            &-exit {
                 animation-name: ${slideDownOut};
             }
         }

@@ -160,6 +160,20 @@ export const TColorMap = {
         success: TColorList.brand.success2,
         warning: TColorList.brand.warning2,
         error: TColorList.brand.error2
+    },
+    gradient: {
+        primary: `linear-gradient(135deg, ${TColorList.brand.primary6} 0%, ${TColorList.brand.primary8} 100%)`,
+        primaryHover: `linear-gradient(135deg, ${TColorList.brand.primary7} 0%, ${TColorList.brand.primary9} 100%)`
+    },
+    shadowButton: {
+        primary: `0 1px 3px -1px ${TColorList.brand.primary7}`,
+        primaryHover: `0 5px 8px -4px ${TColorList.brand.primary7}`
+    },
+    shadowBlock: {
+        leftLg: `-18px 0 16px -12px rgba(82,96,117,0.3)`,
+        rightLg: `-18px 0 16px -12px rgba(82,96,117,0.3)`,
+        topLg: `0 -18px 16px -12px rgba(82,96,117,0.3)`,
+        bottomLg: `0 18px 16px -12px rgba(82,96,117,0.3)`
     }
 };
 

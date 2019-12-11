@@ -5,12 +5,14 @@ import _ from 'lodash';
 import { SvgIconWrapper } from './style';
 import Tick from './icons/Tick';
 import Cross from './icons/Cross';
+import BoldCross from './icons/BoldCross';
 import CircleLoading from './icons/CircleLoading';
 import DottedRightArrow from './icons/DottedRightArrow';
 
 const IconMap = {
     tick: Tick,
     cross: Cross,
+    boldCross: BoldCross,
     circleLoading: CircleLoading,
     dottedRightArrow: DottedRightArrow
 };
