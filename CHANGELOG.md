@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.21"></a>
+
+## [0.5.21](https://github.com/UCloud-FE/react-components/compare/v0.5.20...v0.5.21) (2019-12-16)
+
+### Bug Fixes
+
+*   **Input:** fix input disabled color in safari ([dac4455](https://github.com/UCloud-FE/react-components/commit/dac4455)), closes [#190](https://github.com/UCloud-FE/react-components/issues/190)
+
+### Features
+
+*   **Drawer:** add close handler ([70e6324](https://github.com/UCloud-FE/react-components/commit/70e6324)), closes [#192](https://github.com/UCloud-FE/react-components/issues/192)
+*   **Icon:** add prefix to support custom font-icon ([611cff6](https://github.com/UCloud-FE/react-components/commit/611cff6)), closes [#191](https://github.com/UCloud-FE/react-components/issues/191)
+
 <a name="0.5.20"></a>
 
 ## [0.5.20](https://github.com/UCloud-FE/react-components/compare/v0.5.19...v0.5.20) (2019-12-03)
