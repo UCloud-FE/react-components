@@ -186,6 +186,7 @@ const propsMixin = ({
             ${hideHandler &&
                 css`
                     padding-right: 0;
+                    border-right-width: 1px;
                 `};
         `};
 
