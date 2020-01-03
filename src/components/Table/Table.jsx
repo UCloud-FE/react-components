@@ -707,7 +707,7 @@ class Table extends Component {
                                         ? [(first = false), renderLabel(filter.label, filter.multiple)]
                                         : [', ', renderLabel(filter.label, filter.multiple)]
                             )}
-                            ；
+                            {locale.semicolon}
                         </span>
                     )}
                     <span>
