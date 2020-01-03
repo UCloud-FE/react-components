@@ -22,6 +22,9 @@ export const SortIcon = styled(Icon)(
 export const selectIconCellCls = prefixCls + '-row-select-icon-cell';
 export const selectIconHeaderCls = prefixCls + '-select-icon-th';
 
+export const placeholderCellCls = prefixCls + '-placeholder-cell';
+export const placeholderHeaderCls = prefixCls + '-placeholder-th';
+
 const expandedRowContentCls = prefixCls + '-expanded-row-content';
 export const ExpandedRowContent = styled.div.attrs({
     className: expandedRowContentCls
@@ -179,6 +182,10 @@ export const TableWrap = styled.div(
             &.${selectIconHeaderCls} {
                 border-color: transparent;
             }
+            &.${placeholderHeaderCls} {
+                padding: 0px;
+                font-size: 0px;
+            }
         }
         &-row > td {
             position: relative;
@@ -191,6 +198,10 @@ export const TableWrap = styled.div(
             &.${prefixCls}-row-expand-icon-cell,
             &.${selectIconCellCls} {
                 border-color: transparent;
+            }
+            &.${placeholderCellCls} {
+                padding: 0;
+                font-size: 0;
             }
         }
 

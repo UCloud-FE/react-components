@@ -20,6 +20,7 @@ class Demo extends React.Component {
             showHeader: true,
             showPagination: true,
             zebraCrossing: false,
+            columnPlaceholder: false,
             scroll: {
                 x: false,
                 y: false
@@ -40,7 +41,8 @@ class Demo extends React.Component {
             showHeader,
             showPagination,
             scroll,
-            zebraCrossing
+            zebraCrossing,
+            columnPlaceholder
         } = this.state;
         let dataSource = [];
         dataSource.length = dataLength;
@@ -85,7 +87,7 @@ class Demo extends React.Component {
             delete columns[columnLength - 2].width;
         }
 
-        const tableProps = { columns, dataSource, showHeader, scroll, zebraCrossing };
+        const tableProps = { columns, dataSource, showHeader, scroll, zebraCrossing, columnPlaceholder };
         if (rowSelection) {
             tableProps.rowSelection = {
                 fixed: fixedFirstColumn
@@ -125,6 +127,12 @@ class Demo extends React.Component {
                         <Switch
                             checked={columnConfigButtom}
                             onChange={columnConfigButtom => this.setState({ columnConfigButtom })}
+                        />
+                    </Form.Item>
+                    <Form.Item label="columnPlaceholder" {...itemLayout}>
+                        <Switch
+                            checked={columnPlaceholder}
+                            onChange={columnPlaceholder => this.setState({ columnPlaceholder })}
                         />
                     </Form.Item>
                     <Form.Item label="hasError" {...itemLayout}>

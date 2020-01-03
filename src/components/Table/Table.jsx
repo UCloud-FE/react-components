@@ -1,9 +1,9 @@
 import React, { Component, PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
-import RcTable from 'rc-table';
 import createReactContext from 'create-react-context';
 
+import RcTable from 'src/libs/rc-table';
 import deprecatedLog from 'src/utils/deprecatedLog';
 import Pagination from 'src/components/Pagination';
 import Notice from 'src/components/Notice';
@@ -14,10 +14,21 @@ import Icon from 'src/components/Icon';
 import Popover from 'src/components/Popover';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
 
-import { prefixCls, TableWrap, PopupContainer, SortIcon, selectIconCellCls, selectIconHeaderCls } from './style';
+import {
+    prefixCls,
+    TableWrap,
+    PopupContainer,
+    SortIcon,
+    selectIconCellCls,
+    selectIconHeaderCls,
+    placeholderCellCls,
+    placeholderHeaderCls
+} from './style';
 import LOCALE from './locale/zh_CN';
 
 export const deprecatedLogForOnRowSelect = _.once(() => deprecatedLog('Table onRowSelect', 'rowSelection.onChange'));
+
+export const placeholderKey = 'table_column_width_placeholder';
 
 export const TableContext = createReactContext();
 
@@ -98,6 +109,11 @@ class Table extends Component {
         dataSource: PropTypes.array,
         /** 表列信息 */
         columns: PropTypes.array.isRequired,
+        /**
+         * 启用后会创建一个无宽度的空列，用作宽度占位，占位后宽度溢出便不会导致表格列被压缩，多出的宽度会被空列占用。
+         * 占位列 column.key 为 table_column_width_placeholder，使用中需注意避免重复 key
+         */
+        columnPlaceholder: PropTypes.bool,
         /** 表列配置项，非受控 */
         defaultColumnConfig: PropTypes.object,
         /** 表列配置修改回调 */
@@ -131,7 +147,10 @@ class Table extends Component {
          * @argument index - 表头行的index 表示存在分组时(column.children)的表头层级
          */
         onHeaderRow: PropTypes.func,
-        /** 列表可选选项配置 */
+        /**
+         * 列表可选选项配置.
+         * column.key 为 table_row_selection，使用中需注意避免重复 key
+         */
         rowSelection: PropTypes.oneOfType([
             PropTypes.shape({
                 /** 选框是否为fixed */
@@ -542,7 +561,7 @@ class Table extends Component {
         return key === undefined ? index : key;
     };
     getColumns = dataSourceOfCurrentPage => {
-        const { columns, rowSelection } = this.props;
+        const { columns, rowSelection, columnPlaceholder } = this.props;
         const { order: currentOrder = {}, selectedRowKeyMap, columnConfig } = this.state;
         let newColumns = columns.filter(column => {
             const { key } = column;
@@ -632,6 +651,16 @@ class Table extends Component {
                 }
             });
         }
+
+        if (columnPlaceholder) {
+            newColumns.push({
+                title: '',
+                key: placeholderKey,
+                onHeaderCell: () => ({ className: placeholderHeaderCls }),
+                onCell: () => ({ className: placeholderCellCls }),
+                render: () => null
+            });
+        }
         return newColumns;
     };
     getPagination = () => {
@@ -677,7 +706,8 @@ class Table extends Component {
                                     first
                                         ? [(first = false), renderLabel(filter.label, filter.multiple)]
                                         : [', ', renderLabel(filter.label, filter.multiple)]
-                            )}；
+                            )}
+                            ；
                         </span>
                     )}
                     <span>
@@ -766,6 +796,7 @@ class Table extends Component {
             components,
             onExpand,
             zebraCrossing,
+            columnPlaceholder,
             ...rest
         } = this.props;
         if (emptyContent === undefined) {
