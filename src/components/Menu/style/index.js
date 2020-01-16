@@ -30,8 +30,11 @@ const itemWrapMixin = ({ disabled, theme: { colorMap } }) => css`
     ${disabled &&
         css`
             &&& {
-                pointer-events: none;
                 color: ${colorMap.disabled.text};
+                cursor: not-allowed;
+            }
+            &&&:hover {
+                background: unset;
             }
         `};
 `;
