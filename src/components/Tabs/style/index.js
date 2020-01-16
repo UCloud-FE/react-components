@@ -95,9 +95,9 @@ export const TabsWrap = styled(RcTabs).attrs({
                 display: inline-block;
             }
 
-            &-tab-disabled {
+            &-tab-disabled,
+            &-tab-disabled:hover {
                 cursor: not-allowed;
-                pointer-events: none;
                 color: ${colorMap.disabled.text};
             }
 
@@ -109,6 +109,10 @@ export const TabsWrap = styled(RcTabs).attrs({
                     &-tab:hover {
                         background-color: ${tabsTheme['default:hover'].background};
                         border-color: ${tabsTheme['default:hover'].border};
+                    }
+                    &-tab-disabled:hover {
+                        background-color: unset;
+                        border-color: transparent;
                     }
                     &-tab-active,
                     &-tab-active:hover {
@@ -129,7 +133,11 @@ export const TabsWrap = styled(RcTabs).attrs({
                     &-tab:hover {
                         ${tabsTheme['ink:hover']};
                     }
-                    &-tab-active {
+                    &-tab-disabled:hover {
+                        color: ${colorMap.disabled.text};
+                    }
+                    &-tab-active,
+                    &-tab-active:hover {
                         ${tabsTheme['ink:active']};
                     }
                 }
@@ -150,6 +158,9 @@ export const TabsWrap = styled(RcTabs).attrs({
 
                                 &:hover {
                                     border-bottom-color: ${colorList.secondary4};
+                                }
+                                &-disabled:hover {
+                                    border-bottom-color: transparent;
                                 }
                                 &-active,
                                 &-active:hover {
@@ -180,6 +191,9 @@ export const TabsWrap = styled(RcTabs).attrs({
                                 &:hover {
                                     border-top-color: ${colorList.secondary4};
                                 }
+                                &-disabled:hover {
+                                    border-top-color: transparent;
+                                }
                                 &-active,
                                 &-active:hover {
                                     border-top-color: ${colorList.primary4};
@@ -208,6 +222,9 @@ export const TabsWrap = styled(RcTabs).attrs({
                             &-tab {
                                 &:hover {
                                     border-right-color: ${colorList.secondary4};
+                                }
+                                &-disabled:hover {
+                                    border-right-color: transparent;
                                 }
                                 &-active,
                                 &-active:hover {
@@ -239,6 +256,9 @@ export const TabsWrap = styled(RcTabs).attrs({
                             &-tab {
                                 &:hover {
                                     border-left-color: ${colorList.secondary4};
+                                }
+                                &-disabled:hover {
+                                    border-left-color: transparent;
                                 }
                                 &-active,
                                 &-active:hover {
