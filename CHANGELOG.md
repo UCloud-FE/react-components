@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.22"></a>
+
+## [0.5.22](https://github.com/UCloud-FE/react-components/compare/v0.5.21...v0.5.22) (2020-01-16)
+
+### Bug Fixes
+
+*   **NumberInput:** fix border when hideHandler ([7c1d626](https://github.com/UCloud-FE/react-components/commit/7c1d626)), closes [#193](https://github.com/UCloud-FE/react-components/issues/193)
+
+### Features
+
+*   **Menu:** remove pointer-event:none of menu item ([d40db99](https://github.com/UCloud-FE/react-components/commit/d40db99)), closes [#196](https://github.com/UCloud-FE/react-components/issues/196)
+*   **Table:** add columnPlaceholder ([d9dbfa1](https://github.com/UCloud-FE/react-components/commit/d9dbfa1)), closes [#194](https://github.com/UCloud-FE/react-components/issues/194)
+*   **Tabs:** remove point-event:none in disabled tab ([094fcf5](https://github.com/UCloud-FE/react-components/commit/094fcf5)), closes [#195](https://github.com/UCloud-FE/react-components/issues/195)
+
 <a name="0.5.21"></a>
 
 ## [0.5.21](https://github.com/UCloud-FE/react-components/compare/v0.5.20...v0.5.21) (2019-12-16)
