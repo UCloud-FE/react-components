@@ -42,6 +42,12 @@ export default class ActionList extends Component {
             );
         });
     };
+    handleDisabledClick = e => {
+        if (e) {
+            e.stopPropagation();
+            e.preventDefault();
+        }
+    };
     renderMenu = (list, size) => {
         if (!list.length) {
             return null;
@@ -57,9 +63,14 @@ export default class ActionList extends Component {
                         </Menu.SubMenu>
                     );
                 }
-                const { label, ...rest } = info;
+                const { label, disabled, onClick, ...rest } = info;
                 return (
-                    <Menu.Item key={i} {...rest}>
+                    <Menu.Item
+                        key={i}
+                        disabled={disabled}
+                        onClick={disabled ? this.handleDisabledClick : onClick}
+                        {...rest}
+                    >
                         {label}
                     </Menu.Item>
                 );
