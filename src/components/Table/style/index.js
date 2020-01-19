@@ -39,7 +39,15 @@ export const ExpandedRowContent = styled.div.attrs({
 );
 
 export const TableWrap = styled.div(
-    ({ theme: { colorMap, colorList, fontSize }, zebraCrossing }) => css`
+    ({
+        theme: {
+            colorMap,
+            colorList,
+            fontSize,
+            TColorMap: { bgDark: TBgDarkColorMap, borderLight: TBorderLightColorMap }
+        },
+        zebraCrossing
+    }) => css`
     ${clearFixMixin};
     padding: 15px;
 
@@ -112,17 +120,15 @@ export const TableWrap = styled.div(
             text-align: center;
             color: ${colorList.secondary1};
             cursor: pointer;
-
             &-cell {
                 width: 20px;
-            }
-
-            &:before {
-                content: '+';
             }
         }
         &-expand-icon-th {
             width: 20px;
+        }
+        &-row-expand-icon.${prefixCls}-row-collapsed:before {
+            content: '+';
         }
         &-row-expand-icon.${prefixCls}-row-expanded:before {
             content: '-';
@@ -181,6 +187,7 @@ export const TableWrap = styled.div(
             &.${prefixCls}-expand-icon-th,
             &.${selectIconHeaderCls} {
                 border-color: transparent;
+                padding-left: 0;
             }
             &.${placeholderHeaderCls} {
                 padding: 0px;
@@ -198,13 +205,35 @@ export const TableWrap = styled.div(
             &.${prefixCls}-row-expand-icon-cell,
             &.${selectIconCellCls} {
                 border-color: transparent;
+                background: transparent;
+                padding-left: 0;
             }
             &.${placeholderCellCls} {
                 padding: 0;
                 font-size: 0;
             }
         }
+        &-row-level-1 > td,
+        &-row-level-2 > td,
+        &-row-level-3 > td,
+        &-row-level-4 > td,
+        &-row-level-5 > td {
+            background: ${TBgDarkColorMap.default};
 
+            &.${prefixCls}-row-expand-icon-cell .${prefixCls}-row-spaced {
+                visibility: visible;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 10px;
+                width: 1px;
+                height: 100%;
+                background: ${TBorderLightColorMap.default};
+                padding: 0;
+                border: none;
+                border-bottom: 1px solid ${TBorderLightColorMap.default};
+            }
+        }
         &-fixed-header .${prefixCls}-scroll .${prefixCls}-header {
             overflow: scroll;
         }
