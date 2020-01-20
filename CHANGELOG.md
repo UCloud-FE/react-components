@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.23"></a>
+
+## [0.5.23](https://github.com/UCloud-FE/react-components/compare/v0.5.22...v0.5.23) (2020-01-20)
+
+### Features
+
+*   **Table:** add cable for table child td ([ec07d11](https://github.com/UCloud-FE/react-components/commit/ec07d11)), closes [#198](https://github.com/UCloud-FE/react-components/issues/198)
+*   **Table:** optimize ActionList disabled item ([13d2d72](https://github.com/UCloud-FE/react-components/commit/13d2d72)), closes [#197](https://github.com/UCloud-FE/react-components/issues/197)
+
 <a name="0.5.22"></a>
 
 ## [0.5.22](https://github.com/UCloud-FE/react-components/compare/v0.5.21...v0.5.22) (2020-01-16)
