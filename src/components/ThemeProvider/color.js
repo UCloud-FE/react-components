@@ -151,7 +151,8 @@ export const TColorMap = {
         disabled: TColorList.brand.disabled3,
         success: TColorList.brand.success3,
         warning: TColorList.brand.warning3,
-        error: TColorList.brand.error3
+        error: TColorList.brand.error3,
+        default: TColorList.brand.secondary2
     },
     border: {
         primary: TColorList.brand.primary8,
@@ -160,6 +161,9 @@ export const TColorMap = {
         success: TColorList.brand.success2,
         warning: TColorList.brand.warning2,
         error: TColorList.brand.error2
+    },
+    borderLight: {
+        default: TColorList.brand.secondary5
     },
     gradient: {
         primary: `linear-gradient(135deg, ${TColorList.brand.primary6} 0%, ${TColorList.brand.primary8} 100%)`,

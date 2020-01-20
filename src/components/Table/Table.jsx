@@ -625,7 +625,7 @@ class Table extends Component {
                         />
                     ),
                 key: 'table_row_selection',
-                width: 46,
+                width: 32,
                 fixed: rowSelection.fixed,
                 onHeaderCell: () => ({ className: selectIconHeaderCls }),
                 onCell: () => ({ className: selectIconCellCls }),
