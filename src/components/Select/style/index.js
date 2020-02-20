@@ -14,11 +14,11 @@ export const SelectSearchInput = styled(Input.Search)`
 `;
 
 export const Selector = styled.div`
-    border-radius: 2px;
     cursor: pointer;
     padding: 0 8px;
     padding-right: 28px;
     box-sizing: border-box;
+    border: none;
 `;
 
 export const Arrow = styled(Icon)`
@@ -35,11 +35,11 @@ export const OptionWrap = styled(Menu.Item)`
         `};
 `;
 export const MenuWrap = styled.div(
-    ({ theme: { colorMap, materialVars } }) => css`
+    ({ theme: { designTokens: DT, colorMap, materialVars } }) => css`
         background: ${colorMap.default.background};
-        border: 1px none ${colorMap.default.border};
+        border: ${DT.T_LINE_WIDTH_BASE} none ${colorMap.default.border};
         box-shadow: ${materialVars.whiteBoxShadowActive};
-        border-radius: 2px;
+        border-radius: ${DT.T_CORNER_SM};
         display: inline-block;
     `
 );
@@ -55,49 +55,42 @@ export const BlockMenu = styled(Menu)(
 );
 
 /* stylelint-disable no-duplicate-selectors */
-const propsMixin = ({
-    theme: { colorMap, colorList, Height, fontSize, materialVars, Select: selectTheme = {} },
-    size,
-    disabled
-}) => css`
-    font-size: ${fontSize};
-    color: ${colorList.black};
-    background-color: ${colorMap.default.background};
+const propsMixin = ({ theme: { designTokens: DT, Height, materialVars }, size, disabled }) => css`
+    font-size: ${DT.T_TYPO_FONT_SIZE_1};
+    color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
 
     ${Selector} {
         height: ${Height[size]};
         line-height: ${Height[size]};
-        border: 1px none ${colorMap.default.border};
-        box-shadow: ${materialVars.whiteBoxShadow};
+        color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+        background: ${DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT};
+        box-shadow: ${DT.T_SHADOW_BUTTON_DEFAULT};
+        border-radius: ${DT.T_CORNER_SM};
         transition: all ${materialVars.transitionUp};
 
         &:hover {
-            border-color: ${colorMap.active.border};
-            box-shadow: ${materialVars.whiteBoxShadowActive};
+            color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+            box-shadow: ${DT.T_SHADOW_BUTTON_HOVER};
         }
     }
 
     ${disabled &&
         css`
+            color: ${DT.T_COLOR_TEXT_DISABLED};
             pointer-events: none;
-            color: ${colorMap.disabled.text};
 
             ${Selector} {
-                background: ${colorMap.disabled.background};
-                border-color: ${colorMap.disabled.border};
+                border: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DISABLED_DARK};
+                background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
                 box-shadow: none;
-                border-style: solid;
             }
         `};
-
-    ${selectTheme['&']};
 `;
 /* stylelint-enable no-duplicate-selectors */
 
 export const SelectWrap = styled.div`
     box-sizing: border-box;
     position: relative;
-    font-size: 12px;
 
     ${inlineBlockWithVerticalMixin};
     ${propsMixin};

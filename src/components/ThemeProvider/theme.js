@@ -8,6 +8,8 @@ import Tooltip from 'src/components/Tooltip/style/theme';
 
 import { generateColorTheme, defaultColorList, TColorList, TColorMap } from './color';
 
+import { designTokens } from './designTokens';
+
 const defaultSizeTheme = {
     // default font-size
     fontSize: '12px',
@@ -68,6 +70,7 @@ export const extend = (source, target) => {
 };
 
 export const generateTheme = (originTheme = {}) => {
+    const { designTokens: originDesignTokens } = originTheme;
     const { colorList, colorMap } = generateColorTheme(originTheme.colorList);
     const sizeTheme = _.pick(originTheme, ['fontSize', 'titleFontSize', 'Height', 'Padding']);
     const materialVars = {
@@ -82,7 +85,11 @@ export const generateTheme = (originTheme = {}) => {
         TColorMap,
         ...defaultSizeTheme,
         ...sizeTheme,
-        materialVars
+        materialVars,
+        designTokens: {
+            ...designTokens,
+            ...originDesignTokens
+        }
     };
     theme.HeightNumber = _.mapValues(theme.Height, v => +v.replace('px', ''));
     theme.PaddingNumber = _.mapValues(theme.Padding, v => +v.replace('px', ''));

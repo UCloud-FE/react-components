@@ -15,8 +15,43 @@ const sizeMixin = ({ size, theme: { Height, Padding } }) => css`
     padding: 0 ${Padding[size]};
 `;
 
-const styleTypeMixin = ({ theme: { Button: buttonTheme = {}, PaddingNumber }, styleType, size }) => {
-    const styleTypeTheme = buttonTheme.styleType || {};
+const styleTypeMixin = ({ theme: { designTokens: DT, materialVars, PaddingNumber }, styleType, size }) => {
+    const styleTypeTheme = {
+        primary: {
+            color: DT.T_BUTTON_PRIMARY_COLOR_TEXT_DEFAULT,
+            border: 'none',
+            background: DT.T_BUTTON_PRIMARY_COLOR_BG_DEFAULT,
+            boxShadow: DT.T_SHADOW_BUTTON_PRIMARY,
+            transition: `all ${materialVars.transitionUp}`,
+            ':hover': {
+                background: DT.T_BUTTON_PRIMARY_COLOR_BG_HOVER,
+                boxShadow: DT.T_SHADOW_BUTTON_PRIMARY_HOVER
+            }
+        },
+        border: {
+            color: DT.T_COLOR_TEXT_DEFAULT_DARK,
+            background: DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT,
+            border: 'none',
+            boxShadow: DT.T_SHADOW_BUTTON_DEFAULT,
+            transition: `all ${materialVars.transitionUp}`,
+            ':hover': {
+                color: DT.T_COLOR_TEXT_PRIMARY_DEFAULT,
+                background: DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT,
+                boxShadow: DT.T_SHADOW_BUTTON_HOVER
+            }
+        },
+        'border-gray': {
+            color: DT.T_COLOR_TEXT_DEFAULT_LIGHT,
+            borderColor: DT.T_COLOR_LINE_DEFAULT_LIGHT,
+            background: DT.T_COLOR_BG_DEFAULT_LIGHT,
+            transition: `all ${materialVars.transitionFlat}`,
+            ':hover': {
+                color: DT.T_COLOR_TEXT_PRIMARY_DEFAULT,
+                borderColor: DT.T_COLOR_LINE_PRIMARY_HOVER,
+                background: DT.T_COLOR_BG_TRANSPARENT
+            }
+        }
+    };
     return css`
         ${styleTypeTheme[styleType]};
         ${styleType === 'border-gray' &&
@@ -34,7 +69,7 @@ const shapeCircleMixin = ({ size, theme: { Height } }) => css`
     width: ${Height[size]};
 `;
 
-const loadingMixin = css`
+const loadingMixin = ({ theme: { designTokens: DT } }) => css`
     position: relative;
     pointer-events: none;
 
@@ -44,8 +79,8 @@ const loadingMixin = css`
         left: -1px;
         bottom: -1px;
         right: -1px;
-        background: white;
-        opacity: 0.35;
+        background: ${DT.T_BUTTON_COMMON_COLOR_MASK};
+        opacity: 0.6;
         content: '';
         border-radius: inherit;
         z-index: 1;
@@ -53,27 +88,23 @@ const loadingMixin = css`
     }
 `;
 
-const disabledMixin = ({
-    theme: {
-        colorMap: { disabled: disabledColorMap }
-    }
-}) => css`
+const disabledMixin = ({ theme: { designTokens: DT } }) => css`
     && {
-        border-color: ${disabledColorMap.border};
-        background: ${disabledColorMap.background};
-        color: ${disabledColorMap.text};
+        border-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
+        background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
+        color: ${DT.T_COLOR_TEXT_DISABLED};
         cursor: not-allowed;
-        border-width: 1px;
+        border-width: ${DT.T_LINE_WIDTH_BASE};
         border-style: solid;
         box-shadow: none;
     }
 `;
 
-const checkedMixin = ({ theme: { colorList, materialVars } }) => css`
-    color: ${colorList.primary};
-    background: #fff;
-    border-color: ${colorList.primary};
-    box-shadow: ${materialVars.whiteBoxShadowActive};
+const checkedMixin = ({ theme: { designTokens: DT } }) => css`
+    color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+    background: ${DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT};
+    border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
+    box-shadow: ${DT.T_SHADOW_BUTTON_HOVER};
 `;
 
 // eslint-disable-next-line react/prop-types, no-unused-vars
@@ -94,17 +125,17 @@ export const ButtonWrap = styled(Button).attrs({
             checked && `${prefixCls}-checked`
         )
 })(
-    ({ theme: { fontSize, Button: buttonTheme = {} }, loading, shape, disabled, checked }) => css`
+    ({ theme: { designTokens: DT }, loading, shape, disabled, checked }) => css`
         margin: 0;
         box-sizing: border-box;
-        border-radius: 2px;
-        border-width: 1px;
+        border-radius: ${DT.T_CORNER_SM};
+        border-width: ${DT.T_LINE_WIDTH_BASE};
         border-style: solid;
         text-align: center;
         text-decoration: none;
         cursor: pointer;
         outline: none;
-        font-size: ${fontSize};
+        font-size: ${DT.T_TYPO_FONT_SIZE_1};
         ${inlineBlockWithVerticalMixin};
 
         ${sizeMixin};
@@ -113,8 +144,6 @@ export const ButtonWrap = styled(Button).attrs({
         ${loading && loadingMixin};
         ${checked && checkedMixin};
         ${disabled && disabledMixin};
-
-        ${buttonTheme['&']};
     `
 );
 
