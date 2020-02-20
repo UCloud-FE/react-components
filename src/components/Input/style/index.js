@@ -13,7 +13,6 @@ const prefixCls = _prefixCls + '-input';
 export const FixWrap = styled.span`
     vertical-align: middle;
     display: table-cell;
-    color: #636e83;
     /* auto fix fixwrap to min-width */
     width: 1px;
 `;
@@ -31,20 +30,22 @@ export const SearchIcon = styled(Icon)`
 `;
 
 const themeMixin = ({
-    theme: { colorMap, colorList, Height, HeightNumber, materialVars, Input: inputTheme = {} },
+    theme: { designTokens: DT, Height, HeightNumber, materialVars },
     disabled,
     size,
     focused,
     status
 }) => css`
-    color: ${colorList.black};
-    border: 1px solid #dfe0f1;
+    color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
+    border: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
     background: #fafafc;
+    border-radius: ${DT.T_CORNER_SM};
     height: ${Height[size]};
-    box-shadow: ${materialVars.innerShadow};
+    box-shadow: ${DT.T_SHADOW_INSET_1};
     transition: ${materialVars.transitionDown};
     :hover {
-        border-color: #c3cad9;
+        color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+        border-color: ${DT.T_COLOR_LINE_DEFAULT_DARK};
         background-color: #f6f6fb;
     }
 
@@ -52,14 +53,15 @@ const themeMixin = ({
         line-height: ${HeightNumber[size] - 2}px;
         height: ${HeightNumber[size] - 2}px;
         &::placeholder {
-            color: ${colorList.placeholder};
+            color: ${DT.T_COLOR_TEXT_REMARK_LIGHT};
         }
     }
     ${focused &&
         !disabled &&
         css`
             && {
-                border-color: ${colorMap.active.border};
+                color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+                border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
                 background-color: #f6f6fb;
             }
         `};
@@ -67,26 +69,28 @@ const themeMixin = ({
     ${status === 'error' &&
         css`
             &&& {
-                border-color: #f44336;
+                border-color: ${DT.T_COLOR_LINE_ERROR_DARK};
+                background-color: ${DT.T_COLOR_BG_ERROR_LIGHT};
             }
         `};
 
     ${disabled &&
         css`
-            color: ${colorMap.disabled.text};
-            -webkit-text-fill-color: currentcolor;
             box-shadow: none;
+            input::placeholder {
+                color: ${DT.T_COLOR_BG_DISABLED_LIGHT};
+            }
             &,
             &:hover {
-                background: ${colorMap.disabled.background};
-                border-color: ${colorMap.disabled.border};
+                color: ${DT.T_COLOR_TEXT_DISABLED};
+                -webkit-text-fill-color: currentcolor;
+                border-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
+                background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
             }
             ${SuffixWrap}, ${PrefixWrap} {
                 color: inherit;
             }
         `};
-
-    ${inputTheme['&']};
 `;
 
 export const TableWrap = styled.span`
@@ -100,7 +104,6 @@ export const InputWrap = styled.span.attrs({
     position: relative;
     ${inlineBlockWithVerticalMixin};
     box-sizing: border-box;
-    border-radius: 2px;
 
     ${({ disabled }) =>
         disabled &&

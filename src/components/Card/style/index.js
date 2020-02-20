@@ -57,26 +57,24 @@ export const FooterWrap = styled.div.attrs({
 `;
 
 /* stylelint-disable no-duplicate-selectors */
-const themeMixin = ({ theme: { colorList, colorMap, fontSize, Card: cardTheme = {} } }) => css`
-    background: ${colorList.white};
-    font-size: ${fontSize};
-    color: ${colorMap.default.text};
-    box-shadow: 0px 1px 0px 0px rgba(223, 224, 241, 1), 0px 1px 3px 0px rgba(182, 188, 224, 0.5),
-        0px 4px 12px 0px rgba(218, 221, 238, 0.5);
+const themeMixin = ({ theme: { designTokens: DT } }) => css`
+    background: ${DT.T_CARD_COLOR_BG_DEFAULT};
+    font-size: ${DT.T_TYPO_FONT_SIZE_1};
+    box-shadow: ${DT.T_SHADOW_BLOCK_DEFAULT_MD};
+    border-radius: ${DT.T_CORNER_LG};
     ${HeaderWrap} {
-        color: ${colorList.title};
-        font-size: 16px;
+        color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+        font-size: ${DT.T_TYPO_FONT_SIZE_3};
     }
     ${CommentWrap} {
-        color: ${colorList.subtitle};
-        font-size: ${fontSize};
+        color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
+        font-size: ${DT.T_TYPO_FONT_SIZE_1};
     }
     ${FooterWrap} {
-        border-top: 1px solid ${colorList.secondary5};
+        border-top: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
         padding: 16px 24px;
         margin-top: 24px;
     }
-    ${cardTheme['&']};
 `;
 /* stylelint-enable no-duplicate-selectors */
 
@@ -84,7 +82,6 @@ export const CardWrap = styled.div.attrs({
     className: prefixCls
 })`
     box-sizing: border-box;
-    border-radius: 4px;
     text-align: left;
     overflow: auto;
 

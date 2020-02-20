@@ -3,38 +3,43 @@ import PropTypes from 'prop-types';
 import { Resizable } from 'react-resizable';
 import styled, { css } from 'styled-components';
 
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
+
 // eslint-disable-next-line no-unused-vars
-const FilteredResizable = ({ resizing, ...rest }) => <Resizable {...rest} />;
-FilteredResizable.propTypes = { resizing: PropTypes.bool };
+const FilteredResizable = ({ resizing, theme, ...rest }) => <Resizable {...rest} />;
+FilteredResizable.propTypes = { resizing: PropTypes.bool, theme: PropTypes.any };
 
-const ResizableTHWrap = styled(FilteredResizable)`
-    position: relative;
-    box-sizing: border-box;
+const ResizableTHWrap = styled(FilteredResizable)(
+    ({ resizing, theme: { designTokens: DT } }) => css`
+        position: relative;
+        box-sizing: border-box;
 
-    .react-resizable-handle {
-        position: absolute;
-        width: 6px;
-        height: 100%;
-        bottom: 0;
-        right: 0;
-        cursor: col-resize;
-        border-right: 1px solid transparent;
-    }
-    :hover {
         .react-resizable-handle {
-            border-right-color: #d2d6ea;
+            position: absolute;
+            width: 6px;
+            height: 100%;
+            bottom: 0;
+            right: 0;
+            cursor: col-resize;
+            border-right: 1px solid transparent;
         }
-    }
-
-    ${({ resizing }) =>
-        resizing &&
-        css`
-            background: #fafafc;
+        :hover {
             .react-resizable-handle {
-                border-right-color: #d2d6ea;
+                border-right-color: ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
             }
-        `};
-`;
+        }
+
+        ${resizing &&
+            css`
+                background: ${DT.T_COLOR_BG_DEFAULT_LIGHT};
+                .react-resizable-handle {
+                    border-right-color: ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
+                }
+            `};
+    `
+);
+
+addDefaultThemeProps(ResizableTHWrap);
 
 export default class ResizableTH extends Component {
     static propTypes = {

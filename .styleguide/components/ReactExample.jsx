@@ -127,18 +127,13 @@ export default class ReactExample extends Component {
         const { head, example } = splitExampleCode(compiledCode);
         const initialState = this.getExampleInitialState(head);
         const exampleComponent = this.getExampleComponent(example);
-        const wrappedComponent =
-            theme === 'blue' ? (
+        const wrappedComponent = (
+            <ThemeProvider theme={themeList[theme]}>
                 <Wrapper onError={this.props.onError}>
                     <StateHolder component={exampleComponent} initialState={initialState} />
                 </Wrapper>
-            ) : (
-                <ThemeProvider theme={themeList[theme]}>
-                    <Wrapper onError={this.props.onError}>
-                        <StateHolder component={exampleComponent} initialState={initialState} />
-                    </Wrapper>
-                </ThemeProvider>
-            );
+            </ThemeProvider>
+        );
         return wrappedComponent;
     }
 }

@@ -41,24 +41,21 @@ export const ExpandedRowContent = styled.div.attrs({
 export const TableWrap = styled.div(
     ({
         theme: {
+            designTokens: DT,
             colorMap,
             colorList,
-            fontSize,
             TColorMap: { bgDark: TBgDarkColorMap, borderLight: TBorderLightColorMap }
         },
         zebraCrossing
     }) => css`
     ${clearFixMixin};
     padding: 15px;
+    color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+    border-radius: ${DT.T_CORNER_SM};
+    background-color: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
+    font-size: ${DT.T_TYPO_FONT_SIZE_1};
 
     .${prefixCls} {
-        border-radius: 2px;
-        background-color: ${colorMap.default.background};
-
-        &-body {
-            background-color: ${colorMap.default.background};
-        }
-
         &-scroll table {
             min-width: 100%;
         }
@@ -72,7 +69,6 @@ export const TableWrap = styled.div(
             cursor: pointer;
         }
         table {
-            font-size: ${fontSize};
             border-collapse: separate;
             border-spacing: 0;
             width: 100%;
@@ -89,7 +85,7 @@ export const TableWrap = styled.div(
             margin: 40px auto;
         }
         &-reset-link {
-            color: ${colorMap.active.text};
+            color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
             cursor: pointer;
         }
         &-fixed-left,
@@ -97,7 +93,6 @@ export const TableWrap = styled.div(
             position: absolute;
             top: 0;
             overflow: hidden;
-            background: ${colorMap.default.background};
 
             table {
                 width: auto;
@@ -105,11 +100,11 @@ export const TableWrap = styled.div(
         }
         &-fixed-left {
             left: 0;
-            box-shadow: 8px 0px 6px -6px rgba(162, 166, 191, 0.3);
+            box-shadow: ${DT.T_SHADOW_BLOCK_LEFT_SM};
         }
         &-fixed-right {
             right: 0;
-            box-shadow: -8px 0px 6px -6px rgba(162, 166, 191, 0.3);
+            box-shadow: ${DT.T_SHADOW_BLOCK_RIGHT_SM};
         }
         &-row-expand-icon {
             border: 1px solid ${colorMap.default.border};
@@ -178,8 +173,8 @@ export const TableWrap = styled.div(
         &-thead > tr > th {
             position: relative;
             vertical-align: middle;
-            border-bottom: 1px solid ${colorList.secondary4};
-            color: #6b798e;
+            border-bottom: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
+            color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
             padding: 12px;
             line-height: 22px;
             text-align: left;
@@ -197,8 +192,7 @@ export const TableWrap = styled.div(
         &-row > td {
             position: relative;
             vertical-align: middle;
-            border-bottom: 1px solid ${colorList.secondary5};
-            color: #0a1633;
+            border-bottom: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
             padding: 12px;
             line-height: 22px;
             text-align: left;
@@ -231,7 +225,7 @@ export const TableWrap = styled.div(
                 background: ${TBorderLightColorMap.default};
                 padding: 0;
                 border: none;
-                border-bottom: 1px solid ${TBorderLightColorMap.default};
+                border-bottom: 1px solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
             }
         }
         &-fixed-header .${prefixCls}-scroll .${prefixCls}-header {
@@ -241,7 +235,7 @@ export const TableWrap = styled.div(
             margin-bottom: 4px;
         }
         &-tip-wrap {
-            border-bottom: 1px solid ${colorMap.default.border};
+            border-bottom: ${DT.T_LINE_WIDTH_BASE} solid ${colorMap.default.border};
         }
         &-fixed-left .${prefixCls}-tip-wrap, &-fixed-right .${prefixCls}-tip-wrap {
             display: none;

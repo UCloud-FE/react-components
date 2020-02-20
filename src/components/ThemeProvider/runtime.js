@@ -6,7 +6,7 @@ const setRuntimeTheme = _runtimeTheme => {
     runtimeTheme = _runtimeTheme;
 };
 const getRuntimeTheme = () => {
-    return runtimeTheme;
+    return runtimeTheme || defaultTheme;
 };
 
 export { setRuntimeTheme, getRuntimeTheme };
