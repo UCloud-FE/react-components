@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.6.0"></a>
+
+# [0.6.0](https://github.com/UCloud-FE/react-components/compare/v0.5.23...v0.6.0) (2020-02-20)
+
+### Features
+
+*   **ThemeProvider:** change theme to designTokens ([37686fd](https://github.com/UCloud-FE/react-components/commit/37686fd)), closes [#200](https://github.com/UCloud-FE/react-components/issues/200)
+
 <a name="0.5.23"></a>
 
 ## [0.5.23](https://github.com/UCloud-FE/react-components/compare/v0.5.22...v0.5.23) (2020-01-20)
