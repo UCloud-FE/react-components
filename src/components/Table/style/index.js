@@ -4,7 +4,6 @@ import { clearFixMixin, inlineBlockWithVerticalMixin } from 'src/style';
 import Button from 'src/components/Button';
 import Notice from 'src/components/Notice';
 import Checkbox from 'src/components/Checkbox';
-import { Col } from 'src/components/Grid';
 import Icon from 'src/components/Icon';
 import config from 'src/config';
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
@@ -29,30 +28,22 @@ const expandedRowContentCls = prefixCls + '-expanded-row-content';
 export const ExpandedRowContent = styled.div.attrs({
     className: expandedRowContentCls
 })(
-    ({ theme: { colorList } }) => css`
-        border-bottom: 1px solid ${colorList.secondary5};
-        background: ${colorList.primary6};
-        color: ${colorList.secondary2};
+    ({ theme: { designTokens: DT } }) => css`
+        color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
+        border-bottom: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
+        background: ${DT.T_TABLE_ROW_COLOR_BG_DEFAULT};
         padding: 12px;
         line-height: 20px;
     `
 );
 
 export const TableWrap = styled.div(
-    ({
-        theme: {
-            designTokens: DT,
-            colorMap,
-            colorList,
-            TColorMap: { bgDark: TBgDarkColorMap, borderLight: TBorderLightColorMap }
-        },
-        zebraCrossing
-    }) => css`
+    ({ theme: { designTokens: DT }, zebraCrossing }) => css`
     ${clearFixMixin};
     padding: 15px;
     color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
     border-radius: ${DT.T_CORNER_SM};
-    background-color: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
+    background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
     font-size: ${DT.T_TYPO_FONT_SIZE_1};
 
     .${prefixCls} {
@@ -93,6 +84,7 @@ export const TableWrap = styled.div(
             position: absolute;
             top: 0;
             overflow: hidden;
+            background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
 
             table {
                 width: auto;
@@ -100,23 +92,27 @@ export const TableWrap = styled.div(
         }
         &-fixed-left {
             left: 0;
-            box-shadow: ${DT.T_SHADOW_BLOCK_LEFT_SM};
+            box-shadow: ${DT.T_SHADOW_BLOCK_RIGHT_SM};
         }
         &-fixed-right {
             right: 0;
-            box-shadow: ${DT.T_SHADOW_BLOCK_RIGHT_SM};
+            box-shadow: ${DT.T_SHADOW_BLOCK_LEFT_SM};
         }
         &-row-expand-icon {
-            border: 1px solid ${colorMap.default.border};
+            color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
+            border: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
             ${inlineBlockWithVerticalMixin};
             width: 18px;
             height: 18px;
             line-height: 18px;
             text-align: center;
-            color: ${colorList.secondary1};
             cursor: pointer;
             &-cell {
                 width: 20px;
+            }
+            :hover {
+                color: ${DT.T_COLOR_TEXT_PRIMARY_HOVER};
+                border-color: ${DT.T_COLOR_LINE_PRIMARY_HOVER}
             }
         }
         &-expand-icon-th {
@@ -212,7 +208,7 @@ export const TableWrap = styled.div(
         &-row-level-3 > td,
         &-row-level-4 > td,
         &-row-level-5 > td {
-            background: ${TBgDarkColorMap.default};
+            background: ${DT.T_TABLE_ROW_COLOR_BG_DEFAULT};
 
             &.${prefixCls}-row-expand-icon-cell .${prefixCls}-row-spaced {
                 visibility: visible;
@@ -222,10 +218,11 @@ export const TableWrap = styled.div(
                 left: 10px;
                 width: 1px;
                 height: 100%;
-                background: ${TBorderLightColorMap.default};
+                background: ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
                 padding: 0;
                 border: none;
-                border-bottom: 1px solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
+                border-bottom: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
+                cursor: default;
             }
         }
         &-fixed-header .${prefixCls}-scroll .${prefixCls}-header {
@@ -235,16 +232,16 @@ export const TableWrap = styled.div(
             margin-bottom: 4px;
         }
         &-tip-wrap {
-            border-bottom: ${DT.T_LINE_WIDTH_BASE} solid ${colorMap.default.border};
+            border-bottom: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
         }
         &-fixed-left .${prefixCls}-tip-wrap, &-fixed-right .${prefixCls}-tip-wrap {
             display: none;
         }
 
         table > tbody > .${prefixCls}-row-hover > td, table > tbody > .${prefixCls}-row:hover > td {
-            background-color: ${colorMap.active.background};
+            background: ${DT.T_TABLE_ROW_COLOR_BG_HOVER};
             &.${prefixCls}-row-expand-icon-cell, &.${selectIconCellCls} {
-                background-color: unset;
+                background: unset;
             }
         }
 
@@ -262,9 +259,9 @@ export const TableWrap = styled.div(
         ${zebraCrossing &&
             css`
                 &-row:nth-child(odd) > td {
-                    background-color: #f7f9fc;
+                    background: ${DT.T_TABLE_ROW_COLOR_BG_DEFAULT};
                     &.${prefixCls}-row-expand-icon-cell, &.${selectIconCellCls} {
-                        background-color: unset;
+                        background: unset;
                     }
                 }
             `};
@@ -282,7 +279,7 @@ export const ColumnConfigWrap = styled.span`
 `;
 
 export const ColumnConfigButtonWrap = styled(Button)`
-    border-color: ${({ theme: { colorMap } }) => colorMap.default.border};
+    /* empty */
 `;
 
 export const ColumnConfigModalNotice = styled(Notice)`
@@ -297,13 +294,8 @@ export const ColumnConfigModalCheckbox = styled(Checkbox)`
     padding: 12px 0;
 `;
 
-export const ColumnConfigModalSplitLine = styled(Col)`
-    height: 1px;
-    background: ${({ theme: { colorMap } }) => colorMap.default.background};
-`;
-
 export const ActionButton = styled(Button)`
     margin-right: 4px;
 `;
 
-addDefaultThemeProps(TableWrap, ColumnConfigButtonWrap, ColumnConfigModalSplitLine, SortIcon, ExpandedRowContent);
+addDefaultThemeProps(TableWrap, ColumnConfigButtonWrap, SortIcon, ExpandedRowContent);

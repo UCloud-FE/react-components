@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import _ from 'lodash';
 
 import { inlineBlockWithVerticalMixin, calculateSize } from 'src/style';
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
@@ -49,40 +50,78 @@ export const Line = styled.span`
 `;
 
 /* stylelint-disable no-duplicate-selectors */
-const propsMixin = ({ theme: { colorMap, Height, Switch: switchTheme }, disabled, size, checked }) => {
-    const { Width, Padding, BtnSize, LineLeft, LineHeight, BorderWidth } = switchTheme;
-    return css`
-        background: ${colorMap.default.background};
-
-        &:hover {
-            border-color: ${colorMap.active.border};
+const propsMixin = ({ theme: { designTokens: DT, Height }, disabled, size, checked }) => {
+    const switchTheme = {
+        Width: {
+            sm: '45px',
+            md: '80px',
+            lg: '100px'
+        },
+        Padding: {
+            sm: '1px',
+            md: '4px',
+            lg: '4px'
+        },
+        BorderWidth: {
+            sm: '0',
+            md: '1px',
+            lg: '1px'
+        },
+        LineLeft: {
+            sm: '13px',
+            md: '13px',
+            lg: '18px'
         }
+    };
+    switchTheme.BtnSize = {};
+    switchTheme.LineHeight = {};
+    _.each(['sm', 'md', 'lg'], size => {
+        const height = +Height[size].replace('px', '');
+        const padding = +switchTheme.Padding[size].replace('px', '');
+        const borderWidth = +switchTheme.BorderWidth[size].replace('px', '');
+        const btnSize = height - padding * 2 - borderWidth * 2 + 2;
+        const lineHeight = btnSize - 10;
+        switchTheme.BtnSize[size] = btnSize + 'px';
+        switchTheme.LineHeight[size] = lineHeight + 'px';
+    });
+    const { Width, Padding, BtnSize, LineLeft, LineHeight, BorderWidth } = switchTheme;
+
+    return css`
+        background: ${DT.T_SWITCH_COLOR_BG_OUTER};
 
         height: ${Height[size]};
         width: ${Width[size]};
         padding: ${Padding[size]};
-        border: 1px solid ${colorMap.default.border};
+        border: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
         border-width: ${BorderWidth[size]};
 
-        ${ButtonWrap} {
-            background-color: ${colorMap.default.background};
-            box-shadow: 0 0.5px 0.5px ${colorMap.default.border};
-            border: 1px solid ${colorMap.default.border};
+        ${!disabled &&
+            css`
+                :hover {
+                    border-color: ${DT.T_COLOR_LINE_PRIMARY_HOVER};
+                    ${ButtonWrap} {
+                        box-shadow: ${DT.T_SHADOW_BUTTON_HOVER};
+                    }
+                }
+            `} ${ButtonWrap} {
+            background: ${DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT};
+            box-shadow: ${DT.T_SHADOW_BUTTON_DEFAULT};
 
             width: ${BtnSize[size]};
             height: ${BtnSize[size]};
         }
 
         ${Line} {
-            background-color: ${switchTheme.Line.background};
+            background: ${DT.T_COLOR_BG_ERROR_DARK};
             left: ${LineLeft[size]};
             height: ${LineHeight[size]};
         }
 
         ${Inner} {
-            border: 1px solid ${switchTheme['Inner'].border};
-            background-color: ${switchTheme['Inner'].background};
-            color: ${switchTheme['Inner'].text};
+            color: ${DT.T_SWITCH_COLOR_TEXT_OFF};
+            border: 1px solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
+            box-shadow: ${DT.T_SHADOW_INSET_1};
+            background: ${DT.T_SWITCH_COLOR_BG_INNER_OFF};
         }
 
         ${size === 'sm' &&
@@ -120,9 +159,10 @@ const propsMixin = ({ theme: { colorMap, Height, Switch: switchTheme }, disabled
         ${checked
             ? css`
                   ${/* sc-sel */ Inner} {
-                      border-color: ${switchTheme['Inner:checked'].border};
-                      background-color: ${switchTheme['Inner:checked'].background};
-                      color: ${switchTheme['Inner:checked'].text};
+                      color: ${DT.T_SWITCH_COLOR_TEXT_ON};
+                      border-color: ${DT.T_COLOR_LINE_SUCCESS_LIGHT};
+                      box-shadow: ${DT.T_SHADOW_INSET_1};
+                      background: ${DT.T_SWITCH_COLOR_BG_INNER_ON};
                   }
 
                   ${/* sc-sel */ ButtonWrap} {
@@ -131,7 +171,7 @@ const propsMixin = ({ theme: { colorMap, Height, Switch: switchTheme }, disabled
                   }
 
                   ${Line} {
-                      background: ${switchTheme['Line:checked'].background};
+                      background: ${DT.T_COLOR_BG_SUCCESS_DARK};
                   }
 
                   ${OffText} {
@@ -146,16 +186,18 @@ const propsMixin = ({ theme: { colorMap, Height, Switch: switchTheme }, disabled
 
         ${disabled &&
             css`
-                border-color: ${colorMap.disabled.border};
+                border-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
                 cursor: not-allowed;
 
                 ${Inner} {
-                    border-color: ${switchTheme['Inner:disabled'].border};
-                    background-color: ${switchTheme['Inner:disabled'].background};
+                    color: ${DT.T_COLOR_TEXT_DISABLED};
+                    border-color: ${DT.T_COLOR_LINE_DISABLED_LIGHT};
+                    box-shadow: none;
+                    background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
                 }
 
                 ${Line} {
-                    background-color: ${switchTheme['Line:disabled'].background};
+                    background: ${DT.T_COLOR_BG_DISABLED_DARK};
                 }
             `};
     `;
@@ -164,7 +206,6 @@ const propsMixin = ({ theme: { colorMap, Height, Switch: switchTheme }, disabled
 export const SwitchWrap = styled.div`
     position: relative;
     border-radius: 2px;
-    overflow: hidden;
     box-sizing: border-box;
     cursor: pointer;
     transition: all 0.3s;

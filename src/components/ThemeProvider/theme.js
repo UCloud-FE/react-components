@@ -1,10 +1,6 @@
 import _ from 'lodash';
 
 import Tabs from 'src/components/Tabs/style/theme';
-import Button from 'src/components/Button/style/theme';
-import Menu from 'src/components/Menu/style/theme';
-import Switch from 'src/components/Switch/style/theme';
-import Tooltip from 'src/components/Tooltip/style/theme';
 
 import { generateColorTheme, defaultColorList, TColorList, TColorMap } from './color';
 
@@ -47,11 +43,7 @@ const defaultMaterialVars = {
 };
 
 const componentThemeGeneratorMap = {
-    Button,
-    Tabs,
-    Menu,
-    Switch,
-    Tooltip
+    Tabs
 };
 
 export const extend = (source, target) => {

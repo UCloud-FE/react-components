@@ -247,7 +247,7 @@ class Select extends Component {
         const { visible } = this.state;
         const { size, disabled } = this.props;
         return (
-            <Selector size={size} disabled={disabled}>
+            <Selector styleType="border" size={size} disabled={disabled}>
                 <div key="content">{this.renderContent()}</div>
                 <Arrow key="icon" type={visible ? 'up' : 'down'} />
             </Selector>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Input from 'components/Input';
+import Input from 'src/components/Input';
 
 import { TableContext } from './Table';
 

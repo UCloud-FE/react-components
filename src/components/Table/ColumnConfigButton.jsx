@@ -9,7 +9,6 @@ import {
     ColumnConfigModalNotice,
     ColumnConfigModalCheckboxGroup,
     ColumnConfigModalCheckbox,
-    ColumnConfigModalSplitLine,
     ColumnConfigWrap,
     ColumnConfigButtonWrap
 } from './style';
@@ -91,7 +90,7 @@ class ConfigModal extends PureComponent {
                     }}
                 >
                     <Grid.Row>
-                        {columns.map((column, index) => {
+                        {columns.map(column => {
                             const { key, title } = column;
                             const dom = [
                                 <Grid.Col key={key} span={3}>
@@ -104,11 +103,6 @@ class ConfigModal extends PureComponent {
                                     </ColumnConfigModalCheckbox>
                                 </Grid.Col>
                             ];
-                            if (index % 4 === 0 && index !== 0) {
-                                dom.unshift(
-                                    <ColumnConfigModalSplitLine key={`column-split-line-${index}`} span={12} />
-                                );
-                            }
                             return dom;
                         })}
                     </Grid.Row>

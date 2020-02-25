@@ -48,13 +48,39 @@ export const CloseIcon = styled(Icon)`
     cursor: pointer;
 `;
 
-const themeMixin = ({ styleType, theme: { colorMap } }) => {
-    const color = colorMap[map[styleType]];
+const themeMixin = ({ styleType, theme: { designTokens: DT } }) => {
+    const style = map[styleType];
+    const colorMap = {
+        info: {
+            border: DT.T_COLOR_LINE_NOTICE_LIGHT,
+            background: DT.T_COLOR_BG_NOTICE_LIGHT,
+            icon: DT.T_COLOR_TEXT_PRIMARY_DEFAULT
+        },
+        success: {
+            border: DT.T_COLOR_LINE_SUCCESS_LIGHT,
+            background: DT.T_COLOR_BG_SUCCESS_LIGHT,
+            icon: DT.T_COLOR_TEXT_SUCCESS
+        },
+        warning: {
+            border: DT.T_COLOR_LINE_WARNING_LIGHT,
+            background: DT.T_COLOR_BG_WARNING_LIGHT,
+            icon: DT.T_COLOR_TEXT_WARNING
+        },
+        error: {
+            border: DT.T_COLOR_LINE_ERROR_LIGHT,
+            background: DT.T_COLOR_BG_ERROR_LIGHT,
+            icon: DT.T_COLOR_TEXT_ERROR
+        }
+    }[style];
     return css`
-        background-color: ${color.background};
-        border: 1px solid ${color.border};
-        ${/* sc-sel */ NoticeIcon} {
-            color: ${colorMap[map[styleType]].icon};
+        color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+        border: ${DT.T_LINE_WIDTH_BASE} solid ${colorMap.border};
+        background: ${colorMap.background};
+        ${NoticeIcon} {
+            color: ${colorMap.icon};
+        }
+        ${ActionWrap} {
+            color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
         }
     `;
 };

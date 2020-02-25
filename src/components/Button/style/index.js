@@ -15,7 +15,7 @@ const sizeMixin = ({ size, theme: { Height, Padding } }) => css`
     padding: 0 ${Padding[size]};
 `;
 
-const styleTypeMixin = ({ theme: { designTokens: DT, materialVars, PaddingNumber }, styleType, size }) => {
+const styleTypeMixin = ({ theme: { designTokens: DT, materialVars, PaddingNumber }, styleType, checkAble, size }) => {
     const styleTypeTheme = {
         primary: {
             color: DT.T_BUTTON_PRIMARY_COLOR_TEXT_DEFAULT,
@@ -48,7 +48,7 @@ const styleTypeMixin = ({ theme: { designTokens: DT, materialVars, PaddingNumber
             ':hover': {
                 color: DT.T_COLOR_TEXT_PRIMARY_DEFAULT,
                 borderColor: DT.T_COLOR_LINE_PRIMARY_HOVER,
-                background: DT.T_COLOR_BG_TRANSPARENT
+                background: checkAble ? DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT : DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT
             }
         }
     };
@@ -90,7 +90,7 @@ const loadingMixin = ({ theme: { designTokens: DT } }) => css`
 
 const disabledMixin = ({ theme: { designTokens: DT } }) => css`
     && {
-        border-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
+        border-color: ${DT.T_COLOR_LINE_DISABLED_LIGHT};
         background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
         color: ${DT.T_COLOR_TEXT_DISABLED};
         cursor: not-allowed;
@@ -108,7 +108,7 @@ const checkedMixin = ({ theme: { designTokens: DT } }) => css`
 `;
 
 // eslint-disable-next-line react/prop-types, no-unused-vars
-const Button = ({ loading, styleType, theme, disabled, fakeDisabled, onClick, ...rest }) => (
+const Button = ({ loading, styleType, theme, disabled, fakeDisabled, onClick, checkAble, ...rest }) => (
     <button disabled={disabled && !fakeDisabled} onClick={!disabled ? onClick : null} {...rest} />
 );
 

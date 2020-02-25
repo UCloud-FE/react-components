@@ -5,6 +5,7 @@ import Collapse from 'src/components/Collapse';
 import Checkbox from 'src/components/Checkbox';
 import Icon from 'src/components/Icon';
 import config from 'src/config';
+import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
 const { prefixCls: _prefixCls } = config;
 const prefixCls = _prefixCls + '-menu';
@@ -23,14 +24,14 @@ const ellipsisMixin = css`
     text-overflow: ellipsis;
     overflow: hidden;
 `;
-const itemWrapMixin = ({ disabled, theme: { colorMap } }) => css`
+const itemWrapMixin = ({ disabled, theme: { designTokens: DT } }) => css`
     display: block;
     cursor: pointer;
 
     ${disabled &&
         css`
             &&& {
-                color: ${colorMap.disabled.text};
+                color: ${DT.T_COLOR_TEXT_DISABLED};
                 cursor: not-allowed;
             }
             &&&:hover {
@@ -96,7 +97,7 @@ export const SelectAllCheckbox = styled(Checkbox).attrs({
 );
 /* stylelint-disable no-duplicate-selectors */
 
-const menuWrapMixin = ({ theme: { materialVars = {} } }) => css`
+const menuWrapMixin = () => css`
     display: inline-block;
     box-sizing: border-box;
     max-width: 360px;
@@ -106,7 +107,6 @@ const menuWrapMixin = ({ theme: { materialVars = {} } }) => css`
     border-radius: 2px;
     text-align: left;
     border-style: none !important;
-    box-shadow: ${materialVars.whiteBoxShadow};
 `;
 
 export const PopupContentWrap = styled.div.attrs({
@@ -116,21 +116,33 @@ export const PopupContentWrap = styled.div.attrs({
     ${menuWrapMixin};
 `;
 
-export const MenuWrap = styled(Collapse)(
-    ({ theme: { colorMap, Menu: menuTheme = {}, menuThemeType: themeType = 'light', fontSize } }) => {
-        return css`
-            line-height: 26px;
-            font-size: ${fontSize};
-            ${menuWrapMixin};
+export const MenuWrap = styled(Collapse)(({ theme: { designTokens: DT, fontSize } }) => {
+    return css`
+        line-height: 26px;
+        font-size: ${fontSize};
+        ${menuWrapMixin};
 
-            &,
-            ${/*sc-sel*/ PopupContentWrap} {
-                border: 1px solid ${colorMap.default.border};
+        &,
+        ${/*sc-sel*/ PopupContentWrap} {
+            color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+            border: none;
+            box-shadow: ${DT.T_SHADOW_BLOCK_DEFAULT_LG};
+            background: ${DT.T_COLOR_BG_MENU};
+        }
+
+        .${prefixCls}-item, .${prefixCls}-submenu-title-content, .${prefixCls}-selectall-checkbox {
+            :hover {
+                background: ${DT.T_COLOR_BG_DEFAULT_HOVER};
             }
-
-            ${menuTheme['themeType'] && menuTheme['themeType'][themeType] && menuTheme['themeType'][themeType]['&']};
-            ${menuTheme['&']};
-        `;
-    }
-);
+        }
+        .${prefixCls}-item-selected, .${prefixCls}-submenu-title-selected, .${prefixCls}-selectall-checkbox-checked {
+            color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+        }
+        .${prefixCls}-submenu-title-content-collapse {
+            border-color: ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
+        }
+    `;
+});
 /* stylelint-enable no-duplicate-selectors */
+
+addDefaultThemeProps(MenuWrap, ItemWrap, SubMenuTitleWrap, SelectAllCheckbox, TitleContentWrap);

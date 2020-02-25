@@ -32,6 +32,11 @@ export default class Button extends PureComponent {
         type: PropTypes.string,
         /**
          * @ignore
+         * 是否可选中，样式会有区别
+         */
+        checkAble: PropTypes.bool,
+        /**
+         * @ignore
          * 选中状态
          */
         checked: PropTypes.bool,
