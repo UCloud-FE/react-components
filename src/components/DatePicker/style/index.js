@@ -43,15 +43,15 @@ export const PickerWrap = styled(RcPickerWrap).attrs({
 export const DateWrap = styled.div.attrs({
     className: `${prefixCls}-date-wrap`
 })(
-    ({ theme: { Height, HeightNumber, colorMap, materialVars }, size }) => css`
+    ({ theme: { Height, HeightNumber, designTokens: DT }, size }) => css`
         height: ${Height[size]};
         line-height: ${HeightNumber[size] - 2}px;
         padding: 1px 8px;
-        border: 0px solid ${colorMap.default.border};
         border-radius: 2px;
         cursor: pointer;
         box-sizing: border-box;
-        box-shadow: ${materialVars.whiteBoxShadow};
+        box-shadow: ${DT.T_SHADOW_BUTTON_DEFAULT};
+        background: ${DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT};
         ${inlineBlockWithVerticalMixin};
     `
 );
@@ -81,21 +81,19 @@ export const PickerContainer = styled.div.attrs({
     className: ({ disabled, isMonth }) =>
         classnames(prefixCls, isMonth && `${prefixCls}-month`, disabled && `${prefixCls}-disabled`)
 })(
-    ({ theme: { colorMap, DatePicker: datePickerTheme = {} }, disabled }) => css`
+    ({ theme: { designTokens: DT }, disabled }) => css`
         ${inlineBlockWithVerticalMixin};
 
         ${disabled &&
             css`
-                ${/*sc-sel*/ DateWrap} {
+                ${DateWrap} {
                     pointer-events: none;
-                    color: ${colorMap.disabled.text};
-                    border-color: ${colorMap.disabled.border};
-                    background: ${colorMap.disabled.background};
+                    color: ${DT.T_COLOR_TEXT_DISABLED};
+                    border: 1px solid ${DT.T_COLOR_LINE_DISABLED_DARK};
+                    background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
                     box-shadow: none;
-                    border-width: 1px;
                 }
             `};
-        ${datePickerTheme['&']};
     `
 );
 
@@ -110,13 +108,12 @@ export const RangeContainer = styled.div.attrs({
 export const RangePopup = styled.div.attrs({
     className: `${prefixCls}-range-popup`
 })(
-    ({ theme: { colorMap, materialVars } }) => css`
-        background: ${colorMap.default.background};
+    ({ theme: { designTokens: DT } }) => css`
+        background: ${DT.T_COLOR_BG_MENU};
         display: inline-block;
-        border: 0 solid ${colorMap.default.border};
         border-radius: 2px;
         padding: 0;
-        box-shadow: ${materialVars.whiteBoxShadowActive};
+        box-shadow: ${DT.T_SHADOW_BLOCK_DEFAULT_LG};
     `
 );
 
@@ -132,18 +129,17 @@ export const RangeDateWrap = styled.div.attrs({
             disabled && `${prefixCls}-range-date-wrap-disabled`
         )
 })(
-    ({ theme: { Height, HeightNumber, colorMap, materialVars }, size, readonly, disabled }) => css`
-        border: 0 solid ${colorMap.default.border};
+    ({ theme: { Height, HeightNumber, designTokens: DT }, size, readonly, disabled }) => css`
         padding: 0 8px;
         border-radius: 2px;
         cursor: pointer;
         box-sizing: border-box;
         height: ${Height[size]};
         line-height: ${HeightNumber[size] - 2}px;
-        color: ${colorMap.default.text};
-        box-shadow: ${materialVars.whiteBoxShadow};
+        color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+        box-shadow: ${DT.T_SHADOW_BUTTON_DEFAULT};
         :hover {
-            box-shadow: ${materialVars.whiteBoxShadowActive};
+            box-shadow: ${DT.T_SHADOW_BUTTON_HOVER};
         }
 
         ${inlineBlockWithVerticalMixin};
@@ -163,20 +159,22 @@ export const RangeDateWrap = styled.div.attrs({
         ${disabled &&
             css`
                 pointer-events: none;
-                background: ${colorMap.disabled.background};
-                border-color: ${colorMap.disabled.border};
-                border-width: 1px;
-                color: ${colorMap.disabled.text};
+                background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
+                border: 1px solid ${DT.T_COLOR_LINE_DISABLED_DARK};
+                color: ${DT.T_COLOR_TEXT_DISABLED};
                 box-shadow: none;
+                ${RangeDateSeparator} {
+                    background: ${DT.T_COLOR_LINE_DEFAULT_DARK};
+                }
             `};
     `
 );
 export const RangeDateSeparator = styled.span(
-    ({ theme: { colorMap } }) => css`
+    ({ theme: { designTokens: DT } }) => css`
         margin: 0 4px;
         width: 12px;
         height: 1px;
-        background: ${colorMap.default.border};
+        background: ${DT.T_COLOR_LINE_DEFAULT_DARK};
 
         ${inlineBlockWithVerticalMixin};
     `
@@ -195,25 +193,25 @@ export const RangePopupConfirmButton = styled(Button)`
 `;
 
 export const RangePopupFooter = styled.div(
-    ({ theme: { colorMap } }) => css`
+    ({ theme: { designTokens: DT } }) => css`
         padding: 10px;
         margin-top: 10px;
-        border-top: 1px solid ${colorMap.default.border};
+        border-top: 1px solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
         ${clearFixMixin};
     `
 );
 
 export const RangePopupTip = styled.p(
-    ({ theme: { colorMap } }) => css`
-        color: ${colorMap.default.text};
+    ({ theme: { designTokens: DT } }) => css`
+        color: ${DT.T_COLOR_TEXT_REMARK_DARK};
         display: inline-block;
         line-height: 28px;
     `
 );
 
 export const RangePopupError = styled.p(
-    ({ theme: { colorMap } }) => css`
-        color: ${colorMap.error.text};
+    ({ theme: { designTokens: DT } }) => css`
+        color: ${DT.T_COLOR_TEXT_ERROR};
         display: inline-block;
         line-height: 28px;
     `

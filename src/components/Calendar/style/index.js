@@ -1,3 +1,4 @@
+import React from 'react';
 import styled, { css } from 'styled-components';
 import RcCalendar from 'rc-calendar';
 import RcMonthCalendar from 'rc-calendar/lib/MonthCalendar';
@@ -9,15 +10,17 @@ const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-calendar';
 
 /* stylelint-disable no-duplicate-selectors */
-export const calendarMixin = ({ theme: { colorMap, colorList, Calendar: calendarTheme = {} } }) => css`
+export const calendarMixin = ({ theme: { designTokens: DT } }) => css`
     &.${prefixCls}, .${prefixCls} {
         outline: none;
         position: relative;
-        box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+        color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
+        box-shadow: ${DT.T_SHADOW_BLOCK_DEFAULT_LG};
+        background: ${DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT};
     }
 
     .${prefixCls}-month-panel, .${prefixCls}-year-panel, .${prefixCls}-decade-panel {
-        background: ${colorMap.default.background};
+        background: ${DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT};
     }
 
     .${prefixCls}-header,
@@ -27,7 +30,7 @@ export const calendarMixin = ({ theme: { colorMap, colorList, Calendar: calendar
         width: 100%;
         height: 38px;
         line-height: 38px;
-        background-color: ${colorList.primary};
+        background: ${DT.T_COLOR_BG_PRIMARY_1};
         user-select: none;
     }
     .${prefixCls}-month-header-wrap {
@@ -49,7 +52,7 @@ export const calendarMixin = ({ theme: { colorMap, colorList, Calendar: calendar
         cursor: pointer;
         padding: 0 8px;
         display: inline-block;
-        color: ${colorList.white};
+        color: ${DT.T_BUTTON_PRIMARY_COLOR_TEXT_DEFAULT};
         box-sizing: border-box;
         position: absolute;
         font-family: Arial, 'Hiragino Sans GB', 'Microsoft Yahei', 'Microsoft Sans Serif', sans-serif;
@@ -106,13 +109,13 @@ export const calendarMixin = ({ theme: { colorMap, colorList, Calendar: calendar
         width: 150px;
         text-align: center;
         display: block;
-        color: ${colorList.white};
+        color: ${DT.T_BUTTON_PRIMARY_COLOR_TEXT_DEFAULT};
     }
 
     .${prefixCls}-body {
         width: 100%;
         padding: 0 5px 5px;
-        background-color: ${colorMap.default.background};
+        background-color: ${DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT};
         box-sizing: border-box;
     }
     .${prefixCls}-table,
@@ -124,7 +127,7 @@ export const calendarMixin = ({ theme: { colorMap, colorList, Calendar: calendar
 
     .${prefixCls}-table > thead,
     .${prefixCls}-month-panel-table > thead {
-        border-bottom: 1px solid ${colorMap.default.border};
+        border-bottom: 1px solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
     }
     .${prefixCls}-column-header,
         .${prefixCls}-cell,
@@ -156,7 +159,7 @@ export const calendarMixin = ({ theme: { colorMap, colorList, Calendar: calendar
         .${prefixCls}-month-panel-next-year-cell,
         .${prefixCls}-year-panel-next-decade-cell,
         .${prefixCls}-decade-panel-next-century-cell {
-        color: ${colorMap.disabled.text};
+        color: ${DT.T_COLOR_TEXT_DISABLED};
     }
 
     .${prefixCls}-date-panel {
@@ -173,7 +176,7 @@ export const calendarMixin = ({ theme: { colorMap, colorList, Calendar: calendar
 
     .${prefixCls}-today, .${prefixCls}-month-panel-current-cell {
         position: relative;
-        color: ${colorMap.active.text};
+        color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
     }
 
     .${prefixCls}-today::after, .${prefixCls}-month-panel-current-cell::after {
@@ -192,7 +195,7 @@ export const calendarMixin = ({ theme: { colorMap, colorList, Calendar: calendar
         display: none;
     }
     .${prefixCls}-selected-day .${prefixCls}-date {
-        background: ${colorMap.active.background};
+        background: ${DT.T_COLOR_BG_PRIMARY_5};
     }
     .${prefixCls}-selected-date
         .${prefixCls}-date,
@@ -202,23 +205,31 @@ export const calendarMixin = ({ theme: { colorMap, colorList, Calendar: calendar
         .${prefixCls}-year-panel-year,
         .${prefixCls}-decade-panel-selected-cell
         .${prefixCls}-decade-panel-decade {
-        color: ${colorList.white};
-        background: ${colorList.primary};
+        color: ${DT.T_BUTTON_PRIMARY_COLOR_TEXT_DEFAULT};
+        background: ${DT.T_COLOR_BG_PRIMARY_1};
     }
     .${prefixCls}-disabled-cell, .${prefixCls}-month-panel-cell-disabled {
-        color: ${colorMap.disabled.text};
+        color: ${DT.T_COLOR_TEXT_DISABLED};
     }
     .${prefixCls}-month-panel-year-select-arrow, .${prefixCls}-year-panel-decade-select-arrow {
         display: none;
     }
-    ${calendarTheme['&']};
 `;
 
-export const CalendarWrap = styled(RcCalendar)`
+// eslint-disable-next-line no-unused-vars,react/prop-types
+const CleanPropsRcCalendar = ({ theme, ...rest }) => {
+    return <RcCalendar {...rest} />;
+};
+// eslint-disable-next-line no-unused-vars,react/prop-types
+const CleanPropsRcMonthCalendar = ({ theme, ...rest }) => {
+    return <RcMonthCalendar {...rest} />;
+};
+
+export const CalendarWrap = styled(CleanPropsRcCalendar)`
     ${calendarMixin};
 `;
 
-export const MonthCalendarWrap = styled(RcMonthCalendar)`
+export const MonthCalendarWrap = styled(CleanPropsRcMonthCalendar)`
     ${calendarMixin};
     .${prefixCls}-month-panel-body {
         padding-top: 5px;

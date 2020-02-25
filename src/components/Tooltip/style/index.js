@@ -13,17 +13,29 @@ const borderWidth = '1px';
 
 export const tooltipPopupClassName = prefixCls + '-popup';
 
-export const ContentWrap = styled.div(({ theme: { Tooltip: tooltipTheme }, themeType }) => {
-    tooltipTheme = tooltipTheme[themeType];
+export const ContentWrap = styled.div(({ theme: { designTokens: DT }, themeType }) => {
+    let map = {
+        light: {
+            text: DT.T_COLOR_TEXT_DEFAULT_DARK,
+            border: DT.T_POPOVER_COLOR_LINE_LIGHT,
+            background: DT.T_POPOVER_COLOR_BG_LIGHT
+        },
+        dark: {
+            text: DT.T_COLOR_TEXT_WHITE,
+            border: DT.T_POPOVER_COLOR_BG_DARK,
+            background: DT.T_POPOVER_COLOR_BG_DARK
+        }
+    };
+    map = map[themeType];
     return css`
         padding: 8px 10px;
         text-align: left;
         text-decoration: none;
         border-radius: 3px;
 
-        background-color: ${tooltipTheme.content.background};
-        border: ${borderWidth} solid ${tooltipTheme.content.border};
-        color: ${tooltipTheme.content.text};
+        color: ${map.text};
+        border: ${DT.T_LINE_WIDTH_BASE} solid ${map.border};
+        background: ${map.background};
     `;
 });
 
@@ -154,14 +166,24 @@ injectGlobal`
     }
 `;
 
-export const TooltipWrap = styled.div(({ theme: { Tooltip: tooltipTheme }, themeType }) => {
-    tooltipTheme = tooltipTheme[themeType];
+export const TooltipWrap = styled.div(({ theme: { designTokens: DT }, themeType }) => {
+    let map = {
+        light: {
+            border: DT.T_POPOVER_COLOR_LINE_LIGHT,
+            background: DT.T_POPOVER_COLOR_BG_LIGHT
+        },
+        dark: {
+            border: DT.T_POPOVER_COLOR_BG_DARK,
+            background: DT.T_POPOVER_COLOR_BG_DARK
+        }
+    };
+    map = map[themeType];
     return css`
         ${Arrow} {
-            border-color: ${tooltipTheme.arrow.border};
+            border-color: ${map.border};
         }
         ${ArrowInner} {
-            border-color: ${tooltipTheme.arrow.background};
+            border-color: ${map.background};
         }
     `;
 });

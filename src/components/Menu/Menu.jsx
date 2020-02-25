@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
-import { ThemeProvider } from 'styled-components';
 import uncontrolledDecorator from 'src/decorators/uncontrolled';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
-import defaultTheme from 'src/components/ThemeProvider/theme';
 import deprecatedLog from 'src/utils/deprecatedLog';
 
 import { MenuWrap, SelectAllCheckbox } from './style';
 import LOCALE from './locale/zh_CN';
 
-const deprecatedLogForTheme = _.once(() => deprecatedLog('Menu theme', 'themeType'));
+const deprecatedLogForTheme = _.once(() => deprecatedLog('Menu theme', 'ThemeProvider'));
+const deprecatedLogForThemeType = _.once(() => deprecatedLog('Menu themeType', 'ThemeProvider'));
 
 export const rootPrefix = 'root';
 
@@ -65,21 +64,20 @@ class Menu extends Component {
         /** 是否显示全选，多选时有效 */
         showSelectAll: PropTypes.bool,
         /** @ignore */
+        theme: PropTypes.any,
+        /** @ignore */
+        themeType: PropTypes.any,
+        /** @ignore */
         children: PropTypes.node,
         /** @ignore */
         itemTree: PropTypes.any,
-        /** @ignore */
-        theme: PropTypes.oneOf(['light', 'dark']),
-        /** @ignore */
-        themeType: PropTypes.oneOf(['light', 'dark']),
         /** @ignore */
         locale: PropTypes.object
     };
     static defaultProps = {
         defaultSelectedKeys: [],
         onChange: () => {},
-        selectable: true,
-        themeType: 'light'
+        selectable: true
     };
     constructor(props) {
         super(props);
@@ -91,6 +89,9 @@ class Menu extends Component {
         }
         if ('theme' in props) {
             deprecatedLogForTheme();
+        }
+        if ('themeType' in props) {
+            deprecatedLogForThemeType();
         }
     }
     componentWillReceiveProps(nextProps) {
@@ -225,16 +226,13 @@ class Menu extends Component {
             showSelectAll,
             collapse,
             children,
-            theme: _themeType,
+            theme,
             themeType,
             itemTree,
             locale,
             ...rest
         } = this.props;
         /* eslint-enable no-unused-vars */
-        if (_themeType) {
-            themeType = _themeType;
-        }
         const allSelectedStatus = this.getAllSelectedStatus(rootPrefix);
         const selectAllCheckbox = multiple &&
             showSelectAll && (
@@ -246,20 +244,10 @@ class Menu extends Component {
                 </SelectAllCheckbox>
             );
         return (
-            <ThemeProvider
-                theme={theme => {
-                    const usedTheme = _.isEmpty(theme) ? defaultTheme : theme;
-                    return {
-                        ...usedTheme,
-                        menuThemeType: themeType
-                    };
-                }}
-            >
-                <MenuWrap {...rest} {...collapse}>
-                    {selectAllCheckbox}
-                    {this.renderChildren(children, rootPrefix)}
-                </MenuWrap>
-            </ThemeProvider>
+            <MenuWrap {...rest} {...collapse}>
+                {selectAllCheckbox}
+                {this.renderChildren(children, rootPrefix)}
+            </MenuWrap>
         );
     }
 }

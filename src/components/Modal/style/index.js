@@ -19,7 +19,6 @@ injectGlobal`
             right: 0;
             left: 0;
             bottom: 0;
-            background-color: rgba(0, 0, 0, 0.7);
             height: 100%;
             z-index: 1010;
             &-hidden {
@@ -42,7 +41,7 @@ class RcDialogWrap extends Component {
 }
 
 export const ModalWrap = styled(RcDialogWrap)(
-    ({ theme: { colorMap, fontSize } }) => css`
+    ({ theme: { designTokens: DT, fontSize } }) => css`
         position: fixed;
         overflow: auto;
         top: 0;
@@ -52,20 +51,20 @@ export const ModalWrap = styled(RcDialogWrap)(
         z-index: 1010;
         -webkit-overflow-scrolling: touch;
         outline: 0;
+        background: ${DT.T_MODAL_COLOR_LAYER_DEFAULT};
 
         .${prefixCls} {
             padding: 0;
             line-height: 1;
             font-size: ${fontSize};
-            color: ${colorMap.default.text};
+            color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
             position: relative;
-            border: 1px solid ${colorMap.default.border};
             width: 340px;
             margin: 0 auto 100px;
             top: 15%;
             border-radius: 4px;
-            background-color: ${colorMap.default.background};
-            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+            background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
+            box-shadow: ${DT.T_MODAL_SHADOW_DEFAULT};
             &-content {
                 position: relative;
                 border: none;
@@ -83,6 +82,7 @@ export const ModalWrap = styled(RcDialogWrap)(
                 height: 20px;
                 font-size: 20px;
                 cursor: pointer;
+                color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
             }
             &-close-x {
                 display: none;
@@ -92,14 +92,15 @@ export const ModalWrap = styled(RcDialogWrap)(
                 position: relative;
                 padding: 16px 52px 16px 16px;
                 min-height: 20px;
-                border-bottom: 1px solid ${colorMap.default.border};
+                color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+                border-bottom: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
                 border-radius: 4px 4px 0 0;
                 font-size: 16px;
                 line-height: 20px;
             }
             &-footer {
                 padding: 15px 16px;
-                border-top: 1px solid ${colorMap.default.border};
+                border-top: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
                 border-radius: 0 0 4px 4px;
                 line-height: 1;
                 text-align: right;

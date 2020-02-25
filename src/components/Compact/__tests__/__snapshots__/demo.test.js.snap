@@ -24,13 +24,43 @@ exports[`Compact demo -- compact 1`] = `
   vertical-align: baseline;
 }
 
+.c27 {
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  border-width: 1px;
+  border-style: solid;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 28px;
+  padding: 0 8px;
+  color: #0a1633;
+  background: #ffffff;
+  border: none;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
+}
+
+.c27:hover {
+  color: #3860f4;
+  background: #ffffff;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
 .c11 {
   margin-right: 8px;
   font-size: 14px;
 }
 
 .c9 {
-  color: #6b798e;
+  color: #526075;
   font-size: 12px;
   position: relative;
   cursor: pointer;
@@ -38,10 +68,22 @@ exports[`Compact demo -- compact 1`] = `
   vertical-align: middle;
   height: 28px;
   line-height: 28px;
+}
+
+.c9 .c10 {
+  color: #c3cad9;
+}
+
+.c9:hover {
+  color: #0a1633;
+}
+
+.c9:hover .c10 {
+  color: #3357df;
 }
 
 .c13 {
-  color: #6b798e;
+  color: #526075;
   font-size: 12px;
   position: relative;
   cursor: pointer;
@@ -49,10 +91,15 @@ exports[`Compact demo -- compact 1`] = `
   vertical-align: middle;
   height: 28px;
   line-height: 28px;
+  color: #0a1633;
 }
 
 .c13 .c10 {
-  color: #3555f6;
+  color: #c3cad9;
+}
+
+.c13 .c10 {
+  color: #3860f4;
 }
 
 .c7 {
@@ -61,13 +108,13 @@ exports[`Compact demo -- compact 1`] = `
 }
 
 .c7 .c8,
-.c7 .style__RadioTagWrap-sc-25j3mq-3 {
+.c7 .sc-htpNat {
   margin-right: 8px;
   margin-bottom: 8px;
 }
 
 .c7 .c8:last-child,
-.c7 .style__RadioTagWrap-sc-25j3mq-3:last-child {
+.c7 .sc-htpNat:last-child {
   margin-right: 0;
 }
 
@@ -108,12 +155,12 @@ exports[`Compact demo -- compact 1`] = `
   display: inline-block;
   vertical-align: middle;
   box-sizing: border-box;
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  background: #fafafc;
   border-radius: 2px;
   height: 28px;
+  color: #526075;
+  border: 1px solid #d2d6ea;
   box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
 }
@@ -140,7 +187,7 @@ exports[`Compact demo -- compact 1`] = `
 .c29:hover {
   color: #0a1633;
   border-color: #c3cad9;
-  background-color: #f6f6fb;
+  background: #fafafc;
 }
 
 .c29 input {
@@ -164,12 +211,8 @@ exports[`Compact demo -- compact 1`] = `
   color: #c3cad9;
 }
 
-.c27 {
-  cursor: pointer;
-  padding: 0 8px;
+.c26 {
   padding-right: 28px;
-  box-sizing: border-box;
-  border: none;
 }
 
 .c28 {
@@ -186,22 +229,6 @@ exports[`Compact demo -- compact 1`] = `
   vertical-align: middle;
   font-size: 12px;
   color: #0a1633;
-}
-
-.c25 .c26 {
-  height: 28px;
-  line-height: 28px;
-  color: #0a1633;
-  background: #ffffff;
-  box-shadow: 0 1px 1px -1px #c3cad9,0 1px 3px -1px #7a8baa,inset 0 1px 0 0 #efeff8;
-  border-radius: 2px;
-  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
-  transition: all .22s cubic-bezier(.4,0,.2,1);
-}
-
-.c25 .c26:hover {
-  color: #3860f4;
-  box-shadow: 0 0 1px 0 #c3cad9,0 8px 12px -4px #d2d6ea,0 4px 4px -2px #c3cad9;
 }
 
 .c5 {
@@ -308,14 +335,13 @@ exports[`Compact demo -- compact 1`] = `
 .c14 {
   position: relative;
   border-radius: 2px;
-  overflow: hidden;
   box-sizing: border-box;
   cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
   vertical-align: middle;
-  background: #fff;
+  background: #ffffff;
   height: 28px;
   width: 80px;
   padding: 4px;
@@ -325,27 +351,31 @@ exports[`Compact demo -- compact 1`] = `
 }
 
 .c14:hover {
-  border-color: #3555f6;
+  border-color: #3357df;
+}
+
+.c14:hover .c20 {
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
 }
 
 .c14 .c20 {
-  background-color: #fff;
-  box-shadow: 0 0.5px 0.5px #c3cad9;
-  border: 1px solid #c3cad9;
+  background: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
   width: 20px;
   height: 20px;
 }
 
 .c14 .c22 {
-  background-color: #e69b9b;
+  background: #f44336;
   left: 13px;
   height: 10px;
 }
 
 .c14 .c15 {
-  border: 1px solid #c3cad9;
-  background-color: #ebedf0;
-  color: #6b798e;
+  color: #526075;
+  border: 1px solid #d2d6ea;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #f6f6fb;
 }
 
 .c14 .c17,
@@ -464,8 +494,9 @@ exports[`Compact demo -- compact 1`] = `
         class="uc-fe-compact-controller c25"
       >
         <div>
-          <div
-            class="c26 c27"
+          <button
+            class="c26 uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c27"
+            type="button"
           >
             <div>
               请选择
@@ -473,7 +504,7 @@ exports[`Compact demo -- compact 1`] = `
             <i
               class="uc-fe-icon icon__down c28 c12"
             />
-          </div>
+          </button>
         </div>
       </div>
       <span
@@ -514,6 +545,66 @@ exports[`Compact demo -- sharedProps 1`] = `
   vertical-align: baseline;
 }
 
+.c8 {
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  border-width: 1px;
+  border-style: solid;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 28px;
+  padding: 0 8px;
+  color: #0a1633;
+  background: #ffffff;
+  border: none;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
+}
+
+.c8:hover {
+  color: #3860f4;
+  background: #ffffff;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
+.c3 {
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  border-width: 1px;
+  border-style: solid;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 24px;
+  padding: 0 8px;
+  color: #0a1633;
+  background: #ffffff;
+  border: none;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
+}
+
+.c3:hover {
+  color: #3860f4;
+  background: #ffffff;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
 .c7 {
   display: table;
   width: 100%;
@@ -524,12 +615,12 @@ exports[`Compact demo -- sharedProps 1`] = `
   display: inline-block;
   vertical-align: middle;
   box-sizing: border-box;
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  background: #fafafc;
   border-radius: 2px;
   height: 28px;
+  color: #526075;
+  border: 1px solid #d2d6ea;
   box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
 }
@@ -556,7 +647,7 @@ exports[`Compact demo -- sharedProps 1`] = `
 .c9:hover {
   color: #0a1633;
   border-color: #c3cad9;
-  background-color: #f6f6fb;
+  background: #fafafc;
 }
 
 .c9 input {
@@ -585,12 +676,12 @@ exports[`Compact demo -- sharedProps 1`] = `
   display: inline-block;
   vertical-align: middle;
   box-sizing: border-box;
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  background: #fafafc;
   border-radius: 2px;
   height: 24px;
+  color: #526075;
+  border: 1px solid #d2d6ea;
   box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
 }
@@ -617,7 +708,7 @@ exports[`Compact demo -- sharedProps 1`] = `
 .c6:hover {
   color: #0a1633;
   border-color: #c3cad9;
-  background-color: #f6f6fb;
+  background: #fafafc;
 }
 
 .c6 input {
@@ -641,12 +732,8 @@ exports[`Compact demo -- sharedProps 1`] = `
   color: #c3cad9;
 }
 
-.c3 {
-  cursor: pointer;
-  padding: 0 8px;
+.c2 {
   padding-right: 28px;
-  box-sizing: border-box;
-  border: none;
 }
 
 .c4 {
@@ -656,31 +743,6 @@ exports[`Compact demo -- sharedProps 1`] = `
   margin-top: -6px;
 }
 
-.c8 {
-  box-sizing: border-box;
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 12px;
-  color: #0a1633;
-}
-
-.c8 .c2 {
-  height: 28px;
-  line-height: 28px;
-  color: #0a1633;
-  background: #ffffff;
-  box-shadow: 0 1px 1px -1px #c3cad9,0 1px 3px -1px #7a8baa,inset 0 1px 0 0 #efeff8;
-  border-radius: 2px;
-  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
-  transition: all .22s cubic-bezier(.4,0,.2,1);
-}
-
-.c8 .c2:hover {
-  color: #3860f4;
-  box-shadow: 0 0 1px 0 #c3cad9,0 8px 12px -4px #d2d6ea,0 4px 4px -2px #c3cad9;
-}
-
 .c1 {
   box-sizing: border-box;
   position: relative;
@@ -688,22 +750,6 @@ exports[`Compact demo -- sharedProps 1`] = `
   vertical-align: middle;
   font-size: 12px;
   color: #0a1633;
-}
-
-.c1 .c2 {
-  height: 24px;
-  line-height: 24px;
-  color: #0a1633;
-  background: #ffffff;
-  box-shadow: 0 1px 1px -1px #c3cad9,0 1px 3px -1px #7a8baa,inset 0 1px 0 0 #efeff8;
-  border-radius: 2px;
-  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
-  transition: all .22s cubic-bezier(.4,0,.2,1);
-}
-
-.c1 .c2:hover {
-  color: #3860f4;
-  box-shadow: 0 0 1px 0 #c3cad9,0 8px 12px -4px #d2d6ea,0 4px 4px -2px #c3cad9;
 }
 
 <div>
@@ -717,8 +763,9 @@ exports[`Compact demo -- sharedProps 1`] = `
         class="uc-fe-compact-controller c1"
       >
         <div>
-          <div
-            class="c2 c3"
+          <button
+            class="c2 uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border c3"
+            type="button"
           >
             <div>
               请选择
@@ -726,7 +773,7 @@ exports[`Compact demo -- sharedProps 1`] = `
             <i
               class="uc-fe-icon icon__down c4 c5"
             />
-          </div>
+          </button>
         </div>
       </div>
       <span
@@ -747,11 +794,12 @@ exports[`Compact demo -- sharedProps 1`] = `
       class="uc-fe-compact c0"
     >
       <div
-        class="uc-fe-compact-controller test_cls c8"
+        class="uc-fe-compact-controller test_cls c1"
       >
         <div>
-          <div
-            class="c2 c3"
+          <button
+            class="c2 uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c8"
+            type="button"
           >
             <div>
               请选择
@@ -759,7 +807,7 @@ exports[`Compact demo -- sharedProps 1`] = `
             <i
               class="uc-fe-icon icon__down c4 c5"
             />
-          </div>
+          </button>
         </div>
       </div>
       <span

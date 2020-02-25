@@ -17,8 +17,8 @@ export const RadioIcon = styled(Icon)`
     font-size: 14px;
 `;
 
-const radioCommonStyleMixin = ({ theme: { colorMap, fontSize } }) => css`
-    color: ${colorMap.default.text};
+const radioCommonStyleMixin = ({ theme: { designTokens: DT, fontSize } }) => css`
+    color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
     font-size: ${fontSize};
     position: relative;
     cursor: pointer;
@@ -38,43 +38,53 @@ const sharedClassName = ({ disabled, checked, size, styleType }) =>
         [`${prefixCls}-styletype-${styleType}`]: true
     });
 
-const sharedStyle = ({ theme: { Radio: radioTheme = {} } }) => css`
-    ${radioTheme['&']};
-`;
 /* stylelint-disable no-duplicate-selectors */
 export const RadioWrap = styled.div.attrs({
     className: sharedClassName
-})`
-    ${radioCommonStyleMixin};
+})(
+    ({ theme: { designTokens: DT }, checked, disabled }) => css`
+        ${radioCommonStyleMixin};
 
-    ${inlineBlockWithVerticalMixin};
+        ${inlineBlockWithVerticalMixin};
 
-    ${sizeMixin};
+        ${sizeMixin};
 
-    ${({ checked, theme: { colorMap } }) =>
-        checked &&
-        css`
-            ${RadioIcon} {
-                color: ${colorMap.active.icon};
-            }
-        `};
+        ${RadioIcon} {
+            color: ${DT.T_COLOR_LINE_DEFAULT_DARK};
+        }
 
-    ${({ disabled, theme: { colorMap } }) =>
-        disabled &&
-        css`
-            color: ${colorMap.disabled.text};
-            cursor: not-allowed;
+        ${!checked &&
+            !disabled &&
+            css`
+                :hover {
+                    color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+                    ${RadioIcon} {
+                        color: ${DT.T_COLOR_LINE_PRIMARY_HOVER};
+                    }
+                }
+            `};
+        ${checked &&
+            css`
+                color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+                ${RadioIcon} {
+                    color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+                }
+            `};
 
-            ${RadioIcon} {
-                color: ${colorMap.disabled.icon};
-            }
-        `};
+        ${disabled &&
+            css`
+                color: ${DT.T_COLOR_TEXT_DISABLED};
+                cursor: not-allowed;
 
-    ${sharedStyle};
-`;
+                ${RadioIcon} {
+                    color: ${DT.T_COLOR_LINE_DISABLED_DARK};
+                }
+            `};
+    `
+);
 
 // eslint-disable-next-line no-unused-vars
-const FilterStyleTypeButton = ({ styleType, ...rest }) => <Button styleType="border-gray" {...rest} />;
+const FilterStyleTypeButton = ({ styleType, ...rest }) => <Button styleType="border-gray" checkAble {...rest} />;
 FilterStyleTypeButton.propTypes = {
     styleType: PropTypes.string
 };
@@ -109,38 +119,50 @@ export const RadioButtonWrap = styled(FilterStyleTypeButton).attrs({
         &:hover {
             z-index: 3;
         }
-        ${sharedStyle};
     }
 `;
 
 export const RadioTagWrap = styled.div.attrs({
     className: sharedClassName
-})`
-    padding: 0 8px;
-    cursor: pointer;
-    border-radius: 2px;
+})(
+    ({ theme: { designTokens: DT }, checked, disabled }) => css`
+        padding: 0 8px;
+        cursor: pointer;
+        border-radius: 2px;
 
-    ${radioCommonStyleMixin};
+        ${radioCommonStyleMixin};
 
-    ${inlineBlockWithVerticalMixin};
+        ${inlineBlockWithVerticalMixin};
 
-    ${sizeMixin};
+        ${sizeMixin};
 
-    ${({ checked, theme: { colorMap } }) =>
-        checked &&
-        css`
-            background-color: ${colorMap.active.background};
-            color: ${colorMap.active.text};
-        `};
+        ${checked &&
+            css`
+                background: ${DT.T_COLOR_BG_PRIMARY_5};
+                color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+            `};
 
-    ${({ disabled, theme: { colorMap } }) =>
-        disabled &&
-        css`
-            color: ${colorMap.disabled.text};
-            cursor: not-allowed;
-        `};
-    ${sharedStyle};
-`;
+        ${disabled &&
+            css`
+                color: ${DT.T_COLOR_TEXT_DISABLED};
+                cursor: not-allowed;
+            `};
+
+        ${disabled &&
+            checked &&
+            css`
+                background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
+            `};
+
+        ${!checked &&
+            !disabled &&
+            css`
+                :hover {
+                    color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+                }
+            `};
+    `
+);
 
 export const RadioCardHeader = styled.div`
     position: relative;
@@ -160,7 +182,6 @@ const RadioCardTipPosition = css`
 `;
 export const RadioCardIcon = styled(Icon)`
     font-size: 16px;
-    color: #c3cad9;
     ${RadioCardTipPosition};
 `;
 export const RadioCardDisabledLabelWrap = styled.span`
@@ -168,42 +189,30 @@ export const RadioCardDisabledLabelWrap = styled.span`
     line-height: 16px;
     ${RadioCardTipPosition};
 `;
-const cardPropsMixin = ({ theme: { colorMap, colorList, titleFontSize }, disabled, checked }) => css`
-    border: 1px solid ${colorMap.default.border};
+const cardPropsMixin = ({ theme: { designTokens: DT, titleFontSize }, disabled, checked }) => css`
+    border: 1px solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
+    background: ${DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT};
 
-    ${!checked &&
-        !disabled &&
-        css`
-            :hover {
-                box-shadow: 0px 2px 4px 0px rgba(228, 229, 242, 1), 0px 1px 1px 0px rgba(162, 166, 191, 0.32),
-                    0px 1px 0px 0px rgba(223, 224, 241, 0.7);
-                border-color: transparent;
-            }
-        `};
+    /* stylelint-disable no-descending-specificity */
+    ${RadioCardIcon} {
+        color: ${DT.T_COLOR_LINE_DEFAULT_DARK};
+    }
+    /* stylelint-enable no-descending-specificity */
 
     ${RadioCardHeader} {
-        color: ${colorList.title};
+        color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
         font-size: ${titleFontSize};
-        border-bottom: 1px solid ${colorMap.default.border};
+        border-bottom: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
     }
     ${checked &&
         css`
-            border-color: ${colorMap.active.border};
-            box-shadow: 0px 2px 4px 0px rgba(228, 229, 242, 1), 0px 1px 1px 0px rgba(162, 166, 191, 0.32);
+            border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
+            box-shadow: ${DT.T_SHADOW_BUTTON_DEFAULT};
             ${RadioCardHeader} {
-                color: ${colorMap.active.text};
-                border-color: ${colorMap.active.border};
+                border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
             }
             ${RadioCardIcon} {
-                color: ${colorMap.active.text};
-            }
-        `};
-    ${!disabled &&
-        !checked &&
-        css`
-            ${RadioCardIcon} {
-                border-radius: 50%;
-                background: white;
+                color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
             }
         `};
     ${disabled &&
@@ -213,21 +222,34 @@ const cardPropsMixin = ({ theme: { colorMap, colorList, titleFontSize }, disable
     ${disabled &&
         !checked &&
         css`
-            border-color: ${colorMap.disabled.border};
+            border-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
             ${RadioCardHeader} {
-                background: #bbb;
-                color: white;
+                background: ${DT.T_COLOR_BG_DISABLED_DARK};
+                color: ${DT.T_COLOR_TEXT_DEFAULT_NORMAL};
             }
             ${RadioCardContent} {
-                background: #f7f7f7;
-                color: #bbb;
+                background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
+                color: ${DT.T_COLOR_TEXT_DISABLED};
             }
         `};
     ${disabled &&
         checked &&
         css`
             ${RadioCardIcon} {
-                color: #adbaf3;
+                color: ${DT.T_COLOR_LINE_DISABLED_DARK};
+            }
+        `};
+
+    ${!checked &&
+        !disabled &&
+        css`
+            :hover {
+                box-shadow: ${DT.T_SHADOW_BUTTON_HOVER};
+                border-color: transparent;
+
+                ${RadioCardIcon} {
+                    color: ${DT.T_COLOR_LINE_PRIMARY_HOVER};
+                }
             }
         `};
 `;
@@ -240,60 +262,59 @@ export const RadioCardWrap = styled.div.attrs({
     cursor: pointer;
 
     ${cardPropsMixin};
-    ${sharedStyle};
 `;
 export const RadioTextWrap = styled.div.attrs({
     className: sharedClassName
-})`
-    padding: 2px 0;
-    box-sizing: border-box;
-    cursor: pointer;
+})(
+    ({ theme: { designTokens: DT }, checked, disabled }) => css`
+        padding: 2px 0;
+        box-sizing: border-box;
+        cursor: pointer;
 
-    > span {
-        display: table;
-        height: 100%;
         > span {
-            ${({ theme: { colorMap } }) => css`
+            display: table;
+            height: 100%;
+            > span {
                 padding: 0 12px;
-                border-color: ${colorMap.default.border};
+                border-color: ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
                 border-style: solid;
                 border-width: 0 1px;
                 height: 100%;
                 display: table-cell;
                 vertical-align: middle;
-            `};
-        }
-    }
-
-    ${radioCommonStyleMixin};
-
-    ${inlineBlockWithVerticalMixin};
-
-    ${sizeMixin};
-    line-height: normal;
-
-    ${({ theme: { colorMap } }) => css`
-        :hover {
-            color: ${colorMap.active.text};
-        }
-    `};
-
-    ${({ checked, theme: { colorMap } }) =>
-        checked &&
-        css`
-            color: ${colorMap.active.text};
-        `};
-
-    ${({ disabled, theme: { colorMap } }) =>
-        disabled &&
-        css`
-            && {
-                color: ${colorMap.disabled.text};
-                cursor: not-allowed;
             }
-        `};
-    ${sharedStyle};
-`;
+        }
+
+        ${radioCommonStyleMixin};
+
+        ${inlineBlockWithVerticalMixin};
+
+        ${sizeMixin};
+        line-height: normal;
+        color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+
+        ${!checked &&
+            !disabled &&
+            css`
+                :hover {
+                    color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+                }
+            `};
+
+        ${checked &&
+            css`
+                color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+            `};
+
+        ${disabled &&
+            css`
+                && {
+                    color: ${DT.T_COLOR_TEXT_DISABLED};
+                    cursor: not-allowed;
+                }
+            `};
+    `
+);
 
 export const RadioGroupWrap = styled.div`
     position: relative;

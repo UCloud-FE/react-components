@@ -2,22 +2,25 @@ import styled, { css } from 'styled-components';
 
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
-const themeMixin = ({ theme: { colorList, colorMap, fontSize } }) => css`
+const themeMixin = ({ theme: { designTokens: DT, fontSize } }) => css`
     font-size: ${fontSize};
-    color: ${colorMap.default.text};
-    border: 1px solid ${colorMap.default.border};
-    background: ${colorMap.default.background};
+    color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+    border: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
+    background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
     &:hover,
     &:focus {
-        border-color: ${colorMap.active.border};
+        border-color: ${DT.T_COLOR_LINE_PRIMARY_HOVER};
+    }
+    &:focus {
+        border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
     }
     &::placeholder {
-        color: ${colorList.placeholder};
+        color: ${DT.T_COLOR_TEXT_REMARK_LIGHT};
     }
     &[disabled] {
-        border-color: ${colorMap.disabled.border};
-        background: ${colorMap.disabled.background};
-        color: ${colorMap.disabled.text};
+        color: ${DT.T_COLOR_TEXT_DISABLED};
+        border-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
+        background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
     }
 `;
 

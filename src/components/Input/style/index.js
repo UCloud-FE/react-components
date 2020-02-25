@@ -36,17 +36,17 @@ const themeMixin = ({
     focused,
     status
 }) => css`
-    color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
-    border: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
-    background: #fafafc;
     border-radius: ${DT.T_CORNER_SM};
     height: ${Height[size]};
+    color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
+    border: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
     box-shadow: ${DT.T_SHADOW_INSET_1};
+    background: ${DT.T_INPUT_COLOR_BG_DEFAULT};
     transition: ${materialVars.transitionDown};
     :hover {
         color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
         border-color: ${DT.T_COLOR_LINE_DEFAULT_DARK};
-        background-color: #f6f6fb;
+        background: ${DT.T_INPUT_COLOR_BG_DEFAULT};
     }
 
     input {
@@ -62,7 +62,7 @@ const themeMixin = ({
             && {
                 color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
                 border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
-                background-color: #f6f6fb;
+                background: ${DT.T_INPUT_COLOR_BG_ACTIVE};
             }
         `};
 
@@ -70,7 +70,7 @@ const themeMixin = ({
         css`
             &&& {
                 border-color: ${DT.T_COLOR_LINE_ERROR_DARK};
-                background-color: ${DT.T_COLOR_BG_ERROR_LIGHT};
+                background: ${DT.T_COLOR_BG_ERROR_LIGHT};
             }
         `};
 

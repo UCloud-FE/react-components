@@ -23,6 +23,8 @@ class Collapse extends Component {
         multiple: PropTypes.bool,
         /** @ignore */
         selectable: PropTypes.bool,
+        /** @ignore */
+        theme: PropTypes.any,
         /** 变化回调 */
         onChange: PropTypes.func
     };
@@ -32,7 +34,7 @@ class Collapse extends Component {
     };
     render() {
         // eslint-disable-next-line no-unused-vars
-        const { openKeys, defaultOpenKeys, multiple, selectable, onChange, ...rest } = this.props;
+        const { openKeys, defaultOpenKeys, multiple, selectable, onChange, theme, ...rest } = this.props;
         return <div {...rest} />;
     }
 }

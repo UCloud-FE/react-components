@@ -17,19 +17,28 @@ export const CheckboxIcon = styled(Icon).attrs({
     vertical-align: middle;
 `;
 
-const propsMixin = ({ theme: { Height, colorMap, fontSize }, size, disabled, checked }) => css`
+const propsMixin = ({ theme: { designTokens: DT, Height }, size, disabled, checked }) => css`
     min-height: ${Height[size]};
-    font-size: ${fontSize};
+    font-size: ${DT.T_TYPO_FONT_SIZE_1};
 
     ${disabled &&
         css`
-            color: ${colorMap.disabled.text};
+            color: ${DT.T_COLOR_TEXT_DISABLED};
             cursor: not-allowed;
         `};
 
-    ${/*sc-sel */ CheckboxIcon} {
+    ${!disabled &&
+        css`
+            :hover ${CheckboxIcon} {
+                color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
+            }
+        `} ${CheckboxIcon} {
         line-height: ${Height[size]};
-        color: ${disabled ? colorMap.disabled.icon : checked ? colorMap.active.icon : colorMap.default.border};
+        color: ${disabled
+            ? DT.T_COLOR_LINE_DISABLED_DARK
+            : checked
+                ? DT.T_COLOR_LINE_PRIMARY_HOVER
+                : DT.T_COLOR_LINE_DEFAULT_LIGHT};
     }
 `;
 
@@ -55,7 +64,7 @@ export const CheckboxCardWrap = styled(Card)`
 export const CheckboxGroupWrap = styled.div.attrs({
     className: prefixCls + '-group'
 })`
-    ${/* sc-sel */ CheckboxWrap}, ${CheckboxCardWrap} {
+    ${CheckboxWrap}, ${CheckboxCardWrap} {
         margin-right: 8px;
 
         &:last-child {

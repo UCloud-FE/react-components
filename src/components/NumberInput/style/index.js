@@ -53,9 +53,9 @@ const Handler = styled.span.attrs({
         border-style: solid;
         cursor: pointer;
         color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
-        background: ${DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT};
-        box-shadow: ${DT.T_SHADOW_BUTTON_DEFAULT};
         border-color: ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
+        box-shadow: ${DT.T_SHADOW_BUTTON_DEFAULT};
+        background: ${DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT};
 
         ${inlineBlockWithVerticalMixin};
 
@@ -181,11 +181,12 @@ const propsMixin = ({
             }
 
             ${HandlerUp} {
+                border-width: 0 0 0 1px;
                 top: -1px;
                 padding-top: 1px;
             }
             ${HandlerDown} {
-                border-top-width: 1px;
+                border-width: 1px 0 0 1px;
                 bottom: 0;
                 border-top-color: ${DT.T_COLOR_LINE_DEFAULT_DARK};
             }
@@ -252,7 +253,7 @@ const propsMixin = ({
                 css`
                     ${InputWrap}, ${InputWrap}:hover {
                         border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
-                        background-color: ${DT.T_INPUT_COLOR_BG_ACTIVE};
+                        background: ${DT.T_INPUT_COLOR_BG_ACTIVE};
                     }
                 `};
             ${disabled &&
@@ -302,7 +303,7 @@ const propsMixin = ({
                 top: 0;
                 height: ${Height[size]};
                 width: ${Height[size]};
-                line-height: ${Height[size]}px;
+                line-height: ${Height[size]};
                 border-color: transparent;
                 &:hover {
                     z-index: 1;

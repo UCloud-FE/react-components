@@ -9,8 +9,7 @@ const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-pagination';
 
 export const PaginationWrap = styled.ul(
-    ({ theme: { colorMap, colorList, fontSize, Height, HeightNumber } }) => css`
-        color: ${colorMap.default.text};
+    ({ theme: { designTokens: DT, fontSize, Height, HeightNumber } }) => css`
         font-size: ${fontSize};
         user-select: none;
         ${inlineBlockWithVerticalMixin};
@@ -23,7 +22,6 @@ export const PaginationWrap = styled.ul(
             &-jump-next {
                 outline: none;
                 box-sizing: border-box;
-                background-color: ${colorMap.default.background};
                 text-align: center;
                 border-radius: 2px;
                 cursor: pointer;
@@ -45,34 +43,51 @@ export const PaginationWrap = styled.ul(
                 `};
             }
 
-            &-item,
+            &-item {
+                color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
+                border: 1px solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
+                background: ${DT.T_COLOR_BG_DEFAULT_LIGHT};
+            }
+            &-item:hover {
+                color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+                border: 1px solid ${DT.T_COLOR_LINE_PRIMARY_HOVER};
+                background: ${DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT};
+            }
             &-prev,
             &-next {
-                border: 1px solid ${colorMap.default.border};
+                color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+                box-shadow: ${DT.T_SHADOW_BUTTON_DEFAULT};
+                background: ${DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT};
             }
-            &-item:hover,
             &-prev:hover,
             &-next:hover {
-                border-color: ${colorMap.active.border};
-                color: ${colorMap.active.text};
+                color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+                box-shadow: ${DT.T_SHADOW_BUTTON_HOVER};
+            }
+
+            &-jump-prev,
+            &-jump-next {
+                color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
             }
             &-jump-prev:hover,
             &-jump-next:hover {
-                color: ${colorMap.active.text};
+                color: ${DT.T_COLOR_TEXT_PRIMARY_HOVER};
             }
 
             &-item-active,
             &-item-active:hover {
-                border-color: ${colorMap.active.border};
-                color: ${colorMap.active.text};
-                background-color: ${colorList.primary5};
+                border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
+                color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+                box-shadow: ${DT.T_SHADOW_BUTTON_HOVER};
+                background: ${DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT};
                 cursor: default;
             }
             &-disabled,
             &-disabled:hover {
-                border-color: ${colorMap.disabled.border};
-                background-color: ${colorMap.disabled.background};
-                color: ${colorMap.disabled.text};
+                color: ${DT.T_COLOR_TEXT_DISABLED};
+                border: 1px solid ${DT.T_COLOR_LINE_DISABLED_DARK};
+                box-shadow: none;
+                background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
                 cursor: not-allowed;
             }
 
