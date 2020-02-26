@@ -16,6 +16,8 @@ export const SelectSearchInput = styled(Input.Search)`
 
 export const Selector = styled(Button)`
     padding-right: 28px;
+    width: 100%;
+    text-align: left;
 `;
 
 export const Arrow = styled(Icon)`
