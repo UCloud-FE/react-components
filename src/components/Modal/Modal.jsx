@@ -65,7 +65,8 @@ class Modal extends Component {
         animation: 'fade',
         size: 'md',
         zIndex: 1010,
-        closable: true
+        closable: true,
+        mask: true
     };
     getDefaultFooter = () => {
         const { onOk, onClose, locale } = this.props;
