@@ -41,7 +41,7 @@ class RcDialogWrap extends Component {
 }
 
 export const ModalWrap = styled(RcDialogWrap)(
-    ({ theme: { designTokens: DT, fontSize } }) => css`
+    ({ theme: { designTokens: DT, fontSize }, mask }) => css`
         position: fixed;
         overflow: auto;
         top: 0;
@@ -51,7 +51,7 @@ export const ModalWrap = styled(RcDialogWrap)(
         z-index: 1010;
         -webkit-overflow-scrolling: touch;
         outline: 0;
-        background: ${DT.T_MODAL_COLOR_LAYER_DEFAULT};
+        background: ${mask && DT.T_MODAL_COLOR_LAYER_DEFAULT};
 
         .${prefixCls} {
             padding: 0;
