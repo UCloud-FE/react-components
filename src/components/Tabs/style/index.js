@@ -12,7 +12,7 @@ export const prefixCls = _prefixCls + '-tabs';
 export const TabsWrap = styled(RcTabs).attrs({
     className: ({ styleType }) => `${prefixCls}-styletype-${styleType}`
 })(
-    ({ theme: { colorMap, colorList, Tabs: tabsTheme }, tabBarPosition, styleType, size }) => css`
+    ({ theme: { designTokens: DT }, tabBarPosition, styleType, size }) => css`
         overflow: hidden;
         ${clearFixMixin};
 
@@ -31,6 +31,7 @@ export const TabsWrap = styled(RcTabs).attrs({
                 }
             }
             &-tab {
+                color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
                 border: 1px solid transparent;
                 border-radius: 2px 2px 0 0;
                 box-sizing: border-box;
@@ -88,7 +89,7 @@ export const TabsWrap = styled(RcTabs).attrs({
             }
             &-tab-btn-disabled {
                 pointer-events: none;
-                color: ${colorMap.disabled.text};
+                color: ${DT.T_COLOR_TEXT_DISABLED};
             }
 
             &-tab-prev.${prefixCls}-tab-arrow-show, &-tab-next.${prefixCls}-tab-arrow-show {
@@ -98,7 +99,7 @@ export const TabsWrap = styled(RcTabs).attrs({
             &-tab-disabled,
             &-tab-disabled:hover {
                 cursor: not-allowed;
-                color: ${colorMap.disabled.text};
+                color: ${DT.T_COLOR_TEXT_DISABLED};
             }
 
             &-styletype-default-bar {
@@ -107,16 +108,18 @@ export const TabsWrap = styled(RcTabs).attrs({
                         display: none !important;
                     }
                     &-tab:hover {
-                        background-color: ${tabsTheme['default:hover'].background};
-                        border-color: ${tabsTheme['default:hover'].border};
+                        background: ${DT.T_TABS_DEFAULT_COLOR_BG_HOVER};
+                        border-color: ${DT.T_TABS_DEFAULT_COLOR_LINE_HOVER};
                     }
                     &-tab-disabled:hover {
-                        background-color: unset;
+                        background: unset;
                         border-color: transparent;
                     }
                     &-tab-active,
                     &-tab-active:hover {
-                        ${tabsTheme['default:active']};
+                        color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+                        border-color: ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
+                        background: ${DT.T_TABS_DEFAULT_COLOR_BG_DEFAULT};
                     }
                 }
             }
@@ -128,17 +131,20 @@ export const TabsWrap = styled(RcTabs).attrs({
                         height: 2px;
                         position: absolute;
                         transition: transform 0.3s;
-                        ${tabsTheme.inkBar};
+                        background: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
+                    }
+                    &-tab {
+                        border: 1px solid transparent !important;
                     }
                     &-tab:hover {
-                        ${tabsTheme['ink:hover']};
+                        color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
                     }
                     &-tab-disabled:hover {
-                        color: ${colorMap.disabled.text};
+                        color: ${DT.T_COLOR_TEXT_DISABLED};
                     }
                     &-tab-active,
                     &-tab-active:hover {
-                        ${tabsTheme['ink:active']};
+                        color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
                     }
                 }
             }
@@ -148,7 +154,7 @@ export const TabsWrap = styled(RcTabs).attrs({
             ${tabBarPosition === 'top' &&
                 css`
                     .${prefixCls}-top-bar {
-                        border-bottom: 1px solid ${colorList.secondary4};
+                        border-bottom: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
                         .${prefixCls} {
                             &-nav-container {
                                 bottom: -1px;
@@ -157,14 +163,14 @@ export const TabsWrap = styled(RcTabs).attrs({
                                 display: inline-block;
 
                                 &:hover {
-                                    border-bottom-color: ${colorList.secondary4};
+                                    border-bottom-color: ${DT.T_TABS_DEFAULT_COLOR_BG_HOVER};
                                 }
                                 &-disabled:hover {
                                     border-bottom-color: transparent;
                                 }
                                 &-active,
                                 &-active:hover {
-                                    border-bottom-color: ${colorList.primary4};
+                                    border-bottom-color: ${DT.T_TABS_DEFAULT_COLOR_BG_DEFAULT};
                                 }
                             }
                             &-ink-bar {
@@ -180,7 +186,7 @@ export const TabsWrap = styled(RcTabs).attrs({
             ${tabBarPosition === 'bottom' &&
                 css`
                     .${prefixCls}-bottom-bar {
-                        border-top: 1px solid ${colorList.secondary4};
+                        border-top: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
                         .${prefixCls} {
                             &-nav-container {
                                 top: -1px;
@@ -189,14 +195,14 @@ export const TabsWrap = styled(RcTabs).attrs({
                                 display: inline-block;
 
                                 &:hover {
-                                    border-top-color: ${colorList.secondary4};
+                                    border-top-color: ${DT.T_TABS_DEFAULT_COLOR_BG_HOVER};
                                 }
                                 &-disabled:hover {
                                     border-top-color: transparent;
                                 }
                                 &-active,
                                 &-active:hover {
-                                    border-top-color: ${colorList.primary4};
+                                    border-top-color: ${DT.T_TABS_DEFAULT_COLOR_BG_DEFAULT};
                                 }
                             }
                             &-ink-bar {
@@ -212,7 +218,7 @@ export const TabsWrap = styled(RcTabs).attrs({
             ${tabBarPosition === 'left' &&
                 css`
                     .${prefixCls}-left-bar {
-                        border-right: 1px solid ${colorList.secondary4};
+                        border-right: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
                         float: left;
                         height: 100%;
                         .${prefixCls} {
@@ -221,14 +227,14 @@ export const TabsWrap = styled(RcTabs).attrs({
                             }
                             &-tab {
                                 &:hover {
-                                    border-right-color: ${colorList.secondary4};
+                                    border-right-color: ${DT.T_TABS_DEFAULT_COLOR_BG_HOVER};
                                 }
                                 &-disabled:hover {
                                     border-right-color: transparent;
                                 }
                                 &-active,
                                 &-active:hover {
-                                    border-right-color: ${colorList.primary4};
+                                    border-right-color: ${DT.T_TABS_DEFAULT_COLOR_BG_DEFAULT};
                                 }
                                 text-align: right;
                             }
@@ -246,7 +252,7 @@ export const TabsWrap = styled(RcTabs).attrs({
             ${tabBarPosition === 'right' &&
                 css`
                     .${prefixCls}-right-bar {
-                        border-left: 1px solid ${colorList.secondary4};
+                        border-left: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
                         float: right;
                         height: 100%;
                         .${prefixCls} {
@@ -255,14 +261,14 @@ export const TabsWrap = styled(RcTabs).attrs({
                             }
                             &-tab {
                                 &:hover {
-                                    border-left-color: ${colorList.secondary4};
+                                    border-left-color: ${DT.T_TABS_DEFAULT_COLOR_BG_HOVER};
                                 }
                                 &-disabled:hover {
                                     border-left-color: transparent;
                                 }
                                 &-active,
                                 &-active:hover {
-                                    border-left-color: ${colorList.primary4};
+                                    border-left-color: ${DT.T_TABS_DEFAULT_COLOR_BG_DEFAULT};
                                 }
                             }
                             &-ink-bar {
@@ -344,8 +350,6 @@ export const TabsWrap = styled(RcTabs).attrs({
                     }
                 }
             `};
-
-        ${tabsTheme['&']};
     `
 );
 

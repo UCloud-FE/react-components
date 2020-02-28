@@ -1,7 +1,5 @@
 import _ from 'lodash';
 
-import Tabs from 'src/components/Tabs/style/theme';
-
 import { generateColorTheme, defaultColorList, TColorList, TColorMap } from './color';
 
 import { designTokens } from './designTokens';
@@ -42,9 +40,7 @@ const defaultMaterialVars = {
     transitionFlat: '.16s cubic-bezier(.4,0,.2,1)'
 };
 
-const componentThemeGeneratorMap = {
-    Tabs
-};
+const componentThemeGeneratorMap = {};
 
 export const extend = (source, target) => {
     const cloneSource = JSON.parse(JSON.stringify(source));

@@ -22,15 +22,17 @@ export const LoadingWrap = styled.div`
     }
 `;
 
-export const Mask = styled.div`
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    background: rgba(255, 255, 255, 0.4);
-`;
+export const Mask = styled.div(
+    ({ theme: { designTokens: DT } }) => css`
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        background: ${DT.T_LOADING_COLOR_LAYER_DEFAULT};
+    `
+);
 
 export const IndicatorWrap = styled.div`
     display: table;
@@ -45,9 +47,9 @@ export const IndicatorWrap = styled.div`
 `;
 
 export const LoadingIcon = styled(Icon)(
-    ({ theme: { colorMap } }) => css`
+    ({ theme: { designTokens: DT } }) => css`
         font-size: 20px;
-        color: ${colorMap.default.icon};
+        color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
     `
 );
 
@@ -56,11 +58,12 @@ export const ContentWrap = styled.div`
 `;
 
 export const TipWrap = styled.p(
-    ({ theme: { fontSize } }) => css`
+    ({ theme: { fontSize, designTokens: DT } }) => css`
         text-align: center;
         font-size: ${fontSize};
+        color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
         margin-top: 5px;
     `
 );
 
-addDefaultThemeProps(TipWrap, LoadingIcon);
+addDefaultThemeProps(TipWrap, LoadingIcon, Mask);
