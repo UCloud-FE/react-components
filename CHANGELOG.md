@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.6.3"></a>
+
+## [0.6.3](https://github.com/UCloud-FE/react-components/compare/v0.6.2...v0.6.3) (2020-02-28)
+
+### Bug Fixes
+
+*   **Modal:** fix modal hide-mask style ([1e938dd](https://github.com/UCloud-FE/react-components/commit/1e938dd)), closes [#203](https://github.com/UCloud-FE/react-components/issues/203)
+
+### Features
+
+*   **ThemeProvider:** add designtokens to loading,drawer,tabs ([33acc32](https://github.com/UCloud-FE/react-components/commit/33acc32)), closes [#204](https://github.com/UCloud-FE/react-components/issues/204)
+
 <a name="0.6.2"></a>
 
 ## [0.6.2](https://github.com/UCloud-FE/react-components/compare/v0.6.1...v0.6.2) (2020-02-26)
