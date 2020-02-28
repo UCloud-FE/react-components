@@ -2,8 +2,7 @@ import React, { Component, PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { CSSTransition } from 'react-transition-group';
 
-import SvgIcon from 'src/components/SvgIcon';
-import { DrawerWrap, CloseHandlerWrapper } from './style';
+import { DrawerWrap, CloseHandlerWrapper, CloseIcon } from './style';
 
 const Placement = ['left', 'right', 'top', 'bottom'];
 
@@ -17,7 +16,7 @@ class CloseHandler extends PureComponent {
         return (
             <CSSTransition in={visible} unmountOnExit={false} classNames="uc-fe-animation-fade" timeout={100}>
                 <CloseHandlerWrapper onClick={onClose}>
-                    <SvgIcon type="boldCross" color="white" />
+                    <CloseIcon />
                 </CloseHandlerWrapper>
             </CSSTransition>
         );

@@ -1,37 +1,33 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled, { css, withTheme } from 'styled-components';
 
 import RcDrawer from 'src/libs/rc-drawer';
 import config from 'src/config';
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
+import defaultTheme from 'src/components/ThemeProvider/theme';
+import SvgIcon from 'src/components/SvgIcon';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-drawer';
 
-const propsMixin = ({
-    zIndex,
-    show,
-    theme: {
-        TColorMap: { shadowBlock: TBlockShadowColorMap }
-    },
-    getContainer
-}) => css`
+const propsMixin = ({ zIndex, show, theme: { designTokens: DT }, getContainer }) => css`
+    background: ${DT.T_COLOR_BG_CONTENT_1};
     .${prefixCls}-mask, .${prefixCls}-content-wrapper {
         z-index: ${zIndex};
         position: ${getContainer ? 'absolute' : 'fixed'};
     }
 
     &.${prefixCls}-open.${prefixCls}-left .${prefixCls}-content-wrapper {
-        box-shadow: ${TBlockShadowColorMap.rightLg};
+        box-shadow: ${DT.T_SHADOW_BLOCK_RIGHT_LG};
     }
     &.${prefixCls}-open.${prefixCls}-right .${prefixCls}-content-wrapper {
-        box-shadow: ${TBlockShadowColorMap.leftLg};
+        box-shadow: ${DT.T_SHADOW_BLOCK_LEFT_LG};
     }
     &.${prefixCls}-open.${prefixCls}-top .${prefixCls}-content-wrapper {
-        box-shadow: ${TBlockShadowColorMap.bottomLg};
+        box-shadow: ${DT.T_SHADOW_BLOCK_BOTTOM_LG};
     }
     &.${prefixCls}-open.${prefixCls}-bottom .${prefixCls}-content-wrapper {
-        box-shadow: ${TBlockShadowColorMap.topLg};
+        box-shadow: ${DT.T_SHADOW_BLOCK_TOP_LG};
     }
 
     ${show
@@ -53,16 +49,12 @@ const CleanPropsRcDrawer = ({ show, theme, zIndex, ...rest }) => {
     return <RcDrawer {...rest} />;
 };
 
-const closeHandlerPropsMixin = ({
-    theme: {
-        TColorMap: { shadowButton: TButtonShadowColorMap, gradient: TGradientColorMap }
-    }
-}) => css`
-    background: ${TGradientColorMap.primary};
-    box-shadow: ${TButtonShadowColorMap.primary};
+const closeHandlerPropsMixin = ({ theme: { designTokens: DT } }) => css`
+    background: ${DT.T_BUTTON_PRIMARY_COLOR_BG_DEFAULT};
+    box-shadow: ${DT.T_SHADOW_BUTTON_PRIMARY};
     :hover {
-        background: ${TGradientColorMap.primaryHover};
-        box-shadow: ${TButtonShadowColorMap.primaryHover};
+        background: ${DT.T_BUTTON_PRIMARY_COLOR_BG_HOVER};
+        box-shadow: ${DT.T_SHADOW_BUTTON_PRIMARY_HOVER};
     }
 `;
 
@@ -77,102 +69,108 @@ export const CloseHandlerWrapper = styled.span`
     ${closeHandlerPropsMixin};
 `;
 
+export const CloseIcon = withTheme(({ theme: { designTokens: DT } = defaultTheme }) => {
+    return <SvgIcon type="boldCross" color={DT.T_BUTTON_PRIMARY_COLOR_TEXT_DEFAULT} />;
+});
+
 /* stylelint-disable no-descending-specificity */
 export const DrawerWrap = styled(CleanPropsRcDrawer).attrs({
     prefixCls: prefixCls
-})`
-    outline: none;
+})(
+    ({ theme: { designTokens: DT } }) => css`
+        outline: none;
 
-    .${prefixCls}-mask {
-        background-color: rgba(0, 0, 0, 0.7);
-        opacity: 0;
-    }
-
-    &.${prefixCls}-open {
         .${prefixCls}-mask {
-            opacity: 1;
+            background: ${DT.T_MODAL_COLOR_LAYER_DEFAULT};
+            opacity: 0;
         }
-    }
 
-    .${prefixCls}-content {
-        height: 100%;
-        width: 100%;
-        overflow: auto;
-    }
-
-    .${prefixCls}-content-wrapper {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        background: #fff;
-    }
-    .${prefixCls}-content-wrapper, .${prefixCls}-mask {
-        transition: all 0.1s;
-    }
-
-    &.${prefixCls}-left, &.${prefixCls}-right {
-        ${CloseHandlerWrapper} {
-            width: 24px;
-            height: 48px;
-            line-height: 48px;
-            top: 110px;
+        &.${prefixCls}-open {
+            .${prefixCls}-mask {
+                opacity: 1;
+            }
         }
-    }
-    &.${prefixCls}-left {
-        .${prefixCls}-content-wrapper {
-            top: 0;
-            left: 0;
+
+        .${prefixCls}-content {
             height: 100%;
-        }
-        ${CloseHandlerWrapper} {
-            right: -24px;
-            border-radius: 0px 4px 4px 0px;
-        }
-    }
-    &.${prefixCls}-right {
-        .${prefixCls}-content-wrapper {
-            top: 0;
-            right: 0;
-            height: 100%;
-        }
-        ${CloseHandlerWrapper} {
-            left: -24px;
-            border-radius: 4px 0px 0px 4px;
-        }
-    }
-    &.${prefixCls}-top, &.${prefixCls}-bottom {
-        ${CloseHandlerWrapper} {
-            width: 48px;
-            height: 24px;
-            line-height: 24px;
-            left: 50%;
-            margin-left: -24px;
-        }
-    }
-    &.${prefixCls}-top {
-        .${prefixCls}-content-wrapper {
-            top: 0;
-            left: 0;
             width: 100%;
+            overflow: auto;
         }
-        ${CloseHandlerWrapper} {
-            bottom: -24px;
-            border-radius: 0px 0px 4px 4px;
-        }
-    }
-    &.${prefixCls}-bottom {
-        .${prefixCls}-content-wrapper {
-            bottom: 0;
-            left: 0;
-            width: 100%;
-        }
-        ${CloseHandlerWrapper} {
-            top: -24px;
-            border-radius: 4px 4px 0px 0px;
-        }
-    }
 
-    ${propsMixin};
-`;
+        .${prefixCls}-content-wrapper {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
+        }
+        .${prefixCls}-content-wrapper, .${prefixCls}-mask {
+            transition: all 0.1s;
+        }
+
+        &.${prefixCls}-left, &.${prefixCls}-right {
+            ${CloseHandlerWrapper} {
+                width: 24px;
+                height: 48px;
+                line-height: 48px;
+                top: 110px;
+            }
+        }
+        &.${prefixCls}-left {
+            .${prefixCls}-content-wrapper {
+                top: 0;
+                left: 0;
+                height: 100%;
+            }
+            ${CloseHandlerWrapper} {
+                right: -24px;
+                border-radius: 0px 4px 4px 0px;
+            }
+        }
+        &.${prefixCls}-right {
+            .${prefixCls}-content-wrapper {
+                top: 0;
+                right: 0;
+                height: 100%;
+            }
+            ${CloseHandlerWrapper} {
+                left: -24px;
+                border-radius: 4px 0px 0px 4px;
+            }
+        }
+        &.${prefixCls}-top, &.${prefixCls}-bottom {
+            ${CloseHandlerWrapper} {
+                width: 48px;
+                height: 24px;
+                line-height: 24px;
+                left: 50%;
+                margin-left: -24px;
+            }
+        }
+        &.${prefixCls}-top {
+            .${prefixCls}-content-wrapper {
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+            ${CloseHandlerWrapper} {
+                bottom: -24px;
+                border-radius: 0px 0px 4px 4px;
+            }
+        }
+        &.${prefixCls}-bottom {
+            .${prefixCls}-content-wrapper {
+                bottom: 0;
+                left: 0;
+                width: 100%;
+            }
+            ${CloseHandlerWrapper} {
+                top: -24px;
+                border-radius: 4px 4px 0px 0px;
+            }
+        }
+
+        ${propsMixin};
+    `
+);
 
 addDefaultThemeProps(DrawerWrap, CloseHandlerWrapper);
