@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.6.4"></a>
+
+## [0.6.4](https://github.com/UCloud-FE/react-components/compare/v0.6.3...v0.6.4) (2020-03-02)
+
+### Bug Fixes
+
+*   **Calendar:** remove moment locale in calendar ([54e48ff](https://github.com/UCloud-FE/react-components/commit/54e48ff)), closes [#205](https://github.com/UCloud-FE/react-components/issues/205)
+
 <a name="0.6.3"></a>
 
 ## [0.6.3](https://github.com/UCloud-FE/react-components/compare/v0.6.2...v0.6.3) (2020-02-28)
