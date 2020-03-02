@@ -9,6 +9,10 @@ const Adapter = require('enzyme-adapter-react-15');
 const moment = require('moment-timezone');
 
 moment.tz.setDefault('Asia/Shanghai');
+import 'moment/locale/zh-cn';
+moment()
+    .locale('zh-cn')
+    .utcOffset(8);
 
 Enzyme.configure({ adapter: new Adapter() });
 
