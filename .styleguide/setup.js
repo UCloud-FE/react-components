@@ -25,3 +25,9 @@ import oceanTheme from 'src/components/ThemeProvider/ocean';
 
 global.greenTheme = greenTheme;
 global.oceanTheme = oceanTheme;
+
+import 'moment/locale/zh-cn';
+global
+    .moment()
+    .locale('zh-cn')
+    .utcOffset(8);
