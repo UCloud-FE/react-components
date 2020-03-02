@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import moment from 'moment';
 
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
 
@@ -8,11 +7,6 @@ import { getValidDate } from './utils';
 import { MonthCalendarWrap } from './style';
 import LOCALE from './locale/zh_CN';
 import { calCalendarProps } from './Calendar';
-
-import 'moment/locale/zh-cn';
-moment()
-    .locale('zh-cn')
-    .utcOffset(8);
 
 @localeConsumerDecorator({ defaultLocale: LOCALE, localeName: 'Calendar', publicFn: ['focus'] })
 class Month extends Component {
