@@ -34,7 +34,7 @@ export const PickerWrap = styled(RcPickerWrap).attrs({
         z-index: ${zIndex};
         ${isMonth &&
             css`
-                width: 220px;
+                width: 240px;
             `};
         ${calendarMixin};
     `
