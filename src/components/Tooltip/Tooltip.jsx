@@ -20,21 +20,26 @@ class Tooltip extends Component {
         placement: PropTypes.oneOf(Placement),
         /** @ignore */
         popupClassName: PropTypes.string,
+        /** 是否显示箭头 */
+        arrow: PropTypes.bool,
         /** 主题风格 */
         theme: PropTypes.oneOfType([PropTypes.oneOf(Theme), PropTypes.object])
     };
     static defaultProps = {
         theme: 'light',
+        arrow: true,
         placement: Placement[0]
     };
     renderPopup(theme) {
-        const { popup, placement, theme: themeType } = this.props;
+        const { popup, placement, theme: themeType, arrow } = this.props;
         return (
             <ThemeProvider theme={theme}>
                 <TooltipWrap placement={placement} themeType={themeType}>
-                    <Arrow>
-                        <ArrowInner />
-                    </Arrow>
+                    {arrow && (
+                        <Arrow>
+                            <ArrowInner />
+                        </Arrow>
+                    )}
                     <ContentWrap themeType={themeType}>{popup}</ContentWrap>
                 </TooltipWrap>
             </ThemeProvider>
