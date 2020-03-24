@@ -15,6 +15,11 @@
 ```js {"codepath": "theme.jsx"}
 ```
 
+*   arrow
+
+```js {"codepath": "arrow.jsx"}
+```
+
 *   placement
 
 ```js {"codepath": "placement.jsx"}
