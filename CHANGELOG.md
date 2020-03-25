@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.6.6"></a>
+
+## [0.6.6](https://github.com/UCloud-FE/react-components/compare/v0.6.5...v0.6.6) (2020-03-25)
+
+### Features
+
+*   **Table:** change table tip notice to default ([413e008](https://github.com/UCloud-FE/react-components/commit/413e008)), closes [#208](https://github.com/UCloud-FE/react-components/issues/208)
+*   **Tooltip:** add arrow props to hide arrow ([a2d62c7](https://github.com/UCloud-FE/react-components/commit/a2d62c7)), closes [#207](https://github.com/UCloud-FE/react-components/issues/207)
+
 <a name="0.6.5"></a>
 
 ## [0.6.5](https://github.com/UCloud-FE/react-components/compare/v0.6.4...v0.6.5) (2020-03-16)
