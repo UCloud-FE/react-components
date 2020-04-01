@@ -77,9 +77,6 @@ const themeMixin = ({
     ${disabled &&
         css`
             box-shadow: none;
-            input::placeholder {
-                color: ${DT.T_COLOR_BG_DISABLED_LIGHT};
-            }
             &,
             &:hover {
                 color: ${DT.T_COLOR_TEXT_DISABLED};
