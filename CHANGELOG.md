@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.6.7"></a>
+
+## [0.6.7](https://github.com/UCloud-FE/react-components/compare/v0.6.6...v0.6.7) (2020-04-01)
+
+### Bug Fixes
+
+*   **Input:** fix input placeholder color when disable ([a80ebcd](https://github.com/UCloud-FE/react-components/commit/a80ebcd)), closes [#210](https://github.com/UCloud-FE/react-components/issues/210)
+*   **Slider:** fix slider bug when key props change ([83f6595](https://github.com/UCloud-FE/react-components/commit/83f6595)), closes [#211](https://github.com/UCloud-FE/react-components/issues/211)
+
 <a name="0.6.6"></a>
 
 ## [0.6.6](https://github.com/UCloud-FE/react-components/compare/v0.6.5...v0.6.6) (2020-03-25)
