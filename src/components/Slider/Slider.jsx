@@ -114,8 +114,8 @@ class Slider extends Component {
         super(props);
         this.state = {};
         this.state.cacheMarks = this.simpleClone(props.marks);
-        this.state.marks = this.computeMarks(props.marks);
-        this.state.marksForSlider = this.computeMarksForSlider(this.state.marks);
+        this.state.marks = this.computeMarks(props.marks, props);
+        this.state.marksForSlider = this.computeMarksForSlider(this.state.marks, props);
         this.resetCache();
     }
     simpleClone = (obj = null) => {
@@ -128,11 +128,11 @@ class Slider extends Component {
             nextProps.min !== this.props.min ||
             nextProps.step !== this.props.step
         ) {
-            const marks = this.computeMarks(nextProps.marks);
+            const marks = this.computeMarks(nextProps.marks, nextProps);
             this.setState({
                 cacheMarks: this.simpleClone(nextProps.marks),
                 marks,
-                marksForSlider: this.computeMarksForSlider(marks)
+                marksForSlider: this.computeMarksForSlider(marks, nextProps)
             });
             this.resetCache();
         }
@@ -145,11 +145,11 @@ class Slider extends Component {
             valueToValueStepMap: {}
         };
     };
-    computeMarks = _marks => {
+    computeMarks = (_marks, props) => {
         if (_.isEmpty(_marks)) {
             return null;
         }
-        const { min, max, step } = this.props;
+        const { min, max, step } = props;
         const values = _.sortBy(_.keys(_marks), v => +v);
         const l = values.length;
         const marks = [];
@@ -203,11 +203,11 @@ class Slider extends Component {
         });
         return marks;
     };
-    computeMarksForSlider = _marks => {
+    computeMarksForSlider = (_marks, props) => {
         if (_.isEmpty(_marks)) {
             return null;
         }
-        const { max } = this.props;
+        const { max } = props;
         const marks = {};
         let baseRatio = 0;
         _.each(_marks, _mark => {
