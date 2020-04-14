@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.6.8"></a>
+
+## [0.6.8](https://github.com/UCloud-FE/react-components/compare/v0.6.7...v0.6.8) (2020-04-14)
+
+### Features
+
+*   **DesignTokens:** update designTokens for remark ([65f00fa](https://github.com/UCloud-FE/react-components/commit/65f00fa))
+*   **Style:** normalize placeholder opacity ([d7b36bc](https://github.com/UCloud-FE/react-components/commit/d7b36bc))
+*   **Theme:** change color of T_COLOR_TEXT_REMARK_LIGHT ([e8a4aa9](https://github.com/UCloud-FE/react-components/commit/e8a4aa9))
+
 <a name="0.6.7"></a>
 
 ## [0.6.7](https://github.com/UCloud-FE/react-components/compare/v0.6.6...v0.6.7) (2020-04-01)
