@@ -15,6 +15,7 @@ const themeMixin = ({ theme: { designTokens: DT, fontSize } }) => css`
         border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
     }
     &::placeholder {
+        opacity: 1;
         color: ${DT.T_COLOR_TEXT_REMARK_LIGHT};
     }
     &[disabled] {

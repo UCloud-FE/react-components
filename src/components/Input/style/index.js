@@ -53,6 +53,7 @@ const themeMixin = ({
         line-height: ${HeightNumber[size] - 2}px;
         height: ${HeightNumber[size] - 2}px;
         &::placeholder {
+            opacity: 1;
             color: ${DT.T_COLOR_TEXT_REMARK_LIGHT};
         }
     }

@@ -117,6 +117,7 @@ const propsMixin = ({
             `};
 
         &::placeholder {
+            opacity: 1;
             color: ${DT.T_COLOR_TEXT_REMARK_LIGHT};
         }
     }
