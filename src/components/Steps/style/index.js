@@ -8,42 +8,36 @@ export const Icon = styled(SvgIcon).attrs({ size: '16px' })`
     /* empty */
 `;
 
-const statusMixin = ({
-    status,
-    theme: {
-        TColorMap: { text: TTextColorMap, border: TBorderColorMap, bg: TBgColorMap },
-        TColorList: { brand: TBrandColorList }
-    }
-}) => {
+const statusMixin = ({ status, theme: { designTokens: DT } }) => {
     switch (status) {
         case 'before':
             return css`
-                background: ${TBrandColorList.primary1};
-                border-color: ${TBorderColorMap.primary};
-                color: ${TTextColorMap.primary};
-                fill: ${TTextColorMap.primary};
+                background: ${DT.T_COLOR_BG_PRIMARY_5};
+                border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
+                color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+                fill: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
             `;
         case 'after':
             return css`
-                background: ${TBgColorMap.disabled};
-                border-color: ${TBorderColorMap.disabled};
-                color: ${TTextColorMap.disabled};
-                fill: ${TTextColorMap.disabled};
+                background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
+                border-color: ${DT.T_COLOR_LINE_DISABLED_LIGHT};
+                color: ${DT.T_COLOR_TEXT_DISABLED};
+                fill: ${DT.T_COLOR_TEXT_DISABLED};
             `;
         case 'current':
         case 'loading':
             return css`
-                background: ${TBrandColorList.primary6};
-                border-color: ${TBrandColorList.primary6};
-                color: ${TTextColorMap.white};
-                fill: ${TTextColorMap.white};
+                background: ${DT.T_COLOR_BG_PRIMARY_1};
+                border-color: ${DT.T_COLOR_BG_PRIMARY_1};
+                color: ${DT.T_BUTTON_PRIMARY_COLOR_TEXT_DEFAULT};
+                fill: ${DT.T_BUTTON_PRIMARY_COLOR_TEXT_DEFAULT};
             `;
         case 'error':
             return css`
-                background: ${TBgColorMap.error};
-                border-color: ${TBorderColorMap.error};
-                color: ${TTextColorMap.error};
-                fill: ${TTextColorMap.error};
+                background: ${DT.T_COLOR_BG_ERROR_LIGHT};
+                border-color: ${DT.T_COLOR_LINE_ERROR_DARK};
+                color: ${DT.T_COLOR_TEXT_ERROR};
+                fill: ${DT.T_COLOR_TEXT_ERROR};
             `;
     }
 };
@@ -89,41 +83,34 @@ export const RemarkWrapper = styled.span`
     transition: all 0.3s;
 `;
 
-const linkStatusMixin = ({
-    status,
-    theme: {
-        TColorMap: { text: TTextColorMap }
-    }
-}) => {
+const linkStatusMixin = ({ status, theme: { designTokens: DT } }) => {
     if (status === 'before') {
         return css`
-            color: ${TTextColorMap.primary};
-            fill: ${TTextColorMap.primary};
+            color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+            fill: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
         `;
     }
     return css`
-        color: ${TTextColorMap.remark};
-        fill: ${TTextColorMap.remark};
+        color: ${DT.T_COLOR_TEXT_REMARK_DARK};
+        fill: ${DT.T_COLOR_TEXT_REMARK_DARK};
     `;
 };
 
-const stepStatusMixin = ({
-    status,
-    theme: {
-        TColorMap: { text: TTextColorMap }
-    }
-}) => {
+const stepStatusMixin = ({ status, theme: { designTokens: DT } }) => {
     if (status === 'error') {
         return css`
             ${RemarkWrapper}, ${TitleWrapper} {
-                color: ${TTextColorMap.error};
+                color: ${DT.T_COLOR_TEXT_ERROR};
             }
         `;
     }
     if (status === 'current' || status === 'before' || status === 'loading') {
         return css`
+            ${RemarkWrapper} {
+                color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
+            }
             ${TitleWrapper} {
-                color: ${TTextColorMap.dark};
+                color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
             }
         `;
     }
@@ -146,14 +133,8 @@ export const LinkWrapper = styled.span`
     ${linkStatusMixin};
 `;
 
-export const StepsWrapper = styled.div(
-    ({
-        theme: {
-            TColorMap: { text: TTextColorMap }
-        }
-    }) => css`
-        color: ${TTextColorMap.default};
-    `
-);
+export const StepsWrapper = styled.div`
+    /* empty */
+`;
 
 addDefaultThemeProps(StepsWrapper, IconWrapper, StepWrapper, LinkWrapper);
