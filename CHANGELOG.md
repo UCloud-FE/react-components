@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.6.9"></a>
+
+## [0.6.9](https://github.com/UCloud-FE/react-components/compare/v0.6.8...v0.6.9) (2020-04-17)
+
+### Features
+
+*   **Step:** add designTokens to step ([f8183c9](https://github.com/UCloud-FE/react-components/commit/f8183c9)), closes [#212](https://github.com/UCloud-FE/react-components/issues/212)
+
 <a name="0.6.8"></a>
 
 ## [0.6.8](https://github.com/UCloud-FE/react-components/compare/v0.6.7...v0.6.8) (2020-04-14)
