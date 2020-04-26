@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.6.10"></a>
+
+## [0.6.10](https://github.com/UCloud-FE/react-components/compare/v0.6.9...v0.6.10) (2020-04-26)
+
+### Features
+
+*   **Table:** move columnPlaceholder before lastest fix column ([a667a51](https://github.com/UCloud-FE/react-components/commit/a667a51)), closes [#213](https://github.com/UCloud-FE/react-components/issues/213)
+
 <a name="0.6.9"></a>
 
 ## [0.6.9](https://github.com/UCloud-FE/react-components/compare/v0.6.8...v0.6.9) (2020-04-17)
