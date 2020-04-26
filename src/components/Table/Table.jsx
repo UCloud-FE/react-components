@@ -653,7 +653,8 @@ class Table extends Component {
         }
 
         if (columnPlaceholder) {
-            newColumns.push({
+            const lastUnFixedIndex = _.findLastIndex(newColumns, columnConfig => !columnConfig.fixed);
+            newColumns.splice(lastUnFixedIndex + 1, 0, {
                 title: '',
                 key: placeholderKey,
                 onHeaderCell: () => ({ className: placeholderHeaderCls }),
