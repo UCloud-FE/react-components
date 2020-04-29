@@ -79,7 +79,8 @@ export const TableWrap = styled.div(
             color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
             cursor: pointer;
         }
-        &-fixed {
+        &-fixed,
+        &-body {
             background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
         }
         &-fixed-left,
