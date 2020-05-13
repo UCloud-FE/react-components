@@ -5,7 +5,7 @@ import uncontrolledDecorator from 'src/decorators/uncontrolled';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
 import deprecatedLog from 'src/utils/deprecatedLog';
 
-import { MenuWrap, SelectAllCheckbox } from './style';
+import { MenuWrap, SelectAllCheckbox, ScrollWrap } from './style';
 import LOCALE from './locale/zh_CN';
 
 const deprecatedLogForTheme = _.once(() => deprecatedLog('Menu theme', 'ThemeProvider'));
@@ -245,8 +245,10 @@ class Menu extends Component {
             );
         return (
             <MenuWrap {...rest} {...collapse}>
-                {selectAllCheckbox}
-                {this.renderChildren(children, rootPrefix)}
+                <ScrollWrap>
+                    {selectAllCheckbox}
+                    {this.renderChildren(children, rootPrefix)}
+                </ScrollWrap>
             </MenuWrap>
         );
     }
