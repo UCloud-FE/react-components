@@ -72,7 +72,8 @@ class Table extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            filters: {},
+            filters: this.calDefaultFilters(props),
+            filtersFromProps: this.calFiltersFromProps(props),
             order: null,
             selectedRowKeyMap: {},
             columnConfig: props.defaultColumnConfig,
@@ -111,7 +112,7 @@ class Table extends Component {
         columns: PropTypes.array.isRequired,
         /**
          * 启用后会创建一个无宽度的空列，用作宽度占位，占位后宽度溢出便不会导致表格列被压缩，多出的宽度会被空列占用。
-         * 占位列 column.key 为 table_column_width_placeholder，使用中需注意避免重复 key
+         * 占位列 column.key 为 table\_column\_width\_placeholder，使用中需注意避免重复 key
          */
         columnPlaceholder: PropTypes.bool,
         /** 表列配置项，非受控 */
@@ -149,7 +150,7 @@ class Table extends Component {
         onHeaderRow: PropTypes.func,
         /**
          * 列表可选选项配置.
-         * column.key 为 table_row_selection，使用中需注意避免重复 key
+         * column.key 为 table\_row\_selection，使用中需注意避免重复 key
          */
         rowSelection: PropTypes.oneOfType([
             PropTypes.shape({
@@ -253,6 +254,58 @@ class Table extends Component {
                 selectedRowKeyMap
             });
         }
+        // pick controlled filter value
+        this.setState({
+            filtersFromProps: this.calFiltersFromProps(nextProps)
+        });
+    };
+    calFiltersFromProps = ({ columns = [] }) => {
+        const filters = {};
+        // pick filter controlled value
+        columns.forEach(column => {
+            const { filter, key } = column;
+            if (!filter) return;
+            let filterValue;
+            if ('value' in filter) {
+                filterValue = filter.value;
+                filters[key] = {
+                    value: filterValue
+                };
+            }
+        });
+        return filters;
+    };
+    calDefaultFilters = ({ columns = [] }) => {
+        const filters = {};
+        // pick filter controlled value
+        columns.forEach(column => {
+            const { filter, key } = column;
+            if (!filter) return;
+            let filterValue;
+            // pick default value
+            if ('defaultValue' in filter) {
+                filterValue = filter.defaultValue;
+                filters[key] = {
+                    value: filterValue
+                };
+            }
+        });
+        return filters;
+    };
+    mergeFilters = (stateFilters, propsFilters, columns) => {
+        const filters = {
+            ...stateFilters,
+            ...propsFilters
+        };
+        _.each(filters, (filter, key) => {
+            const column = _.find(columns, column => column.key === key);
+            if (!column || filter.value == null || (column.multiple && _.isEmpty(filter.value))) {
+                delete filters[key];
+            } else {
+                filter.column = column;
+            }
+        });
+        return filters;
     };
     getExpandedRowKeys = (dataSource, changedUnExpandedRowKeys) => {
         const flatDataSource = this.flatDataSource(dataSource);
@@ -307,17 +360,26 @@ class Table extends Component {
             this.handleConditionChange({ searchValue: v });
         }
     };
-    handleConditionChange = condition => {
+    handleConditionChange = (stateCondition, callbackCondition = {}) => {
+        stateCondition = {
+            ..._.pick(this.state, ['order', 'filters', 'searchValue']),
+            ...stateCondition
+        };
         this.setState({
-            ...condition
+            ...stateCondition
         });
         const { onConditionChange } = this.props;
-        condition = {
-            ..._.pick(this.state, ['order', 'filters', 'searchValue']),
-            ...condition
-        };
 
-        let { order, filters, searchValue } = condition;
+        let { order, filters, searchValue } = callbackCondition;
+        if (!('order' in callbackCondition)) {
+            order = stateCondition.order;
+        }
+        if (!('filters' in callbackCondition)) {
+            filters = stateCondition.filters;
+        }
+        if (!('searchValue' in callbackCondition)) {
+            searchValue = stateCondition.searchValue;
+        }
 
         onConditionChange &&
             onConditionChange({
@@ -326,44 +388,24 @@ class Table extends Component {
                 searchValue
             });
     };
-    renderFilter = (filter, key, dataIndex) => {
+    renderFilter = (column, filterInfo = {}) => {
+        const { filter, key } = column;
         if (!filter) {
             return null;
         }
-        const { options, handleFilter, multiple, ...rest } = filter;
-        const filterState = this.state.filters;
+        const { options, multiple, onChange = () => {}, ...rest } = filter;
         const newOptions = _.map(options, option => (_.isObject(option) ? option : { value: option }));
+
+        const { value } = filterInfo;
+        const finalValue = value == null ? undefined : multiple && _.isEmpty(value) ? undefined : value;
+
         return (
             <Select
                 options={newOptions}
-                value={filterState[key] ? filterState[key].value : undefined}
+                value={finalValue}
                 onChange={value => {
-                    let selectedOptionsLabel;
-                    if (multiple) {
-                        const selectedOptions = _.filter(
-                            newOptions,
-                            option => _.findIndex(value, v => v === option.value) >= 0
-                        );
-                        selectedOptionsLabel = selectedOptions.map(
-                            option => (option.label !== undefined ? option.label : option.value)
-                        );
-                    } else {
-                        const selectedOption = _.find(newOptions, option => option.value === value);
-                        selectedOptionsLabel =
-                            selectedOption.label !== undefined ? selectedOption.label : selectedOption.value;
-                    }
-                    this.handleFilter(
-                        key,
-                        value == null || (multiple && !value.length)
-                            ? null
-                            : {
-                                  dataIndex,
-                                  value,
-                                  multiple,
-                                  handleFilter,
-                                  label: selectedOptionsLabel
-                              }
-                    );
+                    this.handleFilter(key, value == null || (multiple && !value.length) ? null : value);
+                    onChange(value);
                 }}
                 className={`${prefixCls}-filter`}
                 renderSelector={(content, visible) => {
@@ -375,20 +417,24 @@ class Table extends Component {
             />
         );
     };
-    handleFilter = (key, filter) => {
-        const filters = { ...this.state.filters };
-        if (filter == null) {
-            delete filters[key];
-        } else {
-            filters[key] = filter;
-        }
+    handleFilter = (key, value) => {
+        const finalFilters = this.mergeFilters(
+            this.state.filters,
+            {
+                ...this.state.filtersFromProps,
+                [key]: {
+                    value
+                }
+            },
+            this.props.columns
+        );
         this.setState({
             pagination: { ...this.state.pagination, current: 1 }
         });
-        this.handleConditionChange({ filters });
+        this.handleConditionChange({ filters: finalFilters });
     };
     clearFilter = () => {
-        this.handleConditionChange({ filters: {}, searchValue: '' });
+        this.handleConditionChange({ filters: {}, searchValue: '' }, { filters: {} });
     };
     renderOrder = (order, key, dataIndex, state = 'none') => {
         if (!order) {
@@ -457,36 +503,38 @@ class Table extends Component {
         loop(dataSource);
         return result;
     };
-    getDataSource = () => {
+    getDataSource = filters => {
         const { dataSource, handleSearch, doNotHandleCondition } = this.props;
-        const { filters, order, searchValue } = this.state;
+        const { order, searchValue } = this.state;
         let data = _.clone(dataSource);
         const doFilter = (dataSource, filter) => {
+            const { value, column: columnInfo } = filter;
             const {
                 dataIndex,
-                value,
-                multiple,
-                handleFilter = (value, record, filterValue, multiple) => {
-                    if (value == null) {
-                        return false;
-                    }
-                    if (_.isNumber(value)) {
-                        value = '' + value;
-                    } else if (!_.isString(value)) {
-                        return false;
-                    }
-                    if (!multiple) {
-                        return value.indexOf(filterValue) >= 0;
-                    } else {
-                        for (let i = 0; i < filterValue.length; i++) {
-                            const v = filterValue[i];
-                            if (value.indexOf(v) >= 0) {
-                                return true;
+                filter: {
+                    multiple,
+                    handleFilter = (value, record, filterValue, multiple) => {
+                        if (value == null) {
+                            return false;
+                        }
+                        if (_.isNumber(value)) {
+                            value = '' + value;
+                        } else if (!_.isString(value)) {
+                            return false;
+                        }
+                        if (!multiple) {
+                            return value.indexOf(filterValue) >= 0;
+                        } else {
+                            for (let i = 0; i < filterValue.length; i++) {
+                                const v = filterValue[i];
+                                if (value.indexOf(v) >= 0) {
+                                    return true;
+                                }
                             }
                         }
                     }
                 }
-            } = filter;
+            } = columnInfo;
             return _.filter(dataSource, record => {
                 return handleFilter(record[dataIndex], record, value, multiple);
             });
@@ -560,15 +608,16 @@ class Table extends Component {
         const key = typeof rowKey === 'function' ? rowKey(record, index) : record[rowKey];
         return key === undefined ? index : key;
     };
-    getColumns = dataSourceOfCurrentPage => {
+    getColumns = (dataSourceOfCurrentPage, filters) => {
         const { columns, rowSelection, columnPlaceholder } = this.props;
         const { order: currentOrder = {}, selectedRowKeyMap, columnConfig } = this.state;
         let newColumns = columns.filter(column => {
             const { key } = column;
             return !columnConfig[key] || !columnConfig[key].hidden;
         });
+
         const generateColumnTitle = column => {
-            const { filter, dataIndex, key, title, renderTitle, order, children } = column;
+            const { dataIndex, key, title, renderTitle, order, children } = column;
             if (children) {
                 return {
                     ...column,
@@ -580,7 +629,7 @@ class Table extends Component {
                     title: (
                         <div>
                             {renderTitle ? renderTitle(title) : title}
-                            {this.renderFilter(filter, key, dataIndex)}
+                            {this.renderFilter(column, filters[key])}
                             {this.renderOrder(
                                 order,
                                 key,
@@ -678,12 +727,27 @@ class Table extends Component {
         const { filters, searchValue, total, locale } = option;
 
         let first = true;
-        const renderLabel = (label, multiple) => {
+        const renderLabel = ({
+            value,
+            column: {
+                filter: { multiple, options }
+            }
+        }) => {
+            options = options.map(option => (!_.isObject(option) ? { value: option, label: option } : option));
             if (multiple) {
+                const label = _.map(value, v => {
+                    const option = _.find(options, option => {
+                        return v === option.value;
+                    });
+                    return option && option.label;
+                });
                 let first = true;
                 return _.map(label, _label => (first ? [(first = false), _label] : [' | ', _label]));
             } else {
-                return label;
+                const option = _.find(options, option => {
+                    return value === option.value;
+                });
+                return option && option.label;
             }
         };
         return !_.isEmpty(filters) || searchValue ? (
@@ -703,10 +767,8 @@ class Table extends Component {
                             {locale.colon}
                             {_.map(
                                 filters,
-                                filter =>
-                                    first
-                                        ? [(first = false), renderLabel(filter.label, filter.multiple)]
-                                        : [', ', renderLabel(filter.label, filter.multiple)]
+                                filterInfo =>
+                                    first ? [(first = false), renderLabel(filterInfo)] : [', ', renderLabel(filterInfo)]
                             )}
                             {locale.semicolon}
                         </span>
@@ -805,12 +867,14 @@ class Table extends Component {
         }
         /* eslint-enable no-unused-vars */
         const pagination = this.getPagination();
-        const { filters = {}, searchValue, columnConfig } = this.state;
-        let { dataSource, total } = this.getDataSource();
+        const { filters, filtersFromProps, searchValue, columnConfig } = this.state;
+        const finalFilters = this.mergeFilters(filters, filtersFromProps, _c);
+        let { dataSource, total } = this.getDataSource(finalFilters);
         if (pagination && 'total' in pagination) {
             total = pagination.total;
         }
-        const columns = this.getColumns(dataSource);
+        const columns = this.getColumns(dataSource, finalFilters);
+
         const defaultExpandAllRowsProps = !defaultExpandAllRows
             ? null
             : (() => {
@@ -868,7 +932,7 @@ class Table extends Component {
                                     : 0
                                 : expandIconColumnIndex
                         }
-                        title={() => this.renderTitle({ filters, searchValue, total, locale })}
+                        title={() => this.renderTitle({ filters: finalFilters, searchValue, total, locale })}
                         footer={() => this.renderFooter({ dataSource: _d, emptyContent, errorContent })}
                     />
                     {footer()}
