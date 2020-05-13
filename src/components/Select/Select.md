@@ -24,6 +24,11 @@
 ```js {"codepath": "disabled.jsx"}
 ```
 
+*   extra - 附加内容
+
+```js {"codepath": "select-extra.jsx"}
+```
+
 *   renderSelector - 自定义渲染选择器
 
 ```js {"codepath": "renderSelector.jsx"}

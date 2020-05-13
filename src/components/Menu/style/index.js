@@ -103,7 +103,6 @@ const menuWrapMixin = () => css`
     max-width: 360px;
     min-width: 64px;
     overflow: auto;
-    padding: 10px 0;
     border-radius: 2px;
     text-align: left;
     border-style: none !important;
@@ -144,5 +143,9 @@ export const MenuWrap = styled(Collapse)(({ theme: { designTokens: DT, fontSize 
     `;
 });
 /* stylelint-enable no-duplicate-selectors */
+
+export const ScrollWrap = styled.div`
+    padding: 10px 0;
+`;
 
 addDefaultThemeProps(MenuWrap, ItemWrap, SubMenuTitleWrap, SelectAllCheckbox, TitleContentWrap);

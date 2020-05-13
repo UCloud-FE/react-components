@@ -10,6 +10,7 @@ import { getItemTree, rootPrefix } from 'src/components/Menu/Menu';
 import deprecatedLog from 'src/utils/deprecatedLog';
 
 import Option from './Option';
+import Extra from './Extra';
 import { SelectWrap, SelectSearchInput, Selector, Arrow, BlockMenu, MenuWrap } from './style';
 import LOCALE from './locale/zh_CN';
 
@@ -53,6 +54,13 @@ class Select extends Component {
         onChange: PropTypes.func,
         /** 快速设置选项 */
         options: PropTypes.array,
+        /** 在尾部增加附加内容，会脱离选项流容器，超高度时不会一起滚动，如需在选项中嵌入附加内容，可使用 Select.Extra */
+        extra: PropTypes.oneOfType([
+            PropTypes.shape({
+                content: PropTypes.node.isRequired
+            }),
+            PropTypes.node
+        ]),
         /** @ignore */
         className: PropTypes.string,
         /** 是否多选 */
@@ -141,6 +149,9 @@ class Select extends Component {
         const { onVisibleChange } = this.props;
         onVisibleChange(open);
     };
+    hidePopup = () => {
+        this.handleVisibleChange(false);
+    };
     renderContent = () => {
         const { state, props } = this;
         const { renderContent, multiple, value } = props;
@@ -185,9 +196,10 @@ class Select extends Component {
         }
     };
     renderPopup = () => {
-        const { search, children, onChange, multiple, showSelectAll, value, options } = this.props;
+        const { search, children, onChange, multiple, showSelectAll, value, options, extra } = this.props;
         const { searchValue, itemTree } = this.state;
         const Options = this.renderOptions(options);
+        const Extra = this.renderExtra(extra);
 
         return (
             <MenuWrap>
@@ -217,6 +229,7 @@ class Select extends Component {
                 >
                     {Options || children}
                 </BlockMenu>
+                {Extra}
             </MenuWrap>
         );
     };
@@ -232,6 +245,16 @@ class Select extends Component {
             });
         } else {
             return null;
+        }
+    };
+    renderExtra = extra => {
+        if (!_.isEmpty(extra)) {
+            if (React.isValidElement(extra)) {
+                return <Extra>{extra}</Extra>;
+            } else {
+                const { content, ...rest } = extra;
+                return <Extra {...rest}>{content}</Extra>;
+            }
         }
     };
     renderSelector = () => {
@@ -258,6 +281,7 @@ class Select extends Component {
         const {
             children,
             options,
+            extra,
             onChange,
             search,
             value,
@@ -276,7 +300,8 @@ class Select extends Component {
             <SelectContext.Provider
                 value={{
                     searchValue: searchValue,
-                    handleSearch: this.handleSearch
+                    handleSearch: this.handleSearch,
+                    hidePopup: this.hidePopup
                 }}
             >
                 <SelectWrap {...rest}>

@@ -113,9 +113,9 @@ describe('Pagination', () => {
             .simulate('click');
         expect(document.querySelectorAll('.uc-fe-popover').length).toBe(1);
         expect(document.querySelectorAll('.uc-fe-popover.uc-fe-popover-hidden').length).toBe(0);
-        expect(document.querySelectorAll('div.uc-fe-popover>div>div>div>div').length).toBe(4);
+        expect(document.querySelectorAll('div.uc-fe-popover>div>div>div>div>div').length).toBe(4);
 
-        document.querySelectorAll('div.uc-fe-popover>div>div>div>div')[1].click();
+        document.querySelectorAll('div.uc-fe-popover>div>div>div>div>div')[1].click();
 
         expect(onPageSizeChange).toHaveBeenCalledTimes(1);
         expect(onPageSizeChange).toHaveBeenLastCalledWith(1, 20);

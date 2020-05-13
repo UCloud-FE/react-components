@@ -2,6 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 
 import Table from 'src/components/Table';
+import Button from 'src/components/Button';
 
 // demo start
 class Demo extends React.Component {
@@ -27,6 +28,21 @@ class Demo extends React.Component {
                 filter: {
                     options: [1, 2, 3],
                     multiple: true
+                }
+            },
+            {
+                title: `extra`,
+                dataIndex: 'index',
+                key: 'extra',
+                width: 200,
+                filter: {
+                    options: new Array(100).fill(null).map((v, i) => i),
+                    search: true,
+                    extra: (
+                        <Button styleType="primary" style={{ width: '100%' }}>
+                            Extra Button
+                        </Button>
+                    )
                 }
             },
             {

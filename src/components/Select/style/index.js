@@ -33,12 +33,20 @@ export const OptionWrap = styled(Menu.Item)`
             display: none;
         `};
 `;
+export const ExtraWrap = styled.div`
+    margin: 0 8px;
+`;
 export const MenuWrap = styled.div(
     ({ theme: { designTokens: DT } }) => css`
         box-shadow: ${DT.T_SHADOW_BLOCK_DEFAULT_LG};
         background: ${DT.T_COLOR_BG_MENU};
         border-radius: ${DT.T_CORNER_SM};
         display: inline-block;
+        width: 100%;
+
+        & > ${/* sc-selector */ ExtraWrap}:last-child {
+            margin-bottom: 10px;
+        }
     `
 );
 
@@ -46,6 +54,7 @@ export const BlockMenu = styled(Menu)(
     () => css`
         display: block;
         border: none;
+        box-shadow: none;
         max-height: 380px;
         max-width: unset;
     `

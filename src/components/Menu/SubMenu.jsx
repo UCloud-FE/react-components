@@ -12,7 +12,8 @@ import {
     TitleContentWrap,
     PopupContentWrap,
     PopupWrap,
-    SelectAllCheckbox
+    SelectAllCheckbox,
+    ScrollWrap
 } from './style';
 import LOCALE from './locale/zh_CN';
 
@@ -93,8 +94,10 @@ class SubMenu extends Component {
                             popup={
                                 <PopupWrap>
                                     <PopupContentWrap>
-                                        {selectAllCheckbox}
-                                        {renderChildren(children)}
+                                        <ScrollWrap>
+                                            {selectAllCheckbox}
+                                            {renderChildren(children)}
+                                        </ScrollWrap>
                                     </PopupContentWrap>
                                 </PopupWrap>
                             }
