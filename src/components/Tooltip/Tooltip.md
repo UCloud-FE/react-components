@@ -1,6 +1,6 @@
 ### 说明
 
-*   Tooltip 基于 Popover，增加了箭头样式，支持所有 Popover 的 props
+*   Tooltip 基于 Popover，增加了箭头样式，支持所有 Popover 的 props，其它 props 的定义和注意事项参考 Popover 文档
 *   主要用于包裹一些展示性的提示
 
 ### 演示

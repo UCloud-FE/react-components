@@ -52,8 +52,10 @@ class Popover extends Component {
          * 自定义类名前缀
          */
         prefixCls: PropTypes.string,
-        /** @ignore */
-        children: PropTypes.any,
+        /**
+         * 需要对子元素进行定位，所以只接收一个有效 react 元素（不接收文本节点）
+         */
+        children: PropTypes.element.isRequired,
         /** 动画名称，slide-up只支持上下方向的弹窗 */
         animation: PropTypes.oneOf(Animation),
         /**

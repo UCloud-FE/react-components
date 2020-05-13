@@ -44,6 +44,8 @@ class Demo extends React.Component {
                  * 筛选信息
                  * @property {array} options - 筛选选项
                  * @property {boolean} multiple - 是否为多选
+                 * @property {string|string[]} defaultValue - 非受控默认筛选值
+                 * @property {string|string[]} value - 受控筛选值
                  * @property {function} handleFilter - 自定义筛选函数
                  *      @param value - 根据dataIndex计算出来的值
                  *      @param record - 列表的数据

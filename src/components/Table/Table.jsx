@@ -108,7 +108,7 @@ class Table extends Component {
         pagination: PropTypes.object,
         /** 数据源 */
         dataSource: PropTypes.array,
-        /** 表列信息 */
+        /** 表列信息，具体属性参考 columns 事例 */
         columns: PropTypes.array.isRequired,
         /**
          * 启用后会创建一个无宽度的空列，用作宽度占位，占位后宽度溢出便不会导致表格列被压缩，多出的宽度会被空列占用。
