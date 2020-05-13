@@ -55,9 +55,12 @@ class Select extends Component {
         /** 快速设置选项 */
         options: PropTypes.array,
         /** 在尾部增加附加内容，会脱离选项流容器，超高度时不会一起滚动，如需在选项中嵌入附加内容，可使用 Select.Extra */
-        extra: PropTypes.shape({
-            content: PropTypes.node.isRequired
-        }),
+        extra: PropTypes.oneOfType([
+            PropTypes.shape({
+                content: PropTypes.node.isRequired
+            }),
+            PropTypes.node
+        ]),
         /** @ignore */
         className: PropTypes.string,
         /** 是否多选 */
@@ -246,8 +249,12 @@ class Select extends Component {
     };
     renderExtra = extra => {
         if (!_.isEmpty(extra)) {
-            const { content, ...rest } = extra;
-            return <Extra {...rest}>{content}</Extra>;
+            if (React.isValidElement(extra)) {
+                return <Extra>{extra}</Extra>;
+            } else {
+                const { content, ...rest } = extra;
+                return <Extra {...rest}>{content}</Extra>;
+            }
         }
     };
     renderSelector = () => {

@@ -38,13 +38,11 @@ class Demo extends React.Component {
                 filter: {
                     options: new Array(100).fill(null).map((v, i) => i),
                     search: true,
-                    extra: {
-                        content: (
-                            <Button styleType="primary" style={{ width: '100%' }}>
-                                Extra Button
-                            </Button>
-                        )
-                    }
+                    extra: (
+                        <Button styleType="primary" style={{ width: '100%' }}>
+                            Extra Button
+                        </Button>
+                    )
                 }
             },
             {
