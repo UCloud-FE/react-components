@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.6.11"></a>
+
+## [0.6.11](https://github.com/UCloud-FE/react-components/compare/v0.6.10...v0.6.11) (2020-05-15)
+
+### Bug Fixes
+
+*   **Table:** fix table header scroll ([f5a4856](https://github.com/UCloud-FE/react-components/commit/f5a4856))
+
+### Features
+
+*   **Progress:** add color & support of DT ([58aee82](https://github.com/UCloud-FE/react-components/commit/58aee82)), closes [#217](https://github.com/UCloud-FE/react-components/issues/217)
+*   **Select:** add extra content support ([280b79a](https://github.com/UCloud-FE/react-components/commit/280b79a)), closes [#216](https://github.com/UCloud-FE/react-components/issues/216)
+*   **Table:** add support of controlled filter ([0d5f935](https://github.com/UCloud-FE/react-components/commit/0d5f935)), closes [#214](https://github.com/UCloud-FE/react-components/issues/214)
+
 <a name="0.6.10"></a>
 
 ## [0.6.10](https://github.com/UCloud-FE/react-components/compare/v0.6.9...v0.6.10) (2020-04-26)
