@@ -2,50 +2,46 @@
 
 exports[`Progress demo -- base 1`] = `
 .c16 {
-  height: 8px;
+  height: 10px;
+  background: #dfe0f1;
+  border-radius: 5px;
+  position: relative;
 }
 
 .c17 {
-  width: 100%;
+  width: 10%;
   height: 100%;
-  border: 1px solid #c3cad9;
-  border-radius: 6px;
-  background: #fff;
-}
-
-.c18 {
-  background: #4683e6;
-  height: 100%;
-  border-radius: 6px;
+  border: none;
+  border-radius: 5px;
   -webkit-transition: width 0.5s;
   transition: width 0.5s;
   position: relative;
-  width: 10%;
+  background: #3860f4;
 }
 
-.c19 {
+.c18 {
   position: absolute;
   right: 0;
   top: -17px;
 }
 
-.c20 {
+.c19 {
   position: relative;
   height: 18px;
   line-height: 18px;
 }
 
-.c20:before,
-.c20:after {
+.c19:before,
+.c19:after {
   content: ' ';
   display: table;
 }
 
-.c20:after {
+.c19:after {
   clear: both;
 }
 
-.c21 {
+.c20 {
   float: right;
 }
 
@@ -299,25 +295,21 @@ exports[`Progress demo -- base 1`] = `
         <div
           class="c17"
         >
-          <div
+          <span
             class="c18"
           >
-            <span
-              class="c19"
-            >
-              10%
-            </span>
-          </div>
+            10%
+          </span>
         </div>
       </div>
       <span
-        class="c20"
+        class="c19"
       >
         <span>
           0%
         </span>
         <span
-          class="c21"
+          class="c20"
         >
           100%
         </span>
@@ -327,52 +319,360 @@ exports[`Progress demo -- base 1`] = `
 </div>
 `;
 
-exports[`Progress demo -- format 1`] = `
-.c16 {
-  height: 8px;
+exports[`Progress demo -- color 1`] = `
+.c0 {
+  height: 10px;
+  background: #dfe0f1;
+  border-radius: 5px;
+  position: relative;
 }
 
-.c17 {
-  width: 100%;
+.c1 {
+  width: 40%;
   height: 100%;
-  border: 1px solid #c3cad9;
-  border-radius: 6px;
-  background: #fff;
-}
-
-.c18 {
-  background: #4683e6;
-  height: 100%;
-  border-radius: 6px;
+  border: none;
+  border-radius: 5px;
   -webkit-transition: width 0.5s;
   transition: width 0.5s;
   position: relative;
-  width: 10%;
+  background: #3860f4;
 }
 
-.c19 {
+.c5 {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 5px;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+  position: relative;
+  background: #4cd964;
+}
+
+.c6 {
+  width: 20%;
+  height: 100%;
+  border: none;
+  border-radius: 5px;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+  position: relative;
+  background: #f9ce1d;
+}
+
+.c7 {
+  width: 50%;
+  height: 100%;
+  border: none;
+  border-radius: 5px;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+  position: relative;
+  background: #f44336;
+}
+
+.c8 {
+  width: 67%;
+  height: 100%;
+  border: none;
+  border-radius: 5px;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+  position: relative;
+  background: #411;
+}
+
+.c2 {
   position: absolute;
   right: 0;
   top: -17px;
 }
 
-.c20 {
+.c3 {
   position: relative;
   height: 18px;
   line-height: 18px;
 }
 
-.c20:before,
-.c20:after {
+.c3:before,
+.c3:after {
   content: ' ';
   display: table;
 }
 
-.c20:after {
+.c3:after {
   clear: both;
 }
 
-.c21 {
+.c4 {
+  float: right;
+}
+
+<div>
+  <div
+    class="demo-wrap"
+    style="padding:24px;"
+  >
+    <div>
+      <div
+        class="c0"
+      >
+        <div
+          class="c1"
+        >
+          <span
+            class="c2"
+          >
+            40%
+          </span>
+        </div>
+      </div>
+      <span
+        class="c3"
+      >
+        <span>
+          0%
+        </span>
+        <span
+          class="c4"
+        >
+          100%
+        </span>
+      </span>
+    </div>
+  </div>
+  <div
+    class="demo-wrap"
+    style="padding:24px;"
+  >
+    <div>
+      <div
+        class="c0"
+      >
+        <div
+          class="c5"
+          color="success"
+        >
+          <span
+            class="c2"
+          >
+            100%
+          </span>
+        </div>
+      </div>
+      <span
+        class="c3"
+      >
+        <span>
+          0%
+        </span>
+        <span
+          class="c4"
+        >
+          100%
+        </span>
+      </span>
+    </div>
+  </div>
+  <div
+    class="demo-wrap"
+    style="padding:24px;"
+  >
+    <div>
+      <div
+        class="c0"
+      >
+        <div
+          class="c6"
+          color="warn"
+        >
+          <span
+            class="c2"
+          >
+            20%
+          </span>
+        </div>
+      </div>
+      <span
+        class="c3"
+      >
+        <span>
+          0%
+        </span>
+        <span
+          class="c4"
+        >
+          100%
+        </span>
+      </span>
+    </div>
+  </div>
+  <div
+    class="demo-wrap"
+    style="padding:24px;"
+  >
+    <div>
+      <div
+        class="c0"
+      >
+        <div
+          class="c7"
+          color="error"
+        >
+          <span
+            class="c2"
+          >
+            50%
+          </span>
+        </div>
+      </div>
+      <span
+        class="c3"
+      >
+        <span>
+          0%
+        </span>
+        <span
+          class="c4"
+        >
+          100%
+        </span>
+      </span>
+    </div>
+  </div>
+  <div
+    class="demo-wrap"
+    style="padding:24px;"
+  >
+    <div>
+      <div
+        class="c0"
+      >
+        <div
+          class="c8"
+          color="#411"
+        >
+          <span
+            class="c2"
+          >
+            67%
+          </span>
+        </div>
+      </div>
+      <span
+        class="c3"
+      >
+        <span>
+          0%
+        </span>
+        <span
+          class="c4"
+        >
+          100%
+        </span>
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Progress demo -- custom 1`] = `
+.c0 {
+  height: 10px;
+  background: #dfe0f1;
+  border-radius: 5px;
+  position: relative;
+}
+
+.c1 {
+  width: 40%;
+  height: 100%;
+  border: none;
+  border-radius: 5px;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+  position: relative;
+  background: #3860f4;
+}
+
+<div>
+  <div
+    class="demo-wrap"
+    style="padding:24px;"
+  >
+    <div
+      style="width:100px;"
+    >
+      <div
+        class="c0"
+      >
+        <div
+          class="c1"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    class="demo-wrap"
+    style="padding:24px;"
+  >
+    <div
+      style="width:100px;"
+    >
+      <div
+        class="c0"
+      >
+        <div
+          class="c1"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Progress demo -- format 1`] = `
+.c16 {
+  height: 10px;
+  background: #dfe0f1;
+  border-radius: 5px;
+  position: relative;
+}
+
+.c17 {
+  width: 10%;
+  height: 100%;
+  border: none;
+  border-radius: 5px;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+  position: relative;
+  background: #3860f4;
+}
+
+.c18 {
+  position: absolute;
+  right: 0;
+  top: -17px;
+}
+
+.c19 {
+  position: relative;
+  height: 18px;
+  line-height: 18px;
+}
+
+.c19:before,
+.c19:after {
+  content: ' ';
+  display: table;
+}
+
+.c19:after {
+  clear: both;
+}
+
+.c20 {
   float: right;
 }
 
@@ -626,29 +926,39 @@ exports[`Progress demo -- format 1`] = `
         <div
           class="c17"
         >
-          <div
+          <span
             class="c18"
           >
-            <span
-              class="c19"
-            >
-              10.00%
-            </span>
-          </div>
+            10.00%
+          </span>
         </div>
       </div>
       <span
-        class="c20"
+        class="c19"
       >
         <span>
           0.00%
         </span>
         <span
-          class="c21"
+          class="c20"
         >
           100.00%
         </span>
       </span>
+    </div>
+  </div>
+  <div
+    class="demo-wrap"
+    style="padding:24px;"
+  >
+    <div>
+      <div
+        class="c16"
+      >
+        <div
+          class="c17"
+        />
+      </div>
     </div>
   </div>
 </div>

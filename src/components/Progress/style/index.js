@@ -3,31 +3,34 @@ import styled, { css } from 'styled-components';
 import { clearFixMixin } from 'src/style';
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
-export const Outer = styled.div`
-    height: 8px;
-`;
-export const Inner = styled.div(
-    ({ theme: { colorMap } }) => css`
-        width: 100%;
-        height: 100%;
-        border: 1px solid ${colorMap.default.border};
-        border-radius: 6px;
-        background: ${colorMap.default.background};
+export const Outer = styled.div(
+    ({ theme: { designTokens: DT } }) => css`
+        height: 10px;
+        background: ${DT.T_PROGRESS_COLOR_BG_DEFAULT};
+        border-radius: 5px;
+        position: relative;
     `
 );
-export const Bg = styled.div(
-    ({ theme: { colorList } }) => css`
-        background: ${colorList.primary2};
+
+export const Inner = styled.div(
+    ({ theme: { designTokens: DT }, color, percent }) => css`
+        width: ${percent}%;
         height: 100%;
-        border-radius: 6px;
+        border: none;
+        border-radius: 5px;
         transition: width 0.5s;
         position: relative;
-
-        ${({ percent }) => css`
-            width: ${percent}%;
-        `};
+        background: ${color
+            ? {
+                  success: DT.T_COLOR_BG_SUCCESS_DARK,
+                  warn: DT.T_COLOR_BG_WARNING_DARK,
+                  error: DT.T_COLOR_BG_ERROR_DARK,
+                  default: DT.T_COLOR_BG_PRIMARY_1
+              }[color] || color
+            : DT.T_COLOR_BG_PRIMARY_1};
     `
 );
+
 export const CurrentText = styled.span`
     position: absolute;
     right: 0;
@@ -46,4 +49,4 @@ export const EndText = styled.span`
     float: right;
 `;
 
-addDefaultThemeProps(Inner, Bg);
+addDefaultThemeProps(Inner, Outer);
