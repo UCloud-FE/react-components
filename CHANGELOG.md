@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.6.12"></a>
+
+## [0.6.12](https://github.com/UCloud-FE/react-components/compare/v0.6.11...v0.6.12) (2020-05-15)
+
+### Bug Fixes
+
+*   **build:** fix build of lib index.js ([8ffcd4f](https://github.com/UCloud-FE/react-components/commit/8ffcd4f))
+
 <a name="0.6.11"></a>
 
 ## [0.6.11](https://github.com/UCloud-FE/react-components/compare/v0.6.10...v0.6.11) (2020-05-15)
