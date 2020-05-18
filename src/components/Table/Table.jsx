@@ -67,6 +67,9 @@ TableRow.propTypes = {
     contextMenu: PropTypes.func
 };
 
+const emptyColumnsWarn = () => console.error('Warning: Table need a valid columns');
+const missingColumnKeyWarn = () => console.error('Warning: Table column need a unique key');
+
 @localeConsumerDecorator({ defaultLocale: LOCALE, localeName: 'Table' })
 class Table extends Component {
     constructor(props) {
@@ -102,6 +105,7 @@ class Table extends Component {
                 _.each(rowSelection.defaultSelectedRowKeys, key => (selectedRowKeyMap[key] = true));
             }
         }
+        this.check(props);
     }
     static propTypes = {
         /** 分页组件的配置，传入null为隐藏分页 */
@@ -245,6 +249,15 @@ class Table extends Component {
         },
         rowKey: 'key'
     };
+    check = props => {
+        const { columns } = props;
+        if (_.isEmpty(columns)) {
+            return emptyColumnsWarn();
+        }
+        _.each(columns, column => {
+            if (column.key === undefined) missingColumnKeyWarn();
+        });
+    };
     componentWillReceiveProps = nextProps => {
         const { rowSelection } = nextProps;
         if (_.isObject(rowSelection) && 'selectedRowKeys' in rowSelection) {
@@ -262,13 +275,14 @@ class Table extends Component {
     calFiltersFromProps = ({ columns = [] }) => {
         const filters = {};
         // pick filter controlled value
-        columns.forEach(column => {
-            const { filter, key } = column;
+        columns.forEach((column, i) => {
+            const { filter } = column;
+            const columnKey = this.getColumnKey(column, i);
             if (!filter) return;
             let filterValue;
             if ('value' in filter) {
                 filterValue = filter.value;
-                filters[key] = {
+                filters[columnKey] = {
                     value: filterValue
                 };
             }
@@ -278,14 +292,15 @@ class Table extends Component {
     calDefaultFilters = ({ columns = [] }) => {
         const filters = {};
         // pick filter controlled value
-        columns.forEach(column => {
-            const { filter, key } = column;
+        columns.forEach((column, i) => {
+            const { filter } = column;
             if (!filter) return;
+            const columnKey = this.getColumnKey(column, i);
             let filterValue;
             // pick default value
             if ('defaultValue' in filter) {
                 filterValue = filter.defaultValue;
-                filters[key] = {
+                filters[columnKey] = {
                     value: filterValue
                 };
             }
@@ -298,7 +313,7 @@ class Table extends Component {
             ...propsFilters
         };
         _.each(filters, (filter, key) => {
-            const column = _.find(columns, column => column.key === key);
+            const column = _.find(columns, (column, i) => this.getColumnKey(column, i) === key);
             if (!column || filter.value == null || (column.multiple && _.isEmpty(filter.value))) {
                 delete filters[key];
             } else {
@@ -388,11 +403,12 @@ class Table extends Component {
                 searchValue
             });
     };
-    renderFilter = (column, filterInfo = {}) => {
-        const { filter, key } = column;
+    renderFilter = (column, filterInfo = {}, index) => {
+        const { filter } = column;
         if (!filter) {
             return null;
         }
+        const columnKey = this.getColumnKey(column, index);
         const { options, multiple, onChange = () => {}, ...rest } = filter;
         const newOptions = _.map(options, option => (_.isObject(option) ? option : { value: option }));
 
@@ -404,7 +420,7 @@ class Table extends Component {
                 options={newOptions}
                 value={finalValue}
                 onChange={value => {
-                    this.handleFilter(key, value == null || (multiple && !value.length) ? null : value);
+                    this.handleFilter(columnKey, value == null || (multiple && !value.length) ? null : value);
                     onChange(value);
                 }}
                 className={`${prefixCls}-filter`}
@@ -608,16 +624,25 @@ class Table extends Component {
         const key = typeof rowKey === 'function' ? rowKey(record, index) : record[rowKey];
         return key === undefined ? index : key;
     };
+    getColumnKey = (column = {}, index) => {
+        const { key } = column;
+        return (key === undefined ? index : key) + '';
+    };
     getColumns = (dataSourceOfCurrentPage, filters) => {
         const { columns, rowSelection, columnPlaceholder } = this.props;
         const { order: currentOrder = {}, selectedRowKeyMap, columnConfig } = this.state;
-        let newColumns = columns.filter(column => {
+        const cloneColumns = columns.map((column, index) => ({
+            ...column,
+            index
+        }));
+        let newColumns = cloneColumns.filter(column => {
             const { key } = column;
             return !columnConfig[key] || !columnConfig[key].hidden;
         });
 
         const generateColumnTitle = column => {
-            const { dataIndex, key, title, renderTitle, order, children } = column;
+            const { dataIndex, title, renderTitle, order, children, index } = column;
+            const columnKey = this.getColumnKey(column, index);
             if (children) {
                 return {
                     ...column,
@@ -629,12 +654,12 @@ class Table extends Component {
                     title: (
                         <div>
                             {renderTitle ? renderTitle(title) : title}
-                            {this.renderFilter(column, filters[key])}
+                            {this.renderFilter(column, filters[columnKey], index)}
                             {this.renderOrder(
                                 order,
-                                key,
+                                columnKey,
                                 dataIndex,
-                                currentOrder && currentOrder.key === key ? currentOrder.state : 'none'
+                                currentOrder && currentOrder.key === columnKey ? currentOrder.state : 'none'
                             )}
                         </div>
                     )

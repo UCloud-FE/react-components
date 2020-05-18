@@ -14,6 +14,7 @@ class Demo extends React.Component {
             },
             {
                 title: 'parent',
+                key: 'parent',
                 children: [
                     {
                         title: 'child1',
