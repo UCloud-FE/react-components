@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.6.13"></a>
+
+## [0.6.13](https://github.com/UCloud-FE/react-components/compare/v0.6.12...v0.6.13) (2020-05-18)
+
+### Features
+
+*   **Table:** add warning to missing column key ([7fbbb1e](https://github.com/UCloud-FE/react-components/commit/7fbbb1e)), closes [#218](https://github.com/UCloud-FE/react-components/issues/218)
+
 <a name="0.6.12"></a>
 
 ## [0.6.12](https://github.com/UCloud-FE/react-components/compare/v0.6.11...v0.6.12) (2020-05-15)
