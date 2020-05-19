@@ -8,6 +8,7 @@ export const Outer = styled.div(
         height: 10px;
         background: ${DT.T_PROGRESS_COLOR_BG_DEFAULT};
         border-radius: 5px;
+        overflow: hidden;
         position: relative;
     `
 );
@@ -31,11 +32,16 @@ export const Inner = styled.div(
     `
 );
 
-export const CurrentText = styled.span`
-    position: absolute;
-    right: 0;
-    top: -17px;
-`;
+export const CurrentText = styled.span(
+    ({ percent }) => css`
+        position: relative;
+        left: ${percent}%;
+        width: 50px;
+        margin-left: -25px;
+        display: inline-block;
+        text-align: center;
+    `
+);
 
 export const TextWrap = styled.span`
     position: relative;
