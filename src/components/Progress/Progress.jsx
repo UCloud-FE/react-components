@@ -24,10 +24,13 @@ class Progress extends Component {
         percent = percent < 0 ? 0 : percent > 100 ? 100 : percent;
         return (
             <div {...rest}>
+                {format !== null && (
+                    <TextWrap>
+                        <CurrentText percent={percent}>{format(percent)}</CurrentText>
+                    </TextWrap>
+                )}
                 <Outer>
-                    <Inner color={color} percent={percent}>
-                        {format !== null && <CurrentText>{format(percent)}</CurrentText>}
-                    </Inner>
+                    <Inner color={color} percent={percent} />
                 </Outer>
                 {format !== null && (
                     <TextWrap>
