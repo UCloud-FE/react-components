@@ -17,7 +17,7 @@ class Message extends Component {
         className: PropTypes.string,
         /** @ignore */
         children: PropTypes.node,
-        /** @ignore */
+        /** 样式风格 */
         styleType: PropTypes.oneOf(StyleType)
     };
     static defaultProps = {

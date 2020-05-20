@@ -24,6 +24,25 @@ ReactDOM.render(
 
 mainContainerDom.appendChild(messageContainerDom);
 
+const popupMessage = (message, duration = config.duration, onClose = () => {}) => {
+    const messageUid = containerRef.appendMessage(<ThemeProvider theme={getRuntimeTheme()}>{message}</ThemeProvider>);
+    const destroy = () => {
+        containerRef.removeMessage(messageUid) && onClose();
+    };
+    if (duration) {
+        setTimeout(() => {
+            destroy();
+        }, duration);
+    }
+    return {
+        destory: () => {
+            console.error(`Wraning: wrong name of destory, please use destroy to instead`);
+            destroy();
+        },
+        destroy
+    };
+};
+
 const showMessage = (styleType, content, duration = config.duration, onClose = () => {}, option = {}) => {
     const { zIndex, style, className } = option;
     let newStyle = {
@@ -32,24 +51,12 @@ const showMessage = (styleType, content, duration = config.duration, onClose = (
     if ('zIndex' in option) {
         newStyle.zIndex = zIndex;
     }
-    const messageUid = containerRef.appendMessage(
-        <ThemeProvider theme={getRuntimeTheme()}>
-            <Message styleType={styleType} style={newStyle} className={className}>
-                {content}
-            </Message>
-        </ThemeProvider>
+    const message = (
+        <Message styleType={styleType} style={newStyle} className={className}>
+            {content}
+        </Message>
     );
-    const destory = () => {
-        containerRef.removeMessage(messageUid) && onClose();
-    };
-    if (duration) {
-        setTimeout(() => {
-            destory();
-        }, duration);
-    }
-    return {
-        destory
-    };
+    return popupMessage(message, duration, onClose, option);
 };
 
 const message = (...args) => showMessage('default', ...args);
@@ -57,5 +64,6 @@ const warning = (...args) => showMessage('warning', ...args);
 const info = (...args) => showMessage('info', ...args);
 const success = (...args) => showMessage('success', ...args);
 const error = (...args) => showMessage('error', ...args);
+const popup = (...args) => popupMessage(...args);
 
-export { message, warning, success, info, error };
+export { message, warning, success, info, error, popup };
