@@ -269,9 +269,6 @@ class Table extends Component {
     };
     check = props => {
         const { columns } = props;
-        if (_.isEmpty(columns)) {
-            return emptyColumnsWarn();
-        }
         _.each(columns, column => {
             if (column.key === undefined) missingColumnKeyWarn();
         });
