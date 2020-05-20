@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.6.14"></a>
+
+## [0.6.14](https://github.com/UCloud-FE/react-components/compare/v0.6.13...v0.6.14) (2020-05-20)
+
+### Features
+
+*   **Message:** add custom popup method ([7952914](https://github.com/UCloud-FE/react-components/commit/7952914)), closes [#221](https://github.com/UCloud-FE/react-components/issues/221)
+*   **Progress:** move out top text & hide overflow progress ([72c9d51](https://github.com/UCloud-FE/react-components/commit/72c9d51)), closes [#219](https://github.com/UCloud-FE/react-components/issues/219)
+*   **Table:** add controlled order & default order ([e71cb03](https://github.com/UCloud-FE/react-components/commit/e71cb03)), closes [#220](https://github.com/UCloud-FE/react-components/issues/220)
+
 <a name="0.6.13"></a>
 
 ## [0.6.13](https://github.com/UCloud-FE/react-components/compare/v0.6.12...v0.6.13) (2020-05-18)
