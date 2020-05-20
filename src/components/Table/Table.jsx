@@ -105,6 +105,14 @@ class Table extends Component {
                 _.each(rowSelection.defaultSelectedRowKeys, key => (selectedRowKeyMap[key] = true));
             }
         }
+        // init order
+        if ('order' in props) {
+            const order = this.getOrder(props.order, props.columns);
+            this.state.order = order;
+        } else if ('defaultOrder' in props) {
+            const order = this.getOrder(props.defaultOrder, props.columns);
+            this.state.order = order;
+        }
         this.check(props);
     }
     static propTypes = {
@@ -210,6 +218,16 @@ class Table extends Component {
                 cell: PropTypes.any
             })
         }),
+        /** 默认排序设置 */
+        defaultOrder: PropTypes.shape({
+            key: PropTypes.string,
+            state: PropTypes.oneOf(['desc', 'asc'])
+        }),
+        /** 受控排序设置 */
+        order: PropTypes.shape({
+            key: PropTypes.string,
+            state: PropTypes.oneOf(['desc', 'asc'])
+        }),
         /**
          * 表格的筛选等条件变更时的回调
          * @param condition - 变更的数据
@@ -271,6 +289,28 @@ class Table extends Component {
         this.setState({
             filtersFromProps: this.calFiltersFromProps(nextProps)
         });
+        if ('order' in nextProps) {
+            const order = this.getOrder(nextProps.order, nextProps.columns);
+            this.setState({
+                order
+            });
+        }
+    };
+    getOrder = (order, columns) => {
+        if (!order || !columns) return null;
+        const { key, state } = order;
+        if (!key || !state) return null;
+        const column = _.find(columns, column => column.key === key);
+        if (!column) return null;
+        const { order: columnOrder, dataIndex } = column;
+        if (!columnOrder) return null;
+        const { handleOrder } = columnOrder;
+        return {
+            key,
+            state,
+            dataIndex,
+            handleOrder
+        };
     };
     calFiltersFromProps = ({ columns = [] }) => {
         const filters = {};
@@ -477,20 +517,26 @@ class Table extends Component {
         );
     };
     handleOrder = (key, { dataIndex, handleOrder, state }) => {
-        this.handleConditionChange({
-            order:
-                state === 'asc'
-                    ? null
-                    : {
-                          key,
-                          dataIndex,
-                          handleOrder,
-                          state: {
-                              none: 'desc',
-                              desc: 'asc'
-                          }[state]
-                      }
-        });
+        const order =
+            state === 'asc'
+                ? null
+                : {
+                      key,
+                      dataIndex,
+                      handleOrder,
+                      state: {
+                          none: 'desc',
+                          desc: 'asc'
+                      }[state]
+                  };
+        // controlled
+        if ('order' in this.props) {
+            this.handleConditionChange({}, { order });
+        } else {
+            this.handleConditionChange({
+                order
+            });
+        }
     };
     flatDataSource = (dataSource = [], childrenName = 'children') => {
         const result = [];

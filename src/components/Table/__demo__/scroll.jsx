@@ -20,7 +20,7 @@ class Demo extends React.Component {
                     <Table scroll={{ x: true }} dataSource={dataSource} columns={columns} />
                 </div>
                 <div className="demo-wrap">
-                    <Table scroll={{ y: 100 }} dataSource={dataSource} columns={columns} />
+                    <Table scroll={{ y: 100, x: true }} dataSource={dataSource} columns={columns} />
                 </div>
             </div>
         );
