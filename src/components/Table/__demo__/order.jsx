@@ -2,13 +2,23 @@ import React from 'react';
 import Table from 'components/Table';
 
 // demo start
+
+const dataSource = new Array(100).fill(null).map((v, i) => ({
+    key: i,
+    index: `index-${i}`,
+    value: (Math.random() * 1000) | 0
+}));
 class Demo extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            order: {
+                key: 'custom',
+                state: 'desc'
+            }
+        };
+    }
     render() {
-        const dataSource = new Array(100).fill(null).map((v, i) => ({
-            key: i,
-            index: `index-${i}`,
-            value: (Math.random() * 1000) | 0
-        }));
         const columns = [
             {
                 title: `auto`,
@@ -36,7 +46,25 @@ class Demo extends React.Component {
         return (
             <div>
                 <div className="demo-wrap">
-                    <Table dataSource={dataSource} columns={columns} />
+                    默认排序非受控：
+                    <Table dataSource={dataSource} columns={columns} defaultOrder={{ key: 'custom', state: 'desc' }} />
+                    受控不可变更排序：
+                    <Table dataSource={dataSource} columns={columns} order={{ key: 'custom', state: 'desc' }} />
+                    随机受控排序：
+                    <Table
+                        dataSource={dataSource}
+                        columns={columns}
+                        order={this.state.order}
+                        onConditionChange={({ order }) => {
+                            if (Math.random() * 100 > 80) {
+                                console.log(`don't handler order: `, order);
+                                return;
+                            }
+                            this.setState({
+                                order: order
+                            });
+                        }}
+                    />
                 </div>
             </div>
         );
