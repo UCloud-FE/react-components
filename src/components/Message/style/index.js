@@ -51,9 +51,9 @@ export const MessageWrap = styled.div(({ styleType, theme: { colorMap } }) => {
 export const MessageContentWrap = styled(TransitionGroup)`
     position: fixed;
     top: 0;
-    width: 300px;
-    margin-left: 50%;
-    left: -50px;
+    width: 100%;
+    height: 0px;
+    overflow: visible;
     z-index: 1060;
 
     .${animationName}-enter, .${animationName}-appear, .${animationName}-leave, .${animationName}-exit {
@@ -68,6 +68,8 @@ export const MessageContentWrap = styled(TransitionGroup)`
     }
 
     ${/*sc-sel*/ MessageWrap} {
+        margin: 0 auto;
+        width: 300px;
         margin-bottom: 10px;
     }
 `;

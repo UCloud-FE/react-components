@@ -12,7 +12,9 @@ const Demo = () => {
                     this is a message
                 </Message>
             ))}
-            <Button onClick={() => Message.info(<div>this is a message</div>, undefined, () => console.log('onClose'))}>
+            <Button
+                onClick={() => Message.message(<div>this is a message</div>, undefined, () => console.log('onClose'))}
+            >
                 show message
             </Button>
         </div>

@@ -218,12 +218,12 @@ class Table extends Component {
                 cell: PropTypes.any
             })
         }),
-        /** 默认排序设置 */
+        /** 默认排序设置，key 为 column key，state 为升序(asc)或降序(desc) */
         defaultOrder: PropTypes.shape({
             key: PropTypes.string,
             state: PropTypes.oneOf(['desc', 'asc'])
         }),
-        /** 受控排序设置 */
+        /** 受控排序设置，key 为 column key，state 为升序(asc)或降序(desc) */
         order: PropTypes.shape({
             key: PropTypes.string,
             state: PropTypes.oneOf(['desc', 'asc'])
