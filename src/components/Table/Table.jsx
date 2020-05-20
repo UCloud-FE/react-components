@@ -269,7 +269,7 @@ class Table extends Component {
     };
     check = props => {
         const { columns } = props;
-        if (_.isEmpty(columns)) {
+        if (!columns) {
             return emptyColumnsWarn();
         }
         _.each(columns, column => {
