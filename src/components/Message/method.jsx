@@ -66,4 +66,14 @@ const success = (...args) => showMessage('success', ...args);
 const error = (...args) => showMessage('error', ...args);
 const popup = (...args) => popupMessage(...args);
 
-export { message, warning, success, info, error, popup };
+const changeConfig = (options = {}) => {
+    if ('duration' in options) {
+        config.duration = options.duration;
+    }
+    if ('top' in options) {
+        config.top = options.top;
+        containerRef && containerRef.setTop(options.top);
+    }
+};
+
+export { message, warning, success, info, error, popup, changeConfig as config };

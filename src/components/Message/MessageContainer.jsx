@@ -11,7 +11,8 @@ class MessageContainer extends Component {
         top: PropTypes.number
     };
     state = {
-        messages: []
+        messages: [],
+        top: this.props.top
     };
     appendMessage = message => {
         const uid = _.uniqueId('uc_message_');
@@ -33,9 +34,15 @@ class MessageContainer extends Component {
             });
         return removed;
     };
+    setTop = top => {
+        this.setState({
+            top
+        });
+    };
     render() {
-        const { messages } = this.state;
-        const { top, ...rest } = this.props;
+        const { messages, top } = this.state;
+        // eslint-disable-next-line no-unused-vars
+        const { top: _top, ...rest } = this.props;
         return (
             <MessageContentWrap style={{ marginTop: top }} {...rest}>
                 {messages.map(info => (

@@ -33,3 +33,13 @@
 
 ```js {"codepath": "custom.jsx"}
 ```
+
+*   config - 自定义 message 配置
+
+可配置全局 message 的配置，会影响后续所有的 message。务必慎用
+
+*   duration: 显示时长，null 为不自动关闭
+*   top: Message 容器距离顶部的距离
+
+```js {"codepath": "config.jsx"}
+```
