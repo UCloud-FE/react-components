@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.6.15"></a>
+
+## [0.6.15](https://github.com/UCloud-FE/react-components/compare/v0.6.14...v0.6.15) (2020-05-27)
+
+### Features
+
+*   **Message:** add config ([d41fe4f](https://github.com/UCloud-FE/react-components/commit/d41fe4f)), closes [#223](https://github.com/UCloud-FE/react-components/issues/223)
+
 <a name="0.6.14"></a>
 
 ## [0.6.14](https://github.com/UCloud-FE/react-components/compare/v0.6.13...v0.6.14) (2020-05-20)
