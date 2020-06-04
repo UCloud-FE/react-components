@@ -70,7 +70,7 @@ export const CloseHandlerWrapper = styled.span`
 `;
 
 export const CloseIcon = withTheme(({ theme: { designTokens: DT } = defaultTheme }) => {
-    return <SvgIcon type="boldCross" color={DT.T_BUTTON_PRIMARY_COLOR_TEXT_DEFAULT} />;
+    return <SvgIcon type="cross" color={DT.T_BUTTON_PRIMARY_COLOR_TEXT_DEFAULT} />;
 });
 
 /* stylelint-disable no-descending-specificity */
