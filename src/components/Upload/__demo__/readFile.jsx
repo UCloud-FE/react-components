@@ -19,6 +19,7 @@ const Demo = () => (
         onChange={fileList => console.log(fileList)}
         onAdd={handleOnAdd}
         onError={({ message, name }) => alert(`there is an error of ${name}: ${message}`)}
+        multiple
     />
 );
 // demo end

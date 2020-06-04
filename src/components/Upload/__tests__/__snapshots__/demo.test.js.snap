@@ -85,6 +85,7 @@ exports[`Upload demo -- accept 1`] = `
     <input
       accept="image/* , .pdf"
       hidden=""
+      multiple=""
       type="file"
     />
     <button
@@ -199,6 +200,7 @@ exports[`Upload demo -- base 1`] = `
   >
     <input
       hidden=""
+      multiple=""
       type="file"
     />
     <button
@@ -330,6 +332,7 @@ exports[`Upload demo -- controlled 1`] = `
   >
     <input
       hidden=""
+      multiple=""
       type="file"
     />
     <button
@@ -484,6 +487,7 @@ exports[`Upload demo -- disabled 1`] = `
     <input
       disabled=""
       hidden=""
+      multiple=""
       type="file"
     />
     <button
@@ -675,6 +679,7 @@ exports[`Upload demo -- listType 1`] = `
   >
     <input
       hidden=""
+      multiple=""
       type="file"
     />
     <button
@@ -891,6 +896,7 @@ exports[`Upload demo -- maxSize 1`] = `
   >
     <input
       hidden=""
+      multiple=""
       type="file"
     />
     <button
@@ -1465,6 +1471,7 @@ exports[`Upload demo -- readFile 1`] = `
   >
     <input
       hidden=""
+      multiple=""
       type="file"
     />
     <button
@@ -1547,6 +1554,7 @@ exports[`Upload demo -- selector 1`] = `
     >
       <input
         hidden=""
+        multiple=""
         type="file"
       />
       <button>
@@ -1564,6 +1572,120 @@ exports[`Upload demo -- selector 1`] = `
         >
           你还未上传任何内容
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Upload demo -- single 1`] = `
+.c1 {
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  border-width: 1px;
+  border-style: solid;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 28px;
+  padding: 0 8px;
+  color: #ffffff;
+  border: none;
+  background: linear-gradient(135deg,#6488fc 0%,#3860f4 100%);
+  box-shadow: 0 1px 3px -1px #5c76e8;
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
+}
+
+.c1:hover {
+  background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
+  box-shadow: 0 5px 8px -4px #5c76e8;
+}
+
+.c6 {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.c5 {
+  display: table;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 16px;
+  margin: 0;
+  border-radius: 1px;
+  line-height: 18px;
+  overflow: hidden;
+  color: #0a1633;
+  border: 1px solid #d2d6ea;
+  background: #fafafc;
+}
+
+.c5 .c7 {
+  color: #3860f4;
+}
+
+.c5 .c8 {
+  color: #526075;
+}
+
+.c0 {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.c2 {
+  margin-left: 5px;
+}
+
+.c3 {
+  max-height: 200px;
+  overflow: auto;
+  border: 1px solid #c3cad9;
+  margin-top: 6px;
+}
+
+.c4 {
+  border: none;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <input
+      hidden=""
+      type="file"
+    />
+    <button
+      class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary c1"
+      type="button"
+    >
+      请选择文件
+    </button>
+    <span
+      class="c2"
+    >
+      请选择符合规则的文件
+    </span>
+  </div>
+  <div
+    class="c3"
+  >
+    <div
+      class="c4 c5"
+    >
+      <div
+        class="c6"
+      >
+        你还未上传任何内容
       </div>
     </div>
   </div>
@@ -1671,6 +1793,7 @@ exports[`Upload demo -- uncontrolled 1`] = `
   >
     <input
       hidden=""
+      multiple=""
       type="file"
     />
     <button
@@ -1765,7 +1888,7 @@ exports[`Upload demo -- uncontrolled 1`] = `
 `;
 
 exports[`Upload demo -- upload 1`] = `
-.c18 {
+.c19 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -1789,17 +1912,17 @@ exports[`Upload demo -- upload 1`] = `
   transition: all .22s cubic-bezier(.4,0,.2,1);
 }
 
-.c18:hover {
+.c19:hover {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8;
 }
 
-.c23 {
+.c24 {
   display: table-cell;
   vertical-align: middle;
 }
 
-.c22 {
+.c23 {
   display: table;
   position: relative;
   box-sizing: border-box;
@@ -1814,31 +1937,31 @@ exports[`Upload demo -- upload 1`] = `
   background: #fafafc;
 }
 
-.c22 .c24 {
+.c23 .c25 {
   color: #3860f4;
 }
 
-.c22 .c25 {
+.c23 .c26 {
   color: #526075;
 }
 
-.c17 {
+.c18 {
   display: inline-block;
   cursor: pointer;
 }
 
-.c19 {
+.c20 {
   margin-left: 5px;
 }
 
-.c20 {
+.c21 {
   max-height: 200px;
   overflow: auto;
   border: 1px solid #c3cad9;
   margin-top: 6px;
 }
 
-.c21 {
+.c22 {
   border: none;
 }
 
@@ -2006,6 +2129,85 @@ exports[`Upload demo -- upload 1`] = `
   display: none;
 }
 
+.c17 {
+  position: relative;
+  border-radius: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  background: #ffffff;
+  height: 28px;
+  width: 80px;
+  padding: 4px;
+  border: 1px solid #c3cad9;
+  border-width: 1px;
+  line-height: 16px;
+}
+
+.c17:hover {
+  border-color: #3357df;
+}
+
+.c17:hover .c13 {
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
+.c17 .c13 {
+  background: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
+  width: 20px;
+  height: 20px;
+}
+
+.c17 .c15 {
+  background: #f44336;
+  left: 13px;
+  height: 10px;
+}
+
+.c17 .c8 {
+  color: #526075;
+  border: 1px solid #d2d6ea;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #f6f6fb;
+}
+
+.c17 .c10,
+.c17 .c12 {
+  line-height: 16px;
+}
+
+.c17 .c10 {
+  padding-right: 20px;
+}
+
+.c17 .c12 {
+  padding-left: 20px;
+}
+
+.c17 .c8 {
+  color: #4cd964;
+  border-color: #9effa5;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #edfff2;
+}
+
+.c17 .c13 {
+  left: 100%;
+  margin-left: -19px;
+}
+
+.c17 .c15 {
+  background: #4cd964;
+}
+
+.c17 .c12 {
+  display: none;
+}
+
 <div>
   <form
     class="demo-form uc-fe-form c0"
@@ -2104,7 +2306,8 @@ exports[`Upload demo -- upload 1`] = `
         span="9"
       >
         <div
-          class="c7"
+          checked=""
+          class="c17"
         >
           <div
             class="c8 c9"
@@ -2416,32 +2619,33 @@ exports[`Upload demo -- upload 1`] = `
   >
     <div>
       <div
-        class="c17"
+        class="c18"
       >
         <input
           hidden=""
+          multiple=""
           type="file"
         />
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary c18"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary c19"
           type="button"
         >
           请选择文件
         </button>
         <span
-          class="c19"
+          class="c20"
         >
           请选择符合规则的文件
         </span>
       </div>
       <div
-        class="c20"
+        class="c21"
       >
         <div
-          class="c21 c22"
+          class="c22 c23"
         >
           <div
-            class="c23"
+            class="c24"
           >
             你还未上传任何内容
           </div>
