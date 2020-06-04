@@ -25,7 +25,9 @@ const handlePreview = file => {
 class Demo extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            multiple: true
+        };
     }
     render() {
         const {

@@ -126,6 +126,27 @@ class Upload extends PureComponent {
         /* eslint-enable no-console */
     };
 
+    /** 单选 */
+    onSingleSelect = files => {
+        const { onAdd, onRemove } = this.props;
+        if (!files.length) return;
+
+        let fileList = this.getFileList();
+        if (fileList.length) {
+            const file = fileList[0];
+            if (onRemove(file, 0) === false) {
+                return;
+            }
+        }
+
+        fileList = [files[0]];
+        if (onAdd(fileList) === false) {
+            return;
+        }
+
+        this.onChange(fileList, () => this.handleFilesUpload(fileList));
+        return;
+    };
     /** 处理添加文件 */
     onAdd = files => {
         const { maxCount, onAdd } = this.props;
@@ -216,7 +237,7 @@ class Upload extends PureComponent {
         return (
             <div {...rest}>
                 <Selector
-                    onSelect={this.onAdd}
+                    onSelect={multiple ? this.onAdd : this.onSingleSelect}
                     onError={this.onError}
                     disabled={disabled}
                     multiple={multiple}
