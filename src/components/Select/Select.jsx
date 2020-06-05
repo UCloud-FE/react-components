@@ -105,12 +105,19 @@ class Select extends Component {
         /** @ignore */
         onVisibleChange: PropTypes.func,
         /** @ignore */
-        locale: PropTypes.object
+        locale: PropTypes.object,
+        /**
+         * 可修改自定义样式集中营
+         */
+        customStyle: PropTypes.shape({
+            optionListMaxHeight: PropTypes.number
+        })
     };
     static defaultProps = {
         onChange: () => {},
         size: 'md',
-        onVisibleChange: () => {}
+        onVisibleChange: () => {},
+        customStyle: {}
     };
     componentWillReceiveProps(nextProps) {
         const { children, options } = nextProps;
@@ -196,7 +203,7 @@ class Select extends Component {
         }
     };
     renderPopup = () => {
-        const { search, children, onChange, multiple, showSelectAll, value, options, extra } = this.props;
+        const { search, children, onChange, multiple, showSelectAll, value, options, extra, customStyle } = this.props;
         const { searchValue, itemTree } = this.state;
         const Options = this.renderOptions(options);
         const Extra = this.renderExtra(extra);
@@ -222,6 +229,7 @@ class Select extends Component {
                             onChange(value);
                         }
                     }}
+                    customStyle={customStyle}
                     itemTree={itemTree}
                     multiple={multiple}
                     showSelectAll={showSelectAll}
@@ -292,6 +300,7 @@ class Select extends Component {
             renderSelector,
             popover,
             popoverProps,
+            customStyle,
             ...rest
         } = this.props;
         /* eslint-enable no-unused-vars */
