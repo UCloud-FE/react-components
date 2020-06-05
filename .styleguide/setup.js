@@ -9,6 +9,12 @@ import ResizableTH from 'src/components/Table/ResizableTH';
 components.Table.ResizableTH = ResizableTH;
 
 Object.assign(global, components);
+Object.defineProperties(window, {
+    Icon: {
+        set: v => {},
+        get: () => components.Icon
+    }
+});
 
 global._ = require('lodash');
 

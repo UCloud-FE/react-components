@@ -145,7 +145,6 @@ class Upload extends PureComponent {
         }
 
         this.onChange(fileList, () => this.handleFilesUpload(fileList));
-        return;
     };
     /** 处理添加文件 */
     onAdd = files => {

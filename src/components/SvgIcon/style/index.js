@@ -18,5 +18,6 @@ export const SvgIconWrapper = styled.svg.attrs({
     ${({ size }) => css`
         width: ${size};
         height: ${size};
-    `} ${({ spin }) => spin && spinMixin};
+    `};
+    ${({ spin }) => spin && spinMixin};
 `;

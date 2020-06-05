@@ -1,24 +1,23 @@
 import React from 'react';
 
-import Checkbox from 'src/components/Checkbox';
+import Tag from 'src/components/Tag';
 import Radio from 'src/components/Radio';
 import Switch from 'src/components/Switch';
 import Form from 'src/components/Form';
+import Icon from 'src/components/Icon';
 
 // demo start
-const { Size, StyleType } = Checkbox;
+const { StyleType } = Tag;
 class Demo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            checked: true,
-            size: 'md',
             styleType: 'default',
-            disabled: false
+            icon: null
         };
     }
     render() {
-        const { checked, size, styleType, disabled } = this.state;
+        const { styleType, closable, icon, disabled } = this.state;
         const itemLayout = {
             labelCol: {
                 span: 3
@@ -30,13 +29,6 @@ class Demo extends React.Component {
         return (
             <div>
                 <Form className="demo-form">
-                    <Form.Item label="size" {...itemLayout}>
-                        <Radio.Group
-                            options={Size.map(size => ({ value: size }))}
-                            value={size}
-                            onChange={size => this.setState({ size })}
-                        />
-                    </Form.Item>
                     <Form.Item label="styleTyle" {...itemLayout}>
                         <Radio.Group
                             options={StyleType.map(styleType => ({ value: styleType }))}
@@ -44,28 +36,30 @@ class Demo extends React.Component {
                             onChange={styleType => this.setState({ styleType })}
                         />
                     </Form.Item>
+                    <Form.Item label="closable" {...itemLayout}>
+                        <Switch checked={closable} onChange={closable => this.setState({ closable })} />
+                    </Form.Item>
                     <Form.Item label="disabled" {...itemLayout}>
                         <Switch checked={disabled} onChange={disabled => this.setState({ disabled })} />
                     </Form.Item>
-                    <Form.Item label="checked" {...itemLayout}>
-                        <Switch checked={checked} onChange={checked => this.setState({ checked })} />
+                    <Form.Item label="icon" {...itemLayout}>
+                        <Radio.Group
+                            options={['circle-fill', 'circle', 'loading', 'custom']
+                                .map(v => ({ label: v, value: v }))
+                                .concat([{ label: 'null', value: null }])}
+                            value={icon}
+                            onChange={icon => this.setState({ icon })}
+                        />
                     </Form.Item>
                 </Form>
                 <div className="demo-wrap">
-                    <Checkbox
-                        checked={checked}
-                        size={size}
-                        styleType={styleType}
-                        disabled={disabled}
-                        title="title"
-                        disabledLabel="disabled label"
-                        onChange={checked => {
-                            console.log(checked);
-                            this.setState({ checked });
-                        }}
+                    <Tag
+                        {...this.state}
+                        icon={icon === 'custom' ? <Icon type="loading" spin /> : icon}
+                        onClose={() => console.log('close tag')}
                     >
-                        checkbox
-                    </Checkbox>
+                        Tag Content
+                    </Tag>
                 </div>
             </div>
         );

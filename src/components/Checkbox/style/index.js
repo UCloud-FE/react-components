@@ -32,7 +32,8 @@ const propsMixin = ({ theme: { designTokens: DT, Height }, size, disabled, check
             :hover ${CheckboxIcon} {
                 color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
             }
-        `} ${CheckboxIcon} {
+        `};
+    ${CheckboxIcon} {
         line-height: ${Height[size]};
         color: ${disabled
             ? DT.T_COLOR_LINE_DISABLED_DARK
