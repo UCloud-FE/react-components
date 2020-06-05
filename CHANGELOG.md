@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.6.16"></a>
+
+## [0.6.16](https://github.com/UCloud-FE/react-components/compare/v0.6.15...v0.6.16) (2020-06-05)
+
+### Features
+
+*   **Drawer:** change drawer icon ([8491e6f](https://github.com/UCloud-FE/react-components/commit/8491e6f)), closes [#224](https://github.com/UCloud-FE/react-components/issues/224)
+*   **Select:** add custom style ([b03a7ef](https://github.com/UCloud-FE/react-components/commit/b03a7ef)), closes [#227](https://github.com/UCloud-FE/react-components/issues/227)
+*   **Tag:** add component Tag ([dc37f94](https://github.com/UCloud-FE/react-components/commit/dc37f94)), closes [#226](https://github.com/UCloud-FE/react-components/issues/226)
+*   **Upload:** support single select ([e1866fd](https://github.com/UCloud-FE/react-components/commit/e1866fd)), closes [#225](https://github.com/UCloud-FE/react-components/issues/225)
+
 <a name="0.6.15"></a>
 
 ## [0.6.15](https://github.com/UCloud-FE/react-components/compare/v0.6.14...v0.6.15) (2020-05-27)
