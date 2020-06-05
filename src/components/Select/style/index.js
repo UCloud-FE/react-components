@@ -1,3 +1,4 @@
+import React from 'react';
 import styled, { css } from 'styled-components';
 
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
@@ -50,12 +51,15 @@ export const MenuWrap = styled.div(
     `
 );
 
-export const BlockMenu = styled(Menu)(
-    () => css`
+// eslint-disable-next-line react/prop-types,no-unused-vars
+const CustomMenu = ({ customStyle, ...rest }) => <Menu {...rest} />;
+
+export const BlockMenu = styled(CustomMenu)(
+    ({ customStyle }) => css`
         display: block;
         border: none;
         box-shadow: none;
-        max-height: 380px;
+        max-height: ${customStyle.optionListMaxHeight || 380}px;
         max-width: unset;
     `
 );
