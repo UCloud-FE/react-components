@@ -217,8 +217,8 @@ export const calendarMixin = ({ theme: { designTokens: DT } }) => css`
 `;
 
 // eslint-disable-next-line no-unused-vars,react/prop-types
-const CleanPropsRcCalendar = ({ theme, ...rest }) => {
-    return <RcCalendar {...rest} />;
+const CleanPropsRcCalendar = ({ theme, _innerRef, ...rest }) => {
+    return <RcCalendar {...rest} ref={_innerRef} />;
 };
 // eslint-disable-next-line no-unused-vars,react/prop-types
 const CleanPropsRcMonthCalendar = ({ theme, ...rest }) => {
