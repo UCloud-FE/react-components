@@ -148,12 +148,13 @@ exports[`Tooltip demo -- arrow 1`] = `
   animation-play-state: running;
 }
 
-.c7 {
+.c8 {
   padding: 8px 10px;
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
   border-radius: 3px;
+  box-sizing: border-box;
   color: #0a1633;
   border: 1px solid #d2d6ea;
   background: #ffffff;
@@ -281,23 +282,43 @@ exports[`Tooltip demo -- arrow 1`] = `
 
 .uc-fe-tooltip-popup.uc-fe-popover-placement-bottomLeft .c3,
 .uc-fe-tooltip-popup.uc-fe-popover-placement-topLeft .c3 {
-  left: 15%;
+  left: 16px;
+}
+
+.uc-fe-tooltip-popup.uc-fe-popover-placement-bottomLeft .c7,
+.uc-fe-tooltip-popup.uc-fe-popover-placement-topLeft .c7 {
+  min-width: 32px;
 }
 
 .uc-fe-tooltip-popup.uc-fe-popover-placement-bottomRight .c3,
 .uc-fe-tooltip-popup.uc-fe-popover-placement-topRight .c3 {
-  right: 15%;
+  right: 10px;
+}
+
+.uc-fe-tooltip-popup.uc-fe-popover-placement-bottomRight .c7,
+.uc-fe-tooltip-popup.uc-fe-popover-placement-topRight .c7 {
+  min-width: 32px;
 }
 
 .uc-fe-tooltip-popup.uc-fe-popover-placement-leftTop .c3,
 .uc-fe-tooltip-popup.uc-fe-popover-placement-rightTop .c3 {
-  top: 15%;
+  top: 5px;
   margin-top: 0;
+}
+
+.uc-fe-tooltip-popup.uc-fe-popover-placement-leftTop .c7,
+.uc-fe-tooltip-popup.uc-fe-popover-placement-rightTop .c7 {
+  min-height: 22px;
 }
 
 .uc-fe-tooltip-popup.uc-fe-popover-placement-leftBottom .c3,
 .uc-fe-tooltip-popup.uc-fe-popover-placement-rightBottom .c3 {
-  bottom: 15%;
+  bottom: 5px;
+}
+
+.uc-fe-tooltip-popup.uc-fe-popover-placement-leftBottom .c7,
+.uc-fe-tooltip-popup.uc-fe-popover-placement-rightBottom .c7 {
+  min-height: 22px;
 }
 
 .uc-fe-tooltip-popup.uc-fe-popover-placement-top .c3,
@@ -305,9 +326,19 @@ exports[`Tooltip demo -- arrow 1`] = `
   left: 50%;
 }
 
+.uc-fe-tooltip-popup.uc-fe-popover-placement-top .c7,
+.uc-fe-tooltip-popup.uc-fe-popover-placement-bottom .c7 {
+  min-width: 32px;
+}
+
 .uc-fe-tooltip-popup.uc-fe-popover-placement-left .c3,
 .uc-fe-tooltip-popup.uc-fe-popover-placement-right .c3 {
   top: 50%;
+}
+
+.uc-fe-tooltip-popup.uc-fe-popover-placement-left .c7,
+.uc-fe-tooltip-popup.uc-fe-popover-placement-right .c7 {
+  min-height: 22px;
 }
 
 .c2 .c3 {
@@ -377,7 +408,7 @@ exports[`Tooltip demo -- arrow 1`] = `
                 />
               </span>
               <div
-                class="c7"
+                class="c7 c8"
               >
                 <p>
                   tooltip message
@@ -410,7 +441,7 @@ exports[`Tooltip demo -- arrow 1`] = `
               class="c2"
             >
               <div
-                class="c7"
+                class="c7 c8"
               >
                 <p>
                   tooltip message
@@ -573,12 +604,13 @@ exports[`Tooltip demo -- placement 1`] = `
   animation-play-state: running;
 }
 
-.c8 {
+.c9 {
   padding: 8px 10px;
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
   border-radius: 3px;
+  box-sizing: border-box;
   color: #0a1633;
   border: 1px solid #d2d6ea;
   background: #ffffff;
@@ -706,23 +738,43 @@ exports[`Tooltip demo -- placement 1`] = `
 
 .uc-fe-tooltip-popup.uc-fe-popover-placement-bottomLeft .c4,
 .uc-fe-tooltip-popup.uc-fe-popover-placement-topLeft .c4 {
-  left: 15%;
+  left: 16px;
+}
+
+.uc-fe-tooltip-popup.uc-fe-popover-placement-bottomLeft .c8,
+.uc-fe-tooltip-popup.uc-fe-popover-placement-topLeft .c8 {
+  min-width: 32px;
 }
 
 .uc-fe-tooltip-popup.uc-fe-popover-placement-bottomRight .c4,
 .uc-fe-tooltip-popup.uc-fe-popover-placement-topRight .c4 {
-  right: 15%;
+  right: 10px;
+}
+
+.uc-fe-tooltip-popup.uc-fe-popover-placement-bottomRight .c8,
+.uc-fe-tooltip-popup.uc-fe-popover-placement-topRight .c8 {
+  min-width: 32px;
 }
 
 .uc-fe-tooltip-popup.uc-fe-popover-placement-leftTop .c4,
 .uc-fe-tooltip-popup.uc-fe-popover-placement-rightTop .c4 {
-  top: 15%;
+  top: 5px;
   margin-top: 0;
+}
+
+.uc-fe-tooltip-popup.uc-fe-popover-placement-leftTop .c8,
+.uc-fe-tooltip-popup.uc-fe-popover-placement-rightTop .c8 {
+  min-height: 22px;
 }
 
 .uc-fe-tooltip-popup.uc-fe-popover-placement-leftBottom .c4,
 .uc-fe-tooltip-popup.uc-fe-popover-placement-rightBottom .c4 {
-  bottom: 15%;
+  bottom: 5px;
+}
+
+.uc-fe-tooltip-popup.uc-fe-popover-placement-leftBottom .c8,
+.uc-fe-tooltip-popup.uc-fe-popover-placement-rightBottom .c8 {
+  min-height: 22px;
 }
 
 .uc-fe-tooltip-popup.uc-fe-popover-placement-top .c4,
@@ -730,9 +782,19 @@ exports[`Tooltip demo -- placement 1`] = `
   left: 50%;
 }
 
+.uc-fe-tooltip-popup.uc-fe-popover-placement-top .c8,
+.uc-fe-tooltip-popup.uc-fe-popover-placement-bottom .c8 {
+  min-width: 32px;
+}
+
 .uc-fe-tooltip-popup.uc-fe-popover-placement-left .c4,
 .uc-fe-tooltip-popup.uc-fe-popover-placement-right .c4 {
   top: 50%;
+}
+
+.uc-fe-tooltip-popup.uc-fe-popover-placement-left .c8,
+.uc-fe-tooltip-popup.uc-fe-popover-placement-right .c8 {
+  min-height: 22px;
 }
 
 .c3 .c4 {
@@ -809,7 +871,7 @@ exports[`Tooltip demo -- placement 1`] = `
                 />
               </span>
               <div
-                class="c8"
+                class="c8 c9"
               >
                 <p>
                   topLeft
@@ -852,7 +914,7 @@ exports[`Tooltip demo -- placement 1`] = `
                 />
               </span>
               <div
-                class="c8"
+                class="c8 c9"
               >
                 <p>
                   top
@@ -895,7 +957,7 @@ exports[`Tooltip demo -- placement 1`] = `
                 />
               </span>
               <div
-                class="c8"
+                class="c8 c9"
               >
                 <p>
                   topRight
@@ -938,7 +1000,7 @@ exports[`Tooltip demo -- placement 1`] = `
                 />
               </span>
               <div
-                class="c8"
+                class="c8 c9"
               >
                 <p>
                   bottomLeft
@@ -981,7 +1043,7 @@ exports[`Tooltip demo -- placement 1`] = `
                 />
               </span>
               <div
-                class="c8"
+                class="c8 c9"
               >
                 <p>
                   bottom
@@ -1024,7 +1086,7 @@ exports[`Tooltip demo -- placement 1`] = `
                 />
               </span>
               <div
-                class="c8"
+                class="c8 c9"
               >
                 <p>
                   bottomRight
@@ -1067,7 +1129,7 @@ exports[`Tooltip demo -- placement 1`] = `
                 />
               </span>
               <div
-                class="c8"
+                class="c8 c9"
               >
                 <p>
                   leftTop
@@ -1110,7 +1172,7 @@ exports[`Tooltip demo -- placement 1`] = `
                 />
               </span>
               <div
-                class="c8"
+                class="c8 c9"
               >
                 <p>
                   left
@@ -1153,7 +1215,7 @@ exports[`Tooltip demo -- placement 1`] = `
                 />
               </span>
               <div
-                class="c8"
+                class="c8 c9"
               >
                 <p>
                   leftBottom
@@ -1196,7 +1258,7 @@ exports[`Tooltip demo -- placement 1`] = `
                 />
               </span>
               <div
-                class="c8"
+                class="c8 c9"
               >
                 <p>
                   rightTop
@@ -1239,7 +1301,7 @@ exports[`Tooltip demo -- placement 1`] = `
                 />
               </span>
               <div
-                class="c8"
+                class="c8 c9"
               >
                 <p>
                   right
@@ -1282,7 +1344,7 @@ exports[`Tooltip demo -- placement 1`] = `
                 />
               </span>
               <div
-                class="c8"
+                class="c8 c9"
               >
                 <p>
                   rightBottom
@@ -1445,23 +1507,25 @@ exports[`Tooltip demo -- theme 1`] = `
   animation-play-state: running;
 }
 
-.c7 {
+.c8 {
   padding: 8px 10px;
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
   border-radius: 3px;
+  box-sizing: border-box;
   color: #0a1633;
   border: 1px solid #d2d6ea;
   background: #ffffff;
 }
 
-.c9 {
+.c10 {
   padding: 8px 10px;
   text-align: left;
   -webkit-text-decoration: none;
   text-decoration: none;
   border-radius: 3px;
+  box-sizing: border-box;
   color: #ffffff;
   border: 1px solid #0a1633;
   background: #0a1633;
@@ -1589,23 +1653,43 @@ exports[`Tooltip demo -- theme 1`] = `
 
 .uc-fe-tooltip-popup.uc-fe-popover-placement-bottomLeft .c3,
 .uc-fe-tooltip-popup.uc-fe-popover-placement-topLeft .c3 {
-  left: 15%;
+  left: 16px;
+}
+
+.uc-fe-tooltip-popup.uc-fe-popover-placement-bottomLeft .c7,
+.uc-fe-tooltip-popup.uc-fe-popover-placement-topLeft .c7 {
+  min-width: 32px;
 }
 
 .uc-fe-tooltip-popup.uc-fe-popover-placement-bottomRight .c3,
 .uc-fe-tooltip-popup.uc-fe-popover-placement-topRight .c3 {
-  right: 15%;
+  right: 10px;
+}
+
+.uc-fe-tooltip-popup.uc-fe-popover-placement-bottomRight .c7,
+.uc-fe-tooltip-popup.uc-fe-popover-placement-topRight .c7 {
+  min-width: 32px;
 }
 
 .uc-fe-tooltip-popup.uc-fe-popover-placement-leftTop .c3,
 .uc-fe-tooltip-popup.uc-fe-popover-placement-rightTop .c3 {
-  top: 15%;
+  top: 5px;
   margin-top: 0;
+}
+
+.uc-fe-tooltip-popup.uc-fe-popover-placement-leftTop .c7,
+.uc-fe-tooltip-popup.uc-fe-popover-placement-rightTop .c7 {
+  min-height: 22px;
 }
 
 .uc-fe-tooltip-popup.uc-fe-popover-placement-leftBottom .c3,
 .uc-fe-tooltip-popup.uc-fe-popover-placement-rightBottom .c3 {
-  bottom: 15%;
+  bottom: 5px;
+}
+
+.uc-fe-tooltip-popup.uc-fe-popover-placement-leftBottom .c7,
+.uc-fe-tooltip-popup.uc-fe-popover-placement-rightBottom .c7 {
+  min-height: 22px;
 }
 
 .uc-fe-tooltip-popup.uc-fe-popover-placement-top .c3,
@@ -1613,9 +1697,19 @@ exports[`Tooltip demo -- theme 1`] = `
   left: 50%;
 }
 
+.uc-fe-tooltip-popup.uc-fe-popover-placement-top .c7,
+.uc-fe-tooltip-popup.uc-fe-popover-placement-bottom .c7 {
+  min-width: 32px;
+}
+
 .uc-fe-tooltip-popup.uc-fe-popover-placement-left .c3,
 .uc-fe-tooltip-popup.uc-fe-popover-placement-right .c3 {
   top: 50%;
+}
+
+.uc-fe-tooltip-popup.uc-fe-popover-placement-left .c7,
+.uc-fe-tooltip-popup.uc-fe-popover-placement-right .c7 {
+  min-height: 22px;
 }
 
 .c2 .c3 {
@@ -1626,11 +1720,11 @@ exports[`Tooltip demo -- theme 1`] = `
   border-color: #ffffff;
 }
 
-.c8 .c3 {
+.c9 .c3 {
   border-color: #0a1633;
 }
 
-.c8 .c5 {
+.c9 .c5 {
   border-color: #0a1633;
 }
 
@@ -1693,7 +1787,7 @@ exports[`Tooltip demo -- theme 1`] = `
                 />
               </span>
               <div
-                class="c7"
+                class="c7 c8"
               >
                 <p>
                   tooltip message
@@ -1723,7 +1817,7 @@ exports[`Tooltip demo -- theme 1`] = `
         >
           <div>
             <div
-              class="c8"
+              class="c9"
             >
               <span
                 class="c3 c4"
@@ -1733,7 +1827,7 @@ exports[`Tooltip demo -- theme 1`] = `
                 />
               </span>
               <div
-                class="c9"
+                class="c7 c10"
               >
                 <p>
                   tooltip message
