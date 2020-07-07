@@ -12,6 +12,7 @@ import Radio from 'src/components/Radio';
 import Select from 'src/components/Select';
 import Icon from 'src/components/Icon';
 import Popover from 'src/components/Popover';
+import Tooltip from 'src/components/Tooltip';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
 
 import {
@@ -19,6 +20,7 @@ import {
     TableWrap,
     PopupContainer,
     SortIcon,
+    CancleSelect,
     selectIconCellCls,
     selectIconHeaderCls,
     placeholderCellCls,
@@ -382,6 +384,7 @@ class Table extends Component {
     };
     onSelectedRowKeysChange = selectedRowKeyMap => {
         const { rowSelection } = this.props;
+        if (!rowSelection) return;
         const selectedRowKeys = [];
         _.each(selectedRowKeyMap, (selected, key) => {
             selected && selectedRowKeys.push(key);
@@ -395,6 +398,10 @@ class Table extends Component {
                     selectedRowKeyMap
                 });
             }
+        } else {
+            this.setState({
+                selectedRowKeyMap
+            });
         }
         this.deprecatedOnRowSelect(selectedRowKeys);
     };
@@ -672,8 +679,11 @@ class Table extends Component {
         const { key } = column;
         return (key === undefined ? index : key) + '';
     };
+    cancleSelect = () => {
+        this.onSelectedRowKeysChange({});
+    };
     getColumns = (dataSourceOfCurrentPage, filters) => {
-        const { columns, rowSelection, columnPlaceholder } = this.props;
+        const { columns, rowSelection, columnPlaceholder, locale } = this.props;
         const { order: currentOrder = {}, selectedRowKeyMap, columnConfig } = this.state;
         const cloneColumns = columns.map((column, index) => ({
             ...column,
@@ -731,16 +741,33 @@ class Table extends Component {
             const isAllSelected =
                 selectedEnableDataSourceOfCurrentPageCount === enableDataSourceOfCurrentPage.length &&
                 selectedEnableDataSourceOfCurrentPageCount > 0;
+
+            const selectedCount = _.filter(selectedRowKeyMap, v => v).length;
             newColumns.unshift({
                 title:
                     rowSelection.multiple === false ? null : (
-                        <Checkbox
-                            onChange={() => {
-                                const enableKeysOfCurrentPage = enableDataSourceOfCurrentPage.map(item => item.key);
-                                this.handleToggleCurrentPage(enableKeysOfCurrentPage, !isAllSelected);
+                        <Tooltip
+                            visible={selectedCount > 0}
+                            getPopupContainer={() => this.popupContainer}
+                            popup={
+                                <span>
+                                    {locale.selected} {selectedCount}{' '}
+                                    <CancleSelect onClick={this.cancleSelect}>{locale.cancleSelect}</CancleSelect>
+                                </span>
+                            }
+                            placement="topLeft"
+                            align={{
+                                offset: [-10, 0]
                             }}
-                            checked={isAllSelected}
-                        />
+                        >
+                            <Checkbox
+                                onChange={() => {
+                                    const enableKeysOfCurrentPage = enableDataSourceOfCurrentPage.map(item => item.key);
+                                    this.handleToggleCurrentPage(enableKeysOfCurrentPage, !isAllSelected);
+                                }}
+                                checked={isAllSelected}
+                            />
+                        </Tooltip>
                     ),
                 key: 'table_row_selection',
                 width: 32,
@@ -876,13 +903,15 @@ class Table extends Component {
         }
     };
     renderTitle = option => {
-        const { title = () => {} } = this.props;
-        return (
-            <div>
-                {title()}
-                {this.renderSearchInfo(option)}
-            </div>
-        );
+        const { title } = this.props;
+        return [
+            title && (
+                <div className={`${prefixCls}-custom-title`} key="custom">
+                    {title()}
+                </div>
+            ),
+            this.renderSearchInfo(option)
+        ];
     };
     renderFooter = option => {
         return <div>{this.renderEmptyAndErrorInfo(option)}</div>;

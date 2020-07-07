@@ -63,6 +63,9 @@ class Demo extends Component {
             },
             render: record => <span>content {record.index}</span>
         }));
+        const dataSource = new Array(100).fill(null).map((v, i) => ({
+            key: i
+        }));
         const list = (
             <div>
                 <div className="demo-wrap">
@@ -139,6 +142,15 @@ class Demo extends Component {
                                 </div>
                             </div>
                         )}
+                    />
+                </div>
+                <div className="demo-wrap">
+                    <Table
+                        columns={columns}
+                        dataSource={dataSource}
+                        rowSelection={{
+                            defaultSelectedRowKeys: [1, 2, 5]
+                        }}
                     />
                 </div>
                 <div className="demo-wrap">

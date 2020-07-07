@@ -8,6 +8,8 @@ export default {
     period: '。',
     semicolon: '；',
     colon: '：',
+    selected: '已选择',
+    cancleSelect: '取消选择',
     columnConfigHeader: '自定义列表',
     columnConfigTip: '清除缓存或更换浏览器，自定义列表失效。',
     columnConfigSelected: '选中'
