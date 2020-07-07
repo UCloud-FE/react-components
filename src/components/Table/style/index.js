@@ -235,8 +235,8 @@ export const TableWrap = styled.div(
         &-fixed-header .${prefixCls}-scroll .${prefixCls}-header {
             overflow: scroll;
         }
-        &-title {
-            margin-bottom: 4px;
+        &-custom-title {
+            margin-bottom: 16px;
         }
         &-tip-wrap {
             border-bottom: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
@@ -279,6 +279,7 @@ export const TableWrap = styled.div(
 
 export const PopupContainer = styled.div`
     position: relative;
+    z-index: 10;
 `;
 
 export const ColumnConfigWrap = styled.span`
@@ -304,5 +305,12 @@ export const ColumnConfigModalCheckbox = styled(Checkbox)`
 export const ActionButton = styled(Button)`
     margin-right: 4px;
 `;
+
+export const CancleSelect = styled.span(
+    ({ theme: { designTokens: DT } }) => css`
+        cursor: pointer;
+        color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+    `
+);
 
 addDefaultThemeProps(TableWrap, ColumnConfigButtonWrap, SortIcon, ExpandedRowContent);
