@@ -67,7 +67,6 @@ TableRow.propTypes = {
     contextMenu: PropTypes.func
 };
 
-const emptyColumnsWarn = () => console.error('Warning: Table need a valid columns');
 const missingColumnKeyWarn = () => console.error('Warning: Table column need a unique key');
 
 @localeConsumerDecorator({ defaultLocale: LOCALE, localeName: 'Table' })
@@ -206,7 +205,9 @@ class Table extends Component {
             /** x轴滚动配置，为true自动展开并滚动，为数字时设定表单的宽度 */
             x: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
             /** y轴滚动配置，为数字时设定表单的高度 */
-            y: PropTypes.oneOfType([PropTypes.bool, PropTypes.number])
+            y: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
+            /** table body 滚动时的回调 */
+            onScroll: PropTypes.func
         }),
         /** 定义如何获取每行的键值 */
         rowKey: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),

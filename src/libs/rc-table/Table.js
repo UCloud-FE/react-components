@@ -359,7 +359,8 @@ class Table extends React.Component {
         const table = [
             this.renderTable({
                 columns: this.columnManager.groupedColumns(),
-                isAnyColumnsFixed
+                isAnyColumnsFixed,
+                onScroll: scroll.onScroll
             }),
             this.renderEmptyText(),
             this.renderFooter()
@@ -395,7 +396,7 @@ class Table extends React.Component {
     }
 
     renderTable(options) {
-        const { columns, fixed, isAnyColumnsFixed } = options;
+        const { columns, fixed, isAnyColumnsFixed, onScroll } = options;
         const { prefixCls, scroll = {} } = this.props;
         const tableClassName = scroll.x || fixed ? `${prefixCls}-fixed` : '';
 
@@ -418,7 +419,10 @@ class Table extends React.Component {
                 tableClassName={tableClassName}
                 getRowKey={this.getRowKey}
                 handleWheel={this.handleWheel}
-                handleBodyScroll={this.handleBodyScroll}
+                handleBodyScroll={e => {
+                    this.handleBodyScroll(e);
+                    onScroll && onScroll(e);
+                }}
                 expander={this.expander}
                 isAnyColumnsFixed={isAnyColumnsFixed}
             />
