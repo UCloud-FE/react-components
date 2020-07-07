@@ -33,6 +33,7 @@ export const ContentWrap = styled.div(({ theme: { designTokens: DT }, themeType 
         text-decoration: none;
         border-radius: 3px;
 
+        box-sizing: border-box;
         color: ${map.text};
         border: ${DT.T_LINE_WIDTH_BASE} solid ${map.border};
         background: ${map.background};
@@ -129,26 +130,38 @@ injectGlobal`
         &.${popoverPrefixCls}-placement-bottomLeft,
         &.${popoverPrefixCls}-placement-topLeft {
             ${Arrow} {
-                left: 15%;
+                left: 16px;
+            }
+            ${ContentWrap} {
+                min-width: 32px;
             }
         }
         &.${popoverPrefixCls}-placement-bottomRight,
         &.${popoverPrefixCls}-placement-topRight {
             ${Arrow} {
-                right: 15%;
+                right: 10px;
+            }
+            ${ContentWrap} {
+                min-width: 32px;
             }
         }
         &.${popoverPrefixCls}-placement-leftTop,
         &.${popoverPrefixCls}-placement-rightTop {
             ${Arrow} {
-                top: 15%;
+                top: 5px;
                 margin-top: 0;
+            }
+            ${ContentWrap} {
+                min-height: 22px;
             }
         }
         &.${popoverPrefixCls}-placement-leftBottom,
         &.${popoverPrefixCls}-placement-rightBottom {
             ${Arrow} {
-                bottom: 15%;
+                bottom: 5px;
+            }
+            ${ContentWrap} {
+                min-height: 22px;
             }
         }
         &.${popoverPrefixCls}-placement-top,
@@ -156,11 +169,17 @@ injectGlobal`
             ${Arrow} {
                 left: 50%;
             }
+            ${ContentWrap} {
+                min-width: 32px;
+            }
         }
         &.${popoverPrefixCls}-placement-left,
         &.${popoverPrefixCls}-placement-right {
             ${Arrow} {
                 top: 50%;
+            }
+            ${ContentWrap} {
+                min-height: 22px;
             }
         }
     }
