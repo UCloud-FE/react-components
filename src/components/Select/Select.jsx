@@ -11,7 +11,7 @@ import deprecatedLog from 'src/utils/deprecatedLog';
 
 import Option from './Option';
 import Extra from './Extra';
-import { SelectWrap, SelectSearchInput, Selector, Arrow, BlockMenu, MenuWrap } from './style';
+import { SelectWrap, SelectSearchInput, Selector, Arrow, BlockMenu, MenuWrap, EmptyContentWrapper } from './style';
 import LOCALE from './locale/zh_CN';
 
 export const deprecatedLogForPopover = _.once(() => deprecatedLog('Select popover', 'popoverProps'));
@@ -111,7 +111,11 @@ class Select extends Component {
          */
         customStyle: PropTypes.shape({
             optionListMaxHeight: PropTypes.number
-        })
+        }),
+        /**
+         * 可选性为空时展示内容
+         */
+        emptyContent: PropTypes.node
     };
     static defaultProps = {
         onChange: () => {},
@@ -202,6 +206,10 @@ class Select extends Component {
             }
         }
     };
+    renderEmptyContent = () => {
+        const { emptyContent, locale } = this.props;
+        return emptyContent || <EmptyContentWrapper>{locale.emptyTip}</EmptyContentWrapper>;
+    };
     renderPopup = () => {
         const { search, children, onChange, multiple, showSelectAll, value, options, extra, customStyle } = this.props;
         const { searchValue, itemTree } = this.state;
@@ -235,7 +243,7 @@ class Select extends Component {
                     showSelectAll={showSelectAll}
                     selectedKeys={multiple ? value : [value]}
                 >
-                    {Options || children}
+                    {Options || children || this.renderEmptyContent()}
                 </BlockMenu>
                 {Extra}
             </MenuWrap>
@@ -301,6 +309,7 @@ class Select extends Component {
             popover,
             popoverProps,
             customStyle,
+            emptyContent,
             ...rest
         } = this.props;
         /* eslint-enable no-unused-vars */

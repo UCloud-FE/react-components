@@ -85,4 +85,11 @@ export const SelectWrap = styled.div`
     ${propsMixin};
 `;
 
+export const EmptyContentWrapper = styled.div(
+    ({ theme: { designTokens: DT } }) => css`
+        text-align: center;
+        color: ${DT.T_COLOR_TEXT_REMARK_DARK};
+    `
+);
+
 addDefaultThemeProps(SelectWrap, MenuWrap);
