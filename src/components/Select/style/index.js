@@ -92,4 +92,4 @@ export const EmptyContentWrapper = styled.div(
     `
 );
 
-addDefaultThemeProps(SelectWrap, MenuWrap);
+addDefaultThemeProps(SelectWrap, MenuWrap, EmptyContentWrapper);
