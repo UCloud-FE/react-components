@@ -93,6 +93,9 @@ export const TableWrap = styled.div(
             table {
                 width: auto;
             }
+            .${prefixCls}-body-inner {
+                overflow-x: scroll;
+            }
         }
         &-fixed-left {
             left: 0;
