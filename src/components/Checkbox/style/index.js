@@ -48,7 +48,7 @@ export const CheckboxWrap = styled.span.attrs({
 })`
     cursor: pointer;
     position: relative;
-
+    white-space: nowrap;
     ${inlineBlockWithVerticalMixin};
     ${propsMixin};
 `;
