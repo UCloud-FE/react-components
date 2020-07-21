@@ -36,7 +36,7 @@ const Demo = () => {
             >
                 reset config
             </Button>
-            {['message', 'warning', 'success', 'error'].map(type => (
+            {['message', 'loading', 'success', 'warning', 'error'].map(type => (
                 <div className="demo-wrap" key={type}>
                     <Button
                         style={{ width: 150 }}
