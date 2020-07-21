@@ -1,8 +1,8 @@
 ### 说明
 
 *   Message 用来弹出提示框。
-
-*   有 message, warning, success, error 四种不同的方法。
+*   普遍会使用 method 调用的方式
+*   有 message, success, warning, error, loading 几种不同的方法。
 
 ### 演示
 
@@ -10,25 +10,35 @@
 
 接收四个参数，
 
-*   message：显示的消息内容
+*   message：显示的消息内容 ｜ 传入 message 的 props
 *   duration: 显示时长，undefined 为默认时长，null 为不自动关闭
 *   callback: 关闭时的回调
-*   option: 自定义 Message 组件的 props （className、style 等）
+*   option: 自定义属性，目前仅支持 zIndex
 
 ```js {"codepath": "method.jsx"}
 ```
 
 *   Message - 或者当组件使用
 
-```js {"codepath": "base.jsx"}
+```js {"codepath": "message.jsx"}
+```
+
+*   title - 标题
+
+```js {"codepath": "title.jsx"}
+```
+
+*   footer - 底栏
+
+```js {"codepath": "footer.jsx"}
 ```
 
 *   custom - 自定义弹出 message 内容
 
-接收三个参数，
+想弹出自定义的 Message 展示框时可使用，接收三个参数，
 
 *   message：显示的消息内容
-*   duration: 显示时长，undefined 为默认时长，null 为不自动关闭
+*   duration: 显示时长，undefined 为默认时长，null 为不自动关闭，同上
 *   callback: 关闭时的回调
 
 ```js {"codepath": "custom.jsx"}
@@ -42,4 +52,9 @@
 *   top: Message 容器距离顶部的距离
 
 ```js {"codepath": "config.jsx"}
+```
+
+*   demo - 样例展示
+
+```js {"codepath": "demo.jsx"}
 ```

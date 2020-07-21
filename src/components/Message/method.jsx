@@ -8,7 +8,7 @@ import Message from './Message';
 import MessageContainer from './MessageContainer';
 
 const config = {
-    duration: 3000,
+    duration: 4500,
     getContainer: () => document.body,
     top: 20
 };
@@ -45,25 +45,34 @@ const popupMessage = (message, duration = config.duration, onClose = () => {}) =
 
 const showMessage = (styleType, content, duration = config.duration, onClose = () => {}, option = {}) => {
     const { zIndex, style, className } = option;
+    let props = {
+        children: content
+    };
     let newStyle = {
         ...style
     };
     if ('zIndex' in option) {
         newStyle.zIndex = zIndex;
     }
+    if (!React.isValidElement(content) && Object.prototype.toString.call(content) === '[object Object]') {
+        props = content;
+    }
+    let destroy = () => {};
     const message = (
-        <Message styleType={styleType} style={newStyle} className={className}>
-            {content}
-        </Message>
+        <Message styleType={styleType} style={newStyle} className={className} {...props} onClose={() => destroy()} />
     );
-    return popupMessage(message, duration, onClose, option);
+    const instance = popupMessage(message, duration, onClose, option);
+    destroy = instance.destroy;
+    return instance;
 };
 
 const message = (...args) => showMessage('default', ...args);
-const warning = (...args) => showMessage('warning', ...args);
-const info = (...args) => showMessage('info', ...args);
+const info = (...args) => showMessage('default', ...args);
 const success = (...args) => showMessage('success', ...args);
+const warning = (...args) => showMessage('warning', ...args);
 const error = (...args) => showMessage('error', ...args);
+const loading = (...args) => showMessage('loading', ...args);
+
 const popup = (...args) => popupMessage(...args);
 
 const changeConfig = (options = {}) => {
@@ -76,4 +85,4 @@ const changeConfig = (options = {}) => {
     }
 };
 
-export { message, warning, success, info, error, popup, changeConfig as config };
+export { success, info, message, warning, error, loading, popup, changeConfig as config };
