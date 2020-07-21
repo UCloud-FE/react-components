@@ -1,49 +1,89 @@
 import styled, { css } from 'styled-components';
 import { TransitionGroup } from 'react-transition-group';
 
+import SvgIcon from 'src/components/SvgIcon';
 import { fadeIn, fadeOut } from 'src/style/animation';
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
 export const animationDuration = 500;
 export const animationName = 'uc-fe-animation-fade';
 
-export const IconWrap = styled.span`
-    display: table-cell;
-    font-size: 15px;
-    width: 15px;
-    padding-right: 8px;
-    padding-top: 2px;
-`;
-
-export const ContentWrap = styled.div`
-    display: table-cell;
-    vertical-align: middle;
-`;
-
-const map = {
-    default: 'info',
-    success: 'success',
-    warning: 'warning',
-    error: 'error',
-    info: 'success'
+const colorMap = {
+    success: 'T_COLOR_TEXT_SUCCESS',
+    warning: 'T_COLOR_TEXT_WARNING',
+    error: 'T_COLOR_TEXT_ERROR',
+    loading: 'T_COLOR_TEXT_PRIMARY_DEFAULT',
+    default: 'T_COLOR_TEXT_PRIMARY_DEFAULT'
 };
 
-export const MessageWrap = styled.div(({ styleType, theme: { colorMap } }) => {
-    const color = colorMap[map[styleType]];
+export const TipIcon = styled(SvgIcon)(
+    ({ styleType, theme: { designTokens: DT } }) => css`
+        fill: ${DT[colorMap[styleType]]};
+    `
+);
+
+export const IconWrap = styled.div`
+    font-size: 15px;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    line-height: 16px;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+`;
+export const CloseIconWrap = styled.div`
+    font-size: 15px;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    line-height: 16px;
+    position: absolute;
+    top: 16px;
+    right: 12px;
+    cursor: pointer;
+`;
+
+export const TitleWrap = styled.h3(({ theme: { designTokens: DT } }) => {
     return css`
+        padding-right: 36px;
+        padding-left: 44px;
         word-break: break-all;
-        line-height: 16px;
         font-size: 14px;
-        padding: 10px;
-        border-radius: 2px;
-        border: 1px solid ${colorMap.default.border};
-        color: ${colorMap.default.text};
+        color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+        line-height: 22px;
+    `;
+});
 
-        border-color: ${color.border};
-        background: ${color.background};
+export const ContentWrap = styled.div(({ theme: { designTokens: DT } }) => {
+    return css`
+        padding-right: 36px;
+        padding-left: 44px;
+        word-break: break-all;
+        font-size: 12px;
+        color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
+        line-height: 20px;
+    `;
+});
 
-        ${/*sc-sel*/ IconWrap} {
-            color: ${color.icon};
+export const FooterWrap = styled.div`
+    text-align: right;
+    margin-right: 16px;
+    margin-top: 16px;
+`;
+
+export const MessageWrap = styled.div(({ theme: { designTokens: DT } }) => {
+    return css`
+        box-sizing: border-box;
+        width: 340px;
+        padding: 16px 0;
+        border-radius: 4px;
+        box-shadow: ${DT.T_SHADOW_BLOCK_DEFAULT_MD};
+        background: ${DT.T_CARD_COLOR_BG_DEFAULT};
+        position: relative;
+
+        ${TitleWrap}+${ContentWrap} {
+            margin-top: 8px;
         }
     `;
 });
@@ -68,10 +108,11 @@ export const MessageContentWrap = styled(TransitionGroup)`
     }
 
     ${/*sc-sel*/ MessageWrap} {
-        margin: 0 auto;
-        width: 300px;
-        margin-bottom: 10px;
+        position: relative;
+        margin-bottom: 16px;
+        margin-right: 16px;
+        margin-left: auto;
     }
 `;
 
-addDefaultThemeProps(MessageWrap);
+addDefaultThemeProps(MessageWrap, TipIcon, TitleWrap, ContentWrap);

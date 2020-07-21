@@ -8,13 +8,15 @@ import Cross from './icons/Cross';
 import BoldCross from './icons/BoldCross';
 import CircleLoading from './icons/CircleLoading';
 import DottedRightArrow from './icons/DottedRightArrow';
+import ExclamationCircle from './icons/ExclamationCircle';
 
 const IconMap = {
     tick: Tick,
     cross: Cross,
     boldCross: BoldCross,
     circleLoading: CircleLoading,
-    dottedRightArrow: DottedRightArrow
+    dottedRightArrow: DottedRightArrow,
+    exclamationCircle: ExclamationCircle
 };
 
 const IconType = _.keys(IconMap);
@@ -38,7 +40,7 @@ class SvgIcon extends PureComponent {
         const Icon = IconMap[type];
         return (
             <SvgIconWrapper {...rest} viewBox="0 0 24 24">
-                <Icon />
+                {Icon && <Icon />}
             </SvgIconWrapper>
         );
     }
