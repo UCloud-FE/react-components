@@ -14,6 +14,7 @@ import Slider from 'src/components/Slider';
 import Modal from 'src/components/Modal';
 import Table from 'src/components/Table';
 import Menu from 'src/components/Menu';
+import PopConfirm from 'src/components/PopConfirm';
 import zh_CN from 'src/components/LocaleProvider/locale/zh_CN';
 import en_US from 'src/components/LocaleProvider/locale/en_US';
 
@@ -160,6 +161,11 @@ class Demo extends Component {
                     <div>
                         <Slider className="test-slider-sensitive" isSensitive />
                     </div>
+                </div>
+                <div className="demo-wrap">
+                    <PopConfirm popup="确认">
+                        <Button>按钮</Button>
+                    </PopConfirm>
                 </div>
             </div>
         );

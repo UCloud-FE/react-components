@@ -7,6 +7,7 @@ import Slider from 'src/components/Slider/locale/zh_CN';
 import Modal from 'src/components/Modal/locale/zh_CN';
 import Table from 'src/components/Table/locale/zh_CN';
 import Menu from 'src/components/Menu/locale/zh_CN';
+import PopConfirm from 'src/components/PopConfirm/locale/zh_CN';
 
 export default {
     locale: 'zh-cn',
@@ -18,5 +19,6 @@ export default {
     Slider,
     Modal,
     Table,
-    Menu
+    Menu,
+    PopConfirm
 };
