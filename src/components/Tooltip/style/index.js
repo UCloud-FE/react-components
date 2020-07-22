@@ -13,7 +13,7 @@ const borderWidth = '1px';
 
 export const tooltipPopupClassName = prefixCls + '-popup';
 
-export const ContentWrap = styled.div(({ theme: { designTokens: DT }, themeType }) => {
+export const ContentWrap = styled.div(({ theme: { designTokens: DT }, themeType, popupWrapperPadding }) => {
     let map = {
         light: {
             text: DT.T_COLOR_TEXT_DEFAULT_DARK,
@@ -28,7 +28,7 @@ export const ContentWrap = styled.div(({ theme: { designTokens: DT }, themeType 
     };
     map = map[themeType];
     return css`
-        padding: 8px 10px;
+        padding: ${popupWrapperPadding || '8px 10px'};
         text-align: left;
         text-decoration: none;
         border-radius: 3px;
