@@ -1,34 +1,40 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import _ from 'lodash';
 import classnames from 'classnames';
 
-import { controllerPrefix, CompactWrap } from './style';
+import Combine from 'src/components/Combine';
+import deprecatedLog from 'src/utils/deprecatedLog';
+import { prefixCls, controllerPrefix } from './style';
+
+const _deprecatedLog = _.once(() => deprecatedLog('Compact', 'Combine(spacing="compact")'));
 
 class Compact extends Component {
     static propTypes = {
         /** @ignore */
         children: PropTypes.node,
+        /** @ignore */
+        className: PropTypes.string,
         /** 组件共享的props，如size、className、style等 */
         sharedProps: PropTypes.object
     };
     static defaultProps = {
         sharedProps: {}
     };
+    constructor(props) {
+        super(props);
+        _deprecatedLog();
+    }
     render() {
-        const { children, sharedProps, ...rest } = this.props;
+        const { className, sharedProps, ...rest } = this.props;
+        const { className: controllerClassName } = sharedProps;
         return (
-            <CompactWrap {...rest}>
-                {React.Children.map(
-                    children,
-                    child =>
-                        React.isValidElement(child)
-                            ? React.cloneElement(child, {
-                                  ...sharedProps,
-                                  className: classnames(controllerPrefix, child.props.className, sharedProps.className)
-                              })
-                            : child
-                )}
-            </CompactWrap>
+            <Combine
+                spacing="compact"
+                sharedProps={{ ...sharedProps, className: classnames(controllerClassName, controllerPrefix) }}
+                {...rest}
+                className={classnames(prefixCls, className)}
+            />
         );
     }
 }

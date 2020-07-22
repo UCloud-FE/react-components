@@ -1,30 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Compact demo -- compact 1`] = `
-.c24 {
+.c25 {
   position: relative;
-  margin-left: 1px;
 }
 
-.c24 .uc-fe-compact-controller {
+.c25 > .uc-fe-combine-controller+.uc-fe-combine-controller {
   vertical-align: bottom;
   display: inline-block;
   margin-left: -1px;
 }
 
-.c24 .uc-fe-compact-controller:focus {
+.c25 > .uc-fe-combine-controller+.uc-fe-combine-controller:focus {
   z-index: 2;
 }
 
-.c24 .uc-fe-compact-controller:hover {
+.c25 > .uc-fe-combine-controller+.uc-fe-combine-controller:hover {
   z-index: 3;
+}
+
+.c25 > .c24 {
+  display: inline-block;
 }
 
 .c12 {
   vertical-align: baseline;
 }
 
-.c27 {
+.c28 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -48,7 +51,7 @@ exports[`Compact demo -- compact 1`] = `
   transition: all .22s cubic-bezier(.4,0,.2,1);
 }
 
-.c27:hover {
+.c28:hover {
   color: #3860f4;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
@@ -108,49 +111,49 @@ exports[`Compact demo -- compact 1`] = `
 }
 
 .c7 .c8,
-.c7 .sc-htpNat {
+.c7 .sc-bxivhb {
   margin-right: 8px;
   margin-bottom: 8px;
 }
 
 .c7 .c8:last-child,
-.c7 .sc-htpNat:last-child {
+.c7 .sc-bxivhb:last-child {
   margin-right: 0;
 }
 
-.c7 .c32 {
+.c7 .c33 {
   margin-right: 12px;
   margin-bottom: 8px;
 }
 
-.c7 .c32:last-child {
+.c7 .c33:last-child {
   margin-right: 0;
 }
 
-.c7 .c33+.c33 {
+.c7 .c34+.c34 {
   margin-left: -1px;
 }
 
-.c7 .c31 {
+.c7 .c32 {
   margin-right: -1px;
   margin-bottom: 8px;
 }
 
-.c7 .c31:first-child {
+.c7 .c32:first-child {
   border-radius: 2px 0 0 2px;
 }
 
-.c7 .c31:last-child {
+.c7 .c32:last-child {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
 }
 
-.c30 {
+.c31 {
   display: table;
   width: 100%;
 }
 
-.c29 {
+.c30 {
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -165,7 +168,7 @@ exports[`Compact demo -- compact 1`] = `
   transition: .18s cubic-bezier(.4,0,.2,1);
 }
 
-.c29 input {
+.c30 input {
   vertical-align: middle;
   display: table-cell;
   box-sizing: border-box;
@@ -176,59 +179,59 @@ exports[`Compact demo -- compact 1`] = `
   color: inherit;
 }
 
-.c29 input,
-.c29 input:hover,
-.c29 input:focus {
+.c30 input,
+.c30 input:hover,
+.c30 input:focus {
   border: none;
   outline: none;
   background: none;
 }
 
-.c29:hover {
+.c30:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.c29 input {
+.c30 input {
   line-height: 26px;
   height: 26px;
 }
 
-.c29 input::-webkit-input-placeholder {
+.c30 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.c29 input::-moz-placeholder {
+.c30 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.c29 input:-ms-input-placeholder {
+.c30 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.c29 input::placeholder {
+.c30 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.c26 {
+.c27 {
   padding-right: 28px;
   width: 100%;
   text-align: left;
 }
 
-.c28 {
+.c29 {
   position: absolute;
   right: 8px;
   top: 50%;
   margin-top: -6px;
 }
 
-.c25 {
+.c26 {
   box-sizing: border-box;
   position: relative;
   display: inline-block;
@@ -494,30 +497,31 @@ exports[`Compact demo -- compact 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-compact c24"
+      class="uc-fe-compact c24 uc-fe-combine c25"
+      spacing="compact"
     >
       <div
-        class="uc-fe-compact-controller c25"
+        class="uc-fe-combine-controller uc-fe-compact-controller c26"
       >
         <div>
           <button
-            class="c26 uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c27"
+            class="c27 uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c28"
             type="button"
           >
             <div>
               请选择
             </div>
             <i
-              class="uc-fe-icon icon__down c28 c12"
+              class="uc-fe-icon icon__down c29 c12"
             />
           </button>
         </div>
       </div>
       <span
-        class="uc-fe-compact-controller uc-fe-input c29"
+        class="uc-fe-combine-controller uc-fe-compact-controller uc-fe-input c30"
       >
         <span
-          class="c30"
+          class="c31"
         >
           <input />
         </span>
@@ -528,30 +532,33 @@ exports[`Compact demo -- compact 1`] = `
 `;
 
 exports[`Compact demo -- sharedProps 1`] = `
-.c0 {
+.c1 {
   position: relative;
-  margin-left: 1px;
 }
 
-.c0 .uc-fe-compact-controller {
+.c1 > .uc-fe-combine-controller+.uc-fe-combine-controller {
   vertical-align: bottom;
   display: inline-block;
   margin-left: -1px;
 }
 
-.c0 .uc-fe-compact-controller:focus {
+.c1 > .uc-fe-combine-controller+.uc-fe-combine-controller:focus {
   z-index: 2;
 }
 
-.c0 .uc-fe-compact-controller:hover {
+.c1 > .uc-fe-combine-controller+.uc-fe-combine-controller:hover {
   z-index: 3;
 }
 
-.c5 {
+.c1 > .c0 {
+  display: inline-block;
+}
+
+.c6 {
   vertical-align: baseline;
 }
 
-.c8 {
+.c9 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -575,13 +582,13 @@ exports[`Compact demo -- sharedProps 1`] = `
   transition: all .22s cubic-bezier(.4,0,.2,1);
 }
 
-.c8:hover {
+.c9:hover {
   color: #3860f4;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
 }
 
-.c3 {
+.c4 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -605,18 +612,18 @@ exports[`Compact demo -- sharedProps 1`] = `
   transition: all .22s cubic-bezier(.4,0,.2,1);
 }
 
-.c3:hover {
+.c4:hover {
   color: #3860f4;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
 }
 
-.c7 {
+.c8 {
   display: table;
   width: 100%;
 }
 
-.c9 {
+.c10 {
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -631,7 +638,7 @@ exports[`Compact demo -- sharedProps 1`] = `
   transition: .18s cubic-bezier(.4,0,.2,1);
 }
 
-.c9 input {
+.c10 input {
   vertical-align: middle;
   display: table-cell;
   box-sizing: border-box;
@@ -642,46 +649,46 @@ exports[`Compact demo -- sharedProps 1`] = `
   color: inherit;
 }
 
-.c9 input,
-.c9 input:hover,
-.c9 input:focus {
+.c10 input,
+.c10 input:hover,
+.c10 input:focus {
   border: none;
   outline: none;
   background: none;
 }
 
-.c9:hover {
+.c10:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.c9 input {
+.c10 input {
   line-height: 26px;
   height: 26px;
 }
 
-.c9 input::-webkit-input-placeholder {
+.c10 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.c9 input::-moz-placeholder {
+.c10 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.c9 input:-ms-input-placeholder {
+.c10 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.c9 input::placeholder {
+.c10 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.c6 {
+.c7 {
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -696,7 +703,7 @@ exports[`Compact demo -- sharedProps 1`] = `
   transition: .18s cubic-bezier(.4,0,.2,1);
 }
 
-.c6 input {
+.c7 input {
   vertical-align: middle;
   display: table-cell;
   box-sizing: border-box;
@@ -707,59 +714,59 @@ exports[`Compact demo -- sharedProps 1`] = `
   color: inherit;
 }
 
-.c6 input,
-.c6 input:hover,
-.c6 input:focus {
+.c7 input,
+.c7 input:hover,
+.c7 input:focus {
   border: none;
   outline: none;
   background: none;
 }
 
-.c6:hover {
+.c7:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.c6 input {
+.c7 input {
   line-height: 22px;
   height: 22px;
 }
 
-.c6 input::-webkit-input-placeholder {
+.c7 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.c6 input::-moz-placeholder {
+.c7 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.c6 input:-ms-input-placeholder {
+.c7 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.c6 input::placeholder {
+.c7 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.c2 {
+.c3 {
   padding-right: 28px;
   width: 100%;
   text-align: left;
 }
 
-.c4 {
+.c5 {
   position: absolute;
   right: 8px;
   top: 50%;
   margin-top: -6px;
 }
 
-.c1 {
+.c2 {
   box-sizing: border-box;
   position: relative;
   display: inline-block;
@@ -773,30 +780,31 @@ exports[`Compact demo -- sharedProps 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-compact c0"
+      class="uc-fe-compact c0 uc-fe-combine c1"
+      spacing="compact"
     >
       <div
-        class="uc-fe-compact-controller c1"
+        class="uc-fe-combine-controller uc-fe-compact-controller c2"
       >
         <div>
           <button
-            class="c2 uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border c3"
+            class="c3 uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border c4"
             type="button"
           >
             <div>
               请选择
             </div>
             <i
-              class="uc-fe-icon icon__down c4 c5"
+              class="uc-fe-icon icon__down c5 c6"
             />
           </button>
         </div>
       </div>
       <span
-        class="uc-fe-compact-controller uc-fe-input c6"
+        class="uc-fe-combine-controller uc-fe-compact-controller uc-fe-input c7"
       >
         <span
-          class="c7"
+          class="c8"
         >
           <input />
         </span>
@@ -807,30 +815,31 @@ exports[`Compact demo -- sharedProps 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-compact c0"
+      class="uc-fe-compact c0 uc-fe-combine c1"
+      spacing="compact"
     >
       <div
-        class="uc-fe-compact-controller test_cls c1"
+        class="uc-fe-combine-controller test_cls uc-fe-compact-controller c2"
       >
         <div>
           <button
-            class="c2 uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c8"
+            class="c3 uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c9"
             type="button"
           >
             <div>
               请选择
             </div>
             <i
-              class="uc-fe-icon icon__down c4 c5"
+              class="uc-fe-icon icon__down c5 c6"
             />
           </button>
         </div>
       </div>
       <span
-        class="uc-fe-compact-controller test_cls uc-fe-input c9"
+        class="uc-fe-combine-controller test_cls uc-fe-compact-controller uc-fe-input c10"
       >
         <span
-          class="c7"
+          class="c8"
         >
           <input />
         </span>
