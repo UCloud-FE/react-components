@@ -9,7 +9,8 @@ import ThemeGetter from 'src/components/ThemeProvider/ThemeGetter';
 import { TooltipWrap, Arrow, ArrowInner, ContentWrap, tooltipPopupClassName } from './style';
 
 const { Animation, Trigger, Placement } = Popover;
-const placements = getPlacements(7);
+const arrowPlacements = getPlacements(10);
+const placements = getPlacements();
 const Theme = ['light', 'dark'];
 
 class Tooltip extends Component {
@@ -23,15 +24,22 @@ class Tooltip extends Component {
         /** 是否显示箭头 */
         arrow: PropTypes.bool,
         /** 主题风格 */
-        theme: PropTypes.oneOfType([PropTypes.oneOf(Theme), PropTypes.object])
+        theme: PropTypes.oneOfType([PropTypes.oneOf(Theme), PropTypes.object]),
+        /** 自定义样式 */
+        customStyle: PropTypes.shape({
+            /** 弹出层外层 padding */
+            popupWrapperPadding: PropTypes.string
+        })
     };
     static defaultProps = {
         theme: 'light',
         arrow: true,
-        placement: Placement[0]
+        placement: Placement[0],
+        customStyle: {}
     };
     renderPopup(theme) {
-        const { popup, placement, theme: themeType, arrow } = this.props;
+        const { popup, placement, theme: themeType, arrow, customStyle } = this.props;
+        const { popupWrapperPadding } = customStyle;
         return (
             <ThemeProvider theme={theme}>
                 <TooltipWrap placement={placement} themeType={themeType}>
@@ -40,14 +48,16 @@ class Tooltip extends Component {
                             <ArrowInner />
                         </Arrow>
                     )}
-                    <ContentWrap themeType={themeType}>{popup}</ContentWrap>
+                    <ContentWrap themeType={themeType} popupWrapperPadding={popupWrapperPadding}>
+                        {popup}
+                    </ContentWrap>
                 </TooltipWrap>
             </ThemeProvider>
         );
     }
     render() {
         // eslint-disable-next-line no-unused-vars
-        const { popup, theme: themeType, popupClassName = '', ...rest } = this.props;
+        const { popup, theme: themeType, popupClassName = '', customStyle, arrow, ...rest } = this.props;
         return (
             <ThemeGetter>
                 {theme => (
@@ -55,7 +65,7 @@ class Tooltip extends Component {
                         getPopupContainer={triggerNode => triggerNode.parentNode}
                         {...rest}
                         popupClassName={`${tooltipPopupClassName} ${popupClassName}`}
-                        builtinPlacements={placements}
+                        builtinPlacements={arrow ? arrowPlacements : placements}
                         popup={this.renderPopup(theme)}
                     />
                 )}
