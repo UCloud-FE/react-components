@@ -5,11 +5,14 @@ import Tooltip from 'src/components/Tooltip';
 import Button from 'src/components/Button';
 import SvgIcon from 'src/components/SvgIcon';
 import Combine from 'src/components/Combine';
-import { PopupWrap, ContentWrap, FooterWrap, IconWrap } from './style';
+import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
 import uncontrolledDecorator from 'src/decorators/uncontrolled';
+import { PopupWrap, ContentWrap, FooterWrap, IconWrap } from './style';
+import LOCALE from './locale/zh_CN';
 
 const noop = () => {};
 
+@localeConsumerDecorator({ defaultLocale: LOCALE, localeName: 'PopConfirm' })
 @uncontrolledDecorator({ valueName: 'visible', onChangeName: 'onVisibleChange' })
 class PopConfirm extends Component {
     static propTypes = {
@@ -21,6 +24,8 @@ class PopConfirm extends Component {
         visible: PropTypes.bool,
         /** @ignore */
         onVisibleChange: PropTypes.func,
+        /** @ignore */
+        locale: PropTypes.object,
         /** 确认按钮回调 */
         onConfirm: PropTypes.func,
         /** 取消按钮回调 */
@@ -41,7 +46,8 @@ class PopConfirm extends Component {
         onVisibleChange(false);
         onCancel();
     };
-    renderPopup = popup => {
+    renderPopup = () => {
+        const { locale, popup } = this.props;
         return (
             <PopupWrap>
                 <IconWrap>
@@ -50,9 +56,9 @@ class PopConfirm extends Component {
                 <ContentWrap>{popup}</ContentWrap>
                 <FooterWrap>
                     <Combine sharedProps={{ size: 'sm' }}>
-                        <Button onClick={this.onCancel}>取消</Button>
+                        <Button onClick={this.onCancel}>{locale.cancel}</Button>
                         <Button onClick={this.onConfirm} styleType="primary">
-                            确认
+                            {locale.confirm}
                         </Button>
                     </Combine>
                 </FooterWrap>
@@ -61,11 +67,11 @@ class PopConfirm extends Component {
     };
     render() {
         // eslint-disable-next-line no-unused-vars
-        const { popup, defaultVisible, visible, ...rest } = this.props;
+        const { popup, defaultVisible, visible, locale, ...rest } = this.props;
         return (
             <Tooltip
                 trigger={['click']}
-                popup={this.renderPopup(popup)}
+                popup={this.renderPopup()}
                 customStyle={{ popupWrapperPadding: '0px' }}
                 {...rest}
                 visible={visible}

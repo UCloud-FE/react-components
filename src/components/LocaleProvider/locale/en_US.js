@@ -7,6 +7,7 @@ import Slider from 'src/components/Slider/locale/en_US';
 import Modal from 'src/components/Modal/locale/en_US';
 import Table from 'src/components/Table/locale/en_US';
 import Menu from 'src/components/Menu/locale/en_US';
+import PopConfirm from 'src/components/PopConfirm/locale/en_US';
 
 export default {
     locale: 'en',
@@ -18,5 +19,6 @@ export default {
     Slider,
     Modal,
     Table,
-    Menu
+    Menu,
+    PopConfirm
 };

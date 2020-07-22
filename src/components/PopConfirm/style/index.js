@@ -11,10 +11,9 @@ export const PopupWrap = styled.div(() => {
         min-width: 186px;
         max-width: 300px;
         box-sizing: border-box;
-        padding: 12px 16px 12px 44px;
+        padding: 12px 16px 12px 40px;
     `;
 });
-
 export const ContentWrap = styled.div(
     ({ theme: { designTokens: DT } }) => css`
         font-size: 14px;
@@ -34,8 +33,8 @@ export const FooterWrap = styled.div(
 export const IconWrap = styled.div(
     ({ theme: { designTokens: DT } }) => css`
         position: absolute;
-        left: 14px;
-        top: 14px;
+        left: 12px;
+        top: 16px;
         fill: ${DT.T_COLOR_TEXT_WARNING};
     `
 );
