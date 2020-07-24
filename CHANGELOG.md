@@ -1,6 +1,24 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [0.6.17](https://github.com/UCloud-FE/react-components/compare/v0.6.16...v0.6.17) (2020-07-24)
+
+### Features
+
+*   **Combine:** add Combine and change compact to combine ([ffeb806](https://github.com/UCloud-FE/react-components/commit/ffeb806e5a8dbf64ca2174bb9bd3351cd89571c5)), closes [#235](https://github.com/UCloud-FE/react-components/issues/235)
+*   **Message:** enhance message, add title, footer, close ([03490cf](https://github.com/UCloud-FE/react-components/commit/03490cfa601f15a211faf57728fb62dd0d0d27ce)), closes [#234](https://github.com/UCloud-FE/react-components/issues/234)
+*   **NumberInput:** add tooltip for numberinput tip display ([51f8bec](https://github.com/UCloud-FE/react-components/commit/51f8bec5ff95dc4d7440607b6e7f8af22ac984aa)), closes [#238](https://github.com/UCloud-FE/react-components/issues/238)
+*   **PopConfirm:** add popconfirm component ([b83f976](https://github.com/UCloud-FE/react-components/commit/b83f976f69bd69f6a7293e51aada21652f091fb5)), closes [#237](https://github.com/UCloud-FE/react-components/issues/237)
+*   **Select:** add empty content for none option display ([d378a91](https://github.com/UCloud-FE/react-components/commit/d378a9150344700bfbcfbfcfba053e9a921cc8a3)), closes [#232](https://github.com/UCloud-FE/react-components/issues/232)
+*   **Table:** add scroll.onScroll and fix fixed column style ([be66be6](https://github.com/UCloud-FE/react-components/commit/be66be6d3a1bcad0fd7f54277fbff33ec2023fad)), closes [#228](https://github.com/UCloud-FE/react-components/issues/228)
+*   **Table:** add select tooltip for table select ([29c6589](https://github.com/UCloud-FE/react-components/commit/29c6589840f8da719268bbfe52a38a30af431d93)), closes [#231](https://github.com/UCloud-FE/react-components/issues/231)
+*   **Tooltip:** add customStyle & change offset ([691a702](https://github.com/UCloud-FE/react-components/commit/691a70239fb2742a86fdee2f68b7778de072b66a)), closes [#236](https://github.com/UCloud-FE/react-components/issues/236)
+*   **Tooltip:** change tooltip arrow position ([eadeaec](https://github.com/UCloud-FE/react-components/commit/eadeaecbbade25c9a28feff478db54cc5e90ca77)), closes [#230](https://github.com/UCloud-FE/react-components/issues/230)
+
+### Bug Fixes
+
+*   **Calendar:** fix calendar wrong ref ([759c4e9](https://github.com/UCloud-FE/react-components/commit/759c4e956e36a2b7a8593a899e7dc589e73d42a7)), closes [#229](https://github.com/UCloud-FE/react-components/issues/229)
 
 <a name="0.6.16"></a>
 
