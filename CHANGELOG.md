@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.19](https://github.com/UCloud-FE/react-components/compare/v0.6.18...v0.6.19) (2020-07-24)
+
+### Bug Fixes
+
+*   **PopConfirm:** fix popup word break ([7c664a2](https://github.com/UCloud-FE/react-components/commit/7c664a2f087818581880e79f1a64c594eafca848))
+
 ### [0.6.18](https://github.com/UCloud-FE/react-components/compare/v0.6.17...v0.6.18) (2020-07-24)
 
 ### [0.6.17](https://github.com/UCloud-FE/react-components/compare/v0.6.16...v0.6.17) (2020-07-24)
