@@ -24,3 +24,8 @@
 
 ```js {"codepath": "placement.jsx"}
 ```
+
+*   style - 修改提示文案宽度
+
+```js {"codepath": "style.jsx"}
+```

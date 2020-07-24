@@ -83,3 +83,8 @@
 
 ```js {"codepath": "uncontrolled.jsx"}
 ```
+
+*   tooltip - 提示文案
+
+```js {"codepath": "tooltip.jsx"}
+```

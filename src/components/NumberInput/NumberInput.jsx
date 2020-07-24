@@ -4,10 +4,11 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import _ from 'lodash';
 
-import Icon from 'components/Icon';
-
-import KEYCODE from 'interfaces/KeyCode';
+import Icon from 'src/components/Icon';
+import Tooltip from 'src/components/Tooltip';
+import KEYCODE from 'src/interfaces/KeyCode';
 import { NumberInputWrap, InputWrap, HandlerUp, HandlerDown, Input, InputSuffix } from './style';
 
 function noop() {}
@@ -93,7 +94,12 @@ class NumberInput extends Component {
         /** 计算合法值 */
         computeValidNumber: PropTypes.func,
         /** 是否隐藏操作按钮 */
-        hideHandler: PropTypes.bool
+        hideHandler: PropTypes.bool,
+        /**
+         * 输入提示，hover 和输入焦点时显示，可直接传入 tooltip 内容，或传入 tooltip 的 props，props 参考 tooltip 组件文档
+         * 注意，如果使用自定义 props 中的 visible 和 onVisibleChange 则需要自己去控制 tooltip 的显示隐藏
+         */
+        tooltip: PropTypes.oneOfType([PropTypes.node, PropTypes.object])
     };
 
     static defaultProps = {
@@ -126,7 +132,8 @@ class NumberInput extends Component {
         this.state = {
             inputValue: this.toPrecisionAsStep(value),
             value,
-            focused: props.autoFocus
+            focused: props.autoFocus,
+            tooltipVisible: false
         };
     }
 
@@ -562,7 +569,12 @@ class NumberInput extends Component {
             </div>
         );
     };
-    render() {
+    onTooltipVisibleChange = visible => {
+        this.setState({
+            tooltipVisible: visible
+        });
+    };
+    renderInput = () => {
         /* eslint-disable no-unused-vars */
         const {
             disabled,
@@ -586,11 +598,12 @@ class NumberInput extends Component {
             computeValidNumber,
             hideHandler,
             size,
+            tooltip,
             ...rest
         } = this.props;
         /* eslint-enable no-unused-vars */
 
-        const { focused, inputValue, value } = this.state;
+        const { focused, inputValue, value, tooltipVisible } = this.state;
 
         // focus state, show input value
         // unfocus state, show valid value
@@ -607,6 +620,54 @@ class NumberInput extends Component {
 
         const inputDisplayValueFormat = this.formatWrapper(inputDisplayValue);
         const editable = !readOnly && !disabled;
+        const input = (
+            <InputWrap>
+                <Input
+                    {...rest}
+                    size={size}
+                    autoComplete="off"
+                    onFocus={this.onFocus}
+                    onBlur={this.onBlur}
+                    onKeyDown={editable ? this.onKeyDown : noop}
+                    onKeyUp={editable ? this.onKeyUp : noop}
+                    onChange={this.onChange}
+                    disabled={disabled}
+                    readOnly={readOnly}
+                    innerRef={this.saveInput}
+                    value={inputDisplayValueFormat}
+                    style={inputStyle}
+                />
+                {suffix && <InputSuffix>{suffix}</InputSuffix>}
+            </InputWrap>
+        );
+
+        if (!tooltip) {
+            return input;
+        } else if (typeof tooltip === 'string' || React.isValidElement(tooltip)) {
+            return (
+                <Tooltip
+                    popup={tooltip}
+                    visible={focused || tooltipVisible}
+                    onVisibleChange={this.onTooltipVisibleChange}
+                >
+                    {input}
+                </Tooltip>
+            );
+        } else if (_.isObject(tooltip)) {
+            return (
+                <Tooltip visible={focused || tooltipVisible} onVisibleChange={this.onTooltipVisibleChange} {...tooltip}>
+                    {input}
+                </Tooltip>
+            );
+        } else {
+            return input;
+        }
+    };
+    render() {
+        const { disabled, className, style, styleType, hideHandler, size } = this.props;
+
+        const { focused } = this.state;
+
         return (
             <NumberInputWrap
                 focused={focused}
@@ -618,24 +679,7 @@ class NumberInput extends Component {
                 className={className}
             >
                 {this.renderHandler()}
-                <InputWrap>
-                    <Input
-                        {...rest}
-                        size={size}
-                        autoComplete="off"
-                        onFocus={this.onFocus}
-                        onBlur={this.onBlur}
-                        onKeyDown={editable ? this.onKeyDown : noop}
-                        onKeyUp={editable ? this.onKeyUp : noop}
-                        onChange={this.onChange}
-                        disabled={disabled}
-                        readOnly={readOnly}
-                        innerRef={this.saveInput}
-                        value={inputDisplayValueFormat}
-                        style={inputStyle}
-                    />
-                    {suffix && <InputSuffix>{suffix}</InputSuffix>}
-                </InputWrap>
+                {this.renderInput()}
             </NumberInputWrap>
         );
     }
