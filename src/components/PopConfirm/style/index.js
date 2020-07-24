@@ -21,6 +21,7 @@ export const ContentWrap = styled.div(
         line-height: 24px;
         max-height: 72px;
         overflow: auto;
+        word-break: normal;
         color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
     `
 );
@@ -34,7 +35,7 @@ export const IconWrap = styled.div(
     ({ theme: { designTokens: DT } }) => css`
         position: absolute;
         left: 12px;
-        top: 16px;
+        top: 14px;
         fill: ${DT.T_COLOR_TEXT_WARNING};
     `
 );
