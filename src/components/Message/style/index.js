@@ -76,6 +76,7 @@ export const MessageWrap = styled.div(({ theme: { designTokens: DT } }) => {
     return css`
         box-sizing: border-box;
         width: 340px;
+        min-height: 52px;
         padding: 16px 0;
         border-radius: 4px;
         box-shadow: ${DT.T_SHADOW_BLOCK_DEFAULT_MD};
