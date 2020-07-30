@@ -940,6 +940,7 @@ class Table extends Component {
     savePopupContainer = _ref => {
         this.popupContainer = _ref;
     };
+    getPopupContainer = () => this.popupContainer;
     render() {
         /* eslint-disable no-unused-vars */
         let {
@@ -1002,7 +1003,8 @@ class Table extends Component {
                     columnConfig: columnConfig,
                     onColumnConfigChange: this.onColumnConfigChange,
                     handleSearch: this.handleSearch,
-                    locale
+                    locale,
+                    getPopupContainer: this.getPopupContainer
                 }}
             >
                 <TableWrap

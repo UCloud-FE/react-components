@@ -6,6 +6,7 @@ import Menu from 'src/components/Menu';
 import Popover from 'src/components/Popover';
 
 import { ActionButton } from './style';
+import { TableContext } from './Table';
 
 const Size = ['sm', 'md', 'lg'];
 const ButtonStyleType = Button.StyleType;
@@ -27,7 +28,7 @@ export default class ActionList extends Component {
     static defaultProps = {
         exposeCount: 3,
         size: 'sm',
-        buttonStyleType: 'border-gray',
+        buttonStyleType: 'border',
         smart: true
     };
     state = {};
@@ -48,7 +49,7 @@ export default class ActionList extends Component {
             e.preventDefault();
         }
     };
-    renderMenu = (list, size) => {
+    renderMenu = (list, size, getPopupContainer) => {
         if (!list.length) {
             return null;
         }
@@ -78,7 +79,7 @@ export default class ActionList extends Component {
         return (
             <Popover
                 trigger={['click']}
-                getPopupContainer={triggerNode => triggerNode.parentNode}
+                getPopupContainer={getPopupContainer}
                 {...popoverProps}
                 visible={visible}
                 onVisibleChange={visible => this.setState({ visible })}
@@ -115,7 +116,9 @@ export default class ActionList extends Component {
         return (
             <ul {...rest}>
                 {this.renderButtonList(buttonList, size)}
-                {this.renderMenu(menuList, size)}
+                <TableContext.Consumer>
+                    {({ getPopupContainer }) => this.renderMenu(menuList, size, getPopupContainer)}
+                </TableContext.Consumer>
             </ul>
         );
     }
