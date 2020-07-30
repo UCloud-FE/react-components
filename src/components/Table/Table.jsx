@@ -28,6 +28,7 @@ import {
 } from './style';
 import LOCALE from './locale/zh_CN';
 
+const noop = () => {};
 export const deprecatedLogForOnRowSelect = _.once(() => deprecatedLog('Table onRowSelect', 'rowSelection.onChange'));
 
 export const placeholderKey = 'table_column_width_placeholder';
@@ -211,6 +212,8 @@ class Table extends Component {
             /** table body 滚动时的回调 */
             onScroll: PropTypes.func
         }),
+        /** 表格布局，当 scroll.y 有值时为 fixed，其它时候默认为 auto，可自行覆盖 */
+        tableLayout: PropTypes.oneOf(['auto', 'fixed']),
         /** 定义如何获取每行的键值 */
         rowKey: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
         /** 是否有斑马线，存在子表格时，斑马线样式可能会错乱 */
@@ -262,11 +265,7 @@ class Table extends Component {
         defaultColumnConfig: {},
         onColumnConfigChange: () => {},
         handleSearch: (record, searchValue) => {
-            return (
-                _.map(record)
-                    .join('')
-                    .indexOf(searchValue) >= 0
-            );
+            return _.map(record).join('').indexOf(searchValue) >= 0;
         },
         rowKey: 'key'
     };
@@ -770,7 +769,7 @@ class Table extends Component {
                         </Tooltip>
                     ),
                 key: 'table_row_selection',
-                width: 32,
+                width: 34,
                 fixed: rowSelection.fixed,
                 onHeaderCell: () => ({ className: selectIconHeaderCls }),
                 onCell: () => ({ className: selectIconCellCls }),
@@ -861,10 +860,8 @@ class Table extends Component {
                         <span>
                             {locale.filter}
                             {locale.colon}
-                            {_.map(
-                                filters,
-                                filterInfo =>
-                                    first ? [(first = false), renderLabel(filterInfo)] : [', ', renderLabel(filterInfo)]
+                            {_.map(filters, filterInfo =>
+                                first ? [(first = false), renderLabel(filterInfo)] : [', ', renderLabel(filterInfo)]
                             )}
                             {locale.semicolon}
                         </span>
@@ -932,6 +929,17 @@ class Table extends Component {
             onExpand(expanded, record);
         }
     };
+    onRow = (record, index) => {
+        const { onRow = noop, contextMenu } = this.props;
+        return {
+            ...onRow(record, index),
+            record,
+            contextMenu
+        };
+    };
+    savePopupContainer = _ref => {
+        this.popupContainer = _ref;
+    };
     render() {
         /* eslint-disable no-unused-vars */
         let {
@@ -949,15 +957,17 @@ class Table extends Component {
             expandIconAsCell,
             expandIconColumnIndex,
             defaultExpandAllRows,
-            title = () => {},
-            footer = () => {},
+            title = noop,
+            footer = noop,
             locale,
             hideExpandIcon,
-            onRow = () => {},
+            onRow = noop,
             components,
             onExpand,
             zebraCrossing,
             columnPlaceholder,
+            tableLayout,
+            scroll,
             ...rest
         } = this.props;
         if (emptyContent === undefined) {
@@ -1001,21 +1011,17 @@ class Table extends Component {
                     hideExpandIcon={hideExpandIcon}
                     zebraCrossing={zebraCrossing}
                 >
-                    <PopupContainer innerRef={_ref => (this.popupContainer = _ref)} />
+                    <PopupContainer innerRef={this.savePopupContainer} />
                     <RcTable
                         {...defaultExpandAllRowsProps}
                         {...rest}
+                        scroll={scroll}
+                        tableLayout={tableLayout ? tableLayout : scroll && scroll.y ? 'fixed' : undefined}
                         prefixCls={prefixCls}
                         data={dataSource}
                         columns={columns}
-                        onRow={(record, index) => {
-                            return {
-                                ...onRow(record, index),
-                                record,
-                                contextMenu
-                            };
-                        }}
-                        components={_.extend(components, {
+                        onRow={this.onRow}
+                        components={_.extend({}, components, {
                             body: {
                                 row: TableRow
                             }

@@ -5,7 +5,7 @@ import BaseTable from './BaseTable';
 
 export default function HeadTable(props, { table }) {
     const { prefixCls, scroll, showHeader } = table.props;
-    const { columns, fixed, tableClassName, handleBodyScrollLeft, expander } = props;
+    const { columns, fixed, tableClassName, handleBodyScrollLeft, expander, tableLayout } = props;
     const { saveRef } = table;
     let { useFixedHeader } = table.props;
     const headStyle = {};
@@ -39,6 +39,7 @@ export default function HeadTable(props, { table }) {
                 fixed={fixed}
                 columns={columns}
                 expander={expander}
+                tableLayout={tableLayout}
             />
         </div>
     );
@@ -49,7 +50,8 @@ HeadTable.propTypes = {
     columns: PropTypes.array.isRequired,
     tableClassName: PropTypes.string.isRequired,
     handleBodyScrollLeft: PropTypes.func.isRequired,
-    expander: PropTypes.object.isRequired
+    expander: PropTypes.object.isRequired,
+    tableLayout: PropTypes.oneOf(['fixed'])
 };
 
 HeadTable.contextTypes = {

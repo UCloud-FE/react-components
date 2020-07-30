@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'mini-store';
 import classNames from 'classnames';
+
 import ColGroup from './ColGroup';
 import TableHeader from './TableHeader';
 import TableRow from './TableRow';
@@ -17,7 +18,7 @@ class BaseTable extends React.Component {
         store: PropTypes.object.isRequired,
         expander: PropTypes.object.isRequired,
         getRowKey: PropTypes.func,
-        isAnyColumnsFixed: PropTypes.bool
+        tableLayout: PropTypes.oneOf(['fixed'])
     };
 
     static contextTypes = {
@@ -25,15 +26,14 @@ class BaseTable extends React.Component {
     };
 
     getColumns(cols) {
-        const { columns = [], fixed } = this.props;
+        const { columns = [] } = this.props;
         const { table } = this.context;
         const { prefixCls } = table.props;
         return (cols || columns).map(column => ({
             ...column,
-            className:
-                !!column.fixed && !fixed
-                    ? classNames(`${prefixCls}-fixed-columns-in-body`, column.className)
-                    : column.className
+            className: column.fixed
+                ? classNames(`${prefixCls}-fixed-columns-in-body`, column.className)
+                : column.className
         }));
     }
 
@@ -46,19 +46,8 @@ class BaseTable extends React.Component {
     renderRows = (renderData, indent, ancestorKeys = []) => {
         const { table } = this.context;
         const { columnManager, components } = table;
-        const {
-            prefixCls,
-            childrenColumnName,
-            rowClassName,
-            rowRef,
-            onRowClick,
-            onRowDoubleClick,
-            onRowContextMenu,
-            onRowMouseEnter,
-            onRowMouseLeave,
-            onRow
-        } = table.props;
-        const { getRowKey, fixed, expander, isAnyColumnsFixed } = this.props;
+        const { prefixCls, childrenColumnName, rowClassName, rowRef, onRow } = table.props;
+        const { getRowKey, expander } = this.props;
 
         const rows = [];
 
@@ -68,31 +57,20 @@ class BaseTable extends React.Component {
             const className = typeof rowClassName === 'string' ? rowClassName : rowClassName(record, i, indent);
 
             const onHoverProps = {};
-            if (columnManager.isAnyColumnsFixed()) {
-                onHoverProps.onHover = this.handleRowHover;
-            }
 
             let leafColumns;
-            if (fixed === 'left') {
-                leafColumns = columnManager.leftLeafColumns();
-            } else if (fixed === 'right') {
-                leafColumns = columnManager.rightLeafColumns();
-            } else {
-                leafColumns = this.getColumns(columnManager.leafColumns());
-            }
+            leafColumns = this.getColumns(columnManager.leafColumns());
 
             const rowPrefixCls = `${prefixCls}-row`;
 
             const row = (
                 <ExpandableRow
                     {...expander.props}
-                    fixed={fixed}
                     index={i}
                     prefixCls={rowPrefixCls}
                     record={record}
                     key={key}
                     rowKey={key}
-                    onRowClick={onRowClick}
                     needIndentSpaced={expander.needIndentSpaced}
                     onExpandedChange={expander.handleExpandChange}
                 >
@@ -100,7 +78,6 @@ class BaseTable extends React.Component {
                         expandableRow // eslint-disable-line
                     ) => (
                         <TableRow
-                            fixed={fixed}
                             indent={indent}
                             className={className}
                             record={record}
@@ -109,16 +86,11 @@ class BaseTable extends React.Component {
                             childrenColumnName={childrenColumnName}
                             columns={leafColumns}
                             onRow={onRow}
-                            onRowDoubleClick={onRowDoubleClick}
-                            onRowContextMenu={onRowContextMenu}
-                            onRowMouseEnter={onRowMouseEnter}
-                            onRowMouseLeave={onRowMouseLeave}
                             {...onHoverProps}
                             rowKey={key}
                             ancestorKeys={ancestorKeys}
                             ref={rowRef(record, i, indent)}
                             components={components}
-                            isAnyColumnsFixed={isAnyColumnsFixed}
                             {...expandableRow}
                         />
                     )}
@@ -127,7 +99,7 @@ class BaseTable extends React.Component {
 
             rows.push(row);
 
-            expander.renderRows(this.renderRows, rows, record, i, indent, fixed, key, ancestorKeys);
+            expander.renderRows(this.renderRows, rows, record, i, indent, key, ancestorKeys);
         }
         return rows;
     };
@@ -135,28 +107,22 @@ class BaseTable extends React.Component {
     render() {
         const { table } = this.context;
         const { components } = table;
-        const { prefixCls, scroll, data, getBodyWrapper } = table.props;
-        const { expander, tableClassName, hasHead, hasBody, fixed } = this.props;
+        const { prefixCls, scroll, data } = table.props;
+        const { expander, tableClassName, hasHead, hasBody, fixed, tableLayout } = this.props;
         const tableStyle = {};
 
-        if (!fixed && scroll.x) {
-            // not set width, then use content fixed width
-            if (scroll.x === true) {
-                tableStyle.tableLayout = 'fixed';
-            } else {
-                tableStyle.width = scroll.x;
-            }
+        if (!fixed && scroll.x && scroll.x !== true) {
+            tableStyle.width = scroll.x;
         }
-
+        if (tableLayout === 'fixed') {
+            tableStyle.tableLayout = 'fixed';
+        }
         const Table = hasBody ? components.table : 'table';
         const BodyWrapper = components.body.wrapper;
 
         let body;
         if (hasBody) {
             body = <BodyWrapper className={`${prefixCls}-tbody`}>{this.renderRows(data, 0)}</BodyWrapper>;
-            if (getBodyWrapper) {
-                body = getBodyWrapper(body);
-            }
         }
 
         const columns = this.getColumns();

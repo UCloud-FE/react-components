@@ -1,8 +1,10 @@
 import React from 'react';
-import Table from 'components/Table';
-import Button from 'components/Button';
-import Menu from 'components/Menu';
 import _ from 'lodash';
+
+import Table from 'src/components/Table';
+import Button from 'src/components/Button';
+import Menu from 'src/components/Menu';
+import Combine from 'src/components/Combine';
 
 // demo start
 class Demo extends React.Component {
@@ -45,12 +47,13 @@ class Demo extends React.Component {
         data.length = 100;
         data.fill({});
         data = data.map((d, i) => ({
-            key: i,
+            key: i + '',
             name: `name-${i}`,
             desc: `desc-${i}`
         }));
         this.state = {
-            data
+            data,
+            selectedRowKeys: []
         };
     }
     handleRemove(key, e) {
@@ -58,6 +61,9 @@ class Demo extends React.Component {
         e.preventDefault();
         const data = this.state.data.filter(item => item.key !== key);
         this.setState({ data });
+        this.setState({
+            selectedRowKeys: this.state.selectedRowKeys.filter(_key => _key !== key)
+        });
     }
     handleAdd() {
         const data = [...this.state.data];
@@ -73,6 +79,9 @@ class Demo extends React.Component {
         const { selectedRowKeys } = this.state;
         const data = this.state.data.filter(record => _.findIndex(selectedRowKeys, key => key === '' + record.key) < 0);
         this.setState({ data });
+        this.setState({
+            selectedRowKeys: []
+        });
     }
     render() {
         const { selectedRowKeys } = this.state;
@@ -89,8 +98,8 @@ class Demo extends React.Component {
                 }}
                 title={() => {
                     return (
-                        <div>
-                            <Button onClick={() => this.handleAdd()} styleType="primary" style={{ marginRight: 8 }}>
+                        <Combine>
+                            <Button onClick={() => this.handleAdd()} styleType="primary">
                                 新增
                             </Button>
                             <Button
@@ -99,11 +108,11 @@ class Demo extends React.Component {
                             >
                                 删除
                             </Button>
-                            <div style={{ float: 'right' }}>
-                                <Table.SearchInput style={{ marginRight: 8 }} />
+                            <Combine style={{ float: 'right' }}>
+                                <Table.SearchInput />
                                 <Table.ColumnConfigButton />
-                            </div>
-                        </div>
+                            </Combine>
+                        </Combine>
                     );
                 }}
                 defaultColumnConfig={{
@@ -122,7 +131,7 @@ class Demo extends React.Component {
                             }}
                         >
                             Remove
-                        </Menu.Item>{' '}
+                        </Menu.Item>
                         <Menu.Item
                             onClick={() => {
                                 console.log(record);
@@ -137,7 +146,6 @@ class Demo extends React.Component {
         );
     }
 }
-
 // demo end
 
 export default Demo;

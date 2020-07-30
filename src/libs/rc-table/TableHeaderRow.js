@@ -1,23 +1,54 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'mini-store';
+import classnames from 'classnames';
 
-function TableHeaderRow({ row, index, height, components, onHeaderRow }) {
+function TableHeaderRow({ row, index, height, components, onHeaderRow, prefixCls }) {
     const HeaderRow = components.header.row;
     const HeaderCell = components.header.cell;
-    const rowProps = onHeaderRow(row.map(cell => cell.column), index);
+    const rowProps = onHeaderRow(
+        row.map(cell => cell.column),
+        index
+    );
     const customStyle = rowProps ? rowProps.style : {};
     const style = { height, ...customStyle };
 
     return (
         <HeaderRow {...rowProps} style={style}>
             {row.map((cell, i) => {
-                const { column, ...cellProps } = cell;
+                let { column, style = {}, className, ...cellProps } = cell;
+                const { offset, fixed } = column;
                 const customProps = column.onHeaderCell ? column.onHeaderCell(column) : {};
+                let { _style = {}, className: _className } = customProps;
+                style = { ...style, ..._style };
+                className = classnames(className, _className);
                 if (column.align) {
-                    customProps.style = { ...customProps.style, textAlign: column.align };
+                    style.textAlign = column.align;
                 }
-                return <HeaderCell {...cellProps} {...customProps} key={column.key || column.dataIndex || i} />;
+                if (fixed && offset != null) {
+                    style.position = 'sticky';
+                    style.zIndex = 2;
+                    if (column.fixed === 'left') {
+                        style.left = offset;
+                        if (column.latestLeftFixed) {
+                            className = classnames(className, `${prefixCls}-th-fixed-left-latest`);
+                        }
+                    } else if (column.fixed === 'right') {
+                        style.right = offset;
+                        if (column.firstRightFixed) {
+                            className = classnames(className, `${prefixCls}-th-fixed-right-first`);
+                        }
+                    }
+                }
+                return (
+                    <HeaderCell
+                        {...cellProps}
+                        {...customProps}
+                        style={style}
+                        className={className}
+                        key={column.key || column.dataIndex || i}
+                    />
+                );
             })}
         </HeaderRow>
     );
@@ -28,7 +59,8 @@ TableHeaderRow.propTypes = {
     index: PropTypes.number,
     height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     components: PropTypes.any,
-    onHeaderRow: PropTypes.func
+    onHeaderRow: PropTypes.func,
+    prefixCls: PropTypes.string
 };
 
 function getRowHeight(state, props) {

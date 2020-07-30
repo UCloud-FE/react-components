@@ -21,6 +21,7 @@ class Demo extends React.Component {
             showPagination: true,
             zebraCrossing: false,
             columnPlaceholder: false,
+            tableLayoutFixed: false,
             scroll: {
                 x: false,
                 y: false
@@ -42,7 +43,8 @@ class Demo extends React.Component {
             showPagination,
             scroll,
             zebraCrossing,
-            columnPlaceholder
+            columnPlaceholder,
+            tableLayoutFixed
         } = this.state;
         let dataSource = [];
         dataSource.length = dataLength;
@@ -87,7 +89,15 @@ class Demo extends React.Component {
             delete columns[columnLength - 2].width;
         }
 
-        const tableProps = { columns, dataSource, showHeader, scroll, zebraCrossing, columnPlaceholder };
+        const tableProps = {
+            columns,
+            dataSource,
+            showHeader,
+            scroll,
+            zebraCrossing,
+            columnPlaceholder,
+            tableLayout: tableLayoutFixed ? 'fixed' : undefined
+        };
         if (rowSelection) {
             tableProps.rowSelection = {
                 fixed: fixedFirstColumn
@@ -133,6 +143,12 @@ class Demo extends React.Component {
                         <Switch
                             checked={columnPlaceholder}
                             onChange={columnPlaceholder => this.setState({ columnPlaceholder })}
+                        />
+                    </Form.Item>
+                    <Form.Item label="tableLayoutFixed" {...itemLayout}>
+                        <Switch
+                            checked={tableLayoutFixed}
+                            onChange={tableLayoutFixed => this.setState({ tableLayoutFixed })}
                         />
                     </Form.Item>
                     <Form.Item label="hasError" {...itemLayout}>

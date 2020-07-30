@@ -19,7 +19,7 @@ export default class ActionList extends Component {
         size: PropTypes.oneOf(Size),
         /** 按钮样式类别，参考Button的styleType */
         buttonStyleType: PropTypes.oneOf(ButtonStyleType),
-        /** 操作数量等于size+1时是否直接显示按钮而不是显示下拉菜单 */
+        /** 操作数量等于exposeCount+1时是否直接显示按钮而不是显示下拉菜单 */
         smart: PropTypes.bool,
         /** 弹出层的popover props */
         popoverProps: PropTypes.object
@@ -78,6 +78,7 @@ export default class ActionList extends Component {
         return (
             <Popover
                 trigger={['click']}
+                getPopupContainer={triggerNode => triggerNode.parentNode}
                 {...popoverProps}
                 visible={visible}
                 onVisibleChange={visible => this.setState({ visible })}
