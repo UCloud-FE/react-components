@@ -37,12 +37,6 @@ class BaseTable extends React.Component {
         }));
     }
 
-    handleRowHover = (isHover, key) => {
-        this.props.store.setState({
-            currentHoverKey: isHover ? key : null
-        });
-    };
-
     renderRows = (renderData, indent, ancestorKeys = []) => {
         const { table } = this.context;
         const { columnManager, components } = table;
@@ -55,8 +49,6 @@ class BaseTable extends React.Component {
             const record = renderData[i];
             const key = getRowKey(record, i);
             const className = typeof rowClassName === 'string' ? rowClassName : rowClassName(record, i, indent);
-
-            const onHoverProps = {};
 
             let leafColumns;
             leafColumns = this.getColumns(columnManager.leafColumns());
@@ -86,7 +78,6 @@ class BaseTable extends React.Component {
                             childrenColumnName={childrenColumnName}
                             columns={leafColumns}
                             onRow={onRow}
-                            {...onHoverProps}
                             rowKey={key}
                             ancestorKeys={ancestorKeys}
                             ref={rowRef(record, i, indent)}

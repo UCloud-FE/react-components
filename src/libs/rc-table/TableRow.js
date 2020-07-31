@@ -11,7 +11,6 @@ class TableRow extends React.Component {
         onRow: PropTypes.func,
         record: PropTypes.object,
         prefixCls: PropTypes.string,
-        onHover: PropTypes.func,
         columns: PropTypes.array,
         height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
         index: PropTypes.number,
@@ -20,7 +19,6 @@ class TableRow extends React.Component {
         indent: PropTypes.number,
         indentSize: PropTypes.number,
         hasExpandIcon: PropTypes.func,
-        hovered: PropTypes.bool.isRequired,
         visible: PropTypes.bool.isRequired,
         store: PropTypes.object.isRequired,
         fixed: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
@@ -74,16 +72,6 @@ class TableRow extends React.Component {
             this.saveRowRef();
         }
     }
-
-    onMouseEnter = () => {
-        const { onHover, rowKey } = this.props;
-        onHover(true, rowKey);
-    };
-
-    onMouseLeave = () => {
-        const { onHover, rowKey } = this.props;
-        onHover(false, rowKey);
-    };
 
     setExpanedRowHeight() {
         const { store, rowKey } = this.props;
@@ -151,7 +139,6 @@ class TableRow extends React.Component {
             onRow,
             indent,
             indentSize,
-            hovered,
             height,
             visible,
             components,
@@ -164,10 +151,6 @@ class TableRow extends React.Component {
         const BodyCell = components.body.cell;
 
         let { className } = this.props;
-
-        if (hovered) {
-            className += ` ${prefixCls}-hover`;
-        }
 
         const cells = [];
 
@@ -203,14 +186,7 @@ class TableRow extends React.Component {
         style = { ...style, ...customStyle };
 
         return (
-            <BodyRow
-                onMouseEnter={this.onMouseEnter}
-                onMouseLeave={this.onMouseLeave}
-                className={rowClassName}
-                {...rowProps}
-                style={style}
-                data-row-key={rowKey}
-            >
+            <BodyRow className={rowClassName} {...rowProps} style={style} data-row-key={rowKey}>
                 {cells}
             </BodyRow>
         );
@@ -239,13 +215,12 @@ function getRowHeight(state, props) {
 polyfill(TableRow);
 
 export default connect((state, props) => {
-    const { currentHoverKey, expandedRowKeys } = state;
-    const { rowKey, ancestorKeys } = props;
+    const { expandedRowKeys } = state;
+    const { ancestorKeys } = props;
     const visible = ancestorKeys.length === 0 || ancestorKeys.every(k => ~expandedRowKeys.indexOf(k));
 
     return {
         visible,
-        hovered: currentHoverKey === rowKey,
         height: getRowHeight(state, props)
     };
 })(TableRow);

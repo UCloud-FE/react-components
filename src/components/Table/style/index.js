@@ -264,8 +264,7 @@ export const TableWrap = styled.div(
             border-bottom: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
         }
 
-
-        table > tbody > .${prefixCls}-row-hover > td, table > tbody > .${prefixCls}-row:hover > td {
+        table > tbody > .${prefixCls}-row:hover > td {
             background: ${DT.T_TABLE_ROW_COLOR_BG_HOVER};
             &.${prefixCls}-row-expand-icon-cell, &.${selectIconCellCls} {
                 background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};

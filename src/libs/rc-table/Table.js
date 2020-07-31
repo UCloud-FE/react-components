@@ -72,7 +72,6 @@ class Table extends React.Component {
         this.columnManager = new ColumnManager(props.columns);
 
         this.store = create({
-            currentHoverKey: null,
             fixedColumnsHeadRowsHeight: [],
             fixedColumnsBodyRowsHeight: {}
         });
