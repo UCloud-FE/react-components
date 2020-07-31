@@ -117,7 +117,10 @@ export default class ActionList extends Component {
             <ul {...rest}>
                 {this.renderButtonList(buttonList, size)}
                 <TableContext.Consumer>
-                    {({ getPopupContainer }) => this.renderMenu(menuList, size, getPopupContainer)}
+                    {(context = {}) => {
+                        const { getPopupContainer } = context;
+                        return this.renderMenu(menuList, size, getPopupContainer);
+                    }}
                 </TableContext.Consumer>
             </ul>
         );
