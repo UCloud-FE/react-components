@@ -182,7 +182,12 @@ class Table extends Component {
                  * 是否多选
                  * @default true
                  */
-                multiple: PropTypes.bool
+                multiple: PropTypes.bool,
+                /**
+                 * 多选选中时的提示，bottom 为显示在下方
+                 * @default true
+                 */
+                selectedTip: PropTypes.oneOf([true, false, 'bottom'])
             }),
             PropTypes.oneOf([true])
         ]),
@@ -742,30 +747,35 @@ class Table extends Component {
                 selectedEnableDataSourceOfCurrentPageCount > 0;
 
             const selectedCount = _.filter(selectedRowKeyMap, v => v).length;
+            const renderSelectedAllCheckbox = () => (
+                <Checkbox
+                    onChange={() => {
+                        const enableKeysOfCurrentPage = enableDataSourceOfCurrentPage.map(item => item.key);
+                        this.handleToggleCurrentPage(enableKeysOfCurrentPage, !isAllSelected);
+                    }}
+                    checked={isAllSelected}
+                />
+            );
             newColumns.unshift({
                 title:
-                    rowSelection.multiple === false ? null : (
+                    rowSelection.multiple === false ? null : rowSelection.selectedTip === false ? (
+                        renderSelectedAllCheckbox()
+                    ) : (
                         <Tooltip
                             visible={selectedCount > 0}
-                            getPopupContainer={() => this.popupContainer}
+                            getPopupContainer={this.getPopupContainer}
                             popup={
                                 <span>
                                     {locale.selected} {selectedCount}{' '}
                                     <CancleSelect onClick={this.cancleSelect}>{locale.cancleSelect}</CancleSelect>
                                 </span>
                             }
-                            placement="topLeft"
+                            placement={rowSelection.selectedTip === 'bottom' ? 'bottomLeft' : 'topLeft'}
                             align={{
                                 offset: [-10, 0]
                             }}
                         >
-                            <Checkbox
-                                onChange={() => {
-                                    const enableKeysOfCurrentPage = enableDataSourceOfCurrentPage.map(item => item.key);
-                                    this.handleToggleCurrentPage(enableKeysOfCurrentPage, !isAllSelected);
-                                }}
-                                checked={isAllSelected}
-                            />
+                            {renderSelectedAllCheckbox()}
                         </Tooltip>
                     ),
                 key: 'table_row_selection',
