@@ -34,6 +34,7 @@ export const ContentWrap = styled.div(({ theme: { designTokens: DT }, themeType,
         border-radius: 3px;
         word-break: keep-all;
         box-sizing: border-box;
+        line-height: 12px;
         color: ${map.text};
         border: ${DT.T_LINE_WIDTH_BASE} solid ${map.border};
         background: ${map.background};
