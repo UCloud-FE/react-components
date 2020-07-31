@@ -2589,17 +2589,36 @@ exports[`LocaleProvider demo -- list 1`] = `
 .c54 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c54 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c54 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c54 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c54 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c54 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c54 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c54 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c54 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c54 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c54 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c54 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c54 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c54 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c54 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c54 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c54 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -2607,7 +2626,6 @@ exports[`LocaleProvider demo -- list 1`] = `
 .c54 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c54 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c54 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 

@@ -174,10 +174,23 @@ export const TableWrap = styled.div(
                 ::after {
                     content: '';
                     position: absolute;
-                    width: 18px;
+                    width: 30px;
                     height: 100%;
                     top: 0;
                     pointer-events: none;
+                    transition: box-shadow .3s;
+                }
+            }
+            .${prefixCls}-th-fixed-left-latest,
+            .${prefixCls}-row-cell-fixed-left-latest {
+                ::after {
+                    right: -30px;
+                }
+            }
+            .${prefixCls}-th-fixed-right-first,
+            .${prefixCls}-row-cell-fixed-right-first {
+                ::after {
+                    left: -30px;
                 }
             }
         }
@@ -186,7 +199,6 @@ export const TableWrap = styled.div(
             .${prefixCls}-th-fixed-left-latest,
             .${prefixCls}-row-cell-fixed-left-latest {
                 ::after {
-                    right: -18px;
                     box-shadow: ${DT.T_SHADOW_BLOCK_INSET_LEFT};
                 }
             }
@@ -196,7 +208,6 @@ export const TableWrap = styled.div(
             .${prefixCls}-th-fixed-right-first,
             .${prefixCls}-row-cell-fixed-right-first {
                 ::after {
-                    left: -18px;
                     box-shadow: ${DT.T_SHADOW_BLOCK_INSET_RIGHT};
                 }
             }

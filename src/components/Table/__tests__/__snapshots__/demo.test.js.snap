@@ -636,17 +636,36 @@ exports[`Table demo -- actionList 1`] = `
 .c32 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c32 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c32 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c32 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c32 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c32 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c32 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c32 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c32 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c32 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c32 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c32 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c32 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c32 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c32 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c32 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c32 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -654,7 +673,6 @@ exports[`Table demo -- actionList 1`] = `
 .c32 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c32 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c32 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -2609,17 +2627,36 @@ exports[`Table demo -- actionList-actionChildren 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -2627,7 +2664,6 @@ exports[`Table demo -- actionList-actionChildren 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -4173,17 +4209,36 @@ exports[`Table demo -- actionList-exposeCount 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -4191,7 +4246,6 @@ exports[`Table demo -- actionList-exposeCount 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -7725,17 +7779,36 @@ exports[`Table demo -- actionList-popoverProps 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -7743,7 +7816,6 @@ exports[`Table demo -- actionList-popoverProps 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -9230,17 +9302,36 @@ exports[`Table demo -- actionList-size 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -9248,7 +9339,6 @@ exports[`Table demo -- actionList-size 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -12802,17 +12892,36 @@ exports[`Table demo -- actionList-smart 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -12820,7 +12929,6 @@ exports[`Table demo -- actionList-smart 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -15852,17 +15960,36 @@ exports[`Table demo -- base 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -15870,7 +15997,6 @@ exports[`Table demo -- base 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -17233,17 +17359,36 @@ exports[`Table demo -- columnConfigButton 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -17251,7 +17396,6 @@ exports[`Table demo -- columnConfigButton 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -19485,17 +19629,36 @@ exports[`Table demo -- columnConfigButton-modalProps 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -19503,7 +19666,6 @@ exports[`Table demo -- columnConfigButton-modalProps 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -20634,17 +20796,36 @@ exports[`Table demo -- columns 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -20652,7 +20833,6 @@ exports[`Table demo -- columns 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -21610,17 +21790,36 @@ exports[`Table demo -- contextMenu 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -21628,7 +21827,6 @@ exports[`Table demo -- contextMenu 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -22884,17 +23082,36 @@ exports[`Table demo -- defaultExpandAllRows 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -22902,7 +23119,6 @@ exports[`Table demo -- defaultExpandAllRows 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -24356,17 +24572,36 @@ exports[`Table demo -- demo 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -24374,7 +24609,6 @@ exports[`Table demo -- demo 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -26829,17 +27063,36 @@ exports[`Table demo -- doNotHandleCondition 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -26847,7 +27100,6 @@ exports[`Table demo -- doNotHandleCondition 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -28324,17 +28576,36 @@ exports[`Table demo -- emptyContent 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -28342,7 +28613,6 @@ exports[`Table demo -- emptyContent 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -29282,17 +29552,36 @@ exports[`Table demo -- errorContent 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -29300,7 +29589,6 @@ exports[`Table demo -- errorContent 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -30199,17 +30487,36 @@ exports[`Table demo -- expandedRowKeys 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -30217,7 +30524,6 @@ exports[`Table demo -- expandedRowKeys 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -32287,17 +32593,36 @@ exports[`Table demo -- expandedRowRender 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -32305,7 +32630,6 @@ exports[`Table demo -- expandedRowRender 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -33627,17 +33951,36 @@ exports[`Table demo -- filter 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -33645,7 +33988,6 @@ exports[`Table demo -- filter 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -34637,17 +34979,36 @@ exports[`Table demo -- fixed 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -34655,7 +35016,6 @@ exports[`Table demo -- fixed 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -36850,17 +37210,36 @@ exports[`Table demo -- footer 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -36868,7 +37247,6 @@ exports[`Table demo -- footer 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -38293,17 +38671,36 @@ exports[`Table demo -- fullRemoteTable 1`] = `
 .c1 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c1 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c1 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c1 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c1 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c1 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c1 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c1 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c1 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c1 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c1 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c1 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c1 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c1 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c1 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c1 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c1 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -38311,7 +38708,6 @@ exports[`Table demo -- fullRemoteTable 1`] = `
 .c1 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c1 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c1 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -39181,17 +39577,36 @@ exports[`Table demo -- groupColumns 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -39199,7 +39614,6 @@ exports[`Table demo -- groupColumns 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -40306,17 +40720,36 @@ exports[`Table demo -- hideExpandIcon 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -40324,7 +40757,6 @@ exports[`Table demo -- hideExpandIcon 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -41535,17 +41967,36 @@ exports[`Table demo -- loadingDataFromRemote 1`] = `
 .c1 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c1 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c1 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c1 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c1 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c1 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c1 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c1 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c1 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c1 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c1 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c1 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c1 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c1 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c1 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c1 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c1 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -41553,7 +42004,6 @@ exports[`Table demo -- loadingDataFromRemote 1`] = `
 .c1 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c1 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c1 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -42460,17 +42910,36 @@ exports[`Table demo -- onConditionChange 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -42478,7 +42947,6 @@ exports[`Table demo -- onConditionChange 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -43508,17 +43976,36 @@ exports[`Table demo -- onHeaderRow 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -43526,7 +44013,6 @@ exports[`Table demo -- onHeaderRow 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -44852,17 +45338,36 @@ exports[`Table demo -- onRow 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -44870,7 +45375,6 @@ exports[`Table demo -- onRow 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -46201,17 +46705,36 @@ exports[`Table demo -- order 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -46219,7 +46742,6 @@ exports[`Table demo -- order 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -47996,17 +48518,36 @@ exports[`Table demo -- pagination 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -48014,7 +48555,6 @@ exports[`Table demo -- pagination 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -54218,17 +54758,36 @@ exports[`Table demo -- resizableTH 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -54236,7 +54795,6 @@ exports[`Table demo -- resizableTH 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -55951,17 +56509,36 @@ exports[`Table demo -- rowKey 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -55969,7 +56546,6 @@ exports[`Table demo -- rowKey 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -57734,17 +58310,36 @@ exports[`Table demo -- rowSelection 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -57752,7 +58347,6 @@ exports[`Table demo -- rowSelection 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -60016,17 +60610,36 @@ exports[`Table demo -- scroll 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -60034,7 +60647,6 @@ exports[`Table demo -- scroll 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -64968,17 +65580,36 @@ exports[`Table demo -- searchInput 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -64986,7 +65617,6 @@ exports[`Table demo -- searchInput 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -66686,17 +67316,36 @@ exports[`Table demo -- subTable 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -66704,7 +67353,6 @@ exports[`Table demo -- subTable 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -69250,17 +69898,36 @@ exports[`Table demo -- table 1`] = `
 .c27 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c27 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c27 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c27 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c27 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c27 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c27 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c27 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c27 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c27 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c27 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c27 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c27 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c27 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c27 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c27 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c27 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -69268,7 +69935,6 @@ exports[`Table demo -- table 1`] = `
 .c27 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c27 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c27 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -71930,17 +72596,36 @@ exports[`Table demo -- title 1`] = `
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
   content: '';
   position: absolute;
-  width: 18px;
+  width: 30px;
   height: 100%;
   top: 0;
   pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
 }
 
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
-  right: -18px;
   box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
@@ -71948,7 +72633,6 @@ exports[`Table demo -- title 1`] = `
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
 .c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
-  left: -18px;
   box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
 }
 
