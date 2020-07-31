@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import get from 'lodash/get';
+import classnames from 'classnames';
 
 function isInvalidRenderCellText(text) {
     return text && !React.isValidElement(text) && Object.prototype.toString.call(text) === '[object Object]';
@@ -18,19 +19,9 @@ export default class TableCell extends React.Component {
         component: PropTypes.any
     };
 
-    handleClick = e => {
-        const {
-            record,
-            column: { onCellClick }
-        } = this.props;
-        if (onCellClick) {
-            onCellClick(record, e);
-        }
-    };
-
     render() {
         const { record, indentSize, prefixCls, indent, index, expandIcon, column, component: BodyCell } = this.props;
-        const { dataIndex, render, className = '' } = column;
+        let { dataIndex, render, className = '', offset } = column;
 
         // We should return undefined if no dataIndex is specified, but in order to
         // be compatible with object-path's behavior, we return the record object instead.
@@ -76,12 +67,32 @@ export default class TableCell extends React.Component {
             return null;
         }
 
+        let { style = {}, className: _className } = tdProps;
+        style = { ...style };
+        className = classnames(className, _className);
         if (column.align) {
-            tdProps.style = { ...tdProps.style, textAlign: column.align };
+            style.textAlign = column.align;
+        }
+
+        if (column.fixed && offset != null) {
+            className = classnames(className, `${prefixCls}-cell-fixed`);
+            style.position = 'sticky';
+            style.zIndex = 2;
+            if (column.fixed === 'left') {
+                style.left = offset;
+                if (column.latestLeftFixed) {
+                    className = classnames(className, `${prefixCls}-cell-fixed-left-latest`);
+                }
+            } else if (column.fixed === 'right') {
+                style.right = offset;
+                if (column.firstRightFixed) {
+                    className = classnames(className, `${prefixCls}-cell-fixed-right-first`);
+                }
+            }
         }
 
         return (
-            <BodyCell className={className} onClick={this.handleClick} {...tdProps}>
+            <BodyCell {...tdProps} className={className} style={style}>
                 {indentText}
                 {expandIcon}
                 {text}

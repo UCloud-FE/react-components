@@ -184,6 +184,8 @@ const designTokens = {
         '0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05)',
     T_SHADOW_BUTTON_HOVER:
         '0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05)',
+    T_SHADOW_BLOCK_INSET_RIGHT: 'inset -5px 0 6px -6px rgba(0,0,0,0.12), inset -18px 0 18px -18px rgba(0,0,0,0.12);',
+    T_SHADOW_BLOCK_INSET_LEFT: 'inset 5px 0 6px -6px rgba(0,0,0,0.12), inset 18px 0 18px -18px rgba(0,0,0,0.12)',
     T_SHADOW_BUTTON_PRIMARY: '0 1px 3px -1px #5c76e8',
     T_SHADOW_BUTTON_PRIMARY_HOVER: '0 5px 8px -4px #5c76e8',
     T_SHADOW_BUTTON_ERROR: '0 1px 3px -1px #f44336',

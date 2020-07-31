@@ -1,6 +1,8 @@
 import React from 'react';
-import Table from 'components/Table';
-import Button from 'components/Button';
+
+import Combine from 'src/components/Combine';
+import Table from 'src/components/Table';
+import Button from 'src/components/Button';
 
 // demo start
 class Demo extends React.Component {
@@ -20,10 +22,10 @@ class Demo extends React.Component {
                 <div className="demo-wrap">
                     <Table
                         title={() => (
-                            <div>
+                            <Combine>
                                 <Button styleType="primary">Add</Button>
                                 <Button>Rmove</Button>
-                            </div>
+                            </Combine>
                         )}
                         dataSource={dataSource}
                         columns={columns}

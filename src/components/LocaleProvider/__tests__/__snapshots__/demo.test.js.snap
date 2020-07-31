@@ -2449,10 +2449,6 @@ exports[`LocaleProvider demo -- list 1`] = `
   clear: both;
 }
 
-.c54 .uc-fe-table-scroll table {
-  min-width: 100%;
-}
-
 .c54 .uc-fe-table-pagination {
   float: right;
   margin-top: 8px;
@@ -2488,37 +2484,14 @@ exports[`LocaleProvider demo -- list 1`] = `
   cursor: pointer;
 }
 
+.c54 .uc-fe-table-body {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
 .c54 .uc-fe-table-fixed,
 .c54 .uc-fe-table-body {
   background: #ffffff;
-}
-
-.c54 .uc-fe-table-fixed-left,
-.c54 .uc-fe-table-fixed-right {
-  position: absolute;
-  top: 0;
-  overflow: hidden;
-  background: #ffffff;
-}
-
-.c54 .uc-fe-table-fixed-left table,
-.c54 .uc-fe-table-fixed-right table {
-  width: auto;
-}
-
-.c54 .uc-fe-table-fixed-left .uc-fe-table-body-inner,
-.c54 .uc-fe-table-fixed-right .uc-fe-table-body-inner {
-  overflow-x: scroll;
-}
-
-.c54 .uc-fe-table-fixed-left {
-  left: 0;
-  box-shadow: 3px 0 3px -2px rgba(0,0,0,0.05),8px 0 6px -6px rgba(0,0,0,0.08);
-}
-
-.c54 .uc-fe-table-fixed-right {
-  right: 0;
-  box-shadow: -3px 0 3px -2px rgba(0,0,0,0.05),-8px 0 6px -6px rgba(0,0,0,0.08);
 }
 
 .c54 .uc-fe-table-row-expand-icon {
@@ -2569,18 +2542,9 @@ exports[`LocaleProvider demo -- list 1`] = `
 
 .c54 .uc-fe-table-fixed-header .uc-fe-table-header {
   min-width: 100%;
-  overflow: auto;
+  overflow: scroll;
   padding-bottom: 20px;
   margin-bottom: -20px;
-}
-
-.c54 .uc-fe-table-fixed-left .uc-fe-table-body-inner {
-  margin-right: -20px;
-  padding-right: 20px;
-}
-
-.c54 .uc-fe-table-fixed-header .uc-fe-table-fixed-left .uc-fe-table-body-inner {
-  padding-right: 0;
 }
 
 .c54 .uc-fe-table-content {
@@ -2611,6 +2575,68 @@ exports[`LocaleProvider demo -- list 1`] = `
   font-size: 0px;
 }
 
+.c54 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c54 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c54 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c54 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c54 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c54 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after,
+.c54 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c54 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c54 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c54 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c54 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c54 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 100%;
+  top: 0;
+  pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c54 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c54 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c54 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c54 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c54 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c54 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c54 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c54 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c54 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c54 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c54 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c54 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
+}
+
+.c54 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c54 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c54 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c54 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
+  box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
+}
+
+.c54 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c54 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c54 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
+.c54 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
+  box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
+}
+
+.c54 .uc-fe-table-row,
+.c54 .uc-fe-table-row>td,
+.c54 .uc-fe-table-thead,
+.c54 .uc-fe-table-thead>tr,
+.c54 .uc-fe-table-thead>tr>th {
+  background: #ffffff;
+}
+
 .c54 .uc-fe-table-row > td {
   position: relative;
   vertical-align: middle;
@@ -2618,12 +2644,12 @@ exports[`LocaleProvider demo -- list 1`] = `
   padding: 12px;
   line-height: 22px;
   text-align: left;
+  overflow-wrap: break-word;
 }
 
 .c54 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
 .c54 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell {
   border-color: transparent;
-  background: transparent;
   padding-left: 0;
 }
 
@@ -2638,6 +2664,14 @@ exports[`LocaleProvider demo -- list 1`] = `
 .c54 .uc-fe-table-row-level-4 > td,
 .c54 .uc-fe-table-row-level-5 > td {
   background: #f6f6fb;
+}
+
+.c54 .uc-fe-table-row-level-1 > td.uc-fe-table-row-expand-icon-cell,
+.c54 .uc-fe-table-row-level-2 > td.uc-fe-table-row-expand-icon-cell,
+.c54 .uc-fe-table-row-level-3 > td.uc-fe-table-row-expand-icon-cell,
+.c54 .uc-fe-table-row-level-4 > td.uc-fe-table-row-expand-icon-cell,
+.c54 .uc-fe-table-row-level-5 > td.uc-fe-table-row-expand-icon-cell {
+  background: #ffffff;
 }
 
 .c54 .uc-fe-table-row-level-1 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
@@ -2659,10 +2693,6 @@ exports[`LocaleProvider demo -- list 1`] = `
   cursor: default;
 }
 
-.c54 .uc-fe-table-fixed-header .uc-fe-table-scroll .uc-fe-table-header {
-  overflow: scroll;
-}
-
 .c54 .uc-fe-table-custom-title {
   margin-bottom: 16px;
 }
@@ -2671,29 +2701,13 @@ exports[`LocaleProvider demo -- list 1`] = `
   border-bottom: 1px solid #d2d6ea;
 }
 
-.c54 .uc-fe-table-fixed-left .uc-fe-table-tip-wrap,
-.c54 .uc-fe-table-fixed-right .uc-fe-table-tip-wrap {
-  display: none;
-}
-
-.c54 .uc-fe-table table > tbody > .uc-fe-table-row-hover > td,
 .c54 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td {
   background: #eaeefd;
 }
 
-.c54 .uc-fe-table table > tbody > .uc-fe-table-row-hover > td.uc-fe-table-row-expand-icon-cell,
 .c54 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-expand-icon-cell,
-.c54 .uc-fe-table table > tbody > .uc-fe-table-row-hover > td.uc-fe-table-row-select-icon-cell,
 .c54 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-select-icon-cell {
-  background: unset;
-}
-
-.c54 .uc-fe-table-scroll-position-left .uc-fe-table-fixed-left {
-  box-shadow: none;
-}
-
-.c54 .uc-fe-table-scroll-position-right .uc-fe-table-fixed-right {
-  box-shadow: none;
+  background: #ffffff;
 }
 
 .c54 .uc-fe-table-row-indent.indent-level-0 {
@@ -4081,7 +4095,7 @@ exports[`LocaleProvider demo -- list 1`] = `
             class="c55"
           />
           <div
-            class="uc-fe-table uc-fe-table-scroll-position-left"
+            class="uc-fe-table"
           >
             <div
               class="uc-fe-table-title"
@@ -4374,7 +4388,7 @@ exports[`LocaleProvider demo -- list 1`] = `
             class="c55"
           />
           <div
-            class="uc-fe-table uc-fe-table-scroll-position-left"
+            class="uc-fe-table"
           >
             <div
               class="uc-fe-table-title"
@@ -4390,7 +4404,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                 >
                   <colgroup>
                     <col
-                      style="width:32px;min-width:32px;"
+                      style="width:34px;min-width:34px;"
                     />
                     <col
                       style="width:100px;min-width:100px;"

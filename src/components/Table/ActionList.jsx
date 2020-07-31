@@ -6,6 +6,7 @@ import Menu from 'src/components/Menu';
 import Popover from 'src/components/Popover';
 
 import { ActionButton } from './style';
+import { TableContext } from './Table';
 
 const Size = ['sm', 'md', 'lg'];
 const ButtonStyleType = Button.StyleType;
@@ -19,7 +20,7 @@ export default class ActionList extends Component {
         size: PropTypes.oneOf(Size),
         /** 按钮样式类别，参考Button的styleType */
         buttonStyleType: PropTypes.oneOf(ButtonStyleType),
-        /** 操作数量等于size+1时是否直接显示按钮而不是显示下拉菜单 */
+        /** 操作数量等于exposeCount+1时是否直接显示按钮而不是显示下拉菜单 */
         smart: PropTypes.bool,
         /** 弹出层的popover props */
         popoverProps: PropTypes.object
@@ -27,7 +28,7 @@ export default class ActionList extends Component {
     static defaultProps = {
         exposeCount: 3,
         size: 'sm',
-        buttonStyleType: 'border-gray',
+        buttonStyleType: 'border',
         smart: true
     };
     state = {};
@@ -48,7 +49,7 @@ export default class ActionList extends Component {
             e.preventDefault();
         }
     };
-    renderMenu = (list, size) => {
+    renderMenu = (list, size, getPopupContainer) => {
         if (!list.length) {
             return null;
         }
@@ -78,6 +79,7 @@ export default class ActionList extends Component {
         return (
             <Popover
                 trigger={['click']}
+                getPopupContainer={getPopupContainer}
                 {...popoverProps}
                 visible={visible}
                 onVisibleChange={visible => this.setState({ visible })}
@@ -114,7 +116,12 @@ export default class ActionList extends Component {
         return (
             <ul {...rest}>
                 {this.renderButtonList(buttonList, size)}
-                {this.renderMenu(menuList, size)}
+                <TableContext.Consumer>
+                    {(context = {}) => {
+                        const { getPopupContainer } = context;
+                        return this.renderMenu(menuList, size, getPopupContainer);
+                    }}
+                </TableContext.Consumer>
             </ul>
         );
     }

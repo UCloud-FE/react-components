@@ -137,13 +137,8 @@ class ExpandableTable extends React.Component {
             }
         };
         let colCount;
-        if (fixed === 'left') {
-            colCount = this.columnManager.leftLeafColumns().length;
-        } else if (fixed === 'right') {
-            colCount = this.columnManager.rightLeafColumns().length;
-        } else {
-            colCount = this.columnManager.leafColumns().length;
-        }
+        colCount = this.columnManager.leafColumns().length;
+
         const columns = [
             {
                 key: 'extra-row',
@@ -183,7 +178,7 @@ class ExpandableTable extends React.Component {
         );
     }
 
-    renderRows = (renderRows, rows, record, index, indent, fixed, parentKey, ancestorKeys) => {
+    renderRows = (renderRows, rows, record, index, indent, parentKey, ancestorKeys) => {
         const { expandedRowClassName, expandedRowRender, childrenColumnName } = this.props;
         const childrenData = record[childrenColumnName];
         const nextAncestorKeys = [...ancestorKeys, parentKey];
@@ -197,8 +192,7 @@ class ExpandableTable extends React.Component {
                     expandedRowRender,
                     expandedRowClassName(record, index, indent),
                     nextAncestorKeys,
-                    nextIndent,
-                    fixed
+                    nextIndent
                 )
             );
         }

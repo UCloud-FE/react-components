@@ -47,9 +47,6 @@ export const TableWrap = styled.div(
     font-size: ${DT.T_TYPO_FONT_SIZE_1};
 
     .${prefixCls} {
-        &-scroll table {
-            min-width: 100%;
-        }
         &-pagination {
             float: right;
             margin-top: 8px;
@@ -79,32 +76,15 @@ export const TableWrap = styled.div(
             color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
             cursor: pointer;
         }
+        &-body {
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
         &-fixed,
         &-body {
             background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
         }
-        &-fixed-left,
-        &-fixed-right {
-            position: absolute;
-            top: 0;
-            overflow: hidden;
-            background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
 
-            table {
-                width: auto;
-            }
-            .${prefixCls}-body-inner {
-                overflow-x: scroll;
-            }
-        }
-        &-fixed-left {
-            left: 0;
-            box-shadow: ${DT.T_SHADOW_BLOCK_RIGHT_SM};
-        }
-        &-fixed-right {
-            right: 0;
-            box-shadow: ${DT.T_SHADOW_BLOCK_LEFT_SM};
-        }
         &-row-expand-icon {
             color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
             border: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
@@ -155,17 +135,9 @@ export const TableWrap = styled.div(
 
         &-fixed-header .${prefixCls}-header {
             min-width: 100%;
-            overflow: auto;
+            overflow: scroll;
             padding-bottom: 20px;
             margin-bottom: -20px;
-        }
-        &-fixed-left .${prefixCls}-body-inner {
-            margin-right: -20px;
-            padding-right: 20px;
-        }
-
-        &-fixed-header .${prefixCls}-fixed-left .${prefixCls}-body-inner {
-            padding-right: 0;
         }
 
         &-content {
@@ -192,6 +164,57 @@ export const TableWrap = styled.div(
                 font-size: 0px;
             }
         }
+        &-scroll-position-right,
+        &-scroll-position-middle,
+        &-scroll-position-left {
+            .${prefixCls}-th-fixed-left-latest,
+            .${prefixCls}-row-cell-fixed-left-latest,
+            .${prefixCls}-th-fixed-right-first,
+            .${prefixCls}-row-cell-fixed-right-first {
+                ::after {
+                    content: '';
+                    position: absolute;
+                    width: 30px;
+                    height: 100%;
+                    top: 0;
+                    pointer-events: none;
+                    transition: box-shadow .3s;
+                }
+            }
+            .${prefixCls}-th-fixed-left-latest,
+            .${prefixCls}-row-cell-fixed-left-latest {
+                ::after {
+                    right: -30px;
+                }
+            }
+            .${prefixCls}-th-fixed-right-first,
+            .${prefixCls}-row-cell-fixed-right-first {
+                ::after {
+                    left: -30px;
+                }
+            }
+        }
+        &-scroll-position-right,
+        &-scroll-position-middle {
+            .${prefixCls}-th-fixed-left-latest,
+            .${prefixCls}-row-cell-fixed-left-latest {
+                ::after {
+                    box-shadow: ${DT.T_SHADOW_BLOCK_INSET_LEFT};
+                }
+            }
+        }
+        &-scroll-position-left,
+        &-scroll-position-middle {
+            .${prefixCls}-th-fixed-right-first,
+            .${prefixCls}-row-cell-fixed-right-first {
+                ::after {
+                    box-shadow: ${DT.T_SHADOW_BLOCK_INSET_RIGHT};
+                }
+            }
+        }
+        &-row, &-row>td, &-thead, &-thead>tr, &-thead>tr>th{
+            background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
+        }
         &-row > td {
             position: relative;
             vertical-align: middle;
@@ -199,10 +222,10 @@ export const TableWrap = styled.div(
             padding: 12px;
             line-height: 22px;
             text-align: left;
+            overflow-wrap: break-word;
             &.${prefixCls}-row-expand-icon-cell,
             &.${selectIconCellCls} {
                 border-color: transparent;
-                background: transparent;
                 padding-left: 0;
             }
             &.${placeholderCellCls} {
@@ -216,7 +239,9 @@ export const TableWrap = styled.div(
         &-row-level-4 > td,
         &-row-level-5 > td {
             background: ${DT.T_TABLE_ROW_COLOR_BG_DEFAULT};
-
+            &.${prefixCls}-row-expand-icon-cell {
+                background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
+            }
             &.${prefixCls}-row-expand-icon-cell .${prefixCls}-row-spaced {
                 visibility: visible;
                 display: block;
@@ -232,46 +257,35 @@ export const TableWrap = styled.div(
                 cursor: default;
             }
         }
-        &-fixed-header .${prefixCls}-scroll .${prefixCls}-header {
-            overflow: scroll;
-        }
         &-custom-title {
             margin-bottom: 16px;
         }
         &-tip-wrap {
             border-bottom: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
         }
-        &-fixed-left .${prefixCls}-tip-wrap, &-fixed-right .${prefixCls}-tip-wrap {
-            display: none;
-        }
 
-        table > tbody > .${prefixCls}-row-hover > td, table > tbody > .${prefixCls}-row:hover > td {
+        table > tbody > .${prefixCls}-row:hover > td {
             background: ${DT.T_TABLE_ROW_COLOR_BG_HOVER};
             &.${prefixCls}-row-expand-icon-cell, &.${selectIconCellCls} {
-                background: unset;
+                background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
             }
         }
 
-        &-scroll-position-left .${prefixCls}-fixed-left {
-            box-shadow: none;
-        }
-
-        &-scroll-position-right .${prefixCls}-fixed-right {
-            box-shadow: none;
-        }
         &-row-indent.indent-level-0 {
             display: none;
         }
         
-        ${zebraCrossing &&
+        ${
+            zebraCrossing &&
             css`
                 &-row:nth-child(odd) > td {
                     background: ${DT.T_TABLE_ROW_COLOR_BG_DEFAULT};
                     &.${prefixCls}-row-expand-icon-cell, &.${selectIconCellCls} {
-                        background: unset;
+                        background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
                     }
                 }
-            `};
+            `
+        };
     }
 
 `

@@ -34,16 +34,6 @@ class Demo extends React.Component {
                     multiple: true
                 },
                 order: true
-            },
-            {
-                title: 'Operations',
-                dataIndex: '',
-                key: 'operation',
-                render: (text, record) => (
-                    <a onClick={e => this.handleRemove(record.key, e)} href="#">
-                        Remove
-                    </a>
-                )
             }
         ];
         return (

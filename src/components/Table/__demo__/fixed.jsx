@@ -2,63 +2,105 @@ import React from 'react';
 import Table from 'components/Table';
 
 // demo start
-class Demo extends React.Component {
-    constructor(props) {
-        super(props);
-        this.columns = [
-            {
-                title: 'name',
-                dataIndex: 'name',
-                key: 'name',
-                width: 100,
-                fixed: 'left'
-            },
-            {
-                title: 'desc',
-                dataIndex: 'desc',
-                key: 'desc',
-                width: 200
-            },
-            {
-                title: 'name',
-                dataIndex: 'name',
-                key: 'name1',
-                width: 100
-            },
-            {
-                title: 'desc',
-                dataIndex: 'desc',
-                key: 'desc2'
-            },
-            {
-                title: 'desc',
-                dataIndex: 'desc',
-                key: 'desc3',
-                width: 100,
-                fixed: 'right'
-            }
-        ];
-        let data = [];
-        data.length = 100;
-        data.fill({});
-        data = data.map((d, i) => ({
-            key: i,
-            name: `name-${i}`,
-            desc: `desc-${i}`
-        }));
-        this.state = {
-            data
-        };
+const columns1 = [
+    {
+        title: 'name',
+        dataIndex: 'name',
+        key: 'name',
+        width: 100,
+        fixed: true
+    },
+    {
+        title: 'desc',
+        dataIndex: 'desc',
+        key: 'desc',
+        width: 200,
+        fixed: true
+    },
+    {
+        title: 'name',
+        dataIndex: 'name',
+        key: 'name1',
+        width: 100
+    },
+    {
+        title: 'desc',
+        dataIndex: 'desc',
+        key: 'desc2',
+        width: 300
+    },
+    {
+        title: 'desc',
+        dataIndex: 'desc',
+        key: 'desc3',
+        width: 100,
+        fixed: true
     }
+];
+const columns2 = [
+    {
+        title: 'name',
+        dataIndex: 'name',
+        key: 'name',
+        width: 100
+    },
+    {
+        title: 'desc',
+        dataIndex: 'desc',
+        key: 'desc',
+        render: () => {
+            return new Array(10).fill('vvvvvvv').join('');
+        }
+    },
+    {
+        title: 'name',
+        dataIndex: 'name',
+        key: 'name1',
+        render: () => {
+            return new Array(10).fill('vvvvvvv').join('');
+        }
+    },
+    {
+        title: 'desc',
+        dataIndex: 'desc',
+        key: 'desc2',
+        render: () => {
+            return new Array(10).fill('vvvvvvv').join('');
+        }
+    },
+    {
+        title: 'desc',
+        dataIndex: 'desc',
+        key: 'desc3',
+        fixed: true
+    }
+];
+let data = [];
+data.length = 100;
+data.fill({});
+data = data.map((d, i) => ({
+    key: i,
+    name: `name-${i}`,
+    desc: `desc-${i}`
+}));
 
+class Demo extends React.Component {
     render() {
         return (
-            <Table
-                columns={this.columns}
-                dataSource={this.state.data}
-                rowSelection={{ fixed: true }}
-                scroll={{ x: 2000, y: 300 }}
-            />
+            <div>
+                <div className="demo-wrap">
+                    <Table
+                        columns={columns1}
+                        dataSource={data}
+                        rowSelection={{ fixed: true }}
+                        columnPlaceholder
+                        scroll={{ x: 2000, y: 300 }}
+                    />
+                </div>
+                <div className="demo-wrap">
+                    <Table rowSelection={{ fixed: true }} columns={columns2} dataSource={data} columnPlaceholder />
+                </div>
+            </div>
         );
     }
 }
