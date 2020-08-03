@@ -1,0 +1,4170 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditableTable demo -- addition 1`] = `
+.c3 {
+  vertical-align: baseline;
+}
+
+.c2 {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  color: #0a1633;
+}
+
+.c4 {
+  vertical-align: middle;
+  color: #0a1633;
+}
+
+.c0 {
+  padding: 15px;
+  color: #0a1633;
+  border-radius: 2px;
+  background: #ffffff;
+  font-size: 12px;
+}
+
+.c0:before,
+.c0:after {
+  content: ' ';
+  display: table;
+}
+
+.c0:after {
+  clear: both;
+}
+
+.c0 .uc-fe-table-pagination {
+  float: right;
+  margin-top: 8px;
+}
+
+.c0 .uc-fe-table-filter {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.c0 .uc-fe-table table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.c0 .uc-fe-table-filter-notice,
+.c0 .uc-fe-table-empty-content-wrap,
+.c0 .uc-fe-table-error-content-wrap {
+  width: 400px;
+  margin: 12px auto;
+  text-align: center;
+}
+
+.c0 .uc-fe-table-empty-content-wrap,
+.c0 .uc-fe-table-error-content-wrap {
+  margin: 40px auto;
+}
+
+.c0 .uc-fe-table-reset-link {
+  color: #3860f4;
+  cursor: pointer;
+}
+
+.c0 .uc-fe-table-body {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.c0 .uc-fe-table-fixed,
+.c0 .uc-fe-table-body {
+  background: #ffffff;
+}
+
+.c0 .uc-fe-table-row-expand-icon {
+  color: #526075;
+  border: 1px solid #d2d6ea;
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.c0 .uc-fe-table-row-expand-icon-cell {
+  width: 20px;
+}
+
+.c0 .uc-fe-table-row-expand-icon:hover {
+  color: #3357df;
+  border-color: #3357df;
+}
+
+.c0 .uc-fe-table-expand-icon-th {
+  width: 20px;
+}
+
+.c0 .uc-fe-table-row-expand-icon.uc-fe-table-row-collapsed:before {
+  content: '+';
+}
+
+.c0 .uc-fe-table-row-expand-icon.uc-fe-table-row-expanded:before {
+  content: '-';
+}
+
+.c0 .uc-fe-table-row-spaced {
+  visibility: hidden;
+}
+
+.c0 .uc-fe-table-row-expanded,
+.c0 .uc-fe-table-row-collapsed {
+  margin-right: 8px;
+}
+
+.c0 .uc-fe-table-row-expand-icon-cell .uc-fe-table-row-expand-icon {
+  margin: 0;
+}
+
+.c0 .uc-fe-table-fixed-header .uc-fe-table-header {
+  min-width: 100%;
+  overflow: scroll;
+  padding-bottom: 20px;
+  margin-bottom: -20px;
+}
+
+.c0 .uc-fe-table-content {
+  position: relative;
+  width: 100%;
+  clear: both;
+}
+
+.c0 .uc-fe-table-thead > tr > th {
+  position: relative;
+  vertical-align: middle;
+  border-bottom: 1px solid #c3cad9;
+  color: #526075;
+  padding: 12px;
+  line-height: 22px;
+  text-align: left;
+  font-weight: 400;
+}
+
+.c0 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
+.c0 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th {
+  border-color: transparent;
+  padding-left: 0;
+}
+
+.c0 .uc-fe-table-thead > tr > th.uc-fe-table-placeholder-th {
+  padding: 0px;
+  font-size: 0px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 100%;
+  top: 0;
+  pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
+  box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
+}
+
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
+  box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
+}
+
+.c0 .uc-fe-table-row,
+.c0 .uc-fe-table-row>td,
+.c0 .uc-fe-table-thead,
+.c0 .uc-fe-table-thead>tr,
+.c0 .uc-fe-table-thead>tr>th {
+  background: #ffffff;
+}
+
+.c0 .uc-fe-table-row > td {
+  position: relative;
+  vertical-align: middle;
+  border-bottom: 1px solid #d2d6ea;
+  padding: 12px;
+  line-height: 22px;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+.c0 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
+.c0 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell {
+  border-color: transparent;
+  padding-left: 0;
+}
+
+.c0 .uc-fe-table-row > td.uc-fe-table-placeholder-cell {
+  padding: 0;
+  font-size: 0;
+}
+
+.c0 .uc-fe-table-row-level-1 > td,
+.c0 .uc-fe-table-row-level-2 > td,
+.c0 .uc-fe-table-row-level-3 > td,
+.c0 .uc-fe-table-row-level-4 > td,
+.c0 .uc-fe-table-row-level-5 > td {
+  background: #f6f6fb;
+}
+
+.c0 .uc-fe-table-row-level-1 > td.uc-fe-table-row-expand-icon-cell,
+.c0 .uc-fe-table-row-level-2 > td.uc-fe-table-row-expand-icon-cell,
+.c0 .uc-fe-table-row-level-3 > td.uc-fe-table-row-expand-icon-cell,
+.c0 .uc-fe-table-row-level-4 > td.uc-fe-table-row-expand-icon-cell,
+.c0 .uc-fe-table-row-level-5 > td.uc-fe-table-row-expand-icon-cell {
+  background: #ffffff;
+}
+
+.c0 .uc-fe-table-row-level-1 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.c0 .uc-fe-table-row-level-2 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.c0 .uc-fe-table-row-level-3 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.c0 .uc-fe-table-row-level-4 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.c0 .uc-fe-table-row-level-5 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced {
+  visibility: visible;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 1px;
+  height: 100%;
+  background: #d2d6ea;
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid #d2d6ea;
+  cursor: default;
+}
+
+.c0 .uc-fe-table-custom-title {
+  margin-bottom: 16px;
+}
+
+.c0 .uc-fe-table-tip-wrap {
+  border-bottom: 1px solid #d2d6ea;
+}
+
+.c0 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td {
+  background: #eaeefd;
+}
+
+.c0 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-expand-icon-cell,
+.c0 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-select-icon-cell {
+  background: #ffffff;
+}
+
+.c0 .uc-fe-table-row-indent.indent-level-0 {
+  display: none;
+}
+
+.c1 {
+  position: relative;
+  z-index: 10;
+}
+
+.c7 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+
+.c9 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+}
+
+.c11 {
+  font-size: 12px;
+  color: #0a1633;
+  line-height: 20px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.c5 {
+  width: 100%;
+  height: 60px;
+  background: #fafafc;
+  color: #0a1633;
+  cursor: pointer;
+  text-align: center;
+  line-height: 60px;
+}
+
+.c5 .c6 {
+  fill: #0a1633;
+}
+
+.c5:hover {
+  background: #eaeefd;
+}
+
+.c5:hover .c6 {
+  fill: #3860f4;
+}
+
+.c5.c5.c5 {
+  background: #f7f7f7;
+  color: #cccccc;
+  cursor: not-allowed;
+}
+
+.c5.c5.c5 .c10 {
+  color: #cccccc;
+}
+
+.c5.c5.c5 .c6 {
+  fill: #cccccc;
+}
+
+.c8 {
+  width: 100%;
+  height: 60px;
+  background: #fafafc;
+  color: #0a1633;
+  cursor: pointer;
+  text-align: center;
+  line-height: 60px;
+}
+
+.c8 .c6 {
+  fill: #0a1633;
+}
+
+.c8:hover {
+  background: #eaeefd;
+}
+
+.c8:hover .c6 {
+  fill: #3860f4;
+}
+
+<div>
+  <div>
+    <h2>
+      false
+    </h2>
+    <div
+      class="demo-wrap"
+    >
+      <div
+        class="c0"
+      >
+        <div
+          class="c1"
+        />
+        <div
+          class="uc-fe-table"
+        >
+          <div
+            class="uc-fe-table-title"
+          />
+          <div
+            class="uc-fe-table-content"
+          >
+            <div
+              class="uc-fe-table-body"
+            >
+              <table
+                class=""
+              >
+                <colgroup>
+                  <col
+                    style="width:100px;min-width:100px;"
+                  />
+                  <col />
+                  <col
+                    style="width:40px;min-width:40px;"
+                  />
+                </colgroup>
+                <thead
+                  class="uc-fe-table-thead"
+                >
+                  <tr>
+                    <th
+                      class=""
+                    >
+                      <div>
+                        name
+                        <div
+                          class="uc-fe-table-filter c2"
+                        >
+                          <div>
+                            <i
+                              class="uc-fe-icon icon__filter c3"
+                            />
+                          </div>
+                        </div>
+                        <i
+                          class="uc-fe-icon icon__sort c4 c3"
+                        />
+                      </div>
+                    </th>
+                    <th
+                      class=""
+                    >
+                      <div>
+                        desc
+                        <div
+                          class="uc-fe-table-filter c2"
+                        >
+                          <div>
+                            <i
+                              class="uc-fe-icon icon__filter c3"
+                            />
+                          </div>
+                        </div>
+                        <i
+                          class="uc-fe-icon icon__sort c4 c3"
+                        />
+                      </div>
+                    </th>
+                    <th
+                      class=""
+                    >
+                      <div />
+                    </th>
+                  </tr>
+                </thead>
+                <tbody
+                  class="uc-fe-table-tbody"
+                />
+              </table>
+            </div>
+            <div
+              class="uc-fe-table-placeholder"
+            />
+            <div
+              class="uc-fe-table-footer"
+            >
+              <div />
+            </div>
+          </div>
+        </div>
+        <div
+          class="c5"
+          disabled=""
+        >
+          <svg
+            class="c6 c7"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2>
+      onAdd
+    </h2>
+    <div
+      class="demo-wrap"
+    >
+      <div
+        class="c0"
+      >
+        <div
+          class="c1"
+        />
+        <div
+          class="uc-fe-table"
+        >
+          <div
+            class="uc-fe-table-title"
+          />
+          <div
+            class="uc-fe-table-content"
+          >
+            <div
+              class="uc-fe-table-body"
+            >
+              <table
+                class=""
+              >
+                <colgroup>
+                  <col
+                    style="width:100px;min-width:100px;"
+                  />
+                  <col />
+                  <col
+                    style="width:40px;min-width:40px;"
+                  />
+                </colgroup>
+                <thead
+                  class="uc-fe-table-thead"
+                >
+                  <tr>
+                    <th
+                      class=""
+                    >
+                      <div>
+                        name
+                        <div
+                          class="uc-fe-table-filter c2"
+                        >
+                          <div>
+                            <i
+                              class="uc-fe-icon icon__filter c3"
+                            />
+                          </div>
+                        </div>
+                        <i
+                          class="uc-fe-icon icon__sort c4 c3"
+                        />
+                      </div>
+                    </th>
+                    <th
+                      class=""
+                    >
+                      <div>
+                        desc
+                        <div
+                          class="uc-fe-table-filter c2"
+                        >
+                          <div>
+                            <i
+                              class="uc-fe-icon icon__filter c3"
+                            />
+                          </div>
+                        </div>
+                        <i
+                          class="uc-fe-icon icon__sort c4 c3"
+                        />
+                      </div>
+                    </th>
+                    <th
+                      class=""
+                    >
+                      <div />
+                    </th>
+                  </tr>
+                </thead>
+                <tbody
+                  class="uc-fe-table-tbody"
+                />
+              </table>
+            </div>
+            <div
+              class="uc-fe-table-placeholder"
+            />
+            <div
+              class="uc-fe-table-footer"
+            >
+              <div />
+            </div>
+          </div>
+        </div>
+        <div
+          class="c8"
+        >
+          <svg
+            class="c6 c7"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2>
+      tip
+    </h2>
+    <div
+      class="demo-wrap"
+    >
+      <div
+        class="c0"
+      >
+        <div
+          class="c1"
+        />
+        <div
+          class="uc-fe-table"
+        >
+          <div
+            class="uc-fe-table-title"
+          />
+          <div
+            class="uc-fe-table-content"
+          >
+            <div
+              class="uc-fe-table-body"
+            >
+              <table
+                class=""
+              >
+                <colgroup>
+                  <col
+                    style="width:100px;min-width:100px;"
+                  />
+                  <col />
+                  <col
+                    style="width:40px;min-width:40px;"
+                  />
+                </colgroup>
+                <thead
+                  class="uc-fe-table-thead"
+                >
+                  <tr>
+                    <th
+                      class=""
+                    >
+                      <div>
+                        name
+                        <div
+                          class="uc-fe-table-filter c2"
+                        >
+                          <div>
+                            <i
+                              class="uc-fe-icon icon__filter c3"
+                            />
+                          </div>
+                        </div>
+                        <i
+                          class="uc-fe-icon icon__sort c4 c3"
+                        />
+                      </div>
+                    </th>
+                    <th
+                      class=""
+                    >
+                      <div>
+                        desc
+                        <div
+                          class="uc-fe-table-filter c2"
+                        >
+                          <div>
+                            <i
+                              class="uc-fe-icon icon__filter c3"
+                            />
+                          </div>
+                        </div>
+                        <i
+                          class="uc-fe-icon icon__sort c4 c3"
+                        />
+                      </div>
+                    </th>
+                    <th
+                      class=""
+                    >
+                      <div />
+                    </th>
+                  </tr>
+                </thead>
+                <tbody
+                  class="uc-fe-table-tbody"
+                />
+              </table>
+            </div>
+            <div
+              class="uc-fe-table-placeholder"
+            />
+            <div
+              class="uc-fe-table-footer"
+            >
+              <div />
+            </div>
+          </div>
+        </div>
+        <div
+          class="c8"
+        >
+          <svg
+            class="c6 c9"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+            />
+          </svg>
+          <span
+            class="c10 c11"
+          >
+            自定义提示
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2>
+      disabled
+    </h2>
+    <div
+      class="demo-wrap"
+    >
+      <div
+        class="c0"
+      >
+        <div
+          class="c1"
+        />
+        <div
+          class="uc-fe-table"
+        >
+          <div
+            class="uc-fe-table-title"
+          />
+          <div
+            class="uc-fe-table-content"
+          >
+            <div
+              class="uc-fe-table-body"
+            >
+              <table
+                class=""
+              >
+                <colgroup>
+                  <col
+                    style="width:100px;min-width:100px;"
+                  />
+                  <col />
+                  <col
+                    style="width:40px;min-width:40px;"
+                  />
+                </colgroup>
+                <thead
+                  class="uc-fe-table-thead"
+                >
+                  <tr>
+                    <th
+                      class=""
+                    >
+                      <div>
+                        name
+                        <div
+                          class="uc-fe-table-filter c2"
+                        >
+                          <div>
+                            <i
+                              class="uc-fe-icon icon__filter c3"
+                            />
+                          </div>
+                        </div>
+                        <i
+                          class="uc-fe-icon icon__sort c4 c3"
+                        />
+                      </div>
+                    </th>
+                    <th
+                      class=""
+                    >
+                      <div>
+                        desc
+                        <div
+                          class="uc-fe-table-filter c2"
+                        >
+                          <div>
+                            <i
+                              class="uc-fe-icon icon__filter c3"
+                            />
+                          </div>
+                        </div>
+                        <i
+                          class="uc-fe-icon icon__sort c4 c3"
+                        />
+                      </div>
+                    </th>
+                    <th
+                      class=""
+                    >
+                      <div />
+                    </th>
+                  </tr>
+                </thead>
+                <tbody
+                  class="uc-fe-table-tbody"
+                />
+              </table>
+            </div>
+            <div
+              class="uc-fe-table-placeholder"
+            />
+            <div
+              class="uc-fe-table-footer"
+            >
+              <div />
+            </div>
+          </div>
+        </div>
+        <div
+          class="c5"
+          disabled=""
+        >
+          <svg
+            class="c6 c7"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2>
+      disabledWithTip
+    </h2>
+    <div
+      class="demo-wrap"
+    >
+      <div
+        class="c0"
+      >
+        <div
+          class="c1"
+        />
+        <div
+          class="uc-fe-table"
+        >
+          <div
+            class="uc-fe-table-title"
+          />
+          <div
+            class="uc-fe-table-content"
+          >
+            <div
+              class="uc-fe-table-body"
+            >
+              <table
+                class=""
+              >
+                <colgroup>
+                  <col
+                    style="width:100px;min-width:100px;"
+                  />
+                  <col />
+                  <col
+                    style="width:40px;min-width:40px;"
+                  />
+                </colgroup>
+                <thead
+                  class="uc-fe-table-thead"
+                >
+                  <tr>
+                    <th
+                      class=""
+                    >
+                      <div>
+                        name
+                        <div
+                          class="uc-fe-table-filter c2"
+                        >
+                          <div>
+                            <i
+                              class="uc-fe-icon icon__filter c3"
+                            />
+                          </div>
+                        </div>
+                        <i
+                          class="uc-fe-icon icon__sort c4 c3"
+                        />
+                      </div>
+                    </th>
+                    <th
+                      class=""
+                    >
+                      <div>
+                        desc
+                        <div
+                          class="uc-fe-table-filter c2"
+                        >
+                          <div>
+                            <i
+                              class="uc-fe-icon icon__filter c3"
+                            />
+                          </div>
+                        </div>
+                        <i
+                          class="uc-fe-icon icon__sort c4 c3"
+                        />
+                      </div>
+                    </th>
+                    <th
+                      class=""
+                    >
+                      <div />
+                    </th>
+                  </tr>
+                </thead>
+                <tbody
+                  class="uc-fe-table-tbody"
+                />
+              </table>
+            </div>
+            <div
+              class="uc-fe-table-placeholder"
+            />
+            <div
+              class="uc-fe-table-footer"
+            >
+              <div />
+            </div>
+          </div>
+        </div>
+        <div
+          class="c5"
+          disabled=""
+        >
+          <svg
+            class="c6 c9"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+            />
+          </svg>
+          <span
+            class="c10 c11"
+          >
+            自定义提示
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`EditableTable demo -- demo 1`] = `
+.c3 {
+  vertical-align: baseline;
+}
+
+.c12 {
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  border-width: 1px;
+  border-style: solid;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 28px;
+  padding: 0 8px;
+  color: #ffffff;
+  border: none;
+  background: linear-gradient(135deg,#6488fc 0%,#3860f4 100%);
+  box-shadow: 0 1px 3px -1px #5c76e8;
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
+}
+
+.c12:hover {
+  background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
+  box-shadow: 0 5px 8px -4px #5c76e8;
+}
+
+.c2 {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  color: #0a1633;
+}
+
+.c4 {
+  vertical-align: middle;
+  color: #0a1633;
+}
+
+.c0 {
+  padding: 15px;
+  color: #0a1633;
+  border-radius: 2px;
+  background: #ffffff;
+  font-size: 12px;
+}
+
+.c0:before,
+.c0:after {
+  content: ' ';
+  display: table;
+}
+
+.c0:after {
+  clear: both;
+}
+
+.c0 .uc-fe-table-pagination {
+  float: right;
+  margin-top: 8px;
+}
+
+.c0 .uc-fe-table-filter {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.c0 .uc-fe-table table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.c0 .uc-fe-table-filter-notice,
+.c0 .uc-fe-table-empty-content-wrap,
+.c0 .uc-fe-table-error-content-wrap {
+  width: 400px;
+  margin: 12px auto;
+  text-align: center;
+}
+
+.c0 .uc-fe-table-empty-content-wrap,
+.c0 .uc-fe-table-error-content-wrap {
+  margin: 40px auto;
+}
+
+.c0 .uc-fe-table-reset-link {
+  color: #3860f4;
+  cursor: pointer;
+}
+
+.c0 .uc-fe-table-body {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.c0 .uc-fe-table-fixed,
+.c0 .uc-fe-table-body {
+  background: #ffffff;
+}
+
+.c0 .uc-fe-table-row-expand-icon {
+  color: #526075;
+  border: 1px solid #d2d6ea;
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.c0 .uc-fe-table-row-expand-icon-cell {
+  width: 20px;
+}
+
+.c0 .uc-fe-table-row-expand-icon:hover {
+  color: #3357df;
+  border-color: #3357df;
+}
+
+.c0 .uc-fe-table-expand-icon-th {
+  width: 20px;
+}
+
+.c0 .uc-fe-table-row-expand-icon.uc-fe-table-row-collapsed:before {
+  content: '+';
+}
+
+.c0 .uc-fe-table-row-expand-icon.uc-fe-table-row-expanded:before {
+  content: '-';
+}
+
+.c0 .uc-fe-table-row-spaced {
+  visibility: hidden;
+}
+
+.c0 .uc-fe-table-row-expanded,
+.c0 .uc-fe-table-row-collapsed {
+  margin-right: 8px;
+}
+
+.c0 .uc-fe-table-row-expand-icon-cell .uc-fe-table-row-expand-icon {
+  margin: 0;
+}
+
+.c0 .uc-fe-table-fixed-header .uc-fe-table-header {
+  min-width: 100%;
+  overflow: scroll;
+  padding-bottom: 20px;
+  margin-bottom: -20px;
+}
+
+.c0 .uc-fe-table-content {
+  position: relative;
+  width: 100%;
+  clear: both;
+}
+
+.c0 .uc-fe-table-thead > tr > th {
+  position: relative;
+  vertical-align: middle;
+  border-bottom: 1px solid #c3cad9;
+  color: #526075;
+  padding: 12px;
+  line-height: 22px;
+  text-align: left;
+  font-weight: 400;
+}
+
+.c0 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
+.c0 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th {
+  border-color: transparent;
+  padding-left: 0;
+}
+
+.c0 .uc-fe-table-thead > tr > th.uc-fe-table-placeholder-th {
+  padding: 0px;
+  font-size: 0px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 100%;
+  top: 0;
+  pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
+  box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
+}
+
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
+  box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
+}
+
+.c0 .uc-fe-table-row,
+.c0 .uc-fe-table-row>td,
+.c0 .uc-fe-table-thead,
+.c0 .uc-fe-table-thead>tr,
+.c0 .uc-fe-table-thead>tr>th {
+  background: #ffffff;
+}
+
+.c0 .uc-fe-table-row > td {
+  position: relative;
+  vertical-align: middle;
+  border-bottom: 1px solid #d2d6ea;
+  padding: 12px;
+  line-height: 22px;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+.c0 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
+.c0 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell {
+  border-color: transparent;
+  padding-left: 0;
+}
+
+.c0 .uc-fe-table-row > td.uc-fe-table-placeholder-cell {
+  padding: 0;
+  font-size: 0;
+}
+
+.c0 .uc-fe-table-row-level-1 > td,
+.c0 .uc-fe-table-row-level-2 > td,
+.c0 .uc-fe-table-row-level-3 > td,
+.c0 .uc-fe-table-row-level-4 > td,
+.c0 .uc-fe-table-row-level-5 > td {
+  background: #f6f6fb;
+}
+
+.c0 .uc-fe-table-row-level-1 > td.uc-fe-table-row-expand-icon-cell,
+.c0 .uc-fe-table-row-level-2 > td.uc-fe-table-row-expand-icon-cell,
+.c0 .uc-fe-table-row-level-3 > td.uc-fe-table-row-expand-icon-cell,
+.c0 .uc-fe-table-row-level-4 > td.uc-fe-table-row-expand-icon-cell,
+.c0 .uc-fe-table-row-level-5 > td.uc-fe-table-row-expand-icon-cell {
+  background: #ffffff;
+}
+
+.c0 .uc-fe-table-row-level-1 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.c0 .uc-fe-table-row-level-2 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.c0 .uc-fe-table-row-level-3 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.c0 .uc-fe-table-row-level-4 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.c0 .uc-fe-table-row-level-5 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced {
+  visibility: visible;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 1px;
+  height: 100%;
+  background: #d2d6ea;
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid #d2d6ea;
+  cursor: default;
+}
+
+.c0 .uc-fe-table-custom-title {
+  margin-bottom: 16px;
+}
+
+.c0 .uc-fe-table-tip-wrap {
+  border-bottom: 1px solid #d2d6ea;
+}
+
+.c0 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td {
+  background: #eaeefd;
+}
+
+.c0 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-expand-icon-cell,
+.c0 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-select-icon-cell {
+  background: #ffffff;
+}
+
+.c0 .uc-fe-table-row-indent.indent-level-0 {
+  display: none;
+}
+
+.c1 {
+  position: relative;
+  z-index: 10;
+}
+
+.c7 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+
+.c8 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+}
+
+.c10 {
+  font-size: 12px;
+  color: #0a1633;
+  line-height: 20px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.c13 .c6 {
+  fill: #0a1633;
+}
+
+.c13:hover .c6 {
+  fill: #3860f4;
+}
+
+.c13.c13.c13 .c9 {
+  color: #cccccc;
+}
+
+.c13.c13.c13 .c6 {
+  fill: #cccccc;
+}
+
+.c5 {
+  width: 100%;
+  height: 60px;
+  background: #fafafc;
+  color: #0a1633;
+  cursor: pointer;
+  text-align: center;
+  line-height: 60px;
+}
+
+.c5 .c6 {
+  fill: #0a1633;
+}
+
+.c5:hover {
+  background: #eaeefd;
+}
+
+.c5:hover .c6 {
+  fill: #3860f4;
+}
+
+.c11 .c14 {
+  margin-bottom: 16px;
+}
+
+.c11 .c14:last-child {
+  margin-bottom: 0;
+}
+
+<div>
+  <h2>
+    存在默认数据，且默认数据不可删除
+  </h2>
+  <div
+    class="demo-wrap"
+  >
+    <div
+      class="c0"
+    >
+      <div
+        class="c1"
+      />
+      <div
+        class="uc-fe-table"
+      >
+        <div
+          class="uc-fe-table-title"
+        />
+        <div
+          class="uc-fe-table-content"
+        >
+          <div
+            class="uc-fe-table-body"
+          >
+            <table
+              class=""
+            >
+              <colgroup>
+                <col
+                  style="width:100px;min-width:100px;"
+                />
+                <col />
+                <col
+                  style="width:40px;min-width:40px;"
+                />
+              </colgroup>
+              <thead
+                class="uc-fe-table-thead"
+              >
+                <tr>
+                  <th
+                    class=""
+                  >
+                    <div>
+                      name
+                      <div
+                        class="uc-fe-table-filter c2"
+                      >
+                        <div>
+                          <i
+                            class="uc-fe-icon icon__filter c3"
+                          />
+                        </div>
+                      </div>
+                      <i
+                        class="uc-fe-icon icon__sort c4 c3"
+                      />
+                    </div>
+                  </th>
+                  <th
+                    class=""
+                  >
+                    <div>
+                      desc
+                      <div
+                        class="uc-fe-table-filter c2"
+                      >
+                        <div>
+                          <i
+                            class="uc-fe-icon icon__filter c3"
+                          />
+                        </div>
+                      </div>
+                      <i
+                        class="uc-fe-icon icon__sort c4 c3"
+                      />
+                    </div>
+                  </th>
+                  <th
+                    class=""
+                  >
+                    <div />
+                  </th>
+                </tr>
+              </thead>
+              <tbody
+                class="uc-fe-table-tbody"
+              >
+                <tr
+                  class="uc-fe-table-row  uc-fe-table-row-level-0"
+                  data-row-key="0"
+                >
+                  <td
+                    class=""
+                  >
+                    <span
+                      class="uc-fe-table-row-indent indent-level-0"
+                      style="padding-left:0px;"
+                    />
+                    name-0
+                  </td>
+                  <td
+                    class=""
+                  >
+                    默认数据，不能删除
+                  </td>
+                  <td
+                    class=""
+                  />
+                </tr>
+                <tr
+                  class="uc-fe-table-row  uc-fe-table-row-level-0"
+                  data-row-key="1"
+                >
+                  <td
+                    class=""
+                  >
+                    <span
+                      class="uc-fe-table-row-indent indent-level-0"
+                      style="padding-left:0px;"
+                    />
+                    name-1
+                  </td>
+                  <td
+                    class=""
+                  >
+                    默认数据，不能删除
+                  </td>
+                  <td
+                    class=""
+                  />
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div
+            class="uc-fe-table-footer"
+          >
+            <div />
+          </div>
+        </div>
+      </div>
+      <div
+        class="c5"
+      >
+        <svg
+          class="c6 c7"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <h2>
+    只能添加有限数据
+  </h2>
+  <div
+    class="demo-wrap"
+  >
+    <div
+      class="c0"
+    >
+      <div
+        class="c1"
+      />
+      <div
+        class="uc-fe-table"
+      >
+        <div
+          class="uc-fe-table-title"
+        />
+        <div
+          class="uc-fe-table-content"
+        >
+          <div
+            class="uc-fe-table-body"
+          >
+            <table
+              class=""
+            >
+              <colgroup>
+                <col
+                  style="width:100px;min-width:100px;"
+                />
+                <col />
+                <col
+                  style="width:40px;min-width:40px;"
+                />
+              </colgroup>
+              <thead
+                class="uc-fe-table-thead"
+              >
+                <tr>
+                  <th
+                    class=""
+                  >
+                    <div>
+                      name
+                      <div
+                        class="uc-fe-table-filter c2"
+                      >
+                        <div>
+                          <i
+                            class="uc-fe-icon icon__filter c3"
+                          />
+                        </div>
+                      </div>
+                      <i
+                        class="uc-fe-icon icon__sort c4 c3"
+                      />
+                    </div>
+                  </th>
+                  <th
+                    class=""
+                  >
+                    <div>
+                      desc
+                      <div
+                        class="uc-fe-table-filter c2"
+                      >
+                        <div>
+                          <i
+                            class="uc-fe-icon icon__filter c3"
+                          />
+                        </div>
+                      </div>
+                      <i
+                        class="uc-fe-icon icon__sort c4 c3"
+                      />
+                    </div>
+                  </th>
+                  <th
+                    class=""
+                  >
+                    <div />
+                  </th>
+                </tr>
+              </thead>
+              <tbody
+                class="uc-fe-table-tbody"
+              />
+            </table>
+          </div>
+          <div
+            class="uc-fe-table-placeholder"
+          />
+          <div
+            class="uc-fe-table-footer"
+          >
+            <div />
+          </div>
+        </div>
+      </div>
+      <div
+        class="c5"
+      >
+        <svg
+          class="c6 c8"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+          />
+        </svg>
+        <span
+          class="c9 c10"
+        >
+          还能再来点
+        </span>
+      </div>
+    </div>
+  </div>
+  <h2>
+    组合 ZForm 表单
+  </h2>
+  <div
+    class="demo-wrap"
+  >
+    <div>
+      <div />
+      <form
+        class="uc-fe-form c11"
+      >
+        <div
+          class="c0"
+        >
+          <div
+            class="c1"
+          />
+          <div
+            class="uc-fe-table"
+          >
+            <div
+              class="uc-fe-table-title"
+            />
+            <div
+              class="uc-fe-table-content"
+            >
+              <div
+                class="uc-fe-table-body"
+              >
+                <table
+                  class=""
+                >
+                  <colgroup>
+                    <col
+                      style="width:100px;min-width:100px;"
+                    />
+                    <col />
+                    <col />
+                    <col
+                      style="width:40px;min-width:40px;"
+                    />
+                  </colgroup>
+                  <thead
+                    class="uc-fe-table-thead"
+                  >
+                    <tr>
+                      <th
+                        class=""
+                      >
+                        <div>
+                          name
+                        </div>
+                      </th>
+                      <th
+                        class=""
+                      >
+                        <div>
+                          desc
+                        </div>
+                      </th>
+                      <th
+                        class=""
+                      >
+                        <div>
+                          tag
+                        </div>
+                      </th>
+                      <th
+                        class=""
+                      >
+                        <div />
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody
+                    class="uc-fe-table-tbody"
+                  />
+                </table>
+              </div>
+              <div
+                class="uc-fe-table-placeholder"
+              />
+              <div
+                class="uc-fe-table-footer"
+              >
+                <div />
+              </div>
+            </div>
+          </div>
+          <div
+            class="c5"
+          >
+            <svg
+              class="c6 c7"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          style="text-align:center;"
+        >
+          <button
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary c12"
+            type="button"
+          >
+            submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`EditableTable demo -- editableTable 1`] = `
+.c23 {
+  vertical-align: baseline;
+}
+
+.c18 {
+  display: table;
+  width: 100%;
+}
+
+.c17 {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  border-radius: 2px;
+  height: 28px;
+  color: #526075;
+  border: 1px solid #d2d6ea;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #fafafc;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+}
+
+.c17 input {
+  vertical-align: middle;
+  display: table-cell;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0px 8px;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+}
+
+.c17 input,
+.c17 input:hover,
+.c17 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.c17:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #fafafc;
+}
+
+.c17 input {
+  line-height: 26px;
+  height: 26px;
+}
+
+.c17 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.c17 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.c17 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.c17 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.c22 {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  color: #0a1633;
+}
+
+.c24 {
+  vertical-align: middle;
+  color: #0a1633;
+}
+
+.c20 {
+  padding: 15px;
+  color: #0a1633;
+  border-radius: 2px;
+  background: #ffffff;
+  font-size: 12px;
+}
+
+.c20:before,
+.c20:after {
+  content: ' ';
+  display: table;
+}
+
+.c20:after {
+  clear: both;
+}
+
+.c20 .uc-fe-table-pagination {
+  float: right;
+  margin-top: 8px;
+}
+
+.c20 .uc-fe-table-filter {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.c20 .uc-fe-table table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.c20 .uc-fe-table-filter-notice,
+.c20 .uc-fe-table-empty-content-wrap,
+.c20 .uc-fe-table-error-content-wrap {
+  width: 400px;
+  margin: 12px auto;
+  text-align: center;
+}
+
+.c20 .uc-fe-table-empty-content-wrap,
+.c20 .uc-fe-table-error-content-wrap {
+  margin: 40px auto;
+}
+
+.c20 .uc-fe-table-reset-link {
+  color: #3860f4;
+  cursor: pointer;
+}
+
+.c20 .uc-fe-table-body {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.c20 .uc-fe-table-fixed,
+.c20 .uc-fe-table-body {
+  background: #ffffff;
+}
+
+.c20 .uc-fe-table-row-expand-icon {
+  color: #526075;
+  border: 1px solid #d2d6ea;
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.c20 .uc-fe-table-row-expand-icon-cell {
+  width: 20px;
+}
+
+.c20 .uc-fe-table-row-expand-icon:hover {
+  color: #3357df;
+  border-color: #3357df;
+}
+
+.c20 .uc-fe-table-expand-icon-th {
+  width: 20px;
+}
+
+.c20 .uc-fe-table-row-expand-icon.uc-fe-table-row-collapsed:before {
+  content: '+';
+}
+
+.c20 .uc-fe-table-row-expand-icon.uc-fe-table-row-expanded:before {
+  content: '-';
+}
+
+.c20 .uc-fe-table-row-spaced {
+  visibility: hidden;
+}
+
+.c20 .uc-fe-table-row-expanded,
+.c20 .uc-fe-table-row-collapsed {
+  margin-right: 8px;
+}
+
+.c20 .uc-fe-table-row-expand-icon-cell .uc-fe-table-row-expand-icon {
+  margin: 0;
+}
+
+.c20 .uc-fe-table-fixed-header .uc-fe-table-header {
+  min-width: 100%;
+  overflow: scroll;
+  padding-bottom: 20px;
+  margin-bottom: -20px;
+}
+
+.c20 .uc-fe-table-content {
+  position: relative;
+  width: 100%;
+  clear: both;
+}
+
+.c20 .uc-fe-table-thead > tr > th {
+  position: relative;
+  vertical-align: middle;
+  border-bottom: 1px solid #c3cad9;
+  color: #526075;
+  padding: 12px;
+  line-height: 22px;
+  text-align: left;
+  font-weight: 400;
+}
+
+.c20 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
+.c20 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th {
+  border-color: transparent;
+  padding-left: 0;
+}
+
+.c20 .uc-fe-table-thead > tr > th.uc-fe-table-placeholder-th {
+  padding: 0px;
+  font-size: 0px;
+}
+
+.c20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after,
+.c20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 100%;
+  top: 0;
+  pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
+}
+
+.c20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
+  box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
+}
+
+.c20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
+.c20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
+  box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
+}
+
+.c20 .uc-fe-table-row,
+.c20 .uc-fe-table-row>td,
+.c20 .uc-fe-table-thead,
+.c20 .uc-fe-table-thead>tr,
+.c20 .uc-fe-table-thead>tr>th {
+  background: #ffffff;
+}
+
+.c20 .uc-fe-table-row > td {
+  position: relative;
+  vertical-align: middle;
+  border-bottom: 1px solid #d2d6ea;
+  padding: 12px;
+  line-height: 22px;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+.c20 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
+.c20 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell {
+  border-color: transparent;
+  padding-left: 0;
+}
+
+.c20 .uc-fe-table-row > td.uc-fe-table-placeholder-cell {
+  padding: 0;
+  font-size: 0;
+}
+
+.c20 .uc-fe-table-row-level-1 > td,
+.c20 .uc-fe-table-row-level-2 > td,
+.c20 .uc-fe-table-row-level-3 > td,
+.c20 .uc-fe-table-row-level-4 > td,
+.c20 .uc-fe-table-row-level-5 > td {
+  background: #f6f6fb;
+}
+
+.c20 .uc-fe-table-row-level-1 > td.uc-fe-table-row-expand-icon-cell,
+.c20 .uc-fe-table-row-level-2 > td.uc-fe-table-row-expand-icon-cell,
+.c20 .uc-fe-table-row-level-3 > td.uc-fe-table-row-expand-icon-cell,
+.c20 .uc-fe-table-row-level-4 > td.uc-fe-table-row-expand-icon-cell,
+.c20 .uc-fe-table-row-level-5 > td.uc-fe-table-row-expand-icon-cell {
+  background: #ffffff;
+}
+
+.c20 .uc-fe-table-row-level-1 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.c20 .uc-fe-table-row-level-2 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.c20 .uc-fe-table-row-level-3 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.c20 .uc-fe-table-row-level-4 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.c20 .uc-fe-table-row-level-5 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced {
+  visibility: visible;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 1px;
+  height: 100%;
+  background: #d2d6ea;
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid #d2d6ea;
+  cursor: default;
+}
+
+.c20 .uc-fe-table-custom-title {
+  margin-bottom: 16px;
+}
+
+.c20 .uc-fe-table-tip-wrap {
+  border-bottom: 1px solid #d2d6ea;
+}
+
+.c20 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td {
+  background: #eaeefd;
+}
+
+.c20 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-expand-icon-cell,
+.c20 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-select-icon-cell {
+  background: #ffffff;
+}
+
+.c20 .uc-fe-table-row-indent.indent-level-0 {
+  display: none;
+}
+
+.c21 {
+  position: relative;
+  z-index: 10;
+}
+
+.c5 {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  min-height: 1px;
+  float: left;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 25%;
+}
+
+.c6 {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  min-height: 1px;
+  float: left;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 75%;
+}
+
+.c2 {
+  position: relative;
+  display: block;
+  height: auto;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.c2:before,
+.c2:after {
+  content: ' ';
+  display: table;
+}
+
+.c2:after {
+  clear: both;
+}
+
+.c2 .c4 {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.c27 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+
+.c28 .c26 {
+  fill: #0a1633;
+}
+
+.c28:hover .c26 {
+  fill: #3860f4;
+}
+
+.c28.c28.c28 .c26 {
+  fill: #cccccc;
+}
+
+.c25 {
+  width: 100%;
+  height: 60px;
+  background: #fafafc;
+  color: #0a1633;
+  cursor: pointer;
+  text-align: center;
+  line-height: 60px;
+}
+
+.c25 .c26 {
+  fill: #0a1633;
+}
+
+.c25:hover {
+  background: #eaeefd;
+}
+
+.c25:hover .c26 {
+  fill: #3860f4;
+}
+
+.c3 {
+  padding-top: 4px;
+  line-height: 20px;
+  word-break: break-all;
+}
+
+.c0 .c1 {
+  margin-bottom: 16px;
+}
+
+.c0 .c1:last-child {
+  margin-bottom: 0;
+}
+
+.c9 {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.c11 {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 22px;
+  box-sizing: border-box;
+  display: block;
+}
+
+.c14 {
+  position: absolute;
+  display: inline-block;
+  left: -1px;
+  top: -2px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.c16 {
+  position: absolute;
+  display: inline-block;
+  left: 18px;
+  top: 4px;
+  width: 2px;
+  height: 16px;
+  border-radius: 1px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.c7 {
+  position: relative;
+  border-radius: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  background: #ffffff;
+  height: 28px;
+  width: 80px;
+  padding: 4px;
+  border: 1px solid #c3cad9;
+  border-width: 1px;
+  line-height: 16px;
+}
+
+.c7:hover {
+  border-color: #3357df;
+}
+
+.c7:hover .c13 {
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
+.c7 .c13 {
+  background: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
+  width: 20px;
+  height: 20px;
+}
+
+.c7 .c15 {
+  background: #f44336;
+  left: 13px;
+  height: 10px;
+}
+
+.c7 .c8 {
+  color: #526075;
+  border: 1px solid #d2d6ea;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #f6f6fb;
+}
+
+.c7 .c10,
+.c7 .c12 {
+  line-height: 16px;
+}
+
+.c7 .c10 {
+  padding-right: 20px;
+}
+
+.c7 .c12 {
+  padding-left: 20px;
+}
+
+.c7 .c8 {
+  color: #4cd964;
+  border-color: #9effa5;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #edfff2;
+}
+
+.c7 .c13 {
+  left: 100%;
+  margin-left: -19px;
+}
+
+.c7 .c15 {
+  background: #4cd964;
+}
+
+.c7 .c12 {
+  display: none;
+}
+
+.c19 {
+  position: relative;
+  border-radius: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  background: #ffffff;
+  height: 28px;
+  width: 80px;
+  padding: 4px;
+  border: 1px solid #c3cad9;
+  border-width: 1px;
+  line-height: 16px;
+}
+
+.c19:hover {
+  border-color: #3357df;
+}
+
+.c19:hover .c13 {
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
+.c19 .c13 {
+  background: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
+  width: 20px;
+  height: 20px;
+}
+
+.c19 .c15 {
+  background: #f44336;
+  left: 13px;
+  height: 10px;
+}
+
+.c19 .c8 {
+  color: #526075;
+  border: 1px solid #d2d6ea;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #f6f6fb;
+}
+
+.c19 .c10,
+.c19 .c12 {
+  line-height: 16px;
+}
+
+.c19 .c10 {
+  padding-right: 20px;
+}
+
+.c19 .c12 {
+  padding-left: 20px;
+}
+
+.c19 .c10 {
+  display: none;
+}
+
+<div>
+  <form
+    class="demo-form uc-fe-form c0"
+  >
+    <div
+      class="c1 uc-fe-form-item uc-fe-row c2"
+    >
+      <div
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
+        span="3"
+      >
+        addition
+      </div>
+      <div
+        class="uc-fe-form-controller c4 uc-fe-col c6"
+        span="9"
+      >
+        <div
+          checked=""
+          class="c7"
+        >
+          <div
+            class="c8 c9"
+          >
+            <span
+              class="c10 c11"
+            >
+              ON
+            </span>
+            <span
+              class="c12 c11"
+            >
+              OFF
+            </span>
+            <span
+              class="c13 c14"
+            >
+              <span
+                class="c15 c16"
+              />
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="c1 uc-fe-form-item uc-fe-row c2"
+    >
+      <div
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
+        span="3"
+      >
+        addition.tip
+      </div>
+      <div
+        class="uc-fe-form-controller c4 uc-fe-col c6"
+        span="9"
+      >
+        <span
+          class="uc-fe-input c17"
+        >
+          <span
+            class="c18"
+          >
+            <input
+              type="input"
+              value=""
+            />
+          </span>
+        </span>
+      </div>
+    </div>
+    <div
+      class="c1 uc-fe-form-item uc-fe-row c2"
+    >
+      <div
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
+        span="3"
+      >
+        rowDeletion
+      </div>
+      <div
+        class="uc-fe-form-controller c4 uc-fe-col c6"
+        span="9"
+      >
+        <div
+          checked=""
+          class="c7"
+        >
+          <div
+            class="c8 c9"
+          >
+            <span
+              class="c10 c11"
+            >
+              ON
+            </span>
+            <span
+              class="c12 c11"
+            >
+              OFF
+            </span>
+            <span
+              class="c13 c14"
+            >
+              <span
+                class="c15 c16"
+              />
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="c1 uc-fe-form-item uc-fe-row c2"
+    >
+      <div
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
+        span="3"
+      >
+        rowDeletion.getDisabledOfRow
+      </div>
+      <div
+        class="uc-fe-form-controller c4 uc-fe-col c6"
+        span="9"
+      >
+        <div
+          class="c19"
+        >
+          <div
+            class="c8 c9"
+          >
+            <span
+              class="c10 c11"
+            >
+              ON
+            </span>
+            <span
+              class="c12 c11"
+            >
+              OFF
+            </span>
+            <span
+              class="c13 c14"
+            >
+              <span
+                class="c15 c16"
+              />
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <div
+    class="demo-wrap"
+  >
+    <div
+      class="c20"
+    >
+      <div
+        class="c21"
+      />
+      <div
+        class="uc-fe-table"
+      >
+        <div
+          class="uc-fe-table-title"
+        />
+        <div
+          class="uc-fe-table-content"
+        >
+          <div
+            class="uc-fe-table-body"
+          >
+            <table
+              class=""
+            >
+              <colgroup>
+                <col
+                  style="width:100px;min-width:100px;"
+                />
+                <col />
+                <col
+                  style="width:40px;min-width:40px;"
+                />
+              </colgroup>
+              <thead
+                class="uc-fe-table-thead"
+              >
+                <tr>
+                  <th
+                    class=""
+                  >
+                    <div>
+                      name
+                      <div
+                        class="uc-fe-table-filter c22"
+                      >
+                        <div>
+                          <i
+                            class="uc-fe-icon icon__filter c23"
+                          />
+                        </div>
+                      </div>
+                      <i
+                        class="uc-fe-icon icon__sort c24 c23"
+                      />
+                    </div>
+                  </th>
+                  <th
+                    class=""
+                  >
+                    <div>
+                      desc
+                      <div
+                        class="uc-fe-table-filter c22"
+                      >
+                        <div>
+                          <i
+                            class="uc-fe-icon icon__filter c23"
+                          />
+                        </div>
+                      </div>
+                      <i
+                        class="uc-fe-icon icon__sort c24 c23"
+                      />
+                    </div>
+                  </th>
+                  <th
+                    class=""
+                  >
+                    <div />
+                  </th>
+                </tr>
+              </thead>
+              <tbody
+                class="uc-fe-table-tbody"
+              />
+            </table>
+          </div>
+          <div
+            class="uc-fe-table-placeholder"
+          />
+          <div
+            class="uc-fe-table-footer"
+          >
+            <div />
+          </div>
+        </div>
+      </div>
+      <div
+        class="c25"
+      >
+        <svg
+          class="c26 c27"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`EditableTable demo -- rowDeletion 1`] = `
+.c3 {
+  vertical-align: baseline;
+}
+
+.c2 {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  color: #0a1633;
+}
+
+.c4 {
+  vertical-align: middle;
+  color: #0a1633;
+}
+
+.c0 {
+  padding: 15px;
+  color: #0a1633;
+  border-radius: 2px;
+  background: #ffffff;
+  font-size: 12px;
+}
+
+.c0:before,
+.c0:after {
+  content: ' ';
+  display: table;
+}
+
+.c0:after {
+  clear: both;
+}
+
+.c0 .uc-fe-table-pagination {
+  float: right;
+  margin-top: 8px;
+}
+
+.c0 .uc-fe-table-filter {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.c0 .uc-fe-table table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.c0 .uc-fe-table-filter-notice,
+.c0 .uc-fe-table-empty-content-wrap,
+.c0 .uc-fe-table-error-content-wrap {
+  width: 400px;
+  margin: 12px auto;
+  text-align: center;
+}
+
+.c0 .uc-fe-table-empty-content-wrap,
+.c0 .uc-fe-table-error-content-wrap {
+  margin: 40px auto;
+}
+
+.c0 .uc-fe-table-reset-link {
+  color: #3860f4;
+  cursor: pointer;
+}
+
+.c0 .uc-fe-table-body {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.c0 .uc-fe-table-fixed,
+.c0 .uc-fe-table-body {
+  background: #ffffff;
+}
+
+.c0 .uc-fe-table-row-expand-icon {
+  color: #526075;
+  border: 1px solid #d2d6ea;
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.c0 .uc-fe-table-row-expand-icon-cell {
+  width: 20px;
+}
+
+.c0 .uc-fe-table-row-expand-icon:hover {
+  color: #3357df;
+  border-color: #3357df;
+}
+
+.c0 .uc-fe-table-expand-icon-th {
+  width: 20px;
+}
+
+.c0 .uc-fe-table-row-expand-icon.uc-fe-table-row-collapsed:before {
+  content: '+';
+}
+
+.c0 .uc-fe-table-row-expand-icon.uc-fe-table-row-expanded:before {
+  content: '-';
+}
+
+.c0 .uc-fe-table-row-spaced {
+  visibility: hidden;
+}
+
+.c0 .uc-fe-table-row-expanded,
+.c0 .uc-fe-table-row-collapsed {
+  margin-right: 8px;
+}
+
+.c0 .uc-fe-table-row-expand-icon-cell .uc-fe-table-row-expand-icon {
+  margin: 0;
+}
+
+.c0 .uc-fe-table-fixed-header .uc-fe-table-header {
+  min-width: 100%;
+  overflow: scroll;
+  padding-bottom: 20px;
+  margin-bottom: -20px;
+}
+
+.c0 .uc-fe-table-content {
+  position: relative;
+  width: 100%;
+  clear: both;
+}
+
+.c0 .uc-fe-table-thead > tr > th {
+  position: relative;
+  vertical-align: middle;
+  border-bottom: 1px solid #c3cad9;
+  color: #526075;
+  padding: 12px;
+  line-height: 22px;
+  text-align: left;
+  font-weight: 400;
+}
+
+.c0 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
+.c0 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th {
+  border-color: transparent;
+  padding-left: 0;
+}
+
+.c0 .uc-fe-table-thead > tr > th.uc-fe-table-placeholder-th {
+  padding: 0px;
+  font-size: 0px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 100%;
+  top: 0;
+  pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
+}
+
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
+  box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
+}
+
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
+.c0 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
+  box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
+}
+
+.c0 .uc-fe-table-row,
+.c0 .uc-fe-table-row>td,
+.c0 .uc-fe-table-thead,
+.c0 .uc-fe-table-thead>tr,
+.c0 .uc-fe-table-thead>tr>th {
+  background: #ffffff;
+}
+
+.c0 .uc-fe-table-row > td {
+  position: relative;
+  vertical-align: middle;
+  border-bottom: 1px solid #d2d6ea;
+  padding: 12px;
+  line-height: 22px;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+.c0 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
+.c0 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell {
+  border-color: transparent;
+  padding-left: 0;
+}
+
+.c0 .uc-fe-table-row > td.uc-fe-table-placeholder-cell {
+  padding: 0;
+  font-size: 0;
+}
+
+.c0 .uc-fe-table-row-level-1 > td,
+.c0 .uc-fe-table-row-level-2 > td,
+.c0 .uc-fe-table-row-level-3 > td,
+.c0 .uc-fe-table-row-level-4 > td,
+.c0 .uc-fe-table-row-level-5 > td {
+  background: #f6f6fb;
+}
+
+.c0 .uc-fe-table-row-level-1 > td.uc-fe-table-row-expand-icon-cell,
+.c0 .uc-fe-table-row-level-2 > td.uc-fe-table-row-expand-icon-cell,
+.c0 .uc-fe-table-row-level-3 > td.uc-fe-table-row-expand-icon-cell,
+.c0 .uc-fe-table-row-level-4 > td.uc-fe-table-row-expand-icon-cell,
+.c0 .uc-fe-table-row-level-5 > td.uc-fe-table-row-expand-icon-cell {
+  background: #ffffff;
+}
+
+.c0 .uc-fe-table-row-level-1 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.c0 .uc-fe-table-row-level-2 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.c0 .uc-fe-table-row-level-3 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.c0 .uc-fe-table-row-level-4 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.c0 .uc-fe-table-row-level-5 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced {
+  visibility: visible;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 1px;
+  height: 100%;
+  background: #d2d6ea;
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid #d2d6ea;
+  cursor: default;
+}
+
+.c0 .uc-fe-table-custom-title {
+  margin-bottom: 16px;
+}
+
+.c0 .uc-fe-table-tip-wrap {
+  border-bottom: 1px solid #d2d6ea;
+}
+
+.c0 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td {
+  background: #eaeefd;
+}
+
+.c0 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-expand-icon-cell,
+.c0 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-select-icon-cell {
+  background: #ffffff;
+}
+
+.c0 .uc-fe-table-row-indent.indent-level-0 {
+  display: none;
+}
+
+.c1 {
+  position: relative;
+  z-index: 10;
+}
+
+.c7 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+
+.c9 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+}
+
+.c8 {
+  cursor: pointer;
+  fill: #526075;
+}
+
+.c8:hover {
+  fill: #3860f4;
+}
+
+.c10 .c6 {
+  fill: #0a1633;
+}
+
+.c10:hover .c6 {
+  fill: #3860f4;
+}
+
+.c10.c10.c10 .c6 {
+  fill: #cccccc;
+}
+
+.c5 {
+  width: 100%;
+  height: 60px;
+  background: #fafafc;
+  color: #0a1633;
+  cursor: pointer;
+  text-align: center;
+  line-height: 60px;
+}
+
+.c5 .c6 {
+  fill: #0a1633;
+}
+
+.c5:hover {
+  background: #eaeefd;
+}
+
+.c5:hover .c6 {
+  fill: #3860f4;
+}
+
+<div>
+  <div>
+    <h2>
+      false
+    </h2>
+    <div
+      class="demo-wrap"
+    >
+      <div
+        class="c0"
+      >
+        <div
+          class="c1"
+        />
+        <div
+          class="uc-fe-table"
+        >
+          <div
+            class="uc-fe-table-title"
+          />
+          <div
+            class="uc-fe-table-content"
+          >
+            <div
+              class="uc-fe-table-body"
+            >
+              <table
+                class=""
+              >
+                <colgroup>
+                  <col
+                    style="width:100px;min-width:100px;"
+                  />
+                  <col />
+                </colgroup>
+                <thead
+                  class="uc-fe-table-thead"
+                >
+                  <tr>
+                    <th
+                      class=""
+                    >
+                      <div>
+                        name
+                        <div
+                          class="uc-fe-table-filter c2"
+                        >
+                          <div>
+                            <i
+                              class="uc-fe-icon icon__filter c3"
+                            />
+                          </div>
+                        </div>
+                        <i
+                          class="uc-fe-icon icon__sort c4 c3"
+                        />
+                      </div>
+                    </th>
+                    <th
+                      class=""
+                    >
+                      <div>
+                        desc
+                        <div
+                          class="uc-fe-table-filter c2"
+                        >
+                          <div>
+                            <i
+                              class="uc-fe-icon icon__filter c3"
+                            />
+                          </div>
+                        </div>
+                        <i
+                          class="uc-fe-icon icon__sort c4 c3"
+                        />
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody
+                  class="uc-fe-table-tbody"
+                >
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="0"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px;"
+                      />
+                      name-0
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-0
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="1"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px;"
+                      />
+                      name-1
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-1
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="2"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px;"
+                      />
+                      name-2
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-2
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="3"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px;"
+                      />
+                      name-3
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-3
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="4"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px;"
+                      />
+                      name-4
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-4
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="5"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px;"
+                      />
+                      name-5
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-5
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="6"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px;"
+                      />
+                      name-6
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-6
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="7"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px;"
+                      />
+                      name-7
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-7
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="8"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px;"
+                      />
+                      name-8
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-8
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="9"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px;"
+                      />
+                      name-9
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-9
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div
+              class="uc-fe-table-footer"
+            >
+              <div />
+            </div>
+          </div>
+        </div>
+        <div
+          class="c5"
+        >
+          <svg
+            class="c6 c7"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2>
+      onDelete
+    </h2>
+    <div
+      class="demo-wrap"
+    >
+      <div
+        class="c0"
+      >
+        <div
+          class="c1"
+        />
+        <div
+          class="uc-fe-table"
+        >
+          <div
+            class="uc-fe-table-title"
+          />
+          <div
+            class="uc-fe-table-content"
+          >
+            <div
+              class="uc-fe-table-body"
+            >
+              <table
+                class=""
+              >
+                <colgroup>
+                  <col
+                    style="width:100px;min-width:100px;"
+                  />
+                  <col />
+                  <col
+                    style="width:40px;min-width:40px;"
+                  />
+                </colgroup>
+                <thead
+                  class="uc-fe-table-thead"
+                >
+                  <tr>
+                    <th
+                      class=""
+                    >
+                      <div>
+                        name
+                        <div
+                          class="uc-fe-table-filter c2"
+                        >
+                          <div>
+                            <i
+                              class="uc-fe-icon icon__filter c3"
+                            />
+                          </div>
+                        </div>
+                        <i
+                          class="uc-fe-icon icon__sort c4 c3"
+                        />
+                      </div>
+                    </th>
+                    <th
+                      class=""
+                    >
+                      <div>
+                        desc
+                        <div
+                          class="uc-fe-table-filter c2"
+                        >
+                          <div>
+                            <i
+                              class="uc-fe-icon icon__filter c3"
+                            />
+                          </div>
+                        </div>
+                        <i
+                          class="uc-fe-icon icon__sort c4 c3"
+                        />
+                      </div>
+                    </th>
+                    <th
+                      class=""
+                    >
+                      <div />
+                    </th>
+                  </tr>
+                </thead>
+                <tbody
+                  class="uc-fe-table-tbody"
+                >
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="10"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px;"
+                      />
+                      name-10
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-10
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <svg
+                        class="c8 c9"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.07 4.93a1 1 0 010 1.41L13.41 12l5.66 5.66a1 1 0 11-1.41 1.41L12 13.41l-5.66 5.66a1 1 0 11-1.41-1.41L10.59 12 4.93 6.34a1 1 0 011.41-1.41L12 10.59l5.66-5.66a1 1 0 011.41 0z"
+                        />
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="11"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px;"
+                      />
+                      name-11
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-11
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <svg
+                        class="c8 c9"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.07 4.93a1 1 0 010 1.41L13.41 12l5.66 5.66a1 1 0 11-1.41 1.41L12 13.41l-5.66 5.66a1 1 0 11-1.41-1.41L10.59 12 4.93 6.34a1 1 0 011.41-1.41L12 10.59l5.66-5.66a1 1 0 011.41 0z"
+                        />
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="12"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px;"
+                      />
+                      name-12
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-12
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <svg
+                        class="c8 c9"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.07 4.93a1 1 0 010 1.41L13.41 12l5.66 5.66a1 1 0 11-1.41 1.41L12 13.41l-5.66 5.66a1 1 0 11-1.41-1.41L10.59 12 4.93 6.34a1 1 0 011.41-1.41L12 10.59l5.66-5.66a1 1 0 011.41 0z"
+                        />
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="13"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px;"
+                      />
+                      name-13
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-13
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <svg
+                        class="c8 c9"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.07 4.93a1 1 0 010 1.41L13.41 12l5.66 5.66a1 1 0 11-1.41 1.41L12 13.41l-5.66 5.66a1 1 0 11-1.41-1.41L10.59 12 4.93 6.34a1 1 0 011.41-1.41L12 10.59l5.66-5.66a1 1 0 011.41 0z"
+                        />
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="14"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px;"
+                      />
+                      name-14
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-14
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <svg
+                        class="c8 c9"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.07 4.93a1 1 0 010 1.41L13.41 12l5.66 5.66a1 1 0 11-1.41 1.41L12 13.41l-5.66 5.66a1 1 0 11-1.41-1.41L10.59 12 4.93 6.34a1 1 0 011.41-1.41L12 10.59l5.66-5.66a1 1 0 011.41 0z"
+                        />
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="15"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px;"
+                      />
+                      name-15
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-15
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <svg
+                        class="c8 c9"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.07 4.93a1 1 0 010 1.41L13.41 12l5.66 5.66a1 1 0 11-1.41 1.41L12 13.41l-5.66 5.66a1 1 0 11-1.41-1.41L10.59 12 4.93 6.34a1 1 0 011.41-1.41L12 10.59l5.66-5.66a1 1 0 011.41 0z"
+                        />
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="16"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px;"
+                      />
+                      name-16
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-16
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <svg
+                        class="c8 c9"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.07 4.93a1 1 0 010 1.41L13.41 12l5.66 5.66a1 1 0 11-1.41 1.41L12 13.41l-5.66 5.66a1 1 0 11-1.41-1.41L10.59 12 4.93 6.34a1 1 0 011.41-1.41L12 10.59l5.66-5.66a1 1 0 011.41 0z"
+                        />
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="17"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px;"
+                      />
+                      name-17
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-17
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <svg
+                        class="c8 c9"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.07 4.93a1 1 0 010 1.41L13.41 12l5.66 5.66a1 1 0 11-1.41 1.41L12 13.41l-5.66 5.66a1 1 0 11-1.41-1.41L10.59 12 4.93 6.34a1 1 0 011.41-1.41L12 10.59l5.66-5.66a1 1 0 011.41 0z"
+                        />
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="18"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px;"
+                      />
+                      name-18
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-18
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <svg
+                        class="c8 c9"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.07 4.93a1 1 0 010 1.41L13.41 12l5.66 5.66a1 1 0 11-1.41 1.41L12 13.41l-5.66 5.66a1 1 0 11-1.41-1.41L10.59 12 4.93 6.34a1 1 0 011.41-1.41L12 10.59l5.66-5.66a1 1 0 011.41 0z"
+                        />
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="19"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px;"
+                      />
+                      name-19
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-19
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <svg
+                        class="c8 c9"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.07 4.93a1 1 0 010 1.41L13.41 12l5.66 5.66a1 1 0 11-1.41 1.41L12 13.41l-5.66 5.66a1 1 0 11-1.41-1.41L10.59 12 4.93 6.34a1 1 0 011.41-1.41L12 10.59l5.66-5.66a1 1 0 011.41 0z"
+                        />
+                      </svg>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div
+              class="uc-fe-table-footer"
+            >
+              <div />
+            </div>
+          </div>
+        </div>
+        <div
+          class="c5"
+        >
+          <svg
+            class="c6 c7"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2>
+      getDisabledOfRow
+    </h2>
+    <div
+      class="demo-wrap"
+    >
+      <div
+        class="c0"
+      >
+        <div
+          class="c1"
+        />
+        <div
+          class="uc-fe-table"
+        >
+          <div
+            class="uc-fe-table-title"
+          />
+          <div
+            class="uc-fe-table-content"
+          >
+            <div
+              class="uc-fe-table-body"
+            >
+              <table
+                class=""
+              >
+                <colgroup>
+                  <col
+                    style="width:100px;min-width:100px;"
+                  />
+                  <col />
+                  <col
+                    style="width:40px;min-width:40px;"
+                  />
+                </colgroup>
+                <thead
+                  class="uc-fe-table-thead"
+                >
+                  <tr>
+                    <th
+                      class=""
+                    >
+                      <div>
+                        name
+                        <div
+                          class="uc-fe-table-filter c2"
+                        >
+                          <div>
+                            <i
+                              class="uc-fe-icon icon__filter c3"
+                            />
+                          </div>
+                        </div>
+                        <i
+                          class="uc-fe-icon icon__sort c4 c3"
+                        />
+                      </div>
+                    </th>
+                    <th
+                      class=""
+                    >
+                      <div>
+                        desc
+                        <div
+                          class="uc-fe-table-filter c2"
+                        >
+                          <div>
+                            <i
+                              class="uc-fe-icon icon__filter c3"
+                            />
+                          </div>
+                        </div>
+                        <i
+                          class="uc-fe-icon icon__sort c4 c3"
+                        />
+                      </div>
+                    </th>
+                    <th
+                      class=""
+                    >
+                      <div />
+                    </th>
+                  </tr>
+                </thead>
+                <tbody
+                  class="uc-fe-table-tbody"
+                >
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="20"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px;"
+                      />
+                      name-20
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-20
+                    </td>
+                    <td
+                      class=""
+                    />
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="21"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px;"
+                      />
+                      name-21
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-21
+                    </td>
+                    <td
+                      class=""
+                    />
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="22"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px;"
+                      />
+                      name-22
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-22
+                    </td>
+                    <td
+                      class=""
+                    />
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="23"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px;"
+                      />
+                      name-23
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-23
+                    </td>
+                    <td
+                      class=""
+                    />
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="24"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px;"
+                      />
+                      name-24
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-24
+                    </td>
+                    <td
+                      class=""
+                    />
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="25"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px;"
+                      />
+                      name-25
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-25
+                    </td>
+                    <td
+                      class=""
+                    />
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="26"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px;"
+                      />
+                      name-26
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-26
+                    </td>
+                    <td
+                      class=""
+                    />
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="27"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px;"
+                      />
+                      name-27
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-27
+                    </td>
+                    <td
+                      class=""
+                    />
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="28"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px;"
+                      />
+                      name-28
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-28
+                    </td>
+                    <td
+                      class=""
+                    />
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="29"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px;"
+                      />
+                      name-29
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-29
+                    </td>
+                    <td
+                      class=""
+                    />
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div
+              class="uc-fe-table-footer"
+            >
+              <div />
+            </div>
+          </div>
+        </div>
+        <div
+          class="c5"
+        >
+          <svg
+            class="c6 c7"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

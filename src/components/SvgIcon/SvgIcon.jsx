@@ -9,6 +9,7 @@ import BoldCross from './icons/BoldCross';
 import CircleLoading from './icons/CircleLoading';
 import DottedRightArrow from './icons/DottedRightArrow';
 import ExclamationCircle from './icons/ExclamationCircle';
+import Plus from './icons/Plus';
 
 const IconMap = {
     tick: Tick,
@@ -16,7 +17,8 @@ const IconMap = {
     boldCross: BoldCross,
     circleLoading: CircleLoading,
     dottedRightArrow: DottedRightArrow,
-    exclamationCircle: ExclamationCircle
+    exclamationCircle: ExclamationCircle,
+    plus: Plus
 };
 
 const IconType = _.keys(IconMap);
