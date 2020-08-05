@@ -55,15 +55,21 @@ const styleTypeMixin = ({ theme: { designTokens: DT, materialVars, PaddingNumber
     return css`
         ${styleTypeTheme[styleType]};
         ${styleType === 'border-gray' &&
-            css`
-                padding-left: ${PaddingNumber[size] - 1}px;
-                padding-right: ${PaddingNumber[size] - 1}px;
-            `};
+        css`
+            padding-left: ${PaddingNumber[size] - 1}px;
+            padding-right: ${PaddingNumber[size] - 1}px;
+        `};
     `;
 };
 
 const shapeCircleMixin = ({ size, theme: { Height } }) => css`
     border-radius: 50% !important;
+    padding: 0;
+    overflow: hidden;
+    width: ${Height[size]};
+`;
+
+const shapeSquareMixin = ({ size, theme: { Height } }) => css`
     padding: 0;
     overflow: hidden;
     width: ${Height[size]};
@@ -141,6 +147,7 @@ export const ButtonWrap = styled(Button).attrs({
         ${sizeMixin};
         ${styleTypeMixin};
         ${shape === 'circle' && shapeCircleMixin};
+        ${shape === 'square' && shapeSquareMixin};
         ${loading && loadingMixin};
         ${checked && checkedMixin};
         ${disabled && disabledMixin};

@@ -60,6 +60,7 @@ export const TableWrap = styled.div(
             border-collapse: separate;
             border-spacing: 0;
             width: 100%;
+            min-width: 100%;
         }
         &-filter-notice,
         &-empty-content-wrap,

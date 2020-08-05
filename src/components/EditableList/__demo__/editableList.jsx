@@ -1,35 +1,16 @@
 import React from 'react';
 
-import EditableTable from 'src/components/EditableTable';
+import EditableList from 'src/components/EditableList';
 import Switch from 'src/components/Switch';
 import Form from 'src/components/Form';
 import Input from 'src/components/Input';
+import Radio from 'src/components/Radio';
+
+import SizeInterface from 'src/interfaces/Size';
 
 // demo start
-const { defaultProps } = EditableTable;
+const { defaultProps } = EditableList;
 
-const columns = [
-    {
-        title: 'name',
-        dataIndex: 'name',
-        key: 'name',
-        width: 100,
-        filter: {
-            options: [1, 2, 3, 4]
-        },
-        order: true
-    },
-    {
-        title: 'desc',
-        dataIndex: 'desc',
-        key: 'desc',
-        filter: {
-            options: [1, 2, 3, 4],
-            multiple: true
-        },
-        order: true
-    }
-];
 let uid = 0;
 
 const generateData = ({ name, desc, deletable } = {}) => {
@@ -46,10 +27,10 @@ class Demo extends React.Component {
         super(props);
         this.state = {
             addition: defaultProps.addition,
-            additionTip: '',
-            rowDeletion: defaultProps.rowDeletion,
+            itemDeletion: defaultProps.itemDeletion,
             randomRowDeletionDisable: false,
-            dataSource: []
+            dataSource: [],
+            size: defaultProps.size
         };
     }
     onDelete(record) {
@@ -63,11 +44,16 @@ class Demo extends React.Component {
         dataSource.push(generateData());
         this.setState({ dataSource });
     }
-    getDisabledOfRow(record) {
+    renderItem(item) {
+        const { size } = this.state;
+        return <Input defaultValue={item.name} size={size} />;
+    }
+
+    getDisabledOfItem(record) {
         return record.key % 2;
     }
     render() {
-        const { addition, rowDeletion, additionTip, randomRowDeletionDisable, dataSource } = this.state;
+        const { addition, itemDeletion, randomRowDeletionDisable, dataSource, grid, size } = this.state;
         const itemLayout = {
             labelCol: {
                 span: 3
@@ -77,17 +63,16 @@ class Demo extends React.Component {
             }
         };
         let _addition = addition,
-            _rowDeletion = rowDeletion;
+            _itemDeletion = itemDeletion;
         if (addition) {
             _addition = {
-                onAdd: () => this.onAdd(),
-                tip: additionTip
+                onAdd: () => this.onAdd()
             };
         }
-        if (rowDeletion) {
-            _rowDeletion = {
+        if (itemDeletion) {
+            _itemDeletion = {
                 onDelete: record => this.onDelete(record),
-                getDisabledOfRow: randomRowDeletionDisable ? this.getDisabledOfRow : null
+                getDisabledOfItem: randomRowDeletionDisable ? this.getDisabledOfItem : null
             };
         }
 
@@ -97,34 +82,35 @@ class Demo extends React.Component {
                     <Form.Item label="addition" {...itemLayout}>
                         <Switch checked={addition} onChange={addition => this.setState({ addition })} />
                     </Form.Item>
-                    <Form.Item label="addition.tip" {...itemLayout}>
-                        <Input
-                            value={additionTip}
-                            onChange={e =>
-                                this.setState({
-                                    additionTip: e.target.value
-                                })
-                            }
-                            type="input"
-                        />
+                    <Form.Item label="itemDeletion" {...itemLayout}>
+                        <Switch checked={itemDeletion} onChange={itemDeletion => this.setState({ itemDeletion })} />
                     </Form.Item>
-                    <Form.Item label="rowDeletion" {...itemLayout}>
-                        <Switch checked={rowDeletion} onChange={rowDeletion => this.setState({ rowDeletion })} />
-                    </Form.Item>
-                    <Form.Item label="rowDeletion.getDisabledOfRow" {...itemLayout}>
+                    <Form.Item label="itemDeletion.getDisabledOfItem" {...itemLayout}>
                         <Switch
                             checked={randomRowDeletionDisable}
                             onChange={randomRowDeletionDisable => this.setState({ randomRowDeletionDisable })}
                         />
                     </Form.Item>
+                    <Form.Item label="grid" {...itemLayout}>
+                        <Switch checked={grid} onChange={grid => this.setState({ grid })} />
+                    </Form.Item>
+                    <Form.Item label="size" {...itemLayout}>
+                        <Radio.Group
+                            options={SizeInterface.map(v => ({ value: v, lable: v }))}
+                            onChange={size => this.setState({ size })}
+                            value={size}
+                        ></Radio.Group>
+                    </Form.Item>
                 </Form>
                 <div className="demo-wrap">
-                    <EditableTable
+                    <EditableList
                         {...{
                             addition: _addition,
-                            rowDeletion: _rowDeletion,
+                            itemDeletion: _itemDeletion,
+                            grid: grid ? {} : null,
                             dataSource,
-                            columns
+                            size,
+                            renderItem: item => this.renderItem(item)
                         }}
                     />
                 </div>

@@ -20,9 +20,11 @@ export const CombineWrap = styled.div.attrs({
     ({ spacing }) => css`
         position: relative;
 
-        > .${controllerPrefix}+.${controllerPrefix} {
-            vertical-align: bottom;
+        > .${controllerPrefix} {
+            vertical-align: middle;
             display: inline-block;
+        }
+        > .${controllerPrefix}+.${controllerPrefix} {
             margin-left: ${spacingMap[spacing] || spacing};
 
             &:focus {
@@ -31,9 +33,6 @@ export const CombineWrap = styled.div.attrs({
             &:hover {
                 z-index: 3;
             }
-        }
-        > ${CombineWrap} {
-            display: inline-block;
         }
     `
 );
