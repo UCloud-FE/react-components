@@ -1,6 +1,6 @@
+require('@babel/polyfill');
 require('file-loader?name=[name].[ext]!./favicon.ico');
 require('!file-loader?name=[name].[ext]!./style.css');
-require('@babel/polyfill');
 
 const components = require('../index');
 
@@ -33,7 +33,6 @@ global.greenTheme = greenTheme;
 global.oceanTheme = oceanTheme;
 
 import 'moment/locale/zh-cn';
-global
-    .moment()
-    .locale('zh-cn')
-    .utcOffset(8);
+global.moment().locale('zh-cn').utcOffset(8);
+
+global.SizeInterface = require('src/interfaces/Size').default;

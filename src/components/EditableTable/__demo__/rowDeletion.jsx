@@ -47,7 +47,7 @@ class InstanceDemo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            dataSource: new Array(10).fill(null).map((v, i) => generateData({ deletable: Math.random() > 0.5 }))
+            dataSource: new Array(10).fill(null).map((v, i) => generateData({ deletable: i % 2 }))
         };
     }
     handleDelete(record) {

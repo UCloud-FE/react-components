@@ -1332,27 +1332,27 @@ exports[`LocaleProvider demo -- list 1`] = `
   margin-bottom: -8px;
 }
 
-.c7 .c84,
+.c7 .c85,
 .c7 .sc-ifAKCX {
   margin-right: 8px;
   margin-bottom: 8px;
 }
 
-.c7 .c84:last-child,
+.c7 .c85:last-child,
 .c7 .sc-ifAKCX:last-child {
   margin-right: 0;
 }
 
-.c7 .c85 {
+.c7 .c86 {
   margin-right: 12px;
   margin-bottom: 8px;
 }
 
-.c7 .c85:last-child {
+.c7 .c86:last-child {
   margin-right: 0;
 }
 
-.c7 .c86+.c86 {
+.c7 .c87+.c87 {
   margin-left: -1px;
 }
 
@@ -2229,7 +2229,7 @@ exports[`LocaleProvider demo -- list 1`] = `
   color: #3860f4;
 }
 
-.c52 .c87 {
+.c52 .c88 {
   color: #526075;
 }
 
@@ -2465,6 +2465,7 @@ exports[`LocaleProvider demo -- list 1`] = `
   border-collapse: separate;
   border-spacing: 0;
   width: 100%;
+  min-width: 100%;
 }
 
 .c54 .uc-fe-table-filter-notice,
@@ -2728,6 +2729,23 @@ exports[`LocaleProvider demo -- list 1`] = `
 .c75 {
   cursor: pointer;
   color: #3860f4;
+}
+
+.c84 > .uc-fe-editable-list-li+.uc-fe-editable-list-li {
+  margin-top: 16px;
+}
+
+.c84 > .uc-fe-editable-list-li-grid+.uc-fe-editable-list-li-grid {
+  margin-top: 16px;
+}
+
+.c84 .uc-fe-editable-list-li .uc-fe-editable-list-item,
+.c84 .uc-fe-editable-list-li .uc-fe-editable-list-action {
+  display: inline-block;
+}
+
+.c84 .uc-fe-editable-list-li .uc-fe-editable-list-action {
+  margin-left: 24px;
 }
 
 <div
@@ -5452,6 +5470,20 @@ exports[`LocaleProvider demo -- list 1`] = `
         >
           按钮
         </button>
+      </div>
+      <div
+        class="demo-wrap"
+      >
+        <div
+          class="c84"
+        >
+          <button
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c17"
+            type="button"
+          >
+            添加数据
+          </button>
+        </div>
       </div>
     </div>
   </div>

@@ -6,7 +6,7 @@ import { ButtonWrap, ButtonIcon } from './style';
 
 const StyleType = ['primary', 'border', 'border-gray'];
 const Size = ['sm', 'md', 'lg'];
-const Shape = ['circle'];
+const Shape = ['circle', 'square'];
 
 export default class Button extends PureComponent {
     static propTypes = {

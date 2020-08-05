@@ -15,6 +15,7 @@ import Modal from 'src/components/Modal';
 import Table from 'src/components/Table';
 import Menu from 'src/components/Menu';
 import PopConfirm from 'src/components/PopConfirm';
+import EditableList from 'src/components/EditableList';
 import zh_CN from 'src/components/LocaleProvider/locale/zh_CN';
 import en_US from 'src/components/LocaleProvider/locale/en_US';
 
@@ -166,6 +167,9 @@ class Demo extends Component {
                     <PopConfirm popup="确认">
                         <Button>按钮</Button>
                     </PopConfirm>
+                </div>
+                <div className="demo-wrap">
+                    <EditableList dataSource={[]} />
                 </div>
             </div>
         );

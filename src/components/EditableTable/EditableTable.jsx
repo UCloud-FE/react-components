@@ -95,7 +95,7 @@ class EditableTable extends PureComponent {
             key: '__editable_table_remove',
             width: 40,
             render: (v, record) => {
-                return getDisabledOfRow && getDisabledOfRow(record) === true ? null : (
+                return getDisabledOfRow && getDisabledOfRow(record) ? null : (
                     <RemoveBtn type="cross" onClick={() => this.onRemove(record)} size="16px" />
                 );
             }
