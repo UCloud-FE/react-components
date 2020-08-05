@@ -1,12 +1,14 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
+import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
 import { Row, Col } from 'src/components/Grid';
 import Button from 'src/components/Button';
 import SvgIcon from 'src/components/SvgIcon';
 import Combine from 'src/components/Combine';
 import Size from 'src/interfaces/Size';
 
+import LOCALE from './locale/zh_CN';
 import { ListWrap, itemCls, actionCls, liCls, liGridCls } from './style';
 
 const noop = () => {};
@@ -22,6 +24,7 @@ const colShape = {
     push: PropTypes.number
 };
 
+@localeConsumerDecorator({ defaultLocale: LOCALE, localeName: 'EditableList' })
 class EditableList extends PureComponent {
     static propTypes = {
         /**
@@ -80,7 +83,9 @@ class EditableList extends PureComponent {
                  */
                 getDisabledOfItem: PropTypes.func
             })
-        ])
+        ]),
+        /** @ignore */
+        locale: PropTypes.object
     };
     static defaultProps = {
         addition: true,
@@ -136,10 +141,10 @@ class EditableList extends PureComponent {
         );
     };
     renderList = () => {
-        const { dataSource = [], addition, size } = this.props;
+        const { dataSource = [], addition, size, locale } = this.props;
         return !dataSource.length ? (
             <Button onClick={this.onAdd} disabled={!addition || addition.disabled} size={size}>
-                添加数据
+                {locale.add}
             </Button>
         ) : (
             dataSource.map((item, i) => {
