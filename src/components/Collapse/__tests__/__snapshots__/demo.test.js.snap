@@ -181,74 +181,114 @@ exports[`Collapse demo -- collapse 1`] = `
   display: none;
 }
 
-.c22 {
-  vertical-align: baseline;
+.c20 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
 }
 
-.c21 {
-  margin-right: 8px;
-  font-size: 14px;
-  vertical-align: middle;
+.c24 {
+  vertical-align: baseline;
 }
 
 .c19 {
   cursor: pointer;
   position: relative;
   white-space: nowrap;
+  height: 28px;
+  line-height: 28px;
   display: inline-block;
   vertical-align: middle;
-  min-height: 28px;
+  font-size: 0;
+  color: #0a1633;
+}
+
+.c19 > * {
   font-size: 12px;
 }
 
-.c19:hover .c20 {
-  color: #3860f4;
-}
-
-.c19 .c20 {
-  line-height: 28px;
-  color: #3357df;
-}
-
-.c24 {
-  cursor: pointer;
+.c19 .uc-fe-checkbox-icon-wrap {
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
   position: relative;
-  white-space: nowrap;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #0a1633;
+  border-radius: 2px;
+  vertical-align: middle;
+}
+
+.c19 .uc-fe-checkbox-icon-wrap .uc-fe-checkbox-icon {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+}
+
+.c19 .uc-fe-checkbox-content {
   display: inline-block;
   vertical-align: middle;
-  min-height: 28px;
-  font-size: 12px;
+  max-height: 100%;
+  margin-left: 8px;
 }
 
-.c24:hover .c20 {
-  color: #3860f4;
+.c19:hover .uc-fe-checkbox-icon-wrap {
+  border-color: #3860f4;
 }
 
-.c24 .c20 {
-  line-height: 28px;
-  color: #d2d6ea;
+.c19.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
+.c19.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
+  border-color: #3860f4;
+  background: #3860f4;
 }
 
-.c23 {
-  display: inline-block;
-  vertical-align: middle;
+.c19.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
+.c19.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
+  visibility: visible;
+  opacity: 1;
+  fill: #ffffff;
+}
+
+.c19.uc-fe-checkbox-disabled {
+  cursor: not-allowed;
+  color: #cccccc;
+}
+
+.c19.uc-fe-checkbox-disabled .uc-fe-checkbox-icon-wrap {
+  border-color: #d9d9d9;
+  background: #f7f7f7;
+}
+
+.c19.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
+.c19.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
+  fill: #cccccc;
+}
+
+.c19.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
+.c19.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
+  background: unset;
 }
 
 .c17 .c18,
-.c17 .style__CheckboxCardWrap-sc-19o5x2n-3 {
+.c17 .style__CheckboxCardWrap-sc-19o5x2n-1 {
   margin-right: 8px;
 }
 
 .c17 .c18:last-child,
-.c17 .style__CheckboxCardWrap-sc-19o5x2n-3:last-child {
+.c17 .style__CheckboxCardWrap-sc-19o5x2n-1:last-child {
   margin-right: 0;
 }
 
-.c30 {
+.c27 {
   position: relative;
 }
 
-.c32 {
+.c29 {
   border: none;
   outline: none;
   padding: 0;
@@ -256,7 +296,7 @@ exports[`Collapse demo -- collapse 1`] = `
   color: inherit;
 }
 
-.c27 {
+.c23 {
   position: absolute;
   box-sizing: border-box;
   text-align: center;
@@ -271,12 +311,12 @@ exports[`Collapse demo -- collapse 1`] = `
   vertical-align: middle;
 }
 
-.c27:hover {
+.c23:hover {
   color: #3860f4;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
 }
 
-.c25 {
+.c21 {
   position: relative;
   box-sizing: border-box;
   border-radius: 2px;
@@ -289,47 +329,47 @@ exports[`Collapse demo -- collapse 1`] = `
   border-right-width: 0;
 }
 
-.c25 .c31 {
+.c21 .c28 {
   line-height: 26px;
   height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c25 .c31::-webkit-input-placeholder {
+.c21 .c28::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.c25 .c31::-moz-placeholder {
+.c21 .c28::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.c25 .c31:-ms-input-placeholder {
+.c21 .c28:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.c25 .c31::placeholder {
+.c21 .c28::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.c25:hover {
+.c21:hover {
   border-color: #c3cad9;
 }
 
-.c25 .c29 {
+.c21 .c26 {
   box-shadow: inset 0 1px 3px 0 #d2d6ea;
   background: #fafafc;
 }
 
-.c25 .c29:hover {
+.c21 .c26:hover {
   background: #f6f6fb;
 }
 
-.c25 .c31 {
+.c21 .c28 {
   padding: 0 0 0 8px;
   text-align: left;
   box-shadow: none;
@@ -337,8 +377,8 @@ exports[`Collapse demo -- collapse 1`] = `
   width: 34px;
 }
 
-.c25 .c26,
-.c25 .c28 {
+.c21 .c22,
+.c21 .c25 {
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
@@ -347,18 +387,18 @@ exports[`Collapse demo -- collapse 1`] = `
   width: 22px;
 }
 
-.c25 .c26:hover,
-.c25 .c28:hover {
+.c21 .c22:hover,
+.c21 .c25:hover {
   color: #3860f4;
 }
 
-.c25 .c26 {
+.c21 .c22 {
   border-width: 0 0 0 1px;
   top: -1px;
   padding-top: 1px;
 }
 
-.c25 .c28 {
+.c21 .c25 {
   border-width: 1px 0 0 1px;
   bottom: 0;
   border-top-color: #c3cad9;
@@ -427,64 +467,74 @@ exports[`Collapse demo -- collapse 1`] = `
         >
           <span
             checked=""
-            class="c18 uc-fe-checkbox c19"
+            class="uc-fe-checkbox uc-fe-checkbox-checked c18 c19"
           >
-            <i
-              class="uc-fe-icon icon__checkbox-ed c20 uc-fe-checkbox-icon c21 c22"
-            />
-            <div
-              class="uc-fe-checkbox-content c23"
+            <span
+              class="uc-fe-checkbox-icon-wrap"
+            >
+              <svg
+                class="uc-fe-checkbox-icon c20"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-checkbox-content"
             >
               0
-            </div>
+            </span>
           </span>
           <span
-            class="c18 uc-fe-checkbox c24"
+            class="uc-fe-checkbox c18 c19"
           >
-            <i
-              class="uc-fe-icon icon__checkbox c20 uc-fe-checkbox-icon c21 c22"
+            <span
+              class="uc-fe-checkbox-icon-wrap"
             />
-            <div
-              class="uc-fe-checkbox-content c23"
+            <span
+              class="uc-fe-checkbox-content"
             >
               1
-            </div>
+            </span>
           </span>
           <span
-            class="c18 uc-fe-checkbox c24"
+            class="uc-fe-checkbox c18 c19"
           >
-            <i
-              class="uc-fe-icon icon__checkbox c20 uc-fe-checkbox-icon c21 c22"
+            <span
+              class="uc-fe-checkbox-icon-wrap"
             />
-            <div
-              class="uc-fe-checkbox-content c23"
+            <span
+              class="uc-fe-checkbox-content"
             >
               2
-            </div>
+            </span>
           </span>
           <span
-            class="c18 uc-fe-checkbox c24"
+            class="uc-fe-checkbox c18 c19"
           >
-            <i
-              class="uc-fe-icon icon__checkbox c20 uc-fe-checkbox-icon c21 c22"
+            <span
+              class="uc-fe-checkbox-icon-wrap"
             />
-            <div
-              class="uc-fe-checkbox-content c23"
+            <span
+              class="uc-fe-checkbox-content"
             >
               3
-            </div>
+            </span>
           </span>
           <span
-            class="c18 uc-fe-checkbox c24"
+            class="uc-fe-checkbox c18 c19"
           >
-            <i
-              class="uc-fe-icon icon__checkbox c20 uc-fe-checkbox-icon c21 c22"
+            <span
+              class="uc-fe-checkbox-icon-wrap"
             />
-            <div
-              class="uc-fe-checkbox-content c23"
+            <span
+              class="uc-fe-checkbox-content"
             >
               4
-            </div>
+            </span>
           </span>
         </div>
       </div>
@@ -503,32 +553,32 @@ exports[`Collapse demo -- collapse 1`] = `
         span="9"
       >
         <div
-          class="uc-fe-numberinput uc-fe-numberinput-styletype-default c25"
+          class="uc-fe-numberinput uc-fe-numberinput-styletype-default c21"
         >
           <div>
             <span
-              class="c26 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c27"
+              class="c22 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c23"
               unselectable="unselectable"
             >
               <i
-                class="uc-fe-icon icon__caret-up c22"
+                class="uc-fe-icon icon__caret-up c24"
               />
             </span>
             <span
-              class="c28 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c27"
+              class="c25 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c23"
               unselectable="unselectable"
             >
               <i
-                class="uc-fe-icon icon__caret-down c22"
+                class="uc-fe-icon icon__caret-down c24"
               />
             </span>
           </div>
           <div
-            class="c29 uc-fe-numberinput-input-wrap c30"
+            class="c26 uc-fe-numberinput-input-wrap c27"
           >
             <input
               autocomplete="off"
-              class="c31 uc-fe-numberinput-input c32"
+              class="c28 uc-fe-numberinput-input c29"
               min="1"
               step="1"
               value="5"

@@ -51,7 +51,7 @@ HeadTable.propTypes = {
     tableClassName: PropTypes.string.isRequired,
     handleBodyScrollLeft: PropTypes.func.isRequired,
     expander: PropTypes.object.isRequired,
-    tableLayout: PropTypes.oneOf(['fixed'])
+    tableLayout: PropTypes.oneOf(['fixed', 'auto'])
 };
 
 HeadTable.contextTypes = {

@@ -13,10 +13,10 @@ const StyleType = ['default', 'success', 'loading', 'warning', 'error'];
 
 const IconMap = {
     success: 'tick',
-    loading: 'circleLoading',
-    error: 'exclamationCircle',
-    warning: 'exclamationCircle',
-    default: 'exclamationCircle'
+    loading: 'ringLoading',
+    error: 'circleExclamation',
+    warning: 'circleExclamation',
+    default: 'circleExclamation'
 };
 
 class Message extends Component {
@@ -59,7 +59,7 @@ class Message extends Component {
                         styleType={styleType}
                         spin={styleType === 'loading'}
                         size="16px"
-                        type={IconMap[styleType] || 'exclamationCircle'}
+                        type={IconMap[styleType] || 'circleExclamation'}
                     />
                 </IconWrap>
                 {closable && (

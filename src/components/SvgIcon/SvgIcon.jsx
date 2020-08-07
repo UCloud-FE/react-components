@@ -6,21 +6,27 @@ import { SvgIconWrapper } from './style';
 import Tick from './icons/Tick';
 import Cross from './icons/Cross';
 import BoldCross from './icons/BoldCross';
-import CircleLoading from './icons/CircleLoading';
+import RingLoading from './icons/RingLoading';
 import DottedRightArrow from './icons/DottedRightArrow';
-import ExclamationCircle from './icons/ExclamationCircle';
+import CircleExclamation from './icons/CircleExclamation';
 import Plus from './icons/Plus';
 import Minus from './icons/Minus';
+import Circle from './icons/Circle';
+import SmallTick from './icons/SmallTick';
+import Horz from './icons/Horz';
 
 const IconMap = {
     tick: Tick,
     cross: Cross,
     boldCross: BoldCross,
-    circleLoading: CircleLoading,
+    ringLoading: RingLoading,
     dottedRightArrow: DottedRightArrow,
-    exclamationCircle: ExclamationCircle,
+    circleExclamation: CircleExclamation,
     plus: Plus,
-    minus: Minus
+    minus: Minus,
+    circle: Circle,
+    smallTick: SmallTick,
+    horz: Horz
 };
 
 const IconType = _.keys(IconMap);

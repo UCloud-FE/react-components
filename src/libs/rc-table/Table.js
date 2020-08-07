@@ -29,7 +29,7 @@ class Table extends React.Component {
         emptyText: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
         scroll: PropTypes.object,
         rowRef: PropTypes.func,
-        tableLayout: PropTypes.oneOf(['fixed']),
+        tableLayout: PropTypes.oneOf(['fixed', 'auto']),
         components: PropTypes.shape({
             table: PropTypes.any,
             header: PropTypes.shape({

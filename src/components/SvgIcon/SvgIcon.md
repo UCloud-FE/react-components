@@ -1,30 +1,30 @@
 ### 说明
 
-*   这是 SvgIcon 组件
+-   这是 SvgIcon 组件，主要是组件内部使用的一些图标，目前直接不建议使用
 
 ### 演示
 
-*   演示
+-   演示
 
 ```js {"codepath": "svgIcon.jsx"}
 ```
 
-*   type
+-   type
 
 ```js {"codepath": "svgIcon-type.jsx"}
 ```
 
-*   color
+-   color
 
 ```js {"codepath": "svgIcon-color.jsx"}
 ```
 
-*   spin
+-   spin
 
 ```js {"codepath": "svgIcon-spin.jsx"}
 ```
 
-*   size
+-   size
 
 ```js {"codepath": "svgIcon-size.jsx"}
 ```

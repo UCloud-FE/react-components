@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Steps demo -- steps 1`] = `
-.c33 {
+.c20 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -10,7 +10,7 @@ exports[`Steps demo -- steps 1`] = `
   height: 16px;
 }
 
-.c25 {
+.c22 {
   width: 32px;
   height: 32px;
   line-height: 30px;
@@ -29,7 +29,7 @@ exports[`Steps demo -- steps 1`] = `
   fill: #ffffff;
 }
 
-.c35 {
+.c31 {
   width: 32px;
   height: 32px;
   line-height: 30px;
@@ -48,17 +48,17 @@ exports[`Steps demo -- steps 1`] = `
   fill: #cccccc;
 }
 
-.c26 {
+.c23 {
   font-size: 16px;
 }
 
-.c27 {
+.c24 {
   margin-left: 12px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c29 {
+.c26 {
   font-size: 14px;
   line-height: 32px;
   min-height: 32px;
@@ -67,37 +67,37 @@ exports[`Steps demo -- steps 1`] = `
   transition: all 0.3s;
 }
 
-.c31 {
+.c28 {
   font-size: 12px;
   line-height: 24px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
-.c24 {
+.c21 {
   display: inline-block;
   vertical-align: middle;
 }
 
-.c24 .c30 {
+.c21 .c27 {
   color: #526075;
 }
 
-.c24 .c28 {
+.c21 .c25 {
   color: #0a1633;
 }
 
-.c34 {
+.c30 {
   display: inline-block;
   vertical-align: middle;
 }
 
-.c36 .c30,
-.c36 .c28 {
+.c32 .c27,
+.c32 .c25 {
   color: #f44336;
 }
 
-.c32 {
+.c29 {
   display: inline-block;
   text-align: center;
   line-height: 32px;
@@ -170,15 +170,6 @@ exports[`Steps demo -- steps 1`] = `
   margin-bottom: 0;
 }
 
-.c22 {
-  vertical-align: baseline;
-}
-
-.c21 {
-  margin-right: 8px;
-  font-size: 14px;
-}
-
 .c19 {
   color: #526075;
   font-size: 12px;
@@ -188,38 +179,68 @@ exports[`Steps demo -- steps 1`] = `
   vertical-align: middle;
   height: 28px;
   line-height: 28px;
+  font-size: 0;
   color: #0a1633;
 }
 
-.c19 .c20 {
-  color: #c3cad9;
-}
-
-.c19 .c20 {
-  color: #3860f4;
-}
-
-.c23 {
-  color: #526075;
+.c19 > * {
   font-size: 12px;
+}
+
+.c19 .uc-fe-radio-icon-wrap {
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
   position: relative;
-  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #0a1633;
+  border-radius: 8px;
+  vertical-align: middle;
+}
+
+.c19 .uc-fe-radio-icon-wrap .uc-fe-radio-icon {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+}
+
+.c19 .uc-fe-radio-content {
   display: inline-block;
   vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
+  max-height: 100%;
+  margin-left: 8px;
 }
 
-.c23 .c20 {
-  color: #c3cad9;
+.c19:hover .uc-fe-radio-icon-wrap,
+.c19.uc-fe-radio-checked .uc-fe-radio-icon-wrap {
+  border-color: #3860f4;
 }
 
-.c23:hover {
-  color: #0a1633;
+.c19.uc-fe-radio-checked .uc-fe-radio-icon {
+  visibility: visible;
+  opacity: 1;
+  fill: #3860f4;
 }
 
-.c23:hover .c20 {
-  color: #3357df;
+.c19.uc-fe-radio-disabled {
+  cursor: not-allowed;
+  color: #cccccc;
+}
+
+.c19.uc-fe-radio-disabled .uc-fe-radio-icon-wrap {
+  border-color: #d9d9d9;
+  background: #f7f7f7;
+}
+
+.c19.uc-fe-radio-disabled.uc-fe-radio-checked .uc-fe-radio-icon {
+  fill: #cccccc;
+}
+
+.c19.uc-fe-radio-disabled.uc-fe-radio-checked .uc-fe-radio-icon-wrap {
+  background: unset;
 }
 
 .c17 {
@@ -238,29 +259,29 @@ exports[`Steps demo -- steps 1`] = `
   margin-right: 0;
 }
 
-.c17 .c38 {
+.c17 .c34 {
   margin-right: 12px;
   margin-bottom: 8px;
 }
 
-.c17 .c38:last-child {
+.c17 .c34:last-child {
   margin-right: 0;
 }
 
-.c17 .c39+.c39 {
+.c17 .c35+.c35 {
   margin-left: -1px;
 }
 
-.c17 .c37 {
+.c17 .c33 {
   margin-right: -1px;
   margin-bottom: 8px;
 }
 
-.c17 .c37:first-child {
+.c17 .c33:first-child {
   border-radius: 2px 0 0 2px;
 }
 
-.c17 .c37:last-child {
+.c17 .c33:last-child {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
 }
@@ -486,31 +507,79 @@ exports[`Steps demo -- steps 1`] = `
         <div
           class="c17"
         >
-          <div
+          <span
             checked=""
             class="c18 uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default c19"
           >
-            <i
-              class="uc-fe-icon icon__cbox-ed c20 c21 c22"
-            />
-            current
-          </div>
-          <div
-            class="c18 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c23"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c20"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              current
+            </span>
+          </span>
+          <span
+            class="c18 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c19"
           >
-            <i
-              class="uc-fe-icon icon__cbox c20 c21 c22"
-            />
-            loading
-          </div>
-          <div
-            class="c18 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c23"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c20"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              loading
+            </span>
+          </span>
+          <span
+            class="c18 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c19"
           >
-            <i
-              class="uc-fe-icon icon__cbox c20 c21 c22"
-            />
-            error
-          </div>
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c20"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              error
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -530,47 +599,127 @@ exports[`Steps demo -- steps 1`] = `
         <div
           class="c17"
         >
-          <div
+          <span
             checked=""
             class="c18 uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default c19"
           >
-            <i
-              class="uc-fe-icon icon__cbox-ed c20 c21 c22"
-            />
-            0
-          </div>
-          <div
-            class="c18 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c23"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c20"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              0
+            </span>
+          </span>
+          <span
+            class="c18 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c19"
           >
-            <i
-              class="uc-fe-icon icon__cbox c20 c21 c22"
-            />
-            1
-          </div>
-          <div
-            class="c18 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c23"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c20"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              1
+            </span>
+          </span>
+          <span
+            class="c18 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c19"
           >
-            <i
-              class="uc-fe-icon icon__cbox c20 c21 c22"
-            />
-            2
-          </div>
-          <div
-            class="c18 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c23"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c20"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              2
+            </span>
+          </span>
+          <span
+            class="c18 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c19"
           >
-            <i
-              class="uc-fe-icon icon__cbox c20 c21 c22"
-            />
-            3
-          </div>
-          <div
-            class="c18 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c23"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c20"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              3
+            </span>
+          </span>
+          <span
+            class="c18 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c19"
           >
-            <i
-              class="uc-fe-icon icon__cbox c20 c21 c22"
-            />
-            4
-          </div>
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c20"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              4
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -582,37 +731,37 @@ exports[`Steps demo -- steps 1`] = `
       class=""
     >
       <div
-        class="c24"
+        class="c21"
       >
         <span
-          class="c25"
+          class="c22"
         >
           <span
-            class="c26"
+            class="c23"
           >
             1
           </span>
         </span>
         <span
-          class="c27"
+          class="c24"
         >
           <span
-            class="c28 c29"
+            class="c25 c26"
           >
             第 1 步
           </span>
           <span
-            class="c30 c31"
+            class="c27 c28"
           >
             这是一条备注
           </span>
         </span>
       </div>
       <span
-        class="c32"
+        class="c29"
       >
         <svg
-          class="c33"
+          class="c20"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -622,37 +771,37 @@ exports[`Steps demo -- steps 1`] = `
         </svg>
       </span>
       <div
-        class="c34"
+        class="c30"
       >
         <span
-          class="c35"
+          class="c31"
         >
           <span
-            class="c26"
+            class="c23"
           >
             2
           </span>
         </span>
         <span
-          class="c27"
+          class="c24"
         >
           <span
-            class="c28 c29"
+            class="c25 c26"
           >
             第 2 步
           </span>
           <span
-            class="c30 c31"
+            class="c27 c28"
           >
             这是一条备注
           </span>
         </span>
       </div>
       <span
-        class="c32"
+        class="c29"
       >
         <svg
-          class="c33"
+          class="c20"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -662,37 +811,37 @@ exports[`Steps demo -- steps 1`] = `
         </svg>
       </span>
       <div
-        class="c34"
+        class="c30"
       >
         <span
-          class="c35"
+          class="c31"
         >
           <span
-            class="c26"
+            class="c23"
           >
             3
           </span>
         </span>
         <span
-          class="c27"
+          class="c24"
         >
           <span
-            class="c28 c29"
+            class="c25 c26"
           >
             第 3 步
           </span>
           <span
-            class="c30 c31"
+            class="c27 c28"
           >
             这是一条备注
           </span>
         </span>
       </div>
       <span
-        class="c32"
+        class="c29"
       >
         <svg
-          class="c33"
+          class="c20"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -702,37 +851,37 @@ exports[`Steps demo -- steps 1`] = `
         </svg>
       </span>
       <div
-        class="c34"
+        class="c30"
       >
         <span
-          class="c35"
+          class="c31"
         >
           <span
-            class="c26"
+            class="c23"
           >
             4
           </span>
         </span>
         <span
-          class="c27"
+          class="c24"
         >
           <span
-            class="c28 c29"
+            class="c25 c26"
           >
             第 4 步
           </span>
           <span
-            class="c30 c31"
+            class="c27 c28"
           >
             这是一条备注
           </span>
         </span>
       </div>
       <span
-        class="c32"
+        class="c29"
       >
         <svg
-          class="c33"
+          class="c20"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -742,27 +891,27 @@ exports[`Steps demo -- steps 1`] = `
         </svg>
       </span>
       <div
-        class="c34"
+        class="c30"
       >
         <span
-          class="c35"
+          class="c31"
         >
           <span
-            class="c26"
+            class="c23"
           >
             5
           </span>
         </span>
         <span
-          class="c27"
+          class="c24"
         >
           <span
-            class="c28 c29"
+            class="c25 c26"
           >
             第 5 步
           </span>
           <span
-            class="c30 c31"
+            class="c27 c28"
           >
             这是一条备注
           </span>

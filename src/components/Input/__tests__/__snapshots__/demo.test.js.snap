@@ -1,16 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Input demo -- input 1`] = `
-.c12 {
-  vertical-align: baseline;
-}
-
-.c25 {
+.c22 {
   display: table;
   width: 100%;
 }
 
-.c24 {
+.c21 {
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -25,7 +21,7 @@ exports[`Input demo -- input 1`] = `
   transition: .18s cubic-bezier(.4,0,.2,1);
 }
 
-.c24 input {
+.c21 input {
   vertical-align: middle;
   display: table-cell;
   box-sizing: border-box;
@@ -36,48 +32,52 @@ exports[`Input demo -- input 1`] = `
   color: inherit;
 }
 
-.c24 input,
-.c24 input:hover,
-.c24 input:focus {
+.c21 input,
+.c21 input:hover,
+.c21 input:focus {
   border: none;
   outline: none;
   background: none;
 }
 
-.c24:hover {
+.c21:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.c24 input {
+.c21 input {
   line-height: 26px;
   height: 26px;
 }
 
-.c24 input::-webkit-input-placeholder {
+.c21 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.c24 input::-moz-placeholder {
+.c21 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.c24 input:-ms-input-placeholder {
+.c21 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.c24 input::placeholder {
+.c21 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.c11 {
-  margin-right: 8px;
-  font-size: 14px;
+.c10 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
 }
 
 .c9 {
@@ -89,38 +89,68 @@ exports[`Input demo -- input 1`] = `
   vertical-align: middle;
   height: 28px;
   line-height: 28px;
-}
-
-.c9 .c10 {
-  color: #c3cad9;
-}
-
-.c9:hover {
+  font-size: 0;
   color: #0a1633;
 }
 
-.c9:hover .c10 {
-  color: #3357df;
+.c9 > * {
+  font-size: 12px;
 }
 
-.c13 {
-  color: #526075;
-  font-size: 12px;
+.c9 .uc-fe-radio-icon-wrap {
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
   position: relative;
-  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #0a1633;
+  border-radius: 8px;
+  vertical-align: middle;
+}
+
+.c9 .uc-fe-radio-icon-wrap .uc-fe-radio-icon {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+}
+
+.c9 .uc-fe-radio-content {
   display: inline-block;
   vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
-  color: #0a1633;
+  max-height: 100%;
+  margin-left: 8px;
 }
 
-.c13 .c10 {
-  color: #c3cad9;
+.c9:hover .uc-fe-radio-icon-wrap,
+.c9.uc-fe-radio-checked .uc-fe-radio-icon-wrap {
+  border-color: #3860f4;
 }
 
-.c13 .c10 {
-  color: #3860f4;
+.c9.uc-fe-radio-checked .uc-fe-radio-icon {
+  visibility: visible;
+  opacity: 1;
+  fill: #3860f4;
+}
+
+.c9.uc-fe-radio-disabled {
+  cursor: not-allowed;
+  color: #cccccc;
+}
+
+.c9.uc-fe-radio-disabled .uc-fe-radio-icon-wrap {
+  border-color: #d9d9d9;
+  background: #f7f7f7;
+}
+
+.c9.uc-fe-radio-disabled.uc-fe-radio-checked .uc-fe-radio-icon {
+  fill: #cccccc;
+}
+
+.c9.uc-fe-radio-disabled.uc-fe-radio-checked .uc-fe-radio-icon-wrap {
+  background: unset;
 }
 
 .c7 {
@@ -139,29 +169,29 @@ exports[`Input demo -- input 1`] = `
   margin-right: 0;
 }
 
-.c7 .c27 {
+.c7 .c24 {
   margin-right: 12px;
   margin-bottom: 8px;
 }
 
-.c7 .c27:last-child {
+.c7 .c24:last-child {
   margin-right: 0;
 }
 
-.c7 .c28+.c28 {
+.c7 .c25+.c25 {
   margin-left: -1px;
 }
 
-.c7 .c26 {
+.c7 .c23 {
   margin-right: -1px;
   margin-bottom: 8px;
 }
 
-.c7 .c26:first-child {
+.c7 .c23:first-child {
   border-radius: 2px 0 0 2px;
 }
 
-.c7 .c26:last-child {
+.c7 .c23:last-child {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
 }
@@ -227,7 +257,7 @@ exports[`Input demo -- input 1`] = `
   margin-bottom: 0;
 }
 
-.c16 {
+.c13 {
   position: relative;
   height: 100%;
   width: 100%;
@@ -235,7 +265,7 @@ exports[`Input demo -- input 1`] = `
   box-sizing: border-box;
 }
 
-.c18 {
+.c15 {
   width: 100%;
   height: 100%;
   text-align: center;
@@ -244,7 +274,7 @@ exports[`Input demo -- input 1`] = `
   display: block;
 }
 
-.c21 {
+.c18 {
   position: absolute;
   display: inline-block;
   left: -1px;
@@ -255,7 +285,7 @@ exports[`Input demo -- input 1`] = `
   transition: all 0.3s;
 }
 
-.c23 {
+.c20 {
   position: absolute;
   display: inline-block;
   left: 18px;
@@ -267,7 +297,7 @@ exports[`Input demo -- input 1`] = `
   transition: all 0.3s;
 }
 
-.c14 {
+.c11 {
   position: relative;
   border-radius: 2px;
   box-sizing: border-box;
@@ -285,48 +315,48 @@ exports[`Input demo -- input 1`] = `
   line-height: 16px;
 }
 
-.c14:hover {
+.c11:hover {
   border-color: #3357df;
 }
 
-.c14:hover .c20 {
+.c11:hover .c17 {
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
 }
 
-.c14 .c20 {
+.c11 .c17 {
   background: #ffffff;
   box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
   width: 20px;
   height: 20px;
 }
 
-.c14 .c22 {
+.c11 .c19 {
   background: #f44336;
   left: 13px;
   height: 10px;
 }
 
-.c14 .c15 {
+.c11 .c12 {
   color: #526075;
   border: 1px solid #d2d6ea;
   box-shadow: inset 0 1px 3px 0 #d2d6ea;
   background: #f6f6fb;
 }
 
-.c14 .c17,
-.c14 .c19 {
+.c11 .c14,
+.c11 .c16 {
   line-height: 16px;
 }
 
-.c14 .c17 {
+.c11 .c14 {
   padding-right: 20px;
 }
 
-.c14 .c19 {
+.c11 .c16 {
   padding-left: 20px;
 }
 
-.c14 .c17 {
+.c11 .c14 {
   display: none;
 }
 
@@ -350,31 +380,79 @@ exports[`Input demo -- input 1`] = `
         <div
           class="c7"
         >
-          <div
+          <span
             class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            sm
-          </div>
-          <div
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              sm
+            </span>
+          </span>
+          <span
             checked=""
-            class="c8 uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            class="c8 uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox-ed c10 c11 c12"
-            />
-            md
-          </div>
-          <div
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              md
+            </span>
+          </span>
+          <span
             class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            lg
-          </div>
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              lg
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -392,26 +470,26 @@ exports[`Input demo -- input 1`] = `
         span="9"
       >
         <div
-          class="c14"
+          class="c11"
         >
           <div
-            class="c15 c16"
+            class="c12 c13"
           >
             <span
-              class="c17 c18"
+              class="c14 c15"
             >
               ON
             </span>
             <span
-              class="c19 c18"
+              class="c16 c15"
             >
               OFF
             </span>
             <span
-              class="c20 c21"
+              class="c17 c18"
             >
               <span
-                class="c22 c23"
+                class="c19 c20"
               />
             </span>
           </div>
@@ -432,26 +510,26 @@ exports[`Input demo -- input 1`] = `
         span="9"
       >
         <div
-          class="c14"
+          class="c11"
         >
           <div
-            class="c15 c16"
+            class="c12 c13"
           >
             <span
-              class="c17 c18"
+              class="c14 c15"
             >
               ON
             </span>
             <span
-              class="c19 c18"
+              class="c16 c15"
             >
               OFF
             </span>
             <span
-              class="c20 c21"
+              class="c17 c18"
             >
               <span
-                class="c22 c23"
+                class="c19 c20"
               />
             </span>
           </div>
@@ -472,26 +550,26 @@ exports[`Input demo -- input 1`] = `
         span="9"
       >
         <div
-          class="c14"
+          class="c11"
         >
           <div
-            class="c15 c16"
+            class="c12 c13"
           >
             <span
-              class="c17 c18"
+              class="c14 c15"
             >
               ON
             </span>
             <span
-              class="c19 c18"
+              class="c16 c15"
             >
               OFF
             </span>
             <span
-              class="c20 c21"
+              class="c17 c18"
             >
               <span
-                class="c22 c23"
+                class="c19 c20"
               />
             </span>
           </div>
@@ -503,10 +581,10 @@ exports[`Input demo -- input 1`] = `
     class="demo-wrap"
   >
     <span
-      class="uc-fe-input c24"
+      class="uc-fe-input c21"
     >
       <span
-        class="c25"
+        class="c22"
       >
         <input />
       </span>
@@ -1654,30 +1732,30 @@ exports[`Input demo -- input-suffix 1`] = `
 `;
 
 exports[`Input demo -- search 1`] = `
-.c12 {
+.c28 {
   vertical-align: baseline;
 }
 
-.c28 {
+.c25 {
   vertical-align: middle;
   display: table-cell;
   width: 1px;
 }
 
-.c27 {
+.c24 {
   padding-right: 8px;
 }
 
-.c30 {
+.c27 {
   cursor: pointer;
 }
 
-.c25 {
+.c22 {
   display: table;
   width: 100%;
 }
 
-.c24 {
+.c21 {
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -1692,7 +1770,7 @@ exports[`Input demo -- search 1`] = `
   transition: .18s cubic-bezier(.4,0,.2,1);
 }
 
-.c24 input {
+.c21 input {
   vertical-align: middle;
   display: table-cell;
   box-sizing: border-box;
@@ -1703,59 +1781,63 @@ exports[`Input demo -- search 1`] = `
   color: inherit;
 }
 
-.c24 input,
-.c24 input:hover,
-.c24 input:focus {
+.c21 input,
+.c21 input:hover,
+.c21 input:focus {
   border: none;
   outline: none;
   background: none;
 }
 
-.c24:hover {
+.c21:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.c24 input {
+.c21 input {
   line-height: 26px;
   height: 26px;
 }
 
-.c24 input::-webkit-input-placeholder {
+.c21 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.c24 input::-moz-placeholder {
+.c21 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.c24 input:-ms-input-placeholder {
+.c21 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.c24 input::placeholder {
+.c21 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.c31,
-.c31 input,
-.c31 .c29 {
+.c29,
+.c29 input,
+.c29 .c26 {
   cursor: not-allowed;
 }
 
-.c31 .c26,
-.c31 .sc-bdVaJa {
+.c29 .c23,
+.c29 .sc-bdVaJa {
   color: inherit;
 }
 
-.c11 {
-  margin-right: 8px;
-  font-size: 14px;
+.c10 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
 }
 
 .c9 {
@@ -1767,38 +1849,68 @@ exports[`Input demo -- search 1`] = `
   vertical-align: middle;
   height: 28px;
   line-height: 28px;
-}
-
-.c9 .c10 {
-  color: #c3cad9;
-}
-
-.c9:hover {
+  font-size: 0;
   color: #0a1633;
 }
 
-.c9:hover .c10 {
-  color: #3357df;
+.c9 > * {
+  font-size: 12px;
 }
 
-.c13 {
-  color: #526075;
-  font-size: 12px;
+.c9 .uc-fe-radio-icon-wrap {
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
   position: relative;
-  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #0a1633;
+  border-radius: 8px;
+  vertical-align: middle;
+}
+
+.c9 .uc-fe-radio-icon-wrap .uc-fe-radio-icon {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+}
+
+.c9 .uc-fe-radio-content {
   display: inline-block;
   vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
-  color: #0a1633;
+  max-height: 100%;
+  margin-left: 8px;
 }
 
-.c13 .c10 {
-  color: #c3cad9;
+.c9:hover .uc-fe-radio-icon-wrap,
+.c9.uc-fe-radio-checked .uc-fe-radio-icon-wrap {
+  border-color: #3860f4;
 }
 
-.c13 .c10 {
-  color: #3860f4;
+.c9.uc-fe-radio-checked .uc-fe-radio-icon {
+  visibility: visible;
+  opacity: 1;
+  fill: #3860f4;
+}
+
+.c9.uc-fe-radio-disabled {
+  cursor: not-allowed;
+  color: #cccccc;
+}
+
+.c9.uc-fe-radio-disabled .uc-fe-radio-icon-wrap {
+  border-color: #d9d9d9;
+  background: #f7f7f7;
+}
+
+.c9.uc-fe-radio-disabled.uc-fe-radio-checked .uc-fe-radio-icon {
+  fill: #cccccc;
+}
+
+.c9.uc-fe-radio-disabled.uc-fe-radio-checked .uc-fe-radio-icon-wrap {
+  background: unset;
 }
 
 .c7 {
@@ -1817,29 +1929,29 @@ exports[`Input demo -- search 1`] = `
   margin-right: 0;
 }
 
-.c7 .c33 {
+.c7 .c31 {
   margin-right: 12px;
   margin-bottom: 8px;
 }
 
-.c7 .c33:last-child {
+.c7 .c31:last-child {
   margin-right: 0;
 }
 
-.c7 .c34+.c34 {
+.c7 .c32+.c32 {
   margin-left: -1px;
 }
 
-.c7 .c32 {
+.c7 .c30 {
   margin-right: -1px;
   margin-bottom: 8px;
 }
 
-.c7 .c32:first-child {
+.c7 .c30:first-child {
   border-radius: 2px 0 0 2px;
 }
 
-.c7 .c32:last-child {
+.c7 .c30:last-child {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
 }
@@ -1905,7 +2017,7 @@ exports[`Input demo -- search 1`] = `
   margin-bottom: 0;
 }
 
-.c16 {
+.c13 {
   position: relative;
   height: 100%;
   width: 100%;
@@ -1913,7 +2025,7 @@ exports[`Input demo -- search 1`] = `
   box-sizing: border-box;
 }
 
-.c18 {
+.c15 {
   width: 100%;
   height: 100%;
   text-align: center;
@@ -1922,7 +2034,7 @@ exports[`Input demo -- search 1`] = `
   display: block;
 }
 
-.c21 {
+.c18 {
   position: absolute;
   display: inline-block;
   left: -1px;
@@ -1933,7 +2045,7 @@ exports[`Input demo -- search 1`] = `
   transition: all 0.3s;
 }
 
-.c23 {
+.c20 {
   position: absolute;
   display: inline-block;
   left: 18px;
@@ -1945,7 +2057,7 @@ exports[`Input demo -- search 1`] = `
   transition: all 0.3s;
 }
 
-.c14 {
+.c11 {
   position: relative;
   border-radius: 2px;
   box-sizing: border-box;
@@ -1963,48 +2075,48 @@ exports[`Input demo -- search 1`] = `
   line-height: 16px;
 }
 
-.c14:hover {
+.c11:hover {
   border-color: #3357df;
 }
 
-.c14:hover .c20 {
+.c11:hover .c17 {
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
 }
 
-.c14 .c20 {
+.c11 .c17 {
   background: #ffffff;
   box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
   width: 20px;
   height: 20px;
 }
 
-.c14 .c22 {
+.c11 .c19 {
   background: #f44336;
   left: 13px;
   height: 10px;
 }
 
-.c14 .c15 {
+.c11 .c12 {
   color: #526075;
   border: 1px solid #d2d6ea;
   box-shadow: inset 0 1px 3px 0 #d2d6ea;
   background: #f6f6fb;
 }
 
-.c14 .c17,
-.c14 .c19 {
+.c11 .c14,
+.c11 .c16 {
   line-height: 16px;
 }
 
-.c14 .c17 {
+.c11 .c14 {
   padding-right: 20px;
 }
 
-.c14 .c19 {
+.c11 .c16 {
   padding-left: 20px;
 }
 
-.c14 .c17 {
+.c11 .c14 {
   display: none;
 }
 
@@ -2028,31 +2140,79 @@ exports[`Input demo -- search 1`] = `
         <div
           class="c7"
         >
-          <div
+          <span
             class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            sm
-          </div>
-          <div
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              sm
+            </span>
+          </span>
+          <span
             checked=""
-            class="c8 uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            class="c8 uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox-ed c10 c11 c12"
-            />
-            md
-          </div>
-          <div
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              md
+            </span>
+          </span>
+          <span
             class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            lg
-          </div>
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              lg
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -2070,26 +2230,26 @@ exports[`Input demo -- search 1`] = `
         span="9"
       >
         <div
-          class="c14"
+          class="c11"
         >
           <div
-            class="c15 c16"
+            class="c12 c13"
           >
             <span
-              class="c17 c18"
+              class="c14 c15"
             >
               ON
             </span>
             <span
-              class="c19 c18"
+              class="c16 c15"
             >
               OFF
             </span>
             <span
-              class="c20 c21"
+              class="c17 c18"
             >
               <span
-                class="c22 c23"
+                class="c19 c20"
               />
             </span>
           </div>
@@ -2101,17 +2261,17 @@ exports[`Input demo -- search 1`] = `
     class="demo-wrap"
   >
     <span
-      class="uc-fe-input c24"
+      class="uc-fe-input c21"
     >
       <span
-        class="c25"
+        class="c22"
       >
         <input />
         <span
-          class="c26 c27 c28"
+          class="c23 c24 c25"
         >
           <i
-            class="uc-fe-icon icon__search c29 c30 c12"
+            class="uc-fe-icon icon__search c26 c27 c28"
           />
         </span>
       </span>

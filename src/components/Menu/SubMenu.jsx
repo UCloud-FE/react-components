@@ -1,23 +1,29 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
-import Popover from 'components/Popover';
-import { getPlacements } from 'components/Popover/placements';
-import Collapse from 'components/Collapse';
+import Popover from 'src/components/Popover';
+import { getPlacements } from 'src/components/Popover/placements';
+import Collapse from 'src/components/Collapse';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
+import Checkbox from 'src/components/Checkbox';
 
 import {
-    SubMenuTitleWrap,
-    SubMenuIcon,
-    TitleContentWrap,
-    PopupContentWrap,
-    PopupWrap,
-    SelectAllCheckbox,
-    ScrollWrap
+    PopupMenuWrap,
+    selectallWrapCls,
+    collapseWrapCls,
+    collapseTitleCls,
+    popupWrapCls,
+    popupContentCls,
+    popupTitleCls,
+    selectedCls,
+    checkboxCls,
+    SubMenuIcon
 } from './style';
 import LOCALE from './locale/zh_CN';
 
 const placements = getPlacements(0);
+
 @localeConsumerDecorator({ defaultLocale: LOCALE, localeName: 'Menu' })
 class SubMenu extends Component {
     static propTypes = {
@@ -40,7 +46,9 @@ class SubMenu extends Component {
         /** @ignore */
         children: PropTypes.node,
         /** @ignore */
-        locale: PropTypes.object
+        locale: PropTypes.object,
+        /** @ignore */
+        className: PropTypes.string
     };
     static defaultProps = {
         styleType: 'collapse'
@@ -58,63 +66,56 @@ class SubMenu extends Component {
             renderChildren,
             children,
             locale,
-            ...rest
+            className
         } = this.props;
         const selectAllCheckbox = multiple && (
-            <SelectAllCheckbox
-                checked={allSelectedStatus === 'ALL'}
-                onChange={checked => onMultipleSelect(checked, uid)}
-            >
-                {locale.selectAll}
-            </SelectAllCheckbox>
+            <div className={selectallWrapCls}>
+                <Checkbox
+                    size="lg"
+                    className={checkboxCls}
+                    checked={allSelectedStatus === 'ALL'}
+                    indeterminate={allSelectedStatus === 'PART'}
+                    onChange={checked => onMultipleSelect(checked, uid)}
+                >
+                    {locale.selectAll}
+                </Checkbox>
+            </div>
         );
-
-        return (
-            <div {...rest}>
-                {styleType === 'collapse' ? (
-                    <div>
-                        <Collapse.Panel
-                            title={({ open }) => (
-                                <SubMenuTitleWrap selected={allSelectedStatus !== 'NONE'}>
-                                    <TitleContentWrap collapse>
-                                        {title}
-                                        <SubMenuIcon type={open ? 'up' : 'down'} />
-                                    </TitleContentWrap>
-                                </SubMenuTitleWrap>
-                            )}
-                            panelKey={subMenuKey}
-                        >
-                            {selectAllCheckbox}
-                            {renderChildren(children)}
-                        </Collapse.Panel>
-                    </div>
-                ) : (
-                    <div>
-                        <Popover
-                            popup={
-                                <PopupWrap>
-                                    <PopupContentWrap>
-                                        <ScrollWrap>
-                                            {selectAllCheckbox}
-                                            {renderChildren(children)}
-                                        </ScrollWrap>
-                                    </PopupContentWrap>
-                                </PopupWrap>
-                            }
-                            getPopupContainer={triggerNode => triggerNode.parentNode}
-                            builtinPlacements={placements}
-                            placement="rightTop"
-                        >
-                            <SubMenuTitleWrap selected={allSelectedStatus !== 'NONE'}>
-                                <TitleContentWrap>
-                                    {title}
-                                    <SubMenuIcon type="caret-right" />
-                                </TitleContentWrap>
-                            </SubMenuTitleWrap>
-                        </Popover>
+        return styleType === 'collapse' ? (
+            <Collapse.Panel
+                className={classnames(collapseWrapCls, className)}
+                title={({ open }) => (
+                    <div className={classnames(collapseTitleCls, allSelectedStatus !== 'NONE' && selectedCls)}>
+                        {title}
+                        <SubMenuIcon type={open ? 'up' : 'down'} />
                     </div>
                 )}
-            </div>
+                panelKey={subMenuKey}
+            >
+                {selectAllCheckbox}
+                {renderChildren(children)}
+            </Collapse.Panel>
+        ) : (
+            <Popover
+                popup={
+                    <PopupMenuWrap className={popupWrapCls}>
+                        <div className={popupContentCls}>
+                            {selectAllCheckbox}
+                            {renderChildren(children)}
+                        </div>
+                    </PopupMenuWrap>
+                }
+                getPopupContainer={triggerNode => triggerNode.parentNode}
+                builtinPlacements={placements}
+                placement="rightTop"
+            >
+                <div className={className}>
+                    <div className={classnames(popupTitleCls, allSelectedStatus !== 'NONE' && selectedCls)}>
+                        {title}
+                        <SubMenuIcon type="caret-right" />
+                    </div>
+                </div>
+            </Popover>
         );
     }
 }

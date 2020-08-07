@@ -1,63 +1,97 @@
 import styled, { css } from 'styled-components';
 
-import Icon from 'src/components/Icon';
 import Card from 'src/components/Radio/Card';
 import { inlineBlockWithVerticalMixin } from 'src/style';
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 import config from 'src/config';
 
 const { prefixCls: _prefixCls } = config;
-const prefixCls = _prefixCls + '-checkbox';
+export const prefixCls = _prefixCls + '-checkbox';
+export const iconCls = prefixCls + '-icon';
+export const iconWrapCls = prefixCls + '-icon-wrap';
+export const contentCls = prefixCls + '-content';
+export const disabledCls = prefixCls + '-disabled';
+export const checkedCls = prefixCls + '-checked';
+export const indeterminateCls = prefixCls + '-indeterminate';
 
-export const CheckboxIcon = styled(Icon).attrs({
-    className: prefixCls + '-icon'
-})`
-    margin-right: 8px;
-    font-size: 14px;
-    vertical-align: middle;
-`;
-
-const propsMixin = ({ theme: { designTokens: DT, Height }, size, disabled, checked }) => css`
-    min-height: ${Height[size]};
-    font-size: ${DT.T_TYPO_FONT_SIZE_1};
-
-    ${disabled &&
-        css`
-            color: ${DT.T_COLOR_TEXT_DISABLED};
-            cursor: not-allowed;
-        `};
-
-    ${!disabled &&
-        css`
-            :hover ${CheckboxIcon} {
-                color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
-            }
-        `};
-    ${CheckboxIcon} {
+export const CheckboxWrap = styled.span(
+    ({ theme: { designTokens: DT, Height }, size }) => css`
+        cursor: pointer;
+        position: relative;
+        white-space: nowrap;
+        height: ${Height[size]};
         line-height: ${Height[size]};
-        color: ${disabled
-            ? DT.T_COLOR_LINE_DISABLED_DARK
-            : checked
-                ? DT.T_COLOR_LINE_PRIMARY_HOVER
-                : DT.T_COLOR_LINE_DEFAULT_LIGHT};
-    }
-`;
+        ${inlineBlockWithVerticalMixin};
 
-export const CheckboxWrap = styled.span.attrs({
-    className: prefixCls
-})`
-    cursor: pointer;
-    position: relative;
-    white-space: nowrap;
-    ${inlineBlockWithVerticalMixin};
-    ${propsMixin};
-`;
+        font-size: 0;
+        color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+        > * {
+            font-size: ${DT.T_TYPO_FONT_SIZE_1};
+        }
 
-export const CheckboxContentWrap = styled.div.attrs({
-    className: prefixCls + '-content'
-})`
-    ${inlineBlockWithVerticalMixin};
-`;
+        .${iconWrapCls} {
+            display: inline-block;
+            box-sizing: border-box;
+            overflow: hidden;
+            position: relative;
+            width: 16px;
+            height: 16px;
+            border: 1px solid ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+            border-radius: 2px;
+            vertical-align: middle;
+
+            .${iconCls} {
+                visibility: hidden;
+                opacity: 0;
+                position: absolute;
+                top: -1px;
+                left: -1px;
+            }
+        }
+        .${contentCls} {
+            display: inline-block;
+            vertical-align: middle;
+            max-height: 100%;
+            margin-left: 8px;
+        }
+
+        :hover {
+            .${iconWrapCls} {
+                border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
+            }
+        }
+
+        &.${checkedCls}, &.${indeterminateCls} {
+            .${iconWrapCls} {
+                border-color: ${DT.T_COLOR_BG_PRIMARY_1};
+                background: ${DT.T_COLOR_BG_PRIMARY_1};
+            }
+            .${iconCls} {
+                visibility: visible;
+                opacity: 1;
+                fill: ${DT.T_COLOR_TEXT_DEFAULT_NORMAL};
+            }
+        }
+
+        &.${disabledCls} {
+            cursor: not-allowed;
+            color: ${DT.T_COLOR_TEXT_DISABLED};
+            .${iconWrapCls} {
+                border-color: ${DT.T_COLOR_LINE_DISABLED_LIGHT};
+                background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
+            }
+        }
+
+        &.${disabledCls}.${checkedCls}, &.${disabledCls}.${indeterminateCls} {
+            .${iconCls} {
+                fill: ${DT.T_COLOR_TEXT_DISABLED};
+            }
+            .${iconWrapCls} {
+                background: unset;
+            }
+        }
+    `
+);
 
 export const CheckboxCardWrap = styled(Card)`
     /* empty */
