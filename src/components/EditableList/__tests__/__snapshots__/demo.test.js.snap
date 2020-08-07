@@ -989,10 +989,6 @@ exports[`EditableList demo -- editableList 1`] = `
 }
 
 .c23 {
-  vertical-align: baseline;
-}
-
-.c26 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -1016,26 +1012,35 @@ exports[`EditableList demo -- editableList 1`] = `
   transition: all .22s cubic-bezier(.4,0,.2,1);
 }
 
-.c26:hover {
+.c23:hover {
   color: #3860f4;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
 }
 
-.c25 > .uc-fe-editable-list-li+.uc-fe-editable-list-li {
+.c21 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+}
+
+.c22 > .uc-fe-editable-list-li+.uc-fe-editable-list-li {
   margin-top: 16px;
 }
 
-.c25 > .uc-fe-editable-list-li-grid+.uc-fe-editable-list-li-grid {
+.c22 > .uc-fe-editable-list-li-grid+.uc-fe-editable-list-li-grid {
   margin-top: 16px;
 }
 
-.c25 .uc-fe-editable-list-li .uc-fe-editable-list-item,
-.c25 .uc-fe-editable-list-li .uc-fe-editable-list-action {
+.c22 .uc-fe-editable-list-li .uc-fe-editable-list-item,
+.c22 .uc-fe-editable-list-li .uc-fe-editable-list-action {
   display: inline-block;
 }
 
-.c25 .uc-fe-editable-list-li .uc-fe-editable-list-action {
+.c22 .uc-fe-editable-list-li .uc-fe-editable-list-action {
   margin-left: 24px;
 }
 
@@ -1235,11 +1240,6 @@ exports[`EditableList demo -- editableList 1`] = `
   display: none;
 }
 
-.c22 {
-  margin-right: 8px;
-  font-size: 14px;
-}
-
 .c20 {
   color: #526075;
   font-size: 12px;
@@ -1249,38 +1249,68 @@ exports[`EditableList demo -- editableList 1`] = `
   vertical-align: middle;
   height: 28px;
   line-height: 28px;
-}
-
-.c20 .c21 {
-  color: #c3cad9;
-}
-
-.c20:hover {
+  font-size: 0;
   color: #0a1633;
 }
 
-.c20:hover .c21 {
-  color: #3357df;
+.c20 > * {
+  font-size: 12px;
 }
 
-.c24 {
-  color: #526075;
-  font-size: 12px;
+.c20 .uc-fe-radio-icon-wrap {
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
   position: relative;
-  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #0a1633;
+  border-radius: 8px;
+  vertical-align: middle;
+}
+
+.c20 .uc-fe-radio-icon-wrap .uc-fe-radio-icon {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+}
+
+.c20 .uc-fe-radio-content {
   display: inline-block;
   vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
-  color: #0a1633;
+  max-height: 100%;
+  margin-left: 8px;
 }
 
-.c24 .c21 {
-  color: #c3cad9;
+.c20:hover .uc-fe-radio-icon-wrap,
+.c20.uc-fe-radio-checked .uc-fe-radio-icon-wrap {
+  border-color: #3860f4;
 }
 
-.c24 .c21 {
-  color: #3860f4;
+.c20.uc-fe-radio-checked .uc-fe-radio-icon {
+  visibility: visible;
+  opacity: 1;
+  fill: #3860f4;
+}
+
+.c20.uc-fe-radio-disabled {
+  cursor: not-allowed;
+  color: #cccccc;
+}
+
+.c20.uc-fe-radio-disabled .uc-fe-radio-icon-wrap {
+  border-color: #d9d9d9;
+  background: #f7f7f7;
+}
+
+.c20.uc-fe-radio-disabled.uc-fe-radio-checked .uc-fe-radio-icon {
+  fill: #cccccc;
+}
+
+.c20.uc-fe-radio-disabled.uc-fe-radio-checked .uc-fe-radio-icon-wrap {
+  background: unset;
 }
 
 .c18 {
@@ -1299,29 +1329,29 @@ exports[`EditableList demo -- editableList 1`] = `
   margin-right: 0;
 }
 
-.c18 .c28 {
+.c18 .c25 {
   margin-right: 12px;
   margin-bottom: 8px;
 }
 
-.c18 .c28:last-child {
+.c18 .c25:last-child {
   margin-right: 0;
 }
 
-.c18 .c29+.c29 {
+.c18 .c26+.c26 {
   margin-left: -1px;
 }
 
-.c18 .c27 {
+.c18 .c24 {
   margin-right: -1px;
   margin-bottom: 8px;
 }
 
-.c18 .c27:first-child {
+.c18 .c24:first-child {
   border-radius: 2px 0 0 2px;
 }
 
-.c18 .c27:last-child {
+.c18 .c24:last-child {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
 }
@@ -1508,31 +1538,79 @@ exports[`EditableList demo -- editableList 1`] = `
         <div
           class="c18"
         >
-          <div
+          <span
             class="c19 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c20"
           >
-            <i
-              class="uc-fe-icon icon__cbox c21 c22 c23"
-            />
-            sm
-          </div>
-          <div
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c21"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              sm
+            </span>
+          </span>
+          <span
             checked=""
-            class="c19 uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default c24"
+            class="c19 uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default c20"
           >
-            <i
-              class="uc-fe-icon icon__cbox-ed c21 c22 c23"
-            />
-            md
-          </div>
-          <div
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c21"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              md
+            </span>
+          </span>
+          <span
             class="c19 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c20"
           >
-            <i
-              class="uc-fe-icon icon__cbox c21 c22 c23"
-            />
-            lg
-          </div>
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c21"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              lg
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -1541,10 +1619,10 @@ exports[`EditableList demo -- editableList 1`] = `
     class="demo-wrap"
   >
     <div
-      class="c25"
+      class="c22"
     >
       <button
-        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c26"
+        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c23"
         type="button"
       >
         添加数据

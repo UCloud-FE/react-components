@@ -4,7 +4,8 @@ import createReactContext from 'create-react-context';
 
 import itemDecorator from 'decorators/selectableWithStore/item';
 import uncontrolledDecorator from 'decorators/uncontrolled';
-import { RadioWrap, RadioIcon, RadioButtonWrap, RadioTagWrap, RadioTextWrap } from 'components/Radio/style';
+import SvgIcon from 'src/components/SvgIcon';
+import { RadioWrap, RadioButtonWrap, RadioTagWrap, RadioTextWrap, iconWrapCls, iconCls, contentCls } from './style';
 import Card from './Card';
 
 export const StoreContext = createReactContext();
@@ -78,8 +79,10 @@ class Radio extends Component {
                 {...rest}
                 onClick={(...args) => this.onClick(props, ...args)}
             >
-                <RadioIcon type={checked ? 'cbox-ed' : 'cbox'} disabled={disabled} />
-                {children}
+                <span className={iconWrapCls}>
+                    <SvgIcon className={iconCls} type="circle" size="16px" />
+                </span>
+                {children != null && <span className={contentCls}>{children}</span>}
             </RadioWrap>
         );
     }

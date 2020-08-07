@@ -772,14 +772,14 @@ class Table extends Component {
                             }
                             placement={rowSelection.selectedTip === 'bottom' ? 'bottomLeft' : 'topLeft'}
                             align={{
-                                offset: [-10, 0]
+                                offset: [-8, 0]
                             }}
                         >
                             {renderSelectedAllCheckbox()}
                         </Tooltip>
                     ),
                 key: 'table_row_selection',
-                width: 34,
+                width: 32,
                 fixed: rowSelection.fixed,
                 onHeaderCell: () => ({ className: selectIconHeaderCls }),
                 onCell: () => ({ className: selectIconCellCls }),

@@ -860,11 +860,20 @@ exports[`Tag demo -- group-compact 1`] = `
 `;
 
 exports[`Tag demo -- icon 1`] = `
-.c12 {
+.c10 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+}
+
+.c13 {
   vertical-align: baseline;
 }
 
-.c15 {
+.c12 {
   box-sizing: border-box;
   height: 20px;
   width: 20px;
@@ -878,21 +887,21 @@ exports[`Tag demo -- icon 1`] = `
   background: #fafafc;
 }
 
-.c15::after {
+.c12::after {
   background: #d2d6ea;
   position: absolute;
   right: 0;
 }
 
-.c16 .c18,
-.c16 .c14 {
+.c14 .c16,
+.c14 .c11 {
   margin-right: 4px;
   margin-bottom: 4px;
   vertical-align: middle;
 }
 
-.c17 .c18,
-.c17 .c14 {
+.c15 .c16,
+.c15 .c11 {
   border-left-style: none;
   border-right-style: none;
   border-radius: unset;
@@ -900,27 +909,27 @@ exports[`Tag demo -- icon 1`] = `
   margin-bottom: 4px;
 }
 
-.c17 .c18:first-child,
-.c17 .c14:first-child {
+.c15 .c16:first-child,
+.c15 .c11:first-child {
   border-left-style: solid;
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
 }
 
-.c17 .c18:last-child,
-.c17 .c14:last-child {
+.c15 .c16:last-child,
+.c15 .c11:last-child {
   border-right-style: solid;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
 }
 
-.c17 .c18:last-child::after,
-.c17 .c14:last-child::after {
+.c15 .c16:last-child::after,
+.c15 .c11:last-child::after {
   content: none;
 }
 
-.c17 .c18::after,
-.c17 .c14::after {
+.c15 .c16::after,
+.c15 .c11::after {
   content: ' ';
   height: 8px;
   width: 1px;
@@ -990,11 +999,6 @@ exports[`Tag demo -- icon 1`] = `
   margin-bottom: 0;
 }
 
-.c11 {
-  margin-right: 8px;
-  font-size: 14px;
-}
-
 .c9 {
   color: #526075;
   font-size: 12px;
@@ -1004,38 +1008,68 @@ exports[`Tag demo -- icon 1`] = `
   vertical-align: middle;
   height: 28px;
   line-height: 28px;
+  font-size: 0;
   color: #0a1633;
 }
 
-.c9 .c10 {
-  color: #c3cad9;
-}
-
-.c9 .c10 {
-  color: #3860f4;
-}
-
-.c13 {
-  color: #526075;
+.c9 > * {
   font-size: 12px;
+}
+
+.c9 .uc-fe-radio-icon-wrap {
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
   position: relative;
-  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #0a1633;
+  border-radius: 8px;
+  vertical-align: middle;
+}
+
+.c9 .uc-fe-radio-icon-wrap .uc-fe-radio-icon {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+}
+
+.c9 .uc-fe-radio-content {
   display: inline-block;
   vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
+  max-height: 100%;
+  margin-left: 8px;
 }
 
-.c13 .c10 {
-  color: #c3cad9;
+.c9:hover .uc-fe-radio-icon-wrap,
+.c9.uc-fe-radio-checked .uc-fe-radio-icon-wrap {
+  border-color: #3860f4;
 }
 
-.c13:hover {
-  color: #0a1633;
+.c9.uc-fe-radio-checked .uc-fe-radio-icon {
+  visibility: visible;
+  opacity: 1;
+  fill: #3860f4;
 }
 
-.c13:hover .c10 {
-  color: #3357df;
+.c9.uc-fe-radio-disabled {
+  cursor: not-allowed;
+  color: #cccccc;
+}
+
+.c9.uc-fe-radio-disabled .uc-fe-radio-icon-wrap {
+  border-color: #d9d9d9;
+  background: #f7f7f7;
+}
+
+.c9.uc-fe-radio-disabled.uc-fe-radio-checked .uc-fe-radio-icon {
+  fill: #cccccc;
+}
+
+.c9.uc-fe-radio-disabled.uc-fe-radio-checked .uc-fe-radio-icon-wrap {
+  background: unset;
 }
 
 .c7 {
@@ -1054,29 +1088,29 @@ exports[`Tag demo -- icon 1`] = `
   margin-right: 0;
 }
 
-.c7 .c20 {
+.c7 .c18 {
   margin-right: 12px;
   margin-bottom: 8px;
 }
 
-.c7 .c20:last-child {
+.c7 .c18:last-child {
   margin-right: 0;
 }
 
-.c7 .c21+.c21 {
+.c7 .c19+.c19 {
   margin-left: -1px;
 }
 
-.c7 .c19 {
+.c7 .c17 {
   margin-right: -1px;
   margin-bottom: 8px;
 }
 
-.c7 .c19:first-child {
+.c7 .c17:first-child {
   border-radius: 2px 0 0 2px;
 }
 
-.c7 .c19:last-child {
+.c7 .c17:last-child {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
 }
@@ -1101,111 +1135,319 @@ exports[`Tag demo -- icon 1`] = `
         <div
           class="c7"
         >
-          <div
+          <span
             checked=""
             class="c8 uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox-ed c10 c11 c12"
-            />
-            default
-          </div>
-          <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              default
+            </span>
+          </span>
+          <span
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            green
-          </div>
-          <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              green
+            </span>
+          </span>
+          <span
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            yellow
-          </div>
-          <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              yellow
+            </span>
+          </span>
+          <span
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            red
-          </div>
-          <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              red
+            </span>
+          </span>
+          <span
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            primary
-          </div>
-          <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              primary
+            </span>
+          </span>
+          <span
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            purple
-          </div>
-          <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              purple
+            </span>
+          </span>
+          <span
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            lightblue
-          </div>
-          <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              lightblue
+            </span>
+          </span>
+          <span
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            blue
-          </div>
-          <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              blue
+            </span>
+          </span>
+          <span
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            orange
-          </div>
-          <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              orange
+            </span>
+          </span>
+          <span
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            cyan
-          </div>
-          <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              cyan
+            </span>
+          </span>
+          <span
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            success
-          </div>
-          <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              success
+            </span>
+          </span>
+          <span
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            warning
-          </div>
-          <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              warning
+            </span>
+          </span>
+          <span
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            error
-          </div>
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              error
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -1225,39 +1467,103 @@ exports[`Tag demo -- icon 1`] = `
         <div
           class="c7"
         >
-          <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+          <span
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            circle-fill
-          </div>
-          <div
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              circle-fill
+            </span>
+          </span>
+          <span
             checked=""
             class="c8 uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox-ed c10 c11 c12"
-            />
-            circle
-          </div>
-          <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              circle
+            </span>
+          </span>
+          <span
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            loading
-          </div>
-          <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              loading
+            </span>
+          </span>
+          <span
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            custom
-          </div>
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              custom
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -1266,10 +1572,10 @@ exports[`Tag demo -- icon 1`] = `
     class="demo-wrap"
   >
     <span
-      class="c14 c15"
+      class="c11 c12"
     >
       <i
-        class="uc-fe-icon icon__circle c12"
+        class="uc-fe-icon icon__circle c13"
       />
     </span>
   </div>
@@ -1795,11 +2101,16 @@ exports[`Tag demo -- icon-styleType 1`] = `
 `;
 
 exports[`Tag demo -- tag 1`] = `
-.c12 {
-  vertical-align: baseline;
+.c10 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
 }
 
-.c25 {
+.c22 {
   box-sizing: border-box;
   height: 20px;
   padding-left: 8px;
@@ -1810,23 +2121,23 @@ exports[`Tag demo -- tag 1`] = `
   background: #fafafc;
 }
 
-.c25::after {
+.c22::after {
   background: #d2d6ea;
 }
 
-.c25 .c41 {
+.c22 .c38 {
   margin-right: 4px;
   vertical-align: middle;
   line-height: 18px;
 }
 
-.c25 .c26 {
+.c22 .c23 {
   margin-right: 8px;
   vertical-align: middle;
   line-height: 18px;
 }
 
-.c25 .c40 {
+.c22 .c37 {
   display: inline-block;
   width: 18px;
   height: 18px;
@@ -1838,87 +2149,87 @@ exports[`Tag demo -- tag 1`] = `
   color: #526075;
 }
 
-.c25 .c40 .c39 {
+.c22 .c37 .c36 {
   fill: #526075;
 }
 
-.c25 .c40:hover {
+.c22 .c37:hover {
   background: #526075;
 }
 
-.c25 .c40:hover .c39 {
+.c22 .c37:hover .c36 {
   fill: #ffffff;
 }
 
-.c27 .c26 {
+.c24 .c23 {
   margin-right: 8px;
   vertical-align: middle;
   line-height: 18px;
 }
 
-.c28 .c26 {
+.c25 .c23 {
   margin-right: 8px;
   vertical-align: middle;
   line-height: 18px;
 }
 
-.c29 .c26 {
+.c26 .c23 {
   margin-right: 8px;
   vertical-align: middle;
   line-height: 18px;
 }
 
-.c30 .c26 {
+.c27 .c23 {
   margin-right: 8px;
   vertical-align: middle;
   line-height: 18px;
 }
 
-.c31 .c26 {
+.c28 .c23 {
   margin-right: 8px;
   vertical-align: middle;
   line-height: 18px;
 }
 
-.c32 .c26 {
+.c29 .c23 {
   margin-right: 8px;
   vertical-align: middle;
   line-height: 18px;
 }
 
-.c33 .c26 {
+.c30 .c23 {
   margin-right: 8px;
   vertical-align: middle;
   line-height: 18px;
 }
 
-.c34 .c26 {
+.c31 .c23 {
   margin-right: 8px;
   vertical-align: middle;
   line-height: 18px;
 }
 
-.c35 .c26 {
+.c32 .c23 {
   margin-right: 8px;
   vertical-align: middle;
   line-height: 18px;
 }
 
-.c36 .c26 {
+.c33 .c23 {
   margin-right: 8px;
   vertical-align: middle;
   line-height: 18px;
 }
 
-.c37 .c24,
-.c37 .style__IconTagWrapper-sc-16gjvsq-7 {
+.c34 .c21,
+.c34 .style__IconTagWrapper-sc-16gjvsq-7 {
   margin-right: 4px;
   margin-bottom: 4px;
   vertical-align: middle;
 }
 
-.c38 .c24,
-.c38 .style__IconTagWrapper-sc-16gjvsq-7 {
+.c35 .c21,
+.c35 .style__IconTagWrapper-sc-16gjvsq-7 {
   border-left-style: none;
   border-right-style: none;
   border-radius: unset;
@@ -1926,27 +2237,27 @@ exports[`Tag demo -- tag 1`] = `
   margin-bottom: 4px;
 }
 
-.c38 .c24:first-child,
-.c38 .style__IconTagWrapper-sc-16gjvsq-7:first-child {
+.c35 .c21:first-child,
+.c35 .style__IconTagWrapper-sc-16gjvsq-7:first-child {
   border-left-style: solid;
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
 }
 
-.c38 .c24:last-child,
-.c38 .style__IconTagWrapper-sc-16gjvsq-7:last-child {
+.c35 .c21:last-child,
+.c35 .style__IconTagWrapper-sc-16gjvsq-7:last-child {
   border-right-style: solid;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
 }
 
-.c38 .c24:last-child::after,
-.c38 .style__IconTagWrapper-sc-16gjvsq-7:last-child::after {
+.c35 .c21:last-child::after,
+.c35 .style__IconTagWrapper-sc-16gjvsq-7:last-child::after {
   content: none;
 }
 
-.c38 .c24::after,
-.c38 .style__IconTagWrapper-sc-16gjvsq-7::after {
+.c35 .c21::after,
+.c35 .style__IconTagWrapper-sc-16gjvsq-7::after {
   content: ' ';
   height: 8px;
   width: 1px;
@@ -1955,23 +2266,23 @@ exports[`Tag demo -- tag 1`] = `
   vertical-align: middle;
 }
 
-.c38 .c24 {
+.c35 .c21 {
   padding-left: 4px;
 }
 
-.c38 .c24:first-child {
+.c35 .c21:first-child {
   padding-left: 8px;
 }
 
-.c38 .c24 .c26 {
+.c35 .c21 .c23 {
   margin-right: 4px;
 }
 
-.c38 .c24:last-child .c26 {
+.c35 .c21:last-child .c23 {
   margin-right: 8px;
 }
 
-.c16 {
+.c13 {
   position: relative;
   height: 100%;
   width: 100%;
@@ -1979,7 +2290,7 @@ exports[`Tag demo -- tag 1`] = `
   box-sizing: border-box;
 }
 
-.c18 {
+.c15 {
   width: 100%;
   height: 100%;
   text-align: center;
@@ -1988,7 +2299,7 @@ exports[`Tag demo -- tag 1`] = `
   display: block;
 }
 
-.c21 {
+.c18 {
   position: absolute;
   display: inline-block;
   left: -1px;
@@ -1999,7 +2310,7 @@ exports[`Tag demo -- tag 1`] = `
   transition: all 0.3s;
 }
 
-.c23 {
+.c20 {
   position: absolute;
   display: inline-block;
   left: 18px;
@@ -2011,7 +2322,7 @@ exports[`Tag demo -- tag 1`] = `
   transition: all 0.3s;
 }
 
-.c14 {
+.c11 {
   position: relative;
   border-radius: 2px;
   box-sizing: border-box;
@@ -2029,48 +2340,48 @@ exports[`Tag demo -- tag 1`] = `
   line-height: 16px;
 }
 
-.c14:hover {
+.c11:hover {
   border-color: #3357df;
 }
 
-.c14:hover .c20 {
+.c11:hover .c17 {
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
 }
 
-.c14 .c20 {
+.c11 .c17 {
   background: #ffffff;
   box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
   width: 20px;
   height: 20px;
 }
 
-.c14 .c22 {
+.c11 .c19 {
   background: #f44336;
   left: 13px;
   height: 10px;
 }
 
-.c14 .c15 {
+.c11 .c12 {
   color: #526075;
   border: 1px solid #d2d6ea;
   box-shadow: inset 0 1px 3px 0 #d2d6ea;
   background: #f6f6fb;
 }
 
-.c14 .c17,
-.c14 .c19 {
+.c11 .c14,
+.c11 .c16 {
   line-height: 16px;
 }
 
-.c14 .c17 {
+.c11 .c14 {
   padding-right: 20px;
 }
 
-.c14 .c19 {
+.c11 .c16 {
   padding-left: 20px;
 }
 
-.c14 .c17 {
+.c11 .c14 {
   display: none;
 }
 
@@ -2135,11 +2446,6 @@ exports[`Tag demo -- tag 1`] = `
   margin-bottom: 0;
 }
 
-.c11 {
-  margin-right: 8px;
-  font-size: 14px;
-}
-
 .c9 {
   color: #526075;
   font-size: 12px;
@@ -2149,38 +2455,68 @@ exports[`Tag demo -- tag 1`] = `
   vertical-align: middle;
   height: 28px;
   line-height: 28px;
+  font-size: 0;
   color: #0a1633;
 }
 
-.c9 .c10 {
-  color: #c3cad9;
-}
-
-.c9 .c10 {
-  color: #3860f4;
-}
-
-.c13 {
-  color: #526075;
+.c9 > * {
   font-size: 12px;
+}
+
+.c9 .uc-fe-radio-icon-wrap {
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
   position: relative;
-  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #0a1633;
+  border-radius: 8px;
+  vertical-align: middle;
+}
+
+.c9 .uc-fe-radio-icon-wrap .uc-fe-radio-icon {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+}
+
+.c9 .uc-fe-radio-content {
   display: inline-block;
   vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
+  max-height: 100%;
+  margin-left: 8px;
 }
 
-.c13 .c10 {
-  color: #c3cad9;
+.c9:hover .uc-fe-radio-icon-wrap,
+.c9.uc-fe-radio-checked .uc-fe-radio-icon-wrap {
+  border-color: #3860f4;
 }
 
-.c13:hover {
-  color: #0a1633;
+.c9.uc-fe-radio-checked .uc-fe-radio-icon {
+  visibility: visible;
+  opacity: 1;
+  fill: #3860f4;
 }
 
-.c13:hover .c10 {
-  color: #3357df;
+.c9.uc-fe-radio-disabled {
+  cursor: not-allowed;
+  color: #cccccc;
+}
+
+.c9.uc-fe-radio-disabled .uc-fe-radio-icon-wrap {
+  border-color: #d9d9d9;
+  background: #f7f7f7;
+}
+
+.c9.uc-fe-radio-disabled.uc-fe-radio-checked .uc-fe-radio-icon {
+  fill: #cccccc;
+}
+
+.c9.uc-fe-radio-disabled.uc-fe-radio-checked .uc-fe-radio-icon-wrap {
+  background: unset;
 }
 
 .c7 {
@@ -2199,29 +2535,29 @@ exports[`Tag demo -- tag 1`] = `
   margin-right: 0;
 }
 
-.c7 .c43 {
+.c7 .c40 {
   margin-right: 12px;
   margin-bottom: 8px;
 }
 
-.c7 .c43:last-child {
+.c7 .c40:last-child {
   margin-right: 0;
 }
 
-.c7 .c44+.c44 {
+.c7 .c41+.c41 {
   margin-left: -1px;
 }
 
-.c7 .c42 {
+.c7 .c39 {
   margin-right: -1px;
   margin-bottom: 8px;
 }
 
-.c7 .c42:first-child {
+.c7 .c39:first-child {
   border-radius: 2px 0 0 2px;
 }
 
-.c7 .c42:last-child {
+.c7 .c39:last-child {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
 }
@@ -2246,111 +2582,319 @@ exports[`Tag demo -- tag 1`] = `
         <div
           class="c7"
         >
-          <div
+          <span
             checked=""
             class="c8 uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox-ed c10 c11 c12"
-            />
-            default
-          </div>
-          <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              default
+            </span>
+          </span>
+          <span
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            green
-          </div>
-          <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              green
+            </span>
+          </span>
+          <span
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            yellow
-          </div>
-          <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              yellow
+            </span>
+          </span>
+          <span
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            red
-          </div>
-          <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              red
+            </span>
+          </span>
+          <span
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            primary
-          </div>
-          <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              primary
+            </span>
+          </span>
+          <span
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            purple
-          </div>
-          <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              purple
+            </span>
+          </span>
+          <span
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            lightblue
-          </div>
-          <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              lightblue
+            </span>
+          </span>
+          <span
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            blue
-          </div>
-          <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              blue
+            </span>
+          </span>
+          <span
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            orange
-          </div>
-          <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              orange
+            </span>
+          </span>
+          <span
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            cyan
-          </div>
-          <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              cyan
+            </span>
+          </span>
+          <span
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            success
-          </div>
-          <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              success
+            </span>
+          </span>
+          <span
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            warning
-          </div>
-          <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              warning
+            </span>
+          </span>
+          <span
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            error
-          </div>
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              error
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -2368,26 +2912,26 @@ exports[`Tag demo -- tag 1`] = `
         span="9"
       >
         <div
-          class="c14"
+          class="c11"
         >
           <div
-            class="c15 c16"
+            class="c12 c13"
           >
             <span
-              class="c17 c18"
+              class="c14 c15"
             >
               ON
             </span>
             <span
-              class="c19 c18"
+              class="c16 c15"
             >
               OFF
             </span>
             <span
-              class="c20 c21"
+              class="c17 c18"
             >
               <span
-                class="c22 c23"
+                class="c19 c20"
               />
             </span>
           </div>
@@ -2408,26 +2952,26 @@ exports[`Tag demo -- tag 1`] = `
         span="9"
       >
         <div
-          class="c14"
+          class="c11"
         >
           <div
-            class="c15 c16"
+            class="c12 c13"
           >
             <span
-              class="c17 c18"
+              class="c14 c15"
             >
               ON
             </span>
             <span
-              class="c19 c18"
+              class="c16 c15"
             >
               OFF
             </span>
             <span
-              class="c20 c21"
+              class="c17 c18"
             >
               <span
-                class="c22 c23"
+                class="c19 c20"
               />
             </span>
           </div>
@@ -2450,47 +2994,127 @@ exports[`Tag demo -- tag 1`] = `
         <div
           class="c7"
         >
-          <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+          <span
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            circle-fill
-          </div>
-          <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              circle-fill
+            </span>
+          </span>
+          <span
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            circle
-          </div>
-          <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              circle
+            </span>
+          </span>
+          <span
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            loading
-          </div>
-          <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              loading
+            </span>
+          </span>
+          <span
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            custom
-          </div>
-          <div
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              custom
+            </span>
+          </span>
+          <span
             checked=""
             class="c8 uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox-ed c10 c11 c12"
-            />
-            null
-          </div>
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              null
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -2499,10 +3123,10 @@ exports[`Tag demo -- tag 1`] = `
     class="demo-wrap"
   >
     <span
-      class="c24 c25"
+      class="c21 c22"
     >
       <span
-        class="c26 "
+        class="c23 "
       >
         Tag Content
       </span>

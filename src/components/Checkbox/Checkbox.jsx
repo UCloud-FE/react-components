@@ -1,11 +1,23 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import createReactContext from 'create-react-context';
+import classnames from 'classnames';
 
 import itemDecorator from 'src/decorators/selectableWithStore/item';
 import uncontrolledDecorator from 'src/decorators/uncontrolled';
+import SvgIcon from 'src/components/SvgIcon';
 
-import { CheckboxWrap, CheckboxIcon, CheckboxCardWrap, CheckboxContentWrap } from './style';
+import {
+    CheckboxWrap,
+    CheckboxCardWrap,
+    iconWrapCls,
+    iconCls,
+    contentCls,
+    checkedCls,
+    disabledCls,
+    prefixCls,
+    indeterminateCls
+} from './style';
 
 const Size = ['sm', 'md', 'lg'];
 const StyleType = ['default', 'card'];
@@ -29,6 +41,8 @@ class Checkbox extends Component {
         disabled: PropTypes.bool,
         /** 点选时的回调 */
         onChange: PropTypes.func,
+        /** 一般用于全选，部分选中的状态 */
+        indeterminate: PropTypes.bool,
         /** @ignore */
         onClick: PropTypes.func,
         /** checkbox的值 */
@@ -57,7 +71,17 @@ class Checkbox extends Component {
     };
     renderCheckbox(props) {
         /* eslint-disable no-unused-vars */
-        const { checked, disabled, children, title, disabledLabel, onChange, ...rest } = props;
+        const {
+            checked,
+            disabled,
+            children,
+            title,
+            disabledLabel,
+            onChange,
+            className,
+            indeterminate,
+            ...rest
+        } = props;
         /* eslint-enable no-unused-vars */
 
         return (
@@ -65,10 +89,23 @@ class Checkbox extends Component {
                 checked={checked}
                 disabled={disabled}
                 {...rest}
+                className={classnames({
+                    [className]: className,
+                    [prefixCls]: true,
+                    [checkedCls]: checked,
+                    [disabledCls]: disabled,
+                    [indeterminateCls]: indeterminate
+                })}
                 onClick={(...args) => this.onClick(props, ...args)}
             >
-                <CheckboxIcon disabled={disabled} type={checked ? 'checkbox-ed' : 'checkbox'} />
-                <CheckboxContentWrap>{children}</CheckboxContentWrap>
+                <span className={iconWrapCls}>
+                    {indeterminate ? (
+                        <SvgIcon className={iconCls} type="horz" size="16px" />
+                    ) : checked ? (
+                        <SvgIcon className={iconCls} type="smallTick" size="16px" />
+                    ) : null}
+                </span>
+                {children != null && <span className={contentCls}>{children}</span>}
             </CheckboxWrap>
         );
     }

@@ -5,10 +5,10 @@ import Checkbox from 'src/components/Checkbox';
 
 describe('Checkbox', () => {
     const getCheckedStatus = wrapper => {
-        if (wrapper.find('i.icon__checkbox-ed').length === 1) {
+        if (wrapper.find('span.uc-fe-checkbox-checked').length === 1) {
             return true;
         }
-        if (wrapper.find('i.icon__checkbox').length === 1) {
+        if (wrapper.find('span.uc-fe-checkbox-checked').length === 0) {
             return false;
         }
         throw new Error('Wrong checkbox rendered');
@@ -16,7 +16,6 @@ describe('Checkbox', () => {
     test('click default checked', () => {
         const onChange = jest.fn();
         const wrapper = mount(<Checkbox defaultChecked onChange={onChange} />);
-        expect(wrapper.find('i.icon__checkbox-ed').length).toBe(1);
         wrapper.simulate('click');
         expect(getCheckedStatus(wrapper)).toBe(false);
         expect(onChange).toHaveBeenCalledTimes(1);
@@ -29,9 +28,7 @@ describe('Checkbox', () => {
     });
     test('click default unchecked', () => {
         const wrapper = mount(<Checkbox />);
-        expect(wrapper.find('i.icon__checkbox').length).toBe(1);
         wrapper.simulate('click');
-        expect(wrapper.find('i.icon__checkbox-ed').length).toBe(1);
     });
     test('click controlled', () => {
         let checkedProps = false;

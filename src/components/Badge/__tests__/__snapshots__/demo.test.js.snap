@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Badge demo -- badge 1`] = `
-.c34 {
+.c32 {
   position: relative;
   display: inline-block;
 }
 
-.c35 {
+.c33 {
   position: absolute;
 }
 
-.c36 {
+.c34 {
   display: inline-block;
   min-height: 20px;
   line-height: 20px;
@@ -83,13 +83,17 @@ exports[`Badge demo -- badge 1`] = `
   margin-bottom: 0;
 }
 
-.c12 {
-  vertical-align: baseline;
+.c31 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
 }
 
-.c32 {
-  margin-right: 8px;
-  font-size: 14px;
+.c12 {
+  vertical-align: baseline;
 }
 
 .c30 {
@@ -101,38 +105,68 @@ exports[`Badge demo -- badge 1`] = `
   vertical-align: middle;
   height: 28px;
   line-height: 28px;
+  font-size: 0;
   color: #0a1633;
 }
 
-.c30 .c31 {
-  color: #c3cad9;
-}
-
-.c30 .c31 {
-  color: #3860f4;
-}
-
-.c33 {
-  color: #526075;
+.c30 > * {
   font-size: 12px;
+}
+
+.c30 .uc-fe-radio-icon-wrap {
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
   position: relative;
-  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #0a1633;
+  border-radius: 8px;
+  vertical-align: middle;
+}
+
+.c30 .uc-fe-radio-icon-wrap .uc-fe-radio-icon {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+}
+
+.c30 .uc-fe-radio-content {
   display: inline-block;
   vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
+  max-height: 100%;
+  margin-left: 8px;
 }
 
-.c33 .c31 {
-  color: #c3cad9;
+.c30:hover .uc-fe-radio-icon-wrap,
+.c30.uc-fe-radio-checked .uc-fe-radio-icon-wrap {
+  border-color: #3860f4;
 }
 
-.c33:hover {
-  color: #0a1633;
+.c30.uc-fe-radio-checked .uc-fe-radio-icon {
+  visibility: visible;
+  opacity: 1;
+  fill: #3860f4;
 }
 
-.c33:hover .c31 {
-  color: #3357df;
+.c30.uc-fe-radio-disabled {
+  cursor: not-allowed;
+  color: #cccccc;
+}
+
+.c30.uc-fe-radio-disabled .uc-fe-radio-icon-wrap {
+  border-color: #d9d9d9;
+  background: #f7f7f7;
+}
+
+.c30.uc-fe-radio-disabled.uc-fe-radio-checked .uc-fe-radio-icon {
+  fill: #cccccc;
+}
+
+.c30.uc-fe-radio-disabled.uc-fe-radio-checked .uc-fe-radio-icon-wrap {
+  background: unset;
 }
 
 .c28 {
@@ -151,29 +185,29 @@ exports[`Badge demo -- badge 1`] = `
   margin-right: 0;
 }
 
-.c28 .c38 {
+.c28 .c36 {
   margin-right: 12px;
   margin-bottom: 8px;
 }
 
-.c28 .c38:last-child {
+.c28 .c36:last-child {
   margin-right: 0;
 }
 
-.c28 .c39+.c39 {
+.c28 .c37+.c37 {
   margin-left: -1px;
 }
 
-.c28 .c37 {
+.c28 .c35 {
   margin-right: -1px;
   margin-bottom: 8px;
 }
 
-.c28 .c37:first-child {
+.c28 .c35:first-child {
   border-radius: 2px 0 0 2px;
 }
 
-.c28 .c37:last-child {
+.c28 .c35:last-child {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
 }
@@ -685,39 +719,103 @@ exports[`Badge demo -- badge 1`] = `
         <div
           class="c28"
         >
-          <div
+          <span
             checked=""
             class="c29 uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default c30"
           >
-            <i
-              class="uc-fe-icon icon__cbox-ed c31 c32 c12"
-            />
-            topRight
-          </div>
-          <div
-            class="c29 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c33"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c31"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              topRight
+            </span>
+          </span>
+          <span
+            class="c29 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c30"
           >
-            <i
-              class="uc-fe-icon icon__cbox c31 c32 c12"
-            />
-            topLeft
-          </div>
-          <div
-            class="c29 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c33"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c31"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              topLeft
+            </span>
+          </span>
+          <span
+            class="c29 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c30"
           >
-            <i
-              class="uc-fe-icon icon__cbox c31 c32 c12"
-            />
-            bottomRight
-          </div>
-          <div
-            class="c29 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c33"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c31"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              bottomRight
+            </span>
+          </span>
+          <span
+            class="c29 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c30"
           >
-            <i
-              class="uc-fe-icon icon__cbox c31 c32 c12"
-            />
-            bottomLeft
-          </div>
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c31"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              bottomLeft
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -762,17 +860,17 @@ exports[`Badge demo -- badge 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-badge c34"
+      class="uc-fe-badge c32"
       style="margin:10px;"
     >
       <div
         style="width:50px;height:50px;background:#ddd;"
       />
       <div
-        class="uc-fe-badge-badge-wrap c35"
+        class="uc-fe-badge-badge-wrap c33"
       >
         <span
-          class="uc-fe-badge-badge c36"
+          class="uc-fe-badge-badge c34"
         >
           1
         </span>

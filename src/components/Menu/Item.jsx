@@ -1,9 +1,10 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 import Checkbox from 'src/components/Checkbox';
 
-import { ItemWrap } from './style';
+import { itemCls, selectedCls, checkboxCls, disabledCls } from './style';
 
 class Item extends PureComponent {
     static propTypes = {
@@ -20,7 +21,9 @@ class Item extends PureComponent {
         /** @ignore */
         onSelect: PropTypes.func,
         /** @ignore */
-        children: PropTypes.node
+        children: PropTypes.node,
+        /** @ignore */
+        className: PropTypes.string
     };
 
     static getItemKey = item => {
@@ -28,24 +31,25 @@ class Item extends PureComponent {
     };
     render() {
         /* eslint-disable no-unused-vars */
-        const { itemKey, disabled, uid, selected, multiple, onSelect, children, ...rest } = this.props;
+        const { itemKey, disabled, uid, selected, multiple, onSelect, children, className, ...rest } = this.props;
         /* eslint-enable no-unused-vars */
 
         return (
-            <ItemWrap
+            <div
+                className={classnames(itemCls, selected && selectedCls, disabled && disabledCls, className)}
                 selected={selected}
                 disabled={disabled}
                 onClick={() => !disabled && onSelect(multiple ? !selected : true, uid)}
                 {...rest}
             >
                 {multiple ? (
-                    <Checkbox checked={selected} disabled={disabled}>
+                    <Checkbox className={checkboxCls} checked={selected} disabled={disabled} size="lg">
                         {children}
                     </Checkbox>
                 ) : (
                     children
                 )}
-            </ItemWrap>
+            </div>
         );
     }
 }

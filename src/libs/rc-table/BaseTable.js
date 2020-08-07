@@ -18,7 +18,7 @@ class BaseTable extends React.Component {
         store: PropTypes.object.isRequired,
         expander: PropTypes.object.isRequired,
         getRowKey: PropTypes.func,
-        tableLayout: PropTypes.oneOf(['fixed'])
+        tableLayout: PropTypes.oneOf(['fixed', 'auto'])
     };
 
     static contextTypes = {

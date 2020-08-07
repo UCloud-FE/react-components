@@ -18,7 +18,7 @@ class Demo extends React.Component {
         };
     }
     render() {
-        const { checked, size, styleType, disabled } = this.state;
+        const { checked, size, styleType, disabled, indeterminate } = this.state;
         const itemLayout = {
             labelCol: {
                 span: 3
@@ -50,15 +50,22 @@ class Demo extends React.Component {
                     <Form.Item label="checked" {...itemLayout}>
                         <Switch checked={checked} onChange={checked => this.setState({ checked })} />
                     </Form.Item>
+                    <Form.Item label="indeterminate" {...itemLayout}>
+                        <Switch
+                            indeterminate={indeterminate}
+                            onChange={indeterminate => this.setState({ indeterminate })}
+                        />
+                    </Form.Item>
                 </Form>
                 <div className="demo-wrap">
                     <Checkbox
                         checked={checked}
+                        indeterminate={indeterminate}
                         size={size}
                         styleType={styleType}
                         disabled={disabled}
                         title="title"
-                        disabledLabel="disabled label"
+                        disabledLabel="售磬"
                         onChange={checked => {
                             console.log(checked);
                             this.setState({ checked });

@@ -55,7 +55,7 @@ BodyTable.propTypes = {
     handleBodyScroll: PropTypes.func.isRequired,
     getRowKey: PropTypes.func.isRequired,
     expander: PropTypes.object.isRequired,
-    tableLayout: PropTypes.oneOf(['fixed'])
+    tableLayout: PropTypes.oneOf(['fixed', 'auto'])
 };
 
 BodyTable.contextTypes = {

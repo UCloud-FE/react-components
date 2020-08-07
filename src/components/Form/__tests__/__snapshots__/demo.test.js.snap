@@ -62,11 +62,20 @@ exports[`Form demo -- form 1`] = `
   margin-bottom: 0;
 }
 
-.c12 {
+.c10 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+}
+
+.c27 {
   vertical-align: baseline;
 }
 
-.c28 {
+.c25 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -90,15 +99,10 @@ exports[`Form demo -- form 1`] = `
   transition: all .22s cubic-bezier(.4,0,.2,1);
 }
 
-.c28:hover {
+.c25:hover {
   color: #3860f4;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
-}
-
-.c11 {
-  margin-right: 8px;
-  font-size: 14px;
 }
 
 .c9 {
@@ -110,38 +114,68 @@ exports[`Form demo -- form 1`] = `
   vertical-align: middle;
   height: 28px;
   line-height: 28px;
+  font-size: 0;
   color: #0a1633;
 }
 
-.c9 .c10 {
-  color: #c3cad9;
-}
-
-.c9 .c10 {
-  color: #3860f4;
-}
-
-.c13 {
-  color: #526075;
+.c9 > * {
   font-size: 12px;
+}
+
+.c9 .uc-fe-radio-icon-wrap {
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
   position: relative;
-  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #0a1633;
+  border-radius: 8px;
+  vertical-align: middle;
+}
+
+.c9 .uc-fe-radio-icon-wrap .uc-fe-radio-icon {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+}
+
+.c9 .uc-fe-radio-content {
   display: inline-block;
   vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
+  max-height: 100%;
+  margin-left: 8px;
 }
 
-.c13 .c10 {
-  color: #c3cad9;
+.c9:hover .uc-fe-radio-icon-wrap,
+.c9.uc-fe-radio-checked .uc-fe-radio-icon-wrap {
+  border-color: #3860f4;
 }
 
-.c13:hover {
-  color: #0a1633;
+.c9.uc-fe-radio-checked .uc-fe-radio-icon {
+  visibility: visible;
+  opacity: 1;
+  fill: #3860f4;
 }
 
-.c13:hover .c10 {
-  color: #3357df;
+.c9.uc-fe-radio-disabled {
+  cursor: not-allowed;
+  color: #cccccc;
+}
+
+.c9.uc-fe-radio-disabled .uc-fe-radio-icon-wrap {
+  border-color: #d9d9d9;
+  background: #f7f7f7;
+}
+
+.c9.uc-fe-radio-disabled.uc-fe-radio-checked .uc-fe-radio-icon {
+  fill: #cccccc;
+}
+
+.c9.uc-fe-radio-disabled.uc-fe-radio-checked .uc-fe-radio-icon-wrap {
+  background: unset;
 }
 
 .c7 {
@@ -160,34 +194,34 @@ exports[`Form demo -- form 1`] = `
   margin-right: 0;
 }
 
-.c7 .c31 {
+.c7 .c29 {
   margin-right: 12px;
   margin-bottom: 8px;
 }
 
-.c7 .c31:last-child {
+.c7 .c29:last-child {
   margin-right: 0;
 }
 
-.c7 .c32+.c32 {
+.c7 .c30+.c30 {
   margin-left: -1px;
 }
 
-.c7 .c30 {
+.c7 .c28 {
   margin-right: -1px;
   margin-bottom: 8px;
 }
 
-.c7 .c30:first-child {
+.c7 .c28:first-child {
   border-radius: 2px 0 0 2px;
 }
 
-.c7 .c30:last-child {
+.c7 .c28:last-child {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
 }
 
-.c18 {
+.c15 {
   position: relative;
   height: 100%;
   width: 100%;
@@ -195,7 +229,7 @@ exports[`Form demo -- form 1`] = `
   box-sizing: border-box;
 }
 
-.c20 {
+.c17 {
   width: 100%;
   height: 100%;
   text-align: center;
@@ -204,7 +238,7 @@ exports[`Form demo -- form 1`] = `
   display: block;
 }
 
-.c23 {
+.c20 {
   position: absolute;
   display: inline-block;
   left: -1px;
@@ -215,7 +249,7 @@ exports[`Form demo -- form 1`] = `
   transition: all 0.3s;
 }
 
-.c25 {
+.c22 {
   position: absolute;
   display: inline-block;
   left: 18px;
@@ -227,7 +261,7 @@ exports[`Form demo -- form 1`] = `
   transition: all 0.3s;
 }
 
-.c16 {
+.c13 {
   position: relative;
   border-radius: 2px;
   box-sizing: border-box;
@@ -245,57 +279,57 @@ exports[`Form demo -- form 1`] = `
   line-height: 16px;
 }
 
-.c16:hover {
+.c13:hover {
   border-color: #3357df;
 }
 
-.c16:hover .c22 {
+.c13:hover .c19 {
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
 }
 
-.c16 .c22 {
+.c13 .c19 {
   background: #ffffff;
   box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
   width: 20px;
   height: 20px;
 }
 
-.c16 .c24 {
+.c13 .c21 {
   background: #f44336;
   left: 13px;
   height: 10px;
 }
 
-.c16 .c17 {
+.c13 .c14 {
   color: #526075;
   border: 1px solid #d2d6ea;
   box-shadow: inset 0 1px 3px 0 #d2d6ea;
   background: #f6f6fb;
 }
 
-.c16 .c19,
-.c16 .c21 {
+.c13 .c16,
+.c13 .c18 {
   line-height: 16px;
 }
 
-.c16 .c19 {
+.c13 .c16 {
   padding-right: 20px;
 }
 
-.c16 .c21 {
+.c13 .c18 {
   padding-left: 20px;
 }
 
-.c16 .c19 {
+.c13 .c16 {
   display: none;
 }
 
-.c15 {
+.c12 {
   display: table;
   width: 100%;
 }
 
-.c14 {
+.c11 {
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -310,7 +344,7 @@ exports[`Form demo -- form 1`] = `
   transition: .18s cubic-bezier(.4,0,.2,1);
 }
 
-.c14 input {
+.c11 input {
   vertical-align: middle;
   display: table-cell;
   box-sizing: border-box;
@@ -321,59 +355,59 @@ exports[`Form demo -- form 1`] = `
   color: inherit;
 }
 
-.c14 input,
-.c14 input:hover,
-.c14 input:focus {
+.c11 input,
+.c11 input:hover,
+.c11 input:focus {
   border: none;
   outline: none;
   background: none;
 }
 
-.c14:hover {
+.c11:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.c14 input {
+.c11 input {
   line-height: 26px;
   height: 26px;
 }
 
-.c14 input::-webkit-input-placeholder {
+.c11 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.c14 input::-moz-placeholder {
+.c11 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.c14 input:-ms-input-placeholder {
+.c11 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.c14 input::placeholder {
+.c11 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.c27 {
+.c24 {
   padding-right: 28px;
   width: 100%;
   text-align: left;
 }
 
-.c29 {
+.c26 {
   position: absolute;
   right: 8px;
   top: 50%;
   margin-top: -6px;
 }
 
-.c26 {
+.c23 {
   box-sizing: border-box;
   position: relative;
   display: inline-block;
@@ -402,23 +436,55 @@ exports[`Form demo -- form 1`] = `
         <div
           class="c7"
         >
-          <div
+          <span
             checked=""
             class="c8 uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox-ed c10 c11 c12"
-            />
-            md
-          </div>
-          <div
-            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c13"
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              md
+            </span>
+          </span>
+          <span
+            class="c8 uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default c9"
           >
-            <i
-              class="uc-fe-icon icon__cbox c10 c11 c12"
-            />
-            lg
-          </div>
+            <span
+              class="uc-fe-radio-icon-wrap"
+            >
+              <svg
+                class="uc-fe-radio-icon c10"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="6"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-radio-content"
+            >
+              lg
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -443,10 +509,10 @@ exports[`Form demo -- form 1`] = `
           span="9"
         >
           <span
-            class="uc-fe-input c14"
+            class="uc-fe-input c11"
           >
             <span
-              class="c15"
+              class="c12"
             >
               <input />
             </span>
@@ -467,26 +533,26 @@ exports[`Form demo -- form 1`] = `
           span="9"
         >
           <div
-            class="c16"
+            class="c13"
           >
             <div
-              class="c17 c18"
+              class="c14 c15"
             >
               <span
-                class="c19 c20"
+                class="c16 c17"
               >
                 ON
               </span>
               <span
-                class="c21 c20"
+                class="c18 c17"
               >
                 OFF
               </span>
               <span
-                class="c22 c23"
+                class="c19 c20"
               >
                 <span
-                  class="c24 c25"
+                  class="c21 c22"
                 />
               </span>
             </div>
@@ -507,18 +573,18 @@ exports[`Form demo -- form 1`] = `
           span="9"
         >
           <div
-            class="c26"
+            class="c23"
           >
             <div>
               <button
-                class="c27 uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c28"
+                class="c24 uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c25"
                 type="button"
               >
                 <div>
                   请选择
                 </div>
                 <i
-                  class="uc-fe-icon icon__down c29 c12"
+                  class="uc-fe-icon icon__down c26 c27"
                 />
               </button>
             </div>

@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
+import classnames from 'classnames';
+
 import uncontrolledDecorator from 'src/decorators/uncontrolled';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
 import deprecatedLog from 'src/utils/deprecatedLog';
+import Checkbox from 'src/components/Checkbox';
 
-import { MenuWrap, SelectAllCheckbox, ScrollWrap } from './style';
+import { MenuWrap, prefixCls, multipleCls, singleCls, selectallWrapCls, firstCls, lastCls, checkboxCls } from './style';
 import LOCALE from './locale/zh_CN';
 
 const deprecatedLogForTheme = _.once(() => deprecatedLog('Menu theme', 'ThemeProvider'));
@@ -63,6 +66,8 @@ class Menu extends Component {
         collapse: PropTypes.object,
         /** 是否显示全选，多选时有效 */
         showSelectAll: PropTypes.bool,
+        /** 使用数据源渲染菜单 */
+        dataSource: PropTypes.array,
         /** @ignore */
         theme: PropTypes.any,
         /** @ignore */
@@ -72,7 +77,9 @@ class Menu extends Component {
         /** @ignore */
         itemTree: PropTypes.any,
         /** @ignore */
-        locale: PropTypes.object
+        locale: PropTypes.object,
+        /** @ignore */
+        className: PropTypes.string
     };
     static defaultProps = {
         defaultSelectedKeys: [],
@@ -110,7 +117,10 @@ class Menu extends Component {
         }
 
         const items = this.itemTree[groupUid];
-        const itemKeys = _.map(_.filter(items, item => !item.props.disabled), item => item.type.getItemKey(item));
+        const itemKeys = _.map(
+            _.filter(items, item => !item.props.disabled),
+            item => item.type.getItemKey(item)
+        );
         const selectedItemKeys = _.filter(
             itemKeys,
             key => _.findIndex(selectedKeys, selectedKey => selectedKey === key) >= 0
@@ -180,6 +190,7 @@ class Menu extends Component {
     renderChildren = (children, prefix) => {
         const { multiple } = this.props;
         const renderChildren = children => {
+            const l = React.Children.count(children) - 1;
             return React.Children.map(children, (child, i) => {
                 if (!React.isValidElement(child)) {
                     return child;
@@ -188,6 +199,9 @@ class Menu extends Component {
                 const childType = child.type;
                 const isMenuItem = childType.isMenuItem;
                 const isOtherMenuComponent = childType.isMenuSubMenu || childType.isMenuGroup;
+                const isFirst = i === 0;
+                const isLast = i === l;
+                const className = classnames(child.className, isFirst && firstCls, isLast && lastCls);
 
                 if (isMenuItem) {
                     const uid = `${prefix}-${i}-item`;
@@ -195,7 +209,8 @@ class Menu extends Component {
                         uid,
                         multiple,
                         selected: this.getItemSelected(uid),
-                        onSelect: this.onSelect
+                        onSelect: this.onSelect,
+                        className
                     });
                 } else if (isOtherMenuComponent) {
                     const uid = `${prefix}-${i}-group`;
@@ -204,7 +219,8 @@ class Menu extends Component {
                         multiple,
                         allSelectedStatus: this.getAllSelectedStatus(uid),
                         onMultipleSelect: this.onMultipleSelect,
-                        renderChildren: children => this.renderChildren(children, uid)
+                        renderChildren: children => this.renderChildren(children, uid),
+                        className
                     });
                 }
 
@@ -230,25 +246,34 @@ class Menu extends Component {
             themeType,
             itemTree,
             locale,
+            className,
             ...rest
         } = this.props;
         /* eslint-enable no-unused-vars */
         const allSelectedStatus = this.getAllSelectedStatus(rootPrefix);
-        const selectAllCheckbox = multiple &&
-            showSelectAll && (
-                <SelectAllCheckbox
+        const selectAllCheckbox = multiple && showSelectAll && (
+            <div className={selectallWrapCls}>
+                <Checkbox
+                    className={checkboxCls}
                     checked={allSelectedStatus === 'ALL'}
+                    indeterminate={allSelectedStatus === 'PART'}
                     onChange={checked => this.onMultipleSelect(checked, rootPrefix)}
+                    size="lg"
                 >
                     {locale.selectAll}
-                </SelectAllCheckbox>
-            );
+                </Checkbox>
+            </div>
+        );
         return (
-            <MenuWrap {...rest} {...collapse}>
-                <ScrollWrap>
+            <MenuWrap
+                className={classnames(className, prefixCls, multiple ? multipleCls : singleCls)}
+                {...rest}
+                {...collapse}
+            >
+                <div>
                     {selectAllCheckbox}
                     {this.renderChildren(children, rootPrefix)}
-                </ScrollWrap>
+                </div>
             </MenuWrap>
         );
     }
