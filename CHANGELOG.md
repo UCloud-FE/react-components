@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.21](https://github.com/UCloud-FE/react-components/compare/v0.6.20...v0.6.21) (2020-08-10)
+
+### Features
+
+-   **EditableList:** add EditableList ([0421fa4](https://github.com/UCloud-FE/react-components/commit/0421fa4b5914360283fe101592b592dd14e50978)), closes [#242](https://github.com/UCloud-FE/react-components/issues/242)
+-   **Menu:** rewrite menu, checkbox, radio style ([ad8b997](https://github.com/UCloud-FE/react-components/commit/ad8b99786fa0f06a34552c40ce3fe30c2c34086c)), closes [#243](https://github.com/UCloud-FE/react-components/issues/243)
+-   **Transfer:** add Transfer ([95a3150](https://github.com/UCloud-FE/react-components/commit/95a3150cceaee68517e2ed81d1b54ce6a4eb8c59)), closes [#244](https://github.com/UCloud-FE/react-components/issues/244)
+-   **TransferMenu:** add TransferMenu ([1569062](https://github.com/UCloud-FE/react-components/commit/1569062e6e6c09515ae947f1c4f9f34421fd8401)), closes [#246](https://github.com/UCloud-FE/react-components/issues/246)
+-   **TransferTable:** add TransferTable ([e20fabb](https://github.com/UCloud-FE/react-components/commit/e20fabbfe9f1624dd16fcab7b0b02f3319f5d41c)), closes [#245](https://github.com/UCloud-FE/react-components/issues/245)
+
 ### [0.6.20](https://github.com/UCloud-FE/react-components/compare/v0.6.19...v0.6.20) (2020-08-03)
 
 ### Features
