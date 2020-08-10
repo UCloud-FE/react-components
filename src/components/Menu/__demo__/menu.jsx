@@ -81,7 +81,7 @@ class Demo extends React.Component {
         });
     }
     render() {
-        const { multiple, selectable, menuData, showSelectAll } = this.state;
+        const { multiple, disabled, selectable, menuData, showSelectAll, block } = this.state;
         const itemLayout = {
             labelCol: {
                 span: 3
@@ -97,11 +97,17 @@ class Demo extends React.Component {
                     <Form.Item label="multiple" {...itemLayout}>
                         <Switch checked={multiple} onChange={multiple => this.setState({ multiple })} />
                     </Form.Item>
+                    <Form.Item label="disabled" {...itemLayout}>
+                        <Switch checked={disabled} onChange={disabled => this.setState({ disabled })} />
+                    </Form.Item>
                     <Form.Item label="selectable" {...itemLayout}>
                         <Switch checked={selectable} onChange={selectable => this.setState({ selectable })} />
                     </Form.Item>
                     <Form.Item label="showSelectAll" {...itemLayout}>
                         <Switch checked={showSelectAll} onChange={showSelectAll => this.setState({ showSelectAll })} />
+                    </Form.Item>
+                    <Form.Item label="block" {...itemLayout}>
+                        <Switch checked={block} onChange={block => this.setState({ block })} />
                     </Form.Item>
                     <Form.Item label="refreshMenuData" {...itemLayout}>
                         <Button onClick={() => this.setState({ menuData: this.generateMenuData() })}>
@@ -112,7 +118,9 @@ class Demo extends React.Component {
                 <div className="demo-wrap">
                     <Menu
                         multiple={multiple}
+                        disabled={disabled}
                         selectable={selectable}
+                        block={block}
                         showSelectAll={showSelectAll}
                         onChange={console.log}
                     >

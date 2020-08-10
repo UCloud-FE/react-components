@@ -101,9 +101,9 @@ class Checkbox extends Component {
                 <span className={iconWrapCls}>
                     {indeterminate ? (
                         <SvgIcon className={iconCls} type="horz" size="16px" />
-                    ) : checked ? (
+                    ) : (
                         <SvgIcon className={iconCls} type="smallTick" size="16px" />
-                    ) : null}
+                    )}
                 </span>
                 {children != null && <span className={contentCls}>{children}</span>}
             </CheckboxWrap>

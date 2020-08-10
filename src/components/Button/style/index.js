@@ -19,6 +19,7 @@ const styleTypeMixin = ({ theme: { designTokens: DT, materialVars, PaddingNumber
     const styleTypeTheme = {
         primary: {
             color: DT.T_BUTTON_PRIMARY_COLOR_TEXT_DEFAULT,
+            fill: DT.T_BUTTON_PRIMARY_COLOR_TEXT_DEFAULT,
             border: 'none',
             background: DT.T_BUTTON_PRIMARY_COLOR_BG_DEFAULT,
             boxShadow: DT.T_SHADOW_BUTTON_PRIMARY,
@@ -30,6 +31,7 @@ const styleTypeMixin = ({ theme: { designTokens: DT, materialVars, PaddingNumber
         },
         border: {
             color: DT.T_COLOR_TEXT_DEFAULT_DARK,
+            fill: DT.T_COLOR_TEXT_DEFAULT_DARK,
             background: DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT,
             border: 'none',
             boxShadow: DT.T_SHADOW_BUTTON_DEFAULT,
@@ -42,6 +44,7 @@ const styleTypeMixin = ({ theme: { designTokens: DT, materialVars, PaddingNumber
         },
         'border-gray': {
             color: DT.T_COLOR_TEXT_DEFAULT_LIGHT,
+            fill: DT.T_COLOR_TEXT_DEFAULT_LIGHT,
             borderColor: DT.T_COLOR_LINE_DEFAULT_LIGHT,
             background: DT.T_COLOR_BG_DEFAULT_LIGHT,
             transition: `all ${materialVars.transitionFlat}`,
@@ -99,6 +102,7 @@ const disabledMixin = ({ theme: { designTokens: DT } }) => css`
         border-color: ${DT.T_COLOR_LINE_DISABLED_LIGHT};
         background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
         color: ${DT.T_COLOR_TEXT_DISABLED};
+        fill: ${DT.T_COLOR_TEXT_DISABLED};
         cursor: not-allowed;
         border-width: ${DT.T_LINE_WIDTH_BASE};
         border-style: solid;
@@ -108,6 +112,7 @@ const disabledMixin = ({ theme: { designTokens: DT } }) => css`
 
 const checkedMixin = ({ theme: { designTokens: DT } }) => css`
     color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+    fill: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
     background: ${DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT};
     border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
     box-shadow: ${DT.T_SHADOW_BUTTON_HOVER};

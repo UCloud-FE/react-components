@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Input from 'src/components/Input';
 import Radio from 'src/components/Radio';
 import Form from 'src/components/Form';
@@ -15,7 +16,7 @@ class Demo extends React.Component {
         };
     }
     render() {
-        const { size, disabled, prefix, suffix } = this.state;
+        const { size, disabled, prefix, suffix, block } = this.state;
         const itemLayout = {
             labelCol: {
                 span: 3
@@ -45,12 +46,16 @@ class Demo extends React.Component {
                     <Form.Item label="disabled" {...itemLayout}>
                         <Switch checked={disabled} onChange={disabled => this.setState({ disabled })} />
                     </Form.Item>
+                    <Form.Item label="block" {...itemLayout}>
+                        <Switch checked={block} onChange={block => this.setState({ block })} />
+                    </Form.Item>
                 </Form>
                 <div className="demo-wrap">
                     <Input
                         {...{
                             size,
                             disabled,
+                            block,
                             prefix: prefix && <Icon type="circle" />,
                             suffix: suffix && <Icon type="circle" />
                         }}
