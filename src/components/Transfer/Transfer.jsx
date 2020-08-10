@@ -49,11 +49,8 @@ const Shape = {
     disabled: PropTypes.bool
 };
 
-const defaultSearchHandle = (searchValue, value, item) => {
-    return (
-        (value + '').indexOf(searchValue) >= 0 ||
-        (item.label && _.isString(item.label) && item.label.indexOf(searchValue) >= 0)
-    );
+const defaultSearchHandle = (searchValue, item) => {
+    return _.map(item).join('').indexOf(searchValue) >= 0;
 };
 
 @uncontrolledDecorator({ valueName: 'selectedKeys' })
@@ -161,7 +158,7 @@ class Transfer extends PureComponent {
         const props = { ...{ search: sharedSearch }, ...(type === 'source' ? source : target) };
         const { search } = props;
         if (!search) return true;
-        return defaultSearchHandle(searchValue, item.value, item);
+        return defaultSearchHandle(searchValue, item);
     };
     handleSourceSearch = item => {
         return this.handleSearch('source', item);
@@ -198,7 +195,6 @@ class Transfer extends PureComponent {
         const { footer, title, search, disabled } = partProps;
         const selectedKeys = part === 'source' ? sourceSelectedKeys : targetSelectedKeys;
         const handleSearch = part === 'source' ? this.handleSourceSearch : this.handleTargetSearch;
-        const searchValue = part === 'source' ? this.sourceSearchValue : this.targetSearchValue;
         const onSelectedChange = part === 'source' ? this.onSourceSelectedChange : this.onTargetSelectedChange;
         const onSearch = part === 'source' ? this.onSourceSearch : this.onTargetSearch;
         return (
@@ -218,7 +214,6 @@ class Transfer extends PureComponent {
                         selectedKeys,
                         onChange: onSelectedChange,
                         handleSearch,
-                        searchValue,
                         disabled
                     })}
                     {footer && <div className={footerCls}>{footer}</div>}
@@ -262,11 +257,11 @@ class Transfer extends PureComponent {
             </div>
         );
     };
-    renderContent = ({ part, dataSource, selectedKeys, onChange, handleSearch, searchValue, disabled }) => {
+    renderContent = ({ part, dataSource, selectedKeys, onChange, handleSearch, disabled }) => {
         if (!dataSource.length) {
             return part === 'source' ? this.renderEmptySourceTip(disabled) : this.renderEmptyTargetTip(disabled);
         }
-        const finalDataSource = dataSource.filter(item => handleSearch(item, searchValue));
+        const finalDataSource = dataSource.filter(item => handleSearch(item));
         if (!finalDataSource.length) {
             return this.renderEmptySearchTip(part);
         }

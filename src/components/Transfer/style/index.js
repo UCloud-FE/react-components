@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components';
 
 import config from 'src/config';
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
-import { prefixCls as menuCls } from 'src/components/Menu/style';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-transfer';
@@ -26,7 +25,7 @@ export const TransferWrap = styled.div(
 
         .${partWrapCls} {
             display: flex;
-            flex: 1;
+            flex: 1 1 50%;
             flex-direction: column;
         }
         .${searchCls} {
@@ -39,21 +38,19 @@ export const TransferWrap = styled.div(
             padding: 6px 4px;
         }
         .${partContentCls} {
-            min-width: 300px;
-            min-height: 200px;
             border-radius: 2px;
             width: 100%;
             border: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
-            flex: 1;
+            flex: auto;
             display: flex;
             flex-direction: column;
-            .${menuCls} {
-                max-height: 300px;
-            }
         }
         .${disabledCls} {
             .${partContentCls}, .${footerCls} {
                 border-color: ${DT.T_COLOR_LINE_DISABLED_LIGHT};
+            }
+            .${titleCls} {
+                color: ${DT.T_COLOR_TEXT_DISABLED};
             }
         }
         .${actionWrapCls} {
@@ -61,7 +58,6 @@ export const TransferWrap = styled.div(
             display: flex;
             align-items: center;
             flex-direction: column;
-            flex: none;
             align-self: center;
             .${actionCls}+.${actionCls} {
                 margin-top: 8px;
@@ -70,10 +66,10 @@ export const TransferWrap = styled.div(
         .${tipWrapCls} {
             margin: 50px;
             padding: 8px;
-            flex: 1;
+            flex: auto;
         }
         .${listWrapCls} {
-            flex: 1;
+            flex: auto;
         }
         .${footerCls} {
             border-top: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};

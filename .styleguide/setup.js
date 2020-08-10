@@ -1,4 +1,3 @@
-require('@babel/polyfill');
 require('file-loader?name=[name].[ext]!./favicon.ico');
 require('!file-loader?name=[name].[ext]!./style.css');
 

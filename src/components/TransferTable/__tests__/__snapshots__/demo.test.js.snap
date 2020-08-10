@@ -253,7 +253,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
   height: 16px;
 }
 
-.c35 {
+.c33 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -266,7 +266,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
   vertical-align: baseline;
 }
 
-.c34 {
+.c32 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -294,12 +294,12 @@ exports[`TransferTable demo -- transferTable 1`] = `
   width: 28px;
 }
 
-.c34:hover {
+.c32:hover {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8;
 }
 
-.c34.c34 {
+.c32.c32 {
   border-color: #d9d9d9;
   background: #f7f7f7;
   color: #cccccc;
@@ -380,7 +380,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
 }
 
 .c20.uc-fe-radio-disabled.uc-fe-radio-checked .uc-fe-radio-icon-wrap {
-  background: unset;
+  background: none;
 }
 
 .c18 {
@@ -399,29 +399,29 @@ exports[`TransferTable demo -- transferTable 1`] = `
   margin-right: 0;
 }
 
-.c18 .c41 {
+.c18 .c39 {
   margin-right: 12px;
   margin-bottom: 8px;
 }
 
-.c18 .c41:last-child {
+.c18 .c39:last-child {
   margin-right: 0;
 }
 
-.c18 .c42+.c42 {
+.c18 .c40+.c40 {
   margin-left: -1px;
 }
 
-.c18 .c40 {
+.c18 .c38 {
   margin-right: -1px;
   margin-bottom: 8px;
 }
 
-.c18 .c40:first-child {
+.c18 .c38:first-child {
   border-radius: 2px 0 0 2px;
 }
 
-.c18 .c40:last-child {
+.c18 .c38:last-child {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
 }
@@ -503,10 +503,10 @@ exports[`TransferTable demo -- transferTable 1`] = `
 
 .c31.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
 .c31.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
-  background: unset;
+  background: none;
 }
 
-.c37 {
+.c35 {
   display: table-cell;
   font-size: 15px;
   width: 15px;
@@ -515,12 +515,12 @@ exports[`TransferTable demo -- transferTable 1`] = `
   padding-top: 2px;
 }
 
-.c39 {
+.c37 {
   display: table-cell;
   vertical-align: middle;
 }
 
-.c36 {
+.c34 {
   display: table;
   position: relative;
   box-sizing: border-box;
@@ -535,11 +535,11 @@ exports[`TransferTable demo -- transferTable 1`] = `
   background: #fafafc;
 }
 
-.c36 .c38 {
+.c34 .c36 {
   color: #3860f4;
 }
 
-.c36 .c43 {
+.c34 .c41 {
   color: #526075;
 }
 
@@ -651,9 +651,9 @@ exports[`TransferTable demo -- transferTable 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex: 1 1 50%;
+  -ms-flex: 1 1 50%;
+  flex: 1 1 50%;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -671,14 +671,12 @@ exports[`TransferTable demo -- transferTable 1`] = `
 }
 
 .c22 .uc-fe-transfer-part-content {
-  min-width: 300px;
-  min-height: 200px;
   border-radius: 2px;
   width: 100%;
   border: 1px solid #c3cad9;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -688,13 +686,13 @@ exports[`TransferTable demo -- transferTable 1`] = `
   flex-direction: column;
 }
 
-.c22 .uc-fe-transfer-part-content .uc-fe-menu {
-  max-height: 300px;
-}
-
 .c22 .uc-fe-transfer-disabled .uc-fe-transfer-part-content,
 .c22 .uc-fe-transfer-disabled .uc-fe-transfer-footer {
   border-color: #d9d9d9;
+}
+
+.c22 .uc-fe-transfer-disabled .uc-fe-transfer-title {
+  color: #cccccc;
 }
 
 .c22 .uc-fe-transfer-action-wrap {
@@ -710,9 +708,6 @@ exports[`TransferTable demo -- transferTable 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -725,15 +720,15 @@ exports[`TransferTable demo -- transferTable 1`] = `
 .c22 .uc-fe-transfer-tip-wrap {
   margin: 50px;
   padding: 8px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
 }
 
 .c22 .uc-fe-transfer-list-wrap {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
 }
 
 .c22 .uc-fe-transfer-footer {
@@ -745,20 +740,6 @@ exports[`TransferTable demo -- transferTable 1`] = `
   margin-left: 4px;
   cursor: pointer;
   color: #3860f4;
-}
-
-.c32 {
-  box-sizing: border-box;
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 12px;
-  color: #0a1633;
-}
-
-.c33 {
-  vertical-align: middle;
-  color: #0a1633;
 }
 
 .c29 {
@@ -1142,7 +1123,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
         class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
-        sourceSearch
+        source.search
       </div>
       <div
         class="uc-fe-form-controller c4 uc-fe-col c6"
@@ -1234,7 +1215,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
         class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
-        sourceDisabled
+        source.disabled
       </div>
       <div
         class="uc-fe-form-controller c4 uc-fe-col c6"
@@ -1326,7 +1307,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
         class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
-        sourceTitle
+        source.title
       </div>
       <div
         class="uc-fe-form-controller c4 uc-fe-col c6"
@@ -1418,7 +1399,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
         class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
-        sourceFooter
+        source.footer
       </div>
       <div
         class="uc-fe-form-controller c4 uc-fe-col c6"
@@ -1459,7 +1440,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
         class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
-        targetSearch
+        target.search
       </div>
       <div
         class="uc-fe-form-controller c4 uc-fe-col c6"
@@ -1551,7 +1532,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
         class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
-        targetDisabled
+        target.disabled
       </div>
       <div
         class="uc-fe-form-controller c4 uc-fe-col c6"
@@ -1643,7 +1624,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
         class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
-        targetTitle
+        target.title
       </div>
       <div
         class="uc-fe-form-controller c4 uc-fe-col c6"
@@ -1735,7 +1716,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
         class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
-        targetFooter
+        target.footer
       </div>
       <div
         class="uc-fe-form-controller c4 uc-fe-col c6"
@@ -1874,18 +1855,6 @@ exports[`TransferTable demo -- transferTable 1`] = `
                             >
                               <div>
                                 name
-                                <div
-                                  class="uc-fe-table-filter c32"
-                                >
-                                  <div>
-                                    <i
-                                      class="uc-fe-icon icon__filter c28"
-                                    />
-                                  </div>
-                                </div>
-                                <i
-                                  class="uc-fe-icon icon__sort c33 c28"
-                                />
                               </div>
                             </th>
                             <th
@@ -1893,18 +1862,6 @@ exports[`TransferTable demo -- transferTable 1`] = `
                             >
                               <div>
                                 desc
-                                <div
-                                  class="uc-fe-table-filter c32"
-                                >
-                                  <div>
-                                    <i
-                                      class="uc-fe-icon icon__filter c28"
-                                    />
-                                  </div>
-                                </div>
-                                <i
-                                  class="uc-fe-icon icon__sort c33 c28"
-                                />
                               </div>
                             </th>
                           </tr>
@@ -5953,13 +5910,13 @@ exports[`TransferTable demo -- transferTable 1`] = `
           class="uc-fe-transfer-action"
         >
           <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary uc-fe-button-square uc-fe-button-disabled c34"
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary uc-fe-button-square uc-fe-button-disabled c32"
             disabled=""
             shape="square"
             type="button"
           >
             <svg
-              class="c35"
+              class="c33"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -5974,13 +5931,13 @@ exports[`TransferTable demo -- transferTable 1`] = `
           class="uc-fe-transfer-action"
         >
           <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary uc-fe-button-square uc-fe-button-disabled c34"
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary uc-fe-button-square uc-fe-button-disabled c32"
             disabled=""
             shape="square"
             type="button"
           >
             <svg
-              class="c35"
+              class="c33"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -6027,17 +5984,17 @@ exports[`TransferTable demo -- transferTable 1`] = `
             class="uc-fe-transfer-tip-wrap"
           >
             <div
-              class="c36"
+              class="c34"
             >
               <span
-                class="c37"
+                class="c35"
               >
                 <i
-                  class="uc-fe-icon icon__circle-mark2 c38 c28"
+                  class="uc-fe-icon icon__circle-mark2 c36 c28"
                 />
               </span>
               <div
-                class="c39"
+                class="c37"
               >
                 请从左侧列表选择
               </div>

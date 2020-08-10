@@ -68,7 +68,7 @@ const menuStyle = ({ theme: { designTokens: DT } }) => {
             color: ${DT.T_COLOR_TEXT_DISABLED};
             cursor: not-allowed;
             :hover {
-                background: unset;
+                background: none;
             }
         }
         .${hiddenCls} {
@@ -119,8 +119,8 @@ export const MenuWrap = styled(Collapse)(props => {
     return css`
         ${menuStyle(props)}
         &.${blockCls} {
-            min-width: unset;
-            max-width: unset;
+            min-width: 0;
+            max-width: none;
             width: 100%;
             height: 100%;
             box-shadow: none;

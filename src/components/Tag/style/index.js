@@ -71,7 +71,11 @@ export const styleMap = {
     }
 };
 
-[['success', 'green'], ['warning', 'yellow'], ['error', 'red']].map(([styleType, color]) => {
+[
+    ['success', 'green'],
+    ['warning', 'yellow'],
+    ['error', 'red']
+].map(([styleType, color]) => {
     styleMap[styleType] = styleMap[color];
 });
 
@@ -144,14 +148,14 @@ export const TagWrapper = styled.span(({ styleType = 'default', disabled, theme:
                 fill: ${DT[colorMap.color]};
             }
             ${!disabled &&
-                css`
-                    :hover {
-                        background: ${DT[colorMap.iconHoverBG]};
-                        ${CloseIcon} {
-                            fill: ${DT.T_COLOR_TEXT_SYSTEM_WHITE};
-                        }
+            css`
+                :hover {
+                    background: ${DT[colorMap.iconHoverBG]};
+                    ${CloseIcon} {
+                        fill: ${DT.T_COLOR_TEXT_SYSTEM_WHITE};
                     }
-                `};
+                }
+            `};
         }
     `;
 });
@@ -186,64 +190,63 @@ export const IconTagWrapper = styled.span(({ styleType = 'default', theme: { des
     `;
 });
 
-export const TagGroupWrapper = styled.div(
-    ({ compact }) =>
-        compact
-            ? css`
-                  margin-bottom: -4px;
-                  ${TagWrapper}, ${IconTagWrapper} {
-                      border-left-style: none;
-                      border-right-style: none;
-                      border-radius: unset;
-                      vertical-align: middle;
-                      margin-bottom: 4px;
-                      :first-child {
-                          border-left-style: solid;
-                          border-top-left-radius: 2px;
-                          border-bottom-left-radius: 2px;
-                      }
-                      :last-child {
-                          border-right-style: solid;
-                          border-top-right-radius: 2px;
-                          border-bottom-right-radius: 2px;
-                          ::after {
-                              content: none;
-                          }
-                      }
-                      /* stylelint-disable no-descending-specificity */
+export const TagGroupWrapper = styled.div(({ compact }) =>
+    compact
+        ? css`
+              margin-bottom: -4px;
+              ${TagWrapper}, ${IconTagWrapper} {
+                  border-left-style: none;
+                  border-right-style: none;
+                  border-radius: 0;
+                  vertical-align: middle;
+                  margin-bottom: 4px;
+                  :first-child {
+                      border-left-style: solid;
+                      border-top-left-radius: 2px;
+                      border-bottom-left-radius: 2px;
+                  }
+                  :last-child {
+                      border-right-style: solid;
+                      border-top-right-radius: 2px;
+                      border-bottom-right-radius: 2px;
                       ::after {
-                          content: ' ';
-                          height: 8px;
-                          width: 1px;
-                          margin: 5px 0;
-                          display: inline-block;
-                          vertical-align: middle;
-                      }
-                      /* stylelint-enable no-descending-specificity */
-                  }
-                  ${TagWrapper} {
-                      padding-left: 4px;
-                      :first-child {
-                          padding-left: 8px;
-                      }
-                      ${ContentWrapper} {
-                          margin-right: 4px;
-                      }
-                      :last-child {
-                          ${ContentWrapper} {
-                              margin-right: 8px;
-                          }
+                          content: none;
                       }
                   }
-              `
-            : css`
-                  margin-bottom: -4px;
-                  ${TagWrapper}, ${IconTagWrapper} {
-                      margin-right: 4px;
-                      margin-bottom: 4px;
+                  /* stylelint-disable no-descending-specificity */
+                  ::after {
+                      content: ' ';
+                      height: 8px;
+                      width: 1px;
+                      margin: 5px 0;
+                      display: inline-block;
                       vertical-align: middle;
                   }
-              `
+                  /* stylelint-enable no-descending-specificity */
+              }
+              ${TagWrapper} {
+                  padding-left: 4px;
+                  :first-child {
+                      padding-left: 8px;
+                  }
+                  ${ContentWrapper} {
+                      margin-right: 4px;
+                  }
+                  :last-child {
+                      ${ContentWrapper} {
+                          margin-right: 8px;
+                      }
+                  }
+              }
+          `
+        : css`
+              margin-bottom: -4px;
+              ${TagWrapper}, ${IconTagWrapper} {
+                  margin-right: 4px;
+                  margin-bottom: 4px;
+                  vertical-align: middle;
+              }
+          `
 );
 
 addDefaultThemeProps(TagWrapper, CloseIcon, IconTagWrapper);

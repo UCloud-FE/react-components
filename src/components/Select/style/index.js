@@ -60,7 +60,7 @@ export const BlockMenu = styled(CustomMenu)(
         border: none;
         box-shadow: none;
         max-height: ${customStyle.optionListMaxHeight || 380}px;
-        max-width: unset;
+        max-width: none;
     `
 );
 
@@ -70,10 +70,10 @@ const propsMixin = ({ theme: { designTokens: DT }, disabled }) => css`
     color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
 
     ${disabled &&
-        css`
-            color: ${DT.T_COLOR_TEXT_DISABLED};
-            pointer-events: none;
-        `};
+    css`
+        color: ${DT.T_COLOR_TEXT_DISABLED};
+        pointer-events: none;
+    `};
 `;
 /* stylelint-enable no-duplicate-selectors */
 
