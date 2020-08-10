@@ -9,7 +9,9 @@ import Notice from 'src/components/Notice';
 import Input from 'src/components/Input';
 import SvgIcon from 'src/components/SvgIcon';
 import uncontrolledDecorator from 'src/decorators/uncontrolled';
+import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
 
+import LOCALE from './locale/zh_CN';
 import {
     TransferWrap,
     partWrapCls,
@@ -20,7 +22,10 @@ import {
     searchCls,
     tipWrapCls,
     titleCls,
-    footerCls
+    footerCls,
+    listWrapCls,
+    searchClearBtnCls,
+    disabledCls
 } from './style';
 
 const noop = () => {};
@@ -52,6 +57,7 @@ const defaultSearchHandle = (searchValue, value, item) => {
 };
 
 @uncontrolledDecorator({ valueName: 'selectedKeys' })
+@localeConsumerDecorator({ defaultLocale: LOCALE, localeName: 'Transfer' })
 class Transfer extends PureComponent {
     static propTypes = {
         /**
@@ -90,6 +96,8 @@ class Transfer extends PureComponent {
          * 已选数据区域的配置
          */
         target: PropTypes.shape(Shape),
+        /** @ignore */
+        locale: PropTypes.object,
         /**
          * @ignore
          */
@@ -166,6 +174,18 @@ class Transfer extends PureComponent {
             [part === 'source' ? 'sourceSearchValue' : 'targetSearchValue']: v
         });
     };
+    onSourceSearch = v => {
+        this.onSearch('source', v);
+    };
+    onTargetSearch = v => {
+        this.onSearch('target', v);
+    };
+    clearSourceSearch = () => {
+        this.onSourceSearch('');
+    };
+    clearTargetSearch = () => {
+        this.onTargetSearch('');
+    };
     renderPart = part => {
         const { dataSourceGroup, sourceSelectedKeys, targetSelectedKeys } = this.state;
         const { source, target, search: sharedSearch, disabled: sharedDisabled } = this.props;
@@ -180,18 +200,20 @@ class Transfer extends PureComponent {
         const handleSearch = part === 'source' ? this.handleSourceSearch : this.handleTargetSearch;
         const searchValue = part === 'source' ? this.sourceSearchValue : this.targetSearchValue;
         const onSelectedChange = part === 'source' ? this.onSourceSelectedChange : this.onTargetSelectedChange;
+        const onSearch = part === 'source' ? this.onSourceSearch : this.onTargetSearch;
         return (
-            <div className={partWrapCls}>
+            <div className={classnames(partWrapCls, disabled && disabledCls)}>
                 {title === null ? null : (
                     <h3 className={titleCls}>{title ? title : { source: '可选', target: '已选' }[part]}</h3>
                 )}
                 <div className={partContentCls}>
                     {search && (
                         <div className={searchCls}>
-                            <Input.Search block onSearch={v => this.onSearch(part, v)} disabled={disabled} />
+                            <Input.Search block onSearch={onSearch} disabled={disabled} />
                         </div>
                     )}
                     {this.renderContent({
+                        part,
                         dataSource: partDataSource,
                         selectedKeys,
                         onChange: onSelectedChange,
@@ -204,31 +226,61 @@ class Transfer extends PureComponent {
             </div>
         );
     };
-    renderContent = ({ dataSource, selectedKeys, onChange, handleSearch, searchValue, disabled }) => {
+    renderEmptySourceTip = disabled => {
+        const { locale } = this.props;
+        return (
+            <div className={tipWrapCls}>
+                <Notice closable={false} styleType={disabled ? 'disabled' : 'default'} icon={null}>
+                    {locale.emptySourceTip}
+                </Notice>
+            </div>
+        );
+    };
+    renderEmptyTargetTip = disabled => {
+        const { locale } = this.props;
+        return (
+            <div className={tipWrapCls}>
+                <Notice closable={false} styleType={disabled ? 'disabled' : 'default'}>
+                    {locale.emptyTargetTip}
+                </Notice>
+            </div>
+        );
+    };
+    renderEmptySearchTip = part => {
+        const { locale } = this.props;
+        return (
+            <div className={tipWrapCls}>
+                <Notice closable={false} styleType="warning">
+                    <span>{locale.emptySearchTip}</span>
+                    <span
+                        className={searchClearBtnCls}
+                        onClick={part === 'source' ? this.clearSourceSearch : this.clearTargetSearch}
+                    >
+                        {locale.resetSearch}
+                    </span>
+                </Notice>
+            </div>
+        );
+    };
+    renderContent = ({ part, dataSource, selectedKeys, onChange, handleSearch, searchValue, disabled }) => {
         if (!dataSource.length) {
-            return (
-                <div className={tipWrapCls}>
-                    <Notice closable={false} styleType={disabled ? 'disabled' : 'default'}>
-                        请选择
-                    </Notice>
-                </div>
-            );
+            return part === 'source' ? this.renderEmptySourceTip(disabled) : this.renderEmptyTargetTip(disabled);
         }
         const finalDataSource = dataSource.filter(item => handleSearch(item, searchValue));
         if (!finalDataSource.length) {
-            return (
-                <div className={tipWrapCls}>
-                    <Notice closable={false}>搜索结果为空</Notice>
-                </div>
-            );
+            return this.renderEmptySearchTip(part);
         }
         const { renderList } = this.props;
-        return renderList({
-            dataSource: finalDataSource,
-            selectedKeys,
-            disabled,
-            onChange
-        });
+        return (
+            <div className={listWrapCls}>
+                {renderList({
+                    dataSource: finalDataSource,
+                    selectedKeys,
+                    disabled,
+                    onChange
+                })}
+            </div>
+        );
     };
 
     renderAction = () => {

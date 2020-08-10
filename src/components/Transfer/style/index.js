@@ -14,6 +14,9 @@ export const actionCls = prefixCls + '-action';
 export const actionWrapCls = prefixCls + '-action-wrap';
 export const searchCls = prefixCls + '-search-wrap';
 export const tipWrapCls = prefixCls + '-tip-wrap';
+export const listWrapCls = prefixCls + '-list-wrap';
+export const searchClearBtnCls = prefixCls + '-clear-search-btn';
+export const disabledCls = prefixCls + '-disabled';
 
 export const TransferWrap = styled.div(
     ({ theme: { designTokens: DT } }) => css`
@@ -48,6 +51,11 @@ export const TransferWrap = styled.div(
                 max-height: 300px;
             }
         }
+        .${disabledCls} {
+            .${partContentCls}, .${footerCls} {
+                border-color: ${DT.T_COLOR_LINE_DISABLED_LIGHT};
+            }
+        }
         .${actionWrapCls} {
             padding: 12px;
             display: flex;
@@ -64,9 +72,17 @@ export const TransferWrap = styled.div(
             padding: 8px;
             flex: 1;
         }
+        .${listWrapCls} {
+            flex: 1;
+        }
         .${footerCls} {
             border-top: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
             padding: 8px;
+        }
+        .${searchClearBtnCls} {
+            margin-left: 4px;
+            cursor: pointer;
+            color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
         }
     `
 );

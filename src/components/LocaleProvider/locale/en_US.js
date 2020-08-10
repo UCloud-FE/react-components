@@ -9,6 +9,7 @@ import Table from 'src/components/Table/locale/en_US';
 import Menu from 'src/components/Menu/locale/en_US';
 import PopConfirm from 'src/components/PopConfirm/locale/en_US';
 import EditableList from 'src/components/EditableList/locale/en_US';
+import Transfer from 'src/components/Transfer/locale/en_US';
 
 export default {
     locale: 'en',
@@ -22,5 +23,6 @@ export default {
     Table,
     Menu,
     PopConfirm,
-    EditableList
+    EditableList,
+    Transfer
 };
