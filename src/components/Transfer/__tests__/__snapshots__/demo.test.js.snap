@@ -380,7 +380,7 @@ exports[`Transfer demo -- transfer 1`] = `
 }
 
 .c20.uc-fe-radio-disabled.uc-fe-radio-checked .uc-fe-radio-icon-wrap {
-  background: unset;
+  background: none;
 }
 
 .c18 {
@@ -571,9 +571,9 @@ exports[`Transfer demo -- transfer 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex: 1 1 50%;
+  -ms-flex: 1 1 50%;
+  flex: 1 1 50%;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -591,14 +591,12 @@ exports[`Transfer demo -- transfer 1`] = `
 }
 
 .c22 .uc-fe-transfer-part-content {
-  min-width: 300px;
-  min-height: 200px;
   border-radius: 2px;
   width: 100%;
   border: 1px solid #c3cad9;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -608,13 +606,13 @@ exports[`Transfer demo -- transfer 1`] = `
   flex-direction: column;
 }
 
-.c22 .uc-fe-transfer-part-content .uc-fe-menu {
-  max-height: 300px;
-}
-
 .c22 .uc-fe-transfer-disabled .uc-fe-transfer-part-content,
 .c22 .uc-fe-transfer-disabled .uc-fe-transfer-footer {
   border-color: #d9d9d9;
+}
+
+.c22 .uc-fe-transfer-disabled .uc-fe-transfer-title {
+  color: #cccccc;
 }
 
 .c22 .uc-fe-transfer-action-wrap {
@@ -630,9 +628,6 @@ exports[`Transfer demo -- transfer 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -645,15 +640,15 @@ exports[`Transfer demo -- transfer 1`] = `
 .c22 .uc-fe-transfer-tip-wrap {
   margin: 50px;
   padding: 8px;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
 }
 
 .c22 .uc-fe-transfer-list-wrap {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
 }
 
 .c22 .uc-fe-transfer-footer {
@@ -759,7 +754,7 @@ exports[`Transfer demo -- transfer 1`] = `
         class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
-        sourceSearch
+        source.search
       </div>
       <div
         class="uc-fe-form-controller c4 uc-fe-col c6"
@@ -851,7 +846,7 @@ exports[`Transfer demo -- transfer 1`] = `
         class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
-        sourceDisabled
+        source.disabled
       </div>
       <div
         class="uc-fe-form-controller c4 uc-fe-col c6"
@@ -943,7 +938,7 @@ exports[`Transfer demo -- transfer 1`] = `
         class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
-        sourceTitle
+        source.title
       </div>
       <div
         class="uc-fe-form-controller c4 uc-fe-col c6"
@@ -1035,7 +1030,7 @@ exports[`Transfer demo -- transfer 1`] = `
         class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
-        sourceFooter
+        source.footer
       </div>
       <div
         class="uc-fe-form-controller c4 uc-fe-col c6"
@@ -1076,7 +1071,7 @@ exports[`Transfer demo -- transfer 1`] = `
         class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
-        targetSearch
+        target.search
       </div>
       <div
         class="uc-fe-form-controller c4 uc-fe-col c6"
@@ -1168,7 +1163,7 @@ exports[`Transfer demo -- transfer 1`] = `
         class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
-        targetDisabled
+        target.disabled
       </div>
       <div
         class="uc-fe-form-controller c4 uc-fe-col c6"
@@ -1260,7 +1255,7 @@ exports[`Transfer demo -- transfer 1`] = `
         class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
-        targetTitle
+        target.title
       </div>
       <div
         class="uc-fe-form-controller c4 uc-fe-col c6"
@@ -1352,7 +1347,7 @@ exports[`Transfer demo -- transfer 1`] = `
         class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
-        targetFooter
+        target.footer
       </div>
       <div
         class="uc-fe-form-controller c4 uc-fe-col c6"

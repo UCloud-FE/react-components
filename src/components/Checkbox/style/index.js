@@ -87,7 +87,7 @@ export const CheckboxWrap = styled.span(
                 fill: ${DT.T_COLOR_TEXT_DISABLED};
             }
             .${iconWrapCls} {
-                background: unset;
+                background: none;
             }
         }
     `

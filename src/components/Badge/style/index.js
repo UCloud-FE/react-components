@@ -39,6 +39,6 @@ export const DotBadge = styled(BaseBadge).attrs({
     height: 10px;
     padding: 0;
     border-radius: 5px;
-    min-width: unset;
-    min-height: unset;
+    min-width: 0;
+    min-height: 0;
 `;

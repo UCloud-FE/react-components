@@ -3,7 +3,7 @@ import React from 'react';
 import Switch from 'src/components/Switch';
 import Form from 'src/components/Form';
 import Menu from 'src/components/Menu';
-import TransferTable from 'src/components/TransferTable';
+import TransferMenu from 'src/components/TransferMenu';
 import Transfer from 'src/components/Transfer';
 import Combine from 'src/components/Combine';
 import Button from 'src/components/Button';
@@ -12,27 +12,13 @@ import Radio from 'src/components/Radio';
 // demo start
 const { defaultProps } = Transfer;
 
-const columns = [
-    {
-        title: 'name',
-        dataIndex: 'name',
-        key: 'name',
-        width: 100
-    },
-    {
-        title: 'desc',
-        dataIndex: 'desc',
-        key: 'desc'
-    }
-];
 let uid = 0;
 
-const generateData = ({ name, desc } = {}) => {
+const generateData = () => {
     const id = uid++;
     return {
         key: id + '',
-        name: name || `name-${id}`,
-        desc: desc || `desc-${id}`
+        label: `item-${id}`
     };
 };
 
@@ -213,7 +199,7 @@ class Demo extends React.Component {
                     </Form.Item>
                 </Form>
                 <div className="demo-wrap">
-                    <TransferTable {...props} columns={columns} />
+                    <TransferMenu {...props} />
                 </div>
             </div>
         );

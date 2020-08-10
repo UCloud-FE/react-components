@@ -112,7 +112,7 @@ export const TabsWrap = styled(RcTabs).attrs({
                         border-color: ${DT.T_TABS_DEFAULT_COLOR_LINE_HOVER};
                     }
                     &-tab-disabled:hover {
-                        background: unset;
+                        background: none;
                         border-color: transparent;
                     }
                     &-tab-active,
@@ -151,7 +151,8 @@ export const TabsWrap = styled(RcTabs).attrs({
         }
 
         &.${prefixCls} {
-            ${tabBarPosition === 'top' &&
+            ${
+                tabBarPosition === 'top' &&
                 css`
                     .${prefixCls}-top-bar {
                         border-bottom: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
@@ -181,9 +182,11 @@ export const TabsWrap = styled(RcTabs).attrs({
                     .${prefixCls}-top-content {
                         width: 100%;
                     }
-                `}
+                `
+            }
 
-            ${tabBarPosition === 'bottom' &&
+            ${
+                tabBarPosition === 'bottom' &&
                 css`
                     .${prefixCls}-bottom-bar {
                         border-top: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
@@ -213,9 +216,11 @@ export const TabsWrap = styled(RcTabs).attrs({
                     .${prefixCls}-bottom-content {
                         width: 100%;
                     }
-                `}
+                `
+            }
 
-            ${tabBarPosition === 'left' &&
+            ${
+                tabBarPosition === 'left' &&
                 css`
                     .${prefixCls}-left-bar {
                         border-right: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
@@ -247,9 +252,11 @@ export const TabsWrap = styled(RcTabs).attrs({
                         overflow: hidden;
                         height: 100%;
                     }
-                `}
+                `
+            }
 
-            ${tabBarPosition === 'right' &&
+            ${
+                tabBarPosition === 'right' &&
                 css`
                     .${prefixCls}-right-bar {
                         border-left: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
@@ -280,8 +287,10 @@ export const TabsWrap = styled(RcTabs).attrs({
                         overflow: hidden;
                         height: 100%;
                     }
-                `}
-            ${(tabBarPosition === 'top' || tabBarPosition === 'bottom') &&
+                `
+            }
+            ${
+                (tabBarPosition === 'top' || tabBarPosition === 'bottom') &&
                 css`
                     .${prefixCls}-top-bar, .${prefixCls}-bottom-bar {
                         .${prefixCls}-nav-scroll {
@@ -307,8 +316,10 @@ export const TabsWrap = styled(RcTabs).attrs({
                             content: '\\203A';
                         }
                     }
-                `}
-            ${(tabBarPosition === 'left' || tabBarPosition === 'right') &&
+                `
+            }
+            ${
+                (tabBarPosition === 'left' || tabBarPosition === 'right') &&
                 css`
                     .${prefixCls}-left-bar, .${prefixCls}-right-bar {
                         .${prefixCls}-nav-scroll {
@@ -335,9 +346,11 @@ export const TabsWrap = styled(RcTabs).attrs({
                             content: '\\203A';
                         }
                     }
-                `}
+                `
+            }
         }
-        ${styleType === 'ink' &&
+        ${
+            styleType === 'ink' &&
             css`
                 .${prefixCls}-top-bar, .${prefixCls}-bottom-bar {
                     .${prefixCls}-tab+.${prefixCls}-tab {
@@ -349,7 +362,8 @@ export const TabsWrap = styled(RcTabs).attrs({
                         margin-top: 8px;
                     }
                 }
-            `};
+            `
+        };
     `
 );
 

@@ -108,7 +108,7 @@ export const RadioWrap = styled.span.attrs({
                 fill: ${DT.T_COLOR_TEXT_DISABLED};
             }
             .${iconWrapCls} {
-                background: unset;
+                background: none;
             }
         }
     `

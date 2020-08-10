@@ -96,7 +96,7 @@ class Demo extends React.Component {
         }
         if (sourceFooter) {
             source.footer = (
-                <Combine>
+                <Combine style={{ float: 'right' }}>
                     <Button disabled={sourceDisabled === 'default' ? disabled : sourceDisabled}>按钮 1</Button>
                     <Button disabled={sourceDisabled === 'default' ? disabled : sourceDisabled}>按钮 2</Button>
                 </Combine>
@@ -115,7 +115,7 @@ class Demo extends React.Component {
         }
         if (targetFooter) {
             target.footer = (
-                <Combine>
+                <Combine style={{ float: 'right' }}>
                     <Button disabled={targetDisabled === 'default' ? disabled : targetDisabled}>按钮 3</Button>
                     <Button disabled={targetDisabled === 'default' ? disabled : targetDisabled}>按钮 4</Button>
                 </Combine>
@@ -138,7 +138,7 @@ class Demo extends React.Component {
                     <Form.Item label="disabled" {...itemLayout}>
                         <Switch checked={disabled} onChange={disabled => this.setState({ disabled })} />
                     </Form.Item>
-                    <Form.Item label="sourceSearch" {...itemLayout}>
+                    <Form.Item label="source.search" {...itemLayout}>
                         <Radio.Group
                             options={['default', true, false].map(v => ({ value: v, label: v + '' }))}
                             value={sourceSearch}
@@ -149,28 +149,28 @@ class Demo extends React.Component {
                             }
                         />
                     </Form.Item>
-                    <Form.Item label="sourceDisabled" {...itemLayout}>
+                    <Form.Item label="source.disabled" {...itemLayout}>
                         <Radio.Group
                             options={['default', true, false].map(v => ({ value: v, label: v + '' }))}
                             value={sourceDisabled}
                             onChange={sourceDisabled => this.setState({ sourceDisabled })}
                         />
                     </Form.Item>
-                    <Form.Item label="sourceTitle" {...itemLayout}>
+                    <Form.Item label="source.title" {...itemLayout}>
                         <Radio.Group
                             options={['default', null, 'custom'].map(v => ({ value: v, label: v + '' }))}
                             value={sourceTitle}
                             onChange={sourceTitle => this.setState({ sourceTitle })}
                         />
                     </Form.Item>
-                    <Form.Item label="sourceFooter" {...itemLayout}>
+                    <Form.Item label="source.footer" {...itemLayout}>
                         <Switch
                             checked={sourceFooter}
                             value={sourceFooter}
                             onChange={sourceFooter => this.setState({ sourceFooter })}
                         />
                     </Form.Item>
-                    <Form.Item label="targetSearch" {...itemLayout}>
+                    <Form.Item label="target.search" {...itemLayout}>
                         <Radio.Group
                             options={['default', true, false].map(v => ({ value: v, label: v + '' }))}
                             value={targetSearch}
@@ -181,21 +181,21 @@ class Demo extends React.Component {
                             }
                         />
                     </Form.Item>
-                    <Form.Item label="targetDisabled" {...itemLayout}>
+                    <Form.Item label="target.disabled" {...itemLayout}>
                         <Radio.Group
                             options={['default', true, false].map(v => ({ value: v, label: v + '' }))}
                             value={targetDisabled}
                             onChange={targetDisabled => this.setState({ targetDisabled })}
                         />
                     </Form.Item>
-                    <Form.Item label="targetTitle" {...itemLayout}>
+                    <Form.Item label="target.title" {...itemLayout}>
                         <Radio.Group
                             options={['default', null, 'custom'].map(v => ({ value: v, label: v + '' }))}
                             value={targetTitle}
                             onChange={targetTitle => this.setState({ targetTitle })}
                         />
                     </Form.Item>
-                    <Form.Item label="targetFooter" {...itemLayout}>
+                    <Form.Item label="target.footer" {...itemLayout}>
                         <Switch
                             checked={targetFooter}
                             value={targetFooter}

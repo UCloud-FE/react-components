@@ -168,7 +168,7 @@ class Table extends Component {
          */
         rowSelection: PropTypes.oneOfType([
             PropTypes.shape({
-                /** 选框是否为fixed */
+                /** 选框是否为 fixed */
                 fixed: PropTypes.bool,
                 /** 选中项变化回调 */
                 onChange: PropTypes.func,

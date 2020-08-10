@@ -58,6 +58,11 @@ module.exports = {
                     href: './style/reset.css',
                     rel: 'stylesheet'
                 }
+            ],
+            scripts: [
+                {
+                    src: './script/polyfill.min.js'
+                }
             ]
         }
     },

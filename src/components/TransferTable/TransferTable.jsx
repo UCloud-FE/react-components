@@ -12,9 +12,6 @@ class TransferTable extends PureComponent {
         /** 表单的 columns */
         columns: PropTypes.array
     };
-    getDisabledOfRow = () => {
-        return true;
-    };
     renderList = ({ dataSource, selectedKeys, onChange, disabled }) => {
         const { columns } = this.props;
         return (
