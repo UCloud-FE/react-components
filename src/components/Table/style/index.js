@@ -38,9 +38,9 @@ export const ExpandedRowContent = styled.div.attrs({
 );
 
 export const TableWrap = styled.div(
-    ({ theme: { designTokens: DT }, zebraCrossing }) => css`
+    ({ theme: { designTokens: DT }, zebraCrossing, customStyle = {} }) => css`
     ${clearFixMixin};
-    padding: 15px;
+    padding: ${customStyle.outerPadding || '15px'};
     color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
     border-radius: ${DT.T_CORNER_SM};
     background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};

@@ -3,31 +3,49 @@ import React from 'react';
 import Switch from 'src/components/Switch';
 import Form from 'src/components/Form';
 import Menu from 'src/components/Menu';
+import TransferTable from 'src/components/TransferTable';
 import Transfer from 'src/components/Transfer';
 import Combine from 'src/components/Combine';
 import Button from 'src/components/Button';
 import Radio from 'src/components/Radio';
-import Checkbox from 'src/components/Radio';
 
 // demo start
 const { defaultProps } = Transfer;
 
+const columns = [
+    {
+        title: 'name',
+        dataIndex: 'name',
+        key: 'name',
+        width: 100,
+        filter: {
+            options: [1, 2, 3, 4]
+        },
+        order: true
+    },
+    {
+        title: 'desc',
+        dataIndex: 'desc',
+        key: 'desc',
+        filter: {
+            options: [1, 2, 3, 4],
+            multiple: true
+        },
+        order: true
+    }
+];
 let uid = 0;
 
-const generateData = ({ name, desc, deletable } = {}) => {
+const generateData = ({ name, desc } = {}) => {
     const id = uid++;
     return {
         key: id + '',
         name: name || `name-${id}`,
-        desc: desc || `desc-${id}`,
-        deletable
+        desc: desc || `desc-${id}`
     };
 };
 
-const dataSource = new Array(100).fill(null).map((v, i) => ({
-    key: i,
-    label: `item-${i}`
-}));
+const dataSource = new Array(100).fill(null).map(() => generateData());
 
 class Demo extends React.Component {
     constructor(props) {
@@ -204,22 +222,7 @@ class Demo extends React.Component {
                     </Form.Item>
                 </Form>
                 <div className="demo-wrap">
-                    <Transfer
-                        {...props}
-                        renderList={({ dataSource, selectedKeys, onChange, disabled }) => {
-                            return (
-                                <div style={{ padding: '12px', height: '300px', overflow: 'auto' }}>
-                                    <Checkbox.Group value={selectedKeys} onChange={onChange} disabled={disabled}>
-                                        {dataSource.map(v => (
-                                            <div key={v.key}>
-                                                <Checkbox value={v.key}>{v.label}</Checkbox>
-                                            </div>
-                                        ))}
-                                    </Checkbox.Group>
-                                </div>
-                            );
-                        }}
-                    />
+                    <TransferTable {...props} columns={columns} />
                 </div>
             </div>
         );

@@ -187,7 +187,9 @@ class Table extends Component {
                  * 多选选中时的提示，bottom 为显示在下方
                  * @default true
                  */
-                selectedTip: PropTypes.oneOf([true, false, 'bottom'])
+                selectedTip: PropTypes.oneOf([true, false, 'bottom']),
+                /** 是否禁用 */
+                disabled: PropTypes.bool
             }),
             PropTypes.oneOf([true])
         ]),
@@ -208,6 +210,10 @@ class Table extends Component {
         errorContent: PropTypes.node,
         /** 如何搜索 */
         handleSearch: PropTypes.func,
+        /** 自定义样式 */
+        customStyle: PropTypes.shape({
+            outerPadding: PropTypes.string
+        }),
         /** 滚动配置 */
         scroll: PropTypes.shape({
             /** x轴滚动配置，为true自动展开并滚动，为数字时设定表单的宽度 */
@@ -272,6 +278,7 @@ class Table extends Component {
         handleSearch: (record, searchValue) => {
             return _.map(record).join('').indexOf(searchValue) >= 0;
         },
+        customStyle: {},
         rowKey: 'key'
     };
     check = props => {
@@ -730,6 +737,8 @@ class Table extends Component {
             let flatDataSourceOfCurrentPage = this.flatDataSource(dataSourceOfCurrentPage);
             let enableDataSourceOfCurrentPage = flatDataSourceOfCurrentPage;
 
+            const { disabled: selectionDisabled } = rowSelection;
+
             if (rowSelection.getDisabledOfRow) {
                 enableDataSourceOfCurrentPage = _.filter(
                     flatDataSourceOfCurrentPage,
@@ -749,11 +758,13 @@ class Table extends Component {
             const selectedCount = _.filter(selectedRowKeyMap, v => v).length;
             const renderSelectedAllCheckbox = () => (
                 <Checkbox
+                    disabled={selectionDisabled}
                     onChange={() => {
                         const enableKeysOfCurrentPage = enableDataSourceOfCurrentPage.map(item => item.key);
                         this.handleToggleCurrentPage(enableKeysOfCurrentPage, !isAllSelected);
                     }}
                     checked={isAllSelected}
+                    indeterminate={!isAllSelected && selectedEnableDataSourceOfCurrentPageCount > 0}
                 />
             );
             newColumns.unshift({
@@ -786,7 +797,9 @@ class Table extends Component {
                 render: (value, record, index) => {
                     const rowKey = this.getRowKey(record, index);
                     let disabled = false;
-                    if (rowSelection.getDisabledOfRow) {
+                    if (selectionDisabled) {
+                        disabled = true;
+                    } else if (rowSelection.getDisabledOfRow) {
                         disabled = rowSelection.getDisabledOfRow(record);
                     }
                     return rowSelection.multiple === false ? (
@@ -979,6 +992,7 @@ class Table extends Component {
             columnPlaceholder,
             tableLayout,
             scroll,
+            customStyle,
             ...rest
         } = this.props;
         if (emptyContent === undefined) {
@@ -1022,6 +1036,7 @@ class Table extends Component {
                     style={style}
                     hideExpandIcon={hideExpandIcon}
                     zebraCrossing={zebraCrossing}
+                    customStyle={customStyle}
                 >
                     <PopupContainer innerRef={this.savePopupContainer} />
                     <RcTable
