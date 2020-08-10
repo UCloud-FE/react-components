@@ -8,7 +8,18 @@ import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsume
 import deprecatedLog from 'src/utils/deprecatedLog';
 import Checkbox from 'src/components/Checkbox';
 
-import { MenuWrap, prefixCls, multipleCls, singleCls, selectallWrapCls, firstCls, lastCls, checkboxCls } from './style';
+import {
+    MenuWrap,
+    prefixCls,
+    multipleCls,
+    singleCls,
+    selectallWrapCls,
+    firstCls,
+    lastCls,
+    checkboxCls,
+    blockCls,
+    disabledCls
+} from './style';
 import LOCALE from './locale/zh_CN';
 
 const deprecatedLogForTheme = _.once(() => deprecatedLog('Menu theme', 'ThemeProvider'));
@@ -66,8 +77,10 @@ class Menu extends Component {
         collapse: PropTypes.object,
         /** 是否显示全选，多选时有效 */
         showSelectAll: PropTypes.bool,
-        /** 使用数据源渲染菜单 */
-        dataSource: PropTypes.array,
+        /** 是否使用块元素显示模式，去除宽高限制，撑满容器，去除外阴影、border，方便放置在自定义容器中 */
+        block: PropTypes.bool,
+        /** 是否禁用 */
+        disabled: PropTypes.bool,
         /** @ignore */
         theme: PropTypes.any,
         /** @ignore */
@@ -188,7 +201,7 @@ class Menu extends Component {
     };
 
     renderChildren = (children, prefix) => {
-        const { multiple } = this.props;
+        const { multiple, disabled } = this.props;
         const renderChildren = children => {
             const l = React.Children.count(children) - 1;
             return React.Children.map(children, (child, i) => {
@@ -208,6 +221,7 @@ class Menu extends Component {
                     return React.cloneElement(child, {
                         uid,
                         multiple,
+                        disabled,
                         selected: this.getItemSelected(uid),
                         onSelect: this.onSelect,
                         className
@@ -217,6 +231,7 @@ class Menu extends Component {
                     return React.cloneElement(child, {
                         uid,
                         multiple,
+                        disabled,
                         allSelectedStatus: this.getAllSelectedStatus(uid),
                         onMultipleSelect: this.onMultipleSelect,
                         renderChildren: children => this.renderChildren(children, uid),
@@ -247,18 +262,21 @@ class Menu extends Component {
             itemTree,
             locale,
             className,
+            block,
+            disabled,
             ...rest
         } = this.props;
         /* eslint-enable no-unused-vars */
         const allSelectedStatus = this.getAllSelectedStatus(rootPrefix);
         const selectAllCheckbox = multiple && showSelectAll && (
-            <div className={selectallWrapCls}>
+            <div className={classnames(selectallWrapCls, disabled && disabledCls)}>
                 <Checkbox
                     className={checkboxCls}
                     checked={allSelectedStatus === 'ALL'}
                     indeterminate={allSelectedStatus === 'PART'}
                     onChange={checked => this.onMultipleSelect(checked, rootPrefix)}
                     size="lg"
+                    disabled={disabled}
                 >
                     {locale.selectAll}
                 </Checkbox>
@@ -266,7 +284,7 @@ class Menu extends Component {
         );
         return (
             <MenuWrap
-                className={classnames(className, prefixCls, multiple ? multipleCls : singleCls)}
+                className={classnames(className, prefixCls, multiple ? multipleCls : singleCls, block && blockCls)}
                 {...rest}
                 {...collapse}
             >

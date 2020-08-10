@@ -7,6 +7,7 @@ import config from 'src/config';
 
 const { prefixCls: _prefixCls } = config;
 const prefixCls = _prefixCls + '-input';
+export const blockCls = prefixCls + '-block';
 
 /* stylelint-disable no-descending-specificity */
 
@@ -58,37 +59,37 @@ const themeMixin = ({
         }
     }
     ${focused &&
-        !disabled &&
-        css`
-            && {
-                color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
-                border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
-                background: ${DT.T_INPUT_COLOR_BG_ACTIVE};
-            }
-        `};
+    !disabled &&
+    css`
+        && {
+            color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+            border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
+            background: ${DT.T_INPUT_COLOR_BG_ACTIVE};
+        }
+    `};
 
     ${status === 'error' &&
-        css`
-            &&& {
-                border-color: ${DT.T_COLOR_LINE_ERROR_DARK};
-                background: ${DT.T_COLOR_BG_ERROR_LIGHT};
-            }
-        `};
+    css`
+        &&& {
+            border-color: ${DT.T_COLOR_LINE_ERROR_DARK};
+            background: ${DT.T_COLOR_BG_ERROR_LIGHT};
+        }
+    `};
 
     ${disabled &&
-        css`
-            box-shadow: none;
-            &,
-            &:hover {
-                color: ${DT.T_COLOR_TEXT_DISABLED};
-                -webkit-text-fill-color: currentcolor;
-                border-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
-                background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
-            }
-            ${SuffixWrap}, ${PrefixWrap} {
-                color: inherit;
-            }
-        `};
+    css`
+        box-shadow: none;
+        &,
+        &:hover {
+            color: ${DT.T_COLOR_TEXT_DISABLED};
+            -webkit-text-fill-color: currentcolor;
+            border-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
+            background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
+        }
+        ${SuffixWrap}, ${PrefixWrap} {
+            color: inherit;
+        }
+    `};
 `;
 
 export const TableWrap = styled.span`
@@ -102,6 +103,9 @@ export const InputWrap = styled.span.attrs({
     position: relative;
     ${inlineBlockWithVerticalMixin};
     box-sizing: border-box;
+    &.${blockCls} {
+        display: block;
+    }
 
     ${({ disabled }) =>
         disabled &&

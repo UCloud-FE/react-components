@@ -12,7 +12,7 @@ export default class Step extends PureComponent {
         const { status, ...rest } = this.props;
         return (
             <LinkWrapper status={status} {...rest}>
-                <Icon type="dottedRightArrow" />
+                <Icon type="dottedRightLineArrow" />
             </LinkWrapper>
         );
     }

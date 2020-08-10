@@ -8,7 +8,8 @@ const map = {
     success: 'success',
     warning: 'warning',
     error: 'error',
-    info: 'success'
+    info: 'success',
+    disabled: 'disabled'
 };
 
 export const NoticeIconWrap = styled.span`
@@ -52,28 +53,38 @@ const themeMixin = ({ styleType, theme: { designTokens: DT } }) => {
     const style = map[styleType];
     const colorMap = {
         info: {
+            color: DT.T_COLOR_TEXT_DEFAULT_DARK,
             border: DT.T_COLOR_LINE_NOTICE_LIGHT,
             background: DT.T_COLOR_BG_NOTICE_LIGHT,
             icon: DT.T_COLOR_TEXT_PRIMARY_DEFAULT
         },
         success: {
+            color: DT.T_COLOR_TEXT_DEFAULT_DARK,
             border: DT.T_COLOR_LINE_SUCCESS_LIGHT,
             background: DT.T_COLOR_BG_SUCCESS_LIGHT,
             icon: DT.T_COLOR_TEXT_SUCCESS
         },
         warning: {
+            color: DT.T_COLOR_TEXT_DEFAULT_DARK,
             border: DT.T_COLOR_LINE_WARNING_LIGHT,
             background: DT.T_COLOR_BG_WARNING_LIGHT,
             icon: DT.T_COLOR_TEXT_WARNING
         },
         error: {
+            color: DT.T_COLOR_TEXT_DEFAULT_DARK,
             border: DT.T_COLOR_LINE_ERROR_LIGHT,
             background: DT.T_COLOR_BG_ERROR_LIGHT,
             icon: DT.T_COLOR_TEXT_ERROR
+        },
+        disabled: {
+            color: DT.T_COLOR_TEXT_DISABLED,
+            border: DT.T_COLOR_LINE_DISABLED_LIGHT,
+            background: DT.T_COLOR_BG_DISABLED,
+            icon: DT.T_COLOR_TEXT_DISABLED
         }
     }[style];
     return css`
-        color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+        color: ${colorMap.color};
         border: ${DT.T_LINE_WIDTH_BASE} solid ${colorMap.border};
         background: ${colorMap.background};
         ${NoticeIcon} {

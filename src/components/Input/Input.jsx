@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
+import classnames from 'classnames';
 
 import Icon from 'src/components/Icon';
 import deprecatedLog from 'src/utils/deprecatedLog';
 
-import { InputWrap, TableWrap, PrefixWrap, SuffixWrap } from './style';
+import { InputWrap, TableWrap, PrefixWrap, SuffixWrap, blockCls } from './style';
 
 const deprecatedLogForIcon = _.once(() => deprecatedLog('Input icon', 'suffix'));
 
@@ -31,6 +32,8 @@ class Input extends Component {
         size: PropTypes.oneOf(Size),
         /** 状态 */
         status: PropTypes.oneOf(Status),
+        /** 展示变更为块占位 */
+        block: PropTypes.bool,
         /** @ignore */
         disabled: PropTypes.bool,
         /** @ignore */
@@ -84,10 +87,29 @@ class Input extends Component {
     };
     render() {
         // eslint-disable-next-line no-unused-vars
-        const { className, style, disabled, icon, size, suffix, prefix, onFocus, onBlur, status, ...rest } = this.props;
+        /* eslint-disable no-unused-vars */
+        const {
+            className,
+            style,
+            disabled,
+            icon,
+            size,
+            suffix,
+            prefix,
+            onFocus,
+            onBlur,
+            status,
+            block,
+            ...rest
+        } = this.props;
+        /* eslint-enable no-unused-vars */
         const { focused } = this.state;
         return (
-            <InputWrap onClick={this.focus} {...{ size, focused, className, style, disabled, status }}>
+            <InputWrap
+                onClick={this.focus}
+                className={classnames(block && blockCls, className)}
+                {...{ size, focused, style, disabled, status }}
+            >
                 <TableWrap>
                     {this.renderPrefix()}
                     <input

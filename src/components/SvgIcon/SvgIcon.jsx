@@ -7,26 +7,30 @@ import Tick from './icons/Tick';
 import Cross from './icons/Cross';
 import BoldCross from './icons/BoldCross';
 import RingLoading from './icons/RingLoading';
-import DottedRightArrow from './icons/DottedRightArrow';
+import DottedRightLineArrow from './icons/DottedRightLineArrow';
 import CircleExclamation from './icons/CircleExclamation';
 import Plus from './icons/Plus';
 import Minus from './icons/Minus';
 import Circle from './icons/Circle';
 import SmallTick from './icons/SmallTick';
 import Horz from './icons/Horz';
+import LeftArrow from './icons/LeftArrow';
+import RightArrow from './icons/RightArrow';
 
 const IconMap = {
     tick: Tick,
     cross: Cross,
     boldCross: BoldCross,
     ringLoading: RingLoading,
-    dottedRightArrow: DottedRightArrow,
+    dottedRightLineArrow: DottedRightLineArrow,
     circleExclamation: CircleExclamation,
     plus: Plus,
     minus: Minus,
     circle: Circle,
     smallTick: SmallTick,
-    horz: Horz
+    horz: Horz,
+    leftArrow: LeftArrow,
+    rightArrow: RightArrow
 };
 
 const IconType = _.keys(IconMap);

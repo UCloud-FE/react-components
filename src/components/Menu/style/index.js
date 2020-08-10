@@ -7,10 +7,12 @@ import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemePr
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-menu';
+export const blockCls = _prefixCls + '-block';
 export const singleCls = prefixCls + '-single';
 export const multipleCls = prefixCls + '-multiple';
 export const itemCls = prefixCls + '-item';
 export const disabledCls = itemCls + '-disabled';
+export const hiddenCls = itemCls + '-hidden';
 export const firstCls = prefixCls + '-first';
 export const lastCls = prefixCls + '-last';
 export const selectedCls = prefixCls + '-selected';
@@ -62,12 +64,15 @@ const menuStyle = ({ theme: { designTokens: DT } }) => {
             padding: 0 8px;
             margin: 0 8px;
         }
-        .${itemCls}.${disabledCls} {
+        .${itemCls}.${disabledCls}, .${selectallWrapCls}.${disabledCls} {
             color: ${DT.T_COLOR_TEXT_DISABLED};
             cursor: not-allowed;
             :hover {
                 background: unset;
             }
+        }
+        .${hiddenCls} {
+            display: none;
         }
         .${popupTitleCls}, .${collapseTitleCls} {
             position: relative;
@@ -110,7 +115,19 @@ const menuStyle = ({ theme: { designTokens: DT } }) => {
     `;
 };
 
-export const MenuWrap = styled(Collapse)(menuStyle);
+export const MenuWrap = styled(Collapse)(props => {
+    return css`
+        ${menuStyle(props)}
+        &.${blockCls} {
+            min-width: unset;
+            max-width: unset;
+            width: 100%;
+            height: 100%;
+            box-shadow: none;
+        }
+    `;
+});
+
 export const PopupMenuWrap = styled.div(props => {
     return css`
         display: inline-block;

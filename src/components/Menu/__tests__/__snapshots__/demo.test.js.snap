@@ -46,13 +46,19 @@ exports[`Menu demo -- item-disabled 1`] = `
   margin: 0 8px;
 }
 
-.c0 .uc-fe-menu-item.uc-fe-menu-item-disabled {
+.c0 .uc-fe-menu-item.uc-fe-menu-item-disabled,
+.c0 .uc-fe-menu-selectall-wrap.uc-fe-menu-item-disabled {
   color: #cccccc;
   cursor: not-allowed;
 }
 
-.c0 .uc-fe-menu-item.uc-fe-menu-item-disabled:hover {
+.c0 .uc-fe-menu-item.uc-fe-menu-item-disabled:hover,
+.c0 .uc-fe-menu-selectall-wrap.uc-fe-menu-item-disabled:hover {
   background: unset;
+}
+
+.c0 .uc-fe-menu-item-hidden {
+  display: none;
 }
 
 .c0 .uc-fe-menu-popup-title,
@@ -95,6 +101,14 @@ exports[`Menu demo -- item-disabled 1`] = `
   width: 100%;
 }
 
+.c0.uc-fe-block {
+  min-width: unset;
+  max-width: unset;
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
+}
+
 <div>
   <div
     class="demo-wrap"
@@ -109,8 +123,7 @@ exports[`Menu demo -- item-disabled 1`] = `
           Menu 1
         </div>
         <div
-          class="uc-fe-menu-item uc-fe-menu-item-disabled"
-          disabled=""
+          class="uc-fe-menu-item"
         >
           Menu 2 - disabled
         </div>
@@ -152,6 +165,7 @@ exports[`Menu demo -- menu 1`] = `
   height: 28px;
   padding: 0 8px;
   color: #0a1633;
+  fill: #0a1633;
   background: #ffffff;
   border: none;
   box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
@@ -218,13 +232,19 @@ exports[`Menu demo -- menu 1`] = `
   margin: 0 8px;
 }
 
-.c19 .uc-fe-menu-item.uc-fe-menu-item-disabled {
+.c19 .uc-fe-menu-item.uc-fe-menu-item-disabled,
+.c19 .uc-fe-menu-selectall-wrap.uc-fe-menu-item-disabled {
   color: #cccccc;
   cursor: not-allowed;
 }
 
-.c19 .uc-fe-menu-item.uc-fe-menu-item-disabled:hover {
+.c19 .uc-fe-menu-item.uc-fe-menu-item-disabled:hover,
+.c19 .uc-fe-menu-selectall-wrap.uc-fe-menu-item-disabled:hover {
   background: unset;
+}
+
+.c19 .uc-fe-menu-item-hidden {
+  display: none;
 }
 
 .c19 .uc-fe-menu-popup-title,
@@ -265,6 +285,14 @@ exports[`Menu demo -- menu 1`] = `
 
 .c19 .uc-fe-menu-checkbox {
   width: 100%;
+}
+
+.c19.uc-fe-block {
+  min-width: unset;
+  max-width: unset;
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
 }
 
 .c5 {
@@ -561,6 +589,46 @@ exports[`Menu demo -- menu 1`] = `
         class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
+        disabled
+      </div>
+      <div
+        class="uc-fe-form-controller c4 uc-fe-col c6"
+        span="9"
+      >
+        <div
+          class="c7"
+        >
+          <div
+            class="c8 c9"
+          >
+            <span
+              class="c10 c11"
+            >
+              ON
+            </span>
+            <span
+              class="c12 c11"
+            >
+              OFF
+            </span>
+            <span
+              class="c13 c14"
+            >
+              <span
+                class="c15 c16"
+              />
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="c1 uc-fe-form-item uc-fe-row c2"
+    >
+      <div
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
+        span="3"
+      >
         selectable
       </div>
       <div
@@ -603,6 +671,46 @@ exports[`Menu demo -- menu 1`] = `
         span="3"
       >
         showSelectAll
+      </div>
+      <div
+        class="uc-fe-form-controller c4 uc-fe-col c6"
+        span="9"
+      >
+        <div
+          class="c7"
+        >
+          <div
+            class="c8 c9"
+          >
+            <span
+              class="c10 c11"
+            >
+              ON
+            </span>
+            <span
+              class="c12 c11"
+            >
+              OFF
+            </span>
+            <span
+              class="c13 c14"
+            >
+              <span
+                class="c15 c16"
+              />
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="c1 uc-fe-form-item uc-fe-row c2"
+    >
+      <div
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
+        span="3"
+      >
+        block
       </div>
       <div
         class="uc-fe-form-controller c4 uc-fe-col c6"
@@ -710,7 +818,16 @@ exports[`Menu demo -- menu 1`] = `
 `;
 
 exports[`Menu demo -- menu-collapse 1`] = `
-.c3 {
+.c2 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+}
+
+.c4 {
   vertical-align: baseline;
 }
 
@@ -794,7 +911,7 @@ exports[`Menu demo -- menu-collapse 1`] = `
   background: unset;
 }
 
-.c2 {
+.c3 {
   position: absolute;
   right: 8px;
   top: 50%;
@@ -847,13 +964,19 @@ exports[`Menu demo -- menu-collapse 1`] = `
   margin: 0 8px;
 }
 
-.c0 .uc-fe-menu-item.uc-fe-menu-item-disabled {
+.c0 .uc-fe-menu-item.uc-fe-menu-item-disabled,
+.c0 .uc-fe-menu-selectall-wrap.uc-fe-menu-item-disabled {
   color: #cccccc;
   cursor: not-allowed;
 }
 
-.c0 .uc-fe-menu-item.uc-fe-menu-item-disabled:hover {
+.c0 .uc-fe-menu-item.uc-fe-menu-item-disabled:hover,
+.c0 .uc-fe-menu-selectall-wrap.uc-fe-menu-item-disabled:hover {
   background: unset;
+}
+
+.c0 .uc-fe-menu-item-hidden {
+  display: none;
 }
 
 .c0 .uc-fe-menu-popup-title,
@@ -896,6 +1019,14 @@ exports[`Menu demo -- menu-collapse 1`] = `
   width: 100%;
 }
 
+.c0.uc-fe-block {
+  min-width: unset;
+  max-width: unset;
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
+}
+
 <div>
   <div
     class="demo-wrap"
@@ -912,7 +1043,17 @@ exports[`Menu demo -- menu-collapse 1`] = `
           >
             <span
               class="uc-fe-checkbox-icon-wrap"
-            />
+            >
+              <svg
+                class="uc-fe-checkbox-icon c2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                />
+              </svg>
+            </span>
             <span
               class="uc-fe-checkbox-content"
             >
@@ -929,7 +1070,7 @@ exports[`Menu demo -- menu-collapse 1`] = `
             >
               SubMenu 1
               <i
-                class="uc-fe-icon icon__up c2 c3"
+                class="uc-fe-icon icon__up c3 c4"
               />
             </div>
           </div>
@@ -945,7 +1086,17 @@ exports[`Menu demo -- menu-collapse 1`] = `
               >
                 <span
                   class="uc-fe-checkbox-icon-wrap"
-                />
+                >
+                  <svg
+                    class="uc-fe-checkbox-icon c2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                    />
+                  </svg>
+                </span>
                 <span
                   class="uc-fe-checkbox-content"
                 >
@@ -961,7 +1112,17 @@ exports[`Menu demo -- menu-collapse 1`] = `
               >
                 <span
                   class="uc-fe-checkbox-icon-wrap"
-                />
+                >
+                  <svg
+                    class="uc-fe-checkbox-icon c2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                    />
+                  </svg>
+                </span>
                 <span
                   class="uc-fe-checkbox-content"
                 >
@@ -977,7 +1138,17 @@ exports[`Menu demo -- menu-collapse 1`] = `
               >
                 <span
                   class="uc-fe-checkbox-icon-wrap"
-                />
+                >
+                  <svg
+                    class="uc-fe-checkbox-icon c2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                    />
+                  </svg>
+                </span>
                 <span
                   class="uc-fe-checkbox-content"
                 >
@@ -993,7 +1164,17 @@ exports[`Menu demo -- menu-collapse 1`] = `
               >
                 <span
                   class="uc-fe-checkbox-icon-wrap"
-                />
+                >
+                  <svg
+                    class="uc-fe-checkbox-icon c2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                    />
+                  </svg>
+                </span>
                 <span
                   class="uc-fe-checkbox-content"
                 >
@@ -1009,7 +1190,17 @@ exports[`Menu demo -- menu-collapse 1`] = `
               >
                 <span
                   class="uc-fe-checkbox-icon-wrap"
-                />
+                >
+                  <svg
+                    class="uc-fe-checkbox-icon c2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                    />
+                  </svg>
+                </span>
                 <span
                   class="uc-fe-checkbox-content"
                 >
@@ -1028,7 +1219,7 @@ exports[`Menu demo -- menu-collapse 1`] = `
             >
               SubMenu 2
               <i
-                class="uc-fe-icon icon__up c2 c3"
+                class="uc-fe-icon icon__up c3 c4"
               />
             </div>
           </div>
@@ -1044,7 +1235,17 @@ exports[`Menu demo -- menu-collapse 1`] = `
               >
                 <span
                   class="uc-fe-checkbox-icon-wrap"
-                />
+                >
+                  <svg
+                    class="uc-fe-checkbox-icon c2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                    />
+                  </svg>
+                </span>
                 <span
                   class="uc-fe-checkbox-content"
                 >
@@ -1060,7 +1261,17 @@ exports[`Menu demo -- menu-collapse 1`] = `
               >
                 <span
                   class="uc-fe-checkbox-icon-wrap"
-                />
+                >
+                  <svg
+                    class="uc-fe-checkbox-icon c2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                    />
+                  </svg>
+                </span>
                 <span
                   class="uc-fe-checkbox-content"
                 >
@@ -1076,7 +1287,17 @@ exports[`Menu demo -- menu-collapse 1`] = `
               >
                 <span
                   class="uc-fe-checkbox-icon-wrap"
-                />
+                >
+                  <svg
+                    class="uc-fe-checkbox-icon c2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                    />
+                  </svg>
+                </span>
                 <span
                   class="uc-fe-checkbox-content"
                 >
@@ -1092,7 +1313,17 @@ exports[`Menu demo -- menu-collapse 1`] = `
               >
                 <span
                   class="uc-fe-checkbox-icon-wrap"
-                />
+                >
+                  <svg
+                    class="uc-fe-checkbox-icon c2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                    />
+                  </svg>
+                </span>
                 <span
                   class="uc-fe-checkbox-content"
                 >
@@ -1108,7 +1339,17 @@ exports[`Menu demo -- menu-collapse 1`] = `
               >
                 <span
                   class="uc-fe-checkbox-icon-wrap"
-                />
+                >
+                  <svg
+                    class="uc-fe-checkbox-icon c2"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                    />
+                  </svg>
+                </span>
                 <span
                   class="uc-fe-checkbox-content"
                 >
@@ -1127,7 +1368,7 @@ exports[`Menu demo -- menu-collapse 1`] = `
             >
               SubMenu 3
               <i
-                class="uc-fe-icon icon__down c2 c3"
+                class="uc-fe-icon icon__down c3 c4"
               />
             </div>
           </div>
@@ -1150,7 +1391,17 @@ exports[`Menu demo -- menu-collapse 1`] = `
           >
             <span
               class="uc-fe-checkbox-icon-wrap"
-            />
+            >
+              <svg
+                class="uc-fe-checkbox-icon c2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                />
+              </svg>
+            </span>
             <span
               class="uc-fe-checkbox-content"
             >
@@ -1167,7 +1418,7 @@ exports[`Menu demo -- menu-collapse 1`] = `
             >
               SubMenu 1
               <i
-                class="uc-fe-icon icon__down c2 c3"
+                class="uc-fe-icon icon__down c3 c4"
               />
             </div>
           </div>
@@ -1181,7 +1432,7 @@ exports[`Menu demo -- menu-collapse 1`] = `
             >
               SubMenu 2
               <i
-                class="uc-fe-icon icon__down c2 c3"
+                class="uc-fe-icon icon__down c3 c4"
               />
             </div>
           </div>
@@ -1195,7 +1446,7 @@ exports[`Menu demo -- menu-collapse 1`] = `
             >
               SubMenu 3
               <i
-                class="uc-fe-icon icon__down c2 c3"
+                class="uc-fe-icon icon__down c3 c4"
               />
             </div>
           </div>
@@ -1341,13 +1592,19 @@ exports[`Menu demo -- menu-controlled 1`] = `
   margin: 0 8px;
 }
 
-.c0 .uc-fe-menu-item.uc-fe-menu-item-disabled {
+.c0 .uc-fe-menu-item.uc-fe-menu-item-disabled,
+.c0 .uc-fe-menu-selectall-wrap.uc-fe-menu-item-disabled {
   color: #cccccc;
   cursor: not-allowed;
 }
 
-.c0 .uc-fe-menu-item.uc-fe-menu-item-disabled:hover {
+.c0 .uc-fe-menu-item.uc-fe-menu-item-disabled:hover,
+.c0 .uc-fe-menu-selectall-wrap.uc-fe-menu-item-disabled:hover {
   background: unset;
+}
+
+.c0 .uc-fe-menu-item-hidden {
+  display: none;
 }
 
 .c0 .uc-fe-menu-popup-title,
@@ -1388,6 +1645,14 @@ exports[`Menu demo -- menu-controlled 1`] = `
 
 .c0 .uc-fe-menu-checkbox {
   width: 100%;
+}
+
+.c0.uc-fe-block {
+  min-width: unset;
+  max-width: unset;
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
 }
 
 <div>
@@ -1434,7 +1699,17 @@ exports[`Menu demo -- menu-controlled 1`] = `
           >
             <span
               class="uc-fe-checkbox-icon-wrap"
-            />
+            >
+              <svg
+                class="uc-fe-checkbox-icon c2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                />
+              </svg>
+            </span>
             <span
               class="uc-fe-checkbox-content"
             >
@@ -1478,7 +1753,17 @@ exports[`Menu demo -- menu-controlled 1`] = `
           >
             <span
               class="uc-fe-checkbox-icon-wrap"
-            />
+            >
+              <svg
+                class="uc-fe-checkbox-icon c2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                />
+              </svg>
+            </span>
             <span
               class="uc-fe-checkbox-content"
             >
@@ -1532,7 +1817,17 @@ exports[`Menu demo -- menu-controlled 1`] = `
           >
             <span
               class="uc-fe-checkbox-icon-wrap"
-            />
+            >
+              <svg
+                class="uc-fe-checkbox-icon c2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                />
+              </svg>
+            </span>
             <span
               class="uc-fe-checkbox-content"
             >
@@ -1576,7 +1871,17 @@ exports[`Menu demo -- menu-controlled 1`] = `
           >
             <span
               class="uc-fe-checkbox-icon-wrap"
-            />
+            >
+              <svg
+                class="uc-fe-checkbox-icon c2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                />
+              </svg>
+            </span>
             <span
               class="uc-fe-checkbox-content"
             >
@@ -1591,6 +1896,15 @@ exports[`Menu demo -- menu-controlled 1`] = `
 `;
 
 exports[`Menu demo -- menu-multiple 1`] = `
+.c2 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+}
+
 .c1 {
   cursor: pointer;
   position: relative;
@@ -1716,13 +2030,19 @@ exports[`Menu demo -- menu-multiple 1`] = `
   margin: 0 8px;
 }
 
-.c0 .uc-fe-menu-item.uc-fe-menu-item-disabled {
+.c0 .uc-fe-menu-item.uc-fe-menu-item-disabled,
+.c0 .uc-fe-menu-selectall-wrap.uc-fe-menu-item-disabled {
   color: #cccccc;
   cursor: not-allowed;
 }
 
-.c0 .uc-fe-menu-item.uc-fe-menu-item-disabled:hover {
+.c0 .uc-fe-menu-item.uc-fe-menu-item-disabled:hover,
+.c0 .uc-fe-menu-selectall-wrap.uc-fe-menu-item-disabled:hover {
   background: unset;
+}
+
+.c0 .uc-fe-menu-item-hidden {
+  display: none;
 }
 
 .c0 .uc-fe-menu-popup-title,
@@ -1763,6 +2083,14 @@ exports[`Menu demo -- menu-multiple 1`] = `
 
 .c0 .uc-fe-menu-checkbox {
   width: 100%;
+}
+
+.c0.uc-fe-block {
+  min-width: unset;
+  max-width: unset;
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
 }
 
 <div>
@@ -1811,7 +2139,17 @@ exports[`Menu demo -- menu-multiple 1`] = `
           >
             <span
               class="uc-fe-checkbox-icon-wrap"
-            />
+            >
+              <svg
+                class="uc-fe-checkbox-icon c2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                />
+              </svg>
+            </span>
             <span
               class="uc-fe-checkbox-content"
             >
@@ -1827,7 +2165,17 @@ exports[`Menu demo -- menu-multiple 1`] = `
           >
             <span
               class="uc-fe-checkbox-icon-wrap"
-            />
+            >
+              <svg
+                class="uc-fe-checkbox-icon c2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                />
+              </svg>
+            </span>
             <span
               class="uc-fe-checkbox-content"
             >
@@ -1843,7 +2191,17 @@ exports[`Menu demo -- menu-multiple 1`] = `
           >
             <span
               class="uc-fe-checkbox-icon-wrap"
-            />
+            >
+              <svg
+                class="uc-fe-checkbox-icon c2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                />
+              </svg>
+            </span>
             <span
               class="uc-fe-checkbox-content"
             >
@@ -1859,7 +2217,17 @@ exports[`Menu demo -- menu-multiple 1`] = `
           >
             <span
               class="uc-fe-checkbox-icon-wrap"
-            />
+            >
+              <svg
+                class="uc-fe-checkbox-icon c2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                />
+              </svg>
+            </span>
             <span
               class="uc-fe-checkbox-content"
             >
@@ -1874,6 +2242,15 @@ exports[`Menu demo -- menu-multiple 1`] = `
 `;
 
 exports[`Menu demo -- menu-selectable 1`] = `
+.c2 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+}
+
 .c1 {
   cursor: pointer;
   position: relative;
@@ -1999,13 +2376,19 @@ exports[`Menu demo -- menu-selectable 1`] = `
   margin: 0 8px;
 }
 
-.c0 .uc-fe-menu-item.uc-fe-menu-item-disabled {
+.c0 .uc-fe-menu-item.uc-fe-menu-item-disabled,
+.c0 .uc-fe-menu-selectall-wrap.uc-fe-menu-item-disabled {
   color: #cccccc;
   cursor: not-allowed;
 }
 
-.c0 .uc-fe-menu-item.uc-fe-menu-item-disabled:hover {
+.c0 .uc-fe-menu-item.uc-fe-menu-item-disabled:hover,
+.c0 .uc-fe-menu-selectall-wrap.uc-fe-menu-item-disabled:hover {
   background: unset;
+}
+
+.c0 .uc-fe-menu-item-hidden {
+  display: none;
 }
 
 .c0 .uc-fe-menu-popup-title,
@@ -2048,6 +2431,14 @@ exports[`Menu demo -- menu-selectable 1`] = `
   width: 100%;
 }
 
+.c0.uc-fe-block {
+  min-width: unset;
+  max-width: unset;
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
+}
+
 <div>
   <div
     class="demo-wrap"
@@ -2064,7 +2455,17 @@ exports[`Menu demo -- menu-selectable 1`] = `
           >
             <span
               class="uc-fe-checkbox-icon-wrap"
-            />
+            >
+              <svg
+                class="uc-fe-checkbox-icon c2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                />
+              </svg>
+            </span>
             <span
               class="uc-fe-checkbox-content"
             >
@@ -2080,7 +2481,17 @@ exports[`Menu demo -- menu-selectable 1`] = `
           >
             <span
               class="uc-fe-checkbox-icon-wrap"
-            />
+            >
+              <svg
+                class="uc-fe-checkbox-icon c2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                />
+              </svg>
+            </span>
             <span
               class="uc-fe-checkbox-content"
             >
@@ -2096,7 +2507,17 @@ exports[`Menu demo -- menu-selectable 1`] = `
           >
             <span
               class="uc-fe-checkbox-icon-wrap"
-            />
+            >
+              <svg
+                class="uc-fe-checkbox-icon c2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                />
+              </svg>
+            </span>
             <span
               class="uc-fe-checkbox-content"
             >
@@ -2112,7 +2533,17 @@ exports[`Menu demo -- menu-selectable 1`] = `
           >
             <span
               class="uc-fe-checkbox-icon-wrap"
-            />
+            >
+              <svg
+                class="uc-fe-checkbox-icon c2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                />
+              </svg>
+            </span>
             <span
               class="uc-fe-checkbox-content"
             >
@@ -2138,7 +2569,17 @@ exports[`Menu demo -- menu-selectable 1`] = `
           >
             <span
               class="uc-fe-checkbox-icon-wrap"
-            />
+            >
+              <svg
+                class="uc-fe-checkbox-icon c2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                />
+              </svg>
+            </span>
             <span
               class="uc-fe-checkbox-content"
             >
@@ -2154,7 +2595,17 @@ exports[`Menu demo -- menu-selectable 1`] = `
           >
             <span
               class="uc-fe-checkbox-icon-wrap"
-            />
+            >
+              <svg
+                class="uc-fe-checkbox-icon c2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                />
+              </svg>
+            </span>
             <span
               class="uc-fe-checkbox-content"
             >
@@ -2170,7 +2621,17 @@ exports[`Menu demo -- menu-selectable 1`] = `
           >
             <span
               class="uc-fe-checkbox-icon-wrap"
-            />
+            >
+              <svg
+                class="uc-fe-checkbox-icon c2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                />
+              </svg>
+            </span>
             <span
               class="uc-fe-checkbox-content"
             >
@@ -2186,7 +2647,17 @@ exports[`Menu demo -- menu-selectable 1`] = `
           >
             <span
               class="uc-fe-checkbox-icon-wrap"
-            />
+            >
+              <svg
+                class="uc-fe-checkbox-icon c2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                />
+              </svg>
+            </span>
             <span
               class="uc-fe-checkbox-content"
             >
@@ -2201,7 +2672,16 @@ exports[`Menu demo -- menu-selectable 1`] = `
 `;
 
 exports[`Menu demo -- menu-showSelectAll 1`] = `
-.c3 {
+.c2 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+}
+
+.c4 {
   vertical-align: baseline;
 }
 
@@ -2285,7 +2765,7 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
   background: unset;
 }
 
-.c2 {
+.c3 {
   position: absolute;
   right: 8px;
   top: 50%;
@@ -2338,13 +2818,19 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
   margin: 0 8px;
 }
 
-.c0 .uc-fe-menu-item.uc-fe-menu-item-disabled {
+.c0 .uc-fe-menu-item.uc-fe-menu-item-disabled,
+.c0 .uc-fe-menu-selectall-wrap.uc-fe-menu-item-disabled {
   color: #cccccc;
   cursor: not-allowed;
 }
 
-.c0 .uc-fe-menu-item.uc-fe-menu-item-disabled:hover {
+.c0 .uc-fe-menu-item.uc-fe-menu-item-disabled:hover,
+.c0 .uc-fe-menu-selectall-wrap.uc-fe-menu-item-disabled:hover {
   background: unset;
+}
+
+.c0 .uc-fe-menu-item-hidden {
+  display: none;
 }
 
 .c0 .uc-fe-menu-popup-title,
@@ -2387,6 +2873,14 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
   width: 100%;
 }
 
+.c0.uc-fe-block {
+  min-width: unset;
+  max-width: unset;
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
+}
+
 <div>
   <div
     class="demo-wrap"
@@ -2403,7 +2897,17 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
           >
             <span
               class="uc-fe-checkbox-icon-wrap"
-            />
+            >
+              <svg
+                class="uc-fe-checkbox-icon c2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                />
+              </svg>
+            </span>
             <span
               class="uc-fe-checkbox-content"
             >
@@ -2419,7 +2923,17 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
           >
             <span
               class="uc-fe-checkbox-icon-wrap"
-            />
+            >
+              <svg
+                class="uc-fe-checkbox-icon c2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                />
+              </svg>
+            </span>
             <span
               class="uc-fe-checkbox-content"
             >
@@ -2435,7 +2949,17 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
           >
             <span
               class="uc-fe-checkbox-icon-wrap"
-            />
+            >
+              <svg
+                class="uc-fe-checkbox-icon c2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                />
+              </svg>
+            </span>
             <span
               class="uc-fe-checkbox-content"
             >
@@ -2451,7 +2975,17 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
           >
             <span
               class="uc-fe-checkbox-icon-wrap"
-            />
+            >
+              <svg
+                class="uc-fe-checkbox-icon c2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                />
+              </svg>
+            </span>
             <span
               class="uc-fe-checkbox-content"
             >
@@ -2468,7 +3002,7 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
             >
               SubMenu 1
               <i
-                class="uc-fe-icon icon__down c2 c3"
+                class="uc-fe-icon icon__down c3 c4"
               />
             </div>
           </div>
@@ -2482,7 +3016,7 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
             >
               SubMenu 2
               <i
-                class="uc-fe-icon icon__down c2 c3"
+                class="uc-fe-icon icon__down c3 c4"
               />
             </div>
           </div>
@@ -2495,7 +3029,7 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
           >
             SubMenu 3
             <i
-              class="uc-fe-icon icon__caret-right c2 c3"
+              class="uc-fe-icon icon__caret-right c3 c4"
             />
           </div>
         </div>
@@ -2517,7 +3051,17 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
           >
             <span
               class="uc-fe-checkbox-icon-wrap"
-            />
+            >
+              <svg
+                class="uc-fe-checkbox-icon c2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                />
+              </svg>
+            </span>
             <span
               class="uc-fe-checkbox-content"
             >
@@ -2533,7 +3077,17 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
           >
             <span
               class="uc-fe-checkbox-icon-wrap"
-            />
+            >
+              <svg
+                class="uc-fe-checkbox-icon c2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                />
+              </svg>
+            </span>
             <span
               class="uc-fe-checkbox-content"
             >
@@ -2549,7 +3103,17 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
           >
             <span
               class="uc-fe-checkbox-icon-wrap"
-            />
+            >
+              <svg
+                class="uc-fe-checkbox-icon c2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                />
+              </svg>
+            </span>
             <span
               class="uc-fe-checkbox-content"
             >
@@ -2565,7 +3129,17 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
           >
             <span
               class="uc-fe-checkbox-icon-wrap"
-            />
+            >
+              <svg
+                class="uc-fe-checkbox-icon c2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                />
+              </svg>
+            </span>
             <span
               class="uc-fe-checkbox-content"
             >
@@ -2581,7 +3155,17 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
           >
             <span
               class="uc-fe-checkbox-icon-wrap"
-            />
+            >
+              <svg
+                class="uc-fe-checkbox-icon c2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                />
+              </svg>
+            </span>
             <span
               class="uc-fe-checkbox-content"
             >
@@ -2598,7 +3182,7 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
             >
               SubMenu 1
               <i
-                class="uc-fe-icon icon__down c2 c3"
+                class="uc-fe-icon icon__down c3 c4"
               />
             </div>
           </div>
@@ -2612,7 +3196,7 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
             >
               SubMenu 2
               <i
-                class="uc-fe-icon icon__down c2 c3"
+                class="uc-fe-icon icon__down c3 c4"
               />
             </div>
           </div>
@@ -2625,7 +3209,7 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
           >
             SubMenu 3
             <i
-              class="uc-fe-icon icon__caret-right c2 c3"
+              class="uc-fe-icon icon__caret-right c3 c4"
             />
           </div>
         </div>
@@ -2668,7 +3252,7 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
             >
               SubMenu 1
               <i
-                class="uc-fe-icon icon__down c2 c3"
+                class="uc-fe-icon icon__down c3 c4"
               />
             </div>
           </div>
@@ -2682,7 +3266,7 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
             >
               SubMenu 2
               <i
-                class="uc-fe-icon icon__down c2 c3"
+                class="uc-fe-icon icon__down c3 c4"
               />
             </div>
           </div>
@@ -2695,7 +3279,7 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
           >
             SubMenu 3
             <i
-              class="uc-fe-icon icon__caret-right c2 c3"
+              class="uc-fe-icon icon__caret-right c3 c4"
             />
           </div>
         </div>
@@ -2738,7 +3322,7 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
             >
               SubMenu 1
               <i
-                class="uc-fe-icon icon__down c2 c3"
+                class="uc-fe-icon icon__down c3 c4"
               />
             </div>
           </div>
@@ -2752,7 +3336,7 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
             >
               SubMenu 2
               <i
-                class="uc-fe-icon icon__down c2 c3"
+                class="uc-fe-icon icon__down c3 c4"
               />
             </div>
           </div>
@@ -2765,7 +3349,7 @@ exports[`Menu demo -- menu-showSelectAll 1`] = `
           >
             SubMenu 3
             <i
-              class="uc-fe-icon icon__caret-right c2 c3"
+              class="uc-fe-icon icon__caret-right c3 c4"
             />
           </div>
         </div>
@@ -2833,13 +3417,19 @@ exports[`Menu demo -- submenu-styleType 1`] = `
   margin: 0 8px;
 }
 
-.c0 .uc-fe-menu-item.uc-fe-menu-item-disabled {
+.c0 .uc-fe-menu-item.uc-fe-menu-item-disabled,
+.c0 .uc-fe-menu-selectall-wrap.uc-fe-menu-item-disabled {
   color: #cccccc;
   cursor: not-allowed;
 }
 
-.c0 .uc-fe-menu-item.uc-fe-menu-item-disabled:hover {
+.c0 .uc-fe-menu-item.uc-fe-menu-item-disabled:hover,
+.c0 .uc-fe-menu-selectall-wrap.uc-fe-menu-item-disabled:hover {
   background: unset;
+}
+
+.c0 .uc-fe-menu-item-hidden {
+  display: none;
 }
 
 .c0 .uc-fe-menu-popup-title,
@@ -2880,6 +3470,14 @@ exports[`Menu demo -- submenu-styleType 1`] = `
 
 .c0 .uc-fe-menu-checkbox {
   width: 100%;
+}
+
+.c0.uc-fe-block {
+  min-width: unset;
+  max-width: unset;
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
 }
 
 <div>
@@ -3024,13 +3622,19 @@ exports[`Menu demo -- submenu-title 1`] = `
   margin: 0 8px;
 }
 
-.c0 .uc-fe-menu-item.uc-fe-menu-item-disabled {
+.c0 .uc-fe-menu-item.uc-fe-menu-item-disabled,
+.c0 .uc-fe-menu-selectall-wrap.uc-fe-menu-item-disabled {
   color: #cccccc;
   cursor: not-allowed;
 }
 
-.c0 .uc-fe-menu-item.uc-fe-menu-item-disabled:hover {
+.c0 .uc-fe-menu-item.uc-fe-menu-item-disabled:hover,
+.c0 .uc-fe-menu-selectall-wrap.uc-fe-menu-item-disabled:hover {
   background: unset;
+}
+
+.c0 .uc-fe-menu-item-hidden {
+  display: none;
 }
 
 .c0 .uc-fe-menu-popup-title,
@@ -3071,6 +3675,14 @@ exports[`Menu demo -- submenu-title 1`] = `
 
 .c0 .uc-fe-menu-checkbox {
   width: 100%;
+}
+
+.c0.uc-fe-block {
+  min-width: unset;
+  max-width: unset;
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
 }
 
 <div>

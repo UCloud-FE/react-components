@@ -18,6 +18,7 @@ import {
     popupTitleCls,
     selectedCls,
     checkboxCls,
+    disabledCls,
     SubMenuIcon
 } from './style';
 import LOCALE from './locale/zh_CN';
@@ -33,6 +34,8 @@ class SubMenu extends Component {
         styleType: PropTypes.oneOf(['collapse', 'popover']),
         /** 子菜单的唯一key，也用作collapse的panel的key */
         subMenuKey: PropTypes.any,
+        /** 禁用 */
+        disabled: PropTypes.bool,
         /** @ignore */
         uid: PropTypes.string,
         /** @ignore */
@@ -66,16 +69,18 @@ class SubMenu extends Component {
             renderChildren,
             children,
             locale,
-            className
+            className,
+            disabled
         } = this.props;
         const selectAllCheckbox = multiple && (
-            <div className={selectallWrapCls}>
+            <div className={classnames(selectallWrapCls, disabled && disabledCls)}>
                 <Checkbox
                     size="lg"
                     className={checkboxCls}
                     checked={allSelectedStatus === 'ALL'}
                     indeterminate={allSelectedStatus === 'PART'}
                     onChange={checked => onMultipleSelect(checked, uid)}
+                    disabled={disabled}
                 >
                     {locale.selectAll}
                 </Checkbox>
