@@ -80,7 +80,7 @@ class Radio extends Component {
                 onClick={(...args) => this.onClick(props, ...args)}
             >
                 <span className={iconWrapCls}>
-                    <SvgIcon className={iconCls} type="circle" size="16px" />
+                    <SvgIcon className={iconCls} type="circle" size="14px" />
                 </span>
                 {children != null && <span className={contentCls}>{children}</span>}
             </RadioWrap>
