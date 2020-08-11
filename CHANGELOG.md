@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.23](https://github.com/UCloud-FE/react-components/compare/v0.6.22...v0.6.23) (2020-08-11)
+
+### Bug Fixes
+
+-   **Table:** fix some style ([ddad57d](https://github.com/UCloud-FE/react-components/commit/ddad57d62b6e52cdbec64079323d26902d060883))
+
 ### [0.6.22](https://github.com/UCloud-FE/react-components/compare/v0.6.21...v0.6.22) (2020-08-11)
 
 ### Features
