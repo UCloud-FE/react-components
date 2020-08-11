@@ -98,7 +98,14 @@ class Demo extends React.Component {
                     />
                 </div>
                 <div className="demo-wrap">
-                    <Table rowSelection={{ fixed: true }} columns={columns2} dataSource={data} columnPlaceholder />
+                    <Table
+                        rowSelection={{ fixed: true }}
+                        scroll={{ x: true }}
+                        tableLayout="auto"
+                        columns={columns2}
+                        dataSource={data}
+                        columnPlaceholder
+                    />
                 </div>
             </div>
         );

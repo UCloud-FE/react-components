@@ -78,7 +78,7 @@ export const TableWrap = styled.div(
             cursor: pointer;
         }
         &-body {
-            overflow-x: auto;
+            overflow-x: hidden;
             overflow-y: hidden;
         }
         &-fixed,

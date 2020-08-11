@@ -106,12 +106,12 @@
 ```js {"codepath": "onHeaderRow.jsx"}
 ```
 
--   rowSelection
+-   rowSelection - 列选择配置
 
 ```js {"codepath": "rowSelection.jsx"}
 ```
 
--   固定表头、列
+-   fixed - 固定表头、列
 
 ```js {"codepath": "fixed.jsx"}
 ```
@@ -131,7 +131,7 @@
 ```js {"codepath": "onConditionChange.jsx"}
 ```
 
--   doNotHandleCondition
+-   doNotHandleCondition - 自行处理筛选等逻辑
 
 ```js {"codepath": "doNotHandleCondition.jsx"}
 ```
