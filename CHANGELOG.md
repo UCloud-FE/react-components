@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.22](https://github.com/UCloud-FE/react-components/compare/v0.6.21...v0.6.22) (2020-08-11)
+
+### Features
+
+-   **Checkbox:** change checkbox and radio color ([1f4f1d0](https://github.com/UCloud-FE/react-components/commit/1f4f1d066c9c122a1b5ba4bebfb4e21b5a1ba2c5)), closes [#247](https://github.com/UCloud-FE/react-components/issues/247)
+-   **Table:** set tableLayout to fixed when scroll true ([c100397](https://github.com/UCloud-FE/react-components/commit/c100397346f5af69901d8cb222f16e754033af0a)), closes [#248](https://github.com/UCloud-FE/react-components/issues/248)
+
+### Bug Fixes
+
+-   **Table:** remove overflow-x auto ([82227c5](https://github.com/UCloud-FE/react-components/commit/82227c542656efe7aeef0a40ee736ec7b4e2af8e)), closes [#249](https://github.com/UCloud-FE/react-components/issues/249)
+
 ### [0.6.21](https://github.com/UCloud-FE/react-components/compare/v0.6.20...v0.6.21) (2020-08-10)
 
 ### Features
