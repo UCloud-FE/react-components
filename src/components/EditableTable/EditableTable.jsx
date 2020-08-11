@@ -52,7 +52,9 @@ class EditableTable extends PureComponent {
                  * 获取当前列的是否禁用删除
                  * @param record 当前列数据
                  */
-                getDisabledOfRow: PropTypes.func
+                getDisabledOfRow: PropTypes.func,
+                /** 是否固定列 */
+                fixed: PropTypes.bool
             })
         ])
     };
@@ -89,11 +91,12 @@ class EditableTable extends PureComponent {
     getColumns = () => {
         const { columns, rowDeletion } = this.props;
         if (!rowDeletion) return columns;
-        const { getDisabledOfRow } = rowDeletion;
+        const { getDisabledOfRow, fixed } = rowDeletion;
         const removeColumn = {
             title: null,
             key: '__editable_table_remove',
             width: 40,
+            fixed,
             render: (v, record) => {
                 return getDisabledOfRow && getDisabledOfRow(record) ? null : (
                     <RemoveBtn type="cross" onClick={() => this.onRemove(record)} size="16px" />
