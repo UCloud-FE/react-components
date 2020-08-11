@@ -58,9 +58,9 @@ export const RadioWrap = styled.span.attrs({
             box-sizing: border-box;
             overflow: hidden;
             position: relative;
-            width: 16px;
-            height: 16px;
-            border: 1px solid ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+            width: 14px;
+            height: 14px;
+            border: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
             border-radius: 8px;
             vertical-align: middle;
 
