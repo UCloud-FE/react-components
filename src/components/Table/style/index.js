@@ -77,10 +77,6 @@ export const TableWrap = styled.div(
             color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
             cursor: pointer;
         }
-        &-body {
-            overflow-x: hidden;
-            overflow-y: hidden;
-        }
         &-fixed,
         &-body {
             background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
@@ -240,7 +236,8 @@ export const TableWrap = styled.div(
         &-row-level-4 > td,
         &-row-level-5 > td {
             background: ${DT.T_TABLE_ROW_COLOR_BG_DEFAULT};
-            &.${prefixCls}-row-expand-icon-cell {
+            &.${prefixCls}-row-expand-icon-cell,
+            &.${prefixCls}-row-select-icon-cell {
                 background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
             }
             &.${prefixCls}-row-expand-icon-cell .${prefixCls}-row-spaced {

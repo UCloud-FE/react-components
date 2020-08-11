@@ -1,3 +1,4 @@
+import React from 'react';
 import styled, { css } from 'styled-components';
 
 import Collapse from 'src/components/Collapse';
@@ -115,9 +116,14 @@ const menuStyle = ({ theme: { designTokens: DT } }) => {
     `;
 };
 
-export const MenuWrap = styled(Collapse)(props => {
+// eslint-disable-next-line react/prop-types,no-unused-vars
+const CleanCollapse = ({ customStyle, ...rest }) => <Collapse {...rest} />;
+
+export const MenuWrap = styled(CleanCollapse)(props => {
+    const { customStyle = {} } = props;
     return css`
-        ${menuStyle(props)}
+        ${menuStyle(props)};
+        max-height: ${customStyle.maxHeight};
         &.${blockCls} {
             min-width: 0;
             max-width: none;
@@ -133,7 +139,8 @@ export const PopupMenuWrap = styled.div(props => {
         display: inline-block;
         padding: 0px 8px;
         .${popupContentCls} {
-            ${menuStyle(props)}
+            ${menuStyle(props)};
+            max-height: 380px;
         }
     `;
 });

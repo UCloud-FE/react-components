@@ -34,8 +34,9 @@ const columns1 = [
         title: 'desc',
         dataIndex: 'desc',
         key: 'desc3',
-        width: 100,
-        render: () => randomString()
+        render() {
+            return <div style={{ width: 1000 }}>{randomString()}</div>;
+        }
     }
 ];
 const columns2 = [
@@ -130,7 +131,7 @@ class Demo extends React.Component {
                     scroll.y，否则会导致头部和数据宽度不一致
                 </p>
                 <div className="demo-wrap">
-                    <Table columns={columns1} dataSource={data} scroll={{ x: true }} />
+                    <Table columns={columns1} dataSource={data} scroll={{ x: true }} tableLayout="auto" />
                 </div>
                 <h3>复杂滚动布局</h3>
                 <p>

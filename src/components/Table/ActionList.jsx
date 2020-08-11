@@ -84,7 +84,11 @@ export default class ActionList extends Component {
                 visible={visible}
                 onVisibleChange={visible => this.setState({ visible })}
                 popup={
-                    <Menu selectable={false} onClick={() => this.setState({ visible: false })}>
+                    <Menu
+                        selectable={false}
+                        onClick={() => this.setState({ visible: false })}
+                        customStyle={{ maxHeight: '200px' }}
+                    >
                         {renderList(list)}
                     </Menu>
                 }

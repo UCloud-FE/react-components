@@ -81,6 +81,11 @@ class Menu extends Component {
         block: PropTypes.bool,
         /** 是否禁用 */
         disabled: PropTypes.bool,
+        /** 自定义样式 */
+        customStyle: PropTypes.shape({
+            /** 菜单的最大高度 */
+            maxHeight: PropTypes.string
+        }),
         /** @ignore */
         theme: PropTypes.any,
         /** @ignore */
@@ -201,7 +206,7 @@ class Menu extends Component {
     };
 
     renderChildren = (children, prefix) => {
-        const { multiple, disabled } = this.props;
+        const { multiple, disabled: globalDisabled } = this.props;
         const renderChildren = children => {
             const l = React.Children.count(children) - 1;
             return React.Children.map(children, (child, i) => {
@@ -214,8 +219,8 @@ class Menu extends Component {
                 const isOtherMenuComponent = childType.isMenuSubMenu || childType.isMenuGroup;
                 const isFirst = i === 0;
                 const isLast = i === l;
-                const className = classnames(child.className, isFirst && firstCls, isLast && lastCls);
-
+                const className = classnames(child.props.className, isFirst && firstCls, isLast && lastCls);
+                const disabled = globalDisabled || child.props.disabled;
                 if (isMenuItem) {
                     const uid = `${prefix}-${i}-item`;
                     return React.cloneElement(child, {
