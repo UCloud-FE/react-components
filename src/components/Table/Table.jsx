@@ -223,7 +223,7 @@ class Table extends Component {
             /** table body 滚动时的回调 */
             onScroll: PropTypes.func
         }),
-        /** 表格布局，当 scroll.y 有值时为 fixed，其它时候默认为 auto，可自行覆盖 */
+        /** 表格布局，当 scroll.x 或 scroll.y 有值时为 fixed，其它时候默认为 auto，可自行覆盖 */
         tableLayout: PropTypes.oneOf(['auto', 'fixed']),
         /** 定义如何获取每行的键值 */
         rowKey: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
@@ -1043,7 +1043,7 @@ class Table extends Component {
                         {...defaultExpandAllRowsProps}
                         {...rest}
                         scroll={scroll}
-                        tableLayout={tableLayout ? tableLayout : scroll && scroll.y ? 'fixed' : undefined}
+                        tableLayout={tableLayout ? tableLayout : scroll && (scroll.y || scroll.x) ? 'fixed' : undefined}
                         prefixCls={prefixCls}
                         data={dataSource}
                         columns={columns}
