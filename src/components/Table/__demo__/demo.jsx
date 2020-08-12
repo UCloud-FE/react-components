@@ -127,8 +127,8 @@ class Demo extends React.Component {
             <div>
                 <h3>简单滚动布局</h3>
                 <p>
-                    表格宽度按照内容撑开展示，超过最大宽度可滚动，不需要设置列宽度比较方便，但是翻页时由于数据的不一致性表列宽度会变化，并且不能使用
-                    scroll.y，否则会导致头部和数据宽度不一致
+                    表格宽度按照内容撑开展示，超过最大宽度可滚动，不需要设置列宽度比较方便，但是翻页时由于数据的不一致性表列宽度会变化，并且如果使用了
+                    scroll.y，可能会导致头部和数据宽度不一致
                 </p>
                 <div className="demo-wrap">
                     <Table columns={columns1} dataSource={data} scroll={{ x: true }} tableLayout="auto" />
