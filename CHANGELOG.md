@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.24](https://github.com/UCloud-FE/react-components/compare/v0.6.23...v0.6.24) (2020-08-12)
+
+### Features
+
+-   **ActionList:** add forwardPopupContainer fallback ([2dc7f81](https://github.com/UCloud-FE/react-components/commit/2dc7f810882f6062c2ac3fa4a391e58a5e3026be))
+-   **EditableTable:** add fixed to deletion ([16b04c7](https://github.com/UCloud-FE/react-components/commit/16b04c7bf077acff9a3d2f7bf5231813106ec135))
+-   **PopupContainer:** add popupContainer to most components ([a0d0acd](https://github.com/UCloud-FE/react-components/commit/a0d0acd9f5425cf0812b229ba8820274cc6060b7)), closes [#251](https://github.com/UCloud-FE/react-components/issues/251)
+
 ### [0.6.23](https://github.com/UCloud-FE/react-components/compare/v0.6.22...v0.6.23) (2020-08-11)
 
 ### Bug Fixes
