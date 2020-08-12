@@ -2,6 +2,8 @@ import React, { Component, PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { CSSTransition } from 'react-transition-group';
 
+import { Provider } from 'src/components/Popover/ContainerContext';
+
 import { DrawerWrap, CloseHandlerWrapper, CloseIcon } from './style';
 
 const Placement = ['left', 'right', 'top', 'bottom'];
@@ -97,18 +99,20 @@ class Drawer extends Component {
         const show = this.getShow();
         return (
             !destory && (
-                <DrawerWrap
-                    {...rest}
-                    open={visible}
-                    onMaskClick={this.onMaskClick}
-                    showMask={mask}
-                    handler={false}
-                    afterVisibleChange={this.afterVisibleChange}
-                    show={show}
-                    closeHandler={this.renderCloseHandler({ closeHandler, onClose, show, visible })}
-                >
-                    {children}
-                </DrawerWrap>
+                <Provider value={{}}>
+                    <DrawerWrap
+                        {...rest}
+                        open={visible}
+                        onMaskClick={this.onMaskClick}
+                        showMask={mask}
+                        handler={false}
+                        afterVisibleChange={this.afterVisibleChange}
+                        show={show}
+                        closeHandler={this.renderCloseHandler({ closeHandler, onClose, show, visible })}
+                    >
+                        {children}
+                    </DrawerWrap>
+                </Provider>
             )
         );
     }

@@ -6,6 +6,7 @@ import MonthCalendar from 'src/components/Calendar/Month';
 import placements from 'src/components/Popover/placements';
 import uncontrolledDecorator from 'src/decorators/uncontrolled';
 import { animationPrefixCls } from 'src/style/globalAnimation';
+import { Consumer } from 'src/components/Popover/ContainerContext';
 
 import { monthPickerPrefixCls, PickerWrap, PickerContainer, DateWrap, DateSpan, PickerIcon } from './style';
 import { Size } from './DatePicker';
@@ -39,8 +40,7 @@ class Month extends Component {
     static defaultProps = {
         onChange: () => {},
         size: 'md',
-        zIndex: 100,
-        getCalendarContainer: triggerNode => triggerNode.parentNode
+        zIndex: 100
     };
     render() {
         const {
@@ -59,28 +59,34 @@ class Month extends Component {
         const value = moment(_v);
 
         return (
-            <PickerContainer isMonth {...rest}>
-                <PickerWrap
-                    prefixCls={monthPickerPrefixCls}
-                    transitionName={`${animationPrefixCls}-fade`}
-                    calendar={<MonthCalendar rules={rules} />}
-                    getCalendarContainer={getCalendarContainer}
-                    value={value}
-                    align={placements.bottomLeft}
-                    onChange={onChange}
-                    zIndex={zIndex}
-                    isMonth
-                >
-                    {({ value }) => {
-                        return (
-                            <DateWrap size={size}>
-                                <DateSpan>{value.format(date.format || 'YYYY-MM')}</DateSpan>
-                                <PickerIcon type="calendar" color="blue" />
-                            </DateWrap>
-                        );
-                    }}
-                </PickerWrap>
-            </PickerContainer>
+            <Consumer>
+                {({ getPopupContainer } = {}) => (
+                    <PickerContainer isMonth {...rest}>
+                        <PickerWrap
+                            prefixCls={monthPickerPrefixCls}
+                            transitionName={`${animationPrefixCls}-fade`}
+                            calendar={<MonthCalendar rules={rules} />}
+                            getCalendarContainer={
+                                getCalendarContainer || getPopupContainer || (triggerNode => triggerNode.parentNode)
+                            }
+                            value={value}
+                            align={placements.bottomLeft}
+                            onChange={onChange}
+                            zIndex={zIndex}
+                            isMonth
+                        >
+                            {({ value }) => {
+                                return (
+                                    <DateWrap size={size}>
+                                        <DateSpan>{value.format(date.format || 'YYYY-MM')}</DateSpan>
+                                        <PickerIcon type="calendar" color="blue" />
+                                    </DateWrap>
+                                );
+                            }}
+                        </PickerWrap>
+                    </PickerContainer>
+                )}
+            </Consumer>
         );
     }
 }

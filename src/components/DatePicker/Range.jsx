@@ -239,7 +239,7 @@ class Range extends Component {
             <RangeContainer {...rest} disabled={disabled}>
                 {!hideOptions && (
                     <RangeSelect
-                        options={options}
+                        options={options.map(option => _.pick(option, ['label', 'value', 'disabled']))}
                         size={size}
                         value={option}
                         disabled={disabled}
@@ -249,7 +249,7 @@ class Range extends Component {
                 )}
                 <Popover
                     visible={visible}
-                    getPopupContainer={triggerNode => triggerNode.parentNode}
+                    forwardPopupContainer={triggerNode => triggerNode.parentNode}
                     zIndex={zIndex}
                     popup={
                         <RangePopup>

@@ -1,60 +1,65 @@
 ### 说明
 
-*   弹窗组件，纯受控组件，显示隐藏通过 visible 控制
+-   弹窗组件，纯受控组件，显示隐藏通过 visible 控制
 
 ### 演示
 
-*   演示
+-   演示
 
 ```js {"codepath": "modal.jsx"}
 ```
 
-*   简易调用函数
+-   简易调用函数
 
 ```js {"codepath": "method.jsx"}
 ```
 
-*   title/footer
+-   title/footer
 
 ```js {"codepath": "titleAndFooter.jsx"}
 ```
 
-*   size
+-   size
 
 ```js {"codepath": "size.jsx"}
 ```
 
-*   closable
+-   closable
 
 ```js {"codepath": "closable.jsx"}
 ```
 
-*   mask
+-   mask
 
 ```js {"codepath": "mask.jsx"}
 ```
 
-*   maskClosable
+-   maskClosable
 
 ```js {"codepath": "maskClosable.jsx"}
 ```
 
-*   keyboard
+-   keyboard
 
 ```js {"codepath": "keyboard.jsx"}
 ```
 
-*   destroyOnClose
+-   destroyOnClose
 
 ```js {"codepath": "destroyOnClose.jsx"}
 ```
 
-*   customClassName
+-   customClassName
 
 ```js {"codepath": "customClassName.jsx"}
 ```
 
-*   customStyle
+-   customStyle
 
 ```js {"codepath": "customStyle.jsx"}
+```
+
+-   popupContainer - 弹出层容器
+
+```js {"codepath": "popupContainer.jsx"}
 ```

@@ -5,7 +5,7 @@ import { clearFixMixin } from 'src/style';
 import config from 'src/config';
 
 const { prefixCls: _prefixCls } = config;
-const prefixCls = _prefixCls + '-card';
+export const prefixCls = _prefixCls + '-card';
 
 const sharedGutter = css`
     padding: 0 24px;

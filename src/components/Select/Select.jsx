@@ -329,7 +329,7 @@ class Select extends Component {
                         onVisibleChange={this.handleVisibleChange}
                         placement="bottomLeft"
                         trigger={['click']}
-                        getPopupContainer={triggerNode => triggerNode.parentNode}
+                        forwardPopupContainer={triggerNode => triggerNode.parentNode}
                         visible={visible}
                         zIndex={100}
                         {...popover}

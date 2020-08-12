@@ -81,7 +81,7 @@ const styles = ({
         height: '10em',
         background: '#fff',
         border: '1px solid #ccc',
-        boxSizing: 'none'
+        boxSizing: 'content-box'
     },
     themeButton: {
         display: 'inline-block',
