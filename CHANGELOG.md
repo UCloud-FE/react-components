@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.25](https://github.com/UCloud-FE/react-components/compare/v0.6.24...v0.6.25) (2020-08-12)
+
+### Features
+
+-   **Table:** change tableLayout to auto when scroll.y ([ff96cbf](https://github.com/UCloud-FE/react-components/commit/ff96cbfeb166a1ebe73776887a12a4437057f30f))
+
 ### [0.6.24](https://github.com/UCloud-FE/react-components/compare/v0.6.23...v0.6.24) (2020-08-12)
 
 ### Features
