@@ -1,7 +1,7 @@
 ### 说明
 
 -   这是 Select 组件
--   默认的弹出层容器为 forwardPopupContainer={triggerNode => triggerNode.parentNode}
+-   默认的弹出层容器为 forwardPopupContainer={triggerNode => triggerNode.parentNode}，默认会查找上层的建议容器
 
 ### 演示
 

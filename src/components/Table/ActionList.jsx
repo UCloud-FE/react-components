@@ -81,7 +81,7 @@ export default class ActionList extends Component {
                 {...popoverProps}
                 visible={visible}
                 onVisibleChange={visible => this.setState({ visible })}
-                forwardPopupContainer
+                forwardPopupContainer={triggerNode => triggerNode.parentNode}
                 popup={
                     <Menu
                         selectable={false}
