@@ -14,6 +14,7 @@ import Icon from 'src/components/Icon';
 import Popover from 'src/components/Popover';
 import Tooltip from 'src/components/Tooltip';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
+import { InhertProvider } from 'src/components/Popover/ContainerContext';
 
 import {
     prefixCls,
@@ -483,7 +484,6 @@ class Table extends Component {
                 renderSelector={(content, visible) => {
                     return <Icon key="icon" type="filter" size="xs" color={visible ? 'blue' : null} />;
                 }}
-                popoverProps={{ getPopupContainer: () => this.popupContainer }}
                 multiple={multiple}
                 {...rest}
             />
@@ -1021,85 +1021,88 @@ class Table extends Component {
               })();
 
         return (
-            <TableContext.Provider
-                value={{
-                    columns: _c,
-                    columnConfig: columnConfig,
-                    onColumnConfigChange: this.onColumnConfigChange,
-                    handleSearch: this.handleSearch,
-                    locale,
-                    getPopupContainer: this.getPopupContainer
-                }}
-            >
-                <TableWrap
-                    className={className}
-                    style={style}
-                    hideExpandIcon={hideExpandIcon}
-                    zebraCrossing={zebraCrossing}
-                    customStyle={customStyle}
+            <InhertProvider value={{ getPopupContainer: this.getPopupContainer }}>
+                <TableContext.Provider
+                    value={{
+                        columns: _c,
+                        columnConfig: columnConfig,
+                        onColumnConfigChange: this.onColumnConfigChange,
+                        handleSearch: this.handleSearch,
+                        locale
+                    }}
                 >
-                    <PopupContainer innerRef={this.savePopupContainer} />
-                    <RcTable
-                        {...defaultExpandAllRowsProps}
-                        {...rest}
-                        scroll={scroll}
-                        tableLayout={tableLayout ? tableLayout : scroll && (scroll.y || scroll.x) ? 'fixed' : undefined}
-                        prefixCls={prefixCls}
-                        data={dataSource}
-                        columns={columns}
-                        onRow={this.onRow}
-                        components={_.extend({}, components, {
-                            body: {
-                                row: TableRow
+                    <TableWrap
+                        className={className}
+                        style={style}
+                        hideExpandIcon={hideExpandIcon}
+                        zebraCrossing={zebraCrossing}
+                        customStyle={customStyle}
+                    >
+                        <PopupContainer innerRef={this.savePopupContainer} />
+                        <RcTable
+                            {...defaultExpandAllRowsProps}
+                            {...rest}
+                            scroll={scroll}
+                            tableLayout={
+                                tableLayout ? tableLayout : scroll && (scroll.y || scroll.x) ? 'fixed' : undefined
                             }
-                        })}
-                        emptyText={null}
-                        expandIconAsCell={!!expandedRowRender || expandIconAsCell}
-                        expandedRowRender={expandedRowRender}
-                        expandIconColumnIndex={
-                            expandIconColumnIndex === undefined
-                                ? columns[0] && columns[0].key === 'table_row_selection'
-                                    ? 1
-                                    : 0
-                                : expandIconColumnIndex
-                        }
-                        title={() => this.renderTitle({ filters: finalFilters, searchValue, total, locale })}
-                        footer={() => this.renderFooter({ dataSource: _d, emptyContent, errorContent })}
-                    />
-                    {footer()}
-                    {pagination === null ? null : (
-                        <Pagination
-                            size="sm"
-                            total={total}
-                            {...{
-                                hideOnSinglePage: false,
-                                showQuickJumper: true,
-                                showSizeChanger: true
-                            }}
-                            {...pagination}
-                            className={`${prefixCls}-pagination`}
-                            onChange={(current, pageSize) => {
-                                this.setState({
-                                    pagination: { current, pageSize }
-                                });
-                                pagination.onChange && pagination.onChange(current, pageSize);
-                            }}
-                            onPageSizeChange={(current, pageSize) => {
-                                this.setState({
-                                    pagination: { current, pageSize }
-                                });
-                                pagination.onPageSizeChange && pagination.onPageSizeChange(current, pageSize);
-                            }}
-                            onAdvise={(current, pageSize) => {
-                                this.setState({
-                                    pagination: { current, pageSize }
-                                });
-                                pagination.onAdvise && pagination.onAdvise(current, pageSize);
-                            }}
+                            prefixCls={prefixCls}
+                            data={dataSource}
+                            columns={columns}
+                            onRow={this.onRow}
+                            components={_.extend({}, components, {
+                                body: {
+                                    row: TableRow
+                                }
+                            })}
+                            emptyText={null}
+                            expandIconAsCell={!!expandedRowRender || expandIconAsCell}
+                            expandedRowRender={expandedRowRender}
+                            expandIconColumnIndex={
+                                expandIconColumnIndex === undefined
+                                    ? columns[0] && columns[0].key === 'table_row_selection'
+                                        ? 1
+                                        : 0
+                                    : expandIconColumnIndex
+                            }
+                            title={() => this.renderTitle({ filters: finalFilters, searchValue, total, locale })}
+                            footer={() => this.renderFooter({ dataSource: _d, emptyContent, errorContent })}
                         />
-                    )}
-                </TableWrap>
-            </TableContext.Provider>
+                        {footer()}
+                        {pagination === null ? null : (
+                            <Pagination
+                                size="sm"
+                                total={total}
+                                {...{
+                                    hideOnSinglePage: false,
+                                    showQuickJumper: true,
+                                    showSizeChanger: true
+                                }}
+                                {...pagination}
+                                className={`${prefixCls}-pagination`}
+                                onChange={(current, pageSize) => {
+                                    this.setState({
+                                        pagination: { current, pageSize }
+                                    });
+                                    pagination.onChange && pagination.onChange(current, pageSize);
+                                }}
+                                onPageSizeChange={(current, pageSize) => {
+                                    this.setState({
+                                        pagination: { current, pageSize }
+                                    });
+                                    pagination.onPageSizeChange && pagination.onPageSizeChange(current, pageSize);
+                                }}
+                                onAdvise={(current, pageSize) => {
+                                    this.setState({
+                                        pagination: { current, pageSize }
+                                    });
+                                    pagination.onAdvise && pagination.onAdvise(current, pageSize);
+                                }}
+                            />
+                        )}
+                    </TableWrap>
+                </TableContext.Provider>
+            </InhertProvider>
         );
     }
 }

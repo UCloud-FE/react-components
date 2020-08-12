@@ -6,7 +6,6 @@ import Menu from 'src/components/Menu';
 import Popover from 'src/components/Popover';
 
 import { ActionButton } from './style';
-import { TableContext } from './Table';
 
 const Size = ['sm', 'md', 'lg'];
 const ButtonStyleType = Button.StyleType;
@@ -49,7 +48,7 @@ export default class ActionList extends Component {
             e.preventDefault();
         }
     };
-    renderMenu = (list, size, getPopupContainer) => {
+    renderMenu = (list, size) => {
         if (!list.length) {
             return null;
         }
@@ -79,15 +78,15 @@ export default class ActionList extends Component {
         return (
             <Popover
                 trigger={['click']}
-                getPopupContainer={getPopupContainer}
                 {...popoverProps}
                 visible={visible}
                 onVisibleChange={visible => this.setState({ visible })}
+                forwardPopupContainer
                 popup={
                     <Menu
                         selectable={false}
                         onClick={() => this.setState({ visible: false })}
-                        customStyle={{ maxHeight: '200px' }}
+                        customStyle={{ maxHeight: '380px' }}
                     >
                         {renderList(list)}
                     </Menu>
@@ -120,12 +119,7 @@ export default class ActionList extends Component {
         return (
             <ul {...rest}>
                 {this.renderButtonList(buttonList, size)}
-                <TableContext.Consumer>
-                    {(context = {}) => {
-                        const { getPopupContainer } = context;
-                        return this.renderMenu(menuList, size, getPopupContainer);
-                    }}
-                </TableContext.Consumer>
+                {this.renderMenu(menuList, size)}
             </ul>
         );
     }

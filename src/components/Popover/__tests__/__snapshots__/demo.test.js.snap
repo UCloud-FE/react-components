@@ -232,6 +232,346 @@ exports[`Popover demo -- control 1`] = `
 </div>
 `;
 
+exports[`Popover demo -- forwardPopupContainer 1`] = `
+.c2 {
+  padding: 0 24px;
+  margin-top: 16px;
+}
+
+.c2:before,
+.c2:after {
+  content: ' ';
+  display: table;
+}
+
+.c2:after {
+  clear: both;
+}
+
+.c3 {
+  line-height: 28px;
+  font-weight: bold;
+}
+
+.c5 {
+  line-height: 20px;
+  font-weight: normal;
+}
+
+.c7 {
+  line-height: 28px;
+  padding: 0 24px;
+  margin-top: 16px;
+}
+
+.c7:before,
+.c7:after {
+  content: ' ';
+  display: table;
+}
+
+.c7:after {
+  clear: both;
+}
+
+.c10 {
+  padding: 0 24px;
+  margin-top: 16px;
+}
+
+.c12 {
+  line-height: 1;
+  padding: 0 24px;
+  margin-top: 16px;
+  padding-top: 12px;
+}
+
+.c12:before,
+.c12:after {
+  content: ' ';
+  display: table;
+}
+
+.c12:after {
+  clear: both;
+}
+
+.c0 {
+  box-sizing: border-box;
+  text-align: left;
+  overflow: auto;
+  background: #ffffff;
+  font-size: 12px;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 4px 4px -2px rgba(0,0,0,0.05);
+  border-radius: 4px;
+}
+
+.c0 .c1:last-child,
+.c0 .c6:last-child,
+.c0 .c9:last-child {
+  margin-bottom: 24px;
+}
+
+.c0 .c1:first-child,
+.c0 .c6:first-child,
+.c0 .c9:first-child {
+  margin-top: 24px;
+}
+
+.c0 .c1 {
+  color: #0a1633;
+  font-size: 16px;
+}
+
+.c0 .c4 {
+  color: #526075;
+  font-size: 12px;
+}
+
+.c0 .c11 {
+  border-top: 1px solid #d2d6ea;
+  padding: 16px 24px;
+  margin-top: 24px;
+}
+
+.c8 {
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  border-width: 1px;
+  border-style: solid;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 28px;
+  padding: 0 8px;
+  color: #0a1633;
+  fill: #0a1633;
+  background: #ffffff;
+  border: none;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
+}
+
+.c8:hover {
+  color: #3860f4;
+  background: #ffffff;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
+<div>
+  <div
+    class="demo-wrap"
+  >
+    <div
+      class="uc-fe-card c0"
+    >
+      <div />
+      <div
+        class="c1 uc-fe-card-header c2"
+      >
+        <div
+          class="uc-fe-card-title c3"
+        >
+          默认容器为 body，可以显示，但滚动时由于容器和元素不在一个滚动层中，会导致偏移，体验较差
+        </div>
+        <div
+          class="c4 uc-fe-card-comment c5"
+        >
+          This is the comment
+        </div>
+      </div>
+      <div
+        class="c6 uc-fe-card-action c7"
+      >
+        <button
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c8"
+          type="button"
+        >
+          This is a action button
+        </button>
+        <button
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c8"
+          type="button"
+        >
+          This is a action button
+        </button>
+      </div>
+      <div
+        class="c9 uc-fe-card-content c10"
+      >
+        <div
+          style="background:#e1e6f0;height:50px;padding:10px;"
+        >
+          This is the content
+        </div>
+      </div>
+      <div
+        class="c11 uc-fe-card-footer c12"
+      >
+        <button
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c8"
+          style="float:right;"
+          type="button"
+        >
+          This is a footer button
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    class="demo-wrap"
+  >
+    <div
+      class="uc-fe-card c0"
+    >
+      <div />
+      <div
+        class="c1 uc-fe-card-header c2"
+      >
+        <div
+          class="uc-fe-card-title c3"
+        >
+          使用父容器作为容器，如果上层有定位容器，并再上层嵌套了滚动容器，会导致弹出层无法脱离，定位出现问题且滚动会闪烁
+        </div>
+        <div
+          class="c4 uc-fe-card-comment c5"
+        >
+          This is the comment
+        </div>
+      </div>
+      <div
+        class="c6 uc-fe-card-action c7"
+      >
+        <button
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c8"
+          type="button"
+        >
+          This is a action button
+        </button>
+        <button
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c8"
+          type="button"
+        >
+          This is a action button
+        </button>
+      </div>
+      <div
+        class="c9 uc-fe-card-content c10"
+      >
+        <div
+          style="position:relative;"
+        >
+          <div
+            style="background:#e1e6f0;height:50px;padding:10px;"
+          >
+            This is the content
+          </div>
+        </div>
+      </div>
+      <div
+        class="c11 uc-fe-card-footer c12"
+      >
+        <button
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c8"
+          style="float:right;"
+          type="button"
+        >
+          This is a footer button
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    class="demo-wrap"
+  >
+    <div
+      class="uc-fe-card c0"
+    >
+      <div />
+      <div
+        class="c1 uc-fe-card-header c2"
+      >
+        <div
+          class="uc-fe-card-title c3"
+        >
+          使用 forwardPopupContainer 可以比较方便的跳过组件内部的这类问题，Card、Table 等组件内部都提供了比较安全的容器区域。
+        </div>
+        <div
+          class="c4 uc-fe-card-comment c5"
+        >
+          This is the comment
+        </div>
+      </div>
+      <div
+        class="c6 uc-fe-card-action c7"
+      >
+        <button
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c8"
+          type="button"
+        >
+          This is a action button
+        </button>
+        <button
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c8"
+          type="button"
+        >
+          This is a action button
+        </button>
+      </div>
+      <div
+        class="c9 uc-fe-card-content c10"
+      >
+        <div
+          style="position:relative;"
+        >
+          <div
+            style="background:#e1e6f0;height:50px;padding:10px;"
+          >
+            This is the content
+          </div>
+        </div>
+      </div>
+      <div
+        class="c11 uc-fe-card-footer c12"
+      >
+        <button
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c8"
+          style="float:right;"
+          type="button"
+        >
+          This is a footer button
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    class="demo-wrap"
+  >
+    <div>
+      <h2>
+        使用 function 的 forwardPopupContainer 来做容器的 fallback
+      </h2>
+      <div
+        style="position:relative;"
+      >
+        <div
+          style="background:#e1e6f0;height:50px;padding:10px;"
+        >
+          This is the content
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Popover demo -- placement 1`] = `
 <div>
   <button
