@@ -169,11 +169,16 @@ export const TabsWrap = styled(RcTabs).attrs({
                 tabBarPosition === 'top' &&
                 css`
                     .${prefixCls}-top-bar {
-                        border-bottom: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
+                        ::before {
+                            content: ' ';
+                            position: absolute;
+                            bottom: 0;
+                            width: 100%;
+                            height: 1px;
+                            background: ${DT.T_COLOR_LINE_DEFAULT_DARK};
+                            z-index: 0;
+                        }
                         .${prefixCls} {
-                            &-nav-container {
-                                bottom: -1px;
-                            }
                             &-tab {
                                 display: inline-block;
 
@@ -203,11 +208,16 @@ export const TabsWrap = styled(RcTabs).attrs({
                 tabBarPosition === 'bottom' &&
                 css`
                     .${prefixCls}-bottom-bar {
-                        border-top: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
+                        ::before {
+                            content: ' ';
+                            position: absolute;
+                            top: 0;
+                            width: 100%;
+                            height: 1px;
+                            background: ${DT.T_COLOR_LINE_DEFAULT_DARK};
+                            z-index: 0;
+                        }
                         .${prefixCls} {
-                            &-nav-container {
-                                top: -1px;
-                            }
                             &-tab {
                                 display: inline-block;
 
@@ -237,13 +247,18 @@ export const TabsWrap = styled(RcTabs).attrs({
                 tabBarPosition === 'left' &&
                 css`
                     .${prefixCls}-left-bar {
-                        border-right: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
                         float: left;
                         height: 100%;
+                        ::before {
+                            content: ' ';
+                            position: absolute;
+                            right: 0;
+                            height: 100%;
+                            width: 1px;
+                            background: ${DT.T_COLOR_LINE_DEFAULT_DARK};
+                            z-index: 0;
+                        }
                         .${prefixCls} {
-                            &-nav-container {
-                                right: -1px;
-                            }
                             &-tab {
                                 &:hover {
                                     border-right-color: ${DT.T_TABS_DEFAULT_COLOR_BG_HOVER};
@@ -273,13 +288,18 @@ export const TabsWrap = styled(RcTabs).attrs({
                 tabBarPosition === 'right' &&
                 css`
                     .${prefixCls}-right-bar {
-                        border-left: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
                         float: right;
                         height: 100%;
+                        ::before {
+                            content: ' ';
+                            position: absolute;
+                            left: 0;
+                            height: 100%;
+                            width: 1px;
+                            background: ${DT.T_COLOR_LINE_DEFAULT_DARK};
+                            z-index: 0;
+                        }
                         .${prefixCls} {
-                            &-nav-container {
-                                left: -1px;
-                            }
                             &-tab {
                                 &:hover {
                                     border-left-color: ${DT.T_TABS_DEFAULT_COLOR_BG_HOVER};
