@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.27](https://github.com/UCloud-FE/react-components/compare/v0.6.26...v0.6.27) (2020-08-17)
+
+### Features
+
+-   **Tabs:** add pure styleType ([78b9ffb](https://github.com/UCloud-FE/react-components/commit/78b9ffbd5d03406f33110a44f5b7d205362034b8))
+
 ### [0.6.26](https://github.com/UCloud-FE/react-components/compare/v0.6.25...v0.6.26) (2020-08-17)
 
 ### Features
