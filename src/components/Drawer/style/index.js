@@ -1,11 +1,9 @@
 import React from 'react';
-import styled, { css, withTheme } from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import RcDrawer from 'src/libs/rc-drawer';
 import config from 'src/config';
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
-import defaultTheme from 'src/components/ThemeProvider/theme';
-import SvgIcon from 'src/components/SvgIcon';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-drawer';
@@ -58,20 +56,20 @@ const closeHandlerPropsMixin = ({ theme: { designTokens: DT } }) => css`
     }
 `;
 
-export const CloseHandlerWrapper = styled.span`
-    display: inline-block;
-    text-align: center;
-    position: absolute;
-    cursor: pointer;
-    font-size: 0px;
-    transition: all 0.3s;
+export const CloseHandlerWrapper = styled.span(
+    ({ theme: { designTokens: DT } }) => css`
+        display: inline-block;
+        text-align: center;
+        position: absolute;
+        cursor: pointer;
+        font-size: 0px;
+        transition: all 0.3s;
 
-    ${closeHandlerPropsMixin};
-`;
+        ${closeHandlerPropsMixin};
 
-export const CloseIcon = withTheme(({ theme: { designTokens: DT } = defaultTheme }) => {
-    return <SvgIcon type="cross" color={DT.T_BUTTON_PRIMARY_COLOR_TEXT_DEFAULT} />;
-});
+        fill: ${DT.T_BUTTON_PRIMARY_COLOR_TEXT_DEFAULT};
+    `
+);
 
 /* stylelint-disable no-descending-specificity */
 export const DrawerWrap = styled(CleanPropsRcDrawer).attrs({
