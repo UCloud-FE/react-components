@@ -82,7 +82,7 @@ export const RowWrap = styled.div.attrs({
     ${justifyMixin};
     ${alignMixin};
 
-    ${/* sc-sel */ ColWrap} {
+    > ${/* sc-sel */ ColWrap} {
         padding-left: ${({ gutter }) => gutter / 2 + 'px'};
         padding-right: ${({ gutter }) => gutter / 2 + 'px'};
     }
