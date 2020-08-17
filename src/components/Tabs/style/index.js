@@ -148,6 +148,20 @@ export const TabsWrap = styled(RcTabs).attrs({
                     }
                 }
             }
+
+            &-styletype-pure-bar {
+                .${prefixCls} {
+                    &-ink-bar {
+                        display: none !important;
+                    }
+                }
+                .${prefixCls}-tab {
+                    border: none;
+                    border-radius: 0;
+                    padding: 0;
+                    line-height: normal;
+                }
+            }
         }
 
         &.${prefixCls} {
