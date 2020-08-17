@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.28](https://github.com/UCloud-FE/react-components/compare/v0.6.27...v0.6.28) (2020-08-17)
+
+### Features
+
+-   **Tabs:** rewrite tabs border ([0bfd3dc](https://github.com/UCloud-FE/react-components/commit/0bfd3dc8c0413105e7c88f349949cd4cd8b4e66e))
+
+### Bug Fixes
+
+-   **Grid:** fix col nested bug ([ccaf19e](https://github.com/UCloud-FE/react-components/commit/ccaf19e9268e714afed0a41c61b857a8f6f60a91))
+
 ### [0.6.27](https://github.com/UCloud-FE/react-components/compare/v0.6.26...v0.6.27) (2020-08-17)
 
 ### Features
