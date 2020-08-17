@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.26](https://github.com/UCloud-FE/react-components/compare/v0.6.25...v0.6.26) (2020-08-17)
+
+### Features
+
+-   **Drawer:** remove withTheme to avoid sc prod bug ([2ec1a23](https://github.com/UCloud-FE/react-components/commit/2ec1a2330474db13b1db1dd7ef151ff87b37cbfb))
+
 ### [0.6.25](https://github.com/UCloud-FE/react-components/compare/v0.6.24...v0.6.25) (2020-08-12)
 
 ### Features
