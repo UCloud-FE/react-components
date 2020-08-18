@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.29](https://github.com/UCloud-FE/react-components/compare/v0.6.28...v0.6.29) (2020-08-18)
+
+### Bug Fixes
+
+-   **Checkbox:** fix Checkbox and Radio big content ([4ccc95c](https://github.com/UCloud-FE/react-components/commit/4ccc95c8e507b816ae520ca41ecc27f865b75581))
+-   **Table:** fix table prop misspell ([e242110](https://github.com/UCloud-FE/react-components/commit/e242110fbdbd69d3ca14d8ddb14d8857977a0cb9))
+
 ### [0.6.28](https://github.com/UCloud-FE/react-components/compare/v0.6.27...v0.6.28) (2020-08-17)
 
 ### Features
