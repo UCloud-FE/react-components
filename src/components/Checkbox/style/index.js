@@ -19,7 +19,7 @@ export const CheckboxWrap = styled.span(
         cursor: pointer;
         position: relative;
         white-space: nowrap;
-        height: ${Height[size]};
+        min-height: ${Height[size]};
         line-height: ${Height[size]};
         ${inlineBlockWithVerticalMixin};
 

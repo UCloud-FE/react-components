@@ -26,7 +26,7 @@ const radioCommonStyleMixin = ({ theme: { designTokens: DT, fontSize } }) => css
 `;
 
 const sizeMixin = ({ theme: { Height }, size }) => css`
-    height: ${Height[size]};
+    min-height: ${Height[size]};
     line-height: ${Height[size]};
 `;
 
