@@ -43,7 +43,7 @@ class Table extends React.Component {
                 cell: PropTypes.any
             })
         }),
-        ...ExpandableTable.PropTypes
+        ...ExpandableTable.propTypes
     };
 
     static childContextTypes = {
