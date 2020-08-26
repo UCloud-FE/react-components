@@ -41,18 +41,20 @@ class Tooltip extends Component {
         const { popup, placement, theme: themeType, arrow, customStyle } = this.props;
         const { popupWrapperPadding } = customStyle;
         return (
-            <ThemeProvider theme={theme}>
-                <TooltipWrap placement={placement} themeType={themeType}>
-                    {arrow && (
-                        <Arrow>
-                            <ArrowInner />
-                        </Arrow>
-                    )}
-                    <ContentWrap themeType={themeType} popupWrapperPadding={popupWrapperPadding}>
-                        {popup}
-                    </ContentWrap>
-                </TooltipWrap>
-            </ThemeProvider>
+            popup != null && (
+                <ThemeProvider theme={theme}>
+                    <TooltipWrap placement={placement} themeType={themeType}>
+                        {arrow && (
+                            <Arrow>
+                                <ArrowInner />
+                            </Arrow>
+                        )}
+                        <ContentWrap themeType={themeType} popupWrapperPadding={popupWrapperPadding}>
+                            {popup}
+                        </ContentWrap>
+                    </TooltipWrap>
+                </ThemeProvider>
+            )
         );
     }
     render() {
