@@ -5,14 +5,12 @@ global.requestAnimationFrame =
     };
 
 const Enzyme = require('enzyme');
-const Adapter = require('enzyme-adapter-react-15');
+const Adapter = require('enzyme-adapter-react-16');
 const moment = require('moment-timezone');
 
 moment.tz.setDefault('Asia/Shanghai');
 import 'moment/locale/zh-cn';
-moment()
-    .locale('zh-cn')
-    .utcOffset(8);
+moment().locale('zh-cn').utcOffset(8);
 
 Enzyme.configure({ adapter: new Adapter() });
 
