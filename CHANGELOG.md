@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.7.0](https://github.com/UCloud-FE/react-components/compare/v0.6.29...v0.7.0) (2020-08-27)
+
+### Features
+
+-   **Badge:** add bubble ([3012484](https://github.com/UCloud-FE/react-components/commit/30124840e74e8d652d2e97dca792ab0dc160706d))
+-   **project:** upgrade react to 16 ([e6e2264](https://github.com/UCloud-FE/react-components/commit/e6e22640b87551bdaea422262e5efbdbd3f9e2ff))
+-   **Tooltip:** when popup is null, hide the container ([b856e85](https://github.com/UCloud-FE/react-components/commit/b856e85c212cb583b5595d802962b0683c1510af))
+
 ### [0.6.29](https://github.com/UCloud-FE/react-components/compare/v0.6.28...v0.6.29) (2020-08-18)
 
 ### Bug Fixes
