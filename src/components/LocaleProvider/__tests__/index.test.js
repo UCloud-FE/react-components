@@ -47,10 +47,7 @@ describe('LocaleProvider', () => {
         wrapper.find('.test-table .test-search-input i.icon__search').simulate('click');
         expect(wrapper.find('.test-table .uc-fe-table-title .uc-fe-table-search-tip-wrap').length).toBe(1);
         expect(wrapper.find('.test-table .uc-fe-table-filter i').length).toBe(5);
-        wrapper
-            .find('.test-table .uc-fe-table-filter i')
-            .at(0)
-            .simulate('click');
+        wrapper.find('.test-table .uc-fe-table-filter i').at(0).simulate('click');
         expect(document.querySelectorAll('body>div>div>.uc-fe-popover').length).toBe(10);
         document.querySelector('body>div>div>.uc-fe-popover').children[0].children[0].children[0].children[0].click();
         expect(
@@ -69,7 +66,7 @@ describe('LocaleProvider', () => {
             renderToJson(wrapper.find('.test-table .uc-fe-table-title .uc-fe-table-search-tip-wrap').render())
         ).toMatchSnapshot();
 
-        wrapper.find('.test-table .test-column-config-btn button').simulate('click');
+        wrapper.find('.test-table .test-column-config-btn button').at(0).simulate('click');
         expect(document.querySelectorAll('.uc-fe-modal-wrap').length).toBe(1);
         expect(document.querySelector('.uc-fe-modal-wrap').outerHTML).toMatchSnapshot();
         document.querySelector('.uc-fe-modal-close').click();
