@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.1](https://github.com/UCloud-FE/react-components/compare/v0.7.0...v0.7.1) (2020-08-28)
+
+### Features
+
+-   **Badge:** fix align not update & add bubble container, offset ([9782022](https://github.com/UCloud-FE/react-components/commit/97820221843e0168ddc711e9a8be9b12cf78f29d))
+
 ## [0.7.0](https://github.com/UCloud-FE/react-components/compare/v0.6.29...v0.7.0) (2020-08-27)
 
 ### Features
