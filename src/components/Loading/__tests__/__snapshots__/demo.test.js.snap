@@ -49,6 +49,11 @@ exports[`Loading demo -- indicator 1`] = `
   text-align: center;
 }
 
+.c3 {
+  -webkit-animation: iVXCSc 1.2s infinite linear;
+  animation: iVXCSc 1.2s infinite linear;
+}
+
 <div>
   <div
     class="demo-wrap"
@@ -66,10 +71,77 @@ exports[`Loading demo -- indicator 1`] = `
           class="c2"
         >
           <div>
-            <img
-              src="https://loading.io/spinners/balls/lg.circle-slack-loading-icon.gif"
-              width="50"
-            />
+            <svg
+              fill="#1ABC9C"
+              height="80"
+              viewBox="0 0 55 80"
+              width="55"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                transform="matrix(1 0 0 -1 0 80)"
+              >
+                <rect
+                  height="20"
+                  rx="3"
+                  width="10"
+                >
+                  <animate
+                    attributeName="height"
+                    begin="0s"
+                    calcMode="linear"
+                    dur="4.3s"
+                    repeatCount="indefinite"
+                    values="20;45;57;80;64;32;66;45;64;23;66;13;64;56;34;34;2;23;76;79;20"
+                  />
+                </rect>
+                <rect
+                  height="80"
+                  rx="3"
+                  width="10"
+                  x="15"
+                >
+                  <animate
+                    attributeName="height"
+                    begin="0s"
+                    calcMode="linear"
+                    dur="2s"
+                    repeatCount="indefinite"
+                    values="80;55;33;5;75;23;73;33;12;14;60;80"
+                  />
+                </rect>
+                <rect
+                  height="50"
+                  rx="3"
+                  width="10"
+                  x="30"
+                >
+                  <animate
+                    attributeName="height"
+                    begin="0s"
+                    calcMode="linear"
+                    dur="1.4s"
+                    repeatCount="indefinite"
+                    values="50;34;78;23;56;23;34;76;80;54;21;50"
+                  />
+                </rect>
+                <rect
+                  height="30"
+                  rx="3"
+                  width="10"
+                  x="45"
+                >
+                  <animate
+                    attributeName="height"
+                    begin="0s"
+                    calcMode="linear"
+                    dur="2s"
+                    repeatCount="indefinite"
+                    values="30;45;13;80;56;72;45;76;34;23;67;30"
+                  />
+                </rect>
+              </g>
+            </svg>
           </div>
         </div>
       </div>
@@ -91,10 +163,70 @@ exports[`Loading demo -- indicator 1`] = `
           class="c2"
         >
           <div>
-            <img
-              src="https://loading.io/spinners/coolors/lg.palette-rotating-ring-loader.gif"
-              width="50"
-            />
+            <svg
+              fill="#E74C3C"
+              height="64"
+              viewBox="0 0 140 64"
+              width="140"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M30.262 57.02L7.195 40.723c-5.84-3.976-7.56-12.06-3.842-18.063 3.715-6 11.467-7.65 17.306-3.68l4.52 3.76 2.6-5.274c3.717-6.002 11.47-7.65 17.305-3.68 5.84 3.97 7.56 12.054 3.842 18.062L34.49 56.118c-.897 1.512-2.793 1.915-4.228.9z"
+                fill-opacity=".5"
+              >
+                <animate
+                  attributeName="fill-opacity"
+                  begin="0s"
+                  calcMode="linear"
+                  dur="1.4s"
+                  repeatCount="indefinite"
+                  values="0.5;1;0.5"
+                />
+              </path>
+              <path
+                d="M105.512 56.12l-14.44-24.272c-3.716-6.008-1.996-14.093 3.843-18.062 5.835-3.97 13.588-2.322 17.306 3.68l2.6 5.274 4.52-3.76c5.84-3.97 13.592-2.32 17.307 3.68 3.718 6.003 1.998 14.088-3.842 18.064L109.74 57.02c-1.434 1.014-3.33.61-4.228-.9z"
+                fill-opacity=".5"
+              >
+                <animate
+                  attributeName="fill-opacity"
+                  begin="0.7s"
+                  calcMode="linear"
+                  dur="1.4s"
+                  repeatCount="indefinite"
+                  values="0.5;1;0.5"
+                />
+              </path>
+              <path
+                d="M67.408 57.834l-23.01-24.98c-5.864-6.15-5.864-16.108 0-22.248 5.86-6.14 15.37-6.14 21.234 0L70 16.168l4.368-5.562c5.863-6.14 15.375-6.14 21.235 0 5.863 6.14 5.863 16.098 0 22.247l-23.007 24.98c-1.43 1.556-3.757 1.556-5.188 0z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="demo-wrap"
+  >
+    <div
+      class="c0"
+    >
+      <div
+        style="height:100px;background:gray"
+      />
+      <div
+        class="c1"
+      >
+        <div
+          class="c2"
+        >
+          <div>
+            <div
+              class="c3"
+              style="display:inline-block"
+            >
+              😈
+            </div>
           </div>
         </div>
       </div>
