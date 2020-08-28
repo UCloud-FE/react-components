@@ -3,25 +3,27 @@ import React from 'react';
 import Badge from 'src/components/Badge';
 import Form from 'src/components/Form';
 import Input from 'src/components/Input';
+import NumberInput from 'src/components/NumberInput';
 import Radio from 'src/components/Radio';
 import Button from 'src/components/Button';
 import Combine from 'src/components/Combine';
 
 // demo start
-const { StyleType } = Badge.Bubble;
+const { StyleType, defaultProps } = Badge.Bubble;
 class Demo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             bubble: 'bubble',
-            styleType: Badge.Bubble.defaultProps.styleType
+            styleType: defaultProps.styleType,
+            offset: defaultProps.offset
         };
     }
     forceAlign() {
         this.badge && this.badge.forceAlign();
     }
     render() {
-        const { bubble, styleType, bubbleColor, bubbleBackground } = this.state;
+        const { bubble, styleType, bubbleColor, bubbleBackground, offset } = this.state;
         const itemLayout = {
             labelCol: {
                 span: 3
@@ -41,6 +43,26 @@ class Demo extends React.Component {
                             value={styleType}
                             options={StyleType.map(v => ({ value: v, label: v }))}
                             onChange={v => this.setState({ styleType: v })}
+                        />
+                    </Form.Item>
+                    <Form.Item label="offset[0]" {...itemLayout}>
+                        <NumberInput
+                            value={offset[0]}
+                            onNumberChange={v =>
+                                this.setState({
+                                    offset: [v, offset[1]]
+                                })
+                            }
+                        />
+                    </Form.Item>
+                    <Form.Item label="offset[1]" {...itemLayout}>
+                        <NumberInput
+                            value={offset[1]}
+                            onNumberChange={v =>
+                                this.setState({
+                                    offset: [offset[0], v]
+                                })
+                            }
                         />
                     </Form.Item>
                     <Form.Item label="customStyle.bubbleColor" {...itemLayout}>
@@ -64,6 +86,7 @@ class Demo extends React.Component {
                     <Badge.Bubble
                         bubble={bubble}
                         styleType={styleType}
+                        offset={offset}
                         customStyle={{ bubbleColor, bubbleBackground }}
                         style={{ margin: 10 }}
                     >

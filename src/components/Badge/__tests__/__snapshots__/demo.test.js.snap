@@ -885,12 +885,12 @@ exports[`Badge demo -- badge 1`] = `
 `;
 
 exports[`Badge demo -- bubble 1`] = `
-.c15 {
+.c24 {
   position: relative;
   display: inline-block;
 }
 
-.c16 {
+.c25 {
   position: absolute;
   line-height: 20px;
   padding: 0 4px;
@@ -900,7 +900,7 @@ exports[`Badge demo -- bubble 1`] = `
   background: #f9ce1d;
 }
 
-.c16::after {
+.c25::after {
   content: '';
   width: 0;
   height: 0;
@@ -982,7 +982,11 @@ exports[`Badge demo -- bubble 1`] = `
   height: 14px;
 }
 
-.c14 {
+.c16 {
+  vertical-align: baseline;
+}
+
+.c23 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -1007,7 +1011,7 @@ exports[`Badge demo -- bubble 1`] = `
   transition: all .22s cubic-bezier(.4,0,.2,1);
 }
 
-.c14:hover {
+.c23:hover {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8;
 }
@@ -1101,29 +1105,29 @@ exports[`Badge demo -- bubble 1`] = `
   margin-right: 0;
 }
 
-.c9 .c18 {
+.c9 .c27 {
   margin-right: 12px;
   margin-bottom: 8px;
 }
 
-.c9 .c18:last-child {
+.c9 .c27:last-child {
   margin-right: 0;
 }
 
-.c9 .c19+.c19 {
+.c9 .c28+.c28 {
   margin-left: -1px;
 }
 
-.c9 .c17 {
+.c9 .c26 {
   margin-right: -1px;
   margin-bottom: 8px;
 }
 
-.c9 .c17:first-child {
+.c9 .c26:first-child {
   border-radius: 2px 0 0 2px;
 }
 
-.c9 .c17:last-child {
+.c9 .c26:last-child {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
 }
@@ -1202,24 +1206,144 @@ exports[`Badge demo -- bubble 1`] = `
   color: rgba(10,22,51,0.20);
 }
 
-.c13 {
+.c19 {
   position: relative;
 }
 
-.c13 > .uc-fe-combine-controller {
+.c21 {
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+}
+
+.c15 {
+  position: absolute;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 2px;
+  border-style: solid;
+  cursor: pointer;
+  color: #0a1633;
+  border-color: #d2d6ea;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
+  background: #ffffff;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.c15:hover {
+  color: #3860f4;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
+.c13 {
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 2px;
+  display: inline-block;
+  vertical-align: middle;
+  color: #0a1633;
+  height: 28px;
+  border: 1px solid #d2d6ea;
+  padding-right: 22px;
+  border-right-width: 0;
+}
+
+.c13 .c20 {
+  line-height: 26px;
+  height: 26px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.c13 .c20::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.c13 .c20::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.c13 .c20:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.c13 .c20::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.c13:hover {
+  border-color: #c3cad9;
+}
+
+.c13 .c18 {
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #fafafc;
+}
+
+.c13 .c18:hover {
+  background: #f6f6fb;
+}
+
+.c13 .c20 {
+  padding: 0 0 0 8px;
+  text-align: left;
+  box-shadow: none;
+  background: transparent;
+  width: 34px;
+}
+
+.c13 .c14,
+.c13 .c17 {
+  right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
+  height: 13px;
+  line-height: 13px;
+  width: 22px;
+}
+
+.c13 .c14:hover,
+.c13 .c17:hover {
+  color: #3860f4;
+}
+
+.c13 .c14 {
+  border-width: 0 0 0 1px;
+  top: -1px;
+  padding-top: 1px;
+}
+
+.c13 .c17 {
+  border-width: 1px 0 0 1px;
+  bottom: 0;
+  border-top-color: #c3cad9;
+}
+
+.c22 {
+  position: relative;
+}
+
+.c22 > .uc-fe-combine-controller {
   vertical-align: middle;
   display: inline-block;
 }
 
-.c13 > .uc-fe-combine-controller+.uc-fe-combine-controller {
+.c22 > .uc-fe-combine-controller+.uc-fe-combine-controller {
   margin-left: 12px;
 }
 
-.c13 > .uc-fe-combine-controller+.uc-fe-combine-controller:focus {
+.c22 > .uc-fe-combine-controller+.uc-fe-combine-controller:focus {
   z-index: 2;
 }
 
-.c13 > .uc-fe-combine-controller+.uc-fe-combine-controller:hover {
+.c22 > .uc-fe-combine-controller+.uc-fe-combine-controller:hover {
   z-index: 3;
 }
 
@@ -1376,6 +1500,102 @@ exports[`Badge demo -- bubble 1`] = `
         class="uc-fe-form-label c3 c4 uc-fe-col c5"
         span="3"
       >
+        offset[0]
+      </div>
+      <div
+        class="uc-fe-form-controller c4 uc-fe-col c6"
+        span="9"
+      >
+        <div
+          class="uc-fe-numberinput uc-fe-numberinput-styletype-default c13"
+        >
+          <div>
+            <span
+              class="c14 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c15"
+              unselectable="unselectable"
+            >
+              <i
+                class="uc-fe-icon icon__caret-up c16"
+              />
+            </span>
+            <span
+              class="c17 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c15"
+              unselectable="unselectable"
+            >
+              <i
+                class="uc-fe-icon icon__caret-down c16"
+              />
+            </span>
+          </div>
+          <div
+            class="c18 uc-fe-numberinput-input-wrap c19"
+          >
+            <input
+              autocomplete="off"
+              class="c20 uc-fe-numberinput-input c21"
+              min="-9007199254740991"
+              step="1"
+              value="12"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="c1 uc-fe-form-item uc-fe-row c2"
+    >
+      <div
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
+        span="3"
+      >
+        offset[1]
+      </div>
+      <div
+        class="uc-fe-form-controller c4 uc-fe-col c6"
+        span="9"
+      >
+        <div
+          class="uc-fe-numberinput uc-fe-numberinput-styletype-default c13"
+        >
+          <div>
+            <span
+              class="c14 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c15"
+              unselectable="unselectable"
+            >
+              <i
+                class="uc-fe-icon icon__caret-up c16"
+              />
+            </span>
+            <span
+              class="c17 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c15"
+              unselectable="unselectable"
+            >
+              <i
+                class="uc-fe-icon icon__caret-down c16"
+              />
+            </span>
+          </div>
+          <div
+            class="c18 uc-fe-numberinput-input-wrap c19"
+          >
+            <input
+              autocomplete="off"
+              class="c20 uc-fe-numberinput-input c21"
+              min="-9007199254740991"
+              step="1"
+              value="-4"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="c1 uc-fe-form-item uc-fe-row c2"
+    >
+      <div
+        class="uc-fe-form-label c3 c4 uc-fe-col c5"
+        span="3"
+      >
         customStyle.bubbleColor
       </div>
       <div
@@ -1383,7 +1603,7 @@ exports[`Badge demo -- bubble 1`] = `
         span="9"
       >
         <div
-          class="uc-fe-combine c13"
+          class="uc-fe-combine c22"
           spacing="md"
         >
           <input
@@ -1391,7 +1611,7 @@ exports[`Badge demo -- bubble 1`] = `
             type="color"
           />
           <button
-            class="uc-fe-combine-controller uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary c14"
+            class="uc-fe-combine-controller uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary c23"
             type="button"
           >
             Remove Color
@@ -1413,7 +1633,7 @@ exports[`Badge demo -- bubble 1`] = `
         span="9"
       >
         <div
-          class="uc-fe-combine c13"
+          class="uc-fe-combine c22"
           spacing="md"
         >
           <input
@@ -1421,7 +1641,7 @@ exports[`Badge demo -- bubble 1`] = `
             type="color"
           />
           <button
-            class="uc-fe-combine-controller uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary c14"
+            class="uc-fe-combine-controller uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary c23"
             type="button"
           >
             Remove Background
@@ -1434,14 +1654,14 @@ exports[`Badge demo -- bubble 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-badge c15"
+      class="uc-fe-badge c24"
       style="margin:10px"
     >
       <div
         style="width:50px;height:50px;background:#ddd"
       />
       <div
-        class="c16"
+        class="c25"
       >
         bubble
       </div>

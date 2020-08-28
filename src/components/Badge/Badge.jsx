@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import RcAlign from 'rc-align';
+import RcAlign from 'src/libs/rc-align';
 import _ from 'lodash';
 
 import { Wrap, BadgeWrap, BaseBadge, DotBadge } from './style';

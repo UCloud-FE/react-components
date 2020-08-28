@@ -45,6 +45,5 @@ export const bubblePlacement = {
         adjustX: 1,
         adjustY: 1
     },
-    offset: [0, 0],
-    targetOffset: [12, 1]
+    offset: [0, -5]
 };
