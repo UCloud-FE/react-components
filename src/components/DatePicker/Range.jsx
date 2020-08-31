@@ -6,6 +6,7 @@ import moment from 'moment';
 import Popover from 'src/components/Popover';
 import uncontrolledDecorator from 'src/decorators/uncontrolled';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
+import ConfigContext from 'src/components/ConfigProvider/ConfigContext';
 
 import DatePicker from './DatePicker';
 import MonthPicker from './Month';
@@ -247,65 +248,74 @@ class Range extends Component {
                         popoverProps={{ zIndex, ...selectProps.popoverProps }}
                     />
                 )}
-                <Popover
-                    visible={visible}
-                    forwardPopupContainer={triggerNode => triggerNode.parentNode}
-                    zIndex={zIndex}
-                    popup={
-                        <RangePopup>
-                            <RangePopupPickerContainer>
-                                <span>{locale.start}</span>
-                                <Picker
-                                    value={cStart}
-                                    rules={{
-                                        range: range,
-                                        custom: (date, value) => _c && _c(date, value, cStart, cEnd, 'start')
-                                    }}
-                                    display={pickerDisplay}
-                                    onChange={v => this.handleChange('start', v)}
-                                />
-                            </RangePopupPickerContainer>
-                            <RangePopupPickerContainer>
-                                <span>{locale.end}</span>
-                                <Picker
-                                    value={cEnd}
-                                    rules={{
-                                        range: range,
-                                        custom: (date, value) => _c && _c(date, value, cStart, cEnd, 'end')
-                                    }}
-                                    display={pickerDisplay}
-                                    onChange={v => this.handleChange('end', v)}
-                                />
-                            </RangePopupPickerContainer>
-                            <RangePopupFooter>
-                                <div>
-                                    {isValid ? (
-                                        <RangePopupTip>{rangeTip}</RangePopupTip>
-                                    ) : (
-                                        <RangePopupError>{errorTip}</RangePopupError>
-                                    )}
-                                    <RangePopupConfirmButton
-                                        styleType="primary"
-                                        onClick={this.confirmChange}
-                                        disabled={!isValid}
-                                    >
-                                        {locale.rangeConfirm}
-                                    </RangePopupConfirmButton>
-                                </div>
-                            </RangePopupFooter>
-                        </RangePopup>
-                    }
-                    onVisibleChange={this.handleVisibleChange}
-                    trigger={['click']}
-                    {..._.pick(popoverProps, ['getPopupContainer'])}
-                >
-                    <RangeDateWrap size={size} readonly={readonly} disabled={disabled}>
-                        <span>{start.format(rangeFormat || formatString[type])}</span>
-                        <RangeDateSeparator />
-                        <span>{end.format(rangeFormat || formatString[type])}</span>
-                        <PickerIcon type="calendar" color="blue" />
-                    </RangeDateWrap>
-                </Popover>
+                <ConfigContext.Consumer>
+                    {({ forwardPopupContainer } = {}) => {
+                        return (
+                            <Popover
+                                visible={visible}
+                                {...(forwardPopupContainer
+                                    ? { forwardPopupContainer: triggerNode => triggerNode.parentNode }
+                                    : { getPopupContainer: triggerNode => triggerNode.parentNode })}
+                                zIndex={zIndex}
+                                popup={
+                                    <RangePopup>
+                                        <RangePopupPickerContainer>
+                                            <span>{locale.start}</span>
+                                            <Picker
+                                                value={cStart}
+                                                rules={{
+                                                    range: range,
+                                                    custom: (date, value) =>
+                                                        _c && _c(date, value, cStart, cEnd, 'start')
+                                                }}
+                                                display={pickerDisplay}
+                                                onChange={v => this.handleChange('start', v)}
+                                            />
+                                        </RangePopupPickerContainer>
+                                        <RangePopupPickerContainer>
+                                            <span>{locale.end}</span>
+                                            <Picker
+                                                value={cEnd}
+                                                rules={{
+                                                    range: range,
+                                                    custom: (date, value) => _c && _c(date, value, cStart, cEnd, 'end')
+                                                }}
+                                                display={pickerDisplay}
+                                                onChange={v => this.handleChange('end', v)}
+                                            />
+                                        </RangePopupPickerContainer>
+                                        <RangePopupFooter>
+                                            <div>
+                                                {isValid ? (
+                                                    <RangePopupTip>{rangeTip}</RangePopupTip>
+                                                ) : (
+                                                    <RangePopupError>{errorTip}</RangePopupError>
+                                                )}
+                                                <RangePopupConfirmButton
+                                                    styleType="primary"
+                                                    onClick={this.confirmChange}
+                                                    disabled={!isValid}
+                                                >
+                                                    {locale.rangeConfirm}
+                                                </RangePopupConfirmButton>
+                                            </div>
+                                        </RangePopupFooter>
+                                    </RangePopup>
+                                }
+                                onVisibleChange={this.handleVisibleChange}
+                                trigger={['click']}
+                                {..._.pick(popoverProps, ['getPopupContainer', 'forwardPopupContainer'])}
+                            >
+                                <RangeDateWrap size={size} readonly={readonly} disabled={disabled}>
+                                    <span>{start.format(rangeFormat || formatString[type])}</span>
+                                    <RangeDateSeparator />
+                                    <span>{end.format(rangeFormat || formatString[type])}</span>
+                                    <PickerIcon type="calendar" color="blue" />
+                                </RangeDateWrap>
+                            </Popover>
+                        );
+                    }}
+                </ConfigContext.Consumer>
             </RangeContainer>
         );
     }

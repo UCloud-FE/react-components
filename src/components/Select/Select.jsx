@@ -8,6 +8,7 @@ import uncontrolledDecorator from 'decorators/uncontrolled';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
 import { getItemTree, rootPrefix } from 'src/components/Menu/Menu';
 import deprecatedLog from 'src/utils/deprecatedLog';
+import ConfigContext from 'src/components/ConfigProvider/ConfigContext';
 
 import Option from './Option';
 import Extra from './Extra';
@@ -315,30 +316,38 @@ class Select extends Component {
         /* eslint-enable no-unused-vars */
         const { visible, searchValue } = this.state;
         return (
-            <SelectContext.Provider
-                value={{
-                    searchValue: searchValue,
-                    handleSearch: this.handleSearch,
-                    hidePopup: this.hidePopup
+            <ConfigContext.Consumer>
+                {({ forwardPopupContainer } = {}) => {
+                    return (
+                        <SelectContext.Provider
+                            value={{
+                                searchValue: searchValue,
+                                handleSearch: this.handleSearch,
+                                hidePopup: this.hidePopup
+                            }}
+                        >
+                            <SelectWrap {...rest}>
+                                <Popover
+                                    forceRender
+                                    popup={this.renderPopup()}
+                                    onVisibleChange={this.handleVisibleChange}
+                                    placement="bottomLeft"
+                                    trigger={['click']}
+                                    {...(forwardPopupContainer
+                                        ? { forwardPopupContainer: triggerNode => triggerNode.parentNode }
+                                        : { getPopupContainer: triggerNode => triggerNode.parentNode })}
+                                    visible={visible}
+                                    zIndex={100}
+                                    {...popover}
+                                    {...popoverProps}
+                                >
+                                    <div>{this.renderSelector()}</div>
+                                </Popover>
+                            </SelectWrap>
+                        </SelectContext.Provider>
+                    );
                 }}
-            >
-                <SelectWrap {...rest}>
-                    <Popover
-                        forceRender
-                        popup={this.renderPopup()}
-                        onVisibleChange={this.handleVisibleChange}
-                        placement="bottomLeft"
-                        trigger={['click']}
-                        forwardPopupContainer={triggerNode => triggerNode.parentNode}
-                        visible={visible}
-                        zIndex={100}
-                        {...popover}
-                        {...popoverProps}
-                    >
-                        <div>{this.renderSelector()}</div>
-                    </Popover>
-                </SelectWrap>
-            </SelectContext.Provider>
+            </ConfigContext.Consumer>
         );
     }
 }

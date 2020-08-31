@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Button from 'src/components/Button';
 import Menu from 'src/components/Menu';
 import Popover from 'src/components/Popover';
+import ConfigContext from 'src/components/ConfigProvider/ConfigContext';
 
 import { ActionButton } from './style';
 
@@ -76,24 +77,32 @@ export default class ActionList extends Component {
                 );
             });
         return (
-            <Popover
-                trigger={['click']}
-                {...popoverProps}
-                visible={visible}
-                onVisibleChange={visible => this.setState({ visible })}
-                forwardPopupContainer={triggerNode => triggerNode.parentNode}
-                popup={
-                    <Menu
-                        selectable={false}
-                        onClick={() => this.setState({ visible: false })}
-                        customStyle={{ maxHeight: '380px' }}
-                    >
-                        {renderList(list)}
-                    </Menu>
-                }
-            >
-                <Button size={size} styleType={buttonStyleType} icon="ellipsis" />
-            </Popover>
+            <ConfigContext.Consumer>
+                {({ forwardPopupContainer } = {}) => {
+                    return (
+                        <Popover
+                            trigger={['click']}
+                            {...popoverProps}
+                            visible={visible}
+                            onVisibleChange={visible => this.setState({ visible })}
+                            {...(forwardPopupContainer
+                                ? { forwardPopupContainer: triggerNode => triggerNode.parentNode }
+                                : { getPopupContainer: triggerNode => triggerNode.parentNode })}
+                            popup={
+                                <Menu
+                                    selectable={false}
+                                    onClick={() => this.setState({ visible: false })}
+                                    customStyle={{ maxHeight: '380px' }}
+                                >
+                                    {renderList(list)}
+                                </Menu>
+                            }
+                        >
+                            <Button size={size} styleType={buttonStyleType} icon="ellipsis" />
+                        </Popover>
+                    );
+                }}
+            </ConfigContext.Consumer>
         );
     };
     render() {
