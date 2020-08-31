@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.2](https://github.com/UCloud-FE/react-components/compare/v0.7.1...v0.7.2) (2020-08-31)
+
+### Features
+
+-   **ConfigProvider:** add config provider, forwardPopupContainer ([a06fb92](https://github.com/UCloud-FE/react-components/commit/a06fb92e51249edc107b1b8601b09f71d18c0adb))
+
 ### [0.7.1](https://github.com/UCloud-FE/react-components/compare/v0.7.0...v0.7.1) (2020-08-28)
 
 ### Features
