@@ -49,7 +49,7 @@ class Tag extends Component {
                 )}
                 <ContentWrapper>{children}</ContentWrapper>
                 {closable && (
-                    <CloseIconWrapper onClick={!disabled && onClose}>
+                    <CloseIconWrapper onClick={disabled ? undefined : onClose}>
                         <CloseIcon type="cross" />
                     </CloseIconWrapper>
                 )}

@@ -1,8 +1,11 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
 import { inlineBlockWithVerticalMixin } from 'src/style';
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 import Button from 'src/components/Button';
+
+import withProps from 'src/utils/withProps';
 
 const textStyleMixin = css`
     font-size: 14px;
@@ -10,49 +13,66 @@ const textStyleMixin = css`
     ${inlineBlockWithVerticalMixin};
 `;
 
-export const BackButtonWrap = styled(Button).attrs({
-    icon: 'left',
-    size: 'sm',
-    styleType: 'border-gray'
-})`
-    margin-right: 16px;
-    padding: 0 5px;
+export const BackButtonWrap = styled(
+    withProps({
+        icon: 'left',
+        size: 'sm',
+        styleType: 'border-gray'
+    })(styled(Button)`
+        margin-right: 16px;
+        padding: 0 5px;
+    `)
+)`
+    /* empty */
 `;
 
-const itemWrapMixin = ({ theme: { colorMap, colorList }, disabled, current, noAction }) => css`
-    cursor: pointer;
-    text-decoration: none;
+const itemWrapMixin = props => {
+    const {
+        theme: { colorMap, colorList },
+        disabled,
+        current,
+        noAction
+    } = props;
 
-    ${textStyleMixin};
+    return css`
+        cursor: pointer;
+        text-decoration: none;
 
-    ${noAction &&
+        ${textStyleMixin};
+
+        ${noAction &&
         css`
             pointer-events: none;
             color: ${colorMap.default.text} !important;
             cursor: default;
         `};
 
-    ${current &&
+        ${current &&
         css`
             pointer-events: none;
             color: ${colorList.black} !important;
             font-weight: bold;
         `};
 
-    ${disabled &&
+        ${disabled &&
         css`
             pointer-events: none;
             color: ${colorMap.disabled.text} !important;
         `};
-`;
+    `;
+};
 
-export const ItemWrapSpan = styled.span`
+export const ItemWrapSpan = styled('span')`
     ${itemWrapMixin};
 `;
 
-export const ItemWrapA = styled.a(
-    ({ theme: { colorMap } }) => css`
-        ${itemWrapMixin};
+export const ItemWrapA = styled('a')(props => {
+    const {
+        theme: { colorMap }
+    } = props;
+
+    return css`
+        ${itemWrapMixin(props)};
 
         &,
         &:hover,
@@ -61,17 +81,22 @@ export const ItemWrapA = styled.a(
         &:active {
             color: ${colorMap.default.text};
         }
-    `
-);
+    `;
+});
 
-export const SeparatorWrap = styled.span`
+export const SeparatorWrap = styled('span')`
     ${textStyleMixin};
     font-weight: bold;
     cursor: default;
 `;
 /* stylelint-disable no-descending-specificity */
-const styleTypeMixin = ({ styleType, theme: { colorMap } }) =>
-    ({
+const styleTypeMixin = props => {
+    const {
+        styleType,
+        theme: { colorMap }
+    } = props;
+
+    return {
         'block-hover': css`
             :hover {
                 ${ItemWrapSpan} {
@@ -109,17 +134,22 @@ const styleTypeMixin = ({ styleType, theme: { colorMap } }) =>
                 }
             }
         `
-    }[styleType]);
+    }[styleType];
+};
 /* stylelint-enable no-descending-specificity */
 
-export const BreadcrumbWrap = styled.div(
-    ({ theme: { colorMap, fontSize } }) => css`
+export const BreadcrumbWrap = styled('div')(props => {
+    const {
+        theme: { colorMap, fontSize }
+    } = props;
+
+    return css`
         font-size: ${fontSize};
         color: ${colorMap.default.text};
         vertical-align: baseline;
 
-        ${styleTypeMixin};
-    `
-);
+        ${styleTypeMixin(props)};
+    `;
+});
 
 addDefaultThemeProps(ItemWrapA, ItemWrapSpan, BreadcrumbWrap);

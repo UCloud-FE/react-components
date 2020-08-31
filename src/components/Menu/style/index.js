@@ -1,5 +1,6 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
 import Collapse from 'src/components/Collapse';
 import Icon from 'src/components/Icon';
@@ -134,7 +135,7 @@ export const MenuWrap = styled(CleanCollapse)(props => {
     `;
 });
 
-export const PopupMenuWrap = styled.div(props => {
+export const PopupMenuWrap = styled('div')(props => {
     return css`
         display: inline-block;
         padding: 0px 8px;

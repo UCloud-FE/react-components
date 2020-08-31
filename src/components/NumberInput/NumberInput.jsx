@@ -5,11 +5,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
+import classnames from 'classnames';
 
 import Icon from 'src/components/Icon';
 import Tooltip from 'src/components/Tooltip';
 import KEYCODE from 'src/interfaces/KeyCode';
-import { NumberInputWrap, InputWrap, HandlerUp, HandlerDown, Input, InputSuffix } from './style';
+import { NumberInputWrap, prefixCls, inputWrapCls, inputCls, suffixCls, handlerUpCls, handlerDownCls } from './style';
 
 function noop() {}
 
@@ -135,6 +136,7 @@ class NumberInput extends Component {
             focused: props.autoFocus,
             tooltipVisible: false
         };
+        this.input = React.createRef();
     }
 
     componentDidMount() {
@@ -155,8 +157,8 @@ class NumberInput extends Component {
 
     componentWillUpdate() {
         try {
-            this.start = this.input.selectionStart;
-            this.end = this.input.selectionEnd;
+            this.start = this.input.current.selectionStart;
+            this.end = this.input.current.selectionEnd;
         } catch (e) {
             // Fix error in Chrome:
             // Failed to read the 'selectionStart' property from 'HTMLInputElement'
@@ -171,14 +173,14 @@ class NumberInput extends Component {
             return;
         }
         if (this.props.focusOnUpDown && this.state.focused) {
-            const selectionRange = this.input.setSelectionRange;
+            const selectionRange = this.input.current.setSelectionRange;
             if (
                 selectionRange &&
                 typeof selectionRange === 'function' &&
                 this.start !== undefined &&
                 this.end !== undefined
             ) {
-                this.input.setSelectionRange(this.start, this.end);
+                this.input.current.setSelectionRange(this.start, this.end);
             } else {
                 this.focus();
             }
@@ -364,11 +366,11 @@ class NumberInput extends Component {
     }
 
     focus() {
-        this.input.focus();
+        this.input.current.focus();
     }
 
     blur() {
-        this.input.blur();
+        this.input.current.blur();
     }
 
     formatWrapper(num) {
@@ -478,9 +480,12 @@ class NumberInput extends Component {
             return;
         }
         this.setValue(this.getCurrentValidValue(val), () => this.props.onNumberChange(val));
-        this.autoStepTimer = setTimeout(() => {
-            this[type](e, ratio, true);
-        }, recursive ? SPEED : DELAY);
+        this.autoStepTimer = setTimeout(
+            () => {
+                this[type](e, ratio, true);
+            },
+            recursive ? SPEED : DELAY
+        );
     }
 
     stop = () => {
@@ -499,9 +504,6 @@ class NumberInput extends Component {
         this.step('up', e, ratio, recursive);
     };
 
-    saveInput = node => {
-        this.input = node;
-    };
     renderHandler = () => {
         const { upHandler, downHandler, readOnly, max, min, disabled, styleType, hideHandler } = this.props;
         if (hideHandler) return null;
@@ -540,7 +542,12 @@ class NumberInput extends Component {
 
         return (
             <div>
-                <HandlerUp unselectable="unselectable" disabled={disabled || upDisabled} {...upEvents}>
+                <span
+                    className={handlerUpCls}
+                    unselectable="unselectable"
+                    disabled={disabled || upDisabled}
+                    {...upEvents}
+                >
                     {upHandler || (
                         <Icon
                             type={
@@ -552,8 +559,13 @@ class NumberInput extends Component {
                             }
                         />
                     )}
-                </HandlerUp>
-                <HandlerDown unselectable="unselectable" disabled={disabled || downDisabled} {...downEvents}>
+                </span>
+                <span
+                    className={handlerDownCls}
+                    unselectable="unselectable"
+                    disabled={disabled || downDisabled}
+                    {...downEvents}
+                >
                     {downHandler || (
                         <Icon
                             type={
@@ -565,7 +577,7 @@ class NumberInput extends Component {
                             }
                         />
                     )}
-                </HandlerDown>
+                </span>
             </div>
         );
     };
@@ -586,6 +598,7 @@ class NumberInput extends Component {
             onChange,
             onFocus,
             onBlur,
+            onEnter,
             upHandler,
             downHandler,
             formatter,
@@ -621,9 +634,10 @@ class NumberInput extends Component {
         const inputDisplayValueFormat = this.formatWrapper(inputDisplayValue);
         const editable = !readOnly && !disabled;
         const input = (
-            <InputWrap>
-                <Input
+            <div className={inputWrapCls}>
+                <input
                     {...rest}
+                    className={inputCls}
                     size={size}
                     autoComplete="off"
                     onFocus={this.onFocus}
@@ -633,12 +647,12 @@ class NumberInput extends Component {
                     onChange={this.onChange}
                     disabled={disabled}
                     readOnly={readOnly}
-                    innerRef={this.saveInput}
+                    ref={this.input}
                     value={inputDisplayValueFormat}
                     style={inputStyle}
                 />
-                {suffix && <InputSuffix>{suffix}</InputSuffix>}
-            </InputWrap>
+                {suffix && <span className={suffixCls}>{suffix}</span>}
+            </div>
         );
 
         if (!tooltip) {
@@ -676,7 +690,13 @@ class NumberInput extends Component {
                 size={size}
                 styleType={styleType}
                 style={style}
-                className={className}
+                className={classnames(
+                    prefixCls,
+                    `${prefixCls}-styletype-${styleType}`,
+                    focused && `${prefixCls}-focused`,
+                    disabled && `${prefixCls}-disabled`,
+                    className
+                )}
             >
                 {this.renderHandler()}
                 {this.renderInput()}

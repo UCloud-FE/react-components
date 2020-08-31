@@ -1,14 +1,24 @@
-import styled, { css } from 'styled-components';
+import styled from "@emotion/styled";
+import { css } from "@emotion/core";
 
 import SvgIcon from 'src/components/SvgIcon';
 import { spinMixin, inlineBlockWithVerticalMixin } from 'src/style';
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
-export const Icon = styled(SvgIcon).attrs({ size: '16px' })`
+import withProps from "src/utils/withProps";
+
+export const Icon = styled(withProps({ size: '16px' })(styled(SvgIcon)`
     /* empty */
+`))`
+/* empty */
 `;
 
-const statusMixin = ({ status, theme: { designTokens: DT } }) => {
+const statusMixin = props => {
+    const {
+        status,
+        theme: { designTokens: DT }
+    } = props;
+
     switch (status) {
         case 'before':
             return css`
@@ -42,34 +52,40 @@ const statusMixin = ({ status, theme: { designTokens: DT } }) => {
     }
 };
 
-export const IconWrapper = styled.span`
-    width: 32px;
-    height: 32px;
-    line-height: 30px;
-    text-align: center;
-    box-sizing: border-box;
-    border-radius: 50%;
-    border: 1px solid;
-    font-size: 0;
-    display: inline-block;
-    vertical-align: top;
-    transition: all 0.3s;
+export const IconWrapper = styled("span")(props => {
+    const {
+        spin
+    } = props;
 
-    ${statusMixin};
-    ${({ spin }) => spin && spinMixin};
-`;
+    return css`
+        width: 32px;
+        height: 32px;
+        line-height: 30px;
+        text-align: center;
+        box-sizing: border-box;
+        border-radius: 50%;
+        border: 1px solid;
+        font-size: 0;
+        display: inline-block;
+        vertical-align: top;
+        transition: all 0.3s;
 
-export const StepCountWrapper = styled.span`
+        ${statusMixin(props)};
+        ${spin && spinMixin};
+    `;
+});
+
+export const StepCountWrapper = styled("span")`
     font-size: 16px;
 `;
 
-export const ContentWrapper = styled.span`
+export const ContentWrapper = styled("span")`
     margin-left: 12px;
 
     ${inlineBlockWithVerticalMixin};
 `;
 
-export const TitleWrapper = styled.span`
+export const TitleWrapper = styled("span")`
     font-size: 14px;
     line-height: 32px;
     min-height: 32px;
@@ -77,13 +93,18 @@ export const TitleWrapper = styled.span`
     transition: all 0.3s;
 `;
 
-export const RemarkWrapper = styled.span`
+export const RemarkWrapper = styled("span")`
     font-size: 12px;
     line-height: 24px;
     transition: all 0.3s;
 `;
 
-const linkStatusMixin = ({ status, theme: { designTokens: DT } }) => {
+const linkStatusMixin = props => {
+    const {
+        status,
+        theme: { designTokens: DT }
+    } = props;
+
     if (status === 'before') {
         return css`
             color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
@@ -96,7 +117,12 @@ const linkStatusMixin = ({ status, theme: { designTokens: DT } }) => {
     `;
 };
 
-const stepStatusMixin = ({ status, theme: { designTokens: DT } }) => {
+const stepStatusMixin = props => {
+    const {
+        status,
+        theme: { designTokens: DT }
+    } = props;
+
     if (status === 'error') {
         return css`
             ${RemarkWrapper}, ${TitleWrapper} {
@@ -116,13 +142,13 @@ const stepStatusMixin = ({ status, theme: { designTokens: DT } }) => {
     }
 };
 
-export const StepWrapper = styled.div`
+export const StepWrapper = styled("div")`
     ${inlineBlockWithVerticalMixin};
 
     ${stepStatusMixin};
 `;
 
-export const LinkWrapper = styled.span`
+export const LinkWrapper = styled("span")`
     display: inline-block;
     text-align: center;
     line-height: 32px;
@@ -133,7 +159,7 @@ export const LinkWrapper = styled.span`
     ${linkStatusMixin};
 `;
 
-export const StepsWrapper = styled.div`
+export const StepsWrapper = styled("div")`
     /* empty */
 `;
 

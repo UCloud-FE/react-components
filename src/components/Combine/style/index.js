@@ -1,6 +1,9 @@
-import styled, { css } from 'styled-components';
+import styled from "@emotion/styled";
+import { css } from "@emotion/core";
 
 import config from 'config';
+
+import withProps from "src/utils/withProps";
 
 const { prefixCls: _prefixCls } = config;
 const prefixCls = _prefixCls + '-combine';
@@ -14,10 +17,14 @@ const spacingMap = {
     lg: '12px'
 };
 
-export const CombineWrap = styled.div.attrs({
+export const CombineWrap = styled(withProps({
     className: prefixCls
-})(
-    ({ spacing }) => css`
+})(styled("div")(props => {
+    const {
+        spacing
+    } = props;
+
+    return css`
         position: relative;
 
         > .${controllerPrefix} {
@@ -34,5 +41,7 @@ export const CombineWrap = styled.div.attrs({
                 z-index: 3;
             }
         }
-    `
-);
+    `;
+})))`
+/* empty */
+`;

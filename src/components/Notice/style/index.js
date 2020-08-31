@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
 import Icon from 'src/components/Icon';
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
@@ -12,7 +13,7 @@ const map = {
     disabled: 'disabled'
 };
 
-export const NoticeIconWrap = styled.span`
+export const NoticeIconWrap = styled('span')`
     display: table-cell;
     font-size: 15px;
     width: 15px;
@@ -25,19 +26,19 @@ export const NoticeIcon = styled(Icon)`
     /* empty */
 `;
 
-export const ContentWrap = styled.div`
+export const ContentWrap = styled('div')`
     display: table-cell;
     vertical-align: middle;
 `;
 
-export const ActionWrap = styled.div`
+export const ActionWrap = styled('div')`
     display: table-cell;
     padding-left: 8px;
     white-space: nowrap;
     text-align: right;
 `;
 
-export const CloseWrap = styled.div`
+export const CloseWrap = styled('div')`
     display: table-cell;
     padding-left: 8px;
     white-space: nowrap;
@@ -49,7 +50,12 @@ export const CloseIcon = styled(Icon)`
     cursor: pointer;
 `;
 
-const themeMixin = ({ styleType, theme: { designTokens: DT } }) => {
+const themeMixin = props => {
+    const {
+        styleType,
+        theme: { designTokens: DT }
+    } = props;
+
     const style = map[styleType];
     const colorMap = {
         info: {
@@ -96,7 +102,7 @@ const themeMixin = ({ styleType, theme: { designTokens: DT } }) => {
     `;
 };
 
-export const NoticeWrap = styled.div`
+export const NoticeWrap = styled('div')`
     display: table;
     position: relative;
     box-sizing: border-box;

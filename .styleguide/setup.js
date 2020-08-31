@@ -23,13 +23,9 @@ global.ReactDOM = require('react-dom');
 
 global.moment = require('moment');
 
-global.StyledComponents = require('styled-components');
+import darkTheme from 'src/components/ThemeProvider/dark';
 
-import greenTheme from 'src/components/ThemeProvider/green';
-import oceanTheme from 'src/components/ThemeProvider/ocean';
-
-global.greenTheme = greenTheme;
-global.oceanTheme = oceanTheme;
+global.darkTheme = darkTheme;
 
 import 'moment/locale/zh-cn';
 global.moment().locale('zh-cn').utcOffset(8);

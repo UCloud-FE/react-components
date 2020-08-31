@@ -19,14 +19,12 @@ class Badge extends Component {
         dot: PropTypes.bool,
         /** 定位 */
         placement: PropTypes.oneOf(Placement),
-        /** 为0时是否隐藏 */
+        /** 为 0 时是否隐藏 */
         hideWhenZero: PropTypes.bool,
         /** badge的样式 */
         badgeStyle: PropTypes.object,
         /** @ignore */
-        children: PropTypes.node,
-        /** @ignore */
-        innerRef: PropTypes.any
+        children: PropTypes.node
     };
     static defaultProps = {
         maxValue: 99,
@@ -51,7 +49,7 @@ class Badge extends Component {
 
     render() {
         /* eslint-disable no-unused-vars */
-        const { value, maxValue, dot, placement, hideWhenZero, children, badgeStyle, innerRef, ...rest } = this.props;
+        const { value, maxValue, dot, placement, hideWhenZero, children, badgeStyle, ...rest } = this.props;
         /* eslint-enable no-unused-vars */
         const badge = this.renderBadge();
         if (!children) {
@@ -61,8 +59,8 @@ class Badge extends Component {
         return (
             <Wrap {...rest}>
                 {children}
-                {hideWhenZero && value === 0 ? null : (
-                    <RcAlign ref={innerRef} target={() => ReactDOM.findDOMNode(this)} align={placements[placement]}>
+                {hideWhenZero && (value === 0 || value === '0') ? null : (
+                    <RcAlign target={() => ReactDOM.findDOMNode(this)} align={placements[placement]}>
                         <BadgeWrap>{badge}</BadgeWrap>
                     </RcAlign>
                 )}

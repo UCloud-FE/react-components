@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
 import config from 'src/config';
 import SvgIcon from 'src/components/SvgIcon';
@@ -84,14 +85,14 @@ export const CloseIcon = styled(SvgIcon)`
     /* empty */
 `;
 
-export const CloseIconWrapper = styled.span`
+export const CloseIconWrapper = styled('span')`
     /* empty */
 `;
 
 export const PrefixIcon = styled(Icon)`
     /* empty */
 `;
-export const PrefixIconWrapper = styled.span`
+export const PrefixIconWrapper = styled('span')`
     /* empty */
 `;
 
@@ -106,7 +107,13 @@ const getColorMap = (styleType, disabled) => {
         : styleMap[styleType];
 };
 
-export const TagWrapper = styled.span(({ styleType = 'default', disabled, theme: { designTokens: DT } }) => {
+export const TagWrapper = styled('span')(props => {
+    const {
+        styleType = 'default',
+        disabled,
+        theme: { designTokens: DT }
+    } = props;
+
     const colorMap = getColorMap(styleType, disabled);
     return css`
         box-sizing: border-box;
@@ -160,14 +167,19 @@ export const TagWrapper = styled.span(({ styleType = 'default', disabled, theme:
     `;
 });
 
-export const ContentWrapper = styled.span`
+export const ContentWrapper = styled('span')`
     /* empty */
 `;
 
 export const IconTag = styled(Icon)`
     /* empty */
 `;
-export const IconTagWrapper = styled.span(({ styleType = 'default', theme: { designTokens: DT } }) => {
+export const IconTagWrapper = styled('span')(props => {
+    const {
+        styleType = 'default',
+        theme: { designTokens: DT }
+    } = props;
+
     const colorMap = getColorMap(styleType);
     return css`
         box-sizing: border-box;
@@ -190,8 +202,10 @@ export const IconTagWrapper = styled.span(({ styleType = 'default', theme: { des
     `;
 });
 
-export const TagGroupWrapper = styled.div(({ compact }) =>
-    compact
+export const TagGroupWrapper = styled('div')(props => {
+    const { compact } = props;
+
+    return compact
         ? css`
               margin-bottom: -4px;
               ${TagWrapper}, ${IconTagWrapper} {
@@ -246,7 +260,7 @@ export const TagGroupWrapper = styled.div(({ compact }) =>
                   margin-bottom: 4px;
                   vertical-align: middle;
               }
-          `
-);
+          `;
+});
 
 addDefaultThemeProps(TagWrapper, CloseIcon, IconTagWrapper);

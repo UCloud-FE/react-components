@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components';
-import classnames from 'classnames';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 import { inlineBlockWithVerticalMixin } from 'src/style';
@@ -8,121 +8,99 @@ import config from 'src/config';
 const { prefixCls: _prefixCls } = config;
 
 export const prefixCls = _prefixCls + '-numberinput';
+export const inputWrapCls = prefixCls + '-input-wrap';
+export const inputCls = prefixCls + '-input';
+export const suffixCls = prefixCls + '-suffix';
+export const handlerCls = prefixCls + '-handler';
+export const handlerUpCls = handlerCls + '-up';
+export const handlerDownCls = handlerCls + '-down';
+export const handlerDisabledCls = handlerCls + '-disabled';
 
-/* stylelint-disable no-duplicate-selectors, selector-type-no-unknown, no-descending-specificity */
+export const NumberInputWrap = styled('div')(props => {
+    const {
+        theme: { designTokens: DT, Height, HeightNumber, materialVars = {} },
+        styleType,
+        focused,
+        size,
+        hideHandler,
+        disabled
+    } = props;
 
-export const InputWrap = styled.div.attrs({
-    className: `${prefixCls}-input-wrap`
-})`
-    position: relative;
-`;
-
-export const Input = styled.input.attrs({
-    className: `${prefixCls}-input`
-})`
-    border: none;
-    outline: none;
-    padding: 0;
-    margin: 0;
-    color: inherit;
-`;
-
-export const InputSuffix = styled.span.attrs({
-    className: `${prefixCls}-suffix`
-})(
-    ({ theme: { designTokens: DT } }) => css`
-        color: ${DT.T_COLOR_TEXT_REMARK_DARK};
-        margin: 0 4px;
-
-        ${inlineBlockWithVerticalMixin};
-    `
-);
-
-const Handler = styled.span.attrs({
-    className: ({ disabled }) =>
-        classnames({
-            [`${prefixCls}-handler`]: true,
-            [`${prefixCls}-handler-disabled`]: disabled
-        })
-})(
-    ({ disabled, theme: { designTokens: DT } }) => css`
-        position: absolute;
+    return css`
+        position: relative;
         box-sizing: border-box;
-        text-align: center;
-        border-radius: ${DT.T_CORNER_SM};
-        border-style: solid;
-        cursor: pointer;
+        border-radius: 2px;
         color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
-        border-color: ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
-        box-shadow: ${DT.T_SHADOW_BUTTON_DEFAULT};
-        background: ${DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT};
-
+        height: ${Height[size]};
         ${inlineBlockWithVerticalMixin};
 
-        :hover {
-            color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
-            box-shadow: ${DT.T_SHADOW_BUTTON_HOVER};
+        .${inputWrapCls} {
+            position: relative;
         }
+        .${inputCls} {
+            border: none;
+            outline: none;
+            padding: 0;
+            margin: 0;
+            color: inherit;
+        }
+        .${suffixCls} {
+            color: ${DT.T_COLOR_TEXT_REMARK_DARK};
+            margin: 0 4px;
+            ${inlineBlockWithVerticalMixin};
+        }
+        .${handlerUpCls}, .${handlerDownCls} {
+            position: absolute;
+            box-sizing: border-box;
+            text-align: center;
+            border-radius: ${DT.T_CORNER_SM};
+            border-style: solid;
+            cursor: pointer;
+            color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+            border-color: ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
+            box-shadow: ${DT.T_SHADOW_BUTTON_DEFAULT};
+            background: ${DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT};
 
-        ${disabled &&
-            css`
+            ${inlineBlockWithVerticalMixin};
+
+            :hover {
+                color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+                box-shadow: ${DT.T_SHADOW_BUTTON_HOVER};
+            }
+
+            &.${handlerDisabledCls} {
                 cursor: not-allowed;
                 pointer-events: none;
                 color: ${DT.T_COLOR_TEXT_DISABLED};
                 border-color: ${DT.T_COLOR_LINE_DEFAULT_DARK};
-            `};
-    `
-);
+            }
+        }
 
-export const HandlerUp = styled(Handler).attrs({
-    className: `${prefixCls}-handler-up`
-})`
-    /* empty */
-`;
-
-export const HandlerDown = styled(Handler).attrs({
-    className: `${prefixCls}-handler-down`
-})`
-    /* empty */
-`;
-
-const propsMixin = ({
-    theme: { designTokens: DT, Height, HeightNumber, materialVars = {} },
-    styleType,
-    focused,
-    size,
-    hideHandler,
-    disabled
-}) => css`
-    color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
-    height: ${Height[size]};
-
-    ${disabled &&
+        ${disabled &&
         css`
             pointer-events: none;
             color: ${DT.T_COLOR_TEXT_DISABLED};
             -webkit-text-fill-color: currentcolor;
         `};
 
-    ${Input} {
-        line-height: ${HeightNumber[size] - 2}px;
-        height: ${HeightNumber[size] - 2}px;
+        .${inputCls} {
+            line-height: ${HeightNumber[size] - 2}px;
+            height: ${HeightNumber[size] - 2}px;
 
-        ${inlineBlockWithVerticalMixin};
+            ${inlineBlockWithVerticalMixin};
 
-        ${({ disabled }) =>
-            disabled &&
+            ${disabled &&
             css`
                 background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
             `};
 
-        &::placeholder {
-            opacity: 1;
-            color: ${DT.T_COLOR_TEXT_REMARK_LIGHT};
+            &::placeholder {
+                opacity: 1;
+                color: ${DT.T_COLOR_TEXT_REMARK_LIGHT};
+            }
         }
-    }
 
-    ${styleType === 'default' &&
+        ${styleType === 'default' &&
         css`
             border: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
             padding-right: ${HeightNumber[size] - 6}px;
@@ -133,7 +111,7 @@ const propsMixin = ({
                 border-color: ${DT.T_COLOR_LINE_DEFAULT_DARK};
             }
 
-            ${InputWrap} {
+            .${inputWrapCls} {
                 box-shadow: ${DT.T_SHADOW_INSET_1};
                 background: ${DT.T_INPUT_COLOR_BG_DEFAULT};
                 :hover {
@@ -141,25 +119,25 @@ const propsMixin = ({
                 }
             }
             ${focused &&
-                css`
-                    &,
-                    &:hover {
-                        border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
-                    }
-                    ${InputWrap} {
-                        background: ${DT.T_INPUT_COLOR_BG_ACTIVE};
-                    }
-                `};
+            css`
+                &,
+                &:hover {
+                    border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
+                }
+                .${inputWrapCls} {
+                    background: ${DT.T_INPUT_COLOR_BG_ACTIVE};
+                }
+            `};
 
             ${disabled &&
-                css`
-                    border-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
-                    ${InputWrap} {
-                        box-shadow: none;
-                    }
-                `};
+            css`
+                border-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
+                .${inputWrapCls} {
+                    box-shadow: none;
+                }
+            `};
 
-            ${Input} {
+            .${inputCls} {
                 padding: 0 0 0 8px;
                 text-align: left;
                 box-shadow: none;
@@ -168,7 +146,7 @@ const propsMixin = ({
                 width: ${HeightNumber[size] + 6}px;
             }
 
-            ${HandlerUp}, ${HandlerDown} {
+            .${handlerUpCls}, .${handlerDownCls} {
                 right: 0;
                 box-sizing: content-box;
                 border-radius: 0;
@@ -181,28 +159,28 @@ const propsMixin = ({
                 }
             }
 
-            ${HandlerUp} {
+            .${handlerUpCls} {
                 border-width: 0 0 0 1px;
                 top: -1px;
                 padding-top: 1px;
             }
-            ${HandlerDown} {
+            .${handlerDownCls} {
                 border-width: 1px 0 0 1px;
                 bottom: 0;
                 border-top-color: ${DT.T_COLOR_LINE_DEFAULT_DARK};
             }
 
             ${hideHandler &&
-                css`
-                    padding-right: 0;
-                    border-right-width: 1px;
-                `};
+            css`
+                padding-right: 0;
+                border-right-width: 1px;
+            `};
         `};
 
-    ${styleType === 'split' &&
+        ${styleType === 'split' &&
         css`
             padding: 0 ${Height[size]};
-            ${Input} {
+            .${inputCls} {
                 padding: 0 8px;
                 text-align: left;
                 box-shadow: none;
@@ -210,7 +188,7 @@ const propsMixin = ({
 
                 width: ${HeightNumber[size] + 6}px;
             }
-            ${InputWrap} {
+            .${inputWrapCls} {
                 margin: 0 -1px 0 -1px;
                 border: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
                 box-shadow: ${DT.T_SHADOW_INSET_1};
@@ -223,15 +201,15 @@ const propsMixin = ({
                     background: ${DT.T_INPUT_COLOR_BG_ACTIVE};
                 }
                 ${focused &&
-                    css`
-                        border-color: ${DT.T_INPUT_COLOR_BG_ACTIVE};
-                    `};
+                css`
+                    border-color: ${DT.T_INPUT_COLOR_BG_ACTIVE};
+                `};
                 ${disabled &&
-                    css`
-                        border-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
-                    `};
+                css`
+                    border-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
+                `};
             }
-            ${HandlerUp}, ${HandlerDown} {
+            .${handlerUpCls}, .${handlerDownCls} {
                 text-align: center;
                 top: 0;
                 height: ${Height[size]};
@@ -244,33 +222,33 @@ const propsMixin = ({
                     z-index: 1;
                 }
             }
-            ${HandlerUp} {
+            .${handlerUpCls} {
                 right: 0;
             }
-            ${HandlerDown} {
+            .${handlerDownCls} {
                 left: 0;
             }
             ${focused &&
-                css`
-                    ${InputWrap}, ${InputWrap}:hover {
-                        border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
-                        background: ${DT.T_INPUT_COLOR_BG_ACTIVE};
-                    }
-                `};
+            css`
+                .${inputWrapCls}, .${inputWrapCls}:hover {
+                    border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
+                    background: ${DT.T_INPUT_COLOR_BG_ACTIVE};
+                }
+            `};
             ${disabled &&
-                css`
-                    box-shadow: none;
-                `};
+            css`
+                box-shadow: none;
+            `};
             ${hideHandler &&
-                css`
-                    padding: 0;
-                `};
+            css`
+                padding: 0;
+            `};
         `};
 
-    ${styleType === 'pagination' &&
+        ${styleType === 'pagination' &&
         css`
             padding: 0 ${Height[size]};
-            ${Input} {
+            .${inputCls} {
                 text-align: center;
                 margin: 0 4px;
                 width: ${HeightNumber[size] - 2}px;
@@ -285,21 +263,21 @@ const propsMixin = ({
                     background: ${DT.T_INPUT_COLOR_BG_ACTIVE};
                 }
                 ${focused &&
-                    css`
-                        &,
-                        &:hover {
-                            border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
-                            background: ${DT.T_INPUT_COLOR_BG_ACTIVE};
-                        }
-                    `};
+                css`
+                    &,
+                    &:hover {
+                        border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
+                        background: ${DT.T_INPUT_COLOR_BG_ACTIVE};
+                    }
+                `};
                 ${disabled &&
-                    css`
-                        border-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
-                        box-shadow: none;
-                        background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
-                    `};
+                css`
+                    border-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
+                    box-shadow: none;
+                    background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
+                `};
             }
-            ${HandlerUp}, ${HandlerDown} {
+            .${handlerUpCls}, .${handlerDownCls} {
                 text-align: center;
                 top: 0;
                 height: ${Height[size]};
@@ -310,44 +288,30 @@ const propsMixin = ({
                     z-index: 1;
                 }
             }
-            ${HandlerUp} {
+            .${handlerUpCls} {
                 right: 0;
             }
-            ${HandlerDown} {
+            .${handlerDownCls} {
                 left: 0;
             }
-            ${InputSuffix} {
+            .${suffixCls} {
                 margin-left: 0;
             }
             ${hideHandler &&
-                css`
-                    padding: 0;
+            css`
+                padding: 0;
+                margin: 0;
+
+                .${inputCls} {
                     margin: 0;
-
-                    ${Input} {
-                        margin: 0;
-                    }
-                    ${InputSuffix} {
-                        margin-left: 4px;
-                        margin-right: 0px;
-                    }
-                `};
+                }
+                .${suffixCls} {
+                    margin-left: 4px;
+                    margin-right: 0px;
+                }
+            `};
         `};
-`;
+    `;
+});
 
-export const NumberInputWrap = styled.div.attrs({
-    className: ({ styleType, focused, disabled }) =>
-        classnames(
-            prefixCls,
-            `${prefixCls}-styletype-${styleType}`,
-            focused && `${prefixCls}-focused`,
-            disabled && `${prefixCls}-disabled`
-        )
-})`
-    position: relative;
-    box-sizing: border-box;
-    border-radius: 2px;
-    ${inlineBlockWithVerticalMixin};
-    ${propsMixin};
-`;
-addDefaultThemeProps(NumberInputWrap, Handler, InputSuffix);
+addDefaultThemeProps(NumberInputWrap);

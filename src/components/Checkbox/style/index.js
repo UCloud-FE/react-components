@@ -1,9 +1,12 @@
-import styled, { css } from 'styled-components';
+import styled from "@emotion/styled";
+import { css } from "@emotion/core";
 
 import Card from 'src/components/Radio/Card';
 import { inlineBlockWithVerticalMixin } from 'src/style';
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 import config from 'src/config';
+
+import withProps from "src/utils/withProps";
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-checkbox';
@@ -14,8 +17,13 @@ export const disabledCls = prefixCls + '-disabled';
 export const checkedCls = prefixCls + '-checked';
 export const indeterminateCls = prefixCls + '-indeterminate';
 
-export const CheckboxWrap = styled.span(
-    ({ theme: { designTokens: DT, Height }, size }) => css`
+export const CheckboxWrap = styled("span")(props => {
+    const {
+        theme: { designTokens: DT, Height },
+        size
+    } = props;
+
+    return css`
         cursor: pointer;
         position: relative;
         white-space: nowrap;
@@ -90,15 +98,15 @@ export const CheckboxWrap = styled.span(
                 background: none;
             }
         }
-    `
-);
+    `;
+});
 
 export const CheckboxCardWrap = styled(Card)`
     /* empty */
 `;
-export const CheckboxGroupWrap = styled.div.attrs({
+export const CheckboxGroupWrap = styled(withProps({
     className: prefixCls + '-group'
-})`
+})(styled("div")`
     ${CheckboxWrap}, ${CheckboxCardWrap} {
         margin-right: 8px;
 
@@ -106,6 +114,8 @@ export const CheckboxGroupWrap = styled.div.attrs({
             margin-right: 0;
         }
     }
+`))`
+/* empty */
 `;
 
 addDefaultThemeProps(CheckboxWrap);

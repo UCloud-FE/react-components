@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from "emotion-theming";
 
 import Popover from 'src/components/Popover';
 import { getPlacements } from 'src/components/Popover/placements';

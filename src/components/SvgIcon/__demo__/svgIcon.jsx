@@ -21,7 +21,7 @@ class Demo extends React.Component {
         super(props);
         this.state = {
             type: Type[0],
-            color: '#333',
+            color: '#333333',
             size: SvgIcon.defaultProps.size
         };
     }

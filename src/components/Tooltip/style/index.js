@@ -1,4 +1,6 @@
-import styled, { css, injectGlobal } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
+import { injectGlobal } from 'emotion';
 
 import { prefixCls as popoverPrefixCls } from 'src/components/Popover/style';
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
@@ -13,7 +15,13 @@ const borderWidth = '1px';
 
 export const tooltipPopupClassName = prefixCls + '-popup';
 
-export const ContentWrap = styled.div(({ theme: { designTokens: DT }, themeType, popupWrapperPadding }) => {
+export const ContentWrap = styled('div')(props => {
+    const {
+        theme: { designTokens: DT },
+        themeType,
+        popupWrapperPadding
+    } = props;
+
     let map = {
         light: {
             text: DT.T_COLOR_TEXT_DEFAULT_DARK,
@@ -51,10 +59,10 @@ const arrowMixin = css`
     border-style: solid;
 `;
 
-export const Arrow = styled.span`
+export const Arrow = styled('span')`
     ${arrowMixin};
 `;
-export const ArrowInner = styled.span`
+export const ArrowInner = styled('span')`
     ${arrowMixin};
 `;
 
@@ -186,7 +194,12 @@ injectGlobal`
     }
 `;
 
-export const TooltipWrap = styled.div(({ theme: { designTokens: DT }, themeType }) => {
+export const TooltipWrap = styled('div')(props => {
+    const {
+        theme: { designTokens: DT },
+        themeType
+    } = props;
+
     let map = {
         light: {
             border: DT.T_POPOVER_COLOR_LINE_LIGHT,
