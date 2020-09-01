@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
 import config from 'src/config';
 import { inlineBlockWithVerticalMixin } from 'src/style';
@@ -7,14 +8,20 @@ import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemePr
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-slider';
 
-export const RcSliderWrap = styled.div`
+export const RcSliderWrap = styled('div')`
     ${inlineBlockWithVerticalMixin};
     margin-right: 12px;
     padding: 0 10px;
 `;
 
-export const SliderWrap = styled.div(
-    ({ theme: { designTokens: DT, Height, HeightNumber }, size, disabled }) => css`
+export const SliderWrap = styled('div')(props => {
+    const {
+        theme: { designTokens: DT, Height, HeightNumber },
+        size,
+        disabled
+    } = props;
+
+    return css`
         .${prefixCls} {
             position: relative;
             width: 300px;
@@ -34,15 +41,15 @@ export const SliderWrap = styled.div(
                 border-right: 0;
 
                 ${disabled &&
-                    css`
+                css`
+                    border-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
+                    background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
+                    ::before,
+                    ::after {
                         border-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
                         background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
-                        ::before,
-                        ::after {
-                            border-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
-                            background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
-                        }
-                    `};
+                    }
+                `};
 
                 ::before,
                 ::after {
@@ -91,14 +98,14 @@ export const SliderWrap = styled.div(
                 }
 
                 ${disabled &&
-                    css`
+                css`
+                    border-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
+                    background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
+                    ::before {
                         border-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
                         background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
-                        ::before {
-                            border-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
-                            background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
-                        }
-                    `};
+                    }
+                `};
             }
 
             &-tooltip {
@@ -136,35 +143,35 @@ export const SliderWrap = styled.div(
                 }
 
                 ${!disabled &&
-                    css`
-                        &:hover,
-                        &:active {
-                            box-shadow: ${DT.T_SHADOW_BUTTON_HOVER};
+                css`
+                    &:hover,
+                    &:active {
+                        box-shadow: ${DT.T_SHADOW_BUTTON_HOVER};
 
-                            &::before,
-                            &::after {
-                                background: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
-                            }
+                        &::before,
+                        &::after {
+                            background: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
                         }
-                        &:active {
-                            cursor: grabbing;
-                        }
-                    `} &:focus {
+                    }
+                    &:active {
+                        cursor: grabbing;
+                    }
+                `} &:focus {
                     outline: none;
                 }
 
                 ${disabled &&
-                    css`
-                        box-shadow: none;
-                        border: 1px solid ${DT.T_COLOR_LINE_DISABLED_LIGHT};
-                        background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
-                        cursor: not-allowed;
+                css`
+                    box-shadow: none;
+                    border: 1px solid ${DT.T_COLOR_LINE_DISABLED_LIGHT};
+                    background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
+                    cursor: not-allowed;
 
-                        &::before,
-                        &::after {
-                            background: ${DT.T_COLOR_TEXT_DISABLED};
-                        }
-                    `};
+                    &::before,
+                    &::after {
+                        background: ${DT.T_COLOR_TEXT_DISABLED};
+                    }
+                `};
             }
 
             &-mark {
@@ -192,19 +199,19 @@ export const SliderWrap = styled.div(
                 line-height: ${Height[size]};
 
                 ${disabled &&
-                    css`
-                        cursor: not-allowed;
-                        color: ${DT.T_COLOR_TEXT_DISABLED};
-                        border-right-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
-                    `};
+                css`
+                    cursor: not-allowed;
+                    color: ${DT.T_COLOR_TEXT_DISABLED};
+                    border-right-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
+                `};
 
                 ${!disabled &&
-                    css`
-                        &-active {
-                            color: ${DT.T_SLIDER_COLOR_TEXT_ACTIVE};
-                            border-right-color: ${DT.T_SLIDER_COLOR_LINE_ACTIVE};
-                        }
-                    `};
+                css`
+                    &-active {
+                        color: ${DT.T_SLIDER_COLOR_TEXT_ACTIVE};
+                        border-right-color: ${DT.T_SLIDER_COLOR_LINE_ACTIVE};
+                    }
+                `};
             }
 
             &-step {
@@ -218,6 +225,6 @@ export const SliderWrap = styled.div(
                 display: none;
             }
         }
-    `
-);
+    `;
+});
 addDefaultThemeProps(SliderWrap);

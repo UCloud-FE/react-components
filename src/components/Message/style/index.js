@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 import { TransitionGroup } from 'react-transition-group';
 
 import SvgIcon from 'src/components/SvgIcon';
@@ -16,13 +17,18 @@ const colorMap = {
     default: 'T_COLOR_TEXT_PRIMARY_DEFAULT'
 };
 
-export const TipIcon = styled(SvgIcon)(
-    ({ styleType, theme: { designTokens: DT } }) => css`
-        fill: ${DT[colorMap[styleType]]};
-    `
-);
+export const TipIcon = styled(SvgIcon)(props => {
+    const {
+        styleType,
+        theme: { designTokens: DT }
+    } = props;
 
-export const IconWrap = styled.div`
+    return css`
+        fill: ${DT[colorMap[styleType]]};
+    `;
+});
+
+export const IconWrap = styled('div')`
     font-size: 15px;
     width: 16px;
     height: 16px;
@@ -32,7 +38,7 @@ export const IconWrap = styled.div`
     top: 16px;
     left: 16px;
 `;
-export const CloseIconWrap = styled.div`
+export const CloseIconWrap = styled('div')`
     font-size: 15px;
     width: 16px;
     height: 16px;
@@ -44,7 +50,11 @@ export const CloseIconWrap = styled.div`
     cursor: pointer;
 `;
 
-export const TitleWrap = styled.h3(({ theme: { designTokens: DT } }) => {
+export const TitleWrap = styled('h3')(props => {
+    const {
+        theme: { designTokens: DT }
+    } = props;
+
     return css`
         padding-right: 36px;
         padding-left: 44px;
@@ -55,7 +65,11 @@ export const TitleWrap = styled.h3(({ theme: { designTokens: DT } }) => {
     `;
 });
 
-export const ContentWrap = styled.div(({ theme: { designTokens: DT } }) => {
+export const ContentWrap = styled('div')(props => {
+    const {
+        theme: { designTokens: DT }
+    } = props;
+
     return css`
         padding-right: 36px;
         padding-left: 44px;
@@ -66,13 +80,17 @@ export const ContentWrap = styled.div(({ theme: { designTokens: DT } }) => {
     `;
 });
 
-export const FooterWrap = styled.div`
+export const FooterWrap = styled('div')`
     text-align: right;
     margin-right: 16px;
     margin-top: 16px;
 `;
 
-export const MessageWrap = styled.div(({ theme: { designTokens: DT } }) => {
+export const MessageWrap = styled('div')(props => {
+    const {
+        theme: { designTokens: DT }
+    } = props;
+
     return css`
         box-sizing: border-box;
         width: 340px;

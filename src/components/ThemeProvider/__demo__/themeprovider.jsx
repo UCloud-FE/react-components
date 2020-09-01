@@ -13,8 +13,7 @@ import Modal from 'src/components/Modal';
 import Table from 'src/components/Table';
 import Menu from 'src/components/Menu';
 
-import greenTheme from 'src/components/ThemeProvider/green';
-import oceanTheme from 'src/components/ThemeProvider/ocean';
+import darkTheme from 'src/components/ThemeProvider/dark';
 
 // demo start
 const columns = new Array(5).fill(null).map((v, i) => ({
@@ -32,7 +31,7 @@ const columns = new Array(5).fill(null).map((v, i) => ({
 
 const Demo = () => (
     <div>
-        {[{}, greenTheme, oceanTheme].map((theme, i) => (
+        {[{}, darkTheme].map((theme, i) => (
             <ThemeProvider key={i} theme={theme}>
                 <div>
                     <div className="demo-wrap">

@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import styled, { css, injectGlobal } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
+import { injectGlobal } from 'emotion';
 import RcDialog from 'rc-dialog';
 
 import config from 'src/config';
@@ -40,8 +42,13 @@ class RcDialogWrap extends Component {
     }
 }
 
-export const ModalWrap = styled(RcDialogWrap)(
-    ({ theme: { designTokens: DT, fontSize }, mask }) => css`
+export const ModalWrap = styled(RcDialogWrap)(props => {
+    const {
+        theme: { designTokens: DT, fontSize },
+        mask
+    } = props;
+
+    return css`
         position: fixed;
         overflow: auto;
         top: 0;
@@ -109,6 +116,6 @@ export const ModalWrap = styled(RcDialogWrap)(
                 min-height: 60px;
             }
         }
-    `
-);
+    `;
+});
 addDefaultThemeProps(ModalWrap);

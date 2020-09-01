@@ -3,7 +3,7 @@ import { css } from '@emotion/core';
 import _ from 'lodash';
 
 import { inlineBlockWithVerticalMixin, calculateSize } from 'src/style';
-import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
+import withProps from 'src/utils/withProps';
 
 export const Inner = styled('div')`
     position: relative;
@@ -211,7 +211,7 @@ const propsMixin = props => {
     `;
 };
 
-export const SwitchWrap = styled('div')`
+export const SwitchWrap = withProps({})(styled('div')`
     position: relative;
     border-radius: 2px;
     box-sizing: border-box;
@@ -220,6 +220,4 @@ export const SwitchWrap = styled('div')`
 
     ${inlineBlockWithVerticalMixin};
     ${propsMixin};
-`;
-
-addDefaultThemeProps(SwitchWrap);
+`);

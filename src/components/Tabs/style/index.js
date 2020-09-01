@@ -1,18 +1,30 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 import RcTabs from 'rc-tabs';
 
 import config from 'src/config';
 import { clearFixMixin } from 'src/style';
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
+import withProps from 'src/utils/withProps';
+
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-tabs';
 
 /* stylelint-disable no-descending-specificity */
-export const TabsWrap = styled(RcTabs).attrs({
-    className: ({ styleType }) => `${prefixCls}-styletype-${styleType}`
-})(
-    ({ theme: { designTokens: DT }, tabBarPosition, styleType, size }) => css`
+export const TabsWrap = styled(
+    withProps({
+        className: ({ styleType }) => `${prefixCls}-styletype-${styleType}`
+    })(
+        styled(RcTabs)(props => {
+            const {
+                theme: { designTokens: DT },
+                tabBarPosition,
+                styleType,
+                size
+            } = props;
+
+            return css`
         overflow: hidden;
         ${clearFixMixin};
 
@@ -398,7 +410,11 @@ export const TabsWrap = styled(RcTabs).attrs({
                 }
             `
         };
-    `
-);
+    `;
+        })
+    )
+)`
+    /* empty */
+`;
 
 addDefaultThemeProps(TabsWrap);

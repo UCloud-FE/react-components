@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
 import { inlineBlockWithVerticalMixin } from 'src/style';
 import config from 'src/config';
@@ -8,8 +9,12 @@ const { prefixCls: _prefixCls } = config;
 
 export const prefixCls = _prefixCls + '-pagination';
 
-export const PaginationWrap = styled.ul(
-    ({ theme: { designTokens: DT, fontSize, Height, HeightNumber } }) => css`
+export const PaginationWrap = styled('ul')(props => {
+    const {
+        theme: { designTokens: DT, fontSize, Height, HeightNumber }
+    } = props;
+
+    return css`
         font-size: ${fontSize};
         user-select: none;
         ${inlineBlockWithVerticalMixin};
@@ -111,6 +116,6 @@ export const PaginationWrap = styled.ul(
                 }
             }
         }
-    `
-);
+    `;
+});
 addDefaultThemeProps(PaginationWrap);

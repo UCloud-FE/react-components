@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
 import { clearFixMixin, inlineBlockWithVerticalMixin } from 'src/style';
 import Button from 'src/components/Button';
@@ -8,15 +9,21 @@ import Icon from 'src/components/Icon';
 import config from 'src/config';
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
+import withProps from 'src/utils/withProps';
+
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-table';
 
-export const SortIcon = styled(Icon)(
-    ({ theme: { colorList } }) => css`
+export const SortIcon = styled(Icon)(props => {
+    const {
+        theme: { colorList }
+    } = props;
+
+    return css`
         vertical-align: middle;
         color: ${colorList.black};
-    `
-);
+    `;
+});
 
 export const selectIconCellCls = prefixCls + '-row-select-icon-cell';
 export const selectIconHeaderCls = prefixCls + '-select-icon-th';
@@ -25,20 +32,36 @@ export const placeholderCellCls = prefixCls + '-placeholder-cell';
 export const placeholderHeaderCls = prefixCls + '-placeholder-th';
 
 const expandedRowContentCls = prefixCls + '-expanded-row-content';
-export const ExpandedRowContent = styled.div.attrs({
-    className: expandedRowContentCls
-})(
-    ({ theme: { designTokens: DT } }) => css`
-        color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
-        border-bottom: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
-        background: ${DT.T_TABLE_ROW_COLOR_BG_DEFAULT};
-        padding: 12px;
-        line-height: 20px;
-    `
-);
+export const ExpandedRowContent = styled(
+    withProps({
+        className: expandedRowContentCls
+    })(
+        styled('div')(props => {
+            const {
+                theme: { designTokens: DT }
+            } = props;
 
-export const TableWrap = styled.div(
-    ({ theme: { designTokens: DT }, zebraCrossing, customStyle = {} }) => css`
+            return css`
+                color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
+                border-bottom: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
+                background: ${DT.T_TABLE_ROW_COLOR_BG_DEFAULT};
+                padding: 12px;
+                line-height: 20px;
+            `;
+        })
+    )
+)`
+    /* empty */
+`;
+
+export const TableWrap = styled('div')(props => {
+    const {
+        theme: { designTokens: DT },
+        zebraCrossing,
+        customStyle = {}
+    } = props;
+
+    return css`
     ${clearFixMixin};
     padding: ${customStyle.outerPadding || '15px'};
     color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
@@ -286,15 +309,15 @@ export const TableWrap = styled.div(
         };
     }
 
-`
-);
+`;
+});
 
-export const PopupContainer = styled.div`
+export const PopupContainer = styled('div')`
     position: relative;
     z-index: 10;
 `;
 
-export const ColumnConfigWrap = styled.span`
+export const ColumnConfigWrap = styled('span')`
     ${inlineBlockWithVerticalMixin};
 `;
 
@@ -318,11 +341,15 @@ export const ActionButton = styled(Button)`
     margin-right: 4px;
 `;
 
-export const CancleSelect = styled.span(
-    ({ theme: { designTokens: DT } }) => css`
+export const CancleSelect = styled('span')(props => {
+    const {
+        theme: { designTokens: DT }
+    } = props;
+
+    return css`
         cursor: pointer;
         color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
-    `
-);
+    `;
+});
 
 addDefaultThemeProps(TableWrap, ColumnConfigButtonWrap, SortIcon, ExpandedRowContent);

@@ -3,15 +3,13 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import classnames from 'classnames';
 
-import Icon from 'src/components/Icon';
 import config from 'src/config';
 import { inlineBlockWithVerticalMixin } from 'src/style';
-import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
-
 import withProps from 'src/utils/withProps';
 
 const { prefixCls: _prefixCls } = config;
 const prefixCls = _prefixCls + '-button';
+export const iconCls = prefixCls + '-icon';
 
 const sizeMixin = props => {
     const {
@@ -172,64 +170,42 @@ const Button = ({ loading, styleType, theme, disabled, fakeDisabled, onClick, ch
     <button disabled={disabled && !fakeDisabled} onClick={!disabled ? onClick : null} {...rest} />
 );
 
-export const ButtonWrap = styled(
-    withProps({
-        className: ({ size, styleType, shape, loading, disabled, fakeDisabled, checked }) =>
-            classnames(
-                prefixCls,
-                `${prefixCls}-size-${size}`,
-                `${prefixCls}-styletype-${styleType}`,
-                shape && `${prefixCls}-${shape}`,
-                loading && `${prefixCls}-loading`,
-                disabled && `${prefixCls}-disabled`,
-                fakeDisabled && `${prefixCls}-disabled-fake`,
-                checked && `${prefixCls}-checked`
-            )
-    })(
-        styled(Button)(props => {
-            const {
-                theme: { designTokens: DT },
-                loading,
-                shape,
-                disabled,
-                checked
-            } = props;
+export const ButtonWrap = withProps({
+    className: ({ size, styleType, shape, loading, disabled, fakeDisabled, checked }) =>
+        classnames(
+            prefixCls,
+            `${prefixCls}-size-${size}`,
+            `${prefixCls}-styletype-${styleType}`,
+            shape && `${prefixCls}-${shape}`,
+            loading && `${prefixCls}-loading`,
+            disabled && `${prefixCls}-disabled`,
+            fakeDisabled && `${prefixCls}-disabled-fake`,
+            checked && `${prefixCls}-checked`
+        )
+})(
+    styled(Button)(props => {
+        const { theme, loading, shape, disabled, checked } = props;
+        const { designTokens: DT } = theme;
+        return css`
+            margin: 0;
+            box-sizing: border-box;
+            border-radius: ${DT.T_CORNER_SM};
+            border-width: ${DT.T_LINE_WIDTH_BASE};
+            border-style: solid;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            outline: none;
+            font-size: ${DT.T_TYPO_FONT_SIZE_1};
+            ${inlineBlockWithVerticalMixin};
 
-            return css`
-                margin: 0;
-                box-sizing: border-box;
-                border-radius: ${DT.T_CORNER_SM};
-                border-width: ${DT.T_LINE_WIDTH_BASE};
-                border-style: solid;
-                text-align: center;
-                text-decoration: none;
-                cursor: pointer;
-                outline: none;
-                font-size: ${DT.T_TYPO_FONT_SIZE_1};
-                ${inlineBlockWithVerticalMixin};
-
-                ${sizeMixin(props)};
-                ${styleTypeMixin(props)};
-                ${shape === 'circle' && shapeCircleMixin(props)};
-                ${shape === 'square' && shapeSquareMixin(props)};
-                ${loading && loadingMixin(props)};
-                ${checked && checkedMixin(props)};
-                ${disabled && disabledMixin(props)};
-            `;
-        })
-    )
-)`
-    /* empty */
-`;
-
-export const ButtonIcon = styled(
-    withProps({
-        className: prefixCls + '-icon'
-    })(styled(Icon)`
-        /* empty */
-    `)
-)`
-    /* empty */
-`;
-
-addDefaultThemeProps(ButtonWrap);
+            ${sizeMixin(props)};
+            ${styleTypeMixin(props)};
+            ${shape === 'circle' && shapeCircleMixin(props)};
+            ${shape === 'square' && shapeSquareMixin(props)};
+            ${loading && loadingMixin(props)};
+            ${checked && checkedMixin(props)};
+            ${disabled && disabledMixin(props)};
+        `;
+    })
+);

@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
 import config from 'src/config';
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
@@ -17,8 +18,12 @@ export const listWrapCls = prefixCls + '-list-wrap';
 export const searchClearBtnCls = prefixCls + '-clear-search-btn';
 export const disabledCls = prefixCls + '-disabled';
 
-export const TransferWrap = styled.div(
-    ({ theme: { designTokens: DT } }) => css`
+export const TransferWrap = styled('div')(props => {
+    const {
+        theme: { designTokens: DT }
+    } = props;
+
+    return css`
         display: flex;
         align-items: stretch;
         justify-content: flex-start;
@@ -80,7 +85,7 @@ export const TransferWrap = styled.div(
             cursor: pointer;
             color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
         }
-    `
-);
+    `;
+});
 
 addDefaultThemeProps(TransferWrap);

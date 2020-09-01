@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
 import config from 'src/config';
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
@@ -13,28 +14,41 @@ export const AddBtn = styled(SvgIcon)(
     `
 );
 
-export const AddTip = styled.span(
-    ({ theme: { designTokens: DT } }) => css`
+export const AddTip = styled('span')(props => {
+    const {
+        theme: { designTokens: DT }
+    } = props;
+
+    return css`
         font-size: 12px;
         color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
         line-height: 20px;
         margin-left: 8px;
         vertical-align: middle;
-    `
-);
+    `;
+});
 
-export const RemoveBtn = styled(SvgIcon)(
-    ({ theme: { designTokens: DT } }) => css`
+export const RemoveBtn = styled(SvgIcon)(props => {
+    const {
+        theme: { designTokens: DT }
+    } = props;
+
+    return css`
         cursor: pointer;
         fill: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
         :hover {
             fill: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
         }
-    `
-);
+    `;
+});
 
-export const AddBar = styled.div(
-    ({ theme: { designTokens: DT }, disabled }) => css`
+export const AddBar = styled('div')(props => {
+    const {
+        theme: { designTokens: DT },
+        disabled
+    } = props;
+
+    return css`
         width: 100%;
         height: 60px;
         background: ${DT.T_COLOR_BG_DEFAULT_LIGHT};
@@ -70,7 +84,7 @@ export const AddBar = styled.div(
                 }
             }
         `}
-    `
-);
+    `;
+});
 
 addDefaultThemeProps(AddBar, AddTip, RemoveBtn);

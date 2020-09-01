@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider as SCThemeProvider } from 'styled-components';
+import { ThemeProvider as SCThemeProvider } from 'emotion-theming';
 
 import defaultTheme from './theme';
 import { generateTheme } from './theme';

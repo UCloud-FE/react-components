@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Resizable } from 'react-resizable';
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
 import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 
@@ -9,8 +10,13 @@ import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemePr
 const FilteredResizable = ({ resizing, theme, ...rest }) => <Resizable {...rest} />;
 FilteredResizable.propTypes = { resizing: PropTypes.bool, theme: PropTypes.any };
 
-const ResizableTHWrap = styled(FilteredResizable)(
-    ({ resizing, theme: { designTokens: DT } }) => css`
+const ResizableTHWrap = styled(FilteredResizable)(props => {
+    const {
+        resizing,
+        theme: { designTokens: DT }
+    } = props;
+
+    return css`
         position: relative;
         box-sizing: border-box;
 
@@ -30,14 +36,14 @@ const ResizableTHWrap = styled(FilteredResizable)(
         }
 
         ${resizing &&
-            css`
-                background: ${DT.T_COLOR_BG_DEFAULT_LIGHT};
-                .react-resizable-handle {
-                    border-right-color: ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
-                }
-            `};
-    `
-);
+        css`
+            background: ${DT.T_COLOR_BG_DEFAULT_LIGHT};
+            .react-resizable-handle {
+                border-right-color: ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
+            }
+        `};
+    `;
+});
 
 addDefaultThemeProps(ResizableTHWrap);
 
