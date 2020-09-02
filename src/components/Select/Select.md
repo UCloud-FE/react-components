@@ -40,6 +40,11 @@
 ```js {"codepath": "renderContent.jsx"}
 ```
 
+-   renderPopup - 自定义渲染弹出内容
+
+```js {"codepath": "renderPopup.jsx"}
+```
+
 -   search - 是否展示搜索框
 
 ```js {"codepath": "search.jsx"}

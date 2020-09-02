@@ -82,6 +82,14 @@ class Select extends Component {
          */
         renderSelector: PropTypes.func,
         /**
+         * 自定义渲染弹出内容
+         * @param {Object} options - 配置
+         * @param {function} options.handleVisible - 处理弹出层的显示隐藏
+         * @param {function} options.onChange -  value 变化回调
+         * @param {any} options.value - select 的当前值
+         */
+        renderPopup: PropTypes.func,
+        /**
          * - 是否展示搜索框，可以为true或者Object
          * - 为Object时可传入handleSearch对搜索筛选进行自定义
          * @argument searchValue - 搜索的值
@@ -212,10 +220,33 @@ class Select extends Component {
         return emptyContent || <EmptyContentWrapper>{locale.emptyTip}</EmptyContentWrapper>;
     };
     renderPopup = () => {
-        const { search, children, onChange, multiple, showSelectAll, value, options, extra, customStyle } = this.props;
+        const {
+            search,
+            children,
+            onChange,
+            multiple,
+            showSelectAll,
+            value,
+            options,
+            extra,
+            customStyle,
+            renderPopup
+        } = this.props;
         const { searchValue, itemTree } = this.state;
         const Options = this.renderOptions(options);
         const Extra = this.renderExtra(extra);
+
+        if (renderPopup) {
+            return renderPopup({
+                handleVisible: this.handleVisibleChange,
+                onChange: v => onChange(v),
+                value,
+                multiple,
+                extra,
+                search,
+                children
+            });
+        }
 
         return (
             <MenuWrap>
@@ -307,10 +338,12 @@ class Select extends Component {
             defaultValue,
             renderContent,
             renderSelector,
+            renderPopup,
             popover,
             popoverProps,
             customStyle,
             emptyContent,
+            onVisibleChange,
             ...rest
         } = this.props;
         /* eslint-enable no-unused-vars */

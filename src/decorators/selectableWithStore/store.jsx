@@ -73,7 +73,7 @@ const storeDecorator = ({
             const { multiple } = this.props;
             const onChange = this.props[onChangeName] || noop;
             if (multiple) {
-                onChange(setValue(value), this.getAllSelectedStatus());
+                onChange(setValue(value), this.getAllSelectedStatus(setValue(value)));
             } else {
                 onChange(setValue(value));
             }
@@ -84,8 +84,7 @@ const storeDecorator = ({
             return copy ? [...value] : value;
         };
 
-        getAllSelectedStatus = () => {
-            const value = this.getCurrentValue();
+        getAllSelectedStatus = value => {
             const { items } = this.store.getState();
             const itemLength = _.keys(items).length;
             const valueLength = value.length;
