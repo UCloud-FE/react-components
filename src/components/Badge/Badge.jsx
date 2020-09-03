@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import RcAlign from 'src/libs/rc-align';
 import _ from 'lodash';
 
-import { Wrap, BadgeWrap, badgeCls, dotCls } from './style';
+import { Wrap, BadgeWrap, Badge as SBadge } from './style';
 import placements from './placements';
 
 const Placement = _.keys(placements);
@@ -44,9 +44,9 @@ class Badge extends Component {
             content = value;
         }
         return (
-            <span className={dot ? dotCls : badgeCls} style={badgeStyle}>
+            <SBadge dot={dot} style={badgeStyle}>
                 {content}
-            </span>
+            </SBadge>
         );
     };
 

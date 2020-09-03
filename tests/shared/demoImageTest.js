@@ -61,7 +61,11 @@ const demoTest = () => {
             render(<Demo />);
 
             // Take screenshot with generateImage()
-            const screenshot = await generateImage({ waitUntilNetworkIdle: true });
+            const screenshot = await generateImage({
+                waitUntilNetworkIdle: true,
+                charset: 'UTF-8',
+                viewport: { width: 800, height: 800 }
+            });
             // and compare it to the previous sceenshot with toMatchImageSnapshot()
             expect(screenshot).toMatchImageSnapshot();
             cleanup();

@@ -157,7 +157,6 @@ class Demo3 extends React.Component {
         this.setState({ dataSource });
     }
     savePopupContainer(_ref) {
-        console.log(_ref);
         this.popupContainer = _ref;
     }
     getPopupContainer() {

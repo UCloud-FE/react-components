@@ -1,11 +1,13 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
+import classnames from 'classnames';
 
 import config from 'src/config';
 import withProps from 'src/utils/withProps';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-badge';
+export const wrapCls = prefixCls + '-badge-wrap';
 export const badgeCls = prefixCls + '-badge';
 export const dotCls = badgeCls + '-dot';
 
@@ -68,23 +70,20 @@ export const BubbleWrap = withProps({
     })
 );
 
-export const BadgeWrap = withProps({
-    className: prefixCls + '-badge-wrap'
-})(styled('div')`
-    position: absolute;
+export const Badge = withProps({
+    className: ({ dot }) => classnames(badgeCls, dot && dotCls)
+})(styled.span`
+    display: inline-block;
+    min-height: 20px;
+    line-height: 20px;
+    min-width: 10px;
+    padding: 0 5px;
+    border-radius: 10px;
+    text-align: center;
+    background: red;
+    color: white;
 
-    .${badgeCls}, .${dotCls} {
-        display: inline-block;
-        min-height: 20px;
-        line-height: 20px;
-        min-width: 10px;
-        padding: 0 5px;
-        border-radius: 10px;
-        text-align: center;
-        background: red;
-        color: white;
-    }
-    .${dotCls} {
+    &.${dotCls} {
         width: 10px;
         height: 10px;
         padding: 0;
@@ -92,4 +91,10 @@ export const BadgeWrap = withProps({
         min-width: 0;
         min-height: 0;
     }
+`);
+
+export const BadgeWrap = withProps({
+    className: wrapCls
+})(styled('div')`
+    position: absolute;
 `);

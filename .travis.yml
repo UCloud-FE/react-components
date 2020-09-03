@@ -18,7 +18,7 @@ jobs:
       script:
         - npm run lint:es
         - npm run lint:style
-        - npm run test -- -w=2
+        - npm run test -- -w=2 --testPathIgnorePatterns=image.test.js
     - stage: build&deploy
       script:
         - npm run build:dist
