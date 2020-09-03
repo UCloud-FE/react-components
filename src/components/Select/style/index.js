@@ -53,10 +53,11 @@ export const MenuWrap = withProps()(
             border-radius: ${DT.T_CORNER_SM};
             display: inline-block;
             width: 100%;
-
+            /* stylelint-disable selector-type-no-unknown */
             & > ${ExtraWrap}:last-child {
                 margin-bottom: 10px;
             }
+            /* stylelint-enable selector-type-no-unknown */
         `;
     })
 );

@@ -228,14 +228,6 @@ export const TagGroupWrapper = withProps()(
                           border-top-left-radius: 2px;
                           border-bottom-left-radius: 2px;
                       }
-                      :last-child {
-                          border-right-style: solid;
-                          border-top-right-radius: 2px;
-                          border-bottom-right-radius: 2px;
-                          ::after {
-                              content: none;
-                          }
-                      }
                       ::after {
                           content: ' ';
                           height: 8px;
@@ -243,6 +235,14 @@ export const TagGroupWrapper = withProps()(
                           margin: 5px 0;
                           display: inline-block;
                           vertical-align: middle;
+                      }
+                      :last-child {
+                          border-right-style: solid;
+                          border-top-right-radius: 2px;
+                          border-bottom-right-radius: 2px;
+                          ::after {
+                              content: none;
+                          }
                       }
                   }
                   .${prefixCls} {
