@@ -51,7 +51,213 @@ exports[`Popover demo -- base 1`] = `
 `;
 
 exports[`Popover demo -- control 1`] = `
-.c0.uc-fe-popover {
+@keyframes animation-0 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animation-1 {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes animation-2 {
+  from, 20%, 40%, 60%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215,0.61,0.355,1);
+    animation-timing-function: cubic-bezier(0.215,0.61,0.355,1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3,0.3,0.3);
+    -ms-transform: scale3d(0.3,0.3,0.3);
+    transform: scale3d(0.3,0.3,0.3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1,1.1,1.1);
+    -ms-transform: scale3d(1.1,1.1,1.1);
+    transform: scale3d(1.1,1.1,1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.9,0.9,0.9);
+    -ms-transform: scale3d(0.9,0.9,0.9);
+    transform: scale3d(0.9,0.9,0.9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03,1.03,1.03);
+    -ms-transform: scale3d(1.03,1.03,1.03);
+    transform: scale3d(1.03,1.03,1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(0.97,0.97,0.97);
+    -ms-transform: scale3d(0.97,0.97,0.97);
+    transform: scale3d(0.97,0.97,0.97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1,1,1);
+    -ms-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+  }
+}
+
+@keyframes animation-3 {
+  20% {
+    -webkit-transform: scale3d(0.9,0.9,0.9);
+    -ms-transform: scale3d(0.9,0.9,0.9);
+    transform: scale3d(0.9,0.9,0.9);
+  }
+
+  50%, 55% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.1,1.1,1.1);
+    -ms-transform: scale3d(1.1,1.1,1.1);
+    transform: scale3d(1.1,1.1,1.1);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3,0.3,0.3);
+    -ms-transform: scale3d(0.3,0.3,0.3);
+    transform: scale3d(0.3,0.3,0.3);
+  }
+}
+
+@keyframes animation-4 {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3,0.3,0.3);
+    -ms-transform: scale3d(0.3,0.3,0.3);
+    transform: scale3d(0.3,0.3,0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes animation-5 {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3,0.3,0.3);
+    -ms-transform: scale3d(0.3,0.3,0.3);
+    transform: scale3d(0.3,0.3,0.3);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes animation-6 {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+
+@keyframes animation-7 {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+
+@keyframes animation-8 {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+}
+
+@keyframes animation-9 {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+}
+
+.emotion-0.uc-fe-popover {
   position: absolute;
   left: -9999px;
   top: -9999px;
@@ -59,72 +265,72 @@ exports[`Popover demo -- control 1`] = `
   display: block;
 }
 
-.c0.uc-fe-popover-hidden {
+.emotion-0.uc-fe-popover-hidden {
   display: none;
 }
 
-.c0.uc-fe-popover-animation-fade-enter,
-.c0.uc-fe-popover-animation-fade-appear,
-.c0.uc-fe-popover-animation-fade-leave {
+.emotion-0.uc-fe-popover-animation-fade-enter,
+.emotion-0.uc-fe-popover-animation-fade-appear,
+.emotion-0.uc-fe-popover-animation-fade-leave {
   -webkit-animation-duration: 0.1s;
   animation-duration: 0.1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 
-.c0.uc-fe-popover-animation-fade-enter,
-.c0.uc-fe-popover-animation-fade-appear {
-  -webkit-animation-name: eMLfYp;
-  animation-name: eMLfYp;
+.emotion-0.uc-fe-popover-animation-fade-enter,
+.emotion-0.uc-fe-popover-animation-fade-appear {
+  -webkit-animation-name: animation-0;
+  animation-name: animation-0;
 }
 
-.c0.uc-fe-popover-animation-fade-leave {
-  -webkit-animation-name: hSsjZP;
-  animation-name: hSsjZP;
+.emotion-0.uc-fe-popover-animation-fade-leave {
+  -webkit-animation-name: animation-1;
+  animation-name: animation-1;
 }
 
-.c0.uc-fe-popover-animation-bounce-enter,
-.c0.uc-fe-popover-animation-bounce-appear,
-.c0.uc-fe-popover-animation-bounce-leave {
+.emotion-0.uc-fe-popover-animation-bounce-enter,
+.emotion-0.uc-fe-popover-animation-bounce-appear,
+.emotion-0.uc-fe-popover-animation-bounce-leave {
   -webkit-animation-duration: 0.1s;
   animation-duration: 0.1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 
-.c0.uc-fe-popover-animation-bounce-enter,
-.c0.uc-fe-popover-animation-bounce-appear {
-  -webkit-animation-name: gLWDmf;
-  animation-name: gLWDmf;
+.emotion-0.uc-fe-popover-animation-bounce-enter,
+.emotion-0.uc-fe-popover-animation-bounce-appear {
+  -webkit-animation-name: animation-2;
+  animation-name: animation-2;
 }
 
-.c0.uc-fe-popover-animation-bounce-leave {
-  -webkit-animation-name: dSExIX;
-  animation-name: dSExIX;
+.emotion-0.uc-fe-popover-animation-bounce-leave {
+  -webkit-animation-name: animation-3;
+  animation-name: animation-3;
 }
 
-.c0.uc-fe-popover-animation-zoom-enter,
-.c0.uc-fe-popover-animation-zoom-appear,
-.c0.uc-fe-popover-animation-zoom-leave {
+.emotion-0.uc-fe-popover-animation-zoom-enter,
+.emotion-0.uc-fe-popover-animation-zoom-appear,
+.emotion-0.uc-fe-popover-animation-zoom-leave {
   -webkit-animation-duration: 0.1s;
   animation-duration: 0.1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 
-.c0.uc-fe-popover-animation-zoom-enter,
-.c0.uc-fe-popover-animation-zoom-appear {
-  -webkit-animation-name: gDGwlq;
-  animation-name: gDGwlq;
+.emotion-0.uc-fe-popover-animation-zoom-enter,
+.emotion-0.uc-fe-popover-animation-zoom-appear {
+  -webkit-animation-name: animation-4;
+  animation-name: animation-4;
 }
 
-.c0.uc-fe-popover-animation-zoom-leave {
-  -webkit-animation-name: xUjnO;
-  animation-name: xUjnO;
+.emotion-0.uc-fe-popover-animation-zoom-leave {
+  -webkit-animation-name: animation-5;
+  animation-name: animation-5;
 }
 
-.c0.uc-fe-popover-animation-slide-up-enter,
-.c0.uc-fe-popover-animation-slide-up-appear {
+.emotion-0.uc-fe-popover-animation-slide-up-enter,
+.emotion-0.uc-fe-popover-animation-slide-up-appear {
   -webkit-animation-duration: 0.1s;
   animation-duration: 0.1s;
   -webkit-animation-fill-mode: both;
@@ -140,7 +346,7 @@ exports[`Popover demo -- control 1`] = `
   animation-play-state: paused;
 }
 
-.c0.uc-fe-popover-animation-slide-up-leave {
+.emotion-0.uc-fe-popover-animation-slide-up-leave {
   -webkit-animation-duration: 0.1s;
   animation-duration: 0.1s;
   -webkit-animation-fill-mode: both;
@@ -156,44 +362,397 @@ exports[`Popover demo -- control 1`] = `
   animation-play-state: paused;
 }
 
-.c0.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-bottomLeft,
-.c0.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-bottomLeft,
-.c0.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-bottomCenter,
-.c0.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-bottomCenter,
-.c0.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-bottomRight,
-.c0.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-bottomRight {
-  -webkit-animation-name: kuepuf;
-  animation-name: kuepuf;
+.emotion-0.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-bottomLeft,
+.emotion-0.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-bottomLeft,
+.emotion-0.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-bottomCenter,
+.emotion-0.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-bottomCenter,
+.emotion-0.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-bottomRight,
+.emotion-0.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-bottomRight {
+  -webkit-animation-name: animation-6;
+  animation-name: animation-6;
   -webkit-animation-play-state: running;
   animation-play-state: running;
 }
 
-.c0.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-topLeft,
-.c0.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-topLeft,
-.c0.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-topCenter,
-.c0.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-topCenter,
-.c0.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-topRight,
-.c0.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-topRight {
-  -webkit-animation-name: bAmAeh;
-  animation-name: bAmAeh;
+.emotion-0.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-topLeft,
+.emotion-0.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-topLeft,
+.emotion-0.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-topCenter,
+.emotion-0.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-topCenter,
+.emotion-0.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-topRight,
+.emotion-0.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-topRight {
+  -webkit-animation-name: animation-7;
+  animation-name: animation-7;
   -webkit-animation-play-state: running;
   animation-play-state: running;
 }
 
-.c0.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-bottomLeft,
-.c0.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-bottomCenter,
-.c0.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-bottomRight {
-  -webkit-animation-name: kbwIVM;
-  animation-name: kbwIVM;
+.emotion-0.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-bottomLeft,
+.emotion-0.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-bottomCenter,
+.emotion-0.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-bottomRight {
+  -webkit-animation-name: animation-8;
+  animation-name: animation-8;
   -webkit-animation-play-state: running;
   animation-play-state: running;
 }
 
-.c0.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-topLeft,
-.c0.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-topCenter,
-.c0.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-topRight {
-  -webkit-animation-name: bRXKvn;
-  animation-name: bRXKvn;
+.emotion-0.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-topLeft,
+.emotion-0.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-topCenter,
+.emotion-0.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-topRight {
+  -webkit-animation-name: animation-9;
+  animation-name: animation-9;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+@keyframes animation-0 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animation-1 {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes animation-2 {
+  from, 20%, 40%, 60%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215,0.61,0.355,1);
+    animation-timing-function: cubic-bezier(0.215,0.61,0.355,1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3,0.3,0.3);
+    -ms-transform: scale3d(0.3,0.3,0.3);
+    transform: scale3d(0.3,0.3,0.3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1,1.1,1.1);
+    -ms-transform: scale3d(1.1,1.1,1.1);
+    transform: scale3d(1.1,1.1,1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.9,0.9,0.9);
+    -ms-transform: scale3d(0.9,0.9,0.9);
+    transform: scale3d(0.9,0.9,0.9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03,1.03,1.03);
+    -ms-transform: scale3d(1.03,1.03,1.03);
+    transform: scale3d(1.03,1.03,1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(0.97,0.97,0.97);
+    -ms-transform: scale3d(0.97,0.97,0.97);
+    transform: scale3d(0.97,0.97,0.97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1,1,1);
+    -ms-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+  }
+}
+
+@keyframes animation-3 {
+  20% {
+    -webkit-transform: scale3d(0.9,0.9,0.9);
+    -ms-transform: scale3d(0.9,0.9,0.9);
+    transform: scale3d(0.9,0.9,0.9);
+  }
+
+  50%, 55% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.1,1.1,1.1);
+    -ms-transform: scale3d(1.1,1.1,1.1);
+    transform: scale3d(1.1,1.1,1.1);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3,0.3,0.3);
+    -ms-transform: scale3d(0.3,0.3,0.3);
+    transform: scale3d(0.3,0.3,0.3);
+  }
+}
+
+@keyframes animation-4 {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3,0.3,0.3);
+    -ms-transform: scale3d(0.3,0.3,0.3);
+    transform: scale3d(0.3,0.3,0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes animation-5 {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3,0.3,0.3);
+    -ms-transform: scale3d(0.3,0.3,0.3);
+    transform: scale3d(0.3,0.3,0.3);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes animation-6 {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+
+@keyframes animation-7 {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+
+@keyframes animation-8 {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+}
+
+@keyframes animation-9 {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+}
+
+.emotion-0.uc-fe-popover {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  z-index: 1030;
+  display: block;
+}
+
+.emotion-0.uc-fe-popover-hidden {
+  display: none;
+}
+
+.emotion-0.uc-fe-popover-animation-fade-enter,
+.emotion-0.uc-fe-popover-animation-fade-appear,
+.emotion-0.uc-fe-popover-animation-fade-leave {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.emotion-0.uc-fe-popover-animation-fade-enter,
+.emotion-0.uc-fe-popover-animation-fade-appear {
+  -webkit-animation-name: animation-0;
+  animation-name: animation-0;
+}
+
+.emotion-0.uc-fe-popover-animation-fade-leave {
+  -webkit-animation-name: animation-1;
+  animation-name: animation-1;
+}
+
+.emotion-0.uc-fe-popover-animation-bounce-enter,
+.emotion-0.uc-fe-popover-animation-bounce-appear,
+.emotion-0.uc-fe-popover-animation-bounce-leave {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.emotion-0.uc-fe-popover-animation-bounce-enter,
+.emotion-0.uc-fe-popover-animation-bounce-appear {
+  -webkit-animation-name: animation-2;
+  animation-name: animation-2;
+}
+
+.emotion-0.uc-fe-popover-animation-bounce-leave {
+  -webkit-animation-name: animation-3;
+  animation-name: animation-3;
+}
+
+.emotion-0.uc-fe-popover-animation-zoom-enter,
+.emotion-0.uc-fe-popover-animation-zoom-appear,
+.emotion-0.uc-fe-popover-animation-zoom-leave {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.emotion-0.uc-fe-popover-animation-zoom-enter,
+.emotion-0.uc-fe-popover-animation-zoom-appear {
+  -webkit-animation-name: animation-4;
+  animation-name: animation-4;
+}
+
+.emotion-0.uc-fe-popover-animation-zoom-leave {
+  -webkit-animation-name: animation-5;
+  animation-name: animation-5;
+}
+
+.emotion-0.uc-fe-popover-animation-slide-up-enter,
+.emotion-0.uc-fe-popover-animation-slide-up-appear {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  display: block !important;
+  opacity: 0;
+  -webkit-animation-timing-function: cubic-bezier(0.08,0.82,0.17,1);
+  animation-timing-function: cubic-bezier(0.08,0.82,0.17,1);
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.emotion-0.uc-fe-popover-animation-slide-up-leave {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  display: block !important;
+  opacity: 1;
+  -webkit-animation-timing-function: cubic-bezier(0.6,0.04,0.98,0.34);
+  animation-timing-function: cubic-bezier(0.6,0.04,0.98,0.34);
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.emotion-0.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-bottomLeft,
+.emotion-0.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-bottomLeft,
+.emotion-0.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-bottomCenter,
+.emotion-0.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-bottomCenter,
+.emotion-0.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-bottomRight,
+.emotion-0.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-bottomRight {
+  -webkit-animation-name: animation-6;
+  animation-name: animation-6;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.emotion-0.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-topLeft,
+.emotion-0.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-topLeft,
+.emotion-0.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-topCenter,
+.emotion-0.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-topCenter,
+.emotion-0.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-topRight,
+.emotion-0.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-topRight {
+  -webkit-animation-name: animation-7;
+  animation-name: animation-7;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.emotion-0.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-bottomLeft,
+.emotion-0.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-bottomCenter,
+.emotion-0.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-bottomRight {
+  -webkit-animation-name: animation-8;
+  animation-name: animation-8;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.emotion-0.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-topLeft,
+.emotion-0.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-topCenter,
+.emotion-0.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-topRight {
+  -webkit-animation-name: animation-9;
+  animation-name: animation-9;
   -webkit-animation-play-state: running;
   animation-play-state: running;
 }
@@ -210,7 +769,7 @@ exports[`Popover demo -- control 1`] = `
     </div>
     <div>
       <div
-        class="uc-fe-popover c0 uc-fe-popover-placement-bottomLeft "
+        class="uc-fe-popover emotion-0 emotion-1 uc-fe-popover-placement-bottomLeft "
       >
         <div>
           <div
@@ -233,70 +792,7 @@ exports[`Popover demo -- control 1`] = `
 `;
 
 exports[`Popover demo -- forwardPopupContainer 1`] = `
-.c2 {
-  padding: 0 24px;
-  margin-top: 16px;
-}
-
-.c2:before,
-.c2:after {
-  content: ' ';
-  display: table;
-}
-
-.c2:after {
-  clear: both;
-}
-
-.c3 {
-  line-height: 28px;
-  font-weight: bold;
-}
-
-.c5 {
-  line-height: 20px;
-  font-weight: normal;
-}
-
-.c7 {
-  line-height: 28px;
-  padding: 0 24px;
-  margin-top: 16px;
-}
-
-.c7:before,
-.c7:after {
-  content: ' ';
-  display: table;
-}
-
-.c7:after {
-  clear: both;
-}
-
-.c10 {
-  padding: 0 24px;
-  margin-top: 16px;
-}
-
-.c12 {
-  line-height: 1;
-  padding: 0 24px;
-  margin-top: 16px;
-  padding-top: 12px;
-}
-
-.c12:before,
-.c12:after {
-  content: ' ';
-  display: table;
-}
-
-.c12:after {
-  clear: both;
-}
-
-.c0 {
+.emotion-18 {
   box-sizing: border-box;
   text-align: left;
   overflow: auto;
@@ -306,35 +802,76 @@ exports[`Popover demo -- forwardPopupContainer 1`] = `
   border-radius: 4px;
 }
 
-.c0 .c1:last-child,
-.c0 .c6:last-child,
-.c0 .c9:last-child {
+.emotion-18 .uc-fe-card-header:last-child,
+.emotion-18 .uc-fe-card-action:last-child,
+.emotion-18 .uc-fe-card-content:last-child {
   margin-bottom: 24px;
 }
 
-.c0 .c1:first-child,
-.c0 .c6:first-child,
-.c0 .c9:first-child {
+.emotion-18 .uc-fe-card-header:first-child,
+.emotion-18 .uc-fe-card-action:first-child,
+.emotion-18 .uc-fe-card-content:first-child {
   margin-top: 24px;
 }
 
-.c0 .c1 {
+.emotion-18 .uc-fe-card-title {
   color: #0a1633;
   font-size: 16px;
 }
 
-.c0 .c4 {
+.emotion-18 .uc-fe-card-comment {
   color: #526075;
   font-size: 12px;
 }
 
-.c0 .c11 {
+.emotion-18 .uc-fe-card-footer {
   border-top: 1px solid #d2d6ea;
   padding: 16px 24px;
   margin-top: 24px;
 }
 
-.c8 {
+.emotion-4 {
+  padding: 0 24px;
+  margin-top: 16px;
+}
+
+.emotion-4:before,
+.emotion-4:after {
+  content: ' ';
+  display: table;
+}
+
+.emotion-4:after {
+  clear: both;
+}
+
+.emotion-0 {
+  line-height: 28px;
+  font-weight: bold;
+}
+
+.emotion-2 {
+  line-height: 20px;
+  font-weight: normal;
+}
+
+.emotion-10 {
+  line-height: 28px;
+  padding: 0 24px;
+  margin-top: 16px;
+}
+
+.emotion-10:before,
+.emotion-10:after {
+  content: ' ';
+  display: table;
+}
+
+.emotion-10:after {
+  clear: both;
+}
+
+.emotion-6 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -359,10 +896,164 @@ exports[`Popover demo -- forwardPopupContainer 1`] = `
   transition: all .22s cubic-bezier(.4,0,.2,1);
 }
 
-.c8:hover {
+.emotion-6:hover {
   color: #3860f4;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
+.emotion-12 {
+  padding: 0 24px;
+  margin-top: 16px;
+}
+
+.emotion-16 {
+  line-height: 1;
+  padding: 0 24px;
+  margin-top: 16px;
+  padding-top: 12px;
+}
+
+.emotion-16:before,
+.emotion-16:after {
+  content: ' ';
+  display: table;
+}
+
+.emotion-16:after {
+  clear: both;
+}
+
+.emotion-18 {
+  box-sizing: border-box;
+  text-align: left;
+  overflow: auto;
+  background: #ffffff;
+  font-size: 12px;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 4px 4px -2px rgba(0,0,0,0.05);
+  border-radius: 4px;
+}
+
+.emotion-18 .uc-fe-card-header:last-child,
+.emotion-18 .uc-fe-card-action:last-child,
+.emotion-18 .uc-fe-card-content:last-child {
+  margin-bottom: 24px;
+}
+
+.emotion-18 .uc-fe-card-header:first-child,
+.emotion-18 .uc-fe-card-action:first-child,
+.emotion-18 .uc-fe-card-content:first-child {
+  margin-top: 24px;
+}
+
+.emotion-18 .uc-fe-card-title {
+  color: #0a1633;
+  font-size: 16px;
+}
+
+.emotion-18 .uc-fe-card-comment {
+  color: #526075;
+  font-size: 12px;
+}
+
+.emotion-18 .uc-fe-card-footer {
+  border-top: 1px solid #d2d6ea;
+  padding: 16px 24px;
+  margin-top: 24px;
+}
+
+.emotion-4 {
+  padding: 0 24px;
+  margin-top: 16px;
+}
+
+.emotion-4:before,
+.emotion-4:after {
+  content: ' ';
+  display: table;
+}
+
+.emotion-4:after {
+  clear: both;
+}
+
+.emotion-0 {
+  line-height: 28px;
+  font-weight: bold;
+}
+
+.emotion-2 {
+  line-height: 20px;
+  font-weight: normal;
+}
+
+.emotion-10 {
+  line-height: 28px;
+  padding: 0 24px;
+  margin-top: 16px;
+}
+
+.emotion-10:before,
+.emotion-10:after {
+  content: ' ';
+  display: table;
+}
+
+.emotion-10:after {
+  clear: both;
+}
+
+.emotion-6 {
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  border-width: 1px;
+  border-style: solid;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 28px;
+  padding: 0 8px;
+  color: #0a1633;
+  fill: #0a1633;
+  background: #ffffff;
+  border: none;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
+}
+
+.emotion-6:hover {
+  color: #3860f4;
+  background: #ffffff;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
+.emotion-12 {
+  padding: 0 24px;
+  margin-top: 16px;
+}
+
+.emotion-16 {
+  line-height: 1;
+  padding: 0 24px;
+  margin-top: 16px;
+  padding-top: 12px;
+}
+
+.emotion-16:before,
+.emotion-16:after {
+  content: ' ';
+  display: table;
+}
+
+.emotion-16:after {
+  clear: both;
 }
 
 <div>
@@ -370,41 +1061,41 @@ exports[`Popover demo -- forwardPopupContainer 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-card c0"
+      class="uc-fe-card emotion-18 emotion-19"
     >
       <div />
       <div
-        class="c1 uc-fe-card-header c2"
+        class="uc-fe-card-header emotion-4 emotion-5"
       >
         <div
-          class="uc-fe-card-title c3"
+          class="uc-fe-card-title emotion-0 emotion-1"
         >
           默认容器为 body，可以显示，但滚动时由于容器和元素不在一个滚动层中，会导致偏移，体验较差
         </div>
         <div
-          class="c4 uc-fe-card-comment c5"
+          class="uc-fe-card-comment emotion-2 emotion-3"
         >
           This is the comment
         </div>
       </div>
       <div
-        class="c6 uc-fe-card-action c7"
+        class="uc-fe-card-action emotion-10 emotion-11"
       >
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c8"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-6 emotion-7"
           type="button"
         >
           This is a action button
         </button>
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c8"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-6 emotion-7"
           type="button"
         >
           This is a action button
         </button>
       </div>
       <div
-        class="c9 uc-fe-card-content c10"
+        class="uc-fe-card-content emotion-12 emotion-13"
       >
         <div
           style="background:#e1e6f0;height:50px;padding:10px"
@@ -413,10 +1104,10 @@ exports[`Popover demo -- forwardPopupContainer 1`] = `
         </div>
       </div>
       <div
-        class="c11 uc-fe-card-footer c12"
+        class="uc-fe-card-footer emotion-16 emotion-17"
       >
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c8"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-6 emotion-7"
           style="float:right"
           type="button"
         >
@@ -429,41 +1120,41 @@ exports[`Popover demo -- forwardPopupContainer 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-card c0"
+      class="uc-fe-card emotion-18 emotion-19"
     >
       <div />
       <div
-        class="c1 uc-fe-card-header c2"
+        class="uc-fe-card-header emotion-4 emotion-5"
       >
         <div
-          class="uc-fe-card-title c3"
+          class="uc-fe-card-title emotion-0 emotion-1"
         >
           使用父容器作为容器，如果上层有定位容器，并再上层嵌套了滚动容器，会导致弹出层无法脱离，定位出现问题且滚动会闪烁
         </div>
         <div
-          class="c4 uc-fe-card-comment c5"
+          class="uc-fe-card-comment emotion-2 emotion-3"
         >
           This is the comment
         </div>
       </div>
       <div
-        class="c6 uc-fe-card-action c7"
+        class="uc-fe-card-action emotion-10 emotion-11"
       >
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c8"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-6 emotion-7"
           type="button"
         >
           This is a action button
         </button>
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c8"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-6 emotion-7"
           type="button"
         >
           This is a action button
         </button>
       </div>
       <div
-        class="c9 uc-fe-card-content c10"
+        class="uc-fe-card-content emotion-12 emotion-13"
       >
         <div
           style="position:relative"
@@ -476,10 +1167,10 @@ exports[`Popover demo -- forwardPopupContainer 1`] = `
         </div>
       </div>
       <div
-        class="c11 uc-fe-card-footer c12"
+        class="uc-fe-card-footer emotion-16 emotion-17"
       >
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c8"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-6 emotion-7"
           style="float:right"
           type="button"
         >
@@ -492,41 +1183,41 @@ exports[`Popover demo -- forwardPopupContainer 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-card c0"
+      class="uc-fe-card emotion-18 emotion-19"
     >
       <div />
       <div
-        class="c1 uc-fe-card-header c2"
+        class="uc-fe-card-header emotion-4 emotion-5"
       >
         <div
-          class="uc-fe-card-title c3"
+          class="uc-fe-card-title emotion-0 emotion-1"
         >
           使用 forwardPopupContainer 可以比较方便的跳过组件内部的这类问题，Card、Table 等组件内部都提供了比较安全的容器区域。
         </div>
         <div
-          class="c4 uc-fe-card-comment c5"
+          class="uc-fe-card-comment emotion-2 emotion-3"
         >
           This is the comment
         </div>
       </div>
       <div
-        class="c6 uc-fe-card-action c7"
+        class="uc-fe-card-action emotion-10 emotion-11"
       >
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c8"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-6 emotion-7"
           type="button"
         >
           This is a action button
         </button>
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c8"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-6 emotion-7"
           type="button"
         >
           This is a action button
         </button>
       </div>
       <div
-        class="c9 uc-fe-card-content c10"
+        class="uc-fe-card-content emotion-12 emotion-13"
       >
         <div
           style="position:relative"
@@ -539,10 +1230,10 @@ exports[`Popover demo -- forwardPopupContainer 1`] = `
         </div>
       </div>
       <div
-        class="c11 uc-fe-card-footer c12"
+        class="uc-fe-card-footer emotion-16 emotion-17"
       >
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c8"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-6 emotion-7"
           style="float:right"
           type="button"
         >
