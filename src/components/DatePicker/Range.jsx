@@ -270,6 +270,7 @@ class Range extends Component {
                                                 }}
                                                 display={pickerDisplay}
                                                 onChange={v => this.handleChange('start', v)}
+                                                getCalendarContainer={triggerNode => triggerNode.parentNode}
                                             />
                                         </RangePopupPickerContainer>
                                         <RangePopupPickerContainer>
@@ -282,6 +283,7 @@ class Range extends Component {
                                                 }}
                                                 display={pickerDisplay}
                                                 onChange={v => this.handleChange('end', v)}
+                                                getCalendarContainer={triggerNode => triggerNode.parentNode}
                                             />
                                         </RangePopupPickerContainer>
                                         <RangePopupFooter>
