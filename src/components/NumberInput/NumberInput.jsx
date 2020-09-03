@@ -10,7 +10,16 @@ import classnames from 'classnames';
 import Icon from 'src/components/Icon';
 import Tooltip from 'src/components/Tooltip';
 import KEYCODE from 'src/interfaces/KeyCode';
-import { NumberInputWrap, prefixCls, inputWrapCls, inputCls, suffixCls, handlerUpCls, handlerDownCls } from './style';
+import {
+    NumberInputWrap,
+    prefixCls,
+    inputWrapCls,
+    inputCls,
+    suffixCls,
+    handlerUpCls,
+    handlerDownCls,
+    handlerDisabledCls
+} from './style';
 
 function noop() {}
 
@@ -543,7 +552,7 @@ class NumberInput extends Component {
         return (
             <div>
                 <span
-                    className={handlerUpCls}
+                    className={classnames(handlerUpCls, (disabled || upDisabled) && handlerDisabledCls)}
                     unselectable="unselectable"
                     disabled={disabled || upDisabled}
                     {...upEvents}
@@ -561,7 +570,7 @@ class NumberInput extends Component {
                     )}
                 </span>
                 <span
-                    className={handlerDownCls}
+                    className={classnames(handlerDownCls, (disabled || downDisabled) && handlerDisabledCls)}
                     unselectable="unselectable"
                     disabled={disabled || downDisabled}
                     {...downEvents}

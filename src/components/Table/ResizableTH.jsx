@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Resizable } from 'react-resizable';
 import styled from '@emotion/styled';
@@ -58,7 +58,9 @@ export default class ResizableTH extends Component {
         /** 是否可调整大小 */
         resizeAble: PropTypes.bool,
         /** 调整时的回调 */
-        onResize: PropTypes.func
+        onResize: PropTypes.func,
+        /** @ignore */
+        children: PropTypes.node
     };
     state = {};
     onResize = (e, { size }) => {
@@ -67,7 +69,7 @@ export default class ResizableTH extends Component {
     };
     render() {
         // eslint-disable-next-line no-unused-vars
-        const { width, resizeAble, onResize, minWidth = 20, maxWidth = Infinity, ...rest } = this.props;
+        const { width, resizeAble, onResize, minWidth = 20, maxWidth = Infinity, children, ...rest } = this.props;
         const { resizing } = this.state;
 
         return resizeAble ? (
@@ -81,10 +83,12 @@ export default class ResizableTH extends Component {
                 maxConstraints={[maxWidth, 0]}
                 resizing={resizing}
             >
-                <th {...rest} />
+                <th {...rest}>
+                    <Fragment>{children}</Fragment>
+                </th>
             </ResizableTHWrap>
         ) : (
-            <th {...rest} />
+            <th {...rest}>{children}</th>
         );
     }
 }
