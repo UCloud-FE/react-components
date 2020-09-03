@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.4](https://github.com/UCloud-FE/react-components/compare/v0.7.3...v0.7.4) (2020-09-03)
+
+### Bug Fixes
+
+-   **DatePicker:** fix click popup hide bug ([af9a0ec](https://github.com/UCloud-FE/react-components/commit/af9a0ec2d4ca798fcac24c2056aa5a87125e8677))
+
 ### [0.7.3](https://github.com/UCloud-FE/react-components/compare/v0.7.2...v0.7.3) (2020-09-02)
 
 ### Features
