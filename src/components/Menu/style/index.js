@@ -5,7 +5,7 @@ import { css } from '@emotion/core';
 import Collapse from 'src/components/Collapse';
 import Icon from 'src/components/Icon';
 import config from 'src/config';
-import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
+import withProps from 'src/utils/withProps';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-menu';
@@ -120,30 +120,32 @@ const menuStyle = ({ theme: { designTokens: DT } }) => {
 // eslint-disable-next-line react/prop-types,no-unused-vars
 const CleanCollapse = ({ customStyle, ...rest }) => <Collapse {...rest} />;
 
-export const MenuWrap = styled(CleanCollapse)(props => {
-    const { customStyle = {} } = props;
-    return css`
-        ${menuStyle(props)};
-        max-height: ${customStyle.maxHeight};
-        &.${blockCls} {
-            min-width: 0;
-            max-width: none;
-            width: 100%;
-            height: 100%;
-            box-shadow: none;
-        }
-    `;
-});
-
-export const PopupMenuWrap = styled('div')(props => {
-    return css`
-        display: inline-block;
-        padding: 0px 8px;
-        .${popupContentCls} {
+export const MenuWrap = withProps()(
+    styled(CleanCollapse)(props => {
+        const { customStyle = {} } = props;
+        return css`
             ${menuStyle(props)};
-            max-height: 380px;
-        }
-    `;
-});
+            max-height: ${customStyle.maxHeight};
+            &.${blockCls} {
+                min-width: 0;
+                max-width: none;
+                width: 100%;
+                height: 100%;
+                box-shadow: none;
+            }
+        `;
+    })
+);
 
-addDefaultThemeProps(MenuWrap, PopupMenuWrap);
+export const PopupMenuWrap = withProps()(
+    styled('div')(props => {
+        return css`
+            display: inline-block;
+            padding: 0px 8px;
+            .${popupContentCls} {
+                ${menuStyle(props)};
+                max-height: 380px;
+            }
+        `;
+    })
+);

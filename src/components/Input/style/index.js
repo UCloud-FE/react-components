@@ -3,7 +3,6 @@ import { css } from '@emotion/core';
 
 import { inlineBlockWithVerticalMixin } from 'src/style';
 import Icon from 'src/components/Icon';
-import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 import config from 'src/config';
 
 import withProps from 'src/utils/withProps';
@@ -104,54 +103,48 @@ export const TableWrap = styled('span')`
     width: 100%;
 `;
 
-export const InputWrap = styled(
-    withProps({
-        className: prefixCls
-    })(
-        styled('span')(props => {
-            const { disabled } = props;
+export const InputWrap = withProps({
+    className: prefixCls
+})(
+    styled('span')(props => {
+        const { disabled } = props;
 
-            return css`
-                position: relative;
-                ${inlineBlockWithVerticalMixin};
+        return css`
+            position: relative;
+            ${inlineBlockWithVerticalMixin};
+            box-sizing: border-box;
+            &.${blockCls} {
+                display: block;
+            }
+
+            ${disabled &&
+            css`
+                &,
+                input,
+                ${SearchIcon} {
+                    cursor: not-allowed;
+                }
+            `};
+
+            input {
+                vertical-align: middle;
+                display: table-cell;
                 box-sizing: border-box;
-                &.${blockCls} {
-                    display: block;
+                width: 100%;
+                padding: 0px 8px;
+                margin: 0;
+                font-size: inherit;
+                color: inherit;
+                &,
+                &:hover,
+                &:focus {
+                    border: none;
+                    outline: none;
+                    background: none;
                 }
+            }
 
-                ${disabled &&
-                css`
-                    &,
-                    input,
-                    ${SearchIcon} {
-                        cursor: not-allowed;
-                    }
-                `};
-
-                input {
-                    vertical-align: middle;
-                    display: table-cell;
-                    box-sizing: border-box;
-                    width: 100%;
-                    padding: 0px 8px;
-                    margin: 0;
-                    font-size: inherit;
-                    color: inherit;
-                    &,
-                    &:hover,
-                    &:focus {
-                        border: none;
-                        outline: none;
-                        background: none;
-                    }
-                }
-
-                ${themeMixin(props)};
-            `;
-        })
-    )
-)`
-    /* empty */
-`;
-
-addDefaultThemeProps(InputWrap);
+            ${themeMixin(props)};
+        `;
+    })
+);

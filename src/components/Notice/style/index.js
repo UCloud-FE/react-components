@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import Icon from 'src/components/Icon';
-import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
+import withProps from 'src/utils/withProps';
 
 const map = {
     default: 'info',
@@ -102,7 +102,7 @@ const themeMixin = props => {
     `;
 };
 
-export const NoticeWrap = styled('div')`
+export const NoticeWrap = withProps()(styled('div')`
     display: table;
     position: relative;
     box-sizing: border-box;
@@ -114,5 +114,4 @@ export const NoticeWrap = styled('div')`
     overflow: hidden;
 
     ${themeMixin};
-`;
-addDefaultThemeProps(NoticeWrap);
+`);

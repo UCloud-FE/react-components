@@ -2,8 +2,9 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import Table from 'src/components/Table';
+import SvgIcon from 'src/components/SvgIcon';
 
-import { AddBar, AddBtn, AddTip, RemoveBtn } from './style';
+import { AddBar, btnCls, AddTip, RemoveBtn } from './style';
 
 const noop = () => {};
 
@@ -78,11 +79,14 @@ class EditableTable extends PureComponent {
         const { tip, disabled } = addition;
         const _disabled = !addition || disabled;
         return [
-            <AddBar key="add" onClick={!_disabled && this.onAdd} disabled={_disabled}>
+            <AddBar key="add" onClick={_disabled ? null : this.onAdd} disabled={_disabled}>
                 {tip ? (
-                    [<AddBtn type="plus" key="add_btn" size="16px" />, <AddTip key="add_tip">{tip}</AddTip>]
+                    [
+                        <SvgIcon className={btnCls} type="plus" key="add_btn" size="16px" />,
+                        <AddTip key="add_tip">{tip}</AddTip>
+                    ]
                 ) : (
-                    <AddBtn type="plus" size="20px" />
+                    <SvgIcon className={btnCls} type="plus" size="20px" />
                 )}
             </AddBar>,
             footer()

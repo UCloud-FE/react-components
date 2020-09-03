@@ -3,51 +3,55 @@ import { css } from '@emotion/core';
 import { injectGlobal } from 'emotion';
 
 import { prefixCls as popoverPrefixCls } from 'src/components/Popover/style';
-import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
-import config from 'config';
+import config from 'src/config';
+import withProps from 'src/utils/withProps';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-tooltip';
 
-/* stylelint-disable property-no-unknown,no-duplicate-selectors */
 const arrowWidth = '6px';
 const borderWidth = '1px';
 
 export const tooltipPopupClassName = prefixCls + '-popup';
+export const contentCls = prefixCls + '-cls';
 
-export const ContentWrap = styled('div')(props => {
-    const {
-        theme: { designTokens: DT },
-        themeType,
-        popupWrapperPadding
-    } = props;
+export const ContentWrap = withProps({
+    className: contentCls
+})(
+    styled('div')(props => {
+        const {
+            theme: { designTokens: DT },
+            themeType,
+            popupWrapperPadding
+        } = props;
 
-    let map = {
-        light: {
-            text: DT.T_COLOR_TEXT_DEFAULT_DARK,
-            border: DT.T_POPOVER_COLOR_LINE_LIGHT,
-            background: DT.T_POPOVER_COLOR_BG_LIGHT
-        },
-        dark: {
-            text: DT.T_COLOR_TEXT_WHITE,
-            border: DT.T_POPOVER_COLOR_BG_DARK,
-            background: DT.T_POPOVER_COLOR_BG_DARK
-        }
-    };
-    map = map[themeType];
-    return css`
-        padding: ${popupWrapperPadding || '8px 10px'};
-        text-align: left;
-        text-decoration: none;
-        border-radius: 3px;
-        word-break: keep-all;
-        box-sizing: border-box;
-        line-height: 12px;
-        color: ${map.text};
-        border: ${DT.T_LINE_WIDTH_BASE} solid ${map.border};
-        background: ${map.background};
-    `;
-});
+        let map = {
+            light: {
+                text: DT.T_COLOR_TEXT_DEFAULT_DARK,
+                border: DT.T_POPOVER_COLOR_LINE_LIGHT,
+                background: DT.T_POPOVER_COLOR_BG_LIGHT
+            },
+            dark: {
+                text: DT.T_COLOR_TEXT_WHITE,
+                border: DT.T_POPOVER_COLOR_BG_DARK,
+                background: DT.T_POPOVER_COLOR_BG_DARK
+            }
+        };
+        map = map[themeType];
+        return css`
+            padding: ${popupWrapperPadding || '8px 10px'};
+            text-align: left;
+            text-decoration: none;
+            border-radius: 3px;
+            word-break: keep-all;
+            box-sizing: border-box;
+            line-height: 12px;
+            color: ${map.text};
+            border: ${DT.T_LINE_WIDTH_BASE} solid ${map.border};
+            background: ${map.background};
+        `;
+    })
+);
 
 const arrowMixin = css`
     display: inline-block;
@@ -141,7 +145,7 @@ injectGlobal`
             ${Arrow} {
                 left: 16px;
             }
-            ${ContentWrap} {
+            .${contentCls} {
                 min-width: 32px;
             }
         }
@@ -150,7 +154,7 @@ injectGlobal`
             ${Arrow} {
                 right: 10px;
             }
-            ${ContentWrap} {
+            .${contentCls} {
                 min-width: 32px;
             }
         }
@@ -160,7 +164,7 @@ injectGlobal`
                 top: 5px;
                 margin-top: 0;
             }
-            ${ContentWrap} {
+            .${contentCls} {
                 min-height: 22px;
             }
         }
@@ -169,7 +173,7 @@ injectGlobal`
             ${Arrow} {
                 bottom: 5px;
             }
-            ${ContentWrap} {
+            .${contentCls} {
                 min-height: 22px;
             }
         }
@@ -178,7 +182,7 @@ injectGlobal`
             ${Arrow} {
                 left: 50%;
             }
-            ${ContentWrap} {
+            .${contentCls} {
                 min-width: 32px;
             }
         }
@@ -187,37 +191,38 @@ injectGlobal`
             ${Arrow} {
                 top: 50%;
             }
-            ${ContentWrap} {
+            .${contentCls} {
                 min-height: 22px;
             }
         }
     }
 `;
 
-export const TooltipWrap = styled('div')(props => {
-    const {
-        theme: { designTokens: DT },
-        themeType
-    } = props;
+export const TooltipWrap = withProps()(
+    styled('div')(props => {
+        const {
+            theme: { designTokens: DT },
+            themeType
+        } = props;
 
-    let map = {
-        light: {
-            border: DT.T_POPOVER_COLOR_LINE_LIGHT,
-            background: DT.T_POPOVER_COLOR_BG_LIGHT
-        },
-        dark: {
-            border: DT.T_POPOVER_COLOR_BG_DARK,
-            background: DT.T_POPOVER_COLOR_BG_DARK
-        }
-    };
-    map = map[themeType];
-    return css`
-        ${Arrow} {
-            border-color: ${map.border};
-        }
-        ${ArrowInner} {
-            border-color: ${map.background};
-        }
-    `;
-});
-addDefaultThemeProps(ContentWrap, TooltipWrap);
+        let map = {
+            light: {
+                border: DT.T_POPOVER_COLOR_LINE_LIGHT,
+                background: DT.T_POPOVER_COLOR_BG_LIGHT
+            },
+            dark: {
+                border: DT.T_POPOVER_COLOR_BG_DARK,
+                background: DT.T_POPOVER_COLOR_BG_DARK
+            }
+        };
+        map = map[themeType];
+        return css`
+            ${Arrow} {
+                border-color: ${map.border};
+            }
+            ${ArrowInner} {
+                border-color: ${map.background};
+            }
+        `;
+    })
+);

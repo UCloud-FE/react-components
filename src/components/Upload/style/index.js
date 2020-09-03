@@ -3,38 +3,42 @@ import { css } from '@emotion/core';
 
 import Notice from 'src/components/Notice';
 import Icon from 'src/components/Icon';
-import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
+import withProps from 'src/utils/withProps';
 
 const disabledMixin = css`
     pointer-events: none;
 `;
 
-export const SelectorWrap = styled('div')(props => {
-    const { disabled } = props;
+export const SelectorWrap = withProps()(
+    styled('div')(props => {
+        const { disabled } = props;
 
-    return css`
-        display: inline-block;
-        cursor: pointer;
+        return css`
+            display: inline-block;
+            cursor: pointer;
 
-        ${disabled && disabledMixin};
-    `;
-});
+            ${disabled && disabledMixin};
+        `;
+    })
+);
 export const TipWrap = styled('span')`
     margin-left: 5px;
 `;
 
-export const ListWrap = styled('div')(props => {
-    const {
-        theme: { colorMap }
-    } = props;
+export const ListWrap = withProps()(
+    styled('div')(props => {
+        const {
+            theme: { colorMap }
+        } = props;
 
-    return css`
-        max-height: 200px;
-        overflow: auto;
-        border: 1px solid ${colorMap.default.border};
-        margin-top: 6px;
-    `;
-});
+        return css`
+            max-height: 200px;
+            overflow: auto;
+            border: 1px solid ${colorMap.default.border};
+            margin-top: 6px;
+        `;
+    })
+);
 
 export const UploadIcon = styled(Icon)`
     vertical-align: baseline;
@@ -42,7 +46,7 @@ export const UploadIcon = styled(Icon)`
     cursor: pointer;
 `;
 
-export const UploadNotice = styled(Notice)(props => {
+export const UploadNotice = styled(withProps({}, { cleanProps: ['onPreview'] })(Notice))(props => {
     const { onPreview } = props;
 
     return css`
@@ -53,4 +57,3 @@ export const UploadNotice = styled(Notice)(props => {
         `};
     `;
 });
-addDefaultThemeProps(ListWrap);

@@ -1,4 +1,4 @@
-import Grid from 'components/Grid';
+import Grid from 'src/components/Grid';
 
 const { Row } = Grid;
 

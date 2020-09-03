@@ -3,7 +3,7 @@ import { css } from '@emotion/core';
 
 import Icon from 'src/components/Icon';
 import { fadeIn, fadeOut } from 'src/style/animation';
-import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
+import withProps from 'src/utils/withProps';
 
 export const animationDuration = 500;
 export const animationName = 'uc-fe-animation-fade';
@@ -23,21 +23,23 @@ export const LoadingWrap = styled('div')`
     }
 `;
 
-export const Mask = styled('div')(props => {
-    const {
-        theme: { designTokens: DT }
-    } = props;
+export const Mask = withProps()(
+    styled('div')(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
 
-    return css`
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 10;
-        background: ${DT.T_LOADING_COLOR_LAYER_DEFAULT};
-    `;
-});
+        return css`
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 10;
+            background: ${DT.T_LOADING_COLOR_LAYER_DEFAULT};
+        `;
+    })
+);
 
 export const IndicatorWrap = styled('div')`
     display: table;
@@ -51,32 +53,34 @@ export const IndicatorWrap = styled('div')`
     }
 `;
 
-export const LoadingIcon = styled(Icon)(props => {
-    const {
-        theme: { designTokens: DT }
-    } = props;
+export const LoadingIcon = withProps()(
+    styled(Icon)(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
 
-    return css`
-        font-size: 20px;
-        color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
-    `;
-});
+        return css`
+            font-size: 20px;
+            color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+        `;
+    })
+);
 
 export const ContentWrap = styled('div')`
     position: relative;
 `;
 
-export const TipWrap = styled('p')(props => {
-    const {
-        theme: { fontSize, designTokens: DT }
-    } = props;
+export const TipWrap = withProps()(
+    styled('p')(props => {
+        const {
+            theme: { fontSize, designTokens: DT }
+        } = props;
 
-    return css`
-        text-align: center;
-        font-size: ${fontSize};
-        color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
-        margin-top: 5px;
-    `;
-});
-
-addDefaultThemeProps(TipWrap, LoadingIcon, Mask);
+        return css`
+            text-align: center;
+            font-size: ${fontSize};
+            color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+            margin-top: 5px;
+        `;
+    })
+);

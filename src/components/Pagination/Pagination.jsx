@@ -483,7 +483,7 @@ class Pagination extends Component {
                 size={size}
                 className={wrapClassName}
                 unselectable="unselectable"
-                ref={this.savePaginationNode}
+                _innerRef={this.savePaginationNode}
                 {...rest}
             >
                 {showTotal && (

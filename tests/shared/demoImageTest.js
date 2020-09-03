@@ -3,6 +3,7 @@ const path = require('path');
 import React from 'react';
 import { generateImage } from 'jsdom-screenshot';
 import { render, cleanup } from '@testing-library/react';
+
 import '../imageSetup.js';
 /**
  * implement if require.content is not supported

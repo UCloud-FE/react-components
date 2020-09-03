@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
+import withProps from 'src/utils/withProps';
 
 const themeMixin = props => {
     const {
@@ -32,7 +32,7 @@ const themeMixin = props => {
     `;
 };
 
-export const TextareaWrap = styled('textarea')`
+export const TextareaWrap = withProps()(styled('textarea')`
     display: block;
     box-sizing: border-box;
     width: 100%;
@@ -43,5 +43,4 @@ export const TextareaWrap = styled('textarea')`
     resize: vertical;
     outline: none;
     ${themeMixin};
-`;
-addDefaultThemeProps(TextareaWrap);
+`);

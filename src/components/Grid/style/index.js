@@ -3,7 +3,6 @@ import { css } from '@emotion/core';
 
 import { clearFixMixin } from 'src/style';
 import config from 'src/config';
-
 import withProps from 'src/utils/withProps';
 
 const { prefixCls: _prefixCls } = config;
@@ -83,54 +82,46 @@ const alignMixin = props => {
     `;
 };
 
-export const ColWrap = styled(
-    withProps({
-        className: colPrefixCls
-    })(
-        styled('div')(props => {
-            return css`
-                position: relative;
-                display: block;
-                box-sizing: border-box;
-                min-height: 1px;
+export const ColWrap = withProps({
+    className: colPrefixCls
+})(
+    styled('div')(props => {
+        return css`
+            position: relative;
+            display: block;
+            box-sizing: border-box;
+            min-height: 1px;
 
-                ${props.span !== undefined && spanMixin(props)};
-                ${props.push && pushMixin(props)};
-                ${props.pull && pullMixin(props)};
-                ${props.offset && offsetMixin(props)};
-                ${props.order && orderMixin(props)};
-            `;
-        })
-    )
-)`
-    /* empty */
-`;
+            ${props.span !== undefined && spanMixin(props)};
+            ${props.push && pushMixin(props)};
+            ${props.pull && pullMixin(props)};
+            ${props.offset && offsetMixin(props)};
+            ${props.order && orderMixin(props)};
+        `;
+    })
+);
 
-export const RowWrap = styled(
-    withProps({
-        className: rowPrefixCls
-    })(
-        styled('div')(props => {
-            const { type, gutter } = props;
+export const RowWrap = withProps({
+    className: rowPrefixCls
+})(
+    styled('div')(props => {
+        const { type, gutter } = props;
 
-            return css`
-                position: relative;
-                display: block;
-                height: auto;
+        return css`
+            position: relative;
+            display: block;
+            height: auto;
 
-                ${type === 'flex' ? flexMixin : clearFixMixin};
-                margin-left: ${-(gutter / 2) + 'px'};
-                margin-right: ${-(gutter / 2) + 'px'};
-                ${justifyMixin(props)};
-                ${alignMixin(props)};
+            ${type === 'flex' ? flexMixin : clearFixMixin};
+            margin-left: ${-(gutter / 2) + 'px'};
+            margin-right: ${-(gutter / 2) + 'px'};
+            ${justifyMixin(props)};
+            ${alignMixin(props)};
 
-                > ${/* sc-sel */ ColWrap} {
-                    padding-left: ${gutter / 2 + 'px'};
-                    padding-right: ${gutter / 2 + 'px'};
-                }
-            `;
-        })
-    )
-)`
-    /* empty */
-`;
+            > .${colPrefixCls} {
+                padding-left: ${gutter / 2 + 'px'};
+                padding-right: ${gutter / 2 + 'px'};
+            }
+        `;
+    })
+);

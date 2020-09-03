@@ -1,9 +1,8 @@
-import styled from "@emotion/styled";
-import { css } from "@emotion/core";
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
-import config from 'config';
-
-import withProps from "src/utils/withProps";
+import config from 'src/config';
+import withProps from 'src/utils/withProps';
 
 const { prefixCls: _prefixCls } = config;
 const prefixCls = _prefixCls + '-combine';
@@ -17,31 +16,29 @@ const spacingMap = {
     lg: '12px'
 };
 
-export const CombineWrap = styled(withProps({
+export const CombineWrap = withProps({
     className: prefixCls
-})(styled("div")(props => {
-    const {
-        spacing
-    } = props;
+})(
+    styled('div')(props => {
+        const { spacing } = props;
 
-    return css`
-        position: relative;
+        return css`
+            position: relative;
 
-        > .${controllerPrefix} {
-            vertical-align: middle;
-            display: inline-block;
-        }
-        > .${controllerPrefix}+.${controllerPrefix} {
-            margin-left: ${spacingMap[spacing] || spacing};
-
-            &:focus {
-                z-index: 2;
+            > .${controllerPrefix} {
+                vertical-align: middle;
+                display: inline-block;
             }
-            &:hover {
-                z-index: 3;
+            > .${controllerPrefix}+.${controllerPrefix} {
+                margin-left: ${spacingMap[spacing] || spacing};
+
+                &:focus {
+                    z-index: 2;
+                }
+                &:hover {
+                    z-index: 3;
+                }
             }
-        }
-    `;
-})))`
-/* empty */
-`;
+        `;
+    })
+);

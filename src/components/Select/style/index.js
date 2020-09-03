@@ -2,12 +2,12 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 import Input from 'src/components/Input';
 import Icon from 'src/components/Icon';
 import Menu from 'src/components/Menu';
 import Button from 'src/components/Button';
 import { inlineBlockWithVerticalMixin } from 'src/style';
+import withProps from 'src/utils/withProps';
 
 export const SelectSearchInput = styled(Input.Search)`
     min-width: 100px;
@@ -41,23 +41,25 @@ export const OptionWrap = styled(Menu.Item)(props => {
 export const ExtraWrap = styled('div')`
     margin: 0 8px;
 `;
-export const MenuWrap = styled('div')(props => {
-    const {
-        theme: { designTokens: DT }
-    } = props;
+export const MenuWrap = withProps()(
+    styled('div')(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
 
-    return css`
-        box-shadow: ${DT.T_SHADOW_BLOCK_DEFAULT_LG};
-        background: ${DT.T_COLOR_BG_MENU};
-        border-radius: ${DT.T_CORNER_SM};
-        display: inline-block;
-        width: 100%;
+        return css`
+            box-shadow: ${DT.T_SHADOW_BLOCK_DEFAULT_LG};
+            background: ${DT.T_COLOR_BG_MENU};
+            border-radius: ${DT.T_CORNER_SM};
+            display: inline-block;
+            width: 100%;
 
-        & > ${/* sc-selector */ ExtraWrap}:last-child {
-            margin-bottom: 10px;
-        }
-    `;
-});
+            & > ${ExtraWrap}:last-child {
+                margin-bottom: 10px;
+            }
+        `;
+    })
+);
 
 // eslint-disable-next-line react/prop-types,no-unused-vars
 const CustomMenu = ({ customStyle, ...rest }) => <Menu {...rest} />;
@@ -94,23 +96,23 @@ const propsMixin = props => {
 };
 /* stylelint-enable no-duplicate-selectors */
 
-export const SelectWrap = styled('div')`
+export const SelectWrap = withProps()(styled('div')`
     box-sizing: border-box;
     position: relative;
 
     ${inlineBlockWithVerticalMixin};
     ${propsMixin};
-`;
+`);
 
-export const EmptyContentWrapper = styled('div')(props => {
-    const {
-        theme: { designTokens: DT }
-    } = props;
+export const EmptyContentWrapper = withProps()(
+    styled('div')(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
 
-    return css`
-        text-align: center;
-        color: ${DT.T_COLOR_TEXT_REMARK_DARK};
-    `;
-});
-
-addDefaultThemeProps(SelectWrap, MenuWrap, EmptyContentWrapper);
+        return css`
+            text-align: center;
+            color: ${DT.T_COLOR_TEXT_REMARK_DARK};
+        `;
+    })
+);

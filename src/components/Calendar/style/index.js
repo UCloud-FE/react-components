@@ -1,11 +1,10 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import RcCalendar from 'rc-calendar';
 import RcMonthCalendar from 'rc-calendar/lib/MonthCalendar';
 
 import config from 'src/config';
-import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
+import withProps from 'src/utils/withProps';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-calendar';
@@ -223,24 +222,13 @@ export const calendarMixin = props => {
     `;
 };
 
-// eslint-disable-next-line no-unused-vars,react/prop-types
-const CleanPropsRcCalendar = ({ theme, _innerRef, ...rest }) => {
-    return <RcCalendar {...rest} ref={_innerRef} />;
-};
-// eslint-disable-next-line no-unused-vars,react/prop-types
-const CleanPropsRcMonthCalendar = ({ theme, ...rest }) => {
-    return <RcMonthCalendar {...rest} />;
-};
-
-export const CalendarWrap = styled(CleanPropsRcCalendar)`
+export const CalendarWrap = withProps()(styled(RcCalendar)`
     ${calendarMixin};
-`;
+`);
 
-export const MonthCalendarWrap = styled(CleanPropsRcMonthCalendar)`
+export const MonthCalendarWrap = withProps()(styled(RcMonthCalendar)`
     ${calendarMixin};
     .${prefixCls}-month-panel-body {
         padding-top: 5px;
     }
-`;
-
-addDefaultThemeProps(CalendarWrap, MonthCalendarWrap);
+`);

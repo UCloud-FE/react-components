@@ -612,6 +612,8 @@ class NumberInput extends Component {
             hideHandler,
             size,
             tooltip,
+            downStep,
+            upStep,
             ...rest
         } = this.props;
         /* eslint-enable no-unused-vars */

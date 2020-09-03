@@ -5,7 +5,8 @@ import { withTheme } from 'emotion-theming';
 
 import defaultTheme from 'src/components/ThemeProvider/theme';
 
-const withProps = input => Comp => {
+const withProps = (input = {}, option = {}) => Comp => {
+    const { cleanProps } = option;
     class ComponentWithProps extends Component {
         render() {
             const { props } = this;
@@ -23,11 +24,15 @@ const withProps = input => Comp => {
                 ...props,
                 className
             };
+
+            if (cleanProps) {
+                _.each(cleanProps, prop => delete result[prop]);
+            }
             if (_.isEmpty(result.theme)) {
                 result.theme = defaultTheme;
             }
             if (result._innerRef) {
-                result.innerRef = result._innerRef;
+                result.ref = result._innerRef;
                 delete result._innerRef;
             }
             return <Comp {...result} />;

@@ -4,48 +4,48 @@ import { Resizable } from 'react-resizable';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
+import withProps from 'src/utils/withProps';
 
 // eslint-disable-next-line no-unused-vars
 const FilteredResizable = ({ resizing, theme, ...rest }) => <Resizable {...rest} />;
 FilteredResizable.propTypes = { resizing: PropTypes.bool, theme: PropTypes.any };
 
-const ResizableTHWrap = styled(FilteredResizable)(props => {
-    const {
-        resizing,
-        theme: { designTokens: DT }
-    } = props;
+const ResizableTHWrap = withProps()(
+    styled(FilteredResizable)(props => {
+        const {
+            resizing,
+            theme: { designTokens: DT }
+        } = props;
 
-    return css`
-        position: relative;
-        box-sizing: border-box;
+        return css`
+            position: relative;
+            box-sizing: border-box;
 
-        .react-resizable-handle {
-            position: absolute;
-            width: 6px;
-            height: 100%;
-            bottom: 0;
-            right: 0;
-            cursor: col-resize;
-            border-right: 1px solid transparent;
-        }
-        :hover {
             .react-resizable-handle {
-                border-right-color: ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
+                position: absolute;
+                width: 6px;
+                height: 100%;
+                bottom: 0;
+                right: 0;
+                cursor: col-resize;
+                border-right: 1px solid transparent;
             }
-        }
-
-        ${resizing &&
-        css`
-            background: ${DT.T_COLOR_BG_DEFAULT_LIGHT};
-            .react-resizable-handle {
-                border-right-color: ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
+            :hover {
+                .react-resizable-handle {
+                    border-right-color: ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
+                }
             }
-        `};
-    `;
-});
 
-addDefaultThemeProps(ResizableTHWrap);
+            ${resizing &&
+            css`
+                background: ${DT.T_COLOR_BG_DEFAULT_LIGHT};
+                .react-resizable-handle {
+                    border-right-color: ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
+                }
+            `};
+        `;
+    })
+);
 
 export default class ResizableTH extends Component {
     static propTypes = {
