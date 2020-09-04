@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import RcTrigger from 'rc-trigger';
 
 import config from 'config';

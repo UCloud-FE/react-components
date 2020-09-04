@@ -1,78 +1,95 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
 import { Row, Col } from 'src/components/Grid';
 import config from 'src/config';
-import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
+
+import withProps from 'src/utils/withProps';
 
 const { prefixCls: _prefixCls } = config;
 const prefixCls = _prefixCls + '-form';
+const itemCls = prefixCls + '-item';
+const labelCls = prefixCls + '-label';
+const controllerCls = prefixCls + '-controller';
+const groupCls = prefixCls + '-group';
+const groupTitleCls = groupCls + '-title';
 
-export const ItemWrap = styled(Row).attrs({
-    className: prefixCls + '-item'
-})`
+export const ItemWrap = withProps({
+    className: itemCls
+})(styled(Row)`
     /* empty */
-`;
+`);
 
-export const LabelWrap = styled(Col).attrs({
-    className: prefixCls + '-label'
-})`
+export const LabelWrap = withProps({
+    className: labelCls
+})(styled(Col)`
     padding-top: 4px;
     line-height: 20px;
     word-break: break-all;
-`;
+`);
 
-export const ControllerWrap = styled(Col).attrs({
-    className: prefixCls + '-controller'
-})`
+export const ControllerWrap = withProps({
+    className: controllerCls
+})(styled(Col)`
     /* empty */
-`;
+`);
 
-export const GroupWrap = styled.div.attrs({
-    className: prefixCls + '-group'
-})`
+export const GroupWrap = withProps({
+    className: groupCls
+})(styled('div')`
     & + & {
         margin-top: 24px;
     }
     /* empty */
-`;
+`);
 
-export const GroupTitle = styled.div.attrs({
-    className: prefixCls + '-group-title'
-})`
-    font-weight: bold;
-    line-height: 22px;
-    padding: 12px 0;
-    margin-bottom: 24px;
+export const GroupTitle = withProps({
+    className: groupTitleCls
+})(
+    styled('div')(props => {
+        const {
+            theme: { colorList, colorMap, titleFontSize }
+        } = props;
 
-    ${({ theme: { colorList, colorMap, titleFontSize } }) => css`
-        font-size: ${titleFontSize};
-        border-bottom: 1px solid ${colorMap.default.border};
-        color: ${colorList.title};
-    `};
-`;
+        return css`
+            font-weight: bold;
+            line-height: 22px;
+            padding: 12px 0;
+            margin-bottom: 24px;
 
-export const FormWrap = styled.form.attrs({
+            ${css`
+                font-size: ${titleFontSize};
+                border-bottom: 1px solid ${colorMap.default.border};
+                color: ${colorList.title};
+            `};
+        `;
+    })
+);
+
+export const FormWrap = withProps({
     className: prefixCls
 })(
-    ({ size }) => css`
-        ${ItemWrap} {
-            margin-bottom: 16px;
+    styled('form')(props => {
+        const { size } = props;
 
-            &:last-child {
-                margin-bottom: 0;
+        return css`
+            .${itemCls} {
+                margin-bottom: 16px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
             }
-        }
 
-        ${size === 'lg' &&
+            ${size === 'lg' &&
             css`
-                ${ItemWrap} {
+                .${itemCls} {
                     margin-bottom: 24px;
                 }
-                ${LabelWrap} {
+                .${labelCls} {
                     padding-top: 6px;
                 }
             `};
-    `
+        `;
+    })
 );
-
-addDefaultThemeProps(GroupTitle);

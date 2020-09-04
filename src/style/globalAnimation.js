@@ -1,4 +1,4 @@
-import { injectGlobal } from 'styled-components';
+import { injectGlobal } from 'emotion';
 
 import config from 'config';
 import { fadeIn, fadeOut, bounceIn, bounceOut, zoomIn, zoomOut, slideDownIn, slideDownOut } from './animation';

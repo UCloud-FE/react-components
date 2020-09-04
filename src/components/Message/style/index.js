@@ -1,9 +1,16 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 import { TransitionGroup } from 'react-transition-group';
 
 import SvgIcon from 'src/components/SvgIcon';
 import { fadeIn, fadeOut } from 'src/style/animation';
-import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
+import config from 'src/config';
+import withProps from 'src/utils/withProps';
+
+const { prefixCls: _prefixCls } = config;
+export const prefixCls = _prefixCls + '-message';
+export const titleCls = prefixCls + '-title';
+export const contentCls = prefixCls + '-content';
 
 export const animationDuration = 500;
 export const animationName = 'uc-fe-animation-fade';
@@ -16,13 +23,20 @@ const colorMap = {
     default: 'T_COLOR_TEXT_PRIMARY_DEFAULT'
 };
 
-export const TipIcon = styled(SvgIcon)(
-    ({ styleType, theme: { designTokens: DT } }) => css`
-        fill: ${DT[colorMap[styleType]]};
-    `
+export const TipIcon = withProps()(
+    styled(SvgIcon)(props => {
+        const {
+            styleType,
+            theme: { designTokens: DT }
+        } = props;
+
+        return css`
+            fill: ${DT[colorMap[styleType]]};
+        `;
+    })
 );
 
-export const IconWrap = styled.div`
+export const IconWrap = styled('div')`
     font-size: 15px;
     width: 16px;
     height: 16px;
@@ -32,7 +46,7 @@ export const IconWrap = styled.div`
     top: 16px;
     left: 16px;
 `;
-export const CloseIconWrap = styled.div`
+export const CloseIconWrap = styled('div')`
     font-size: 15px;
     width: 16px;
     height: 16px;
@@ -44,50 +58,74 @@ export const CloseIconWrap = styled.div`
     cursor: pointer;
 `;
 
-export const TitleWrap = styled.h3(({ theme: { designTokens: DT } }) => {
-    return css`
-        padding-right: 36px;
-        padding-left: 44px;
-        word-break: break-all;
-        font-size: 14px;
-        color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
-        line-height: 22px;
-    `;
-});
+export const TitleWrap = withProps({
+    className: titleCls
+})(
+    styled('h3')(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
 
-export const ContentWrap = styled.div(({ theme: { designTokens: DT } }) => {
-    return css`
-        padding-right: 36px;
-        padding-left: 44px;
-        word-break: break-all;
-        font-size: 12px;
-        color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
-        line-height: 20px;
-    `;
-});
+        return css`
+            padding-right: 36px;
+            padding-left: 44px;
+            word-break: break-all;
+            font-size: 14px;
+            color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+            line-height: 22px;
+        `;
+    })
+);
 
-export const FooterWrap = styled.div`
+export const ContentWrap = withProps({
+    className: contentCls
+})(
+    styled('div')(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
+
+        return css`
+            padding-right: 36px;
+            padding-left: 44px;
+            word-break: break-all;
+            font-size: 12px;
+            color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
+            line-height: 20px;
+        `;
+    })
+);
+
+export const FooterWrap = styled('div')`
     text-align: right;
     margin-right: 16px;
     margin-top: 16px;
 `;
 
-export const MessageWrap = styled.div(({ theme: { designTokens: DT } }) => {
-    return css`
-        box-sizing: border-box;
-        width: 340px;
-        min-height: 52px;
-        padding: 16px 0;
-        border-radius: 4px;
-        box-shadow: ${DT.T_SHADOW_BLOCK_DEFAULT_MD};
-        background: ${DT.T_CARD_COLOR_BG_DEFAULT};
-        position: relative;
+export const MessageWrap = withProps({
+    className: prefixCls
+})(
+    styled('div')(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
 
-        ${TitleWrap}+${ContentWrap} {
-            margin-top: 8px;
-        }
-    `;
-});
+        return css`
+            box-sizing: border-box;
+            width: 340px;
+            min-height: 52px;
+            padding: 16px 0;
+            border-radius: 4px;
+            box-shadow: ${DT.T_SHADOW_BLOCK_DEFAULT_MD};
+            background: ${DT.T_CARD_COLOR_BG_DEFAULT};
+            position: relative;
+
+            .${titleCls}+.${contentCls} {
+                margin-top: 8px;
+            }
+        `;
+    })
+);
 
 export const MessageContentWrap = styled(TransitionGroup)`
     position: fixed;
@@ -108,12 +146,10 @@ export const MessageContentWrap = styled(TransitionGroup)`
         animation-name: ${fadeOut};
     }
 
-    ${/*sc-sel*/ MessageWrap} {
+    .${prefixCls} {
         position: relative;
         margin-bottom: 16px;
         margin-right: 16px;
         margin-left: auto;
     }
 `;
-
-addDefaultThemeProps(MessageWrap, TipIcon, TitleWrap, ContentWrap);

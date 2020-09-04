@@ -6,17 +6,18 @@ import classnames from 'classnames';
 import itemDecorator from 'src/decorators/selectableWithStore/item';
 import uncontrolledDecorator from 'src/decorators/uncontrolled';
 import SvgIcon from 'src/components/SvgIcon';
+import Card from 'src/components/Radio/Card';
 
 import {
     CheckboxWrap,
-    CheckboxCardWrap,
     iconWrapCls,
     iconCls,
     contentCls,
     checkedCls,
     disabledCls,
     prefixCls,
-    indeterminateCls
+    indeterminateCls,
+    cardCls
 } from './style';
 
 const Size = ['sm', 'md', 'lg'];
@@ -90,11 +91,11 @@ class Checkbox extends Component {
                 disabled={disabled}
                 {...rest}
                 className={classnames({
-                    [className]: className,
                     [prefixCls]: true,
                     [checkedCls]: checked,
                     [disabledCls]: disabled,
-                    [indeterminateCls]: indeterminate
+                    [indeterminateCls]: indeterminate,
+                    [className]: className
                 })}
                 onClick={(...args) => this.onClick(props, ...args)}
             >
@@ -111,9 +112,16 @@ class Checkbox extends Component {
     }
     renderCheckboxCard(props) {
         /* eslint-disable no-unused-vars */
-        const { onChange, ...rest } = props;
+        const { onChange, className, ...rest } = props;
         /* eslint-enable no-unused-vars */
-        return <CheckboxCardWrap {...rest} onClick={(...args) => this.onClick(props, ...args)} multiple />;
+        return (
+            <Card
+                {...rest}
+                className={classnames(prefixCls, cardCls, className)}
+                onClick={(...args) => this.onClick(props, ...args)}
+                multiple
+            />
+        );
     }
     render() {
         return (

@@ -1038,7 +1038,7 @@ class Table extends Component {
                         zebraCrossing={zebraCrossing}
                         customStyle={customStyle}
                     >
-                        <PopupContainer innerRef={this.savePopupContainer} />
+                        <PopupContainer ref={this.savePopupContainer} />
                         <RcTable
                             {...defaultExpandAllRowsProps}
                             {...rest}

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import _ from 'lodash';
@@ -483,7 +483,7 @@ class Pagination extends Component {
                 size={size}
                 className={wrapClassName}
                 unselectable="unselectable"
-                innerRef={this.savePaginationNode}
+                _innerRef={this.savePaginationNode}
                 {...rest}
             >
                 {showTotal && (

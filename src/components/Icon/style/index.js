@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
 import { spinMixin } from 'src/style';
 import config from 'src/config';
@@ -11,9 +12,13 @@ const iconSpinMixin = css`
     line-height: normal;
 `;
 
-export const IconWrap = styled.i`
-    vertical-align: baseline;
-    &&& {
-        ${({ spin }) => spin && iconSpinMixin};
-    }
-`;
+export const IconWrap = styled('i')(props => {
+    const { spin } = props;
+
+    return css`
+        vertical-align: baseline;
+        &&& {
+            ${spin && iconSpinMixin};
+        }
+    `;
+});

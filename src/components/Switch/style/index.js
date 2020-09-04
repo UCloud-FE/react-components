@@ -1,10 +1,11 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 import _ from 'lodash';
 
 import { inlineBlockWithVerticalMixin, calculateSize } from 'src/style';
-import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
+import withProps from 'src/utils/withProps';
 
-export const Inner = styled.div`
+export const Inner = styled('div')`
     position: relative;
     height: 100%;
     width: 100%;
@@ -12,7 +13,7 @@ export const Inner = styled.div`
     box-sizing: border-box;
 `;
 
-export const Text = styled.span`
+export const Text = styled('span')`
     width: 100%;
     height: 100%;
     text-align: center;
@@ -28,7 +29,7 @@ export const OffText = styled(Text)`
     /* empty */
 `;
 
-export const ButtonWrap = styled.span`
+export const ButtonWrap = styled('span')`
     position: absolute;
     display: inline-block;
     left: -1px;
@@ -38,7 +39,7 @@ export const ButtonWrap = styled.span`
     transition: all 0.3s;
 `;
 
-export const Line = styled.span`
+export const Line = styled('span')`
     position: absolute;
     display: inline-block;
     left: 18px;
@@ -50,7 +51,14 @@ export const Line = styled.span`
 `;
 
 /* stylelint-disable no-duplicate-selectors */
-const propsMixin = ({ theme: { designTokens: DT, Height }, disabled, size, checked }) => {
+const propsMixin = props => {
+    const {
+        theme: { designTokens: DT, Height },
+        disabled,
+        size,
+        checked
+    } = props;
+
     const switchTheme = {
         Width: {
             sm: '45px',
@@ -96,14 +104,14 @@ const propsMixin = ({ theme: { designTokens: DT, Height }, disabled, size, check
         border-width: ${BorderWidth[size]};
 
         ${!disabled &&
-            css`
-                :hover {
-                    border-color: ${DT.T_COLOR_LINE_PRIMARY_HOVER};
-                    ${ButtonWrap} {
-                        box-shadow: ${DT.T_SHADOW_BUTTON_HOVER};
-                    }
+        css`
+            :hover {
+                border-color: ${DT.T_COLOR_LINE_PRIMARY_HOVER};
+                ${ButtonWrap} {
+                    box-shadow: ${DT.T_SHADOW_BUTTON_HOVER};
                 }
-            `} ${ButtonWrap} {
+            }
+        `} ${ButtonWrap} {
             background: ${DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT};
             box-shadow: ${DT.T_SHADOW_BUTTON_DEFAULT};
 
@@ -125,36 +133,36 @@ const propsMixin = ({ theme: { designTokens: DT, Height }, disabled, size, check
         }
 
         ${size === 'sm' &&
-            css`
-                ${/*sc-sel*/ OnText}, ${/*sc-sel*/ OffText} {
-                    display: none;
-                }
-            `};
+        css`
+            ${/*sc-sel*/ OnText}, ${/*sc-sel*/ OffText} {
+                display: none;
+            }
+        `};
         ${size === 'md' &&
-            css`
+        css`
+            line-height: 16px;
+
+            ${/*sc-sel*/ OnText}, ${/*sc-sel */ OffText} {
                 line-height: 16px;
-
-                ${/*sc-sel*/ OnText}, ${/*sc-sel */ OffText} {
-                    line-height: 16px;
-                }
-                ${OnText} {
-                    padding-right: 20px;
-                }
-                ${OffText} {
-                    padding-left: 20px;
-                }
-            `};
+            }
+            ${OnText} {
+                padding-right: 20px;
+            }
+            ${OffText} {
+                padding-left: 20px;
+            }
+        `};
         ${size === 'lg' &&
-            css`
-                line-height: 22px;
+        css`
+            line-height: 22px;
 
-                ${OnText} {
-                    padding-right: 26px;
-                }
-                ${OffText} {
-                    padding-left: 26px;
-                }
-            `};
+            ${OnText} {
+                padding-right: 26px;
+            }
+            ${OffText} {
+                padding-left: 26px;
+            }
+        `};
 
         ${checked
             ? css`
@@ -185,25 +193,25 @@ const propsMixin = ({ theme: { designTokens: DT, Height }, disabled, size, check
               `};
 
         ${disabled &&
-            css`
-                border-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
-                cursor: not-allowed;
+        css`
+            border-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
+            cursor: not-allowed;
 
-                ${Inner} {
-                    color: ${DT.T_COLOR_TEXT_DISABLED};
-                    border-color: ${DT.T_COLOR_LINE_DISABLED_LIGHT};
-                    box-shadow: none;
-                    background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
-                }
+            ${Inner} {
+                color: ${DT.T_COLOR_TEXT_DISABLED};
+                border-color: ${DT.T_COLOR_LINE_DISABLED_LIGHT};
+                box-shadow: none;
+                background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
+            }
 
-                ${Line} {
-                    background: ${DT.T_COLOR_BG_DISABLED_DARK};
-                }
-            `};
+            ${Line} {
+                background: ${DT.T_COLOR_BG_DISABLED_DARK};
+            }
+        `};
     `;
 };
 
-export const SwitchWrap = styled.div`
+export const SwitchWrap = withProps({})(styled('div')`
     position: relative;
     border-radius: 2px;
     box-sizing: border-box;
@@ -212,6 +220,4 @@ export const SwitchWrap = styled.div`
 
     ${inlineBlockWithVerticalMixin};
     ${propsMixin};
-`;
-
-addDefaultThemeProps(SwitchWrap);
+`);

@@ -13,7 +13,7 @@
 
 ### 如何使用
 
--   组件依赖于 react（^16）、react-dom（^16）、styled-components（^3.4.10），请注意引入对应依赖，从 0.7.0 开始，不再兼容 react 15。
+-   组件依赖于 react（^16）、react-dom（^16），请注意引入对应依赖，从 0.7.0 开始，不再兼容 react 15。
 
 -   使用 npm 或 yarn 进行安装
 

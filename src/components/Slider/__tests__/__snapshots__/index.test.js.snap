@@ -143,11 +143,331 @@ exports[`Slider number input 24`] = `"input: , after press enter, value is: 10"`
 exports[`Slider number input 25`] = `"input:  dsadas --, after press enter, value is: 10"`;
 
 exports[`Slider numberInputTipFormatter 1`] = `
+.emotion-8 .uc-fe-slider {
+  position: relative;
+  width: 300px;
+  border-radius: 2px;
+  touch-action: none;
+  height: 28px;
+}
+
+.emotion-8 .uc-fe-slider-rail {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  background: #fafafc;
+  border: 1px solid #c3cad9;
+  height: 28px;
+  border-left: 0;
+  border-right: 0;
+}
+
+.emotion-8 .uc-fe-slider-rail::before,
+.emotion-8 .uc-fe-slider-rail::after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  border: 1px solid #c3cad9;
+  top: -1px;
+  background: #fafafc;
+}
+
+.emotion-8 .uc-fe-slider-rail::before {
+  left: -10px;
+  border-radius: 2px 0 0 2px;
+  border-right: 0;
+}
+
+.emotion-8 .uc-fe-slider-rail::after {
+  right: -10px;
+  border-radius: 0 2px 2px 0;
+  border-left: 0;
+}
+
+.emotion-8 .uc-fe-slider-track {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  border: 1px solid #3860f4;
+  background: #f8f8ff;
+  height: 28px;
+  border-left: 0;
+  border-right: 0;
+}
+
+.emotion-8 .uc-fe-slider-track::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  border: 1px solid #3860f4;
+  top: -1px;
+  background: #f8f8ff;
+  left: -10px;
+  border-radius: 2px 0 0 2px;
+  border-right: 0;
+}
+
+.emotion-8 .uc-fe-slider-tooltip {
+  line-height: normal;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-8 .uc-fe-slider-handle {
+  box-sizing: border-box;
+  position: absolute;
+  margin-left: -10px;
+  margin-top: -3px;
+  width: 20px;
+  cursor: pointer;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+  text-align: center;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
+  background: #ffffff;
+  touch-action: pan-x;
+  z-index: 9;
+  height: 34px;
+  line-height: 36px;
+}
+
+.emotion-8 .uc-fe-slider-handle::before,
+.emotion-8 .uc-fe-slider-handle::after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 16px;
+  background: #c3cad9;
+  margin-top: 8px;
+}
+
+.emotion-8 .uc-fe-slider-handle::after {
+  margin-left: 4px;
+}
+
+.emotion-8 .uc-fe-slider-handle:hover,
+.emotion-8 .uc-fe-slider-handle:active {
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
+.emotion-8 .uc-fe-slider-handle:hover::before,
+.emotion-8 .uc-fe-slider-handle:active::before,
+.emotion-8 .uc-fe-slider-handle:hover::after,
+.emotion-8 .uc-fe-slider-handle:active::after {
+  background: #3860f4;
+}
+
+.emotion-8 .uc-fe-slider-handle:active {
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing;
+}
+
+.emotion-8 .uc-fe-slider-handle:focus {
+  outline: none;
+}
+
+.emotion-8 .uc-fe-slider-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 12px;
+}
+
+.emotion-8 .uc-fe-slider-mark-text {
+  position: absolute;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: right;
+  width: 30%;
+  margin-left: -30%;
+  overflow: hidden;
+  cursor: pointer;
+  color: #7a8baa;
+  border-right: 1px solid #c3cad9;
+  padding: 0 8px;
+  box-sizing: border-box;
+  pointer-events: none;
+  line-height: 28px;
+}
+
+.emotion-8 .uc-fe-slider-mark-text-active {
+  color: #3860f4;
+  border-right-color: #3860f4;
+}
+
+.emotion-8 .uc-fe-slider-step {
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  height: 28px;
+}
+
+.emotion-8 .uc-fe-slider-dot {
+  display: none;
+}
+
+.emotion-0 {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 12px;
+  padding: 0 10px;
+}
+
+.emotion-6 {
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 2px;
+  color: #0a1633;
+  height: 28px;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid #d2d6ea;
+  padding-right: 22px;
+  border-right-width: 0;
+}
+
+.emotion-6 .uc-fe-numberinput-input-wrap {
+  position: relative;
+}
+
+.emotion-6 .uc-fe-numberinput-input {
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+}
+
+.emotion-6 .uc-fe-numberinput-suffix {
+  color: #7a8baa;
+  margin: 0 4px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up,
+.emotion-6 .uc-fe-numberinput-handler-down {
+  position: absolute;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 2px;
+  border-style: solid;
+  cursor: pointer;
+  color: #0a1633;
+  border-color: #d2d6ea;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
+  background: #ffffff;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up:hover,
+.emotion-6 .uc-fe-numberinput-handler-down:hover {
+  color: #3860f4;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up.uc-fe-numberinput-handler-disabled,
+.emotion-6 .uc-fe-numberinput-handler-down.uc-fe-numberinput-handler-disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  color: #cccccc;
+  border-color: #c3cad9;
+}
+
+.emotion-6 .uc-fe-numberinput-input {
+  line-height: 26px;
+  height: 26px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-6 .uc-fe-numberinput-input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-6 .uc-fe-numberinput-input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-6 .uc-fe-numberinput-input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-6 .uc-fe-numberinput-input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-6:hover {
+  border-color: #c3cad9;
+}
+
+.emotion-6 .uc-fe-numberinput-input-wrap {
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #fafafc;
+}
+
+.emotion-6 .uc-fe-numberinput-input-wrap:hover {
+  background: #f6f6fb;
+}
+
+.emotion-6 .uc-fe-numberinput-input {
+  padding: 0 0 0 8px;
+  text-align: left;
+  box-shadow: none;
+  background: transparent;
+  width: 34px;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up,
+.emotion-6 .uc-fe-numberinput-handler-down {
+  right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
+  height: 13px;
+  line-height: 13px;
+  width: 22px;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up:hover,
+.emotion-6 .uc-fe-numberinput-handler-down:hover {
+  color: #3860f4;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up {
+  border-width: 0 0 0 1px;
+  top: -1px;
+  padding-top: 1px;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-down {
+  border-width: 1px 0 0 1px;
+  bottom: 0;
+  border-top-color: #c3cad9;
+}
+
+.emotion-2 {
+  vertical-align: baseline;
+}
+
 <div
-  class="style__SliderWrap-sc-1rsqtg6-1 ZBOFX"
+  class=" emotion-8 emotion-9"
 >
   <div
-    class="style__RcSliderWrap-sc-1rsqtg6-0 eMzAHv"
+    class="emotion-0 emotion-1"
   >
     <div
       class="uc-fe-slider"
@@ -178,33 +498,33 @@ exports[`Slider numberInputTipFormatter 1`] = `
     </div>
   </div>
   <div
-    class="style__NumberInputWrap-mnip3j-4 uc-fe-numberinput uc-fe-numberinput-styletype-default hnoCaL"
+    class="uc-fe-numberinput uc-fe-numberinput-styletype-default emotion-6 emotion-7"
   >
     <div>
       <span
-        class="style__HandlerUp-mnip3j-2 uc-fe-numberinput-handler-up kCwAjK sc-bwzfXH uc-fe-numberinput-handler dUjajJ"
+        class="uc-fe-numberinput-handler-up"
         unselectable="unselectable"
       >
         <i
-          class="uc-fe-icon icon__caret-up style__IconWrap-sc-3eqdhz-0 xPAJB"
+          class="uc-fe-icon icon__caret-up emotion-2 emotion-3"
         />
       </span>
       <span
-        class="style__HandlerDown-mnip3j-3 uc-fe-numberinput-handler-down bNRfrJ sc-bwzfXH uc-fe-numberinput-handler uc-fe-numberinput-handler-disabled hjAcsF"
+        class="uc-fe-numberinput-handler-down uc-fe-numberinput-handler-disabled"
         disabled=""
         unselectable="unselectable"
       >
         <i
-          class="uc-fe-icon icon__caret-down style__IconWrap-sc-3eqdhz-0 xPAJB"
+          class="uc-fe-icon icon__caret-down emotion-2 emotion-3"
         />
       </span>
     </div>
     <div
-      class="style__InputWrap-mnip3j-0 uc-fe-numberinput-input-wrap bqNpJA"
+      class="uc-fe-numberinput-input-wrap"
     >
       <input
         autocomplete="off"
-        class="style__Input-mnip3j-1 uc-fe-numberinput-input iFpoQR"
+        class="uc-fe-numberinput-input"
         max="1000"
         min="10"
         step="1"
@@ -216,11 +536,735 @@ exports[`Slider numberInputTipFormatter 1`] = `
 `;
 
 exports[`Slider numberInputTipFormatter 2`] = `
+@keyframes animation-0 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animation-1 {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes animation-2 {
+  from, 20%, 40%, 60%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215,0.61,0.355,1);
+    animation-timing-function: cubic-bezier(0.215,0.61,0.355,1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3,0.3,0.3);
+    -ms-transform: scale3d(0.3,0.3,0.3);
+    transform: scale3d(0.3,0.3,0.3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1,1.1,1.1);
+    -ms-transform: scale3d(1.1,1.1,1.1);
+    transform: scale3d(1.1,1.1,1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.9,0.9,0.9);
+    -ms-transform: scale3d(0.9,0.9,0.9);
+    transform: scale3d(0.9,0.9,0.9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03,1.03,1.03);
+    -ms-transform: scale3d(1.03,1.03,1.03);
+    transform: scale3d(1.03,1.03,1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(0.97,0.97,0.97);
+    -ms-transform: scale3d(0.97,0.97,0.97);
+    transform: scale3d(0.97,0.97,0.97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1,1,1);
+    -ms-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+  }
+}
+
+@keyframes animation-3 {
+  20% {
+    -webkit-transform: scale3d(0.9,0.9,0.9);
+    -ms-transform: scale3d(0.9,0.9,0.9);
+    transform: scale3d(0.9,0.9,0.9);
+  }
+
+  50%, 55% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.1,1.1,1.1);
+    -ms-transform: scale3d(1.1,1.1,1.1);
+    transform: scale3d(1.1,1.1,1.1);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3,0.3,0.3);
+    -ms-transform: scale3d(0.3,0.3,0.3);
+    transform: scale3d(0.3,0.3,0.3);
+  }
+}
+
+@keyframes animation-4 {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3,0.3,0.3);
+    -ms-transform: scale3d(0.3,0.3,0.3);
+    transform: scale3d(0.3,0.3,0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes animation-5 {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3,0.3,0.3);
+    -ms-transform: scale3d(0.3,0.3,0.3);
+    transform: scale3d(0.3,0.3,0.3);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes animation-6 {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+
+@keyframes animation-7 {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+
+@keyframes animation-8 {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+}
+
+@keyframes animation-9 {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+}
+
+.emotion-18 .uc-fe-slider {
+  position: relative;
+  width: 300px;
+  border-radius: 2px;
+  touch-action: none;
+  height: 28px;
+}
+
+.emotion-18 .uc-fe-slider-rail {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  background: #fafafc;
+  border: 1px solid #c3cad9;
+  height: 28px;
+  border-left: 0;
+  border-right: 0;
+}
+
+.emotion-18 .uc-fe-slider-rail::before,
+.emotion-18 .uc-fe-slider-rail::after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  border: 1px solid #c3cad9;
+  top: -1px;
+  background: #fafafc;
+}
+
+.emotion-18 .uc-fe-slider-rail::before {
+  left: -10px;
+  border-radius: 2px 0 0 2px;
+  border-right: 0;
+}
+
+.emotion-18 .uc-fe-slider-rail::after {
+  right: -10px;
+  border-radius: 0 2px 2px 0;
+  border-left: 0;
+}
+
+.emotion-18 .uc-fe-slider-track {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  border: 1px solid #3860f4;
+  background: #f8f8ff;
+  height: 28px;
+  border-left: 0;
+  border-right: 0;
+}
+
+.emotion-18 .uc-fe-slider-track::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  border: 1px solid #3860f4;
+  top: -1px;
+  background: #f8f8ff;
+  left: -10px;
+  border-radius: 2px 0 0 2px;
+  border-right: 0;
+}
+
+.emotion-18 .uc-fe-slider-tooltip {
+  line-height: normal;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-18 .uc-fe-slider-handle {
+  box-sizing: border-box;
+  position: absolute;
+  margin-left: -10px;
+  margin-top: -3px;
+  width: 20px;
+  cursor: pointer;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+  text-align: center;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
+  background: #ffffff;
+  touch-action: pan-x;
+  z-index: 9;
+  height: 34px;
+  line-height: 36px;
+}
+
+.emotion-18 .uc-fe-slider-handle::before,
+.emotion-18 .uc-fe-slider-handle::after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 16px;
+  background: #c3cad9;
+  margin-top: 8px;
+}
+
+.emotion-18 .uc-fe-slider-handle::after {
+  margin-left: 4px;
+}
+
+.emotion-18 .uc-fe-slider-handle:hover,
+.emotion-18 .uc-fe-slider-handle:active {
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
+.emotion-18 .uc-fe-slider-handle:hover::before,
+.emotion-18 .uc-fe-slider-handle:active::before,
+.emotion-18 .uc-fe-slider-handle:hover::after,
+.emotion-18 .uc-fe-slider-handle:active::after {
+  background: #3860f4;
+}
+
+.emotion-18 .uc-fe-slider-handle:active {
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing;
+}
+
+.emotion-18 .uc-fe-slider-handle:focus {
+  outline: none;
+}
+
+.emotion-18 .uc-fe-slider-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 12px;
+}
+
+.emotion-18 .uc-fe-slider-mark-text {
+  position: absolute;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: right;
+  width: 30%;
+  margin-left: -30%;
+  overflow: hidden;
+  cursor: pointer;
+  color: #7a8baa;
+  border-right: 1px solid #c3cad9;
+  padding: 0 8px;
+  box-sizing: border-box;
+  pointer-events: none;
+  line-height: 28px;
+}
+
+.emotion-18 .uc-fe-slider-mark-text-active {
+  color: #3860f4;
+  border-right-color: #3860f4;
+}
+
+.emotion-18 .uc-fe-slider-step {
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  height: 28px;
+}
+
+.emotion-18 .uc-fe-slider-dot {
+  display: none;
+}
+
+.emotion-0 {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 12px;
+  padding: 0 10px;
+}
+
+.emotion-16.uc-fe-popover {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  z-index: 1030;
+  display: block;
+}
+
+.emotion-16.uc-fe-popover-hidden {
+  display: none;
+}
+
+.emotion-16.uc-fe-popover-animation-fade-enter,
+.emotion-16.uc-fe-popover-animation-fade-appear,
+.emotion-16.uc-fe-popover-animation-fade-leave {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.emotion-16.uc-fe-popover-animation-fade-enter,
+.emotion-16.uc-fe-popover-animation-fade-appear {
+  -webkit-animation-name: animation-0;
+  animation-name: animation-0;
+}
+
+.emotion-16.uc-fe-popover-animation-fade-leave {
+  -webkit-animation-name: animation-1;
+  animation-name: animation-1;
+}
+
+.emotion-16.uc-fe-popover-animation-bounce-enter,
+.emotion-16.uc-fe-popover-animation-bounce-appear,
+.emotion-16.uc-fe-popover-animation-bounce-leave {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.emotion-16.uc-fe-popover-animation-bounce-enter,
+.emotion-16.uc-fe-popover-animation-bounce-appear {
+  -webkit-animation-name: animation-2;
+  animation-name: animation-2;
+}
+
+.emotion-16.uc-fe-popover-animation-bounce-leave {
+  -webkit-animation-name: animation-3;
+  animation-name: animation-3;
+}
+
+.emotion-16.uc-fe-popover-animation-zoom-enter,
+.emotion-16.uc-fe-popover-animation-zoom-appear,
+.emotion-16.uc-fe-popover-animation-zoom-leave {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.emotion-16.uc-fe-popover-animation-zoom-enter,
+.emotion-16.uc-fe-popover-animation-zoom-appear {
+  -webkit-animation-name: animation-4;
+  animation-name: animation-4;
+}
+
+.emotion-16.uc-fe-popover-animation-zoom-leave {
+  -webkit-animation-name: animation-5;
+  animation-name: animation-5;
+}
+
+.emotion-16.uc-fe-popover-animation-slide-up-enter,
+.emotion-16.uc-fe-popover-animation-slide-up-appear {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  display: block !important;
+  opacity: 0;
+  -webkit-animation-timing-function: cubic-bezier(0.08,0.82,0.17,1);
+  animation-timing-function: cubic-bezier(0.08,0.82,0.17,1);
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.emotion-16.uc-fe-popover-animation-slide-up-leave {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  display: block !important;
+  opacity: 1;
+  -webkit-animation-timing-function: cubic-bezier(0.6,0.04,0.98,0.34);
+  animation-timing-function: cubic-bezier(0.6,0.04,0.98,0.34);
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.emotion-16.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-bottomLeft,
+.emotion-16.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-bottomLeft,
+.emotion-16.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-bottomCenter,
+.emotion-16.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-bottomCenter,
+.emotion-16.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-bottomRight,
+.emotion-16.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-bottomRight {
+  -webkit-animation-name: animation-6;
+  animation-name: animation-6;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.emotion-16.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-topLeft,
+.emotion-16.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-topLeft,
+.emotion-16.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-topCenter,
+.emotion-16.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-topCenter,
+.emotion-16.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-topRight,
+.emotion-16.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-topRight {
+  -webkit-animation-name: animation-7;
+  animation-name: animation-7;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.emotion-16.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-bottomLeft,
+.emotion-16.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-bottomCenter,
+.emotion-16.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-bottomRight {
+  -webkit-animation-name: animation-8;
+  animation-name: animation-8;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.emotion-16.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-topLeft,
+.emotion-16.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-topCenter,
+.emotion-16.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-topRight {
+  -webkit-animation-name: animation-9;
+  animation-name: animation-9;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.emotion-2 {
+  vertical-align: baseline;
+}
+
+.emotion-6 {
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 2px;
+  color: #0a1633;
+  height: 28px;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid #d2d6ea;
+  padding-right: 22px;
+  border-right-width: 0;
+}
+
+.emotion-6 .uc-fe-numberinput-input-wrap {
+  position: relative;
+}
+
+.emotion-6 .uc-fe-numberinput-input {
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+}
+
+.emotion-6 .uc-fe-numberinput-suffix {
+  color: #7a8baa;
+  margin: 0 4px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up,
+.emotion-6 .uc-fe-numberinput-handler-down {
+  position: absolute;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 2px;
+  border-style: solid;
+  cursor: pointer;
+  color: #0a1633;
+  border-color: #d2d6ea;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
+  background: #ffffff;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up:hover,
+.emotion-6 .uc-fe-numberinput-handler-down:hover {
+  color: #3860f4;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up.uc-fe-numberinput-handler-disabled,
+.emotion-6 .uc-fe-numberinput-handler-down.uc-fe-numberinput-handler-disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  color: #cccccc;
+  border-color: #c3cad9;
+}
+
+.emotion-6 .uc-fe-numberinput-input {
+  line-height: 26px;
+  height: 26px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-6 .uc-fe-numberinput-input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-6 .uc-fe-numberinput-input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-6 .uc-fe-numberinput-input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-6 .uc-fe-numberinput-input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-6:hover {
+  border-color: #c3cad9;
+}
+
+.emotion-6 .uc-fe-numberinput-input-wrap {
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #fafafc;
+}
+
+.emotion-6 .uc-fe-numberinput-input-wrap:hover {
+  background: #f6f6fb;
+}
+
+.emotion-6,
+.emotion-6:hover {
+  border-color: #3860f4;
+}
+
+.emotion-6 .uc-fe-numberinput-input-wrap {
+  background: #f6f6fb;
+}
+
+.emotion-6 .uc-fe-numberinput-input {
+  padding: 0 0 0 8px;
+  text-align: left;
+  box-shadow: none;
+  background: transparent;
+  width: 34px;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up,
+.emotion-6 .uc-fe-numberinput-handler-down {
+  right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
+  height: 13px;
+  line-height: 13px;
+  width: 22px;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up:hover,
+.emotion-6 .uc-fe-numberinput-handler-down:hover {
+  color: #3860f4;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up {
+  border-width: 0 0 0 1px;
+  top: -1px;
+  padding-top: 1px;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-down {
+  border-width: 1px 0 0 1px;
+  bottom: 0;
+  border-top-color: #c3cad9;
+}
+
+.emotion-14 .emotion-11 {
+  border-color: #0a1633;
+}
+
+.emotion-14 .emotion-9 {
+  border-color: #0a1633;
+}
+
+.emotion-10 {
+  display: inline-block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.emotion-8 {
+  display: inline-block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.emotion-12 {
+  padding: 8px 10px;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-radius: 3px;
+  word-break: keep-all;
+  box-sizing: border-box;
+  line-height: 12px;
+  color: #ffffff;
+  border: 1px solid #0a1633;
+  background: #0a1633;
+}
+
 <div
-  class="style__SliderWrap-sc-1rsqtg6-1 ZBOFX"
+  class=" emotion-18 emotion-19"
 >
   <div
-    class="style__RcSliderWrap-sc-1rsqtg6-0 eMzAHv"
+    class="emotion-0 emotion-1"
   >
     <div
       class="uc-fe-slider"
@@ -251,34 +1295,34 @@ exports[`Slider numberInputTipFormatter 2`] = `
     </div>
   </div>
   <div
-    class="style__NumberInputWrap-mnip3j-4 uc-fe-numberinput uc-fe-numberinput-styletype-default uc-fe-numberinput-focused kqgIlc"
+    class="uc-fe-numberinput uc-fe-numberinput-styletype-default uc-fe-numberinput-focused emotion-6 emotion-7"
     style=""
   >
     <div>
       <span
-        class="style__HandlerUp-mnip3j-2 uc-fe-numberinput-handler-up kCwAjK sc-bwzfXH uc-fe-numberinput-handler dUjajJ"
+        class="uc-fe-numberinput-handler-up"
         unselectable="unselectable"
       >
         <i
-          class="uc-fe-icon icon__caret-up style__IconWrap-sc-3eqdhz-0 xPAJB"
+          class="uc-fe-icon icon__caret-up emotion-2 emotion-3"
         />
       </span>
       <span
-        class="style__HandlerDown-mnip3j-3 uc-fe-numberinput-handler-down bNRfrJ sc-bwzfXH uc-fe-numberinput-handler uc-fe-numberinput-handler-disabled hjAcsF"
+        class="uc-fe-numberinput-handler-down uc-fe-numberinput-handler-disabled"
         disabled=""
         unselectable="unselectable"
       >
         <i
-          class="uc-fe-icon icon__caret-down style__IconWrap-sc-3eqdhz-0 xPAJB"
+          class="uc-fe-icon icon__caret-down emotion-2 emotion-3"
         />
       </span>
     </div>
     <div
-      class="style__InputWrap-mnip3j-0 uc-fe-numberinput-input-wrap bqNpJA"
+      class="uc-fe-numberinput-input-wrap"
     >
       <input
         autocomplete="off"
-        class="style__Input-mnip3j-1 uc-fe-numberinput-input iFpoQR"
+        class="uc-fe-numberinput-input"
         max="1000"
         min="10"
         step="1"
@@ -291,22 +1335,22 @@ exports[`Slider numberInputTipFormatter 2`] = `
   >
     <div>
       <div
-        class="uc-fe-popover style__PopoverWrap-sc-1yqouou-0 bRVwjN uc-fe-tooltip-popup uc-fe-slider-tooltip uc-fe-popover-placement-top uc-fe-popover-animation-fade-appear"
+        class="uc-fe-popover emotion-16 emotion-17 uc-fe-tooltip-popup uc-fe-slider-tooltip uc-fe-popover-placement-top uc-fe-popover-animation-fade-appear"
         style="left: -999px; top: -1009px;"
       >
         <div>
           <div
-            class="style__TooltipWrap-sc-1vhz6mi-3 gbHKRm"
+            class=" emotion-14 emotion-15"
           >
             <span
-              class="style__Arrow-sc-1vhz6mi-1 jJwgzd"
+              class="emotion-10 emotion-11"
             >
               <span
-                class="style__ArrowInner-sc-1vhz6mi-2 dYGbyO"
+                class="emotion-8 emotion-9"
               />
             </span>
             <div
-              class="style__ContentWrap-sc-1vhz6mi-0 iKmJqz"
+              class="uc-fe-tooltip-cls emotion-12 emotion-13"
             >
               当前生效值为10，输入值为10
             </div>
@@ -319,11 +1363,735 @@ exports[`Slider numberInputTipFormatter 2`] = `
 `;
 
 exports[`Slider numberInputTipFormatter 3`] = `
+@keyframes animation-0 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animation-1 {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes animation-2 {
+  from, 20%, 40%, 60%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215,0.61,0.355,1);
+    animation-timing-function: cubic-bezier(0.215,0.61,0.355,1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3,0.3,0.3);
+    -ms-transform: scale3d(0.3,0.3,0.3);
+    transform: scale3d(0.3,0.3,0.3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1,1.1,1.1);
+    -ms-transform: scale3d(1.1,1.1,1.1);
+    transform: scale3d(1.1,1.1,1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.9,0.9,0.9);
+    -ms-transform: scale3d(0.9,0.9,0.9);
+    transform: scale3d(0.9,0.9,0.9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03,1.03,1.03);
+    -ms-transform: scale3d(1.03,1.03,1.03);
+    transform: scale3d(1.03,1.03,1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(0.97,0.97,0.97);
+    -ms-transform: scale3d(0.97,0.97,0.97);
+    transform: scale3d(0.97,0.97,0.97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1,1,1);
+    -ms-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+  }
+}
+
+@keyframes animation-3 {
+  20% {
+    -webkit-transform: scale3d(0.9,0.9,0.9);
+    -ms-transform: scale3d(0.9,0.9,0.9);
+    transform: scale3d(0.9,0.9,0.9);
+  }
+
+  50%, 55% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.1,1.1,1.1);
+    -ms-transform: scale3d(1.1,1.1,1.1);
+    transform: scale3d(1.1,1.1,1.1);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3,0.3,0.3);
+    -ms-transform: scale3d(0.3,0.3,0.3);
+    transform: scale3d(0.3,0.3,0.3);
+  }
+}
+
+@keyframes animation-4 {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3,0.3,0.3);
+    -ms-transform: scale3d(0.3,0.3,0.3);
+    transform: scale3d(0.3,0.3,0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes animation-5 {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3,0.3,0.3);
+    -ms-transform: scale3d(0.3,0.3,0.3);
+    transform: scale3d(0.3,0.3,0.3);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes animation-6 {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+
+@keyframes animation-7 {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+
+@keyframes animation-8 {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+}
+
+@keyframes animation-9 {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+}
+
+.emotion-18 .uc-fe-slider {
+  position: relative;
+  width: 300px;
+  border-radius: 2px;
+  touch-action: none;
+  height: 28px;
+}
+
+.emotion-18 .uc-fe-slider-rail {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  background: #fafafc;
+  border: 1px solid #c3cad9;
+  height: 28px;
+  border-left: 0;
+  border-right: 0;
+}
+
+.emotion-18 .uc-fe-slider-rail::before,
+.emotion-18 .uc-fe-slider-rail::after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  border: 1px solid #c3cad9;
+  top: -1px;
+  background: #fafafc;
+}
+
+.emotion-18 .uc-fe-slider-rail::before {
+  left: -10px;
+  border-radius: 2px 0 0 2px;
+  border-right: 0;
+}
+
+.emotion-18 .uc-fe-slider-rail::after {
+  right: -10px;
+  border-radius: 0 2px 2px 0;
+  border-left: 0;
+}
+
+.emotion-18 .uc-fe-slider-track {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  border: 1px solid #3860f4;
+  background: #f8f8ff;
+  height: 28px;
+  border-left: 0;
+  border-right: 0;
+}
+
+.emotion-18 .uc-fe-slider-track::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  border: 1px solid #3860f4;
+  top: -1px;
+  background: #f8f8ff;
+  left: -10px;
+  border-radius: 2px 0 0 2px;
+  border-right: 0;
+}
+
+.emotion-18 .uc-fe-slider-tooltip {
+  line-height: normal;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-18 .uc-fe-slider-handle {
+  box-sizing: border-box;
+  position: absolute;
+  margin-left: -10px;
+  margin-top: -3px;
+  width: 20px;
+  cursor: pointer;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+  text-align: center;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
+  background: #ffffff;
+  touch-action: pan-x;
+  z-index: 9;
+  height: 34px;
+  line-height: 36px;
+}
+
+.emotion-18 .uc-fe-slider-handle::before,
+.emotion-18 .uc-fe-slider-handle::after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 16px;
+  background: #c3cad9;
+  margin-top: 8px;
+}
+
+.emotion-18 .uc-fe-slider-handle::after {
+  margin-left: 4px;
+}
+
+.emotion-18 .uc-fe-slider-handle:hover,
+.emotion-18 .uc-fe-slider-handle:active {
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
+.emotion-18 .uc-fe-slider-handle:hover::before,
+.emotion-18 .uc-fe-slider-handle:active::before,
+.emotion-18 .uc-fe-slider-handle:hover::after,
+.emotion-18 .uc-fe-slider-handle:active::after {
+  background: #3860f4;
+}
+
+.emotion-18 .uc-fe-slider-handle:active {
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing;
+}
+
+.emotion-18 .uc-fe-slider-handle:focus {
+  outline: none;
+}
+
+.emotion-18 .uc-fe-slider-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 12px;
+}
+
+.emotion-18 .uc-fe-slider-mark-text {
+  position: absolute;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: right;
+  width: 30%;
+  margin-left: -30%;
+  overflow: hidden;
+  cursor: pointer;
+  color: #7a8baa;
+  border-right: 1px solid #c3cad9;
+  padding: 0 8px;
+  box-sizing: border-box;
+  pointer-events: none;
+  line-height: 28px;
+}
+
+.emotion-18 .uc-fe-slider-mark-text-active {
+  color: #3860f4;
+  border-right-color: #3860f4;
+}
+
+.emotion-18 .uc-fe-slider-step {
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  height: 28px;
+}
+
+.emotion-18 .uc-fe-slider-dot {
+  display: none;
+}
+
+.emotion-0 {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 12px;
+  padding: 0 10px;
+}
+
+.emotion-16.uc-fe-popover {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  z-index: 1030;
+  display: block;
+}
+
+.emotion-16.uc-fe-popover-hidden {
+  display: none;
+}
+
+.emotion-16.uc-fe-popover-animation-fade-enter,
+.emotion-16.uc-fe-popover-animation-fade-appear,
+.emotion-16.uc-fe-popover-animation-fade-leave {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.emotion-16.uc-fe-popover-animation-fade-enter,
+.emotion-16.uc-fe-popover-animation-fade-appear {
+  -webkit-animation-name: animation-0;
+  animation-name: animation-0;
+}
+
+.emotion-16.uc-fe-popover-animation-fade-leave {
+  -webkit-animation-name: animation-1;
+  animation-name: animation-1;
+}
+
+.emotion-16.uc-fe-popover-animation-bounce-enter,
+.emotion-16.uc-fe-popover-animation-bounce-appear,
+.emotion-16.uc-fe-popover-animation-bounce-leave {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.emotion-16.uc-fe-popover-animation-bounce-enter,
+.emotion-16.uc-fe-popover-animation-bounce-appear {
+  -webkit-animation-name: animation-2;
+  animation-name: animation-2;
+}
+
+.emotion-16.uc-fe-popover-animation-bounce-leave {
+  -webkit-animation-name: animation-3;
+  animation-name: animation-3;
+}
+
+.emotion-16.uc-fe-popover-animation-zoom-enter,
+.emotion-16.uc-fe-popover-animation-zoom-appear,
+.emotion-16.uc-fe-popover-animation-zoom-leave {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.emotion-16.uc-fe-popover-animation-zoom-enter,
+.emotion-16.uc-fe-popover-animation-zoom-appear {
+  -webkit-animation-name: animation-4;
+  animation-name: animation-4;
+}
+
+.emotion-16.uc-fe-popover-animation-zoom-leave {
+  -webkit-animation-name: animation-5;
+  animation-name: animation-5;
+}
+
+.emotion-16.uc-fe-popover-animation-slide-up-enter,
+.emotion-16.uc-fe-popover-animation-slide-up-appear {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  display: block !important;
+  opacity: 0;
+  -webkit-animation-timing-function: cubic-bezier(0.08,0.82,0.17,1);
+  animation-timing-function: cubic-bezier(0.08,0.82,0.17,1);
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.emotion-16.uc-fe-popover-animation-slide-up-leave {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  display: block !important;
+  opacity: 1;
+  -webkit-animation-timing-function: cubic-bezier(0.6,0.04,0.98,0.34);
+  animation-timing-function: cubic-bezier(0.6,0.04,0.98,0.34);
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.emotion-16.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-bottomLeft,
+.emotion-16.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-bottomLeft,
+.emotion-16.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-bottomCenter,
+.emotion-16.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-bottomCenter,
+.emotion-16.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-bottomRight,
+.emotion-16.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-bottomRight {
+  -webkit-animation-name: animation-6;
+  animation-name: animation-6;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.emotion-16.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-topLeft,
+.emotion-16.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-topLeft,
+.emotion-16.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-topCenter,
+.emotion-16.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-topCenter,
+.emotion-16.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-topRight,
+.emotion-16.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-topRight {
+  -webkit-animation-name: animation-7;
+  animation-name: animation-7;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.emotion-16.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-bottomLeft,
+.emotion-16.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-bottomCenter,
+.emotion-16.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-bottomRight {
+  -webkit-animation-name: animation-8;
+  animation-name: animation-8;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.emotion-16.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-topLeft,
+.emotion-16.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-topCenter,
+.emotion-16.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-topRight {
+  -webkit-animation-name: animation-9;
+  animation-name: animation-9;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.emotion-2 {
+  vertical-align: baseline;
+}
+
+.emotion-6 {
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 2px;
+  color: #0a1633;
+  height: 28px;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid #d2d6ea;
+  padding-right: 22px;
+  border-right-width: 0;
+}
+
+.emotion-6 .uc-fe-numberinput-input-wrap {
+  position: relative;
+}
+
+.emotion-6 .uc-fe-numberinput-input {
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+}
+
+.emotion-6 .uc-fe-numberinput-suffix {
+  color: #7a8baa;
+  margin: 0 4px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up,
+.emotion-6 .uc-fe-numberinput-handler-down {
+  position: absolute;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 2px;
+  border-style: solid;
+  cursor: pointer;
+  color: #0a1633;
+  border-color: #d2d6ea;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
+  background: #ffffff;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up:hover,
+.emotion-6 .uc-fe-numberinput-handler-down:hover {
+  color: #3860f4;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up.uc-fe-numberinput-handler-disabled,
+.emotion-6 .uc-fe-numberinput-handler-down.uc-fe-numberinput-handler-disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  color: #cccccc;
+  border-color: #c3cad9;
+}
+
+.emotion-6 .uc-fe-numberinput-input {
+  line-height: 26px;
+  height: 26px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-6 .uc-fe-numberinput-input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-6 .uc-fe-numberinput-input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-6 .uc-fe-numberinput-input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-6 .uc-fe-numberinput-input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-6:hover {
+  border-color: #c3cad9;
+}
+
+.emotion-6 .uc-fe-numberinput-input-wrap {
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #fafafc;
+}
+
+.emotion-6 .uc-fe-numberinput-input-wrap:hover {
+  background: #f6f6fb;
+}
+
+.emotion-6,
+.emotion-6:hover {
+  border-color: #3860f4;
+}
+
+.emotion-6 .uc-fe-numberinput-input-wrap {
+  background: #f6f6fb;
+}
+
+.emotion-6 .uc-fe-numberinput-input {
+  padding: 0 0 0 8px;
+  text-align: left;
+  box-shadow: none;
+  background: transparent;
+  width: 34px;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up,
+.emotion-6 .uc-fe-numberinput-handler-down {
+  right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
+  height: 13px;
+  line-height: 13px;
+  width: 22px;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up:hover,
+.emotion-6 .uc-fe-numberinput-handler-down:hover {
+  color: #3860f4;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up {
+  border-width: 0 0 0 1px;
+  top: -1px;
+  padding-top: 1px;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-down {
+  border-width: 1px 0 0 1px;
+  bottom: 0;
+  border-top-color: #c3cad9;
+}
+
+.emotion-14 .emotion-11 {
+  border-color: #0a1633;
+}
+
+.emotion-14 .emotion-9 {
+  border-color: #0a1633;
+}
+
+.emotion-10 {
+  display: inline-block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.emotion-8 {
+  display: inline-block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.emotion-12 {
+  padding: 8px 10px;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-radius: 3px;
+  word-break: keep-all;
+  box-sizing: border-box;
+  line-height: 12px;
+  color: #ffffff;
+  border: 1px solid #0a1633;
+  background: #0a1633;
+}
+
 <div
-  class="style__SliderWrap-sc-1rsqtg6-1 ZBOFX"
+  class=" emotion-18 emotion-19"
 >
   <div
-    class="style__RcSliderWrap-sc-1rsqtg6-0 eMzAHv"
+    class="emotion-0 emotion-1"
   >
     <div
       class="uc-fe-slider"
@@ -354,34 +2122,34 @@ exports[`Slider numberInputTipFormatter 3`] = `
     </div>
   </div>
   <div
-    class="style__NumberInputWrap-mnip3j-4 uc-fe-numberinput uc-fe-numberinput-styletype-default uc-fe-numberinput-focused kqgIlc"
+    class="uc-fe-numberinput uc-fe-numberinput-styletype-default uc-fe-numberinput-focused emotion-6 emotion-7"
     style=""
   >
     <div>
       <span
-        class="style__HandlerUp-mnip3j-2 uc-fe-numberinput-handler-up kCwAjK sc-bwzfXH uc-fe-numberinput-handler dUjajJ"
+        class="uc-fe-numberinput-handler-up"
         unselectable="unselectable"
       >
         <i
-          class="uc-fe-icon icon__caret-up style__IconWrap-sc-3eqdhz-0 xPAJB"
+          class="uc-fe-icon icon__caret-up emotion-2 emotion-3"
         />
       </span>
       <span
-        class="style__HandlerDown-mnip3j-3 uc-fe-numberinput-handler-down bNRfrJ sc-bwzfXH uc-fe-numberinput-handler uc-fe-numberinput-handler-disabled hjAcsF"
+        class="uc-fe-numberinput-handler-down uc-fe-numberinput-handler-disabled"
         disabled=""
         unselectable="unselectable"
       >
         <i
-          class="uc-fe-icon icon__caret-down style__IconWrap-sc-3eqdhz-0 xPAJB"
+          class="uc-fe-icon icon__caret-down emotion-2 emotion-3"
         />
       </span>
     </div>
     <div
-      class="style__InputWrap-mnip3j-0 uc-fe-numberinput-input-wrap bqNpJA"
+      class="uc-fe-numberinput-input-wrap"
     >
       <input
         autocomplete="off"
-        class="style__Input-mnip3j-1 uc-fe-numberinput-input iFpoQR"
+        class="uc-fe-numberinput-input"
         max="1000"
         min="10"
         step="1"
@@ -394,22 +2162,22 @@ exports[`Slider numberInputTipFormatter 3`] = `
   >
     <div>
       <div
-        class="uc-fe-popover style__PopoverWrap-sc-1yqouou-0 bRVwjN uc-fe-tooltip-popup uc-fe-slider-tooltip uc-fe-popover-placement-top uc-fe-popover-hidden"
+        class="uc-fe-popover emotion-16 emotion-17 uc-fe-tooltip-popup uc-fe-slider-tooltip uc-fe-popover-placement-top uc-fe-popover-hidden"
         style="left: -999px; top: -1009px;"
       >
         <div>
           <div
-            class="style__TooltipWrap-sc-1vhz6mi-3 gbHKRm"
+            class=" emotion-14 emotion-15"
           >
             <span
-              class="style__Arrow-sc-1vhz6mi-1 jJwgzd"
+              class="emotion-10 emotion-11"
             >
               <span
-                class="style__ArrowInner-sc-1vhz6mi-2 dYGbyO"
+                class="emotion-8 emotion-9"
               />
             </span>
             <div
-              class="style__ContentWrap-sc-1vhz6mi-0 iKmJqz"
+              class="uc-fe-tooltip-cls emotion-12 emotion-13"
             >
               当前生效值为10，输入值为10
             </div>
@@ -422,11 +2190,735 @@ exports[`Slider numberInputTipFormatter 3`] = `
 `;
 
 exports[`Slider numberInputTipFormatter 4`] = `
+@keyframes animation-0 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animation-1 {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes animation-2 {
+  from, 20%, 40%, 60%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215,0.61,0.355,1);
+    animation-timing-function: cubic-bezier(0.215,0.61,0.355,1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3,0.3,0.3);
+    -ms-transform: scale3d(0.3,0.3,0.3);
+    transform: scale3d(0.3,0.3,0.3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1,1.1,1.1);
+    -ms-transform: scale3d(1.1,1.1,1.1);
+    transform: scale3d(1.1,1.1,1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.9,0.9,0.9);
+    -ms-transform: scale3d(0.9,0.9,0.9);
+    transform: scale3d(0.9,0.9,0.9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03,1.03,1.03);
+    -ms-transform: scale3d(1.03,1.03,1.03);
+    transform: scale3d(1.03,1.03,1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(0.97,0.97,0.97);
+    -ms-transform: scale3d(0.97,0.97,0.97);
+    transform: scale3d(0.97,0.97,0.97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1,1,1);
+    -ms-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+  }
+}
+
+@keyframes animation-3 {
+  20% {
+    -webkit-transform: scale3d(0.9,0.9,0.9);
+    -ms-transform: scale3d(0.9,0.9,0.9);
+    transform: scale3d(0.9,0.9,0.9);
+  }
+
+  50%, 55% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.1,1.1,1.1);
+    -ms-transform: scale3d(1.1,1.1,1.1);
+    transform: scale3d(1.1,1.1,1.1);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3,0.3,0.3);
+    -ms-transform: scale3d(0.3,0.3,0.3);
+    transform: scale3d(0.3,0.3,0.3);
+  }
+}
+
+@keyframes animation-4 {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3,0.3,0.3);
+    -ms-transform: scale3d(0.3,0.3,0.3);
+    transform: scale3d(0.3,0.3,0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes animation-5 {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3,0.3,0.3);
+    -ms-transform: scale3d(0.3,0.3,0.3);
+    transform: scale3d(0.3,0.3,0.3);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes animation-6 {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+
+@keyframes animation-7 {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+
+@keyframes animation-8 {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+}
+
+@keyframes animation-9 {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+}
+
+.emotion-18 .uc-fe-slider {
+  position: relative;
+  width: 300px;
+  border-radius: 2px;
+  touch-action: none;
+  height: 28px;
+}
+
+.emotion-18 .uc-fe-slider-rail {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  background: #fafafc;
+  border: 1px solid #c3cad9;
+  height: 28px;
+  border-left: 0;
+  border-right: 0;
+}
+
+.emotion-18 .uc-fe-slider-rail::before,
+.emotion-18 .uc-fe-slider-rail::after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  border: 1px solid #c3cad9;
+  top: -1px;
+  background: #fafafc;
+}
+
+.emotion-18 .uc-fe-slider-rail::before {
+  left: -10px;
+  border-radius: 2px 0 0 2px;
+  border-right: 0;
+}
+
+.emotion-18 .uc-fe-slider-rail::after {
+  right: -10px;
+  border-radius: 0 2px 2px 0;
+  border-left: 0;
+}
+
+.emotion-18 .uc-fe-slider-track {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  border: 1px solid #3860f4;
+  background: #f8f8ff;
+  height: 28px;
+  border-left: 0;
+  border-right: 0;
+}
+
+.emotion-18 .uc-fe-slider-track::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  border: 1px solid #3860f4;
+  top: -1px;
+  background: #f8f8ff;
+  left: -10px;
+  border-radius: 2px 0 0 2px;
+  border-right: 0;
+}
+
+.emotion-18 .uc-fe-slider-tooltip {
+  line-height: normal;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-18 .uc-fe-slider-handle {
+  box-sizing: border-box;
+  position: absolute;
+  margin-left: -10px;
+  margin-top: -3px;
+  width: 20px;
+  cursor: pointer;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+  text-align: center;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
+  background: #ffffff;
+  touch-action: pan-x;
+  z-index: 9;
+  height: 34px;
+  line-height: 36px;
+}
+
+.emotion-18 .uc-fe-slider-handle::before,
+.emotion-18 .uc-fe-slider-handle::after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 16px;
+  background: #c3cad9;
+  margin-top: 8px;
+}
+
+.emotion-18 .uc-fe-slider-handle::after {
+  margin-left: 4px;
+}
+
+.emotion-18 .uc-fe-slider-handle:hover,
+.emotion-18 .uc-fe-slider-handle:active {
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
+.emotion-18 .uc-fe-slider-handle:hover::before,
+.emotion-18 .uc-fe-slider-handle:active::before,
+.emotion-18 .uc-fe-slider-handle:hover::after,
+.emotion-18 .uc-fe-slider-handle:active::after {
+  background: #3860f4;
+}
+
+.emotion-18 .uc-fe-slider-handle:active {
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing;
+}
+
+.emotion-18 .uc-fe-slider-handle:focus {
+  outline: none;
+}
+
+.emotion-18 .uc-fe-slider-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 12px;
+}
+
+.emotion-18 .uc-fe-slider-mark-text {
+  position: absolute;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: right;
+  width: 30%;
+  margin-left: -30%;
+  overflow: hidden;
+  cursor: pointer;
+  color: #7a8baa;
+  border-right: 1px solid #c3cad9;
+  padding: 0 8px;
+  box-sizing: border-box;
+  pointer-events: none;
+  line-height: 28px;
+}
+
+.emotion-18 .uc-fe-slider-mark-text-active {
+  color: #3860f4;
+  border-right-color: #3860f4;
+}
+
+.emotion-18 .uc-fe-slider-step {
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  height: 28px;
+}
+
+.emotion-18 .uc-fe-slider-dot {
+  display: none;
+}
+
+.emotion-0 {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 12px;
+  padding: 0 10px;
+}
+
+.emotion-16.uc-fe-popover {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  z-index: 1030;
+  display: block;
+}
+
+.emotion-16.uc-fe-popover-hidden {
+  display: none;
+}
+
+.emotion-16.uc-fe-popover-animation-fade-enter,
+.emotion-16.uc-fe-popover-animation-fade-appear,
+.emotion-16.uc-fe-popover-animation-fade-leave {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.emotion-16.uc-fe-popover-animation-fade-enter,
+.emotion-16.uc-fe-popover-animation-fade-appear {
+  -webkit-animation-name: animation-0;
+  animation-name: animation-0;
+}
+
+.emotion-16.uc-fe-popover-animation-fade-leave {
+  -webkit-animation-name: animation-1;
+  animation-name: animation-1;
+}
+
+.emotion-16.uc-fe-popover-animation-bounce-enter,
+.emotion-16.uc-fe-popover-animation-bounce-appear,
+.emotion-16.uc-fe-popover-animation-bounce-leave {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.emotion-16.uc-fe-popover-animation-bounce-enter,
+.emotion-16.uc-fe-popover-animation-bounce-appear {
+  -webkit-animation-name: animation-2;
+  animation-name: animation-2;
+}
+
+.emotion-16.uc-fe-popover-animation-bounce-leave {
+  -webkit-animation-name: animation-3;
+  animation-name: animation-3;
+}
+
+.emotion-16.uc-fe-popover-animation-zoom-enter,
+.emotion-16.uc-fe-popover-animation-zoom-appear,
+.emotion-16.uc-fe-popover-animation-zoom-leave {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.emotion-16.uc-fe-popover-animation-zoom-enter,
+.emotion-16.uc-fe-popover-animation-zoom-appear {
+  -webkit-animation-name: animation-4;
+  animation-name: animation-4;
+}
+
+.emotion-16.uc-fe-popover-animation-zoom-leave {
+  -webkit-animation-name: animation-5;
+  animation-name: animation-5;
+}
+
+.emotion-16.uc-fe-popover-animation-slide-up-enter,
+.emotion-16.uc-fe-popover-animation-slide-up-appear {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  display: block !important;
+  opacity: 0;
+  -webkit-animation-timing-function: cubic-bezier(0.08,0.82,0.17,1);
+  animation-timing-function: cubic-bezier(0.08,0.82,0.17,1);
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.emotion-16.uc-fe-popover-animation-slide-up-leave {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  display: block !important;
+  opacity: 1;
+  -webkit-animation-timing-function: cubic-bezier(0.6,0.04,0.98,0.34);
+  animation-timing-function: cubic-bezier(0.6,0.04,0.98,0.34);
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.emotion-16.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-bottomLeft,
+.emotion-16.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-bottomLeft,
+.emotion-16.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-bottomCenter,
+.emotion-16.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-bottomCenter,
+.emotion-16.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-bottomRight,
+.emotion-16.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-bottomRight {
+  -webkit-animation-name: animation-6;
+  animation-name: animation-6;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.emotion-16.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-topLeft,
+.emotion-16.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-topLeft,
+.emotion-16.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-topCenter,
+.emotion-16.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-topCenter,
+.emotion-16.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-topRight,
+.emotion-16.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-topRight {
+  -webkit-animation-name: animation-7;
+  animation-name: animation-7;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.emotion-16.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-bottomLeft,
+.emotion-16.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-bottomCenter,
+.emotion-16.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-bottomRight {
+  -webkit-animation-name: animation-8;
+  animation-name: animation-8;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.emotion-16.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-topLeft,
+.emotion-16.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-topCenter,
+.emotion-16.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-topRight {
+  -webkit-animation-name: animation-9;
+  animation-name: animation-9;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.emotion-2 {
+  vertical-align: baseline;
+}
+
+.emotion-6 {
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 2px;
+  color: #0a1633;
+  height: 28px;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid #d2d6ea;
+  padding-right: 22px;
+  border-right-width: 0;
+}
+
+.emotion-6 .uc-fe-numberinput-input-wrap {
+  position: relative;
+}
+
+.emotion-6 .uc-fe-numberinput-input {
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+}
+
+.emotion-6 .uc-fe-numberinput-suffix {
+  color: #7a8baa;
+  margin: 0 4px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up,
+.emotion-6 .uc-fe-numberinput-handler-down {
+  position: absolute;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 2px;
+  border-style: solid;
+  cursor: pointer;
+  color: #0a1633;
+  border-color: #d2d6ea;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
+  background: #ffffff;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up:hover,
+.emotion-6 .uc-fe-numberinput-handler-down:hover {
+  color: #3860f4;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up.uc-fe-numberinput-handler-disabled,
+.emotion-6 .uc-fe-numberinput-handler-down.uc-fe-numberinput-handler-disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  color: #cccccc;
+  border-color: #c3cad9;
+}
+
+.emotion-6 .uc-fe-numberinput-input {
+  line-height: 26px;
+  height: 26px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-6 .uc-fe-numberinput-input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-6 .uc-fe-numberinput-input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-6 .uc-fe-numberinput-input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-6 .uc-fe-numberinput-input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-6:hover {
+  border-color: #c3cad9;
+}
+
+.emotion-6 .uc-fe-numberinput-input-wrap {
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #fafafc;
+}
+
+.emotion-6 .uc-fe-numberinput-input-wrap:hover {
+  background: #f6f6fb;
+}
+
+.emotion-6,
+.emotion-6:hover {
+  border-color: #3860f4;
+}
+
+.emotion-6 .uc-fe-numberinput-input-wrap {
+  background: #f6f6fb;
+}
+
+.emotion-6 .uc-fe-numberinput-input {
+  padding: 0 0 0 8px;
+  text-align: left;
+  box-shadow: none;
+  background: transparent;
+  width: 34px;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up,
+.emotion-6 .uc-fe-numberinput-handler-down {
+  right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
+  height: 13px;
+  line-height: 13px;
+  width: 22px;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up:hover,
+.emotion-6 .uc-fe-numberinput-handler-down:hover {
+  color: #3860f4;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up {
+  border-width: 0 0 0 1px;
+  top: -1px;
+  padding-top: 1px;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-down {
+  border-width: 1px 0 0 1px;
+  bottom: 0;
+  border-top-color: #c3cad9;
+}
+
+.emotion-14 .emotion-11 {
+  border-color: #0a1633;
+}
+
+.emotion-14 .emotion-9 {
+  border-color: #0a1633;
+}
+
+.emotion-10 {
+  display: inline-block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.emotion-8 {
+  display: inline-block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.emotion-12 {
+  padding: 8px 10px;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-radius: 3px;
+  word-break: keep-all;
+  box-sizing: border-box;
+  line-height: 12px;
+  color: #ffffff;
+  border: 1px solid #0a1633;
+  background: #0a1633;
+}
+
 <div
-  class="style__SliderWrap-sc-1rsqtg6-1 ZBOFX"
+  class=" emotion-18 emotion-19"
 >
   <div
-    class="style__RcSliderWrap-sc-1rsqtg6-0 eMzAHv"
+    class="emotion-0 emotion-1"
   >
     <div
       class="uc-fe-slider"
@@ -457,34 +2949,34 @@ exports[`Slider numberInputTipFormatter 4`] = `
     </div>
   </div>
   <div
-    class="style__NumberInputWrap-mnip3j-4 uc-fe-numberinput uc-fe-numberinput-styletype-default uc-fe-numberinput-focused kqgIlc"
+    class="uc-fe-numberinput uc-fe-numberinput-styletype-default uc-fe-numberinput-focused emotion-6 emotion-7"
     style=""
   >
     <div>
       <span
-        class="style__HandlerUp-mnip3j-2 uc-fe-numberinput-handler-up kCwAjK sc-bwzfXH uc-fe-numberinput-handler dUjajJ"
+        class="uc-fe-numberinput-handler-up"
         unselectable="unselectable"
       >
         <i
-          class="uc-fe-icon icon__caret-up style__IconWrap-sc-3eqdhz-0 xPAJB"
+          class="uc-fe-icon icon__caret-up emotion-2 emotion-3"
         />
       </span>
       <span
-        class="style__HandlerDown-mnip3j-3 uc-fe-numberinput-handler-down bNRfrJ sc-bwzfXH uc-fe-numberinput-handler uc-fe-numberinput-handler-disabled hjAcsF"
+        class="uc-fe-numberinput-handler-down uc-fe-numberinput-handler-disabled"
         disabled=""
         unselectable="unselectable"
       >
         <i
-          class="uc-fe-icon icon__caret-down style__IconWrap-sc-3eqdhz-0 xPAJB"
+          class="uc-fe-icon icon__caret-down emotion-2 emotion-3"
         />
       </span>
     </div>
     <div
-      class="style__InputWrap-mnip3j-0 uc-fe-numberinput-input-wrap bqNpJA"
+      class="uc-fe-numberinput-input-wrap"
     >
       <input
         autocomplete="off"
-        class="style__Input-mnip3j-1 uc-fe-numberinput-input iFpoQR"
+        class="uc-fe-numberinput-input"
         max="1000"
         min="10"
         step="1"
@@ -497,22 +2989,22 @@ exports[`Slider numberInputTipFormatter 4`] = `
   >
     <div>
       <div
-        class="uc-fe-popover style__PopoverWrap-sc-1yqouou-0 bRVwjN uc-fe-tooltip-popup uc-fe-slider-tooltip uc-fe-popover-placement-top uc-fe-popover-animation-fade-enter"
+        class="uc-fe-popover emotion-16 emotion-17 uc-fe-tooltip-popup uc-fe-slider-tooltip uc-fe-popover-placement-top uc-fe-popover-animation-fade-enter"
         style="left: -999px; top: -1009px;"
       >
         <div>
           <div
-            class="style__TooltipWrap-sc-1vhz6mi-3 gbHKRm"
+            class=" emotion-14 emotion-15"
           >
             <span
-              class="style__Arrow-sc-1vhz6mi-1 jJwgzd"
+              class="emotion-10 emotion-11"
             >
               <span
-                class="style__ArrowInner-sc-1vhz6mi-2 dYGbyO"
+                class="emotion-8 emotion-9"
               />
             </span>
             <div
-              class="style__ContentWrap-sc-1vhz6mi-0 iKmJqz"
+              class="uc-fe-tooltip-cls emotion-12 emotion-13"
             >
               <span>
                 currentValue: 10inputValue: 10isSensitive: undefined
@@ -527,11 +3019,735 @@ exports[`Slider numberInputTipFormatter 4`] = `
 `;
 
 exports[`Slider numberInputTipFormatter 5`] = `
+@keyframes animation-0 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animation-1 {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes animation-2 {
+  from, 20%, 40%, 60%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215,0.61,0.355,1);
+    animation-timing-function: cubic-bezier(0.215,0.61,0.355,1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3,0.3,0.3);
+    -ms-transform: scale3d(0.3,0.3,0.3);
+    transform: scale3d(0.3,0.3,0.3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1,1.1,1.1);
+    -ms-transform: scale3d(1.1,1.1,1.1);
+    transform: scale3d(1.1,1.1,1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.9,0.9,0.9);
+    -ms-transform: scale3d(0.9,0.9,0.9);
+    transform: scale3d(0.9,0.9,0.9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03,1.03,1.03);
+    -ms-transform: scale3d(1.03,1.03,1.03);
+    transform: scale3d(1.03,1.03,1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(0.97,0.97,0.97);
+    -ms-transform: scale3d(0.97,0.97,0.97);
+    transform: scale3d(0.97,0.97,0.97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1,1,1);
+    -ms-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+  }
+}
+
+@keyframes animation-3 {
+  20% {
+    -webkit-transform: scale3d(0.9,0.9,0.9);
+    -ms-transform: scale3d(0.9,0.9,0.9);
+    transform: scale3d(0.9,0.9,0.9);
+  }
+
+  50%, 55% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.1,1.1,1.1);
+    -ms-transform: scale3d(1.1,1.1,1.1);
+    transform: scale3d(1.1,1.1,1.1);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3,0.3,0.3);
+    -ms-transform: scale3d(0.3,0.3,0.3);
+    transform: scale3d(0.3,0.3,0.3);
+  }
+}
+
+@keyframes animation-4 {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3,0.3,0.3);
+    -ms-transform: scale3d(0.3,0.3,0.3);
+    transform: scale3d(0.3,0.3,0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes animation-5 {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3,0.3,0.3);
+    -ms-transform: scale3d(0.3,0.3,0.3);
+    transform: scale3d(0.3,0.3,0.3);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes animation-6 {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+
+@keyframes animation-7 {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+
+@keyframes animation-8 {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+}
+
+@keyframes animation-9 {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+}
+
+.emotion-18 .uc-fe-slider {
+  position: relative;
+  width: 300px;
+  border-radius: 2px;
+  touch-action: none;
+  height: 28px;
+}
+
+.emotion-18 .uc-fe-slider-rail {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  background: #fafafc;
+  border: 1px solid #c3cad9;
+  height: 28px;
+  border-left: 0;
+  border-right: 0;
+}
+
+.emotion-18 .uc-fe-slider-rail::before,
+.emotion-18 .uc-fe-slider-rail::after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  border: 1px solid #c3cad9;
+  top: -1px;
+  background: #fafafc;
+}
+
+.emotion-18 .uc-fe-slider-rail::before {
+  left: -10px;
+  border-radius: 2px 0 0 2px;
+  border-right: 0;
+}
+
+.emotion-18 .uc-fe-slider-rail::after {
+  right: -10px;
+  border-radius: 0 2px 2px 0;
+  border-left: 0;
+}
+
+.emotion-18 .uc-fe-slider-track {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  border: 1px solid #3860f4;
+  background: #f8f8ff;
+  height: 28px;
+  border-left: 0;
+  border-right: 0;
+}
+
+.emotion-18 .uc-fe-slider-track::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  border: 1px solid #3860f4;
+  top: -1px;
+  background: #f8f8ff;
+  left: -10px;
+  border-radius: 2px 0 0 2px;
+  border-right: 0;
+}
+
+.emotion-18 .uc-fe-slider-tooltip {
+  line-height: normal;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-18 .uc-fe-slider-handle {
+  box-sizing: border-box;
+  position: absolute;
+  margin-left: -10px;
+  margin-top: -3px;
+  width: 20px;
+  cursor: pointer;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+  text-align: center;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
+  background: #ffffff;
+  touch-action: pan-x;
+  z-index: 9;
+  height: 34px;
+  line-height: 36px;
+}
+
+.emotion-18 .uc-fe-slider-handle::before,
+.emotion-18 .uc-fe-slider-handle::after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 16px;
+  background: #c3cad9;
+  margin-top: 8px;
+}
+
+.emotion-18 .uc-fe-slider-handle::after {
+  margin-left: 4px;
+}
+
+.emotion-18 .uc-fe-slider-handle:hover,
+.emotion-18 .uc-fe-slider-handle:active {
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
+.emotion-18 .uc-fe-slider-handle:hover::before,
+.emotion-18 .uc-fe-slider-handle:active::before,
+.emotion-18 .uc-fe-slider-handle:hover::after,
+.emotion-18 .uc-fe-slider-handle:active::after {
+  background: #3860f4;
+}
+
+.emotion-18 .uc-fe-slider-handle:active {
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing;
+}
+
+.emotion-18 .uc-fe-slider-handle:focus {
+  outline: none;
+}
+
+.emotion-18 .uc-fe-slider-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 12px;
+}
+
+.emotion-18 .uc-fe-slider-mark-text {
+  position: absolute;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: right;
+  width: 30%;
+  margin-left: -30%;
+  overflow: hidden;
+  cursor: pointer;
+  color: #7a8baa;
+  border-right: 1px solid #c3cad9;
+  padding: 0 8px;
+  box-sizing: border-box;
+  pointer-events: none;
+  line-height: 28px;
+}
+
+.emotion-18 .uc-fe-slider-mark-text-active {
+  color: #3860f4;
+  border-right-color: #3860f4;
+}
+
+.emotion-18 .uc-fe-slider-step {
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  height: 28px;
+}
+
+.emotion-18 .uc-fe-slider-dot {
+  display: none;
+}
+
+.emotion-0 {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 12px;
+  padding: 0 10px;
+}
+
+.emotion-16.uc-fe-popover {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  z-index: 1030;
+  display: block;
+}
+
+.emotion-16.uc-fe-popover-hidden {
+  display: none;
+}
+
+.emotion-16.uc-fe-popover-animation-fade-enter,
+.emotion-16.uc-fe-popover-animation-fade-appear,
+.emotion-16.uc-fe-popover-animation-fade-leave {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.emotion-16.uc-fe-popover-animation-fade-enter,
+.emotion-16.uc-fe-popover-animation-fade-appear {
+  -webkit-animation-name: animation-0;
+  animation-name: animation-0;
+}
+
+.emotion-16.uc-fe-popover-animation-fade-leave {
+  -webkit-animation-name: animation-1;
+  animation-name: animation-1;
+}
+
+.emotion-16.uc-fe-popover-animation-bounce-enter,
+.emotion-16.uc-fe-popover-animation-bounce-appear,
+.emotion-16.uc-fe-popover-animation-bounce-leave {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.emotion-16.uc-fe-popover-animation-bounce-enter,
+.emotion-16.uc-fe-popover-animation-bounce-appear {
+  -webkit-animation-name: animation-2;
+  animation-name: animation-2;
+}
+
+.emotion-16.uc-fe-popover-animation-bounce-leave {
+  -webkit-animation-name: animation-3;
+  animation-name: animation-3;
+}
+
+.emotion-16.uc-fe-popover-animation-zoom-enter,
+.emotion-16.uc-fe-popover-animation-zoom-appear,
+.emotion-16.uc-fe-popover-animation-zoom-leave {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.emotion-16.uc-fe-popover-animation-zoom-enter,
+.emotion-16.uc-fe-popover-animation-zoom-appear {
+  -webkit-animation-name: animation-4;
+  animation-name: animation-4;
+}
+
+.emotion-16.uc-fe-popover-animation-zoom-leave {
+  -webkit-animation-name: animation-5;
+  animation-name: animation-5;
+}
+
+.emotion-16.uc-fe-popover-animation-slide-up-enter,
+.emotion-16.uc-fe-popover-animation-slide-up-appear {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  display: block !important;
+  opacity: 0;
+  -webkit-animation-timing-function: cubic-bezier(0.08,0.82,0.17,1);
+  animation-timing-function: cubic-bezier(0.08,0.82,0.17,1);
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.emotion-16.uc-fe-popover-animation-slide-up-leave {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  display: block !important;
+  opacity: 1;
+  -webkit-animation-timing-function: cubic-bezier(0.6,0.04,0.98,0.34);
+  animation-timing-function: cubic-bezier(0.6,0.04,0.98,0.34);
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.emotion-16.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-bottomLeft,
+.emotion-16.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-bottomLeft,
+.emotion-16.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-bottomCenter,
+.emotion-16.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-bottomCenter,
+.emotion-16.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-bottomRight,
+.emotion-16.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-bottomRight {
+  -webkit-animation-name: animation-6;
+  animation-name: animation-6;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.emotion-16.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-topLeft,
+.emotion-16.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-topLeft,
+.emotion-16.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-topCenter,
+.emotion-16.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-topCenter,
+.emotion-16.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-topRight,
+.emotion-16.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-topRight {
+  -webkit-animation-name: animation-7;
+  animation-name: animation-7;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.emotion-16.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-bottomLeft,
+.emotion-16.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-bottomCenter,
+.emotion-16.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-bottomRight {
+  -webkit-animation-name: animation-8;
+  animation-name: animation-8;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.emotion-16.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-topLeft,
+.emotion-16.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-topCenter,
+.emotion-16.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-topRight {
+  -webkit-animation-name: animation-9;
+  animation-name: animation-9;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.emotion-2 {
+  vertical-align: baseline;
+}
+
+.emotion-6 {
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 2px;
+  color: #0a1633;
+  height: 28px;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid #d2d6ea;
+  padding-right: 22px;
+  border-right-width: 0;
+}
+
+.emotion-6 .uc-fe-numberinput-input-wrap {
+  position: relative;
+}
+
+.emotion-6 .uc-fe-numberinput-input {
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+}
+
+.emotion-6 .uc-fe-numberinput-suffix {
+  color: #7a8baa;
+  margin: 0 4px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up,
+.emotion-6 .uc-fe-numberinput-handler-down {
+  position: absolute;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 2px;
+  border-style: solid;
+  cursor: pointer;
+  color: #0a1633;
+  border-color: #d2d6ea;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
+  background: #ffffff;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up:hover,
+.emotion-6 .uc-fe-numberinput-handler-down:hover {
+  color: #3860f4;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up.uc-fe-numberinput-handler-disabled,
+.emotion-6 .uc-fe-numberinput-handler-down.uc-fe-numberinput-handler-disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  color: #cccccc;
+  border-color: #c3cad9;
+}
+
+.emotion-6 .uc-fe-numberinput-input {
+  line-height: 26px;
+  height: 26px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-6 .uc-fe-numberinput-input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-6 .uc-fe-numberinput-input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-6 .uc-fe-numberinput-input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-6 .uc-fe-numberinput-input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-6:hover {
+  border-color: #c3cad9;
+}
+
+.emotion-6 .uc-fe-numberinput-input-wrap {
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #fafafc;
+}
+
+.emotion-6 .uc-fe-numberinput-input-wrap:hover {
+  background: #f6f6fb;
+}
+
+.emotion-6,
+.emotion-6:hover {
+  border-color: #3860f4;
+}
+
+.emotion-6 .uc-fe-numberinput-input-wrap {
+  background: #f6f6fb;
+}
+
+.emotion-6 .uc-fe-numberinput-input {
+  padding: 0 0 0 8px;
+  text-align: left;
+  box-shadow: none;
+  background: transparent;
+  width: 34px;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up,
+.emotion-6 .uc-fe-numberinput-handler-down {
+  right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
+  height: 13px;
+  line-height: 13px;
+  width: 22px;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up:hover,
+.emotion-6 .uc-fe-numberinput-handler-down:hover {
+  color: #3860f4;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up {
+  border-width: 0 0 0 1px;
+  top: -1px;
+  padding-top: 1px;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-down {
+  border-width: 1px 0 0 1px;
+  bottom: 0;
+  border-top-color: #c3cad9;
+}
+
+.emotion-14 .emotion-11 {
+  border-color: #0a1633;
+}
+
+.emotion-14 .emotion-9 {
+  border-color: #0a1633;
+}
+
+.emotion-10 {
+  display: inline-block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.emotion-8 {
+  display: inline-block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.emotion-12 {
+  padding: 8px 10px;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-radius: 3px;
+  word-break: keep-all;
+  box-sizing: border-box;
+  line-height: 12px;
+  color: #ffffff;
+  border: 1px solid #0a1633;
+  background: #0a1633;
+}
+
 <div
-  class="style__SliderWrap-sc-1rsqtg6-1 ZBOFX"
+  class=" emotion-18 emotion-19"
 >
   <div
-    class="style__RcSliderWrap-sc-1rsqtg6-0 eMzAHv"
+    class="emotion-0 emotion-1"
   >
     <div
       class="uc-fe-slider"
@@ -562,35 +3778,35 @@ exports[`Slider numberInputTipFormatter 5`] = `
     </div>
   </div>
   <div
-    class="style__NumberInputWrap-mnip3j-4 uc-fe-numberinput uc-fe-numberinput-styletype-default uc-fe-numberinput-focused kqgIlc"
+    class="uc-fe-numberinput uc-fe-numberinput-styletype-default uc-fe-numberinput-focused emotion-6 emotion-7"
     style=""
   >
     <div>
       <span
-        class="style__HandlerUp-mnip3j-2 uc-fe-numberinput-handler-up kCwAjK sc-bwzfXH uc-fe-numberinput-handler uc-fe-numberinput-handler-disabled hjAcsF"
+        class="uc-fe-numberinput-handler-up uc-fe-numberinput-handler-disabled"
         disabled=""
         unselectable="unselectable"
       >
         <i
-          class="uc-fe-icon icon__caret-up style__IconWrap-sc-3eqdhz-0 xPAJB"
+          class="uc-fe-icon icon__caret-up emotion-2 emotion-3"
         />
       </span>
       <span
-        class="style__HandlerDown-mnip3j-3 uc-fe-numberinput-handler-down bNRfrJ sc-bwzfXH uc-fe-numberinput-handler uc-fe-numberinput-handler-disabled hjAcsF"
+        class="uc-fe-numberinput-handler-down uc-fe-numberinput-handler-disabled"
         disabled=""
         unselectable="unselectable"
       >
         <i
-          class="uc-fe-icon icon__caret-down style__IconWrap-sc-3eqdhz-0 xPAJB"
+          class="uc-fe-icon icon__caret-down emotion-2 emotion-3"
         />
       </span>
     </div>
     <div
-      class="style__InputWrap-mnip3j-0 uc-fe-numberinput-input-wrap bqNpJA"
+      class="uc-fe-numberinput-input-wrap"
     >
       <input
         autocomplete="off"
-        class="style__Input-mnip3j-1 uc-fe-numberinput-input iFpoQR"
+        class="uc-fe-numberinput-input"
         max="1000"
         min="10"
         step="1"
@@ -603,22 +3819,22 @@ exports[`Slider numberInputTipFormatter 5`] = `
   >
     <div>
       <div
-        class="uc-fe-popover style__PopoverWrap-sc-1yqouou-0 bRVwjN uc-fe-tooltip-popup uc-fe-slider-tooltip uc-fe-popover-placement-top"
+        class="uc-fe-popover emotion-16 emotion-17 uc-fe-tooltip-popup uc-fe-slider-tooltip uc-fe-popover-placement-top"
         style="left: -999px; top: -1009px;"
       >
         <div>
           <div
-            class="style__TooltipWrap-sc-1vhz6mi-3 gbHKRm"
+            class=" emotion-14 emotion-15"
           >
             <span
-              class="style__Arrow-sc-1vhz6mi-1 jJwgzd"
+              class="emotion-10 emotion-11"
             >
               <span
-                class="style__ArrowInner-sc-1vhz6mi-2 dYGbyO"
+                class="emotion-8 emotion-9"
               />
             </span>
             <div
-              class="style__ContentWrap-sc-1vhz6mi-0 iKmJqz"
+              class="uc-fe-tooltip-cls emotion-12 emotion-13"
             >
               <span>
                 currentValue: 10inputValue: asdasdisSensitive: undefined
@@ -633,11 +3849,735 @@ exports[`Slider numberInputTipFormatter 5`] = `
 `;
 
 exports[`Slider numberInputTipFormatter 6`] = `
+@keyframes animation-0 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animation-1 {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes animation-2 {
+  from, 20%, 40%, 60%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215,0.61,0.355,1);
+    animation-timing-function: cubic-bezier(0.215,0.61,0.355,1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3,0.3,0.3);
+    -ms-transform: scale3d(0.3,0.3,0.3);
+    transform: scale3d(0.3,0.3,0.3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1,1.1,1.1);
+    -ms-transform: scale3d(1.1,1.1,1.1);
+    transform: scale3d(1.1,1.1,1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.9,0.9,0.9);
+    -ms-transform: scale3d(0.9,0.9,0.9);
+    transform: scale3d(0.9,0.9,0.9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03,1.03,1.03);
+    -ms-transform: scale3d(1.03,1.03,1.03);
+    transform: scale3d(1.03,1.03,1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(0.97,0.97,0.97);
+    -ms-transform: scale3d(0.97,0.97,0.97);
+    transform: scale3d(0.97,0.97,0.97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1,1,1);
+    -ms-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+  }
+}
+
+@keyframes animation-3 {
+  20% {
+    -webkit-transform: scale3d(0.9,0.9,0.9);
+    -ms-transform: scale3d(0.9,0.9,0.9);
+    transform: scale3d(0.9,0.9,0.9);
+  }
+
+  50%, 55% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.1,1.1,1.1);
+    -ms-transform: scale3d(1.1,1.1,1.1);
+    transform: scale3d(1.1,1.1,1.1);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3,0.3,0.3);
+    -ms-transform: scale3d(0.3,0.3,0.3);
+    transform: scale3d(0.3,0.3,0.3);
+  }
+}
+
+@keyframes animation-4 {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3,0.3,0.3);
+    -ms-transform: scale3d(0.3,0.3,0.3);
+    transform: scale3d(0.3,0.3,0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes animation-5 {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3,0.3,0.3);
+    -ms-transform: scale3d(0.3,0.3,0.3);
+    transform: scale3d(0.3,0.3,0.3);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes animation-6 {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+
+@keyframes animation-7 {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+
+@keyframes animation-8 {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+}
+
+@keyframes animation-9 {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+}
+
+.emotion-18 .uc-fe-slider {
+  position: relative;
+  width: 300px;
+  border-radius: 2px;
+  touch-action: none;
+  height: 28px;
+}
+
+.emotion-18 .uc-fe-slider-rail {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  background: #fafafc;
+  border: 1px solid #c3cad9;
+  height: 28px;
+  border-left: 0;
+  border-right: 0;
+}
+
+.emotion-18 .uc-fe-slider-rail::before,
+.emotion-18 .uc-fe-slider-rail::after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  border: 1px solid #c3cad9;
+  top: -1px;
+  background: #fafafc;
+}
+
+.emotion-18 .uc-fe-slider-rail::before {
+  left: -10px;
+  border-radius: 2px 0 0 2px;
+  border-right: 0;
+}
+
+.emotion-18 .uc-fe-slider-rail::after {
+  right: -10px;
+  border-radius: 0 2px 2px 0;
+  border-left: 0;
+}
+
+.emotion-18 .uc-fe-slider-track {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  border: 1px solid #3860f4;
+  background: #f8f8ff;
+  height: 28px;
+  border-left: 0;
+  border-right: 0;
+}
+
+.emotion-18 .uc-fe-slider-track::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  border: 1px solid #3860f4;
+  top: -1px;
+  background: #f8f8ff;
+  left: -10px;
+  border-radius: 2px 0 0 2px;
+  border-right: 0;
+}
+
+.emotion-18 .uc-fe-slider-tooltip {
+  line-height: normal;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-18 .uc-fe-slider-handle {
+  box-sizing: border-box;
+  position: absolute;
+  margin-left: -10px;
+  margin-top: -3px;
+  width: 20px;
+  cursor: pointer;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+  text-align: center;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
+  background: #ffffff;
+  touch-action: pan-x;
+  z-index: 9;
+  height: 34px;
+  line-height: 36px;
+}
+
+.emotion-18 .uc-fe-slider-handle::before,
+.emotion-18 .uc-fe-slider-handle::after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 16px;
+  background: #c3cad9;
+  margin-top: 8px;
+}
+
+.emotion-18 .uc-fe-slider-handle::after {
+  margin-left: 4px;
+}
+
+.emotion-18 .uc-fe-slider-handle:hover,
+.emotion-18 .uc-fe-slider-handle:active {
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
+.emotion-18 .uc-fe-slider-handle:hover::before,
+.emotion-18 .uc-fe-slider-handle:active::before,
+.emotion-18 .uc-fe-slider-handle:hover::after,
+.emotion-18 .uc-fe-slider-handle:active::after {
+  background: #3860f4;
+}
+
+.emotion-18 .uc-fe-slider-handle:active {
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing;
+}
+
+.emotion-18 .uc-fe-slider-handle:focus {
+  outline: none;
+}
+
+.emotion-18 .uc-fe-slider-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 12px;
+}
+
+.emotion-18 .uc-fe-slider-mark-text {
+  position: absolute;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: right;
+  width: 30%;
+  margin-left: -30%;
+  overflow: hidden;
+  cursor: pointer;
+  color: #7a8baa;
+  border-right: 1px solid #c3cad9;
+  padding: 0 8px;
+  box-sizing: border-box;
+  pointer-events: none;
+  line-height: 28px;
+}
+
+.emotion-18 .uc-fe-slider-mark-text-active {
+  color: #3860f4;
+  border-right-color: #3860f4;
+}
+
+.emotion-18 .uc-fe-slider-step {
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  height: 28px;
+}
+
+.emotion-18 .uc-fe-slider-dot {
+  display: none;
+}
+
+.emotion-0 {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 12px;
+  padding: 0 10px;
+}
+
+.emotion-16.uc-fe-popover {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  z-index: 1030;
+  display: block;
+}
+
+.emotion-16.uc-fe-popover-hidden {
+  display: none;
+}
+
+.emotion-16.uc-fe-popover-animation-fade-enter,
+.emotion-16.uc-fe-popover-animation-fade-appear,
+.emotion-16.uc-fe-popover-animation-fade-leave {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.emotion-16.uc-fe-popover-animation-fade-enter,
+.emotion-16.uc-fe-popover-animation-fade-appear {
+  -webkit-animation-name: animation-0;
+  animation-name: animation-0;
+}
+
+.emotion-16.uc-fe-popover-animation-fade-leave {
+  -webkit-animation-name: animation-1;
+  animation-name: animation-1;
+}
+
+.emotion-16.uc-fe-popover-animation-bounce-enter,
+.emotion-16.uc-fe-popover-animation-bounce-appear,
+.emotion-16.uc-fe-popover-animation-bounce-leave {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.emotion-16.uc-fe-popover-animation-bounce-enter,
+.emotion-16.uc-fe-popover-animation-bounce-appear {
+  -webkit-animation-name: animation-2;
+  animation-name: animation-2;
+}
+
+.emotion-16.uc-fe-popover-animation-bounce-leave {
+  -webkit-animation-name: animation-3;
+  animation-name: animation-3;
+}
+
+.emotion-16.uc-fe-popover-animation-zoom-enter,
+.emotion-16.uc-fe-popover-animation-zoom-appear,
+.emotion-16.uc-fe-popover-animation-zoom-leave {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.emotion-16.uc-fe-popover-animation-zoom-enter,
+.emotion-16.uc-fe-popover-animation-zoom-appear {
+  -webkit-animation-name: animation-4;
+  animation-name: animation-4;
+}
+
+.emotion-16.uc-fe-popover-animation-zoom-leave {
+  -webkit-animation-name: animation-5;
+  animation-name: animation-5;
+}
+
+.emotion-16.uc-fe-popover-animation-slide-up-enter,
+.emotion-16.uc-fe-popover-animation-slide-up-appear {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  display: block !important;
+  opacity: 0;
+  -webkit-animation-timing-function: cubic-bezier(0.08,0.82,0.17,1);
+  animation-timing-function: cubic-bezier(0.08,0.82,0.17,1);
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.emotion-16.uc-fe-popover-animation-slide-up-leave {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  display: block !important;
+  opacity: 1;
+  -webkit-animation-timing-function: cubic-bezier(0.6,0.04,0.98,0.34);
+  animation-timing-function: cubic-bezier(0.6,0.04,0.98,0.34);
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.emotion-16.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-bottomLeft,
+.emotion-16.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-bottomLeft,
+.emotion-16.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-bottomCenter,
+.emotion-16.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-bottomCenter,
+.emotion-16.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-bottomRight,
+.emotion-16.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-bottomRight {
+  -webkit-animation-name: animation-6;
+  animation-name: animation-6;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.emotion-16.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-topLeft,
+.emotion-16.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-topLeft,
+.emotion-16.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-topCenter,
+.emotion-16.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-topCenter,
+.emotion-16.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-topRight,
+.emotion-16.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-topRight {
+  -webkit-animation-name: animation-7;
+  animation-name: animation-7;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.emotion-16.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-bottomLeft,
+.emotion-16.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-bottomCenter,
+.emotion-16.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-bottomRight {
+  -webkit-animation-name: animation-8;
+  animation-name: animation-8;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.emotion-16.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-topLeft,
+.emotion-16.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-topCenter,
+.emotion-16.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-topRight {
+  -webkit-animation-name: animation-9;
+  animation-name: animation-9;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.emotion-2 {
+  vertical-align: baseline;
+}
+
+.emotion-6 {
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 2px;
+  color: #0a1633;
+  height: 28px;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid #d2d6ea;
+  padding-right: 22px;
+  border-right-width: 0;
+}
+
+.emotion-6 .uc-fe-numberinput-input-wrap {
+  position: relative;
+}
+
+.emotion-6 .uc-fe-numberinput-input {
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+}
+
+.emotion-6 .uc-fe-numberinput-suffix {
+  color: #7a8baa;
+  margin: 0 4px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up,
+.emotion-6 .uc-fe-numberinput-handler-down {
+  position: absolute;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 2px;
+  border-style: solid;
+  cursor: pointer;
+  color: #0a1633;
+  border-color: #d2d6ea;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
+  background: #ffffff;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up:hover,
+.emotion-6 .uc-fe-numberinput-handler-down:hover {
+  color: #3860f4;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up.uc-fe-numberinput-handler-disabled,
+.emotion-6 .uc-fe-numberinput-handler-down.uc-fe-numberinput-handler-disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  color: #cccccc;
+  border-color: #c3cad9;
+}
+
+.emotion-6 .uc-fe-numberinput-input {
+  line-height: 26px;
+  height: 26px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-6 .uc-fe-numberinput-input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-6 .uc-fe-numberinput-input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-6 .uc-fe-numberinput-input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-6 .uc-fe-numberinput-input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-6:hover {
+  border-color: #c3cad9;
+}
+
+.emotion-6 .uc-fe-numberinput-input-wrap {
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #fafafc;
+}
+
+.emotion-6 .uc-fe-numberinput-input-wrap:hover {
+  background: #f6f6fb;
+}
+
+.emotion-6,
+.emotion-6:hover {
+  border-color: #3860f4;
+}
+
+.emotion-6 .uc-fe-numberinput-input-wrap {
+  background: #f6f6fb;
+}
+
+.emotion-6 .uc-fe-numberinput-input {
+  padding: 0 0 0 8px;
+  text-align: left;
+  box-shadow: none;
+  background: transparent;
+  width: 34px;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up,
+.emotion-6 .uc-fe-numberinput-handler-down {
+  right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
+  height: 13px;
+  line-height: 13px;
+  width: 22px;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up:hover,
+.emotion-6 .uc-fe-numberinput-handler-down:hover {
+  color: #3860f4;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-up {
+  border-width: 0 0 0 1px;
+  top: -1px;
+  padding-top: 1px;
+}
+
+.emotion-6 .uc-fe-numberinput-handler-down {
+  border-width: 1px 0 0 1px;
+  bottom: 0;
+  border-top-color: #c3cad9;
+}
+
+.emotion-14 .emotion-11 {
+  border-color: #0a1633;
+}
+
+.emotion-14 .emotion-9 {
+  border-color: #0a1633;
+}
+
+.emotion-10 {
+  display: inline-block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.emotion-8 {
+  display: inline-block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.emotion-12 {
+  padding: 8px 10px;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-radius: 3px;
+  word-break: keep-all;
+  box-sizing: border-box;
+  line-height: 12px;
+  color: #ffffff;
+  border: 1px solid #0a1633;
+  background: #0a1633;
+}
+
 <div
-  class="style__SliderWrap-sc-1rsqtg6-1 ZBOFX"
+  class=" emotion-18 emotion-19"
 >
   <div
-    class="style__RcSliderWrap-sc-1rsqtg6-0 eMzAHv"
+    class="emotion-0 emotion-1"
   >
     <div
       class="uc-fe-slider"
@@ -668,35 +4608,35 @@ exports[`Slider numberInputTipFormatter 6`] = `
     </div>
   </div>
   <div
-    class="style__NumberInputWrap-mnip3j-4 uc-fe-numberinput uc-fe-numberinput-styletype-default uc-fe-numberinput-focused kqgIlc"
+    class="uc-fe-numberinput uc-fe-numberinput-styletype-default uc-fe-numberinput-focused emotion-6 emotion-7"
     style=""
   >
     <div>
       <span
-        class="style__HandlerUp-mnip3j-2 uc-fe-numberinput-handler-up kCwAjK sc-bwzfXH uc-fe-numberinput-handler uc-fe-numberinput-handler-disabled hjAcsF"
+        class="uc-fe-numberinput-handler-up uc-fe-numberinput-handler-disabled"
         disabled=""
         unselectable="unselectable"
       >
         <i
-          class="uc-fe-icon icon__caret-up style__IconWrap-sc-3eqdhz-0 xPAJB"
+          class="uc-fe-icon icon__caret-up emotion-2 emotion-3"
         />
       </span>
       <span
-        class="style__HandlerDown-mnip3j-3 uc-fe-numberinput-handler-down bNRfrJ sc-bwzfXH uc-fe-numberinput-handler uc-fe-numberinput-handler-disabled hjAcsF"
+        class="uc-fe-numberinput-handler-down uc-fe-numberinput-handler-disabled"
         disabled=""
         unselectable="unselectable"
       >
         <i
-          class="uc-fe-icon icon__caret-down style__IconWrap-sc-3eqdhz-0 xPAJB"
+          class="uc-fe-icon icon__caret-down emotion-2 emotion-3"
         />
       </span>
     </div>
     <div
-      class="style__InputWrap-mnip3j-0 uc-fe-numberinput-input-wrap bqNpJA"
+      class="uc-fe-numberinput-input-wrap"
     >
       <input
         autocomplete="off"
-        class="style__Input-mnip3j-1 uc-fe-numberinput-input iFpoQR"
+        class="uc-fe-numberinput-input"
         max="1000"
         min="10"
         step="1"
@@ -709,22 +4649,22 @@ exports[`Slider numberInputTipFormatter 6`] = `
   >
     <div>
       <div
-        class="uc-fe-popover style__PopoverWrap-sc-1yqouou-0 bRVwjN uc-fe-tooltip-popup uc-fe-slider-tooltip uc-fe-popover-placement-top"
+        class="uc-fe-popover emotion-16 emotion-17 uc-fe-tooltip-popup uc-fe-slider-tooltip uc-fe-popover-placement-top"
         style="left: -999px; top: -1009px;"
       >
         <div>
           <div
-            class="style__TooltipWrap-sc-1vhz6mi-3 gbHKRm"
+            class=" emotion-14 emotion-15"
           >
             <span
-              class="style__Arrow-sc-1vhz6mi-1 jJwgzd"
+              class="emotion-10 emotion-11"
             >
               <span
-                class="style__ArrowInner-sc-1vhz6mi-2 dYGbyO"
+                class="emotion-8 emotion-9"
               />
             </span>
             <div
-              class="style__ContentWrap-sc-1vhz6mi-0 iKmJqz"
+              class="uc-fe-tooltip-cls emotion-12 emotion-13"
             >
               <span>
                 currentValue: 10inputValue: asdasdisSensitive: true

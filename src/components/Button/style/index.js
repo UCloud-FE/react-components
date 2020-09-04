@@ -1,21 +1,36 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 import classnames from 'classnames';
 
-import Icon from 'src/components/Icon';
 import config from 'src/config';
 import { inlineBlockWithVerticalMixin } from 'src/style';
-import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
+import withProps from 'src/utils/withProps';
 
 const { prefixCls: _prefixCls } = config;
 const prefixCls = _prefixCls + '-button';
+export const iconCls = prefixCls + '-icon';
 
-const sizeMixin = ({ size, theme: { Height, Padding } }) => css`
-    height: ${Height[size]};
-    padding: 0 ${Padding[size]};
-`;
+const sizeMixin = props => {
+    const {
+        size,
+        theme: { Height, Padding }
+    } = props;
 
-const styleTypeMixin = ({ theme: { designTokens: DT, materialVars, PaddingNumber }, styleType, checkAble, size }) => {
+    return css`
+        height: ${Height[size]};
+        padding: 0 ${Padding[size]};
+    `;
+};
+
+const styleTypeMixin = props => {
+    const {
+        theme: { designTokens: DT, materialVars, PaddingNumber },
+        styleType,
+        checkAble,
+        size
+    } = props;
+
     const styleTypeTheme = {
         primary: {
             color: DT.T_BUTTON_PRIMARY_COLOR_TEXT_DEFAULT,
@@ -65,65 +80,97 @@ const styleTypeMixin = ({ theme: { designTokens: DT, materialVars, PaddingNumber
     `;
 };
 
-const shapeCircleMixin = ({ size, theme: { Height } }) => css`
-    border-radius: 50% !important;
-    padding: 0;
-    overflow: hidden;
-    width: ${Height[size]};
-`;
+const shapeCircleMixin = props => {
+    const {
+        size,
+        theme: { Height }
+    } = props;
 
-const shapeSquareMixin = ({ size, theme: { Height } }) => css`
-    padding: 0;
-    overflow: hidden;
-    width: ${Height[size]};
-`;
+    return css`
+        border-radius: 50% !important;
+        padding: 0;
+        overflow: hidden;
+        width: ${Height[size]};
+    `;
+};
 
-const loadingMixin = ({ theme: { designTokens: DT } }) => css`
-    position: relative;
-    pointer-events: none;
+const shapeSquareMixin = props => {
+    const {
+        size,
+        theme: { Height }
+    } = props;
 
-    &:before {
-        position: absolute;
-        top: -1px;
-        left: -1px;
-        bottom: -1px;
-        right: -1px;
-        background: ${DT.T_BUTTON_COMMON_COLOR_MASK};
-        opacity: 0.6;
-        content: '';
-        border-radius: inherit;
-        z-index: 1;
-        transition: opacity 0.2s;
-    }
-`;
+    return css`
+        padding: 0;
+        overflow: hidden;
+        width: ${Height[size]};
+    `;
+};
 
-const disabledMixin = ({ theme: { designTokens: DT } }) => css`
-    && {
-        border-color: ${DT.T_COLOR_LINE_DISABLED_LIGHT};
-        background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
-        color: ${DT.T_COLOR_TEXT_DISABLED};
-        fill: ${DT.T_COLOR_TEXT_DISABLED};
-        cursor: not-allowed;
-        border-width: ${DT.T_LINE_WIDTH_BASE};
-        border-style: solid;
-        box-shadow: none;
-    }
-`;
+const loadingMixin = props => {
+    const {
+        theme: { designTokens: DT }
+    } = props;
 
-const checkedMixin = ({ theme: { designTokens: DT } }) => css`
-    color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
-    fill: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
-    background: ${DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT};
-    border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
-    box-shadow: ${DT.T_SHADOW_BUTTON_HOVER};
-`;
+    return css`
+        position: relative;
+        pointer-events: none;
+
+        &:before {
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            bottom: -1px;
+            right: -1px;
+            background: ${DT.T_BUTTON_COMMON_COLOR_MASK};
+            opacity: 0.6;
+            content: '';
+            border-radius: inherit;
+            z-index: 1;
+            transition: opacity 0.2s;
+        }
+    `;
+};
+
+const disabledMixin = props => {
+    const {
+        theme: { designTokens: DT }
+    } = props;
+
+    return css`
+        && {
+            border-color: ${DT.T_COLOR_LINE_DISABLED_LIGHT};
+            background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
+            color: ${DT.T_COLOR_TEXT_DISABLED};
+            fill: ${DT.T_COLOR_TEXT_DISABLED};
+            cursor: not-allowed;
+            border-width: ${DT.T_LINE_WIDTH_BASE};
+            border-style: solid;
+            box-shadow: none;
+        }
+    `;
+};
+
+const checkedMixin = props => {
+    const {
+        theme: { designTokens: DT }
+    } = props;
+
+    return css`
+        color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+        fill: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+        background: ${DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT};
+        border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
+        box-shadow: ${DT.T_SHADOW_BUTTON_HOVER};
+    `;
+};
 
 // eslint-disable-next-line react/prop-types, no-unused-vars
 const Button = ({ loading, styleType, theme, disabled, fakeDisabled, onClick, checkAble, ...rest }) => (
     <button disabled={disabled && !fakeDisabled} onClick={!disabled ? onClick : null} {...rest} />
 );
 
-export const ButtonWrap = styled(Button).attrs({
+export const ButtonWrap = withProps({
     className: ({ size, styleType, shape, loading, disabled, fakeDisabled, checked }) =>
         classnames(
             prefixCls,
@@ -136,33 +183,29 @@ export const ButtonWrap = styled(Button).attrs({
             checked && `${prefixCls}-checked`
         )
 })(
-    ({ theme: { designTokens: DT }, loading, shape, disabled, checked }) => css`
-        margin: 0;
-        box-sizing: border-box;
-        border-radius: ${DT.T_CORNER_SM};
-        border-width: ${DT.T_LINE_WIDTH_BASE};
-        border-style: solid;
-        text-align: center;
-        text-decoration: none;
-        cursor: pointer;
-        outline: none;
-        font-size: ${DT.T_TYPO_FONT_SIZE_1};
-        ${inlineBlockWithVerticalMixin};
+    styled(Button)(props => {
+        const { theme, loading, shape, disabled, checked } = props;
+        const { designTokens: DT } = theme;
+        return css`
+            margin: 0;
+            box-sizing: border-box;
+            border-radius: ${DT.T_CORNER_SM};
+            border-width: ${DT.T_LINE_WIDTH_BASE};
+            border-style: solid;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            outline: none;
+            font-size: ${DT.T_TYPO_FONT_SIZE_1};
+            ${inlineBlockWithVerticalMixin};
 
-        ${sizeMixin};
-        ${styleTypeMixin};
-        ${shape === 'circle' && shapeCircleMixin};
-        ${shape === 'square' && shapeSquareMixin};
-        ${loading && loadingMixin};
-        ${checked && checkedMixin};
-        ${disabled && disabledMixin};
-    `
+            ${sizeMixin(props)};
+            ${styleTypeMixin(props)};
+            ${shape === 'circle' && shapeCircleMixin(props)};
+            ${shape === 'square' && shapeSquareMixin(props)};
+            ${loading && loadingMixin(props)};
+            ${checked && checkedMixin(props)};
+            ${disabled && disabledMixin(props)};
+        `;
+    })
 );
-
-export const ButtonIcon = styled(Icon).attrs({
-    className: prefixCls + '-icon'
-})`
-    /* empty */
-`;
-
-addDefaultThemeProps(ButtonWrap);

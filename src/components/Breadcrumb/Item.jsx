@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { ItemWrapA, ItemWrapSpan } from './style';
+import { ItemSpan, ItemA } from './style';
 
 export default class Item extends Component {
     static propTypes = {
@@ -20,7 +20,6 @@ export default class Item extends Component {
     static __IS_BREADCRUMB_ITEM = true;
     render() {
         const { ...rest } = this.props;
-        const ItemWrap = 'href' in this.props ? ItemWrapA : ItemWrapSpan;
-        return <ItemWrap {...rest} />;
+        return 'href' in this.props ? <ItemA {...rest} /> : <ItemSpan {...rest} />;
     }
 }

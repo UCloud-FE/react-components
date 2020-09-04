@@ -6,8 +6,9 @@ class Demo extends React.Component {
     renderRedTip(option) {
         const { currentValue, inputValue } = option;
         return (
-            <p style={{ width: 50, color: 'red' }}>
-                当前: {currentValue}, 输入: {inputValue}, 回车或失焦生效
+            <p style={{ width: 'auto', whiteSpace: 'pre-line', color: 'red' }}>
+                当前:{currentValue}, 输入: {inputValue}
+                {'\n'}回车或失焦生效
             </p>
         );
     }

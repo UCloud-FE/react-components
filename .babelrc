@@ -1,6 +1,7 @@
 {
     "presets": [["env", {}], "react"],
     "plugins": [
+        "emotion",
         "lodash",
         "transform-decorators-legacy",
         "transform-class-properties",
@@ -10,7 +11,6 @@
                 "useBuiltIns": true
             }
         ],
-        ["babel-plugin-webpack-alias", { "config": "./webpack.config.js", "noOutputExtension": true }],
-        "babel-plugin-styled-components"
+        ["babel-plugin-webpack-alias", { "config": "./webpack.config.js", "noOutputExtension": true }]
     ]
 }

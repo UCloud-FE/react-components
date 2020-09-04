@@ -1,12 +1,14 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
 import config from 'src/config';
 import SvgIcon from 'src/components/SvgIcon';
 import Icon from 'src/components/Icon';
-import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
+import withProps from 'src/utils/withProps';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-tag';
+export const iconCls = _prefixCls + '-tag-icon';
 
 export const styleMap = {
     default: {
@@ -79,19 +81,18 @@ export const styleMap = {
     styleMap[styleType] = styleMap[color];
 });
 
-// eslint-disable-next-line no-unused-vars
 export const CloseIcon = styled(SvgIcon)`
     /* empty */
 `;
 
-export const CloseIconWrapper = styled.span`
+export const CloseIconWrapper = styled('span')`
     /* empty */
 `;
 
 export const PrefixIcon = styled(Icon)`
     /* empty */
 `;
-export const PrefixIconWrapper = styled.span`
+export const PrefixIconWrapper = styled('span')`
     /* empty */
 `;
 
@@ -106,147 +107,166 @@ const getColorMap = (styleType, disabled) => {
         : styleMap[styleType];
 };
 
-export const TagWrapper = styled.span(({ styleType = 'default', disabled, theme: { designTokens: DT } }) => {
-    const colorMap = getColorMap(styleType, disabled);
-    return css`
-        box-sizing: border-box;
-        height: 20px;
-        padding-left: 8px;
-        display: inline-block;
-        border-radius: 2px;
+export const TagWrapper = withProps({
+    className: prefixCls
+})(
+    styled('span')(props => {
+        const {
+            styleType = 'default',
+            disabled,
+            theme: { designTokens: DT }
+        } = props;
 
-        color: ${DT[colorMap.color]};
-        border: 1px solid ${DT[colorMap.border]};
-        background: ${DT[colorMap.bg]};
-
-        ::after {
-            background: ${DT[colorMap.border]};
-        }
-
-        ${PrefixIconWrapper} {
-            margin-right: 4px;
-            vertical-align: middle;
-            line-height: 18px;
-        }
-        ${ContentWrapper} {
-            margin-right: 8px;
-            vertical-align: middle;
-            line-height: 18px;
-        }
-        ${CloseIconWrapper} {
+        const colorMap = getColorMap(styleType, disabled);
+        return css`
+            box-sizing: border-box;
+            height: 20px;
+            padding-left: 8px;
             display: inline-block;
-            width: 18px;
-            height: 18px;
-            line-height: 18px;
-            font-size: 0;
-            vertical-align: middle;
-            text-align: center;
-            ${!disabled && 'cursor: pointer'};
+            border-radius: 2px;
+
             color: ${DT[colorMap.color]};
+            border: 1px solid ${DT[colorMap.border]};
+            background: ${DT[colorMap.bg]};
 
-            ${CloseIcon} {
-                fill: ${DT[colorMap.color]};
+            ::after {
+                background: ${DT[colorMap.border]};
             }
-            ${!disabled &&
-            css`
-                :hover {
-                    background: ${DT[colorMap.iconHoverBG]};
-                    ${CloseIcon} {
-                        fill: ${DT.T_COLOR_TEXT_SYSTEM_WHITE};
-                    }
-                }
-            `};
-        }
-    `;
-});
 
-export const ContentWrapper = styled.span`
+            ${PrefixIconWrapper} {
+                margin-right: 4px;
+                vertical-align: middle;
+                line-height: 18px;
+            }
+            ${ContentWrapper} {
+                margin-right: 8px;
+                vertical-align: middle;
+                line-height: 18px;
+            }
+            ${CloseIconWrapper} {
+                display: inline-block;
+                width: 18px;
+                height: 18px;
+                line-height: 18px;
+                font-size: 0;
+                vertical-align: middle;
+                text-align: center;
+                ${!disabled && 'cursor: pointer'};
+                color: ${DT[colorMap.color]};
+
+                ${CloseIcon} {
+                    fill: ${DT[colorMap.color]};
+                }
+                ${!disabled &&
+                css`
+                    :hover {
+                        background: ${DT[colorMap.iconHoverBG]};
+                        ${CloseIcon} {
+                            fill: ${DT.T_COLOR_TEXT_SYSTEM_WHITE};
+                        }
+                    }
+                `};
+            }
+        `;
+    })
+);
+
+export const ContentWrapper = styled('span')`
     /* empty */
 `;
 
 export const IconTag = styled(Icon)`
     /* empty */
 `;
-export const IconTagWrapper = styled.span(({ styleType = 'default', theme: { designTokens: DT } }) => {
-    const colorMap = getColorMap(styleType);
-    return css`
-        box-sizing: border-box;
-        height: 20px;
-        width: 20px;
-        line-height: 18px;
-        text-align: center;
-        display: inline-block;
-        border-radius: 2px;
-        position: relative;
+export const IconTagWrapper = withProps({
+    className: iconCls
+})(
+    styled('span')(props => {
+        const {
+            styleType = 'default',
+            theme: { designTokens: DT }
+        } = props;
 
-        color: ${DT[colorMap.color]};
-        border: 1px solid ${DT[colorMap.border]};
-        background: ${DT[colorMap.bg]};
-        ::after {
-            background: ${DT[colorMap.border]};
-            position: absolute;
-            right: 0;
-        }
-    `;
-});
+        const colorMap = getColorMap(styleType);
+        return css`
+            box-sizing: border-box;
+            height: 20px;
+            width: 20px;
+            line-height: 18px;
+            text-align: center;
+            display: inline-block;
+            border-radius: 2px;
+            position: relative;
 
-export const TagGroupWrapper = styled.div(({ compact }) =>
-    compact
-        ? css`
-              margin-bottom: -4px;
-              ${TagWrapper}, ${IconTagWrapper} {
-                  border-left-style: none;
-                  border-right-style: none;
-                  border-radius: 0;
-                  vertical-align: middle;
-                  margin-bottom: 4px;
-                  :first-child {
-                      border-left-style: solid;
-                      border-top-left-radius: 2px;
-                      border-bottom-left-radius: 2px;
-                  }
-                  :last-child {
-                      border-right-style: solid;
-                      border-top-right-radius: 2px;
-                      border-bottom-right-radius: 2px;
-                      ::after {
-                          content: none;
-                      }
-                  }
-                  /* stylelint-disable no-descending-specificity */
-                  ::after {
-                      content: ' ';
-                      height: 8px;
-                      width: 1px;
-                      margin: 5px 0;
-                      display: inline-block;
-                      vertical-align: middle;
-                  }
-                  /* stylelint-enable no-descending-specificity */
-              }
-              ${TagWrapper} {
-                  padding-left: 4px;
-                  :first-child {
-                      padding-left: 8px;
-                  }
-                  ${ContentWrapper} {
-                      margin-right: 4px;
-                  }
-                  :last-child {
-                      ${ContentWrapper} {
-                          margin-right: 8px;
-                      }
-                  }
-              }
-          `
-        : css`
-              margin-bottom: -4px;
-              ${TagWrapper}, ${IconTagWrapper} {
-                  margin-right: 4px;
-                  margin-bottom: 4px;
-                  vertical-align: middle;
-              }
-          `
+            color: ${DT[colorMap.color]};
+            border: 1px solid ${DT[colorMap.border]};
+            background: ${DT[colorMap.bg]};
+            ::after {
+                background: ${DT[colorMap.border]};
+                position: absolute;
+                right: 0;
+            }
+        `;
+    })
 );
 
-addDefaultThemeProps(TagWrapper, CloseIcon, IconTagWrapper);
+export const TagGroupWrapper = withProps()(
+    styled('div')(props => {
+        const { compact } = props;
+
+        return compact
+            ? css`
+                  margin-bottom: -4px;
+                  .${prefixCls}, .${iconCls} {
+                      border-left-style: none;
+                      border-right-style: none;
+                      border-radius: 0;
+                      vertical-align: middle;
+                      margin-bottom: 4px;
+                      :first-child {
+                          border-left-style: solid;
+                          border-top-left-radius: 2px;
+                          border-bottom-left-radius: 2px;
+                      }
+                      ::after {
+                          content: ' ';
+                          height: 8px;
+                          width: 1px;
+                          margin: 5px 0;
+                          display: inline-block;
+                          vertical-align: middle;
+                      }
+                      :last-child {
+                          border-right-style: solid;
+                          border-top-right-radius: 2px;
+                          border-bottom-right-radius: 2px;
+                          ::after {
+                              content: none;
+                          }
+                      }
+                  }
+                  .${prefixCls} {
+                      padding-left: 4px;
+                      :first-child {
+                          padding-left: 8px;
+                      }
+                      ${ContentWrapper} {
+                          margin-right: 4px;
+                      }
+                      :last-child {
+                          ${ContentWrapper} {
+                              margin-right: 8px;
+                          }
+                      }
+                  }
+              `
+            : css`
+                  margin-bottom: -4px;
+                  .${prefixCls}, .${iconCls} {
+                      margin-right: 4px;
+                      margin-bottom: 4px;
+                      vertical-align: middle;
+                  }
+              `;
+    })
+);

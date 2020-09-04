@@ -13,6 +13,8 @@ module.exports = {
         '\\.(css|less)$': '<rootDir>/tests/__mocks__/styleMock.js',
         '^src/(.*)$': '<rootDir>/src/$1'
     },
+    testEnvironment: 'jsdom',
+    snapshotSerializers: ['jest-emotion/serializer'],
     coverageDirectory: './coverage/',
     coveragePathIgnorePatterns: ['/node_modules/', '/__demo__/']
 };
