@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/UCloud-FE/react-components/compare/v0.7.4...v1.0.0) (2020-09-04)
+
+### Features
+
+-   **Emotion:** use emotion to replace styled-components ([821958f](https://github.com/UCloud-FE/react-components/commit/821958f6f58e3686a96e20037d694c4c3bd988c5)), closes [#252](https://github.com/UCloud-FE/react-components/issues/252)
+
 ### [0.7.4](https://github.com/UCloud-FE/react-components/compare/v0.7.3...v0.7.4) (2020-09-03)
 
 ### Bug Fixes
