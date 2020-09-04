@@ -29,6 +29,7 @@
     "precommit": "lint-staged",
     "commitmsg": "commitlint -E GIT_PARAMS",
     "build": "webpack --display-error-details",
+    "build:analyzer": "NODE_ENV=production ANALYZER=true npm run build -- --config webpack.dist.config.js",
     "build:lib": "babel src/ -d lib/ --ignore '__demo__/*,__tests__/*' && node build-index.js",
     "build:dist": "export NODE_ENV='production' && npm run build -- --config webpack.dist.config.js",
     "build:styleguide": "styleguidist build",
@@ -126,6 +127,7 @@
     "stylelint-processor-styled-components": "^1.10.0",
     "url-loader": "^1.0.1",
     "webpack": "^4.5.0",
+    "webpack-bundle-analyzer": "^3.8.0",
     "webpack-cli": "^2.0.14"
   },
   "peerDependencies": {

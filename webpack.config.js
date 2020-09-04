@@ -2,6 +2,7 @@ const path = require('path');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const cssPlugin = new MiniCssExtractPlugin({
     filename: '[name].min.css'
@@ -9,6 +10,7 @@ const cssPlugin = new MiniCssExtractPlugin({
 const optimizeCssPlugin = new OptimizeCSSAssetsPlugin({});
 
 const isProd = process.env.NODE_ENV === 'production';
+const isAnalyzer = !!process.env.ANALYZER;
 
 const config = {
     entry: {
@@ -21,7 +23,7 @@ const config = {
         library: 'react-components',
         libraryTarget: 'umd'
     },
-    plugins: [cssPlugin],
+    plugins: [cssPlugin, ...(isAnalyzer ? [new BundleAnalyzerPlugin()] : [])],
     optimization: {
         minimizer: [optimizeCssPlugin]
     },
