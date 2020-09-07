@@ -16,12 +16,12 @@ export const prefixCls = _prefixCls + '-table';
 export const SortIcon = withProps()(
     styled(Icon)(props => {
         const {
-            theme: { colorList }
+            theme: { designTokens: DT }
         } = props;
 
         return css`
             vertical-align: middle;
-            color: ${colorList.black};
+            color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
         `;
     })
 );

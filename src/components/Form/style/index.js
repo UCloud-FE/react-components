@@ -48,7 +48,7 @@ export const GroupTitle = withProps({
 })(
     styled('div')(props => {
         const {
-            theme: { colorList, colorMap, titleFontSize }
+            theme: { designTokens: DT }
         } = props;
 
         return css`
@@ -58,9 +58,9 @@ export const GroupTitle = withProps({
             margin-bottom: 24px;
 
             ${css`
-                font-size: ${titleFontSize};
-                border-bottom: 1px solid ${colorMap.default.border};
-                color: ${colorList.title};
+                font-size: 14px;
+                border-bottom: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
+                color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
             `};
         `;
     })

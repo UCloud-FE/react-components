@@ -28,13 +28,13 @@ export const TipWrap = styled('span')`
 export const ListWrap = withProps()(
     styled('div')(props => {
         const {
-            theme: { colorMap }
+            theme: { designTokens: DT }
         } = props;
 
         return css`
             max-height: 200px;
             overflow: auto;
-            border: 1px solid ${colorMap.default.border};
+            border: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
             margin-top: 6px;
         `;
     })
