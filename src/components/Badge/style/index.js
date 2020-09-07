@@ -40,17 +40,20 @@ export const BubbleWrap = withProps({
         const {
             theme: { designTokens: DT },
             styleType,
+            size,
             customStyle = {}
         } = props;
+        const fontSize = { sm: '12px', md: '14px' }[size];
+        const lineHeight = { sm: '16px', md: '20px' }[size];
 
         const map = bubbleStyleMap[styleType] || {};
         const bg = customStyle.bubbleBackground || DT[map.bg];
         const color = customStyle.bubbleColor || DT[map.color] || DT.T_COLOR_TEXT_SYSTEM_WHITE;
         return css`
             position: absolute;
-            line-height: 20px;
+            line-height: ${lineHeight};
             padding: 0 4px;
-            font-size: 14px;
+            font-size: ${fontSize};
             font-weight: bold;
             color: ${color};
             background: ${bg};

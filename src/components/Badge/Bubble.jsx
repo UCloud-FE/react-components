@@ -8,6 +8,7 @@ import { Wrap, BubbleWrap, bubbleStyleMap } from './style';
 import { bubblePlacement } from './placements';
 
 const StyleType = Object.keys(bubbleStyleMap);
+const Size = ['sm', 'md'];
 
 export class Bubble extends PureComponent {
     static propTypes = {
@@ -17,6 +18,8 @@ export class Bubble extends PureComponent {
         bubble: PropTypes.node,
         /** 内置样式风格 */
         styleType: PropTypes.oneOf(StyleType),
+        /** 尺寸 */
+        size: PropTypes.oneOf(Size),
         /** 自定义样式 */
         customStyle: PropTypes.shape({
             /** 泡泡字色 */
@@ -31,10 +34,11 @@ export class Bubble extends PureComponent {
     };
     static defaultProps = {
         styleType: 'yellow',
-        offset: [12, -4]
+        offset: [12, -4],
+        size: 'md'
     };
     render() {
-        const { children, bubble, styleType, customStyle, offset, getBubbleContainer, ...rest } = this.props;
+        const { children, bubble, styleType, customStyle, offset, getBubbleContainer, size, ...rest } = this.props;
         return (
             <Wrap {...rest}>
                 {children}
@@ -43,7 +47,7 @@ export class Bubble extends PureComponent {
                         target={getBubbleContainer || (() => ReactDOM.findDOMNode(this))}
                         align={{ ...bubblePlacement, targetOffset: offset }}
                     >
-                        <BubbleWrap styleType={styleType} customStyle={customStyle}>
+                        <BubbleWrap styleType={styleType} customStyle={customStyle} size={size}>
                             {bubble}
                         </BubbleWrap>
                     </RcAlign>
@@ -53,5 +57,6 @@ export class Bubble extends PureComponent {
     }
 }
 Bubble.StyleType = StyleType;
+Bubble.Size = Size;
 
 export default Bubble;

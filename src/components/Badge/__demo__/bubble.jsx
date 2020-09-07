@@ -9,21 +9,22 @@ import Button from 'src/components/Button';
 import Combine from 'src/components/Combine';
 
 // demo start
-const { StyleType, defaultProps } = Badge.Bubble;
+const { StyleType, defaultProps, Size } = Badge.Bubble;
 class Demo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             bubble: 'bubble',
             styleType: defaultProps.styleType,
-            offset: defaultProps.offset
+            offset: defaultProps.offset,
+            size: defaultProps.size
         };
     }
     forceAlign() {
         this.badge && this.badge.forceAlign();
     }
     render() {
-        const { bubble, styleType, bubbleColor, bubbleBackground, offset } = this.state;
+        const { bubble, styleType, bubbleColor, bubbleBackground, offset, size } = this.state;
         const itemLayout = {
             labelCol: {
                 span: 3
@@ -43,6 +44,13 @@ class Demo extends React.Component {
                             value={styleType}
                             options={StyleType.map(v => ({ value: v, label: v }))}
                             onChange={v => this.setState({ styleType: v })}
+                        />
+                    </Form.Item>
+                    <Form.Item label="size" {...itemLayout}>
+                        <Radio.Group
+                            value={size}
+                            options={Size.map(v => ({ value: v, label: v }))}
+                            onChange={v => this.setState({ size: v })}
                         />
                     </Form.Item>
                     <Form.Item label="offset[0]" {...itemLayout}>
@@ -89,6 +97,7 @@ class Demo extends React.Component {
                         offset={offset}
                         customStyle={{ bubbleColor, bubbleBackground }}
                         style={{ margin: 10 }}
+                        size={size}
                     >
                         <div style={{ width: 50, height: 50, background: '#ddd' }} />
                     </Badge.Bubble>
