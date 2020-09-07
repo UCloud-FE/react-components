@@ -1,16 +1,34 @@
 {
-    "presets": [["env", {}], "react"],
-    "plugins": [
-        "emotion",
-        "lodash",
-        "transform-decorators-legacy",
-        "transform-class-properties",
+    "sourceType": "unambiguous",
+    "presets": [
         [
-            "transform-object-rest-spread",
+            "@babel/preset-env",
             {
-                "useBuiltIns": true
+                "targets": {
+                    "ie": "11",
+                    "firefox": "25",
+                    "chrome": "25",
+                    "safari": "7"
+                },
+                "spec": true,
+                "corejs": "3",
+                "useBuiltIns": "entry"
             }
         ],
+        ["@babel/preset-react"],
+        ["@babel/preset-typescript"]
+    ],
+    "plugins": [
+        [
+            "@babel/plugin-transform-runtime",
+            {
+                "regenerator": false
+            }
+        ],
+        ["@babel/plugin-proposal-decorators", { "legacy": true }],
+        ["@babel/plugin-proposal-class-properties", { "loose": true }],
+        "emotion",
+        "lodash",
         ["babel-plugin-webpack-alias", { "config": "./webpack.config.js", "noOutputExtension": true }]
     ]
 }

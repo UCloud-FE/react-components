@@ -1,13 +1,10 @@
 const path = require('path');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const cssPlugin = new MiniCssExtractPlugin({
     filename: '[name].min.css'
 });
-const optimizeCssPlugin = new OptimizeCSSAssetsPlugin({});
 
 const isProd = process.env.NODE_ENV === 'production';
 const isAnalyzer = !!process.env.ANALYZER;
@@ -23,14 +20,12 @@ const config = {
         library: 'react-components',
         libraryTarget: 'umd'
     },
-    plugins: [cssPlugin, ...(isAnalyzer ? [new BundleAnalyzerPlugin()] : [])],
-    optimization: {
-        minimizer: [optimizeCssPlugin]
-    },
+    plugins: [cssPlugin],
+    optimization: {},
     module: {
         rules: [
             {
-                test: /\.jsx?$/,
+                test: /\.(j|t)sx?$/,
                 use: 'babel-loader',
                 exclude: [path.join(__dirname, 'node_modules')]
             },
@@ -61,7 +56,7 @@ const config = {
     },
     mode: process.env.NODE_ENV || 'development',
     resolve: {
-        extensions: ['.js', '.jsx', '.json'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
         alias: {
             utils: path.join(__dirname, 'src/utils'),
             components: path.join(__dirname, 'src/components'),
@@ -94,23 +89,16 @@ const config = {
             commonjs2: 'moment'
         }
     },
-    devtool: isProd ? false : 'eval-source-map'
+    devtool: 'eval-source-map'
 };
+
+if (isAnalyzer) {
+    config.plugins.push(new BundleAnalyzerPlugin());
+}
 
 if (isProd) {
     config.devtool = false;
-    if (!config.plugins) {
-        config.plugins = [];
-    }
-    config.plugins.push(
-        new UglifyJSPlugin({
-            uglifyOptions: {
-                compress: {
-                    pure_funcs: ['console.log']
-                }
-            }
-        })
-    );
+    config.optimization.minimize = true;
 }
 
 module.exports = config;

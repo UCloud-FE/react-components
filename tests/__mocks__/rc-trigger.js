@@ -2,7 +2,7 @@ import React from 'react';
 
 let Trigger;
 
-const ActualTrigger = require.requireActual('rc-trigger');
+const ActualTrigger = jest.requireActual('rc-trigger');
 const render = ActualTrigger.prototype.render;
 
 ActualTrigger.prototype.render = function mockRender() {
