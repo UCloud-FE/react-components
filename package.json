@@ -34,7 +34,7 @@
     "build:dist": "NODE_ENV=production npm run build -- --config webpack.dist.config.js",
     "build:styleguide": "styleguidist build",
     "build:gh-pages": "./scripts/gh-pages.sh",
-    "test": "jest --testPathIgnorePatterns=image.test.js",
+    "test": "jest --testPathIgnorePatterns=image.test.js --testPathIgnorePatterns=lib.manual.test.js",
     "lint:es": "eslint . --ext .js,.jsx",
     "lint:style": "stylelint './src/style/*.js' && stylelint './src/components/**/*.(jsx|js)'",
     "deploy:gh-pages": "./scripts/gh-pages.sh -p",

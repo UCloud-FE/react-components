@@ -24,7 +24,7 @@ jobs:
         - npm run build:dist
         - npm run build:lib
         - npm run build:gh-pages
-        - npm run test -- --testRegex '.*' tests/lib.test.manual.js
+        - npx jest tests/lib.manual.test.js
       deploy:
         - provider: npm
           email: ZxBing0066@gmail.com

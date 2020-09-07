@@ -95,7 +95,7 @@ jobs:
       - *attach_workspace
       - run: npm run build:dist
       - run: npm run build:lib
-      - run: npm run test -- --testRegex '.*' tests/lib.test.manual.js
+      - run: npx jest tests/lib.manual.test.js
 
 workflows:
   version: 2
