@@ -1,7 +1,7 @@
 const path = require('path');
 const _ = require('lodash');
-const webpackConfig = require('./webpack.config.js');
 
+const webpackConfig = require('./webpack.config.js');
 let components = require('./.styleguide/components.json');
 
 const namePrefix = '❖  ';
@@ -78,8 +78,7 @@ module.exports = {
         StyleGuideRenderer: path.join(__dirname, '.styleguide/components/StyleGuideRenderer'),
         ReactComponentRenderer: path.join(__dirname, '.styleguide/components/ReactComponentRenderer'),
         Examples: path.join(__dirname, '.styleguide/components/Examples'),
-        ReactExample: path.join(__dirname, '.styleguide/components/ReactExample'),
-        'slots/IsolateButton': path.join(__dirname, '.styleguide/components/IsolateButton')
+        ReactExample: path.join(__dirname, '.styleguide/components/ReactExample')
     },
     require: [path.join(__dirname, '.styleguide/setup.js')],
     assetsDir: 'static/',

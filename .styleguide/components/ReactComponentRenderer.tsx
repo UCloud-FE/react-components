@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Pathline from 'rsg-components/Pathline';
-import Styled from 'rsg-components/Styled';
+import Styled, { JssInjectedProps } from 'rsg-components/Styled';
 
 const styles = ({ color, fontSize, space }) => ({
     root: {
@@ -14,7 +14,12 @@ const styles = ({ color, fontSize, space }) => ({
         marginBottom: space[3]
     },
     tabButtons: {
-        marginBottom: space[2]
+        marginBottom: space[1]
+    },
+    tabBody: {
+        overflowX: 'auto',
+        maxWidth: '100%',
+        WebkitOverflowScrolling: 'touch'
     },
     docs: {
         color: color.base,
@@ -22,7 +27,7 @@ const styles = ({ color, fontSize, space }) => ({
     }
 });
 
-export function ReactComponentRenderer({
+export const ReactComponentRenderer = ({
     classes,
     name,
     heading,
@@ -31,11 +36,11 @@ export function ReactComponentRenderer({
     docs,
     examples,
     tabButtons,
-    filepath,
-    tabBody
-}) {
+    tabBody,
+    filepath
+}) => {
     return (
-        <div className={classes.root} id={name + '-container'}>
+        <div className={classes.root} data-testid={`${name}-container`}>
             <header className={classes.header}>
                 {heading}
                 {pathLine && <Pathline>{pathLine}</Pathline>}
@@ -49,7 +54,7 @@ export function ReactComponentRenderer({
             {tabButtons && (
                 <div className={classes.tabs}>
                     <div className={classes.tabButtons}>{tabButtons}</div>
-                    {tabBody}
+                    <div className={classes.tabBody}>{tabBody}</div>
                 </div>
             )}
             {React.cloneElement(examples, {
@@ -57,10 +62,10 @@ export function ReactComponentRenderer({
             })}
         </div>
     );
-}
+};
 
 ReactComponentRenderer.propTypes = {
-    classes: PropTypes.object.isRequired,
+    classes: PropTypes.objectOf(PropTypes.string.isRequired).isRequired,
     name: PropTypes.string.isRequired,
     heading: PropTypes.node.isRequired,
     filepath: PropTypes.string,

@@ -30,12 +30,12 @@
 -   commit 格式遵循[AngularJS Git Commit Guidelines](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#commits)
 -   Commit 信息格式：
 
-    ```vim
-        <type>(<scope>): <subject>
-        <BLANK LINE>
-        <body>
-        <BLANK LINE>
-        <footer>
+    ```markup
+    <type>(<scope>): <subject>
+    <BLANK LINE>
+    <body>
+    <BLANK LINE>
+    <footer>
     ```
 
 -   提交时请使用`npm run cm`来替换`git commit`，或者根据`[commitizen 文档](https://github.com/commitizen/cz-cli#conventional-commit-messages-as-a-global-utility)`添加全局命令后使用`git cz`命令

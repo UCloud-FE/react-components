@@ -3,14 +3,20 @@ import PropTypes from 'prop-types';
 import Playground from 'rsg-components/Playground';
 import Markdown from 'rsg-components/Markdown';
 import ExamplesRenderer from './ExamplesRenderer';
+import { useStyleGuideContext } from 'rsg-components/Context';
+import classnames from 'classnames';
+import Styled from 'rsg-components/Styled';
 
 import path from 'path';
+import { DarkThemeContext } from './StyleGuideRenderer';
 
 const demoPath = '__demo__';
 
-export default function Examples({ examples, name, filepath, exampleMode }, { codeRevision }) {
+export default function Examples({ examples, name, filepath, exampleMode }) {
+    const { codeRevision } = useStyleGuideContext();
+    const darkTheme = React.useContext(DarkThemeContext);
     return (
-        <ExamplesRenderer>
+        <ExamplesRenderer name={name}>
             {examples.map((example, index) => {
                 switch (example.type) {
                     case 'code':
@@ -21,9 +27,7 @@ export default function Examples({ examples, name, filepath, exampleMode }, { co
                                 filepath = filepath.replace(/\\/g, '/');
                             }
                             const parentComponentName = filepath.match(new RegExp(`.*\/(\\w*)\/${name}\.jsx?`))[1];
-                            code = require(`!raw-loader!../../src/components/${parentComponentName}/${demoPath}/${
-                                example.settings.codepath
-                            }`);
+                            code = require(`!raw-loader!../../src/components/${parentComponentName}/${demoPath}/${example.settings.codepath}`);
                             let demoStartIndex = code.match(/\/\/\s*demo\s*start\s*/);
                             demoStartIndex = demoStartIndex
                                 ? demoStartIndex.index + demoStartIndex[0].length
@@ -46,7 +50,16 @@ export default function Examples({ examples, name, filepath, exampleMode }, { co
                                 key={`${codeRevision}/${index}`}
                                 name={name}
                                 index={index}
-                                settings={example.settings}
+                                settings={{
+                                    ...example.settings,
+                                    props: {
+                                        ...example.settings?.props,
+                                        className: classnames(
+                                            example.settings?.props?.className,
+                                            darkTheme && 'rsg--example--dark'
+                                        )
+                                    }
+                                }}
                                 exampleMode={exampleMode}
                             />
                         );
@@ -63,7 +76,4 @@ Examples.propTypes = {
     examples: PropTypes.array.isRequired,
     name: PropTypes.string.isRequired,
     filepath: PropTypes.string
-};
-Examples.contextTypes = {
-    codeRevision: PropTypes.number.isRequired
 };

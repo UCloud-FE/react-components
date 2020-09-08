@@ -22,7 +22,12 @@ body,
     background-size: 16px 16px !important;
 }
 
-form.demo-form {
+.rsg--example--dark.rsg--example--dark.rsg--example--dark {
+    background: #141a2b !important;
+}
+
+form.demo-form,
+.demo-wrap {
     padding: 10px;
     border: 1px dashed #ccc;
     border-radius: 5px;
@@ -30,7 +35,8 @@ form.demo-form {
     position: relative;
     margin-top: 10px;
 }
-form.demo-form:before {
+form.demo-form:before,
+.demo-wrap:before {
     content: 'Demo Form';
     position: absolute;
     background: white;
@@ -42,23 +48,16 @@ form.demo-form:before {
 }
 
 .demo-wrap {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    position: relative;
-    margin-top: 10px;
+    border-style: solid;
 }
-
 .demo-wrap:before {
     content: 'Demo Wrap';
-    position: absolute;
-    background: white;
-    display: inline-block;
-    height: 16px;
-    line-height: 16px;
-    top: -8px;
-    left: 8px;
+}
+
+.rsg--example--dark.rsg--example--dark.rsg--example--dark form.demo-form:before,
+.rsg--example--dark.rsg--example--dark.rsg--example--dark .demo-wrap:before {
+    background: #141a2b;
+    color: white;
 }
 
 .demo-block {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Logo from 'rsg-components/Logo';
 import Markdown from 'rsg-components/Markdown';
@@ -6,12 +6,11 @@ import Styled from 'rsg-components/Styled';
 import cx from 'classnames';
 import Ribbon from 'rsg-components/Ribbon';
 import _ from 'lodash';
-import themeIcon from '!url-loader!./theme.svg';
 
-import Popover from 'src/components/Popover';
-import { themeList, themeColor, changeTheme } from './ReactExample';
+import { toggleDarkTheme, isDarkTheme } from './ReactExample';
+import Switch from 'src/components/Switch';
 
-const xsmall = '@media (max-width: 600px)';
+export const DarkThemeContext = React.createContext();
 
 const styles = ({
     color,
@@ -30,7 +29,10 @@ const styles = ({
     root: {
         backgroundColor: color.baseBackground,
         height: '100%',
-        overflow: 'hidden'
+        overflow: 'hidden',
+        [mq.small]: {
+            overflow: 'auto'
+        }
     },
     header: {
         color: '#fff',
@@ -39,22 +41,15 @@ const styles = ({
         top: 0,
         left: 0,
         width: '100%',
+        padding: [[space[1], space[2]]],
         zIndex: 100
     },
     bar: {
         display: 'flex',
-        alignItems: 'center',
-        [xsmall]: {
-            flexDirection: 'column',
-            alignItems: 'center'
-        }
+        alignItems: 'center'
     },
     nav: {
-        marginLeft: 'auto',
-        marginRight: '-0.5em',
-        [xsmall]: {
-            margin: [[10, 0, 0]]
-        }
+        marginLeft: 'auto'
     },
     headerLink: {
         '&, &:link, &:visited': {
@@ -69,27 +64,11 @@ const styles = ({
             cursor: 'pointer'
         }
     },
-    themeIcon: {
-        width: '2em',
-        height: '2em',
-        marginLeft: '0.5em',
-        verticalAlign: 'middle',
-        cursor: 'pointer'
-    },
-    themeWrap: {
-        width: '10em',
-        height: '10em',
-        background: '#fff',
-        border: '1px solid #ccc',
-        boxSizing: 'content-box'
-    },
-    themeButton: {
+    darkLabel: {
         display: 'inline-block',
-        cursor: 'pointer',
-        width: '4em',
-        height: '4em',
-        borderRadius: '2em',
-        margin: '.5em'
+        padding: '.5em 0',
+        marginLeft: '2em',
+        marginRight: '.5em'
     },
     hasSidebar: {
         paddingLeft: sidebarWidth,
@@ -112,7 +91,7 @@ const styles = ({
         border: [[color.border, 'solid']],
         borderWidth: [[0, 1, 0, 0]],
         position: 'absolute',
-        top: space[2] * 2 + fontSize.h4 * 2,
+        top: space[1] * 2 + fontSize.h4 * 2,
         left: 0,
         bottom: 0,
         width: sidebarWidth,
@@ -136,12 +115,15 @@ const styles = ({
         fontSize: fontSize.small
     },
     fixPaddingTop: {
-        paddingTop: space[2] * 2 + fontSize.h4 * 2
+        paddingTop: space[1] * 2 + fontSize.h4 * 2
     },
     wrapper: {
         position: 'relative',
         height: '100%',
-        overflow: 'hidden'
+        overflow: 'hidden',
+        [mq.small]: {
+            overflow: 'auto'
+        }
     },
     center: {
         margin: [[0, 'auto']],
@@ -150,10 +132,11 @@ const styles = ({
 });
 
 export function StyleGuideRenderer({ classes, title, homepageUrl, children, toc, hasSidebar }) {
+    const [darkTheme, setDarkTheme] = useState(isDarkTheme);
     return (
-        <div className={classes.root}>
-            <header className={classes.header}>
-                <div className={classes.content}>
+        <DarkThemeContext.Provider value={darkTheme}>
+            <div className={classes.root}>
+                <header className={classes.header}>
                     <div className={classes.bar}>
                         <Logo show>{title}</Logo>
                         <nav className={classes.nav}>
@@ -178,40 +161,34 @@ export function StyleGuideRenderer({ classes, title, homepageUrl, children, toc,
                             >
                                 NPM
                             </a>
-                            <Popover
-                                popup={
-                                    <div className={classes.themeWrap}>
-                                        {_.map(themeList, (theme, themeType) => (
-                                            <span
-                                                key={themeType}
-                                                title={themeType}
-                                                className={classes.themeButton}
-                                                style={{ background: themeColor[themeType] }}
-                                                onClick={() => changeTheme(themeType)}
-                                            />
-                                        ))}
-                                    </div>
-                                }
-                            >
-                                <img src={themeIcon} className={cx(classes.themeIcon)} alt="switch theme icon" />
-                            </Popover>
+                            <span>
+                                <span className={classes.darkLabel}>Dark:</span>
+                                <Switch
+                                    value={darkTheme}
+                                    size="sm"
+                                    onChange={v => {
+                                        setDarkTheme(v);
+                                        toggleDarkTheme(v);
+                                    }}
+                                />
+                            </span>
                         </nav>
                     </div>
+                </header>
+                <div className={cx(classes.wrapper, hasSidebar && classes.hasSidebar, classes.fixPaddingTop)}>
+                    {hasSidebar && <div className={cx('sidebar', classes.sidebar)}>{toc}</div>}
+                    <main className={classes.content}>
+                        <div className={classes.center}>
+                            {children}
+                            <footer className={classes.footer}>
+                                <Markdown text={`Generated with [React Styleguidist](${homepageUrl})`} />
+                            </footer>
+                        </div>
+                    </main>
+                    <Ribbon />
                 </div>
-            </header>
-            <div className={cx(classes.wrapper, hasSidebar && classes.hasSidebar, classes.fixPaddingTop)}>
-                {hasSidebar && <div className={cx('sidebar', classes.sidebar)}>{toc}</div>}
-                <main className={classes.content}>
-                    <div className={classes.center}>
-                        {children}
-                        <footer className={classes.footer}>
-                            <Markdown text={`Generated with [React Styleguidist](${homepageUrl})`} />
-                        </footer>
-                    </div>
-                </main>
-                <Ribbon />
             </div>
-        </div>
+        </DarkThemeContext.Provider>
     );
 }
 
