@@ -2,7 +2,6 @@ import React from 'react';
 
 import Switch from 'src/components/Switch';
 import Form from 'src/components/Form';
-import Menu from 'src/components/Menu';
 import Transfer from 'src/components/Transfer';
 import Combine from 'src/components/Combine';
 import Button from 'src/components/Button';
@@ -11,18 +10,6 @@ import Checkbox from 'src/components/Radio';
 
 // demo start
 const { defaultProps } = Transfer;
-
-let uid = 0;
-
-const generateData = ({ name, desc, deletable } = {}) => {
-    const id = uid++;
-    return {
-        key: id + '',
-        name: name || `name-${id}`,
-        desc: desc || `desc-${id}`,
-        deletable
-    };
-};
 
 const dataSource = new Array(100).fill(null).map((v, i) => ({
     key: i,
@@ -44,20 +31,6 @@ class Demo extends React.Component {
             targetTitle: 'default',
             targetFooter: false
         };
-    }
-    onDelete(record) {
-        console.log('Delete', record);
-        const key = record.key;
-        const dataSource = this.state.dataSource.filter(item => item.key !== key);
-        this.setState({ dataSource });
-    }
-    onAdd() {
-        const dataSource = [...this.state.dataSource];
-        dataSource.push(generateData());
-        this.setState({ dataSource });
-    }
-    getDisabledOfRow(record) {
-        return record.key % 2;
     }
     render() {
         const {

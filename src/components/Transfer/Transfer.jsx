@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 import classnames from 'classnames';
 
-import Menu from 'src/components/Menu';
 import Button from 'src/components/Button';
 import Notice from 'src/components/Notice';
 import Input from 'src/components/Input';
@@ -40,9 +39,20 @@ const Shape = {
      */
     footer: PropTypes.node,
     /**
-     * 是否显示搜索栏
+     * 是否展示搜索框，可以为 boolean 或者 Object
+     * 为 Object 时可传入 handleSearch 对搜索筛选进行自定义
      */
-    search: PropTypes.bool,
+    search: PropTypes.oneOfType([
+        PropTypes.bool,
+        PropTypes.shape({
+            /**
+             * @argument searchValue - 搜索的值
+             * @argument item - 当前匹配的项
+             * @return 匹配结果
+             */
+            handleSearch: PropTypes.func
+        })
+    ]),
     /**
      * 禁用
      */
@@ -82,9 +92,20 @@ class Transfer extends PureComponent {
          */
         disabled: PropTypes.bool,
         /**
-         * 搜素配置
+         * 是否展示搜索框，可以为 boolean 或者 Object
+         * 为 Object 时可传入 handleSearch 对搜索筛选进行自定义
          */
-        search: PropTypes.bool,
+        search: PropTypes.oneOfType([
+            PropTypes.bool,
+            PropTypes.shape({
+                /**
+                 * @argument searchValue - 搜索的值
+                 * @argument item - 当前匹配的项
+                 * @return 匹配结果
+                 */
+                handleSearch: PropTypes.func
+            })
+        ]),
         /**
          * 源数据区域的配置
          */
@@ -158,7 +179,8 @@ class Transfer extends PureComponent {
         const props = { ...{ search: sharedSearch }, ...(type === 'source' ? source : target) };
         const { search } = props;
         if (!search) return true;
-        return defaultSearchHandle(searchValue, item);
+        const { handleSearch } = search;
+        return handleSearch ? handleSearch(searchValue, item) : defaultSearchHandle(searchValue, item);
     };
     handleSourceSearch = item => {
         return this.handleSearch('source', item);
