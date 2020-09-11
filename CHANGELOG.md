@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/UCloud-FE/react-components/compare/v1.0.0...v1.0.1) (2020-09-11)
+
+### Features
+
+-   **Badge:** add size for badge.bubble ([a1f1fc6](https://github.com/UCloud-FE/react-components/commit/a1f1fc61000acf10881cdd2aa0a1893613aaec20))
+-   **designTokens:** use dt to replace old theme ([c82f17a](https://github.com/UCloud-FE/react-components/commit/c82f17a928604d67df74ae3953fedb2488bd8135))
+-   **lot:** change disable cursor style ([0ded440](https://github.com/UCloud-FE/react-components/commit/0ded440096a48259bfd1120310164cb3c7148d5e))
+-   **Table:** delete Table outer padding ([e44beb3](https://github.com/UCloud-FE/react-components/commit/e44beb33ef496f30643565cd664351454071744c))
+
 ## [1.0.0](https://github.com/UCloud-FE/react-components/compare/v0.7.4...v1.0.0) (2020-09-04)
 
 ### Features
