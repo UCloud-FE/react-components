@@ -13,7 +13,7 @@ const arrowWidth = '6px';
 const borderWidth = '1px';
 
 export const tooltipPopupClassName = prefixCls + '-popup';
-export const contentCls = prefixCls + '-cls';
+export const contentCls = prefixCls + '-content';
 
 export const ContentWrap = withProps({
     className: contentCls
