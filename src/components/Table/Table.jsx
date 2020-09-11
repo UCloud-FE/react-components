@@ -1,4 +1,4 @@
-import React, { Component, PureComponent } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 import createReactContext from 'create-react-context';
@@ -11,7 +11,6 @@ import Checkbox from 'src/components/Checkbox';
 import Radio from 'src/components/Radio';
 import Select from 'src/components/Select';
 import Icon from 'src/components/Icon';
-import Popover from 'src/components/Popover';
 import Tooltip from 'src/components/Tooltip';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
 import { InhertProvider } from 'src/components/Popover/ContainerContext';
@@ -28,6 +27,7 @@ import {
     placeholderHeaderCls
 } from './style';
 import LOCALE from './locale/zh_CN';
+import TableRow from './TableRow';
 
 const noop = () => {};
 export const deprecatedLogForOnRowSelect = _.once(() => deprecatedLog('Table onRowSelect', 'rowSelection.onChange'));
@@ -35,41 +35,6 @@ export const deprecatedLogForOnRowSelect = _.once(() => deprecatedLog('Table onR
 export const placeholderKey = 'table_column_width_placeholder';
 
 export const TableContext = createReactContext();
-
-class TableRow extends PureComponent {
-    state = {
-        contextMenuVisible: false
-    };
-    hideContextMenu = () => {
-        this.setState({
-            contextMenuVisible: false
-        });
-    };
-    render() {
-        const { record, contextMenu, ...rest } = this.props;
-        const { contextMenuVisible } = this.state;
-        if (contextMenu) {
-            return (
-                <Popover
-                    popup={<div>{contextMenu(record, this.hideContextMenu)}</div>}
-                    trigger={['contextMenu']}
-                    hideAction={['click']}
-                    visible={contextMenuVisible}
-                    onVisibleChange={visible => this.setState({ contextMenuVisible: visible })}
-                    animation={null}
-                    alignPoint
-                >
-                    <tr {...rest} />
-                </Popover>
-            );
-        }
-        return <tr {...rest} />;
-    }
-}
-TableRow.propTypes = {
-    record: PropTypes.object,
-    contextMenu: PropTypes.func
-};
 
 const missingColumnKeyWarn = () => console.error('Warning: Table column need a unique key');
 
