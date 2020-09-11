@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.2](https://github.com/UCloud-FE/react-components/compare/v1.0.1...v1.0.2) (2020-09-11)
+
+### Bug Fixes
+
+-   **build:** fix build crash ([06f5e27](https://github.com/UCloud-FE/react-components/commit/06f5e27fb5c36d4c0f5bf523743152a50997825f))
+
 ### [1.0.1](https://github.com/UCloud-FE/react-components/compare/v1.0.0...v1.0.1) (2020-09-11)
 
 ### Features
