@@ -117,7 +117,7 @@ export const RadioWrap = styled(
                 }
 
                 &.${disabledCls} {
-                    cursor: not-allowed;
+                    cursor: default;
                     color: ${DT.T_COLOR_TEXT_DISABLED};
                     .${iconWrapCls} {
                         border-color: ${DT.T_COLOR_LINE_DISABLED_LIGHT};
@@ -222,7 +222,7 @@ export const RadioTagWrap = styled(
                 ${disabled &&
                 css`
                     color: ${DT.T_COLOR_TEXT_DISABLED};
-                    cursor: not-allowed;
+                    cursor: default;
                 `};
 
                 ${disabled &&
@@ -305,7 +305,7 @@ const cardPropsMixin = props => {
         `};
         ${disabled &&
         css`
-            cursor: not-allowed;
+            cursor: default;
         `};
         ${disabled &&
         !checked &&
@@ -407,7 +407,7 @@ export const RadioTextWrap = withProps({
             css`
                 && {
                     color: ${DT.T_COLOR_TEXT_DISABLED};
-                    cursor: not-allowed;
+                    cursor: default;
                 }
             `};
         `;

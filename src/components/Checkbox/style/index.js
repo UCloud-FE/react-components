@@ -82,7 +82,7 @@ export const CheckboxWrap = withProps()(
             }
 
             &.${disabledCls} {
-                cursor: not-allowed;
+                cursor: default;
                 color: ${DT.T_COLOR_TEXT_DISABLED};
                 .${iconWrapCls} {
                     border-color: ${DT.T_COLOR_LINE_DISABLED_LIGHT};

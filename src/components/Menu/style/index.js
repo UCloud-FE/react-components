@@ -68,7 +68,7 @@ const menuStyle = ({ theme: { designTokens: DT } }) => {
         }
         .${itemCls}.${disabledCls}, .${selectallWrapCls}.${disabledCls} {
             color: ${DT.T_COLOR_TEXT_DISABLED};
-            cursor: not-allowed;
+            cursor: default;
             :hover {
                 background: none;
             }

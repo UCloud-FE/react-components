@@ -143,7 +143,7 @@ const disabledMixin = props => {
             background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
             color: ${DT.T_COLOR_TEXT_DISABLED};
             fill: ${DT.T_COLOR_TEXT_DISABLED};
-            cursor: not-allowed;
+            cursor: default;
             border-width: ${DT.T_LINE_WIDTH_BASE};
             border-style: solid;
             box-shadow: none;
