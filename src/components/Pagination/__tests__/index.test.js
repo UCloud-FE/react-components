@@ -12,16 +12,10 @@ describe('Pagination', () => {
 
         expect(wrapper.find('li').length).toBe(9);
 
-        wrapper
-            .find('li')
-            .at(1)
-            .simulate('click');
+        wrapper.find('li').at(1).simulate('click');
         expect(onChange).toHaveBeenCalledTimes(0);
 
-        wrapper
-            .find('li')
-            .at(2)
-            .simulate('click');
+        wrapper.find('li').at(2).simulate('click');
         expect(onChange).toHaveBeenCalledTimes(1);
         expect(onChange).toHaveBeenLastCalledWith(2, 10);
 
@@ -41,39 +35,23 @@ describe('Pagination', () => {
         expect(onChange).toHaveBeenCalledTimes(5);
         expect(onChange).toHaveBeenLastCalledWith(2, 10);
 
-        wrapper
-            .find('.uc-fe-pagination-prev')
-            .simulate('focus')
-            .simulate('keyPress', { key: 'Enter' });
+        wrapper.find('.uc-fe-pagination-prev').simulate('focus').simulate('keyPress', { key: 'Enter' });
         expect(onChange).toHaveBeenCalledTimes(6);
         expect(onChange).toHaveBeenLastCalledWith(1, 10);
 
-        wrapper
-            .find('.uc-fe-pagination-next')
-            .simulate('focus')
-            .simulate('keyPress', { key: 'Enter' });
+        wrapper.find('.uc-fe-pagination-next').simulate('focus').simulate('keyPress', { key: 'Enter' });
         expect(onChange).toHaveBeenCalledTimes(7);
         expect(onChange).toHaveBeenLastCalledWith(2, 10);
 
-        wrapper
-            .find('.uc-fe-pagination-jump-next')
-            .simulate('focus')
-            .simulate('keyPress', { key: 'Enter' });
+        wrapper.find('.uc-fe-pagination-jump-next').simulate('focus').simulate('keyPress', { key: 'Enter' });
         expect(onChange).toHaveBeenCalledTimes(8);
         expect(onChange).toHaveBeenLastCalledWith(7, 10);
 
-        wrapper
-            .find('.uc-fe-pagination-jump-prev')
-            .simulate('focus')
-            .simulate('keyPress', { key: 'Enter' });
+        wrapper.find('.uc-fe-pagination-jump-prev').simulate('focus').simulate('keyPress', { key: 'Enter' });
         expect(onChange).toHaveBeenCalledTimes(9);
         expect(onChange).toHaveBeenLastCalledWith(2, 10);
 
-        wrapper
-            .find('li')
-            .at(1)
-            .simulate('focus')
-            .simulate('keyPress', { key: 'Enter' });
+        wrapper.find('li').at(1).simulate('focus').simulate('keyPress', { key: 'Enter' });
         expect(onChange).toHaveBeenCalledTimes(10);
         expect(onChange).toHaveBeenLastCalledWith(1, 10);
     });
@@ -106,11 +84,7 @@ describe('Pagination', () => {
         });
         expect(wrapper.find('li').length).toBe(7);
 
-        wrapper
-            .find('div.uc-fe-pagination-options-size-changer')
-            .at(0)
-            .childAt(0)
-            .simulate('click');
+        wrapper.find('div.uc-fe-pagination-options-size-changer').at(0).childAt(0).simulate('click');
         expect(document.querySelectorAll('.uc-fe-popover').length).toBe(1);
         expect(document.querySelectorAll('.uc-fe-popover.uc-fe-popover-hidden').length).toBe(0);
         expect(document.querySelectorAll('div.uc-fe-popover>div>div>div>div>div').length).toBe(4);
@@ -158,6 +132,9 @@ describe('Pagination', () => {
         expect(onAdvise).toHaveBeenCalledTimes(1);
         expect(onAdvise).toHaveBeenCalledWith(4, 10);
 
+        wrapper.setProps({
+            current: 4
+        });
         wrapper.setProps({
             current: 5
         });

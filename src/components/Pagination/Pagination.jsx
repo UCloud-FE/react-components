@@ -1,4 +1,4 @@
-import React, { Component, forwardRef } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import _ from 'lodash';
@@ -149,7 +149,7 @@ class Pagination extends Component {
                 });
             }
             const { onAdvise } = nextProps;
-            if (onAdvise) {
+            if (onAdvise && (nextProps.current != this.props.current || nextProps.total != this.props.total)) {
                 onAdvise(newCurrent, pageSize);
             }
         }
