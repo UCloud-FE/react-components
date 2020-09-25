@@ -43,33 +43,49 @@ describe('Radio', () => {
     });
 
     test('check controlled Group', async () => {
-        let radioValue = 2;
+        let radioValue = 1;
         const onChange = jest.fn(value => (radioValue = value));
-        const wrapper = mount(
-            <Group value={radioValue} onChange={onChange}>
-                <Radio value={1}>1</Radio>
-                <Radio value={2}>1</Radio>
-            </Group>
-        );
-        const children = wrapper.find('span.uc-fe-radio');
-        expect(children).toHaveLength(2);
-        expect(children.at(1).hasClass('uc-fe-radio-checked')).toBe(true);
 
-        children.at(0).simulate('click');
-        // click 后有 防抖 所以做一个延迟
-        await new Promise(resolve => {
-            setTimeout(resolve, 10);
-        });
-        expect(onChange).toHaveBeenCalledTimes(1);
-        expect(onChange).toHaveBeenLastCalledWith(1);
+        const options = [1, 2, 3].map(value => ({
+            value,
+            label: value
+        }));
 
-        wrapper.setProps({ disabled: true, value: radioValue });
-        expect(wrapper.find('span.uc-fe-radio').at(0).hasClass('uc-fe-radio-checked')).toBe(true);
+        const wrapper = mount(<Group options={options} value={radioValue} onChange={onChange} />);
+        let children = wrapper.find('span.uc-fe-radio');
+        expect(children).toHaveLength(3);
+        expect(children.at(0).hasClass('uc-fe-radio-checked')).toBe(true);
 
         children.at(1).simulate('click');
-        await new Promise(resolve => {
-            setTimeout(resolve, 10);
+        // click 后有防抖，所以做一个延迟
+        await new Promise(resolve => setTimeout(resolve));
+        expect(onChange).toHaveBeenCalledTimes(1);
+        expect(onChange).toHaveBeenLastCalledWith(2);
+
+        wrapper.setProps({
+            value: radioValue
         });
+        children = wrapper.find('span.uc-fe-radio');
+        expect(children.at(1).hasClass('uc-fe-radio-checked')).toBe(true);
+
+        wrapper.setProps({
+            options: options.map(item => ({
+                ...item,
+                disabled: item.value === 3
+            }))
+        });
+
+        children = wrapper.find('span.uc-fe-radio');
+        children.at(2).simulate('click');
+        await new Promise(resolve => setTimeout(resolve));
+        expect(onChange).toHaveBeenCalledTimes(1);
+        expect(onChange).toHaveBeenLastCalledWith(2);
+
+        wrapper.setProps({ disabled: true, options });
+        children = wrapper.find('span.uc-fe-radio');
+
+        children.at(0).simulate('click');
+        await new Promise(resolve => setTimeout(resolve));
         expect(onChange).toHaveBeenCalledTimes(1);
     });
 });
