@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 
-export default class Plus extends PureComponent {
+export default class Minus extends PureComponent {
     render() {
         return (
             <path

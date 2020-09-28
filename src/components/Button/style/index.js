@@ -53,6 +53,7 @@ const styleTypeMixin = props => {
             transition: `all ${materialVars.transitionUp}`,
             ':hover': {
                 color: DT.T_COLOR_TEXT_PRIMARY_DEFAULT,
+                fill: DT.T_COLOR_TEXT_PRIMARY_DEFAULT,
                 background: DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT,
                 boxShadow: DT.T_SHADOW_BUTTON_HOVER
             }
@@ -65,6 +66,7 @@ const styleTypeMixin = props => {
             transition: `all ${materialVars.transitionFlat}`,
             ':hover': {
                 color: DT.T_COLOR_TEXT_PRIMARY_DEFAULT,
+                fill: DT.T_COLOR_TEXT_PRIMARY_DEFAULT,
                 borderColor: DT.T_COLOR_LINE_PRIMARY_HOVER,
                 background: checkAble ? DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT : DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT
             }
