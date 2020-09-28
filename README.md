@@ -1,11 +1,13 @@
 ## React Components
 
+<div style="white-space: normal; margin-bottom: 10px;">
 [![npm version](https://badge.fury.io/js/%40ucloud-fe%2Freact-components.svg)](https://badge.fury.io/js/%40ucloud-fe%2Freact-components)
 [![TravisCI](https://travis-ci.org/UCloud-FE/react-components.svg?branch=master)](https://travis-ci.org/UCloud-FE/react-components)
 [![CircleCI](https://circleci.com/gh/UCloud-FE/react-components.svg?style=svg)](https://circleci.com/gh/UCloud-FE/react-components)
 [![codecov](https://codecov.io/gh/UCloud-FE/react-components/branch/master/graph/badge.svg)](https://codecov.io/gh/UCloud-FE/react-components)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+</div>
 
 ### 前排注意事项
 
