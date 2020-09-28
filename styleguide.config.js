@@ -10,6 +10,9 @@ const fileSuffix = '.jsx';
 
 const isProd = process.env.NODE_ENV === 'production';
 
+const babel = webpackConfig.module.rules.filter(rule => rule.use === 'babel-loader')[0];
+babel.exclude = /node_modules\/(?!(ansi-styles|strip-ansi|ansi-regex|react-dev-utils|chalk|regexpu-core|unicode-match-property-ecmascript|unicode-match-property-value-ecmascript|acorn-jsx)\/).*/;
+
 components = _.map(components, section => {
     const { name, sections, ...rest } = section;
     return {
@@ -78,7 +81,9 @@ module.exports = {
         StyleGuideRenderer: path.join(__dirname, '.styleguide/components/StyleGuideRenderer'),
         ReactComponentRenderer: path.join(__dirname, '.styleguide/components/ReactComponentRenderer'),
         Examples: path.join(__dirname, '.styleguide/components/Examples'),
-        ReactExample: path.join(__dirname, '.styleguide/components/ReactExample')
+        ReactExample: path.join(__dirname, '.styleguide/components/ReactExample'),
+        ArgumentRenderer: path.join(__dirname, '.styleguide/components/ArgumentRenderer'),
+        ParaRenderer: path.join(__dirname, '.styleguide/components/ParaRenderer')
     },
     require: [path.join(__dirname, '.styleguide/setup.js')],
     assetsDir: 'static/',
@@ -103,7 +108,7 @@ module.exports = {
     webpackConfig,
     pagePerSection: true,
     skipComponentsWithoutExample: true,
-    usageMode: 'expand',
+    usageMode: isProd ? 'expand' : 'collapse',
     serverPort: 6080,
     sortProps: props => props,
     styleguideDir: process.env.STYLEGUIDE_BUILD_DIR || 'styleguide-build/default'
