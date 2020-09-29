@@ -1,6 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const babelConfig = require('./.babelrc.json');
 
 const cssPlugin = new MiniCssExtractPlugin({
     filename: '[name].min.css'
@@ -26,8 +27,11 @@ const config = {
         rules: [
             {
                 test: /\.(j|t)sx?$/,
-                use: 'babel-loader',
-                exclude: [path.join(__dirname, 'node_modules')]
+                use: {
+                    loader: 'babel-loader',
+                    options: babelConfig
+                },
+                exclude: /node_modules\/(?!(ansi-styles|strip-ansi|ansi-regex|react-dev-utils|chalk|regexpu-core|unicode-match-property-ecmascript|unicode-match-property-value-ecmascript|acorn-jsx|estree-walker|pretty-bytes)\/).*/
             },
             {
                 test: /static\/style\/icon\.css$/,

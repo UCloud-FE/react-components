@@ -1,5 +1,6 @@
 const path = require('path');
 const _ = require('lodash');
+const webpack = require('webpack');
 
 const webpackConfig = require('./webpack.config.js');
 let components = require('./.styleguide/components.json');
@@ -9,9 +10,6 @@ const basePath = 'src/components/';
 const fileSuffix = '.jsx';
 
 const isProd = process.env.NODE_ENV === 'production';
-
-const babel = webpackConfig.module.rules.filter(rule => rule.use === 'babel-loader')[0];
-babel.exclude = /node_modules\/(?!(ansi-styles|strip-ansi|ansi-regex|react-dev-utils|chalk|regexpu-core|unicode-match-property-ecmascript|unicode-match-property-value-ecmascript|acorn-jsx)\/).*/;
 
 components = _.map(components, section => {
     const { name, sections, ...rest } = section;
@@ -105,7 +103,10 @@ module.exports = {
     getExampleFilename(componentPath) {
         return componentPath.replace(/\.jsx?$/, '.md');
     },
-    webpackConfig,
+    webpackConfig: {
+        ...webpackConfig,
+        plugins: (webpackConfig.plugins || []).concat(new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/))
+    },
     pagePerSection: true,
     skipComponentsWithoutExample: true,
     usageMode: isProd ? 'expand' : 'collapse',
