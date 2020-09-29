@@ -33,6 +33,7 @@ export const TransferWrap = withProps()(
                 display: flex;
                 flex: 1 1 50%;
                 flex-direction: column;
+                overflow: hidden;
             }
             .${searchCls} {
                 margin: 12px;
