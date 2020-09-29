@@ -48,6 +48,7 @@ export const TransferWrap = withProps()(
                 border-radius: 2px;
                 width: 100%;
                 border: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
+                box-sizing: border-box;
                 flex: auto;
                 display: flex;
                 flex-direction: column;
