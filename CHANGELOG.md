@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.4](https://github.com/UCloud-FE/react-components/compare/v1.0.3...v1.0.4) (2020-09-29)
+
+### Features
+
+-   **Progress:** display percent to int for better performance ([d1c424b](https://github.com/UCloud-FE/react-components/commit/d1c424bfe95d15ccb136ce012475699dd0b5a541))
+-   **Tooltip:** add line-height to tooltip content ([f445a97](https://github.com/UCloud-FE/react-components/commit/f445a976c2d0bef574e6455e9e14cf412234f80e))
+-   **TransferTable:** add tableProps to add custom table props ([672b0c5](https://github.com/UCloud-FE/react-components/commit/672b0c58907dc403dff5394a515bbf492a923128))
+-   **Upload:** rewrite Upload, add dropzone and rewrite ui ([74b6208](https://github.com/UCloud-FE/react-components/commit/74b62084b8d50b3348b33d492220667240c34a7e))
+
+### Bug Fixes
+
+-   **Pagination:** fix onAdvise allways trigger bug ([d47863d](https://github.com/UCloud-FE/react-components/commit/d47863d246578c136bd19dcc242c1f3cc90215a4))
+
 ### [1.0.3](https://github.com/UCloud-FE/react-components/compare/v1.0.2...v1.0.3) (2020-09-14)
 
 ### Features
