@@ -121,6 +121,7 @@ export const TagWrapper = withProps({
         return css`
             box-sizing: border-box;
             height: 20px;
+            line-height: normal;
             padding-left: 8px;
             display: inline-block;
             border-radius: 2px;
