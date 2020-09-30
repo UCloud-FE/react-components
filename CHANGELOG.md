@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.5](https://github.com/UCloud-FE/react-components/compare/v1.0.4...v1.0.5) (2020-09-30)
+
+### Features
+
+-   **Bubble:** clean default styleType ([b635aef](https://github.com/UCloud-FE/react-components/commit/b635aefb7b50149ab88fe4f0f6bb927e2fdee446))
+
+### Bug Fixes
+
+-   **Tag:** fix tag line-height inhert bug ([4a7cd5e](https://github.com/UCloud-FE/react-components/commit/4a7cd5e463f4d1b7cf53aa4b180013bf8b3a1a82))
+-   **Transfer:** fix transfer border style bug ([08e9b59](https://github.com/UCloud-FE/react-components/commit/08e9b595da1e781952ef0d7b6969f402b4f01323))
+
 ### [1.0.4](https://github.com/UCloud-FE/react-components/compare/v1.0.3...v1.0.4) (2020-09-29)
 
 ### Features
