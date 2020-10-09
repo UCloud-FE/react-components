@@ -3,7 +3,7 @@ require('!file-loader?name=[name].[ext]!./style.css');
 
 const components = require('../index');
 
-const ResizableTH = require('src/components/Table/ResizableTH');
+const ResizableTH = require('src/components/Table/ResizableTH').default;
 
 components.Table.ResizableTH = ResizableTH;
 
