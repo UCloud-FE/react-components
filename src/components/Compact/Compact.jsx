@@ -9,6 +9,9 @@ import { prefixCls, controllerPrefix } from './style';
 
 const _deprecatedLog = _.once(() => deprecatedLog('Compact', 'Combine(spacing="compact")'));
 
+/**
+ * @deprecated 请使用 Combine 替代
+ */
 class Compact extends Component {
     static propTypes = {
         /** @ignore */
