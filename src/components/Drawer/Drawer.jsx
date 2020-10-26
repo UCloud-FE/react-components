@@ -79,7 +79,7 @@ class Drawer extends Component {
             visible
         });
     };
-    getDestory = () => {
+    getDestroy = () => {
         const { destroyOnClose, visible } = this.props;
         const { visible: visibleState } = this.state;
         return destroyOnClose && !visible && !visibleState;
@@ -96,10 +96,10 @@ class Drawer extends Component {
     render() {
         // eslint-disable-next-line no-unused-vars
         const { children, visible, mask, maskClosable, onClose, destroyOnClose, closeHandler, ...rest } = this.props;
-        const destory = this.getDestory();
+        const destroy = this.getDestroy();
         const show = this.getShow();
         return (
-            !destory && (
+            !destroy && (
                 <Provider value={{}}>
                     <DrawerWrap
                         {...rest}

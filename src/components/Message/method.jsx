@@ -36,7 +36,7 @@ const popupMessage = (message, duration = config.duration, onClose = () => {}) =
     }
     return {
         destory: () => {
-            console.error(`Wraning: wrong name of destory, please use destroy to instead`);
+            console.error(`Warning: wrong name of destory, please use destroy to instead`);
             destroy();
         },
         destroy
