@@ -97,4 +97,19 @@ const confirm = ({ onOk = () => {}, onClose = () => {}, ...rest }, content) => {
     return modal;
 };
 
-export { alert, confirm };
+const open = ({ onOk = () => {}, onClose = () => {}, ...rest }, content) => {
+    const _onClose = () => promiseJudgeHandle(onClose(), () => modal.destroy());
+    const _onOk = () => promiseJudgeHandle(onOk(), () => modal.destroy());
+
+    const options = {
+        children: content,
+        onClose: _onClose,
+        onOk: _onOk,
+        ...rest
+    };
+
+    const modal = pop(options);
+    return modal;
+};
+
+export { alert, confirm, open };

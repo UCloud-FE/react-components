@@ -83,6 +83,28 @@ class Demo extends React.Component {
                 >
                     promise confirm
                 </Button>
+                <Button
+                    onClick={() =>
+                        Modal.open(
+                            {
+                                title: 'this is promise confirm',
+                                onClose: () =>
+                                    new Promise(resolve => {
+                                        setTimeout(() => {
+                                            resolve();
+                                        }, 3000);
+                                    }),
+                                onOk: () =>
+                                    new Promise(resolve => {
+                                        setTimeout(() => {
+                                            resolve();
+                                        }, 3000);
+                                    })
+                            },
+                            <div>this is content</div>
+                        )
+                    }
+                ></Button>
             </div>
         );
     }
