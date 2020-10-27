@@ -113,6 +113,7 @@ export const InputWrap = withProps({
             position: relative;
             ${inlineBlockWithVerticalMixin};
             box-sizing: border-box;
+            font-size: 12px;
             &.${blockCls} {
                 display: block;
             }

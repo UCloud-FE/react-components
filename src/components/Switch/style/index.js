@@ -217,6 +217,7 @@ export const SwitchWrap = withProps({})(styled('div')`
     box-sizing: border-box;
     cursor: pointer;
     transition: all 0.3s;
+    font-size: 12px;
 
     ${inlineBlockWithVerticalMixin};
     ${propsMixin};
