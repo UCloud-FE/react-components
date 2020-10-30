@@ -33,6 +33,7 @@ export const TransferWrap = withProps()(
                 display: flex;
                 flex: 1 1 50%;
                 flex-direction: column;
+                overflow: hidden;
             }
             .${searchCls} {
                 margin: 12px;
@@ -47,6 +48,7 @@ export const TransferWrap = withProps()(
                 border-radius: 2px;
                 width: 100%;
                 border: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
+                box-sizing: border-box;
                 flex: auto;
                 display: flex;
                 flex-direction: column;

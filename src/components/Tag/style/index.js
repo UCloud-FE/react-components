@@ -11,7 +11,7 @@ export const prefixCls = _prefixCls + '-tag';
 export const iconCls = _prefixCls + '-tag-icon';
 
 export const styleMap = {
-    default: {
+    gray: {
         color: 'T_COLOR_TEXT_DEFAULT_LIGHT',
         border: 'T_COLOR_LINE_NOTICE_LIGHT',
         bg: 'T_COLOR_BG_NOTICE_LIGHT',
@@ -74,6 +74,7 @@ export const styleMap = {
 };
 
 [
+    ['default', 'gray'],
     ['success', 'green'],
     ['warning', 'yellow'],
     ['error', 'red']
@@ -97,14 +98,16 @@ export const PrefixIconWrapper = styled('span')`
 `;
 
 const getColorMap = (styleType, disabled) => {
-    return disabled
-        ? {
-              color: 'T_COLOR_TEXT_DISABLED',
-              border: 'T_COLOR_LINE_DISABLED_LIGHT',
-              bg: 'T_COLOR_BG_DISABLED_LIGHT',
-              iconHoverBG: 'T_COLOR_BG_DISABLED_LIGHT'
-          }
-        : styleMap[styleType];
+    return (
+        (disabled
+            ? {
+                  color: 'T_COLOR_TEXT_DISABLED',
+                  border: 'T_COLOR_LINE_DISABLED_LIGHT',
+                  bg: 'T_COLOR_BG_DISABLED_LIGHT',
+                  iconHoverBG: 'T_COLOR_BG_DISABLED_LIGHT'
+              }
+            : styleMap[styleType]) || {}
+    );
 };
 
 export const TagWrapper = withProps({
@@ -112,7 +115,7 @@ export const TagWrapper = withProps({
 })(
     styled('span')(props => {
         const {
-            styleType = 'default',
+            styleType,
             disabled,
             theme: { designTokens: DT }
         } = props;
@@ -121,6 +124,7 @@ export const TagWrapper = withProps({
         return css`
             box-sizing: border-box;
             height: 20px;
+            line-height: normal;
             padding-left: 8px;
             display: inline-block;
             border-radius: 2px;

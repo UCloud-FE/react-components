@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 
-export default class Loading extends PureComponent {
+export default class CircleExclamation extends PureComponent {
     render() {
         return (
             <path

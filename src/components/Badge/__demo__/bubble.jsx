@@ -15,7 +15,7 @@ class Demo extends React.Component {
         super(props);
         this.state = {
             bubble: 'bubble',
-            styleType: defaultProps.styleType,
+            styleType: 'yellow',
             offset: defaultProps.offset,
             size: defaultProps.size
         };

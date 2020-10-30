@@ -2,6 +2,44 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.7](https://github.com/UCloud-FE/react-components/compare/v1.0.6...v1.0.7) (2020-10-27)
+
+### Features
+
+-   **All:** add font-size to input and switch ([2ffc9d2](https://github.com/UCloud-FE/react-components/commit/2ffc9d2d1116e28d7c7fe0d5c8629d6fc07c5409))
+-   **Combine:** rename className from controller to item ([850c23c](https://github.com/UCloud-FE/react-components/commit/850c23c510c33627dd5ea252049f95bfbd04bddc))
+-   **global:** add index.d.ts to npm for publish ([39612fa](https://github.com/UCloud-FE/react-components/commit/39612fa1bfab65c8bf8aa907fc45316a512e7a30))
+-   **Interface:** update index.d.ts ([0be8950](https://github.com/UCloud-FE/react-components/commit/0be8950547f11147594ecc67f7405b2274194dc8)), closes [#258](https://github.com/UCloud-FE/react-components/issues/258)
+-   **Modal:** add open method ([738a30f](https://github.com/UCloud-FE/react-components/commit/738a30fed3475fb113c876ba9a14ba80818bd51b))
+-   **Table:** add HoverDisplayArea ([3505830](https://github.com/UCloud-FE/react-components/commit/35058309b77605dc06e1ba4183706b24032b139e))
+-   **Tag:** add gray styleType & unsafe handle ([7324dd1](https://github.com/UCloud-FE/react-components/commit/7324dd19a4dec5e1c1ada2715d57c6edd3db6042))
+
+### [1.0.6](https://github.com/UCloud-FE/react-components/compare/v1.0.5...v1.0.6) (2020-10-09)
+
+### [1.0.5](https://github.com/UCloud-FE/react-components/compare/v1.0.4...v1.0.5) (2020-09-30)
+
+### Features
+
+-   **Bubble:** clean default styleType ([b635aef](https://github.com/UCloud-FE/react-components/commit/b635aefb7b50149ab88fe4f0f6bb927e2fdee446))
+
+### Bug Fixes
+
+-   **Tag:** fix tag line-height inhert bug ([4a7cd5e](https://github.com/UCloud-FE/react-components/commit/4a7cd5e463f4d1b7cf53aa4b180013bf8b3a1a82))
+-   **Transfer:** fix transfer border style bug ([08e9b59](https://github.com/UCloud-FE/react-components/commit/08e9b595da1e781952ef0d7b6969f402b4f01323))
+
+### [1.0.4](https://github.com/UCloud-FE/react-components/compare/v1.0.3...v1.0.4) (2020-09-29)
+
+### Features
+
+-   **Progress:** display percent to int for better performance ([d1c424b](https://github.com/UCloud-FE/react-components/commit/d1c424bfe95d15ccb136ce012475699dd0b5a541))
+-   **Tooltip:** add line-height to tooltip content ([f445a97](https://github.com/UCloud-FE/react-components/commit/f445a976c2d0bef574e6455e9e14cf412234f80e))
+-   **TransferTable:** add tableProps to add custom table props ([672b0c5](https://github.com/UCloud-FE/react-components/commit/672b0c58907dc403dff5394a515bbf492a923128))
+-   **Upload:** rewrite Upload, add dropzone and rewrite ui ([74b6208](https://github.com/UCloud-FE/react-components/commit/74b62084b8d50b3348b33d492220667240c34a7e))
+
+### Bug Fixes
+
+-   **Pagination:** fix onAdvise allways trigger bug ([d47863d](https://github.com/UCloud-FE/react-components/commit/d47863d246578c136bd19dcc242c1f3cc90215a4))
+
 ### [1.0.3](https://github.com/UCloud-FE/react-components/compare/v1.0.2...v1.0.3) (2020-09-14)
 
 ### Features

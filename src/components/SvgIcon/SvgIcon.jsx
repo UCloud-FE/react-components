@@ -2,7 +2,8 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
-import { SvgIconWrapper } from './style';
+import SvgIconWrapper from './SvgIconWrap';
+
 import Tick from './icons/Tick';
 import Cross from './icons/Cross';
 import BoldCross from './icons/BoldCross';
@@ -16,6 +17,9 @@ import SmallTick from './icons/SmallTick';
 import Horz from './icons/Horz';
 import LeftArrow from './icons/LeftArrow';
 import RightArrow from './icons/RightArrow';
+import Refresh from './icons/Refresh';
+import Trash from './icons/Trash';
+import Eye from './icons/Eye';
 
 const IconMap = {
     tick: Tick,
@@ -30,7 +34,10 @@ const IconMap = {
     smallTick: SmallTick,
     horz: Horz,
     leftArrow: LeftArrow,
-    rightArrow: RightArrow
+    rightArrow: RightArrow,
+    refresh: Refresh,
+    trash: Trash,
+    eye: Eye
 };
 
 const IconType = _.keys(IconMap);
@@ -52,11 +59,7 @@ class SvgIcon extends PureComponent {
     render() {
         const { type, ...rest } = this.props;
         const Icon = IconMap[type];
-        return (
-            <SvgIconWrapper {...rest} viewBox="0 0 24 24">
-                {Icon && <Icon />}
-            </SvgIconWrapper>
-        );
+        return <SvgIconWrapper {...rest}>{Icon && <Icon />}</SvgIconWrapper>;
     }
 }
 

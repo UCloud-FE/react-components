@@ -21,7 +21,7 @@ class Progress extends Component {
     };
     render() {
         let { percent, format, color, ...rest } = this.props;
-        percent = percent < 0 ? 0 : percent > 100 ? 100 : percent;
+        percent = (percent < 0 ? 0 : percent > 100 ? 100 : percent) >> 0;
         return (
             <div {...rest}>
                 {format !== null && (

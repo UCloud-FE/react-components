@@ -1,6 +1,6 @@
 module.exports = {
     setupFiles: ['./tests/setup.js'],
-    moduleFileExtensions: ['js', 'jsx', 'json'],
+    moduleFileExtensions: ['js', 'jsx', 'json', 'ts', 'tsx'],
     moduleNameMapper: {
         '^utils/(.*)$': '<rootDir>/src/utils/$1',
         '^components/(.*)$': '<rootDir>/src/components/$1',

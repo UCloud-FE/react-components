@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import { controllerPrefix, CombineWrap } from './style';
+import { itemPrefix, CombineWrap } from './style';
 
 class Combine extends Component {
     static propTypes = {
@@ -26,15 +26,13 @@ class Combine extends Component {
         const { size = 'md' } = sharedProps;
         return (
             <CombineWrap spacing={spacing === 'smart' ? size : spacing} {...rest}>
-                {React.Children.map(
-                    children,
-                    child =>
-                        React.isValidElement(child)
-                            ? React.cloneElement(child, {
-                                  ...sharedProps,
-                                  className: classnames(child.props.className, controllerPrefix, sharedProps.className)
-                              })
-                            : child
+                {React.Children.map(children, child =>
+                    React.isValidElement(child)
+                        ? React.cloneElement(child, {
+                              ...sharedProps,
+                              className: classnames(child.props.className, itemPrefix, sharedProps.className)
+                          })
+                        : child
                 )}
             </CombineWrap>
         );

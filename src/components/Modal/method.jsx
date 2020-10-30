@@ -12,7 +12,7 @@ import Modal from './Modal';
 const pop = props => {
     let container = document.createElement('div');
     document.body.appendChild(container);
-    const destory = () => {
+    const destroy = () => {
         const result = ReactDOM.unmountComponentAtNode(container);
         if (result && container.parentElement) {
             container.parentElement.removeChild(container);
@@ -27,7 +27,11 @@ const pop = props => {
     );
 
     return {
-        destory
+        destory: () => {
+            console.error(`Warning: wrong name of destory, please use destroy to instead`);
+            destroy();
+        },
+        destroy
     };
 };
 
@@ -46,8 +50,8 @@ const promiseJudgeHandle = (promiseLike, handle) => {
     }
 };
 const alert = ({ onOk = () => {}, onClose = () => {}, ...rest }, content) => {
-    const _onClose = () => promiseJudgeHandle(onClose(), () => modal.destory());
-    const _onOk = () => promiseJudgeHandle(onOk(), () => modal.destory());
+    const _onClose = () => promiseJudgeHandle(onClose(), () => modal.destroy());
+    const _onOk = () => promiseJudgeHandle(onOk(), () => modal.destroy());
     const AlertFooter = ({ locale }) => (
         <Button size="lg" styleType="primary" onClick={_onOk}>
             {locale.confirm}
@@ -74,8 +78,8 @@ const alert = ({ onOk = () => {}, onClose = () => {}, ...rest }, content) => {
 };
 
 const confirm = ({ onOk = () => {}, onClose = () => {}, ...rest }, content) => {
-    const _onClose = () => promiseJudgeHandle(onClose(), () => modal.destory());
-    const _onOk = () => promiseJudgeHandle(onOk(), () => modal.destory());
+    const _onClose = () => promiseJudgeHandle(onClose(), () => modal.destroy());
+    const _onOk = () => promiseJudgeHandle(onOk(), () => modal.destroy());
 
     const options = {
         children: content,
@@ -93,4 +97,19 @@ const confirm = ({ onOk = () => {}, onClose = () => {}, ...rest }, content) => {
     return modal;
 };
 
-export { alert, confirm };
+const open = ({ onOk = () => {}, onClose = () => {}, ...rest }, content) => {
+    const _onClose = () => promiseJudgeHandle(onClose(), () => modal.destroy());
+    const _onOk = () => promiseJudgeHandle(onOk(), () => modal.destroy());
+
+    const options = {
+        children: content,
+        onClose: _onClose,
+        onOk: _onOk,
+        ...rest
+    };
+
+    const modal = pop(options);
+    return modal;
+};
+
+export { alert, confirm, open };

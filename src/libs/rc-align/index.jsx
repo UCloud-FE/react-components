@@ -94,7 +94,6 @@ class Align extends Component {
                 }
 
                 if (!shallowequal(prevProps.align, props.align)) {
-                    console.log('re');
                     reAlign = true;
                 }
             }

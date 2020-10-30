@@ -1,6 +1,6 @@
 {
   "name": "@ucloud-fe/react-components",
-  "version": "1.0.3",
+  "version": "1.0.7",
   "title": "UCloud react components",
   "description": "UCloud react components",
   "keywords": [
@@ -30,7 +30,7 @@
     "commitmsg": "commitlint -E GIT_PARAMS",
     "build": "webpack --display-error-details",
     "build:analyzer": "NODE_ENV=production ANALYZER=true npm run build -- --config webpack.dist.config.js",
-    "build:lib": "babel src/ -d lib/ --ignore '**/__demo__/*','**/__tests__/*' && node build-index.js",
+    "build:lib": "babel src/ --extensions '.js,.jsx,.ts,.tsx' -d lib/ --ignore '**/__demo__/*','**/__tests__/*' && node build-index.js",
     "build:dist": "NODE_ENV=production npm run build -- --config webpack.dist.config.js",
     "build:styleguide": "styleguidist build",
     "build:gh-pages": "./scripts/gh-pages.sh",
@@ -47,6 +47,7 @@
   "main": "lib/index.js",
   "files": [
     "README.md",
+    "index.d.ts",
     "dist/",
     "lib/"
   ],
@@ -60,6 +61,7 @@
     "dom-align": "^1.12.0",
     "emotion": "^10.0.27",
     "emotion-theming": "^10.0.27",
+    "file-bytes-formatter": "^1.0.4",
     "lodash": "^4.17.5",
     "mini-store": "^1.0.2",
     "moment": "^2.22.2",
@@ -90,6 +92,8 @@
     "@commitlint/config-conventional": "^7.1.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.0.0",
+    "@types/react": "^16",
+    "axios": "^0.20.0",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.3.0",
     "babel-loader": "^8.1.0",

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { ZFormContext } from './ZForm';
 
-const controllerDecotator = options => {
+const controllerDecorator = options => {
     return function decorator(Controller) {
         return class WrappedController extends Component {
             static propTypes = {
@@ -27,4 +27,4 @@ const controllerDecotator = options => {
     };
 };
 
-export default controllerDecotator;
+export default controllerDecorator;

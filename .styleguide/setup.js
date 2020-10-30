@@ -3,7 +3,7 @@ require('!file-loader?name=[name].[ext]!./style.css');
 
 const components = require('../index');
 
-import ResizableTH from 'src/components/Table/ResizableTH';
+const ResizableTH = require('src/components/Table/ResizableTH').default;
 
 components.Table.ResizableTH = ResizableTH;
 
@@ -31,3 +31,4 @@ import 'moment/locale/zh-cn';
 global.moment().locale('zh-cn').utcOffset(8);
 
 global.SizeInterface = require('src/interfaces/Size').default;
+global.axios = require('axios');

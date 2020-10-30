@@ -155,3 +155,8 @@
 
 ```js {"codepath": "demo.jsx"}
 ```
+
+-   单元格合并
+
+```js {"codepath": "cellMerge.jsx"}
+```

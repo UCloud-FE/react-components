@@ -7,7 +7,7 @@ import withProps from 'src/utils/withProps';
 const { prefixCls: _prefixCls } = config;
 const prefixCls = _prefixCls + '-combine';
 
-export const controllerPrefix = prefixCls + '-controller';
+export const itemPrefix = prefixCls + '-item';
 
 const spacingMap = {
     compact: '-1px',
@@ -25,11 +25,11 @@ export const CombineWrap = withProps({
         return css`
             position: relative;
 
-            > .${controllerPrefix} {
+            > .${itemPrefix} {
                 vertical-align: middle;
                 display: inline-block;
             }
-            > .${controllerPrefix}+.${controllerPrefix} {
+            > .${itemPrefix}+.${itemPrefix} {
                 margin-left: ${spacingMap[spacing] || spacing};
 
                 &:focus {

@@ -17,7 +17,7 @@ export class Bubble extends PureComponent {
         /** 泡泡内容 */
         bubble: PropTypes.node,
         /** 内置样式风格 */
-        styleType: PropTypes.oneOf(StyleType),
+        styleType: PropTypes.oneOf(StyleType).isRequired,
         /** 尺寸 */
         size: PropTypes.oneOf(Size),
         /** 自定义样式 */
@@ -33,12 +33,26 @@ export class Bubble extends PureComponent {
         offset: PropTypes.array
     };
     static defaultProps = {
-        styleType: 'yellow',
         offset: [12, -4],
         size: 'md'
     };
+    componentDidMount() {
+        const { styleType } = this.props;
+        if (!styleType) {
+            console.error('Must provide styleType for Tag');
+        }
+    }
     render() {
-        const { children, bubble, styleType, customStyle, offset, getBubbleContainer, size, ...rest } = this.props;
+        const {
+            children,
+            bubble,
+            styleType = 'yellow',
+            customStyle,
+            offset,
+            getBubbleContainer,
+            size,
+            ...rest
+        } = this.props;
         return (
             <Wrap {...rest}>
                 {children}

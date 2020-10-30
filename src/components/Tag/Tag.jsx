@@ -38,6 +38,9 @@ class Tag extends Component {
          */
         disabled: PropTypes.bool
     };
+    static defaultProps = {
+        styleType: 'default'
+    };
     render() {
         const { children, styleType, closable, icon, disabled, onClose, ...rest } = this.props;
         return (

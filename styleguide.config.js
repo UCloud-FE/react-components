@@ -1,5 +1,6 @@
 const path = require('path');
 const _ = require('lodash');
+const webpack = require('webpack');
 
 const webpackConfig = require('./webpack.config.js');
 let components = require('./.styleguide/components.json');
@@ -78,7 +79,9 @@ module.exports = {
         StyleGuideRenderer: path.join(__dirname, '.styleguide/components/StyleGuideRenderer'),
         ReactComponentRenderer: path.join(__dirname, '.styleguide/components/ReactComponentRenderer'),
         Examples: path.join(__dirname, '.styleguide/components/Examples'),
-        ReactExample: path.join(__dirname, '.styleguide/components/ReactExample')
+        ReactExample: path.join(__dirname, '.styleguide/components/ReactExample'),
+        ArgumentRenderer: path.join(__dirname, '.styleguide/components/ArgumentRenderer'),
+        ParaRenderer: path.join(__dirname, '.styleguide/components/ParaRenderer')
     },
     require: [path.join(__dirname, '.styleguide/setup.js')],
     assetsDir: 'static/',
@@ -100,10 +103,13 @@ module.exports = {
     getExampleFilename(componentPath) {
         return componentPath.replace(/\.jsx?$/, '.md');
     },
-    webpackConfig,
+    webpackConfig: {
+        ...webpackConfig,
+        plugins: (webpackConfig.plugins || []).concat(new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/))
+    },
     pagePerSection: true,
     skipComponentsWithoutExample: true,
-    usageMode: 'expand',
+    usageMode: isProd ? 'expand' : 'collapse',
     serverPort: 6080,
     sortProps: props => props,
     styleguideDir: process.env.STYLEGUIDE_BUILD_DIR || 'styleguide-build/default'

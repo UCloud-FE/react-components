@@ -75,7 +75,9 @@ export default class ReactExample extends Component<ReactExampleProps> {
         const ExampleComponent = this.getExampleComponent(example);
         let wrappedComponent = (
             <Wrapper onError={onError}>
-                <ExampleComponent />
+                <div className="demo">
+                    <ExampleComponent />
+                </div>
             </Wrapper>
         );
         if (dark) {

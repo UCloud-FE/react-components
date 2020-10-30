@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 
-export default class BoldCross extends PureComponent {
+export default class RightArrow extends PureComponent {
     render() {
         return (
             <path

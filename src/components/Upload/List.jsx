@@ -1,17 +1,10 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import Icon from 'components/Icon';
-
-import { UploadIcon, UploadNotice, ListWrap } from './style';
-
-const getIconName = status => {
-    return {
-        uploading: 'loading',
-        success: 'circle-check',
-        error: 'circle-mark'
-    }[status];
-};
+import { ListWrap, listCls, cardListCls } from './style';
+import Item from './Item';
+import CardItem from './CardItem';
+import { readFile, getFileType, openLink } from './utils';
 
 /**
  * 文件列表控件
@@ -26,47 +19,95 @@ export default class List extends PureComponent {
         onRemove: PropTypes.func,
         /** 自定义预览文件 */
         onPreview: PropTypes.func,
+        /** 自定义文件是否可以预览 */
+        getPreviewableOfItem: PropTypes.func,
+        /** 自定义文件是否可删除 */
+        getRemovableOfItem: PropTypes.func,
         /** 重新上传文件 */
         handleReupload: PropTypes.func,
         /** 是否禁用 */
         disabled: PropTypes.bool,
+        /** 是否展示缩略图 */
+        thumbnail: PropTypes.bool,
+        /** 卡片列表 */
+        card: PropTypes.bool,
         /** @ignore */
         locale: PropTypes.object
     };
     static defaultProps = {
-        onError: () => {},
-        onRemove: () => {}
+        getRemovableOfItem: file => file?.status !== 'uploading'
+    };
+    onPreview = (file, index) => {
+        const { onPreview } = this.props;
+        if (onPreview) {
+            onPreview(file, index);
+        } else if (file.url) {
+            openLink(file.url);
+        } else {
+            const w = openLink('');
+            readFile(file).then(url => {
+                const doc = w.document;
+                const img = doc.createElement('img');
+                img.src = url;
+                img.style.margin = 'auto';
+                img.style.display = 'block';
+                doc.write(img.outerHTML);
+            });
+        }
     };
     /** 渲染列表项 */
-    renderFileItem = (file, index, disabled) => {
-        const { onRemove, onPreview, handleReupload } = this.props;
-        const action = [
-            disabled || file.status !== 'error' || !handleReupload ? null : (
-                <UploadIcon key="reload" type="reload" onClick={() => handleReupload(file)} />
-            ),
-            disabled || file.status === 'uploading' ? null : (
-                <UploadIcon key="remove" type="cross" onClick={() => onRemove(file, index)} />
-            )
-        ];
-        const icon = file.status ? <Icon type={getIconName(file.status)} spin={file.status === 'uploading'} /> : null;
-        return (
-            <UploadNotice key={file.uid} icon={icon} onPreview={onPreview} action={action} closable={false}>
-                <a onClick={() => onPreview && onPreview(file, index)}>{file.name}</a>
-            </UploadNotice>
-        );
+    renderFileItem = (file = {}, index) => {
+        const {
+            getRemovableOfItem,
+            onRemove,
+            onPreview,
+            getPreviewableOfItem,
+            handleReupload,
+            locale,
+            thumbnail,
+            disabled,
+            card
+        } = this.props;
+
+        const removable = getRemovableOfItem?.(file);
+        let previewable = false;
+        if (file.status === 'uploading' || file.status === 'error') {
+            // empty
+        } else if (onPreview) {
+            if (getPreviewableOfItem) {
+                previewable = getPreviewableOfItem(file);
+            } else {
+                previewable = true;
+            }
+        } else if (onPreview === null) {
+            previewable = false;
+        } else if (file.url || (file instanceof File && getFileType(file) === 'image')) {
+            previewable = true;
+        }
+        const itemProps = {
+            onRemove: removable ? onRemove : null,
+            onPreview: previewable ? this.onPreview : null,
+            onReupload: handleReupload,
+            locale,
+            disabled,
+            file,
+            index
+        };
+        if (!card) itemProps.thumbnail = thumbnail;
+        const ItemComp = card ? CardItem : Item;
+        return <ItemComp key={file.uid} {...itemProps} />;
     };
+
     render() {
-        const { fileList, renderFileItem = this.renderFileItem, disabled, locale } = this.props;
-        return (
+        const { fileList, card } = this.props;
+        return fileList.length ? (
             <ListWrap>
-                {fileList.length ? (
-                    fileList.map((file, index) => renderFileItem(file, index, disabled))
-                ) : (
-                    <UploadNotice closable={false} icon={null}>
-                        {locale.emptyTip}
-                    </UploadNotice>
-                )}
+                <div>
+                    <div className={card ? cardListCls : listCls}>
+                        {fileList.map((file, index) => this.renderFileItem(file, index))}
+                    </div>
+                </div>
             </ListWrap>
-        );
+        ) : null;
     }
 }

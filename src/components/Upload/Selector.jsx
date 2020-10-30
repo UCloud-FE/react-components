@@ -1,40 +1,9 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import _ from 'lodash';
 
-import generateError from 'utils/generateError';
-import Button from 'components/Button';
+import Button from 'src/components/Button';
 
-import { SelectorWrap, TipWrap } from './style';
-
-/** 检查文件类型和大小 */
-const checkFile = (file, accept = '*', maxSize) => {
-    const types = accept.split(/\s*,\s*/);
-    let typeCheckPass = false;
-    for (let index in types) {
-        const type = types[index];
-        let regexp, pass;
-        if (/^\./.test(type)) {
-            regexp = new RegExp(type.replace('.', '\\.') + '$');
-            pass = regexp.test(file.name);
-        } else {
-            regexp = new RegExp(type.replace('*', '.*').replace('.', '\\.'));
-            pass = regexp.test(file.type);
-        }
-        if (pass) {
-            typeCheckPass = true;
-            break;
-        }
-    }
-    const sizeCheckPass = maxSize === undefined || file.size <= maxSize;
-    if (!typeCheckPass) {
-        return generateError(`file ${file.name} type is not accepted`, 'FileTypeError');
-    }
-    if (!sizeCheckPass) {
-        return generateError(`file ${file.name} size is to big`, 'FileSizeError');
-    }
-    return true;
-};
+import { SelectorWrap, tipCls } from './style';
 
 /**
  * 文件选择控件
@@ -43,8 +12,6 @@ export default class Selector extends PureComponent {
     static propTypes = {
         /** 选取文件回调函数 */
         onSelect: PropTypes.func,
-        /** 选中或读取文件错误回调 */
-        onError: PropTypes.func,
         /** 自定义触发图片选择的选择控件 */
         selector: PropTypes.node,
         /** 是否禁用 */
@@ -58,10 +25,6 @@ export default class Selector extends PureComponent {
         /** @ignore */
         locale: PropTypes.object
     };
-    static defaultProps = {
-        onSelect: () => {},
-        onError: () => {}
-    };
     /**
      * 触发选择操作
      * @public
@@ -74,23 +37,14 @@ export default class Selector extends PureComponent {
         this._trigger && (this._trigger.value = '');
     };
     onChange = e => {
-        const { onSelect, onError, accept, maxSize } = this.props;
-        const files = [].slice.call(e.target.files);
+        const { onSelect } = this.props;
+        onSelect?.(e.target.files);
         this.cleanTrigger();
-        for (let index in files) {
-            const file = files[index];
-            const checkResult = checkFile(file, accept, maxSize);
-            if (checkResult !== true) {
-                onError(checkResult);
-                return;
-            }
-            file.uid = _.uniqueId('__file_uid_for_upload_components__');
-        }
-        onSelect(files);
     };
     render() {
-        const { disabled, multiple, accept, selector, locale, ...rest } = this.props;
-        return (
+        // eslint-disable-next-line no-unused-vars
+        const { disabled, multiple, accept, selector, locale, onSelect, ...rest } = this.props;
+        return selector === null ? null : (
             <SelectorWrap onClick={this.trigger} disabled={disabled} {...rest}>
                 <input
                     type="file"
@@ -107,7 +61,9 @@ export default class Selector extends PureComponent {
                           <Button size="md" styleType="primary" disabled={disabled} key="button">
                               {locale.selectFile}
                           </Button>,
-                          <TipWrap key="tip">{locale.selectFileTip}</TipWrap>
+                          <span className={tipCls} key="tip">
+                              {locale.selectFileTip}
+                          </span>
                       ]}
             </SelectorWrap>
         );
