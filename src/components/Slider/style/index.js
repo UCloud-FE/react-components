@@ -166,7 +166,7 @@ export const SliderWrap = withProps()(
                         box-shadow: none;
                         border: 1px solid ${DT.T_COLOR_LINE_DISABLED_LIGHT};
                         background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
-                        cursor: not-allowed;
+                        cursor: default;
 
                         &::before,
                         &::after {
@@ -201,7 +201,7 @@ export const SliderWrap = withProps()(
 
                     ${disabled &&
                     css`
-                        cursor: not-allowed;
+                        cursor: default;
                         color: ${DT.T_COLOR_TEXT_DISABLED};
                         border-right-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
                     `};

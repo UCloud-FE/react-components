@@ -195,7 +195,7 @@ const propsMixin = props => {
         ${disabled &&
         css`
             border-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
-            cursor: not-allowed;
+            cursor: default;
 
             ${Inner} {
                 color: ${DT.T_COLOR_TEXT_DISABLED};

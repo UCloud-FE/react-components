@@ -107,7 +107,7 @@ ${clearFixMixin};
 
     &-tab-disabled,
     &-tab-disabled:hover {
-        cursor: not-allowed;
+        cursor: default;
         color: ${DT.T_COLOR_TEXT_DISABLED};
     }
 

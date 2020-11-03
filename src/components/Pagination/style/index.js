@@ -92,7 +92,7 @@ export const PaginationWrap = withProps()(
                     border: 1px solid ${DT.T_COLOR_LINE_DISABLED_DARK};
                     box-shadow: none;
                     background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
-                    cursor: not-allowed;
+                    cursor: default;
                 }
 
                 &-prev-icon,
