@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.7](https://github.com/UCloud-FE/react-components/compare/v1.0.6...v1.0.7) (2020-10-27)
+
+### Features
+
+-   **All:** add font-size to input and switch ([2ffc9d2](https://github.com/UCloud-FE/react-components/commit/2ffc9d2d1116e28d7c7fe0d5c8629d6fc07c5409))
+-   **Combine:** rename className from controller to item ([850c23c](https://github.com/UCloud-FE/react-components/commit/850c23c510c33627dd5ea252049f95bfbd04bddc))
+-   **global:** add index.d.ts to npm for publish ([39612fa](https://github.com/UCloud-FE/react-components/commit/39612fa1bfab65c8bf8aa907fc45316a512e7a30))
+-   **Interface:** update index.d.ts ([0be8950](https://github.com/UCloud-FE/react-components/commit/0be8950547f11147594ecc67f7405b2274194dc8)), closes [#258](https://github.com/UCloud-FE/react-components/issues/258)
+-   **Modal:** add open method ([738a30f](https://github.com/UCloud-FE/react-components/commit/738a30fed3475fb113c876ba9a14ba80818bd51b))
+-   **Table:** add HoverDisplayArea ([3505830](https://github.com/UCloud-FE/react-components/commit/35058309b77605dc06e1ba4183706b24032b139e))
+-   **Tag:** add gray styleType & unsafe handle ([7324dd1](https://github.com/UCloud-FE/react-components/commit/7324dd19a4dec5e1c1ada2715d57c6edd3db6042))
+
 ### [1.0.6](https://github.com/UCloud-FE/react-components/compare/v1.0.5...v1.0.6) (2020-10-09)
 
 ### [1.0.5](https://github.com/UCloud-FE/react-components/compare/v1.0.4...v1.0.5) (2020-09-30)

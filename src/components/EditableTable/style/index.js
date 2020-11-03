@@ -76,7 +76,7 @@ export const AddBar = withProps()(
                 &&& {
                     background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
                     color: ${DT.T_COLOR_TEXT_DISABLED};
-                    cursor: not-allowed;
+                    cursor: default;
 
                     .${tipCls} {
                         color: ${DT.T_COLOR_TEXT_DISABLED};

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Styled, { JssInjectedProps } from 'rsg-components/Styled';
+import classnames from 'classnames';
 
 export const styles = ({ space, color, fontFamily }) => ({
     para: {
@@ -22,7 +23,7 @@ interface ParaProps extends JssInjectedProps {
 export const ParaRenderer: React.FunctionComponent<ParaProps> = ({ classes, semantic, children }) => {
     const Tag = semantic || 'div';
 
-    return <Tag className={classes.para}>{children}</Tag>;
+    return <Tag className={classnames(classes.para, 'sc-para')}>{children}</Tag>;
 };
 
 ParaRenderer.propTypes = {

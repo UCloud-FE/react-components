@@ -32,6 +32,7 @@ export const selectIconHeaderCls = prefixCls + '-select-icon-th';
 export const placeholderCellCls = prefixCls + '-placeholder-cell';
 export const placeholderHeaderCls = prefixCls + '-placeholder-th';
 const expandedRowContentCls = prefixCls + '-expanded-row-content';
+export const hoverDisplayAreaCls = prefixCls + '-hover-display-area';
 
 export const ExpandedRowContent = withProps({
     className: expandedRowContentCls
@@ -89,7 +90,7 @@ export const TableWrap = withProps({
             &-filter-notice,
             &-empty-content-wrap,
             &-error-content-wrap {
-                width: 400px;
+                max-width: 400px;
                 margin: 12px auto;
                 text-align: center;
             }
@@ -291,6 +292,15 @@ export const TableWrap = withProps({
                 background: ${DT.T_TABLE_ROW_COLOR_BG_HOVER};
                 &.${prefixCls}-row-expand-icon-cell, &.${selectIconCellCls} {
                     background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
+                }
+            }
+            .${hoverDisplayAreaCls} {
+                display: inline;
+                visibility: hidden;
+            }
+            table > tbody > .${prefixCls}-row:hover {
+                .${hoverDisplayAreaCls} {
+                    visibility: visible;
                 }
             }
 

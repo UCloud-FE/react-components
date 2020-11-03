@@ -43,8 +43,8 @@ export class CardItem extends Component {
         onReupload(file);
     };
     onRemove = () => {
-        const { file, onRemove } = this.props;
-        onRemove(file);
+        const { file, index, onRemove } = this.props;
+        onRemove(file, index);
     };
     renderThumbnail = isFullThumbnail => {
         const { file } = this.props;
