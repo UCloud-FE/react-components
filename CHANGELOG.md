@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.8](https://github.com/UCloud-FE/react-components/compare/v1.0.7...v1.0.8) (2020-11-03)
+
+### Features
+
+-   **All:** clean not-allowed cursor ([07fed0b](https://github.com/UCloud-FE/react-components/commit/07fed0b5c3f2fb87f8ae6ec8659d838dfb767b8f))
+-   **Input:** change input disabled border ([1c86679](https://github.com/UCloud-FE/react-components/commit/1c86679c7a2a93128e9b8d0ebd97c0860e363a75))
+
+### Bug Fixes
+
+-   **Upload:** fix upload onRemove args bug ([8c4465d](https://github.com/UCloud-FE/react-components/commit/8c4465d735bc33e4d104e99bf09c1ead54a8e971))
+
 ### [1.0.7](https://github.com/UCloud-FE/react-components/compare/v1.0.6...v1.0.7) (2020-10-27)
 
 ### Features

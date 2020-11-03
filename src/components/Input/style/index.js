@@ -88,7 +88,7 @@ const themeMixin = props => {
             &:hover {
                 color: ${DT.T_COLOR_TEXT_DISABLED};
                 -webkit-text-fill-color: currentcolor;
-                border-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
+                border-color: ${DT.T_COLOR_LINE_DISABLED_LIGHT};
                 background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
             }
             ${SuffixWrap}, ${PrefixWrap} {
