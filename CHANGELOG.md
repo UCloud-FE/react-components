@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.9](https://github.com/UCloud-FE/react-components/compare/v1.0.8...v1.0.9) (2020-11-04)
+
+### Features
+
+-   **EditableList:** add vertical-align ([4f67431](https://github.com/UCloud-FE/react-components/commit/4f67431bdfa1d1ae40e4c0a7c1f8d593fa02356e))
+-   **Interface:** update index.d.ts ([75c1622](https://github.com/UCloud-FE/react-components/commit/75c16221e4fafdc28d52ffa8f519b5bfe3eb3f09)), closes [#259](https://github.com/UCloud-FE/react-components/issues/259)
+-   **Table:** unselect link ignore disabled row ([c874fac](https://github.com/UCloud-FE/react-components/commit/c874fac8552262aa297efbc07a08b2c533bf5118))
+
 ### [1.0.8](https://github.com/UCloud-FE/react-components/compare/v1.0.7...v1.0.8) (2020-11-03)
 
 ### Features
