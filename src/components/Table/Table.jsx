@@ -13,14 +13,14 @@ import Select from 'src/components/Select';
 import Icon from 'src/components/Icon';
 import Tooltip from 'src/components/Tooltip';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
-import { InhertProvider } from 'src/components/Popover/ContainerContext';
+import { InheritProvider } from 'src/components/Popover/ContainerContext';
 
 import {
     prefixCls,
     TableWrap,
     PopupContainer,
     SortIcon,
-    CancleSelect,
+    CancelSelect,
     selectIconCellCls,
     selectIconHeaderCls,
     placeholderCellCls,
@@ -655,9 +655,6 @@ class Table extends Component {
         const { key } = column;
         return (key === undefined ? index : key) + '';
     };
-    cancleSelect = () => {
-        this.onSelectedRowKeysChange({});
-    };
     getColumns = (dataSourceOfCurrentPage, filters) => {
         const { columns, rowSelection, columnPlaceholder, locale } = this.props;
         const { order: currentOrder = {}, selectedRowKeyMap, columnConfig } = this.state;
@@ -743,7 +740,16 @@ class Table extends Component {
                             popup={
                                 <span>
                                     {locale.selected} {selectedCount}{' '}
-                                    <CancleSelect onClick={this.cancleSelect}>{locale.cancleSelect}</CancleSelect>
+                                    <CancelSelect
+                                        onClick={() => {
+                                            const enableKeysOfCurrentPage = enableDataSourceOfCurrentPage.map(
+                                                item => item.key
+                                            );
+                                            this.handleToggleCurrentPage(enableKeysOfCurrentPage, false);
+                                        }}
+                                    >
+                                        {locale.cancelSelect}
+                                    </CancelSelect>
                                 </span>
                             }
                             placement={rowSelection.selectedTip === 'bottom' ? 'bottomLeft' : 'topLeft'}
@@ -986,7 +992,7 @@ class Table extends Component {
               })();
 
         return (
-            <InhertProvider value={{ getPopupContainer: this.getPopupContainer }}>
+            <InheritProvider value={{ getPopupContainer: this.getPopupContainer }}>
                 <TableContext.Provider
                     value={{
                         columns: _c,
@@ -1065,7 +1071,7 @@ class Table extends Component {
                         )}
                     </TableWrap>
                 </TableContext.Provider>
-            </InhertProvider>
+            </InheritProvider>
         );
     }
 }
