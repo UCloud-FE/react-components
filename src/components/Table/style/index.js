@@ -352,7 +352,7 @@ export const ActionButton = styled(Button)`
     margin-right: 4px;
 `;
 
-export const CancleSelect = withProps()(
+export const CancelSelect = withProps()(
     styled('span')(props => {
         const {
             theme: { designTokens: DT }

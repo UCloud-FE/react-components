@@ -8,7 +8,7 @@ export default ContainerContext;
 
 export const { Consumer, Provider } = ContainerContext;
 
-export class InhertProvider extends PureComponent {
+export class InheritProvider extends PureComponent {
     static propTypes = {
         value: PropTypes.object
     };
