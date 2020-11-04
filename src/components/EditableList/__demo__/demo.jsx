@@ -102,7 +102,7 @@ const ZInput = controllerDecorator({
 
 const renderError = (error, key) => {
     const e = _.get(error, key);
-    return e ? <p>{e.join(',')}</p> : null;
+    return e ? <p style={{ color: 'red' }}>{e.join(',')}</p> : null;
 };
 
 class Demo3 extends React.Component {
@@ -134,7 +134,7 @@ class Demo3 extends React.Component {
     renderItem(item, originErrors) {
         return (
             <div>
-                <ZInput zName={`data.${item.key}.name`} />
+                <ZInput zName={`data.${item.key}.name`} zOptions={{ rules: [{ required: true }] }} />
                 {renderError(originErrors, `data.${item.key}.name`)}
             </div>
         );
