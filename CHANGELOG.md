@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.10](https://github.com/UCloud-FE/react-components/compare/v1.0.9...v1.0.10) (2020-11-06)
+
+### Features
+
+-   **Modal:** remove min-height in modal body ([c8ab713](https://github.com/UCloud-FE/react-components/commit/c8ab713e13e8d74c22500d75fffe44e756ecb741))
+-   **Switch:** change switch style & update DT ([09ae53f](https://github.com/UCloud-FE/react-components/commit/09ae53f4d71eec71efafce958e3a0c203e4b5c41))
+
 ### [1.0.9](https://github.com/UCloud-FE/react-components/compare/v1.0.8...v1.0.9) (2020-11-04)
 
 ### Features
