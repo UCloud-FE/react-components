@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Badge demo -- badge 1`] = `
-.emotion-140 .uc-fe-form-item {
+.emotion-110 .uc-fe-form-item {
   margin-bottom: 16px;
 }
 
-.emotion-140 .uc-fe-form-item:last-child {
+.emotion-110 .uc-fe-form-item:last-child {
   margin-bottom: 0;
 }
 
@@ -287,7 +287,7 @@ exports[`Badge demo -- badge 1`] = `
   vertical-align: baseline;
 }
 
-.emotion-41 {
+.emotion-31 {
   position: relative;
   border-radius: 2px;
   box-sizing: border-box;
@@ -299,87 +299,28 @@ exports[`Badge demo -- badge 1`] = `
   vertical-align: middle;
   background: #ffffff;
   height: 28px;
-  width: 80px;
+  width: 78px;
   padding: 4px;
-  border: 1px solid #c3cad9;
-  border-width: 1px;
-  line-height: 16px;
-}
-
-.emotion-41:hover {
-  border-color: #3357df;
-}
-
-.emotion-41:hover .emotion-38 {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
-}
-
-.emotion-41 .emotion-38 {
-  background: #ffffff;
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
-  width: 20px;
-  height: 20px;
-}
-
-.emotion-41 .emotion-36 {
-  background: #f44336;
-  left: 13px;
-  height: 10px;
-}
-
-.emotion-41 .emotion-40 {
-  color: #526075;
   border: 1px solid #d2d6ea;
-  box-shadow: inset 0 1px 3px 0 #d2d6ea;
-  background: #f6f6fb;
+  border-width: 1px;
 }
 
-.emotion-41 .emotion-32,
-.emotion-41 .emotion-34 {
-  line-height: 16px;
-}
-
-.emotion-41 .emotion-32 {
-  padding-right: 20px;
-}
-
-.emotion-41 .emotion-34 {
-  padding-left: 20px;
-}
-
-.emotion-41 .emotion-32 {
-  display: none;
-}
-
-.emotion-39 {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-31 {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  line-height: 22px;
-  box-sizing: border-box;
-  display: block;
-}
-
-.emotion-33 {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  line-height: 22px;
-  box-sizing: border-box;
-  display: block;
-}
-
-.emotion-37 {
+.emotion-31 .uc-fe-switch-dot {
   position: absolute;
-  display: inline-block;
+  display: block;
+  right: 4px;
+  top: 50%;
+  margin-top: -2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.emotion-31 .uc-fe-switch-button {
+  position: absolute;
+  display: block;
   left: -1px;
   top: -2px;
   border-radius: 2px;
@@ -388,62 +329,110 @@ exports[`Badge demo -- badge 1`] = `
   transition: all 0.3s;
 }
 
-.emotion-35 {
-  position: absolute;
-  display: inline-block;
-  left: 18px;
-  top: 4px;
-  width: 2px;
-  height: 16px;
-  border-radius: 1px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+.emotion-31 .uc-fe-switch-tip-on,
+.emotion-31 .uc-fe-switch-tip-off {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  display: block;
 }
 
-.emotion-114 {
+.emotion-31 .uc-fe-switch-inner {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.emotion-31:hover {
+  border-color: #3357df;
+}
+
+.emotion-31:hover .uc-fe-switch-button {
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
+.emotion-31 .uc-fe-switch-button {
+  background: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
+  width: 20px;
+  height: 20px;
+}
+
+.emotion-31 .uc-fe-switch-dot {
+  background: #f44336;
+}
+
+.emotion-31 .uc-fe-switch-inner {
+  color: #526075;
+  border: 1px solid #d2d6ea;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #f6f6fb;
+}
+
+.emotion-31 .uc-fe-switch-tip-on,
+.emotion-31 .uc-fe-switch-tip-off {
+  line-height: 16px;
+}
+
+.emotion-31 .uc-fe-switch-tip-on {
+  padding-right: 20px;
+}
+
+.emotion-31 .uc-fe-switch-tip-off {
+  padding-left: 20px;
+}
+
+.emotion-31 .uc-fe-switch-tip-on {
+  display: none;
+}
+
+.emotion-84 {
   position: relative;
   margin-bottom: -8px;
 }
 
-.emotion-114 .uc-fe-radio-styletype-default,
-.emotion-114 .uc-fe-radio-styletype-tag {
+.emotion-84 .uc-fe-radio-styletype-default,
+.emotion-84 .uc-fe-radio-styletype-tag {
   margin-right: 8px;
   margin-bottom: 8px;
 }
 
-.emotion-114 .uc-fe-radio-styletype-default:last-child,
-.emotion-114 .uc-fe-radio-styletype-tag:last-child {
+.emotion-84 .uc-fe-radio-styletype-default:last-child,
+.emotion-84 .uc-fe-radio-styletype-tag:last-child {
   margin-right: 0;
 }
 
-.emotion-114 .uc-fe-radio-styletype-card {
+.emotion-84 .uc-fe-radio-styletype-card {
   margin-right: 12px;
   margin-bottom: 8px;
 }
 
-.emotion-114 .uc-fe-radio-styletype-card:last-child {
+.emotion-84 .uc-fe-radio-styletype-card:last-child {
   margin-right: 0;
 }
 
-.emotion-114 .uc-fe-radio-styletype-text+.uc-fe-radio-styletype-text {
+.emotion-84 .uc-fe-radio-styletype-text+.uc-fe-radio-styletype-text {
   margin-left: -1px;
 }
 
-.emotion-114 .uc-fe-radio-styletype-button {
+.emotion-84 .uc-fe-radio-styletype-button {
   margin-right: -1px;
   margin-bottom: 8px;
 }
 
-.emotion-114 .uc-fe-radio-styletype-button:first-of-type {
+.emotion-84 .uc-fe-radio-styletype-button:first-of-type {
   border-radius: 2px 0 0 2px;
 }
 
-.emotion-114 .uc-fe-radio-styletype-button:last-of-type {
+.emotion-84 .uc-fe-radio-styletype-button:last-of-type {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
 }
 
-.emotion-97 {
+.emotion-67 {
   color: #526075;
   font-size: 12px;
   position: relative;
@@ -456,11 +445,11 @@ exports[`Badge demo -- badge 1`] = `
   color: #0a1633;
 }
 
-.emotion-97 > * {
+.emotion-67 > * {
   font-size: 12px;
 }
 
-.emotion-97 .uc-fe-radio-icon-wrap {
+.emotion-67 .uc-fe-radio-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -472,7 +461,7 @@ exports[`Badge demo -- badge 1`] = `
   vertical-align: middle;
 }
 
-.emotion-97 .uc-fe-radio-icon-wrap .uc-fe-radio-icon {
+.emotion-67 .uc-fe-radio-icon-wrap .uc-fe-radio-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -480,43 +469,43 @@ exports[`Badge demo -- badge 1`] = `
   left: -1px;
 }
 
-.emotion-97 .uc-fe-radio-content {
+.emotion-67 .uc-fe-radio-content {
   display: inline-block;
   vertical-align: middle;
   max-height: 100%;
   margin-left: 8px;
 }
 
-.emotion-97:hover .uc-fe-radio-icon-wrap,
-.emotion-97.uc-fe-radio-checked .uc-fe-radio-icon-wrap {
+.emotion-67:hover .uc-fe-radio-icon-wrap,
+.emotion-67.uc-fe-radio-checked .uc-fe-radio-icon-wrap {
   border-color: #3860f4;
 }
 
-.emotion-97.uc-fe-radio-checked .uc-fe-radio-icon {
+.emotion-67.uc-fe-radio-checked .uc-fe-radio-icon {
   visibility: visible;
   opacity: 1;
   fill: #3860f4;
 }
 
-.emotion-97.uc-fe-radio-disabled {
+.emotion-67.uc-fe-radio-disabled {
   cursor: default;
   color: #cccccc;
 }
 
-.emotion-97.uc-fe-radio-disabled .uc-fe-radio-icon-wrap {
+.emotion-67.uc-fe-radio-disabled .uc-fe-radio-icon-wrap {
   border-color: #d9d9d9;
   background: #f7f7f7;
 }
 
-.emotion-97.uc-fe-radio-disabled.uc-fe-radio-checked .uc-fe-radio-icon {
+.emotion-67.uc-fe-radio-disabled.uc-fe-radio-checked .uc-fe-radio-icon {
   fill: #cccccc;
 }
 
-.emotion-97.uc-fe-radio-disabled.uc-fe-radio-checked .uc-fe-radio-icon-wrap {
+.emotion-67.uc-fe-radio-disabled.uc-fe-radio-checked .uc-fe-radio-icon-wrap {
   background: none;
 }
 
-.emotion-94 {
+.emotion-64 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -525,16 +514,16 @@ exports[`Badge demo -- badge 1`] = `
   height: 14px;
 }
 
-.emotion-146 {
+.emotion-116 {
   position: relative;
   display: inline-block;
 }
 
-.emotion-144 {
+.emotion-114 {
   position: absolute;
 }
 
-.emotion-142 {
+.emotion-112 {
   display: inline-block;
   min-height: 20px;
   line-height: 20px;
@@ -546,7 +535,7 @@ exports[`Badge demo -- badge 1`] = `
   color: white;
 }
 
-.emotion-142.uc-fe-badge-badge-dot {
+.emotion-112.uc-fe-badge-badge-dot {
   width: 10px;
   height: 10px;
   padding: 0;
@@ -555,11 +544,11 @@ exports[`Badge demo -- badge 1`] = `
   min-height: 0;
 }
 
-.emotion-140 .uc-fe-form-item {
+.emotion-110 .uc-fe-form-item {
   margin-bottom: 16px;
 }
 
-.emotion-140 .uc-fe-form-item:last-child {
+.emotion-110 .uc-fe-form-item:last-child {
   margin-bottom: 0;
 }
 
@@ -841,7 +830,7 @@ exports[`Badge demo -- badge 1`] = `
   vertical-align: baseline;
 }
 
-.emotion-41 {
+.emotion-31 {
   position: relative;
   border-radius: 2px;
   box-sizing: border-box;
@@ -853,87 +842,28 @@ exports[`Badge demo -- badge 1`] = `
   vertical-align: middle;
   background: #ffffff;
   height: 28px;
-  width: 80px;
+  width: 78px;
   padding: 4px;
-  border: 1px solid #c3cad9;
-  border-width: 1px;
-  line-height: 16px;
-}
-
-.emotion-41:hover {
-  border-color: #3357df;
-}
-
-.emotion-41:hover .emotion-38 {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
-}
-
-.emotion-41 .emotion-38 {
-  background: #ffffff;
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
-  width: 20px;
-  height: 20px;
-}
-
-.emotion-41 .emotion-36 {
-  background: #f44336;
-  left: 13px;
-  height: 10px;
-}
-
-.emotion-41 .emotion-40 {
-  color: #526075;
   border: 1px solid #d2d6ea;
-  box-shadow: inset 0 1px 3px 0 #d2d6ea;
-  background: #f6f6fb;
+  border-width: 1px;
 }
 
-.emotion-41 .emotion-32,
-.emotion-41 .emotion-34 {
-  line-height: 16px;
-}
-
-.emotion-41 .emotion-32 {
-  padding-right: 20px;
-}
-
-.emotion-41 .emotion-34 {
-  padding-left: 20px;
-}
-
-.emotion-41 .emotion-32 {
-  display: none;
-}
-
-.emotion-39 {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-31 {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  line-height: 22px;
-  box-sizing: border-box;
-  display: block;
-}
-
-.emotion-33 {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  line-height: 22px;
-  box-sizing: border-box;
-  display: block;
-}
-
-.emotion-37 {
+.emotion-31 .uc-fe-switch-dot {
   position: absolute;
-  display: inline-block;
+  display: block;
+  right: 4px;
+  top: 50%;
+  margin-top: -2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.emotion-31 .uc-fe-switch-button {
+  position: absolute;
+  display: block;
   left: -1px;
   top: -2px;
   border-radius: 2px;
@@ -942,62 +872,110 @@ exports[`Badge demo -- badge 1`] = `
   transition: all 0.3s;
 }
 
-.emotion-35 {
-  position: absolute;
-  display: inline-block;
-  left: 18px;
-  top: 4px;
-  width: 2px;
-  height: 16px;
-  border-radius: 1px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+.emotion-31 .uc-fe-switch-tip-on,
+.emotion-31 .uc-fe-switch-tip-off {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  display: block;
 }
 
-.emotion-114 {
+.emotion-31 .uc-fe-switch-inner {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.emotion-31:hover {
+  border-color: #3357df;
+}
+
+.emotion-31:hover .uc-fe-switch-button {
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
+.emotion-31 .uc-fe-switch-button {
+  background: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
+  width: 20px;
+  height: 20px;
+}
+
+.emotion-31 .uc-fe-switch-dot {
+  background: #f44336;
+}
+
+.emotion-31 .uc-fe-switch-inner {
+  color: #526075;
+  border: 1px solid #d2d6ea;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #f6f6fb;
+}
+
+.emotion-31 .uc-fe-switch-tip-on,
+.emotion-31 .uc-fe-switch-tip-off {
+  line-height: 16px;
+}
+
+.emotion-31 .uc-fe-switch-tip-on {
+  padding-right: 20px;
+}
+
+.emotion-31 .uc-fe-switch-tip-off {
+  padding-left: 20px;
+}
+
+.emotion-31 .uc-fe-switch-tip-on {
+  display: none;
+}
+
+.emotion-84 {
   position: relative;
   margin-bottom: -8px;
 }
 
-.emotion-114 .uc-fe-radio-styletype-default,
-.emotion-114 .uc-fe-radio-styletype-tag {
+.emotion-84 .uc-fe-radio-styletype-default,
+.emotion-84 .uc-fe-radio-styletype-tag {
   margin-right: 8px;
   margin-bottom: 8px;
 }
 
-.emotion-114 .uc-fe-radio-styletype-default:last-child,
-.emotion-114 .uc-fe-radio-styletype-tag:last-child {
+.emotion-84 .uc-fe-radio-styletype-default:last-child,
+.emotion-84 .uc-fe-radio-styletype-tag:last-child {
   margin-right: 0;
 }
 
-.emotion-114 .uc-fe-radio-styletype-card {
+.emotion-84 .uc-fe-radio-styletype-card {
   margin-right: 12px;
   margin-bottom: 8px;
 }
 
-.emotion-114 .uc-fe-radio-styletype-card:last-child {
+.emotion-84 .uc-fe-radio-styletype-card:last-child {
   margin-right: 0;
 }
 
-.emotion-114 .uc-fe-radio-styletype-text+.uc-fe-radio-styletype-text {
+.emotion-84 .uc-fe-radio-styletype-text+.uc-fe-radio-styletype-text {
   margin-left: -1px;
 }
 
-.emotion-114 .uc-fe-radio-styletype-button {
+.emotion-84 .uc-fe-radio-styletype-button {
   margin-right: -1px;
   margin-bottom: 8px;
 }
 
-.emotion-114 .uc-fe-radio-styletype-button:first-of-type {
+.emotion-84 .uc-fe-radio-styletype-button:first-of-type {
   border-radius: 2px 0 0 2px;
 }
 
-.emotion-114 .uc-fe-radio-styletype-button:last-of-type {
+.emotion-84 .uc-fe-radio-styletype-button:last-of-type {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
 }
 
-.emotion-97 {
+.emotion-67 {
   color: #526075;
   font-size: 12px;
   position: relative;
@@ -1010,11 +988,11 @@ exports[`Badge demo -- badge 1`] = `
   color: #0a1633;
 }
 
-.emotion-97 > * {
+.emotion-67 > * {
   font-size: 12px;
 }
 
-.emotion-97 .uc-fe-radio-icon-wrap {
+.emotion-67 .uc-fe-radio-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -1026,7 +1004,7 @@ exports[`Badge demo -- badge 1`] = `
   vertical-align: middle;
 }
 
-.emotion-97 .uc-fe-radio-icon-wrap .uc-fe-radio-icon {
+.emotion-67 .uc-fe-radio-icon-wrap .uc-fe-radio-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -1034,43 +1012,43 @@ exports[`Badge demo -- badge 1`] = `
   left: -1px;
 }
 
-.emotion-97 .uc-fe-radio-content {
+.emotion-67 .uc-fe-radio-content {
   display: inline-block;
   vertical-align: middle;
   max-height: 100%;
   margin-left: 8px;
 }
 
-.emotion-97:hover .uc-fe-radio-icon-wrap,
-.emotion-97.uc-fe-radio-checked .uc-fe-radio-icon-wrap {
+.emotion-67:hover .uc-fe-radio-icon-wrap,
+.emotion-67.uc-fe-radio-checked .uc-fe-radio-icon-wrap {
   border-color: #3860f4;
 }
 
-.emotion-97.uc-fe-radio-checked .uc-fe-radio-icon {
+.emotion-67.uc-fe-radio-checked .uc-fe-radio-icon {
   visibility: visible;
   opacity: 1;
   fill: #3860f4;
 }
 
-.emotion-97.uc-fe-radio-disabled {
+.emotion-67.uc-fe-radio-disabled {
   cursor: default;
   color: #cccccc;
 }
 
-.emotion-97.uc-fe-radio-disabled .uc-fe-radio-icon-wrap {
+.emotion-67.uc-fe-radio-disabled .uc-fe-radio-icon-wrap {
   border-color: #d9d9d9;
   background: #f7f7f7;
 }
 
-.emotion-97.uc-fe-radio-disabled.uc-fe-radio-checked .uc-fe-radio-icon {
+.emotion-67.uc-fe-radio-disabled.uc-fe-radio-checked .uc-fe-radio-icon {
   fill: #cccccc;
 }
 
-.emotion-97.uc-fe-radio-disabled.uc-fe-radio-checked .uc-fe-radio-icon-wrap {
+.emotion-67.uc-fe-radio-disabled.uc-fe-radio-checked .uc-fe-radio-icon-wrap {
   background: none;
 }
 
-.emotion-94 {
+.emotion-64 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -1079,16 +1057,16 @@ exports[`Badge demo -- badge 1`] = `
   height: 14px;
 }
 
-.emotion-146 {
+.emotion-116 {
   position: relative;
   display: inline-block;
 }
 
-.emotion-144 {
+.emotion-114 {
   position: absolute;
 }
 
-.emotion-142 {
+.emotion-112 {
   display: inline-block;
   min-height: 20px;
   line-height: 20px;
@@ -1100,7 +1078,7 @@ exports[`Badge demo -- badge 1`] = `
   color: white;
 }
 
-.emotion-142.uc-fe-badge-badge-dot {
+.emotion-112.uc-fe-badge-badge-dot {
   width: 10px;
   height: 10px;
   padding: 0;
@@ -1111,7 +1089,7 @@ exports[`Badge demo -- badge 1`] = `
 
 <div>
   <form
-    class="uc-fe-form demo-form emotion-140 emotion-141"
+    class="uc-fe-form demo-form emotion-110 emotion-111"
   >
     <div
       class="uc-fe-row uc-fe-form-item emotion-10 emotion-11 emotion-12"
@@ -1201,26 +1179,26 @@ exports[`Badge demo -- badge 1`] = `
         span="9"
       >
         <div
-          class=" emotion-41 emotion-42"
+          class=" emotion-31 emotion-32"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="uc-fe-switch-inner"
           >
             <span
-              class="emotion-31 emotion-32"
+              class="uc-fe-switch-tip-on"
             >
               ON
             </span>
             <span
-              class="emotion-33 emotion-34"
+              class="uc-fe-switch-tip-off"
             >
               OFF
             </span>
             <span
-              class="emotion-37 emotion-38"
+              class="uc-fe-switch-button"
             >
               <span
-                class="emotion-35 emotion-36"
+                class="uc-fe-switch-dot"
               />
             </span>
           </div>
@@ -1241,26 +1219,26 @@ exports[`Badge demo -- badge 1`] = `
         span="9"
       >
         <div
-          class=" emotion-41 emotion-42"
+          class=" emotion-31 emotion-32"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="uc-fe-switch-inner"
           >
             <span
-              class="emotion-31 emotion-32"
+              class="uc-fe-switch-tip-on"
             >
               ON
             </span>
             <span
-              class="emotion-33 emotion-34"
+              class="uc-fe-switch-tip-off"
             >
               OFF
             </span>
             <span
-              class="emotion-37 emotion-38"
+              class="uc-fe-switch-button"
             >
               <span
-                class="emotion-35 emotion-36"
+                class="uc-fe-switch-dot"
               />
             </span>
           </div>
@@ -1281,26 +1259,26 @@ exports[`Badge demo -- badge 1`] = `
         span="9"
       >
         <div
-          class=" emotion-41 emotion-42"
+          class=" emotion-31 emotion-32"
         >
           <div
-            class="emotion-39 emotion-40"
+            class="uc-fe-switch-inner"
           >
             <span
-              class="emotion-31 emotion-32"
+              class="uc-fe-switch-tip-on"
             >
               ON
             </span>
             <span
-              class="emotion-33 emotion-34"
+              class="uc-fe-switch-tip-off"
             >
               OFF
             </span>
             <span
-              class="emotion-37 emotion-38"
+              class="uc-fe-switch-button"
             >
               <span
-                class="emotion-35 emotion-36"
+                class="uc-fe-switch-dot"
               />
             </span>
           </div>
@@ -1321,17 +1299,17 @@ exports[`Badge demo -- badge 1`] = `
         span="9"
       >
         <div
-          class="emotion-114 emotion-982"
+          class="emotion-84 emotion-682"
         >
           <span
             checked=""
-            class="uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-96 emotion-97 emotion-98"
+            class="uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-66 emotion-67 emotion-68"
           >
             <span
               class="uc-fe-radio-icon-wrap"
             >
               <svg
-                class="uc-fe-radio-icon emotion-94 emotion-95"
+                class="uc-fe-radio-icon emotion-64 emotion-65"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -1349,13 +1327,13 @@ exports[`Badge demo -- badge 1`] = `
             </span>
           </span>
           <span
-            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-96 emotion-97 emotion-98"
+            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-66 emotion-67 emotion-68"
           >
             <span
               class="uc-fe-radio-icon-wrap"
             >
               <svg
-                class="uc-fe-radio-icon emotion-94 emotion-95"
+                class="uc-fe-radio-icon emotion-64 emotion-65"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -1373,13 +1351,13 @@ exports[`Badge demo -- badge 1`] = `
             </span>
           </span>
           <span
-            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-96 emotion-97 emotion-98"
+            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-66 emotion-67 emotion-68"
           >
             <span
               class="uc-fe-radio-icon-wrap"
             >
               <svg
-                class="uc-fe-radio-icon emotion-94 emotion-95"
+                class="uc-fe-radio-icon emotion-64 emotion-65"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -1397,13 +1375,13 @@ exports[`Badge demo -- badge 1`] = `
             </span>
           </span>
           <span
-            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-96 emotion-97 emotion-98"
+            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-66 emotion-67 emotion-68"
           >
             <span
               class="uc-fe-radio-icon-wrap"
             >
               <svg
-                class="uc-fe-radio-icon emotion-94 emotion-95"
+                class="uc-fe-radio-icon emotion-64 emotion-65"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -1464,17 +1442,17 @@ exports[`Badge demo -- badge 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-badge emotion-146 emotion-147"
+      class="uc-fe-badge emotion-116 emotion-117"
       style="margin:10px"
     >
       <div
         style="width:50px;height:50px;background:#ddd"
       />
       <div
-        class="uc-fe-badge-badge-wrap emotion-144 emotion-145"
+        class="uc-fe-badge-badge-wrap emotion-114 emotion-115"
       >
         <span
-          class="uc-fe-badge-badge emotion-142 emotion-143"
+          class="uc-fe-badge-badge emotion-112 emotion-113"
         >
           1
         </span>
@@ -1959,7 +1937,7 @@ exports[`Badge demo -- bubble 1`] = `
   font-size: 14px;
   font-weight: bold;
   color: #ffffff;
-  background: #f9ce1d;
+  background: #ffc42e;
 }
 
 .emotion-123::after {
@@ -1971,7 +1949,7 @@ exports[`Badge demo -- bubble 1`] = `
   bottom: -5px;
   border-style: solid;
   border-width: 5px 5px 0 0;
-  border-color: #f9ce1d transparent transparent transparent;
+  border-color: #ffc42e transparent transparent transparent;
 }
 
 .emotion-121 .uc-fe-form-item {
@@ -2448,7 +2426,7 @@ exports[`Badge demo -- bubble 1`] = `
   font-size: 14px;
   font-weight: bold;
   color: #ffffff;
-  background: #f9ce1d;
+  background: #ffc42e;
 }
 
 .emotion-123::after {
@@ -2460,7 +2438,7 @@ exports[`Badge demo -- bubble 1`] = `
   bottom: -5px;
   border-style: solid;
   border-width: 5px 5px 0 0;
-  border-color: #f9ce1d transparent transparent transparent;
+  border-color: #ffc42e transparent transparent transparent;
 }
 
 <div>
