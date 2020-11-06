@@ -44,8 +44,8 @@ export class Item extends Component {
         onReupload(file);
     };
     onRemove = () => {
-        const { file, onRemove } = this.props;
-        onRemove(file);
+        const { file, index, onRemove } = this.props;
+        onRemove(file, index);
     };
     renderThumbnail = () => {
         const { file, thumbnail } = this.props;
@@ -64,7 +64,7 @@ export class Item extends Component {
         const { status } = file;
         const removeBtn =
             !disabled && onRemove ? (
-                <SvgIcon size="14px" className={removeCls} type="cross" onClick={onRemove} />
+                <SvgIcon size="14px" className={removeCls} type="cross" onClick={this.onRemove} />
             ) : null;
         const retryBtn = !disabled ? (
             <Button key="reload" size="sm" onClick={this.onReupload}>

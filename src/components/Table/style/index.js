@@ -222,7 +222,7 @@ export const TableWrap = withProps({
                 .${prefixCls}-th-fixed-left-latest,
                 .${prefixCls}-row-cell-fixed-left-latest {
                     ::after {
-                        box-shadow: ${DT.T_SHADOW_BLOCK_INSET_LEFT};
+                        box-shadow: ${DT.T_SHADOW_INSET_LEFT};
                     }
                 }
             }
@@ -231,7 +231,7 @@ export const TableWrap = withProps({
                 .${prefixCls}-th-fixed-right-first,
                 .${prefixCls}-row-cell-fixed-right-first {
                     ::after {
-                        box-shadow: ${DT.T_SHADOW_BLOCK_INSET_RIGHT};
+                        box-shadow: ${DT.T_SHADOW_INSET_RIGHT};
                     }
                 }
             }
@@ -352,7 +352,7 @@ export const ActionButton = styled(Button)`
     margin-right: 4px;
 `;
 
-export const CancleSelect = withProps()(
+export const CancelSelect = withProps()(
     styled('span')(props => {
         const {
             theme: { designTokens: DT }

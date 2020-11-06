@@ -1,54 +1,40 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import _ from 'lodash';
 
 import { inlineBlockWithVerticalMixin, calculateSize } from 'src/style';
 import withProps from 'src/utils/withProps';
+import config from 'src/config';
 
-export const Inner = styled('div')`
-    position: relative;
-    height: 100%;
-    width: 100%;
-    border-radius: 2px;
-    box-sizing: border-box;
-`;
+const { prefixCls: _prefixCls } = config;
+export const prefixCls = _prefixCls + '-switch';
+export const dotCls = prefixCls + '-dot';
+export const onTipCls = prefixCls + '-tip-on';
+export const offTipCls = prefixCls + '-tip-off';
+export const innerCls = prefixCls + '-inner';
+export const buttonCls = prefixCls + '-button';
 
-export const Text = styled('span')`
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    line-height: 22px;
-    box-sizing: border-box;
-    display: block;
-`;
-
-export const OnText = styled(Text)`
-    /* empty */
-`;
-export const OffText = styled(Text)`
-    /* empty */
-`;
-
-export const ButtonWrap = styled('span')`
-    position: absolute;
-    display: inline-block;
-    left: -1px;
-    top: -2px;
-    border-radius: 2px;
-    box-sizing: border-box;
-    transition: all 0.3s;
-`;
-
-export const Line = styled('span')`
-    position: absolute;
-    display: inline-block;
-    left: 18px;
-    top: 4px;
-    width: 2px;
-    height: 16px;
-    border-radius: 1px;
-    transition: all 0.3s;
-`;
+const switchTheme = {
+    Width: {
+        sm: '44px',
+        md: '78px',
+        lg: '92px'
+    },
+    Padding: {
+        sm: '0',
+        md: '4px',
+        lg: '4px'
+    },
+    BorderWidth: {
+        sm: '0',
+        md: '1px',
+        lg: '1px'
+    },
+    BtnSize: {
+        sm: '24px',
+        md: '20px',
+        lg: '24px'
+    }
+};
 
 /* stylelint-disable no-duplicate-selectors */
 const propsMixin = props => {
@@ -59,155 +45,134 @@ const propsMixin = props => {
         checked
     } = props;
 
-    const switchTheme = {
-        Width: {
-            sm: '45px',
-            md: '80px',
-            lg: '100px'
-        },
-        Padding: {
-            sm: '1px',
-            md: '4px',
-            lg: '4px'
-        },
-        BorderWidth: {
-            sm: '0',
-            md: '1px',
-            lg: '1px'
-        },
-        LineLeft: {
-            sm: '13px',
-            md: '13px',
-            lg: '18px'
-        }
-    };
-    switchTheme.BtnSize = {};
-    switchTheme.LineHeight = {};
-    _.each(['sm', 'md', 'lg'], size => {
-        const height = +Height[size].replace('px', '');
-        const padding = +switchTheme.Padding[size].replace('px', '');
-        const borderWidth = +switchTheme.BorderWidth[size].replace('px', '');
-        const btnSize = height - padding * 2 - borderWidth * 2 + 2;
-        const lineHeight = btnSize - 10;
-        switchTheme.BtnSize[size] = btnSize + 'px';
-        switchTheme.LineHeight[size] = lineHeight + 'px';
-    });
-    const { Width, Padding, BtnSize, LineLeft, LineHeight, BorderWidth } = switchTheme;
+    const { Width, Padding, BorderWidth, BtnSize } = switchTheme;
 
     return css`
         background: ${DT.T_SWITCH_COLOR_BG_OUTER};
-
         height: ${Height[size]};
         width: ${Width[size]};
         padding: ${Padding[size]};
-        border: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
+        border: 1px solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
         border-width: ${BorderWidth[size]};
 
-        ${!disabled &&
-        css`
-            :hover {
-                border-color: ${DT.T_COLOR_LINE_PRIMARY_HOVER};
-                ${ButtonWrap} {
-                    box-shadow: ${DT.T_SHADOW_BUTTON_HOVER};
+        ${
+            !disabled &&
+            css`
+                :hover {
+                    border-color: ${DT.T_COLOR_LINE_PRIMARY_HOVER};
+                    .${buttonCls} {
+                        box-shadow: ${DT.T_SHADOW_BUTTON_HOVER};
+                    }
                 }
-            }
-        `} ${ButtonWrap} {
+            `
+        }
+
+        .${buttonCls} {
             background: ${DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT};
             box-shadow: ${DT.T_SHADOW_BUTTON_DEFAULT};
-
             width: ${BtnSize[size]};
             height: ${BtnSize[size]};
         }
 
-        ${Line} {
-            background: ${DT.T_COLOR_BG_ERROR_DARK};
-            left: ${LineLeft[size]};
-            height: ${LineHeight[size]};
+        .${dotCls} {
+            background: ${DT.T_COLOR_TEXT_ERROR};
         }
 
-        ${Inner} {
+        .${innerCls} {
             color: ${DT.T_SWITCH_COLOR_TEXT_OFF};
             border: 1px solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
             box-shadow: ${DT.T_SHADOW_INSET_1};
             background: ${DT.T_SWITCH_COLOR_BG_INNER_OFF};
         }
 
-        ${size === 'sm' &&
-        css`
-            ${/*sc-sel*/ OnText}, ${/*sc-sel*/ OffText} {
-                display: none;
-            }
-        `};
-        ${size === 'md' &&
-        css`
-            line-height: 16px;
+        ${
+            size === 'sm' &&
+            css`
+                .${onTipCls}, .${offTipCls} {
+                    display: none;
+                }
+                .${buttonCls} {
+                    top: -1px;
+                }
+            `
+        };
+        ${
+            size === 'md' &&
+            css`
+                .${onTipCls}, .${offTipCls} {
+                    line-height: 16px;
+                }
+                .${onTipCls} {
+                    padding-right: 20px;
+                }
+                .${offTipCls} {
+                    padding-left: 20px;
+                }
+            `
+        };
+        ${
+            size === 'lg' &&
+            css`
+                .${onTipCls}, .${offTipCls} {
+                    line-height: 20px;
+                }
+                .${onTipCls} {
+                    padding-right: 26px;
+                }
+                .${offTipCls} {
+                    padding-left: 26px;
+                }
+            `
+        };
 
-            ${/*sc-sel*/ OnText}, ${/*sc-sel */ OffText} {
-                line-height: 16px;
-            }
-            ${OnText} {
-                padding-right: 20px;
-            }
-            ${OffText} {
-                padding-left: 20px;
-            }
-        `};
-        ${size === 'lg' &&
-        css`
-            line-height: 22px;
+        ${
+            checked
+                ? css`
+                      .${innerCls} {
+                          color: ${DT.T_SWITCH_COLOR_TEXT_ON};
+                          border-color: ${DT.T_SWITCH_COLOR_LINE_INNER_ON};
+                          box-shadow: ${DT.T_SHADOW_INSET_1};
+                          background: ${DT.T_SWITCH_COLOR_BG_INNER_ON};
+                      }
 
-            ${OnText} {
-                padding-right: 26px;
-            }
-            ${OffText} {
-                padding-left: 26px;
-            }
-        `};
+                      .${buttonCls} {
+                          left: 100%;
+                          margin-left: -${calculateSize(BtnSize[size], -1)};
+                      }
 
-        ${checked
-            ? css`
-                  ${/* sc-sel */ Inner} {
-                      color: ${DT.T_SWITCH_COLOR_TEXT_ON};
-                      border-color: ${DT.T_COLOR_LINE_SUCCESS_LIGHT};
-                      box-shadow: ${DT.T_SHADOW_INSET_1};
-                      background: ${DT.T_SWITCH_COLOR_BG_INNER_ON};
-                  }
+                      .${dotCls} {
+                          background: ${DT.T_COLOR_TEXT_SUCCESS};
+                      }
 
-                  ${/* sc-sel */ ButtonWrap} {
-                      left: 100%;
-                      margin-left: -${calculateSize(BtnSize[size], -1)};
-                  }
+                      .${offTipCls} {
+                          display: none;
+                      }
+                  `
+                : css`
+                      .${onTipCls} {
+                          display: none;
+                      }
+                  `
+        };
 
-                  ${Line} {
-                      background: ${DT.T_COLOR_BG_SUCCESS_DARK};
-                  }
+        ${
+            disabled &&
+            css`
+                border-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
+                cursor: default;
 
-                  ${OffText} {
-                      display: none;
-                  }
-              `
-            : css`
-                  ${OnText} {
-                      display: none;
-                  }
-              `};
+                .${innerCls} {
+                    color: ${DT.T_COLOR_TEXT_DISABLED};
+                    border-color: ${DT.T_COLOR_LINE_DISABLED_LIGHT};
+                    box-shadow: none;
+                    background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
+                }
 
-        ${disabled &&
-        css`
-            border-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
-            cursor: not-allowed;
-
-            ${Inner} {
-                color: ${DT.T_COLOR_TEXT_DISABLED};
-                border-color: ${DT.T_COLOR_LINE_DISABLED_LIGHT};
-                box-shadow: none;
-                background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
-            }
-
-            ${Line} {
-                background: ${DT.T_COLOR_BG_DISABLED_DARK};
-            }
-        `};
+                .${dotCls} {
+                    background: ${DT.T_COLOR_BG_DISABLED_DARK};
+                }
+            `
+        };
     `;
 };
 
@@ -220,5 +185,40 @@ export const SwitchWrap = withProps({})(styled('div')`
     font-size: 12px;
 
     ${inlineBlockWithVerticalMixin};
+
+    .${dotCls} {
+        position: absolute;
+        display: block;
+        right: 4px;
+        top: 50%;
+        margin-top: -2px;
+        width: 4px;
+        height: 4px;
+        border-radius: 2px;
+        transition: all 0.3s;
+    }
+    .${buttonCls} {
+        position: absolute;
+        display: block;
+        left: -1px;
+        top: -2px;
+        border-radius: 2px;
+        box-sizing: border-box;
+        transition: all 0.3s;
+    }
+    .${onTipCls}, .${offTipCls} {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        box-sizing: border-box;
+        display: block;
+    }
+    .${innerCls} {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        border-radius: 2px;
+        box-sizing: border-box;
+    }
     ${propsMixin};
 `);

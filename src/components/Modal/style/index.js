@@ -114,7 +114,7 @@ export const ModalWrap = withProps()(
                     text-align: right;
                 }
                 &-body {
-                    min-height: 60px;
+                    /* min-height: 60px; */
                 }
             }
         `;

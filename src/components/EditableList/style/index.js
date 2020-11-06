@@ -20,6 +20,7 @@ export const ListWrap = styled('div')`
     .${liCls} {
         .${itemCls}, .${actionCls} {
             display: inline-block;
+            vertical-align: top;
         }
         .${actionCls} {
             margin-left: 24px;

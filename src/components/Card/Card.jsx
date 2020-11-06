@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import { InhertProvider } from 'src/components/Popover/ContainerContext';
+import { InheritProvider } from 'src/components/Popover/ContainerContext';
 
 import { CardWrap, prefixCls } from './style';
 
@@ -22,12 +22,12 @@ class Card extends PureComponent {
     render() {
         const { children, className, ...rest } = this.props;
         return (
-            <InhertProvider value={{ getPopupContainer: this.getPopupContainer }}>
+            <InheritProvider value={{ getPopupContainer: this.getPopupContainer }}>
                 <CardWrap className={classnames(prefixCls, className)} {...rest}>
                     <div ref={this.savePopupContainer}></div>
                     {children}
                 </CardWrap>
-            </InhertProvider>
+            </InheritProvider>
         );
     }
 }

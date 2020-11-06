@@ -16,7 +16,7 @@ export const blockCls = prefixCls + '-block';
 export const FixWrap = styled('span')`
     vertical-align: middle;
     display: table-cell;
-    /* auto fix fixwrap to min-width */
+    /* auto fix fixWrap to min-width */
     width: 1px;
 `;
 
@@ -88,7 +88,7 @@ const themeMixin = props => {
             &:hover {
                 color: ${DT.T_COLOR_TEXT_DISABLED};
                 -webkit-text-fill-color: currentcolor;
-                border-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
+                border-color: ${DT.T_COLOR_LINE_DISABLED_LIGHT};
                 background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
             }
             ${SuffixWrap}, ${PrefixWrap} {
@@ -107,8 +107,6 @@ export const InputWrap = withProps({
     className: prefixCls
 })(
     styled('span')(props => {
-        const { disabled } = props;
-
         return css`
             position: relative;
             ${inlineBlockWithVerticalMixin};
@@ -117,15 +115,6 @@ export const InputWrap = withProps({
             &.${blockCls} {
                 display: block;
             }
-
-            ${disabled &&
-            css`
-                &,
-                input,
-                ${SearchIcon} {
-                    cursor: not-allowed;
-                }
-            `};
 
             input {
                 vertical-align: middle;
