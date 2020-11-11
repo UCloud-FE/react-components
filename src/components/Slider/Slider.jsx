@@ -84,7 +84,7 @@ class Slider extends Component {
         sliderStyle: PropTypes.object,
         /** number input 的自定义 props，为null时隐藏 */
         numberInput: PropTypes.object,
-        /** 是否灵敏的触发onChange，为true时当NumberInput中事实输入有效值时会触发onChange */
+        /** 是否灵敏的触发onChange，为true时当NumberInput中实时输入有效值时会触发onChange */
         isSensitive: PropTypes.bool,
         /**
          * 输入框提示语格式化，传入null隐藏
@@ -194,7 +194,7 @@ class Slider extends Component {
         const remainRange = max - min - usedRange;
         _.each(indexWithoutRatio, i => {
             const info = marks[i];
-            info.ratio = (info.range[1] - info.range[0]) / remainRange * (100 - usedRatio);
+            info.ratio = ((info.range[1] - info.range[0]) / remainRange) * (100 - usedRatio);
         });
         let ratioBefore = 0;
         _.each(marks, mark => {
@@ -214,7 +214,7 @@ class Slider extends Component {
             if (_mark.label == null) {
                 return;
             }
-            const value = (baseRatio += _mark.ratio) / 100 * sliderSplit;
+            const value = ((baseRatio += _mark.ratio) / 100) * sliderSplit;
             const mark = {
                 label: _mark.label,
                 style: {
@@ -227,12 +227,12 @@ class Slider extends Component {
         });
         return marks;
     };
-    handleChange = (v, lastest) => {
+    handleChange = (v, latest) => {
         const { onChange, onLastChange, value } = this.props;
         if (v + '' !== value + '') {
             onChange(v);
         }
-        if (lastest) {
+        if (latest) {
             onLastChange(v);
         }
     };
@@ -262,9 +262,9 @@ class Slider extends Component {
             isNumberInputFocused: false
         });
     };
-    onSliderChange = (v, lastest) => {
+    onSliderChange = (v, latest) => {
         const value = this.translateSliderValueToValue(v);
-        this.handleChange(value, lastest);
+        this.handleChange(value, latest);
     };
     translateSliderValueToValue = v => {
         if (v in this.cache.sliderValueToValueMap) {
@@ -274,7 +274,7 @@ class Slider extends Component {
         const { min, max, step } = this.props;
         let value;
         if (_.isEmpty(marks)) {
-            value = this.computeValidNumber(min + (max - min) * v / sliderSplit, {
+            value = this.computeValidNumber(min + ((max - min) * v) / sliderSplit, {
                 step,
                 min,
                 max
@@ -282,7 +282,7 @@ class Slider extends Component {
         } else if (v == sliderSplit) {
             value = max;
         } else {
-            const vRatio = v / sliderSplit * 100;
+            const vRatio = (v / sliderSplit) * 100;
             let mark = _.find(marks, mark => {
                 const { ratioBefore, ratio } = mark;
                 if (vRatio >= ratioBefore && vRatio < ratioBefore + ratio) {
@@ -291,7 +291,7 @@ class Slider extends Component {
             });
             if (!mark) mark = marks[0];
             const { ratioBefore, range, ratio, step } = mark;
-            value = this.computeValidNumber((vRatio - ratioBefore) / ratio * (range[1] - range[0]) + range[0], {
+            value = this.computeValidNumber(((vRatio - ratioBefore) / ratio) * (range[1] - range[0]) + range[0], {
                 min: range[0],
                 max: range[1],
                 step: step
@@ -310,7 +310,7 @@ class Slider extends Component {
         if (v == undefined) {
             value = 0;
         } else if (_.isEmpty(marks)) {
-            value = (v - min) / (max - min) * sliderSplit;
+            value = ((v - min) / (max - min)) * sliderSplit;
         } else if (v == max) {
             value = sliderSplit;
         } else {
@@ -322,7 +322,7 @@ class Slider extends Component {
             });
             if (!mark) mark = marks[0];
             const { range, ratio, ratioBefore } = mark;
-            value = ((v - range[0]) / (range[1] - range[0]) * ratio + ratioBefore) / 100 * sliderSplit;
+            value = ((((v - range[0]) / (range[1] - range[0])) * ratio + ratioBefore) / 100) * sliderSplit;
         }
         this.cache.valueToSliderValueMap[v] = value;
         return value;
@@ -505,12 +505,10 @@ class Slider extends Component {
                                       isSensitive,
                                       locale
                                   })
-                                : `${locale.currentValueIs}${value}${locale.comma}${
-                                      locale.inputValueIs
-                                  }${numberInputValue}` +
+                                : `${locale.currentValueIs}${value}${locale.comma}${locale.inputValueIs}${numberInputValue}` +
                                   (isSensitive
                                       ? `${locale.comma}${locale.input}${
-                                            isNumberInputValid ? locale.isValid : locale.isUnvalid
+                                            isNumberInputValid ? locale.isValid : locale.isInvalid
                                         }${isNumberInputValid ? '' : `${locale.comma}${locale.tip}`}`
                                       : '')
                         }
