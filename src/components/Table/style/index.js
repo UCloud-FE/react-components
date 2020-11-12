@@ -348,10 +348,6 @@ export const ColumnConfigModalCheckbox = styled(Checkbox)`
     padding: 12px 0;
 `;
 
-export const ActionButton = styled(Button)`
-    margin-right: 4px;
-`;
-
 export const CancelSelect = withProps()(
     styled('span')(props => {
         const {
