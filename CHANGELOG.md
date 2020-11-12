@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.11](https://github.com/UCloud-FE/react-components/compare/v1.0.10...v1.0.11) (2020-11-12)
+
+### Features
+
+-   **ActionList:** move outside & add dropdownButton & tooptip ([a6177d8](https://github.com/UCloud-FE/react-components/commit/a6177d8c9439a3dfb1e16dcacd8a7da446913e66)), closes [#260](https://github.com/UCloud-FE/react-components/issues/260)
+-   **Menu:** add tooltip support ([5ba84f3](https://github.com/UCloud-FE/react-components/commit/5ba84f3dee2c27f981479192b7bcddc2a3f9873e))
+-   **Table:** remove Table.ActionList & fix demo warning ([0290745](https://github.com/UCloud-FE/react-components/commit/029074598bf53a3593504374bba2e15ef36fb3be))
+
+### Bug Fixes
+
+-   **Slider:** fix misspell ([dde578e](https://github.com/UCloud-FE/react-components/commit/dde578e6db1fb6d4fcbf1679327887207c14aa01))
+
 ### [1.0.10](https://github.com/UCloud-FE/react-components/compare/v1.0.9...v1.0.10) (2020-11-06)
 
 ### Features
