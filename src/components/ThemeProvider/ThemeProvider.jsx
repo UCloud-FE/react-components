@@ -17,6 +17,9 @@ class ThemeProvider extends Component {
         setRuntimeTheme(theme);
     }
     static propTypes = {
+        /**
+         * 自定义主题
+         */
         theme: PropTypes.object.isRequired
     };
     getMergedTheme = theme => {

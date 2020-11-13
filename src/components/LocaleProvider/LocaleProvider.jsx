@@ -10,7 +10,13 @@ class LocaleProvider extends Component {
         setRuntimeLocale(locale);
     }
     static propTypes = {
+        /**
+         * @ignore
+         */
         children: PropTypes.node,
+        /**
+         * 自定义语言
+         */
         locale: PropTypes.object
     };
     static defaultProps = {

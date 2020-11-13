@@ -8,3 +8,13 @@
 
 ```js {"codepath": "demo.jsx"}
 ```
+
+-   theme - 用作定义主题
+
+```js {"codepath": "theme.jsx"}
+```
+
+-   locale - 用作定义语言
+
+```js {"codepath": "locale.jsx"}
+```
