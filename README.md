@@ -15,6 +15,14 @@
 
 -   一些没有写在文档中的 props 以及方法等强烈不建议使用，因为这类 API 可能会随时变动。版本更新后可能会发生不可预知的问题。
 
+### 浏览器兼容
+
+<div class='browser-list'>
+| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Safari |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| IE11, Edge 18                                                                                                                                                                                                   | 29                                                                                                                                                                                                                | 30                                                                                                                                                                                                            | 7                                                                                                                                                                                                             |
+</div>
+
 ### 如何使用
 
 -   组件依赖于 react（^16）、react-dom（^16），请注意引入对应依赖，从 0.7.0 开始，不再兼容 react 15。
