@@ -97,7 +97,6 @@ export default class ExamplesT extends React.PureComponent {
         const allH = [...rootDOM.querySelectorAll('h2,h3,h4')];
         const filterH = [...rootDOM.querySelectorAll('.demo h2,.demo h3,.demo h4')];
         const h = allH.filter(h => !filterH.find(_h => _h === h));
-        console.log(h);
         const group = { children: [], level: 0 };
         let pos = group;
         h.forEach(h => {
@@ -185,9 +184,9 @@ export default class ExamplesT extends React.PureComponent {
     }
     renderAnchor = () => {
         const { h, active } = this.state;
-        const renderItem = ({ text, children, h }) => {
+        const renderItem = ({ text, children, h }, i) => {
             return (
-                <div>
+                <div key={i}>
                     <div
                         className={`anchor-title ${active?.h === h ? 'anchor-title-active' : ''}`}
                         title={text}
@@ -195,9 +194,7 @@ export default class ExamplesT extends React.PureComponent {
                     >
                         {text}
                     </div>
-                    {children && children.length ? (
-                        <div className="anchor-list">{children.map(c => renderItem(c))}</div>
-                    ) : null}
+                    {children && children.length ? <div className="anchor-list">{children.map(renderItem)}</div> : null}
                 </div>
             );
         };
