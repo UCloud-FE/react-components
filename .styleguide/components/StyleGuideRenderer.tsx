@@ -126,7 +126,6 @@ const styles = ({
         }
     },
     center: {
-        margin: [[0, 'auto']],
         maxWidth
     }
 });
@@ -177,7 +176,7 @@ export function StyleGuideRenderer({ classes, title, homepageUrl, children, toc,
                 </header>
                 <div className={cx(classes.wrapper, hasSidebar && classes.hasSidebar, classes.fixPaddingTop)}>
                     {hasSidebar && <div className={cx('sidebar', classes.sidebar)}>{toc}</div>}
-                    <main className={classes.content}>
+                    <main className={classes.content} id='main-container'>
                         <div className={classes.center}>
                             {children}
                             <footer className={classes.footer}>
