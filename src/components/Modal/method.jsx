@@ -53,6 +53,23 @@ const pop = props => {
     };
 };
 
+const openModal = modal => {
+    let container = document.createElement('div');
+    document.body.appendChild(container);
+    const destroy = () => {
+        const result = ReactDOM.unmountComponentAtNode(container);
+        if (result && container.parentElement) {
+            container.parentElement.removeChild(container);
+        }
+    };
+
+    ReactDOM.render(<ThemeProvider theme={getRuntimeTheme()}>{modal}</ThemeProvider>, container);
+
+    return {
+        destroy
+    };
+};
+
 const isPromise = promiseLike => {
     return promiseLike && promiseLike.then && _.isFunction(promiseLike.then);
 };
@@ -130,4 +147,4 @@ const open = ({ onOk = () => {}, onClose = () => {}, ...rest }, content) => {
     return modal;
 };
 
-export { alert, confirm, open };
+export { alert, confirm, open, openModal };

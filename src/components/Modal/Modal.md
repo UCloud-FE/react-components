@@ -1,65 +1,71 @@
 ### 说明
 
 -   弹窗组件，纯受控组件，显示隐藏通过 visible 控制
+-   提供 jsx 使用和命令式调用
 
 ### 演示
 
--   演示
+#### 演示
 
 ```js {"codepath": "modal.jsx"}
 ```
 
--   简易调用函数
+#### method - 简单的命令式打开弹窗
 
 ```js {"codepath": "method.jsx"}
 ```
 
--   title/footer
+#### openModal - 命令式调用打开整个弹窗
+
+```js {"codepath": "openModal.jsx"}
+```
+
+#### title/footer - 自定义 title/footer 内容
 
 ```js {"codepath": "titleAndFooter.jsx"}
 ```
 
--   size
+#### size - 预设尺寸
 
 ```js {"codepath": "size.jsx"}
 ```
 
--   closable
+#### closable - 关闭按钮
 
 ```js {"codepath": "closable.jsx"}
 ```
 
--   mask
+#### mask - 是否有遮罩层
 
 ```js {"codepath": "mask.jsx"}
 ```
 
--   maskClosable
+#### maskClosable - 是否可通过点击遮罩层关闭
 
 ```js {"codepath": "maskClosable.jsx"}
 ```
 
--   keyboard
+#### keyboard - 是否可通过键盘关闭
 
 ```js {"codepath": "keyboard.jsx"}
 ```
 
--   destroyOnClose
+#### destroyOnClose - 关闭后是否直接销魂
 
 ```js {"codepath": "destroyOnClose.jsx"}
 ```
 
--   customClassName
+#### 自定义 className
 
 ```js {"codepath": "customClassName.jsx"}
 ```
 
--   customStyle
+#### 自定义样式
 
 ```js {"codepath": "customStyle.jsx"}
 ```
 
--   popupContainer - 弹出层容器
+#### popupContainer - 弹出层容器
 
 ```js {"codepath": "popupContainer.jsx"}
 ```
