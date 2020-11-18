@@ -24,7 +24,7 @@ export class Icon extends PureComponent<IconProps> {}
 // SvgIcon
 export interface SvgIconProps extends HTMLAttributes<SVGElement> {
     type: string;
-    color: string;
+    color?: string;
     spin?: boolean;
 }
 export class SvgIcon extends PureComponent<SvgIconProps> {}
@@ -113,16 +113,16 @@ export interface CollapsePanelTitleFunction {
     (open: boolean, disabled: boolean, toggle: CollapsePanelToggle): ReactNode;
 }
 export interface CollapsePanelProps {
-    title: ReactNode | CollapsePanelTitleFunction;
-    children: ReactNode;
-    onChange: (open: boolean) => void;
-    open: boolean;
-    defaultOpen: boolean;
-    forceRender: boolean;
-    disabled: boolean;
-    panelKey: any;
-    titlePosition: "top" | "bottom";
-    multiple: boolean;
+    title?: ReactNode | CollapsePanelTitleFunction;
+    children?: ReactNode;
+    onChange?: (open: boolean) => void;
+    open?: boolean;
+    defaultOpen?: boolean;
+    forceRender?: boolean;
+    disabled?: boolean;
+    panelKey?: any;
+    titlePosition?: "top" | "bottom";
+    multiple?: boolean;
 }
 declare class Panel extends Component<CollapsePanelProps> {}
 export class Collapse extends Component<CollapseProps> {
@@ -394,7 +394,7 @@ interface UpdateProgress {
 type UploadListTypeOption<T> = [T, "none" | "dropzone" | "thumbnail"];
 export type UploadListType = "none" | "text" | "list" | "dropzone" | UploadListTypeOption<"list"> | UploadListTypeOption<"dropzone">;
 export interface UploadCustomStyle {
-    listMaxHeight: string;
+    listMaxHeight?: string;
     [key: string]: any;
 }
 export interface UploadProps {
@@ -459,7 +459,7 @@ export interface DatePickerProps {
     disabled?: boolean;
     zIndex?: number;
     style?: CSSProperties;
-    getCalendarContainer: () => ReactNode;
+    getCalendarContainer?: () => ReactNode;
 }
 interface MonthDisplayOption {
     format?: string;
@@ -476,7 +476,7 @@ export interface MonthProps {
     size?: SizeType;
     disabled?: boolean;
     zIndex?: number;
-    getCalendarContainer: () => ReactNode;
+    getCalendarContainer?: () => ReactNode;
 }
 declare class DatePickerMonth extends Component<MonthProps> {}
 type DateRangeValue = DateValue[];
@@ -485,7 +485,7 @@ interface DateRangeChangeEvent {
 }
 export interface DatePickerRangeSelectOption extends SelectOptionProps {
     label?: ReactNode;
-    range: {
+    range?: {
         start?: MomentInput;
         end?: MomentInput;
     }
@@ -506,10 +506,10 @@ export interface RangeProps {
     size?: SizeType;
     disabled?: boolean;
     zIndex?: number;
-    selectProps: SelectProps;
-    popoverProps: PopoverProps;
-    datePickerProps: DatePickerProps;
-    rangeTip: ReactNode
+    selectProps?: SelectProps;
+    popoverProps?: PopoverProps;
+    datePickerProps?: DatePickerProps;
+    rangeTip?: ReactNode
 }
 declare class DatePickerRange extends Component<RangeProps> {}
 export class DatePicker extends Component<DatePickerProps> {
@@ -519,7 +519,7 @@ export class DatePicker extends Component<DatePickerProps> {
 
 // Menu
 export interface MenuCustomStyle {
-    maxHeight: string;
+    maxHeight?: string;
     [key: string]: any;
 }
 export interface MenuProps {
@@ -530,9 +530,9 @@ export interface MenuProps {
     selectable?: boolean;
     collapse?: CollapseProps;
     showSelectAll?: boolean;
-    block: boolean;
-    disabled: boolean;
-    customStyle: MenuCustomStyle;
+    block?: boolean;
+    disabled?: boolean;
+    customStyle?: MenuCustomStyle;
 }
 export interface MenuItemProps extends HTMLDivElement {
     itemKey?: number | string;
@@ -540,7 +540,7 @@ export interface MenuItemProps extends HTMLDivElement {
 }
 declare class MenuItem extends Component<MenuItemProps> {}
 export interface MenuSubMenuProps extends ObjectExclude<HTMLDivElement, "title"> {
-    title: ReactNode;
+    title?: ReactNode;
     styleType?: "collapse" | "popover";
     subMenuKey?: string;
     disabled?: boolean;
@@ -592,8 +592,8 @@ interface TransferSource {
     disabled?: boolean;
 }
 export interface TransferProps extends HTMLDivElement {
-    dataSource: any[];
-    renderList: (options: TransferProps) => ReactNode;
+    dataSource?: any[];
+    renderList?: (options: TransferProps) => ReactNode;
     selectedKeys?: string[];
     defaultSelectedKeys?: string[];
     onChange?: (keys: string[]) => void;
@@ -617,17 +617,17 @@ export class Notice extends Component<NoticeProps> {}
 
 // Badge
 export interface BubbleCustomStyle {
-    bubbleColor: string;
-    bubbleBackground: string;
+    bubbleColor?: string;
+    bubbleBackground?: string;
     [key: string]: any;
 }
 export interface BubbleProps extends HTMLDivElement {
     bubble?: ReactNode;
     styleType?: "yellow" | "orange" | "gray" | "purple";
-    size: "sm" | "md";
-    customStyle: BubbleCustomStyle;
-    getBubbleContainer: GetPopupContainer;
-    offset: number[];
+    size?: "sm" | "md";
+    customStyle?: BubbleCustomStyle;
+    getBubbleContainer?: GetPopupContainer;
+    offset?: number[];
 }
 export type BadgePlacement = "topRight" | "topLeft" | "bottomRight" | "bottomLeft";
 export interface BadgeProps extends HTMLDivElement {
@@ -652,8 +652,8 @@ export class Tag extends Component<TagProps> {}
 
 // Popover
 interface PopupAlign {
-    points: string[];
-    offset: number[];
+    points?: string[];
+    offset?: number[];
 }
 export type PopoverPlacement = | "topLeft"
     | "top"
@@ -692,7 +692,8 @@ export class Popover extends Component<PopoverProps> {}
 
 // Tooltip
 interface TooltipCustomStyle {
-    popupWrapperPadding: string
+    popupWrapperPadding?: string;
+    [key: string]: any;
 }
 export type TooltipTheme = "light" | "dark";
 export interface TooltipProps extends PopoverProps {
@@ -767,7 +768,7 @@ export class Drawer extends Component<DrawerProps> {}
 export interface TableScroll {
     x?: number;
     y?: number;
-    onScroll: (e: WheelEvent) => void;
+    onScroll?: (e: WheelEvent) => void;
 }
 type RowKey = () => string;
 export interface RowSelection {
@@ -776,9 +777,9 @@ export interface RowSelection {
     defaultSelectedRowKeys?: string[];
     selectedRowKeys?: string[];
     getDisabledOfRow?: (row: any) => boolean;
-    multiple: boolean;
-    selectedTip: boolean | "button";
-    disabled: boolean;
+    multiple?: boolean;
+    selectedTip?: boolean | "button";
+    disabled?: boolean;
 }
 interface GetRowClassName {
     (): string
@@ -826,15 +827,15 @@ export interface TableProps {
     dataSource?: any[];
     columns?: Column[];
     columnPlaceholder?: boolean;
-    defaultColumnConfig: DefaultColumnConfig;
+    defaultColumnConfig?: DefaultColumnConfig;
     onColumnConfigChange?: (config: DefaultColumnConfig) => void;
     expandedRowRender?: (row: any) => ReactNode;
     expandIconAsCell?: boolean;
-    expandIconColumnIndex: number;
+    expandIconColumnIndex?: number;
     hideExpandIcon?: boolean;
     defaultExpandedRowKeys?: string[];
     expandedRowKeys?: string[];
-    defaultExpandAllRows: boolean;
+    defaultExpandAllRows?: boolean;
     onExpandedRowsChange?: (row: any) => void;
     onExpand?: Function;
     onRow?: (row: any, index: number) => TableRowBack;
@@ -885,6 +886,65 @@ export class Table extends Component<TableProps> {
     static ExpandedRowContent: typeof TableExpandedRowContent;
 }
 
+// TransferTable
+export interface TransferTableProps extends TransferProps {
+    columns?: Column[];
+    tableProps?: TableProps;
+}
+
+export class TransferTable extends Component<TransferTableProps> {}
+
+// TransferMenu
+export interface TransferMenuProps extends TransferProps {
+    renderItem?: (item: any) => ReactNode;
+}
+
+export class TransferMenu extends Component<TransferMenuProps> {}
+
+// EditableList
+interface EditableListAddition {
+    onAdd?: Function;
+    disabled?: boolean;
+}
+
+interface EditableListRowDeletion {
+    onDelete?: Function;
+    getDisabledOfItem?: Function;
+}
+
+interface EditableListGrid {
+    itemCol?: ColProps;
+    actionCol?: ColProps;
+}
+
+export interface EditableListProps {
+    dataSource?: any[];
+    renderItem?: (item: any) => ReactNode;
+    grid?: EditableListGrid;
+    size?: SizeType;
+    addition?: boolean | EditableListAddition;
+    itemDeletion?: boolean | EditableListRowDeletion;
+}
+
+export class EditableList extends Component<EditableListProps> {}
+
+// EditableTable
+interface EditableTableAddition extends EditableListAddition {
+    tip?: ReactNode;
+}
+
+interface EditableTableRowDeletion {
+    onDelete?: Function;
+    getDisabledOfRow?: Function;
+    fixed?: boolean;
+}
+export interface EditableTableProps extends TableProps {
+    addition?: boolean | EditableTableAddition;
+    rowDeletion?: boolean | EditableTableRowDeletion;
+}
+
+export class EditableTable extends Component<EditableTableProps> {}
+
 // Progress
 interface ProgressFormat {
     (percent: number): string;
@@ -911,7 +971,7 @@ interface GetPaginationShowTotal {
     (total: number): string;
 }
 interface ShowQuickJumperObject {
-    goButton: ReactNode;
+    goButton?: ReactNode;
 }
 export interface PaginationProps {
     current?: number;
