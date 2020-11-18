@@ -643,29 +643,29 @@ export class Badge extends Component<BadgeProps> {}
 // Tag
 export interface TagProps {
     styleType?:
-        | 'default'
-        | 'green'
-        | 'yellow'
-        | 'red'
-        | 'primary'
-        | 'purple'
-        | 'lightblue'
-        | 'blue'
-        | 'orange'
-        | 'cyan'
-        | 'success'
-        | 'warning'
-        | 'error'
-        | 'purple-fill'
-        | 'lightblue-fill'
-        | 'blue-fill'
-        | 'orange-fill'
-        | 'yellow-fill'
-        | 'cyan-fill'
+        | "default"
+        | "green"
+        | "yellow"
+        | "red"
+        | "primary"
+        | "purple"
+        | "lightblue"
+        | "blue"
+        | "orange"
+        | "cyan"
+        | "success"
+        | "warning"
+        | "error"
+        | "purple-fill"
+        | "lightblue-fill"
+        | "blue-fill"
+        | "orange-fill"
+        | "yellow-fill"
+        | "cyan-fill"
         | string;
     closable?: boolean;
     onClose?: () => void;
-    icon?: 'circle-fill' | 'circle' | 'loading' | 'custom' | ReactNode;
+    icon?: "circle-fill" | "circle" | "loading" | "custom" | ReactNode;
     disabled?: boolean;
 }
 export class Tag extends Component<TagProps> {}
@@ -690,7 +690,7 @@ export type PopoverPlacement = | "topLeft"
 export interface GetPopupContainer {
     (): HTMLElement
 }
-export interface PopoverProps extends ObjectExclude<HTMLDivElement, 'align'> {
+export interface PopoverProps extends ObjectExclude<HTMLDivElement, "align"> {
     visible?: boolean;
     defaultVisible?: boolean;
     onVisibleChange?: (visible: boolean) => void;
@@ -972,7 +972,7 @@ interface ProgressFormat {
 }
 export interface ProgressProps extends HTMLDivElement {
     percent?: number;
-    color?: 'success' | 'warn' | 'error' | string
+    color?: "success" | "warn" | "error" | string
     format?: null | ProgressFormat;
 }
 export class Progress extends Component<ProgressProps> {}
