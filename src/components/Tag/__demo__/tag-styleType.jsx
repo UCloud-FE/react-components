@@ -13,7 +13,7 @@ class Demo extends React.Component {
                     {['default', 'success', 'warning', 'error'].map(styleType => (
                         <div key={styleType}>
                             <Tag styleType={styleType} icon="circle-fill" closable>
-                                Content
+                                {styleType}
                             </Tag>
                         </div>
                     ))}
@@ -22,8 +22,8 @@ class Demo extends React.Component {
                 <div className="demo-wrap">
                     {StyleType.filter(v => !{ success: 1, warning: 1, error: 1 }[v]).map(styleType => (
                         <div key={styleType}>
-                            <Tag styleType={styleType} icon="circle-fill" closable>
-                                Content
+                            <Tag styleType={styleType} icon="circle-fill" closable style={{ width: '120px' }}>
+                                {styleType}
                             </Tag>
                         </div>
                     ))}
