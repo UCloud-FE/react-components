@@ -12,7 +12,7 @@ class Demo extends React.Component {
                 <div className="demo-wrap">
                     {['default', 'success', 'warning', 'error'].map(styleType => (
                         <div key={styleType}>
-                            <Tag styleType={styleType} icon="circle-fill" closable>
+                            <Tag styleType={styleType} icon="circle-fill" closable style={{ width: '120px' }}>
                                 {styleType}
                             </Tag>
                         </div>

@@ -20,7 +20,8 @@ export const Wrap = withProps({
 
 export const bubbleStyleMap = {
     yellow: {
-        bg: 'T_COLOR_BG_WARNING_DARK'
+        bg: 'T_COLOR_BG_WARNING_DARK',
+        color: 'T_COLOR_LEGEND_ORANGE_8'
     },
     orange: {
         bg: 'T_COLOR_LEGEND_ORANGE_5'

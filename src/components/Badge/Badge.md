@@ -1,45 +1,45 @@
 ### 说明
 
-*   这是 Badge 组件
+-   这是 Badge 组件，用作角标展示
 
 ### 演示
 
-*   演示
+#### 演示
 
 ```js {"codepath": "badge.jsx"}
 ```
 
-*   placement
+#### placement
 
 ```js {"codepath": "placement.jsx"}
 ```
 
-*   dot
+#### dot
 
 ```js {"codepath": "dot.jsx"}
 ```
 
-*   hideWhenZero
+#### hideWhenZero
 
 ```js {"codepath": "hideWhenZero.jsx"}
 ```
 
-*   noneContent
+#### noneContent
 
 ```js {"codepath": "noneContent.jsx"}
 ```
 
-*   maxValue
+#### maxValue
 
 ```js {"codepath": "maxValue.jsx"}
 ```
 
-*   customStyle
+#### customStyle
 
 ```js {"codepath": "customStyle.jsx"}
 ```
 
-*   customValue
+#### customValue
 
 ```js {"codepath": "customValue.jsx"}
 ```
