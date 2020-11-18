@@ -12,6 +12,7 @@ import withProps from 'src/utils/withProps';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-modal';
+export const contentCls = prefixCls + '-body-content';
 
 injectGlobal`
     .${prefixCls} {
@@ -46,7 +47,8 @@ export const ModalWrap = withProps()(
     styled(RcDialogWrap)(props => {
         const {
             theme: { designTokens: DT, fontSize },
-            mask
+            mask,
+            customStyle
         } = props;
 
         return css`
@@ -115,6 +117,10 @@ export const ModalWrap = withProps()(
                 }
                 &-body {
                     /* min-height: 60px; */
+                    ${customStyle?.contentPadding &&
+                    css`
+                        padding: 16px 20px;
+                    `}
                 }
             }
         `;

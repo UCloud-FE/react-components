@@ -9,6 +9,7 @@ class Demo extends React.Component {
         this.modal = Modal.open(
             {
                 title: '测试',
+                customStyle: { contentPadding: true },
                 onClose: () => console.log('close'),
                 onOk: () => console.log('ok')
             },
@@ -21,6 +22,7 @@ class Demo extends React.Component {
         if (!this.modal) return;
         this.modal.update({
             title: `测试 - ${Math.random()}`,
+            customStyle: { contentPadding: true },
             size: ['sm', 'md', 'lg'][(Math.random() * 3) | 0]
         });
     }
@@ -35,6 +37,7 @@ class Demo extends React.Component {
                         Modal.alert(
                             {
                                 title: 'this is alert',
+                                customStyle: { contentPadding: true },
                                 onClose: () => console.log('close'),
                                 onOk: () => console.log('ok')
                             },
@@ -49,6 +52,7 @@ class Demo extends React.Component {
                         Modal.confirm(
                             {
                                 title: 'this is confirm',
+                                customStyle: { contentPadding: true },
                                 onClose: () => console.log('close'),
                                 onOk: () => console.log('ok')
                             },
@@ -63,6 +67,7 @@ class Demo extends React.Component {
                         Modal.alert(
                             {
                                 title: 'this is promise alert',
+                                customStyle: { contentPadding: true },
                                 onClose: () =>
                                     new Promise(resolve => {
                                         setTimeout(() => {
@@ -87,6 +92,7 @@ class Demo extends React.Component {
                         Modal.confirm(
                             {
                                 title: 'this is promise confirm',
+                                customStyle: { contentPadding: true },
                                 onClose: () =>
                                     new Promise(resolve => {
                                         setTimeout(() => {
@@ -111,6 +117,7 @@ class Demo extends React.Component {
                         Modal.open(
                             {
                                 title: 'this is promise confirm',
+                                customStyle: { contentPadding: true },
                                 onClose: () =>
                                     new Promise(resolve => {
                                         setTimeout(() => {

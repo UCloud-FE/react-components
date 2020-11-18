@@ -58,6 +58,7 @@ class Demo extends React.Component {
                                 <Modal
                                     visible={this.state[`visible-${i}`]}
                                     onClose={() => this.setState({ [`visible-${i}`]: false })}
+                                    customStyle={{ contentPadding: true }}
                                 >
                                     {test()}
                                 </Modal>

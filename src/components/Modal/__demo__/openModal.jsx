@@ -26,6 +26,7 @@ class CreateModal extends React.Component {
                     </div>
                 }
                 onClose={this.props.onEnd}
+                customStyle={{ contentPadding: true }}
             >
                 测试
             </Modal>

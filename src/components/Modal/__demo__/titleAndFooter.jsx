@@ -30,6 +30,7 @@ class Demo extends React.Component {
                             visible: false
                         })
                     }
+                    customStyle={{ contentPadding: true }}
                     title="This is title"
                     footer="This is footer"
                 >

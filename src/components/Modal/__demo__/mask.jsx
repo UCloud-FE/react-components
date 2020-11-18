@@ -7,8 +7,20 @@ class Demo extends React.Component {
     render() {
         return (
             <div>
-                <Button onClick={() => Modal.alert({ mask: true }, 'This is a modal')}>mask=true</Button>
-                <Button onClick={() => Modal.alert({ mask: false }, 'This is a modal')}>mask=false</Button>
+                <Button
+                    onClick={() =>
+                        Modal.alert({ mask: true, customStyle: { contentPadding: true } }, 'This is a modal')
+                    }
+                >
+                    mask=true
+                </Button>
+                <Button
+                    onClick={() =>
+                        Modal.alert({ mask: false, customStyle: { contentPadding: true } }, 'This is a modal')
+                    }
+                >
+                    mask=false
+                </Button>
             </div>
         );
     }

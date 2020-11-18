@@ -52,6 +52,11 @@ class Modal extends Component {
         className: PropTypes.string,
         /** 弹窗包裹容器的类名 */
         wrapClassName: PropTypes.string,
+        /** 自定义预设部分样式 */
+        customStyle: PropTypes.shape({
+            /** 由于弹窗会包裹各种组件，经常会 padding 叠加，所以默认内部无间距，通过 contentPadding 为 true 可打开内间距 */
+            contentPadding: PropTypes.bool
+        }),
         /** 弹窗的样式 */
         style: PropTypes.object,
         /** 弹窗的内容部分的样式 */

@@ -88,8 +88,9 @@ class Demo extends React.Component {
                         afterClose={() => console.log('afterClose')}
                         onOk={() => console.log('onOk')}
                         title="this is title"
+                        customStyle={{ contentPadding: true }}
                     >
-                        <Box padding="lg">this is content</Box>
+                        this is content
                     </Modal>
                 </div>
             </div>
