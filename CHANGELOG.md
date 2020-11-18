@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.12](https://github.com/UCloud-FE/react-components/compare/v1.0.11...v1.0.12) (2020-11-18)
+
+### Features
+
+-   **Badge:** change bubble yellow color ([ed75588](https://github.com/UCloud-FE/react-components/commit/ed755888fbd4b82c1cd4df98b5238a54d05de86a))
+-   **Box:** add Box for layout ([b0effeb](https://github.com/UCloud-FE/react-components/commit/b0effeb76c2f64d98242dd0e6f22506da35be2c8)), closes [#261](https://github.com/UCloud-FE/react-components/issues/261)
+-   **Combine:** add separator ([dcb6b50](https://github.com/UCloud-FE/react-components/commit/dcb6b500ed9636876c3cf555e3d5b215f26c0e95))
+-   **ConfigProvider:** support theme and locale ([0dff48c](https://github.com/UCloud-FE/react-components/commit/0dff48c1c2e1534a9cfc0080bdbefb50a1770cd5))
+-   **Modal:** add update to method modal ([c8914d3](https://github.com/UCloud-FE/react-components/commit/c8914d3143311744016ed5632a2ccd879992c42a))
+-   **Tag:** add some preset color ([054847f](https://github.com/UCloud-FE/react-components/commit/054847f6b1f03be12f549be8f3d3eb7be71db036))
+
 ### [1.0.11](https://github.com/UCloud-FE/react-components/compare/v1.0.10...v1.0.11) (2020-11-12)
 
 ### Features
