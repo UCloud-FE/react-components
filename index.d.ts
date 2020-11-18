@@ -642,10 +642,30 @@ export class Badge extends Component<BadgeProps> {}
 
 // Tag
 export interface TagProps {
-    styleType?: "default" | "green" | "yellow" | "red" | "primary" | "purple" | "lightblue" | "blue" | 'orange' | "cyan" | "success" | "warning" | "error";
+    styleType?:
+        | 'default'
+        | 'green'
+        | 'yellow'
+        | 'red'
+        | 'primary'
+        | 'purple'
+        | 'lightblue'
+        | 'blue'
+        | 'orange'
+        | 'cyan'
+        | 'success'
+        | 'warning'
+        | 'error'
+        | 'purple-fill'
+        | 'lightblue-fill'
+        | 'blue-fill'
+        | 'orange-fill'
+        | 'yellow-fill'
+        | 'cyan-fill'
+        | string;
     closable?: boolean;
     onClose?: () => void;
-    icon?: "circle-fill" | "circle" | "loading" | "custom" | ReactNode;
+    icon?: 'circle-fill' | 'circle' | 'loading' | 'custom' | ReactNode;
     disabled?: boolean;
 }
 export class Tag extends Component<TagProps> {}
@@ -745,6 +765,7 @@ interface ModalConfirm {
 export class Modal extends Component<ModalProps> {
     static confirm: ModalConfirm;
     static alert: ModalConfirm;
+    static open: ModalConfirm;
 }
 
 // Drawer
@@ -908,8 +929,8 @@ interface EditableListAddition {
 }
 
 interface EditableListRowDeletion {
-    onDelete?: Function;
-    getDisabledOfItem?: Function;
+    onDelete?: (item: any) => void;
+    getDisabledOfItem?: (item: any) => boolean;
 }
 
 interface EditableListGrid {
@@ -934,8 +955,8 @@ interface EditableTableAddition extends EditableListAddition {
 }
 
 interface EditableTableRowDeletion {
-    onDelete?: Function;
-    getDisabledOfRow?: Function;
+    onDelete?: (record: any) => void;
+    getDisabledOfRow?: (record: any) => boolean;
     fixed?: boolean;
 }
 export interface EditableTableProps extends TableProps {
