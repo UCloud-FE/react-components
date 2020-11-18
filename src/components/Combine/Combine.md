@@ -6,22 +6,27 @@
 
 ### 演示
 
--   演示
+#### 演示
 
 ```js {"codepath": "combine.jsx"}
 ```
 
--   sharedProps - props 共享
+#### sharedProps - props 共享
 
 ```js {"codepath": "sharedProps.jsx"}
 ```
 
--   spacing - 间距
+#### spacing - 间距
 
 ```js {"codepath": "spacing.jsx"}
 ```
 
--   demo - 样例展示
+#### separator - 分隔符
+
+```js {"codepath": "separator.jsx"}
+```
+
+#### demo - 样例展示
 
 ```js {"codepath": "demo.jsx"}
 ```
