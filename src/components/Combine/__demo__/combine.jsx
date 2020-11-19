@@ -6,6 +6,7 @@ import Input from 'src/components/Input';
 import Radio from 'src/components/Radio';
 import Form from 'src/components/Form';
 import Switch from 'src/components/Switch';
+import Icon from 'src/components/Icon';
 
 // demo start
 const { Size } = Input;
@@ -14,11 +15,12 @@ class Demo extends React.Component {
         super(props);
         this.state = {
             size: 'md',
-            spacing: 'smart'
+            spacing: 'smart',
+            separator: 'default'
         };
     }
     render() {
-        const { size, disabled, spacing } = this.state;
+        const { size, disabled, spacing, separator } = this.state;
         const itemLayout = {
             labelCol: {
                 span: 3
@@ -27,6 +29,15 @@ class Demo extends React.Component {
                 span: 9
             }
         };
+        const props = {};
+        switch (separator) {
+            case '-':
+                props.separator = '-';
+                break;
+            case 'icon':
+                props.separator = <Icon type="arrow-right" />;
+                break;
+        }
         return (
             <div>
                 <Form className="demo-form">
@@ -51,9 +62,18 @@ class Demo extends React.Component {
                             }))}
                         />
                     </Form.Item>
+                    <Form.Item label="separator" {...itemLayout}>
+                        <Radio.Group
+                            value={separator}
+                            onChange={separator => this.setState({ separator })}
+                            options={['default', '-', 'icon'].map(separator => ({
+                                value: separator
+                            }))}
+                        />
+                    </Form.Item>
                 </Form>
                 <div className="demo-wrap">
-                    <Combine sharedProps={{ size, disabled }} spacing={spacing}>
+                    <Combine sharedProps={{ size, disabled }} spacing={spacing} {...props}>
                         <Select options={[1, 2, 3].map(i => ({ value: i }))} />
                         <Input />
                     </Combine>

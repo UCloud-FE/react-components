@@ -151,12 +151,12 @@
 ```js {"codepath": "popupContainer.jsx"}
 ```
 
--   demo - 样例演示
-
-```js {"codepath": "demo.jsx"}
-```
-
 -   单元格合并
 
 ```js {"codepath": "cellMerge.jsx"}
+```
+
+-   demo - 样例演示
+
+```js {"codepath": "demo.jsx"}
 ```

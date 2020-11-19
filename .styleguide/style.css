@@ -99,3 +99,49 @@ form.demo-form:before,
 .badge .sc-para {
     white-space: normal;
 }
+.browser-list {
+    margin-bottom: 16px;
+}
+.browser-list > table {
+    margin: 0px;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.browser-list > table th,
+.browser-list > table td {
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.anchor-wrap {
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    line-height: 1.3em;
+    border-left: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-sizing: border-box;
+    max-width: 200px;
+}
+.anchor-wrap-out {
+    right: -210px;
+    width: 200px;
+}
+.anchor-title {
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.anchor-title:hover {
+    color: blue;
+}
+.anchor-title-active {
+    color: blue;
+}
+.anchor-list {
+    padding-left: 8px;
+    margin-top: 4px;
+}

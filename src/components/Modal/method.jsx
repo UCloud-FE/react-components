@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'emotion-theming';
@@ -8,6 +8,27 @@ import Button from 'src/components/Button';
 import { getRuntimeTheme } from 'src/components/ThemeProvider/runtime';
 
 import Modal from './Modal';
+
+class ModalWrap extends PureComponent {
+    static propTypes = {
+        reportUpdate: PropTypes.func
+    };
+    componentWillMount() {
+        this.props.reportUpdate(this.update);
+    }
+    update = props => {
+        this.setState({ ...props });
+    };
+    render() {
+        // eslint-disable-next-line no-unused-vars
+        const { reportUpdate, ...rest } = this.props;
+        return (
+            <ThemeProvider theme={getRuntimeTheme()}>
+                <Modal {...rest} visible {...this.state} />
+            </ThemeProvider>
+        );
+    }
+}
 
 const pop = props => {
     let container = document.createElement('div');
@@ -19,19 +40,16 @@ const pop = props => {
         }
     };
 
-    ReactDOM.render(
-        <ThemeProvider theme={getRuntimeTheme()}>
-            <Modal {...props} visible />
-        </ThemeProvider>,
-        container
-    );
+    let update = null;
+    ReactDOM.render(<ModalWrap {...props} reportUpdate={_update => (update = _update)} />, container);
 
     return {
         destory: () => {
             console.error(`Warning: wrong name of destory, please use destroy to instead`);
             destroy();
         },
-        destroy
+        destroy,
+        update
     };
 };
 

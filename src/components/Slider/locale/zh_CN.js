@@ -7,6 +7,6 @@ export default {
     comma: '，',
     input: '输入',
     isValid: '合法',
-    isUnvalid: '不合法',
+    isInvalid: '不合法',
     tip: '请回车或者点击它处自动计算最相近合法值'
 };

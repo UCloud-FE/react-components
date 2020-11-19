@@ -7,6 +7,10 @@ import Icon from 'src/components/Icon';
 
 // demo start
 const { StyleType } = Tag;
+let TrueIcon = Icon;
+// Icon 在 context 中被文档强行覆盖，这里重新取一下
+if (window.Icon) TrueIcon = window.Icon;
+
 class Demo extends React.Component {
     constructor(props) {
         super(props);
@@ -17,6 +21,7 @@ class Demo extends React.Component {
     }
     render() {
         const { styleType, icon } = this.state;
+        const Icon = TrueIcon;
         const itemLayout = {
             labelCol: {
                 span: 3

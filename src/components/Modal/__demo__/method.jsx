@@ -1,12 +1,35 @@
 import React from 'react';
-import Modal from 'components/Modal';
-import Button from 'components/Button';
+
+import Modal from 'src/components/Modal';
+import Button from 'src/components/Button';
 
 // demo start
 class Demo extends React.Component {
+    open() {
+        this.modal = Modal.open(
+            {
+                title: '测试',
+                onClose: () => console.log('close'),
+                onOk: () => console.log('ok')
+            },
+            <div style={{ height: '300px' }}>
+                <Button onClick={() => this.update()}>测试</Button>
+            </div>
+        );
+    }
+    update() {
+        if (!this.modal) return;
+        this.modal.update({
+            title: `测试 - ${Math.random()}`,
+            size: ['sm', 'md', 'lg'][(Math.random() * 3) | 0]
+        });
+    }
     render() {
         return (
             <div>
+                <div className="demo-wrap">
+                    <Button onClick={() => this.open()}>open</Button>
+                </div>
                 <Button
                     onClick={() =>
                         Modal.alert(
@@ -104,7 +127,9 @@ class Demo extends React.Component {
                             <div>this is content</div>
                         )
                     }
-                ></Button>
+                >
+                    promise open
+                </Button>
             </div>
         );
     }

@@ -20,6 +20,7 @@ class Demo extends React.Component {
                 width: 100,
                 colSpan: 2,
                 align: 'center',
+                key: 'index-0',
                 render: (text, { key }) => {
                     let rowSpan = 0;
                     if (key % 2 === 0) {
@@ -36,6 +37,7 @@ class Demo extends React.Component {
             {
                 title: 'title-1',
                 dataIndex: 'index-1',
+                key: 'index-1',
                 width: 100,
                 colSpan: 0,
                 align: 'center'
@@ -43,12 +45,14 @@ class Demo extends React.Component {
             {
                 title: 'title-2',
                 dataIndex: 'index-2',
+                key: 'index-2',
                 width: 100,
                 align: 'center'
             },
             {
                 title: 'title-3',
                 dataIndex: 'index-3',
+                key: 'index-3',
                 width: 100,
                 align: 'center',
                 render: (text, { key }) => {
@@ -66,6 +70,7 @@ class Demo extends React.Component {
             {
                 title: 'title-4',
                 dataIndex: 'index-4',
+                key: 'index-4',
                 width: 100,
                 align: 'center',
                 render: (text, { key }) => {
@@ -83,6 +88,7 @@ class Demo extends React.Component {
             {
                 title: 'title-5',
                 dataIndex: 'index-5',
+                key: 'index-5',
                 width: 100,
                 align: 'center'
             }
