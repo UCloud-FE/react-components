@@ -20,7 +20,7 @@ export default class StepIcon extends PureComponent {
             case 'current':
                 return <StepCountWrapper>{content}</StepCountWrapper>;
             case 'loading':
-                return <Icon type="ringLoading" spin />;
+                return <Icon type="ring-loading" spin />;
             case 'error':
                 return <Icon type="cross" />;
         }

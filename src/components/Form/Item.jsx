@@ -1,13 +1,30 @@
-import React from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 
-import { ItemWrap, LabelWrap, ControllerWrap } from './style';
+import { ItemWrap, LabelWrap, ControllerWrap, tipIconCls, tipContentCls, StatusIcon, Tip } from './style';
 
-const Item = ({ label, children, labelCol, controllerCol, ...rest }) => {
+const Item = ({ label, children, labelCol, controllerCol, tip, ...rest }) => {
+    if (typeof tip === 'string' || React.isValidElement(tip)) tip = { content: tip };
     return (
         <ItemWrap {...rest}>
             <LabelWrap {...labelCol}>{label}</LabelWrap>
-            <ControllerWrap {...controllerCol}>{children}</ControllerWrap>
+            <ControllerWrap {...controllerCol}>
+                {children}
+                {tip ? (
+                    <Tip spacing="sm" status={tip.status}>
+                        {tip.icon === false ? null : (
+                            <div className={tipIconCls}>
+                                {tip.icon || tip.icon === null || tip.icon === false ? (
+                                    tip.icon
+                                ) : (
+                                    <StatusIcon status={tip.status} spin={tip.status === 'loading'} />
+                                )}
+                            </div>
+                        )}
+                        <div className={tipContentCls}>{tip.content}</div>
+                    </Tip>
+                ) : null}
+            </ControllerWrap>
         </ItemWrap>
     );
 };
@@ -33,7 +50,19 @@ Item.propTypes = {
     /** 控件的col配置 */
     controllerCol: PropTypes.shape(colShape),
     /** @ignore */
-    className: PropTypes.string
+    className: PropTypes.string,
+    /** 提示信息 */
+    tip: PropTypes.oneOfType([
+        PropTypes.shape({
+            /** 提示的状态/类型 */
+            status: PropTypes.oneOf(['default', 'success', 'warning', 'error', 'loading']),
+            /** 自定义提示图标 */
+            icon: PropTypes.node,
+            /** 提示内容 */
+            content: PropTypes.node
+        }),
+        PropTypes.node
+    ])
 };
 
-export default Item;
+export default memo(Item);

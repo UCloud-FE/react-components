@@ -1,52 +1,32 @@
 /* eslint-disable no-console */
 import React from 'react';
-import PropTypes from 'prop-types';
 import _ from 'lodash';
 
-import ZForm from 'components/ZForm';
-import Form from 'components/Form';
+import ZForm from 'src/components/ZForm';
+import Form from 'src/components/Form';
+import Input from 'src/components/Input';
+import Checkbox from 'src/components/Checkbox';
+import Select from 'src/components/Select';
+import Button from 'src/components/Button';
 
 // demo start
 const { formDecorator, controllerDecorator, formShape } = ZForm;
 const { Item } = Form;
-class Input extends React.Component {
-    render() {
-        return <input {...this.props} />;
-    }
-}
+
 const ZInput = controllerDecorator({
     initialValue: ''
 })(Input);
 
-class Checkbox extends React.Component {
-    render() {
-        return <input type="checkbox" {...this.props} />;
-    }
-}
 const ZCheckbox = controllerDecorator({
     initialValue: true,
     valuePropName: 'checked'
 })(Checkbox);
 
-class Select extends React.Component {
-    render() {
-        const { options, ...selectProps } = this.props;
-        return (
-            <select {...selectProps}>
-                <option>请选择</option>
-                {options.map(option => (
-                    <option value={option} key={option}>
-                        {option}
-                    </option>
-                ))}
-            </select>
-        );
-    }
-}
-Select.propTypes = {
-    options: PropTypes.array.isRequired
-};
 const ZSelect = controllerDecorator()(Select);
+
+const getError = (error, key) => {
+    return _.get(error, key);
+};
 
 class DemoForm extends React.PureComponent {
     handleSubmit() {
@@ -59,14 +39,6 @@ class DemoForm extends React.PureComponent {
         const { form } = this.props;
         const originErrors = form.getFieldsError() || [];
 
-        const errors = [];
-        _.each(originErrors, (errs, name) => {
-            errs !== undefined &&
-                errors.push({
-                    name,
-                    message: errs.join(', ')
-                });
-        });
         const itemLayout = {
             labelCol: {
                 span: 1
@@ -77,8 +49,28 @@ class DemoForm extends React.PureComponent {
         };
         return (
             <ZForm form={form}>
-                <Item label="input_1" {...itemLayout}>
-                    <ZInput zName="input_1" />
+                <Item
+                    label="input_1"
+                    tip={
+                        getError(originErrors, 'input_1')
+                            ? {
+                                  status: 'error',
+                                  content: getError(originErrors, 'input_1')
+                              }
+                            : null
+                    }
+                    {...itemLayout}
+                >
+                    <ZInput
+                        zName="input_1"
+                        zOptions={{
+                            rules: [
+                                {
+                                    required: true
+                                }
+                            ]
+                        }}
+                    />
                 </Item>
                 <Item label="input_2" {...itemLayout}>
                     <ZInput
@@ -110,23 +102,46 @@ class DemoForm extends React.PureComponent {
                         }}
                     />
                 </Item>
-                <Item label="input_3" {...itemLayout}>
-                    <ZInput zName="input_3" />
+                <Item
+                    label="input_3"
+                    tip={
+                        getError(originErrors, 'input_3')
+                            ? {
+                                  status: 'error',
+                                  content: getError(originErrors, 'input_3')
+                              }
+                            : 'this is required'
+                    }
+                    {...itemLayout}
+                >
+                    <ZInput
+                        zName="input_3"
+                        zOptions={{
+                            rules: [
+                                {
+                                    required: true
+                                }
+                            ]
+                        }}
+                    />
                 </Item>
                 <Item label="checkbox_1" {...itemLayout}>
                     <ZCheckbox zName="checkbox_1" />
                 </Item>
                 <Item label="select_1" {...itemLayout}>
-                    <ZSelect zName="select_1" options={[1, 2, 3, 4]} />
+                    <ZSelect zName="select_1" options={[1, 2, 3, 4].map(v => ({ value: v, label: `label-${v}` }))} />
                 </Item>
                 <Item label="select_2" {...itemLayout}>
-                    <ZSelect zName="select_2" zOptions={{ initialValue: 1 }} options={[1, 2, 3, 4]} />
+                    <ZSelect
+                        zName="select_2"
+                        zOptions={{ initialValue: 1 }}
+                        options={[1, 2, 3, 4].map(v => ({ value: v, label: `label-${v}` }))}
+                    />
                 </Item>
-                <p className="u-red">{errors.map(error => `${error.name}: ${error.message}`).join(', ')}</p>
 
-                <button type="button" onClick={() => this.handleSubmit()}>
+                <Button styleType="primary" onClick={() => this.handleSubmit()}>
                     submit
-                </button>
+                </Button>
             </ZForm>
         );
     }

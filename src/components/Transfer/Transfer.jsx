@@ -312,7 +312,7 @@ class Transfer extends PureComponent {
                         disabled={disabled || !sourceSelectedKeys.length}
                         onClick={() => this.transfer('source')}
                     >
-                        <SvgIcon type="rightArrow" />
+                        <SvgIcon type="right-arrow" />
                     </Button>
                 </div>
                 <div className={actionCls}>
@@ -322,7 +322,7 @@ class Transfer extends PureComponent {
                         disabled={disabled || !targetSelectedKeys.length}
                         onClick={() => this.transfer('target')}
                     >
-                        <SvgIcon type="leftArrow" />
+                        <SvgIcon type="left-arrow" />
                     </Button>
                 </div>
             </div>

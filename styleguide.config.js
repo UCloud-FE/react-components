@@ -3,7 +3,7 @@ const _ = require('lodash');
 const webpack = require('webpack');
 
 const webpackConfig = require('./webpack.config.js');
-let components = require('./.styleguide/components.json');
+let components = require('./.styleguide/components.js');
 
 const namePrefix = '❖  ';
 const basePath = 'src/components/';

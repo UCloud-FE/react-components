@@ -51,7 +51,7 @@ class PopConfirm extends Component {
         return (
             <PopupWrap>
                 <IconWrap>
-                    <SvgIcon size="20px" type="circleExclamation" />
+                    <SvgIcon size="20px" type="circle-exclamation" />
                 </IconWrap>
                 <ContentWrap>{popup}</ContentWrap>
                 <FooterWrap>

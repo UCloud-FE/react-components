@@ -84,7 +84,7 @@ export class Item extends Component {
                                 </div>
                             ) : (
                                 <div className={uploadingTipCLs}>
-                                    <SvgIcon className={uploadingIconCLs} type="ringLoading" spin />
+                                    <SvgIcon className={uploadingIconCLs} type="ring-loading" spin />
                                     {locale.uploading}
                                 </div>
                             )}
@@ -100,7 +100,7 @@ export class Item extends Component {
                         <div className={detailCls}>
                             {this.renderName()}
                             <div className={errorCls} title={file.error + '' || locale.defaultUploadErrorTip}>
-                                <SvgIcon className={errorIconCls} size="12px" type="circleExclamation" />
+                                <SvgIcon className={errorIconCls} size="12px" type="circle-exclamation" />
                                 {file.error + '' || locale.defaultUploadErrorTip}
                             </div>
                         </div>

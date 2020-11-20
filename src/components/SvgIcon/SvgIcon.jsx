@@ -2,6 +2,8 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
+import { camel2Kebab } from 'src/utils/string';
+
 import SvgIconWrapper from './SvgIconWrap';
 
 import Tick from './icons/Tick';
@@ -9,7 +11,6 @@ import Cross from './icons/Cross';
 import BoldCross from './icons/BoldCross';
 import RingLoading from './icons/RingLoading';
 import DottedRightLineArrow from './icons/DottedRightLineArrow';
-import CircleExclamation from './icons/CircleExclamation';
 import Plus from './icons/Plus';
 import Minus from './icons/Minus';
 import Circle from './icons/Circle';
@@ -20,24 +21,31 @@ import RightArrow from './icons/RightArrow';
 import Refresh from './icons/Refresh';
 import Trash from './icons/Trash';
 import Eye from './icons/Eye';
+import CircleExclamation from './icons/CircleExclamation';
+import CircleInfo from './icons/CircleInfo';
+import CircleTick from './icons/CircleTick';
+import CircleCross from './icons/CircleCross';
 
 const IconMap = {
     tick: Tick,
     cross: Cross,
-    boldCross: BoldCross,
-    ringLoading: RingLoading,
-    dottedRightLineArrow: DottedRightLineArrow,
-    circleExclamation: CircleExclamation,
+    'bold-cross': BoldCross,
+    'ring-loading': RingLoading,
+    'dotted-right-line-arrow': DottedRightLineArrow,
     plus: Plus,
     minus: Minus,
     circle: Circle,
-    smallTick: SmallTick,
+    'small-tick': SmallTick,
     horz: Horz,
-    leftArrow: LeftArrow,
-    rightArrow: RightArrow,
+    'left-arrow': LeftArrow,
+    'right-arrow': RightArrow,
     refresh: Refresh,
     trash: Trash,
-    eye: Eye
+    eye: Eye,
+    'circle-exclamation': CircleExclamation,
+    'circle-info': CircleInfo,
+    'circle-tick': CircleTick,
+    'circle-cross': CircleCross
 };
 
 const IconType = _.keys(IconMap);
@@ -57,7 +65,8 @@ class SvgIcon extends PureComponent {
         size: '12px'
     };
     render() {
-        const { type, ...rest } = this.props;
+        let { type, ...rest } = this.props;
+        type = camel2Kebab(type);
         const Icon = IconMap[type];
         return <SvgIconWrapper {...rest}>{Icon && <Icon />}</SvgIconWrapper>;
     }

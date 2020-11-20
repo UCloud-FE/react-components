@@ -1,7 +1,11 @@
+import React, { memo } from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
+import PropTypes from 'prop-types';
 
+import SvgIcon from 'src/components/SvgIcon';
 import { Row, Col } from 'src/components/Grid';
+import Combine from 'src/components/Combine';
 import config from 'src/config';
 
 import withProps from 'src/utils/withProps';
@@ -13,6 +17,9 @@ const labelCls = prefixCls + '-label';
 const controllerCls = prefixCls + '-controller';
 const groupCls = prefixCls + '-group';
 const groupTitleCls = groupCls + '-title';
+export const tipCls = prefixCls + '-tip';
+export const tipIconCls = tipCls + '-icon';
+export const tipContentCls = tipCls + '-content';
 
 export const ItemWrap = withProps({
     className: itemCls
@@ -75,12 +82,10 @@ export const FormWrap = withProps({
         return css`
             .${itemCls} {
                 margin-bottom: 16px;
-
                 &:last-child {
                     margin-bottom: 0;
                 }
             }
-
             ${size === 'lg' &&
             css`
                 .${itemCls} {
@@ -93,3 +98,50 @@ export const FormWrap = withProps({
         `;
     })
 );
+
+export const Tip = withProps({ className: tipCls })(
+    styled(Combine)(props => {
+        const {
+            status,
+            theme: { designTokens: DT }
+        } = props;
+        const iconColorDT =
+            {
+                success: 'T_COLOR_BG_SUCCESS_DARK',
+                warning: 'T_COLOR_BG_WARNING_DARK',
+                error: 'T_COLOR_BG_ERROR_DARK',
+                loading: 'T_COLOR_TEXT_PRIMARY_DEFAULT'
+            }[status] || 'T_COLOR_TEXT_PRIMARY_DEFAULT';
+        const colorDt =
+            {
+                error: 'T_COLOR_TEXT_ERROR'
+            }[status] || 'T_COLOR_TEXT_DEFAULT_LIGHT';
+        return css`
+            margin-top: 4px;
+            color: ${DT[colorDt]};
+            .${tipContentCls} {
+                line-height: 20px;
+            }
+            .${tipIconCls} {
+                fill: ${DT[iconColorDT]};
+            }
+        `;
+    })
+);
+
+let StatusIcon = ({ status, ...rest }) => {
+    const iconType =
+        {
+            success: 'circle-tick',
+            warning: 'circle-exclamation',
+            error: 'circle-cross',
+            loading: 'ring-loading'
+        }[status] || 'circle-info';
+    return <SvgIcon type={iconType} className={tipIconCls} {...rest} />;
+};
+StatusIcon.propTypes = {
+    status: PropTypes.string
+};
+StatusIcon = memo(StatusIcon);
+
+export { StatusIcon };
