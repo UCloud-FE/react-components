@@ -7,7 +7,6 @@ import ExamplesRenderer from './ExamplesRenderer';
 import { useStyleGuideContext } from 'rsg-components/Context';
 import classnames from 'classnames';
 import _ from 'lodash';
-import Styled from 'rsg-components/Styled';
 
 import path from 'path';
 import { DarkThemeContext } from './StyleGuideRenderer';
@@ -88,12 +87,13 @@ function isInViewport(el) {
     return (rect.top > 0 && rect.top < clientHeight - 50) || (rect.bottom > 100 && rect.bottom < clientHeight);
 }
 
-export default class ExamplesT extends React.PureComponent {
+class Anchor extends React.PureComponent {
     state = {
         h: []
     };
     updateTree = () => {
-        const rootDOM = ReactDOM.findDOMNode(this);
+        const { target } = this.props;
+        const rootDOM = ReactDOM.findDOMNode(target);
         const allH = [...rootDOM.querySelectorAll('h2,h3,h4')];
         const filterH = [...rootDOM.querySelectorAll('.demo h2,.demo h3,.demo h4')];
         const h = allH.filter(h => !filterH.find(_h => _h === h));
@@ -202,12 +202,20 @@ export default class ExamplesT extends React.PureComponent {
     };
     render() {
         return (
-            <div style={{ position: 'relative' }}>
-                <div style={{ position: 'sticky', height: 0, top: 0, zIndex: 2 }}>
-                    <div className={`anchor-wrap ${this.state.place === 'out' ? 'anchor-wrap-out' : ''}`}>
-                        {this.renderAnchor()}
-                    </div>
+            <div style={{ position: 'sticky', height: 0, top: 0, zIndex: 2 }}>
+                <div className={`anchor-wrap ${this.state.place === 'out' ? 'anchor-wrap-out' : ''}`}>
+                    {this.renderAnchor()}
                 </div>
+            </div>
+        );
+    }
+}
+
+export default class ExamplesT extends React.PureComponent {
+    render() {
+        return (
+            <div style={{ position: 'relative' }}>
+                <Anchor target={this} />
                 <Examples {...this.props} />
             </div>
         );
