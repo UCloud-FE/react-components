@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.13](https://github.com/UCloud-FE/react-components/compare/v1.0.12...v1.0.13) (2020-11-23)
+
+### Features
+
+-   **Form:** add tip to form item ([d449ef6](https://github.com/UCloud-FE/react-components/commit/d449ef66e191ab6007a84406593d7c7048fe4e62))
+-   **Form:** change item.tip.status to item.status ([d5044bf](https://github.com/UCloud-FE/react-components/commit/d5044bff16dcd0abb5c4cdf5af704d4e28cf21ab))
+-   **Modal:** add customStyle of contentPadding ([c3ec8c5](https://github.com/UCloud-FE/react-components/commit/c3ec8c5e9aa9f3bb62a26f2a2449c741e763d3e7))
+-   **Modal:** add openModal method ([ad4bed9](https://github.com/UCloud-FE/react-components/commit/ad4bed918b0fc2d17329899a4b4256ce5703f24e))
+-   **Tag:** add styleType of red-fill ([a80670a](https://github.com/UCloud-FE/react-components/commit/a80670a7ebe1f17fe6a5a0bbfb40955b09a16766))
+
 ### [1.0.12](https://github.com/UCloud-FE/react-components/compare/v1.0.11...v1.0.12) (2020-11-18)
 
 ### Features
