@@ -106,6 +106,10 @@ const fillStyleMap = {
     cyan: {
         bg: 'T_COLOR_LEGEND_CYAN_6',
         iconHoverBG: 'T_COLOR_LEGEND_CYAN_7'
+    },
+    red: {
+        bg: 'T_COLOR_LEGEND_RED_6',
+        iconHoverBG: 'T_COLOR_LEGEND_RED_7'
     }
 };
 
@@ -113,6 +117,7 @@ Object.keys(fillStyleMap).map(key => {
     const map = fillStyleMap[key];
     styleMap[key + '-fill'] = {
         ...map,
+        border: map.bg,
         color: 'T_COLOR_TEXT_SYSTEM_WHITE'
     };
 });
@@ -165,30 +170,28 @@ export const TagWrapper = withProps({
             border-radius: 2px;
 
             color: ${DT[colorMap.color]};
-            ${border &&
-            css`
-                border: 1px solid ${DT[border]};
-            `};
             background: ${DT[colorMap.bg]};
+            border: 1px solid ${DT[border]};
 
             ${PrefixIconWrapper} {
                 margin-right: 4px;
                 vertical-align: middle;
-                line-height: 20px;
+                line-height: 18px;
             }
             ${ContentWrapper} {
                 margin-right: 8px;
                 vertical-align: middle;
-                line-height: 20px;
+                line-height: 18px;
             }
             ${CloseIconWrapper} {
                 float: right;
-                width: 20px;
-                height: 20px;
-                line-height: 20px;
+                width: 18px;
+                height: 18px;
+                line-height: 18px;
                 font-size: 0;
                 vertical-align: middle;
                 text-align: center;
+                border-radius: 0 2px 2px 0;
                 ${!disabled && 'cursor: pointer'};
                 color: ${DT[colorMap.color]};
                 transition: background 0.3s;
@@ -206,21 +209,9 @@ export const TagWrapper = withProps({
                     }
                 `};
             }
-
-            ${border &&
-            css`
-                ${PrefixIconWrapper} {
-                    line-height: 18px;
-                }
-                ${ContentWrapper} {
-                    line-height: 18px;
-                }
-                ${CloseIconWrapper} {
-                    width: 18px;
-                    height: 18px;
-                    line-height: 18px;
-                }
-            `}
+            ::after {
+                background: ${DT[colorMap.border]};
+            }
         `;
     })
 );
@@ -242,6 +233,7 @@ export const IconTagWrapper = withProps({
         } = props;
 
         const colorMap = getColorMap(styleType);
+        const border = DT[colorMap.border];
         return css`
             box-sizing: border-box;
             height: 20px;
@@ -252,11 +244,11 @@ export const IconTagWrapper = withProps({
             border-radius: 2px;
             position: relative;
 
+            border: 1px solid ${border};
             color: ${DT[colorMap.color]};
-            border: 1px solid ${DT[colorMap.border]};
             background: ${DT[colorMap.bg]};
             ::after {
-                background: ${DT[colorMap.border]};
+                background: ${border};
                 position: absolute;
                 right: 0;
             }
