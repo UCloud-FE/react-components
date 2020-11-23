@@ -47,20 +47,12 @@ class DemoForm extends React.PureComponent {
                 span: 5
             }
         };
+        const error1 = getError(originErrors, 'input_1');
+        const error3 = getError(originErrors, 'input_3');
+        console.log(error1, error3);
         return (
             <ZForm form={form}>
-                <Item
-                    label="input_1"
-                    tip={
-                        getError(originErrors, 'input_1')
-                            ? {
-                                  status: 'error',
-                                  content: getError(originErrors, 'input_1')
-                              }
-                            : null
-                    }
-                    {...itemLayout}
-                >
+                <Item label="input_1" {...(error1 ? { status: 'error', tip: error1.join(',') } : {})} {...itemLayout}>
                     <ZInput
                         zName="input_1"
                         zOptions={{
@@ -104,14 +96,7 @@ class DemoForm extends React.PureComponent {
                 </Item>
                 <Item
                     label="input_3"
-                    tip={
-                        getError(originErrors, 'input_3')
-                            ? {
-                                  status: 'error',
-                                  content: getError(originErrors, 'input_3')
-                              }
-                            : 'this is required'
-                    }
+                    {...(error3 ? { status: 'error', tip: error3.join(',') } : { tip: 'this is required' })}
                     {...itemLayout}
                 >
                     <ZInput

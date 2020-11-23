@@ -30,7 +30,8 @@ const Demo = () => (
             <Item
                 key={status}
                 label={`tip - ${status}`}
-                tip={{ status, content: `${status} - 提示` }}
+                status={status}
+                tip={{ content: `${status} - 提示` }}
                 {...horizontalLayout}
             >
                 <Input />
@@ -38,7 +39,8 @@ const Demo = () => (
         ))}
         <Item
             label={`tip - custom`}
-            tip={{ icon: <Icon type="arrow-left" />, status: 'error', content: `自定义提示` }}
+            status="error"
+            tip={{ icon: <Icon type="arrow-left" />, content: `自定义提示` }}
             {...horizontalLayout}
         >
             <Input />

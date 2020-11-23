@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { ItemWrap, LabelWrap, ControllerWrap, tipIconCls, tipContentCls, StatusIcon, Tip } from './style';
 
-const Item = ({ label, children, labelCol, controllerCol, tip, ...rest }) => {
+const Item = ({ label, children, labelCol, controllerCol, status, tip, ...rest }) => {
     if (typeof tip === 'string' || React.isValidElement(tip)) tip = { content: tip };
     return (
         <ItemWrap {...rest}>
@@ -11,13 +11,13 @@ const Item = ({ label, children, labelCol, controllerCol, tip, ...rest }) => {
             <ControllerWrap {...controllerCol}>
                 {children}
                 {tip ? (
-                    <Tip spacing="sm" status={tip.status}>
+                    <Tip spacing="sm" status={status}>
                         {tip.icon === false ? null : (
                             <div className={tipIconCls}>
                                 {tip.icon || tip.icon === null || tip.icon === false ? (
                                     tip.icon
                                 ) : (
-                                    <StatusIcon status={tip.status} spin={tip.status === 'loading'} />
+                                    <StatusIcon status={status} spin={status === 'loading'} />
                                 )}
                             </div>
                         )}
@@ -51,11 +51,11 @@ Item.propTypes = {
     controllerCol: PropTypes.shape(colShape),
     /** @ignore */
     className: PropTypes.string,
+    /** 影响提示的状态/类型、包裹的控件的状态 */
+    status: PropTypes.oneOf(['default', 'success', 'warning', 'error', 'loading']),
     /** 提示信息 */
     tip: PropTypes.oneOfType([
         PropTypes.shape({
-            /** 提示的状态/类型 */
-            status: PropTypes.oneOf(['default', 'success', 'warning', 'error', 'loading']),
             /** 自定义提示图标 */
             icon: PropTypes.node,
             /** 提示内容 */
