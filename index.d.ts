@@ -8,7 +8,7 @@ import type {
 import { Moment, MomentInput } from "moment";
 
 // 忽略 T 对象中 键在 K 中的所有的属性
-type ObjectExclude<T, K extends keyof T> = Pick<T, { [P in keyof T]: P extends K ? never : P; }[keyof T]>;
+type ObjectExclude<T, K extends keyof T> = Partial<Pick<T, { [P in keyof T]: P extends K ? never : P; }[keyof T]>>;
 
 // base type
 export type SizeType = "sm" | "md" | "lg";
