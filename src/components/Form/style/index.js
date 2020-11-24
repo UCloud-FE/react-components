@@ -20,6 +20,7 @@ const groupTitleCls = groupCls + '-title';
 export const tipCls = prefixCls + '-tip';
 export const tipIconCls = tipCls + '-icon';
 export const tipContentCls = tipCls + '-content';
+const subGroupCls = prefixCls + '-sub-group';
 
 export const ItemWrap = withProps({
     className: itemCls
@@ -145,3 +146,23 @@ StatusIcon.propTypes = {
 StatusIcon = memo(StatusIcon);
 
 export { StatusIcon };
+
+export const SubGroupWrap = withProps({ className: subGroupCls })(
+    styled.div(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
+        return css`
+            padding: 20px;
+            border: 1px solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
+            background: ${DT.T_COLOR_BG_DEFAULT_DARK};
+
+            * + & {
+                margin-top: 12px;
+            }
+            & .${itemCls} {
+                margin-bottom: 16px;
+            }
+        `;
+    })
+);
