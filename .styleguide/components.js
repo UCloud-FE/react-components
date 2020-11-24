@@ -156,7 +156,7 @@ module.exports = [
             },
             {
                 name: 'Form',
-                components: ['Form', 'Item', 'Group', 'SubGroup']
+                components: ['Form', 'Item', 'Group', 'SubArea']
             },
             {
                 name: 'Card'

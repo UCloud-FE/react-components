@@ -5,7 +5,12 @@
 
 ### 演示
 
--   普通使用
+#### 普通使用
 
 ```js {"codepath": "form.jsx"}
+```
+
+#### itemProps - 统一设置 item 的 props
+
+```js {"codepath": "form-itemProps.jsx"}
 ```

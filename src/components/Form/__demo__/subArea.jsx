@@ -7,7 +7,7 @@ import Slider from 'src/components/Slider';
 import Input from 'src/components/Input';
 
 // demo start
-const { SubGroup, Item } = Form;
+const { SubArea, Item } = Form;
 const horizontalLayout = {
     labelCol: {
         span: 3
@@ -23,24 +23,24 @@ const Demo = () => (
         </Item>
         <Item label="switch" {...horizontalLayout}>
             <Switch />
-            <SubGroup>
+            <SubArea>
                 <Item label="slider" {...horizontalLayout}>
                     <Slider defaultValue={10} />
                 </Item>
                 <Item label="input" {...horizontalLayout}>
                     <Input />
                 </Item>
-            </SubGroup>
+            </SubArea>
         </Item>
         <Item label="test" {...horizontalLayout}>
-            <SubGroup>
+            <SubArea>
                 <Item label="slider" {...horizontalLayout}>
                     <Slider defaultValue={10} />
                 </Item>
                 <Item label="input" {...horizontalLayout}>
                     <Input />
                 </Item>
-            </SubGroup>
+            </SubArea>
         </Item>
     </Form>
 );

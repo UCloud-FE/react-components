@@ -1,9 +1,13 @@
-import React, { memo } from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 
+import ItemContext from './ItemContext';
 import { ItemWrap, LabelWrap, ControllerWrap, tipIconCls, tipContentCls, StatusIcon, Tip } from './style';
 
-const Item = ({ label, children, labelCol, controllerCol, status, tip, ...rest }) => {
+const Item = props => {
+    const itemContext = useContext(ItemContext);
+    let { label, children, labelCol, controllerCol, status, tip, ...rest } = { ...itemContext, ...props };
+
     if (typeof tip === 'string' || React.isValidElement(tip)) tip = { content: tip };
     return (
         <ItemWrap {...rest}>
@@ -65,4 +69,4 @@ Item.propTypes = {
     ])
 };
 
-export default memo(Item);
+export default React.memo(Item);

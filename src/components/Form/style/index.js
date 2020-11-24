@@ -20,7 +20,7 @@ const groupTitleCls = groupCls + '-title';
 export const tipCls = prefixCls + '-tip';
 export const tipIconCls = tipCls + '-icon';
 export const tipContentCls = tipCls + '-content';
-const subGroupCls = prefixCls + '-sub-group';
+const subAreaCls = prefixCls + '-sub-area';
 
 export const ItemWrap = withProps({
     className: itemCls
@@ -147,7 +147,7 @@ StatusIcon = memo(StatusIcon);
 
 export { StatusIcon };
 
-export const SubGroupWrap = withProps({ className: subGroupCls })(
+export const SubAreaWrap = withProps({ className: subAreaCls })(
     styled.div(props => {
         const {
             theme: { designTokens: DT }

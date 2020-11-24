@@ -8,7 +8,7 @@ import Input from 'src/components/Input';
 
 // demo start
 const { Group, Item } = Form;
-const horizontalLayout = {
+const sharedItemProps = {
     labelCol: {
         span: 3
     },
@@ -17,20 +17,20 @@ const horizontalLayout = {
     }
 };
 const Demo = () => (
-    <Form>
+    <Form itemProps={sharedItemProps}>
         <Group title="Group 1">
-            <Item label="upload" {...horizontalLayout}>
+            <Item label="upload">
                 <Upload />
             </Item>
-            <Item label="switch" {...horizontalLayout}>
+            <Item label="switch">
                 <Switch />
             </Item>
         </Group>
         <Group title="Group 2">
-            <Item label="slider" {...horizontalLayout}>
+            <Item label="slider">
                 <Slider defaultValue={10} />
             </Item>
-            <Item label="input" {...horizontalLayout}>
+            <Item label="input">
                 <Input />
             </Item>
         </Group>

@@ -7,5 +7,5 @@ Form.Item = Item;
 import Group from './Group';
 Form.Group = Group;
 
-import SubGroup from './SubGroup';
-Form.SubGroup = SubGroup;
+import SubArea from './SubArea';
+Form.SubArea = SubArea;
