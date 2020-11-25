@@ -8,3 +8,8 @@
 
 ```js {"codepath": "item.jsx"}
 ```
+
+#### shareStatus
+
+```js {"codepath": "item-shareStatus.jsx"}
+```

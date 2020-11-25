@@ -2,14 +2,15 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 
 import ItemContext from './ItemContext';
+import ControllerContext from './ControllerContext';
 import { ItemWrap, LabelWrap, ControllerWrap, tipIconCls, tipContentCls, StatusIcon, Tip } from './style';
 
 const Item = props => {
     const itemContext = useContext(ItemContext);
-    let { label, children, labelCol, controllerCol, status, tip, ...rest } = { ...itemContext, ...props };
+    let { label, children, labelCol, controllerCol, status, tip, shareStatus, ...rest } = { ...itemContext, ...props };
 
     if (typeof tip === 'string' || React.isValidElement(tip)) tip = { content: tip };
-    return (
+    const item = (
         <ItemWrap {...rest}>
             <LabelWrap {...labelCol}>{label}</LabelWrap>
             <ControllerWrap {...controllerCol}>
@@ -31,6 +32,10 @@ const Item = props => {
             </ControllerWrap>
         </ItemWrap>
     );
+    if (shareStatus) {
+        return <ControllerContext.Provider value={{ status }}>{item}</ControllerContext.Provider>;
+    }
+    return item;
 };
 
 const colShape = {
@@ -66,7 +71,9 @@ Item.propTypes = {
             content: PropTypes.node
         }),
         PropTypes.node
-    ])
+    ]),
+    /** 是否将状态传递给 item 下的表单控件（目前仅 Input 支持部分状态） */
+    shareStatus: PropTypes.bool
 };
 
 export default React.memo(Item);

@@ -1,17 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import _ from 'lodash';
 
 import { FormWrap } from './style';
-import ItemContext from './ItemContext';
+import ItemPropsWrap from './ItemPropsWrap';
 
 const Form = ({ itemProps, ...rest }) => {
-    const form = <FormWrap {...rest} />;
-    if (itemProps) {
-        itemProps = _.pick(itemProps, ['labelCol', 'controllerCol']);
-        return <ItemContext.Provider value={itemProps}>{form}</ItemContext.Provider>;
-    }
-    return form;
+    return (
+        <ItemPropsWrap itemProps={itemProps}>
+            <FormWrap {...rest} />
+        </ItemPropsWrap>
+    );
 };
 
 const Size = ['md', 'lg'];
@@ -28,7 +26,9 @@ Form.propTypes = {
         /** 具体见 item 文档 */
         labelCol: PropTypes.object,
         /** 具体见 item 文档 */
-        controllerCol: PropTypes.object
+        controllerCol: PropTypes.object,
+        /** 具体见 item 文档 */
+        shareStatus: PropTypes.bool
     })
 };
 Form.defaultProps = {
