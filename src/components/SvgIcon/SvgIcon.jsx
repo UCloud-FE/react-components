@@ -7,45 +7,70 @@ import { camel2Kebab } from 'src/utils/string';
 import SvgIconWrapper from './SvgIconWrap';
 
 import Tick from './icons/Tick';
+import TickSmall from './icons/TickSmall';
 import Cross from './icons/Cross';
-import BoldCross from './icons/BoldCross';
+import CrossBold from './icons/CrossBold';
 import RingLoading from './icons/RingLoading';
 import DottedRightLineArrow from './icons/DottedRightLineArrow';
 import Plus from './icons/Plus';
 import Minus from './icons/Minus';
 import Circle from './icons/Circle';
-import SmallTick from './icons/SmallTick';
 import Horz from './icons/Horz';
-import LeftArrow from './icons/LeftArrow';
-import RightArrow from './icons/RightArrow';
+import LeftArrow from './icons/ArrowLeft';
+import RightArrow from './icons/ArrowRight';
 import Refresh from './icons/Refresh';
 import Trash from './icons/Trash';
 import Eye from './icons/Eye';
-import CircleExclamation from './icons/CircleExclamation';
-import CircleInfo from './icons/CircleInfo';
-import CircleTick from './icons/CircleTick';
-import CircleCross from './icons/CircleCross';
+import QuestionCircle from './icons/QuestionCircle';
+
+// circle filled
+import ExclamationCircleFilled from './icons/ExclamationCircleFilled';
+import InfoCircleFilled from './icons/InfoCircleFilled';
+import TickCircleFilled from './icons/TickCircleFilled';
+import CrossCircleFilled from './icons/CrossCircleFilled';
 
 const IconMap = {
     tick: Tick,
+    'tick-small': TickSmall,
     cross: Cross,
-    'bold-cross': BoldCross,
+    'cross-bold': CrossBold,
     'ring-loading': RingLoading,
     'dotted-right-line-arrow': DottedRightLineArrow,
     plus: Plus,
     minus: Minus,
     circle: Circle,
-    'small-tick': SmallTick,
     horz: Horz,
-    'left-arrow': LeftArrow,
-    'right-arrow': RightArrow,
+    'arrow-left': LeftArrow,
+    'arrow-right': RightArrow,
     refresh: Refresh,
     trash: Trash,
-    eye: Eye,
-    'circle-exclamation': CircleExclamation,
-    'circle-info': CircleInfo,
-    'circle-tick': CircleTick,
-    'circle-cross': CircleCross
+    eye: Eye
+};
+
+// circle
+_.forEach({ question: QuestionCircle }, (Icon, key) => {
+    IconMap[key + '-circle'] = Icon;
+});
+
+// circle filled
+_.forEach(
+    {
+        exclamation: ExclamationCircleFilled,
+        info: InfoCircleFilled,
+        tick: TickCircleFilled,
+        cross: CrossCircleFilled
+    },
+    (Icon, key) => {
+        IconMap[key + '-circle-filled'] = Icon;
+    }
+);
+
+// fix old
+const oldMap = {
+    'small-tick': 'tick-small',
+    'bold-cross': 'cross-bold',
+    'left-arrow': 'arrow-left',
+    'right-arrow': 'arrow-right'
 };
 
 const IconType = _.keys(IconMap);
@@ -67,7 +92,7 @@ class SvgIcon extends PureComponent {
     render() {
         let { type, ...rest } = this.props;
         type = camel2Kebab(type);
-        const Icon = IconMap[type];
+        const Icon = IconMap[type] || IconMap[oldMap[type]];
         return <SvgIconWrapper {...rest}>{Icon && <Icon />}</SvgIconWrapper>;
     }
 }

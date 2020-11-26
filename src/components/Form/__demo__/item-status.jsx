@@ -20,7 +20,6 @@ const Demo = () => (
             <Item
                 key={status}
                 label={`tip - ${status}`}
-                shareStatus
                 status={status}
                 {...horizontalLayout}
                 tip={{ content: `${status} - 提示` }}

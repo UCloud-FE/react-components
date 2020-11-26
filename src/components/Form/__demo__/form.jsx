@@ -44,7 +44,7 @@ class Demo extends React.Component {
                         <Item label="Switch" {...itemLayout}>
                             <Switch size={size} />
                         </Item>
-                        <Item label="上传文件" {...itemLayout}>
+                        <Item label="Select" {...itemLayout}>
                             <Select size={size} options={[{ value: '123' }, { value: '1231' }, { value: '1232' }]} />
                         </Item>
                     </Form>

@@ -100,7 +100,7 @@ export class Item extends Component {
                         <div className={detailCls}>
                             {this.renderName()}
                             <div className={errorCls} title={file.error + '' || locale.defaultUploadErrorTip}>
-                                <SvgIcon className={errorIconCls} size="12px" type="circle-exclamation" />
+                                <SvgIcon className={errorIconCls} size="12px" type="exclamation-circle-filled" />
                                 {file.error + '' || locale.defaultUploadErrorTip}
                             </div>
                         </div>

@@ -56,7 +56,7 @@ class Message extends Component {
                         styleType={styleType}
                         spin={styleType === 'loading'}
                         size="16px"
-                        type={IconMap[styleType] || 'circle-exclamation'}
+                        type={IconMap[styleType] || 'exclamation-circle-filled'}
                     />
                 </IconWrap>
                 {closable && (

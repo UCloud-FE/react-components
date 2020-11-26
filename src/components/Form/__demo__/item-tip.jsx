@@ -15,19 +15,15 @@ const horizontalLayout = {
     }
 };
 const Demo = () => (
-    <Form>
+    <Form itemProps={{ ...horizontalLayout }}>
         {['default', 'success', 'warning', 'error', 'loading'].map(status => (
-            <Item
-                key={status}
-                label={`tip - ${status}`}
-                shareStatus
-                status={status}
-                {...horizontalLayout}
-                tip={{ content: `${status} - 提示` }}
-            >
+            <Item key={status} label={`tip - ${status}`} status={status} tip={{ content: `${status} - 提示` }}>
                 <Input />
             </Item>
         ))}
+        <Item label={`tip - custom`} status="error" tip={{ icon: <Icon type="arrow-left" />, content: `自定义提示` }}>
+            <Input />
+        </Item>
     </Form>
 );
 // demo end

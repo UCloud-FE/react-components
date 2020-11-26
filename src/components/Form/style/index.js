@@ -130,14 +130,39 @@ export const Tip = withProps({ className: tipCls })(
     })
 );
 
+export const RequiredLabel = withProps()(
+    styled.span(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
+        return css`
+            margin-left: 4px;
+            color: ${DT.T_COLOR_TEXT_ERROR};
+        `;
+    })
+);
+
+export const HelpIcon = withProps()(
+    styled(SvgIcon)(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
+        return css`
+            margin-left: 8px;
+            vertical-align: middle;
+            fill: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+        `;
+    })
+);
+
 let StatusIcon = ({ status, ...rest }) => {
     const iconType =
         {
-            success: 'circle-tick',
-            warning: 'circle-exclamation',
-            error: 'circle-cross',
+            success: 'tick-circle-filled',
+            warning: 'exclamation-circle-filled',
+            error: 'cross-circle-filled',
             loading: 'ring-loading'
-        }[status] || 'circle-info';
+        }[status] || 'info-circle-filled';
     return <SvgIcon type={iconType} className={tipIconCls} {...rest} />;
 };
 StatusIcon.propTypes = {
