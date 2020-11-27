@@ -342,12 +342,14 @@ export interface SwitchProps
 export class Switch extends Component<SwitchProps> {}
 
 // Slider
-export interface SliderMarkOption {
+export interface SliderMark {
     label?: string;
     step?: number;
     ratio?: number;
 }
-export type SliderMark = SliderMarkOption[];
+export interface SliderMarks {
+    [key: string]: SliderMark
+}
 interface NumberInputTipFormatterOption {
     currentValue: number;
     inputValue: number;
@@ -364,7 +366,7 @@ export interface SliderProps
     min?: number;
     max?: number;
     step?: number | string;
-    marks?: SliderMark;
+    marks?: SliderMarks;
     className?: string;
     style?: CSSProperties;
     sliderClassName?: string;
