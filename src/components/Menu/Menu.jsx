@@ -242,6 +242,8 @@ class Menu extends Component {
                         renderChildren: children => this.renderChildren(children, uid),
                         className
                     });
+                } else {
+                    console.error('Warning: Menu has a child which is not a MenuItem component or SubMenu component');
                 }
 
                 return child;
