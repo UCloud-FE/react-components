@@ -206,6 +206,8 @@ class Menu extends Component {
                         onMultipleSelect: this.onMultipleSelect,
                         renderChildren: children => this.renderChildren(children, uid)
                     });
+                } else {
+                    console.error('Warning: Menu has a child which is not a MenuItem component or SubMenu component');
                 }
 
                 return child;
