@@ -2,7 +2,10 @@ import React, { Component, PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { CSSTransition } from 'react-transition-group';
 
-import { DrawerWrap, CloseHandlerWrapper, CloseIcon } from './style';
+import { Provider } from 'src/components/Popover/ContainerContext';
+import SvgIcon from 'src/components/SvgIcon';
+
+import { DrawerWrap, CloseHandlerWrapper } from './style';
 
 const Placement = ['left', 'right', 'top', 'bottom'];
 
@@ -16,7 +19,7 @@ class CloseHandler extends PureComponent {
         return (
             <CSSTransition in={visible} unmountOnExit={false} classNames="uc-fe-animation-fade" timeout={100}>
                 <CloseHandlerWrapper onClick={onClose}>
-                    <CloseIcon />
+                    <SvgIcon type="cross" />
                 </CloseHandlerWrapper>
             </CSSTransition>
         );
@@ -76,7 +79,7 @@ class Drawer extends Component {
             visible
         });
     };
-    getDestory = () => {
+    getDestroy = () => {
         const { destroyOnClose, visible } = this.props;
         const { visible: visibleState } = this.state;
         return destroyOnClose && !visible && !visibleState;
@@ -93,22 +96,24 @@ class Drawer extends Component {
     render() {
         // eslint-disable-next-line no-unused-vars
         const { children, visible, mask, maskClosable, onClose, destroyOnClose, closeHandler, ...rest } = this.props;
-        const destory = this.getDestory();
+        const destroy = this.getDestroy();
         const show = this.getShow();
         return (
-            !destory && (
-                <DrawerWrap
-                    {...rest}
-                    open={visible}
-                    onMaskClick={this.onMaskClick}
-                    showMask={mask}
-                    handler={false}
-                    afterVisibleChange={this.afterVisibleChange}
-                    show={show}
-                    closeHandler={this.renderCloseHandler({ closeHandler, onClose, show, visible })}
-                >
-                    {children}
-                </DrawerWrap>
+            !destroy && (
+                <Provider value={{}}>
+                    <DrawerWrap
+                        {...rest}
+                        open={visible}
+                        onMaskClick={this.onMaskClick}
+                        showMask={mask}
+                        handler={false}
+                        afterVisibleChange={this.afterVisibleChange}
+                        show={show}
+                        closeHandler={this.renderCloseHandler({ closeHandler, onClose, show, visible })}
+                    >
+                        {children}
+                    </DrawerWrap>
+                </Provider>
             )
         );
     }

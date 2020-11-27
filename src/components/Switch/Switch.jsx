@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { SwitchWrap, Inner, ButtonWrap, Line, OnText, OffText } from './style';
+import { SwitchWrap, innerCls, buttonCls, onTipCls, offTipCls, dotCls } from './style';
 import uncontrolledDecorator from 'src/decorators/uncontrolled';
 
 const Size = ['sm', 'md', 'lg'];
@@ -40,13 +40,13 @@ class Switch extends Component {
         const { checked, disabled, defaultChecked, onChange, size, onText, offText, ...rest } = this.props;
         return (
             <SwitchWrap {...rest} checked={checked} disabled={disabled} size={size} onClick={this.onClick}>
-                <Inner>
-                    <OnText>{onText}</OnText>
-                    <OffText>{offText}</OffText>
-                    <ButtonWrap>
-                        <Line />
-                    </ButtonWrap>
-                </Inner>
+                <div className={innerCls}>
+                    <span className={onTipCls}>{onText}</span>
+                    <span className={offTipCls}>{offText}</span>
+                    <span className={buttonCls}>
+                        <span className={dotCls} />
+                    </span>
+                </div>
             </SwitchWrap>
         );
     }

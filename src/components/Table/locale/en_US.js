@@ -8,7 +8,9 @@ export default {
     period: '.',
     semicolon: ';',
     colon: ': ',
+    selected: 'selected',
+    cancelSelect: 'cancel select',
     columnConfigHeader: 'custom columns',
-    columnConfigTip: 'when you clean cache or change brower, the saving record will lost.',
+    columnConfigTip: 'when you clean cache or change browser, the saving record will lost.',
     columnConfigSelected: 'selected'
 };

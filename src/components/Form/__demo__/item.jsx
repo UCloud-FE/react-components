@@ -1,6 +1,9 @@
 import React from 'react';
-import Form from 'components/Form';
-import Upload from 'components/Upload';
+
+import Form from 'src/components/Form';
+import Upload from 'src/components/Upload';
+import Input from 'src/components/Input';
+import Icon from 'src/components/Icon';
 
 // demo start
 const { Item } = Form;
@@ -22,6 +25,25 @@ const Demo = () => (
         <Item label="竖向布局" {...verticalLayout}>
             <Upload style={{ marginBottom: 5 }} />
             <Upload />
+        </Item>
+        {['default', 'success', 'warning', 'error', 'loading'].map(status => (
+            <Item
+                key={status}
+                label={`tip - ${status}`}
+                status={status}
+                tip={{ content: `${status} - 提示` }}
+                {...horizontalLayout}
+            >
+                <Input />
+            </Item>
+        ))}
+        <Item
+            label={`tip - custom`}
+            status="error"
+            tip={{ icon: <Icon type="arrow-left" />, content: `自定义提示` }}
+            {...horizontalLayout}
+        >
+            <Input />
         </Item>
     </Form>
 );

@@ -1,6 +1,6 @@
 module.exports = {
     setupFiles: ['./tests/setup.js'],
-    moduleFileExtensions: ['js', 'jsx', 'json'],
+    moduleFileExtensions: ['js', 'jsx', 'json', 'ts', 'tsx'],
     moduleNameMapper: {
         '^utils/(.*)$': '<rootDir>/src/utils/$1',
         '^components/(.*)$': '<rootDir>/src/components/$1',
@@ -13,6 +13,8 @@ module.exports = {
         '\\.(css|less)$': '<rootDir>/tests/__mocks__/styleMock.js',
         '^src/(.*)$': '<rootDir>/src/$1'
     },
+    testEnvironment: 'jsdom',
+    snapshotSerializers: ['jest-emotion/serializer'],
     coverageDirectory: './coverage/',
     coveragePathIgnorePatterns: ['/node_modules/', '/__demo__/']
 };

@@ -1,8 +1,15 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
+import config from 'src/config';
 import { inlineBlockWithVerticalMixin } from 'src/style';
-import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
 import Button from 'src/components/Button';
+import withProps from 'src/utils/withProps';
+
+const { prefixCls: _prefixCls } = config;
+export const prefixCls = _prefixCls + '-breadcrumb';
+export const itemCls = prefixCls + '-item';
+export const backBtnCls = prefixCls + '-back-btn';
 
 const textStyleMixin = css`
     font-size: 14px;
@@ -10,116 +17,134 @@ const textStyleMixin = css`
     ${inlineBlockWithVerticalMixin};
 `;
 
-export const BackButtonWrap = styled(Button).attrs({
+export const BackButtonWrap = withProps({
     icon: 'left',
     size: 'sm',
-    styleType: 'border-gray'
-})`
+    styleType: 'border-gray',
+    className: backBtnCls
+})(styled(Button)`
     margin-right: 16px;
     padding: 0 5px;
-`;
+`);
 
-const itemWrapMixin = ({ theme: { colorMap, colorList }, disabled, current, noAction }) => css`
-    cursor: pointer;
-    text-decoration: none;
+const itemStyle = props => {
+    const {
+        theme: { colorMap, colorList },
+        disabled,
+        current,
+        noAction
+    } = props;
 
-    ${textStyleMixin};
+    return css`
+        cursor: pointer;
+        text-decoration: none;
 
-    ${noAction &&
+        ${textStyleMixin};
+
+        ${noAction &&
         css`
             pointer-events: none;
             color: ${colorMap.default.text} !important;
             cursor: default;
         `};
 
-    ${current &&
+        ${current &&
         css`
             pointer-events: none;
             color: ${colorList.black} !important;
             font-weight: bold;
         `};
 
-    ${disabled &&
+        ${disabled &&
         css`
             pointer-events: none;
             color: ${colorMap.disabled.text} !important;
         `};
-`;
+    `;
+};
 
-export const ItemWrapSpan = styled.span`
-    ${itemWrapMixin};
-`;
+export const ItemSpan = withProps({
+    className: itemCls
+})(styled.span(itemStyle));
 
-export const ItemWrapA = styled.a(
-    ({ theme: { colorMap } }) => css`
-        ${itemWrapMixin};
-
-        &,
-        &:hover,
-        &:visited,
-        &:link,
-        &:active {
-            color: ${colorMap.default.text};
-        }
-    `
+export const ItemA = withProps({
+    className: itemCls
+})(
+    styled.a(props => {
+        const {
+            theme: { colorMap }
+        } = props;
+        return css`
+            ${itemStyle(props)};
+            text-decoration: none;
+            &,
+            &:hover,
+            &:visited,
+            &:link,
+            &:active {
+                color: ${colorMap.default.text};
+            }
+        `;
+    })
 );
 
-export const SeparatorWrap = styled.span`
+export const SeparatorWrap = styled('span')`
     ${textStyleMixin};
     font-weight: bold;
     cursor: default;
 `;
-/* stylelint-disable no-descending-specificity */
-const styleTypeMixin = ({ styleType, theme: { colorMap } }) =>
-    ({
-        'block-hover': css`
-            :hover {
-                ${ItemWrapSpan} {
-                    color: ${colorMap.active.text};
-                }
-                ${ItemWrapA} {
-                    &,
-                    &:hover,
-                    &:visited,
-                    &:link,
-                    &:active {
+
+export const BreadcrumbWrap = withProps()(
+    styled('div')(props => {
+        const {
+            theme: { colorMap, fontSize },
+            styleType
+        } = props;
+
+        return css`
+            font-size: ${fontSize};
+            color: ${colorMap.default.text};
+            vertical-align: baseline;
+
+            ${{
+                'block-hover': css`
+                    :hover {
+                        span.${itemCls} {
+                            color: ${colorMap.active.text};
+                        }
+                        a.${itemCls} {
+                            &,
+                            &:hover,
+                            &:visited,
+                            &:link,
+                            &:active {
+                                color: ${colorMap.active.text};
+                            }
+                        }
+                    }
+                `,
+                active: css`
+                    span.${itemCls} {
                         color: ${colorMap.active.text};
                     }
-                }
-            }
-        `,
-        active: css`
-            ${ItemWrapSpan} {
-                color: ${colorMap.active.text};
-            }
-            ${ItemWrapA} {
-                &,
-                &:hover,
-                &:visited,
-                &:link,
-                &:active {
-                    color: ${colorMap.active.text};
-                }
-            }
-        `,
-        hover: css`
-            ${ItemWrapSpan}, ${ItemWrapA} {
-                :hover {
-                    color: ${colorMap.active.text};
-                }
-            }
-        `
-    }[styleType]);
-/* stylelint-enable no-descending-specificity */
-
-export const BreadcrumbWrap = styled.div(
-    ({ theme: { colorMap, fontSize } }) => css`
-        font-size: ${fontSize};
-        color: ${colorMap.default.text};
-        vertical-align: baseline;
-
-        ${styleTypeMixin};
-    `
+                    a.${itemCls} {
+                        &,
+                        &:hover,
+                        &:visited,
+                        &:link,
+                        &:active {
+                            color: ${colorMap.active.text};
+                        }
+                    }
+                `,
+                hover: css`
+                    span.${itemCls}, a.${itemCls} {
+                        :hover {
+                            color: ${colorMap.active.text};
+                        }
+                    }
+                `
+            }[styleType]};
+        `;
+    })
 );
-
-addDefaultThemeProps(ItemWrapA, ItemWrapSpan, BreadcrumbWrap);

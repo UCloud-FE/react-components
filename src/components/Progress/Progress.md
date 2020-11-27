@@ -13,3 +13,13 @@
 
 ```js {"codepath": "format.jsx"}
 ```
+
+*   color - 进度条颜色
+
+```js {"codepath": "color.jsx"}
+```
+
+*   custom - 自定义
+
+```js {"codepath": "custom.jsx"}
+```

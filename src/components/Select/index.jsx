@@ -6,3 +6,6 @@ Select.Option = Option;
 
 import Group from './Group';
 Select.Group = Group;
+
+import Extra from './Extra';
+Select.Extra = Extra;

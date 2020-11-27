@@ -4,7 +4,7 @@ version: 2
 references:
   container_config: &container_config
     docker:
-      - image: circleci/node:8
+      - image: circleci/node:10
     working_directory: ~/react-components
   attach_workspace: &attach_workspace
     attach_workspace:
@@ -55,7 +55,7 @@ jobs:
     steps:
       - checkout
       - *attach_workspace
-      - run: npm run test -- -w=2 --collectCoverage
+      - run: npm run test -- -w=2 --collectCoverage --testPathIgnorePatterns=image.test.js
       - persist_to_workspace:
           root: ~/react-components
           paths:
@@ -95,7 +95,7 @@ jobs:
       - *attach_workspace
       - run: npm run build:dist
       - run: npm run build:lib
-      - run: npm run test -- --testRegex '.*' tests/lib.test.manual.js
+      - run: npx jest tests/lib.manual.test.js
 
 workflows:
   version: 2

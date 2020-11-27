@@ -5,6 +5,7 @@ import { polyfill } from 'react-lifecycles-compat';
 
 import placements from './placements';
 import { prefixCls, animationPrefixCls, PopoverWrap } from './style';
+import { Consumer } from './ContainerContext';
 
 const Animation = ['fade', 'zoom', 'bounce', 'slide-up'];
 const Trigger = ['hover', 'focus', 'click', 'contextMenu'];
@@ -47,13 +48,17 @@ class Popover extends Component {
         zIndex: PropTypes.number,
         /** 自定义弹出层容器 */
         getPopupContainer: PropTypes.func,
+        /** 是否使用最上层传入的安全容器，如果为 function，在没有找到安全容器时将会使用该 function 作为 getPopupContainer 的值 */
+        forwardPopupContainer: PropTypes.oneOfType([PropTypes.bool, PropTypes.func]),
         /**
          * @ignore
          * 自定义类名前缀
          */
         prefixCls: PropTypes.string,
-        /** @ignore */
-        children: PropTypes.any,
+        /**
+         * 需要对子元素进行定位，所以只接收一个有效 react 元素（不接收文本节点）
+         */
+        children: PropTypes.element.isRequired,
         /** 动画名称，slide-up只支持上下方向的弹窗 */
         animation: PropTypes.oneOf(Animation),
         /**
@@ -129,7 +134,7 @@ class Popover extends Component {
     forceAlign = _.debounce(() => {
         if (this.__scroll_lock) return;
         this.trigger && this.trigger.forcePopupAlign();
-    }, 100);
+    }, 33);
 
     componentDidUpdate = () => {
         this.props.forceAlignWhenUpdate && this.forceAlign();
@@ -177,10 +182,13 @@ class Popover extends Component {
             trigger,
             stretch = [],
             className,
+            getPopupContainer,
+            forwardPopupContainer,
             ...rest
         } = this.props;
         const popup = this.getPopup();
-        return (
+
+        const renderPopover = getPopupContainer => (
             <PopoverWrap
                 {...rest}
                 triggerRef={this.saveTrigger}
@@ -193,9 +201,22 @@ class Popover extends Component {
                 onPopupVisibleChange={this.onVisibleChange}
                 stretch={stretch.join('')}
                 trueClassName={className}
+                getPopupContainer={getPopupContainer}
             >
                 {children}
             </PopoverWrap>
+        );
+        return !getPopupContainer && forwardPopupContainer ? (
+            <Consumer>
+                {({ getPopupContainer: getPopupContainerFromContext } = {}) =>
+                    renderPopover(
+                        getPopupContainerFromContext ||
+                            (typeof forwardPopupContainer === 'function' ? forwardPopupContainer : undefined)
+                    )
+                }
+            </Consumer>
+        ) : (
+            renderPopover(getPopupContainer)
         );
     }
 }

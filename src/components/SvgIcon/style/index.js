@@ -1,22 +1,30 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
 import { spinMixin, inlineBlockWithVerticalMixin } from 'src/style';
+import withProps from 'src/utils/withProps';
 
-export const SvgIconWrapper = styled.svg.attrs({
+export const SvgIconWrapper = withProps({
     xmlns: 'http://www.w3.org/2000/svg'
-})`
-    transition: all 0.3s;
+})(
+    styled('svg')(props => {
+        const { color, size, spin } = props;
 
-    ${inlineBlockWithVerticalMixin};
+        return css`
+            transition: all 0.3s;
 
-    ${({ color }) =>
-        color &&
-        css`
-            fill: ${color};
-        `};
+            ${inlineBlockWithVerticalMixin};
 
-    ${({ size }) => css`
-        width: ${size};
-        height: ${size};
-    `} ${({ spin }) => spin && spinMixin};
-`;
+            ${color &&
+            css`
+                fill: ${color};
+            `};
+
+            ${css`
+                width: ${size};
+                height: ${size};
+            `};
+            ${spin && spinMixin};
+        `;
+    })
+);

@@ -9,6 +9,401 @@ exports[`Tooltip tooltip 1`] = `
 `;
 
 exports[`Tooltip tooltip 2`] = `
+@keyframes animation-0 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animation-1 {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes animation-2 {
+  from, 20%, 40%, 60%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215,0.61,0.355,1);
+    animation-timing-function: cubic-bezier(0.215,0.61,0.355,1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3,0.3,0.3);
+    -ms-transform: scale3d(0.3,0.3,0.3);
+    transform: scale3d(0.3,0.3,0.3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1,1.1,1.1);
+    -ms-transform: scale3d(1.1,1.1,1.1);
+    transform: scale3d(1.1,1.1,1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(0.9,0.9,0.9);
+    -ms-transform: scale3d(0.9,0.9,0.9);
+    transform: scale3d(0.9,0.9,0.9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03,1.03,1.03);
+    -ms-transform: scale3d(1.03,1.03,1.03);
+    transform: scale3d(1.03,1.03,1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(0.97,0.97,0.97);
+    -ms-transform: scale3d(0.97,0.97,0.97);
+    transform: scale3d(0.97,0.97,0.97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1,1,1);
+    -ms-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+  }
+}
+
+@keyframes animation-3 {
+  20% {
+    -webkit-transform: scale3d(0.9,0.9,0.9);
+    -ms-transform: scale3d(0.9,0.9,0.9);
+    transform: scale3d(0.9,0.9,0.9);
+  }
+
+  50%, 55% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.1,1.1,1.1);
+    -ms-transform: scale3d(1.1,1.1,1.1);
+    transform: scale3d(1.1,1.1,1.1);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3,0.3,0.3);
+    -ms-transform: scale3d(0.3,0.3,0.3);
+    transform: scale3d(0.3,0.3,0.3);
+  }
+}
+
+@keyframes animation-4 {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3,0.3,0.3);
+    -ms-transform: scale3d(0.3,0.3,0.3);
+    transform: scale3d(0.3,0.3,0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes animation-5 {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3,0.3,0.3);
+    -ms-transform: scale3d(0.3,0.3,0.3);
+    transform: scale3d(0.3,0.3,0.3);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes animation-6 {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+
+@keyframes animation-7 {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+
+@keyframes animation-8 {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+}
+
+@keyframes animation-9 {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+}
+
+.emotion-8.uc-fe-popover {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  z-index: 1030;
+  display: block;
+}
+
+.emotion-8.uc-fe-popover-hidden {
+  display: none;
+}
+
+.emotion-8.uc-fe-popover-animation-fade-enter,
+.emotion-8.uc-fe-popover-animation-fade-appear,
+.emotion-8.uc-fe-popover-animation-fade-leave {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.emotion-8.uc-fe-popover-animation-fade-enter,
+.emotion-8.uc-fe-popover-animation-fade-appear {
+  -webkit-animation-name: animation-0;
+  animation-name: animation-0;
+}
+
+.emotion-8.uc-fe-popover-animation-fade-leave {
+  -webkit-animation-name: animation-1;
+  animation-name: animation-1;
+}
+
+.emotion-8.uc-fe-popover-animation-bounce-enter,
+.emotion-8.uc-fe-popover-animation-bounce-appear,
+.emotion-8.uc-fe-popover-animation-bounce-leave {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.emotion-8.uc-fe-popover-animation-bounce-enter,
+.emotion-8.uc-fe-popover-animation-bounce-appear {
+  -webkit-animation-name: animation-2;
+  animation-name: animation-2;
+}
+
+.emotion-8.uc-fe-popover-animation-bounce-leave {
+  -webkit-animation-name: animation-3;
+  animation-name: animation-3;
+}
+
+.emotion-8.uc-fe-popover-animation-zoom-enter,
+.emotion-8.uc-fe-popover-animation-zoom-appear,
+.emotion-8.uc-fe-popover-animation-zoom-leave {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.emotion-8.uc-fe-popover-animation-zoom-enter,
+.emotion-8.uc-fe-popover-animation-zoom-appear {
+  -webkit-animation-name: animation-4;
+  animation-name: animation-4;
+}
+
+.emotion-8.uc-fe-popover-animation-zoom-leave {
+  -webkit-animation-name: animation-5;
+  animation-name: animation-5;
+}
+
+.emotion-8.uc-fe-popover-animation-slide-up-enter,
+.emotion-8.uc-fe-popover-animation-slide-up-appear {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  display: block !important;
+  opacity: 0;
+  -webkit-animation-timing-function: cubic-bezier(0.08,0.82,0.17,1);
+  animation-timing-function: cubic-bezier(0.08,0.82,0.17,1);
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.emotion-8.uc-fe-popover-animation-slide-up-leave {
+  -webkit-animation-duration: 0.1s;
+  animation-duration: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  display: block !important;
+  opacity: 1;
+  -webkit-animation-timing-function: cubic-bezier(0.6,0.04,0.98,0.34);
+  animation-timing-function: cubic-bezier(0.6,0.04,0.98,0.34);
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.emotion-8.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-bottomLeft,
+.emotion-8.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-bottomLeft,
+.emotion-8.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-bottomCenter,
+.emotion-8.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-bottomCenter,
+.emotion-8.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-bottomRight,
+.emotion-8.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-bottomRight {
+  -webkit-animation-name: animation-6;
+  animation-name: animation-6;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.emotion-8.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-topLeft,
+.emotion-8.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-topLeft,
+.emotion-8.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-topCenter,
+.emotion-8.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-topCenter,
+.emotion-8.uc-fe-popover-animation-slide-up-enter-active.uc-fe-popover-placement-topRight,
+.emotion-8.uc-fe-popover-animation-slide-up-appear-active.uc-fe-popover-placement-topRight {
+  -webkit-animation-name: animation-7;
+  animation-name: animation-7;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.emotion-8.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-bottomLeft,
+.emotion-8.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-bottomCenter,
+.emotion-8.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-bottomRight {
+  -webkit-animation-name: animation-8;
+  animation-name: animation-8;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.emotion-8.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-topLeft,
+.emotion-8.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-topCenter,
+.emotion-8.uc-fe-popover-animation-slide-up-leave-active.uc-fe-popover-placement-topRight {
+  -webkit-animation-name: animation-9;
+  animation-name: animation-9;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.emotion-6 .emotion-3 {
+  border-color: #d2d6ea;
+}
+
+.emotion-6 .emotion-1 {
+  border-color: #ffffff;
+}
+
+.emotion-2 {
+  display: inline-block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.emotion-0 {
+  display: inline-block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.emotion-4 {
+  padding: 8px 10px;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-radius: 3px;
+  word-break: keep-all;
+  box-sizing: border-box;
+  line-height: 20px;
+  color: #0a1633;
+  border: 1px solid #d2d6ea;
+  background: #ffffff;
+}
+
 <div>
   <div
     style=""
@@ -20,22 +415,22 @@ exports[`Tooltip tooltip 2`] = `
   >
     <div>
       <div
-        class="uc-fe-popover style__PopoverWrap-sc-1yqouou-0 bRVwjN uc-fe-tooltip-popup uc-fe-popover-placement-topLeft uc-fe-popover-animation-fade-appear"
-        style="left: -999px; top: -1006px;"
+        class="uc-fe-popover emotion-8 emotion-9 uc-fe-tooltip-popup uc-fe-popover-placement-topLeft uc-fe-popover-animation-fade-appear"
+        style="left: -999px; top: -1009px;"
       >
         <div>
           <div
-            class="style__TooltipWrap-sc-1vhz6mi-3 kqifDn"
+            class=" emotion-6 emotion-7"
           >
             <span
-              class="style__Arrow-sc-1vhz6mi-1 jJwgzd"
+              class="emotion-2 emotion-3"
             >
               <span
-                class="style__ArrowInner-sc-1vhz6mi-2 dYGbyO"
+                class="emotion-0 emotion-1"
               />
             </span>
             <div
-              class="style__ContentWrap-sc-1vhz6mi-0 jTmGmR"
+              class="uc-fe-tooltip-content emotion-4 emotion-5"
             >
               <div>
                 tooltip

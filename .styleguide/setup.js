@@ -1,14 +1,19 @@
 require('file-loader?name=[name].[ext]!./favicon.ico');
 require('!file-loader?name=[name].[ext]!./style.css');
-require('@babel/polyfill');
 
 const components = require('../index');
 
-import ResizableTH from 'src/components/Table/ResizableTH';
+const ResizableTH = require('src/components/Table/ResizableTH').default;
 
 components.Table.ResizableTH = ResizableTH;
 
 Object.assign(global, components);
+Object.defineProperties(window, {
+    Icon: {
+        set: v => {},
+        get: () => components.Icon
+    }
+});
 
 global._ = require('lodash');
 
@@ -18,16 +23,12 @@ global.ReactDOM = require('react-dom');
 
 global.moment = require('moment');
 
-global.StyledComponents = require('styled-components');
+import darkTheme from 'src/components/ThemeProvider/dark';
 
-import greenTheme from 'src/components/ThemeProvider/green';
-import oceanTheme from 'src/components/ThemeProvider/ocean';
-
-global.greenTheme = greenTheme;
-global.oceanTheme = oceanTheme;
+global.darkTheme = darkTheme;
 
 import 'moment/locale/zh-cn';
-global
-    .moment()
-    .locale('zh-cn')
-    .utcOffset(8);
+global.moment().locale('zh-cn').utcOffset(8);
+
+global.SizeInterface = require('src/interfaces/Size').default;
+global.axios = require('axios');

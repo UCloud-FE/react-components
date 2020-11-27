@@ -1,9 +1,11 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 import Checkbox from 'src/components/Checkbox';
+import Tooltip from 'src/components/Tooltip';
 
-import { ItemWrap } from './style';
+import { itemCls, selectedCls, checkboxCls, disabledCls } from './style';
 
 class Item extends PureComponent {
     static propTypes = {
@@ -11,6 +13,10 @@ class Item extends PureComponent {
         itemKey: PropTypes.any,
         /** 是否禁用 */
         disabled: PropTypes.bool,
+        /**
+         * tooltip 提示，可以为文本或 node，也可以是 tooltip 的 props object
+         */
+        tooltip: PropTypes.oneOfType([PropTypes.node, PropTypes.object]),
         /** @ignore */
         uid: PropTypes.string,
         /** @ignore */
@@ -20,7 +26,9 @@ class Item extends PureComponent {
         /** @ignore */
         onSelect: PropTypes.func,
         /** @ignore */
-        children: PropTypes.node
+        children: PropTypes.node,
+        /** @ignore */
+        className: PropTypes.string
     };
 
     static getItemKey = item => {
@@ -28,24 +36,50 @@ class Item extends PureComponent {
     };
     render() {
         /* eslint-disable no-unused-vars */
-        const { itemKey, disabled, uid, selected, multiple, onSelect, children, ...rest } = this.props;
+        const {
+            itemKey,
+            disabled,
+            uid,
+            selected,
+            multiple,
+            onSelect,
+            children,
+            className,
+            tooltip,
+            ...rest
+        } = this.props;
         /* eslint-enable no-unused-vars */
 
-        return (
-            <ItemWrap
+        const item = (
+            <div
+                className={classnames(itemCls, selected && selectedCls, disabled && disabledCls, className)}
                 selected={selected}
                 disabled={disabled}
                 onClick={() => !disabled && onSelect(multiple ? !selected : true, uid)}
                 {...rest}
             >
                 {multiple ? (
-                    <Checkbox checked={selected} disabled={disabled}>
+                    <Checkbox className={checkboxCls} checked={selected} disabled={disabled} size="lg">
                         {children}
                     </Checkbox>
                 ) : (
                     children
                 )}
-            </ItemWrap>
+            </div>
+        );
+
+        return tooltip ? (
+            typeof tooltip === 'string' || React.isValidElement(tooltip) ? (
+                <Tooltip popup={tooltip} placement="left">
+                    {item}
+                </Tooltip>
+            ) : (
+                <Tooltip placement="left" {...tooltip}>
+                    {item}
+                </Tooltip>
+            )
+        ) : (
+            item
         );
     }
 }

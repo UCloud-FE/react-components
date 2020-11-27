@@ -1,8 +1,9 @@
 const path = require('path');
 const _ = require('lodash');
-const webpackConfig = require('./webpack.config.js');
+const webpack = require('webpack');
 
-let components = require('./.styleguide/components.json');
+const webpackConfig = require('./webpack.config.js');
+let components = require('./.styleguide/components.js');
 
 const namePrefix = '❖  ';
 const basePath = 'src/components/';
@@ -58,6 +59,11 @@ module.exports = {
                     href: './style/reset.css',
                     rel: 'stylesheet'
                 }
+            ],
+            scripts: [
+                {
+                    src: './script/polyfill.min.js'
+                }
             ]
         }
     },
@@ -74,7 +80,8 @@ module.exports = {
         ReactComponentRenderer: path.join(__dirname, '.styleguide/components/ReactComponentRenderer'),
         Examples: path.join(__dirname, '.styleguide/components/Examples'),
         ReactExample: path.join(__dirname, '.styleguide/components/ReactExample'),
-        'slots/IsolateButton': path.join(__dirname, '.styleguide/components/IsolateButton')
+        ArgumentRenderer: path.join(__dirname, '.styleguide/components/ArgumentRenderer'),
+        ParaRenderer: path.join(__dirname, '.styleguide/components/ParaRenderer')
     },
     require: [path.join(__dirname, '.styleguide/setup.js')],
     assetsDir: 'static/',
@@ -96,10 +103,13 @@ module.exports = {
     getExampleFilename(componentPath) {
         return componentPath.replace(/\.jsx?$/, '.md');
     },
-    webpackConfig,
+    webpackConfig: {
+        ...webpackConfig,
+        plugins: (webpackConfig.plugins || []).concat(new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/))
+    },
     pagePerSection: true,
     skipComponentsWithoutExample: true,
-    usageMode: 'expand',
+    usageMode: isProd ? 'expand' : 'collapse',
     serverPort: 6080,
     sortProps: props => props,
     styleguideDir: process.env.STYLEGUIDE_BUILD_DIR || 'styleguide-build/default'

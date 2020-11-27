@@ -1,5 +1,6 @@
 export default {
     placeholder: 'please select',
     selected: 'selected ',
-    items: ' items'
+    items: ' items',
+    emptyTip: 'data is empty'
 };

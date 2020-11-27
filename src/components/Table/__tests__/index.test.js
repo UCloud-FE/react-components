@@ -71,14 +71,14 @@ describe('Table', () => {
 
         const wrapper = mount(<Demo />);
 
-        expect(wrapper.find('.uc-fe-table-tbody i.icon__checkbox-ed').length).toBe(4);
-        expect(wrapper.find('.uc-fe-table-tbody i[disabled=true]').length).toBe(4);
-        expect(wrapper.find('.uc-fe-table-tbody i.icon__checkbox-ed[disabled=true]').length).toBe(2);
+        expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-checkbox-checked').length).toBe(4);
+        expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-checkbox-disabled').length).toBe(4);
+        expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-checkbox-checked.uc-fe-checkbox-disabled').length).toBe(2);
 
-        wrapper.find('.uc-fe-table-thead i.icon__checkbox').simulate('click');
-        expect(wrapper.find('.uc-fe-table-tbody i.icon__checkbox-ed').length).toBe(8);
-        expect(wrapper.find('.uc-fe-table-tbody i[disabled=true]').length).toBe(4);
-        expect(wrapper.find('.uc-fe-table-tbody i.icon__checkbox-ed[disabled=true]').length).toBe(2);
+        wrapper.find('.uc-fe-table-thead span.uc-fe-checkbox').simulate('click');
+        expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-checkbox-checked').length).toBe(8);
+        expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-checkbox-disabled').length).toBe(4);
+        expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-checkbox-checked.uc-fe-checkbox-disabled').length).toBe(2);
         expect(onRowSelect).toHaveBeenCalledTimes(++onRowSelectTimes);
         expect(onRowSelect).toHaveBeenLastCalledWith(['1', '2', '4', '5', '6', '7', '8', '9']);
     });
@@ -120,17 +120,14 @@ describe('Table', () => {
 
         const wrapper = mount(<Demo />);
 
-        expect(wrapper.find('.uc-fe-table-tbody i.icon__cbox-ed').length).toBe(1);
-        expect(wrapper.find('.uc-fe-table-tbody i[disabled=true]').length).toBe(4);
-        expect(wrapper.find('.uc-fe-table-tbody i.icon__cbox-ed[disabled=true]').length).toBe(1);
+        expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-radio-checked').length).toBe(1);
+        expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-radio-disabled').length).toBe(4);
+        expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-radio-checked.uc-fe-radio-disabled').length).toBe(1);
 
-        wrapper
-            .find('.uc-fe-table-tbody i.icon__cbox')
-            .at(5)
-            .simulate('click');
-        expect(wrapper.find('.uc-fe-table-tbody i.icon__cbox-ed').length).toBe(1);
-        expect(wrapper.find('.uc-fe-table-tbody i.icon__cbox-ed[disabled=true]').length).toBe(0);
+        wrapper.find('.uc-fe-table-tbody span.uc-fe-radio').at(5).simulate('click');
+        expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-radio-checked').length).toBe(1);
+        expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-radio-checked.uc-fe-radio-disabled').length).toBe(0);
         expect(onRowSelect).toHaveBeenCalledTimes(++onRowSelectTimes);
-        expect(onRowSelect).toHaveBeenLastCalledWith(['6']);
+        expect(onRowSelect).toHaveBeenLastCalledWith(['5']);
     });
 });

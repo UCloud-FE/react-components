@@ -5,28 +5,36 @@ import Modal from 'components/Modal';
 // demo start
 const { readFile } = Upload;
 const handlePreview = file => {
-    readFile(file)
-        .then(url => {
-            Modal.alert(
-                {
-                    title: '预览',
-                    size: 'md'
-                },
-                <img src={url} width={500} height={500} />
-            );
-        })
-        .catch(e => {
-            alert(e);
-        });
+    if (file.type.split('/')[0] === 'image') {
+        readFile(file)
+            .then(url => {
+                Modal.alert(
+                    {
+                        title: '预览',
+                        size: 'md'
+                    },
+                    <div style={{ textAlign: 'center' }}>
+                        <img src={url} width={500} />
+                    </div>
+                );
+            })
+            .catch(e => {
+                alert(e);
+            });
+    } else {
+        Modal.alert(
+            {
+                title: '预览',
+                size: 'md'
+            },
+            <div style={{ textAlign: 'center' }}>
+                <div>类型{file.type}</div>
+                <div>名称{file.name}</div>
+            </div>
+        );
+    }
 };
-const Demo = () => (
-    <Upload
-        onChange={fileList => console.log(fileList)}
-        onError={({ message, name }) => alert(`there is an error of ${name}: ${message}`)}
-        onPreview={handlePreview}
-        multiple
-    />
-);
+const Demo = () => <Upload onChange={fileList => console.log(fileList)} onPreview={handlePreview} multiple />;
 // demo end
 
 export default Demo;

@@ -1,9 +1,11 @@
 import React from 'react';
-import Table from 'components/Table';
-import Switch from 'components/Switch';
-import Form from 'components/Form';
-import NumberInput from 'components/NumberInput';
-import Notice from 'components/Notice';
+
+import Table from 'src/components/Table';
+import Switch from 'src/components/Switch';
+import Form from 'src/components/Form';
+import NumberInput from 'src/components/NumberInput';
+import Notice from 'src/components/Notice';
+import Radio from 'src/components/Radio';
 
 // demo start
 class Demo extends React.Component {
@@ -21,6 +23,8 @@ class Demo extends React.Component {
             showPagination: true,
             zebraCrossing: false,
             columnPlaceholder: false,
+            rowSelectionSelectedTip: true,
+            tableLayout: 'default',
             scroll: {
                 x: false,
                 y: false
@@ -42,7 +46,9 @@ class Demo extends React.Component {
             showPagination,
             scroll,
             zebraCrossing,
-            columnPlaceholder
+            columnPlaceholder,
+            tableLayout,
+            rowSelectionSelectedTip
         } = this.state;
         let dataSource = [];
         dataSource.length = dataLength;
@@ -87,11 +93,20 @@ class Demo extends React.Component {
             delete columns[columnLength - 2].width;
         }
 
-        const tableProps = { columns, dataSource, showHeader, scroll, zebraCrossing, columnPlaceholder };
+        const tableProps = {
+            columns,
+            dataSource,
+            showHeader,
+            scroll,
+            zebraCrossing,
+            columnPlaceholder,
+            tableLayout: tableLayout === 'default' ? undefined : tableLayout
+        };
         if (rowSelection) {
             tableProps.rowSelection = {
                 fixed: fixedFirstColumn
             };
+            tableProps.rowSelection.selectedTip = rowSelectionSelectedTip;
         }
         if (!showPagination) {
             tableProps.pagination = null;
@@ -110,6 +125,18 @@ class Demo extends React.Component {
                     </Form.Item>
                     <Form.Item label="rowSelection" {...itemLayout}>
                         <Switch checked={rowSelection} onChange={rowSelection => this.setState({ rowSelection })} />
+                    </Form.Item>
+                    <Form.Item label="rowSelection.selectedTip" {...itemLayout}>
+                        <Radio.Group
+                            styleType="button"
+                            options={[true, false, 'bottom'].map(v => ({ label: v + '', value: v }))}
+                            value={rowSelectionSelectedTip}
+                            onChange={rowSelectionSelectedTip =>
+                                this.setState({
+                                    rowSelectionSelectedTip
+                                })
+                            }
+                        />
                     </Form.Item>
                     <Form.Item label="showHeader" {...itemLayout}>
                         <Switch checked={showHeader} onChange={showHeader => this.setState({ showHeader })} />
@@ -133,6 +160,18 @@ class Demo extends React.Component {
                         <Switch
                             checked={columnPlaceholder}
                             onChange={columnPlaceholder => this.setState({ columnPlaceholder })}
+                        />
+                    </Form.Item>
+                    <Form.Item label="tableLayout" {...itemLayout}>
+                        <Radio.Group
+                            styleType="button"
+                            options={['default', 'auto', 'fixed'].map(v => ({ label: v + '', value: v }))}
+                            value={tableLayout}
+                            onChange={tableLayout =>
+                                this.setState({
+                                    tableLayout
+                                })
+                            }
                         />
                     </Form.Item>
                     <Form.Item label="hasError" {...itemLayout}>

@@ -1,14 +1,14 @@
 const path = require('path');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const babelConfig = require('./.babelrc.json');
 
 const cssPlugin = new MiniCssExtractPlugin({
     filename: '[name].min.css'
 });
-const optimizeCssPlugin = new OptimizeCSSAssetsPlugin({});
 
 const isProd = process.env.NODE_ENV === 'production';
+const isAnalyzer = !!process.env.ANALYZER;
 
 const config = {
     entry: {
@@ -22,15 +22,16 @@ const config = {
         libraryTarget: 'umd'
     },
     plugins: [cssPlugin],
-    optimization: {
-        minimizer: [optimizeCssPlugin]
-    },
+    optimization: {},
     module: {
         rules: [
             {
-                test: /\.jsx?$/,
-                use: 'babel-loader',
-                exclude: [path.join(__dirname, 'node_modules')]
+                test: /\.(j|t)sx?$/,
+                use: {
+                    loader: 'babel-loader',
+                    options: babelConfig
+                },
+                exclude: /node_modules\/(?!(ansi-styles|strip-ansi|ansi-regex|react-dev-utils|chalk|regexpu-core|unicode-match-property-ecmascript|unicode-match-property-value-ecmascript|acorn-jsx|estree-walker|pretty-bytes)\/).*/
             },
             {
                 test: /static\/style\/icon\.css$/,
@@ -59,7 +60,7 @@ const config = {
     },
     mode: process.env.NODE_ENV || 'development',
     resolve: {
-        extensions: ['.js', '.jsx', '.json'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
         alias: {
             utils: path.join(__dirname, 'src/utils'),
             components: path.join(__dirname, 'src/components'),
@@ -85,12 +86,6 @@ const config = {
             commonjs: 'react-dom',
             commonjs2: 'react-dom'
         },
-        'styled-components': {
-            root: 'StyledComponents',
-            amd: 'styled-components',
-            commonjs: 'styled-components',
-            commonjs2: 'styled-components'
-        },
         moment: {
             root: 'moment',
             amd: 'moment',
@@ -98,23 +93,16 @@ const config = {
             commonjs2: 'moment'
         }
     },
-    devtool: isProd ? false : 'eval-source-map'
+    devtool: 'eval-source-map'
 };
+
+if (isAnalyzer) {
+    config.plugins.push(new BundleAnalyzerPlugin());
+}
 
 if (isProd) {
     config.devtool = false;
-    if (!config.plugins) {
-        config.plugins = [];
-    }
-    config.plugins.push(
-        new UglifyJSPlugin({
-            uglifyOptions: {
-                compress: {
-                    pure_funcs: ['console.log']
-                }
-            }
-        })
-    );
+    config.optimization.minimize = true;
 }
 
 module.exports = config;

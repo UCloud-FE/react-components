@@ -1,7 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Collapse demo -- collapse 1`] = `
-.c5 {
+.emotion-57 .uc-fe-form-item {
+  margin-bottom: 16px;
+}
+
+.emotion-57 .uc-fe-form-item:last-child {
+  margin-bottom: 0;
+}
+
+.emotion-9 {
+  position: relative;
+  display: block;
+  height: auto;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.emotion-9:before,
+.emotion-9:after {
+  content: ' ';
+  display: table;
+}
+
+.emotion-9:after {
+  clear: both;
+}
+
+.emotion-9 > .uc-fe-col {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.emotion-1 {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -11,9 +42,12 @@ exports[`Collapse demo -- collapse 1`] = `
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   width: 25%;
+  padding-top: 4px;
+  line-height: 20px;
+  word-break: break-all;
 }
 
-.c6 {
+.emotion-6 {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -25,63 +59,52 @@ exports[`Collapse demo -- collapse 1`] = `
   width: 75%;
 }
 
-.c2 {
+.emotion-6 {
   position: relative;
   display: block;
-  height: auto;
-  margin-left: -8px;
-  margin-right: -8px;
+  box-sizing: border-box;
+  min-height: 1px;
+  float: left;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 75%;
 }
 
-.c2:before,
-.c2:after {
-  content: ' ';
-  display: table;
-}
-
-.c2:after {
-  clear: both;
-}
-
-.c2 .c4 {
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-.c3 {
-  padding-top: 4px;
-  line-height: 20px;
-  word-break: break-all;
-}
-
-.c0 .c1 {
-  margin-bottom: 16px;
-}
-
-.c0 .c1:last-child {
-  margin-bottom: 0;
-}
-
-.c9 {
+.emotion-3 {
   position: relative;
-  height: 100%;
-  width: 100%;
   border-radius: 2px;
   box-sizing: border-box;
-}
-
-.c11 {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  line-height: 22px;
-  box-sizing: border-box;
-  display: block;
-}
-
-.c14 {
-  position: absolute;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-size: 12px;
   display: inline-block;
+  vertical-align: middle;
+  background: #ffffff;
+  height: 28px;
+  width: 78px;
+  padding: 4px;
+  border: 1px solid #d2d6ea;
+  border-width: 1px;
+}
+
+.emotion-3 .uc-fe-switch-dot {
+  position: absolute;
+  display: block;
+  right: 4px;
+  top: 50%;
+  margin-top: -2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.emotion-3 .uc-fe-switch-button {
+  position: absolute;
+  display: block;
   left: -1px;
   top: -2px;
   border-radius: 2px;
@@ -90,163 +113,197 @@ exports[`Collapse demo -- collapse 1`] = `
   transition: all 0.3s;
 }
 
-.c16 {
-  position: absolute;
-  display: inline-block;
-  left: 18px;
-  top: 4px;
-  width: 2px;
-  height: 16px;
-  border-radius: 1px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+.emotion-3 .uc-fe-switch-tip-on,
+.emotion-3 .uc-fe-switch-tip-off {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  display: block;
 }
 
-.c7 {
+.emotion-3 .uc-fe-switch-inner {
   position: relative;
+  height: 100%;
+  width: 100%;
   border-radius: 2px;
   box-sizing: border-box;
-  cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  display: inline-block;
-  vertical-align: middle;
-  background: #ffffff;
-  height: 28px;
-  width: 80px;
-  padding: 4px;
-  border: 1px solid #c3cad9;
-  border-width: 1px;
-  line-height: 16px;
 }
 
-.c7:hover {
+.emotion-3:hover {
   border-color: #3357df;
 }
 
-.c7:hover .c13 {
+.emotion-3:hover .uc-fe-switch-button {
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
 }
 
-.c7 .c13 {
+.emotion-3 .uc-fe-switch-button {
   background: #ffffff;
   box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
   width: 20px;
   height: 20px;
 }
 
-.c7 .c15 {
+.emotion-3 .uc-fe-switch-dot {
   background: #f44336;
-  left: 13px;
-  height: 10px;
 }
 
-.c7 .c8 {
+.emotion-3 .uc-fe-switch-inner {
   color: #526075;
   border: 1px solid #d2d6ea;
   box-shadow: inset 0 1px 3px 0 #d2d6ea;
   background: #f6f6fb;
 }
 
-.c7 .c10,
-.c7 .c12 {
+.emotion-3 .uc-fe-switch-tip-on,
+.emotion-3 .uc-fe-switch-tip-off {
   line-height: 16px;
 }
 
-.c7 .c10 {
+.emotion-3 .uc-fe-switch-tip-on {
   padding-right: 20px;
 }
 
-.c7 .c12 {
+.emotion-3 .uc-fe-switch-tip-off {
   padding-left: 20px;
 }
 
-.c7 .c8 {
-  color: #4cd964;
+.emotion-3 .uc-fe-switch-inner {
+  color: #15ad31;
   border-color: #9effa5;
   box-shadow: inset 0 1px 3px 0 #d2d6ea;
-  background: #edfff2;
+  background: #e6ffed;
 }
 
-.c7 .c13 {
+.emotion-3 .uc-fe-switch-button {
   left: 100%;
   margin-left: -19px;
 }
 
-.c7 .c15 {
-  background: #4cd964;
+.emotion-3 .uc-fe-switch-dot {
+  background: #15ad31;
 }
 
-.c7 .c12 {
+.emotion-3 .uc-fe-switch-tip-off {
   display: none;
 }
 
-.c22 {
-  vertical-align: baseline;
-}
-
-.c21 {
-  margin-right: 8px;
-  font-size: 14px;
-  vertical-align: middle;
-}
-
-.c19 {
-  cursor: pointer;
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  min-height: 28px;
-  font-size: 12px;
-}
-
-.c19:hover .c20 {
-  color: #3860f4;
-}
-
-.c19 .c20 {
-  line-height: 28px;
-  color: #3357df;
-}
-
-.c24 {
-  cursor: pointer;
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  min-height: 28px;
-  font-size: 12px;
-}
-
-.c24:hover .c20 {
-  color: #3860f4;
-}
-
-.c24 .c20 {
-  line-height: 28px;
-  color: #d2d6ea;
-}
-
-.c23 {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.c17 .c18,
-.c17 .style__CheckboxCardWrap-sc-19o5x2n-3 {
+.emotion-34 .uc-fe-checkbox {
   margin-right: 8px;
 }
 
-.c17 .c18:last-child,
-.c17 .style__CheckboxCardWrap-sc-19o5x2n-3:last-child {
+.emotion-34 .uc-fe-checkbox:last-child {
   margin-right: 0;
 }
 
-.c30 {
+.emotion-16 {
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+  min-height: 28px;
+  line-height: 28px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  color: #0a1633;
+}
+
+.emotion-16 > * {
+  font-size: 12px;
+}
+
+.emotion-16 .uc-fe-checkbox-icon-wrap {
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #c3cad9;
+  border-radius: 2px;
+  vertical-align: middle;
+}
+
+.emotion-16 .uc-fe-checkbox-icon-wrap .uc-fe-checkbox-icon {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+}
+
+.emotion-16 .uc-fe-checkbox-content {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 100%;
+  margin-left: 8px;
+}
+
+.emotion-16:hover .uc-fe-checkbox-icon-wrap {
+  border-color: #3860f4;
+}
+
+.emotion-16.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
+.emotion-16.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
+  border-color: #3860f4;
+  background: #3860f4;
+}
+
+.emotion-16.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
+.emotion-16.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
+  visibility: visible;
+  opacity: 1;
+  fill: #ffffff;
+}
+
+.emotion-16.uc-fe-checkbox-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-16.uc-fe-checkbox-disabled .uc-fe-checkbox-icon-wrap {
+  border-color: #d9d9d9;
+  background: #f7f7f7;
+}
+
+.emotion-16.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
+.emotion-16.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
+  fill: #cccccc;
+}
+
+.emotion-16.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
+.emotion-16.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
+  background: none;
+}
+
+.emotion-14 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+}
+
+.emotion-49 {
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 2px;
+  color: #0a1633;
+  height: 28px;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid #d2d6ea;
+  padding-right: 22px;
+  border-right-width: 0;
+}
+
+.emotion-49 .uc-fe-numberinput-input-wrap {
   position: relative;
 }
 
-.c32 {
+.emotion-49 .uc-fe-numberinput-input {
   border: none;
   outline: none;
   padding: 0;
@@ -254,7 +311,15 @@ exports[`Collapse demo -- collapse 1`] = `
   color: inherit;
 }
 
-.c27 {
+.emotion-49 .uc-fe-numberinput-suffix {
+  color: #7a8baa;
+  margin: 0 4px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-49 .uc-fe-numberinput-handler-up,
+.emotion-49 .uc-fe-numberinput-handler-down {
   position: absolute;
   box-sizing: border-box;
   text-align: center;
@@ -269,61 +334,61 @@ exports[`Collapse demo -- collapse 1`] = `
   vertical-align: middle;
 }
 
-.c27:hover {
+.emotion-49 .uc-fe-numberinput-handler-up:hover,
+.emotion-49 .uc-fe-numberinput-handler-down:hover {
   color: #3860f4;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
 }
 
-.c25 {
-  position: relative;
-  box-sizing: border-box;
-  border-radius: 2px;
-  display: inline-block;
-  vertical-align: middle;
-  color: #0a1633;
-  height: 28px;
-  border: 1px solid #d2d6ea;
-  padding-right: 22px;
-  border-right-width: 0;
+.emotion-49 .uc-fe-numberinput-handler-up.uc-fe-numberinput-handler-disabled,
+.emotion-49 .uc-fe-numberinput-handler-down.uc-fe-numberinput-handler-disabled {
+  cursor: default;
+  pointer-events: none;
+  color: #cccccc;
+  border-color: #c3cad9;
 }
 
-.c25 .c31 {
+.emotion-49 .uc-fe-numberinput-input {
   line-height: 26px;
   height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.c25 .c31::-webkit-input-placeholder {
-  color: #c3cad9;
+.emotion-49 .uc-fe-numberinput-input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
 }
 
-.c25 .c31::-moz-placeholder {
-  color: #c3cad9;
+.emotion-49 .uc-fe-numberinput-input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
 }
 
-.c25 .c31:-ms-input-placeholder {
-  color: #c3cad9;
+.emotion-49 .uc-fe-numberinput-input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
 }
 
-.c25 .c31::placeholder {
-  color: #c3cad9;
+.emotion-49 .uc-fe-numberinput-input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
 }
 
-.c25:hover {
+.emotion-49:hover {
   border-color: #c3cad9;
 }
 
-.c25 .c29 {
+.emotion-49 .uc-fe-numberinput-input-wrap {
   box-shadow: inset 0 1px 3px 0 #d2d6ea;
   background: #fafafc;
 }
 
-.c25 .c29:hover {
+.emotion-49 .uc-fe-numberinput-input-wrap:hover {
   background: #f6f6fb;
 }
 
-.c25 .c31 {
+.emotion-49 .uc-fe-numberinput-input {
   padding: 0 0 0 8px;
   text-align: left;
   box-shadow: none;
@@ -331,8 +396,8 @@ exports[`Collapse demo -- collapse 1`] = `
   width: 34px;
 }
 
-.c25 .c26,
-.c25 .c28 {
+.emotion-49 .uc-fe-numberinput-handler-up,
+.emotion-49 .uc-fe-numberinput-handler-down {
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
@@ -341,62 +406,492 @@ exports[`Collapse demo -- collapse 1`] = `
   width: 22px;
 }
 
-.c25 .c26:hover,
-.c25 .c28:hover {
+.emotion-49 .uc-fe-numberinput-handler-up:hover,
+.emotion-49 .uc-fe-numberinput-handler-down:hover {
   color: #3860f4;
 }
 
-.c25 .c26 {
+.emotion-49 .uc-fe-numberinput-handler-up {
   border-width: 0 0 0 1px;
   top: -1px;
   padding-top: 1px;
 }
 
-.c25 .c28 {
+.emotion-49 .uc-fe-numberinput-handler-down {
   border-width: 1px 0 0 1px;
   bottom: 0;
   border-top-color: #c3cad9;
 }
 
+.emotion-45 {
+  vertical-align: baseline;
+}
+
+.emotion-57 .uc-fe-form-item {
+  margin-bottom: 16px;
+}
+
+.emotion-57 .uc-fe-form-item:last-child {
+  margin-bottom: 0;
+}
+
+.emotion-9 {
+  position: relative;
+  display: block;
+  height: auto;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.emotion-9:before,
+.emotion-9:after {
+  content: ' ';
+  display: table;
+}
+
+.emotion-9:after {
+  clear: both;
+}
+
+.emotion-9 > .uc-fe-col {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.emotion-1 {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  min-height: 1px;
+  float: left;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 25%;
+  padding-top: 4px;
+  line-height: 20px;
+  word-break: break-all;
+}
+
+.emotion-6 {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  min-height: 1px;
+  float: left;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 75%;
+}
+
+.emotion-6 {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  min-height: 1px;
+  float: left;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 75%;
+}
+
+.emotion-3 {
+  position: relative;
+  border-radius: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  background: #ffffff;
+  height: 28px;
+  width: 78px;
+  padding: 4px;
+  border: 1px solid #d2d6ea;
+  border-width: 1px;
+}
+
+.emotion-3 .uc-fe-switch-dot {
+  position: absolute;
+  display: block;
+  right: 4px;
+  top: 50%;
+  margin-top: -2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.emotion-3 .uc-fe-switch-button {
+  position: absolute;
+  display: block;
+  left: -1px;
+  top: -2px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.emotion-3 .uc-fe-switch-tip-on,
+.emotion-3 .uc-fe-switch-tip-off {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  display: block;
+}
+
+.emotion-3 .uc-fe-switch-inner {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.emotion-3:hover {
+  border-color: #3357df;
+}
+
+.emotion-3:hover .uc-fe-switch-button {
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
+.emotion-3 .uc-fe-switch-button {
+  background: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
+  width: 20px;
+  height: 20px;
+}
+
+.emotion-3 .uc-fe-switch-dot {
+  background: #f44336;
+}
+
+.emotion-3 .uc-fe-switch-inner {
+  color: #526075;
+  border: 1px solid #d2d6ea;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #f6f6fb;
+}
+
+.emotion-3 .uc-fe-switch-tip-on,
+.emotion-3 .uc-fe-switch-tip-off {
+  line-height: 16px;
+}
+
+.emotion-3 .uc-fe-switch-tip-on {
+  padding-right: 20px;
+}
+
+.emotion-3 .uc-fe-switch-tip-off {
+  padding-left: 20px;
+}
+
+.emotion-3 .uc-fe-switch-inner {
+  color: #15ad31;
+  border-color: #9effa5;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #e6ffed;
+}
+
+.emotion-3 .uc-fe-switch-button {
+  left: 100%;
+  margin-left: -19px;
+}
+
+.emotion-3 .uc-fe-switch-dot {
+  background: #15ad31;
+}
+
+.emotion-3 .uc-fe-switch-tip-off {
+  display: none;
+}
+
+.emotion-34 .uc-fe-checkbox {
+  margin-right: 8px;
+}
+
+.emotion-34 .uc-fe-checkbox:last-child {
+  margin-right: 0;
+}
+
+.emotion-16 {
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+  min-height: 28px;
+  line-height: 28px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  color: #0a1633;
+}
+
+.emotion-16 > * {
+  font-size: 12px;
+}
+
+.emotion-16 .uc-fe-checkbox-icon-wrap {
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #c3cad9;
+  border-radius: 2px;
+  vertical-align: middle;
+}
+
+.emotion-16 .uc-fe-checkbox-icon-wrap .uc-fe-checkbox-icon {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+}
+
+.emotion-16 .uc-fe-checkbox-content {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 100%;
+  margin-left: 8px;
+}
+
+.emotion-16:hover .uc-fe-checkbox-icon-wrap {
+  border-color: #3860f4;
+}
+
+.emotion-16.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
+.emotion-16.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
+  border-color: #3860f4;
+  background: #3860f4;
+}
+
+.emotion-16.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
+.emotion-16.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
+  visibility: visible;
+  opacity: 1;
+  fill: #ffffff;
+}
+
+.emotion-16.uc-fe-checkbox-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-16.uc-fe-checkbox-disabled .uc-fe-checkbox-icon-wrap {
+  border-color: #d9d9d9;
+  background: #f7f7f7;
+}
+
+.emotion-16.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
+.emotion-16.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
+  fill: #cccccc;
+}
+
+.emotion-16.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
+.emotion-16.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
+  background: none;
+}
+
+.emotion-14 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+}
+
+.emotion-49 {
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 2px;
+  color: #0a1633;
+  height: 28px;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid #d2d6ea;
+  padding-right: 22px;
+  border-right-width: 0;
+}
+
+.emotion-49 .uc-fe-numberinput-input-wrap {
+  position: relative;
+}
+
+.emotion-49 .uc-fe-numberinput-input {
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+}
+
+.emotion-49 .uc-fe-numberinput-suffix {
+  color: #7a8baa;
+  margin: 0 4px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-49 .uc-fe-numberinput-handler-up,
+.emotion-49 .uc-fe-numberinput-handler-down {
+  position: absolute;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 2px;
+  border-style: solid;
+  cursor: pointer;
+  color: #0a1633;
+  border-color: #d2d6ea;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
+  background: #ffffff;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-49 .uc-fe-numberinput-handler-up:hover,
+.emotion-49 .uc-fe-numberinput-handler-down:hover {
+  color: #3860f4;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
+.emotion-49 .uc-fe-numberinput-handler-up.uc-fe-numberinput-handler-disabled,
+.emotion-49 .uc-fe-numberinput-handler-down.uc-fe-numberinput-handler-disabled {
+  cursor: default;
+  pointer-events: none;
+  color: #cccccc;
+  border-color: #c3cad9;
+}
+
+.emotion-49 .uc-fe-numberinput-input {
+  line-height: 26px;
+  height: 26px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-49 .uc-fe-numberinput-input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-49 .uc-fe-numberinput-input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-49 .uc-fe-numberinput-input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-49 .uc-fe-numberinput-input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-49:hover {
+  border-color: #c3cad9;
+}
+
+.emotion-49 .uc-fe-numberinput-input-wrap {
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #fafafc;
+}
+
+.emotion-49 .uc-fe-numberinput-input-wrap:hover {
+  background: #f6f6fb;
+}
+
+.emotion-49 .uc-fe-numberinput-input {
+  padding: 0 0 0 8px;
+  text-align: left;
+  box-shadow: none;
+  background: transparent;
+  width: 34px;
+}
+
+.emotion-49 .uc-fe-numberinput-handler-up,
+.emotion-49 .uc-fe-numberinput-handler-down {
+  right: 0;
+  box-sizing: content-box;
+  border-radius: 0;
+  height: 13px;
+  line-height: 13px;
+  width: 22px;
+}
+
+.emotion-49 .uc-fe-numberinput-handler-up:hover,
+.emotion-49 .uc-fe-numberinput-handler-down:hover {
+  color: #3860f4;
+}
+
+.emotion-49 .uc-fe-numberinput-handler-up {
+  border-width: 0 0 0 1px;
+  top: -1px;
+  padding-top: 1px;
+}
+
+.emotion-49 .uc-fe-numberinput-handler-down {
+  border-width: 1px 0 0 1px;
+  bottom: 0;
+  border-top-color: #c3cad9;
+}
+
+.emotion-45 {
+  vertical-align: baseline;
+}
+
 <div>
   <form
-    class="demo-form uc-fe-form c0"
+    class="uc-fe-form demo-form emotion-57 emotion-58"
   >
     <div
-      class="c1 uc-fe-form-item uc-fe-row c2"
+      class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10"
     >
       <div
-        class="uc-fe-form-label c3 c4 uc-fe-col c5"
+        class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
         span="3"
       >
         multiple
       </div>
       <div
-        class="uc-fe-form-controller c4 uc-fe-col c6"
+        class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
         span="9"
       >
         <div
           checked=""
-          class="c7"
+          class=" emotion-3 emotion-4"
         >
           <div
-            class="c8 c9"
+            class="uc-fe-switch-inner"
           >
             <span
-              class="c10 c11"
+              class="uc-fe-switch-tip-on"
             >
               ON
             </span>
             <span
-              class="c12 c11"
+              class="uc-fe-switch-tip-off"
             >
               OFF
             </span>
             <span
-              class="c13 c14"
+              class="uc-fe-switch-button"
             >
               <span
-                class="c15 c16"
+                class="uc-fe-switch-dot"
               />
             </span>
           </div>
@@ -404,125 +899,175 @@ exports[`Collapse demo -- collapse 1`] = `
       </div>
     </div>
     <div
-      class="c1 uc-fe-form-item uc-fe-row c2"
+      class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10"
     >
       <div
-        class="uc-fe-form-label c3 c4 uc-fe-col c5"
+        class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
         span="3"
       >
         openKeys
       </div>
       <div
-        class="uc-fe-form-controller c4 uc-fe-col c6"
+        class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
         span="9"
       >
         <div
-          class="uc-fe-checkbox-group c17"
+          class="uc-fe-checkbox-group emotion-34 emotion-35"
         >
           <span
             checked=""
-            class="c18 uc-fe-checkbox c19"
+            class="uc-fe-checkbox uc-fe-checkbox-checked emotion-16 emotion-17"
           >
-            <i
-              class="uc-fe-icon icon__checkbox-ed c20 uc-fe-checkbox-icon c21 c22"
-            />
-            <div
-              class="uc-fe-checkbox-content c23"
+            <span
+              class="uc-fe-checkbox-icon-wrap"
+            >
+              <svg
+                class="uc-fe-checkbox-icon emotion-14 emotion-15"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-checkbox-content"
             >
               0
-            </div>
+            </span>
           </span>
           <span
-            class="c18 uc-fe-checkbox c24"
+            class="uc-fe-checkbox emotion-16 emotion-17"
           >
-            <i
-              class="uc-fe-icon icon__checkbox c20 uc-fe-checkbox-icon c21 c22"
-            />
-            <div
-              class="uc-fe-checkbox-content c23"
+            <span
+              class="uc-fe-checkbox-icon-wrap"
+            >
+              <svg
+                class="uc-fe-checkbox-icon emotion-14 emotion-15"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-checkbox-content"
             >
               1
-            </div>
+            </span>
           </span>
           <span
-            class="c18 uc-fe-checkbox c24"
+            class="uc-fe-checkbox emotion-16 emotion-17"
           >
-            <i
-              class="uc-fe-icon icon__checkbox c20 uc-fe-checkbox-icon c21 c22"
-            />
-            <div
-              class="uc-fe-checkbox-content c23"
+            <span
+              class="uc-fe-checkbox-icon-wrap"
+            >
+              <svg
+                class="uc-fe-checkbox-icon emotion-14 emotion-15"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-checkbox-content"
             >
               2
-            </div>
+            </span>
           </span>
           <span
-            class="c18 uc-fe-checkbox c24"
+            class="uc-fe-checkbox emotion-16 emotion-17"
           >
-            <i
-              class="uc-fe-icon icon__checkbox c20 uc-fe-checkbox-icon c21 c22"
-            />
-            <div
-              class="uc-fe-checkbox-content c23"
+            <span
+              class="uc-fe-checkbox-icon-wrap"
+            >
+              <svg
+                class="uc-fe-checkbox-icon emotion-14 emotion-15"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-checkbox-content"
             >
               3
-            </div>
+            </span>
           </span>
           <span
-            class="c18 uc-fe-checkbox c24"
+            class="uc-fe-checkbox emotion-16 emotion-17"
           >
-            <i
-              class="uc-fe-icon icon__checkbox c20 uc-fe-checkbox-icon c21 c22"
-            />
-            <div
-              class="uc-fe-checkbox-content c23"
+            <span
+              class="uc-fe-checkbox-icon-wrap"
+            >
+              <svg
+                class="uc-fe-checkbox-icon emotion-14 emotion-15"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                />
+              </svg>
+            </span>
+            <span
+              class="uc-fe-checkbox-content"
             >
               4
-            </div>
+            </span>
           </span>
         </div>
       </div>
     </div>
     <div
-      class="c1 uc-fe-form-item uc-fe-row c2"
+      class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10"
     >
       <div
-        class="uc-fe-form-label c3 c4 uc-fe-col c5"
+        class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
         span="3"
       >
         panelCount
       </div>
       <div
-        class="uc-fe-form-controller c4 uc-fe-col c6"
+        class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
         span="9"
       >
         <div
-          class="uc-fe-numberinput uc-fe-numberinput-styletype-default c25"
+          class="uc-fe-numberinput uc-fe-numberinput-styletype-default emotion-49 emotion-50"
         >
           <div>
             <span
-              class="c26 uc-fe-numberinput-handler-up uc-fe-numberinput-handler c27"
+              class="uc-fe-numberinput-handler-up"
               unselectable="unselectable"
             >
               <i
-                class="uc-fe-icon icon__caret-up c22"
+                class="uc-fe-icon icon__caret-up emotion-45 emotion-46"
               />
             </span>
             <span
-              class="c28 uc-fe-numberinput-handler-down uc-fe-numberinput-handler c27"
+              class="uc-fe-numberinput-handler-down"
               unselectable="unselectable"
             >
               <i
-                class="uc-fe-icon icon__caret-down c22"
+                class="uc-fe-icon icon__caret-down emotion-45 emotion-46"
               />
             </span>
           </div>
           <div
-            class="c29 uc-fe-numberinput-input-wrap c30"
+            class="uc-fe-numberinput-input-wrap"
           >
             <input
               autocomplete="off"
-              class="c31 uc-fe-numberinput-input c32"
+              class="uc-fe-numberinput-input"
               min="1"
               step="1"
               value="5"
@@ -541,7 +1086,7 @@ exports[`Collapse demo -- collapse 1`] = `
           panel 0
         </div>
         <div
-          class=""
+          class="emotion-59 emotion-60"
           open=""
         >
           content 0
@@ -582,7 +1127,7 @@ exports[`Collapse demo -- collapse-multiple 1`] = `
         panel 1
       </div>
       <div
-        class=""
+        class="css-psi0v6-PanelWrap-PanelWrap emotion-0"
         open=""
       >
         content 1
@@ -593,7 +1138,7 @@ exports[`Collapse demo -- collapse-multiple 1`] = `
         panel 2
       </div>
       <div
-        class=""
+        class="css-psi0v6-PanelWrap-PanelWrap emotion-0"
         open=""
       >
         content 2
@@ -618,7 +1163,7 @@ exports[`Collapse demo -- collapse-multiple 1`] = `
         panel 2
       </div>
       <div
-        class=""
+        class="css-psi0v6-PanelWrap-PanelWrap emotion-0"
         open=""
       >
         content 2
@@ -649,7 +1194,7 @@ exports[`Collapse demo -- collapse-uncontrolled 1`] = `
           panel 2
         </div>
         <div
-          class=""
+          class="css-psi0v6-PanelWrap-PanelWrap emotion-0"
           open=""
         >
           content 2
@@ -660,7 +1205,7 @@ exports[`Collapse demo -- collapse-uncontrolled 1`] = `
           panel 3
         </div>
         <div
-          class=""
+          class="css-psi0v6-PanelWrap-PanelWrap emotion-0"
           open=""
         >
           content 3
@@ -682,7 +1227,7 @@ exports[`Collapse demo -- collapse-uncontrolled 1`] = `
           panel 2
         </div>
         <div
-          class=""
+          class="css-psi0v6-PanelWrap-PanelWrap emotion-0"
           open=""
         >
           content 2
@@ -693,7 +1238,7 @@ exports[`Collapse demo -- collapse-uncontrolled 1`] = `
           panel 3
         </div>
         <div
-          class=""
+          class="css-psi0v6-PanelWrap-PanelWrap emotion-0"
           open=""
         >
           content 3
@@ -705,7 +1250,156 @@ exports[`Collapse demo -- collapse-uncontrolled 1`] = `
 `;
 
 exports[`Collapse demo -- panel 1`] = `
-.c5 {
+.emotion-33 .uc-fe-form-item {
+  margin-bottom: 16px;
+}
+
+.emotion-33 .uc-fe-form-item:last-child {
+  margin-bottom: 0;
+}
+
+.emotion-9 {
+  position: relative;
+  display: block;
+  height: auto;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.emotion-9:before,
+.emotion-9:after {
+  content: ' ';
+  display: table;
+}
+
+.emotion-9:after {
+  clear: both;
+}
+
+.emotion-9 > .uc-fe-col {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.emotion-3 {
+  position: relative;
+  border-radius: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  background: #ffffff;
+  height: 28px;
+  width: 78px;
+  padding: 4px;
+  border: 1px solid #d2d6ea;
+  border-width: 1px;
+}
+
+.emotion-3 .uc-fe-switch-dot {
+  position: absolute;
+  display: block;
+  right: 4px;
+  top: 50%;
+  margin-top: -2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.emotion-3 .uc-fe-switch-button {
+  position: absolute;
+  display: block;
+  left: -1px;
+  top: -2px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.emotion-3 .uc-fe-switch-tip-on,
+.emotion-3 .uc-fe-switch-tip-off {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  display: block;
+}
+
+.emotion-3 .uc-fe-switch-inner {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.emotion-3:hover {
+  border-color: #3357df;
+}
+
+.emotion-3:hover .uc-fe-switch-button {
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
+.emotion-3 .uc-fe-switch-button {
+  background: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
+  width: 20px;
+  height: 20px;
+}
+
+.emotion-3 .uc-fe-switch-dot {
+  background: #f44336;
+}
+
+.emotion-3 .uc-fe-switch-inner {
+  color: #526075;
+  border: 1px solid #d2d6ea;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #f6f6fb;
+}
+
+.emotion-3 .uc-fe-switch-tip-on,
+.emotion-3 .uc-fe-switch-tip-off {
+  line-height: 16px;
+}
+
+.emotion-3 .uc-fe-switch-tip-on {
+  padding-right: 20px;
+}
+
+.emotion-3 .uc-fe-switch-tip-off {
+  padding-left: 20px;
+}
+
+.emotion-3 .uc-fe-switch-inner {
+  color: #15ad31;
+  border-color: #9effa5;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #e6ffed;
+}
+
+.emotion-3 .uc-fe-switch-button {
+  left: 100%;
+  margin-left: -19px;
+}
+
+.emotion-3 .uc-fe-switch-dot {
+  background: #15ad31;
+}
+
+.emotion-3 .uc-fe-switch-tip-off {
+  display: none;
+}
+
+.emotion-1 {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -715,9 +1409,12 @@ exports[`Collapse demo -- panel 1`] = `
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   width: 16.66666667%;
+  padding-top: 4px;
+  line-height: 20px;
+  word-break: break-all;
 }
 
-.c6 {
+.emotion-6 {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -729,63 +1426,52 @@ exports[`Collapse demo -- panel 1`] = `
   width: 83.33333333%;
 }
 
-.c2 {
+.emotion-6 {
   position: relative;
   display: block;
-  height: auto;
-  margin-left: -8px;
-  margin-right: -8px;
+  box-sizing: border-box;
+  min-height: 1px;
+  float: left;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 83.33333333%;
 }
 
-.c2:before,
-.c2:after {
-  content: ' ';
-  display: table;
-}
-
-.c2:after {
-  clear: both;
-}
-
-.c2 .c4 {
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-.c3 {
-  padding-top: 4px;
-  line-height: 20px;
-  word-break: break-all;
-}
-
-.c0 .c1 {
-  margin-bottom: 16px;
-}
-
-.c0 .c1:last-child {
-  margin-bottom: 0;
-}
-
-.c9 {
+.emotion-14 {
   position: relative;
-  height: 100%;
-  width: 100%;
   border-radius: 2px;
   box-sizing: border-box;
-}
-
-.c11 {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  line-height: 22px;
-  box-sizing: border-box;
-  display: block;
-}
-
-.c14 {
-  position: absolute;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-size: 12px;
   display: inline-block;
+  vertical-align: middle;
+  background: #ffffff;
+  height: 28px;
+  width: 78px;
+  padding: 4px;
+  border: 1px solid #d2d6ea;
+  border-width: 1px;
+}
+
+.emotion-14 .uc-fe-switch-dot {
+  position: absolute;
+  display: block;
+  right: 4px;
+  top: 50%;
+  margin-top: -2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.emotion-14 .uc-fe-switch-button {
+  position: absolute;
+  display: block;
   left: -1px;
   top: -2px;
   border-radius: 2px;
@@ -794,199 +1480,395 @@ exports[`Collapse demo -- panel 1`] = `
   transition: all 0.3s;
 }
 
-.c16 {
-  position: absolute;
-  display: inline-block;
-  left: 18px;
-  top: 4px;
-  width: 2px;
-  height: 16px;
-  border-radius: 1px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+.emotion-14 .uc-fe-switch-tip-on,
+.emotion-14 .uc-fe-switch-tip-off {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  display: block;
 }
 
-.c7 {
+.emotion-14 .uc-fe-switch-inner {
   position: relative;
+  height: 100%;
+  width: 100%;
   border-radius: 2px;
   box-sizing: border-box;
-  cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  display: inline-block;
-  vertical-align: middle;
-  background: #ffffff;
-  height: 28px;
-  width: 80px;
-  padding: 4px;
-  border: 1px solid #c3cad9;
-  border-width: 1px;
-  line-height: 16px;
 }
 
-.c7:hover {
+.emotion-14:hover {
   border-color: #3357df;
 }
 
-.c7:hover .c13 {
+.emotion-14:hover .uc-fe-switch-button {
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
 }
 
-.c7 .c13 {
+.emotion-14 .uc-fe-switch-button {
   background: #ffffff;
   box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
   width: 20px;
   height: 20px;
 }
 
-.c7 .c15 {
+.emotion-14 .uc-fe-switch-dot {
   background: #f44336;
-  left: 13px;
-  height: 10px;
 }
 
-.c7 .c8 {
+.emotion-14 .uc-fe-switch-inner {
   color: #526075;
   border: 1px solid #d2d6ea;
   box-shadow: inset 0 1px 3px 0 #d2d6ea;
   background: #f6f6fb;
 }
 
-.c7 .c10,
-.c7 .c12 {
+.emotion-14 .uc-fe-switch-tip-on,
+.emotion-14 .uc-fe-switch-tip-off {
   line-height: 16px;
 }
 
-.c7 .c10 {
+.emotion-14 .uc-fe-switch-tip-on {
   padding-right: 20px;
 }
 
-.c7 .c12 {
+.emotion-14 .uc-fe-switch-tip-off {
   padding-left: 20px;
 }
 
-.c7 .c8 {
-  color: #4cd964;
-  border-color: #9effa5;
-  box-shadow: inset 0 1px 3px 0 #d2d6ea;
-  background: #edfff2;
+.emotion-14 .uc-fe-switch-tip-on {
+  display: none;
 }
 
-.c7 .c13 {
+.emotion-33 .uc-fe-form-item {
+  margin-bottom: 16px;
+}
+
+.emotion-33 .uc-fe-form-item:last-child {
+  margin-bottom: 0;
+}
+
+.emotion-9 {
+  position: relative;
+  display: block;
+  height: auto;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.emotion-9:before,
+.emotion-9:after {
+  content: ' ';
+  display: table;
+}
+
+.emotion-9:after {
+  clear: both;
+}
+
+.emotion-9 > .uc-fe-col {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.emotion-3 {
+  position: relative;
+  border-radius: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  background: #ffffff;
+  height: 28px;
+  width: 78px;
+  padding: 4px;
+  border: 1px solid #d2d6ea;
+  border-width: 1px;
+}
+
+.emotion-3 .uc-fe-switch-dot {
+  position: absolute;
+  display: block;
+  right: 4px;
+  top: 50%;
+  margin-top: -2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.emotion-3 .uc-fe-switch-button {
+  position: absolute;
+  display: block;
+  left: -1px;
+  top: -2px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.emotion-3 .uc-fe-switch-tip-on,
+.emotion-3 .uc-fe-switch-tip-off {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  display: block;
+}
+
+.emotion-3 .uc-fe-switch-inner {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.emotion-3:hover {
+  border-color: #3357df;
+}
+
+.emotion-3:hover .uc-fe-switch-button {
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
+.emotion-3 .uc-fe-switch-button {
+  background: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
+  width: 20px;
+  height: 20px;
+}
+
+.emotion-3 .uc-fe-switch-dot {
+  background: #f44336;
+}
+
+.emotion-3 .uc-fe-switch-inner {
+  color: #526075;
+  border: 1px solid #d2d6ea;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #f6f6fb;
+}
+
+.emotion-3 .uc-fe-switch-tip-on,
+.emotion-3 .uc-fe-switch-tip-off {
+  line-height: 16px;
+}
+
+.emotion-3 .uc-fe-switch-tip-on {
+  padding-right: 20px;
+}
+
+.emotion-3 .uc-fe-switch-tip-off {
+  padding-left: 20px;
+}
+
+.emotion-3 .uc-fe-switch-inner {
+  color: #15ad31;
+  border-color: #9effa5;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #e6ffed;
+}
+
+.emotion-3 .uc-fe-switch-button {
   left: 100%;
   margin-left: -19px;
 }
 
-.c7 .c15 {
-  background: #4cd964;
+.emotion-3 .uc-fe-switch-dot {
+  background: #15ad31;
 }
 
-.c7 .c12 {
+.emotion-3 .uc-fe-switch-tip-off {
   display: none;
 }
 
-.c17 {
+.emotion-1 {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  min-height: 1px;
+  float: left;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 16.66666667%;
+  padding-top: 4px;
+  line-height: 20px;
+  word-break: break-all;
+}
+
+.emotion-6 {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  min-height: 1px;
+  float: left;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 83.33333333%;
+}
+
+.emotion-6 {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  min-height: 1px;
+  float: left;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 83.33333333%;
+}
+
+.emotion-14 {
   position: relative;
   border-radius: 2px;
   box-sizing: border-box;
   cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  font-size: 12px;
   display: inline-block;
   vertical-align: middle;
   background: #ffffff;
   height: 28px;
-  width: 80px;
+  width: 78px;
   padding: 4px;
-  border: 1px solid #c3cad9;
+  border: 1px solid #d2d6ea;
   border-width: 1px;
-  line-height: 16px;
 }
 
-.c17:hover {
+.emotion-14 .uc-fe-switch-dot {
+  position: absolute;
+  display: block;
+  right: 4px;
+  top: 50%;
+  margin-top: -2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.emotion-14 .uc-fe-switch-button {
+  position: absolute;
+  display: block;
+  left: -1px;
+  top: -2px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.emotion-14 .uc-fe-switch-tip-on,
+.emotion-14 .uc-fe-switch-tip-off {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  display: block;
+}
+
+.emotion-14 .uc-fe-switch-inner {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.emotion-14:hover {
   border-color: #3357df;
 }
 
-.c17:hover .c13 {
+.emotion-14:hover .uc-fe-switch-button {
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
 }
 
-.c17 .c13 {
+.emotion-14 .uc-fe-switch-button {
   background: #ffffff;
   box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
   width: 20px;
   height: 20px;
 }
 
-.c17 .c15 {
+.emotion-14 .uc-fe-switch-dot {
   background: #f44336;
-  left: 13px;
-  height: 10px;
 }
 
-.c17 .c8 {
+.emotion-14 .uc-fe-switch-inner {
   color: #526075;
   border: 1px solid #d2d6ea;
   box-shadow: inset 0 1px 3px 0 #d2d6ea;
   background: #f6f6fb;
 }
 
-.c17 .c10,
-.c17 .c12 {
+.emotion-14 .uc-fe-switch-tip-on,
+.emotion-14 .uc-fe-switch-tip-off {
   line-height: 16px;
 }
 
-.c17 .c10 {
+.emotion-14 .uc-fe-switch-tip-on {
   padding-right: 20px;
 }
 
-.c17 .c12 {
+.emotion-14 .uc-fe-switch-tip-off {
   padding-left: 20px;
 }
 
-.c17 .c10 {
+.emotion-14 .uc-fe-switch-tip-on {
   display: none;
 }
 
 <div>
   <form
-    class="demo-form uc-fe-form c0"
+    class="uc-fe-form demo-form emotion-33 emotion-34"
   >
     <div
-      class="c1 uc-fe-form-item uc-fe-row c2"
+      class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10"
     >
       <div
-        class="uc-fe-form-label c3 c4 uc-fe-col c5"
+        class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
         span="2"
       >
         open
       </div>
       <div
-        class="uc-fe-form-controller c4 uc-fe-col c6"
+        class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
         span="10"
       >
         <div
           checked=""
-          class="c7"
+          class=" emotion-3 emotion-4"
         >
           <div
-            class="c8 c9"
+            class="uc-fe-switch-inner"
           >
             <span
-              class="c10 c11"
+              class="uc-fe-switch-tip-on"
             >
               ON
             </span>
             <span
-              class="c12 c11"
+              class="uc-fe-switch-tip-off"
             >
               OFF
             </span>
             <span
-              class="c13 c14"
+              class="uc-fe-switch-button"
             >
               <span
-                class="c15 c16"
+                class="uc-fe-switch-dot"
               />
             </span>
           </div>
@@ -994,39 +1876,39 @@ exports[`Collapse demo -- panel 1`] = `
       </div>
     </div>
     <div
-      class="c1 uc-fe-form-item uc-fe-row c2"
+      class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10"
     >
       <div
-        class="uc-fe-form-label c3 c4 uc-fe-col c5"
+        class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
         span="2"
       >
         disabled
       </div>
       <div
-        class="uc-fe-form-controller c4 uc-fe-col c6"
+        class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
         span="10"
       >
         <div
-          class="c17"
+          class=" emotion-14 emotion-4"
         >
           <div
-            class="c8 c9"
+            class="uc-fe-switch-inner"
           >
             <span
-              class="c10 c11"
+              class="uc-fe-switch-tip-on"
             >
               ON
             </span>
             <span
-              class="c12 c11"
+              class="uc-fe-switch-tip-off"
             >
               OFF
             </span>
             <span
-              class="c13 c14"
+              class="uc-fe-switch-button"
             >
               <span
-                class="c15 c16"
+                class="uc-fe-switch-dot"
               />
             </span>
           </div>
@@ -1034,39 +1916,39 @@ exports[`Collapse demo -- panel 1`] = `
       </div>
     </div>
     <div
-      class="c1 uc-fe-form-item uc-fe-row c2"
+      class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10"
     >
       <div
-        class="uc-fe-form-label c3 c4 uc-fe-col c5"
+        class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
         span="2"
       >
         customTitle
       </div>
       <div
-        class="uc-fe-form-controller c4 uc-fe-col c6"
+        class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
         span="10"
       >
         <div
-          class="c17"
+          class=" emotion-14 emotion-4"
         >
           <div
-            class="c8 c9"
+            class="uc-fe-switch-inner"
           >
             <span
-              class="c10 c11"
+              class="uc-fe-switch-tip-on"
             >
               ON
             </span>
             <span
-              class="c12 c11"
+              class="uc-fe-switch-tip-off"
             >
               OFF
             </span>
             <span
-              class="c13 c14"
+              class="uc-fe-switch-button"
             >
               <span
-                class="c15 c16"
+                class="uc-fe-switch-dot"
               />
             </span>
           </div>
@@ -1082,7 +1964,7 @@ exports[`Collapse demo -- panel 1`] = `
         Panel title
       </div>
       <div
-        class=""
+        class="emotion-35 emotion-36"
         open=""
       >
         Content
@@ -1093,7 +1975,7 @@ exports[`Collapse demo -- panel 1`] = `
 `;
 
 exports[`Collapse demo -- panel-customTitle 1`] = `
-.c0 {
+.emotion-0 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -1110,6 +1992,7 @@ exports[`Collapse demo -- panel-customTitle 1`] = `
   height: 28px;
   padding: 0 8px;
   color: #0a1633;
+  fill: #0a1633;
   background: #ffffff;
   border: none;
   box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
@@ -1117,8 +2000,41 @@ exports[`Collapse demo -- panel-customTitle 1`] = `
   transition: all .22s cubic-bezier(.4,0,.2,1);
 }
 
-.c0:hover {
+.emotion-0:hover {
   color: #3860f4;
+  fill: #3860f4;
+  background: #ffffff;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
+.emotion-0 {
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  border-width: 1px;
+  border-style: solid;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 28px;
+  padding: 0 8px;
+  color: #0a1633;
+  fill: #0a1633;
+  background: #ffffff;
+  border: none;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
+}
+
+.emotion-0:hover {
+  color: #3860f4;
+  fill: #3860f4;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
 }
@@ -1127,12 +2043,12 @@ exports[`Collapse demo -- panel-customTitle 1`] = `
   <div>
     <div>
       <div
-        style="border:1px solid #ccc;height:28px;line-height:28px;padding:10px;"
+        style="border:1px solid #ccc;height:28px;line-height:28px;padding:10px"
       >
         title
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border c0"
-          style="float:right;"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-0 emotion-1"
+          style="float:right"
           type="button"
         >
           toggle
@@ -1154,7 +2070,11 @@ exports[`Collapse demo -- panel-disabled 1`] = `
 `;
 
 exports[`Collapse demo -- panel-forceRender 1`] = `
-.c0 {
+.emotion-0 {
+  display: none;
+}
+
+.emotion-0 {
   display: none;
 }
 
@@ -1164,7 +2084,7 @@ exports[`Collapse demo -- panel-forceRender 1`] = `
       Panel
     </div>
     <div
-      class="c0"
+      class="emotion-0 emotion-1"
     >
       Content
     </div>
@@ -1182,7 +2102,7 @@ exports[`Collapse demo -- panel-titlePosition 1`] = `
         Panel
       </div>
       <div
-        class=""
+        class="emotion-0 emotion-1"
         open=""
       >
         Content
@@ -1194,7 +2114,7 @@ exports[`Collapse demo -- panel-titlePosition 1`] = `
   >
     <div>
       <div
-        class=""
+        class="emotion-0 emotion-1"
         open=""
       >
         Content
@@ -1217,7 +2137,7 @@ exports[`Collapse demo -- panel-uncontrolled 1`] = `
         Panel
       </div>
       <div
-        class=""
+        class="emotion-0 emotion-1"
         open=""
       >
         Content
@@ -1232,7 +2152,7 @@ exports[`Collapse demo -- panel-uncontrolled 1`] = `
         Panel
       </div>
       <div
-        class=""
+        class="emotion-0 emotion-1"
         open=""
       >
         Content

@@ -1,52 +1,32 @@
 /* eslint-disable no-console */
 import React from 'react';
-import PropTypes from 'prop-types';
 import _ from 'lodash';
 
-import ZForm from 'components/ZForm';
-import Form from 'components/Form';
+import ZForm from 'src/components/ZForm';
+import Form from 'src/components/Form';
+import Input from 'src/components/Input';
+import Checkbox from 'src/components/Checkbox';
+import Select from 'src/components/Select';
+import Button from 'src/components/Button';
 
 // demo start
 const { formDecorator, controllerDecorator, formShape } = ZForm;
-const { Item } = Form;
-class Input extends React.Component {
-    render() {
-        return <input {...this.props} />;
-    }
-}
+const { Item, SubArea } = Form;
+
 const ZInput = controllerDecorator({
     initialValue: ''
 })(Input);
 
-class Checkbox extends React.Component {
-    render() {
-        return <input type="checkbox" {...this.props} />;
-    }
-}
 const ZCheckbox = controllerDecorator({
     initialValue: true,
     valuePropName: 'checked'
 })(Checkbox);
 
-class Select extends React.Component {
-    render() {
-        const { options, ...selectProps } = this.props;
-        return (
-            <select {...selectProps}>
-                <option>请选择</option>
-                {options.map(option => (
-                    <option value={option} key={option}>
-                        {option}
-                    </option>
-                ))}
-            </select>
-        );
-    }
-}
-Select.propTypes = {
-    options: PropTypes.array.isRequired
-};
 const ZSelect = controllerDecorator()(Select);
+
+const getError = (error, key) => {
+    return _.get(error, key);
+};
 
 class DemoForm extends React.PureComponent {
     handleSubmit() {
@@ -59,28 +39,33 @@ class DemoForm extends React.PureComponent {
         const { form } = this.props;
         const originErrors = form.getFieldsError() || [];
 
-        const errors = [];
-        _.each(originErrors, (errs, name) => {
-            errs !== undefined &&
-                errors.push({
-                    name,
-                    message: errs.join(', ')
-                });
-        });
         const itemLayout = {
             labelCol: {
-                span: 1
+                span: 2
             },
             controllerCol: {
                 span: 5
             }
         };
+        const error1 = getError(originErrors, 'input_1');
+        const error3 = getError(originErrors, 'input_3');
+        const subError1 = getError(originErrors, 'sub_item_1');
+        console.log(originErrors);
         return (
-            <ZForm form={form}>
-                <Item label="input_1" {...itemLayout}>
-                    <ZInput zName="input_1" />
+            <ZForm form={form} itemProps={{ ...itemLayout, shareStatus: true }}>
+                <Item label="input_1" {...(error1 ? { status: 'error', tip: error1.join(',') } : {})}>
+                    <ZInput
+                        zName="input_1"
+                        zOptions={{
+                            rules: [
+                                {
+                                    required: true
+                                }
+                            ]
+                        }}
+                    />
                 </Item>
-                <Item label="input_2" {...itemLayout}>
+                <Item label="input_2">
                     <ZInput
                         zName="input_2"
                         zOptions={{
@@ -110,23 +95,62 @@ class DemoForm extends React.PureComponent {
                         }}
                     />
                 </Item>
-                <Item label="input_3" {...itemLayout}>
-                    <ZInput zName="input_3" />
+                <Item
+                    label="input_3"
+                    {...(error3 ? { status: 'error', tip: error3.join(',') } : { tip: 'this is required' })}
+                >
+                    <ZInput
+                        zName="input_3"
+                        zOptions={{
+                            rules: [
+                                {
+                                    required: true
+                                }
+                            ]
+                        }}
+                    />
                 </Item>
-                <Item label="checkbox_1" {...itemLayout}>
+                <Item label="checkbox_1">
                     <ZCheckbox zName="checkbox_1" />
                 </Item>
-                <Item label="select_1" {...itemLayout}>
-                    <ZSelect zName="select_1" options={[1, 2, 3, 4]} />
+                <Item label="select_1">
+                    <ZSelect zName="select_1" options={[1, 2, 3, 4].map(v => ({ value: v, label: `label-${v}` }))} />
                 </Item>
-                <Item label="select_2" {...itemLayout}>
-                    <ZSelect zName="select_2" zOptions={{ initialValue: 1 }} options={[1, 2, 3, 4]} />
+                <Item label="select_2">
+                    <ZSelect
+                        zName="select_2"
+                        zOptions={{ initialValue: 1 }}
+                        options={[1, 2, 3, 4].map(v => ({ value: v, label: `label-${v}` }))}
+                    />
                 </Item>
-                <p className="u-red">{errors.map(error => `${error.name}: ${error.message}`).join(', ')}</p>
+                <Item label="区域">
+                    <SubArea>
+                        <Item label="sub_item_1" {...(subError1 ? { status: 'error', tip: subError1.join(',') } : {})}>
+                            <ZSelect
+                                zName="sub_item_1"
+                                zOptions={{
+                                    rules: [
+                                        {
+                                            required: true
+                                        }
+                                    ]
+                                }}
+                                options={[1, 2, 3, 4].map(v => ({ value: v, label: `label-${v}` }))}
+                            />
+                        </Item>
+                        <Item label="sub_item_2">
+                            <ZSelect
+                                zName="sub_item_2"
+                                zOptions={{ initialValue: 1 }}
+                                options={[1, 2, 3, 4].map(v => ({ value: v, label: `label-${v}` }))}
+                            />
+                        </Item>
+                    </SubArea>
+                </Item>
 
-                <button type="button" onClick={() => this.handleSubmit()}>
+                <Button styleType="primary" onClick={() => this.handleSubmit()}>
                     submit
-                </button>
+                </Button>
             </ZForm>
         );
     }

@@ -6,6 +6,7 @@ import Button from 'src/components/Button';
 import Icon from 'src/components/Icon';
 import { animationPrefixCls } from 'src/style/globalAnimation';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
+import { Provider } from 'src/components/Popover/ContainerContext';
 
 import { prefixCls, ModalWrap } from './style';
 import LOCALE from './locale/zh_CN';
@@ -51,6 +52,11 @@ class Modal extends Component {
         className: PropTypes.string,
         /** 弹窗包裹容器的类名 */
         wrapClassName: PropTypes.string,
+        /** 自定义预设部分样式 */
+        customStyle: PropTypes.shape({
+            /** 由于弹窗会包裹各种组件，经常会 padding 叠加，所以默认内部无间距，通过 contentPadding 为 true 可打开内间距 */
+            contentPadding: PropTypes.bool
+        }),
         /** 弹窗的样式 */
         style: PropTypes.object,
         /** 弹窗的内容部分的样式 */
@@ -79,6 +85,10 @@ class Modal extends Component {
             </Button>
         ];
     };
+    savePopupContainer = ref => {
+        this.popupContainer = ref;
+    };
+    getPopupContainer = () => this.popupContainer && this.popupContainer;
     render() {
         const {
             title,
@@ -91,6 +101,7 @@ class Modal extends Component {
             className,
             onClose,
             locale,
+            children,
             ...rest
         } = this.props;
         const width = {
@@ -99,28 +110,33 @@ class Modal extends Component {
             lg: 800
         }[size];
         return (
-            <ModalWrap
-                {...rest}
-                trueClassName={className}
-                style={{
-                    width: width,
-                    ...style
-                }}
-                prefixCls={prefixCls}
-                closable={false}
-                maskTransitionName={`${animationPrefixCls}-${maskAnimation}`}
-                transitionName={`${animationPrefixCls}-${animation}`}
-                onClose={onClose}
-                title={[
-                    <div key="content" className={`${prefixCls}-title-content`}>
-                        {title}
-                    </div>,
-                    closable && (
-                        <Icon key="close" type="circle-cross" className={`${prefixCls}-close`} onClick={onClose} />
-                    )
-                ]}
-                footer={_.isFunction(footer) ? footer({ locale }) : footer}
-            />
+            <Provider value={{}}>
+                <ModalWrap
+                    {...rest}
+                    trueClassName={className}
+                    style={{
+                        width: width,
+                        ...style
+                    }}
+                    prefixCls={prefixCls}
+                    closable={false}
+                    maskTransitionName={`${animationPrefixCls}-${maskAnimation}`}
+                    transitionName={`${animationPrefixCls}-${animation}`}
+                    onClose={onClose}
+                    title={[
+                        <div key="content" className={`${prefixCls}-title-content`}>
+                            {title}
+                        </div>,
+                        closable && (
+                            <Icon key="close" type="circle-cross" className={`${prefixCls}-close`} onClick={onClose} />
+                        )
+                    ]}
+                    footer={_.isFunction(footer) ? footer({ locale }) : footer}
+                >
+                    <div ref={this.savePopupContainer}></div>
+                    {children}
+                </ModalWrap>
+            </Provider>
         );
     }
 }

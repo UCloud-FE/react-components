@@ -1,4 +1,4 @@
-import { keyframes } from 'styled-components';
+import { keyframes } from "@emotion/core";
 
 export const slideUpIn = keyframes`
     0% {

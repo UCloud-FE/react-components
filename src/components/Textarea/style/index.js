@@ -1,30 +1,38 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
-import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
+import withProps from 'src/utils/withProps';
 
-const themeMixin = ({ theme: { designTokens: DT, fontSize } }) => css`
-    font-size: ${fontSize};
-    color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
-    border: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
-    background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
-    &:hover,
-    &:focus {
-        border-color: ${DT.T_COLOR_LINE_PRIMARY_HOVER};
-    }
-    &:focus {
-        border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
-    }
-    &::placeholder {
-        color: ${DT.T_COLOR_TEXT_REMARK_LIGHT};
-    }
-    &[disabled] {
-        color: ${DT.T_COLOR_TEXT_DISABLED};
-        border-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
-        background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
-    }
-`;
+const themeMixin = props => {
+    const {
+        theme: { designTokens: DT, fontSize }
+    } = props;
 
-export const TextareaWrap = styled.textarea`
+    return css`
+        font-size: ${fontSize};
+        color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+        border: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
+        background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
+        &:hover,
+        &:focus {
+            border-color: ${DT.T_COLOR_LINE_PRIMARY_HOVER};
+        }
+        &:focus {
+            border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
+        }
+        &::placeholder {
+            opacity: 1;
+            color: ${DT.T_COLOR_TEXT_REMARK_LIGHT};
+        }
+        &[disabled] {
+            color: ${DT.T_COLOR_TEXT_DISABLED};
+            border-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
+            background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
+        }
+    `;
+};
+
+export const TextareaWrap = withProps()(styled('textarea')`
     display: block;
     box-sizing: border-box;
     width: 100%;
@@ -35,5 +43,4 @@ export const TextareaWrap = styled.textarea`
     resize: vertical;
     outline: none;
     ${themeMixin};
-`;
-addDefaultThemeProps(TextareaWrap);
+`);

@@ -6,7 +6,7 @@ import ScrollableInkTabBar from 'rc-tabs/lib/ScrollableInkTabBar';
 import { prefixCls, TabsWrap } from './style';
 
 const Position = ['left', 'right', 'top', 'bottom'];
-const StyleType = ['default', 'ink'];
+const StyleType = ['default', 'ink', 'pure'];
 const Size = ['sm', 'md', 'lg'];
 
 class Tabs extends Component {

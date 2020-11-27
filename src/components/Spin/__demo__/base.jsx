@@ -1,5 +1,6 @@
 import React from 'react';
-import Spin from 'components/Spin';
+
+import Spin from 'src/components/Spin';
 
 // demo start
 const Demo = () => (

@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Tooltip from 'components/Tooltip';
-import Radio from 'components/Radio';
-import Form from 'components/Form';
-import Button from 'components/Button';
+
+import Tooltip from 'src/components/Tooltip';
+import Radio from 'src/components/Radio';
+import Form from 'src/components/Form';
+import Button from 'src/components/Button';
+import Switch from 'src/components/Switch';
 
 // demo start
 const { Placement, Theme } = Tooltip;
@@ -18,11 +20,12 @@ class Demo extends React.Component {
         super(props);
         this.state = {
             placement: Placement[0],
-            theme: Theme[0]
+            theme: Theme[0],
+            arrow: Tooltip.defaultProps.arrow
         };
     }
     render() {
-        const { placement, theme } = this.state;
+        const { placement, theme, arrow } = this.state;
         const itemLayout = {
             labelCol: {
                 span: 3
@@ -52,9 +55,18 @@ class Demo extends React.Component {
                             }))}
                         />
                     </Form.Item>
+                    <Form.Item label="arrow" {...itemLayout}>
+                        <Switch onChange={arrow => this.setState({ arrow })} checked={arrow} />
+                    </Form.Item>
                 </Form>
                 <div className="demo-wrap">
-                    <Tooltip placement={placement} popup={<Popup />} theme={theme}>
+                    <Tooltip
+                        placement={placement}
+                        popup={<Popup />}
+                        theme={theme}
+                        arrow={arrow}
+                        getPopupContainer={() => document.body}
+                    >
                         <Content>content</Content>
                     </Tooltip>
                 </div>

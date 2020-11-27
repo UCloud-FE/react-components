@@ -1,0 +1,6204 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditableTable demo -- addition 1`] = `
+.emotion-20 {
+  padding: 0px;
+  color: #0a1633;
+  border-radius: 2px;
+  background: #ffffff;
+  font-size: 12px;
+}
+
+.emotion-20:before,
+.emotion-20:after {
+  content: ' ';
+  display: table;
+}
+
+.emotion-20:after {
+  clear: both;
+}
+
+.emotion-20 .uc-fe-table-pagination {
+  float: right;
+  margin-top: 8px;
+}
+
+.emotion-20 .uc-fe-table-filter {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.emotion-20 .uc-fe-table table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  min-width: 100%;
+}
+
+.emotion-20 .uc-fe-table-filter-notice,
+.emotion-20 .uc-fe-table-empty-content-wrap,
+.emotion-20 .uc-fe-table-error-content-wrap {
+  max-width: 400px;
+  margin: 12px auto;
+  text-align: center;
+}
+
+.emotion-20 .uc-fe-table-empty-content-wrap,
+.emotion-20 .uc-fe-table-error-content-wrap {
+  margin: 40px auto;
+}
+
+.emotion-20 .uc-fe-table-reset-link {
+  color: #3860f4;
+  cursor: pointer;
+}
+
+.emotion-20 .uc-fe-table-fixed,
+.emotion-20 .uc-fe-table-body {
+  background: #ffffff;
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon {
+  color: #526075;
+  border: 1px solid #d2d6ea;
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon-cell {
+  width: 20px;
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon:hover {
+  color: #3357df;
+  border-color: #3357df;
+}
+
+.emotion-20 .uc-fe-table-expand-icon-th {
+  width: 20px;
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon.uc-fe-table-row-collapsed:before {
+  content: '+';
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon.uc-fe-table-row-expanded:before {
+  content: '-';
+}
+
+.emotion-20 .uc-fe-table-row-spaced {
+  visibility: hidden;
+}
+
+.emotion-20 .uc-fe-table-row-expanded,
+.emotion-20 .uc-fe-table-row-collapsed {
+  margin-right: 8px;
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon-cell .uc-fe-table-row-expand-icon {
+  margin: 0;
+}
+
+.emotion-20 .uc-fe-table-fixed-header .uc-fe-table-header {
+  min-width: 100%;
+  overflow: scroll;
+  padding-bottom: 20px;
+  margin-bottom: -20px;
+}
+
+.emotion-20 .uc-fe-table-content {
+  position: relative;
+  width: 100%;
+  clear: both;
+}
+
+.emotion-20 .uc-fe-table-thead > tr > th {
+  position: relative;
+  vertical-align: middle;
+  border-bottom: 1px solid #c3cad9;
+  color: #526075;
+  padding: 12px;
+  line-height: 22px;
+  text-align: left;
+  font-weight: 400;
+}
+
+.emotion-20 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
+.emotion-20 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th {
+  border-color: transparent;
+  padding-left: 0;
+}
+
+.emotion-20 .uc-fe-table-thead > tr > th.uc-fe-table-placeholder-th {
+  padding: 0px;
+  font-size: 0px;
+}
+
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 100%;
+  top: 0;
+  pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
+}
+
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
+  box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
+}
+
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
+  box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
+}
+
+.emotion-20 .uc-fe-table-row,
+.emotion-20 .uc-fe-table-row>td,
+.emotion-20 .uc-fe-table-thead,
+.emotion-20 .uc-fe-table-thead>tr,
+.emotion-20 .uc-fe-table-thead>tr>th {
+  background: #ffffff;
+}
+
+.emotion-20 .uc-fe-table-row > td {
+  position: relative;
+  vertical-align: middle;
+  border-bottom: 1px solid #d2d6ea;
+  padding: 12px;
+  line-height: 22px;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+.emotion-20 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell {
+  border-color: transparent;
+  padding-left: 0;
+}
+
+.emotion-20 .uc-fe-table-row > td.uc-fe-table-placeholder-cell {
+  padding: 0;
+  font-size: 0;
+}
+
+.emotion-20 .uc-fe-table-row-level-1 > td,
+.emotion-20 .uc-fe-table-row-level-2 > td,
+.emotion-20 .uc-fe-table-row-level-3 > td,
+.emotion-20 .uc-fe-table-row-level-4 > td,
+.emotion-20 .uc-fe-table-row-level-5 > td {
+  background: #f6f6fb;
+}
+
+.emotion-20 .uc-fe-table-row-level-1 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row-level-2 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row-level-3 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row-level-4 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row-level-5 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row-level-1 > td.uc-fe-table-row-select-icon-cell,
+.emotion-20 .uc-fe-table-row-level-2 > td.uc-fe-table-row-select-icon-cell,
+.emotion-20 .uc-fe-table-row-level-3 > td.uc-fe-table-row-select-icon-cell,
+.emotion-20 .uc-fe-table-row-level-4 > td.uc-fe-table-row-select-icon-cell,
+.emotion-20 .uc-fe-table-row-level-5 > td.uc-fe-table-row-select-icon-cell {
+  background: #ffffff;
+}
+
+.emotion-20 .uc-fe-table-row-level-1 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.emotion-20 .uc-fe-table-row-level-2 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.emotion-20 .uc-fe-table-row-level-3 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.emotion-20 .uc-fe-table-row-level-4 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.emotion-20 .uc-fe-table-row-level-5 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced {
+  visibility: visible;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 1px;
+  height: 100%;
+  background: #d2d6ea;
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid #d2d6ea;
+  cursor: default;
+}
+
+.emotion-20 .uc-fe-table-custom-title {
+  margin-bottom: 16px;
+}
+
+.emotion-20 .uc-fe-table-tip-wrap {
+  border-bottom: 1px solid #d2d6ea;
+}
+
+.emotion-20 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td {
+  background: #eaeefd;
+}
+
+.emotion-20 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-select-icon-cell {
+  background: #ffffff;
+}
+
+.emotion-20 .uc-fe-table .uc-fe-table-hover-display-area {
+  display: inline;
+  visibility: hidden;
+}
+
+.emotion-20 .uc-fe-table table > tbody > .uc-fe-table-row:hover .uc-fe-table-hover-display-area {
+  visibility: visible;
+}
+
+.emotion-20 .uc-fe-table-row-indent.indent-level-0 {
+  display: none;
+}
+
+.emotion-0 {
+  position: relative;
+  z-index: 10;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  color: #0a1633;
+}
+
+.emotion-2 {
+  vertical-align: baseline;
+}
+
+.emotion-7 {
+  vertical-align: baseline;
+  vertical-align: middle;
+  color: #0a1633;
+}
+
+.emotion-18 {
+  width: 100%;
+  height: 60px;
+  background: #fafafc;
+  color: #0a1633;
+  cursor: pointer;
+  text-align: center;
+  line-height: 60px;
+}
+
+.emotion-18 .uc-fe-editable-table-btn {
+  fill: #0a1633;
+}
+
+.emotion-18:hover {
+  background: #eaeefd;
+}
+
+.emotion-18:hover .uc-fe-editable-table-btn {
+  fill: #3860f4;
+}
+
+.emotion-18.emotion-18.emotion-18 {
+  background: #f7f7f7;
+  color: #cccccc;
+  cursor: default;
+}
+
+.emotion-18.emotion-18.emotion-18 .uc-fe-editable-table-tip {
+  color: #cccccc;
+}
+
+.emotion-18.emotion-18.emotion-18 .uc-fe-editable-table-btn {
+  fill: #cccccc;
+}
+
+.emotion-16 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+
+.emotion-40 {
+  width: 100%;
+  height: 60px;
+  background: #fafafc;
+  color: #0a1633;
+  cursor: pointer;
+  text-align: center;
+  line-height: 60px;
+}
+
+.emotion-40 .uc-fe-editable-table-btn {
+  fill: #0a1633;
+}
+
+.emotion-40:hover {
+  background: #eaeefd;
+}
+
+.emotion-40:hover .uc-fe-editable-table-btn {
+  fill: #3860f4;
+}
+
+.emotion-60 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+}
+
+.emotion-62 {
+  font-size: 12px;
+  color: #0a1633;
+  line-height: 20px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.emotion-20 {
+  padding: 0px;
+  color: #0a1633;
+  border-radius: 2px;
+  background: #ffffff;
+  font-size: 12px;
+}
+
+.emotion-20:before,
+.emotion-20:after {
+  content: ' ';
+  display: table;
+}
+
+.emotion-20:after {
+  clear: both;
+}
+
+.emotion-20 .uc-fe-table-pagination {
+  float: right;
+  margin-top: 8px;
+}
+
+.emotion-20 .uc-fe-table-filter {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.emotion-20 .uc-fe-table table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  min-width: 100%;
+}
+
+.emotion-20 .uc-fe-table-filter-notice,
+.emotion-20 .uc-fe-table-empty-content-wrap,
+.emotion-20 .uc-fe-table-error-content-wrap {
+  max-width: 400px;
+  margin: 12px auto;
+  text-align: center;
+}
+
+.emotion-20 .uc-fe-table-empty-content-wrap,
+.emotion-20 .uc-fe-table-error-content-wrap {
+  margin: 40px auto;
+}
+
+.emotion-20 .uc-fe-table-reset-link {
+  color: #3860f4;
+  cursor: pointer;
+}
+
+.emotion-20 .uc-fe-table-fixed,
+.emotion-20 .uc-fe-table-body {
+  background: #ffffff;
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon {
+  color: #526075;
+  border: 1px solid #d2d6ea;
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon-cell {
+  width: 20px;
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon:hover {
+  color: #3357df;
+  border-color: #3357df;
+}
+
+.emotion-20 .uc-fe-table-expand-icon-th {
+  width: 20px;
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon.uc-fe-table-row-collapsed:before {
+  content: '+';
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon.uc-fe-table-row-expanded:before {
+  content: '-';
+}
+
+.emotion-20 .uc-fe-table-row-spaced {
+  visibility: hidden;
+}
+
+.emotion-20 .uc-fe-table-row-expanded,
+.emotion-20 .uc-fe-table-row-collapsed {
+  margin-right: 8px;
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon-cell .uc-fe-table-row-expand-icon {
+  margin: 0;
+}
+
+.emotion-20 .uc-fe-table-fixed-header .uc-fe-table-header {
+  min-width: 100%;
+  overflow: scroll;
+  padding-bottom: 20px;
+  margin-bottom: -20px;
+}
+
+.emotion-20 .uc-fe-table-content {
+  position: relative;
+  width: 100%;
+  clear: both;
+}
+
+.emotion-20 .uc-fe-table-thead > tr > th {
+  position: relative;
+  vertical-align: middle;
+  border-bottom: 1px solid #c3cad9;
+  color: #526075;
+  padding: 12px;
+  line-height: 22px;
+  text-align: left;
+  font-weight: 400;
+}
+
+.emotion-20 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
+.emotion-20 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th {
+  border-color: transparent;
+  padding-left: 0;
+}
+
+.emotion-20 .uc-fe-table-thead > tr > th.uc-fe-table-placeholder-th {
+  padding: 0px;
+  font-size: 0px;
+}
+
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 100%;
+  top: 0;
+  pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
+}
+
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
+  box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
+}
+
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
+  box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
+}
+
+.emotion-20 .uc-fe-table-row,
+.emotion-20 .uc-fe-table-row>td,
+.emotion-20 .uc-fe-table-thead,
+.emotion-20 .uc-fe-table-thead>tr,
+.emotion-20 .uc-fe-table-thead>tr>th {
+  background: #ffffff;
+}
+
+.emotion-20 .uc-fe-table-row > td {
+  position: relative;
+  vertical-align: middle;
+  border-bottom: 1px solid #d2d6ea;
+  padding: 12px;
+  line-height: 22px;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+.emotion-20 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell {
+  border-color: transparent;
+  padding-left: 0;
+}
+
+.emotion-20 .uc-fe-table-row > td.uc-fe-table-placeholder-cell {
+  padding: 0;
+  font-size: 0;
+}
+
+.emotion-20 .uc-fe-table-row-level-1 > td,
+.emotion-20 .uc-fe-table-row-level-2 > td,
+.emotion-20 .uc-fe-table-row-level-3 > td,
+.emotion-20 .uc-fe-table-row-level-4 > td,
+.emotion-20 .uc-fe-table-row-level-5 > td {
+  background: #f6f6fb;
+}
+
+.emotion-20 .uc-fe-table-row-level-1 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row-level-2 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row-level-3 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row-level-4 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row-level-5 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row-level-1 > td.uc-fe-table-row-select-icon-cell,
+.emotion-20 .uc-fe-table-row-level-2 > td.uc-fe-table-row-select-icon-cell,
+.emotion-20 .uc-fe-table-row-level-3 > td.uc-fe-table-row-select-icon-cell,
+.emotion-20 .uc-fe-table-row-level-4 > td.uc-fe-table-row-select-icon-cell,
+.emotion-20 .uc-fe-table-row-level-5 > td.uc-fe-table-row-select-icon-cell {
+  background: #ffffff;
+}
+
+.emotion-20 .uc-fe-table-row-level-1 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.emotion-20 .uc-fe-table-row-level-2 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.emotion-20 .uc-fe-table-row-level-3 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.emotion-20 .uc-fe-table-row-level-4 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.emotion-20 .uc-fe-table-row-level-5 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced {
+  visibility: visible;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 1px;
+  height: 100%;
+  background: #d2d6ea;
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid #d2d6ea;
+  cursor: default;
+}
+
+.emotion-20 .uc-fe-table-custom-title {
+  margin-bottom: 16px;
+}
+
+.emotion-20 .uc-fe-table-tip-wrap {
+  border-bottom: 1px solid #d2d6ea;
+}
+
+.emotion-20 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td {
+  background: #eaeefd;
+}
+
+.emotion-20 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-select-icon-cell {
+  background: #ffffff;
+}
+
+.emotion-20 .uc-fe-table .uc-fe-table-hover-display-area {
+  display: inline;
+  visibility: hidden;
+}
+
+.emotion-20 .uc-fe-table table > tbody > .uc-fe-table-row:hover .uc-fe-table-hover-display-area {
+  visibility: visible;
+}
+
+.emotion-20 .uc-fe-table-row-indent.indent-level-0 {
+  display: none;
+}
+
+.emotion-0 {
+  position: relative;
+  z-index: 10;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  color: #0a1633;
+}
+
+.emotion-2 {
+  vertical-align: baseline;
+}
+
+.emotion-7 {
+  vertical-align: baseline;
+  vertical-align: middle;
+  color: #0a1633;
+}
+
+.emotion-18 {
+  width: 100%;
+  height: 60px;
+  background: #fafafc;
+  color: #0a1633;
+  cursor: pointer;
+  text-align: center;
+  line-height: 60px;
+}
+
+.emotion-18 .uc-fe-editable-table-btn {
+  fill: #0a1633;
+}
+
+.emotion-18:hover {
+  background: #eaeefd;
+}
+
+.emotion-18:hover .uc-fe-editable-table-btn {
+  fill: #3860f4;
+}
+
+.emotion-18.emotion-18.emotion-18 {
+  background: #f7f7f7;
+  color: #cccccc;
+  cursor: default;
+}
+
+.emotion-18.emotion-18.emotion-18 .uc-fe-editable-table-tip {
+  color: #cccccc;
+}
+
+.emotion-18.emotion-18.emotion-18 .uc-fe-editable-table-btn {
+  fill: #cccccc;
+}
+
+.emotion-16 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+
+.emotion-40 {
+  width: 100%;
+  height: 60px;
+  background: #fafafc;
+  color: #0a1633;
+  cursor: pointer;
+  text-align: center;
+  line-height: 60px;
+}
+
+.emotion-40 .uc-fe-editable-table-btn {
+  fill: #0a1633;
+}
+
+.emotion-40:hover {
+  background: #eaeefd;
+}
+
+.emotion-40:hover .uc-fe-editable-table-btn {
+  fill: #3860f4;
+}
+
+.emotion-60 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+}
+
+.emotion-62 {
+  font-size: 12px;
+  color: #0a1633;
+  line-height: 20px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+<div>
+  <div>
+    <h2>
+      false
+    </h2>
+    <div
+      class="demo-wrap"
+    >
+      <div
+        class="uc-fe-table-wrapper emotion-20 emotion-21"
+      >
+        <div
+          class="emotion-0 emotion-1"
+        />
+        <div
+          class="uc-fe-table"
+        >
+          <div
+            class="uc-fe-table-title"
+          />
+          <div
+            class="uc-fe-table-content"
+          >
+            <div
+              class="uc-fe-table-body"
+            >
+              <table
+                class=""
+              >
+                <colgroup>
+                  <col
+                    style="width:100px;min-width:100px"
+                  />
+                  <col />
+                  <col
+                    style="width:40px;min-width:40px"
+                  />
+                </colgroup>
+                <thead
+                  class="uc-fe-table-thead"
+                >
+                  <tr>
+                    <th
+                      class=""
+                    >
+                      <div>
+                        name
+                        <div
+                          class="uc-fe-table-filter emotion-4 emotion-5"
+                        >
+                          <div>
+                            <i
+                              class="uc-fe-icon icon__filter emotion-2 emotion-3"
+                            />
+                          </div>
+                        </div>
+                        <i
+                          class="uc-fe-icon icon__sort  emotion-6 emotion-7 emotion-3"
+                        />
+                      </div>
+                    </th>
+                    <th
+                      class=""
+                    >
+                      <div>
+                        desc
+                        <div
+                          class="uc-fe-table-filter emotion-4 emotion-5"
+                        >
+                          <div>
+                            <i
+                              class="uc-fe-icon icon__filter emotion-2 emotion-3"
+                            />
+                          </div>
+                        </div>
+                        <i
+                          class="uc-fe-icon icon__sort  emotion-6 emotion-7 emotion-3"
+                        />
+                      </div>
+                    </th>
+                    <th
+                      class=""
+                    >
+                      <div />
+                    </th>
+                  </tr>
+                </thead>
+                <tbody
+                  class="uc-fe-table-tbody"
+                />
+              </table>
+            </div>
+            <div
+              class="uc-fe-table-placeholder"
+            />
+            <div
+              class="uc-fe-table-footer"
+            >
+              <div />
+            </div>
+          </div>
+        </div>
+        <div
+          class=" emotion-18 emotion-19"
+          disabled=""
+        >
+          <svg
+            class="uc-fe-editable-table-btn emotion-16 emotion-17"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2>
+      onAdd
+    </h2>
+    <div
+      class="demo-wrap"
+    >
+      <div
+        class="uc-fe-table-wrapper emotion-20 emotion-21"
+      >
+        <div
+          class="emotion-0 emotion-1"
+        />
+        <div
+          class="uc-fe-table"
+        >
+          <div
+            class="uc-fe-table-title"
+          />
+          <div
+            class="uc-fe-table-content"
+          >
+            <div
+              class="uc-fe-table-body"
+            >
+              <table
+                class=""
+              >
+                <colgroup>
+                  <col
+                    style="width:100px;min-width:100px"
+                  />
+                  <col />
+                  <col
+                    style="width:40px;min-width:40px"
+                  />
+                </colgroup>
+                <thead
+                  class="uc-fe-table-thead"
+                >
+                  <tr>
+                    <th
+                      class=""
+                    >
+                      <div>
+                        name
+                        <div
+                          class="uc-fe-table-filter emotion-4 emotion-5"
+                        >
+                          <div>
+                            <i
+                              class="uc-fe-icon icon__filter emotion-2 emotion-3"
+                            />
+                          </div>
+                        </div>
+                        <i
+                          class="uc-fe-icon icon__sort  emotion-6 emotion-7 emotion-3"
+                        />
+                      </div>
+                    </th>
+                    <th
+                      class=""
+                    >
+                      <div>
+                        desc
+                        <div
+                          class="uc-fe-table-filter emotion-4 emotion-5"
+                        >
+                          <div>
+                            <i
+                              class="uc-fe-icon icon__filter emotion-2 emotion-3"
+                            />
+                          </div>
+                        </div>
+                        <i
+                          class="uc-fe-icon icon__sort  emotion-6 emotion-7 emotion-3"
+                        />
+                      </div>
+                    </th>
+                    <th
+                      class=""
+                    >
+                      <div />
+                    </th>
+                  </tr>
+                </thead>
+                <tbody
+                  class="uc-fe-table-tbody"
+                />
+              </table>
+            </div>
+            <div
+              class="uc-fe-table-placeholder"
+            />
+            <div
+              class="uc-fe-table-footer"
+            >
+              <div />
+            </div>
+          </div>
+        </div>
+        <div
+          class=" emotion-40 emotion-19"
+        >
+          <svg
+            class="uc-fe-editable-table-btn emotion-16 emotion-17"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2>
+      tip
+    </h2>
+    <div
+      class="demo-wrap"
+    >
+      <div
+        class="uc-fe-table-wrapper emotion-20 emotion-21"
+      >
+        <div
+          class="emotion-0 emotion-1"
+        />
+        <div
+          class="uc-fe-table"
+        >
+          <div
+            class="uc-fe-table-title"
+          />
+          <div
+            class="uc-fe-table-content"
+          >
+            <div
+              class="uc-fe-table-body"
+            >
+              <table
+                class=""
+              >
+                <colgroup>
+                  <col
+                    style="width:100px;min-width:100px"
+                  />
+                  <col />
+                  <col
+                    style="width:40px;min-width:40px"
+                  />
+                </colgroup>
+                <thead
+                  class="uc-fe-table-thead"
+                >
+                  <tr>
+                    <th
+                      class=""
+                    >
+                      <div>
+                        name
+                        <div
+                          class="uc-fe-table-filter emotion-4 emotion-5"
+                        >
+                          <div>
+                            <i
+                              class="uc-fe-icon icon__filter emotion-2 emotion-3"
+                            />
+                          </div>
+                        </div>
+                        <i
+                          class="uc-fe-icon icon__sort  emotion-6 emotion-7 emotion-3"
+                        />
+                      </div>
+                    </th>
+                    <th
+                      class=""
+                    >
+                      <div>
+                        desc
+                        <div
+                          class="uc-fe-table-filter emotion-4 emotion-5"
+                        >
+                          <div>
+                            <i
+                              class="uc-fe-icon icon__filter emotion-2 emotion-3"
+                            />
+                          </div>
+                        </div>
+                        <i
+                          class="uc-fe-icon icon__sort  emotion-6 emotion-7 emotion-3"
+                        />
+                      </div>
+                    </th>
+                    <th
+                      class=""
+                    >
+                      <div />
+                    </th>
+                  </tr>
+                </thead>
+                <tbody
+                  class="uc-fe-table-tbody"
+                />
+              </table>
+            </div>
+            <div
+              class="uc-fe-table-placeholder"
+            />
+            <div
+              class="uc-fe-table-footer"
+            >
+              <div />
+            </div>
+          </div>
+        </div>
+        <div
+          class=" emotion-40 emotion-19"
+        >
+          <svg
+            class="uc-fe-editable-table-btn emotion-60 emotion-17"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+            />
+          </svg>
+          <span
+            class="uc-fe-editable-table-tip emotion-62 emotion-63"
+          >
+            自定义提示
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2>
+      disabled
+    </h2>
+    <div
+      class="demo-wrap"
+    >
+      <div
+        class="uc-fe-table-wrapper emotion-20 emotion-21"
+      >
+        <div
+          class="emotion-0 emotion-1"
+        />
+        <div
+          class="uc-fe-table"
+        >
+          <div
+            class="uc-fe-table-title"
+          />
+          <div
+            class="uc-fe-table-content"
+          >
+            <div
+              class="uc-fe-table-body"
+            >
+              <table
+                class=""
+              >
+                <colgroup>
+                  <col
+                    style="width:100px;min-width:100px"
+                  />
+                  <col />
+                  <col
+                    style="width:40px;min-width:40px"
+                  />
+                </colgroup>
+                <thead
+                  class="uc-fe-table-thead"
+                >
+                  <tr>
+                    <th
+                      class=""
+                    >
+                      <div>
+                        name
+                        <div
+                          class="uc-fe-table-filter emotion-4 emotion-5"
+                        >
+                          <div>
+                            <i
+                              class="uc-fe-icon icon__filter emotion-2 emotion-3"
+                            />
+                          </div>
+                        </div>
+                        <i
+                          class="uc-fe-icon icon__sort  emotion-6 emotion-7 emotion-3"
+                        />
+                      </div>
+                    </th>
+                    <th
+                      class=""
+                    >
+                      <div>
+                        desc
+                        <div
+                          class="uc-fe-table-filter emotion-4 emotion-5"
+                        >
+                          <div>
+                            <i
+                              class="uc-fe-icon icon__filter emotion-2 emotion-3"
+                            />
+                          </div>
+                        </div>
+                        <i
+                          class="uc-fe-icon icon__sort  emotion-6 emotion-7 emotion-3"
+                        />
+                      </div>
+                    </th>
+                    <th
+                      class=""
+                    >
+                      <div />
+                    </th>
+                  </tr>
+                </thead>
+                <tbody
+                  class="uc-fe-table-tbody"
+                />
+              </table>
+            </div>
+            <div
+              class="uc-fe-table-placeholder"
+            />
+            <div
+              class="uc-fe-table-footer"
+            >
+              <div />
+            </div>
+          </div>
+        </div>
+        <div
+          class=" emotion-18 emotion-19"
+          disabled=""
+        >
+          <svg
+            class="uc-fe-editable-table-btn emotion-16 emotion-17"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2>
+      disabledWithTip
+    </h2>
+    <div
+      class="demo-wrap"
+    >
+      <div
+        class="uc-fe-table-wrapper emotion-20 emotion-21"
+      >
+        <div
+          class="emotion-0 emotion-1"
+        />
+        <div
+          class="uc-fe-table"
+        >
+          <div
+            class="uc-fe-table-title"
+          />
+          <div
+            class="uc-fe-table-content"
+          >
+            <div
+              class="uc-fe-table-body"
+            >
+              <table
+                class=""
+              >
+                <colgroup>
+                  <col
+                    style="width:100px;min-width:100px"
+                  />
+                  <col />
+                  <col
+                    style="width:40px;min-width:40px"
+                  />
+                </colgroup>
+                <thead
+                  class="uc-fe-table-thead"
+                >
+                  <tr>
+                    <th
+                      class=""
+                    >
+                      <div>
+                        name
+                        <div
+                          class="uc-fe-table-filter emotion-4 emotion-5"
+                        >
+                          <div>
+                            <i
+                              class="uc-fe-icon icon__filter emotion-2 emotion-3"
+                            />
+                          </div>
+                        </div>
+                        <i
+                          class="uc-fe-icon icon__sort  emotion-6 emotion-7 emotion-3"
+                        />
+                      </div>
+                    </th>
+                    <th
+                      class=""
+                    >
+                      <div>
+                        desc
+                        <div
+                          class="uc-fe-table-filter emotion-4 emotion-5"
+                        >
+                          <div>
+                            <i
+                              class="uc-fe-icon icon__filter emotion-2 emotion-3"
+                            />
+                          </div>
+                        </div>
+                        <i
+                          class="uc-fe-icon icon__sort  emotion-6 emotion-7 emotion-3"
+                        />
+                      </div>
+                    </th>
+                    <th
+                      class=""
+                    >
+                      <div />
+                    </th>
+                  </tr>
+                </thead>
+                <tbody
+                  class="uc-fe-table-tbody"
+                />
+              </table>
+            </div>
+            <div
+              class="uc-fe-table-placeholder"
+            />
+            <div
+              class="uc-fe-table-footer"
+            >
+              <div />
+            </div>
+          </div>
+        </div>
+        <div
+          class=" emotion-18 emotion-19"
+          disabled=""
+        >
+          <svg
+            class="uc-fe-editable-table-btn emotion-60 emotion-17"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+            />
+          </svg>
+          <span
+            class="uc-fe-editable-table-tip emotion-62 emotion-63"
+          >
+            自定义提示
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`EditableTable demo -- demo 1`] = `
+.emotion-20 {
+  padding: 0px;
+  color: #0a1633;
+  border-radius: 2px;
+  background: #ffffff;
+  font-size: 12px;
+}
+
+.emotion-20:before,
+.emotion-20:after {
+  content: ' ';
+  display: table;
+}
+
+.emotion-20:after {
+  clear: both;
+}
+
+.emotion-20 .uc-fe-table-pagination {
+  float: right;
+  margin-top: 8px;
+}
+
+.emotion-20 .uc-fe-table-filter {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.emotion-20 .uc-fe-table table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  min-width: 100%;
+}
+
+.emotion-20 .uc-fe-table-filter-notice,
+.emotion-20 .uc-fe-table-empty-content-wrap,
+.emotion-20 .uc-fe-table-error-content-wrap {
+  max-width: 400px;
+  margin: 12px auto;
+  text-align: center;
+}
+
+.emotion-20 .uc-fe-table-empty-content-wrap,
+.emotion-20 .uc-fe-table-error-content-wrap {
+  margin: 40px auto;
+}
+
+.emotion-20 .uc-fe-table-reset-link {
+  color: #3860f4;
+  cursor: pointer;
+}
+
+.emotion-20 .uc-fe-table-fixed,
+.emotion-20 .uc-fe-table-body {
+  background: #ffffff;
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon {
+  color: #526075;
+  border: 1px solid #d2d6ea;
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon-cell {
+  width: 20px;
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon:hover {
+  color: #3357df;
+  border-color: #3357df;
+}
+
+.emotion-20 .uc-fe-table-expand-icon-th {
+  width: 20px;
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon.uc-fe-table-row-collapsed:before {
+  content: '+';
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon.uc-fe-table-row-expanded:before {
+  content: '-';
+}
+
+.emotion-20 .uc-fe-table-row-spaced {
+  visibility: hidden;
+}
+
+.emotion-20 .uc-fe-table-row-expanded,
+.emotion-20 .uc-fe-table-row-collapsed {
+  margin-right: 8px;
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon-cell .uc-fe-table-row-expand-icon {
+  margin: 0;
+}
+
+.emotion-20 .uc-fe-table-fixed-header .uc-fe-table-header {
+  min-width: 100%;
+  overflow: scroll;
+  padding-bottom: 20px;
+  margin-bottom: -20px;
+}
+
+.emotion-20 .uc-fe-table-content {
+  position: relative;
+  width: 100%;
+  clear: both;
+}
+
+.emotion-20 .uc-fe-table-thead > tr > th {
+  position: relative;
+  vertical-align: middle;
+  border-bottom: 1px solid #c3cad9;
+  color: #526075;
+  padding: 12px;
+  line-height: 22px;
+  text-align: left;
+  font-weight: 400;
+}
+
+.emotion-20 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
+.emotion-20 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th {
+  border-color: transparent;
+  padding-left: 0;
+}
+
+.emotion-20 .uc-fe-table-thead > tr > th.uc-fe-table-placeholder-th {
+  padding: 0px;
+  font-size: 0px;
+}
+
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 100%;
+  top: 0;
+  pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
+}
+
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
+  box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
+}
+
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
+  box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
+}
+
+.emotion-20 .uc-fe-table-row,
+.emotion-20 .uc-fe-table-row>td,
+.emotion-20 .uc-fe-table-thead,
+.emotion-20 .uc-fe-table-thead>tr,
+.emotion-20 .uc-fe-table-thead>tr>th {
+  background: #ffffff;
+}
+
+.emotion-20 .uc-fe-table-row > td {
+  position: relative;
+  vertical-align: middle;
+  border-bottom: 1px solid #d2d6ea;
+  padding: 12px;
+  line-height: 22px;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+.emotion-20 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell {
+  border-color: transparent;
+  padding-left: 0;
+}
+
+.emotion-20 .uc-fe-table-row > td.uc-fe-table-placeholder-cell {
+  padding: 0;
+  font-size: 0;
+}
+
+.emotion-20 .uc-fe-table-row-level-1 > td,
+.emotion-20 .uc-fe-table-row-level-2 > td,
+.emotion-20 .uc-fe-table-row-level-3 > td,
+.emotion-20 .uc-fe-table-row-level-4 > td,
+.emotion-20 .uc-fe-table-row-level-5 > td {
+  background: #f6f6fb;
+}
+
+.emotion-20 .uc-fe-table-row-level-1 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row-level-2 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row-level-3 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row-level-4 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row-level-5 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row-level-1 > td.uc-fe-table-row-select-icon-cell,
+.emotion-20 .uc-fe-table-row-level-2 > td.uc-fe-table-row-select-icon-cell,
+.emotion-20 .uc-fe-table-row-level-3 > td.uc-fe-table-row-select-icon-cell,
+.emotion-20 .uc-fe-table-row-level-4 > td.uc-fe-table-row-select-icon-cell,
+.emotion-20 .uc-fe-table-row-level-5 > td.uc-fe-table-row-select-icon-cell {
+  background: #ffffff;
+}
+
+.emotion-20 .uc-fe-table-row-level-1 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.emotion-20 .uc-fe-table-row-level-2 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.emotion-20 .uc-fe-table-row-level-3 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.emotion-20 .uc-fe-table-row-level-4 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.emotion-20 .uc-fe-table-row-level-5 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced {
+  visibility: visible;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 1px;
+  height: 100%;
+  background: #d2d6ea;
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid #d2d6ea;
+  cursor: default;
+}
+
+.emotion-20 .uc-fe-table-custom-title {
+  margin-bottom: 16px;
+}
+
+.emotion-20 .uc-fe-table-tip-wrap {
+  border-bottom: 1px solid #d2d6ea;
+}
+
+.emotion-20 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td {
+  background: #eaeefd;
+}
+
+.emotion-20 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-select-icon-cell {
+  background: #ffffff;
+}
+
+.emotion-20 .uc-fe-table .uc-fe-table-hover-display-area {
+  display: inline;
+  visibility: hidden;
+}
+
+.emotion-20 .uc-fe-table table > tbody > .uc-fe-table-row:hover .uc-fe-table-hover-display-area {
+  visibility: visible;
+}
+
+.emotion-20 .uc-fe-table-row-indent.indent-level-0 {
+  display: none;
+}
+
+.emotion-0 {
+  position: relative;
+  z-index: 10;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  color: #0a1633;
+}
+
+.emotion-2 {
+  vertical-align: baseline;
+}
+
+.emotion-7 {
+  vertical-align: baseline;
+  vertical-align: middle;
+  color: #0a1633;
+}
+
+.emotion-16 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+
+.emotion-18 {
+  width: 100%;
+  height: 60px;
+  background: #fafafc;
+  color: #0a1633;
+  cursor: pointer;
+  text-align: center;
+  line-height: 60px;
+}
+
+.emotion-18 .uc-fe-editable-table-btn {
+  fill: #0a1633;
+}
+
+.emotion-18:hover {
+  background: #eaeefd;
+}
+
+.emotion-18:hover .uc-fe-editable-table-btn {
+  fill: #3860f4;
+}
+
+.emotion-38 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+}
+
+.emotion-40 {
+  font-size: 12px;
+  color: #0a1633;
+  line-height: 20px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.emotion-56 .uc-fe-form-item {
+  margin-bottom: 16px;
+}
+
+.emotion-56 .uc-fe-form-item:last-child {
+  margin-bottom: 0;
+}
+
+.emotion-54 {
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  border-width: 1px;
+  border-style: solid;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 28px;
+  padding: 0 8px;
+  color: #ffffff;
+  fill: #ffffff;
+  border: none;
+  background: linear-gradient(135deg,#6488fc 0%,#3860f4 100%);
+  box-shadow: 0 1px 3px -1px #5c76e8;
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
+}
+
+.emotion-54:hover {
+  background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
+  box-shadow: 0 5px 8px -4px #5c76e8;
+}
+
+.emotion-20 {
+  padding: 0px;
+  color: #0a1633;
+  border-radius: 2px;
+  background: #ffffff;
+  font-size: 12px;
+}
+
+.emotion-20:before,
+.emotion-20:after {
+  content: ' ';
+  display: table;
+}
+
+.emotion-20:after {
+  clear: both;
+}
+
+.emotion-20 .uc-fe-table-pagination {
+  float: right;
+  margin-top: 8px;
+}
+
+.emotion-20 .uc-fe-table-filter {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.emotion-20 .uc-fe-table table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  min-width: 100%;
+}
+
+.emotion-20 .uc-fe-table-filter-notice,
+.emotion-20 .uc-fe-table-empty-content-wrap,
+.emotion-20 .uc-fe-table-error-content-wrap {
+  max-width: 400px;
+  margin: 12px auto;
+  text-align: center;
+}
+
+.emotion-20 .uc-fe-table-empty-content-wrap,
+.emotion-20 .uc-fe-table-error-content-wrap {
+  margin: 40px auto;
+}
+
+.emotion-20 .uc-fe-table-reset-link {
+  color: #3860f4;
+  cursor: pointer;
+}
+
+.emotion-20 .uc-fe-table-fixed,
+.emotion-20 .uc-fe-table-body {
+  background: #ffffff;
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon {
+  color: #526075;
+  border: 1px solid #d2d6ea;
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon-cell {
+  width: 20px;
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon:hover {
+  color: #3357df;
+  border-color: #3357df;
+}
+
+.emotion-20 .uc-fe-table-expand-icon-th {
+  width: 20px;
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon.uc-fe-table-row-collapsed:before {
+  content: '+';
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon.uc-fe-table-row-expanded:before {
+  content: '-';
+}
+
+.emotion-20 .uc-fe-table-row-spaced {
+  visibility: hidden;
+}
+
+.emotion-20 .uc-fe-table-row-expanded,
+.emotion-20 .uc-fe-table-row-collapsed {
+  margin-right: 8px;
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon-cell .uc-fe-table-row-expand-icon {
+  margin: 0;
+}
+
+.emotion-20 .uc-fe-table-fixed-header .uc-fe-table-header {
+  min-width: 100%;
+  overflow: scroll;
+  padding-bottom: 20px;
+  margin-bottom: -20px;
+}
+
+.emotion-20 .uc-fe-table-content {
+  position: relative;
+  width: 100%;
+  clear: both;
+}
+
+.emotion-20 .uc-fe-table-thead > tr > th {
+  position: relative;
+  vertical-align: middle;
+  border-bottom: 1px solid #c3cad9;
+  color: #526075;
+  padding: 12px;
+  line-height: 22px;
+  text-align: left;
+  font-weight: 400;
+}
+
+.emotion-20 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
+.emotion-20 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th {
+  border-color: transparent;
+  padding-left: 0;
+}
+
+.emotion-20 .uc-fe-table-thead > tr > th.uc-fe-table-placeholder-th {
+  padding: 0px;
+  font-size: 0px;
+}
+
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 100%;
+  top: 0;
+  pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
+}
+
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
+  box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
+}
+
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
+  box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
+}
+
+.emotion-20 .uc-fe-table-row,
+.emotion-20 .uc-fe-table-row>td,
+.emotion-20 .uc-fe-table-thead,
+.emotion-20 .uc-fe-table-thead>tr,
+.emotion-20 .uc-fe-table-thead>tr>th {
+  background: #ffffff;
+}
+
+.emotion-20 .uc-fe-table-row > td {
+  position: relative;
+  vertical-align: middle;
+  border-bottom: 1px solid #d2d6ea;
+  padding: 12px;
+  line-height: 22px;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+.emotion-20 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell {
+  border-color: transparent;
+  padding-left: 0;
+}
+
+.emotion-20 .uc-fe-table-row > td.uc-fe-table-placeholder-cell {
+  padding: 0;
+  font-size: 0;
+}
+
+.emotion-20 .uc-fe-table-row-level-1 > td,
+.emotion-20 .uc-fe-table-row-level-2 > td,
+.emotion-20 .uc-fe-table-row-level-3 > td,
+.emotion-20 .uc-fe-table-row-level-4 > td,
+.emotion-20 .uc-fe-table-row-level-5 > td {
+  background: #f6f6fb;
+}
+
+.emotion-20 .uc-fe-table-row-level-1 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row-level-2 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row-level-3 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row-level-4 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row-level-5 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row-level-1 > td.uc-fe-table-row-select-icon-cell,
+.emotion-20 .uc-fe-table-row-level-2 > td.uc-fe-table-row-select-icon-cell,
+.emotion-20 .uc-fe-table-row-level-3 > td.uc-fe-table-row-select-icon-cell,
+.emotion-20 .uc-fe-table-row-level-4 > td.uc-fe-table-row-select-icon-cell,
+.emotion-20 .uc-fe-table-row-level-5 > td.uc-fe-table-row-select-icon-cell {
+  background: #ffffff;
+}
+
+.emotion-20 .uc-fe-table-row-level-1 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.emotion-20 .uc-fe-table-row-level-2 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.emotion-20 .uc-fe-table-row-level-3 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.emotion-20 .uc-fe-table-row-level-4 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.emotion-20 .uc-fe-table-row-level-5 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced {
+  visibility: visible;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 1px;
+  height: 100%;
+  background: #d2d6ea;
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid #d2d6ea;
+  cursor: default;
+}
+
+.emotion-20 .uc-fe-table-custom-title {
+  margin-bottom: 16px;
+}
+
+.emotion-20 .uc-fe-table-tip-wrap {
+  border-bottom: 1px solid #d2d6ea;
+}
+
+.emotion-20 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td {
+  background: #eaeefd;
+}
+
+.emotion-20 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-select-icon-cell {
+  background: #ffffff;
+}
+
+.emotion-20 .uc-fe-table .uc-fe-table-hover-display-area {
+  display: inline;
+  visibility: hidden;
+}
+
+.emotion-20 .uc-fe-table table > tbody > .uc-fe-table-row:hover .uc-fe-table-hover-display-area {
+  visibility: visible;
+}
+
+.emotion-20 .uc-fe-table-row-indent.indent-level-0 {
+  display: none;
+}
+
+.emotion-0 {
+  position: relative;
+  z-index: 10;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  color: #0a1633;
+}
+
+.emotion-2 {
+  vertical-align: baseline;
+}
+
+.emotion-7 {
+  vertical-align: baseline;
+  vertical-align: middle;
+  color: #0a1633;
+}
+
+.emotion-16 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+
+.emotion-18 {
+  width: 100%;
+  height: 60px;
+  background: #fafafc;
+  color: #0a1633;
+  cursor: pointer;
+  text-align: center;
+  line-height: 60px;
+}
+
+.emotion-18 .uc-fe-editable-table-btn {
+  fill: #0a1633;
+}
+
+.emotion-18:hover {
+  background: #eaeefd;
+}
+
+.emotion-18:hover .uc-fe-editable-table-btn {
+  fill: #3860f4;
+}
+
+.emotion-38 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+}
+
+.emotion-40 {
+  font-size: 12px;
+  color: #0a1633;
+  line-height: 20px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.emotion-56 .uc-fe-form-item {
+  margin-bottom: 16px;
+}
+
+.emotion-56 .uc-fe-form-item:last-child {
+  margin-bottom: 0;
+}
+
+.emotion-54 {
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  border-width: 1px;
+  border-style: solid;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 28px;
+  padding: 0 8px;
+  color: #ffffff;
+  fill: #ffffff;
+  border: none;
+  background: linear-gradient(135deg,#6488fc 0%,#3860f4 100%);
+  box-shadow: 0 1px 3px -1px #5c76e8;
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
+}
+
+.emotion-54:hover {
+  background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
+  box-shadow: 0 5px 8px -4px #5c76e8;
+}
+
+<div>
+  <h2>
+    存在默认数据，且默认数据不可删除
+  </h2>
+  <div
+    class="demo-wrap"
+  >
+    <div
+      class="uc-fe-table-wrapper emotion-20 emotion-21"
+    >
+      <div
+        class="emotion-0 emotion-1"
+      />
+      <div
+        class="uc-fe-table"
+      >
+        <div
+          class="uc-fe-table-title"
+        />
+        <div
+          class="uc-fe-table-content"
+        >
+          <div
+            class="uc-fe-table-body"
+          >
+            <table
+              class=""
+            >
+              <colgroup>
+                <col
+                  style="width:100px;min-width:100px"
+                />
+                <col />
+                <col
+                  style="width:40px;min-width:40px"
+                />
+              </colgroup>
+              <thead
+                class="uc-fe-table-thead"
+              >
+                <tr>
+                  <th
+                    class=""
+                  >
+                    <div>
+                      name
+                      <div
+                        class="uc-fe-table-filter emotion-4 emotion-5"
+                      >
+                        <div>
+                          <i
+                            class="uc-fe-icon icon__filter emotion-2 emotion-3"
+                          />
+                        </div>
+                      </div>
+                      <i
+                        class="uc-fe-icon icon__sort  emotion-6 emotion-7 emotion-3"
+                      />
+                    </div>
+                  </th>
+                  <th
+                    class=""
+                  >
+                    <div>
+                      desc
+                      <div
+                        class="uc-fe-table-filter emotion-4 emotion-5"
+                      >
+                        <div>
+                          <i
+                            class="uc-fe-icon icon__filter emotion-2 emotion-3"
+                          />
+                        </div>
+                      </div>
+                      <i
+                        class="uc-fe-icon icon__sort  emotion-6 emotion-7 emotion-3"
+                      />
+                    </div>
+                  </th>
+                  <th
+                    class=""
+                  >
+                    <div />
+                  </th>
+                </tr>
+              </thead>
+              <tbody
+                class="uc-fe-table-tbody"
+              >
+                <tr
+                  class="uc-fe-table-row  uc-fe-table-row-level-0"
+                  data-row-key="0"
+                >
+                  <td
+                    class=""
+                  >
+                    <span
+                      class="uc-fe-table-row-indent indent-level-0"
+                      style="padding-left:0px"
+                    />
+                    name-0
+                  </td>
+                  <td
+                    class=""
+                  >
+                    默认数据，不能删除
+                  </td>
+                  <td
+                    class=""
+                  />
+                </tr>
+                <tr
+                  class="uc-fe-table-row  uc-fe-table-row-level-0"
+                  data-row-key="1"
+                >
+                  <td
+                    class=""
+                  >
+                    <span
+                      class="uc-fe-table-row-indent indent-level-0"
+                      style="padding-left:0px"
+                    />
+                    name-1
+                  </td>
+                  <td
+                    class=""
+                  >
+                    默认数据，不能删除
+                  </td>
+                  <td
+                    class=""
+                  />
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div
+            class="uc-fe-table-footer"
+          >
+            <div />
+          </div>
+        </div>
+      </div>
+      <div
+        class=" emotion-18 emotion-19"
+      >
+        <svg
+          class="uc-fe-editable-table-btn emotion-16 emotion-17"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <h2>
+    只能添加有限数据
+  </h2>
+  <div
+    class="demo-wrap"
+  >
+    <div
+      class="uc-fe-table-wrapper emotion-20 emotion-21"
+    >
+      <div
+        class="emotion-0 emotion-1"
+      />
+      <div
+        class="uc-fe-table"
+      >
+        <div
+          class="uc-fe-table-title"
+        />
+        <div
+          class="uc-fe-table-content"
+        >
+          <div
+            class="uc-fe-table-body"
+          >
+            <table
+              class=""
+            >
+              <colgroup>
+                <col
+                  style="width:100px;min-width:100px"
+                />
+                <col />
+                <col
+                  style="width:40px;min-width:40px"
+                />
+              </colgroup>
+              <thead
+                class="uc-fe-table-thead"
+              >
+                <tr>
+                  <th
+                    class=""
+                  >
+                    <div>
+                      name
+                      <div
+                        class="uc-fe-table-filter emotion-4 emotion-5"
+                      >
+                        <div>
+                          <i
+                            class="uc-fe-icon icon__filter emotion-2 emotion-3"
+                          />
+                        </div>
+                      </div>
+                      <i
+                        class="uc-fe-icon icon__sort  emotion-6 emotion-7 emotion-3"
+                      />
+                    </div>
+                  </th>
+                  <th
+                    class=""
+                  >
+                    <div>
+                      desc
+                      <div
+                        class="uc-fe-table-filter emotion-4 emotion-5"
+                      >
+                        <div>
+                          <i
+                            class="uc-fe-icon icon__filter emotion-2 emotion-3"
+                          />
+                        </div>
+                      </div>
+                      <i
+                        class="uc-fe-icon icon__sort  emotion-6 emotion-7 emotion-3"
+                      />
+                    </div>
+                  </th>
+                  <th
+                    class=""
+                  >
+                    <div />
+                  </th>
+                </tr>
+              </thead>
+              <tbody
+                class="uc-fe-table-tbody"
+              />
+            </table>
+          </div>
+          <div
+            class="uc-fe-table-placeholder"
+          />
+          <div
+            class="uc-fe-table-footer"
+          >
+            <div />
+          </div>
+        </div>
+      </div>
+      <div
+        class=" emotion-18 emotion-19"
+      >
+        <svg
+          class="uc-fe-editable-table-btn emotion-38 emotion-17"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+          />
+        </svg>
+        <span
+          class="uc-fe-editable-table-tip emotion-40 emotion-41"
+        >
+          还能再来点
+        </span>
+      </div>
+    </div>
+  </div>
+  <h2>
+    组合 ZForm 表单
+  </h2>
+  <div
+    class="demo-wrap"
+  >
+    <div>
+      <div />
+      <form
+        class="uc-fe-form emotion-56 emotion-57"
+      >
+        <div
+          class="uc-fe-table-wrapper emotion-20 emotion-21"
+        >
+          <div
+            class="emotion-0 emotion-1"
+          />
+          <div
+            class="uc-fe-table"
+          >
+            <div
+              class="uc-fe-table-title"
+            />
+            <div
+              class="uc-fe-table-content"
+            >
+              <div
+                class="uc-fe-table-body"
+              >
+                <table
+                  class=""
+                >
+                  <colgroup>
+                    <col
+                      style="width:100px;min-width:100px"
+                    />
+                    <col />
+                    <col />
+                    <col
+                      style="width:40px;min-width:40px"
+                    />
+                  </colgroup>
+                  <thead
+                    class="uc-fe-table-thead"
+                  >
+                    <tr>
+                      <th
+                        class=""
+                      >
+                        <div>
+                          name
+                        </div>
+                      </th>
+                      <th
+                        class=""
+                      >
+                        <div>
+                          desc
+                        </div>
+                      </th>
+                      <th
+                        class=""
+                      >
+                        <div>
+                          tag
+                        </div>
+                      </th>
+                      <th
+                        class=""
+                      >
+                        <div />
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody
+                    class="uc-fe-table-tbody"
+                  />
+                </table>
+              </div>
+              <div
+                class="uc-fe-table-placeholder"
+              />
+              <div
+                class="uc-fe-table-footer"
+              >
+                <div />
+              </div>
+            </div>
+          </div>
+          <div
+            class=" emotion-18 emotion-19"
+          >
+            <svg
+              class="uc-fe-editable-table-btn emotion-16 emotion-17"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          style="text-align:center"
+        >
+          <button
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-54 emotion-55"
+            type="button"
+          >
+            submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`EditableTable demo -- editableTable 1`] = `
+.emotion-68 {
+  padding: 0px;
+  color: #0a1633;
+  border-radius: 2px;
+  background: #ffffff;
+  font-size: 12px;
+}
+
+.emotion-68:before,
+.emotion-68:after {
+  content: ' ';
+  display: table;
+}
+
+.emotion-68:after {
+  clear: both;
+}
+
+.emotion-68 .uc-fe-table-pagination {
+  float: right;
+  margin-top: 8px;
+}
+
+.emotion-68 .uc-fe-table-filter {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.emotion-68 .uc-fe-table table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  min-width: 100%;
+}
+
+.emotion-68 .uc-fe-table-filter-notice,
+.emotion-68 .uc-fe-table-empty-content-wrap,
+.emotion-68 .uc-fe-table-error-content-wrap {
+  max-width: 400px;
+  margin: 12px auto;
+  text-align: center;
+}
+
+.emotion-68 .uc-fe-table-empty-content-wrap,
+.emotion-68 .uc-fe-table-error-content-wrap {
+  margin: 40px auto;
+}
+
+.emotion-68 .uc-fe-table-reset-link {
+  color: #3860f4;
+  cursor: pointer;
+}
+
+.emotion-68 .uc-fe-table-fixed,
+.emotion-68 .uc-fe-table-body {
+  background: #ffffff;
+}
+
+.emotion-68 .uc-fe-table-row-expand-icon {
+  color: #526075;
+  border: 1px solid #d2d6ea;
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.emotion-68 .uc-fe-table-row-expand-icon-cell {
+  width: 20px;
+}
+
+.emotion-68 .uc-fe-table-row-expand-icon:hover {
+  color: #3357df;
+  border-color: #3357df;
+}
+
+.emotion-68 .uc-fe-table-expand-icon-th {
+  width: 20px;
+}
+
+.emotion-68 .uc-fe-table-row-expand-icon.uc-fe-table-row-collapsed:before {
+  content: '+';
+}
+
+.emotion-68 .uc-fe-table-row-expand-icon.uc-fe-table-row-expanded:before {
+  content: '-';
+}
+
+.emotion-68 .uc-fe-table-row-spaced {
+  visibility: hidden;
+}
+
+.emotion-68 .uc-fe-table-row-expanded,
+.emotion-68 .uc-fe-table-row-collapsed {
+  margin-right: 8px;
+}
+
+.emotion-68 .uc-fe-table-row-expand-icon-cell .uc-fe-table-row-expand-icon {
+  margin: 0;
+}
+
+.emotion-68 .uc-fe-table-fixed-header .uc-fe-table-header {
+  min-width: 100%;
+  overflow: scroll;
+  padding-bottom: 20px;
+  margin-bottom: -20px;
+}
+
+.emotion-68 .uc-fe-table-content {
+  position: relative;
+  width: 100%;
+  clear: both;
+}
+
+.emotion-68 .uc-fe-table-thead > tr > th {
+  position: relative;
+  vertical-align: middle;
+  border-bottom: 1px solid #c3cad9;
+  color: #526075;
+  padding: 12px;
+  line-height: 22px;
+  text-align: left;
+  font-weight: 400;
+}
+
+.emotion-68 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
+.emotion-68 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th {
+  border-color: transparent;
+  padding-left: 0;
+}
+
+.emotion-68 .uc-fe-table-thead > tr > th.uc-fe-table-placeholder-th {
+  padding: 0px;
+  font-size: 0px;
+}
+
+.emotion-68 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.emotion-68 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.emotion-68 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.emotion-68 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-68 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-68 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-68 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.emotion-68 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.emotion-68 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.emotion-68 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-68 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-68 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 100%;
+  top: 0;
+  pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.emotion-68 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.emotion-68 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.emotion-68 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.emotion-68 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-68 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-68 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.emotion-68 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.emotion-68 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.emotion-68 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.emotion-68 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-68 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-68 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
+}
+
+.emotion-68 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.emotion-68 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.emotion-68 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-68 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
+  box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
+}
+
+.emotion-68 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.emotion-68 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.emotion-68 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-68 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
+  box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
+}
+
+.emotion-68 .uc-fe-table-row,
+.emotion-68 .uc-fe-table-row>td,
+.emotion-68 .uc-fe-table-thead,
+.emotion-68 .uc-fe-table-thead>tr,
+.emotion-68 .uc-fe-table-thead>tr>th {
+  background: #ffffff;
+}
+
+.emotion-68 .uc-fe-table-row > td {
+  position: relative;
+  vertical-align: middle;
+  border-bottom: 1px solid #d2d6ea;
+  padding: 12px;
+  line-height: 22px;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+.emotion-68 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
+.emotion-68 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell {
+  border-color: transparent;
+  padding-left: 0;
+}
+
+.emotion-68 .uc-fe-table-row > td.uc-fe-table-placeholder-cell {
+  padding: 0;
+  font-size: 0;
+}
+
+.emotion-68 .uc-fe-table-row-level-1 > td,
+.emotion-68 .uc-fe-table-row-level-2 > td,
+.emotion-68 .uc-fe-table-row-level-3 > td,
+.emotion-68 .uc-fe-table-row-level-4 > td,
+.emotion-68 .uc-fe-table-row-level-5 > td {
+  background: #f6f6fb;
+}
+
+.emotion-68 .uc-fe-table-row-level-1 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-68 .uc-fe-table-row-level-2 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-68 .uc-fe-table-row-level-3 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-68 .uc-fe-table-row-level-4 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-68 .uc-fe-table-row-level-5 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-68 .uc-fe-table-row-level-1 > td.uc-fe-table-row-select-icon-cell,
+.emotion-68 .uc-fe-table-row-level-2 > td.uc-fe-table-row-select-icon-cell,
+.emotion-68 .uc-fe-table-row-level-3 > td.uc-fe-table-row-select-icon-cell,
+.emotion-68 .uc-fe-table-row-level-4 > td.uc-fe-table-row-select-icon-cell,
+.emotion-68 .uc-fe-table-row-level-5 > td.uc-fe-table-row-select-icon-cell {
+  background: #ffffff;
+}
+
+.emotion-68 .uc-fe-table-row-level-1 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.emotion-68 .uc-fe-table-row-level-2 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.emotion-68 .uc-fe-table-row-level-3 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.emotion-68 .uc-fe-table-row-level-4 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.emotion-68 .uc-fe-table-row-level-5 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced {
+  visibility: visible;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 1px;
+  height: 100%;
+  background: #d2d6ea;
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid #d2d6ea;
+  cursor: default;
+}
+
+.emotion-68 .uc-fe-table-custom-title {
+  margin-bottom: 16px;
+}
+
+.emotion-68 .uc-fe-table-tip-wrap {
+  border-bottom: 1px solid #d2d6ea;
+}
+
+.emotion-68 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td {
+  background: #eaeefd;
+}
+
+.emotion-68 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-expand-icon-cell,
+.emotion-68 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-select-icon-cell {
+  background: #ffffff;
+}
+
+.emotion-68 .uc-fe-table .uc-fe-table-hover-display-area {
+  display: inline;
+  visibility: hidden;
+}
+
+.emotion-68 .uc-fe-table table > tbody > .uc-fe-table-row:hover .uc-fe-table-hover-display-area {
+  visibility: visible;
+}
+
+.emotion-68 .uc-fe-table-row-indent.indent-level-0 {
+  display: none;
+}
+
+.emotion-48 {
+  position: relative;
+  z-index: 10;
+}
+
+.emotion-52 {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  color: #0a1633;
+}
+
+.emotion-50 {
+  vertical-align: baseline;
+}
+
+.emotion-55 {
+  vertical-align: baseline;
+  vertical-align: middle;
+  color: #0a1633;
+}
+
+.emotion-64 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+
+.emotion-66 {
+  width: 100%;
+  height: 60px;
+  background: #fafafc;
+  color: #0a1633;
+  cursor: pointer;
+  text-align: center;
+  line-height: 60px;
+}
+
+.emotion-66 .uc-fe-editable-table-btn {
+  fill: #0a1633;
+}
+
+.emotion-66:hover {
+  background: #eaeefd;
+}
+
+.emotion-66:hover .uc-fe-editable-table-btn {
+  fill: #3860f4;
+}
+
+.emotion-46 .uc-fe-form-item {
+  margin-bottom: 16px;
+}
+
+.emotion-46 .uc-fe-form-item:last-child {
+  margin-bottom: 0;
+}
+
+.emotion-9 {
+  position: relative;
+  display: block;
+  height: auto;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.emotion-9:before,
+.emotion-9:after {
+  content: ' ';
+  display: table;
+}
+
+.emotion-9:after {
+  clear: both;
+}
+
+.emotion-9 > .uc-fe-col {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.emotion-1 {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  min-height: 1px;
+  float: left;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 25%;
+  padding-top: 4px;
+  line-height: 20px;
+  word-break: break-all;
+}
+
+.emotion-6 {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  min-height: 1px;
+  float: left;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 75%;
+}
+
+.emotion-6 {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  min-height: 1px;
+  float: left;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 75%;
+}
+
+.emotion-3 {
+  position: relative;
+  border-radius: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  background: #ffffff;
+  height: 28px;
+  width: 78px;
+  padding: 4px;
+  border: 1px solid #d2d6ea;
+  border-width: 1px;
+}
+
+.emotion-3 .uc-fe-switch-dot {
+  position: absolute;
+  display: block;
+  right: 4px;
+  top: 50%;
+  margin-top: -2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.emotion-3 .uc-fe-switch-button {
+  position: absolute;
+  display: block;
+  left: -1px;
+  top: -2px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.emotion-3 .uc-fe-switch-tip-on,
+.emotion-3 .uc-fe-switch-tip-off {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  display: block;
+}
+
+.emotion-3 .uc-fe-switch-inner {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.emotion-3:hover {
+  border-color: #3357df;
+}
+
+.emotion-3:hover .uc-fe-switch-button {
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
+.emotion-3 .uc-fe-switch-button {
+  background: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
+  width: 20px;
+  height: 20px;
+}
+
+.emotion-3 .uc-fe-switch-dot {
+  background: #f44336;
+}
+
+.emotion-3 .uc-fe-switch-inner {
+  color: #526075;
+  border: 1px solid #d2d6ea;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #f6f6fb;
+}
+
+.emotion-3 .uc-fe-switch-tip-on,
+.emotion-3 .uc-fe-switch-tip-off {
+  line-height: 16px;
+}
+
+.emotion-3 .uc-fe-switch-tip-on {
+  padding-right: 20px;
+}
+
+.emotion-3 .uc-fe-switch-tip-off {
+  padding-left: 20px;
+}
+
+.emotion-3 .uc-fe-switch-inner {
+  color: #15ad31;
+  border-color: #9effa5;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #e6ffed;
+}
+
+.emotion-3 .uc-fe-switch-button {
+  left: 100%;
+  margin-left: -19px;
+}
+
+.emotion-3 .uc-fe-switch-dot {
+  background: #15ad31;
+}
+
+.emotion-3 .uc-fe-switch-tip-off {
+  display: none;
+}
+
+.emotion-16 {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  font-size: 12px;
+  border-radius: 2px;
+  height: 28px;
+  color: #526075;
+  border: 1px solid #d2d6ea;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #fafafc;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+}
+
+.emotion-16.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-16 input {
+  vertical-align: middle;
+  display: table-cell;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0px 8px;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+}
+
+.emotion-16 input,
+.emotion-16 input:hover,
+.emotion-16 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-16:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #fafafc;
+}
+
+.emotion-16 input {
+  line-height: 26px;
+  height: 26px;
+}
+
+.emotion-16 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-16 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-16 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-16 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-14 {
+  display: table;
+  width: 100%;
+}
+
+.emotion-38 {
+  position: relative;
+  border-radius: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  background: #ffffff;
+  height: 28px;
+  width: 78px;
+  padding: 4px;
+  border: 1px solid #d2d6ea;
+  border-width: 1px;
+}
+
+.emotion-38 .uc-fe-switch-dot {
+  position: absolute;
+  display: block;
+  right: 4px;
+  top: 50%;
+  margin-top: -2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.emotion-38 .uc-fe-switch-button {
+  position: absolute;
+  display: block;
+  left: -1px;
+  top: -2px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.emotion-38 .uc-fe-switch-tip-on,
+.emotion-38 .uc-fe-switch-tip-off {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  display: block;
+}
+
+.emotion-38 .uc-fe-switch-inner {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.emotion-38:hover {
+  border-color: #3357df;
+}
+
+.emotion-38:hover .uc-fe-switch-button {
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
+.emotion-38 .uc-fe-switch-button {
+  background: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
+  width: 20px;
+  height: 20px;
+}
+
+.emotion-38 .uc-fe-switch-dot {
+  background: #f44336;
+}
+
+.emotion-38 .uc-fe-switch-inner {
+  color: #526075;
+  border: 1px solid #d2d6ea;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #f6f6fb;
+}
+
+.emotion-38 .uc-fe-switch-tip-on,
+.emotion-38 .uc-fe-switch-tip-off {
+  line-height: 16px;
+}
+
+.emotion-38 .uc-fe-switch-tip-on {
+  padding-right: 20px;
+}
+
+.emotion-38 .uc-fe-switch-tip-off {
+  padding-left: 20px;
+}
+
+.emotion-38 .uc-fe-switch-tip-on {
+  display: none;
+}
+
+.emotion-68 {
+  padding: 0px;
+  color: #0a1633;
+  border-radius: 2px;
+  background: #ffffff;
+  font-size: 12px;
+}
+
+.emotion-68:before,
+.emotion-68:after {
+  content: ' ';
+  display: table;
+}
+
+.emotion-68:after {
+  clear: both;
+}
+
+.emotion-68 .uc-fe-table-pagination {
+  float: right;
+  margin-top: 8px;
+}
+
+.emotion-68 .uc-fe-table-filter {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.emotion-68 .uc-fe-table table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  min-width: 100%;
+}
+
+.emotion-68 .uc-fe-table-filter-notice,
+.emotion-68 .uc-fe-table-empty-content-wrap,
+.emotion-68 .uc-fe-table-error-content-wrap {
+  max-width: 400px;
+  margin: 12px auto;
+  text-align: center;
+}
+
+.emotion-68 .uc-fe-table-empty-content-wrap,
+.emotion-68 .uc-fe-table-error-content-wrap {
+  margin: 40px auto;
+}
+
+.emotion-68 .uc-fe-table-reset-link {
+  color: #3860f4;
+  cursor: pointer;
+}
+
+.emotion-68 .uc-fe-table-fixed,
+.emotion-68 .uc-fe-table-body {
+  background: #ffffff;
+}
+
+.emotion-68 .uc-fe-table-row-expand-icon {
+  color: #526075;
+  border: 1px solid #d2d6ea;
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.emotion-68 .uc-fe-table-row-expand-icon-cell {
+  width: 20px;
+}
+
+.emotion-68 .uc-fe-table-row-expand-icon:hover {
+  color: #3357df;
+  border-color: #3357df;
+}
+
+.emotion-68 .uc-fe-table-expand-icon-th {
+  width: 20px;
+}
+
+.emotion-68 .uc-fe-table-row-expand-icon.uc-fe-table-row-collapsed:before {
+  content: '+';
+}
+
+.emotion-68 .uc-fe-table-row-expand-icon.uc-fe-table-row-expanded:before {
+  content: '-';
+}
+
+.emotion-68 .uc-fe-table-row-spaced {
+  visibility: hidden;
+}
+
+.emotion-68 .uc-fe-table-row-expanded,
+.emotion-68 .uc-fe-table-row-collapsed {
+  margin-right: 8px;
+}
+
+.emotion-68 .uc-fe-table-row-expand-icon-cell .uc-fe-table-row-expand-icon {
+  margin: 0;
+}
+
+.emotion-68 .uc-fe-table-fixed-header .uc-fe-table-header {
+  min-width: 100%;
+  overflow: scroll;
+  padding-bottom: 20px;
+  margin-bottom: -20px;
+}
+
+.emotion-68 .uc-fe-table-content {
+  position: relative;
+  width: 100%;
+  clear: both;
+}
+
+.emotion-68 .uc-fe-table-thead > tr > th {
+  position: relative;
+  vertical-align: middle;
+  border-bottom: 1px solid #c3cad9;
+  color: #526075;
+  padding: 12px;
+  line-height: 22px;
+  text-align: left;
+  font-weight: 400;
+}
+
+.emotion-68 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
+.emotion-68 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th {
+  border-color: transparent;
+  padding-left: 0;
+}
+
+.emotion-68 .uc-fe-table-thead > tr > th.uc-fe-table-placeholder-th {
+  padding: 0px;
+  font-size: 0px;
+}
+
+.emotion-68 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.emotion-68 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.emotion-68 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.emotion-68 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-68 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-68 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-68 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.emotion-68 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.emotion-68 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.emotion-68 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-68 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-68 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 100%;
+  top: 0;
+  pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.emotion-68 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.emotion-68 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.emotion-68 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.emotion-68 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-68 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-68 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.emotion-68 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.emotion-68 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.emotion-68 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.emotion-68 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-68 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-68 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
+}
+
+.emotion-68 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.emotion-68 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.emotion-68 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-68 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
+  box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
+}
+
+.emotion-68 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.emotion-68 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.emotion-68 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-68 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
+  box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
+}
+
+.emotion-68 .uc-fe-table-row,
+.emotion-68 .uc-fe-table-row>td,
+.emotion-68 .uc-fe-table-thead,
+.emotion-68 .uc-fe-table-thead>tr,
+.emotion-68 .uc-fe-table-thead>tr>th {
+  background: #ffffff;
+}
+
+.emotion-68 .uc-fe-table-row > td {
+  position: relative;
+  vertical-align: middle;
+  border-bottom: 1px solid #d2d6ea;
+  padding: 12px;
+  line-height: 22px;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+.emotion-68 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
+.emotion-68 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell {
+  border-color: transparent;
+  padding-left: 0;
+}
+
+.emotion-68 .uc-fe-table-row > td.uc-fe-table-placeholder-cell {
+  padding: 0;
+  font-size: 0;
+}
+
+.emotion-68 .uc-fe-table-row-level-1 > td,
+.emotion-68 .uc-fe-table-row-level-2 > td,
+.emotion-68 .uc-fe-table-row-level-3 > td,
+.emotion-68 .uc-fe-table-row-level-4 > td,
+.emotion-68 .uc-fe-table-row-level-5 > td {
+  background: #f6f6fb;
+}
+
+.emotion-68 .uc-fe-table-row-level-1 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-68 .uc-fe-table-row-level-2 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-68 .uc-fe-table-row-level-3 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-68 .uc-fe-table-row-level-4 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-68 .uc-fe-table-row-level-5 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-68 .uc-fe-table-row-level-1 > td.uc-fe-table-row-select-icon-cell,
+.emotion-68 .uc-fe-table-row-level-2 > td.uc-fe-table-row-select-icon-cell,
+.emotion-68 .uc-fe-table-row-level-3 > td.uc-fe-table-row-select-icon-cell,
+.emotion-68 .uc-fe-table-row-level-4 > td.uc-fe-table-row-select-icon-cell,
+.emotion-68 .uc-fe-table-row-level-5 > td.uc-fe-table-row-select-icon-cell {
+  background: #ffffff;
+}
+
+.emotion-68 .uc-fe-table-row-level-1 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.emotion-68 .uc-fe-table-row-level-2 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.emotion-68 .uc-fe-table-row-level-3 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.emotion-68 .uc-fe-table-row-level-4 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.emotion-68 .uc-fe-table-row-level-5 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced {
+  visibility: visible;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 1px;
+  height: 100%;
+  background: #d2d6ea;
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid #d2d6ea;
+  cursor: default;
+}
+
+.emotion-68 .uc-fe-table-custom-title {
+  margin-bottom: 16px;
+}
+
+.emotion-68 .uc-fe-table-tip-wrap {
+  border-bottom: 1px solid #d2d6ea;
+}
+
+.emotion-68 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td {
+  background: #eaeefd;
+}
+
+.emotion-68 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-expand-icon-cell,
+.emotion-68 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-select-icon-cell {
+  background: #ffffff;
+}
+
+.emotion-68 .uc-fe-table .uc-fe-table-hover-display-area {
+  display: inline;
+  visibility: hidden;
+}
+
+.emotion-68 .uc-fe-table table > tbody > .uc-fe-table-row:hover .uc-fe-table-hover-display-area {
+  visibility: visible;
+}
+
+.emotion-68 .uc-fe-table-row-indent.indent-level-0 {
+  display: none;
+}
+
+.emotion-48 {
+  position: relative;
+  z-index: 10;
+}
+
+.emotion-52 {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  color: #0a1633;
+}
+
+.emotion-50 {
+  vertical-align: baseline;
+}
+
+.emotion-55 {
+  vertical-align: baseline;
+  vertical-align: middle;
+  color: #0a1633;
+}
+
+.emotion-64 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+
+.emotion-66 {
+  width: 100%;
+  height: 60px;
+  background: #fafafc;
+  color: #0a1633;
+  cursor: pointer;
+  text-align: center;
+  line-height: 60px;
+}
+
+.emotion-66 .uc-fe-editable-table-btn {
+  fill: #0a1633;
+}
+
+.emotion-66:hover {
+  background: #eaeefd;
+}
+
+.emotion-66:hover .uc-fe-editable-table-btn {
+  fill: #3860f4;
+}
+
+.emotion-46 .uc-fe-form-item {
+  margin-bottom: 16px;
+}
+
+.emotion-46 .uc-fe-form-item:last-child {
+  margin-bottom: 0;
+}
+
+.emotion-9 {
+  position: relative;
+  display: block;
+  height: auto;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.emotion-9:before,
+.emotion-9:after {
+  content: ' ';
+  display: table;
+}
+
+.emotion-9:after {
+  clear: both;
+}
+
+.emotion-9 > .uc-fe-col {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.emotion-1 {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  min-height: 1px;
+  float: left;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 25%;
+  padding-top: 4px;
+  line-height: 20px;
+  word-break: break-all;
+}
+
+.emotion-6 {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  min-height: 1px;
+  float: left;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 75%;
+}
+
+.emotion-6 {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  min-height: 1px;
+  float: left;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 75%;
+}
+
+.emotion-3 {
+  position: relative;
+  border-radius: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  background: #ffffff;
+  height: 28px;
+  width: 78px;
+  padding: 4px;
+  border: 1px solid #d2d6ea;
+  border-width: 1px;
+}
+
+.emotion-3 .uc-fe-switch-dot {
+  position: absolute;
+  display: block;
+  right: 4px;
+  top: 50%;
+  margin-top: -2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.emotion-3 .uc-fe-switch-button {
+  position: absolute;
+  display: block;
+  left: -1px;
+  top: -2px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.emotion-3 .uc-fe-switch-tip-on,
+.emotion-3 .uc-fe-switch-tip-off {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  display: block;
+}
+
+.emotion-3 .uc-fe-switch-inner {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.emotion-3:hover {
+  border-color: #3357df;
+}
+
+.emotion-3:hover .uc-fe-switch-button {
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
+.emotion-3 .uc-fe-switch-button {
+  background: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
+  width: 20px;
+  height: 20px;
+}
+
+.emotion-3 .uc-fe-switch-dot {
+  background: #f44336;
+}
+
+.emotion-3 .uc-fe-switch-inner {
+  color: #526075;
+  border: 1px solid #d2d6ea;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #f6f6fb;
+}
+
+.emotion-3 .uc-fe-switch-tip-on,
+.emotion-3 .uc-fe-switch-tip-off {
+  line-height: 16px;
+}
+
+.emotion-3 .uc-fe-switch-tip-on {
+  padding-right: 20px;
+}
+
+.emotion-3 .uc-fe-switch-tip-off {
+  padding-left: 20px;
+}
+
+.emotion-3 .uc-fe-switch-inner {
+  color: #15ad31;
+  border-color: #9effa5;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #e6ffed;
+}
+
+.emotion-3 .uc-fe-switch-button {
+  left: 100%;
+  margin-left: -19px;
+}
+
+.emotion-3 .uc-fe-switch-dot {
+  background: #15ad31;
+}
+
+.emotion-3 .uc-fe-switch-tip-off {
+  display: none;
+}
+
+.emotion-16 {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box;
+  font-size: 12px;
+  border-radius: 2px;
+  height: 28px;
+  color: #526075;
+  border: 1px solid #d2d6ea;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #fafafc;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+}
+
+.emotion-16.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-16 input {
+  vertical-align: middle;
+  display: table-cell;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0px 8px;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+}
+
+.emotion-16 input,
+.emotion-16 input:hover,
+.emotion-16 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-16:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #fafafc;
+}
+
+.emotion-16 input {
+  line-height: 26px;
+  height: 26px;
+}
+
+.emotion-16 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-16 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-16 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-16 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-14 {
+  display: table;
+  width: 100%;
+}
+
+.emotion-38 {
+  position: relative;
+  border-radius: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  background: #ffffff;
+  height: 28px;
+  width: 78px;
+  padding: 4px;
+  border: 1px solid #d2d6ea;
+  border-width: 1px;
+}
+
+.emotion-38 .uc-fe-switch-dot {
+  position: absolute;
+  display: block;
+  right: 4px;
+  top: 50%;
+  margin-top: -2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.emotion-38 .uc-fe-switch-button {
+  position: absolute;
+  display: block;
+  left: -1px;
+  top: -2px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.emotion-38 .uc-fe-switch-tip-on,
+.emotion-38 .uc-fe-switch-tip-off {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  display: block;
+}
+
+.emotion-38 .uc-fe-switch-inner {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.emotion-38:hover {
+  border-color: #3357df;
+}
+
+.emotion-38:hover .uc-fe-switch-button {
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
+.emotion-38 .uc-fe-switch-button {
+  background: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
+  width: 20px;
+  height: 20px;
+}
+
+.emotion-38 .uc-fe-switch-dot {
+  background: #f44336;
+}
+
+.emotion-38 .uc-fe-switch-inner {
+  color: #526075;
+  border: 1px solid #d2d6ea;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #f6f6fb;
+}
+
+.emotion-38 .uc-fe-switch-tip-on,
+.emotion-38 .uc-fe-switch-tip-off {
+  line-height: 16px;
+}
+
+.emotion-38 .uc-fe-switch-tip-on {
+  padding-right: 20px;
+}
+
+.emotion-38 .uc-fe-switch-tip-off {
+  padding-left: 20px;
+}
+
+.emotion-38 .uc-fe-switch-tip-on {
+  display: none;
+}
+
+<div>
+  <form
+    class="uc-fe-form demo-form emotion-46 emotion-47"
+  >
+    <div
+      class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10"
+    >
+      <div
+        class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
+        span="3"
+      >
+        addition
+      </div>
+      <div
+        class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
+        span="9"
+      >
+        <div
+          checked=""
+          class=" emotion-3 emotion-4"
+        >
+          <div
+            class="uc-fe-switch-inner"
+          >
+            <span
+              class="uc-fe-switch-tip-on"
+            >
+              ON
+            </span>
+            <span
+              class="uc-fe-switch-tip-off"
+            >
+              OFF
+            </span>
+            <span
+              class="uc-fe-switch-button"
+            >
+              <span
+                class="uc-fe-switch-dot"
+              />
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10"
+    >
+      <div
+        class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
+        span="3"
+      >
+        addition.tip
+      </div>
+      <div
+        class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
+        span="9"
+      >
+        <span
+          class="uc-fe-input emotion-16 emotion-17"
+        >
+          <span
+            class="emotion-14 emotion-15"
+          >
+            <input
+              type="input"
+              value=""
+            />
+          </span>
+        </span>
+      </div>
+    </div>
+    <div
+      class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10"
+    >
+      <div
+        class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
+        span="3"
+      >
+        rowDeletion
+      </div>
+      <div
+        class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
+        span="9"
+      >
+        <div
+          checked=""
+          class=" emotion-3 emotion-4"
+        >
+          <div
+            class="uc-fe-switch-inner"
+          >
+            <span
+              class="uc-fe-switch-tip-on"
+            >
+              ON
+            </span>
+            <span
+              class="uc-fe-switch-tip-off"
+            >
+              OFF
+            </span>
+            <span
+              class="uc-fe-switch-button"
+            >
+              <span
+                class="uc-fe-switch-dot"
+              />
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10"
+    >
+      <div
+        class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
+        span="3"
+      >
+        rowDeletion.getDisabledOfRow
+      </div>
+      <div
+        class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
+        span="9"
+      >
+        <div
+          class=" emotion-38 emotion-4"
+        >
+          <div
+            class="uc-fe-switch-inner"
+          >
+            <span
+              class="uc-fe-switch-tip-on"
+            >
+              ON
+            </span>
+            <span
+              class="uc-fe-switch-tip-off"
+            >
+              OFF
+            </span>
+            <span
+              class="uc-fe-switch-button"
+            >
+              <span
+                class="uc-fe-switch-dot"
+              />
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <div
+    class="demo-wrap"
+  >
+    <div
+      class="uc-fe-table-wrapper emotion-68 emotion-69"
+    >
+      <div
+        class="emotion-48 emotion-49"
+      />
+      <div
+        class="uc-fe-table"
+      >
+        <div
+          class="uc-fe-table-title"
+        />
+        <div
+          class="uc-fe-table-content"
+        >
+          <div
+            class="uc-fe-table-body"
+          >
+            <table
+              class=""
+            >
+              <colgroup>
+                <col
+                  style="width:100px;min-width:100px"
+                />
+                <col />
+                <col
+                  style="width:40px;min-width:40px"
+                />
+              </colgroup>
+              <thead
+                class="uc-fe-table-thead"
+              >
+                <tr>
+                  <th
+                    class=""
+                  >
+                    <div>
+                      name
+                      <div
+                        class="uc-fe-table-filter emotion-52 emotion-53"
+                      >
+                        <div>
+                          <i
+                            class="uc-fe-icon icon__filter emotion-50 emotion-51"
+                          />
+                        </div>
+                      </div>
+                      <i
+                        class="uc-fe-icon icon__sort  emotion-54 emotion-55 emotion-51"
+                      />
+                    </div>
+                  </th>
+                  <th
+                    class=""
+                  >
+                    <div>
+                      desc
+                      <div
+                        class="uc-fe-table-filter emotion-52 emotion-53"
+                      >
+                        <div>
+                          <i
+                            class="uc-fe-icon icon__filter emotion-50 emotion-51"
+                          />
+                        </div>
+                      </div>
+                      <i
+                        class="uc-fe-icon icon__sort  emotion-54 emotion-55 emotion-51"
+                      />
+                    </div>
+                  </th>
+                  <th
+                    class=""
+                  >
+                    <div />
+                  </th>
+                </tr>
+              </thead>
+              <tbody
+                class="uc-fe-table-tbody"
+              />
+            </table>
+          </div>
+          <div
+            class="uc-fe-table-placeholder"
+          />
+          <div
+            class="uc-fe-table-footer"
+          >
+            <div />
+          </div>
+        </div>
+      </div>
+      <div
+        class=" emotion-66 emotion-67"
+      >
+        <svg
+          class="uc-fe-editable-table-btn emotion-64 emotion-65"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`EditableTable demo -- rowDeletion 1`] = `
+.emotion-20 {
+  padding: 0px;
+  color: #0a1633;
+  border-radius: 2px;
+  background: #ffffff;
+  font-size: 12px;
+}
+
+.emotion-20:before,
+.emotion-20:after {
+  content: ' ';
+  display: table;
+}
+
+.emotion-20:after {
+  clear: both;
+}
+
+.emotion-20 .uc-fe-table-pagination {
+  float: right;
+  margin-top: 8px;
+}
+
+.emotion-20 .uc-fe-table-filter {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.emotion-20 .uc-fe-table table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  min-width: 100%;
+}
+
+.emotion-20 .uc-fe-table-filter-notice,
+.emotion-20 .uc-fe-table-empty-content-wrap,
+.emotion-20 .uc-fe-table-error-content-wrap {
+  max-width: 400px;
+  margin: 12px auto;
+  text-align: center;
+}
+
+.emotion-20 .uc-fe-table-empty-content-wrap,
+.emotion-20 .uc-fe-table-error-content-wrap {
+  margin: 40px auto;
+}
+
+.emotion-20 .uc-fe-table-reset-link {
+  color: #3860f4;
+  cursor: pointer;
+}
+
+.emotion-20 .uc-fe-table-fixed,
+.emotion-20 .uc-fe-table-body {
+  background: #ffffff;
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon {
+  color: #526075;
+  border: 1px solid #d2d6ea;
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon-cell {
+  width: 20px;
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon:hover {
+  color: #3357df;
+  border-color: #3357df;
+}
+
+.emotion-20 .uc-fe-table-expand-icon-th {
+  width: 20px;
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon.uc-fe-table-row-collapsed:before {
+  content: '+';
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon.uc-fe-table-row-expanded:before {
+  content: '-';
+}
+
+.emotion-20 .uc-fe-table-row-spaced {
+  visibility: hidden;
+}
+
+.emotion-20 .uc-fe-table-row-expanded,
+.emotion-20 .uc-fe-table-row-collapsed {
+  margin-right: 8px;
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon-cell .uc-fe-table-row-expand-icon {
+  margin: 0;
+}
+
+.emotion-20 .uc-fe-table-fixed-header .uc-fe-table-header {
+  min-width: 100%;
+  overflow: scroll;
+  padding-bottom: 20px;
+  margin-bottom: -20px;
+}
+
+.emotion-20 .uc-fe-table-content {
+  position: relative;
+  width: 100%;
+  clear: both;
+}
+
+.emotion-20 .uc-fe-table-thead > tr > th {
+  position: relative;
+  vertical-align: middle;
+  border-bottom: 1px solid #c3cad9;
+  color: #526075;
+  padding: 12px;
+  line-height: 22px;
+  text-align: left;
+  font-weight: 400;
+}
+
+.emotion-20 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
+.emotion-20 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th {
+  border-color: transparent;
+  padding-left: 0;
+}
+
+.emotion-20 .uc-fe-table-thead > tr > th.uc-fe-table-placeholder-th {
+  padding: 0px;
+  font-size: 0px;
+}
+
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 100%;
+  top: 0;
+  pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
+}
+
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
+  box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
+}
+
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
+  box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
+}
+
+.emotion-20 .uc-fe-table-row,
+.emotion-20 .uc-fe-table-row>td,
+.emotion-20 .uc-fe-table-thead,
+.emotion-20 .uc-fe-table-thead>tr,
+.emotion-20 .uc-fe-table-thead>tr>th {
+  background: #ffffff;
+}
+
+.emotion-20 .uc-fe-table-row > td {
+  position: relative;
+  vertical-align: middle;
+  border-bottom: 1px solid #d2d6ea;
+  padding: 12px;
+  line-height: 22px;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+.emotion-20 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell {
+  border-color: transparent;
+  padding-left: 0;
+}
+
+.emotion-20 .uc-fe-table-row > td.uc-fe-table-placeholder-cell {
+  padding: 0;
+  font-size: 0;
+}
+
+.emotion-20 .uc-fe-table-row-level-1 > td,
+.emotion-20 .uc-fe-table-row-level-2 > td,
+.emotion-20 .uc-fe-table-row-level-3 > td,
+.emotion-20 .uc-fe-table-row-level-4 > td,
+.emotion-20 .uc-fe-table-row-level-5 > td {
+  background: #f6f6fb;
+}
+
+.emotion-20 .uc-fe-table-row-level-1 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row-level-2 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row-level-3 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row-level-4 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row-level-5 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row-level-1 > td.uc-fe-table-row-select-icon-cell,
+.emotion-20 .uc-fe-table-row-level-2 > td.uc-fe-table-row-select-icon-cell,
+.emotion-20 .uc-fe-table-row-level-3 > td.uc-fe-table-row-select-icon-cell,
+.emotion-20 .uc-fe-table-row-level-4 > td.uc-fe-table-row-select-icon-cell,
+.emotion-20 .uc-fe-table-row-level-5 > td.uc-fe-table-row-select-icon-cell {
+  background: #ffffff;
+}
+
+.emotion-20 .uc-fe-table-row-level-1 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.emotion-20 .uc-fe-table-row-level-2 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.emotion-20 .uc-fe-table-row-level-3 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.emotion-20 .uc-fe-table-row-level-4 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.emotion-20 .uc-fe-table-row-level-5 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced {
+  visibility: visible;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 1px;
+  height: 100%;
+  background: #d2d6ea;
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid #d2d6ea;
+  cursor: default;
+}
+
+.emotion-20 .uc-fe-table-custom-title {
+  margin-bottom: 16px;
+}
+
+.emotion-20 .uc-fe-table-tip-wrap {
+  border-bottom: 1px solid #d2d6ea;
+}
+
+.emotion-20 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td {
+  background: #eaeefd;
+}
+
+.emotion-20 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-select-icon-cell {
+  background: #ffffff;
+}
+
+.emotion-20 .uc-fe-table .uc-fe-table-hover-display-area {
+  display: inline;
+  visibility: hidden;
+}
+
+.emotion-20 .uc-fe-table table > tbody > .uc-fe-table-row:hover .uc-fe-table-hover-display-area {
+  visibility: visible;
+}
+
+.emotion-20 .uc-fe-table-row-indent.indent-level-0 {
+  display: none;
+}
+
+.emotion-0 {
+  position: relative;
+  z-index: 10;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  color: #0a1633;
+}
+
+.emotion-2 {
+  vertical-align: baseline;
+}
+
+.emotion-7 {
+  vertical-align: baseline;
+  vertical-align: middle;
+  color: #0a1633;
+}
+
+.emotion-16 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+
+.emotion-18 {
+  width: 100%;
+  height: 60px;
+  background: #fafafc;
+  color: #0a1633;
+  cursor: pointer;
+  text-align: center;
+  line-height: 60px;
+}
+
+.emotion-18 .uc-fe-editable-table-btn {
+  fill: #0a1633;
+}
+
+.emotion-18:hover {
+  background: #eaeefd;
+}
+
+.emotion-18:hover .uc-fe-editable-table-btn {
+  fill: #3860f4;
+}
+
+.emotion-39 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  fill: #526075;
+}
+
+.emotion-39:hover {
+  fill: #3860f4;
+}
+
+.emotion-20 {
+  padding: 0px;
+  color: #0a1633;
+  border-radius: 2px;
+  background: #ffffff;
+  font-size: 12px;
+}
+
+.emotion-20:before,
+.emotion-20:after {
+  content: ' ';
+  display: table;
+}
+
+.emotion-20:after {
+  clear: both;
+}
+
+.emotion-20 .uc-fe-table-pagination {
+  float: right;
+  margin-top: 8px;
+}
+
+.emotion-20 .uc-fe-table-filter {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.emotion-20 .uc-fe-table table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  min-width: 100%;
+}
+
+.emotion-20 .uc-fe-table-filter-notice,
+.emotion-20 .uc-fe-table-empty-content-wrap,
+.emotion-20 .uc-fe-table-error-content-wrap {
+  max-width: 400px;
+  margin: 12px auto;
+  text-align: center;
+}
+
+.emotion-20 .uc-fe-table-empty-content-wrap,
+.emotion-20 .uc-fe-table-error-content-wrap {
+  margin: 40px auto;
+}
+
+.emotion-20 .uc-fe-table-reset-link {
+  color: #3860f4;
+  cursor: pointer;
+}
+
+.emotion-20 .uc-fe-table-fixed,
+.emotion-20 .uc-fe-table-body {
+  background: #ffffff;
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon {
+  color: #526075;
+  border: 1px solid #d2d6ea;
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon-cell {
+  width: 20px;
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon:hover {
+  color: #3357df;
+  border-color: #3357df;
+}
+
+.emotion-20 .uc-fe-table-expand-icon-th {
+  width: 20px;
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon.uc-fe-table-row-collapsed:before {
+  content: '+';
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon.uc-fe-table-row-expanded:before {
+  content: '-';
+}
+
+.emotion-20 .uc-fe-table-row-spaced {
+  visibility: hidden;
+}
+
+.emotion-20 .uc-fe-table-row-expanded,
+.emotion-20 .uc-fe-table-row-collapsed {
+  margin-right: 8px;
+}
+
+.emotion-20 .uc-fe-table-row-expand-icon-cell .uc-fe-table-row-expand-icon {
+  margin: 0;
+}
+
+.emotion-20 .uc-fe-table-fixed-header .uc-fe-table-header {
+  min-width: 100%;
+  overflow: scroll;
+  padding-bottom: 20px;
+  margin-bottom: -20px;
+}
+
+.emotion-20 .uc-fe-table-content {
+  position: relative;
+  width: 100%;
+  clear: both;
+}
+
+.emotion-20 .uc-fe-table-thead > tr > th {
+  position: relative;
+  vertical-align: middle;
+  border-bottom: 1px solid #c3cad9;
+  color: #526075;
+  padding: 12px;
+  line-height: 22px;
+  text-align: left;
+  font-weight: 400;
+}
+
+.emotion-20 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
+.emotion-20 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th {
+  border-color: transparent;
+  padding-left: 0;
+}
+
+.emotion-20 .uc-fe-table-thead > tr > th.uc-fe-table-placeholder-th {
+  padding: 0px;
+  font-size: 0px;
+}
+
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 100%;
+  top: 0;
+  pointer-events: none;
+  -webkit-transition: box-shadow .3s;
+  transition: box-shadow .3s;
+}
+
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-left-latest::after {
+  right: -30px;
+}
+
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after {
+  left: -30px;
+}
+
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-right .uc-fe-table-row-cell-fixed-left-latest::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-left-latest::after {
+  box-shadow: inset 5px 0 6px -6px rgba(0,0,0,0.12),inset 18px 0 18px -18px rgba(0,0,0,0.12);
+}
+
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-th-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-left .uc-fe-table-row-cell-fixed-right-first::after,
+.emotion-20 .uc-fe-table-scroll-position-middle .uc-fe-table-row-cell-fixed-right-first::after {
+  box-shadow: inset -5px 0 6px -6px rgba(0,0,0,0.12),inset -18px 0 18px -18px rgba(0,0,0,0.12);
+}
+
+.emotion-20 .uc-fe-table-row,
+.emotion-20 .uc-fe-table-row>td,
+.emotion-20 .uc-fe-table-thead,
+.emotion-20 .uc-fe-table-thead>tr,
+.emotion-20 .uc-fe-table-thead>tr>th {
+  background: #ffffff;
+}
+
+.emotion-20 .uc-fe-table-row > td {
+  position: relative;
+  vertical-align: middle;
+  border-bottom: 1px solid #d2d6ea;
+  padding: 12px;
+  line-height: 22px;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+.emotion-20 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell {
+  border-color: transparent;
+  padding-left: 0;
+}
+
+.emotion-20 .uc-fe-table-row > td.uc-fe-table-placeholder-cell {
+  padding: 0;
+  font-size: 0;
+}
+
+.emotion-20 .uc-fe-table-row-level-1 > td,
+.emotion-20 .uc-fe-table-row-level-2 > td,
+.emotion-20 .uc-fe-table-row-level-3 > td,
+.emotion-20 .uc-fe-table-row-level-4 > td,
+.emotion-20 .uc-fe-table-row-level-5 > td {
+  background: #f6f6fb;
+}
+
+.emotion-20 .uc-fe-table-row-level-1 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row-level-2 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row-level-3 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row-level-4 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row-level-5 > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table-row-level-1 > td.uc-fe-table-row-select-icon-cell,
+.emotion-20 .uc-fe-table-row-level-2 > td.uc-fe-table-row-select-icon-cell,
+.emotion-20 .uc-fe-table-row-level-3 > td.uc-fe-table-row-select-icon-cell,
+.emotion-20 .uc-fe-table-row-level-4 > td.uc-fe-table-row-select-icon-cell,
+.emotion-20 .uc-fe-table-row-level-5 > td.uc-fe-table-row-select-icon-cell {
+  background: #ffffff;
+}
+
+.emotion-20 .uc-fe-table-row-level-1 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.emotion-20 .uc-fe-table-row-level-2 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.emotion-20 .uc-fe-table-row-level-3 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.emotion-20 .uc-fe-table-row-level-4 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced,
+.emotion-20 .uc-fe-table-row-level-5 > td.uc-fe-table-row-expand-icon-cell .uc-fe-table-row-spaced {
+  visibility: visible;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 1px;
+  height: 100%;
+  background: #d2d6ea;
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid #d2d6ea;
+  cursor: default;
+}
+
+.emotion-20 .uc-fe-table-custom-title {
+  margin-bottom: 16px;
+}
+
+.emotion-20 .uc-fe-table-tip-wrap {
+  border-bottom: 1px solid #d2d6ea;
+}
+
+.emotion-20 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td {
+  background: #eaeefd;
+}
+
+.emotion-20 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-expand-icon-cell,
+.emotion-20 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-select-icon-cell {
+  background: #ffffff;
+}
+
+.emotion-20 .uc-fe-table .uc-fe-table-hover-display-area {
+  display: inline;
+  visibility: hidden;
+}
+
+.emotion-20 .uc-fe-table table > tbody > .uc-fe-table-row:hover .uc-fe-table-hover-display-area {
+  visibility: visible;
+}
+
+.emotion-20 .uc-fe-table-row-indent.indent-level-0 {
+  display: none;
+}
+
+.emotion-0 {
+  position: relative;
+  z-index: 10;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  color: #0a1633;
+}
+
+.emotion-2 {
+  vertical-align: baseline;
+}
+
+.emotion-7 {
+  vertical-align: baseline;
+  vertical-align: middle;
+  color: #0a1633;
+}
+
+.emotion-16 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+
+.emotion-18 {
+  width: 100%;
+  height: 60px;
+  background: #fafafc;
+  color: #0a1633;
+  cursor: pointer;
+  text-align: center;
+  line-height: 60px;
+}
+
+.emotion-18 .uc-fe-editable-table-btn {
+  fill: #0a1633;
+}
+
+.emotion-18:hover {
+  background: #eaeefd;
+}
+
+.emotion-18:hover .uc-fe-editable-table-btn {
+  fill: #3860f4;
+}
+
+.emotion-39 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  fill: #526075;
+}
+
+.emotion-39:hover {
+  fill: #3860f4;
+}
+
+<div>
+  <div>
+    <h2>
+      false
+    </h2>
+    <div
+      class="demo-wrap"
+    >
+      <div
+        class="uc-fe-table-wrapper emotion-20 emotion-21"
+      >
+        <div
+          class="emotion-0 emotion-1"
+        />
+        <div
+          class="uc-fe-table"
+        >
+          <div
+            class="uc-fe-table-title"
+          />
+          <div
+            class="uc-fe-table-content"
+          >
+            <div
+              class="uc-fe-table-body"
+            >
+              <table
+                class=""
+              >
+                <colgroup>
+                  <col
+                    style="width:100px;min-width:100px"
+                  />
+                  <col />
+                </colgroup>
+                <thead
+                  class="uc-fe-table-thead"
+                >
+                  <tr>
+                    <th
+                      class=""
+                    >
+                      <div>
+                        name
+                        <div
+                          class="uc-fe-table-filter emotion-4 emotion-5"
+                        >
+                          <div>
+                            <i
+                              class="uc-fe-icon icon__filter emotion-2 emotion-3"
+                            />
+                          </div>
+                        </div>
+                        <i
+                          class="uc-fe-icon icon__sort  emotion-6 emotion-7 emotion-3"
+                        />
+                      </div>
+                    </th>
+                    <th
+                      class=""
+                    >
+                      <div>
+                        desc
+                        <div
+                          class="uc-fe-table-filter emotion-4 emotion-5"
+                        >
+                          <div>
+                            <i
+                              class="uc-fe-icon icon__filter emotion-2 emotion-3"
+                            />
+                          </div>
+                        </div>
+                        <i
+                          class="uc-fe-icon icon__sort  emotion-6 emotion-7 emotion-3"
+                        />
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody
+                  class="uc-fe-table-tbody"
+                >
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="0"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px"
+                      />
+                      name-0
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-0
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="1"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px"
+                      />
+                      name-1
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-1
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="2"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px"
+                      />
+                      name-2
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-2
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="3"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px"
+                      />
+                      name-3
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-3
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="4"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px"
+                      />
+                      name-4
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-4
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="5"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px"
+                      />
+                      name-5
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-5
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="6"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px"
+                      />
+                      name-6
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-6
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="7"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px"
+                      />
+                      name-7
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-7
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="8"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px"
+                      />
+                      name-8
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-8
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="9"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px"
+                      />
+                      name-9
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-9
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div
+              class="uc-fe-table-footer"
+            >
+              <div />
+            </div>
+          </div>
+        </div>
+        <div
+          class=" emotion-18 emotion-19"
+        >
+          <svg
+            class="uc-fe-editable-table-btn emotion-16 emotion-17"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2>
+      onDelete
+    </h2>
+    <div
+      class="demo-wrap"
+    >
+      <div
+        class="uc-fe-table-wrapper emotion-20 emotion-21"
+      >
+        <div
+          class="emotion-0 emotion-1"
+        />
+        <div
+          class="uc-fe-table"
+        >
+          <div
+            class="uc-fe-table-title"
+          />
+          <div
+            class="uc-fe-table-content"
+          >
+            <div
+              class="uc-fe-table-body"
+            >
+              <table
+                class=""
+              >
+                <colgroup>
+                  <col
+                    style="width:100px;min-width:100px"
+                  />
+                  <col />
+                  <col
+                    style="width:40px;min-width:40px"
+                  />
+                </colgroup>
+                <thead
+                  class="uc-fe-table-thead"
+                >
+                  <tr>
+                    <th
+                      class=""
+                    >
+                      <div>
+                        name
+                        <div
+                          class="uc-fe-table-filter emotion-4 emotion-5"
+                        >
+                          <div>
+                            <i
+                              class="uc-fe-icon icon__filter emotion-2 emotion-3"
+                            />
+                          </div>
+                        </div>
+                        <i
+                          class="uc-fe-icon icon__sort  emotion-6 emotion-7 emotion-3"
+                        />
+                      </div>
+                    </th>
+                    <th
+                      class=""
+                    >
+                      <div>
+                        desc
+                        <div
+                          class="uc-fe-table-filter emotion-4 emotion-5"
+                        >
+                          <div>
+                            <i
+                              class="uc-fe-icon icon__filter emotion-2 emotion-3"
+                            />
+                          </div>
+                        </div>
+                        <i
+                          class="uc-fe-icon icon__sort  emotion-6 emotion-7 emotion-3"
+                        />
+                      </div>
+                    </th>
+                    <th
+                      class=""
+                    >
+                      <div />
+                    </th>
+                  </tr>
+                </thead>
+                <tbody
+                  class="uc-fe-table-tbody"
+                >
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="10"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px"
+                      />
+                      name-10
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-10
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <svg
+                        class=" emotion-38 emotion-39 emotion-17"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.07 4.93a1 1 0 010 1.41L13.41 12l5.66 5.66a1 1 0 11-1.41 1.41L12 13.41l-5.66 5.66a1 1 0 11-1.41-1.41L10.59 12 4.93 6.34a1 1 0 011.41-1.41L12 10.59l5.66-5.66a1 1 0 011.41 0z"
+                        />
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="11"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px"
+                      />
+                      name-11
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-11
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <svg
+                        class=" emotion-38 emotion-39 emotion-17"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.07 4.93a1 1 0 010 1.41L13.41 12l5.66 5.66a1 1 0 11-1.41 1.41L12 13.41l-5.66 5.66a1 1 0 11-1.41-1.41L10.59 12 4.93 6.34a1 1 0 011.41-1.41L12 10.59l5.66-5.66a1 1 0 011.41 0z"
+                        />
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="12"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px"
+                      />
+                      name-12
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-12
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <svg
+                        class=" emotion-38 emotion-39 emotion-17"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.07 4.93a1 1 0 010 1.41L13.41 12l5.66 5.66a1 1 0 11-1.41 1.41L12 13.41l-5.66 5.66a1 1 0 11-1.41-1.41L10.59 12 4.93 6.34a1 1 0 011.41-1.41L12 10.59l5.66-5.66a1 1 0 011.41 0z"
+                        />
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="13"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px"
+                      />
+                      name-13
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-13
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <svg
+                        class=" emotion-38 emotion-39 emotion-17"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.07 4.93a1 1 0 010 1.41L13.41 12l5.66 5.66a1 1 0 11-1.41 1.41L12 13.41l-5.66 5.66a1 1 0 11-1.41-1.41L10.59 12 4.93 6.34a1 1 0 011.41-1.41L12 10.59l5.66-5.66a1 1 0 011.41 0z"
+                        />
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="14"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px"
+                      />
+                      name-14
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-14
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <svg
+                        class=" emotion-38 emotion-39 emotion-17"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.07 4.93a1 1 0 010 1.41L13.41 12l5.66 5.66a1 1 0 11-1.41 1.41L12 13.41l-5.66 5.66a1 1 0 11-1.41-1.41L10.59 12 4.93 6.34a1 1 0 011.41-1.41L12 10.59l5.66-5.66a1 1 0 011.41 0z"
+                        />
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="15"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px"
+                      />
+                      name-15
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-15
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <svg
+                        class=" emotion-38 emotion-39 emotion-17"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.07 4.93a1 1 0 010 1.41L13.41 12l5.66 5.66a1 1 0 11-1.41 1.41L12 13.41l-5.66 5.66a1 1 0 11-1.41-1.41L10.59 12 4.93 6.34a1 1 0 011.41-1.41L12 10.59l5.66-5.66a1 1 0 011.41 0z"
+                        />
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="16"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px"
+                      />
+                      name-16
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-16
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <svg
+                        class=" emotion-38 emotion-39 emotion-17"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.07 4.93a1 1 0 010 1.41L13.41 12l5.66 5.66a1 1 0 11-1.41 1.41L12 13.41l-5.66 5.66a1 1 0 11-1.41-1.41L10.59 12 4.93 6.34a1 1 0 011.41-1.41L12 10.59l5.66-5.66a1 1 0 011.41 0z"
+                        />
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="17"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px"
+                      />
+                      name-17
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-17
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <svg
+                        class=" emotion-38 emotion-39 emotion-17"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.07 4.93a1 1 0 010 1.41L13.41 12l5.66 5.66a1 1 0 11-1.41 1.41L12 13.41l-5.66 5.66a1 1 0 11-1.41-1.41L10.59 12 4.93 6.34a1 1 0 011.41-1.41L12 10.59l5.66-5.66a1 1 0 011.41 0z"
+                        />
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="18"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px"
+                      />
+                      name-18
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-18
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <svg
+                        class=" emotion-38 emotion-39 emotion-17"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.07 4.93a1 1 0 010 1.41L13.41 12l5.66 5.66a1 1 0 11-1.41 1.41L12 13.41l-5.66 5.66a1 1 0 11-1.41-1.41L10.59 12 4.93 6.34a1 1 0 011.41-1.41L12 10.59l5.66-5.66a1 1 0 011.41 0z"
+                        />
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="19"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px"
+                      />
+                      name-19
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-19
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <svg
+                        class=" emotion-38 emotion-39 emotion-17"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.07 4.93a1 1 0 010 1.41L13.41 12l5.66 5.66a1 1 0 11-1.41 1.41L12 13.41l-5.66 5.66a1 1 0 11-1.41-1.41L10.59 12 4.93 6.34a1 1 0 011.41-1.41L12 10.59l5.66-5.66a1 1 0 011.41 0z"
+                        />
+                      </svg>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div
+              class="uc-fe-table-footer"
+            >
+              <div />
+            </div>
+          </div>
+        </div>
+        <div
+          class=" emotion-18 emotion-19"
+        >
+          <svg
+            class="uc-fe-editable-table-btn emotion-16 emotion-17"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <h2>
+      getDisabledOfRow
+    </h2>
+    <div
+      class="demo-wrap"
+    >
+      <div
+        class="uc-fe-table-wrapper emotion-20 emotion-21"
+      >
+        <div
+          class="emotion-0 emotion-1"
+        />
+        <div
+          class="uc-fe-table"
+        >
+          <div
+            class="uc-fe-table-title"
+          />
+          <div
+            class="uc-fe-table-content"
+          >
+            <div
+              class="uc-fe-table-body"
+            >
+              <table
+                class=""
+              >
+                <colgroup>
+                  <col
+                    style="width:100px;min-width:100px"
+                  />
+                  <col />
+                  <col
+                    style="width:40px;min-width:40px"
+                  />
+                </colgroup>
+                <thead
+                  class="uc-fe-table-thead"
+                >
+                  <tr>
+                    <th
+                      class=""
+                    >
+                      <div>
+                        name
+                        <div
+                          class="uc-fe-table-filter emotion-4 emotion-5"
+                        >
+                          <div>
+                            <i
+                              class="uc-fe-icon icon__filter emotion-2 emotion-3"
+                            />
+                          </div>
+                        </div>
+                        <i
+                          class="uc-fe-icon icon__sort  emotion-6 emotion-7 emotion-3"
+                        />
+                      </div>
+                    </th>
+                    <th
+                      class=""
+                    >
+                      <div>
+                        desc
+                        <div
+                          class="uc-fe-table-filter emotion-4 emotion-5"
+                        >
+                          <div>
+                            <i
+                              class="uc-fe-icon icon__filter emotion-2 emotion-3"
+                            />
+                          </div>
+                        </div>
+                        <i
+                          class="uc-fe-icon icon__sort  emotion-6 emotion-7 emotion-3"
+                        />
+                      </div>
+                    </th>
+                    <th
+                      class=""
+                    >
+                      <div />
+                    </th>
+                  </tr>
+                </thead>
+                <tbody
+                  class="uc-fe-table-tbody"
+                >
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="20"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px"
+                      />
+                      name-20
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-20
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <svg
+                        class=" emotion-38 emotion-39 emotion-17"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.07 4.93a1 1 0 010 1.41L13.41 12l5.66 5.66a1 1 0 11-1.41 1.41L12 13.41l-5.66 5.66a1 1 0 11-1.41-1.41L10.59 12 4.93 6.34a1 1 0 011.41-1.41L12 10.59l5.66-5.66a1 1 0 011.41 0z"
+                        />
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="21"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px"
+                      />
+                      name-21
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-21
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <svg
+                        class=" emotion-38 emotion-39 emotion-17"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.07 4.93a1 1 0 010 1.41L13.41 12l5.66 5.66a1 1 0 11-1.41 1.41L12 13.41l-5.66 5.66a1 1 0 11-1.41-1.41L10.59 12 4.93 6.34a1 1 0 011.41-1.41L12 10.59l5.66-5.66a1 1 0 011.41 0z"
+                        />
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="22"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px"
+                      />
+                      name-22
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-22
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <svg
+                        class=" emotion-38 emotion-39 emotion-17"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.07 4.93a1 1 0 010 1.41L13.41 12l5.66 5.66a1 1 0 11-1.41 1.41L12 13.41l-5.66 5.66a1 1 0 11-1.41-1.41L10.59 12 4.93 6.34a1 1 0 011.41-1.41L12 10.59l5.66-5.66a1 1 0 011.41 0z"
+                        />
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="23"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px"
+                      />
+                      name-23
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-23
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <svg
+                        class=" emotion-38 emotion-39 emotion-17"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.07 4.93a1 1 0 010 1.41L13.41 12l5.66 5.66a1 1 0 11-1.41 1.41L12 13.41l-5.66 5.66a1 1 0 11-1.41-1.41L10.59 12 4.93 6.34a1 1 0 011.41-1.41L12 10.59l5.66-5.66a1 1 0 011.41 0z"
+                        />
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="24"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px"
+                      />
+                      name-24
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-24
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <svg
+                        class=" emotion-38 emotion-39 emotion-17"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.07 4.93a1 1 0 010 1.41L13.41 12l5.66 5.66a1 1 0 11-1.41 1.41L12 13.41l-5.66 5.66a1 1 0 11-1.41-1.41L10.59 12 4.93 6.34a1 1 0 011.41-1.41L12 10.59l5.66-5.66a1 1 0 011.41 0z"
+                        />
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="25"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px"
+                      />
+                      name-25
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-25
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <svg
+                        class=" emotion-38 emotion-39 emotion-17"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.07 4.93a1 1 0 010 1.41L13.41 12l5.66 5.66a1 1 0 11-1.41 1.41L12 13.41l-5.66 5.66a1 1 0 11-1.41-1.41L10.59 12 4.93 6.34a1 1 0 011.41-1.41L12 10.59l5.66-5.66a1 1 0 011.41 0z"
+                        />
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="26"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px"
+                      />
+                      name-26
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-26
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <svg
+                        class=" emotion-38 emotion-39 emotion-17"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.07 4.93a1 1 0 010 1.41L13.41 12l5.66 5.66a1 1 0 11-1.41 1.41L12 13.41l-5.66 5.66a1 1 0 11-1.41-1.41L10.59 12 4.93 6.34a1 1 0 011.41-1.41L12 10.59l5.66-5.66a1 1 0 011.41 0z"
+                        />
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="27"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px"
+                      />
+                      name-27
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-27
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <svg
+                        class=" emotion-38 emotion-39 emotion-17"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.07 4.93a1 1 0 010 1.41L13.41 12l5.66 5.66a1 1 0 11-1.41 1.41L12 13.41l-5.66 5.66a1 1 0 11-1.41-1.41L10.59 12 4.93 6.34a1 1 0 011.41-1.41L12 10.59l5.66-5.66a1 1 0 011.41 0z"
+                        />
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="28"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px"
+                      />
+                      name-28
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-28
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <svg
+                        class=" emotion-38 emotion-39 emotion-17"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.07 4.93a1 1 0 010 1.41L13.41 12l5.66 5.66a1 1 0 11-1.41 1.41L12 13.41l-5.66 5.66a1 1 0 11-1.41-1.41L10.59 12 4.93 6.34a1 1 0 011.41-1.41L12 10.59l5.66-5.66a1 1 0 011.41 0z"
+                        />
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr
+                    class="uc-fe-table-row  uc-fe-table-row-level-0"
+                    data-row-key="29"
+                  >
+                    <td
+                      class=""
+                    >
+                      <span
+                        class="uc-fe-table-row-indent indent-level-0"
+                        style="padding-left:0px"
+                      />
+                      name-29
+                    </td>
+                    <td
+                      class=""
+                    >
+                      desc-29
+                    </td>
+                    <td
+                      class=""
+                    >
+                      <svg
+                        class=" emotion-38 emotion-39 emotion-17"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.07 4.93a1 1 0 010 1.41L13.41 12l5.66 5.66a1 1 0 11-1.41 1.41L12 13.41l-5.66 5.66a1 1 0 11-1.41-1.41L10.59 12 4.93 6.34a1 1 0 011.41-1.41L12 10.59l5.66-5.66a1 1 0 011.41 0z"
+                        />
+                      </svg>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div
+              class="uc-fe-table-footer"
+            >
+              <div />
+            </div>
+          </div>
+        </div>
+        <div
+          class=" emotion-18 emotion-19"
+        >
+          <svg
+            class="uc-fe-editable-table-btn emotion-16 emotion-17"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -59,14 +59,9 @@ const uncontrolledDecorator = (...options) => Child => {
         }
     }
     // get default props
-    UncontrolledWrappedComponent.defaultProps = {};
-    if (Child.defaultProps) {
-        options.forEach(({ defaultValueName }) => {
-            if (defaultValueName in Child.defaultProps) {
-                UncontrolledWrappedComponent.defaultProps[defaultValueName] = Child.defaultProps[defaultValueName];
-            }
-        });
-    }
+    UncontrolledWrappedComponent.defaultProps = {
+        ...Child.defaultProps
+    };
 
     return UncontrolledWrappedComponent;
 };

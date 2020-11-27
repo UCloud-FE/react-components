@@ -1,52 +1,19 @@
-import React from 'react';
+import _ from 'lodash';
+
+import checkStickySupport from 'src/utils/checkStickySupport';
+import warning from 'src/utils/warning';
+
+const supportSticky = checkStickySupport();
 
 export default class ColumnManager {
     _cached = {};
 
-    constructor(columns, elements) {
-        this.columns = columns || this.normalize(elements);
-    }
-
-    isAnyColumnsFixed() {
-        return this._cache('isAnyColumnsFixed', () => {
-            return this.columns.some(column => !!column.fixed);
-        });
-    }
-
-    isAnyColumnsLeftFixed() {
-        return this._cache('isAnyColumnsLeftFixed', () => {
-            return this.columns.some(column => column.fixed === 'left' || column.fixed === true);
-        });
-    }
-
-    isAnyColumnsRightFixed() {
-        return this._cache('isAnyColumnsRightFixed', () => {
-            return this.columns.some(column => column.fixed === 'right');
-        });
-    }
-
-    leftColumns() {
-        return this._cache('leftColumns', () => {
-            return this.groupedColumns().filter(column => column.fixed === 'left' || column.fixed === true);
-        });
-    }
-
-    rightColumns() {
-        return this._cache('rightColumns', () => {
-            return this.groupedColumns().filter(column => column.fixed === 'right');
-        });
+    constructor(columns) {
+        this.reset(columns);
     }
 
     leafColumns() {
         return this._cache('leafColumns', () => this._leafColumns(this.columns));
-    }
-
-    leftLeafColumns() {
-        return this._cache('leftLeafColumns', () => this._leafColumns(this.leftColumns()));
-    }
-
-    rightLeafColumns() {
-        return this._cache('rightLeafColumns', () => this._leafColumns(this.rightColumns()));
     }
 
     // add appropriate rowspan and colspan to column
@@ -93,26 +60,56 @@ export default class ColumnManager {
         });
     }
 
-    normalize(elements) {
-        const columns = [];
-        React.Children.forEach(elements, element => {
-            if (!React.isValidElement(element)) {
-                return;
+    reset(columns) {
+        if (supportSticky) {
+            columns = [...columns];
+            let leftOffset = 0,
+                leftPos = 0;
+            for (; leftPos < columns.length; leftPos++) {
+                const column = { ...columns[leftPos] };
+                if (column.fixed === 'left' || column.fixed === true) {
+                    if (leftOffset === false) {
+                        warning(`every left fixed columns before the latest should have a valid width`);
+                        break;
+                    }
+                    column.offset = leftOffset;
+                    column.fixed = 'left';
+                    if (column.width) {
+                        leftOffset += column.width;
+                    } else {
+                        leftOffset = false;
+                    }
+                    columns[leftPos] = column;
+                } else {
+                    break;
+                }
             }
-            const column = { ...element.props };
-            if (element.key) {
-                column.key = element.key;
-            }
-            if (element.type.isTableColumnGroup) {
-                column.children = this.normalize(column.children);
-            }
-            columns.push(column);
-        });
-        return columns;
-    }
+            if (leftPos > 0) columns[leftPos - 1].latestLeftFixed = true;
 
-    reset(columns, elements) {
-        this.columns = columns || this.normalize(elements);
+            let rightOffset = 0,
+                rightPos = columns.length - 1;
+            for (; rightPos > 0; rightPos--) {
+                const column = { ...columns[rightPos] };
+                if (column.fixed === 'right' || column.fixed === true) {
+                    if (rightOffset === false) {
+                        warning(`every right fixed columns after the first should have a valid width`);
+                        break;
+                    }
+                    column.offset = rightOffset;
+                    column.fixed = 'right';
+                    if (column.width) {
+                        rightOffset += column.width;
+                    } else {
+                        rightOffset = false;
+                    }
+                    columns[rightPos] = column;
+                } else {
+                    break;
+                }
+            }
+            if (rightPos < columns.length - 1) columns[rightPos + 1].firstRightFixed = true;
+        }
+        this.columns = columns;
         this._cached = {};
     }
 

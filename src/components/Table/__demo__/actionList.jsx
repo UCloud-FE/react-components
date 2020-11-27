@@ -15,7 +15,7 @@ class Demo extends React.Component {
         this.state = {
             size: 'sm',
             smart: true,
-            buttonStyleType: 'border-gray',
+            buttonStyleType: 'border',
             exposeCount: 3,
             actionListLength: 5
         };

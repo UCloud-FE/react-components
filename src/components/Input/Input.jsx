@@ -1,11 +1,13 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
+import classnames from 'classnames';
 
 import Icon from 'src/components/Icon';
 import deprecatedLog from 'src/utils/deprecatedLog';
+import ControllerContext from 'src/components/Form/ControllerContext';
 
-import { InputWrap, TableWrap, PrefixWrap, SuffixWrap } from './style';
+import { InputWrap, TableWrap, PrefixWrap, SuffixWrap, blockCls } from './style';
 
 const deprecatedLogForIcon = _.once(() => deprecatedLog('Input icon', 'suffix'));
 
@@ -14,7 +16,7 @@ const Status = ['default', 'error'];
 
 const noop = () => {};
 
-class Input extends Component {
+class Input extends PureComponent {
     static propTypes = {
         /** @ignore */
         className: PropTypes.string,
@@ -31,6 +33,8 @@ class Input extends Component {
         size: PropTypes.oneOf(Size),
         /** 状态 */
         status: PropTypes.oneOf(Status),
+        /** 展示变更为块占位 */
+        block: PropTypes.bool,
         /** @ignore */
         disabled: PropTypes.bool,
         /** @ignore */
@@ -82,24 +86,48 @@ class Input extends Component {
     focus = () => {
         this.input && this.input.focus();
     };
+    saveInput = ref => (this.input = ref);
     render() {
         // eslint-disable-next-line no-unused-vars
-        const { className, style, disabled, icon, size, suffix, prefix, onFocus, onBlur, status, ...rest } = this.props;
+        /* eslint-disable no-unused-vars */
+        const {
+            className,
+            style,
+            disabled,
+            icon,
+            size,
+            suffix,
+            prefix,
+            onFocus,
+            onBlur,
+            status,
+            block,
+            ...rest
+        } = this.props;
+        /* eslint-enable no-unused-vars */
         const { focused } = this.state;
         return (
-            <InputWrap onClick={this.focus} {...{ size, focused, className, style, disabled, status }}>
-                <TableWrap>
-                    {this.renderPrefix()}
-                    <input
-                        {...rest}
-                        ref={ref => (this.input = ref)}
-                        onFocus={this.onFocus}
-                        onBlur={this.onBlur}
-                        disabled={disabled}
-                    />
-                    {this.renderSuffix()}
-                </TableWrap>
-            </InputWrap>
+            <ControllerContext.Consumer>
+                {({ status: _status }) => (
+                    <InputWrap
+                        onClick={this.focus}
+                        className={classnames(block && blockCls, className)}
+                        {...{ size, focused, style, disabled, status: status || _status }}
+                    >
+                        <TableWrap>
+                            {this.renderPrefix()}
+                            <input
+                                {...rest}
+                                ref={this.saveInput}
+                                onFocus={this.onFocus}
+                                onBlur={this.onBlur}
+                                disabled={disabled}
+                            />
+                            {this.renderSuffix()}
+                        </TableWrap>
+                    </InputWrap>
+                )}
+            </ControllerContext.Consumer>
         );
     }
 }

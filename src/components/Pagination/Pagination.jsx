@@ -149,7 +149,7 @@ class Pagination extends Component {
                 });
             }
             const { onAdvise } = nextProps;
-            if (onAdvise) {
+            if (onAdvise && (nextProps.current != this.props.current || nextProps.total != this.props.total)) {
                 onAdvise(newCurrent, pageSize);
             }
         }
@@ -483,7 +483,7 @@ class Pagination extends Component {
                 size={size}
                 className={wrapClassName}
                 unselectable="unselectable"
-                innerRef={this.savePaginationNode}
+                _innerRef={this.savePaginationNode}
                 {...rest}
             >
                 {showTotal && (

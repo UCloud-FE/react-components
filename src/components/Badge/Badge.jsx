@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import RcAlign from 'rc-align';
+import RcAlign from 'src/libs/rc-align';
 import _ from 'lodash';
 
-import { Wrap, BadgeWrap, BaseBadge, DotBadge } from './style';
+import { Wrap, BadgeWrap, Badge as SBadge } from './style';
 import placements from './placements';
 
 const Placement = _.keys(placements);
@@ -19,14 +19,12 @@ class Badge extends Component {
         dot: PropTypes.bool,
         /** 定位 */
         placement: PropTypes.oneOf(Placement),
-        /** 为0时是否隐藏 */
+        /** 为 0 时是否隐藏 */
         hideWhenZero: PropTypes.bool,
         /** badge的样式 */
         badgeStyle: PropTypes.object,
         /** @ignore */
-        children: PropTypes.node,
-        /** @ignore */
-        innerRef: PropTypes.any
+        children: PropTypes.node
     };
     static defaultProps = {
         maxValue: 99,
@@ -45,13 +43,16 @@ class Badge extends Component {
         } else {
             content = value;
         }
-        const Comp = dot ? DotBadge : BaseBadge;
-        return <Comp style={badgeStyle}>{content}</Comp>;
+        return (
+            <SBadge dot={dot} style={badgeStyle}>
+                {content}
+            </SBadge>
+        );
     };
 
     render() {
         /* eslint-disable no-unused-vars */
-        const { value, maxValue, dot, placement, hideWhenZero, children, badgeStyle, innerRef, ...rest } = this.props;
+        const { value, maxValue, dot, placement, hideWhenZero, children, badgeStyle, ...rest } = this.props;
         /* eslint-enable no-unused-vars */
         const badge = this.renderBadge();
         if (!children) {
@@ -61,8 +62,8 @@ class Badge extends Component {
         return (
             <Wrap {...rest}>
                 {children}
-                {hideWhenZero && value === 0 ? null : (
-                    <RcAlign ref={innerRef} target={() => ReactDOM.findDOMNode(this)} align={placements[placement]}>
+                {hideWhenZero && (value === 0 || value === '0') ? null : (
+                    <RcAlign target={() => ReactDOM.findDOMNode(this)} align={placements[placement]}>
                         <BadgeWrap>{badge}</BadgeWrap>
                     </RcAlign>
                 )}

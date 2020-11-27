@@ -22,7 +22,27 @@ body,
     background-size: 16px 16px !important;
 }
 
-form.demo-form {
+.rsg--example--dark.rsg--example--dark.rsg--example--dark {
+    background: #141a2b !important;
+}
+
+.demo h1 {
+    line-height: 2em;
+    font-size: 18px;
+    font-weight: bold;
+}
+.demo h2 {
+    line-height: 2em;
+    font-size: 16px;
+    font-weight: bold;
+}
+.demo h3 {
+    line-height: 1.6em;
+    font-size: 13px;
+}
+
+form.demo-form,
+.demo-wrap {
     padding: 10px;
     border: 1px dashed #ccc;
     border-radius: 5px;
@@ -30,7 +50,8 @@ form.demo-form {
     position: relative;
     margin-top: 10px;
 }
-form.demo-form:before {
+form.demo-form:before,
+.demo-wrap:before {
     content: 'Demo Form';
     position: absolute;
     background: white;
@@ -42,23 +63,16 @@ form.demo-form:before {
 }
 
 .demo-wrap {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    position: relative;
-    margin-top: 10px;
+    border-style: solid;
 }
-
 .demo-wrap:before {
     content: 'Demo Wrap';
-    position: absolute;
-    background: white;
-    display: inline-block;
-    height: 16px;
-    line-height: 16px;
-    top: -8px;
-    left: 8px;
+}
+
+.rsg--example--dark.rsg--example--dark.rsg--example--dark form.demo-form:before,
+.rsg--example--dark.rsg--example--dark.rsg--example--dark .demo-wrap:before {
+    background: #141a2b;
+    color: white;
 }
 
 .demo-block {
@@ -81,4 +95,53 @@ form.demo-form:before {
     border-radius: 3px;
     width: 100%;
     display: inline-block;
+}
+.badge .sc-para {
+    white-space: normal;
+}
+.browser-list {
+    margin-bottom: 16px;
+}
+.browser-list > table {
+    margin: 0px;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.browser-list > table th,
+.browser-list > table td {
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.anchor-wrap {
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    line-height: 1.3em;
+    border-left: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-sizing: border-box;
+    max-width: 200px;
+}
+.anchor-wrap-out {
+    right: -210px;
+    width: 200px;
+}
+.anchor-title {
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.anchor-title:hover {
+    color: blue;
+}
+.anchor-title-active {
+    color: blue;
+}
+.anchor-list {
+    padding-left: 8px;
+    margin-top: 4px;
 }

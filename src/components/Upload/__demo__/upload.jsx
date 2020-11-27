@@ -1,44 +1,59 @@
 import React from 'react';
-import Upload from 'components/Upload';
 
-import Form from 'components/Form';
-import Modal from 'components/Modal';
-import Switch from 'components/Switch';
+import Upload from 'src/components/Upload';
+import Form from 'src/components/Form';
+import Modal from 'src/components/Modal';
+import Switch from 'src/components/Switch';
+import Radio from 'src/components/Radio';
 
 // demo start
 const { readFile } = Upload;
 const handlePreview = file => {
-    readFile(file)
-        .then(url => {
-            Modal.alert(
-                {
-                    title: '预览',
-                    size: 'md'
-                },
-                <img src={url} width={500} height={500} />
-            );
-        })
-        .catch(e => {
-            alert(e);
-        });
+    if (file.type.split('/')[0] === 'image') {
+        readFile(file)
+            .then(url => {
+                Modal.alert(
+                    {
+                        title: '预览',
+                        size: 'md'
+                    },
+                    <div style={{ textAlign: 'center' }}>
+                        <img src={url} width={500} />
+                    </div>
+                );
+            })
+            .catch(e => {
+                alert(e);
+            });
+    }
+};
+const handleError = error => {
+    alert(`报错了：${error}`);
+    console.error(error);
 };
 class Demo extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            multiple: true,
+            listType: 'list',
+            listTypeOption: null
+        };
     }
     render() {
         const {
             disableAdd,
             disableRemove,
             multiple,
-            enablePreview,
+            customPreview,
+            customErrorHandle,
             disabled,
             onlyAcceptImage,
             maxSize,
             maxCount,
             customSelector,
-            hideList
+            listType,
+            listTypeOption
         } = this.state;
         const itemLayout = {
             labelCol: {
@@ -50,16 +65,23 @@ class Demo extends React.Component {
         };
         const props = {
             multiple,
-            disabled
+            disabled,
+            listType
         };
+        if (listTypeOption) {
+            props.listType = [props.listType, listTypeOption];
+        }
         if (disableAdd) {
             props.onAdd = () => false;
         }
         if (disableRemove) {
             props.onRemove = () => false;
         }
-        if (enablePreview) {
+        if (customPreview) {
             props.onPreview = handlePreview;
+        }
+        if (customErrorHandle) {
+            props.onError = handleError;
         }
         if (onlyAcceptImage) {
             props.accept = 'image/*';
@@ -72,9 +94,6 @@ class Demo extends React.Component {
         }
         if (customSelector) {
             props.selector = <div>点我选文件</div>;
-        }
-        if (hideList) {
-            props.listType = 'none';
         }
         return (
             <div>
@@ -91,8 +110,32 @@ class Demo extends React.Component {
                     <Form.Item label="disabled" {...itemLayout}>
                         <Switch checked={disabled} onChange={disabled => this.setState({ disabled })} />
                     </Form.Item>
-                    <Form.Item label="enablePreview" {...itemLayout}>
-                        <Switch checked={enablePreview} onChange={enablePreview => this.setState({ enablePreview })} />
+                    <Form.Item label="listType" {...itemLayout}>
+                        <Radio.Group
+                            value={listType}
+                            options={['none', 'text', 'list', 'dropzone'].map(v => ({ value: v, label: v }))}
+                            onChange={listType => this.setState({ listType })}
+                        />
+                    </Form.Item>
+                    <Form.Item label="listTypeOption" {...itemLayout}>
+                        <Radio.Group
+                            value={listTypeOption}
+                            options={[
+                                { value: null, label: 'null' },
+                                { value: 'thumbnail', label: 'thumbnail' },
+                                { value: 'card', label: 'card' }
+                            ]}
+                            onChange={listTypeOption => this.setState({ listTypeOption })}
+                        />
+                    </Form.Item>
+                    <Form.Item label="customPreview" {...itemLayout}>
+                        <Switch checked={customPreview} onChange={customPreview => this.setState({ customPreview })} />
+                    </Form.Item>
+                    <Form.Item label="customErrorHandle" {...itemLayout}>
+                        <Switch
+                            checked={customErrorHandle}
+                            onChange={customErrorHandle => this.setState({ customErrorHandle })}
+                        />
                     </Form.Item>
                     <Form.Item label="onlyAcceptImage" {...itemLayout}>
                         <Switch
@@ -112,12 +155,9 @@ class Demo extends React.Component {
                             onChange={customSelector => this.setState({ customSelector })}
                         />
                     </Form.Item>
-                    <Form.Item label="hideList" {...itemLayout}>
-                        <Switch checked={hideList} onChange={hideList => this.setState({ hideList })} />
-                    </Form.Item>
                 </Form>
                 <div className="demo-wrap">
-                    <Upload {...props} onChange={console.log} onError={console.error} />
+                    <Upload {...props} onChange={console.log} />
                 </div>
             </div>
         );

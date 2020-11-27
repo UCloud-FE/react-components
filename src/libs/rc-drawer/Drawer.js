@@ -1,7 +1,7 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import ContainerRender from 'rc-util/lib/ContainerRender';
 import getScrollBarSize from 'rc-util/lib/getScrollBarSize';
 import KeyCode from 'rc-util/lib/KeyCode';
 
@@ -626,11 +626,14 @@ class Drawer extends React.PureComponent {
         if (windowIsUndefined) {
             return null;
         }
+        if (this.container) return this.container;
         const container = document.createElement('div');
         this.parent.appendChild(container);
         if (this.props.wrapperClassName) {
             container.className = this.props.wrapperClassName;
         }
+        const parent = this.parent;
+        this.removeContainer = () => parent.removeChild(container);
         return container;
     };
 
@@ -657,22 +660,7 @@ class Drawer extends React.PureComponent {
         if (!this.container || (!open && !this.firstEnter)) {
             return null;
         }
-        return (
-            <ContainerRender
-                parent={this}
-                visible
-                autoMount
-                autoDestroy={false}
-                getComponent={() => children}
-                getContainer={this.getContainer}
-            >
-                {({ renderComponent, removeContainer }) => {
-                    this.renderComponent = renderComponent;
-                    this.removeContainer = removeContainer;
-                    return null;
-                }}
-            </ContainerRender>
-        );
+        return ReactDOM.createPortal(children, this.getContainer());
     }
 }
 

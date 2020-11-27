@@ -42,6 +42,7 @@ class Demo extends React.Component {
                         );
                     }
                 }}
+                multiple
                 onError={({ message, name }) => alert(`there is an error of ${name}: ${message}`)}
                 fileList={state.fileList}
             />

@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { withTheme } from 'styled-components';
+import { withTheme } from 'emotion-theming';
 
 import InnerDefaultThemeProvider from './InnerDefaultThemeProvider';
 

@@ -9,7 +9,10 @@ class Demo extends React.Component {
         return (
             <div>
                 {Size.map(size => (
-                    <Button key={size} onClick={() => Modal.alert({ size }, 'This is a modal')}>
+                    <Button
+                        key={size}
+                        onClick={() => Modal.alert({ size, customStyle: { contentPadding: true } }, 'This is a modal')}
+                    >
                         {size}
                     </Button>
                 ))}

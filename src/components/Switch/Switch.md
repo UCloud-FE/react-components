@@ -1,35 +1,40 @@
 ### 说明
 
-*   这是 Switch 组件
+-   这是 Switch 组件
 
 ### 演示
 
-*   演示
+-   演示
 
 ```js {"codepath": "switch.jsx"}
 ```
 
-*   checked
+-   checked
 
 ```js {"codepath": "checked.jsx"}
 ```
 
-*   disabled
+-   disabled
 
 ```js {"codepath": "disabled.jsx"}
 ```
 
-*   size
+-   size
 
 ```js {"codepath": "size.jsx"}
 ```
 
-*   onTextAndOffText
+-   onTextAndOffText
 
 ```js {"codepath": "onTextAndOffText.jsx"}
 ```
 
-*   uncontrolled
+-   uncontrolled
 
 ```js {"codepath": "uncontrolled.jsx"}
+```
+
+-   展示
+
+```js {"codepath": "demo.jsx"}
 ```

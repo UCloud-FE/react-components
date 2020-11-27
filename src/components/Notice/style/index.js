@@ -1,17 +1,19 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
 import Icon from 'src/components/Icon';
-import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
+import withProps from 'src/utils/withProps';
 
 const map = {
     default: 'info',
     success: 'success',
     warning: 'warning',
     error: 'error',
-    info: 'success'
+    info: 'success',
+    disabled: 'disabled'
 };
 
-export const NoticeIconWrap = styled.span`
+export const NoticeIconWrap = styled('span')`
     display: table-cell;
     font-size: 15px;
     width: 15px;
@@ -24,19 +26,19 @@ export const NoticeIcon = styled(Icon)`
     /* empty */
 `;
 
-export const ContentWrap = styled.div`
+export const ContentWrap = styled('div')`
     display: table-cell;
     vertical-align: middle;
 `;
 
-export const ActionWrap = styled.div`
+export const ActionWrap = styled('div')`
     display: table-cell;
     padding-left: 8px;
     white-space: nowrap;
     text-align: right;
 `;
 
-export const CloseWrap = styled.div`
+export const CloseWrap = styled('div')`
     display: table-cell;
     padding-left: 8px;
     white-space: nowrap;
@@ -48,32 +50,47 @@ export const CloseIcon = styled(Icon)`
     cursor: pointer;
 `;
 
-const themeMixin = ({ styleType, theme: { designTokens: DT } }) => {
+const themeMixin = props => {
+    const {
+        styleType,
+        theme: { designTokens: DT }
+    } = props;
+
     const style = map[styleType];
     const colorMap = {
         info: {
+            color: DT.T_COLOR_TEXT_DEFAULT_DARK,
             border: DT.T_COLOR_LINE_NOTICE_LIGHT,
             background: DT.T_COLOR_BG_NOTICE_LIGHT,
             icon: DT.T_COLOR_TEXT_PRIMARY_DEFAULT
         },
         success: {
+            color: DT.T_COLOR_TEXT_DEFAULT_DARK,
             border: DT.T_COLOR_LINE_SUCCESS_LIGHT,
             background: DT.T_COLOR_BG_SUCCESS_LIGHT,
             icon: DT.T_COLOR_TEXT_SUCCESS
         },
         warning: {
+            color: DT.T_COLOR_TEXT_DEFAULT_DARK,
             border: DT.T_COLOR_LINE_WARNING_LIGHT,
             background: DT.T_COLOR_BG_WARNING_LIGHT,
             icon: DT.T_COLOR_TEXT_WARNING
         },
         error: {
+            color: DT.T_COLOR_TEXT_DEFAULT_DARK,
             border: DT.T_COLOR_LINE_ERROR_LIGHT,
             background: DT.T_COLOR_BG_ERROR_LIGHT,
             icon: DT.T_COLOR_TEXT_ERROR
+        },
+        disabled: {
+            color: DT.T_COLOR_TEXT_DISABLED,
+            border: DT.T_COLOR_LINE_DISABLED_LIGHT,
+            background: DT.T_COLOR_BG_DISABLED,
+            icon: DT.T_COLOR_TEXT_DISABLED
         }
     }[style];
     return css`
-        color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+        color: ${colorMap.color};
         border: ${DT.T_LINE_WIDTH_BASE} solid ${colorMap.border};
         background: ${colorMap.background};
         ${NoticeIcon} {
@@ -85,7 +102,7 @@ const themeMixin = ({ styleType, theme: { designTokens: DT } }) => {
     `;
 };
 
-export const NoticeWrap = styled.div`
+export const NoticeWrap = withProps()(styled('div')`
     display: table;
     position: relative;
     box-sizing: border-box;
@@ -97,5 +114,4 @@ export const NoticeWrap = styled.div`
     overflow: hidden;
 
     ${themeMixin};
-`;
-addDefaultThemeProps(NoticeWrap);
+`);

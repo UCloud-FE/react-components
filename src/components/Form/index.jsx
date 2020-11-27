@@ -6,3 +6,6 @@ Form.Item = Item;
 
 import Group from './Group';
 Form.Group = Group;
+
+import SubArea from './SubArea';
+Form.SubArea = SubArea;

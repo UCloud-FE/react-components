@@ -7,7 +7,7 @@ class ExpandableRow extends React.Component {
     static propTypes = {
         prefixCls: PropTypes.string.isRequired,
         rowKey: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-        fixed: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+        fixed: PropTypes.oneOf([true, 'left', 'right']),
         record: PropTypes.object.isRequired,
         indentSize: PropTypes.number,
         needIndentSpaced: PropTypes.bool.isRequired,

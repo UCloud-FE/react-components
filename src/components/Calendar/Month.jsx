@@ -48,7 +48,7 @@ class Month extends Component {
 
         return (
             <MonthCalendarWrap
-                innerRef={ref => (this.calendar = ref)}
+                _innerRef={ref => (this.calendar = ref)}
                 onSelect={this.onSelect}
                 {...calCalendarProps({ rules })}
                 {...rest}

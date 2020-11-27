@@ -13,8 +13,7 @@ import Modal from 'src/components/Modal';
 import Table from 'src/components/Table';
 import Menu from 'src/components/Menu';
 
-import greenTheme from 'src/components/ThemeProvider/green';
-import oceanTheme from 'src/components/ThemeProvider/ocean';
+import darkTheme from 'src/components/ThemeProvider/dark';
 
 // demo start
 const columns = new Array(5).fill(null).map((v, i) => ({
@@ -32,9 +31,12 @@ const columns = new Array(5).fill(null).map((v, i) => ({
 
 const Demo = () => (
     <div>
-        {[{}, greenTheme, oceanTheme].map((theme, i) => (
-            <ThemeProvider key={i} theme={theme}>
-                <div>
+        {[
+            { theme: {} },
+            { theme: darkTheme, background: 'linear-gradient(rgb(26, 33, 50) 0%, rgb(26, 33, 50) 100%)' }
+        ].map((theme, i) => (
+            <ThemeProvider key={i} theme={theme.theme}>
+                <div style={{ background: theme.background }}>
                     <div className="demo-wrap">
                         <Pagination total={100} showSizeChanger showQuickJumper={{ goButton: true }} />
                     </div>

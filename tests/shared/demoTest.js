@@ -2,8 +2,10 @@ const fs = require('fs');
 const path = require('path');
 import { render } from 'enzyme';
 import { renderToJson } from 'enzyme-to-json';
-import 'jest-styled-components';
+import { getStyles, createSerializer } from 'jest-emotion';
+import * as emotion from 'emotion';
 
+expect.addSnapshotSerializer(createSerializer(emotion));
 /**
  * implement if require.content is not supported
  */

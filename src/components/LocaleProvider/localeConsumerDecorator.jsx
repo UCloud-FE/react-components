@@ -12,9 +12,11 @@ const localeConsumerDecorator = ({ defaultLocale = {}, localeName, publicFn = []
             });
         }
         static propTypes = {
+            ...Child.PropTypes,
             locale: PropTypes.object
         };
         static defaultProps = {
+            ...Child.defaultProps,
             locale: {}
         };
         static contextTypes = {

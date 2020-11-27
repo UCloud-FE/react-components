@@ -2,19 +2,75 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
-import { SvgIconWrapper } from './style';
+import { camel2Kebab } from 'src/utils/string';
+
+import SvgIconWrapper from './SvgIconWrap';
+
 import Tick from './icons/Tick';
+import TickSmall from './icons/TickSmall';
 import Cross from './icons/Cross';
-import BoldCross from './icons/BoldCross';
-import CircleLoading from './icons/CircleLoading';
-import DottedRightArrow from './icons/DottedRightArrow';
+import CrossBold from './icons/CrossBold';
+import RingLoading from './icons/RingLoading';
+import DottedRightLineArrow from './icons/DottedRightLineArrow';
+import Plus from './icons/Plus';
+import Minus from './icons/Minus';
+import Circle from './icons/Circle';
+import Horz from './icons/Horz';
+import LeftArrow from './icons/ArrowLeft';
+import RightArrow from './icons/ArrowRight';
+import Refresh from './icons/Refresh';
+import Trash from './icons/Trash';
+import Eye from './icons/Eye';
+import QuestionCircle from './icons/QuestionCircle';
+
+// circle filled
+import ExclamationCircleFilled from './icons/ExclamationCircleFilled';
+import InfoCircleFilled from './icons/InfoCircleFilled';
+import TickCircleFilled from './icons/TickCircleFilled';
+import CrossCircleFilled from './icons/CrossCircleFilled';
 
 const IconMap = {
     tick: Tick,
+    'tick-small': TickSmall,
     cross: Cross,
-    boldCross: BoldCross,
-    circleLoading: CircleLoading,
-    dottedRightArrow: DottedRightArrow
+    'cross-bold': CrossBold,
+    'ring-loading': RingLoading,
+    'dotted-right-line-arrow': DottedRightLineArrow,
+    plus: Plus,
+    minus: Minus,
+    circle: Circle,
+    horz: Horz,
+    'arrow-left': LeftArrow,
+    'arrow-right': RightArrow,
+    refresh: Refresh,
+    trash: Trash,
+    eye: Eye
+};
+
+// circle
+_.forEach({ question: QuestionCircle }, (Icon, key) => {
+    IconMap[key + '-circle'] = Icon;
+});
+
+// circle filled
+_.forEach(
+    {
+        exclamation: ExclamationCircleFilled,
+        info: InfoCircleFilled,
+        tick: TickCircleFilled,
+        cross: CrossCircleFilled
+    },
+    (Icon, key) => {
+        IconMap[key + '-circle-filled'] = Icon;
+    }
+);
+
+// fix old
+const oldMap = {
+    'small-tick': 'tick-small',
+    'bold-cross': 'cross-bold',
+    'left-arrow': 'arrow-left',
+    'right-arrow': 'arrow-right'
 };
 
 const IconType = _.keys(IconMap);
@@ -34,13 +90,10 @@ class SvgIcon extends PureComponent {
         size: '12px'
     };
     render() {
-        const { type, ...rest } = this.props;
-        const Icon = IconMap[type];
-        return (
-            <SvgIconWrapper {...rest} viewBox="0 0 24 24">
-                <Icon />
-            </SvgIconWrapper>
-        );
+        let { type, ...rest } = this.props;
+        type = camel2Kebab(type);
+        const Icon = IconMap[type] || IconMap[oldMap[type]];
+        return <SvgIconWrapper {...rest}>{Icon && <Icon />}</SvgIconWrapper>;
     }
 }
 

@@ -1,5 +1,7 @@
 ## React Components
 
+<div class="badge" style="white-space: normal; margin-bottom: 10px;">
+
 [![npm version](https://badge.fury.io/js/%40ucloud-fe%2Freact-components.svg)](https://badge.fury.io/js/%40ucloud-fe%2Freact-components)
 [![TravisCI](https://travis-ci.org/UCloud-FE/react-components.svg?branch=master)](https://travis-ci.org/UCloud-FE/react-components)
 [![CircleCI](https://circleci.com/gh/UCloud-FE/react-components.svg?style=svg)](https://circleci.com/gh/UCloud-FE/react-components)
@@ -7,15 +9,27 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
+</div>
+
 ### 前排注意事项
 
-*   一些没有写在文档中的 props 以及方法等强烈不建议使用，因为这类 API 可能会随时变动。版本更新后可能会发生不可预知的问题。
+-   一些没有写在文档中的 props 以及方法等强烈不建议使用，因为这类 API 可能会随时变动。版本更新后可能会发生不可预知的问题。
+
+### 浏览器兼容
+
+<div class='browser-list'>
+
+| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Safari |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| IE11, Edge 18                                                                                                                                                                                                   | 29                                                                                                                                                                                                                | 30                                                                                                                                                                                                            | 7                                                                                                                                                                                                             |
+
+</div>
 
 ### 如何使用
 
-*   组件依赖于 react、react-dom、styled-components（^3.4.10），请注意引入对应依赖
+-   组件依赖于 react（^16）、react-dom（^16），请注意引入对应依赖，从 0.7.0 开始，不再兼容 react 15。
 
-*   使用 npm 或 yarn 进行安装
+-   使用 npm 或 yarn 进行安装
 
 ```bash
 <!-- install use yarn -->
@@ -26,7 +40,7 @@ npm install @ucloud-fe/react-components
 yarn add @ucloud-fe/react-components@0.3.1
 ```
 
-*   导入组件并按需导入字体样式并使用
+-   导入组件并按需导入字体样式并使用
 
 ```js static
 import { Button } from '@ucloud-fe/react-components';
@@ -46,7 +60,7 @@ class App extends Component {
 export default App;
 ```
 
-*   需要注意对应修改 webpack 的 loader 配置，根据项目具体配置
+-   需要注意对应修改 webpack 的 loader 配置，根据项目具体配置
 
 ```js static
 {
@@ -70,9 +84,9 @@ export default App;
 }
 ```
 
-*   实现模块化加载
+-   实现模块化加载
 
-    *   通过`babel-plugin-import`实现模块化加载
+    -   通过`babel-plugin-import`实现模块化加载
 
     ```bash
     <!-- 添加import插件 -->
@@ -95,7 +109,7 @@ export default App;
     }
     ```
 
-    *   或者直接手动引用对应文件来实现模块化加载
+    -   或者直接手动引用对应文件来实现模块化加载
 
     ```js static
     import Button from '@ucloud-fe/react-components/lib/components/Button';
@@ -115,9 +129,9 @@ export default App;
 
 ### zIndex 说明
 
-*   Modal,Drawer 默认的 zIndex 为 1010
-*   Popover，Tooltip 默认的 zIndex 为 1030，包括其他的用到 Popover 且默认容器为 body 的地方，如 Table.ActionList、Table 的 contxtMenu 等
-*   Message 默认的 zIndex 为 1060
-*   Select、DatePicker 等的弹出层默认容器为组件内部，所以 zIndex 比较低为 100
-*   Loading 默认的 zIndex 为 10
-*   其余内部使用的 zIndex 为 10 以下
+-   Modal,Drawer 默认的 zIndex 为 1010
+-   Popover，Tooltip 默认的 zIndex 为 1030，包括其他的用到 Popover 且默认容器为 body 的地方，如 Table.ActionList、Table 的 contxtMenu 等
+-   Message 默认的 zIndex 为 1060
+-   Select、DatePicker 等的弹出层默认容器为组件内部，所以 zIndex 比较低为 100
+-   Loading 默认的 zIndex 为 10
+-   其余内部使用的 zIndex 为 10 以下

@@ -7,6 +7,7 @@ const Demo = () => (
         onChange={fileList => console.log(fileList)}
         onError={({ message, name }) => alert(`there is an error of ${name}: ${message}`)}
         accept="image/* , .pdf"
+        multiple
     />
 );
 // demo end

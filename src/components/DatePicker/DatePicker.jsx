@@ -7,6 +7,8 @@ import Calendar from 'src/components/Calendar/Calendar';
 import placements from 'src/components/Popover/placements';
 import uncontrolledDecorator from 'src/decorators/uncontrolled';
 import { animationPrefixCls } from 'src/style/globalAnimation';
+import { Consumer } from 'src/components/Popover/ContainerContext';
+import ConfigContext from 'src/components/ConfigProvider/ConfigContext';
 
 import { isDateDisabled, getValidDate } from './utils';
 import {
@@ -55,8 +57,7 @@ class DatePicker extends Component {
     static defaultProps = {
         onChange: () => {},
         size: 'md',
-        zIndex: 100,
-        getCalendarContainer: triggerNode => triggerNode.parentNode
+        zIndex: 100
     };
     handleChange = value => {
         const { onChange, rules } = this.props;
@@ -136,30 +137,44 @@ class DatePicker extends Component {
         const value = moment(_v);
 
         return (
-            <PickerContainer {...rest}>
-                {date.show !== false && (
-                    <PickerWrap
-                        prefixCls={pickerPrefixCls}
-                        transitionName={`${animationPrefixCls}-fade`}
-                        calendar={<Calendar rules={rules} />}
-                        getCalendarContainer={getCalendarContainer}
-                        value={value}
-                        align={placements.bottomLeft}
-                        onChange={onChange}
-                        zIndex={zIndex}
-                    >
-                        {({ value }) => {
-                            return (
-                                <DateWrap size={size}>
-                                    <DateSpan>{value.format(date.format || 'YYYY-MM-DD')}</DateSpan>
-                                    <PickerIcon type="calendar" color="blue" />
-                                </DateWrap>
-                            );
-                        }}
-                    </PickerWrap>
-                )}
-                {this.renderTimePicker(value, display)}
-            </PickerContainer>
+            <ConfigContext.Consumer>
+                {({ forwardPopupContainer } = {}) => {
+                    return (
+                        <Consumer>
+                            {({ getPopupContainer } = {}) => (
+                                <PickerContainer {...rest}>
+                                    {date.show !== false && (
+                                        <PickerWrap
+                                            prefixCls={pickerPrefixCls}
+                                            transitionName={`${animationPrefixCls}-fade`}
+                                            calendar={<Calendar rules={rules} />}
+                                            getCalendarContainer={
+                                                getCalendarContainer ||
+                                                (forwardPopupContainer && getPopupContainer) ||
+                                                (triggerNode => triggerNode.parentNode)
+                                            }
+                                            value={value}
+                                            align={placements.bottomLeft}
+                                            onChange={onChange}
+                                            zIndex={zIndex}
+                                        >
+                                            {({ value }) => {
+                                                return (
+                                                    <DateWrap size={size}>
+                                                        <DateSpan>{value.format(date.format || 'YYYY-MM-DD')}</DateSpan>
+                                                        <PickerIcon type="calendar" color="blue" />
+                                                    </DateWrap>
+                                                );
+                                            }}
+                                        </PickerWrap>
+                                    )}
+                                    {this.renderTimePicker(value, display)}
+                                </PickerContainer>
+                            )}
+                        </Consumer>
+                    );
+                }}
+            </ConfigContext.Consumer>
         );
     }
 }

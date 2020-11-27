@@ -8,9 +8,11 @@ import uncontrolledDecorator from 'decorators/uncontrolled';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
 import { getItemTree, rootPrefix } from 'src/components/Menu/Menu';
 import deprecatedLog from 'src/utils/deprecatedLog';
+import ConfigContext from 'src/components/ConfigProvider/ConfigContext';
 
 import Option from './Option';
-import { SelectWrap, SelectSearchInput, Selector, Arrow, BlockMenu, MenuWrap } from './style';
+import Extra from './Extra';
+import { SelectWrap, SelectSearchInput, Selector, Arrow, BlockMenu, MenuWrap, EmptyContentWrapper } from './style';
 import LOCALE from './locale/zh_CN';
 
 export const deprecatedLogForPopover = _.once(() => deprecatedLog('Select popover', 'popoverProps'));
@@ -53,6 +55,13 @@ class Select extends Component {
         onChange: PropTypes.func,
         /** 快速设置选项 */
         options: PropTypes.array,
+        /** 在尾部增加附加内容，会脱离选项流容器，超高度时不会一起滚动，如需在选项中嵌入附加内容，可使用 Select.Extra */
+        extra: PropTypes.oneOfType([
+            PropTypes.shape({
+                content: PropTypes.node.isRequired
+            }),
+            PropTypes.node
+        ]),
         /** @ignore */
         className: PropTypes.string,
         /** 是否多选 */
@@ -72,6 +81,14 @@ class Select extends Component {
          * @param {bool} visible - 当前的select下拉是否展示
          */
         renderSelector: PropTypes.func,
+        /**
+         * 自定义渲染弹出内容
+         * @param {Object} options - 配置
+         * @param {function} options.handleVisible - 处理弹出层的显示隐藏
+         * @param {function} options.onChange -  value 变化回调
+         * @param {any} options.value - select 的当前值
+         */
+        renderPopup: PropTypes.func,
         /**
          * - 是否展示搜索框，可以为true或者Object
          * - 为Object时可传入handleSearch对搜索筛选进行自定义
@@ -97,12 +114,23 @@ class Select extends Component {
         /** @ignore */
         onVisibleChange: PropTypes.func,
         /** @ignore */
-        locale: PropTypes.object
+        locale: PropTypes.object,
+        /**
+         * 可修改自定义样式集中营
+         */
+        customStyle: PropTypes.shape({
+            optionListMaxHeight: PropTypes.number
+        }),
+        /**
+         * 可选性为空时展示内容
+         */
+        emptyContent: PropTypes.node
     };
     static defaultProps = {
         onChange: () => {},
         size: 'md',
-        onVisibleChange: () => {}
+        onVisibleChange: () => {},
+        customStyle: {}
     };
     componentWillReceiveProps(nextProps) {
         const { children, options } = nextProps;
@@ -140,6 +168,9 @@ class Select extends Component {
         });
         const { onVisibleChange } = this.props;
         onVisibleChange(open);
+    };
+    hidePopup = () => {
+        this.handleVisibleChange(false);
     };
     renderContent = () => {
         const { state, props } = this;
@@ -184,10 +215,38 @@ class Select extends Component {
             }
         }
     };
+    renderEmptyContent = () => {
+        const { emptyContent, locale } = this.props;
+        return emptyContent || <EmptyContentWrapper>{locale.emptyTip}</EmptyContentWrapper>;
+    };
     renderPopup = () => {
-        const { search, children, onChange, multiple, showSelectAll, value, options } = this.props;
+        const {
+            search,
+            children,
+            onChange,
+            multiple,
+            showSelectAll,
+            value,
+            options,
+            extra,
+            customStyle,
+            renderPopup
+        } = this.props;
         const { searchValue, itemTree } = this.state;
         const Options = this.renderOptions(options);
+        const Extra = this.renderExtra(extra);
+
+        if (renderPopup) {
+            return renderPopup({
+                handleVisible: this.handleVisibleChange,
+                onChange: v => onChange(v),
+                value,
+                multiple,
+                extra,
+                search,
+                children
+            });
+        }
 
         return (
             <MenuWrap>
@@ -210,13 +269,15 @@ class Select extends Component {
                             onChange(value);
                         }
                     }}
+                    customStyle={customStyle}
                     itemTree={itemTree}
                     multiple={multiple}
                     showSelectAll={showSelectAll}
                     selectedKeys={multiple ? value : [value]}
                 >
-                    {Options || children}
+                    {Options || children || this.renderEmptyContent()}
                 </BlockMenu>
+                {Extra}
             </MenuWrap>
         );
     };
@@ -232,6 +293,16 @@ class Select extends Component {
             });
         } else {
             return null;
+        }
+    };
+    renderExtra = extra => {
+        if (!_.isEmpty(extra)) {
+            if (React.isValidElement(extra)) {
+                return <Extra>{extra}</Extra>;
+            } else {
+                const { content, ...rest } = extra;
+                return <Extra {...rest}>{content}</Extra>;
+            }
         }
     };
     renderSelector = () => {
@@ -258,6 +329,7 @@ class Select extends Component {
         const {
             children,
             options,
+            extra,
             onChange,
             search,
             value,
@@ -266,36 +338,49 @@ class Select extends Component {
             defaultValue,
             renderContent,
             renderSelector,
+            renderPopup,
             popover,
             popoverProps,
+            customStyle,
+            emptyContent,
+            onVisibleChange,
             ...rest
         } = this.props;
         /* eslint-enable no-unused-vars */
         const { visible, searchValue } = this.state;
         return (
-            <SelectContext.Provider
-                value={{
-                    searchValue: searchValue,
-                    handleSearch: this.handleSearch
+            <ConfigContext.Consumer>
+                {({ forwardPopupContainer } = {}) => {
+                    return (
+                        <SelectContext.Provider
+                            value={{
+                                searchValue: searchValue,
+                                handleSearch: this.handleSearch,
+                                hidePopup: this.hidePopup
+                            }}
+                        >
+                            <SelectWrap {...rest}>
+                                <Popover
+                                    forceRender
+                                    popup={this.renderPopup()}
+                                    onVisibleChange={this.handleVisibleChange}
+                                    placement="bottomLeft"
+                                    trigger={['click']}
+                                    {...(forwardPopupContainer
+                                        ? { forwardPopupContainer: triggerNode => triggerNode.parentNode }
+                                        : { getPopupContainer: triggerNode => triggerNode.parentNode })}
+                                    visible={visible}
+                                    zIndex={100}
+                                    {...popover}
+                                    {...popoverProps}
+                                >
+                                    <div>{this.renderSelector()}</div>
+                                </Popover>
+                            </SelectWrap>
+                        </SelectContext.Provider>
+                    );
                 }}
-            >
-                <SelectWrap {...rest}>
-                    <Popover
-                        forceRender
-                        popup={this.renderPopup()}
-                        onVisibleChange={this.handleVisibleChange}
-                        placement="bottomLeft"
-                        trigger={['click']}
-                        getPopupContainer={triggerNode => triggerNode.parentNode}
-                        visible={visible}
-                        zIndex={100}
-                        {...popover}
-                        {...popoverProps}
-                    >
-                        <div>{this.renderSelector()}</div>
-                    </Popover>
-                </SelectWrap>
-            </SelectContext.Provider>
+            </ConfigContext.Consumer>
         );
     }
 }

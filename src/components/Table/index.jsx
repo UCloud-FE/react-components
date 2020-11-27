@@ -13,5 +13,8 @@ Table.ActionList = ActionList;
 import ExpandedRowContent from './ExpandedRowContent';
 Table.ExpandedRowContent = ExpandedRowContent;
 
+import HoverDisplayArea from './HoverDisplayArea';
+Table.HoverDisplayArea = HoverDisplayArea;
+
 import * as utils from './utils';
 Object.assign(Table, utils);

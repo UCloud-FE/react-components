@@ -1,40 +1,66 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
 import { clearFixMixin } from 'src/style';
-import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
+import withProps from 'src/utils/withProps';
 
-export const Outer = styled.div`
-    height: 8px;
-`;
-export const Inner = styled.div(
-    ({ theme: { colorMap } }) => css`
-        width: 100%;
-        height: 100%;
-        border: 1px solid ${colorMap.default.border};
-        border-radius: 6px;
-        background: ${colorMap.default.background};
-    `
+export const Outer = withProps()(
+    styled('div')(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
+
+        return css`
+            height: 10px;
+            background: ${DT.T_PROGRESS_COLOR_BG_DEFAULT};
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        `;
+    })
 );
-export const Bg = styled.div(
-    ({ theme: { colorList } }) => css`
-        background: ${colorList.primary2};
-        height: 100%;
-        border-radius: 6px;
-        transition: width 0.5s;
-        position: relative;
 
-        ${({ percent }) => css`
+export const Inner = withProps()(
+    styled('div')(props => {
+        const {
+            theme: { designTokens: DT },
+            color,
+            percent
+        } = props;
+
+        return css`
             width: ${percent}%;
-        `};
-    `
+            height: 100%;
+            border: none;
+            border-radius: 5px;
+            transition: width 0.5s;
+            position: relative;
+            background: ${color
+                ? {
+                      success: DT.T_COLOR_BG_SUCCESS_DARK,
+                      warn: DT.T_COLOR_BG_WARNING_DARK,
+                      error: DT.T_COLOR_BG_ERROR_DARK,
+                      default: DT.T_COLOR_BG_PRIMARY_1
+                  }[color] || color
+                : DT.T_COLOR_BG_PRIMARY_1};
+        `;
+    })
 );
-export const CurrentText = styled.span`
-    position: absolute;
-    right: 0;
-    top: -17px;
-`;
 
-export const TextWrap = styled.span`
+export const CurrentText = styled('span')(props => {
+    const { percent } = props;
+
+    return css`
+        position: relative;
+        left: ${percent}%;
+        width: 50px;
+        margin-left: -25px;
+        display: inline-block;
+        text-align: center;
+    `;
+});
+
+export const TextWrap = styled('span')`
     position: relative;
     height: 18px;
     line-height: 18px;
@@ -42,8 +68,6 @@ export const TextWrap = styled.span`
     ${clearFixMixin};
 `;
 
-export const EndText = styled.span`
+export const EndText = styled('span')`
     float: right;
 `;
-
-addDefaultThemeProps(Inner, Bg);

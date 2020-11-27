@@ -1,6 +1,7 @@
 import React from 'react';
-import Table from 'components/Table';
-import Notice from 'components/Notice';
+
+import Table from 'src/components/Table';
+import Notice from 'src/components/Notice';
 
 // demo start
 class Demo extends React.Component {
@@ -16,6 +17,7 @@ class Demo extends React.Component {
                         columns={[
                             {
                                 title: 'name',
+                                key: 'name',
                                 dataIndex: 'name'
                             }
                         ]}
@@ -32,6 +34,7 @@ class Demo extends React.Component {
                         columns={[
                             {
                                 title: 'name',
+                                key: 'name',
                                 dataIndex: 'name'
                             }
                         ]}

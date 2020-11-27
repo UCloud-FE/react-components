@@ -8,7 +8,7 @@ import { NoticeWrap, NoticeIconWrap, ContentWrap, ActionWrap, CloseWrap, CloseIc
 
 const deprecatedLogForStyleTypeInfo = _.once(() => deprecatedLog('Notice styleType "info"', '"success"'));
 
-const StyleType = ['default', 'success', 'warning', 'error'];
+const StyleType = ['default', 'success', 'warning', 'error', 'disabled'];
 
 class Notice extends Component {
     state = {

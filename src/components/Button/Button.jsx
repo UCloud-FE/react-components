@@ -2,11 +2,13 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
-import { ButtonWrap, ButtonIcon } from './style';
+import Icon from 'src/components/Icon';
+
+import { ButtonWrap, iconCls } from './style';
 
 const StyleType = ['primary', 'border', 'border-gray'];
 const Size = ['sm', 'md', 'lg'];
-const Shape = ['circle'];
+const Shape = ['circle', 'square'];
 
 export default class Button extends PureComponent {
     static propTypes = {
@@ -56,12 +58,12 @@ export default class Button extends PureComponent {
         const { loading, icon, children, ...rest } = this.props;
         let btnIcon = null;
         if (_.isString(icon)) {
-            btnIcon = <ButtonIcon type={icon} />;
+            btnIcon = <Icon className={iconCls} type={icon} />;
         } else {
             btnIcon = icon;
         }
         if (loading) {
-            btnIcon = <ButtonIcon type="loading" spin />;
+            btnIcon = <Icon className={iconCls} type="loading" spin />;
         }
         return (
             <ButtonWrap loading={loading} {...rest}>

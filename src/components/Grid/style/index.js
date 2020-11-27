@@ -1,7 +1,9 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
 import { clearFixMixin } from 'src/style';
 import config from 'src/config';
+import withProps from 'src/utils/withProps';
 
 const { prefixCls: _prefixCls } = config;
 const colPrefixCls = _prefixCls + '-col';
@@ -17,73 +19,109 @@ const flexMixin = css`
     display: flex;
     flex-flow: row wrap;
 `;
-const spanMixin = css`
-    float: left;
-    flex: 0 0 auto;
-    width: ${({ span }) => percentage(span / maxColumns)};
-    ${({ span }) =>
-        span === 0 &&
+const spanMixin = props => {
+    const { span } = props;
+
+    return css`
+        float: left;
+        flex: 0 0 auto;
+        width: ${percentage(span / maxColumns)};
+        ${span === 0 &&
         css`
             display: none;
         `};
-`;
-const pushMixin = css`
-    left: ${({ push }) => percentage(push / maxColumns)};
-`;
-const pullMixin = css`
-    right: ${({ pull }) => percentage(pull / maxColumns)};
-`;
-const offsetMixin = css`
-    margin-left: ${({ offset }) => percentage(offset / maxColumns)};
-`;
-const orderMixin = css`
-    order: ${({ order }) => order};
-`;
+    `;
+};
+const pushMixin = props => {
+    const { push } = props;
 
-const justifyMixin = css`
-    justify-content: ${({ justify }) =>
-        ({
+    return css`
+        left: ${percentage(push / maxColumns)};
+    `;
+};
+const pullMixin = props => {
+    const { pull } = props;
+
+    return css`
+        right: ${percentage(pull / maxColumns)};
+    `;
+};
+const offsetMixin = props => {
+    const { offset } = props;
+
+    return css`
+        margin-left: ${percentage(offset / maxColumns)};
+    `;
+};
+const orderMixin = props => {
+    const { order } = props;
+
+    return css`
+        order: ${order};
+    `;
+};
+
+const justifyMixin = props => {
+    const { justify } = props;
+
+    return css`
+        justify-content: ${{
             start: 'flex-start',
             center: 'center',
             end: 'flex-end',
             'space-around': 'space-around',
             'space-between': 'space-between'
-        }[justify])};
-`;
-const alignMixin = css`
-    align-items: ${({ align }) => ({ top: 'flex-start', middle: 'center', bottom: 'flex-end' }[align])};
-`;
+        }[justify]};
+    `;
+};
+const alignMixin = props => {
+    const { align } = props;
 
-export const ColWrap = styled.div.attrs({
+    return css`
+        align-items: ${{ top: 'flex-start', middle: 'center', bottom: 'flex-end' }[align]};
+    `;
+};
+
+export const ColWrap = withProps({
     className: colPrefixCls
-})`
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    min-height: 1px;
+})(
+    styled('div')(props => {
+        return css`
+            position: relative;
+            display: block;
+            box-sizing: border-box;
+            min-height: 1px;
 
-    ${props => props.span !== undefined && spanMixin};
-    ${props => props.push && pushMixin};
-    ${props => props.pull && pullMixin};
-    ${props => props.offset && offsetMixin};
-    ${props => props.order && orderMixin};
-`;
+            ${props.span !== undefined && spanMixin(props)};
+            ${props.push && pushMixin(props)};
+            ${props.pull && pullMixin(props)};
+            ${props.offset && offsetMixin(props)};
+            ${props.order && orderMixin(props)};
+        `;
+    })
+);
 
-export const RowWrap = styled.div.attrs({
+export const RowWrap = withProps({
     className: rowPrefixCls
-})`
-    position: relative;
-    display: block;
-    height: auto;
+})(
+    styled('div')(props => {
+        const { type, gutter } = props;
 
-    ${({ type }) => (type === 'flex' ? flexMixin : clearFixMixin)};
-    margin-left: ${({ gutter }) => -(gutter / 2) + 'px'};
-    margin-right: ${({ gutter }) => -(gutter / 2) + 'px'};
-    ${justifyMixin};
-    ${alignMixin};
+        return css`
+            position: relative;
+            display: block;
+            height: auto;
 
-    ${/* sc-sel */ ColWrap} {
-        padding-left: ${({ gutter }) => gutter / 2 + 'px'};
-        padding-right: ${({ gutter }) => gutter / 2 + 'px'};
-    }
-`;
+            ${type === 'flex' ? flexMixin : clearFixMixin};
+            margin-left: ${-(gutter / 2) + 'px'};
+            margin-right: ${-(gutter / 2) + 'px'};
+            ${justifyMixin(props)};
+            ${alignMixin(props)};
+
+            > .${colPrefixCls} {
+                padding-left: ${gutter / 2 + 'px'};
+                padding-right: ${gutter / 2 + 'px'};
+            }
+        `;
+    })
+);

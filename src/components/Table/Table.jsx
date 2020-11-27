@@ -1,4 +1,4 @@
-import React, { Component, PureComponent } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 import createReactContext from 'create-react-context';
@@ -11,68 +11,40 @@ import Checkbox from 'src/components/Checkbox';
 import Radio from 'src/components/Radio';
 import Select from 'src/components/Select';
 import Icon from 'src/components/Icon';
-import Popover from 'src/components/Popover';
+import Tooltip from 'src/components/Tooltip';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
+import { InheritProvider } from 'src/components/Popover/ContainerContext';
 
 import {
     prefixCls,
     TableWrap,
     PopupContainer,
     SortIcon,
+    CancelSelect,
     selectIconCellCls,
     selectIconHeaderCls,
     placeholderCellCls,
     placeholderHeaderCls
 } from './style';
 import LOCALE from './locale/zh_CN';
+import TableRow from './TableRow';
 
+const noop = () => {};
 export const deprecatedLogForOnRowSelect = _.once(() => deprecatedLog('Table onRowSelect', 'rowSelection.onChange'));
 
 export const placeholderKey = 'table_column_width_placeholder';
 
 export const TableContext = createReactContext();
 
-class TableRow extends PureComponent {
-    state = {
-        contextMenuVisible: false
-    };
-    hideContextMenu = () => {
-        this.setState({
-            contextMenuVisible: false
-        });
-    };
-    render() {
-        const { record, contextMenu, ...rest } = this.props;
-        const { contextMenuVisible } = this.state;
-        if (contextMenu) {
-            return (
-                <Popover
-                    popup={<div>{contextMenu(record, this.hideContextMenu)}</div>}
-                    trigger={['contextMenu']}
-                    hideAction={['click']}
-                    visible={contextMenuVisible}
-                    onVisibleChange={visible => this.setState({ contextMenuVisible: visible })}
-                    animation={null}
-                    alignPoint
-                >
-                    <tr {...rest} />
-                </Popover>
-            );
-        }
-        return <tr {...rest} />;
-    }
-}
-TableRow.propTypes = {
-    record: PropTypes.object,
-    contextMenu: PropTypes.func
-};
+const missingColumnKeyWarn = () => console.error('Warning: Table column need a unique key');
 
 @localeConsumerDecorator({ defaultLocale: LOCALE, localeName: 'Table' })
 class Table extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            filters: {},
+            filters: this.calDefaultFilters(props),
+            filtersFromProps: this.calFiltersFromProps(props),
             order: null,
             selectedRowKeyMap: {},
             columnConfig: props.defaultColumnConfig,
@@ -101,17 +73,26 @@ class Table extends Component {
                 _.each(rowSelection.defaultSelectedRowKeys, key => (selectedRowKeyMap[key] = true));
             }
         }
+        // init order
+        if ('order' in props) {
+            const order = this.getOrder(props.order, props.columns);
+            this.state.order = order;
+        } else if ('defaultOrder' in props) {
+            const order = this.getOrder(props.defaultOrder, props.columns);
+            this.state.order = order;
+        }
+        this.check(props);
     }
     static propTypes = {
         /** 分页组件的配置，传入null为隐藏分页 */
         pagination: PropTypes.object,
         /** 数据源 */
         dataSource: PropTypes.array,
-        /** 表列信息 */
+        /** 表列信息，具体属性参考 columns 事例 */
         columns: PropTypes.array.isRequired,
         /**
          * 启用后会创建一个无宽度的空列，用作宽度占位，占位后宽度溢出便不会导致表格列被压缩，多出的宽度会被空列占用。
-         * 占位列 column.key 为 table_column_width_placeholder，使用中需注意避免重复 key
+         * 占位列 column.key 为 table\_column\_width\_placeholder，使用中需注意避免重复 key
          */
         columnPlaceholder: PropTypes.bool,
         /** 表列配置项，非受控 */
@@ -149,11 +130,11 @@ class Table extends Component {
         onHeaderRow: PropTypes.func,
         /**
          * 列表可选选项配置.
-         * column.key 为 table_row_selection，使用中需注意避免重复 key
+         * column.key 为 table\_row\_selection，使用中需注意避免重复 key
          */
         rowSelection: PropTypes.oneOfType([
             PropTypes.shape({
-                /** 选框是否为fixed */
+                /** 选框是否为 fixed */
                 fixed: PropTypes.bool,
                 /** 选中项变化回调 */
                 onChange: PropTypes.func,
@@ -167,7 +148,14 @@ class Table extends Component {
                  * 是否多选
                  * @default true
                  */
-                multiple: PropTypes.bool
+                multiple: PropTypes.bool,
+                /**
+                 * 多选选中时的提示，bottom 为显示在下方
+                 * @default true
+                 */
+                selectedTip: PropTypes.oneOf([true, false, 'bottom']),
+                /** 是否禁用 */
+                disabled: PropTypes.bool
             }),
             PropTypes.oneOf([true])
         ]),
@@ -188,13 +176,21 @@ class Table extends Component {
         errorContent: PropTypes.node,
         /** 如何搜索 */
         handleSearch: PropTypes.func,
+        /** 自定义样式 */
+        customStyle: PropTypes.shape({
+            outerPadding: PropTypes.string
+        }),
         /** 滚动配置 */
         scroll: PropTypes.shape({
             /** x轴滚动配置，为true自动展开并滚动，为数字时设定表单的宽度 */
             x: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
             /** y轴滚动配置，为数字时设定表单的高度 */
-            y: PropTypes.oneOfType([PropTypes.bool, PropTypes.number])
+            y: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
+            /** table body 滚动时的回调 */
+            onScroll: PropTypes.func
         }),
+        /** 表格布局，当 scroll.x 有值时为 fixed，其它时候默认为 auto，可自行覆盖 */
+        tableLayout: PropTypes.oneOf(['auto', 'fixed']),
         /** 定义如何获取每行的键值 */
         rowKey: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
         /** 是否有斑马线，存在子表格时，斑马线样式可能会错乱 */
@@ -204,6 +200,16 @@ class Table extends Component {
             header: PropTypes.shape({
                 cell: PropTypes.any
             })
+        }),
+        /** 默认排序设置，key 为 column key，state 为升序(asc)或降序(desc) */
+        defaultOrder: PropTypes.shape({
+            key: PropTypes.string,
+            state: PropTypes.oneOf(['desc', 'asc'])
+        }),
+        /** 受控排序设置，key 为 column key，state 为升序(asc)或降序(desc) */
+        order: PropTypes.shape({
+            key: PropTypes.string,
+            state: PropTypes.oneOf(['desc', 'asc'])
         }),
         /**
          * 表格的筛选等条件变更时的回调
@@ -236,13 +242,16 @@ class Table extends Component {
         defaultColumnConfig: {},
         onColumnConfigChange: () => {},
         handleSearch: (record, searchValue) => {
-            return (
-                _.map(record)
-                    .join('')
-                    .indexOf(searchValue) >= 0
-            );
+            return _.map(record).join('').indexOf(searchValue) >= 0;
         },
+        customStyle: {},
         rowKey: 'key'
+    };
+    check = props => {
+        const { columns } = props;
+        _.each(columns, column => {
+            if (column.key === undefined) missingColumnKeyWarn();
+        });
     };
     componentWillReceiveProps = nextProps => {
         const { rowSelection } = nextProps;
@@ -253,6 +262,82 @@ class Table extends Component {
                 selectedRowKeyMap
             });
         }
+        // pick controlled filter value
+        this.setState({
+            filtersFromProps: this.calFiltersFromProps(nextProps)
+        });
+        if ('order' in nextProps) {
+            const order = this.getOrder(nextProps.order, nextProps.columns);
+            this.setState({
+                order
+            });
+        }
+    };
+    getOrder = (order, columns) => {
+        if (!order || !columns) return null;
+        const { key, state } = order;
+        if (!key || !state) return null;
+        const column = _.find(columns, column => column.key === key);
+        if (!column) return null;
+        const { order: columnOrder, dataIndex } = column;
+        if (!columnOrder) return null;
+        const { handleOrder } = columnOrder;
+        return {
+            key,
+            state,
+            dataIndex,
+            handleOrder
+        };
+    };
+    calFiltersFromProps = ({ columns = [] }) => {
+        const filters = {};
+        // pick filter controlled value
+        columns.forEach((column, i) => {
+            const { filter } = column;
+            const columnKey = this.getColumnKey(column, i);
+            if (!filter) return;
+            let filterValue;
+            if ('value' in filter) {
+                filterValue = filter.value;
+                filters[columnKey] = {
+                    value: filterValue
+                };
+            }
+        });
+        return filters;
+    };
+    calDefaultFilters = ({ columns = [] }) => {
+        const filters = {};
+        // pick filter controlled value
+        columns.forEach((column, i) => {
+            const { filter } = column;
+            if (!filter) return;
+            const columnKey = this.getColumnKey(column, i);
+            let filterValue;
+            // pick default value
+            if ('defaultValue' in filter) {
+                filterValue = filter.defaultValue;
+                filters[columnKey] = {
+                    value: filterValue
+                };
+            }
+        });
+        return filters;
+    };
+    mergeFilters = (stateFilters, propsFilters, columns) => {
+        const filters = {
+            ...stateFilters,
+            ...propsFilters
+        };
+        _.each(filters, (filter, key) => {
+            const column = _.find(columns, (column, i) => this.getColumnKey(column, i) === key);
+            if (!column || filter.value == null || (column.multiple && _.isEmpty(filter.value))) {
+                delete filters[key];
+            } else {
+                filter.column = column;
+            }
+        });
+        return filters;
     };
     getExpandedRowKeys = (dataSource, changedUnExpandedRowKeys) => {
         const flatDataSource = this.flatDataSource(dataSource);
@@ -276,6 +361,7 @@ class Table extends Component {
     };
     onSelectedRowKeysChange = selectedRowKeyMap => {
         const { rowSelection } = this.props;
+        if (!rowSelection) return;
         const selectedRowKeys = [];
         _.each(selectedRowKeyMap, (selected, key) => {
             selected && selectedRowKeys.push(key);
@@ -289,6 +375,10 @@ class Table extends Component {
                     selectedRowKeyMap
                 });
             }
+        } else {
+            this.setState({
+                selectedRowKeyMap
+            });
         }
         this.deprecatedOnRowSelect(selectedRowKeys);
     };
@@ -307,17 +397,26 @@ class Table extends Component {
             this.handleConditionChange({ searchValue: v });
         }
     };
-    handleConditionChange = condition => {
+    handleConditionChange = (stateCondition, callbackCondition = {}) => {
+        stateCondition = {
+            ..._.pick(this.state, ['order', 'filters', 'searchValue']),
+            ...stateCondition
+        };
         this.setState({
-            ...condition
+            ...stateCondition
         });
         const { onConditionChange } = this.props;
-        condition = {
-            ..._.pick(this.state, ['order', 'filters', 'searchValue']),
-            ...condition
-        };
 
-        let { order, filters, searchValue } = condition;
+        let { order, filters, searchValue } = callbackCondition;
+        if (!('order' in callbackCondition)) {
+            order = stateCondition.order;
+        }
+        if (!('filters' in callbackCondition)) {
+            filters = stateCondition.filters;
+        }
+        if (!('searchValue' in callbackCondition)) {
+            searchValue = stateCondition.searchValue;
+        }
 
         onConditionChange &&
             onConditionChange({
@@ -326,69 +425,53 @@ class Table extends Component {
                 searchValue
             });
     };
-    renderFilter = (filter, key, dataIndex) => {
+    renderFilter = (column, filterInfo = {}, index) => {
+        const { filter } = column;
         if (!filter) {
             return null;
         }
-        const { options, handleFilter, multiple, ...rest } = filter;
-        const filterState = this.state.filters;
+        const columnKey = this.getColumnKey(column, index);
+        const { options, multiple, onChange = () => {}, ...rest } = filter;
         const newOptions = _.map(options, option => (_.isObject(option) ? option : { value: option }));
+
+        const { value } = filterInfo;
+        const finalValue = value == null ? undefined : multiple && _.isEmpty(value) ? undefined : value;
+
         return (
             <Select
                 options={newOptions}
-                value={filterState[key] ? filterState[key].value : undefined}
+                value={finalValue}
                 onChange={value => {
-                    let selectedOptionsLabel;
-                    if (multiple) {
-                        const selectedOptions = _.filter(
-                            newOptions,
-                            option => _.findIndex(value, v => v === option.value) >= 0
-                        );
-                        selectedOptionsLabel = selectedOptions.map(
-                            option => (option.label !== undefined ? option.label : option.value)
-                        );
-                    } else {
-                        const selectedOption = _.find(newOptions, option => option.value === value);
-                        selectedOptionsLabel =
-                            selectedOption.label !== undefined ? selectedOption.label : selectedOption.value;
-                    }
-                    this.handleFilter(
-                        key,
-                        value == null || (multiple && !value.length)
-                            ? null
-                            : {
-                                  dataIndex,
-                                  value,
-                                  multiple,
-                                  handleFilter,
-                                  label: selectedOptionsLabel
-                              }
-                    );
+                    this.handleFilter(columnKey, value == null || (multiple && !value.length) ? null : value);
+                    onChange(value);
                 }}
                 className={`${prefixCls}-filter`}
                 renderSelector={(content, visible) => {
                     return <Icon key="icon" type="filter" size="xs" color={visible ? 'blue' : null} />;
                 }}
-                popoverProps={{ getPopupContainer: () => this.popupContainer }}
                 multiple={multiple}
                 {...rest}
             />
         );
     };
-    handleFilter = (key, filter) => {
-        const filters = { ...this.state.filters };
-        if (filter == null) {
-            delete filters[key];
-        } else {
-            filters[key] = filter;
-        }
+    handleFilter = (key, value) => {
+        const finalFilters = this.mergeFilters(
+            this.state.filters,
+            {
+                ...this.state.filtersFromProps,
+                [key]: {
+                    value
+                }
+            },
+            this.props.columns
+        );
         this.setState({
             pagination: { ...this.state.pagination, current: 1 }
         });
-        this.handleConditionChange({ filters });
+        this.handleConditionChange({ filters: finalFilters });
     };
     clearFilter = () => {
-        this.handleConditionChange({ filters: {}, searchValue: '' });
+        this.handleConditionChange({ filters: {}, searchValue: '' }, { filters: {} });
     };
     renderOrder = (order, key, dataIndex, state = 'none') => {
         if (!order) {
@@ -415,20 +498,26 @@ class Table extends Component {
         );
     };
     handleOrder = (key, { dataIndex, handleOrder, state }) => {
-        this.handleConditionChange({
-            order:
-                state === 'asc'
-                    ? null
-                    : {
-                          key,
-                          dataIndex,
-                          handleOrder,
-                          state: {
-                              none: 'desc',
-                              desc: 'asc'
-                          }[state]
-                      }
-        });
+        const order =
+            state === 'asc'
+                ? null
+                : {
+                      key,
+                      dataIndex,
+                      handleOrder,
+                      state: {
+                          none: 'desc',
+                          desc: 'asc'
+                      }[state]
+                  };
+        // controlled
+        if ('order' in this.props) {
+            this.handleConditionChange({}, { order });
+        } else {
+            this.handleConditionChange({
+                order
+            });
+        }
     };
     flatDataSource = (dataSource = [], childrenName = 'children') => {
         const result = [];
@@ -457,36 +546,38 @@ class Table extends Component {
         loop(dataSource);
         return result;
     };
-    getDataSource = () => {
+    getDataSource = filters => {
         const { dataSource, handleSearch, doNotHandleCondition } = this.props;
-        const { filters, order, searchValue } = this.state;
+        const { order, searchValue } = this.state;
         let data = _.clone(dataSource);
         const doFilter = (dataSource, filter) => {
+            const { value, column: columnInfo } = filter;
             const {
                 dataIndex,
-                value,
-                multiple,
-                handleFilter = (value, record, filterValue, multiple) => {
-                    if (value == null) {
-                        return false;
-                    }
-                    if (_.isNumber(value)) {
-                        value = '' + value;
-                    } else if (!_.isString(value)) {
-                        return false;
-                    }
-                    if (!multiple) {
-                        return value.indexOf(filterValue) >= 0;
-                    } else {
-                        for (let i = 0; i < filterValue.length; i++) {
-                            const v = filterValue[i];
-                            if (value.indexOf(v) >= 0) {
-                                return true;
+                filter: {
+                    multiple,
+                    handleFilter = (value, record, filterValue, multiple) => {
+                        if (value == null) {
+                            return false;
+                        }
+                        if (_.isNumber(value)) {
+                            value = '' + value;
+                        } else if (!_.isString(value)) {
+                            return false;
+                        }
+                        if (!multiple) {
+                            return value.indexOf(filterValue) >= 0;
+                        } else {
+                            for (let i = 0; i < filterValue.length; i++) {
+                                const v = filterValue[i];
+                                if (value.indexOf(v) >= 0) {
+                                    return true;
+                                }
                             }
                         }
                     }
                 }
-            } = filter;
+            } = columnInfo;
             return _.filter(dataSource, record => {
                 return handleFilter(record[dataIndex], record, value, multiple);
             });
@@ -560,15 +651,25 @@ class Table extends Component {
         const key = typeof rowKey === 'function' ? rowKey(record, index) : record[rowKey];
         return key === undefined ? index : key;
     };
-    getColumns = dataSourceOfCurrentPage => {
-        const { columns, rowSelection, columnPlaceholder } = this.props;
+    getColumnKey = (column = {}, index) => {
+        const { key } = column;
+        return (key === undefined ? index : key) + '';
+    };
+    getColumns = (dataSourceOfCurrentPage, filters) => {
+        const { columns, rowSelection, columnPlaceholder, locale } = this.props;
         const { order: currentOrder = {}, selectedRowKeyMap, columnConfig } = this.state;
-        let newColumns = columns.filter(column => {
+        const cloneColumns = columns.map((column, index) => ({
+            ...column,
+            index
+        }));
+        let newColumns = cloneColumns.filter(column => {
             const { key } = column;
             return !columnConfig[key] || !columnConfig[key].hidden;
         });
+
         const generateColumnTitle = column => {
-            const { filter, dataIndex, key, title, renderTitle, order, children } = column;
+            const { dataIndex, title, renderTitle, order, children, index } = column;
+            const columnKey = this.getColumnKey(column, index);
             if (children) {
                 return {
                     ...column,
@@ -580,12 +681,12 @@ class Table extends Component {
                     title: (
                         <div>
                             {renderTitle ? renderTitle(title) : title}
-                            {this.renderFilter(filter, key, dataIndex)}
+                            {this.renderFilter(column, filters[columnKey], index)}
                             {this.renderOrder(
                                 order,
-                                key,
+                                columnKey,
                                 dataIndex,
-                                currentOrder && currentOrder.key === key ? currentOrder.state : 'none'
+                                currentOrder && currentOrder.key === columnKey ? currentOrder.state : 'none'
                             )}
                         </div>
                     )
@@ -597,6 +698,8 @@ class Table extends Component {
         if (rowSelection) {
             let flatDataSourceOfCurrentPage = this.flatDataSource(dataSourceOfCurrentPage);
             let enableDataSourceOfCurrentPage = flatDataSourceOfCurrentPage;
+
+            const { disabled: selectionDisabled } = rowSelection;
 
             if (rowSelection.getDisabledOfRow) {
                 enableDataSourceOfCurrentPage = _.filter(
@@ -613,16 +716,49 @@ class Table extends Component {
             const isAllSelected =
                 selectedEnableDataSourceOfCurrentPageCount === enableDataSourceOfCurrentPage.length &&
                 selectedEnableDataSourceOfCurrentPageCount > 0;
+
+            const selectedCount = _.filter(selectedRowKeyMap, v => v).length;
+            const renderSelectedAllCheckbox = () => (
+                <Checkbox
+                    disabled={selectionDisabled}
+                    onChange={() => {
+                        const enableKeysOfCurrentPage = enableDataSourceOfCurrentPage.map(item => item.key);
+                        this.handleToggleCurrentPage(enableKeysOfCurrentPage, !isAllSelected);
+                    }}
+                    checked={isAllSelected}
+                    indeterminate={!isAllSelected && selectedEnableDataSourceOfCurrentPageCount > 0}
+                />
+            );
             newColumns.unshift({
                 title:
-                    rowSelection.multiple === false ? null : (
-                        <Checkbox
-                            onChange={() => {
-                                const enableKeysOfCurrentPage = enableDataSourceOfCurrentPage.map(item => item.key);
-                                this.handleToggleCurrentPage(enableKeysOfCurrentPage, !isAllSelected);
+                    rowSelection.multiple === false ? null : rowSelection.selectedTip === false ? (
+                        renderSelectedAllCheckbox()
+                    ) : (
+                        <Tooltip
+                            visible={selectedCount > 0}
+                            getPopupContainer={this.getPopupContainer}
+                            popup={
+                                <span>
+                                    {locale.selected} {selectedCount}{' '}
+                                    <CancelSelect
+                                        onClick={() => {
+                                            const enableKeysOfCurrentPage = enableDataSourceOfCurrentPage.map(
+                                                item => item.key
+                                            );
+                                            this.handleToggleCurrentPage(enableKeysOfCurrentPage, false);
+                                        }}
+                                    >
+                                        {locale.cancelSelect}
+                                    </CancelSelect>
+                                </span>
+                            }
+                            placement={rowSelection.selectedTip === 'bottom' ? 'bottomLeft' : 'topLeft'}
+                            align={{
+                                offset: [-8, 0]
                             }}
-                            checked={isAllSelected}
-                        />
+                        >
+                            {renderSelectedAllCheckbox()}
+                        </Tooltip>
                     ),
                 key: 'table_row_selection',
                 width: 32,
@@ -632,7 +768,9 @@ class Table extends Component {
                 render: (value, record, index) => {
                     const rowKey = this.getRowKey(record, index);
                     let disabled = false;
-                    if (rowSelection.getDisabledOfRow) {
+                    if (selectionDisabled) {
+                        disabled = true;
+                    } else if (rowSelection.getDisabledOfRow) {
                         disabled = rowSelection.getDisabledOfRow(record);
                     }
                     return rowSelection.multiple === false ? (
@@ -653,7 +791,8 @@ class Table extends Component {
         }
 
         if (columnPlaceholder) {
-            newColumns.push({
+            const lastUnFixedIndex = _.findLastIndex(newColumns, columnConfig => !columnConfig.fixed);
+            newColumns.splice(lastUnFixedIndex + 1, 0, {
                 title: '',
                 key: placeholderKey,
                 onHeaderCell: () => ({ className: placeholderHeaderCls }),
@@ -677,17 +816,32 @@ class Table extends Component {
         const { filters, searchValue, total, locale } = option;
 
         let first = true;
-        const renderLabel = (label, multiple) => {
+        const renderLabel = ({
+            value,
+            column: {
+                filter: { multiple, options }
+            }
+        }) => {
+            options = options.map(option => (!_.isObject(option) ? { value: option, label: option } : option));
             if (multiple) {
+                const label = _.map(value, v => {
+                    const option = _.find(options, option => {
+                        return v === option.value;
+                    });
+                    return option && option.label;
+                });
                 let first = true;
                 return _.map(label, _label => (first ? [(first = false), _label] : [' | ', _label]));
             } else {
-                return label;
+                const option = _.find(options, option => {
+                    return value === option.value;
+                });
+                return option && option.label;
             }
         };
         return !_.isEmpty(filters) || searchValue ? (
             <div key="search-info" className={`${prefixCls}-search-tip-wrap`}>
-                <Notice icon={null} closable={false} className={`${prefixCls}-filter-notice`} styleType="success">
+                <Notice icon={null} closable={false} className={`${prefixCls}-filter-notice`}>
                     {searchValue && (
                         <span>
                             {locale.search}
@@ -700,12 +854,8 @@ class Table extends Component {
                         <span>
                             {locale.filter}
                             {locale.colon}
-                            {_.map(
-                                filters,
-                                filter =>
-                                    first
-                                        ? [(first = false), renderLabel(filter.label, filter.multiple)]
-                                        : [', ', renderLabel(filter.label, filter.multiple)]
+                            {_.map(filters, filterInfo =>
+                                first ? [(first = false), renderLabel(filterInfo)] : [', ', renderLabel(filterInfo)]
                             )}
                             {locale.semicolon}
                         </span>
@@ -744,13 +894,15 @@ class Table extends Component {
         }
     };
     renderTitle = option => {
-        const { title = () => {} } = this.props;
-        return (
-            <div>
-                {title()}
-                {this.renderSearchInfo(option)}
-            </div>
-        );
+        const { title } = this.props;
+        return [
+            title && (
+                <div className={`${prefixCls}-custom-title`} key="custom">
+                    {title()}
+                </div>
+            ),
+            this.renderSearchInfo(option)
+        ];
     };
     renderFooter = option => {
         return <div>{this.renderEmptyAndErrorInfo(option)}</div>;
@@ -771,6 +923,18 @@ class Table extends Component {
             onExpand(expanded, record);
         }
     };
+    onRow = (record, index) => {
+        const { onRow = noop, contextMenu } = this.props;
+        return {
+            ...onRow(record, index),
+            record,
+            contextMenu
+        };
+    };
+    savePopupContainer = _ref => {
+        this.popupContainer = _ref;
+    };
+    getPopupContainer = () => this.popupContainer;
     render() {
         /* eslint-disable no-unused-vars */
         let {
@@ -788,15 +952,18 @@ class Table extends Component {
             expandIconAsCell,
             expandIconColumnIndex,
             defaultExpandAllRows,
-            title = () => {},
-            footer = () => {},
+            title = noop,
+            footer = noop,
             locale,
             hideExpandIcon,
-            onRow = () => {},
+            onRow = noop,
             components,
             onExpand,
             zebraCrossing,
             columnPlaceholder,
+            tableLayout,
+            scroll,
+            customStyle,
             ...rest
         } = this.props;
         if (emptyContent === undefined) {
@@ -804,12 +971,14 @@ class Table extends Component {
         }
         /* eslint-enable no-unused-vars */
         const pagination = this.getPagination();
-        const { filters = {}, searchValue, columnConfig } = this.state;
-        let { dataSource, total } = this.getDataSource();
+        const { filters, filtersFromProps, searchValue, columnConfig } = this.state;
+        const finalFilters = this.mergeFilters(filters, filtersFromProps, _c);
+        let { dataSource, total } = this.getDataSource(finalFilters);
         if (pagination && 'total' in pagination) {
             total = pagination.total;
         }
-        const columns = this.getColumns(dataSource);
+        const columns = this.getColumns(dataSource, finalFilters);
+
         const defaultExpandAllRowsProps = !defaultExpandAllRows
             ? null
             : (() => {
@@ -823,87 +992,86 @@ class Table extends Component {
               })();
 
         return (
-            <TableContext.Provider
-                value={{
-                    columns: _c,
-                    columnConfig: columnConfig,
-                    onColumnConfigChange: this.onColumnConfigChange,
-                    handleSearch: this.handleSearch,
-                    locale
-                }}
-            >
-                <TableWrap
-                    className={className}
-                    style={style}
-                    hideExpandIcon={hideExpandIcon}
-                    zebraCrossing={zebraCrossing}
+            <InheritProvider value={{ getPopupContainer: this.getPopupContainer }}>
+                <TableContext.Provider
+                    value={{
+                        columns: _c,
+                        columnConfig: columnConfig,
+                        onColumnConfigChange: this.onColumnConfigChange,
+                        handleSearch: this.handleSearch,
+                        locale
+                    }}
                 >
-                    <PopupContainer innerRef={_ref => (this.popupContainer = _ref)} />
-                    <RcTable
-                        {...defaultExpandAllRowsProps}
-                        {...rest}
-                        prefixCls={prefixCls}
-                        data={dataSource}
-                        columns={columns}
-                        onRow={(record, index) => {
-                            return {
-                                ...onRow(record, index),
-                                record,
-                                contextMenu
-                            };
-                        }}
-                        components={_.extend(components, {
-                            body: {
-                                row: TableRow
+                    <TableWrap
+                        className={className}
+                        style={style}
+                        hideExpandIcon={hideExpandIcon}
+                        zebraCrossing={zebraCrossing}
+                        customStyle={customStyle}
+                    >
+                        <PopupContainer ref={this.savePopupContainer} />
+                        <RcTable
+                            {...defaultExpandAllRowsProps}
+                            {...rest}
+                            scroll={scroll}
+                            tableLayout={tableLayout ? tableLayout : scroll && scroll.x ? 'fixed' : undefined}
+                            prefixCls={prefixCls}
+                            data={dataSource}
+                            columns={columns}
+                            onRow={this.onRow}
+                            components={_.extend({}, components, {
+                                body: {
+                                    row: TableRow
+                                }
+                            })}
+                            emptyText={null}
+                            expandIconAsCell={!!expandedRowRender || expandIconAsCell}
+                            expandedRowRender={expandedRowRender}
+                            expandIconColumnIndex={
+                                expandIconColumnIndex === undefined
+                                    ? columns[0] && columns[0].key === 'table_row_selection'
+                                        ? 1
+                                        : 0
+                                    : expandIconColumnIndex
                             }
-                        })}
-                        emptyText={null}
-                        expandIconAsCell={!!expandedRowRender || expandIconAsCell}
-                        expandedRowRender={expandedRowRender}
-                        expandIconColumnIndex={
-                            expandIconColumnIndex === undefined
-                                ? columns[0] && columns[0].key === 'table_row_selection'
-                                    ? 1
-                                    : 0
-                                : expandIconColumnIndex
-                        }
-                        title={() => this.renderTitle({ filters, searchValue, total, locale })}
-                        footer={() => this.renderFooter({ dataSource: _d, emptyContent, errorContent })}
-                    />
-                    {footer()}
-                    {pagination === null ? null : (
-                        <Pagination
-                            size="sm"
-                            total={total}
-                            {...{
-                                hideOnSinglePage: false,
-                                showQuickJumper: true,
-                                showSizeChanger: true
-                            }}
-                            {...pagination}
-                            className={`${prefixCls}-pagination`}
-                            onChange={(current, pageSize) => {
-                                this.setState({
-                                    pagination: { current, pageSize }
-                                });
-                                pagination.onChange && pagination.onChange(current, pageSize);
-                            }}
-                            onPageSizeChange={(current, pageSize) => {
-                                this.setState({
-                                    pagination: { current, pageSize }
-                                });
-                                pagination.onPageSizeChange && pagination.onPageSizeChange(current, pageSize);
-                            }}
-                            onAdvise={(current, pageSize) => {
-                                this.setState({
-                                    pagination: { current, pageSize }
-                                });
-                                pagination.onAdvise && pagination.onAdvise(current, pageSize);
-                            }}
+                            title={() => this.renderTitle({ filters: finalFilters, searchValue, total, locale })}
+                            footer={() => this.renderFooter({ dataSource: _d, emptyContent, errorContent })}
                         />
-                    )}
-                </TableWrap>
-            </TableContext.Provider>
+                        {footer()}
+                        {pagination === null ? null : (
+                            <Pagination
+                                size="sm"
+                                total={total}
+                                {...{
+                                    hideOnSinglePage: false,
+                                    showQuickJumper: true,
+                                    showSizeChanger: true
+                                }}
+                                {...pagination}
+                                className={`${prefixCls}-pagination`}
+                                onChange={(current, pageSize) => {
+                                    this.setState({
+                                        pagination: { current, pageSize }
+                                    });
+                                    pagination.onChange && pagination.onChange(current, pageSize);
+                                }}
+                                onPageSizeChange={(current, pageSize) => {
+                                    this.setState({
+                                        pagination: { current, pageSize }
+                                    });
+                                    pagination.onPageSizeChange && pagination.onPageSizeChange(current, pageSize);
+                                }}
+                                onAdvise={(current, pageSize) => {
+                                    this.setState({
+                                        pagination: { current, pageSize }
+                                    });
+                                    pagination.onAdvise && pagination.onAdvise(current, pageSize);
+                                }}
+                            />
+                        )}
+                    </TableWrap>
+                </TableContext.Provider>
+            </InheritProvider>
         );
     }
 }

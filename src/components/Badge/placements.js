@@ -38,3 +38,12 @@ const placements = {
 };
 
 export default placements;
+
+export const bubblePlacement = {
+    points: ['bl', 'tr'],
+    overflow: {
+        adjustX: 1,
+        adjustY: 1
+    },
+    offset: [0, -5]
+};

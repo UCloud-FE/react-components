@@ -1,14 +1,30 @@
-import styled, { css } from 'styled-components';
-import classnames from 'classnames';
+import React from 'react';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
 import Collapse from 'src/components/Collapse';
-import Checkbox from 'src/components/Checkbox';
 import Icon from 'src/components/Icon';
 import config from 'src/config';
-import addDefaultThemeProps from 'src/components/ThemeProvider/addDefaultThemeProps';
+import withProps from 'src/utils/withProps';
 
 const { prefixCls: _prefixCls } = config;
-const prefixCls = _prefixCls + '-menu';
+export const prefixCls = _prefixCls + '-menu';
+export const blockCls = _prefixCls + '-block';
+export const singleCls = prefixCls + '-single';
+export const multipleCls = prefixCls + '-multiple';
+export const itemCls = prefixCls + '-item';
+export const disabledCls = itemCls + '-disabled';
+export const hiddenCls = itemCls + '-hidden';
+export const firstCls = prefixCls + '-first';
+export const lastCls = prefixCls + '-last';
+export const selectedCls = prefixCls + '-selected';
+export const selectallWrapCls = prefixCls + '-selectall-wrap';
+export const collapseTitleCls = prefixCls + '-collapse-title';
+export const collapseWrapCls = prefixCls + '-collapse-wrap';
+export const popupTitleCls = prefixCls + '-popup-title';
+export const popupWrapCls = prefixCls + '-popup-wrap';
+export const popupContentCls = prefixCls + '-popup-content';
+export const checkboxCls = prefixCls + '-checkbox';
 
 export const SubMenuIcon = styled(Icon)`
     position: absolute;
@@ -18,131 +34,118 @@ export const SubMenuIcon = styled(Icon)`
     font-size: 14px;
 `;
 
-const ellipsisMixin = css`
-    text-decoration: none;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-`;
-const itemWrapMixin = ({ disabled, theme: { designTokens: DT } }) => css`
-    display: block;
-    cursor: pointer;
-
-    ${disabled &&
-        css`
-            &&& {
-                color: ${DT.T_COLOR_TEXT_DISABLED};
-                cursor: not-allowed;
-            }
-            &&&:hover {
-                background: unset;
-            }
-        `};
-`;
-export const ItemWrap = styled.div.attrs({
-    className: ({ selected }) => classnames(prefixCls + '-item', selected && prefixCls + '-item-selected')
-})(
-    () => css`
-        padding: 0 8px;
-        margin: 0 8px;
-        border-radius: 2px;
-
-        ${itemWrapMixin};
-        ${ellipsisMixin};
-    `
-);
-export const SubMenuTitleWrap = styled.div.attrs({
-    className: ({ selected }) =>
-        classnames(prefixCls + '-submenu-title', selected && prefixCls + '-submenu-title-selected')
-})(
-    () => css`
-        padding: 0 8px;
-        border-radius: 2px;
-        ${itemWrapMixin};
-    `
-);
-
-export const TitleContentWrap = styled.div.attrs({
-    className: ({ collapse }) =>
-        classnames(prefixCls + '-submenu-title-content', collapse && prefixCls + '-submenu-title-content-collapse')
-})(
-    ({ collapse }) => css`
-        padding: 0 8px;
-        padding-right: 40px;
-        position: relative;
-
-        ${collapse &&
-            css`
-                border-bottom: 1px solid;
-                margin: 8px 0;
-            `};
-        ${ellipsisMixin};
-    `
-);
-
-export const PopupWrap = styled.div`
-    padding: 0 8px;
-    display: inline-block;
-`;
-export const SelectAllCheckbox = styled(Checkbox).attrs({
-    className: ({ checked }) =>
-        classnames(prefixCls + '-selectall-checkbox', checked && prefixCls + '-selectall-checkbox-checked')
-})(
-    () => css`
-        padding: 0 8px;
-        margin: 0 8px;
-        border-radius: 2px;
-        ${itemWrapMixin};
-    `
-);
-/* stylelint-disable no-duplicate-selectors */
-
-const menuWrapMixin = () => css`
-    display: inline-block;
-    box-sizing: border-box;
-    max-width: 360px;
-    min-width: 64px;
-    overflow: auto;
-    padding: 10px 0;
-    border-radius: 2px;
-    text-align: left;
-    border-style: none !important;
-`;
-
-export const PopupContentWrap = styled.div.attrs({
-    className: prefixCls + '-popup-content-wrap'
-})`
-    max-height: 380px;
-    ${menuWrapMixin};
-`;
-
-export const MenuWrap = styled(Collapse)(({ theme: { designTokens: DT, fontSize } }) => {
+const menuStyle = ({ theme: { designTokens: DT } }) => {
     return css`
-        line-height: 26px;
-        font-size: ${fontSize};
-        ${menuWrapMixin};
+        display: inline-block;
+        box-sizing: border-box;
+        overflow: auto;
+        line-height: 32px;
+        font-size: 12px;
+        max-width: 360px;
+        min-width: 64px;
+        padding: 4px 0px;
+        border-radius: 2px;
+        text-align: left;
+        border-style: none !important;
+        border: none;
+        color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+        box-shadow: ${DT.T_SHADOW_BLOCK_DEFAULT_LG};
+        background: ${DT.T_COLOR_BG_MENU};
 
-        &,
-        ${/*sc-sel*/ PopupContentWrap} {
-            color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
-            border: none;
-            box-shadow: ${DT.T_SHADOW_BLOCK_DEFAULT_LG};
-            background: ${DT.T_COLOR_BG_MENU};
-        }
-
-        .${prefixCls}-item, .${prefixCls}-submenu-title-content, .${prefixCls}-selectall-checkbox {
+        .${itemCls}, .${selectallWrapCls}, .${popupTitleCls},.${collapseTitleCls} {
+            cursor: pointer;
+            white-space: nowrap;
+            text-decoration: none;
+            text-overflow: ellipsis;
+            overflow: hidden;
             :hover {
                 background: ${DT.T_COLOR_BG_DEFAULT_HOVER};
             }
         }
-        .${prefixCls}-item-selected, .${prefixCls}-submenu-title-selected, .${prefixCls}-selectall-checkbox-checked {
+        .${itemCls}, .${selectallWrapCls}, .${popupTitleCls}, .${collapseTitleCls} {
+            padding: 0 8px;
+            margin: 0 8px;
+        }
+        .${itemCls}.${disabledCls}, .${selectallWrapCls}.${disabledCls} {
+            color: ${DT.T_COLOR_TEXT_DISABLED};
+            cursor: default;
+            :hover {
+                background: none;
+            }
+        }
+        .${hiddenCls} {
+            display: none;
+        }
+        .${popupTitleCls}, .${collapseTitleCls} {
+            position: relative;
+            padding: 0px 40px 0px 8px;
+            &.${selectedCls} {
+                color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+            }
+        }
+        &.${singleCls} .${itemCls}.${selectedCls} {
             color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
         }
-        .${prefixCls}-submenu-title-content-collapse {
-            border-color: ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
+        .${collapseWrapCls} {
+            ::after,
+            ::before {
+                content: '';
+                display: block;
+                margin: 4px 8px;
+                height: 1px;
+                background: ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
+            }
+        }
+        .${firstCls}.${collapseWrapCls} {
+            ::before {
+                display: none;
+            }
+        }
+        .${collapseWrapCls}+.${collapseWrapCls} {
+            ::before {
+                display: none;
+            }
+        }
+        .${lastCls}.${collapseWrapCls} {
+            ::after {
+                display: none;
+            }
+        }
+        .${checkboxCls} {
+            width: 100%;
         }
     `;
-});
-/* stylelint-enable no-duplicate-selectors */
+};
 
-addDefaultThemeProps(MenuWrap, ItemWrap, SubMenuTitleWrap, SelectAllCheckbox, TitleContentWrap);
+// eslint-disable-next-line react/prop-types,no-unused-vars
+const CleanCollapse = ({ customStyle, ...rest }) => <Collapse {...rest} />;
+
+export const MenuWrap = withProps()(
+    styled(CleanCollapse)(props => {
+        const { customStyle = {} } = props;
+        return css`
+            ${menuStyle(props)};
+            max-height: ${customStyle.maxHeight};
+            &.${blockCls} {
+                min-width: 0;
+                max-width: none;
+                width: 100%;
+                height: 100%;
+                box-shadow: none;
+            }
+        `;
+    })
+);
+
+export const PopupMenuWrap = withProps()(
+    styled('div')(props => {
+        return css`
+            display: inline-block;
+            padding: 0px 8px;
+            .${popupContentCls} {
+                ${menuStyle(props)};
+                max-height: 380px;
+            }
+        `;
+    })
+);

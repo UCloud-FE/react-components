@@ -1,10 +1,12 @@
 import React from 'react';
-import Radio from 'components/Radio';
-import Switch from 'components/Switch';
-import Form from 'components/Form';
-import Modal from 'components/Modal';
-import Button from 'components/Button';
-import NumberInput from 'components/NumberInput';
+
+import Radio from 'src/components/Radio';
+import Switch from 'src/components/Switch';
+import Form from 'src/components/Form';
+import Modal from 'src/components/Modal';
+import Button from 'src/components/Button';
+import NumberInput from 'src/components/NumberInput';
+import Box from 'src/components/Box';
 
 // demo start
 const { Size } = Modal;
@@ -86,8 +88,9 @@ class Demo extends React.Component {
                         afterClose={() => console.log('afterClose')}
                         onOk={() => console.log('onOk')}
                         title="this is title"
+                        customStyle={{ contentPadding: true }}
                     >
-                        <div>this is content</div>
+                        this is content
                     </Modal>
                 </div>
             </div>

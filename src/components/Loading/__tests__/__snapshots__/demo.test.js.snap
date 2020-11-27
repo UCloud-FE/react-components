@@ -1,33 +1,67 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Loading demo -- indicator 1`] = `
-.c0 {
+@keyframes animation-0 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animation-1 {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes animation-2 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.emotion-4 {
   position: relative;
 }
 
-.c0 .uc-fe-animation-fade-enter,
-.c0 .uc-fe-animation-fade-appear,
-.c0 .uc-fe-animation-fade-leave,
-.c0 .uc-fe-animation-fade-exit {
+.emotion-4 .uc-fe-animation-fade-enter,
+.emotion-4 .uc-fe-animation-fade-appear,
+.emotion-4 .uc-fe-animation-fade-leave,
+.emotion-4 .uc-fe-animation-fade-exit {
   -webkit-animation-duration: 500ms;
   animation-duration: 500ms;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 
-.c0 .uc-fe-animation-fade-enter,
-.c0 .uc-fe-animation-fade-appear {
-  -webkit-animation-name: eMLfYp;
-  animation-name: eMLfYp;
+.emotion-4 .uc-fe-animation-fade-enter,
+.emotion-4 .uc-fe-animation-fade-appear {
+  -webkit-animation-name: animation-0;
+  animation-name: animation-0;
 }
 
-.c0 .uc-fe-animation-fade-leave,
-.c0 .uc-fe-animation-fade-exit {
-  -webkit-animation-name: hSsjZP;
-  animation-name: hSsjZP;
+.emotion-4 .uc-fe-animation-fade-leave,
+.emotion-4 .uc-fe-animation-fade-exit {
+  -webkit-animation-name: animation-1;
+  animation-name: animation-1;
 }
 
-.c1 {
+.emotion-2 {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -37,16 +71,108 @@ exports[`Loading demo -- indicator 1`] = `
   background: rgba(255,255,255,0.70);
 }
 
-.c2 {
+.emotion-0 {
   display: table;
   width: 100%;
   height: 100%;
 }
 
-.c2 > div {
+.emotion-0 > div {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+}
+
+.emotion-12 {
+  -webkit-animation: animation-2 1.2s infinite linear;
+  animation: animation-2 1.2s infinite linear;
+}
+
+@keyframes animation-0 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animation-1 {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes animation-2 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.emotion-4 {
+  position: relative;
+}
+
+.emotion-4 .uc-fe-animation-fade-enter,
+.emotion-4 .uc-fe-animation-fade-appear,
+.emotion-4 .uc-fe-animation-fade-leave,
+.emotion-4 .uc-fe-animation-fade-exit {
+  -webkit-animation-duration: 500ms;
+  animation-duration: 500ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.emotion-4 .uc-fe-animation-fade-enter,
+.emotion-4 .uc-fe-animation-fade-appear {
+  -webkit-animation-name: animation-0;
+  animation-name: animation-0;
+}
+
+.emotion-4 .uc-fe-animation-fade-leave,
+.emotion-4 .uc-fe-animation-fade-exit {
+  -webkit-animation-name: animation-1;
+  animation-name: animation-1;
+}
+
+.emotion-2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: rgba(255,255,255,0.70);
+}
+
+.emotion-0 {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-0 > div {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.emotion-12 {
+  -webkit-animation: animation-2 1.2s infinite linear;
+  animation: animation-2 1.2s infinite linear;
 }
 
 <div>
@@ -54,22 +180,89 @@ exports[`Loading demo -- indicator 1`] = `
     class="demo-wrap"
   >
     <div
-      class="c0"
+      class="emotion-4 emotion-5"
     >
       <div
-        style="height:100px;background:gray;"
+        style="height:100px;background:gray"
       />
       <div
-        class="c1"
+        class=" emotion-2 emotion-3"
       >
         <div
-          class="c2"
+          class="emotion-0 emotion-1"
         >
           <div>
-            <img
-              src="https://loading.io/spinners/balls/lg.circle-slack-loading-icon.gif"
-              width="50"
-            />
+            <svg
+              fill="#1ABC9C"
+              height="80"
+              viewBox="0 0 55 80"
+              width="55"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                transform="matrix(1 0 0 -1 0 80)"
+              >
+                <rect
+                  height="20"
+                  rx="3"
+                  width="10"
+                >
+                  <animate
+                    attributeName="height"
+                    begin="0s"
+                    calcMode="linear"
+                    dur="4.3s"
+                    repeatCount="indefinite"
+                    values="20;45;57;80;64;32;66;45;64;23;66;13;64;56;34;34;2;23;76;79;20"
+                  />
+                </rect>
+                <rect
+                  height="80"
+                  rx="3"
+                  width="10"
+                  x="15"
+                >
+                  <animate
+                    attributeName="height"
+                    begin="0s"
+                    calcMode="linear"
+                    dur="2s"
+                    repeatCount="indefinite"
+                    values="80;55;33;5;75;23;73;33;12;14;60;80"
+                  />
+                </rect>
+                <rect
+                  height="50"
+                  rx="3"
+                  width="10"
+                  x="30"
+                >
+                  <animate
+                    attributeName="height"
+                    begin="0s"
+                    calcMode="linear"
+                    dur="1.4s"
+                    repeatCount="indefinite"
+                    values="50;34;78;23;56;23;34;76;80;54;21;50"
+                  />
+                </rect>
+                <rect
+                  height="30"
+                  rx="3"
+                  width="10"
+                  x="45"
+                >
+                  <animate
+                    attributeName="height"
+                    begin="0s"
+                    calcMode="linear"
+                    dur="2s"
+                    repeatCount="indefinite"
+                    values="30;45;13;80;56;72;45;76;34;23;67;30"
+                  />
+                </rect>
+              </g>
+            </svg>
           </div>
         </div>
       </div>
@@ -79,22 +272,82 @@ exports[`Loading demo -- indicator 1`] = `
     class="demo-wrap"
   >
     <div
-      class="c0"
+      class="emotion-4 emotion-5"
     >
       <div
-        style="height:100px;background:gray;"
+        style="height:100px;background:gray"
       />
       <div
-        class="c1"
+        class=" emotion-2 emotion-3"
       >
         <div
-          class="c2"
+          class="emotion-0 emotion-1"
         >
           <div>
-            <img
-              src="https://loading.io/spinners/coolors/lg.palette-rotating-ring-loader.gif"
-              width="50"
-            />
+            <svg
+              fill="#E74C3C"
+              height="64"
+              viewBox="0 0 140 64"
+              width="140"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M30.262 57.02L7.195 40.723c-5.84-3.976-7.56-12.06-3.842-18.063 3.715-6 11.467-7.65 17.306-3.68l4.52 3.76 2.6-5.274c3.717-6.002 11.47-7.65 17.305-3.68 5.84 3.97 7.56 12.054 3.842 18.062L34.49 56.118c-.897 1.512-2.793 1.915-4.228.9z"
+                fill-opacity=".5"
+              >
+                <animate
+                  attributeName="fill-opacity"
+                  begin="0s"
+                  calcMode="linear"
+                  dur="1.4s"
+                  repeatCount="indefinite"
+                  values="0.5;1;0.5"
+                />
+              </path>
+              <path
+                d="M105.512 56.12l-14.44-24.272c-3.716-6.008-1.996-14.093 3.843-18.062 5.835-3.97 13.588-2.322 17.306 3.68l2.6 5.274 4.52-3.76c5.84-3.97 13.592-2.32 17.307 3.68 3.718 6.003 1.998 14.088-3.842 18.064L109.74 57.02c-1.434 1.014-3.33.61-4.228-.9z"
+                fill-opacity=".5"
+              >
+                <animate
+                  attributeName="fill-opacity"
+                  begin="0.7s"
+                  calcMode="linear"
+                  dur="1.4s"
+                  repeatCount="indefinite"
+                  values="0.5;1;0.5"
+                />
+              </path>
+              <path
+                d="M67.408 57.834l-23.01-24.98c-5.864-6.15-5.864-16.108 0-22.248 5.86-6.14 15.37-6.14 21.234 0L70 16.168l4.368-5.562c5.863-6.14 15.375-6.14 21.235 0 5.863 6.14 5.863 16.098 0 22.247l-23.007 24.98c-1.43 1.556-3.757 1.556-5.188 0z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="demo-wrap"
+  >
+    <div
+      class="emotion-4 emotion-5"
+    >
+      <div
+        style="height:100px;background:gray"
+      />
+      <div
+        class=" emotion-2 emotion-3"
+      >
+        <div
+          class="emotion-0 emotion-1"
+        >
+          <div>
+            <div
+              class="emotion-12 emotion-13"
+              style="display:inline-block"
+            >
+              😈
+            </div>
           </div>
         </div>
       </div>
@@ -104,43 +357,81 @@ exports[`Loading demo -- indicator 1`] = `
 `;
 
 exports[`Loading demo -- inlineBlock 1`] = `
-.c4 {
-  vertical-align: baseline;
+@keyframes animation-0 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
-.c4.c4.c4 {
-  -webkit-animation: iVXCSc 1.2s infinite linear;
-  animation: iVXCSc 1.2s infinite linear;
-  line-height: normal;
+@keyframes animation-1 {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
 
-.c0 {
+@keyframes animation-2 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animation-2 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.emotion-7 {
   position: relative;
 }
 
-.c0 .uc-fe-animation-fade-enter,
-.c0 .uc-fe-animation-fade-appear,
-.c0 .uc-fe-animation-fade-leave,
-.c0 .uc-fe-animation-fade-exit {
+.emotion-7 .uc-fe-animation-fade-enter,
+.emotion-7 .uc-fe-animation-fade-appear,
+.emotion-7 .uc-fe-animation-fade-leave,
+.emotion-7 .uc-fe-animation-fade-exit {
   -webkit-animation-duration: 500ms;
   animation-duration: 500ms;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 
-.c0 .uc-fe-animation-fade-enter,
-.c0 .uc-fe-animation-fade-appear {
-  -webkit-animation-name: eMLfYp;
-  animation-name: eMLfYp;
+.emotion-7 .uc-fe-animation-fade-enter,
+.emotion-7 .uc-fe-animation-fade-appear {
+  -webkit-animation-name: animation-0;
+  animation-name: animation-0;
 }
 
-.c0 .uc-fe-animation-fade-leave,
-.c0 .uc-fe-animation-fade-exit {
-  -webkit-animation-name: hSsjZP;
-  animation-name: hSsjZP;
+.emotion-7 .uc-fe-animation-fade-leave,
+.emotion-7 .uc-fe-animation-fade-exit {
+  -webkit-animation-name: animation-1;
+  animation-name: animation-1;
 }
 
-.c1 {
+.emotion-5 {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -150,21 +441,136 @@ exports[`Loading demo -- inlineBlock 1`] = `
   background: rgba(255,255,255,0.70);
 }
 
-.c2 {
+.emotion-3 {
   display: table;
   width: 100%;
   height: 100%;
 }
 
-.c2 > div {
+.emotion-3 > div {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
 }
 
-.c3 {
+.emotion-1 {
+  vertical-align: baseline;
   font-size: 20px;
   color: #3860f4;
+}
+
+.emotion-1.emotion-1.emotion-1 {
+  -webkit-animation: animation-2 1.2s infinite linear;
+  animation: animation-2 1.2s infinite linear;
+  line-height: normal;
+}
+
+@keyframes animation-0 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animation-1 {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes animation-2 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animation-2 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.emotion-7 {
+  position: relative;
+}
+
+.emotion-7 .uc-fe-animation-fade-enter,
+.emotion-7 .uc-fe-animation-fade-appear,
+.emotion-7 .uc-fe-animation-fade-leave,
+.emotion-7 .uc-fe-animation-fade-exit {
+  -webkit-animation-duration: 500ms;
+  animation-duration: 500ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.emotion-7 .uc-fe-animation-fade-enter,
+.emotion-7 .uc-fe-animation-fade-appear {
+  -webkit-animation-name: animation-0;
+  animation-name: animation-0;
+}
+
+.emotion-7 .uc-fe-animation-fade-leave,
+.emotion-7 .uc-fe-animation-fade-exit {
+  -webkit-animation-name: animation-1;
+  animation-name: animation-1;
+}
+
+.emotion-5 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: rgba(255,255,255,0.70);
+}
+
+.emotion-3 {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-3 > div {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.emotion-1 {
+  vertical-align: baseline;
+  font-size: 20px;
+  color: #3860f4;
+}
+
+.emotion-1.emotion-1.emotion-1 {
+  -webkit-animation: animation-2 1.2s infinite linear;
+  animation: animation-2 1.2s infinite linear;
+  line-height: normal;
 }
 
 <div>
@@ -172,27 +578,27 @@ exports[`Loading demo -- inlineBlock 1`] = `
     class="demo-wrap"
   >
     <div
-      class="c0"
-      style="display:inline-block;"
+      class="emotion-7 emotion-8"
+      style="display:inline-block"
     >
       <div
-        style="height:100px;display:inline-block;background:gray;"
+        style="height:100px;display:inline-block;background:gray"
       >
         <p
-          style="color:red;"
+          style="color:red"
         >
           this is content
         </p>
       </div>
       <div
-        class="c1"
+        class=" emotion-5 emotion-6"
       >
         <div
-          class="c2"
+          class="emotion-3 emotion-4"
         >
           <div>
             <i
-              class="uc-fe-icon icon__loading uc-fe-icon-spin c3 c4"
+              class="uc-fe-icon icon__loading uc-fe-icon-spin  emotion-0 emotion-1 emotion-2"
             />
           </div>
         </div>
@@ -203,21 +609,21 @@ exports[`Loading demo -- inlineBlock 1`] = `
     class="demo-wrap"
   >
     <div
-      class="c0"
-      style="display:inline-block;"
+      class="emotion-7 emotion-8"
+      style="display:inline-block"
     >
       <div
-        style="height:100px;width:100px;background:gray;"
+        style="height:100px;width:100px;background:gray"
       />
       <div
-        class="c1"
+        class=" emotion-5 emotion-6"
       >
         <div
-          class="c2"
+          class="emotion-3 emotion-4"
         >
           <div>
             <i
-              class="uc-fe-icon icon__loading uc-fe-icon-spin c3 c4"
+              class="uc-fe-icon icon__loading uc-fe-icon-spin  emotion-0 emotion-1 emotion-2"
             />
           </div>
         </div>
@@ -228,52 +634,156 @@ exports[`Loading demo -- inlineBlock 1`] = `
 `;
 
 exports[`Loading demo -- loading 1`] = `
-.c17 {
+@keyframes animation-0 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animation-1 {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.emotion-26 {
   position: relative;
 }
 
-.c17 .uc-fe-animation-fade-enter,
-.c17 .uc-fe-animation-fade-appear,
-.c17 .uc-fe-animation-fade-leave,
-.c17 .uc-fe-animation-fade-exit {
+.emotion-26 .uc-fe-animation-fade-enter,
+.emotion-26 .uc-fe-animation-fade-appear,
+.emotion-26 .uc-fe-animation-fade-leave,
+.emotion-26 .uc-fe-animation-fade-exit {
   -webkit-animation-duration: 500ms;
   animation-duration: 500ms;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 
-.c17 .uc-fe-animation-fade-enter,
-.c17 .uc-fe-animation-fade-appear {
-  -webkit-animation-name: eMLfYp;
-  animation-name: eMLfYp;
+.emotion-26 .uc-fe-animation-fade-enter,
+.emotion-26 .uc-fe-animation-fade-appear {
+  -webkit-animation-name: animation-0;
+  animation-name: animation-0;
 }
 
-.c17 .uc-fe-animation-fade-leave,
-.c17 .uc-fe-animation-fade-exit {
-  -webkit-animation-name: hSsjZP;
-  animation-name: hSsjZP;
+.emotion-26 .uc-fe-animation-fade-leave,
+.emotion-26 .uc-fe-animation-fade-exit {
+  -webkit-animation-name: animation-1;
+  animation-name: animation-1;
 }
 
-.c9 {
+.emotion-22 .uc-fe-form-item {
+  margin-bottom: 16px;
+}
+
+.emotion-22 .uc-fe-form-item:last-child {
+  margin-bottom: 0;
+}
+
+.emotion-9 {
   position: relative;
-  height: 100%;
-  width: 100%;
+  display: block;
+  height: auto;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.emotion-9:before,
+.emotion-9:after {
+  content: ' ';
+  display: table;
+}
+
+.emotion-9:after {
+  clear: both;
+}
+
+.emotion-9 > .uc-fe-col {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.emotion-1 {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  min-height: 1px;
+  float: left;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 25%;
+  padding-top: 4px;
+  line-height: 20px;
+  word-break: break-all;
+}
+
+.emotion-6 {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  min-height: 1px;
+  float: left;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 75%;
+}
+
+.emotion-6 {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  min-height: 1px;
+  float: left;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 75%;
+}
+
+.emotion-3 {
+  position: relative;
   border-radius: 2px;
   box-sizing: border-box;
-}
-
-.c11 {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  line-height: 22px;
-  box-sizing: border-box;
-  display: block;
-}
-
-.c14 {
-  position: absolute;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-size: 12px;
   display: inline-block;
+  vertical-align: middle;
+  background: #ffffff;
+  height: 28px;
+  width: 78px;
+  padding: 4px;
+  border: 1px solid #d2d6ea;
+  border-width: 1px;
+}
+
+.emotion-3 .uc-fe-switch-dot {
+  position: absolute;
+  display: block;
+  right: 4px;
+  top: 50%;
+  margin-top: -2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.emotion-3 .uc-fe-switch-button {
+  position: absolute;
+  display: block;
   left: -1px;
   top: -2px;
   border-radius: 2px;
@@ -282,82 +792,67 @@ exports[`Loading demo -- loading 1`] = `
   transition: all 0.3s;
 }
 
-.c16 {
-  position: absolute;
-  display: inline-block;
-  left: 18px;
-  top: 4px;
-  width: 2px;
-  height: 16px;
-  border-radius: 1px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+.emotion-3 .uc-fe-switch-tip-on,
+.emotion-3 .uc-fe-switch-tip-off {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  display: block;
 }
 
-.c7 {
+.emotion-3 .uc-fe-switch-inner {
   position: relative;
+  height: 100%;
+  width: 100%;
   border-radius: 2px;
   box-sizing: border-box;
-  cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  display: inline-block;
-  vertical-align: middle;
-  background: #ffffff;
-  height: 28px;
-  width: 80px;
-  padding: 4px;
-  border: 1px solid #c3cad9;
-  border-width: 1px;
-  line-height: 16px;
 }
 
-.c7:hover {
+.emotion-3:hover {
   border-color: #3357df;
 }
 
-.c7:hover .c13 {
+.emotion-3:hover .uc-fe-switch-button {
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
 }
 
-.c7 .c13 {
+.emotion-3 .uc-fe-switch-button {
   background: #ffffff;
   box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
   width: 20px;
   height: 20px;
 }
 
-.c7 .c15 {
+.emotion-3 .uc-fe-switch-dot {
   background: #f44336;
-  left: 13px;
-  height: 10px;
 }
 
-.c7 .c8 {
+.emotion-3 .uc-fe-switch-inner {
   color: #526075;
   border: 1px solid #d2d6ea;
   box-shadow: inset 0 1px 3px 0 #d2d6ea;
   background: #f6f6fb;
 }
 
-.c7 .c10,
-.c7 .c12 {
+.emotion-3 .uc-fe-switch-tip-on,
+.emotion-3 .uc-fe-switch-tip-off {
   line-height: 16px;
 }
 
-.c7 .c10 {
+.emotion-3 .uc-fe-switch-tip-on {
   padding-right: 20px;
 }
 
-.c7 .c12 {
+.emotion-3 .uc-fe-switch-tip-off {
   padding-left: 20px;
 }
 
-.c7 .c10 {
+.emotion-3 .uc-fe-switch-tip-on {
   display: none;
 }
 
-.c18 {
+.emotion-24 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -374,6 +869,7 @@ exports[`Loading demo -- loading 1`] = `
   height: 28px;
   padding: 0 8px;
   color: #ffffff;
+  fill: #ffffff;
   border: none;
   background: linear-gradient(135deg,#6488fc 0%,#3860f4 100%);
   box-shadow: 0 1px 3px -1px #5c76e8;
@@ -381,12 +877,89 @@ exports[`Loading demo -- loading 1`] = `
   transition: all .22s cubic-bezier(.4,0,.2,1);
 }
 
-.c18:hover {
+.emotion-24:hover {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8;
 }
 
-.c5 {
+@keyframes animation-0 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animation-1 {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.emotion-26 {
+  position: relative;
+}
+
+.emotion-26 .uc-fe-animation-fade-enter,
+.emotion-26 .uc-fe-animation-fade-appear,
+.emotion-26 .uc-fe-animation-fade-leave,
+.emotion-26 .uc-fe-animation-fade-exit {
+  -webkit-animation-duration: 500ms;
+  animation-duration: 500ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.emotion-26 .uc-fe-animation-fade-enter,
+.emotion-26 .uc-fe-animation-fade-appear {
+  -webkit-animation-name: animation-0;
+  animation-name: animation-0;
+}
+
+.emotion-26 .uc-fe-animation-fade-leave,
+.emotion-26 .uc-fe-animation-fade-exit {
+  -webkit-animation-name: animation-1;
+  animation-name: animation-1;
+}
+
+.emotion-22 .uc-fe-form-item {
+  margin-bottom: 16px;
+}
+
+.emotion-22 .uc-fe-form-item:last-child {
+  margin-bottom: 0;
+}
+
+.emotion-9 {
+  position: relative;
+  display: block;
+  height: auto;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.emotion-9:before,
+.emotion-9:after {
+  content: ' ';
+  display: table;
+}
+
+.emotion-9:after {
+  clear: both;
+}
+
+.emotion-9 > .uc-fe-col {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.emotion-1 {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -396,9 +969,12 @@ exports[`Loading demo -- loading 1`] = `
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   width: 25%;
+  padding-top: 4px;
+  line-height: 20px;
+  word-break: break-all;
 }
 
-.c6 {
+.emotion-6 {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -410,81 +986,188 @@ exports[`Loading demo -- loading 1`] = `
   width: 75%;
 }
 
-.c2 {
+.emotion-6 {
   position: relative;
   display: block;
-  height: auto;
-  margin-left: -8px;
-  margin-right: -8px;
+  box-sizing: border-box;
+  min-height: 1px;
+  float: left;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 75%;
 }
 
-.c2:before,
-.c2:after {
-  content: ' ';
-  display: table;
+.emotion-3 {
+  position: relative;
+  border-radius: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  background: #ffffff;
+  height: 28px;
+  width: 78px;
+  padding: 4px;
+  border: 1px solid #d2d6ea;
+  border-width: 1px;
 }
 
-.c2:after {
-  clear: both;
+.emotion-3 .uc-fe-switch-dot {
+  position: absolute;
+  display: block;
+  right: 4px;
+  top: 50%;
+  margin-top: -2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
-.c2 .c4 {
-  padding-left: 8px;
-  padding-right: 8px;
+.emotion-3 .uc-fe-switch-button {
+  position: absolute;
+  display: block;
+  left: -1px;
+  top: -2px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
-.c3 {
-  padding-top: 4px;
-  line-height: 20px;
-  word-break: break-all;
+.emotion-3 .uc-fe-switch-tip-on,
+.emotion-3 .uc-fe-switch-tip-off {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  display: block;
 }
 
-.c0 .c1 {
-  margin-bottom: 16px;
+.emotion-3 .uc-fe-switch-inner {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
-.c0 .c1:last-child {
-  margin-bottom: 0;
+.emotion-3:hover {
+  border-color: #3357df;
+}
+
+.emotion-3:hover .uc-fe-switch-button {
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05);
+}
+
+.emotion-3 .uc-fe-switch-button {
+  background: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08),0 1px 1px -1px rgba(0,0,0,0.30),0 1px 3px -1px rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.05);
+  width: 20px;
+  height: 20px;
+}
+
+.emotion-3 .uc-fe-switch-dot {
+  background: #f44336;
+}
+
+.emotion-3 .uc-fe-switch-inner {
+  color: #526075;
+  border: 1px solid #d2d6ea;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  background: #f6f6fb;
+}
+
+.emotion-3 .uc-fe-switch-tip-on,
+.emotion-3 .uc-fe-switch-tip-off {
+  line-height: 16px;
+}
+
+.emotion-3 .uc-fe-switch-tip-on {
+  padding-right: 20px;
+}
+
+.emotion-3 .uc-fe-switch-tip-off {
+  padding-left: 20px;
+}
+
+.emotion-3 .uc-fe-switch-tip-on {
+  display: none;
+}
+
+.emotion-24 {
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  border-width: 1px;
+  border-style: solid;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 28px;
+  padding: 0 8px;
+  color: #ffffff;
+  fill: #ffffff;
+  border: none;
+  background: linear-gradient(135deg,#6488fc 0%,#3860f4 100%);
+  box-shadow: 0 1px 3px -1px #5c76e8;
+  -webkit-transition: all .22s cubic-bezier(.4,0,.2,1);
+  transition: all .22s cubic-bezier(.4,0,.2,1);
+}
+
+.emotion-24:hover {
+  background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
+  box-shadow: 0 5px 8px -4px #5c76e8;
 }
 
 <div>
   <form
-    class="demo-form uc-fe-form c0"
+    class="uc-fe-form demo-form emotion-22 emotion-23"
   >
     <div
-      class="c1 uc-fe-form-item uc-fe-row c2"
+      class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10"
     >
       <div
-        class="uc-fe-form-label c3 c4 uc-fe-col c5"
+        class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
         span="3"
       >
         loading
       </div>
       <div
-        class="uc-fe-form-controller c4 uc-fe-col c6"
+        class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
         span="9"
       >
         <div
-          class="c7"
+          class=" emotion-3 emotion-4"
         >
           <div
-            class="c8 c9"
+            class="uc-fe-switch-inner"
           >
             <span
-              class="c10 c11"
+              class="uc-fe-switch-tip-on"
             >
               ON
             </span>
             <span
-              class="c12 c11"
+              class="uc-fe-switch-tip-off"
             >
               OFF
             </span>
             <span
-              class="c13 c14"
+              class="uc-fe-switch-button"
             >
               <span
-                class="c15 c16"
+                class="uc-fe-switch-dot"
               />
             </span>
           </div>
@@ -492,39 +1175,39 @@ exports[`Loading demo -- loading 1`] = `
       </div>
     </div>
     <div
-      class="c1 uc-fe-form-item uc-fe-row c2"
+      class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10"
     >
       <div
-        class="uc-fe-form-label c3 c4 uc-fe-col c5"
+        class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
         span="3"
       >
         showTip
       </div>
       <div
-        class="uc-fe-form-controller c4 uc-fe-col c6"
+        class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
         span="9"
       >
         <div
-          class="c7"
+          class=" emotion-3 emotion-4"
         >
           <div
-            class="c8 c9"
+            class="uc-fe-switch-inner"
           >
             <span
-              class="c10 c11"
+              class="uc-fe-switch-tip-on"
             >
               ON
             </span>
             <span
-              class="c12 c11"
+              class="uc-fe-switch-tip-off"
             >
               OFF
             </span>
             <span
-              class="c13 c14"
+              class="uc-fe-switch-button"
             >
               <span
-                class="c15 c16"
+                class="uc-fe-switch-dot"
               />
             </span>
           </div>
@@ -536,14 +1219,14 @@ exports[`Loading demo -- loading 1`] = `
     class="demo-wrap"
   >
     <div
-      class="c17"
+      class="emotion-26 emotion-27"
     >
       <div
-        style="height:100px;background:gray;"
+        style="height:100px;background:gray"
       >
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary c18"
-          style="display:block;width:200px;margin:0 auto;top:20px;position:relative;"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-24 emotion-25"
+          style="display:block;width:200px;margin:0 auto;top:20px;position:relative"
           type="button"
         >
           Start To Loading
@@ -555,43 +1238,81 @@ exports[`Loading demo -- loading 1`] = `
 `;
 
 exports[`Loading demo -- showLoading 1`] = `
-.c4 {
-  vertical-align: baseline;
+@keyframes animation-0 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
-.c4.c4.c4 {
-  -webkit-animation: iVXCSc 1.2s infinite linear;
-  animation: iVXCSc 1.2s infinite linear;
-  line-height: normal;
+@keyframes animation-1 {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
 
-.c0 {
+@keyframes animation-2 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animation-2 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.emotion-7 {
   position: relative;
 }
 
-.c0 .uc-fe-animation-fade-enter,
-.c0 .uc-fe-animation-fade-appear,
-.c0 .uc-fe-animation-fade-leave,
-.c0 .uc-fe-animation-fade-exit {
+.emotion-7 .uc-fe-animation-fade-enter,
+.emotion-7 .uc-fe-animation-fade-appear,
+.emotion-7 .uc-fe-animation-fade-leave,
+.emotion-7 .uc-fe-animation-fade-exit {
   -webkit-animation-duration: 500ms;
   animation-duration: 500ms;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 
-.c0 .uc-fe-animation-fade-enter,
-.c0 .uc-fe-animation-fade-appear {
-  -webkit-animation-name: eMLfYp;
-  animation-name: eMLfYp;
+.emotion-7 .uc-fe-animation-fade-enter,
+.emotion-7 .uc-fe-animation-fade-appear {
+  -webkit-animation-name: animation-0;
+  animation-name: animation-0;
 }
 
-.c0 .uc-fe-animation-fade-leave,
-.c0 .uc-fe-animation-fade-exit {
-  -webkit-animation-name: hSsjZP;
-  animation-name: hSsjZP;
+.emotion-7 .uc-fe-animation-fade-leave,
+.emotion-7 .uc-fe-animation-fade-exit {
+  -webkit-animation-name: animation-1;
+  animation-name: animation-1;
 }
 
-.c1 {
+.emotion-5 {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -601,21 +1322,136 @@ exports[`Loading demo -- showLoading 1`] = `
   background: rgba(255,255,255,0.70);
 }
 
-.c2 {
+.emotion-3 {
   display: table;
   width: 100%;
   height: 100%;
 }
 
-.c2 > div {
+.emotion-3 > div {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
 }
 
-.c3 {
+.emotion-1 {
+  vertical-align: baseline;
   font-size: 20px;
   color: #3860f4;
+}
+
+.emotion-1.emotion-1.emotion-1 {
+  -webkit-animation: animation-2 1.2s infinite linear;
+  animation: animation-2 1.2s infinite linear;
+  line-height: normal;
+}
+
+@keyframes animation-0 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animation-1 {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes animation-2 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animation-2 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.emotion-7 {
+  position: relative;
+}
+
+.emotion-7 .uc-fe-animation-fade-enter,
+.emotion-7 .uc-fe-animation-fade-appear,
+.emotion-7 .uc-fe-animation-fade-leave,
+.emotion-7 .uc-fe-animation-fade-exit {
+  -webkit-animation-duration: 500ms;
+  animation-duration: 500ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.emotion-7 .uc-fe-animation-fade-enter,
+.emotion-7 .uc-fe-animation-fade-appear {
+  -webkit-animation-name: animation-0;
+  animation-name: animation-0;
+}
+
+.emotion-7 .uc-fe-animation-fade-leave,
+.emotion-7 .uc-fe-animation-fade-exit {
+  -webkit-animation-name: animation-1;
+  animation-name: animation-1;
+}
+
+.emotion-5 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: rgba(255,255,255,0.70);
+}
+
+.emotion-3 {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-3 > div {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.emotion-1 {
+  vertical-align: baseline;
+  font-size: 20px;
+  color: #3860f4;
+}
+
+.emotion-1.emotion-1.emotion-1 {
+  -webkit-animation: animation-2 1.2s infinite linear;
+  animation: animation-2 1.2s infinite linear;
+  line-height: normal;
 }
 
 <div>
@@ -623,20 +1459,20 @@ exports[`Loading demo -- showLoading 1`] = `
     class="demo-wrap"
   >
     <div
-      class="c0"
+      class="emotion-7 emotion-8"
     >
       <div
-        style="height:100px;background:gray;"
+        style="height:100px;background:gray"
       />
       <div
-        class="c1"
+        class=" emotion-5 emotion-6"
       >
         <div
-          class="c2"
+          class="emotion-3 emotion-4"
         >
           <div>
             <i
-              class="uc-fe-icon icon__loading uc-fe-icon-spin c3 c4"
+              class="uc-fe-icon icon__loading uc-fe-icon-spin  emotion-0 emotion-1 emotion-2"
             />
           </div>
         </div>
@@ -647,10 +1483,10 @@ exports[`Loading demo -- showLoading 1`] = `
     class="demo-wrap"
   >
     <div
-      class="c0"
+      class="emotion-7 emotion-8"
     >
       <div
-        style="height:100px;background:gray;"
+        style="height:100px;background:gray"
       />
     </div>
   </div>

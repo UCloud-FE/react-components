@@ -21,9 +21,6 @@ class Demo extends React.Component {
             noneContent: false
         };
     }
-    forceAlign() {
-        this.badge && this.badge.forceAlign();
-    }
     render() {
         const { value, dot, hideWhenZero, placement, maxValue, noneContent, color, background } = this.state;
         const itemLayout = {
@@ -58,7 +55,6 @@ class Demo extends React.Component {
                             value={placement}
                             onChange={placement => {
                                 this.setState({ placement });
-                                setTimeout(() => this.forceAlign());
                             }}
                         />
                     </Form.Item>
@@ -78,7 +74,6 @@ class Demo extends React.Component {
                         hideWhenZero={hideWhenZero}
                         placement={placement}
                         badgeStyle={{ color, background }}
-                        innerRef={ref => (this.badge = ref)}
                     >
                         {noneContent ? null : <div style={{ width: 50, height: 50, background: '#ddd' }} />}
                     </Badge>

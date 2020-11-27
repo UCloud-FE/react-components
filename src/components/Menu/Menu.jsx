@@ -1,11 +1,25 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
+import classnames from 'classnames';
+
 import uncontrolledDecorator from 'src/decorators/uncontrolled';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
 import deprecatedLog from 'src/utils/deprecatedLog';
+import Checkbox from 'src/components/Checkbox';
 
-import { MenuWrap, SelectAllCheckbox } from './style';
+import {
+    MenuWrap,
+    prefixCls,
+    multipleCls,
+    singleCls,
+    selectallWrapCls,
+    firstCls,
+    lastCls,
+    checkboxCls,
+    blockCls,
+    disabledCls
+} from './style';
 import LOCALE from './locale/zh_CN';
 
 const deprecatedLogForTheme = _.once(() => deprecatedLog('Menu theme', 'ThemeProvider'));
@@ -63,6 +77,15 @@ class Menu extends Component {
         collapse: PropTypes.object,
         /** 是否显示全选，多选时有效 */
         showSelectAll: PropTypes.bool,
+        /** 是否使用块元素显示模式，去除宽高限制，撑满容器，去除外阴影、border，方便放置在自定义容器中 */
+        block: PropTypes.bool,
+        /** 是否禁用 */
+        disabled: PropTypes.bool,
+        /** 自定义样式 */
+        customStyle: PropTypes.shape({
+            /** 菜单的最大高度 */
+            maxHeight: PropTypes.string
+        }),
         /** @ignore */
         theme: PropTypes.any,
         /** @ignore */
@@ -72,7 +95,9 @@ class Menu extends Component {
         /** @ignore */
         itemTree: PropTypes.any,
         /** @ignore */
-        locale: PropTypes.object
+        locale: PropTypes.object,
+        /** @ignore */
+        className: PropTypes.string
     };
     static defaultProps = {
         defaultSelectedKeys: [],
@@ -110,7 +135,10 @@ class Menu extends Component {
         }
 
         const items = this.itemTree[groupUid];
-        const itemKeys = _.map(_.filter(items, item => !item.props.disabled), item => item.type.getItemKey(item));
+        const itemKeys = _.map(
+            _.filter(items, item => !item.props.disabled),
+            item => item.type.getItemKey(item)
+        );
         const selectedItemKeys = _.filter(
             itemKeys,
             key => _.findIndex(selectedKeys, selectedKey => selectedKey === key) >= 0
@@ -178,8 +206,9 @@ class Menu extends Component {
     };
 
     renderChildren = (children, prefix) => {
-        const { multiple } = this.props;
+        const { multiple, disabled: globalDisabled } = this.props;
         const renderChildren = children => {
+            const l = React.Children.count(children) - 1;
             return React.Children.map(children, (child, i) => {
                 if (!React.isValidElement(child)) {
                     return child;
@@ -188,23 +217,30 @@ class Menu extends Component {
                 const childType = child.type;
                 const isMenuItem = childType.isMenuItem;
                 const isOtherMenuComponent = childType.isMenuSubMenu || childType.isMenuGroup;
-
+                const isFirst = i === 0;
+                const isLast = i === l;
+                const className = classnames(child.props.className, isFirst && firstCls, isLast && lastCls);
+                const disabled = globalDisabled || child.props.disabled;
                 if (isMenuItem) {
                     const uid = `${prefix}-${i}-item`;
                     return React.cloneElement(child, {
                         uid,
                         multiple,
+                        disabled,
                         selected: this.getItemSelected(uid),
-                        onSelect: this.onSelect
+                        onSelect: this.onSelect,
+                        className
                     });
                 } else if (isOtherMenuComponent) {
                     const uid = `${prefix}-${i}-group`;
                     return React.cloneElement(child, {
                         uid,
                         multiple,
+                        disabled,
                         allSelectedStatus: this.getAllSelectedStatus(uid),
                         onMultipleSelect: this.onMultipleSelect,
-                        renderChildren: children => this.renderChildren(children, uid)
+                        renderChildren: children => this.renderChildren(children, uid),
+                        className
                     });
                 } else {
                     console.error('Warning: Menu has a child which is not a MenuItem component or SubMenu component');
@@ -232,23 +268,37 @@ class Menu extends Component {
             themeType,
             itemTree,
             locale,
+            className,
+            block,
+            disabled,
             ...rest
         } = this.props;
         /* eslint-enable no-unused-vars */
         const allSelectedStatus = this.getAllSelectedStatus(rootPrefix);
-        const selectAllCheckbox = multiple &&
-            showSelectAll && (
-                <SelectAllCheckbox
+        const selectAllCheckbox = multiple && showSelectAll && (
+            <div className={classnames(selectallWrapCls, disabled && disabledCls)}>
+                <Checkbox
+                    className={checkboxCls}
                     checked={allSelectedStatus === 'ALL'}
+                    indeterminate={allSelectedStatus === 'PART'}
                     onChange={checked => this.onMultipleSelect(checked, rootPrefix)}
+                    size="lg"
+                    disabled={disabled}
                 >
                     {locale.selectAll}
-                </SelectAllCheckbox>
-            );
+                </Checkbox>
+            </div>
+        );
         return (
-            <MenuWrap {...rest} {...collapse}>
-                {selectAllCheckbox}
-                {this.renderChildren(children, rootPrefix)}
+            <MenuWrap
+                className={classnames(className, prefixCls, multiple ? multipleCls : singleCls, block && blockCls)}
+                {...rest}
+                {...collapse}
+            >
+                <div>
+                    {selectAllCheckbox}
+                    {this.renderChildren(children, rootPrefix)}
+                </div>
             </MenuWrap>
         );
     }

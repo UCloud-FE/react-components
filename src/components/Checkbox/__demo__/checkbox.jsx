@@ -1,8 +1,9 @@
 import React from 'react';
-import Checkbox from 'components/Checkbox';
-import Radio from 'components/Radio';
-import Switch from 'components/Switch';
-import Form from 'components/Form';
+
+import Checkbox from 'src/components/Checkbox';
+import Radio from 'src/components/Radio';
+import Switch from 'src/components/Switch';
+import Form from 'src/components/Form';
 
 // demo start
 const { Size, StyleType } = Checkbox;
@@ -17,7 +18,7 @@ class Demo extends React.Component {
         };
     }
     render() {
-        const { checked, size, styleType, disabled } = this.state;
+        const { checked, size, styleType, disabled, indeterminate } = this.state;
         const itemLayout = {
             labelCol: {
                 span: 3
@@ -49,15 +50,22 @@ class Demo extends React.Component {
                     <Form.Item label="checked" {...itemLayout}>
                         <Switch checked={checked} onChange={checked => this.setState({ checked })} />
                     </Form.Item>
+                    <Form.Item label="indeterminate" {...itemLayout}>
+                        <Switch
+                            indeterminate={indeterminate}
+                            onChange={indeterminate => this.setState({ indeterminate })}
+                        />
+                    </Form.Item>
                 </Form>
                 <div className="demo-wrap">
                     <Checkbox
                         checked={checked}
+                        indeterminate={indeterminate}
                         size={size}
                         styleType={styleType}
                         disabled={disabled}
                         title="title"
-                        disabledLabel="disabled label"
+                        disabledLabel="售磬"
                         onChange={checked => {
                             console.log(checked);
                             this.setState({ checked });

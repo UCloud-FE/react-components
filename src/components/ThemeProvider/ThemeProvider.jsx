@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider as SCThemeProvider } from 'styled-components';
+import { ThemeProvider as SCThemeProvider } from 'emotion-theming';
 
 import defaultTheme from './theme';
 import { generateTheme } from './theme';
@@ -17,6 +17,9 @@ class ThemeProvider extends Component {
         setRuntimeTheme(theme);
     }
     static propTypes = {
+        /**
+         * 自定义主题
+         */
         theme: PropTypes.object.isRequired
     };
     getMergedTheme = theme => {

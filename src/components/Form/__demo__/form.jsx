@@ -1,12 +1,13 @@
 import React from 'react';
-import Form from 'components/Form';
-import Radio from 'components/Radio';
-import Switch from 'components/Switch';
-import Input from 'components/Input';
-import Select from 'components/Select';
+
+import Form from 'src/components/Form';
+import Radio from 'src/components/Radio';
+import Switch from 'src/components/Switch';
+import Input from 'src/components/Input';
+import Select from 'src/components/Select';
 
 // demo start
-const { Item, Size } = Form;
+const { Item } = Form;
 const itemLayout = {
     labelCol: {
         span: 3
@@ -30,7 +31,7 @@ class Demo extends React.Component {
                     <Form.Item label="size" {...itemLayout}>
                         <Radio.Group
                             value={size}
-                            options={Size.map(value => ({ value }))}
+                            options={['md', 'lg'].map(value => ({ value }))}
                             onChange={size => this.setState({ size })}
                         />
                     </Form.Item>
@@ -43,7 +44,7 @@ class Demo extends React.Component {
                         <Item label="Switch" {...itemLayout}>
                             <Switch size={size} />
                         </Item>
-                        <Item label="上传文件" {...itemLayout}>
+                        <Item label="Select" {...itemLayout}>
                             <Select size={size} options={[{ value: '123' }, { value: '1231' }, { value: '1232' }]} />
                         </Item>
                     </Form>
