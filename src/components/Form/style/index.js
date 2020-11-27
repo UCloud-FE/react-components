@@ -20,6 +20,7 @@ const groupTitleCls = groupCls + '-title';
 export const tipCls = prefixCls + '-tip';
 export const tipIconCls = tipCls + '-icon';
 export const tipContentCls = tipCls + '-content';
+const subAreaCls = prefixCls + '-sub-area';
 
 export const ItemWrap = withProps({
     className: itemCls
@@ -129,14 +130,39 @@ export const Tip = withProps({ className: tipCls })(
     })
 );
 
+export const RequiredLabel = withProps()(
+    styled.span(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
+        return css`
+            margin-left: 4px;
+            color: ${DT.T_COLOR_TEXT_ERROR};
+        `;
+    })
+);
+
+export const HelpIcon = withProps()(
+    styled(SvgIcon)(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
+        return css`
+            margin-left: 8px;
+            vertical-align: middle;
+            fill: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+        `;
+    })
+);
+
 let StatusIcon = ({ status, ...rest }) => {
     const iconType =
         {
-            success: 'circle-tick',
-            warning: 'circle-exclamation',
-            error: 'circle-cross',
+            success: 'tick-circle-filled',
+            warning: 'exclamation-circle-filled',
+            error: 'cross-circle-filled',
             loading: 'ring-loading'
-        }[status] || 'circle-info';
+        }[status] || 'info-circle-filled';
     return <SvgIcon type={iconType} className={tipIconCls} {...rest} />;
 };
 StatusIcon.propTypes = {
@@ -145,3 +171,23 @@ StatusIcon.propTypes = {
 StatusIcon = memo(StatusIcon);
 
 export { StatusIcon };
+
+export const SubAreaWrap = withProps({ className: subAreaCls })(
+    styled.div(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
+        return css`
+            padding: 20px;
+            border: 1px solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
+            background: ${DT.T_COLOR_BG_DEFAULT_DARK};
+
+            * + & {
+                margin-top: 12px;
+            }
+            & .${itemCls} {
+                margin-bottom: 16px;
+            }
+        `;
+    })
+);

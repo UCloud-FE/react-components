@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import KEYCODE from 'interfaces/KeyCode';
@@ -6,7 +6,7 @@ import KEYCODE from 'interfaces/KeyCode';
 import Input from './Input';
 import { SearchIcon } from './style';
 
-class Search extends Component {
+class Search extends PureComponent {
     static propTypes = {
         /** 搜索回调 */
         onSearch: PropTypes.func,

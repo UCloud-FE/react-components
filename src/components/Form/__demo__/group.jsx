@@ -1,9 +1,10 @@
 import React from 'react';
-import Form from 'components/Form';
-import Upload from 'components/Upload';
-import Switch from 'components/Switch';
-import Slider from 'components/Slider';
-import Input from 'components/Input';
+
+import Form from 'src/components/Form';
+import Upload from 'src/components/Upload';
+import Switch from 'src/components/Switch';
+import Slider from 'src/components/Slider';
+import Input from 'src/components/Input';
 
 // demo start
 const { Group, Item } = Form;

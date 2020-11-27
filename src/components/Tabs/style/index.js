@@ -395,12 +395,12 @@ ${clearFixMixin};
 ${
     styleType === 'ink' &&
     css`
-        .${prefixCls}-top-bar, .${prefixCls}-bottom-bar {
+        > .${prefixCls}-top-bar, > .${prefixCls}-bottom-bar {
             .${prefixCls}-tab+.${prefixCls}-tab {
                 margin-left: 12px;
             }
         }
-        .${prefixCls}-left-bar, .${prefixCls}-right-bar {
+        > .${prefixCls}-left-bar, > .${prefixCls}-right-bar {
             .${prefixCls}-tab+.${prefixCls}-tab {
                 margin-top: 8px;
             }

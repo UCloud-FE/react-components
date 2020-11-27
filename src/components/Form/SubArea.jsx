@@ -1,26 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { FormWrap } from './style';
+import { SubAreaWrap } from './style';
 import ItemPropsWrap from './ItemPropsWrap';
 
-const Form = ({ itemProps, ...rest }) => {
+function SubArea({ itemProps, ...rest }) {
     return (
         <ItemPropsWrap itemProps={itemProps}>
-            <FormWrap {...rest} />
+            <SubAreaWrap {...rest} />
         </ItemPropsWrap>
     );
-};
+}
 
-const Size = ['md', 'lg'];
-
-Form.propTypes = {
+SubArea.propTypes = {
     /**
-     * 配合表单控件的size使用
-     */
-    size: PropTypes.oneOf(Size),
-    /**
-     * 如果存在会在所有包裹的 item 上附加该 props
+     * 如果存在会在所有包裹的 item 上附加该 props，会覆盖来自上层包裹的 itemProps
      */
     itemProps: PropTypes.shape({
         /** 具体见 item 文档 */
@@ -31,8 +25,5 @@ Form.propTypes = {
         shareStatus: PropTypes.bool
     })
 };
-Form.defaultProps = {
-    size: 'md'
-};
 
-export default React.memo(Form);
+export default React.memo(SubArea);
