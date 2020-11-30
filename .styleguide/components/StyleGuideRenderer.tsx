@@ -206,6 +206,7 @@ export function StyleGuideRenderer({ classes, title, homepageUrl, children, toc,
                         <div className={classes.center}>
                             {children}
                             <Gitalk
+                                key={componentId}
                                 options={{
                                     ...gitalkSec,
                                     repo: 'react-components',
