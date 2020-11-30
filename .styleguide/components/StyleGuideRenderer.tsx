@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Logo from 'rsg-components/Logo';
 import Markdown from 'rsg-components/Markdown';
@@ -6,6 +6,9 @@ import Styled from 'rsg-components/Styled';
 import cx from 'classnames';
 import Ribbon from 'rsg-components/Ribbon';
 import _ from 'lodash';
+
+import '!style-loader!css-loader!gitalk/dist/gitalk.css';
+import Gitalk from 'gitalk/dist/gitalk-component';
 
 import { toggleDarkTheme, isDarkTheme } from './ReactExample';
 import Switch from 'src/components/Switch';
@@ -130,8 +133,31 @@ const styles = ({
     }
 });
 
+const gitalkSec =
+    location.hostname === 'localhost'
+        ? {
+              clientID: 'e4203234ccca794c7ca3',
+              clientSecret: '11d1ded3c2b185180dcfea8efcf602bd67382908'
+          }
+        : {
+              clientID: '5c478803320de7626b0b',
+              clientSecret: '6dd542196b541f5bb79593fa7e341756d38bb86b'
+          };
+
 export function StyleGuideRenderer({ classes, title, homepageUrl, children, toc, hasSidebar }) {
     const [darkTheme, setDarkTheme] = useState(isDarkTheme);
+    const ComponentName =
+        location.hash.indexOf('%E2%9D%96%20%20') >= 0
+            ? location.hash
+                  ?.replace(/\?.*/, '')
+                  ?.replace(/.*\/%E2%9D%96%20%20/, '')
+                  ?.replace(/\/.*$/, '')
+            : 'common';
+    const [componentId, setComponentId] = useState(ComponentName);
+    useEffect(() => {
+        setComponentId(ComponentName);
+        return () => {};
+    }, [ComponentName]);
     return (
         <DarkThemeContext.Provider value={darkTheme}>
             <div className={classes.root}>
@@ -176,9 +202,19 @@ export function StyleGuideRenderer({ classes, title, homepageUrl, children, toc,
                 </header>
                 <div className={cx(classes.wrapper, hasSidebar && classes.hasSidebar, classes.fixPaddingTop)}>
                     {hasSidebar && <div className={cx('sidebar', classes.sidebar)}>{toc}</div>}
-                    <main className={classes.content} id='main-container'>
+                    <main className={classes.content} id="main-container">
                         <div className={classes.center}>
                             {children}
+                            <Gitalk
+                                options={{
+                                    ...gitalkSec,
+                                    repo: 'react-components',
+                                    owner: 'UCloud-FE',
+                                    admin: ['ZxBing0066'],
+                                    id: componentId,
+                                    distractionFreeMode: false
+                                }}
+                            />
                             <footer className={classes.footer}>
                                 <Markdown text={`Generated with [React Styleguidist](${homepageUrl})`} />
                             </footer>
