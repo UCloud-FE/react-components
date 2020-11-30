@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import { IconTagWrapper, IconTag } from './style';
 import { StyleType } from './Tag';
 
-class Icon extends Component {
+class Icon extends PureComponent {
     static propTypes = {
         /** @ignore */
         children: PropTypes.node,
