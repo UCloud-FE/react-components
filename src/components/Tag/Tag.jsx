@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import {
@@ -13,7 +13,7 @@ import {
 
 const StyleType = Object.keys(styleMap);
 
-class Tag extends Component {
+class Tag extends PureComponent {
     static propTypes = {
         /** @ignore */
         children: PropTypes.node,

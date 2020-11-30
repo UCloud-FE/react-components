@@ -82,7 +82,7 @@ export const styleMap = {
     styleMap[styleType] = styleMap[color];
 });
 
-const fillStyleMap = {
+const filledStyleMap = {
     purple: {
         bg: 'T_COLOR_LEGEND_PURPLE_6',
         iconHoverBG: 'T_COLOR_LEGEND_PURPLE_7'
@@ -113,9 +113,9 @@ const fillStyleMap = {
     }
 };
 
-Object.keys(fillStyleMap).map(key => {
-    const map = fillStyleMap[key];
-    styleMap[key + '-fill'] = {
+Object.keys(filledStyleMap).map(key => {
+    const map = filledStyleMap[key];
+    styleMap[key + '-filled'] = {
         ...map,
         border: map.bg,
         color: 'T_COLOR_TEXT_SYSTEM_WHITE'
@@ -138,6 +138,9 @@ export const PrefixIconWrapper = styled('span')`
 `;
 
 const getColorMap = (styleType, disabled) => {
+    if (/-fill$/.test(styleType)) {
+        styleType += 'ed';
+    }
     return (
         (disabled
             ? {
@@ -164,10 +167,10 @@ export const TagWrapper = withProps({
         return css`
             box-sizing: border-box;
             height: 20px;
-            line-height: normal;
             padding-left: 8px;
-            display: inline-block;
             border-radius: 2px;
+            display: inline-flex;
+            align-items: center;
 
             color: ${DT[colorMap.color]};
             background: ${DT[colorMap.bg]};
@@ -175,13 +178,15 @@ export const TagWrapper = withProps({
 
             ${PrefixIconWrapper} {
                 margin-right: 4px;
-                vertical-align: middle;
                 line-height: 18px;
             }
             ${ContentWrapper} {
                 margin-right: 8px;
-                vertical-align: middle;
                 line-height: 18px;
+                flex: 1 1 auto;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
             ${CloseIconWrapper} {
                 float: right;
@@ -189,7 +194,6 @@ export const TagWrapper = withProps({
                 height: 18px;
                 line-height: 18px;
                 font-size: 0;
-                vertical-align: middle;
                 text-align: center;
                 border-radius: 0 2px 2px 0;
                 ${!disabled && 'cursor: pointer'};
