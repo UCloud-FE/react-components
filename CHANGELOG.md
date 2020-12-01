@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.14](https://github.com/UCloud-FE/react-components/compare/v1.0.13...v1.0.14) (2020-11-30)
+
+### Features
+
+-   **Docs:** add gitalk ([6c8cdc0](https://github.com/UCloud-FE/react-components/commit/6c8cdc02389c67ebd044d62604bcd56734e9e118))
+-   **Form:** add itemProps to set item layout ([791af6c](https://github.com/UCloud-FE/react-components/commit/791af6c035cabef5643cced5ad99612b899e5d00))
+-   **Form:** add required and help to Item ([c1e2cbd](https://github.com/UCloud-FE/react-components/commit/c1e2cbd406cac00e5a24b78fa9bc45792d01659e))
+-   **Form:** add shareStatus to Item ([af7cdca](https://github.com/UCloud-FE/react-components/commit/af7cdcafdd1591e0a3bcdcc155fe3775da1d4f97))
+-   **Form:** add subGroup to make a little item group ([c2e54b0](https://github.com/UCloud-FE/react-components/commit/c2e54b006e107f2a827fb7b922f26737515b5806))
+-   **Tag:** rename styleType and change wrap to flex ([34926a6](https://github.com/UCloud-FE/react-components/commit/34926a6409c448ec8c439f8ba4e08413cd514de7))
+
+### Bug Fixes
+
+-   **Tabs:** fix nested margin bug ([3d93e99](https://github.com/UCloud-FE/react-components/commit/3d93e99e510994022322ecd6c9ae7712257bec9f))
+
 ### [1.0.13](https://github.com/UCloud-FE/react-components/compare/v1.0.12...v1.0.13) (2020-11-23)
 
 ### Features
