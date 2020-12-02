@@ -1,13 +1,15 @@
 import React from 'react';
-import Table from 'components/Table';
-import Switch from 'components/Switch';
-import Form from 'components/Form';
-import Radio from 'components/Radio';
-import NumberInput from 'components/NumberInput';
-import Button from 'components/Button';
+
+import Table from 'src/components/Table';
+import Switch from 'src/components/Switch';
+import Form from 'src/components/Form';
+import Radio from 'src/components/Radio';
+import NumberInput from 'src/components/NumberInput';
+import Button from 'src/components/Button';
+import ActionList from 'src/components/ActionList';
 
 // demo start
-const { Size } = Table.ActionList;
+const { Size } = ActionList;
 const { StyleType } = Button;
 class Demo extends React.Component {
     constructor(props) {
@@ -45,7 +47,7 @@ class Demo extends React.Component {
             key: 'Action',
             width: 200,
             render: record => (
-                <Table.ActionList
+                <ActionList
                     actionList={new Array(actionListLength).fill(null).map((v, i) => ({
                         label: `Action ${i}`,
                         onClick: e => console.log('action', i, record, e)

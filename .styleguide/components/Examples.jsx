@@ -202,8 +202,11 @@ class Anchor extends React.PureComponent {
     };
     render() {
         return (
-            <div style={{ position: 'sticky', height: 0, top: 0, zIndex: 2 }}>
-                <div className={`anchor-wrap ${this.state.place === 'out' ? 'anchor-wrap-out' : ''}`}>
+            <div style={{ position: 'sticky', height: 0, top: 0, zIndex: 999 }}>
+                <div
+                    className={`anchor-wrap ${this.state.place === 'out' ? 'anchor-wrap-out' : ''}`}
+                    style={{ maxHeight: clientHeight - 200 }}
+                >
                     {this.renderAnchor()}
                 </div>
             </div>
