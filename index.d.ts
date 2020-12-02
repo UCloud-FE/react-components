@@ -2,43 +2,40 @@ import type {
     CSSProperties,
     ReactNode,
     Component,
+    PureComponent,
     HTMLAttributes,
 } from "react";
 import { Moment, MomentInput } from "moment";
-import { number } from 'prop-types';
 
 // 忽略 T 对象中 键在 K 中的所有的属性
 type ObjectExclude<T, K extends keyof T> = Pick<T, { [P in keyof T]: P extends K ? never : P; }[keyof T]>;
-
-// 将HTML属性变为可选
-type PartialHTMLAttributes<T = HTMLDivElement> = Partial<HTMLAttributes<T>>;
 
 // base type
 export type SizeType = "sm" | "md" | "lg";
 
 // Icon
-export interface IconProps extends PartialHTMLAttributes<HTMLSpanElement> {
+export interface IconProps extends HTMLAttributes<HTMLSpanElement> {
     type: string;
     spin?: boolean;
     prefix?: string;
 }
-export class Icon extends Component<IconProps> {}
+export class Icon extends PureComponent<IconProps> {}
 
 // Button
 export type ButtonStyleType = "primary" | "border" | "border-gray";
 export type ButtonShape = "circle" | "square";
-export interface ButtonProps extends PartialHTMLAttributes<HTMLSpanElement> {
+export interface ButtonProps extends HTMLAttributes<HTMLSpanElement> {
     styleType?: ButtonStyleType;
     size?: SizeType;
     shape?: ButtonShape;
     loading?: boolean;
     icon?: ReactNode;
 }
-export class Button extends Component<ButtonProps> {}
+export class Button extends PureComponent<ButtonProps> {}
 
 // Box
 type BoxSpacing = "sm" | "md" | "lg" | number | string;
-export interface BoxProps extends PartialHTMLAttributes {
+export interface BoxProps extends HTMLAttributes<HTMLDivElement> {
     container?: boolean;
     spacing?: BoxSpacing | [BoxSpacing, BoxSpacing?];
     direction?: "row" | "row-reverse" | "column" | "column-reverse";
@@ -54,7 +51,7 @@ export interface BoxProps extends PartialHTMLAttributes {
     flex?: string;
     cleanMargin?: boolean;
 }
-export class Box extends Component<BoxProps> {}
+export class Box extends PureComponent<BoxProps> {}
 
 // Row
 export type RowType = "flex";
@@ -65,7 +62,7 @@ export type RowJustify =
     | "center"
     | "space-around"
     | "space-between";
-export interface RowProps extends PartialHTMLAttributes {
+export interface RowProps extends HTMLAttributes<HTMLDivElement> {
     type?: RowType;
     align?: RowAlign;
     justify?: RowJustify;
@@ -74,13 +71,12 @@ export interface RowProps extends PartialHTMLAttributes {
 export class Row extends Component<RowProps> {}
 
 // Col
-export interface ColProps extends PartialHTMLAttributes {
+export interface ColProps extends HTMLAttributes<HTMLDivElement> {
     span?: number;
     offset?: number;
     pull?: number;
     push?: number;
     order?: number;
-    gutter?: number;
 }
 export class Col extends Component<ColProps> {}
 
@@ -92,25 +88,24 @@ export interface GridType {
 export const Grid: GridType;
 
 // Combine
-export interface CombineProps extends PartialHTMLAttributes {
+export interface CombineProps extends HTMLAttributes<HTMLDivElement> {
     sharedProps?: CompactSharedProps;
     spacing?: "compact" | "smart" | "sm" | "md" | "lg" | string;
 }
-export class Combine extends Component<CombineProps> {}
-
+export class Combine extends PureComponent<CombineProps> {}
 
 // Compact
 export interface CompactSharedProps {
     [key: string]: any;
 }
-export interface CompactProps extends PartialHTMLAttributes {
+export interface CompactProps extends HTMLAttributes<HTMLDivElement> {
     sharedProps?: CompactSharedProps;
 }
 export class Compact extends Component<CompactProps> {}
 
 // Input
 export interface InputProps
-    extends ObjectExclude<PartialHTMLAttributes<HTMLInputElement>, "prefix"> {
+    extends ObjectExclude<HTMLAttributes<HTMLInputElement>, "prefix"> {
     icon?: ReactNode;
     prefix?: ReactNode;
     suffix?: ReactNode;
@@ -120,15 +115,15 @@ export interface InputProps
 interface SearchInputProps extends InputProps {
     onSearch?: (value: string) => void;
 }
-declare class SearchInput extends Component<SearchInputProps> {}
-export class Input extends Component<InputProps> {
-    static Search: typeof SearchInput;
+declare class SearchInput extends PureComponent<SearchInputProps> {}
+export class Input extends PureComponent<InputProps> {
+    static Search: SearchInput;
 }
 
 // NumberInput
 export type NumberInputStyleType = "default" | "split" | "pagination";
 export interface NumberInputProps
-    extends ObjectExclude<PartialHTMLAttributes<HTMLInputElement>, "onChange"> {
+    extends ObjectExclude<HTMLAttributes<HTMLInputElement>, "onChange"> {
     value?: number | string;
     defaultValue?: number | string;
     onChange?: (value: number | string) => void;
@@ -153,57 +148,86 @@ export interface NumberInputProps
 export class NumberInput extends Component<NumberInputProps> {}
 
 // Textarea
-export type TextareaProps = PartialHTMLAttributes<HTMLTextAreaElement>;
+export type TextareaProps = HTMLAttributes<HTMLTextAreaElement>;
 export class Textarea extends Component<TextareaProps> {}
 
 // Select
-export interface SelectOptionProps extends PartialHTMLAttributes {
-    value?: string | number;
+interface SelectOptionProps extends HTMLAttributes<HTMLDivElement> {
+    value?: any;
+    disabled?: boolean;
 }
-export interface InterfaceSelectOption extends SelectOptionProps {
+interface InterfaceSelectOption extends SelectOptionProps {
     label?: ReactNode;
 }
-export type SelectOptions = InterfaceSelectOption[];
-export interface SelectSearch {
-    handleSearch(value: string, item: InterfaceSelectOption): boolean;
+interface SelectSearch {
+    handleSearch(searchValue: string, value: any, item: InterfaceSelectOption): boolean;
 }
-export interface SelectProps extends PartialHTMLAttributes {
+interface SelectExtraProps extends HTMLAttributes<HTMLDivElement> {
+    autoHidePopup?: boolean;
+}
+interface SelectGroupProps {
+    title?: ReactNode;
+    groupKey?: any;
+}
+interface SelectCustomStyle {
+    optionListMaxHeight?: number;
+    [key: string]: any
+}
+interface SelectShapeExtra extends SelectExtraProps {
+    content?: ReactNode;
+}
+interface SelectRenderPopupOptions {
+    handleVisible: (open: boolean) => void;
+    onChange: (value: any) => void;
+    value: any;
+    multiple: boolean;
+    extra: ReactNode | SelectShapeExtra;
+    search: true | SelectSearch;
+    children: ReactNode;
+}
+export type SelectOptions = InterfaceSelectOption[];
+export interface SelectProps extends HTMLAttributes<HTMLDivElement> {
     value?: any;
     defaultValue?: any;
     placeholder?: string;
     onChange?: (value: any) => void;
     options?: SelectOptions;
+    extra?: ReactNode | SelectShapeExtra;
     multiple?: boolean;
     showSelectAll?: boolean;
     disabled?: boolean;
-    renderContent?: () => ReactNode;
+    renderContent?: (value: any, valueChild: any) => ReactNode;
     renderSelector?: (node: ReactNode, visible: boolean) => ReactNode;
+    renderPopup?: (options: SelectRenderPopupOptions) => ReactNode;
     search?: true | SelectSearch;
     size?: SizeType;
-    popover?: PopoverProps;
+    popoverProps?: PopoverProps;
+    customStyle?: SelectCustomStyle;
+    emptyContent?: ReactNode;
 }
-declare class SelectOption extends Component<SelectOptionProps> {}
-interface SelectGroupProps {
-    title?: ReactNode;
-    groupKey?: any;
-}
+declare class SelectOption extends PureComponent<SelectOptionProps> {}
 declare class SelectGroup extends Component<SelectGroupProps> {}
+declare class SelectExtra extends PureComponent<SelectExtraProps> {}
 export class Select extends Component<SelectProps> {
-    static Option: typeof SelectOption;
-    static Group: typeof SelectGroup;
+    static Option: SelectOption;
+    static Group: SelectGroup;
+    static Extra: SelectExtra;
 }
 
 // Checkbox
 export type CheckboxStyleType = "default" | "card";
 export interface CheckboxProps
-    extends ObjectExclude<PartialHTMLAttributes<HTMLSpanElement>, "onChange"> {
+    extends ObjectExclude<HTMLAttributes<HTMLSpanElement>, "onChange" | "title"> {
     checked?: boolean;
     defaultChecked?: boolean;
     disabled?: boolean;
+    onChange?: (checked: boolean) => void;
+    indeterminate?: boolean;
     value?: any;
     size?: SizeType;
     styleType?: CheckboxStyleType;
-    onChange?: (checked: boolean) => void;
+    title?: ReactNode;
+    disabledLabel?: ReactNode;
 }
 export type CheckboxOptions = SelectOptions;
 export interface CheckboxGroupProps {
@@ -213,10 +237,11 @@ export interface CheckboxGroupProps {
     options?: CheckboxOptions;
     disabled?: boolean;
     size?: SizeType;
+    styleType?: CheckboxStyleType;
 }
 export class CheckboxGroup extends Component<CheckboxGroupProps> {}
 export class Checkbox extends Component<CheckboxProps> {
-    static Group: typeof CheckboxGroup;
+    static Group: CheckboxGroup;
 }
 
 // Radio
@@ -247,12 +272,12 @@ export interface RadioGroupProps {
 }
 declare class RadioGroup extends Component<RadioGroupProps> {}
 export class Radio extends Component<RadioProps> {
-    static Group: typeof RadioGroup;
+    static Group: RadioGroup;
 }
 
 // Switch
 export interface SwitchProps
-    extends ObjectExclude<PartialHTMLAttributes, "onChange"> {
+    extends ObjectExclude<HTMLAttributes<HTMLDivElement>, "onChange"> {
     checked?: boolean;
     defaultChecked?: boolean;
     onChange?: (checked: boolean) => void;
@@ -279,7 +304,7 @@ interface NumberInputTipFormatterOption {
     locale: any;
 }
 export interface SliderProps
-    extends ObjectExclude<PartialHTMLAttributes, "onChange"> {
+    extends ObjectExclude<HTMLAttributes<HTMLDivElement>, "onChange"> {
     value?: number;
     defaultValue?: number;
     onChange?: (value: number) => void;
@@ -373,7 +398,7 @@ export interface DatePickerDisplay {
     minute?: boolean;
     second?: boolean;
 }
-export interface DatePickerProps {
+export interface DatePickerProps extends ObjectExclude<HTMLAttributes<HTMLDivElement>, "defaultValue" | "onChange"> {
     value?: DateValue;
     defaultValue?: DateValue;
     onChange?: DateChangeEvent;
@@ -382,7 +407,6 @@ export interface DatePickerProps {
     display?: DatePickerDisplay;
     disabled?: boolean;
     zIndex?: number;
-    style?: CSSProperties;
     getCalendarContainer?: () => ReactNode;
 }
 interface MonthDisplayOption {
@@ -391,7 +415,7 @@ interface MonthDisplayOption {
 interface MonthDisplay {
     date?: MonthDisplayOption;
 }
-export interface MonthProps {
+export interface MonthProps extends ObjectExclude<HTMLAttributes<HTMLDivElement>, "defaultValue" | "onChange">  {
     value?: DateValue;
     defaultValue?: DateValue;
     onChange?: DateChangeEvent;
@@ -414,7 +438,7 @@ export interface DatePickerRangeSelectOption extends SelectOptionProps {
         end?: MomentInput;
     }
 }
-export interface RangeProps {
+export interface RangeProps extends ObjectExclude<HTMLAttributes<HTMLDivElement>, "defaultValue" | "onChange">  {
     value?: DateRangeValue;
     defaultValue?: DateRangeValue;
     onChange?: DateRangeChangeEvent;
@@ -437,8 +461,8 @@ export interface RangeProps {
 }
 declare class DatePickerRange extends Component<RangeProps> {}
 export class DatePicker extends Component<DatePickerProps> {
-    static Month: typeof DatePickerMonth;
-    static Range: typeof DatePickerRange;
+    static Month: DatePickerMonth;
+    static Range: DatePickerRange;
 }
 
 // Menu
@@ -458,12 +482,13 @@ export interface MenuProps {
     disabled?: boolean;
     customStyle?: MenuCustomStyle;
 }
-export interface MenuItemProps extends PartialHTMLAttributes {
+export interface MenuItemProps extends HTMLAttributes<HTMLDivElement> {
     itemKey?: number | string;
     disabled?: boolean;
+    tooltip?: ReactNode | TooltipProps;
 }
-declare class MenuItem extends Component<MenuItemProps> {}
-export interface MenuSubMenuProps extends ObjectExclude<PartialHTMLAttributes, "title"> {
+declare class MenuItem extends PureComponent<MenuItemProps> {}
+export interface MenuSubMenuProps extends ObjectExclude<HTMLAttributes<HTMLDivElement>, "title"> {
     title?: ReactNode;
     styleType?: "collapse" | "popover";
     subMenuKey?: string;
@@ -471,15 +496,15 @@ export interface MenuSubMenuProps extends ObjectExclude<PartialHTMLAttributes, "
 }
 declare class MenuSubMenu extends Component<MenuSubMenuProps> {}
 export class Menu extends Component<MenuProps> {
-    static Item: typeof MenuItem;
-    static SubMenu: typeof MenuSubMenu;
+    static Item: MenuItem;
+    static SubMenu: MenuSubMenu;
 }
 
 // ActionList
 interface ActionItem extends ButtonProps {
     label?: ReactNode;
 }
-interface ActionListProps {
+interface ActionListProps extends HTMLAttributes<HTMLUListElement> {
     actionList: ActionItem[];
     exposeCount?: number;
     size?: SizeType;
@@ -510,7 +535,7 @@ export interface FormShape {
     validateFields: Function,
     resetFields: Function
 }
-export interface ZFormProps {
+export interface ZFormProps extends FormProps {
     form?: FormShape;
 }
 interface ControllerDecoratorOptions {
@@ -529,7 +554,7 @@ interface TransferSource {
     search?: boolean | SelectSearch;
     disabled?: boolean;
 }
-export interface TransferProps extends ObjectExclude<PartialHTMLAttributes, "onChange"> {
+export interface TransferProps extends ObjectExclude<HTMLAttributes<HTMLDivElement>, "onChange"> {
     dataSource?: any[];
     renderList?: (options: TransferProps) => ReactNode;
     selectedKeys?: string[];
@@ -540,14 +565,14 @@ export interface TransferProps extends ObjectExclude<PartialHTMLAttributes, "onC
     source?: TransferSource;
     target?: TransferSource;
 }
-export class Transfer extends Component<TransferProps> {}
+export class Transfer extends PureComponent<TransferProps> {}
 
 // TransferMenu
 export interface TransferMenuProps extends TransferProps {
     renderItem?: (item: any) => ReactNode;
 }
 
-export class TransferMenu extends Component<TransferMenuProps> {}
+export class TransferMenu extends PureComponent<TransferMenuProps> {}
 
 // TransferTable
 export interface TransferTableProps extends TransferProps {
@@ -555,7 +580,7 @@ export interface TransferTableProps extends TransferProps {
     tableProps?: TableProps;
 }
 
-export class TransferTable extends Component<TransferTableProps> {}
+export class TransferTable extends PureComponent<TransferTableProps> {}
 
 // EditableTable
 interface EditableTableAddition extends EditableListAddition {
@@ -570,7 +595,7 @@ export interface EditableTableProps extends TableProps {
     addition?: boolean | EditableTableAddition;
     rowDeletion?: boolean | EditableTableRowDeletion;
 }
-export class EditableTable extends Component<EditableTableProps> {}
+export class EditableTable extends PureComponent<EditableTableProps> {}
 
 // EditableList
 interface EditableListAddition {
@@ -593,11 +618,11 @@ export interface EditableListProps {
     addition?: boolean | EditableListAddition;
     itemDeletion?: boolean | EditableListRowDeletion;
 }
-export class EditableList extends Component<EditableListProps> {}
+export class EditableList extends PureComponent<EditableListProps> {}
 
 // Notice
 export type NoticeStyleType = "default" | "success" | "warning" | "error" | "disabled";
-export interface NoticeProps extends PartialHTMLAttributes {
+export interface NoticeProps extends HTMLAttributes<HTMLDivElement> {
     closable?: boolean;
     icon?: ReactNode;
     onClose?: Function;
@@ -607,21 +632,21 @@ export interface NoticeProps extends PartialHTMLAttributes {
 export class Notice extends Component<NoticeProps> {}
 
 // Badge
-export interface BubbleCustomStyle {
+export interface BadgeBubbleCustomStyle {
     bubbleColor?: string;
     bubbleBackground?: string;
     [key: string]: any;
 }
-export interface BubbleProps extends PartialHTMLAttributes {
+export interface BadgeBubbleProps extends HTMLAttributes<HTMLDivElement> {
     bubble?: ReactNode;
     styleType?: "yellow" | "orange" | "gray" | "purple";
     size?: "sm" | "md";
-    customStyle?: BubbleCustomStyle;
+    customStyle?: BadgeBubbleCustomStyle;
     getBubbleContainer?: GetPopupContainer;
     offset?: number[];
 }
 export type BadgePlacement = "topRight" | "topLeft" | "bottomRight" | "bottomLeft";
-export interface BadgeProps extends PartialHTMLAttributes {
+export interface BadgeProps extends HTMLAttributes<HTMLDivElement> {
     value?: ReactNode;
     maxValue?: number;
     dot?: boolean;
@@ -629,44 +654,49 @@ export interface BadgeProps extends PartialHTMLAttributes {
     hideWhenZero?: boolean;
     badgeStyle?: CSSProperties;
 }
-export class Badge extends Component<BadgeProps> {}
+declare class BadgeBubble extends PureComponent<BadgeBubbleProps> {}
+export class Badge extends Component<BadgeProps> {
+    static Bubble: BadgeBubble;
+}
 
 // Tag
-export interface TagProps {
-    styleType?:
-        | "default"
-        | "green"
-        | "yellow"
-        | "red"
-        | "primary"
-        | "purple"
-        | "lightblue"
-        | "blue"
-        | "orange"
-        | "cyan"
-        | "success"
-        | "warning"
-        | "error"
-        | "purple-fill"
-        | "lightblue-fill"
-        | "blue-fill"
-        | "orange-fill"
-        | "yellow-fill"
-        | "cyan-fill"
-        | string;
+export type TagStyleType =
+    "default"
+    | "green"
+    | "yellow"
+    | "red"
+    | "primary"
+    | "purple"
+    | "lightblue"
+    | "blue"
+    | "orange"
+    | "cyan"
+    | "success"
+    | "warning"
+    | "error"
+    | "purple-fill"
+    | "lightblue-fill"
+    | "blue-fill"
+    | "orange-fill"
+    | "yellow-fill"
+    | "cyan-fill"
+    | string;
+export interface TagProps extends HTMLAttributes<HTMLSpanElement> {
+    styleType?: TagStyleType;
     closable?: boolean;
     onClose?: () => void;
     icon?: "circle-fill" | "circle" | "loading" | "custom" | ReactNode;
     disabled?: boolean;
 }
-export class Tag extends Component<TagProps> {}
+export class Tag extends PureComponent<TagProps> {}
 
 // Popover
 interface PopupAlign {
     points?: string[];
     offset?: number[];
 }
-export type PopoverPlacement = | "topLeft"
+export type PopoverPlacement = 
+    "topLeft"
     | "top"
     | "topRight"
     | "bottomLeft"
@@ -681,7 +711,7 @@ export type PopoverPlacement = | "topLeft"
 export interface GetPopupContainer {
     (): HTMLElement
 }
-export interface PopoverProps extends PartialHTMLAttributes {
+export interface PopoverProps extends HTMLAttributes<HTMLDivElement> {
     visible?: boolean;
     defaultVisible?: boolean;
     onVisibleChange?: (visible: boolean) => void;
@@ -725,6 +755,10 @@ export class PopConfirm extends Component<PopConfirmProps> {}
 interface ModalGetFooter {
     (): ReactNode;
 }
+interface ModalCustomStyle {
+    contentPadding?: boolean;
+    [key: string]: any;
+}
 export interface ModalProps {
     title?: ReactNode;
     footer?: ReactNode | ModalGetFooter;
@@ -743,6 +777,7 @@ export interface ModalProps {
     animation?: string;
     className?: string;
     wrapClassName?: string;
+    customStyle?: ModalCustomStyle;
     style?: CSSProperties;
     bodyStyle?: CSSProperties;
     maskStyle?: CSSProperties;
@@ -811,6 +846,7 @@ export interface Column {
     onCellClick?: Function;
     onCell?: Function;
     onHeaderCell?: Function;
+    [key: string]: any;
 }
 interface DefaultColumnConfig {
     [key: string]: string
@@ -818,6 +854,7 @@ interface DefaultColumnConfig {
 interface TableRowBack extends HTMLTableDataCellElement {}
 interface TableCustomStyle {
     outerPadding?: string;
+    [key: string]: any;
 }
 interface TableDefaultOrder {
     key: string;
@@ -877,12 +914,15 @@ interface ColumnConfigButtonProps extends ButtonProps {
     modalProps?: ModalProps;
 }
 declare class TableColumnConfigButton extends Component<ColumnConfigButtonProps> {}
-interface TableExpandedRowContentProps extends PartialHTMLAttributes {}
+interface TableExpandedRowContentProps extends HTMLAttributes<HTMLDivElement> {}
 declare class TableExpandedRowContent extends Component<TableExpandedRowContentProps> {}
 export class Table extends Component<TableProps> {
-    static ColumnConfigButton: typeof TableColumnConfigButton;
-    static SearchInput: typeof SearchInput;
-    static ExpandedRowContent: typeof TableExpandedRowContent;
+    static ColumnConfigButton: TableColumnConfigButton;
+    static SearchInput: SearchInput;
+    static ActionList: ActionList;
+    static ExpandedRowContent: TableExpandedRowContent;
+    static getColumnConfigFromLocalStorage: Function;
+    static setColumnConfigToLocalStorage: Function;
 }
 
 // Tabs
@@ -907,12 +947,13 @@ declare class TabPane extends Component<TabsPaneProps> {}
 export class Tabs extends Component<TabsProps> {
     static Pane: TabPane;
 }
+
 // Collapse
-export interface CollapseProps {
-    openKeys?: string[];
-    defaultOpenKeys?: string[];
+export interface CollapseProps extends ObjectExclude<HTMLAttributes<HTMLDivElement>, "onChange"> {
+    openKeys?: any[];
+    defaultOpenKeys?: any[];
     multiple?: boolean;
-    onChange?: (keys: string[]) => void;
+    onChange?: (keys: any[]) => void;
 }
 export interface CollapsePanelToggle {
     (open: boolean): void;
@@ -932,9 +973,9 @@ export interface CollapsePanelProps {
     titlePosition?: "top" | "bottom";
     multiple?: boolean;
 }
-declare class Panel extends Component<CollapsePanelProps> {}
+declare class CollapsePanel extends Component<CollapsePanelProps> {}
 export class Collapse extends Component<CollapseProps> {
-    static Panel: typeof Panel;
+    static Panel: CollapsePanel;
 }
 
 // Form
@@ -944,38 +985,54 @@ export interface FormLabelCol {
     pull?: number;
     push?: number;
 }
-export interface FormProps {
+interface FormItemTip {
+    icon?: ReactNode;
+    content?: ReactNode;
+}
+export interface FormItemProps extends RowProps {
     label?: ReactNode;
     labelCol?: FormLabelCol;
     controllerCol?: FormLabelCol;
+    help?: ReactNode;
+    required?: boolean;
+    status?: "default" | "success" | "warning" | "error" | "loading";
+    shareStatus?: boolean;
+    tip?: ReactNode | FormItemTip;
 }
-export interface FormItemProps {
-    label?: ReactNode;
-    children?: ReactNode;
-    labelCol?: FormLabelCol;
-    controllerCol?: FormLabelCol;
-    className?: string;
+export interface FormGroupProps extends ObjectExclude<HTMLAttributes<HTMLDivElement>, "title"> {
+    title?: ReactNode;
+    itemProps?: FormItemProps;
 }
-declare class FormItem extends Component<FormItemProps> {}
-export class Form extends Component<FormProps> {
-    static Item: typeof FormItem;
+export interface FormSubAreaProps extends HTMLAttributes<HTMLFormElement> {
+    itemProps?: FormItemProps;
+}
+export interface FormProps extends HTMLAttributes<HTMLFormElement> {
+    size?: "md" | "lg";
+    itemProps?: FormItemProps;
+}
+declare class FormItem extends PureComponent<FormItemProps> {}
+declare class FormGroup extends Component<FormGroupProps> {}
+declare class FormSubArea extends PureComponent<FormSubAreaProps> {}
+export class Form extends PureComponent<FormProps> {
+    static Item: FormItem;
+    static Group: FormGroup;
+    static SubArea: FormSubArea;
 }
 
 // Card
-export type CardChildProps = PartialHTMLAttributes;
-export interface CardHeaderProps extends CardChildProps {
+export interface CardHeaderProps extends HTMLAttributes<HTMLDivElement> {
     comment?: ReactNode;
 }
 declare class CardHeader extends Component<CardHeaderProps> {}
-declare class CardContent extends Component<CardChildProps> {}
-declare class CardFooter extends Component<CardChildProps> {}
-declare class CardAction extends Component<CardChildProps> {}
-export type CardProps = PartialHTMLAttributes;
-export class Card extends Component<CardProps> {
-    static Header: typeof CardHeader;
-    static Content: typeof CardContent;
-    static Footer: typeof CardFooter;
-    static Action: typeof CardAction;
+declare class CardContent extends Component<HTMLAttributes<HTMLDivElement>> {}
+declare class CardFooter extends Component<HTMLAttributes<HTMLDivElement>> {}
+declare class CardAction extends Component<HTMLAttributes<HTMLDivElement>> {}
+export type CardProps = HTMLAttributes<HTMLDivElement>;
+export class Card extends PureComponent<CardProps> {
+    static Header: CardHeader;
+    static Content: CardContent;
+    static Footer: CardFooter;
+    static Action: CardAction;
 }
 
 // Steps
@@ -985,7 +1042,7 @@ interface Step {
     title?: ReactNode;
     remark?: ReactNode;
 }
-export interface StepsProps {
+export interface StepsProps extends HTMLAttributes<HTMLDivElement> {
     steps: Step[];
     current?: string | number;
     status?: "current" | "loading" | "error";
@@ -993,11 +1050,11 @@ export interface StepsProps {
 export class Steps extends Component<StepsProps> {}
 
 // Message
-export interface MessageProps {
+export interface MessageProps extends ObjectExclude<HTMLAttributes<HTMLDivElement>, "title"> {
     closable?: boolean;
     title?: ReactNode;
     footer?: ReactNode;
-    styleType?: NoticeStyleType
+    styleType?: "default" | "success" | "loading" | "warning" | "error";
 }
 interface MessageOption {
     zIndex?: number;
@@ -1033,7 +1090,7 @@ interface BreadcrumbItemProps {
     onClick?: Function;
 }
 declare class BreadcrumbItem extends Component<BreadcrumbItemProps> {}
-interface BreadcrumbProps {
+interface BreadcrumbProps extends HTMLAttributes<HTMLDivElement> {
     separator?: ReactNode;
     styleType?: "block-hover" | "hover" | "active";
 }
@@ -1050,7 +1107,7 @@ interface GetPaginationShowTotal {
 interface ShowQuickJumperObject {
     goButton?: ReactNode;
 }
-export interface PaginationProps {
+export interface PaginationProps extends ObjectExclude<HTMLAttributes<HTMLUListElement>, "onChange"> {
     current?: number;
     defaultCurrent?: number;
     total?: number;
@@ -1075,7 +1132,7 @@ export class Pagination extends Component<PaginationProps> {}
 interface ProgressFormat {
     (percent: number): string;
 }
-export interface ProgressProps extends PartialHTMLAttributes {
+export interface ProgressProps extends HTMLAttributes<HTMLDivElement> {
     percent?: number;
     color?: "success" | "warn" | "error" | string
     format?: null | ProgressFormat;
@@ -1083,7 +1140,7 @@ export interface ProgressProps extends PartialHTMLAttributes {
 export class Progress extends Component<ProgressProps> {}
 
 // Loading
-export interface LoadingProps extends PartialHTMLAttributes {
+export interface LoadingProps extends HTMLAttributes<HTMLDivElement> {
     loading?: boolean;
     indicator?: ReactNode;
     tip?: ReactNode;
