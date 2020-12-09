@@ -73,3 +73,4 @@ class Demo extends React.Component {
 // demo end
 
 export default Demo;
+Demo.__ignore__test = true;

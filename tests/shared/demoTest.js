@@ -59,6 +59,7 @@ const demoTest = () => {
     demoFiles.forEach(file => {
         test(`${componentsName} demo -- ${file.match(/^.*\/([^/]*)\.jsx?$/)[1]}`, () => {
             const Demo = require(file).default;
+            if (Demo.__ignore__test) return;
             const component = render(<Demo />);
             let tree = renderToJson(component);
             expect(tree).toMatchSnapshot();
