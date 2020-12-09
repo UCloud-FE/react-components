@@ -14,6 +14,7 @@ describe('LocaleProvider', () => {
         expect(renderToJson(wrapper.render())).toMatchSnapshot();
         wrapper.unmount();
     });
+    jest.setTimeout(10000);
     test('Modal', async () => {
         const wrapper = mount(<Demo />);
         wrapper.find('button.demo-alert-btn').simulate('click');
