@@ -179,6 +179,7 @@ export const TagWrapper = withProps({
             ${PrefixIconWrapper} {
                 margin-right: 4px;
                 line-height: 18px;
+                flex-shrink: 0;
             }
             ${ContentWrapper} {
                 margin-right: 8px;
@@ -199,6 +200,7 @@ export const TagWrapper = withProps({
                 ${!disabled && 'cursor: pointer'};
                 color: ${DT[colorMap.color]};
                 transition: background 0.3s;
+                flex-shrink: 0;
 
                 ${CloseIcon} {
                     fill: ${DT[colorMap.color]};
