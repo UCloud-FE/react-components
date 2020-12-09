@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.15](https://github.com/UCloud-FE/react-components/compare/v1.0.14...v1.0.15) (2020-12-09)
+
+### Features
+
+-   **Radio:** add styleType list ([6f577fa](https://github.com/UCloud-FE/react-components/commit/6f577fafcff398bf9c3b97c41978feb81ca85963))
+
+### Bug Fixes
+
+-   **Radio:** fix text radio height ([8b0c48e](https://github.com/UCloud-FE/react-components/commit/8b0c48e7ba57d36c60a2cdd606472889ac105937))
+
 ### [1.0.14](https://github.com/UCloud-FE/react-components/compare/v1.0.13...v1.0.14) (2020-11-30)
 
 ### Features
