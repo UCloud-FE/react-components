@@ -18,6 +18,7 @@ export const iconCls = prefixCls + '-icon';
 export const contentCls = prefixCls + '-content';
 export const disabledCls = prefixCls + '-disabled';
 export const checkedCls = prefixCls + '-checked';
+export const extraCls = prefixCls + '-extra';
 
 export const genStyleTypeCls = styleType => prefixCls + '-styletype-' + styleType;
 
@@ -55,6 +56,63 @@ const sharedClassName = ({ disabled, checked, size, styleType }) =>
         [genStyleTypeCls(styleType)]: true
     });
 
+const radioIconMixin = props => {
+    const {
+        theme: { designTokens: DT }
+    } = props;
+    return css`
+        .${iconWrapCls} {
+            display: inline-block;
+            box-sizing: border-box;
+            overflow: hidden;
+            position: relative;
+            width: 14px;
+            height: 14px;
+            border: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
+            border-radius: 8px;
+            vertical-align: middle;
+
+            .${iconCls} {
+                visibility: hidden;
+                opacity: 0;
+                position: absolute;
+                top: -1px;
+                left: -1px;
+            }
+        }
+        :hover,
+        &.${checkedCls} {
+            .${iconWrapCls} {
+                border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
+            }
+        }
+
+        &.${checkedCls} {
+            .${iconCls} {
+                visibility: visible;
+                opacity: 1;
+                fill: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+            }
+        }
+
+        &.${disabledCls} {
+            .${iconWrapCls} {
+                border-color: ${DT.T_COLOR_LINE_DISABLED_LIGHT};
+                background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
+            }
+        }
+
+        &.${disabledCls}.${checkedCls} {
+            .${iconCls} {
+                fill: ${DT.T_COLOR_TEXT_DISABLED};
+            }
+            .${iconWrapCls} {
+                background: none;
+            }
+        }
+    `;
+};
+
 /* stylelint-disable no-duplicate-selectors */
 export const RadioWrap = styled(
     withProps({
@@ -75,25 +133,6 @@ export const RadioWrap = styled(
                     font-size: 12px;
                 }
 
-                .${iconWrapCls} {
-                    display: inline-block;
-                    box-sizing: border-box;
-                    overflow: hidden;
-                    position: relative;
-                    width: 14px;
-                    height: 14px;
-                    border: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
-                    border-radius: 8px;
-                    vertical-align: middle;
-
-                    .${iconCls} {
-                        visibility: hidden;
-                        opacity: 0;
-                        position: absolute;
-                        top: -1px;
-                        left: -1px;
-                    }
-                }
                 .${contentCls} {
                     display: inline-block;
                     vertical-align: middle;
@@ -101,44 +140,71 @@ export const RadioWrap = styled(
                     margin-left: 8px;
                 }
 
-                :hover,
-                &.${checkedCls} {
-                    .${iconWrapCls} {
-                        border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
-                    }
-                }
-
-                &.${checkedCls} {
-                    .${iconCls} {
-                        visibility: visible;
-                        opacity: 1;
-                        fill: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
-                    }
-                }
-
                 &.${disabledCls} {
                     cursor: default;
                     color: ${DT.T_COLOR_TEXT_DISABLED};
-                    .${iconWrapCls} {
-                        border-color: ${DT.T_COLOR_LINE_DISABLED_LIGHT};
-                        background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
-                    }
                 }
-
-                &.${disabledCls}.${checkedCls} {
-                    .${iconCls} {
-                        fill: ${DT.T_COLOR_TEXT_DISABLED};
-                    }
-                    .${iconWrapCls} {
-                        background: none;
-                    }
-                }
+                ${radioIconMixin(props)};
             `;
         })
     )
 )`
     /* empty */
 `;
+
+export const RadioListWrap = withProps({
+    className: sharedClassName
+})(
+    styled('div')(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
+
+        return css`
+            ${radioCommonStyleMixin(props)};
+            display: flex;
+            align-items: center;
+            padding: 8px 8px 8px 0;
+            border-bottom: 1px solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
+            color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+            ${radioIconMixin(props)};
+
+            .${iconWrapCls} {
+                margin: 0 12px 0 8px;
+                flex-shrink: 0;
+            }
+            .${contentCls} {
+                flex: 1 1 auto;
+                line-height: 20px;
+                overflow-x: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .${extraCls} {
+                flex-shrink: 0;
+                color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
+                margin-left: 8px;
+            }
+
+            &.${checkedCls} {
+                background: ${DT.T_COLOR_BG_PRIMARY_5};
+                .${contentCls} {
+                    font-weight: bold;
+                }
+            }
+            &.${disabledCls} {
+                cursor: default;
+                color: ${DT.T_COLOR_TEXT_DISABLED};
+                .${extraCls} {
+                    color: ${DT.T_COLOR_TEXT_DISABLED};
+                }
+            }
+            &.${checkedCls}.${disabledCls} {
+                background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
+            }
+        `;
+    })
+);
 
 // eslint-disable-next-line no-unused-vars
 const FilterStyleTypeButton = ({ styleType, ...rest }) => <Button styleType="border-gray" checkAble {...rest} />;
@@ -146,104 +212,94 @@ FilterStyleTypeButton.propTypes = {
     styleType: PropTypes.string
 };
 
-export const RadioButtonWrap = styled(
-    withProps({
-        className: sharedClassName
-    })(
-        styled(FilterStyleTypeButton)(props => {
-            const {
-                size,
-                theme: { fontSize },
-                disabled,
-                checked
-            } = props;
+export const RadioButtonWrap = withProps({
+    className: sharedClassName
+})(
+    styled(FilterStyleTypeButton)(props => {
+        const {
+            size,
+            theme: { fontSize },
+            disabled,
+            checked
+        } = props;
 
-            return css`
-                && {
-                    ${css`
-                        min-width: ${{ lg: 80, md: 68, sm: 56 }[size]}px;
-                    `};
-                    text-align: center;
-                    border-radius: 0;
-                    ${css`
-                        font-size: ${fontSize};
-                    `};
-                    position: relative;
+        return css`
+            && {
+                min-width: ${{ lg: 80, md: 68, sm: 56 }[size]}px;
+                text-align: center;
+                border-radius: 0;
+                ${css`
+                    font-size: ${fontSize};
+                `};
+                position: relative;
 
-                    ${disabled &&
-                    css`
-                        z-index: 1;
-                    `};
-
-                    ${checked &&
-                    css`
-                        z-index: 2;
-                    `};
-
-                    &:hover {
-                        z-index: 3;
-                    }
-                }
-            `;
-        })
-    )
-)`
-    /* empty */
-`;
-
-export const RadioTagWrap = styled(
-    withProps({
-        className: sharedClassName
-    })(
-        styled('div')(props => {
-            const {
-                theme: { designTokens: DT },
-                checked,
-                disabled
-            } = props;
-
-            return css`
-                padding: 0 8px;
-                cursor: pointer;
-                border-radius: 2px;
-
-                ${radioCommonStyleMixin(props)};
-
-                ${inlineBlockWithVerticalMixin};
-
-                ${sizeMixin(props)};
+                ${disabled &&
+                css`
+                    z-index: 1;
+                `};
 
                 ${checked &&
                 css`
-                    background: ${DT.T_COLOR_BG_PRIMARY_5};
+                    z-index: 2;
+                `};
+
+                &:hover {
+                    z-index: 3;
+                }
+            }
+        `;
+    })
+);
+
+export const RadioTagWrap = withProps({
+    className: sharedClassName
+})(
+    styled('div')(props => {
+        const {
+            theme: { designTokens: DT },
+            checked,
+            disabled
+        } = props;
+
+        return css`
+            padding: 0 8px;
+            cursor: pointer;
+            border-radius: 2px;
+
+            ${radioCommonStyleMixin(props)};
+
+            ${inlineBlockWithVerticalMixin};
+
+            ${sizeMixin(props)};
+
+            ${checked &&
+            css`
+                background: ${DT.T_COLOR_BG_PRIMARY_5};
+                color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+            `};
+
+            ${disabled &&
+            css`
+                color: ${DT.T_COLOR_TEXT_DISABLED};
+                cursor: default;
+            `};
+
+            ${disabled &&
+            checked &&
+            css`
+                background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
+            `};
+
+            ${!checked &&
+            !disabled &&
+            css`
+                :hover {
                     color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
-                `};
-
-                ${disabled &&
-                css`
-                    color: ${DT.T_COLOR_TEXT_DISABLED};
-                    cursor: default;
-                `};
-
-                ${disabled &&
-                checked &&
-                css`
-                    background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
-                `};
-
-                ${!checked &&
-                !disabled &&
-                css`
-                    :hover {
-                        color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
-                    }
-                `};
-            `;
-        })
-    )
-)`
-    /* empty */
-`;
+                }
+            `};
+        `;
+    })
+);
 
 export const RadioCardHeader = styled('div')`
     position: relative;
@@ -446,6 +502,11 @@ export const RadioGroupWrap = styled('div')`
         &:last-of-type {
             border-radius: 0 2px 2px 0;
             margin-right: 0;
+        }
+    }
+    .${genStyleTypeCls('list')} {
+        &:last-of-type {
+            margin-bottom: 8px;
         }
     }
 `;

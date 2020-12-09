@@ -1,22 +1,32 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import createReactContext from 'create-react-context';
 
-import itemDecorator from 'decorators/selectableWithStore/item';
-import uncontrolledDecorator from 'decorators/uncontrolled';
+import itemDecorator from 'src/decorators/selectableWithStore/item';
+import uncontrolledDecorator from 'src/decorators/uncontrolled';
 import SvgIcon from 'src/components/SvgIcon';
-import { RadioWrap, RadioButtonWrap, RadioTagWrap, RadioTextWrap, iconWrapCls, iconCls, contentCls } from './style';
+import {
+    RadioWrap,
+    RadioListWrap,
+    RadioButtonWrap,
+    RadioTagWrap,
+    RadioTextWrap,
+    iconWrapCls,
+    iconCls,
+    contentCls,
+    extraCls
+} from './style';
 import Card from './Card';
 
 export const StoreContext = createReactContext();
 export const RadioContext = createReactContext();
 
 const Size = ['sm', 'md', 'lg'];
-const StyleType = ['default', 'button', 'tag', 'card', 'text'];
+const StyleType = ['default', 'button', 'tag', 'card', 'text', 'list'];
 
 @uncontrolledDecorator({ valueName: 'checked' })
 @itemDecorator({ StoreContext })
-class Radio extends Component {
+class Radio extends PureComponent {
     static propTypes = {
         /** @ignore */
         children: PropTypes.node,
@@ -34,11 +44,13 @@ class Radio extends Component {
         value: PropTypes.any,
         /** 样式风格 */
         styleType: PropTypes.oneOf(StyleType),
-        /** 尺寸，styleType为card时无效 */
+        /** 尺寸，styleType 为 card、list 时无效 */
         size: PropTypes.oneOf(Size),
-        /** 标题，styleType为card时使用 */
+        /** 标题，styleType 为 card 时使用 */
         title: PropTypes.node,
-        /** 禁用标识，styleType为card时使用 */
+        /** 附加内容，styleType 为 list 时使用 */
+        extra: PropTypes.node,
+        /** 禁用标识，styleType 为 card 时使用 */
         disabledLabel: PropTypes.node,
         /** @ignore */
         multiple: PropTypes.bool
@@ -49,11 +61,9 @@ class Radio extends Component {
     };
     onClick = (props, e) => {
         const { onChange, onClick, disabled, checked } = props;
-
         if (disabled) return;
 
         onClick(e);
-
         if (!checked) onChange(true);
     };
     renderRadio(props) {
@@ -84,6 +94,38 @@ class Radio extends Component {
                 </span>
                 {children != null && <span className={contentCls}>{children}</span>}
             </RadioWrap>
+        );
+    }
+    renderRadioList(props) {
+        /* eslint-disable no-unused-vars */
+        const {
+            children,
+            checked,
+            defaultChecked,
+            value,
+            onChange,
+            onClick,
+            multiple,
+            disabled,
+            title,
+            extra,
+            ...rest
+        } = props;
+        /* eslint-enable no-unused-vars */
+
+        return (
+            <RadioListWrap
+                checked={checked}
+                disabled={disabled}
+                {...rest}
+                onClick={(...args) => this.onClick(props, ...args)}
+            >
+                <span className={iconWrapCls}>
+                    <SvgIcon className={iconCls} type="circle" size="14px" />
+                </span>
+                {children != null && <span className={contentCls}>{children}</span>}
+                {extra && <span className={extraCls}>{extra}</span>}
+            </RadioListWrap>
         );
     }
     renderRadioButton(props) {
@@ -142,6 +184,8 @@ class Radio extends Component {
                             return this.renderRadioCard(props);
                         case 'text':
                             return this.renderRadioText(props);
+                        case 'list':
+                            return this.renderRadioList(props);
                         default:
                             return this.renderRadio(props);
                     }

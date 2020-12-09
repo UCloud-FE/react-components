@@ -13,6 +13,17 @@ const Demo = () => (
         <div className="demo-wrap">
             <Radio styleType="card" title="card" />
         </div>
+        <div className="demo-wrap">
+            <Radio styleType="list" extra={<span>备注</span>}>
+                <p>title</p>
+                <p>content</p>
+            </Radio>
+        </div>
+        <div className="demo-wrap">
+            <Radio styleType="list" extra={<span>备注</span>}>
+                longcontentlongcontentlongcontentlongcontentlongcontentlongcontentlongcontentlongcontentlongcontentlongcontentlongcontentlongcontentlongcontentlongcontentlongcontentlongcontentlongcontentlongcontentlongcontentlongcontentlongcontentlongcontentlongcontentlongcontentlongcontentlongcontentlongcontentlongcontent
+            </Radio>
+        </div>
     </div>
 );
 // demo end
