@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.16](https://github.com/UCloud-FE/react-components/compare/v1.0.15...v1.0.16) (2020-12-09)
+
+### Bug Fixes
+
+-   **Tag:** fix tag overflow cause icon offset ([bb46fe8](https://github.com/UCloud-FE/react-components/commit/bb46fe8685def87e849b03c2e1438fdf89be27e9))
+
 ### [1.0.15](https://github.com/UCloud-FE/react-components/compare/v1.0.14...v1.0.15) (2020-12-09)
 
 ### Features
