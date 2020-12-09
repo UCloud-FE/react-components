@@ -414,15 +414,17 @@ export const RadioTextWrap = withProps({
 })(
     styled('div')(props => {
         const {
-            theme: { designTokens: DT },
+            theme: { designTokens: DT, Height },
             checked,
-            disabled
+            disabled,
+            size
         } = props;
 
         return css`
             padding: 2px 0;
             box-sizing: border-box;
             cursor: pointer;
+            height: ${Height[size]};
 
             > span {
                 display: table;
