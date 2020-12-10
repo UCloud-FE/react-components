@@ -33,7 +33,7 @@ class Demo extends React.Component {
         return (
             <div>
                 <Form className="demo-form">
-                    <Form.Item label="styleTyle" {...itemLayout}>
+                    <Form.Item label="styleType" {...itemLayout}>
                         <Radio.Group
                             options={StyleType.map(styleType => ({ value: styleType }))}
                             value={styleType}

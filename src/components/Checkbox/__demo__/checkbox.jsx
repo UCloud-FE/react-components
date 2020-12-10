@@ -37,7 +37,7 @@ class Demo extends React.Component {
                             onChange={size => this.setState({ size })}
                         />
                     </Form.Item>
-                    <Form.Item label="styleTyle" {...itemLayout}>
+                    <Form.Item label="styleType" {...itemLayout}>
                         <Radio.Group
                             options={StyleType.map(styleType => ({ value: styleType }))}
                             value={styleType}
