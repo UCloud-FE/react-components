@@ -139,7 +139,7 @@ export type NumberInputProps = Override<HTMLAttributes<HTMLInputElement>, {
     styleType?: NumberInputStyleType;
     size?: SizeType;
     suffix?: ReactNode;
-    InputStyle?: CSSProperties;
+    inputStyle?: CSSProperties;
     computeValidNumber?: (value: number) => number;
     hideHandler?: boolean;
 }>
