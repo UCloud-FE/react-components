@@ -4,7 +4,7 @@
     "parser": "babel-eslint",
     "settings": {
         "react": {
-            "version": "^15"
+            "version": "^16"
         }
     },
     "parserOptions": {
@@ -40,6 +40,20 @@
                 "jest": true,
                 "describe": true
             }
+        },
+        {
+            "files": ["**/*.ts?(x)"],
+            "parser": "@typescript-eslint/parser",
+            "parserOptions": {
+                "ecmaVersion": 2018,
+                "sourceType": "module",
+                "ecmaFeatures": {
+                    "jsx": true
+                },
+                "warnOnUnsupportedTypeScriptVersion": true
+            },
+            "plugins": ["@typescript-eslint"],
+            "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:@typescript-eslint/recommended"]
         }
     ]
 }

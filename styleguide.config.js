@@ -7,7 +7,7 @@ let components = require('./.styleguide/components.js');
 
 const namePrefix = '❖  ';
 const basePath = 'src/components/';
-const fileSuffix = '.jsx';
+const fileSuffix = '.{jsx,tsx}';
 
 const isProd = process.env.NODE_ENV === 'production';
 
@@ -101,7 +101,7 @@ module.exports = {
         ...components
     ],
     getExampleFilename(componentPath) {
-        return componentPath.replace(/\.jsx?$/, '.md');
+        return componentPath.replace(/\.(j|t)sx?$/, '.md');
     },
     webpackConfig: {
         ...webpackConfig,

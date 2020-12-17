@@ -32,3 +32,5 @@ global.moment().locale('zh-cn').utcOffset(8);
 
 global.SizeInterface = require('src/interfaces/Size').default;
 global.axios = require('axios');
+
+global.demoUtil = require('tests/shared/demoUtil').default;
