@@ -1,7 +1,5 @@
 import React from 'react';
 
-let Trigger;
-
 const ActualTrigger = jest.requireActual('rc-trigger');
 const render = ActualTrigger.prototype.render;
 
@@ -24,6 +22,6 @@ ActualTrigger.prototype.render = function mockRender() {
         </div>
     );
 };
-Trigger = ActualTrigger;
+const Trigger = ActualTrigger;
 
 export default Trigger;

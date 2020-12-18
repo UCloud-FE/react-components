@@ -150,7 +150,7 @@ class TableRow extends React.Component {
         const BodyRow = components.body.row;
         const BodyCell = components.body.cell;
 
-        let { className } = this.props;
+        const { className } = this.props;
 
         const cells = [];
 

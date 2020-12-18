@@ -43,10 +43,10 @@ export const BoxWrap = withProps({
         } = props;
         const isVertical = direction === 'column' || direction === 'column-reverse';
 
-        let margin = [],
+        const margin = [],
             boxMargin = [],
-            cleanMargin = [],
-            hSpace = null,
+            cleanMargin = [];
+        let hSpace = null,
             vSpace = null;
         if (Array.isArray(spacing)) {
             [hSpace, vSpace] = spacing;
@@ -88,7 +88,7 @@ export const BoxWrap = withProps({
                 margin-bottom: -${vSpace}px;
             `);
         }
-        let boxPadding = [];
+        const boxPadding = [];
         if (padding) {
             if (typeof padding === 'string' || typeof padding === 'number') {
                 boxPadding.push(css`

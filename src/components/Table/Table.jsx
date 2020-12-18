@@ -696,7 +696,7 @@ class Table extends Component {
         newColumns = newColumns.map(generateColumnTitle);
 
         if (rowSelection) {
-            let flatDataSourceOfCurrentPage = this.flatDataSource(dataSourceOfCurrentPage);
+            const flatDataSourceOfCurrentPage = this.flatDataSource(dataSourceOfCurrentPage);
             let enableDataSourceOfCurrentPage = flatDataSourceOfCurrentPage;
 
             const { disabled: selectionDisabled } = rowSelection;
@@ -707,7 +707,7 @@ class Table extends Component {
                     item => !rowSelection.getDisabledOfRow(item.record)
                 );
             }
-            let selectedEnableDataSourceOfCurrentPage = _.filter(
+            const selectedEnableDataSourceOfCurrentPage = _.filter(
                 enableDataSourceOfCurrentPage,
                 item => selectedRowKeyMap[item.key]
             );

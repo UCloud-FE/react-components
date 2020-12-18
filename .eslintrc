@@ -17,7 +17,14 @@
     },
     "rules": {
         "no-console": ["warn", { "allow": ["warn", "error"] }],
-        "no-unused-vars": "warn"
+        "no-unused-vars": "warn",
+        "prefer-const": [
+            "error",
+            {
+                "destructuring": "all"
+            }
+        ],
+        "react/display-name": "warn"
     },
     "env": {
         "browser": true,
@@ -52,8 +59,11 @@
                 },
                 "warnOnUnsupportedTypeScriptVersion": true
             },
-            "plugins": ["@typescript-eslint"],
-            "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:@typescript-eslint/recommended"]
+            "plugins": ["react", "@typescript-eslint"],
+            "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:@typescript-eslint/recommended"],
+            "rules": {
+                "@typescript-eslint/explicit-module-boundary-types": 0
+            }
         }
     ]
 }

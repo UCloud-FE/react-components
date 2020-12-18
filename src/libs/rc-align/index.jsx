@@ -34,7 +34,8 @@ class Align extends Component {
         monitorBufferTime: PropTypes.number,
         monitorWindowResize: PropTypes.bool,
         disabled: PropTypes.bool,
-        children: PropTypes.any
+        children: PropTypes.any,
+        container: PropTypes.func
     };
 
     static defaultProps = {
@@ -160,8 +161,8 @@ class Align extends Component {
     };
 
     render() {
-        const { childrenProps, children } = this.props;
-        const child = React.Children.only(children);
+        const { childrenProps, children, container } = this.props;
+        let child = React.Children.only(children);
         if (childrenProps) {
             const newProps = {};
             const propList = Object.keys(childrenProps);
@@ -169,7 +170,14 @@ class Align extends Component {
                 newProps[prop] = this.props[childrenProps[prop]];
             });
 
-            return React.cloneElement(child, newProps);
+            child = React.cloneElement(child, newProps);
+        }
+        if (container) {
+            if (typeof container === 'function') {
+                return ReactDOM.createPortal(child, container());
+            } else {
+                return ReactDOM.createPortal(child, container);
+            }
         }
         return child;
     }

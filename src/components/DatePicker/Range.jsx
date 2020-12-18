@@ -95,7 +95,7 @@ class Range extends Component {
         selectProps: PropTypes.object,
         /** 自定义时间选择框弹出层props */
         popoverProps: PropTypes.object,
-        /** 自定义datepicker的props */
+        /** 自定义 datePicker 的 props */
         datePickerProps: PropTypes.object,
         /** @ignore */
         locale: PropTypes.object,
@@ -143,13 +143,13 @@ class Range extends Component {
         const { cache } = this.state;
         const [start, end] = cache;
         if (tag === 'start') {
-            let s = value,
+            const s = value,
                 e = end;
             this.setState({
                 cache: [moment(s), moment(e)]
             });
         } else if (tag === 'end') {
-            let s = start,
+            const s = start,
                 e = value;
             this.setState({
                 cache: [moment(s), moment(e)]
@@ -217,7 +217,7 @@ class Range extends Component {
             value: 'custom'
         });
         const { range, custom: _c } = rules;
-        let readonly = option !== 'custom';
+        const readonly = option !== 'custom';
         let [start, end] = value;
         start = moment(+start);
         end = moment(+end);

@@ -535,15 +535,13 @@ class NumberInput extends Component {
                 downDisabled = true;
             }
         }
-        let upEvents;
-        let downEvents;
 
-        upEvents = {
+        const upEvents = {
             onMouseDown: e => (editable && !upDisabled ? this.up(e) : noop()),
             onMouseUp: e => this.stop(e),
             onMouseLeave: e => this.stop(e)
         };
-        downEvents = {
+        const downEvents = {
             onMouseDown: e => (editable && !downDisabled ? this.down(e) : noop()),
             onMouseUp: e => this.stop(e),
             onMouseLeave: e => this.stop(e)

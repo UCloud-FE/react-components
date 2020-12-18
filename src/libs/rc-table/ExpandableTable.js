@@ -136,8 +136,7 @@ class ExpandableTable extends React.Component {
                 cell: 'td'
             }
         };
-        let colCount;
-        colCount = this.columnManager.leafColumns().length;
+        const colCount = this.columnManager.leafColumns().length;
 
         const columns = [
             {

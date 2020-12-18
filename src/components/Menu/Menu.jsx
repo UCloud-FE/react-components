@@ -73,7 +73,7 @@ class Menu extends Component {
         multiple: PropTypes.bool,
         /** 是否可选 */
         selectable: PropTypes.bool,
-        /** collapse的配置，参考collpase组件 */
+        /** collapse的配置，参考 collapse 组件 */
         collapse: PropTypes.object,
         /** 是否显示全选，多选时有效 */
         showSelectAll: PropTypes.bool,
@@ -253,7 +253,7 @@ class Menu extends Component {
 
     render() {
         /* eslint-disable no-unused-vars */
-        let {
+        const {
             selectedKeys,
             defaultSelectedKeys,
             onChange,

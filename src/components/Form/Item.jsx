@@ -32,6 +32,9 @@ const Help = React.memo(({ help }) => {
         </Tooltip>
     ) : null;
 });
+Help.propTypes = {
+    help: PropTypes.node
+};
 
 const Item = props => {
     const itemContext = useContext(ItemContext);

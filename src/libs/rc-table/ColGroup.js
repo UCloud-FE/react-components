@@ -10,8 +10,7 @@ export default function ColGroup(props, { table }) {
         cols.push(<col className={`${prefixCls}-expand-icon-col`} key="rc-table-expand-icon-col" />);
     }
 
-    let leafColumns;
-    leafColumns = table.columnManager.leafColumns();
+    const leafColumns = table.columnManager.leafColumns();
 
     cols = cols.concat(
         leafColumns.map(c => {

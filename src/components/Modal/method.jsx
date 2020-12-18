@@ -31,7 +31,7 @@ class ModalWrap extends PureComponent {
 }
 
 const pop = props => {
-    let container = document.createElement('div');
+    const container = document.createElement('div');
     document.body.appendChild(container);
     const destroy = () => {
         const result = ReactDOM.unmountComponentAtNode(container);
@@ -54,7 +54,7 @@ const pop = props => {
 };
 
 const openModal = modal => {
-    let container = document.createElement('div');
+    const container = document.createElement('div');
     document.body.appendChild(container);
     const destroy = () => {
         const result = ReactDOM.unmountComponentAtNode(container);

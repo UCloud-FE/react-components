@@ -50,8 +50,7 @@ class BaseTable extends React.Component {
             const key = getRowKey(record, i);
             const className = typeof rowClassName === 'string' ? rowClassName : rowClassName(record, i, indent);
 
-            let leafColumns;
-            leafColumns = this.getColumns(columnManager.leafColumns());
+            const leafColumns = this.getColumns(columnManager.leafColumns());
 
             const rowPrefixCls = `${prefixCls}-row`;
 

@@ -13,7 +13,7 @@ const config = {
     top: 20
 };
 
-let messageContainerDom = document.createElement('div');
+const messageContainerDom = document.createElement('div');
 
 const mainContainerDom = config.getContainer();
 let containerRef;
@@ -48,7 +48,7 @@ const showMessage = (styleType, content, duration = config.duration, onClose = (
     let props = {
         children: content
     };
-    let newStyle = {
+    const newStyle = {
         ...style
     };
     if ('zIndex' in option) {

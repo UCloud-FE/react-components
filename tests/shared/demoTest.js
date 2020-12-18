@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 import { render } from 'enzyme';
 import { renderToJson } from 'enzyme-to-json';
-import { getStyles, createSerializer } from 'jest-emotion';
+import { createSerializer } from 'jest-emotion';
 import * as emotion from 'emotion';
 
 expect.addSnapshotSerializer(createSerializer(emotion));
@@ -61,7 +61,7 @@ const demoTest = () => {
             const Demo = require(file).default;
             if (Demo.__ignore__test) return;
             const component = render(<Demo />);
-            let tree = renderToJson(component);
+            const tree = renderToJson(component);
             expect(tree).toMatchSnapshot();
         });
     });

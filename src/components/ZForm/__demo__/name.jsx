@@ -61,7 +61,7 @@ class DemoForm extends React.Component {
                 second: false,
                 third: false
             };
-            for (let key in checkboxObject) {
+            for (const key in checkboxObject) {
                 checkboxArray.push(
                     <Item label={`checkbox ${key}`} key={key} {...itemLayout}>
                         <ZCheckbox

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
 
 const uncontrolledDecorator = (...options) => Child => {
     if (!options.length) {
@@ -58,6 +59,9 @@ const uncontrolledDecorator = (...options) => Child => {
             return <Child {...rest} ref={innerRef} />;
         }
     }
+    UncontrolledWrappedComponent.propTypes = {
+        innerRef: PropTypes.any
+    };
     // get default props
     UncontrolledWrappedComponent.defaultProps = {
         ...Child.defaultProps

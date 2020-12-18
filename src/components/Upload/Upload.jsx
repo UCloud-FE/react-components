@@ -275,7 +275,7 @@ class Upload extends PureComponent {
         if (!files || !files.length) return;
         const { accept, maxSize, multiple, locale } = this.props;
         files = [].slice.call(files);
-        for (let index in files) {
+        for (const index in files) {
             const file = files[index];
             const checkResult = checkFile(file, accept, maxSize, locale);
             if (checkResult !== true) {

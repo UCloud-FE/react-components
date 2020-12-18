@@ -1,5 +1,4 @@
 import moment from 'moment';
-import _ from 'lodash';
 
 const isDateDisabled = (date, value, rules) => {
     date = moment(date);
@@ -8,7 +7,7 @@ const isDateDisabled = (date, value, rules) => {
     }
     const { range, custom } = rules;
     if (range) {
-        let [start, end] = range;
+        const [start, end] = range;
         if (
             (start != null && moment(date).set({ hour: 23, minute: 59, second: 59 }) < start) ||
             (end != null && moment(date).set({ hour: 0, minute: 0, second: 0 }) > end)
@@ -28,7 +27,7 @@ const getValidDate = (date, rules) => {
     }
     const { range } = rules;
     if (range) {
-        let [start, end] = range;
+        const [start, end] = range;
 
         if (start != null && date < start) {
             return moment(start);

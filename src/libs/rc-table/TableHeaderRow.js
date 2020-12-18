@@ -19,7 +19,7 @@ function TableHeaderRow({ row, index, height, components, onHeaderRow, prefixCls
                 let { column, style = {}, className, ...cellProps } = cell;
                 const { offset, fixed } = column;
                 const customProps = column.onHeaderCell ? column.onHeaderCell(column) : {};
-                let { _style = {}, className: _className } = customProps;
+                const { _style = {}, className: _className } = customProps;
                 style = { ...style, ..._style };
                 className = classnames(className, _className);
                 if (column.align) {

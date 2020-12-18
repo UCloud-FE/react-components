@@ -42,7 +42,7 @@ describe('LocaleProvider', () => {
         wrapper.unmount();
     });
     test('Table', async () => {
-        let wrapper = mount(<Demo />);
+        const wrapper = mount(<Demo />);
         // wrapper = wrapper.find('.test-table');
         wrapper.find('.test-table .test-search-input input').instance().value = 'searchValue';
         wrapper.find('.test-table .test-search-input i.icon__search').simulate('click');

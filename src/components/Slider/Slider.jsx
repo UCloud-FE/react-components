@@ -403,7 +403,7 @@ class Slider extends Component {
         return valueStep;
     };
     computeValidNumber = (number, options) => {
-        let { step, min, max } = options || this.props;
+        const { step, min, max } = options || this.props;
         if (number < min) {
             return min;
         }
