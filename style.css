@@ -47,7 +47,6 @@ form.demo-form,
     border: 1px dashed #ccc;
     border-radius: 5px;
     margin-bottom: 10px;
-    position: relative;
     margin-top: 10px;
 }
 form.demo-form:before,
@@ -59,7 +58,7 @@ form.demo-form:before,
     height: 16px;
     line-height: 16px;
     top: -8px;
-    left: 8px;
+    right: 8px;
 }
 
 .demo-wrap {
@@ -76,8 +75,27 @@ form.demo-form:before,
 }
 
 .demo-block {
-    padding: 0 10px 0 0;
+    margin-right: 10px;
     display: inline-block;
+}
+.demo-block-lg {
+    margin-right: 30px;
+    display: inline-block;
+}
+.demo-block-row {
+    display: block;
+    margin-right: 0;
+}
+.demo-block-row + .demo-block-row {
+    margin-top: 10px;
+}
+.demo-block-row + .demo-block-row.demo-block-lg {
+    margin-top: 30px;
+}
+
+.demo-title {
+    font-size: 16px;
+    margin-bottom: 12px;
 }
 
 .clear-fixed:before,
