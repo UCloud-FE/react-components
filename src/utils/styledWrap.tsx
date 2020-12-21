@@ -1,7 +1,7 @@
-import React, { DetailedHTMLProps, HTMLAttributes, Ref } from 'react';
+import React, { DetailedHTMLProps, HTMLAttributes, Ref, FC, useMemo } from 'react';
 import classnames from 'classnames';
 import { StyledComponent } from '@emotion/styled';
-import { withTheme } from 'emotion-theming';
+import { useTheme } from 'emotion-theming';
 
 import defaultTheme from 'src/components/ThemeProvider/theme';
 
@@ -16,28 +16,45 @@ export interface Theme {
     [key: string]: unknown;
 }
 
+/**
+ * 包裹组件，注入默认主题，添加默认的 props
+ * @param input {object} 需要注入组件的 props
+ */
 const styledWrap = <Props, HTMLElement = HTMLDivElement>(input: Input<Props>) => {
     type MergedPropsWithTheme = Props & HTMLAttributes<HTMLElement> & { theme?: Theme };
+    type fullProps = Props & HTMLAttributes<HTMLElement>;
     return (
         Comp: StyledComponent<DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>, MergedPropsWithTheme, Theme>
     ) => {
-        const WithPropsComponent = (props: MergedPropsWithTheme, ref: Ref<HTMLElement>) => {
-            let { className, ...rest } = input;
-            if (className) {
-                className = typeof className === 'function' ? className(props) : className;
-            }
+        const WithThemeComponent = (props: fullProps, ref?: Ref<HTMLElement>) => {
+            const { className, ...rest } = input;
+
+            const memoClassName = useMemo(() => {
+                let cn;
+                if (className) {
+                    cn = typeof className === 'function' ? className(props) : className;
+                }
+                if (props.className) {
+                    cn = classnames(cn, props.className);
+                }
+                return cn;
+            }, [className, props]);
+
+            const theme = useTheme<Theme>();
+            const memoTheme = useMemo(() => (!theme || !Object.keys(theme)?.length ? defaultTheme : theme), [theme]);
+
             const result: MergedPropsWithTheme = {
                 ...rest,
                 ...props,
-                ...(props.className ? { className: classnames(className, props.className) } : {})
+                ...(memoClassName ? { className: memoClassName } : {}),
+                theme: memoTheme
             };
-            if (!result.theme || !Object.keys(result.theme)?.length) {
-                result.theme = defaultTheme;
-            }
-            const Com = (Comp as unknown) as React.FC;
+
+            const Com = (Comp as unknown) as FC;
             return <Com {...result} ref={ref} />;
         };
-        return withTheme(React.forwardRef(WithPropsComponent));
+        return React.forwardRef(WithThemeComponent);
     };
 };
+
 export default styledWrap;
