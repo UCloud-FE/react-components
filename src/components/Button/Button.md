@@ -1,45 +1,46 @@
 ### 说明
 
-*   这是 Button 组件
+-   这是 Button，按钮组件
+-   主要内置了一些样式
 
 ### 演示
 
-*   演示
+#### 演示
 
 ```js {"codepath": "button.jsx", "props": {"className": "editor_transparent"}}
 ```
 
-*   styleType
+#### styleType
 
 ```js {"codepath": "styleType.jsx"}
 ```
 
-*   shape
+#### shape
 
 ```js {"codepath": "shape.jsx"}
 ```
 
-*   loading
+#### loading
 
 ```js {"codepath": "loading.jsx"}
 ```
 
-*   size
+#### size
 
 ```js {"codepath": "size.jsx"}
 ```
 
-*   disabled
+#### disabled
 
 ```js {"codepath": "disabled.jsx"}
 ```
 
-*   fakeDisabled
+#### fakeDisabled
 
 ```js {"codepath": "fakeDisabled.jsx"}
 ```
 
-*   icon
+#### icon
 
 ```js {"codepath": "icon.jsx"}
 ```
