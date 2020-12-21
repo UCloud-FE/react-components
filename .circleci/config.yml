@@ -78,7 +78,7 @@ jobs:
       - persist_to_workspace:
           root: ~/react-components
           paths:
-            - build
+            - dist
   build lib:
     <<: *container_config
     steps:
