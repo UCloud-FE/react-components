@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.17](https://github.com/UCloud-FE/react-components/compare/v1.0.16...v1.0.17) (2020-12-21)
+
+### Features
+
+-   **All:** add support of ts components ([405b467](https://github.com/UCloud-FE/react-components/commit/405b4675b3a16c35c86c4e98cc43704e4059e63e))
+-   **Badge:** add placement & offset & color & zIndex ([90bf7b9](https://github.com/UCloud-FE/react-components/commit/90bf7b9b928adcf8a19ce72f33e8578c2dbee650)), closes [#323](https://github.com/UCloud-FE/react-components/issues/323)
+-   **DesignTokens:** update design tokens ([3ce89d9](https://github.com/UCloud-FE/react-components/commit/3ce89d9c2405021d6ecc45b6ae27c5ad9bbc152e))
+
+### Bug Fixes
+
+-   **eslint:** fix code to adapt new eslint ([83be301](https://github.com/UCloud-FE/react-components/commit/83be30168434000ab9d8018a695e18a31e6f6c4c))
+-   **index.d.ts:** NumberInput inputStyle case bug ([19e344c](https://github.com/UCloud-FE/react-components/commit/19e344c01b550cd74303eb857aeaca7d752f0f80)), closes [#322](https://github.com/UCloud-FE/react-components/issues/322)
+
 ### [1.0.16](https://github.com/UCloud-FE/react-components/compare/v1.0.15...v1.0.16) (2020-12-09)
 
 ### Bug Fixes
