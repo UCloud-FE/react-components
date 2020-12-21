@@ -32,7 +32,7 @@ jobs:
           root: ~/react-components
           paths:
             - node_modules
-  
+
   end:
     <<: *container_config
     steps:
@@ -75,6 +75,10 @@ jobs:
       - checkout
       - *attach_workspace
       - run: npm run build:dist
+      - persist_to_workspace:
+          root: ~/react-components
+          paths:
+            - build
   build lib:
     <<: *container_config
     steps:
@@ -82,26 +86,48 @@ jobs:
       - *attach_workspace
       - run: npm run build:lib
       - run: npm run build:ts
+      - persist_to_workspace:
+          root: ~/react-components
+          paths:
+            - lib
   build gh-pages:
     <<: *container_config
     steps:
       - checkout
       - *attach_workspace
       - run: npm run build:gh-pages
-  
+
   test lib:
     <<: *container_config
     steps:
       - checkout
       - *attach_workspace
-      - run: npm run build:dist
-      - run: npm run build:lib
-      - run: npm run build:ts
       - run: npx jest tests/lib.manual.test.js
+
+  deploy npm:
+    <<: *container_config
+    steps:
+      - checkout
+      - *attach_workspace
+      - run:
+          name: Authenticate with registry
+          command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
+      - run:
+          name: Publish package
+          command: npm publish
+
+  deploy pages:
+    <<: *container_config
+    steps:
+      - checkout
+      - *attach_workspace
+      - run:
+          name: publish to github pages
+          command: npm run deploy:gh-pages
 
 workflows:
   version: 2
-  test-and-build:
+  test-and-build-and-deploy:
     jobs:
       - setup:
           filters:
@@ -122,24 +148,39 @@ workflows:
             - test
       - build dist:
           requires:
-            - eslint
-            - stylelint
+            - test
       - build lib:
           requires:
-            - eslint
-            - stylelint
+            - test
       - build gh-pages:
           requires:
-            - eslint
-            - stylelint
+            - test
       - test lib:
           requires:
             - build dist
             - build lib
-      - end:
+      - deploy npm:
           requires:
-            - codecov
+            - test
             - build dist
             - build lib
             - build gh-pages
             - test lib
+          filters:
+            tags:
+              only: /^v.*/
+      - deploy pages:
+          requires:
+            - deploy npm
+          filters:
+            tags:
+              only: /^v.*/
+      - end:
+          requires:
+            - test
+            - build dist
+            - build lib
+            - build gh-pages
+            - test lib
+            - deploy npm
+            - deploy pages

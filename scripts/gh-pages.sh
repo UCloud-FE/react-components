@@ -8,8 +8,8 @@ giturl="https://github.com/UCloud-FE/react-components.git"
 
 echo "clean cache path"
 if [ ! -a $cachepath ]; then
-  echo "exist"
-  rm -rf $cachepath
+    echo "exist"
+    rm -rf $cachepath
 fi
 
 echo "clone gh-pages"
@@ -31,7 +31,9 @@ else
     git remote rm origin
     git remote add origin https://ZxBing0066:${GITHUB_TOKEN}@github.com/UCloud-FE/react-components.git
     git add -A
-    git commit -m "docs: Travis CI auto update docs, $TRAVIS_TAG"
+    git config user.name 'circle.ci'
+    git config user.email 'robot@circle.ci'
+    git commit -m "docs: Circle CI auto update docs, $CIRCLE_TAG"
     git push origin gh-pages
 fi
 
