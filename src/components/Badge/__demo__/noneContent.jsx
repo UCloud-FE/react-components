@@ -1,14 +1,27 @@
 import React from 'react';
-import Badge from 'components/Badge';
+
+import Badge from 'src/components/Badge';
+import Combine from 'src/components/Combine';
+import demoUtil from 'tests/shared/demoUtil';
 
 // demo start
+const { DemoWrap } = demoUtil;
+
 const Demo = () => (
-    <div className="demo-wrap">
-        <Badge value={100} style={{ marginTop: 10, marginRight: 50, display: 'inline-block' }}>
-            <div style={{ width: 50, height: 50, background: '#ddd' }} />
-        </Badge>
-        <Badge value={100} style={{ marginTop: 10, marginRight: 50, display: 'inline-block' }} />
-    </div>
+    <>
+        <DemoWrap>
+            <Combine>
+                <span>文本</span>
+                <Badge value={100} />
+            </Combine>
+        </DemoWrap>
+        <DemoWrap>
+            <Combine>
+                <span>文本</span>
+                <Badge value={100} dot color="primary" />
+            </Combine>
+        </DemoWrap>
+    </>
 );
 // demo end
 

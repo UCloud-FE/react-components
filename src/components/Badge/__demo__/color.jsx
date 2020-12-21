@@ -5,12 +5,19 @@ import demoUtil from 'tests/shared/demoUtil';
 
 // demo start
 const { DemoWrap, DemoBlock } = demoUtil;
-const { Placement } = Badge;
+const { Color } = Badge;
 const Demo = () => (
     <DemoWrap>
-        {Placement.map(placement => (
-            <DemoBlock key={placement} lg>
-                <Badge value={100} placement={placement}>
+        {Color.map(color => (
+            <DemoBlock key={color}>
+                <Badge value={100} color={color}>
+                    <div style={{ width: 50, height: 50, background: '#ddd' }} />
+                </Badge>
+            </DemoBlock>
+        ))}
+        {Color.map(color => (
+            <DemoBlock key={color}>
+                <Badge value={100} dot color={color}>
                     <div style={{ width: 50, height: 50, background: '#ddd' }} />
                 </Badge>
             </DemoBlock>

@@ -8,12 +8,12 @@ const { DemoWrap, DemoBlock } = demoUtil;
 const Demo = () => (
     <DemoWrap>
         <DemoBlock>
-            <Badge value={10}>
+            <Badge value="string">
                 <div style={{ width: 50, height: 50, background: '#ddd' }} />
             </Badge>
         </DemoBlock>
         <DemoBlock>
-            <Badge value={10} maxValue={9}>
+            <Badge value={<span style={{ fontWeight: 'bolder' }}>node</span>} hideWhenZero>
                 <div style={{ width: 50, height: 50, background: '#ddd' }} />
             </Badge>
         </DemoBlock>

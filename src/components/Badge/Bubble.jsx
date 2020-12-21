@@ -2,14 +2,19 @@
 import React, { PureComponent } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
+
 import RcAlign from 'src/libs/rc-align';
 
-import { Wrap, BubbleWrap, bubbleStyleMap } from './style';
+import { SWrap, SBubbleWrap, bubbleStyleMap } from './style';
 import { bubblePlacement } from './placements';
 
 const StyleType = Object.keys(bubbleStyleMap);
 const Size = ['sm', 'md'];
 
+/**
+ * @deprecated
+ * 后续会移除，请使用 Badge 替代
+ */
 export class Bubble extends PureComponent {
     static propTypes = {
         /** @ignore */
@@ -27,8 +32,11 @@ export class Bubble extends PureComponent {
             /** 泡泡的背景色 */
             bubbleBackground: PropTypes.string
         }),
-        /** 自定义冒泡层容器 */
-        getBubbleContainer: PropTypes.func,
+        /**
+         * @ignore
+         * 自定义冒泡层定位的目标元素
+         */
+        getBubbleTarget: PropTypes.func,
         /** 自定义偏移量 */
         offset: PropTypes.array
     };
@@ -49,24 +57,24 @@ export class Bubble extends PureComponent {
             styleType = 'yellow',
             customStyle,
             offset,
-            getBubbleContainer,
+            getBubbleTarget,
             size,
             ...rest
         } = this.props;
         return (
-            <Wrap {...rest}>
+            <SWrap {...rest}>
                 {children}
                 {bubble && (
                     <RcAlign
-                        target={getBubbleContainer || (() => ReactDOM.findDOMNode(this))}
+                        target={getBubbleTarget || (() => ReactDOM.findDOMNode(this))}
                         align={{ ...bubblePlacement, targetOffset: offset }}
                     >
-                        <BubbleWrap styleType={styleType} customStyle={customStyle} size={size}>
+                        <SBubbleWrap styleType={styleType} customStyle={customStyle} size={size}>
                             {bubble}
-                        </BubbleWrap>
+                        </SBubbleWrap>
                     </RcAlign>
                 )}
-            </Wrap>
+            </SWrap>
         );
     }
 }

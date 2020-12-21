@@ -1,55 +1,50 @@
 import React from 'react';
-import Badge from 'components/Badge';
 
-import Form from 'components/Form';
-import Radio from 'components/Radio';
-import Input from 'components/Input';
-import NumberInput from 'components/NumberInput';
-import Switch from 'components/Switch';
+import demoUtil from 'tests/shared/demoUtil';
+import Badge from 'src/components/Badge';
+import Form from 'src/components/Form';
+import Radio from 'src/components/Radio';
+import Input from 'src/components/Input';
+import NumberInput from 'src/components/NumberInput';
+import Switch from 'src/components/Switch';
 
 // demo start
-const { Placement } = Badge;
-class Demo extends React.Component {
+const { formLayout, DemoWrap } = demoUtil;
+const { Placement, Color, defaultProps } = Badge;
+class Demo extends React.PureComponent {
     constructor(props) {
         super(props);
         this.state = {
             value: 1,
             dot: false,
             hideWhenZero: false,
-            placement: Placement[0],
-            maxValue: 99,
+            placement: defaultProps.placement,
+            maxValue: defaultProps.maxValue,
+            color: defaultProps.color,
             noneContent: false
         };
     }
     render() {
-        const { value, dot, hideWhenZero, placement, maxValue, noneContent, color, background } = this.state;
-        const itemLayout = {
-            labelCol: {
-                span: 3
-            },
-            controllerCol: {
-                span: 9
-            }
-        };
+        const { value, dot, hideWhenZero, placement, maxValue, noneContent, color, cColor, cBackground } = this.state;
         return (
             <div>
-                <Form className="demo-form">
-                    <Form.Item label="value" {...itemLayout}>
+                <Form className="demo-form" itemProps={{ ...formLayout }}>
+                    <Form.Item label="value">
                         <Input value={value} onChange={e => this.setState({ value: e.target.value })} />
                     </Form.Item>
-                    <Form.Item label="maxValue" {...itemLayout}>
+                    <Form.Item label="maxValue">
                         <NumberInput value={maxValue} onNumberChange={maxValue => this.setState({ maxValue })} />
                     </Form.Item>
-                    <Form.Item label="dot" {...itemLayout}>
+                    <Form.Item label="dot">
                         <Switch checked={dot} onChange={dot => this.setState({ dot })} />
                     </Form.Item>
-                    <Form.Item label="hideWhenZero" {...itemLayout}>
+                    <Form.Item label="hideWhenZero">
                         <Switch checked={hideWhenZero} onChange={hideWhenZero => this.setState({ hideWhenZero })} />
                     </Form.Item>
-                    <Form.Item label="noneContent" {...itemLayout}>
+                    <Form.Item label="noneContent">
                         <Switch checked={noneContent} onChange={noneContent => this.setState({ noneContent })} />
                     </Form.Item>
-                    <Form.Item label="placement" {...itemLayout}>
+                    <Form.Item label="placement">
                         <Radio.Group
                             options={Placement.map(p => ({ value: p }))}
                             value={placement}
@@ -58,26 +53,35 @@ class Demo extends React.Component {
                             }}
                         />
                     </Form.Item>
-                    <Form.Item label="badgeStyle.color" {...itemLayout}>
-                        <input type="color" onChange={e => this.setState({ color: e.target.value })} />
+                    <Form.Item label="color">
+                        <Radio.Group
+                            options={Color.map(p => ({ value: p }))}
+                            value={color}
+                            onChange={color => {
+                                this.setState({ color });
+                            }}
+                        />
                     </Form.Item>
-                    <Form.Item label="badgeStyle.background" {...itemLayout}>
-                        <input type="color" onChange={e => this.setState({ background: e.target.value })} />
+                    <Form.Item label="badgeStyle.color">
+                        <input type="color" onChange={e => this.setState({ cColor: e.target.value })} />
+                    </Form.Item>
+                    <Form.Item label="badgeStyle.background">
+                        <input type="color" onChange={e => this.setState({ cBackground: e.target.value })} />
                     </Form.Item>
                 </Form>
-                <div className="demo-wrap">
+                <DemoWrap>
                     <Badge
                         value={value}
-                        style={{ margin: 10 }}
                         maxValue={+maxValue}
                         dot={dot}
                         hideWhenZero={hideWhenZero}
                         placement={placement}
-                        badgeStyle={{ color, background }}
+                        color={color}
+                        badgeStyle={{ color: cColor, background: cBackground }}
                     >
                         {noneContent ? null : <div style={{ width: 50, height: 50, background: '#ddd' }} />}
                     </Badge>
-                </div>
+                </DemoWrap>
             </div>
         );
     }
