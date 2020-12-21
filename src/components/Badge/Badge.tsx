@@ -1,4 +1,4 @@
-import React, { CSSProperties, PureComponent, ReactNode } from 'react';
+import React, { CSSProperties, HTMLAttributes, PureComponent, ReactNode } from 'react';
 import ReactDOM from 'react-dom';
 
 import RcAlign from 'src/libs/rc-align';
@@ -9,7 +9,8 @@ import placements from './placements';
 const defaultProps = {
     maxValue: 99,
     placement: 'topRight',
-    color: 'red'
+    color: 'red',
+    zIndex: 9
 };
 
 type BadgeProps = {
@@ -33,7 +34,8 @@ type BadgeProps = {
     color?: 'red' | 'green' | 'yellow' | 'primary';
     /** badge 的 zIndex */
     zIndex?: number;
-} & typeof defaultProps;
+} & typeof defaultProps &
+    HTMLAttributes<HTMLDivElement>;
 
 const Placement = Object.keys(placements);
 const Color = Object.keys(StyleMap);

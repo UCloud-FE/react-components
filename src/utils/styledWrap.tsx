@@ -1,4 +1,4 @@
-import React, { DetailedHTMLProps, HTMLAttributes, Ref, FC, useMemo } from 'react';
+import React, { DetailedHTMLProps, HTMLAttributes, Ref, FC, useMemo, forwardRef } from 'react';
 import classnames from 'classnames';
 import { StyledComponent } from '@emotion/styled';
 import { useTheme } from 'emotion-theming';
@@ -53,7 +53,7 @@ const styledWrap = <Props, HTMLElement = HTMLDivElement>(input: Input<Props>) =>
             const Com = (Comp as unknown) as FC;
             return <Com {...result} ref={ref} />;
         };
-        return React.forwardRef(WithThemeComponent);
+        return forwardRef(WithThemeComponent);
     };
 };
 

@@ -11,7 +11,7 @@ export const wrapCls = prefixCls + '-badge-wrap';
 export const badgeCls = prefixCls + '-badge';
 export const dotCls = badgeCls + '-dot';
 
-export const SWrap = styledWrap<Record<string, unknown>>({
+export const SWrap = styledWrap({
     className: prefixCls
 })(styled('div')`
     position: relative;
@@ -24,7 +24,7 @@ export const SBadgeWrap = styledWrap<SBadgeWrapProps>({
     className: wrapCls
 })(
     styled.div(props => {
-        const { zIndex = 9 } = props;
+        const { zIndex } = props;
         return css`
             position: absolute;
             z-index: ${zIndex};
@@ -32,12 +32,7 @@ export const SBadgeWrap = styledWrap<SBadgeWrapProps>({
     })
 );
 
-export const StyleMap: {
-    [key: string]: {
-        bg: string;
-        color?: string;
-    };
-} = {
+export const StyleMap = {
     red: {
         bg: 'T_COLOR_LEGEND_RED_6'
     },
@@ -55,15 +50,18 @@ export const StyleMap: {
 
 type SBadgeProps = { dot?: boolean; color?: keyof typeof StyleMap };
 
+const defaultColor = 'red';
+const defaultColorCT = 'T_COLOR_TEXT_SYSTEM_WHITE';
 export const SBadge = styledWrap<SBadgeProps, HTMLSpanElement>({
     className: ({ dot }) => classnames(badgeCls, dot && dotCls)
 })(
     styled.span(props => {
         const {
             theme: { designTokens: DT },
-            color = 'red'
+            color = defaultColor
         } = props;
-        const styleMap = StyleMap[color] || StyleMap.red;
+        const styleMap = StyleMap[color] || StyleMap[defaultColor];
+        const colorT = 'color' in styleMap ? styleMap.color : defaultColorCT;
 
         return css`
             display: inline-block;
@@ -75,7 +73,7 @@ export const SBadge = styledWrap<SBadgeProps, HTMLSpanElement>({
             text-align: center;
             white-space: nowrap;
             background: ${DT[styleMap.bg]};
-            color: ${DT[styleMap.color || 'T_COLOR_TEXT_SYSTEM_WHITE']};
+            color: ${DT[colorT]};
 
             &.${dotCls} {
                 width: 8px;
@@ -89,12 +87,7 @@ export const SBadge = styledWrap<SBadgeProps, HTMLSpanElement>({
     })
 );
 
-export const bubbleStyleMap: {
-    [key: string]: {
-        bg: string;
-        color?: string;
-    };
-} = {
+export const bubbleStyleMap = {
     yellow: {
         bg: 'T_COLOR_BG_WARNING_DARK',
         color: 'T_COLOR_LEGEND_ORANGE_8'
@@ -119,23 +112,25 @@ type SBubbleProps = {
     };
 };
 
+const defaultBColor = 'orange';
+const defaultBColorT = 'T_COLOR_TEXT_SYSTEM_WHITE';
 export const SBubbleWrap = styledWrap<SBubbleProps>({
     className: prefixCls + '-bubble-wrap'
 })(
     styled.div(props => {
         const {
             theme: { designTokens: DT },
-            styleType,
+            styleType = defaultBColor,
             size,
             customStyle = {}
         } = props;
         const fontSize = { sm: '12px', md: '14px' }[size];
         const lineHeight = { sm: '16px', md: '20px' }[size];
 
-        const map = bubbleStyleMap[styleType] || {};
+        const map = bubbleStyleMap[styleType] || bubbleStyleMap[defaultBColor];
         const bg = customStyle.bubbleBackground || DT[map.bg];
-        const color =
-            customStyle.bubbleColor || DT[map.color || 'T_COLOR_TEXT_SYSTEM_WHITE'] || DT.T_COLOR_TEXT_SYSTEM_WHITE;
+        const colorT = 'color' in map ? map.color : defaultBColorT;
+        const color = customStyle.bubbleColor || DT[colorT];
         return css`
             position: absolute;
             line-height: ${lineHeight};

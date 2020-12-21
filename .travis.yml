@@ -23,6 +23,7 @@ jobs:
       script:
         - npm run build:dist
         - npm run build:lib
+        - npm run build:ts
         - npm run build:gh-pages
         - npx jest tests/lib.manual.test.js
       deploy:

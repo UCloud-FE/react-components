@@ -627,32 +627,7 @@ export interface NoticeProps extends HTMLAttributes<HTMLDivElement> {
 export declare class Notice extends Component<NoticeProps> {}
 
 // Badge
-export interface BadgeBubbleCustomStyle {
-    bubbleColor?: string;
-    bubbleBackground?: string;
-    [key: string]: any;
-}
-export interface BadgeBubbleProps extends HTMLAttributes<HTMLDivElement> {
-    bubble?: ReactNode;
-    styleType?: "yellow" | "orange" | "gray" | "purple";
-    size?: "sm" | "md";
-    customStyle?: BadgeBubbleCustomStyle;
-    getBubbleContainer?: GetPopupContainer;
-    offset?: number[];
-}
-export type BadgePlacement = "topRight" | "topLeft" | "bottomRight" | "bottomLeft";
-export interface BadgeProps extends HTMLAttributes<HTMLDivElement> {
-    value?: ReactNode;
-    maxValue?: number;
-    dot?: boolean;
-    placement?: BadgePlacement;
-    hideWhenZero?: boolean;
-    badgeStyle?: CSSProperties;
-}
-declare class BadgeBubble extends PureComponent<BadgeBubbleProps> {}
-export declare class Badge extends Component<BadgeProps> {
-    static Bubble: BadgeBubble;
-}
+export { default as Badge } from './lib/components/Badge';
 
 // Tag
 export type TagStyleType =

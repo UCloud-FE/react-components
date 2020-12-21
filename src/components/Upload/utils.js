@@ -48,7 +48,7 @@ export const getFileType = file => {
     }
 };
 
-export const openLink = (link: string): Window => {
+export const openLink = link => {
     return window.open(link, '_blank');
 };
 
@@ -56,7 +56,7 @@ export const openLink = (link: string): Window => {
 export const checkFile = (file, accept = '*', maxSize, locale) => {
     const types = accept.split(/\s*,\s*/);
     let typeCheckPass = false;
-    for (let index in types) {
+    for (const index in types) {
         const type = types[index];
         let regexp, pass;
         if (/^\./.test(type)) {

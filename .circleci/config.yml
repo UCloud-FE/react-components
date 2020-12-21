@@ -81,6 +81,7 @@ jobs:
       - checkout
       - *attach_workspace
       - run: npm run build:lib
+      - run: npm run build:ts
   build gh-pages:
     <<: *container_config
     steps:
@@ -95,6 +96,7 @@ jobs:
       - *attach_workspace
       - run: npm run build:dist
       - run: npm run build:lib
+      - run: npm run build:ts
       - run: npx jest tests/lib.manual.test.js
 
 workflows:
