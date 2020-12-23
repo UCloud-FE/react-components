@@ -38,17 +38,12 @@ jobs:
     steps:
       - run: echo end
 
-  eslint:
+  lint:
     <<: *container_config
     steps:
       - checkout
       - *attach_workspace
       - run: npm run lint:es
-  stylelint:
-    <<: *container_config
-    steps:
-      - checkout
-      - *attach_workspace
       - run: npm run lint:style
   test:
     <<: *container_config
@@ -69,33 +64,20 @@ jobs:
       - run: sudo npm install -g codecov
       - run: codecov
 
-  build dist:
+  build:
     <<: *container_config
     steps:
       - checkout
       - *attach_workspace
       - run: npm run build:dist
+      - run: npm run build:lib
+      - run: npm run build:ts
+      - run: npm run build:gh-pages
       - persist_to_workspace:
           root: ~/react-components
           paths:
             - dist
-  build lib:
-    <<: *container_config
-    steps:
-      - checkout
-      - *attach_workspace
-      - run: npm run build:lib
-      - run: npm run build:ts
-      - persist_to_workspace:
-          root: ~/react-components
-          paths:
             - lib
-  build gh-pages:
-    <<: *container_config
-    steps:
-      - checkout
-      - *attach_workspace
-      - run: npm run build:gh-pages
 
   test lib:
     <<: *container_config
@@ -131,40 +113,42 @@ workflows:
     jobs:
       - setup:
           filters:
+            tags:
+              only: /^v.*/
             branches:
               ignore: gh-pages
-      - eslint:
-          requires:
-            - setup
-      - stylelint:
+      - lint:
+          filters:
+            tags:
+              only: /^v.*/
           requires:
             - setup
       - test:
+          filters:
+            tags:
+              only: /^v.*/
           requires:
-            - eslint
-            - stylelint
+            - lint
       - codecov:
+          filters:
+            tags:
+              only: /^v.*/
           requires:
             - test
-      - build dist:
-          requires:
-            - test
-      - build lib:
-          requires:
-            - test
-      - build gh-pages:
+      - build:
+          filters:
+            tags:
+              only: /^v.*/
           requires:
             - test
       - test lib:
+          filters:
+            tags:
+              only: /^v.*/
           requires:
-            - build dist
-            - build lib
+            - build
       - deploy npm:
           requires:
-            - test
-            - build dist
-            - build lib
-            - build gh-pages
             - test lib
           filters:
             tags:
@@ -180,11 +164,13 @@ workflows:
             branches:
               ignore: /.*/
       - end:
+          filters:
+            tags:
+              only: /^v.*/
           requires:
+            - lint
             - test
-            - build dist
-            - build lib
-            - build gh-pages
+            - build
             - test lib
             - deploy npm
             - deploy pages
