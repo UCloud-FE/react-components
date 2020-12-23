@@ -218,7 +218,7 @@ export default class ExamplesT extends React.PureComponent {
     render() {
         return (
             <div style={{ position: 'relative' }}>
-                <Anchor target={this} />
+                {window.ActiveXObject || 'ActiveXObject' in window ? null : <Anchor target={this} />}
                 <Examples {...this.props} />
             </div>
         );
