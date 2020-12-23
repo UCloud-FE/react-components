@@ -169,12 +169,16 @@ workflows:
           filters:
             tags:
               only: /^v.*/
+            branches:
+              ignore: /.*/
       - deploy pages:
           requires:
             - deploy npm
           filters:
             tags:
               only: /^v.*/
+            branches:
+              ignore: /.*/
       - end:
           requires:
             - test
