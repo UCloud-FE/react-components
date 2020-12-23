@@ -1,5 +1,6 @@
 import React from 'react';
-import Button from 'components/Button';
+
+import Button from 'src/components/Button';
 
 // demo start
 const { Size } = Button;

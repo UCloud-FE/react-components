@@ -1,15 +1,16 @@
 import React from 'react';
-import Button from 'components/Button';
+
+import Button from 'src/components/Button';
 
 // demo start
 const Demo = () => {
     return (
         <div>
-            <Button shape="circle" size="lg" onClick={() => console.log('clicked')}>
-                Button
-            </Button>
-            <Button shape="circle" styleType="primary" size="lg" icon="upload" onClick={() => console.log('clicked')} />
-            <Button shape="circle" styleType="border" size="lg" icon="plus" onClick={() => console.log('clicked')} />
+            <Button onClick={() => console.log('clicked')}>Button</Button>
+            <Button shape="circle" styleType="primary" icon="upload" onClick={() => console.log('clicked')} />
+            <Button shape="circle" styleType="border" icon="plus" onClick={() => console.log('clicked')} />
+            <Button shape="square" styleType="primary" icon="upload" onClick={() => console.log('clicked')} />
+            <Button shape="square" styleType="border" icon="plus" onClick={() => console.log('clicked')} />
         </div>
     );
 };

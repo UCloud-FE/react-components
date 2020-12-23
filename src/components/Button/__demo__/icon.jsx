@@ -1,6 +1,7 @@
 import React from 'react';
-import Button from 'components/Button';
-import Icon from 'components/Icon';
+
+import Button from 'src/components/Button';
+import Icon from 'src/components/Icon';
 
 // demo start
 const icons = ['loading', 'link', 'check'];

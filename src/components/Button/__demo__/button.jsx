@@ -1,8 +1,9 @@
 import React from 'react';
-import Button from 'components/Button';
-import Form from 'components/Form';
-import Radio from 'components/Radio';
-import Switch from 'components/Switch';
+
+import Button from 'src/components/Button';
+import Form from 'src/components/Form';
+import Radio from 'src/components/Radio';
+import Switch from 'src/components/Switch';
 
 // demo start
 const { StyleType, Size, Shape } = Button;
