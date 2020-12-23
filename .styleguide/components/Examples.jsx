@@ -112,7 +112,7 @@ class Anchor extends React.PureComponent {
                 pos.children.push(i);
                 pos = i;
             } else {
-                const findParent = (level, pos) => {
+                const findParent = function (level, pos) {
                     if (pos.level < level) {
                         return pos;
                     }
