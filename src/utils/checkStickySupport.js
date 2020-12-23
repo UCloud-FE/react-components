@@ -5,11 +5,15 @@ const checkStickySupport = () => {
     const style = testDOM.style;
     const prefix = ['', '-o-', '-webkit-', '-moz-', '-ms-'];
 
+    let support = false;
     for (let i = 0; i < prefix.length; i += 1) {
-        style.position = `${prefix[i]}sticky`;
+        const stickyName = `${prefix[i]}sticky`;
+        style.position = stickyName;
+        if (style.position === stickyName) support = true;
+        break;
     }
 
-    return style.position === 'sticky' ? true : false;
+    return support;
 };
 
 export default () => {

@@ -192,10 +192,10 @@ const designTokens = {
     T_LINE_STYLE_DASHED: 'dashed',
     T_PROGRESS_COLOR_BG_DEFAULT: '#dfe0f1',
     T_SHADOW_INSET_1: 'inset 0 1px 3px 0 #d2d6ea',
-    T_SHADOW_INSET_TOP: 'inset 0 5px 6px -6px rgba(0,0,0,0.12), inset 0 18px 18px -18px rgba(0,0,0,0.12)',
-    T_SHADOW_INSET_RIGHT: 'inset -5px 0 6px -6px rgba(0,0,0,0.12), inset -18px 0 18px -18px rgba(0,0,0,0.12)',
-    T_SHADOW_INSET_BOTTOM: 'inset 0 -5px 6px -6px rgba(0,0,0,0.12), inset 0 -18px 18px -18px rgba(0,0,0,0.12)',
-    T_SHADOW_INSET_LEFT: 'inset 5px 0 6px -6px rgba(0,0,0,0.12), inset 18px 0 18px -18px rgba(0,0,0,0.12)',
+    T_SHADOW_INSET_TOP: 'inset 0 10px 8px -8px rgba(0,0,0,0.12)',
+    T_SHADOW_INSET_RIGHT: 'inset -10px 0 8px -8px rgba(0,0,0,0.12)',
+    T_SHADOW_INSET_BOTTOM: 'inset 0 -10px 8px -8px rgba(0,0,0,0.12)',
+    T_SHADOW_INSET_LEFT: 'inset 10px 0 8px -8px rgba(0,0,0,0.12)',
     T_SHADOW_BLOCK_DEFAULT_SM:
         '0 0 2px 0 rgba(0,0,0,0.08), 0 5px 8px -4px rgba(0,0,0,0.12), 0 1px 0 0 rgba(0,0,0,0.05)',
     T_SHADOW_BLOCK_DEFAULT_MD:
