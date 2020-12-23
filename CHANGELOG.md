@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.21](https://github.com/UCloud-FE/react-components/compare/v1.0.20...v1.0.21) (2020-12-23)
+
+### Bug Fixes
+
+-   **Table:** fix sticky style & check ([227e6da](https://github.com/UCloud-FE/react-components/commit/227e6dafaa7cf5398745acab0a44028c56919562))
+
 ### [1.0.20](https://github.com/UCloud-FE/react-components/compare/v1.0.19...v1.0.20) (2020-12-21)
 
 ### [1.0.19](https://github.com/UCloud-FE/react-components/compare/v1.0.18...v1.0.19) (2020-12-21)
