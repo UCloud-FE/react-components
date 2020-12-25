@@ -3,7 +3,7 @@ import { css } from '@emotion/core';
 import classnames from 'classnames';
 
 import config from 'src/config';
-import styledWrap from 'src/utils/styledWrap';
+import styledWrap, { DesignToken } from 'src/utils/styledWrap';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-badge';
@@ -32,20 +32,25 @@ export const SBadgeWrap = styledWrap<SBadgeWrapProps>({
     })
 );
 
+interface StyleInfo {
+    bg: DesignToken;
+    color?: DesignToken;
+}
+
 export const StyleMap = {
     red: {
         bg: 'T_COLOR_LEGEND_RED_6'
-    },
+    } as StyleInfo,
     green: {
         bg: 'T_COLOR_LEGEND_GREEN_6'
-    },
+    } as StyleInfo,
     yellow: {
         bg: 'T_COLOR_LEGEND_YELLOW_6',
         color: 'T_COLOR_TEXT_SYSTEM_BLACK'
-    },
+    } as StyleInfo,
     primary: {
         bg: 'T_COLOR_BG_PRIMARY_1'
-    }
+    } as StyleInfo
 };
 
 type SBadgeProps = { dot?: boolean; color?: keyof typeof StyleMap };
@@ -61,7 +66,7 @@ export const SBadge = styledWrap<SBadgeProps, HTMLSpanElement>({
             color = defaultColor
         } = props;
         const styleMap = StyleMap[color] || StyleMap[defaultColor];
-        const colorT = 'color' in styleMap ? styleMap.color : defaultColorCT;
+        const colorT = styleMap.color || defaultColorCT;
 
         return css`
             display: inline-block;
@@ -87,20 +92,25 @@ export const SBadge = styledWrap<SBadgeProps, HTMLSpanElement>({
     })
 );
 
+interface BubbleStyleInfo {
+    bg: DesignToken;
+    color?: DesignToken;
+}
+
 export const bubbleStyleMap = {
     yellow: {
         bg: 'T_COLOR_BG_WARNING_DARK',
         color: 'T_COLOR_LEGEND_ORANGE_8'
-    },
+    } as BubbleStyleInfo,
     orange: {
         bg: 'T_COLOR_LEGEND_ORANGE_5'
-    },
+    } as BubbleStyleInfo,
     gray: {
         bg: 'T_COLOR_BG_DISABLED_DARK'
-    },
+    } as BubbleStyleInfo,
     purple: {
         bg: 'T_COLOR_LEGEND_PURPLE_5'
-    }
+    } as BubbleStyleInfo
 };
 
 type SBubbleProps = {
@@ -129,7 +139,7 @@ export const SBubbleWrap = styledWrap<SBubbleProps>({
 
         const map = bubbleStyleMap[styleType] || bubbleStyleMap[defaultBColor];
         const bg = customStyle.bubbleBackground || DT[map.bg];
-        const colorT = 'color' in map ? map.color : defaultBColorT;
+        const colorT = map.color || defaultBColorT;
         const color = customStyle.bubbleColor || DT[colorT];
         return css`
             position: absolute;

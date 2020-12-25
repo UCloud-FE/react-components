@@ -16,6 +16,9 @@ module.exports = [
                   ]),
             {
                 name: 'Button'
+            },
+            {
+                name: 'Link'
             }
         ]
     },

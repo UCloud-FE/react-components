@@ -3,16 +3,16 @@ import classnames from 'classnames';
 import { StyledComponent } from '@emotion/styled';
 import { useTheme } from 'emotion-theming';
 
-import defaultTheme from 'src/components/ThemeProvider/theme';
+import defaultTheme, { defaultDesignTokens } from 'src/components/ThemeProvider/theme';
 
 type Input<Props extends { className?: string }> = Omit<Partial<Props>, 'className'> & {
     className?: string | ((props: Props) => string);
 };
 
+export type DesignTokens = typeof defaultDesignTokens;
+export type DesignToken = keyof DesignTokens;
 export interface Theme {
-    designTokens: {
-        [key: string]: string | number;
-    };
+    designTokens: DesignTokens;
     [key: string]: unknown;
 }
 
