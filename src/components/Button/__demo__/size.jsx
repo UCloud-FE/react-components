@@ -3,12 +3,12 @@ import React from 'react';
 import Button from 'src/components/Button';
 
 // demo start
-const { Size } = Button;
+const { Sizes } = Button;
 
 const Demo = () => {
     return (
         <div>
-            {Size.map(size => (
+            {Sizes.map(size => (
                 <Button size={size} key={size} onClick={() => console.log('clicked')}>
                     Button
                 </Button>

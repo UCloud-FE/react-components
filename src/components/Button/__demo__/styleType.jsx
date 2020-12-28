@@ -3,12 +3,12 @@ import React from 'react';
 import Button from 'src/components/Button';
 
 // demo start
-const { StyleType } = Button;
+const { StyleTypes } = Button;
 
 const Demo = () => {
     return (
         <div>
-            {StyleType.map(styleType => (
+            {StyleTypes.map(styleType => (
                 <Button styleType={styleType} key={'key' + styleType} onClick={() => console.log('clicked')}>
                     Button
                 </Button>

@@ -10,7 +10,7 @@ import ActionList from 'src/components/ActionList';
 
 // demo start
 const { Size } = ActionList;
-const { StyleType } = Button;
+const { StyleTypes } = Button;
 class Demo extends React.Component {
     constructor(props) {
         super(props);
@@ -73,7 +73,7 @@ class Demo extends React.Component {
                     </Form.Item>
                     <Form.Item label={'button styleType'} {...itemLayout}>
                         <Radio.Group
-                            options={StyleType.map(styleType => ({ value: styleType }))}
+                            options={StyleTypes.map(styleType => ({ value: styleType }))}
                             value={buttonStyleType}
                             onChange={buttonStyleType => this.setState({ buttonStyleType })}
                         />

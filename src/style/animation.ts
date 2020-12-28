@@ -1,4 +1,4 @@
-import { keyframes } from "@emotion/core";
+import { keyframes } from '@emotion/core';
 
 export const slideUpIn = keyframes`
     0% {
@@ -168,3 +168,16 @@ export const slideInDown = keyframes`
         transform: translate3d(0, 0, 0);
     }
 `;
+
+export const spinKeyframes = keyframes`
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+`;
+
+export const transitionUp = '.22s cubic-bezier(.4,0,.2,1)';
+export const transitionDown = '.18s cubic-bezier(.4,0,.2,1)';
+export const transitionFlat = '.16s cubic-bezier(.4,0,.2,1)';

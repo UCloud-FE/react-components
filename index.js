@@ -9,6 +9,6 @@ function importAll(r) {
     });
 }
 
-importAll(require.context('./src/components/', true, /index\.(j|t)sx$/));
+importAll(require.context('./src/components/', true, /^\.\/[A-Za-z]+\/index\.(j|t)sx$/));
 
 module.exports = components;

@@ -6,16 +6,16 @@ import Radio from 'src/components/Radio';
 import Switch from 'src/components/Switch';
 
 // demo start
-const { StyleType, Size, Shape } = Button;
-const IconType = ['circle-fill', 'circle', 'loading'];
+const { StyleTypes, Sizes, Shapes, defaultProps } = Button;
+const IconTypes = ['undefined', 'circle-fill', 'circle', 'loading'];
 class Demo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            styleType: StyleType[0],
-            size: Size[0],
+            styleType: defaultProps.styleType,
+            size: defaultProps.size,
             shape: 'undefined',
-            icon: IconType[0],
+            icon: IconTypes[0],
             disabled: false,
             fakeDisabled: false
         };
@@ -42,33 +42,36 @@ class Demo extends React.Component {
         if (shape === 'undefined') {
             delete props.shape;
         }
+        if (icon === 'undefined') {
+            delete props.icon;
+        }
         return (
             <div>
                 <Form className="demo-form">
                     <Form.Item label="styleType" {...itemLayout}>
                         <Radio.Group
-                            options={StyleType.map(styleType => ({ value: styleType }))}
+                            options={StyleTypes.map(styleType => ({ value: styleType }))}
                             value={styleType}
                             onChange={styleType => this.setState({ styleType })}
                         />
                     </Form.Item>
                     <Form.Item label="size" {...itemLayout}>
                         <Radio.Group
-                            options={Size.map(size => ({ value: size }))}
+                            options={Sizes.map(size => ({ value: size }))}
                             value={size}
                             onChange={size => this.setState({ size })}
                         />
                     </Form.Item>
                     <Form.Item label="shape" {...itemLayout}>
                         <Radio.Group
-                            options={['undefined', ...Shape].map(shape => ({ value: shape }))}
+                            options={['undefined', ...Shapes].map(shape => ({ value: shape }))}
                             value={shape}
                             onChange={shape => this.setState({ shape })}
                         />
                     </Form.Item>
                     <Form.Item label="icon" {...itemLayout}>
                         <Radio.Group
-                            options={IconType.map(icon => ({ value: icon }))}
+                            options={IconTypes.map(icon => ({ value: icon }))}
                             value={icon}
                             onChange={icon => this.setState({ icon })}
                         />

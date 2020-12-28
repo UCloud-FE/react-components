@@ -2,8 +2,7 @@
     "*.{js,jsx}": [
         "prettier --write",
         "git add",
-        "stylelint './src/style/*.js'",
-        "stylelint './src/components/**/*.(jsx|js)'",
+        "stylelint './src/components/**/*.(js|ts|jsx|tsx)'",
         "eslint",
         "jest --bail --findRelatedTests --collectCoverage"
     ],

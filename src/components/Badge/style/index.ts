@@ -3,7 +3,7 @@ import { css } from '@emotion/core';
 import classnames from 'classnames';
 
 import config from 'src/config';
-import styledWrap, { DesignToken } from 'src/utils/styledWrap';
+import { sWrap, DesignToken } from 'src/style';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-badge';
@@ -11,7 +11,7 @@ export const wrapCls = prefixCls + '-badge-wrap';
 export const badgeCls = prefixCls + '-badge';
 export const dotCls = badgeCls + '-dot';
 
-export const SWrap = styledWrap({
+export const SWrap = sWrap({
     className: prefixCls
 })(styled('div')`
     position: relative;
@@ -20,7 +20,7 @@ export const SWrap = styledWrap({
 
 type SBadgeWrapProps = { zIndex?: number };
 
-export const SBadgeWrap = styledWrap<SBadgeWrapProps>({
+export const SBadgeWrap = sWrap<SBadgeWrapProps>({
     className: wrapCls
 })(
     styled.div(props => {
@@ -57,7 +57,7 @@ type SBadgeProps = { dot?: boolean; color?: keyof typeof StyleMap };
 
 const defaultColor = 'red';
 const defaultColorCT = 'T_COLOR_TEXT_SYSTEM_WHITE';
-export const SBadge = styledWrap<SBadgeProps, HTMLSpanElement>({
+export const SBadge = sWrap<SBadgeProps, HTMLSpanElement>({
     className: ({ dot }) => classnames(badgeCls, dot && dotCls)
 })(
     styled.span(props => {
@@ -124,7 +124,7 @@ type SBubbleProps = {
 
 const defaultBColor = 'orange';
 const defaultBColorT = 'T_COLOR_TEXT_SYSTEM_WHITE';
-export const SBubbleWrap = styledWrap<SBubbleProps>({
+export const SBubbleWrap = sWrap<SBubbleProps>({
     className: prefixCls + '-bubble-wrap'
 })(
     styled.div(props => {
