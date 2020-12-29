@@ -143,7 +143,7 @@ const gitalkSec =
               clientID: '5c478803320de7626b0b',
               clientSecret: '6dd542196b541f5bb79593fa7e341756d38bb86b'
           };
-
+const createIssueManually = location.hostname === 'localhost';
 export function StyleGuideRenderer({ classes, title, homepageUrl, children, toc, hasSidebar }) {
     const [darkTheme, setDarkTheme] = useState(isDarkTheme);
     const ComponentName =
@@ -209,6 +209,7 @@ export function StyleGuideRenderer({ classes, title, homepageUrl, children, toc,
                                 key={componentId}
                                 options={{
                                     ...gitalkSec,
+                                    createIssueManually,
                                     repo: 'react-components',
                                     owner: 'UCloud-FE',
                                     admin: ['ZxBing0066'],

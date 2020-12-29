@@ -12,5 +12,13 @@ describe('Button', () => {
         wrapper.setProps({ disabled: true });
         wrapper.simulate('click');
         expect(onClick).toHaveBeenCalledTimes(1);
+
+        wrapper.setProps({ disabled: false, fakeDisabled: true });
+        wrapper.simulate('click');
+        expect(onClick).toHaveBeenCalledTimes(2);
+
+        wrapper.setProps({ disabled: true, fakeDisabled: true });
+        wrapper.simulate('click');
+        expect(onClick).toHaveBeenCalledTimes(2);
     });
 });

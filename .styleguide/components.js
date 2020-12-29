@@ -18,7 +18,8 @@ module.exports = [
                 name: 'Button'
             },
             {
-                name: 'Link'
+                name: 'Link',
+                components: ['Link', 'Button']
             }
         ]
     },

@@ -13,7 +13,8 @@ import {
     offsetPaddingBySize,
     transitionFlat,
     transitionUp,
-    ignoreProps
+    ignoreProps,
+    offsetHeightBySize
 } from 'src/style';
 
 import { StyleTypes, Sizes, Shapes } from '../shared';
@@ -43,6 +44,7 @@ const sizeMixin = (props: SButtonPropsFinal) => {
 
     return css`
         height: ${getHeightBySize(DT, size)};
+        line-height: ${getHeightBySize(DT, size)};
         padding: 0 ${getPaddingBySize(DT, size)};
     `;
 };
@@ -52,6 +54,7 @@ const styleTypeMixin = (props: SButtonPropsFinal) => {
         theme: { designTokens: DT },
         styleType,
         checkAble,
+        disabled,
         size
     } = props;
 
@@ -96,12 +99,23 @@ const styleTypeMixin = (props: SButtonPropsFinal) => {
             }
         }
     };
+    const disabledTheme = {
+        background: DT.T_COLOR_BG_DISABLED_LIGHT,
+        color: DT.T_COLOR_TEXT_DISABLED,
+        fill: DT.T_COLOR_TEXT_DISABLED,
+        cursor: 'default',
+        borderColor: DT.T_COLOR_LINE_DISABLED_LIGHT,
+        boxShadow: 'none',
+        transition: `all ${transitionUp}`
+    };
     return css`
-        ${styleTypeTheme[styleType]};
-        ${styleType === 'border-gray' &&
+        ${disabled ? disabledTheme : styleTypeTheme[styleType]};
+        ${(disabled || styleType === 'border-gray') &&
         css`
-            padding-left: ${offsetPaddingBySize(DT, size, -1)};
-            padding-right: ${offsetPaddingBySize(DT, size, -1)};
+            border-width: ${DT.T_LINE_WIDTH_BASE};
+            border-style: solid;
+            padding: 0 ${offsetPaddingBySize(DT, size, -1)};
+            line-height: ${offsetHeightBySize(DT, size, -2)};
         `};
     `;
 };
@@ -156,25 +170,6 @@ const loadingMixin = (props: SButtonPropsFinal) => {
     `;
 };
 
-const disabledMixin = (props: SButtonPropsFinal) => {
-    const {
-        theme: { designTokens: DT }
-    } = props;
-
-    return css`
-        && {
-            border-color: ${DT.T_COLOR_LINE_DISABLED_LIGHT};
-            background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
-            color: ${DT.T_COLOR_TEXT_DISABLED};
-            fill: ${DT.T_COLOR_TEXT_DISABLED};
-            cursor: default;
-            border-width: ${DT.T_LINE_WIDTH_BASE};
-            border-style: solid;
-            box-shadow: none;
-        }
-    `;
-};
-
 const checkedMixin = (props: SButtonPropsFinal) => {
     const {
         theme: { designTokens: DT }
@@ -202,14 +197,12 @@ const classNameMixin = ({ size, styleType, shape, loading, disabled, fakeDisable
     );
 
 const buttonStyleMixin = <T extends SButtonProps & { theme: Theme }>(props: T) => {
-    const { theme, loading, shape, disabled, checked } = props;
+    const { theme, loading, shape, checked } = props;
     const { designTokens: DT } = theme;
     return css`
         margin: 0;
         box-sizing: border-box;
         border-radius: ${DT.T_CORNER_SM};
-        border-width: ${DT.T_LINE_WIDTH_BASE};
-        border-style: solid;
         text-align: center;
         text-decoration: none;
         cursor: pointer;
@@ -222,7 +215,6 @@ const buttonStyleMixin = <T extends SButtonProps & { theme: Theme }>(props: T) =
         ${shape && shapeMixin(props)};
         ${loading && loadingMixin(props)};
         ${checked && checkedMixin(props)};
-        ${disabled && disabledMixin(props)};
     `;
 };
 

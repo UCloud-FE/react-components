@@ -1,3 +1,6 @@
 import Link from './Link';
-export default Link;
+import Button from './Button';
 
+(Link as any).Button = Button;
+
+export default Link;
