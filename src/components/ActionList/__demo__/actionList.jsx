@@ -5,19 +5,17 @@ import Switch from 'src/components/Switch';
 import Form from 'src/components/Form';
 import Radio from 'src/components/Radio';
 import NumberInput from 'src/components/NumberInput';
-import Button from 'src/components/Button';
 
 // demo start
-const { Size } = ActionList;
-const { StyleTypes } = Button;
+const { Sizes, ButtonStyleTypes, defaultProps } = ActionList;
 class Demo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            size: 'sm',
-            smart: true,
-            buttonStyleType: 'border',
-            exposeCount: 3,
+            size: defaultProps.size,
+            smart: defaultProps.smart,
+            buttonStyleType: defaultProps.buttonStyleType,
+            exposeCount: defaultProps.exposeCount,
             actionListLength: 5
         };
     }
@@ -36,14 +34,14 @@ class Demo extends React.Component {
                 <Form className="demo-form">
                     <Form.Item label={'size'} {...itemLayout}>
                         <Radio.Group
-                            options={Size.map(size => ({ value: size }))}
+                            options={Sizes.map(size => ({ value: size }))}
                             value={size}
                             onChange={size => this.setState({ size })}
                         />
                     </Form.Item>
                     <Form.Item label={'button styleType'} {...itemLayout}>
                         <Radio.Group
-                            options={StyleTypes.map(styleType => ({ value: styleType }))}
+                            options={ButtonStyleTypes.map(styleType => ({ value: styleType }))}
                             value={buttonStyleType}
                             onChange={buttonStyleType => this.setState({ buttonStyleType })}
                         />

@@ -13,7 +13,6 @@ import {
     offsetPaddingBySize,
     transitionFlat,
     transitionUp,
-    ignoreProps,
     offsetHeightBySize
 } from 'src/style';
 
@@ -227,7 +226,11 @@ export const SButton = sWrap<SButtonProps, HTMLButtonElement>({
     className: classNameMixin
 })(styled(Button)(buttonStyleMixin));
 
-const shouldForwardProp = ignoreProps('loading');
-export const SButtonA = sWrap<SButtonProps, HTMLAnchorElement>({
-    className: classNameMixin
-})(styled('a', { shouldForwardProp })(buttonStyleMixin));
+export const SButtonA = sWrap<SButtonProps, HTMLAnchorElement>(
+    {
+        className: classNameMixin
+    },
+    {
+        ignoreProps: ['disabled', 'fakeDisabled', 'checked', 'checkAble', 'loading']
+    }
+)(styled('a')(buttonStyleMixin));

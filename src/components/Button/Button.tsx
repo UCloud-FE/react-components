@@ -34,12 +34,12 @@ type ButtonProps = {
     type?: string;
     /**
      * @ignore
-     * 是否可选中，样式会有区别
+     * 内部使用，请勿使用，是否可选中，样式会有区别
      */
     checkAble?: boolean;
     /**
      * @ignore
-     * 选中状态
+     * 内部使用，请勿使用，选中状态
      */
     checked?: boolean;
 } & typeof defaultProps &

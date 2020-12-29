@@ -5,12 +5,10 @@ import Switch from 'src/components/Switch';
 import Form from 'src/components/Form';
 import Radio from 'src/components/Radio';
 import NumberInput from 'src/components/NumberInput';
-import Button from 'src/components/Button';
 import ActionList from 'src/components/ActionList';
 
 // demo start
-const { Size } = ActionList;
-const { StyleTypes } = Button;
+const { Sizes, ButtonStyleTypes } = ActionList;
 class Demo extends React.Component {
     constructor(props) {
         super(props);
@@ -66,14 +64,14 @@ class Demo extends React.Component {
                 <Form className="demo-form">
                     <Form.Item label={'size'} {...itemLayout}>
                         <Radio.Group
-                            options={Size.map(size => ({ value: size }))}
+                            options={Sizes.map(size => ({ value: size }))}
                             value={size}
                             onChange={size => this.setState({ size })}
                         />
                     </Form.Item>
                     <Form.Item label={'button styleType'} {...itemLayout}>
                         <Radio.Group
-                            options={StyleTypes.map(styleType => ({ value: styleType }))}
+                            options={ButtonStyleTypes.map(styleType => ({ value: styleType }))}
                             value={buttonStyleType}
                             onChange={buttonStyleType => this.setState({ buttonStyleType })}
                         />

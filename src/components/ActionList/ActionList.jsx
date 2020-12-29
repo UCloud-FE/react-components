@@ -9,7 +9,7 @@ import ConfigContext from 'src/components/ConfigProvider/ConfigContext';
 
 import { ActionButton } from './style';
 
-const Size = ['sm', 'md', 'lg'];
+const Sizes = Button.Sizes;
 const ButtonStyleTypes = Button.StyleTypes;
 export default class ActionList extends Component {
     static propTypes = {
@@ -18,7 +18,7 @@ export default class ActionList extends Component {
         /** 暴露的操作数量 */
         exposeCount: PropTypes.number,
         /** 控件尺寸 */
-        size: PropTypes.oneOf(Size),
+        size: PropTypes.oneOf(Sizes),
         /** 按钮的默认样式类别，参考 Button 的 styleType */
         buttonStyleType: PropTypes.oneOf(ButtonStyleTypes),
         /** 操作数量等于 exposeCount+1 时是否直接显示按钮而不是显示下拉菜单 */
@@ -174,4 +174,5 @@ export default class ActionList extends Component {
         );
     }
 }
-ActionList.Size = Size;
+ActionList.Sizes = Sizes;
+ActionList.ButtonStyleTypes = ButtonStyleTypes;

@@ -3,12 +3,12 @@ import React from 'react';
 import ActionList from 'src/components/ActionList';
 
 // demo start
-const { Size } = ActionList;
+const { Sizes } = ActionList;
 class Demo extends React.Component {
     render() {
         return (
             <div>
-                {Size.map(size => (
+                {Sizes.map(size => (
                     <div className="demo-wrap" key={size}>
                         <ActionList
                             size={size}

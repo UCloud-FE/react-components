@@ -15,7 +15,12 @@ type Input<Props extends { className?: string }> = Omit<Partial<Props>, 'classNa
  * 包裹组件，注入默认主题，添加默认的 props
  * @param input {object} 需要注入组件的 props
  */
-const sWrap = <Props, HTMLElement = HTMLDivElement>(input: Input<Props>) => {
+const sWrap = <Props, HTMLElement = HTMLDivElement>(
+    input: Input<Props>,
+    options?: {
+        ignoreProps?: (keyof Props)[];
+    }
+) => {
     type TagAttributes = HTMLAttributes<HTMLElement>;
     type PropsWithTag = Props & TagAttributes;
     type PropsFinal = PropsWithTag & { theme?: Theme };
@@ -43,6 +48,11 @@ const sWrap = <Props, HTMLElement = HTMLDivElement>(input: Input<Props>) => {
                 ...(memoClassName ? { className: memoClassName } : {}),
                 theme: memoTheme
             };
+            if (options?.ignoreProps) {
+                options?.ignoreProps.forEach(prop => {
+                    delete result[prop];
+                });
+            }
 
             const Com = (Comp as unknown) as FC;
             return <Com {...result} ref={ref} />;
