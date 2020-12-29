@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.25](https://github.com/UCloud-FE/react-components/compare/v1.0.24...v1.0.25) (2020-12-29)
+
+### Features
+
+-   **Button:** rewrite with ts ([b75f7b4](https://github.com/UCloud-FE/react-components/commit/b75f7b4bacb514b64d2ca6e0493440e951673ee4))
+-   **Link:** add Link ([8cb4d90](https://github.com/UCloud-FE/react-components/commit/8cb4d906dd2705d3f653a88e8b4944ba51d47e87))
+-   **Link:** add subComponent Button ([9816210](https://github.com/UCloud-FE/react-components/commit/98162108eed916eedb4475dedf6fe82571279545))
+-   **Link:** ignore some props for Link.Button ([d7f5f48](https://github.com/UCloud-FE/react-components/commit/d7f5f487bb3d697657bd6de6599d31032b4389b1))
+
 ### [1.0.24](https://github.com/UCloud-FE/react-components/compare/v1.0.23...v1.0.24) (2020-12-23)
 
 ### [1.0.23](https://github.com/UCloud-FE/react-components/compare/v1.0.22...v1.0.23) (2020-12-23)
