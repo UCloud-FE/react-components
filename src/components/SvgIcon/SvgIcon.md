@@ -4,27 +4,27 @@
 
 ### 演示
 
--   演示
+#### 演示
 
 ```js {"codepath": "svgIcon.jsx"}
 ```
 
--   type
+#### type - 图标类型
 
 ```js {"codepath": "svgIcon-type.jsx"}
 ```
 
--   color
+#### color - 颜色
 
 ```js {"codepath": "svgIcon-color.jsx"}
 ```
 
--   spin
+#### spin - 是否旋转
 
 ```js {"codepath": "svgIcon-spin.jsx"}
 ```
 
--   size
+#### size - 尺寸
 
 ```js {"codepath": "svgIcon-size.jsx"}
 ```

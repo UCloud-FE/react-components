@@ -75,6 +75,10 @@ const oldMap = {
 
 const IconType = _.keys(IconMap);
 
+/**
+ * @private
+ * 内部使用的一些图标，后续可能会变更，不建议直接使用
+ */
 class SvgIcon extends PureComponent {
     static propTypes = {
         /** 图标类型 */
