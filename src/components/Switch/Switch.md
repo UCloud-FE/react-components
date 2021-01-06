@@ -4,37 +4,37 @@
 
 ### 演示
 
--   演示
+#### 演示
 
 ```js {"codepath": "switch.jsx"}
 ```
 
--   checked
+#### checked - 是否打开
 
 ```js {"codepath": "checked.jsx"}
 ```
 
--   disabled
+#### disabled - 禁用
 
 ```js {"codepath": "disabled.jsx"}
 ```
 
--   size
+#### size - 尺寸
 
 ```js {"codepath": "size.jsx"}
 ```
 
--   onTextAndOffText
+#### onTextAndOffText - 自定义文本
 
 ```js {"codepath": "onTextAndOffText.jsx"}
 ```
 
--   uncontrolled
+#### uncontrolled
 
 ```js {"codepath": "uncontrolled.jsx"}
 ```
 
--   展示
+#### 案例展示
 
 ```js {"codepath": "demo.jsx"}
 ```

@@ -1,25 +1,25 @@
 ### 说明
 
-*   这是步骤条组件
+这是步骤条组件
 
 ### 演示
 
-*   演示
+#### 演示
 
 ```js {"codepath": "steps.jsx"}
 ```
 
-*   steps
+#### steps - 步骤
 
 ```js {"codepath": "steps-steps.jsx"}
 ```
 
-*   status
+#### status - 状态
 
 ```js {"codepath": "steps-status.jsx"}
 ```
 
-*   current
+#### current - 当前 step
 
 ```js {"codepath": "steps-current.jsx"}
 ```
