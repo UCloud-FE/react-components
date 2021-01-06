@@ -10,37 +10,37 @@
 ```js {"codepath": "button.jsx", "props": {"className": "editor_transparent"}}
 ```
 
-#### styleType
+#### styleType - 样式风格
 
 ```js {"codepath": "styleType.jsx"}
 ```
 
-#### shape
+#### shape - 形状
 
 ```js {"codepath": "shape.jsx"}
 ```
 
-#### loading
+#### loading - 加载
 
 ```js {"codepath": "loading.jsx"}
 ```
 
-#### size
+#### size - 尺寸
 
 ```js {"codepath": "size.jsx"}
 ```
 
-#### disabled
+#### disabled - 禁用
 
 ```js {"codepath": "disabled.jsx"}
 ```
 
-#### fakeDisabled
+#### fakeDisabled - 特殊禁用（仅禁用 onClick）
 
 ```js {"codepath": "fakeDisabled.jsx"}
 ```
 
-#### icon
+#### icon - 图标
 
 ```js {"codepath": "icon.jsx"}
 ```
