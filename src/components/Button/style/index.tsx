@@ -12,7 +12,6 @@ import {
     getPaddingBySize,
     offsetPaddingBySize,
     transitionFlat,
-    transitionUp,
     offsetHeightBySize
 } from 'src/style';
 
@@ -48,6 +47,8 @@ const sizeMixin = (props: SButtonPropsFinal) => {
     `;
 };
 
+const transitionProperty = 'width,height,border,background,color,fill,box-shadow';
+
 const styleTypeMixin = (props: SButtonPropsFinal) => {
     const {
         theme: { designTokens: DT },
@@ -64,7 +65,7 @@ const styleTypeMixin = (props: SButtonPropsFinal) => {
             border: 'none',
             background: DT.T_BUTTON_PRIMARY_COLOR_BG_DEFAULT,
             boxShadow: DT.T_SHADOW_BUTTON_PRIMARY,
-            transition: `all ${transitionUp}`,
+            transition: `${transitionProperty} ${transitionFlat}`,
             ':hover': {
                 background: DT.T_BUTTON_PRIMARY_COLOR_BG_HOVER,
                 boxShadow: DT.T_SHADOW_BUTTON_PRIMARY_HOVER
@@ -76,7 +77,7 @@ const styleTypeMixin = (props: SButtonPropsFinal) => {
             background: DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT,
             border: 'none',
             boxShadow: DT.T_SHADOW_BUTTON_DEFAULT,
-            transition: `all ${transitionUp}`,
+            transition: `${transitionProperty} ${transitionFlat}`,
             ':hover': {
                 color: DT.T_COLOR_TEXT_PRIMARY_DEFAULT,
                 fill: DT.T_COLOR_TEXT_PRIMARY_DEFAULT,
@@ -89,7 +90,7 @@ const styleTypeMixin = (props: SButtonPropsFinal) => {
             fill: DT.T_COLOR_TEXT_DEFAULT_LIGHT,
             borderColor: DT.T_COLOR_LINE_DEFAULT_LIGHT,
             background: DT.T_COLOR_BG_DEFAULT_LIGHT,
-            transition: `all ${transitionFlat}`,
+            transition: `${transitionProperty} ${transitionFlat}`,
             ':hover': {
                 color: DT.T_COLOR_TEXT_PRIMARY_DEFAULT,
                 fill: DT.T_COLOR_TEXT_PRIMARY_DEFAULT,
@@ -105,7 +106,7 @@ const styleTypeMixin = (props: SButtonPropsFinal) => {
         cursor: 'default',
         borderColor: DT.T_COLOR_LINE_DISABLED_LIGHT,
         boxShadow: 'none',
-        transition: `all ${transitionUp}`
+        transition: `${transitionProperty} ${transitionFlat}`
     };
     return css`
         ${disabled ? disabledTheme : styleTypeTheme[styleType]};
