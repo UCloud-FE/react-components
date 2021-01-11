@@ -134,7 +134,8 @@ module.exports = [
                 name: 'PopConfirm'
             },
             {
-                name: 'Modal'
+                name: 'Modal',
+                components: ['Modal', 'Content']
             },
             {
                 name: 'Drawer'

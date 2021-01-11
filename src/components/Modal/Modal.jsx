@@ -1,17 +1,29 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
+import classnames from 'classnames';
 
 import Button from 'src/components/Button';
 import Icon from 'src/components/Icon';
+import Notice from 'src/components/Notice';
 import { animationPrefixCls } from 'src/style/globalAnimation';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
 import { Provider } from 'src/components/Popover/ContainerContext';
 
-import { prefixCls, ModalWrap } from './style';
+import { prefixCls, noticeCls, ModalWrap } from './style';
 import LOCALE from './locale/zh_CN';
 
 const Size = ['sm', 'md', 'lg'];
+
+const ModalNotice = ({ notice }) => {
+    return notice ? (
+        React.isValidElement(notice) ? (
+            <Notice className={noticeCls}>{notice}</Notice>
+        ) : (
+            <Notice {...notice} className={classnames(noticeCls, notice.className)}></Notice>
+        )
+    ) : null;
+};
 
 @localeConsumerDecorator({ defaultLocale: LOCALE, localeName: 'Modal', requireRuntimeLocale: true })
 class Modal extends Component {
@@ -53,10 +65,7 @@ class Modal extends Component {
         /** 弹窗包裹容器的类名 */
         wrapClassName: PropTypes.string,
         /** 自定义预设部分样式 */
-        customStyle: PropTypes.shape({
-            /** 由于弹窗会包裹各种组件，经常会 padding 叠加，所以默认内部无间距，通过 contentPadding 为 true 可打开内间距 */
-            contentPadding: PropTypes.bool
-        }),
+        customStyle: PropTypes.shape({}),
         /** 弹窗的样式 */
         style: PropTypes.object,
         /** 弹窗的内容部分的样式 */
@@ -64,7 +73,9 @@ class Modal extends Component {
         /** 遮罩层的样式 */
         maskStyle: PropTypes.object,
         /** @ignore */
-        locale: PropTypes.object
+        locale: PropTypes.object,
+        /** 传入 node 显示提示框或使用 Notice 组件的 props 来自定义提示 */
+        notice: PropTypes.oneOfType([PropTypes.node, PropTypes.object])
     };
     static defaultProps = {
         maskAnimation: 'fade',
@@ -102,6 +113,7 @@ class Modal extends Component {
             onClose,
             locale,
             children,
+            notice,
             ...rest
         } = this.props;
         const width = {
@@ -134,6 +146,7 @@ class Modal extends Component {
                     footer={_.isFunction(footer) ? footer({ locale }) : footer}
                 >
                     <div ref={this.savePopupContainer}></div>
+                    <ModalNotice notice={notice} />
                     {children}
                 </ModalWrap>
             </Provider>

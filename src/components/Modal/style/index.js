@@ -13,6 +13,7 @@ import withProps from 'src/utils/withProps';
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-modal';
 export const contentCls = prefixCls + '-body-content';
+export const noticeCls = prefixCls + '-notice';
 
 injectGlobal`
     .${prefixCls} {
@@ -42,6 +43,17 @@ class RcDialogWrap extends Component {
         return <RcDialog className={trueClassName} wrapClassName={classnames(className, wrapClassName)} {...rest} />;
     }
 }
+
+export const SContent = withProps({ className: contentCls })(
+    styled.div(props => {
+        const { maxHeight } = props;
+        return css`
+            padding: 16px 20px;
+            overflow: auto;
+            max-height: ${maxHeight};
+        `;
+    })
+);
 
 export const ModalWrap = withProps()(
     styled(RcDialogWrap)(props => {
@@ -116,11 +128,16 @@ export const ModalWrap = withProps()(
                     text-align: right;
                 }
                 &-body {
-                    /* min-height: 60px; */
                     ${customStyle?.contentPadding &&
                     css`
                         padding: 16px 20px;
                     `}
+                }
+                .${noticeCls}.${noticeCls}.${noticeCls} {
+                    border-top: none;
+                    border-left: none;
+                    border-right: none;
+                    border-radius: 0;
                 }
             }
         `;

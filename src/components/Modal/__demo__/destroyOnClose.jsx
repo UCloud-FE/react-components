@@ -32,7 +32,7 @@ class Demo extends React.Component {
                     }
                     destroyOnClose
                 >
-                    This is a modal
+                    <Modal.Content>This is a modal</Modal.Content>
                 </Modal>
             </div>
         );

@@ -7,8 +7,14 @@ class Demo extends React.Component {
     render() {
         return (
             <div>
-                <Button onClick={() => Modal.alert({ keyboard: true }, 'This is a modal')}>keyboard=true</Button>
-                <Button onClick={() => Modal.alert({ keyboard: false }, 'This is a modal')}>keyboard=false</Button>
+                <Button onClick={() => Modal.alert({ keyboard: true }, <Modal.Content>This is a modal</Modal.Content>)}>
+                    keyboard=true
+                </Button>
+                <Button
+                    onClick={() => Modal.alert({ keyboard: false }, <Modal.Content>This is a modal</Modal.Content>)}
+                >
+                    keyboard=false
+                </Button>
             </div>
         );
     }

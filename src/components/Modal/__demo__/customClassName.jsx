@@ -9,7 +9,10 @@ class Demo extends React.Component {
             <div>
                 <Button
                     onClick={() =>
-                        Modal.alert({ className: 'test_cls', wrapClassName: 'test_cls_wrap' }, 'This is a modal')
+                        Modal.alert(
+                            { className: 'test_cls', wrapClassName: 'test_cls_wrap' },
+                            <Modal.Content>This is a modal</Modal.Content>
+                        )
                     }
                 >
                     custom className

@@ -726,7 +726,6 @@ interface ModalGetFooter {
     (): ReactNode;
 }
 interface ModalCustomStyle {
-    contentPadding?: boolean;
     [key: string]: any;
 }
 export interface ModalProps {

@@ -19,7 +19,7 @@ class Demo extends React.Component {
                                     background: 'blue'
                                 }
                             },
-                            'This is a modal'
+                            <Modal.Content>This is a modal</Modal.Content>
                         )
                     }
                 >

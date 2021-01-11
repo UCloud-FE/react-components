@@ -50,9 +50,14 @@
 ```js {"codepath": "keyboard.jsx"}
 ```
 
-#### destroyOnClose - 关闭后是否直接销魂
+#### destroyOnClose - 关闭后是否直接销毁
 
 ```js {"codepath": "destroyOnClose.jsx"}
+```
+
+#### notice - 弹窗中的提示
+
+```js {"codepath": "notice.jsx"}
 ```
 
 #### 自定义 className

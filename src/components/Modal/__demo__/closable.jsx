@@ -7,8 +7,14 @@ class Demo extends React.Component {
     render() {
         return (
             <div>
-                <Button onClick={() => Modal.alert({ closable: true }, 'This is a modal')}>closable=true</Button>
-                <Button onClick={() => Modal.alert({ closable: false }, 'This is a modal')}>closable=false</Button>
+                <Button onClick={() => Modal.alert({ closable: true }, <Modal.Content>This is a modal</Modal.Content>)}>
+                    closable=true
+                </Button>
+                <Button
+                    onClick={() => Modal.alert({ closable: false }, <Modal.Content>This is a modal</Modal.Content>)}
+                >
+                    closable=false
+                </Button>
             </div>
         );
     }

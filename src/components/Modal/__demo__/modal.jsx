@@ -6,10 +6,10 @@ import Form from 'src/components/Form';
 import Modal from 'src/components/Modal';
 import Button from 'src/components/Button';
 import NumberInput from 'src/components/NumberInput';
-import Box from 'src/components/Box';
 
 // demo start
 const { Size } = Modal;
+const NoticeOptions = ['none', 'node', 'custom'];
 class Demo extends React.Component {
     constructor(props) {
         super(props);
@@ -21,7 +21,8 @@ class Demo extends React.Component {
             mask: true,
             maskClosable: true,
             keyboard: true,
-            destroyOnClose: false
+            destroyOnClose: false,
+            notice: 'none'
         };
     }
     toggle(visible) {
@@ -36,7 +37,7 @@ class Demo extends React.Component {
         this.toggle(false);
     }
     render() {
-        const { size, visible, zIndex, closable, mask, maskClosable, keyboard, destroyOnClose } = this.state;
+        const { size, visible, zIndex, closable, mask, maskClosable, keyboard, destroyOnClose, notice } = this.state;
         const itemLayout = {
             labelCol: {
                 span: 3
@@ -45,6 +46,15 @@ class Demo extends React.Component {
                 span: 9
             }
         };
+        const props = {
+            ...this.state
+        };
+        props.notice =
+            notice === 'node' ? (
+                <span>Just a notice</span>
+            ) : notice === 'custom' ? (
+                { styleType: 'error', children: 'An Error notice', closable: false }
+            ) : null;
         return (
             <div>
                 <Form className="demo-form">
@@ -53,6 +63,13 @@ class Demo extends React.Component {
                             options={Size.map(size => ({ value: size }))}
                             value={size}
                             onChange={size => this.setState({ size })}
+                        />
+                    </Form.Item>
+                    <Form.Item label="notice" {...itemLayout}>
+                        <Radio.Group
+                            options={NoticeOptions.map(notice => ({ value: notice }))}
+                            value={notice}
+                            onChange={notice => this.setState({ notice })}
                         />
                     </Form.Item>
                     <Form.Item label="visible" {...itemLayout}>
@@ -83,14 +100,13 @@ class Demo extends React.Component {
                 <div className="demo-wrap">
                     <Button onClick={() => this.toggle()}>Toggle Visible</Button>
                     <Modal
-                        {...this.state}
+                        {...props}
                         onClose={() => this.close()}
                         afterClose={() => console.log('afterClose')}
                         onOk={() => console.log('onOk')}
                         title="this is title"
-                        customStyle={{ contentPadding: true }}
                     >
-                        this is content
+                        <Modal.Content>this is content</Modal.Content>
                     </Modal>
                 </div>
             </div>

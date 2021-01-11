@@ -11,7 +11,7 @@ class Demo extends React.Component {
                 {Size.map(size => (
                     <Button
                         key={size}
-                        onClick={() => Modal.alert({ size, customStyle: { contentPadding: true } }, 'This is a modal')}
+                        onClick={() => Modal.alert({ size }, <Modal.Content>This is a modal</Modal.Content>)}
                     >
                         {size}
                     </Button>

@@ -1,6 +1,7 @@
 import React from 'react';
-import Modal from 'components/Modal';
-import Button from 'components/Button';
+
+import Modal from 'src/components/Modal';
+import Button from 'src/components/Button';
 
 // demo start
 class Demo extends React.Component {
@@ -30,11 +31,10 @@ class Demo extends React.Component {
                             visible: false
                         })
                     }
-                    customStyle={{ contentPadding: true }}
                     title="This is title"
                     footer="This is footer"
                 >
-                    This is a modal
+                    <Modal.Content>This is a modal</Modal.Content>
                 </Modal>
             </div>
         );

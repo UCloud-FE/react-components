@@ -9,20 +9,20 @@ class Demo extends React.Component {
         this.modal = Modal.open(
             {
                 title: '测试',
-                customStyle: { contentPadding: true },
                 onClose: () => console.log('close'),
                 onOk: () => console.log('ok')
             },
-            <div style={{ height: '300px' }}>
-                <Button onClick={() => this.update()}>测试</Button>
-            </div>
+            <Modal.Content>
+                <div style={{ height: '300px' }}>
+                    <Button onClick={() => this.update()}>测试</Button>
+                </div>
+            </Modal.Content>
         );
     }
     update() {
         if (!this.modal) return;
         this.modal.update({
             title: `测试 - ${Math.random()}`,
-            customStyle: { contentPadding: true },
             size: ['sm', 'md', 'lg'][(Math.random() * 3) | 0]
         });
     }
@@ -37,11 +37,10 @@ class Demo extends React.Component {
                         Modal.alert(
                             {
                                 title: 'this is alert',
-                                customStyle: { contentPadding: true },
                                 onClose: () => console.log('close'),
                                 onOk: () => console.log('ok')
                             },
-                            <div>this is content</div>
+                            <Modal.Content>this is content</Modal.Content>
                         )
                     }
                 >
@@ -52,11 +51,10 @@ class Demo extends React.Component {
                         Modal.confirm(
                             {
                                 title: 'this is confirm',
-                                customStyle: { contentPadding: true },
                                 onClose: () => console.log('close'),
                                 onOk: () => console.log('ok')
                             },
-                            <div>this is content</div>
+                            <Modal.Content>this is content</Modal.Content>
                         )
                     }
                 >
@@ -67,7 +65,6 @@ class Demo extends React.Component {
                         Modal.alert(
                             {
                                 title: 'this is promise alert',
-                                customStyle: { contentPadding: true },
                                 onClose: () =>
                                     new Promise(resolve => {
                                         setTimeout(() => {
@@ -81,7 +78,7 @@ class Demo extends React.Component {
                                         }, 3000);
                                     })
                             },
-                            <div>this is content</div>
+                            <Modal.Content>this is content</Modal.Content>
                         )
                     }
                 >
@@ -92,7 +89,6 @@ class Demo extends React.Component {
                         Modal.confirm(
                             {
                                 title: 'this is promise confirm',
-                                customStyle: { contentPadding: true },
                                 onClose: () =>
                                     new Promise(resolve => {
                                         setTimeout(() => {
@@ -106,7 +102,7 @@ class Demo extends React.Component {
                                         }, 3000);
                                     })
                             },
-                            <div>this is content</div>
+                            <Modal.Content>This is a modal</Modal.Content>
                         )
                     }
                 >
@@ -117,7 +113,6 @@ class Demo extends React.Component {
                         Modal.open(
                             {
                                 title: 'this is promise confirm',
-                                customStyle: { contentPadding: true },
                                 onClose: () =>
                                     new Promise(resolve => {
                                         setTimeout(() => {
@@ -131,7 +126,7 @@ class Demo extends React.Component {
                                         }, 3000);
                                     })
                             },
-                            <div>this is content</div>
+                            <Modal.Content>This is a modal</Modal.Content>
                         )
                     }
                 >
