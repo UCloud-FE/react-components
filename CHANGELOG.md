@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.27](https://github.com/UCloud-FE/react-components/compare/v1.0.26...v1.0.27) (2021-01-11)
+
+### Features
+
+-   **Modal:** add content and notice ([6f13e50](https://github.com/UCloud-FE/react-components/commit/6f13e504e87f41e4e6f9f87a6e24fe89c67402ff))
+
+### Bug Fixes
+
+-   **Modal:** fix modal ts not completely bug ([9385b97](https://github.com/UCloud-FE/react-components/commit/9385b97af80e5dab89ba8ebc0168255df0b6886c))
+
 ### [1.0.26](https://github.com/UCloud-FE/react-components/compare/v1.0.25...v1.0.26) (2021-01-06)
 
 ### Features
