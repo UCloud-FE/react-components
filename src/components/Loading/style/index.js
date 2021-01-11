@@ -5,7 +5,7 @@ import Icon from 'src/components/Icon';
 import { fadeIn, fadeOut } from 'src/style/animation';
 import withProps from 'src/utils/withProps';
 
-export const animationDuration = 500;
+export const animationDuration = 200;
 export const animationName = 'uc-fe-animation-fade';
 
 export const LoadingWrap = styled('div')`

@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.26](https://github.com/UCloud-FE/react-components/compare/v1.0.25...v1.0.26) (2021-01-06)
+
+### Features
+
+-   **Link:** change a:link style ([2e90a13](https://github.com/UCloud-FE/react-components/commit/2e90a134d78a3515bde53da3c65aef31e0714d10))
+-   **Loading:** change animate druation to 200 ([4b1dd4e](https://github.com/UCloud-FE/react-components/commit/4b1dd4ed032e4038432cb5bde17ad6a0669c1e49))
+
+### Bug Fixes
+
+-   **Button:** fix button transtion shake ([b89de72](https://github.com/UCloud-FE/react-components/commit/b89de728155f66005988268cee7c55f3cc341f9f))
+
 ### [1.0.25](https://github.com/UCloud-FE/react-components/compare/v1.0.24...v1.0.25) (2020-12-29)
 
 ### Features

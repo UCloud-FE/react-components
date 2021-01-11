@@ -10,17 +10,17 @@
 ```js {"codepath": "item.jsx"}
 ```
 
-#### current
+#### current - 当前项
 
 ```js {"codepath": "item-current.jsx"}
 ```
 
-#### noAction
+#### noAction - 无操作
 
 ```js {"codepath": "item-noAction.jsx"}
 ```
 
-#### disabled
+#### disabled - 禁用
 
 ```js {"codepath": "item-disabled.jsx"}
 ```

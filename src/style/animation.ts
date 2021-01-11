@@ -180,4 +180,4 @@ export const spinKeyframes = keyframes`
 
 export const transitionUp = '.22s cubic-bezier(.4,0,.2,1)';
 export const transitionDown = '.18s cubic-bezier(.4,0,.2,1)';
-export const transitionFlat = '.16s cubic-bezier(.4,0,.2,1)';
+export const transitionFlat = '.16s ease-out';

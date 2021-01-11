@@ -32,99 +32,99 @@ const fileShape = {
 
 ### 演示
 
--   演示
+#### 演示
 
 ```js {"codepath": "upload.jsx"}
 ```
 
--   简单使用
+#### 简单使用
 
 ```js {"codepath": "base.jsx"}
 ```
 
--   multiple: true - 支持多选
+#### multiple: true - 支持多选
 
 ```js {"codepath": "multiple.jsx"}
 ```
 
--   multiple: false - 支持单选
+#### multiple: false - 支持单选
 
 ```js {"codepath": "single.jsx"}
 ```
 
--   maxCount - 限制文件数量
+#### maxCount - 限制文件数量
 
 ```js {"codepath": "maxCount.jsx"}
 ```
 
--   maxSize - 限制文件大小
+#### maxSize - 限制文件大小
 
 ```js {"codepath": "maxSize.jsx"}
 ```
 
--   accept - 限制文件类型
+#### accept - 限制文件类型
 
 ```js {"codepath": "accept.jsx"}
 ```
 
--   disabled - 禁用
+#### disabled - 禁用
 
 ```js {"codepath": "disabled.jsx"}
 ```
 
--   onAdd - 控制文件添加
+#### onAdd - 控制文件添加
 
 ```js {"codepath": "onAdd.jsx"}
 ```
 
--   onRemove - 控制文件删除
+#### onRemove - 控制文件删除
 
 ```js {"codepath": "onRemove.jsx"}
 ```
 
--   onPreview - 自定义文件预览
+#### onPreview - 自定义文件预览
 
 ```js {"codepath": "onPreview.jsx"}
 ```
 
--   selector - 自定义选择控件
+#### selector - 自定义选择控件
 
 ```js {"codepath": "selector.jsx"}
 ```
 
--   listType - 隐藏文件列表
+#### listType - 隐藏文件列表
 
 ```js {"codepath": "listType.jsx"}
 ```
 
--   defaultFileList - 默认文件列表
+#### defaultFileList - 默认文件列表
 
 ```js {"codepath": "uncontrolled.jsx"}
 ```
 
--   handleUpload - 上传
+#### handleUpload - 上传
 
 ```js {"codepath": "handleUpload.jsx"}
 ```
 
--   fileList - 受控组件
+#### fileList - 受控组件
 
 ```js {"codepath": "controlled.jsx"}
 ```
 
--   案例展示
+#### 案例展示
 
 ```js {"codepath": "demo.jsx"}
 ```
 
--   ui - UI 展示列表
+#### ui - UI 展示列表
 
 ```js {"codepath": "ui.jsx"}
 ```
 
 ### 其它
 
--   提供读取文件 dataUrl 的工具函数
+#### 提供读取文件 dataUrl 的工具函数
 
 ```js {"codepath": "readFile.jsx"}
 ```

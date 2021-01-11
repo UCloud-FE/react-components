@@ -1,70 +1,70 @@
 ### 说明
 
-*   这是 Pagination 组件
+这是 Pagination 组件
 
 ### 演示
 
-*   演示
+#### 演示
 
 ```js {"codepath": "pagination.jsx"}
 ```
 
-*   size
+#### size - 尺寸
 
 ```js {"codepath": "size.jsx"}
 ```
 
-*   total
+#### total - 总数量
 
 ```js {"codepath": "total.jsx"}
 ```
 
-*   showTotal
+#### showTotal - 自定义 total 展示
 
 ```js {"codepath": "showTotal.jsx"}
 ```
 
-*   pageSize
+#### pageSize - 每页的数量
 
 ```js {"codepath": "pageSize.jsx"}
 ```
 
-*   pageSizeOptions
+#### pageSizeOptions - 页数菜单选项
 
 ```js {"codepath": "pageSizeOptions.jsx"}
 ```
 
-*   showLessItems
+#### showLessItems - 只显示少量的按钮
 
 ```js {"codepath": "showLessItems.jsx"}
 ```
 
-*   showPrevNextJumpers
+#### showPrevNextJumpers - 显示更多页面跳转
 
 ```js {"codepath": "showPrevNextJumpers.jsx"}
 ```
 
-*   showQuickJumper
+#### showQuickJumper - 显示快捷跳转
 
 ```js {"codepath": "showQuickJumper.jsx"}
 ```
 
-*   showSizeChanger
+#### showSizeChanger - 显示分页调节菜单
 
 ```js {"codepath": "showSizeChanger.jsx"}
 ```
 
-*   showTitle
+#### showTitle - 显示 title
 
 ```js {"codepath": "showTitle.jsx"}
 ```
 
-*   simple
+#### simple - 简洁模式
 
 ```js {"codepath": "simple.jsx"}
 ```
 
-*   uncontrolled
+#### uncontrolled
 
 ```js {"codepath": "uncontrolled.jsx"}
 ```

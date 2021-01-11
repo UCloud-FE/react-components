@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { CSSTransition } from 'react-transition-group';
 
-import { LoadingWrap, Mask, IndicatorWrap, LoadingIcon, TipWrap } from './style';
+import { LoadingWrap, Mask, IndicatorWrap, LoadingIcon, TipWrap, animationDuration } from './style';
 
-export const animationDuration = 500;
 export const animationName = 'uc-fe-animation-fade';
 
 class Loading extends Component {

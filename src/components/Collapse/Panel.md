@@ -1,35 +1,35 @@
 ### 说明
 
-*   Collapse 的子组件
+Collapse 的子组件
 
 ### 演示
 
-*   普通使用
+#### 普通使用
 
 ```js {"codepath": "panel.jsx"}
 ```
 
-*   disabled
+#### disabled - 禁用
 
 ```js {"codepath": "panel-disabled.jsx"}
 ```
 
-*   forceRender
+#### forceRender - 强制渲染
 
 ```js {"codepath": "panel-forceRender.jsx"}
 ```
 
-*   custom title
+#### custom title - 自定义 title
 
 ```js {"codepath": "panel-customTitle.jsx"}
 ```
 
-*   uncontrolled
+#### uncontrolled
 
 ```js {"codepath": "panel-uncontrolled.jsx"}
 ```
 
-*   titlePosition
+#### titlePosition - 标题位置
 
 ```js {"codepath": "panel-titlePosition.jsx"}
 ```
