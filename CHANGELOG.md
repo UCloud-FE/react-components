@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.28](https://github.com/UCloud-FE/react-components/compare/v1.0.27...v1.0.28) (2021-01-14)
+
+### Features
+
+-   **All:** update dts and add styles ([9a80462](https://github.com/UCloud-FE/react-components/commit/9a80462ad7e8a6bbba146f4a0a6f23d4c6c8670e)), closes [#326](https://github.com/UCloud-FE/react-components/issues/326)
+
 ### [1.0.27](https://github.com/UCloud-FE/react-components/compare/v1.0.26...v1.0.27) (2021-01-11)
 
 ### Features
