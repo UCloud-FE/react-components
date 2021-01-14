@@ -113,7 +113,7 @@ export const NumberInputWrap = withProps()(
                 }
 
                 .${inputWrapCls} {
-                    box-shadow: ${DT.T_SHADOW_INSET_1};
+                    box-shadow: ${DT.T_SHADOW_INSET_DEFAULT};
                     background: ${DT.T_INPUT_COLOR_BG_DEFAULT};
                     :hover {
                         background: ${DT.T_INPUT_COLOR_BG_ACTIVE};
@@ -192,7 +192,7 @@ export const NumberInputWrap = withProps()(
                 .${inputWrapCls} {
                     margin: 0 -1px 0 -1px;
                     border: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
-                    box-shadow: ${DT.T_SHADOW_INSET_1};
+                    box-shadow: ${DT.T_SHADOW_INSET_DEFAULT};
                     background: ${DT.T_INPUT_COLOR_BG_DEFAULT};
                     transition: ${materialVars.transitionDown};
                     margin: 0;
@@ -254,7 +254,7 @@ export const NumberInputWrap = withProps()(
                     margin: 0 4px;
                     width: ${HeightNumber[size] - 2}px;
                     border: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
-                    box-shadow: ${DT.T_SHADOW_INSET_1};
+                    box-shadow: ${DT.T_SHADOW_INSET_DEFAULT};
                     background: ${DT.T_INPUT_COLOR_BG_DEFAULT};
                     transition: ${materialVars.transitionDown};
 

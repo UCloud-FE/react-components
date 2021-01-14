@@ -218,7 +218,7 @@ export const RadioButtonWrap = withProps({
     styled(FilterStyleTypeButton)(props => {
         const {
             size,
-            theme: { fontSize },
+            theme: { designTokens: DT, fontSize },
             disabled,
             checked
         } = props;
@@ -241,6 +241,7 @@ export const RadioButtonWrap = withProps({
                 ${checked &&
                 css`
                     z-index: 2;
+                    background-color: ${DT.T_COLOR_BG_DEFAULT_HOVER};
                 `};
 
                 &:hover {
@@ -336,6 +337,7 @@ const cardPropsMixin = props => {
     return css`
         border: 1px solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
         background: ${DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT};
+        box-shadow: ${DT.T_SHADOW_BUTTON_DEFAULT};
 
         /* stylelint-disable no-descending-specificity */
         ${RadioCardIcon} {
@@ -346,12 +348,13 @@ const cardPropsMixin = props => {
         ${RadioCardHeader} {
             color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
             font-size: ${titleFontSize};
-            border-bottom: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
+            border-bottom: 1px solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
         }
         ${checked &&
         css`
             border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
-            box-shadow: ${DT.T_SHADOW_BUTTON_DEFAULT};
+            background: ${DT.T_COLOR_BG_DEFAULT_HOVER};
+            box-shadow: ${DT.T_SHADOW_BUTTON_HOVER};
             ${RadioCardHeader} {
                 border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
             }
@@ -362,6 +365,7 @@ const cardPropsMixin = props => {
         ${disabled &&
         css`
             cursor: default;
+            box-shadow: 0 0 0 0 ${DT.T_COLOR_BG_TRANSPARENT};
         `};
         ${disabled &&
         !checked &&
@@ -389,7 +393,11 @@ const cardPropsMixin = props => {
         css`
             :hover {
                 box-shadow: ${DT.T_SHADOW_BUTTON_HOVER};
-                border-color: transparent;
+                border: 1px solid ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
+
+                ${RadioCardHeader} {
+                    border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
+                }
 
                 ${RadioCardIcon} {
                     color: ${DT.T_COLOR_LINE_PRIMARY_HOVER};

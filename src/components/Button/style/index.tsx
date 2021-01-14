@@ -75,12 +75,13 @@ const styleTypeMixin = (props: SButtonPropsFinal) => {
             color: DT.T_COLOR_TEXT_DEFAULT_DARK,
             fill: DT.T_COLOR_TEXT_DEFAULT_DARK,
             background: DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT,
-            border: 'none',
+            border: `1px solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT}`,
             boxShadow: DT.T_SHADOW_BUTTON_DEFAULT,
             transition: `${transitionProperty} ${transitionFlat}`,
             ':hover': {
                 color: DT.T_COLOR_TEXT_PRIMARY_DEFAULT,
                 fill: DT.T_COLOR_TEXT_PRIMARY_DEFAULT,
+                border: `1px solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT}`,
                 background: DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT,
                 boxShadow: DT.T_SHADOW_BUTTON_HOVER
             }
@@ -110,7 +111,7 @@ const styleTypeMixin = (props: SButtonPropsFinal) => {
     };
     return css`
         ${disabled ? disabledTheme : styleTypeTheme[styleType]};
-        ${(disabled || styleType === 'border-gray') &&
+        ${(disabled || styleType === 'border' || styleType === 'border-gray') &&
         css`
             border-width: ${DT.T_LINE_WIDTH_BASE};
             border-style: solid;
@@ -178,7 +179,7 @@ const checkedMixin = (props: SButtonPropsFinal) => {
     return css`
         color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
         fill: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
-        background: ${DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT};
+        background: ${DT.T_COLOR_BG_DEFAULT_HOVER};
         border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
         box-shadow: ${DT.T_SHADOW_BUTTON_HOVER};
     `;
