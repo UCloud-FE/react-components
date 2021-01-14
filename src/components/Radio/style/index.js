@@ -218,7 +218,7 @@ export const RadioButtonWrap = withProps({
     styled(FilterStyleTypeButton)(props => {
         const {
             size,
-            theme: { designTokens: DT, fontSize },
+            theme: { fontSize },
             disabled,
             checked
         } = props;
@@ -241,7 +241,6 @@ export const RadioButtonWrap = withProps({
                 ${checked &&
                 css`
                     z-index: 2;
-                    background-color: ${DT.T_COLOR_BG_DEFAULT_HOVER};
                 `};
 
                 &:hover {

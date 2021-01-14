@@ -21,7 +21,6 @@ const themeMixin = props => {
         }
         &:focus {
             border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
-            background: ${DT.T_INPUT_COLOR_BG_ACTIVE};
         }
         &::placeholder {
             opacity: 1;
