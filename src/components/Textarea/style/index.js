@@ -11,11 +11,13 @@ const themeMixin = props => {
     return css`
         font-size: ${fontSize};
         color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
-        border: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
-        background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
+        border: 1px solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
+        background: ${DT.T_INPUT_COLOR_BG_DEFAULT};
+        box-shadow: ${DT.T_SHADOW_INSET_DEFAULT};
         &:hover,
         &:focus {
-            border-color: ${DT.T_COLOR_LINE_PRIMARY_HOVER};
+            border-color: ${DT.T_COLOR_LINE_DEFAULT_DARK};
+            background: ${DT.T_INPUT_COLOR_BG_ACTIVE};
         }
         &:focus {
             border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
@@ -28,6 +30,7 @@ const themeMixin = props => {
             color: ${DT.T_COLOR_TEXT_DISABLED};
             border-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
             background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
+            box-shadow: 0 0 0 0 ${DT.T_COLOR_BG_TRANSPARENT};
         }
     `;
 };
