@@ -216,10 +216,9 @@ export const NumberInputWrap = withProps()(
                     height: ${Height[size]};
                     width: ${Height[size]};
                     line-height: ${Height[size]};
-                    border-color: transparent;
+                    border-width: 1px;
 
                     &:hover {
-                        color: ${DT.T_SHADOW_BUTTON_HOVER};
                         z-index: 1;
                     }
                 }
@@ -284,7 +283,7 @@ export const NumberInputWrap = withProps()(
                     height: ${Height[size]};
                     width: ${Height[size]};
                     line-height: ${Height[size]};
-                    border-color: transparent;
+                    border-width: 1px;
                     &:hover {
                         z-index: 1;
                     }
