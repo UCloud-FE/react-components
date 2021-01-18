@@ -75,7 +75,7 @@ const styleTypeMixin = (props: SButtonPropsFinal) => {
             color: DT.T_COLOR_TEXT_DEFAULT_DARK,
             fill: DT.T_COLOR_TEXT_DEFAULT_DARK,
             background: DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT,
-            border: `1px solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT}`,
+            border: `1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK}`,
             boxShadow: DT.T_SHADOW_BUTTON_DEFAULT,
             transition: `${transitionProperty} ${transitionFlat}`,
             ':hover': {
