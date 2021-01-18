@@ -196,14 +196,14 @@ const designTokens = {
     T_SHADOW_INSET_RIGHT: 'inset -10px 0 8px -8px rgba(0,0,0,0.12)',
     T_SHADOW_INSET_BOTTOM: 'inset 0 -10px 8px -8px rgba(0,0,0,0.12)',
     T_SHADOW_INSET_LEFT: 'inset 10px 0 8px -8px rgba(0,0,0,0.12)',
-    T_SHADOW_INSET_DEFAULT: 'inset 0 3px 0 0 rgba(0,0,0,0.08)',
+    T_SHADOW_INSET_DEFAULT: 'inset 0 3px 0 0 rgba(0,0,0,0.05)',
     T_SHADOW_INSET_ERROR: 'inset 0 1px 3px 0 #fed4d4',
     T_SHADOW_BLOCK_DEFAULT_SM:
-        '0 0 2px 0 rgba(0,0,0,0.08), 0 5px 8px -4px rgba(0,0,0,0.12), 0 1px 0 0 rgba(0,0,0,0.05),inset 0 -1px 0px 0px #e3e9ff',
+        '0 0 2px 0 rgba(0,0,0,0.08), 0 5px 8px -4px rgba(0,0,0,0.12), 0 1px 0 0 rgba(0,0,0,0.05),inset 0 -1px 0px 0px #f8f8ff',
     T_SHADOW_BLOCK_DEFAULT_MD:
-        '0 0 1px 0 rgba(0,0,0,0.12), 0 8px 12px -4px rgba(0,0,0,0.12), 0 4px 4px -2px rgba(0,0,0,0.05),inset 0 -2px 0px 0px #e3e9ff',
+        '0 0 1px 0 rgba(0,0,0,0.12), 0 8px 12px -4px rgba(0,0,0,0.12), 0 4px 4px -2px rgba(0,0,0,0.05),inset 0 -2px 0px 0px #f8f8ff',
     T_SHADOW_BLOCK_DEFAULT_LG:
-        '0 6px 16px 0 rgba(0,0,0,0.05), 0 16px 24px -8px rgba(0,0,0,0.08), 0 0 16px 0 rgba(0,0,0,0.05),inset 0 -2px 0px 0px #e3e9ff',
+        '0 6px 16px 0 rgba(0,0,0,0.05), 0 16px 24px -8px rgba(0,0,0,0.08), 0 0 16px 0 rgba(0,0,0,0.05),inset 0 -2px 0px 0px #f8f8ff',
     T_SHADOW_BLOCK_LEFT_SM: '-3px 0 3px -2px rgba(0,0,0,0.05),-8px 0 6px -6px rgba(0,0,0,0.08)',
     T_SHADOW_BLOCK_LEFT_LG:
         '-46px 0 24px -35px rgba(0,0,0,0.05),-25px 0 10px -16px rgba(0,0,0,0.05),-10px 0 6px -6px rgba(0,0,0,0.05)',
@@ -216,7 +216,7 @@ const designTokens = {
     T_SHADOW_BLOCK_TOP_SM: '0 -3px 3px -2px rgba(0,0,0,0.05),0 -8px 6px -6px rgba(0,0,0,0.08)',
     T_SHADOW_BLOCK_TOP_LG:
         '0 -46px 24px -35px rgba(0,0,0,0.05),0 -25px 10px -16px rgba(0,0,0,0.05),0 -10px 6px -6px rgba(0,0,0,0.05)',
-    T_SHADOW_BUTTON_DEFAULT: '0 3px 6px 0 rgba(0,0,0,0.08),0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff',
+    T_SHADOW_BUTTON_DEFAULT: '0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff',
     T_SHADOW_BUTTON_HOVER:
         '0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05), inset 0 -2px 0 0 #e3e9ff',
     T_SHADOW_BUTTON_PRIMARY:

@@ -79,7 +79,7 @@ export default {
         T_COLOR_LINE_DEFAULT_TRANSPARENT: '#000000',
         T_COLOR_LINE_PRIMARY_DEFAULT: '#5A76FF',
         T_COLOR_LINE_PRIMARY_HOVER: '#738BFF',
-        T_COLOR_LINE_PRIMARY_LIGHT: '#333F63',
+        T_COLOR_LINE_PRIMARY_LIGHT: '#2b3555',
         T_COLOR_LINE_NOTICE_LIGHT: '#2C3D72',
         T_COLOR_LINE_NOTICE_DARK: '#526075',
         T_COLOR_LINE_SUCCESS_LIGHT: '#236019',
@@ -211,7 +211,7 @@ export default {
         T_SWITCH_COLOR_TEXT_ON: '#F7F9FF',
         T_SWITCH_COLOR_LINE_INNER_ON: '#2B3555',
         T_TABLE_ROW_COLOR_BG_DEFAULT: '#1F2538',
-        T_TABLE_ROW_COLOR_BG_HOVER: '#333F63',
+        T_TABLE_ROW_COLOR_BG_HOVER: '#2b3555',
         T_TABS_DEFAULT_COLOR_BG_DEFAULT: '#1a2132',
         T_TABS_DEFAULT_COLOR_BG_HOVER: '#192036',
         T_TABS_DEFAULT_COLOR_LINE_HOVER: '#192036',
@@ -240,14 +240,14 @@ export default {
         T_SHADOW_INSET_RIGHT: 'inset -10px 0 8px -8px rgba(0,0,0,0.32)',
         T_SHADOW_INSET_BOTTOM: 'inset 0 -10px 8px -8px rgba(0,0,0,0.32)',
         T_SHADOW_INSET_LEFT: 'inset 10px 0 8px -8px rgba(0,0,0,0.32)',
-        T_SHADOW_INSET_DEFAULT: 'inset 0 3px 0 0 rgba(0,0,0,0.28)',
+        T_SHADOW_INSET_DEFAULT: 'inset 0 3px 0 0 rgba(0,0,0,0.25)',
         T_SHADOW_INSET_ERROR: 'inset 0 1px 3px 0 #6a2e2b',
         T_SHADOW_BLOCK_DEFAULT_SM:
-            '0 0 2px 0 rgba(0,0,0,0.28), 0 5px 8px -4px rgba(0,0,0,0.32), 0 1px 0 0 rgba(0,0,0,0.25),inset 0 -1px 0px 0px #333F63',
+            '0 0 2px 0 rgba(0,0,0,0.28), 0 5px 8px -4px rgba(0,0,0,0.32), 0 1px 0 0 rgba(0,0,0,0.25),inset 0 -1px 0px 0px #1B2341',
         T_SHADOW_BLOCK_DEFAULT_MD:
-            '0 0 1px 0 rgba(0,0,0,0.32), 0 8px 12px -4px rgba(0,0,0,0.32), 0 4px 4px -2px rgba(0,0,0,0.25),inset 0 -2px 0px 0px #333F63',
+            '0 0 1px 0 rgba(0,0,0,0.32), 0 8px 12px -4px rgba(0,0,0,0.32), 0 4px 4px -2px rgba(0,0,0,0.25),inset 0 -2px 0px 0px #1B2341',
         T_SHADOW_BLOCK_DEFAULT_LG:
-            '0 6px 16px 0 rgba(0,0,0,0.25), 0 16px 24px -8px rgba(0,0,0,0.28), 0 0 16px 0 rgba(0,0,0,0.25),inset 0 -2px 0px 0px #333F63',
+            '0 6px 16px 0 rgba(0,0,0,0.25), 0 16px 24px -8px rgba(0,0,0,0.28), 0 0 16px 0 rgba(0,0,0,0.25),inset 0 -2px 0px 0px #1B2341',
         T_SHADOW_BLOCK_LEFT_SM: '-3px 0 3px -2px rgba(0,0,0,0.25),-8px 0 6px -6px rgba(0,0,0,0.28)',
         T_SHADOW_BLOCK_LEFT_LG:
             '-46px 0 24px -35px rgba(0,0,0,0.25),-25px 0 10px -16px rgba(0,0,0,0.25),-10px 0 6px -6px rgba(0,0,0,0.25)',
@@ -260,9 +260,9 @@ export default {
         T_SHADOW_BLOCK_TOP_SM: '0 -3px 3px -2px rgba(0,0,0,0.25),0 -8px 6px -6px rgba(0,0,0,0.28)',
         T_SHADOW_BLOCK_TOP_LG:
             '0 -46px 24px -35px rgba(0,0,0,0.25),0 -25px 10px -16px rgba(0,0,0,0.25),0 -10px 6px -6px rgba(0,0,0,0.25)',
-        T_SHADOW_BUTTON_DEFAULT: '0 3px 6px 0 rgba(0,0,0,0.28),0 2px 3px 0 rgba(0,0,0,0.32),inset 0 -2px 0 0 #333F63',
+        T_SHADOW_BUTTON_DEFAULT: '0 2px 3px 0 rgba(0,0,0,0.32),inset 0 -2px 0 0 #2b3555',
         T_SHADOW_BUTTON_HOVER:
-            '0 0 1px 0 rgba(0,0,0,0.32),0 8px 12px -4px rgba(0,0,0,0.32),0 2px 1px -1px rgba(0,0,0,0.25), inset 0 -2px 0 0 #333F63',
+            '0 0 1px 0 rgba(0,0,0,0.32),0 8px 12px -4px rgba(0,0,0,0.32),0 2px 1px -1px rgba(0,0,0,0.25), inset 0 -2px 0 0 #2b3555',
         T_SHADOW_BUTTON_PRIMARY:
             '0 2px 4px -1px #3458DE, inset 0 -3px 0 0 rgba(0,0,0,0.32), inset 0 1px 0 0 rgba(0,0,0,0.32)',
         T_SHADOW_BUTTON_PRIMARY_HOVER:
