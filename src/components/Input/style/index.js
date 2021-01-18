@@ -45,7 +45,7 @@ const themeMixin = props => {
         border-radius: ${DT.T_CORNER_SM};
         height: ${Height[size]};
         color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
-        border: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
+        border: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
         box-shadow: ${DT.T_SHADOW_INSET_DEFAULT};
         background: ${DT.T_INPUT_COLOR_BG_DEFAULT};
         transition: ${materialVars.transitionDown};
