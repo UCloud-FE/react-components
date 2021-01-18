@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.29](https://github.com/UCloud-FE/react-components/compare/v1.0.28...v1.0.29) (2021-01-18)
+
+### Features
+
+-   **dt:** update design tokens ([03f6f9e](https://github.com/UCloud-FE/react-components/commit/03f6f9ee171e748a6758e1ff44c0b85619e3d4bd))
+-   **Input&Button:** update style ([9e6e489](https://github.com/UCloud-FE/react-components/commit/9e6e489924a93f9eb0af0733a5ecab941b95d0cb))
+-   **NumberInput:** add styles for handlers ([cc6b08f](https://github.com/UCloud-FE/react-components/commit/cc6b08f1a079d1c4e661a7d6d5b55b31752a9362))
+
 ### [1.0.28](https://github.com/UCloud-FE/react-components/compare/v1.0.27...v1.0.28) (2021-01-14)
 
 ### Features
