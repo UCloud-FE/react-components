@@ -66,7 +66,10 @@ const styleTypeMixin = (props: SButtonPropsFinal) => {
             background: DT.T_BUTTON_PRIMARY_COLOR_BG_DEFAULT,
             boxShadow: DT.T_SHADOW_BUTTON_PRIMARY,
             transition: `${transitionProperty} ${transitionFlat}`,
-            ':hover': {
+            ':link,:visited': {
+                color: DT.T_BUTTON_PRIMARY_COLOR_TEXT_DEFAULT
+            },
+            ':hover,:active': {
                 background: DT.T_BUTTON_PRIMARY_COLOR_BG_HOVER,
                 boxShadow: DT.T_SHADOW_BUTTON_PRIMARY_HOVER
             }
@@ -78,7 +81,10 @@ const styleTypeMixin = (props: SButtonPropsFinal) => {
             border: `1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK}`,
             boxShadow: DT.T_SHADOW_BUTTON_DEFAULT,
             transition: `${transitionProperty} ${transitionFlat}`,
-            ':hover': {
+            ':link,:visited': {
+                color: DT.T_COLOR_TEXT_DEFAULT_DARK
+            },
+            ':hover,:active': {
                 color: DT.T_COLOR_TEXT_PRIMARY_DEFAULT,
                 fill: DT.T_COLOR_TEXT_PRIMARY_DEFAULT,
                 border: `1px solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT}`,
@@ -92,7 +98,10 @@ const styleTypeMixin = (props: SButtonPropsFinal) => {
             borderColor: DT.T_COLOR_LINE_DEFAULT_LIGHT,
             background: DT.T_COLOR_BG_DEFAULT_LIGHT,
             transition: `${transitionProperty} ${transitionFlat}`,
-            ':hover': {
+            ':link,:visited': {
+                color: DT.T_COLOR_TEXT_DEFAULT_LIGHT
+            },
+            ':hover,:active': {
                 color: DT.T_COLOR_TEXT_PRIMARY_DEFAULT,
                 fill: DT.T_COLOR_TEXT_PRIMARY_DEFAULT,
                 borderColor: DT.T_COLOR_LINE_PRIMARY_HOVER,
@@ -235,4 +244,14 @@ export const SButtonA = sWrap<SButtonProps, HTMLAnchorElement>(
     {
         ignoreProps: ['disabled', 'fakeDisabled', 'checked', 'checkAble', 'loading']
     }
-)(styled('a')(buttonStyleMixin));
+)(
+    styled('a')(props => {
+        return css`
+            ${buttonStyleMixin(props)};
+            :link,
+            :visited {
+                color: ;
+            }
+        `;
+    })
+);
