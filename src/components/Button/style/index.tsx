@@ -105,7 +105,7 @@ const styleTypeMixin = (props: SButtonPropsFinal) => {
                 color: DT.T_COLOR_TEXT_PRIMARY_DEFAULT,
                 fill: DT.T_COLOR_TEXT_PRIMARY_DEFAULT,
                 borderColor: DT.T_COLOR_LINE_PRIMARY_HOVER,
-                background: checkAble ? DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT : DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT
+                background: checkAble ? DT.T_COLOR_BG_DEFAULT_LIGHT : DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT
             }
         }
     };
@@ -191,6 +191,9 @@ const checkedMixin = (props: SButtonPropsFinal) => {
         background: ${DT.T_COLOR_BG_DEFAULT_HOVER};
         border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
         box-shadow: ${DT.T_SHADOW_BUTTON_HOVER};
+        :hover {
+            background: ${DT.T_COLOR_BG_DEFAULT_HOVER};
+        }
     `;
 };
 
