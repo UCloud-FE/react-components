@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.30](https://github.com/UCloud-FE/react-components/compare/v1.0.29...v1.0.30) (2021-01-28)
+
+### Features
+
+-   **ActionList:** use combine to wrap ([4dc4faf](https://github.com/UCloud-FE/react-components/commit/4dc4faf91d22001b498762d7fa3517381909381c))
+-   **Button:** change checkable button background ([6e0a5b6](https://github.com/UCloud-FE/react-components/commit/6e0a5b60b1708367b2eb521b4d21cf924dea2582))
+-   **Combine:** change combine classname to wrap ([bdd0e9b](https://github.com/UCloud-FE/react-components/commit/bdd0e9b80c4dc262859be8990a233a4dfa2484fa))
+-   **Link:** force link button visited color ([55272ce](https://github.com/UCloud-FE/react-components/commit/55272ce3c9c440936f9f381fdb186697ee83f603))
+
 ### [1.0.29](https://github.com/UCloud-FE/react-components/compare/v1.0.28...v1.0.29) (2021-01-18)
 
 ### Features
