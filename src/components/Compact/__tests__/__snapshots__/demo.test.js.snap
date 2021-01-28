@@ -303,25 +303,24 @@ exports[`Compact demo -- compact 1`] = `
   display: none;
 }
 
-.emotion-51 {
-  position: relative;
-}
-
-.emotion-51 > .uc-fe-combine-item {
+.emotion-51 > .uc-fe-combine-item,
+.emotion-51 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-51 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: -1px;
-}
-
-.emotion-51 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-51 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-51 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-51 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-51 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-51 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-51 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: -1px;
 }
 
 .emotion-45 {
@@ -763,25 +762,24 @@ exports[`Compact demo -- compact 1`] = `
   display: none;
 }
 
-.emotion-51 {
-  position: relative;
-}
-
-.emotion-51 > .uc-fe-combine-item {
+.emotion-51 > .uc-fe-combine-item,
+.emotion-51 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-51 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: -1px;
-}
-
-.emotion-51 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-51 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-51 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-51 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-51 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-51 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-51 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: -1px;
 }
 
 .emotion-45 {
@@ -1066,56 +1064,63 @@ exports[`Compact demo -- compact 1`] = `
       spacing="compact"
     >
       <div
-        class="uc-fe-combine-item uc-fe-compact-controller emotion-45 emotion-46"
+        class="uc-fe-combine-item"
       >
-        <div>
-          <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-42 emotion-43 emotion-44"
-            type="button"
-          >
-            <div>
-              请选择
-            </div>
-            <i
-              class="uc-fe-icon icon__down emotion-39 emotion-40 emotion-41"
-            />
-          </button>
+        <div
+          class=" emotion-45 emotion-46"
+        >
+          <div>
+            <button
+              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-42 emotion-43 emotion-44"
+              type="button"
+            >
+              <div>
+                请选择
+              </div>
+              <i
+                class="uc-fe-icon icon__down emotion-39 emotion-40 emotion-41"
+              />
+            </button>
+          </div>
         </div>
       </div>
-      <span
-        class="uc-fe-input uc-fe-combine-item uc-fe-compact-controller emotion-49 emotion-50"
+      <div
+        class="uc-fe-combine-item"
       >
         <span
-          class="emotion-47 emotion-48"
+          class="uc-fe-input emotion-49 emotion-50"
         >
-          <input />
+          <span
+            class="emotion-47 emotion-48"
+          >
+            <input />
+          </span>
         </span>
-      </span>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`Compact demo -- sharedProps 1`] = `
-.emotion-12 {
-  position: relative;
-}
-
-.emotion-12 > .uc-fe-combine-item {
+.emotion-12 > .uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: -1px;
-}
-
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-12 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-12 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: -1px;
 }
 
 .emotion-6 {
@@ -1370,25 +1375,24 @@ exports[`Compact demo -- sharedProps 1`] = `
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-12 {
-  position: relative;
-}
-
-.emotion-12 > .uc-fe-combine-item {
+.emotion-12 > .uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: -1px;
-}
-
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-12 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-12 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: -1px;
 }
 
 .emotion-6 {
@@ -1652,31 +1656,39 @@ exports[`Compact demo -- sharedProps 1`] = `
       spacing="compact"
     >
       <div
-        class="uc-fe-combine-item uc-fe-compact-controller emotion-6 emotion-7"
+        class="uc-fe-combine-item"
       >
-        <div>
-          <button
-            class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-            type="button"
-          >
-            <div>
-              请选择
-            </div>
-            <i
-              class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
-            />
-          </button>
+        <div
+          class=" emotion-6 emotion-7"
+        >
+          <div>
+            <button
+              class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
+              type="button"
+            >
+              <div>
+                请选择
+              </div>
+              <i
+                class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+              />
+            </button>
+          </div>
         </div>
       </div>
-      <span
-        class="uc-fe-input uc-fe-combine-item uc-fe-compact-controller emotion-10 emotion-11"
+      <div
+        class="uc-fe-combine-item"
       >
         <span
-          class="emotion-8 emotion-9"
+          class="uc-fe-input emotion-10 emotion-11"
         >
-          <input />
+          <span
+            class="emotion-8 emotion-9"
+          >
+            <input />
+          </span>
         </span>
-      </span>
+      </div>
     </div>
   </div>
   <div
@@ -1687,31 +1699,39 @@ exports[`Compact demo -- sharedProps 1`] = `
       spacing="compact"
     >
       <div
-        class="uc-fe-combine-item test_cls uc-fe-compact-controller emotion-6 emotion-7"
+        class="uc-fe-combine-item"
       >
-        <div>
-          <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-18 emotion-5"
-            type="button"
-          >
-            <div>
-              请选择
-            </div>
-            <i
-              class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
-            />
-          </button>
+        <div
+          class=" emotion-6 emotion-7"
+        >
+          <div>
+            <button
+              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-18 emotion-5"
+              type="button"
+            >
+              <div>
+                请选择
+              </div>
+              <i
+                class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+              />
+            </button>
+          </div>
         </div>
       </div>
-      <span
-        class="uc-fe-input uc-fe-combine-item test_cls uc-fe-compact-controller emotion-24 emotion-11"
+      <div
+        class="uc-fe-combine-item"
       >
         <span
-          class="emotion-8 emotion-9"
+          class="uc-fe-input emotion-24 emotion-11"
         >
-          <input />
+          <span
+            class="emotion-8 emotion-9"
+          >
+            <input />
+          </span>
         </span>
-      </span>
+      </div>
     </div>
   </div>
 </div>

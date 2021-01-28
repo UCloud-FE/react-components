@@ -123,25 +123,24 @@ exports[`EditableList demo -- addition 1`] = `
   width: 100%;
 }
 
-.emotion-12 {
-  position: relative;
-}
-
-.emotion-12 > .uc-fe-combine-item {
+.emotion-12 > .uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 12px;
-}
-
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-12 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-12 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 .emotion-10 {
@@ -362,25 +361,24 @@ exports[`EditableList demo -- addition 1`] = `
   width: 100%;
 }
 
-.emotion-12 {
-  position: relative;
-}
-
-.emotion-12 > .uc-fe-combine-item {
+.emotion-12 > .uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 12px;
-}
-
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-12 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-12 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 .emotion-10 {
@@ -530,22 +528,29 @@ exports[`EditableList demo -- addition 1`] = `
               class="uc-fe-combine emotion-12 emotion-13"
               spacing="md"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-10 emotion-1"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-8 emotion-9"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-10 emotion-1"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-8 emotion-9"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
+              />
             </div>
           </div>
         </div>
@@ -574,22 +579,29 @@ exports[`EditableList demo -- addition 1`] = `
               class="uc-fe-combine emotion-12 emotion-13"
               spacing="md"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-10 emotion-1"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-8 emotion-9"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-10 emotion-1"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-8 emotion-9"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
+              />
             </div>
           </div>
         </div>
@@ -645,22 +657,29 @@ exports[`EditableList demo -- addition 1`] = `
               class="uc-fe-combine emotion-12 emotion-13"
               spacing="md"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-10 emotion-1"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-8 emotion-9"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-10 emotion-1"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-8 emotion-9"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
+              />
             </div>
           </div>
         </div>
@@ -689,37 +708,45 @@ exports[`EditableList demo -- addition 1`] = `
               class="uc-fe-combine emotion-12 emotion-13"
               spacing="md"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-10 emotion-1"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-8 emotion-9"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-10 emotion-1"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-10 emotion-1"
-                shape="square"
-                type="button"
+                  <svg
+                    class=" emotion-8 emotion-9"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-8 emotion-9"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-10 emotion-1"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-8 emotion-9"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -776,22 +803,29 @@ exports[`EditableList demo -- addition 1`] = `
               class="uc-fe-combine emotion-12 emotion-13"
               spacing="md"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-10 emotion-1"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-8 emotion-9"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-10 emotion-1"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-8 emotion-9"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
+              />
             </div>
           </div>
         </div>
@@ -820,22 +854,29 @@ exports[`EditableList demo -- addition 1`] = `
               class="uc-fe-combine emotion-12 emotion-13"
               spacing="md"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-10 emotion-1"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-8 emotion-9"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-10 emotion-1"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-8 emotion-9"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
+              />
             </div>
           </div>
         </div>
@@ -939,25 +980,24 @@ exports[`EditableList demo -- demo 1`] = `
   width: 100%;
 }
 
-.emotion-4 {
-  position: relative;
-}
-
-.emotion-4 > .uc-fe-combine-item {
+.emotion-4 > .uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 12px;
-}
-
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-4 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-4 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 .emotion-12 {
@@ -1192,25 +1232,24 @@ exports[`EditableList demo -- demo 1`] = `
   width: 100%;
 }
 
-.emotion-4 {
-  position: relative;
-}
-
-.emotion-4 > .uc-fe-combine-item {
+.emotion-4 > .uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 12px;
-}
-
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-4 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-4 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 .emotion-12 {
@@ -1386,7 +1425,14 @@ exports[`EditableList demo -- demo 1`] = `
           <div
             class="uc-fe-combine emotion-4 emotion-5"
             spacing="md"
-          />
+          >
+            <div
+              class="uc-fe-combine-item"
+            />
+            <div
+              class="uc-fe-combine-item"
+            />
+          </div>
         </div>
       </div>
       <div
@@ -1414,21 +1460,28 @@ exports[`EditableList demo -- demo 1`] = `
             class="uc-fe-combine emotion-4 emotion-5"
             spacing="md"
           >
-            <button
-              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-12 emotion-13"
-              shape="square"
-              type="button"
+            <div
+              class="uc-fe-combine-item"
+            />
+            <div
+              class="uc-fe-combine-item"
             >
-              <svg
-                class=" emotion-10 emotion-11"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+              <button
+                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-12 emotion-13"
+                shape="square"
+                type="button"
               >
-                <path
-                  d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
-                />
-              </svg>
-            </button>
+                <svg
+                  class=" emotion-10 emotion-11"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -2820,25 +2873,24 @@ exports[`EditableList demo -- grid 1`] = `
   width: 100%;
 }
 
-.emotion-8 {
-  position: relative;
-}
-
-.emotion-8 > .uc-fe-combine-item {
+.emotion-8 > .uc-fe-combine-item,
+.emotion-8 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-8 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 12px;
-}
-
-.emotion-8 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-8 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-8 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-8 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-8 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-8 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-8 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 .emotion-6 {
@@ -3060,25 +3112,24 @@ exports[`EditableList demo -- grid 1`] = `
   width: 100%;
 }
 
-.emotion-8 {
-  position: relative;
-}
-
-.emotion-8 > .uc-fe-combine-item {
+.emotion-8 > .uc-fe-combine-item,
+.emotion-8 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-8 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 12px;
-}
-
-.emotion-8 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-8 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-8 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-8 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-8 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-8 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-8 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 .emotion-6 {
@@ -3243,22 +3294,29 @@ exports[`EditableList demo -- grid 1`] = `
               class="uc-fe-combine emotion-8 emotion-9"
               spacing="md"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-6 emotion-7"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-4 emotion-5"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-4 emotion-5"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
+              />
             </div>
           </div>
         </div>
@@ -3287,22 +3345,29 @@ exports[`EditableList demo -- grid 1`] = `
               class="uc-fe-combine emotion-8 emotion-9"
               spacing="md"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-6 emotion-7"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-4 emotion-5"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-4 emotion-5"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
+              />
             </div>
           </div>
         </div>
@@ -3331,22 +3396,29 @@ exports[`EditableList demo -- grid 1`] = `
               class="uc-fe-combine emotion-8 emotion-9"
               spacing="md"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-6 emotion-7"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-4 emotion-5"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-4 emotion-5"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
+              />
             </div>
           </div>
         </div>
@@ -3375,22 +3447,29 @@ exports[`EditableList demo -- grid 1`] = `
               class="uc-fe-combine emotion-8 emotion-9"
               spacing="md"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-6 emotion-7"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-4 emotion-5"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-4 emotion-5"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
+              />
             </div>
           </div>
         </div>
@@ -3419,37 +3498,45 @@ exports[`EditableList demo -- grid 1`] = `
               class="uc-fe-combine emotion-8 emotion-9"
               spacing="md"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-6 emotion-7"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-4 emotion-5"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-6 emotion-7"
-                shape="square"
-                type="button"
+                  <svg
+                    class=" emotion-4 emotion-5"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-4 emotion-5"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-4 emotion-5"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -3493,22 +3580,29 @@ exports[`EditableList demo -- grid 1`] = `
               class="uc-fe-combine emotion-8 emotion-9"
               spacing="md"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-6 emotion-7"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-4 emotion-5"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-4 emotion-5"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
+              />
             </div>
           </div>
         </div>
@@ -3539,22 +3633,29 @@ exports[`EditableList demo -- grid 1`] = `
               class="uc-fe-combine emotion-8 emotion-9"
               spacing="md"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-6 emotion-7"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-4 emotion-5"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-4 emotion-5"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
+              />
             </div>
           </div>
         </div>
@@ -3585,22 +3686,29 @@ exports[`EditableList demo -- grid 1`] = `
               class="uc-fe-combine emotion-8 emotion-9"
               spacing="md"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-6 emotion-7"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-4 emotion-5"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-4 emotion-5"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
+              />
             </div>
           </div>
         </div>
@@ -3631,22 +3739,29 @@ exports[`EditableList demo -- grid 1`] = `
               class="uc-fe-combine emotion-8 emotion-9"
               spacing="md"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-6 emotion-7"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-4 emotion-5"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-4 emotion-5"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
+              />
             </div>
           </div>
         </div>
@@ -3677,37 +3792,45 @@ exports[`EditableList demo -- grid 1`] = `
               class="uc-fe-combine emotion-8 emotion-9"
               spacing="md"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-6 emotion-7"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-4 emotion-5"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-6 emotion-7"
-                shape="square"
-                type="button"
+                  <svg
+                    class=" emotion-4 emotion-5"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-4 emotion-5"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-4 emotion-5"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -3752,22 +3875,29 @@ exports[`EditableList demo -- grid 1`] = `
               class="uc-fe-combine emotion-8 emotion-9"
               spacing="md"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-6 emotion-7"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-4 emotion-5"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-4 emotion-5"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
+              />
             </div>
           </div>
         </div>
@@ -3799,22 +3929,29 @@ exports[`EditableList demo -- grid 1`] = `
               class="uc-fe-combine emotion-8 emotion-9"
               spacing="md"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-6 emotion-7"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-4 emotion-5"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-4 emotion-5"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
+              />
             </div>
           </div>
         </div>
@@ -3846,22 +3983,29 @@ exports[`EditableList demo -- grid 1`] = `
               class="uc-fe-combine emotion-8 emotion-9"
               spacing="md"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-6 emotion-7"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-4 emotion-5"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-4 emotion-5"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
+              />
             </div>
           </div>
         </div>
@@ -3893,22 +4037,29 @@ exports[`EditableList demo -- grid 1`] = `
               class="uc-fe-combine emotion-8 emotion-9"
               spacing="md"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-6 emotion-7"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-4 emotion-5"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-4 emotion-5"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
+              />
             </div>
           </div>
         </div>
@@ -3940,37 +4091,45 @@ exports[`EditableList demo -- grid 1`] = `
               class="uc-fe-combine emotion-8 emotion-9"
               spacing="md"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-6 emotion-7"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-4 emotion-5"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-6 emotion-7"
-                shape="square"
-                type="button"
+                  <svg
+                    class=" emotion-4 emotion-5"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-4 emotion-5"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-4 emotion-5"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -4074,25 +4233,24 @@ exports[`EditableList demo -- itemDeletion 1`] = `
   width: 100%;
 }
 
-.emotion-4 {
-  position: relative;
-}
-
-.emotion-4 > .uc-fe-combine-item {
+.emotion-4 > .uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 12px;
-}
-
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-4 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-4 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 .emotion-30 {
@@ -4242,25 +4400,24 @@ exports[`EditableList demo -- itemDeletion 1`] = `
   width: 100%;
 }
 
-.emotion-4 {
-  position: relative;
-}
-
-.emotion-4 > .uc-fe-combine-item {
+.emotion-4 > .uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 12px;
-}
-
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-4 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-4 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 .emotion-30 {
@@ -4352,7 +4509,14 @@ exports[`EditableList demo -- itemDeletion 1`] = `
             <div
               class="uc-fe-combine emotion-4 emotion-5"
               spacing="md"
-            />
+            >
+              <div
+                class="uc-fe-combine-item"
+              />
+              <div
+                class="uc-fe-combine-item"
+              />
+            </div>
           </div>
         </div>
         <div
@@ -4379,7 +4543,14 @@ exports[`EditableList demo -- itemDeletion 1`] = `
             <div
               class="uc-fe-combine emotion-4 emotion-5"
               spacing="md"
-            />
+            >
+              <div
+                class="uc-fe-combine-item"
+              />
+              <div
+                class="uc-fe-combine-item"
+              />
+            </div>
           </div>
         </div>
         <div
@@ -4406,7 +4577,14 @@ exports[`EditableList demo -- itemDeletion 1`] = `
             <div
               class="uc-fe-combine emotion-4 emotion-5"
               spacing="md"
-            />
+            >
+              <div
+                class="uc-fe-combine-item"
+              />
+              <div
+                class="uc-fe-combine-item"
+              />
+            </div>
           </div>
         </div>
         <div
@@ -4433,7 +4611,14 @@ exports[`EditableList demo -- itemDeletion 1`] = `
             <div
               class="uc-fe-combine emotion-4 emotion-5"
               spacing="md"
-            />
+            >
+              <div
+                class="uc-fe-combine-item"
+              />
+              <div
+                class="uc-fe-combine-item"
+              />
+            </div>
           </div>
         </div>
         <div
@@ -4461,21 +4646,28 @@ exports[`EditableList demo -- itemDeletion 1`] = `
               class="uc-fe-combine emotion-4 emotion-5"
               spacing="md"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-30 emotion-31"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
+              />
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-28 emotion-29"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-30 emotion-31"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-28 emotion-29"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -4517,22 +4709,29 @@ exports[`EditableList demo -- itemDeletion 1`] = `
               class="uc-fe-combine emotion-4 emotion-5"
               spacing="md"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-30 emotion-31"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-28 emotion-29"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-30 emotion-31"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-28 emotion-29"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
+              />
             </div>
           </div>
         </div>
@@ -4561,22 +4760,29 @@ exports[`EditableList demo -- itemDeletion 1`] = `
               class="uc-fe-combine emotion-4 emotion-5"
               spacing="md"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-30 emotion-31"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-28 emotion-29"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-30 emotion-31"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-28 emotion-29"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
+              />
             </div>
           </div>
         </div>
@@ -4605,22 +4811,29 @@ exports[`EditableList demo -- itemDeletion 1`] = `
               class="uc-fe-combine emotion-4 emotion-5"
               spacing="md"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-30 emotion-31"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-28 emotion-29"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-30 emotion-31"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-28 emotion-29"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
+              />
             </div>
           </div>
         </div>
@@ -4649,22 +4862,29 @@ exports[`EditableList demo -- itemDeletion 1`] = `
               class="uc-fe-combine emotion-4 emotion-5"
               spacing="md"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-30 emotion-31"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-28 emotion-29"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-30 emotion-31"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-28 emotion-29"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
+              />
             </div>
           </div>
         </div>
@@ -4693,37 +4913,45 @@ exports[`EditableList demo -- itemDeletion 1`] = `
               class="uc-fe-combine emotion-4 emotion-5"
               spacing="md"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-30 emotion-31"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-28 emotion-29"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-30 emotion-31"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-30 emotion-31"
-                shape="square"
-                type="button"
+                  <svg
+                    class=" emotion-28 emotion-29"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-28 emotion-29"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-30 emotion-31"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-28 emotion-29"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -4765,22 +4993,29 @@ exports[`EditableList demo -- itemDeletion 1`] = `
               class="uc-fe-combine emotion-4 emotion-5"
               spacing="md"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-30 emotion-31"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-28 emotion-29"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-30 emotion-31"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-28 emotion-29"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
+              />
             </div>
           </div>
         </div>
@@ -4808,7 +5043,14 @@ exports[`EditableList demo -- itemDeletion 1`] = `
             <div
               class="uc-fe-combine emotion-4 emotion-5"
               spacing="md"
-            />
+            >
+              <div
+                class="uc-fe-combine-item"
+              />
+              <div
+                class="uc-fe-combine-item"
+              />
+            </div>
           </div>
         </div>
         <div
@@ -4836,22 +5078,29 @@ exports[`EditableList demo -- itemDeletion 1`] = `
               class="uc-fe-combine emotion-4 emotion-5"
               spacing="md"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-30 emotion-31"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-28 emotion-29"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-30 emotion-31"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-28 emotion-29"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
+              />
             </div>
           </div>
         </div>
@@ -4879,7 +5128,14 @@ exports[`EditableList demo -- itemDeletion 1`] = `
             <div
               class="uc-fe-combine emotion-4 emotion-5"
               spacing="md"
-            />
+            >
+              <div
+                class="uc-fe-combine-item"
+              />
+              <div
+                class="uc-fe-combine-item"
+              />
+            </div>
           </div>
         </div>
         <div
@@ -4907,37 +5163,45 @@ exports[`EditableList demo -- itemDeletion 1`] = `
               class="uc-fe-combine emotion-4 emotion-5"
               spacing="md"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-30 emotion-31"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-28 emotion-29"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-30 emotion-31"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-30 emotion-31"
-                shape="square"
-                type="button"
+                  <svg
+                    class=" emotion-28 emotion-29"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-28 emotion-29"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-30 emotion-31"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-28 emotion-29"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -5041,25 +5305,24 @@ exports[`EditableList demo -- size 1`] = `
   width: 100%;
 }
 
-.emotion-42 {
-  position: relative;
-}
-
-.emotion-42 > .uc-fe-combine-item {
+.emotion-42 > .uc-fe-combine-item,
+.emotion-42 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-42 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 12px;
-}
-
-.emotion-42 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-42 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-42 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-42 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-42 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-42 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-42 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 .emotion-40 {
@@ -5270,25 +5533,24 @@ exports[`EditableList demo -- size 1`] = `
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-12 {
-  position: relative;
-}
-
-.emotion-12 > .uc-fe-combine-item {
+.emotion-12 > .uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 8px;
-}
-
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-12 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-12 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 4px;
 }
 
 .emotion-10 {
@@ -5446,6 +5708,26 @@ exports[`EditableList demo -- size 1`] = `
 .emotion-66 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
+}
+
+.emotion-72 > .uc-fe-combine-item,
+.emotion-72 > .uc-fe-combine-separator {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.emotion-72 > .uc-fe-combine-item:focus {
+  z-index: 2;
+}
+
+.emotion-72 > .uc-fe-combine-item:hover {
+  z-index: 3;
+}
+
+.emotion-72 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-72 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-72 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 12px;
 }
 
 .emotion-70 {
@@ -5586,25 +5868,24 @@ exports[`EditableList demo -- size 1`] = `
   width: 100%;
 }
 
-.emotion-42 {
-  position: relative;
-}
-
-.emotion-42 > .uc-fe-combine-item {
+.emotion-42 > .uc-fe-combine-item,
+.emotion-42 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-42 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 12px;
-}
-
-.emotion-42 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-42 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-42 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-42 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-42 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-42 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-42 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 .emotion-40 {
@@ -5815,25 +6096,24 @@ exports[`EditableList demo -- size 1`] = `
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-12 {
-  position: relative;
-}
-
-.emotion-12 > .uc-fe-combine-item {
+.emotion-12 > .uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 8px;
-}
-
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-12 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-12 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 4px;
 }
 
 .emotion-10 {
@@ -5993,6 +6273,26 @@ exports[`EditableList demo -- size 1`] = `
   color: rgba(10,22,51,0.20);
 }
 
+.emotion-72 > .uc-fe-combine-item,
+.emotion-72 > .uc-fe-combine-separator {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.emotion-72 > .uc-fe-combine-item:focus {
+  z-index: 2;
+}
+
+.emotion-72 > .uc-fe-combine-item:hover {
+  z-index: 3;
+}
+
+.emotion-72 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-72 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-72 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 12px;
+}
+
 .emotion-70 {
   margin: 0;
   box-sizing: border-box;
@@ -6088,22 +6388,29 @@ exports[`EditableList demo -- size 1`] = `
               class="uc-fe-combine emotion-12 emotion-13"
               spacing="sm"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-10 emotion-1"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-8 emotion-9"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border uc-fe-button-square emotion-10 emotion-1"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-8 emotion-9"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
+              />
             </div>
           </div>
         </div>
@@ -6132,37 +6439,45 @@ exports[`EditableList demo -- size 1`] = `
               class="uc-fe-combine emotion-12 emotion-13"
               spacing="sm"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-10 emotion-1"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-8 emotion-9"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border uc-fe-button-square emotion-10 emotion-1"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
-              <button
-                class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-10 emotion-1"
-                shape="square"
-                type="button"
+                  <svg
+                    class=" emotion-8 emotion-9"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-8 emotion-9"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border uc-fe-button-square emotion-10 emotion-1"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-8 emotion-9"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -6218,22 +6533,29 @@ exports[`EditableList demo -- size 1`] = `
               class="uc-fe-combine emotion-42 emotion-13"
               spacing="md"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-40 emotion-1"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-8 emotion-9"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-40 emotion-1"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-8 emotion-9"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
+              />
             </div>
           </div>
         </div>
@@ -6262,37 +6584,45 @@ exports[`EditableList demo -- size 1`] = `
               class="uc-fe-combine emotion-42 emotion-13"
               spacing="md"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-40 emotion-1"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-8 emotion-9"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-40 emotion-1"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-40 emotion-1"
-                shape="square"
-                type="button"
+                  <svg
+                    class=" emotion-8 emotion-9"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-8 emotion-9"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-40 emotion-1"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-8 emotion-9"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -6345,25 +6675,32 @@ exports[`EditableList demo -- size 1`] = `
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-42 emotion-13"
+              class="uc-fe-combine emotion-72 emotion-13"
               spacing="lg"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-lg uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-70 emotion-1"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-8 emotion-9"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-lg uc-fe-button-styletype-border uc-fe-button-square emotion-70 emotion-1"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-8 emotion-9"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
+              />
             </div>
           </div>
         </div>
@@ -6389,40 +6726,48 @@ exports[`EditableList demo -- size 1`] = `
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-42 emotion-13"
+              class="uc-fe-combine emotion-72 emotion-13"
               spacing="lg"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-lg uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-70 emotion-1"
-                shape="square"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-8 emotion-9"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-lg uc-fe-button-styletype-border uc-fe-button-square emotion-70 emotion-1"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
-                    transform="rotate(90 12 12)"
-                  />
-                </svg>
-              </button>
-              <button
-                class="uc-fe-button uc-fe-button-size-lg uc-fe-button-styletype-border uc-fe-button-square uc-fe-combine-item emotion-70 emotion-1"
-                shape="square"
-                type="button"
+                  <svg
+                    class=" emotion-8 emotion-9"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                      transform="rotate(90 12 12)"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
               >
-                <svg
-                  class=" emotion-8 emotion-9"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+                <button
+                  class="uc-fe-button uc-fe-button-size-lg uc-fe-button-styletype-border uc-fe-button-square emotion-70 emotion-1"
+                  shape="square"
+                  type="button"
                 >
-                  <path
-                    d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-8 emotion-9"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>

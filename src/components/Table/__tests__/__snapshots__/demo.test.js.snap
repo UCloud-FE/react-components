@@ -4272,25 +4272,24 @@ exports[`Table demo -- base 1`] = `
   margin-right: 0px;
 }
 
-.emotion-22 {
-  position: relative;
-}
-
-.emotion-22 > .uc-fe-combine-item {
+.emotion-22 > .uc-fe-combine-item,
+.emotion-22 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-22 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 12px;
-}
-
-.emotion-22 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-22 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-22 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-22 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-22 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-22 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-22 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 .emotion-2 {
@@ -5202,25 +5201,24 @@ exports[`Table demo -- base 1`] = `
   margin-right: 0px;
 }
 
-.emotion-22 {
-  position: relative;
-}
-
-.emotion-22 > .uc-fe-combine-item {
+.emotion-22 > .uc-fe-combine-item,
+.emotion-22 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-22 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 12px;
-}
-
-.emotion-22 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-22 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-22 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-22 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-22 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-22 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-22 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 .emotion-2 {
@@ -5526,52 +5524,72 @@ exports[`Table demo -- base 1`] = `
           class="uc-fe-combine emotion-22 emotion-23"
           spacing="md"
         >
-          <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary uc-fe-combine-item emotion-2 emotion-3"
-            type="button"
-          >
-            新增
-          </button>
-          <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-disabled uc-fe-combine-item emotion-4 emotion-3"
-            disabled=""
-            type="button"
-          >
-            删除
-          </button>
           <div
-            class="uc-fe-combine uc-fe-combine-item emotion-22 emotion-23"
-            spacing="md"
-            style="float:right"
+            class="uc-fe-combine-item"
           >
-            <span
-              class="uc-fe-input uc-fe-combine-item emotion-13 emotion-14"
+            <button
+              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-2 emotion-3"
+              type="button"
             >
-              <span
-                class="emotion-11 emotion-12"
+              新增
+            </button>
+          </div>
+          <div
+            class="uc-fe-combine-item"
+          >
+            <button
+              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-disabled emotion-4 emotion-3"
+              disabled=""
+              type="button"
+            >
+              删除
+            </button>
+          </div>
+          <div
+            class="uc-fe-combine-item"
+          >
+            <div
+              class="uc-fe-combine emotion-22 emotion-23"
+              spacing="md"
+              style="float:right"
+            >
+              <div
+                class="uc-fe-combine-item"
               >
-                <input />
                 <span
-                  class="emotion-9 emotion-10"
+                  class="uc-fe-input emotion-13 emotion-14"
                 >
-                  <i
-                    class="uc-fe-icon icon__search emotion-6 emotion-7 emotion-8"
-                  />
+                  <span
+                    class="emotion-11 emotion-12"
+                  >
+                    <input />
+                    <span
+                      class="emotion-9 emotion-10"
+                    >
+                      <i
+                        class="uc-fe-icon icon__search emotion-6 emotion-7 emotion-8"
+                      />
+                    </span>
+                  </span>
                 </span>
-              </span>
-            </span>
-            <span
-              class="uc-fe-combine-item emotion-20 emotion-21"
-            >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-17 emotion-18 emotion-3"
-                type="button"
+              </div>
+              <div
+                class="uc-fe-combine-item"
               >
-                <i
-                  class="uc-fe-icon icon__cog uc-fe-button-icon emotion-15 emotion-8"
-                />
-              </button>
-            </span>
+                <span
+                  class="emotion-20 emotion-21"
+                >
+                  <button
+                    class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-17 emotion-18 emotion-3"
+                    type="button"
+                  >
+                    <i
+                      class="uc-fe-icon icon__cog uc-fe-button-icon emotion-15 emotion-8"
+                    />
+                  </button>
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -37369,25 +37387,24 @@ exports[`Table demo -- footer 1`] = `
   margin-right: 0px;
 }
 
-.emotion-6 {
-  position: relative;
-}
-
-.emotion-6 > .uc-fe-combine-item {
+.emotion-6 > .uc-fe-combine-item,
+.emotion-6 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 12px;
-}
-
-.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-6 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-6 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-6 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 .emotion-2 {
@@ -38083,25 +38100,24 @@ exports[`Table demo -- footer 1`] = `
   margin-right: 0px;
 }
 
-.emotion-6 {
-  position: relative;
-}
-
-.emotion-6 > .uc-fe-combine-item {
+.emotion-6 > .uc-fe-combine-item,
+.emotion-6 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 12px;
-}
-
-.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-6 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-6 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-6 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 .emotion-2 {
@@ -38721,18 +38737,26 @@ exports[`Table demo -- footer 1`] = `
         class="uc-fe-combine emotion-6 emotion-7"
         spacing="md"
       >
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary uc-fe-combine-item emotion-2 emotion-3"
-          type="button"
+        <div
+          class="uc-fe-combine-item"
         >
-          Add
-        </button>
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-combine-item emotion-4 emotion-3"
-          type="button"
+          <button
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-2 emotion-3"
+            type="button"
+          >
+            Add
+          </button>
+        </div>
+        <div
+          class="uc-fe-combine-item"
         >
-          Rmove
-        </button>
+          <button
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-4 emotion-3"
+            type="button"
+          >
+            Rmove
+          </button>
+        </div>
       </div>
       <ul
         class="uc-fe-pagination uc-fe-table-pagination uc-fe-pagination-sm emotion-24 emotion-25"
@@ -45140,25 +45164,24 @@ exports[`Table demo -- hoverDisplayArea 1`] = `
   margin-right: 0px;
 }
 
-.emotion-4 {
-  position: relative;
-}
-
-.emotion-4 > .uc-fe-combine-item {
+.emotion-4 > .uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 12px;
-}
-
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-4 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-4 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 .emotion-2 {
@@ -45777,25 +45800,24 @@ exports[`Table demo -- hoverDisplayArea 1`] = `
   margin-right: 0px;
 }
 
-.emotion-4 {
-  position: relative;
-}
-
-.emotion-4 > .uc-fe-combine-item {
+.emotion-4 > .uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 12px;
-}
-
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-4 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-4 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 <div>
@@ -45882,18 +45904,24 @@ exports[`Table demo -- hoverDisplayArea 1`] = `
                       class="uc-fe-combine emotion-4 emotion-5"
                       spacing="md"
                     >
-                      <span
+                      <div
                         class="uc-fe-combine-item"
                       >
-                        content
-                      </span>
+                        <span>
+                          content
+                        </span>
+                      </div>
                       <div
-                        class="uc-fe-table-hover-display-area uc-fe-combine-item"
+                        class="uc-fe-combine-item"
                       >
-                        <i
-                          class="uc-fe-icon icon__edit emotion-2 emotion-3"
-                          style="cursor:pointer"
-                        />
+                        <div
+                          class="uc-fe-table-hover-display-area"
+                        >
+                          <i
+                            class="uc-fe-icon icon__edit emotion-2 emotion-3"
+                            style="cursor:pointer"
+                          />
+                        </div>
                       </div>
                     </div>
                   </td>
@@ -45904,36 +45932,48 @@ exports[`Table demo -- hoverDisplayArea 1`] = `
                       class="uc-fe-combine emotion-4 emotion-5"
                       spacing="md"
                     >
-                      <span
+                      <div
                         class="uc-fe-combine-item"
                       >
-                        content 1
-                      </span>
+                        <span>
+                          content 1
+                        </span>
+                      </div>
                       <div
-                        class="uc-fe-table-hover-display-area uc-fe-combine-item"
+                        class="uc-fe-combine-item"
                       >
-                        <i
-                          class="uc-fe-icon icon__edit emotion-2 emotion-3"
-                          style="cursor:pointer"
-                        />
+                        <div
+                          class="uc-fe-table-hover-display-area"
+                        >
+                          <i
+                            class="uc-fe-icon icon__edit emotion-2 emotion-3"
+                            style="cursor:pointer"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div
                       class="uc-fe-combine emotion-4 emotion-5"
                       spacing="md"
                     >
-                      <span
+                      <div
                         class="uc-fe-combine-item"
                       >
-                        content 2
-                      </span>
+                        <span>
+                          content 2
+                        </span>
+                      </div>
                       <div
-                        class="uc-fe-table-hover-display-area uc-fe-combine-item"
+                        class="uc-fe-combine-item"
                       >
-                        <i
-                          class="uc-fe-icon icon__edit emotion-2 emotion-3"
-                          style="cursor:pointer"
-                        />
+                        <div
+                          class="uc-fe-table-hover-display-area"
+                        >
+                          <i
+                            class="uc-fe-icon icon__edit emotion-2 emotion-3"
+                            style="cursor:pointer"
+                          />
+                        </div>
                       </div>
                     </div>
                   </td>
@@ -45960,18 +46000,24 @@ exports[`Table demo -- hoverDisplayArea 1`] = `
                       class="uc-fe-combine emotion-4 emotion-5"
                       spacing="md"
                     >
-                      <span
+                      <div
                         class="uc-fe-combine-item"
                       >
-                        content
-                      </span>
+                        <span>
+                          content
+                        </span>
+                      </div>
                       <div
-                        class="uc-fe-table-hover-display-area uc-fe-combine-item"
+                        class="uc-fe-combine-item"
                       >
-                        <i
-                          class="uc-fe-icon icon__edit emotion-2 emotion-3"
-                          style="cursor:pointer"
-                        />
+                        <div
+                          class="uc-fe-table-hover-display-area"
+                        >
+                          <i
+                            class="uc-fe-icon icon__edit emotion-2 emotion-3"
+                            style="cursor:pointer"
+                          />
+                        </div>
                       </div>
                     </div>
                   </td>
@@ -45982,36 +46028,48 @@ exports[`Table demo -- hoverDisplayArea 1`] = `
                       class="uc-fe-combine emotion-4 emotion-5"
                       spacing="md"
                     >
-                      <span
+                      <div
                         class="uc-fe-combine-item"
                       >
-                        content 1
-                      </span>
+                        <span>
+                          content 1
+                        </span>
+                      </div>
                       <div
-                        class="uc-fe-table-hover-display-area uc-fe-combine-item"
+                        class="uc-fe-combine-item"
                       >
-                        <i
-                          class="uc-fe-icon icon__edit emotion-2 emotion-3"
-                          style="cursor:pointer"
-                        />
+                        <div
+                          class="uc-fe-table-hover-display-area"
+                        >
+                          <i
+                            class="uc-fe-icon icon__edit emotion-2 emotion-3"
+                            style="cursor:pointer"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div
                       class="uc-fe-combine emotion-4 emotion-5"
                       spacing="md"
                     >
-                      <span
+                      <div
                         class="uc-fe-combine-item"
                       >
-                        content 2
-                      </span>
+                        <span>
+                          content 2
+                        </span>
+                      </div>
                       <div
-                        class="uc-fe-table-hover-display-area uc-fe-combine-item"
+                        class="uc-fe-combine-item"
                       >
-                        <i
-                          class="uc-fe-icon icon__edit emotion-2 emotion-3"
-                          style="cursor:pointer"
-                        />
+                        <div
+                          class="uc-fe-table-hover-display-area"
+                        >
+                          <i
+                            class="uc-fe-icon icon__edit emotion-2 emotion-3"
+                            style="cursor:pointer"
+                          />
+                        </div>
                       </div>
                     </div>
                   </td>
@@ -46038,18 +46096,24 @@ exports[`Table demo -- hoverDisplayArea 1`] = `
                       class="uc-fe-combine emotion-4 emotion-5"
                       spacing="md"
                     >
-                      <span
+                      <div
                         class="uc-fe-combine-item"
                       >
-                        content
-                      </span>
+                        <span>
+                          content
+                        </span>
+                      </div>
                       <div
-                        class="uc-fe-table-hover-display-area uc-fe-combine-item"
+                        class="uc-fe-combine-item"
                       >
-                        <i
-                          class="uc-fe-icon icon__edit emotion-2 emotion-3"
-                          style="cursor:pointer"
-                        />
+                        <div
+                          class="uc-fe-table-hover-display-area"
+                        >
+                          <i
+                            class="uc-fe-icon icon__edit emotion-2 emotion-3"
+                            style="cursor:pointer"
+                          />
+                        </div>
                       </div>
                     </div>
                   </td>
@@ -46060,36 +46124,48 @@ exports[`Table demo -- hoverDisplayArea 1`] = `
                       class="uc-fe-combine emotion-4 emotion-5"
                       spacing="md"
                     >
-                      <span
+                      <div
                         class="uc-fe-combine-item"
                       >
-                        content 1
-                      </span>
+                        <span>
+                          content 1
+                        </span>
+                      </div>
                       <div
-                        class="uc-fe-table-hover-display-area uc-fe-combine-item"
+                        class="uc-fe-combine-item"
                       >
-                        <i
-                          class="uc-fe-icon icon__edit emotion-2 emotion-3"
-                          style="cursor:pointer"
-                        />
+                        <div
+                          class="uc-fe-table-hover-display-area"
+                        >
+                          <i
+                            class="uc-fe-icon icon__edit emotion-2 emotion-3"
+                            style="cursor:pointer"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div
                       class="uc-fe-combine emotion-4 emotion-5"
                       spacing="md"
                     >
-                      <span
+                      <div
                         class="uc-fe-combine-item"
                       >
-                        content 2
-                      </span>
+                        <span>
+                          content 2
+                        </span>
+                      </div>
                       <div
-                        class="uc-fe-table-hover-display-area uc-fe-combine-item"
+                        class="uc-fe-combine-item"
                       >
-                        <i
-                          class="uc-fe-icon icon__edit emotion-2 emotion-3"
-                          style="cursor:pointer"
-                        />
+                        <div
+                          class="uc-fe-table-hover-display-area"
+                        >
+                          <i
+                            class="uc-fe-icon icon__edit emotion-2 emotion-3"
+                            style="cursor:pointer"
+                          />
+                        </div>
                       </div>
                     </div>
                   </td>
@@ -46116,18 +46192,24 @@ exports[`Table demo -- hoverDisplayArea 1`] = `
                       class="uc-fe-combine emotion-4 emotion-5"
                       spacing="md"
                     >
-                      <span
+                      <div
                         class="uc-fe-combine-item"
                       >
-                        content
-                      </span>
+                        <span>
+                          content
+                        </span>
+                      </div>
                       <div
-                        class="uc-fe-table-hover-display-area uc-fe-combine-item"
+                        class="uc-fe-combine-item"
                       >
-                        <i
-                          class="uc-fe-icon icon__edit emotion-2 emotion-3"
-                          style="cursor:pointer"
-                        />
+                        <div
+                          class="uc-fe-table-hover-display-area"
+                        >
+                          <i
+                            class="uc-fe-icon icon__edit emotion-2 emotion-3"
+                            style="cursor:pointer"
+                          />
+                        </div>
                       </div>
                     </div>
                   </td>
@@ -46138,36 +46220,48 @@ exports[`Table demo -- hoverDisplayArea 1`] = `
                       class="uc-fe-combine emotion-4 emotion-5"
                       spacing="md"
                     >
-                      <span
+                      <div
                         class="uc-fe-combine-item"
                       >
-                        content 1
-                      </span>
+                        <span>
+                          content 1
+                        </span>
+                      </div>
                       <div
-                        class="uc-fe-table-hover-display-area uc-fe-combine-item"
+                        class="uc-fe-combine-item"
                       >
-                        <i
-                          class="uc-fe-icon icon__edit emotion-2 emotion-3"
-                          style="cursor:pointer"
-                        />
+                        <div
+                          class="uc-fe-table-hover-display-area"
+                        >
+                          <i
+                            class="uc-fe-icon icon__edit emotion-2 emotion-3"
+                            style="cursor:pointer"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div
                       class="uc-fe-combine emotion-4 emotion-5"
                       spacing="md"
                     >
-                      <span
+                      <div
                         class="uc-fe-combine-item"
                       >
-                        content 2
-                      </span>
+                        <span>
+                          content 2
+                        </span>
+                      </div>
                       <div
-                        class="uc-fe-table-hover-display-area uc-fe-combine-item"
+                        class="uc-fe-combine-item"
                       >
-                        <i
-                          class="uc-fe-icon icon__edit emotion-2 emotion-3"
-                          style="cursor:pointer"
-                        />
+                        <div
+                          class="uc-fe-table-hover-display-area"
+                        >
+                          <i
+                            class="uc-fe-icon icon__edit emotion-2 emotion-3"
+                            style="cursor:pointer"
+                          />
+                        </div>
                       </div>
                     </div>
                   </td>
@@ -46194,18 +46288,24 @@ exports[`Table demo -- hoverDisplayArea 1`] = `
                       class="uc-fe-combine emotion-4 emotion-5"
                       spacing="md"
                     >
-                      <span
+                      <div
                         class="uc-fe-combine-item"
                       >
-                        content
-                      </span>
+                        <span>
+                          content
+                        </span>
+                      </div>
                       <div
-                        class="uc-fe-table-hover-display-area uc-fe-combine-item"
+                        class="uc-fe-combine-item"
                       >
-                        <i
-                          class="uc-fe-icon icon__edit emotion-2 emotion-3"
-                          style="cursor:pointer"
-                        />
+                        <div
+                          class="uc-fe-table-hover-display-area"
+                        >
+                          <i
+                            class="uc-fe-icon icon__edit emotion-2 emotion-3"
+                            style="cursor:pointer"
+                          />
+                        </div>
                       </div>
                     </div>
                   </td>
@@ -46216,36 +46316,48 @@ exports[`Table demo -- hoverDisplayArea 1`] = `
                       class="uc-fe-combine emotion-4 emotion-5"
                       spacing="md"
                     >
-                      <span
+                      <div
                         class="uc-fe-combine-item"
                       >
-                        content 1
-                      </span>
+                        <span>
+                          content 1
+                        </span>
+                      </div>
                       <div
-                        class="uc-fe-table-hover-display-area uc-fe-combine-item"
+                        class="uc-fe-combine-item"
                       >
-                        <i
-                          class="uc-fe-icon icon__edit emotion-2 emotion-3"
-                          style="cursor:pointer"
-                        />
+                        <div
+                          class="uc-fe-table-hover-display-area"
+                        >
+                          <i
+                            class="uc-fe-icon icon__edit emotion-2 emotion-3"
+                            style="cursor:pointer"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div
                       class="uc-fe-combine emotion-4 emotion-5"
                       spacing="md"
                     >
-                      <span
+                      <div
                         class="uc-fe-combine-item"
                       >
-                        content 2
-                      </span>
+                        <span>
+                          content 2
+                        </span>
+                      </div>
                       <div
-                        class="uc-fe-table-hover-display-area uc-fe-combine-item"
+                        class="uc-fe-combine-item"
                       >
-                        <i
-                          class="uc-fe-icon icon__edit emotion-2 emotion-3"
-                          style="cursor:pointer"
-                        />
+                        <div
+                          class="uc-fe-table-hover-display-area"
+                        >
+                          <i
+                            class="uc-fe-icon icon__edit emotion-2 emotion-3"
+                            style="cursor:pointer"
+                          />
+                        </div>
                       </div>
                     </div>
                   </td>
@@ -46272,18 +46384,24 @@ exports[`Table demo -- hoverDisplayArea 1`] = `
                       class="uc-fe-combine emotion-4 emotion-5"
                       spacing="md"
                     >
-                      <span
+                      <div
                         class="uc-fe-combine-item"
                       >
-                        content
-                      </span>
+                        <span>
+                          content
+                        </span>
+                      </div>
                       <div
-                        class="uc-fe-table-hover-display-area uc-fe-combine-item"
+                        class="uc-fe-combine-item"
                       >
-                        <i
-                          class="uc-fe-icon icon__edit emotion-2 emotion-3"
-                          style="cursor:pointer"
-                        />
+                        <div
+                          class="uc-fe-table-hover-display-area"
+                        >
+                          <i
+                            class="uc-fe-icon icon__edit emotion-2 emotion-3"
+                            style="cursor:pointer"
+                          />
+                        </div>
                       </div>
                     </div>
                   </td>
@@ -46294,36 +46412,48 @@ exports[`Table demo -- hoverDisplayArea 1`] = `
                       class="uc-fe-combine emotion-4 emotion-5"
                       spacing="md"
                     >
-                      <span
+                      <div
                         class="uc-fe-combine-item"
                       >
-                        content 1
-                      </span>
+                        <span>
+                          content 1
+                        </span>
+                      </div>
                       <div
-                        class="uc-fe-table-hover-display-area uc-fe-combine-item"
+                        class="uc-fe-combine-item"
                       >
-                        <i
-                          class="uc-fe-icon icon__edit emotion-2 emotion-3"
-                          style="cursor:pointer"
-                        />
+                        <div
+                          class="uc-fe-table-hover-display-area"
+                        >
+                          <i
+                            class="uc-fe-icon icon__edit emotion-2 emotion-3"
+                            style="cursor:pointer"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div
                       class="uc-fe-combine emotion-4 emotion-5"
                       spacing="md"
                     >
-                      <span
+                      <div
                         class="uc-fe-combine-item"
                       >
-                        content 2
-                      </span>
+                        <span>
+                          content 2
+                        </span>
+                      </div>
                       <div
-                        class="uc-fe-table-hover-display-area uc-fe-combine-item"
+                        class="uc-fe-combine-item"
                       >
-                        <i
-                          class="uc-fe-icon icon__edit emotion-2 emotion-3"
-                          style="cursor:pointer"
-                        />
+                        <div
+                          class="uc-fe-table-hover-display-area"
+                        >
+                          <i
+                            class="uc-fe-icon icon__edit emotion-2 emotion-3"
+                            style="cursor:pointer"
+                          />
+                        </div>
                       </div>
                     </div>
                   </td>
@@ -46350,18 +46480,24 @@ exports[`Table demo -- hoverDisplayArea 1`] = `
                       class="uc-fe-combine emotion-4 emotion-5"
                       spacing="md"
                     >
-                      <span
+                      <div
                         class="uc-fe-combine-item"
                       >
-                        content
-                      </span>
+                        <span>
+                          content
+                        </span>
+                      </div>
                       <div
-                        class="uc-fe-table-hover-display-area uc-fe-combine-item"
+                        class="uc-fe-combine-item"
                       >
-                        <i
-                          class="uc-fe-icon icon__edit emotion-2 emotion-3"
-                          style="cursor:pointer"
-                        />
+                        <div
+                          class="uc-fe-table-hover-display-area"
+                        >
+                          <i
+                            class="uc-fe-icon icon__edit emotion-2 emotion-3"
+                            style="cursor:pointer"
+                          />
+                        </div>
                       </div>
                     </div>
                   </td>
@@ -46372,36 +46508,48 @@ exports[`Table demo -- hoverDisplayArea 1`] = `
                       class="uc-fe-combine emotion-4 emotion-5"
                       spacing="md"
                     >
-                      <span
+                      <div
                         class="uc-fe-combine-item"
                       >
-                        content 1
-                      </span>
+                        <span>
+                          content 1
+                        </span>
+                      </div>
                       <div
-                        class="uc-fe-table-hover-display-area uc-fe-combine-item"
+                        class="uc-fe-combine-item"
                       >
-                        <i
-                          class="uc-fe-icon icon__edit emotion-2 emotion-3"
-                          style="cursor:pointer"
-                        />
+                        <div
+                          class="uc-fe-table-hover-display-area"
+                        >
+                          <i
+                            class="uc-fe-icon icon__edit emotion-2 emotion-3"
+                            style="cursor:pointer"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div
                       class="uc-fe-combine emotion-4 emotion-5"
                       spacing="md"
                     >
-                      <span
+                      <div
                         class="uc-fe-combine-item"
                       >
-                        content 2
-                      </span>
+                        <span>
+                          content 2
+                        </span>
+                      </div>
                       <div
-                        class="uc-fe-table-hover-display-area uc-fe-combine-item"
+                        class="uc-fe-combine-item"
                       >
-                        <i
-                          class="uc-fe-icon icon__edit emotion-2 emotion-3"
-                          style="cursor:pointer"
-                        />
+                        <div
+                          class="uc-fe-table-hover-display-area"
+                        >
+                          <i
+                            class="uc-fe-icon icon__edit emotion-2 emotion-3"
+                            style="cursor:pointer"
+                          />
+                        </div>
                       </div>
                     </div>
                   </td>
@@ -46428,18 +46576,24 @@ exports[`Table demo -- hoverDisplayArea 1`] = `
                       class="uc-fe-combine emotion-4 emotion-5"
                       spacing="md"
                     >
-                      <span
+                      <div
                         class="uc-fe-combine-item"
                       >
-                        content
-                      </span>
+                        <span>
+                          content
+                        </span>
+                      </div>
                       <div
-                        class="uc-fe-table-hover-display-area uc-fe-combine-item"
+                        class="uc-fe-combine-item"
                       >
-                        <i
-                          class="uc-fe-icon icon__edit emotion-2 emotion-3"
-                          style="cursor:pointer"
-                        />
+                        <div
+                          class="uc-fe-table-hover-display-area"
+                        >
+                          <i
+                            class="uc-fe-icon icon__edit emotion-2 emotion-3"
+                            style="cursor:pointer"
+                          />
+                        </div>
                       </div>
                     </div>
                   </td>
@@ -46450,36 +46604,48 @@ exports[`Table demo -- hoverDisplayArea 1`] = `
                       class="uc-fe-combine emotion-4 emotion-5"
                       spacing="md"
                     >
-                      <span
+                      <div
                         class="uc-fe-combine-item"
                       >
-                        content 1
-                      </span>
+                        <span>
+                          content 1
+                        </span>
+                      </div>
                       <div
-                        class="uc-fe-table-hover-display-area uc-fe-combine-item"
+                        class="uc-fe-combine-item"
                       >
-                        <i
-                          class="uc-fe-icon icon__edit emotion-2 emotion-3"
-                          style="cursor:pointer"
-                        />
+                        <div
+                          class="uc-fe-table-hover-display-area"
+                        >
+                          <i
+                            class="uc-fe-icon icon__edit emotion-2 emotion-3"
+                            style="cursor:pointer"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div
                       class="uc-fe-combine emotion-4 emotion-5"
                       spacing="md"
                     >
-                      <span
+                      <div
                         class="uc-fe-combine-item"
                       >
-                        content 2
-                      </span>
+                        <span>
+                          content 2
+                        </span>
+                      </div>
                       <div
-                        class="uc-fe-table-hover-display-area uc-fe-combine-item"
+                        class="uc-fe-combine-item"
                       >
-                        <i
-                          class="uc-fe-icon icon__edit emotion-2 emotion-3"
-                          style="cursor:pointer"
-                        />
+                        <div
+                          class="uc-fe-table-hover-display-area"
+                        >
+                          <i
+                            class="uc-fe-icon icon__edit emotion-2 emotion-3"
+                            style="cursor:pointer"
+                          />
+                        </div>
                       </div>
                     </div>
                   </td>
@@ -46506,18 +46672,24 @@ exports[`Table demo -- hoverDisplayArea 1`] = `
                       class="uc-fe-combine emotion-4 emotion-5"
                       spacing="md"
                     >
-                      <span
+                      <div
                         class="uc-fe-combine-item"
                       >
-                        content
-                      </span>
+                        <span>
+                          content
+                        </span>
+                      </div>
                       <div
-                        class="uc-fe-table-hover-display-area uc-fe-combine-item"
+                        class="uc-fe-combine-item"
                       >
-                        <i
-                          class="uc-fe-icon icon__edit emotion-2 emotion-3"
-                          style="cursor:pointer"
-                        />
+                        <div
+                          class="uc-fe-table-hover-display-area"
+                        >
+                          <i
+                            class="uc-fe-icon icon__edit emotion-2 emotion-3"
+                            style="cursor:pointer"
+                          />
+                        </div>
                       </div>
                     </div>
                   </td>
@@ -46528,36 +46700,48 @@ exports[`Table demo -- hoverDisplayArea 1`] = `
                       class="uc-fe-combine emotion-4 emotion-5"
                       spacing="md"
                     >
-                      <span
+                      <div
                         class="uc-fe-combine-item"
                       >
-                        content 1
-                      </span>
+                        <span>
+                          content 1
+                        </span>
+                      </div>
                       <div
-                        class="uc-fe-table-hover-display-area uc-fe-combine-item"
+                        class="uc-fe-combine-item"
                       >
-                        <i
-                          class="uc-fe-icon icon__edit emotion-2 emotion-3"
-                          style="cursor:pointer"
-                        />
+                        <div
+                          class="uc-fe-table-hover-display-area"
+                        >
+                          <i
+                            class="uc-fe-icon icon__edit emotion-2 emotion-3"
+                            style="cursor:pointer"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div
                       class="uc-fe-combine emotion-4 emotion-5"
                       spacing="md"
                     >
-                      <span
+                      <div
                         class="uc-fe-combine-item"
                       >
-                        content 2
-                      </span>
+                        <span>
+                          content 2
+                        </span>
+                      </div>
                       <div
-                        class="uc-fe-table-hover-display-area uc-fe-combine-item"
+                        class="uc-fe-combine-item"
                       >
-                        <i
-                          class="uc-fe-icon icon__edit emotion-2 emotion-3"
-                          style="cursor:pointer"
-                        />
+                        <div
+                          class="uc-fe-table-hover-display-area"
+                        >
+                          <i
+                            class="uc-fe-icon icon__edit emotion-2 emotion-3"
+                            style="cursor:pointer"
+                          />
+                        </div>
                       </div>
                     </div>
                   </td>
@@ -46584,18 +46768,24 @@ exports[`Table demo -- hoverDisplayArea 1`] = `
                       class="uc-fe-combine emotion-4 emotion-5"
                       spacing="md"
                     >
-                      <span
+                      <div
                         class="uc-fe-combine-item"
                       >
-                        content
-                      </span>
+                        <span>
+                          content
+                        </span>
+                      </div>
                       <div
-                        class="uc-fe-table-hover-display-area uc-fe-combine-item"
+                        class="uc-fe-combine-item"
                       >
-                        <i
-                          class="uc-fe-icon icon__edit emotion-2 emotion-3"
-                          style="cursor:pointer"
-                        />
+                        <div
+                          class="uc-fe-table-hover-display-area"
+                        >
+                          <i
+                            class="uc-fe-icon icon__edit emotion-2 emotion-3"
+                            style="cursor:pointer"
+                          />
+                        </div>
                       </div>
                     </div>
                   </td>
@@ -46606,36 +46796,48 @@ exports[`Table demo -- hoverDisplayArea 1`] = `
                       class="uc-fe-combine emotion-4 emotion-5"
                       spacing="md"
                     >
-                      <span
+                      <div
                         class="uc-fe-combine-item"
                       >
-                        content 1
-                      </span>
+                        <span>
+                          content 1
+                        </span>
+                      </div>
                       <div
-                        class="uc-fe-table-hover-display-area uc-fe-combine-item"
+                        class="uc-fe-combine-item"
                       >
-                        <i
-                          class="uc-fe-icon icon__edit emotion-2 emotion-3"
-                          style="cursor:pointer"
-                        />
+                        <div
+                          class="uc-fe-table-hover-display-area"
+                        >
+                          <i
+                            class="uc-fe-icon icon__edit emotion-2 emotion-3"
+                            style="cursor:pointer"
+                          />
+                        </div>
                       </div>
                     </div>
                     <div
                       class="uc-fe-combine emotion-4 emotion-5"
                       spacing="md"
                     >
-                      <span
+                      <div
                         class="uc-fe-combine-item"
                       >
-                        content 2
-                      </span>
+                        <span>
+                          content 2
+                        </span>
+                      </div>
                       <div
-                        class="uc-fe-table-hover-display-area uc-fe-combine-item"
+                        class="uc-fe-combine-item"
                       >
-                        <i
-                          class="uc-fe-icon icon__edit emotion-2 emotion-3"
-                          style="cursor:pointer"
-                        />
+                        <div
+                          class="uc-fe-table-hover-display-area"
+                        >
+                          <i
+                            class="uc-fe-icon icon__edit emotion-2 emotion-3"
+                            style="cursor:pointer"
+                          />
+                        </div>
                       </div>
                     </div>
                   </td>
@@ -90822,25 +91024,24 @@ exports[`Table demo -- title 1`] = `
   margin-right: 0px;
 }
 
-.emotion-6 {
-  position: relative;
-}
-
-.emotion-6 > .uc-fe-combine-item {
+.emotion-6 > .uc-fe-combine-item,
+.emotion-6 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 12px;
-}
-
-.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-6 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-6 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-6 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 .emotion-2 {
@@ -91536,25 +91737,24 @@ exports[`Table demo -- title 1`] = `
   margin-right: 0px;
 }
 
-.emotion-6 {
-  position: relative;
-}
-
-.emotion-6 > .uc-fe-combine-item {
+.emotion-6 > .uc-fe-combine-item,
+.emotion-6 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 12px;
-}
-
-.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-6 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-6 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-6 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 .emotion-2 {
@@ -91657,18 +91857,26 @@ exports[`Table demo -- title 1`] = `
               class="uc-fe-combine emotion-6 emotion-7"
               spacing="md"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary uc-fe-combine-item emotion-2 emotion-3"
-                type="button"
+              <div
+                class="uc-fe-combine-item"
               >
-                Add
-              </button>
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-combine-item emotion-4 emotion-3"
-                type="button"
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-2 emotion-3"
+                  type="button"
+                >
+                  Add
+                </button>
+              </div>
+              <div
+                class="uc-fe-combine-item"
               >
-                Rmove
-              </button>
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-4 emotion-3"
+                  type="button"
+                >
+                  Rmove
+                </button>
+              </div>
             </div>
           </div>
         </div>

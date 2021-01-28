@@ -303,25 +303,24 @@ exports[`Combine demo -- combine 1`] = `
   display: none;
 }
 
-.emotion-113 {
-  position: relative;
-}
-
-.emotion-113 > .uc-fe-combine-item {
+.emotion-113 > .uc-fe-combine-item,
+.emotion-113 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-113 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 12px;
-}
-
-.emotion-113 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-113 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-113 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-113 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-113 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-113 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-113 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 .emotion-107 {
@@ -763,25 +762,24 @@ exports[`Combine demo -- combine 1`] = `
   display: none;
 }
 
-.emotion-113 {
-  position: relative;
-}
-
-.emotion-113 > .uc-fe-combine-item {
+.emotion-113 > .uc-fe-combine-item,
+.emotion-113 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-113 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 12px;
-}
-
-.emotion-113 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-113 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-113 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-113 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-113 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-113 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-113 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 .emotion-107 {
@@ -1298,56 +1296,63 @@ exports[`Combine demo -- combine 1`] = `
       spacing="md"
     >
       <div
-        class="uc-fe-combine-item emotion-107 emotion-108"
+        class="uc-fe-combine-item"
       >
-        <div>
-          <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-104 emotion-105 emotion-106"
-            type="button"
-          >
-            <div>
-              请选择
-            </div>
-            <i
-              class="uc-fe-icon icon__down emotion-101 emotion-102 emotion-103"
-            />
-          </button>
+        <div
+          class=" emotion-107 emotion-108"
+        >
+          <div>
+            <button
+              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-104 emotion-105 emotion-106"
+              type="button"
+            >
+              <div>
+                请选择
+              </div>
+              <i
+                class="uc-fe-icon icon__down emotion-101 emotion-102 emotion-103"
+              />
+            </button>
+          </div>
         </div>
       </div>
-      <span
-        class="uc-fe-input uc-fe-combine-item emotion-111 emotion-112"
+      <div
+        class="uc-fe-combine-item"
       >
         <span
-          class="emotion-109 emotion-110"
+          class="uc-fe-input emotion-111 emotion-112"
         >
-          <input />
+          <span
+            class="emotion-109 emotion-110"
+          >
+            <input />
+          </span>
         </span>
-      </span>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`Combine demo -- demo 1`] = `
-.emotion-16 {
-  position: relative;
-}
-
-.emotion-16 > .uc-fe-combine-item {
+.emotion-16 > .uc-fe-combine-item,
+.emotion-16 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-16 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 12px;
-}
-
-.emotion-16 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-16 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-16 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-16 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-16 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-16 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-16 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 .emotion-6 {
@@ -1487,25 +1492,24 @@ exports[`Combine demo -- demo 1`] = `
   width: 100%;
 }
 
-.emotion-12 {
-  position: relative;
-}
-
-.emotion-12 > .uc-fe-combine-item {
+.emotion-12 > .uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: -1px;
-}
-
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-12 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-12 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: -1px;
 }
 
 .emotion-14 {
@@ -1630,25 +1634,24 @@ exports[`Combine demo -- demo 1`] = `
   vertical-align: baseline;
 }
 
-.emotion-16 {
-  position: relative;
-}
-
-.emotion-16 > .uc-fe-combine-item {
+.emotion-16 > .uc-fe-combine-item,
+.emotion-16 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-16 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 12px;
-}
-
-.emotion-16 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-16 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-16 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-16 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-16 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-16 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-16 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 .emotion-6 {
@@ -1788,25 +1791,24 @@ exports[`Combine demo -- demo 1`] = `
   width: 100%;
 }
 
-.emotion-12 {
-  position: relative;
-}
-
-.emotion-12 > .uc-fe-combine-item {
+.emotion-12 > .uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: -1px;
-}
-
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-12 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-12 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: -1px;
 }
 
 .emotion-14 {
@@ -1943,42 +1945,58 @@ exports[`Combine demo -- demo 1`] = `
       spacing="md"
     >
       <div
-        class="uc-fe-combine uc-fe-combine-item emotion-12 emotion-13"
-        spacing="compact"
+        class="uc-fe-combine-item"
       >
         <div
-          class="uc-fe-combine-item emotion-6 emotion-7"
+          class="uc-fe-combine emotion-12 emotion-13"
+          spacing="compact"
         >
-          <div>
-            <button
-              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-              type="button"
+          <div
+            class="uc-fe-combine-item"
+          >
+            <div
+              class=" emotion-6 emotion-7"
             >
               <div>
-                请选择
+                <button
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
+                  type="button"
+                >
+                  <div>
+                    请选择
+                  </div>
+                  <i
+                    class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+                  />
+                </button>
               </div>
-              <i
-                class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
-              />
-            </button>
+            </div>
+          </div>
+          <div
+            class="uc-fe-combine-item"
+          >
+            <span
+              class="uc-fe-input emotion-10 emotion-11"
+            >
+              <span
+                class="emotion-8 emotion-9"
+              >
+                <input />
+              </span>
+            </span>
           </div>
         </div>
-        <span
-          class="uc-fe-input uc-fe-combine-item emotion-10 emotion-11"
-        >
-          <span
-            class="emotion-8 emotion-9"
-          >
-            <input />
-          </span>
-        </span>
       </div>
-      <button
-        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary uc-fe-combine-item emotion-14 emotion-5"
-        type="button"
+      <div
+        class="uc-fe-combine-item"
       >
-        按钮
-      </button>
+        <button
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-14 emotion-5"
+          type="button"
+        >
+          按钮
+        </button>
+      </div>
     </div>
   </div>
   <h3>
@@ -1991,31 +2009,47 @@ exports[`Combine demo -- demo 1`] = `
       class="uc-fe-combine emotion-16 emotion-13"
       spacing="md"
     >
-      <button
-        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary uc-fe-combine-item emotion-14 emotion-5"
-        type="button"
+      <div
+        class="uc-fe-combine-item"
       >
-        按钮组展示
-      </button>
-      <button
-        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-combine-item emotion-20 emotion-5"
-        type="button"
+        <button
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-14 emotion-5"
+          type="button"
+        >
+          按钮组展示
+        </button>
+      </div>
+      <div
+        class="uc-fe-combine-item"
       >
-        按钮组展示
-      </button>
-      <button
-        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-combine-item emotion-20 emotion-5"
-        type="button"
+        <button
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-20 emotion-5"
+          type="button"
+        >
+          按钮组展示
+        </button>
+      </div>
+      <div
+        class="uc-fe-combine-item"
       >
-        按钮组展示
-      </button>
-      <button
-        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-disabled uc-fe-combine-item emotion-24 emotion-5"
-        disabled=""
-        type="button"
+        <button
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-20 emotion-5"
+          type="button"
+        >
+          按钮组展示
+        </button>
+      </div>
+      <div
+        class="uc-fe-combine-item"
       >
-        按钮组展示
-      </button>
+        <button
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-disabled emotion-24 emotion-5"
+          disabled=""
+          type="button"
+        >
+          按钮组展示
+        </button>
+      </div>
     </div>
   </div>
   <h3>
@@ -2028,77 +2062,96 @@ exports[`Combine demo -- demo 1`] = `
       class="uc-fe-combine emotion-16 emotion-13"
       spacing="md"
     >
-      <span
-        class="uc-fe-input uc-fe-combine-item emotion-10 emotion-11"
+      <div
+        class="uc-fe-combine-item"
       >
         <span
-          class="emotion-8 emotion-9"
+          class="uc-fe-input emotion-10 emotion-11"
         >
-          <input />
           <span
-            class="emotion-31 emotion-32"
+            class="emotion-8 emotion-9"
           >
-            <i
-              class="uc-fe-icon icon__search emotion-28 emotion-29 emotion-2"
-            />
+            <input />
+            <span
+              class="emotion-31 emotion-32"
+            >
+              <i
+                class="uc-fe-icon icon__search emotion-28 emotion-29 emotion-2"
+              />
+            </span>
           </span>
         </span>
-      </span>
-      <button
-        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-combine-item emotion-20 emotion-5"
-        type="button"
+      </div>
+      <div
+        class="uc-fe-combine-item"
       >
-        <i
-          class="uc-fe-icon icon__repeat uc-fe-button-icon emotion-37 emotion-2"
-        />
-      </button>
-      <button
-        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-combine-item emotion-20 emotion-5"
-        type="button"
+        <button
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-20 emotion-5"
+          type="button"
+        >
+          <i
+            class="uc-fe-icon icon__repeat uc-fe-button-icon emotion-37 emotion-2"
+          />
+        </button>
+      </div>
+      <div
+        class="uc-fe-combine-item"
       >
-        <i
-          class="uc-fe-icon icon__cog uc-fe-button-icon emotion-37 emotion-2"
-        />
-      </button>
-      <button
-        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-combine-item emotion-20 emotion-5"
-        type="button"
+        <button
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-20 emotion-5"
+          type="button"
+        >
+          <i
+            class="uc-fe-icon icon__cog uc-fe-button-icon emotion-37 emotion-2"
+          />
+        </button>
+      </div>
+      <div
+        class="uc-fe-combine-item"
       >
-        <i
-          class="uc-fe-icon icon__cloud-download uc-fe-button-icon emotion-37 emotion-2"
-        />
-      </button>
-      <button
-        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-combine-item emotion-20 emotion-5"
-        type="button"
+        <button
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-20 emotion-5"
+          type="button"
+        >
+          <i
+            class="uc-fe-icon icon__cloud-download uc-fe-button-icon emotion-37 emotion-2"
+          />
+        </button>
+      </div>
+      <div
+        class="uc-fe-combine-item"
       >
-        按钮
-      </button>
+        <button
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-20 emotion-5"
+          type="button"
+        >
+          按钮
+        </button>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`Combine demo -- separator 1`] = `
-.emotion-24 {
-  position: relative;
-}
-
-.emotion-24 > .uc-fe-combine-item {
+.emotion-24 > .uc-fe-combine-item,
+.emotion-24 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-24 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 12px;
-}
-
-.emotion-24 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-24 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-24 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-24 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-24 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-24 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-24 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 .emotion-6 {
@@ -2167,25 +2220,24 @@ exports[`Combine demo -- separator 1`] = `
   vertical-align: baseline;
 }
 
-.emotion-24 {
-  position: relative;
-}
-
-.emotion-24 > .uc-fe-combine-item {
+.emotion-24 > .uc-fe-combine-item,
+.emotion-24 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-24 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 12px;
-}
-
-.emotion-24 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-24 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-24 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-24 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-24 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-24 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-24 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 .emotion-6 {
@@ -2263,64 +2315,76 @@ exports[`Combine demo -- separator 1`] = `
       spacing="md"
     >
       <div
-        class="uc-fe-combine-item emotion-6 emotion-7"
+        class="uc-fe-combine-item"
       >
-        <div>
-          <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-            type="button"
-          >
-            <div>
-              请选择
-            </div>
-            <i
-              class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
-            />
-          </button>
+        <div
+          class=" emotion-6 emotion-7"
+        >
+          <div>
+            <button
+              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
+              type="button"
+            >
+              <div>
+                请选择
+              </div>
+              <i
+                class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+              />
+            </button>
+          </div>
         </div>
       </div>
       <span
-        class="uc-fe-combine-item"
+        class="uc-fe-combine-separator"
       >
         -
       </span>
       <div
-        class="uc-fe-combine-item emotion-6 emotion-7"
+        class="uc-fe-combine-item"
       >
-        <div>
-          <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-            type="button"
-          >
-            <div>
-              请选择
-            </div>
-            <i
-              class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
-            />
-          </button>
+        <div
+          class=" emotion-6 emotion-7"
+        >
+          <div>
+            <button
+              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
+              type="button"
+            >
+              <div>
+                请选择
+              </div>
+              <i
+                class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+              />
+            </button>
+          </div>
         </div>
       </div>
       <span
-        class="uc-fe-combine-item"
+        class="uc-fe-combine-separator"
       >
         -
       </span>
       <div
-        class="uc-fe-combine-item emotion-6 emotion-7"
+        class="uc-fe-combine-item"
       >
-        <div>
-          <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-            type="button"
-          >
-            <div>
-              请选择
-            </div>
-            <i
-              class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
-            />
-          </button>
+        <div
+          class=" emotion-6 emotion-7"
+        >
+          <div>
+            <button
+              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
+              type="button"
+            >
+              <div>
+                请选择
+              </div>
+              <i
+                class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+              />
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -2333,68 +2397,80 @@ exports[`Combine demo -- separator 1`] = `
       spacing="md"
     >
       <div
-        class="uc-fe-combine-item emotion-6 emotion-7"
+        class="uc-fe-combine-item"
       >
-        <div>
-          <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-            type="button"
-          >
-            <div>
-              请选择
-            </div>
-            <i
-              class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
-            />
-          </button>
+        <div
+          class=" emotion-6 emotion-7"
+        >
+          <div>
+            <button
+              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
+              type="button"
+            >
+              <div>
+                请选择
+              </div>
+              <i
+                class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+              />
+            </button>
+          </div>
         </div>
       </div>
       <span
-        class="uc-fe-combine-item"
+        class="uc-fe-combine-separator"
       >
         <i
           class="uc-fe-icon icon__arrow-right emotion-34 emotion-2"
         />
       </span>
       <div
-        class="uc-fe-combine-item emotion-6 emotion-7"
+        class="uc-fe-combine-item"
       >
-        <div>
-          <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-            type="button"
-          >
-            <div>
-              请选择
-            </div>
-            <i
-              class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
-            />
-          </button>
+        <div
+          class=" emotion-6 emotion-7"
+        >
+          <div>
+            <button
+              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
+              type="button"
+            >
+              <div>
+                请选择
+              </div>
+              <i
+                class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+              />
+            </button>
+          </div>
         </div>
       </div>
       <span
-        class="uc-fe-combine-item"
+        class="uc-fe-combine-separator"
       >
         <i
           class="uc-fe-icon icon__arrow-right emotion-34 emotion-2"
         />
       </span>
       <div
-        class="uc-fe-combine-item emotion-6 emotion-7"
+        class="uc-fe-combine-item"
       >
-        <div>
-          <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-            type="button"
-          >
-            <div>
-              请选择
-            </div>
-            <i
-              class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
-            />
-          </button>
+        <div
+          class=" emotion-6 emotion-7"
+        >
+          <div>
+            <button
+              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
+              type="button"
+            >
+              <div>
+                请选择
+              </div>
+              <i
+                class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+              />
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -2403,25 +2479,24 @@ exports[`Combine demo -- separator 1`] = `
 `;
 
 exports[`Combine demo -- sharedProps 1`] = `
-.emotion-26 {
-  position: relative;
-}
-
-.emotion-26 > .uc-fe-combine-item {
+.emotion-26 > .uc-fe-combine-item,
+.emotion-26 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-26 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 12px;
-}
-
-.emotion-26 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-26 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-26 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-26 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-26 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-26 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-26 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 .emotion-6 {
@@ -2561,25 +2636,24 @@ exports[`Combine demo -- sharedProps 1`] = `
   width: 100%;
 }
 
-.emotion-12 {
-  position: relative;
-}
-
-.emotion-12 > .uc-fe-combine-item {
+.emotion-12 > .uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 8px;
-}
-
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-12 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-12 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 4px;
 }
 
 .emotion-4 {
@@ -2697,25 +2771,24 @@ exports[`Combine demo -- sharedProps 1`] = `
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-26 {
-  position: relative;
-}
-
-.emotion-26 > .uc-fe-combine-item {
+.emotion-26 > .uc-fe-combine-item,
+.emotion-26 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-26 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 12px;
-}
-
-.emotion-26 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-26 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-26 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-26 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-26 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-26 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-26 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 .emotion-6 {
@@ -2855,25 +2928,24 @@ exports[`Combine demo -- sharedProps 1`] = `
   width: 100%;
 }
 
-.emotion-12 {
-  position: relative;
-}
-
-.emotion-12 > .uc-fe-combine-item {
+.emotion-12 > .uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 8px;
-}
-
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-12 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-12 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 4px;
 }
 
 .emotion-4 {
@@ -3000,31 +3072,39 @@ exports[`Combine demo -- sharedProps 1`] = `
       spacing="sm"
     >
       <div
-        class="uc-fe-combine-item emotion-6 emotion-7"
+        class="uc-fe-combine-item"
       >
-        <div>
-          <button
-            class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-            type="button"
-          >
-            <div>
-              请选择
-            </div>
-            <i
-              class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
-            />
-          </button>
+        <div
+          class=" emotion-6 emotion-7"
+        >
+          <div>
+            <button
+              class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
+              type="button"
+            >
+              <div>
+                请选择
+              </div>
+              <i
+                class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+              />
+            </button>
+          </div>
         </div>
       </div>
-      <span
-        class="uc-fe-input uc-fe-combine-item emotion-10 emotion-11"
+      <div
+        class="uc-fe-combine-item"
       >
         <span
-          class="emotion-8 emotion-9"
+          class="uc-fe-input emotion-10 emotion-11"
         >
-          <input />
+          <span
+            class="emotion-8 emotion-9"
+          >
+            <input />
+          </span>
         </span>
-      </span>
+      </div>
     </div>
   </div>
   <div
@@ -3035,56 +3115,63 @@ exports[`Combine demo -- sharedProps 1`] = `
       spacing="md"
     >
       <div
-        class="uc-fe-combine-item test_cls emotion-6 emotion-7"
+        class="uc-fe-combine-item"
       >
-        <div>
-          <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-18 emotion-5"
-            type="button"
-          >
-            <div>
-              请选择
-            </div>
-            <i
-              class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
-            />
-          </button>
+        <div
+          class=" emotion-6 emotion-7"
+        >
+          <div>
+            <button
+              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-18 emotion-5"
+              type="button"
+            >
+              <div>
+                请选择
+              </div>
+              <i
+                class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+              />
+            </button>
+          </div>
         </div>
       </div>
-      <span
-        class="uc-fe-input uc-fe-combine-item test_cls emotion-24 emotion-11"
+      <div
+        class="uc-fe-combine-item"
       >
         <span
-          class="emotion-8 emotion-9"
+          class="uc-fe-input emotion-24 emotion-11"
         >
-          <input />
+          <span
+            class="emotion-8 emotion-9"
+          >
+            <input />
+          </span>
         </span>
-      </span>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`Combine demo -- spacing 1`] = `
-.emotion-6 {
-  position: relative;
-}
-
-.emotion-6 > .uc-fe-combine-item {
+.emotion-6 > .uc-fe-combine-item,
+.emotion-6 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 12px;
-}
-
-.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-6 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-6 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-6 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 .emotion-62 {
@@ -3224,25 +3311,24 @@ exports[`Combine demo -- spacing 1`] = `
   width: 100%;
 }
 
-.emotion-68 {
-  position: relative;
-}
-
-.emotion-68 > .uc-fe-combine-item {
+.emotion-68 > .uc-fe-combine-item,
+.emotion-68 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-68 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: -1px;
-}
-
-.emotion-68 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-68 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-68 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-68 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-68 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-68 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-68 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: -1px;
 }
 
 .emotion-4 {
@@ -3280,25 +3366,24 @@ exports[`Combine demo -- spacing 1`] = `
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
 
-.emotion-14 {
-  position: relative;
-}
-
-.emotion-14 > .uc-fe-combine-item {
+.emotion-14 > .uc-fe-combine-item,
+.emotion-14 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-14 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 8px;
-}
-
-.emotion-14 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-14 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-14 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-14 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-14 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-14 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-14 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 4px;
 }
 
 .emotion-10 {
@@ -3406,6 +3491,26 @@ exports[`Combine demo -- spacing 1`] = `
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
 
+.emotion-30 > .uc-fe-combine-item,
+.emotion-30 > .uc-fe-combine-separator {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.emotion-30 > .uc-fe-combine-item:focus {
+  z-index: 2;
+}
+
+.emotion-30 > .uc-fe-combine-item:hover {
+  z-index: 3;
+}
+
+.emotion-30 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-30 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-30 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 12px;
+}
+
 .emotion-26 {
   position: relative;
   display: inline-block;
@@ -3511,46 +3616,44 @@ exports[`Combine demo -- spacing 1`] = `
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
 
-.emotion-76 {
-  position: relative;
-}
-
-.emotion-76 > .uc-fe-combine-item {
+.emotion-76 > .uc-fe-combine-item,
+.emotion-76 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-76 > .uc-fe-combine-item+.uc-fe-combine-item {
+.emotion-76 > .uc-fe-combine-item:focus {
+  z-index: 2;
+}
+
+.emotion-76 > .uc-fe-combine-item:hover {
+  z-index: 3;
+}
+
+.emotion-76 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-76 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-76 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 40px;
 }
 
-.emotion-76 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
-  z-index: 2;
-}
-
-.emotion-76 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
-  z-index: 3;
-}
-
-.emotion-6 {
-  position: relative;
-}
-
-.emotion-6 > .uc-fe-combine-item {
+.emotion-6 > .uc-fe-combine-item,
+.emotion-6 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 12px;
-}
-
-.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-6 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-6 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-6 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 .emotion-62 {
@@ -3690,25 +3793,24 @@ exports[`Combine demo -- spacing 1`] = `
   width: 100%;
 }
 
-.emotion-68 {
-  position: relative;
-}
-
-.emotion-68 > .uc-fe-combine-item {
+.emotion-68 > .uc-fe-combine-item,
+.emotion-68 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-68 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: -1px;
-}
-
-.emotion-68 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-68 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-68 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-68 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-68 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-68 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-68 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: -1px;
 }
 
 .emotion-4 {
@@ -3746,25 +3848,24 @@ exports[`Combine demo -- spacing 1`] = `
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
 
-.emotion-14 {
-  position: relative;
-}
-
-.emotion-14 > .uc-fe-combine-item {
+.emotion-14 > .uc-fe-combine-item,
+.emotion-14 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-14 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 8px;
-}
-
-.emotion-14 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-14 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-14 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-14 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-14 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-14 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-14 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 4px;
 }
 
 .emotion-10 {
@@ -3872,6 +3973,26 @@ exports[`Combine demo -- spacing 1`] = `
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
 
+.emotion-30 > .uc-fe-combine-item,
+.emotion-30 > .uc-fe-combine-separator {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.emotion-30 > .uc-fe-combine-item:focus {
+  z-index: 2;
+}
+
+.emotion-30 > .uc-fe-combine-item:hover {
+  z-index: 3;
+}
+
+.emotion-30 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-30 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-30 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 12px;
+}
+
 .emotion-26 {
   position: relative;
   display: inline-block;
@@ -3977,25 +4098,24 @@ exports[`Combine demo -- spacing 1`] = `
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
 
-.emotion-76 {
-  position: relative;
-}
-
-.emotion-76 > .uc-fe-combine-item {
+.emotion-76 > .uc-fe-combine-item,
+.emotion-76 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-76 > .uc-fe-combine-item+.uc-fe-combine-item {
-  margin-left: 40px;
-}
-
-.emotion-76 > .uc-fe-combine-item+.uc-fe-combine-item:focus {
+.emotion-76 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-76 > .uc-fe-combine-item+.uc-fe-combine-item:hover {
+.emotion-76 > .uc-fe-combine-item:hover {
   z-index: 3;
+}
+
+.emotion-76 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-76 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-76 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 40px;
 }
 
 <div>
@@ -4010,21 +4130,29 @@ exports[`Combine demo -- spacing 1`] = `
         class="uc-fe-combine emotion-6 emotion-7"
         spacing="md"
       >
-        <span
-          class="uc-fe-input uc-fe-combine-item emotion-2 emotion-3"
+        <div
+          class="uc-fe-combine-item"
         >
           <span
-            class="emotion-0 emotion-1"
+            class="uc-fe-input emotion-2 emotion-3"
           >
-            <input />
+            <span
+              class="emotion-0 emotion-1"
+            >
+              <input />
+            </span>
           </span>
-        </span>
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary uc-fe-combine-item emotion-4 emotion-5"
-          type="button"
+        </div>
+        <div
+          class="uc-fe-combine-item"
         >
-          按钮
-        </button>
+          <button
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-4 emotion-5"
+            type="button"
+          >
+            按钮
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -4039,21 +4167,29 @@ exports[`Combine demo -- spacing 1`] = `
         class="uc-fe-combine emotion-14 emotion-7"
         spacing="sm"
       >
-        <span
-          class="uc-fe-input uc-fe-combine-item emotion-10 emotion-3"
+        <div
+          class="uc-fe-combine-item"
         >
           <span
-            class="emotion-0 emotion-1"
+            class="uc-fe-input emotion-10 emotion-3"
           >
-            <input />
+            <span
+              class="emotion-0 emotion-1"
+            >
+              <input />
+            </span>
           </span>
-        </span>
-        <button
-          class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-primary uc-fe-combine-item emotion-12 emotion-5"
-          type="button"
+        </div>
+        <div
+          class="uc-fe-combine-item"
         >
-          按钮
-        </button>
+          <button
+            class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-primary emotion-12 emotion-5"
+            type="button"
+          >
+            按钮
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -4068,21 +4204,29 @@ exports[`Combine demo -- spacing 1`] = `
         class="uc-fe-combine emotion-6 emotion-7"
         spacing="md"
       >
-        <span
-          class="uc-fe-input uc-fe-combine-item emotion-2 emotion-3"
+        <div
+          class="uc-fe-combine-item"
         >
           <span
-            class="emotion-0 emotion-1"
+            class="uc-fe-input emotion-2 emotion-3"
           >
-            <input />
+            <span
+              class="emotion-0 emotion-1"
+            >
+              <input />
+            </span>
           </span>
-        </span>
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary uc-fe-combine-item emotion-4 emotion-5"
-          type="button"
+        </div>
+        <div
+          class="uc-fe-combine-item"
         >
-          按钮
-        </button>
+          <button
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-4 emotion-5"
+            type="button"
+          >
+            按钮
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -4094,24 +4238,32 @@ exports[`Combine demo -- spacing 1`] = `
       class="demo-wrap"
     >
       <div
-        class="uc-fe-combine emotion-6 emotion-7"
+        class="uc-fe-combine emotion-30 emotion-7"
         spacing="lg"
       >
-        <span
-          class="uc-fe-input uc-fe-combine-item emotion-26 emotion-3"
+        <div
+          class="uc-fe-combine-item"
         >
           <span
-            class="emotion-0 emotion-1"
+            class="uc-fe-input emotion-26 emotion-3"
           >
-            <input />
+            <span
+              class="emotion-0 emotion-1"
+            >
+              <input />
+            </span>
           </span>
-        </span>
-        <button
-          class="uc-fe-button uc-fe-button-size-lg uc-fe-button-styletype-primary uc-fe-combine-item emotion-28 emotion-5"
-          type="button"
+        </div>
+        <div
+          class="uc-fe-combine-item"
         >
-          按钮
-        </button>
+          <button
+            class="uc-fe-button uc-fe-button-size-lg uc-fe-button-styletype-primary emotion-28 emotion-5"
+            type="button"
+          >
+            按钮
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -4126,21 +4278,29 @@ exports[`Combine demo -- spacing 1`] = `
         class="uc-fe-combine emotion-14 emotion-7"
         spacing="sm"
       >
-        <span
-          class="uc-fe-input uc-fe-combine-item emotion-2 emotion-3"
+        <div
+          class="uc-fe-combine-item"
         >
           <span
-            class="emotion-0 emotion-1"
+            class="uc-fe-input emotion-2 emotion-3"
           >
-            <input />
+            <span
+              class="emotion-0 emotion-1"
+            >
+              <input />
+            </span>
           </span>
-        </span>
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary uc-fe-combine-item emotion-4 emotion-5"
-          type="button"
+        </div>
+        <div
+          class="uc-fe-combine-item"
         >
-          按钮
-        </button>
+          <button
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-4 emotion-5"
+            type="button"
+          >
+            按钮
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -4155,21 +4315,29 @@ exports[`Combine demo -- spacing 1`] = `
         class="uc-fe-combine emotion-6 emotion-7"
         spacing="md"
       >
-        <span
-          class="uc-fe-input uc-fe-combine-item emotion-2 emotion-3"
+        <div
+          class="uc-fe-combine-item"
         >
           <span
-            class="emotion-0 emotion-1"
+            class="uc-fe-input emotion-2 emotion-3"
           >
-            <input />
+            <span
+              class="emotion-0 emotion-1"
+            >
+              <input />
+            </span>
           </span>
-        </span>
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary uc-fe-combine-item emotion-4 emotion-5"
-          type="button"
+        </div>
+        <div
+          class="uc-fe-combine-item"
         >
-          按钮
-        </button>
+          <button
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-4 emotion-5"
+            type="button"
+          >
+            按钮
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -4181,24 +4349,32 @@ exports[`Combine demo -- spacing 1`] = `
       class="demo-wrap"
     >
       <div
-        class="uc-fe-combine emotion-6 emotion-7"
+        class="uc-fe-combine emotion-30 emotion-7"
         spacing="lg"
       >
-        <span
-          class="uc-fe-input uc-fe-combine-item emotion-2 emotion-3"
+        <div
+          class="uc-fe-combine-item"
         >
           <span
-            class="emotion-0 emotion-1"
+            class="uc-fe-input emotion-2 emotion-3"
           >
-            <input />
+            <span
+              class="emotion-0 emotion-1"
+            >
+              <input />
+            </span>
           </span>
-        </span>
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary uc-fe-combine-item emotion-4 emotion-5"
-          type="button"
+        </div>
+        <div
+          class="uc-fe-combine-item"
         >
-          按钮
-        </button>
+          <button
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-4 emotion-5"
+            type="button"
+          >
+            按钮
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -4213,31 +4389,39 @@ exports[`Combine demo -- spacing 1`] = `
       spacing="compact"
     >
       <div
-        class="uc-fe-combine-item emotion-62 emotion-63"
+        class="uc-fe-combine-item"
       >
-        <div>
-          <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-59 emotion-60 emotion-5"
-            type="button"
-          >
-            <div>
-              请选择
-            </div>
-            <i
-              class="uc-fe-icon icon__down emotion-56 emotion-57 emotion-58"
-            />
-          </button>
+        <div
+          class=" emotion-62 emotion-63"
+        >
+          <div>
+            <button
+              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-59 emotion-60 emotion-5"
+              type="button"
+            >
+              <div>
+                请选择
+              </div>
+              <i
+                class="uc-fe-icon icon__down emotion-56 emotion-57 emotion-58"
+              />
+            </button>
+          </div>
         </div>
       </div>
-      <span
-        class="uc-fe-input uc-fe-combine-item emotion-2 emotion-3"
+      <div
+        class="uc-fe-combine-item"
       >
         <span
-          class="emotion-0 emotion-1"
+          class="uc-fe-input emotion-2 emotion-3"
         >
-          <input />
+          <span
+            class="emotion-0 emotion-1"
+          >
+            <input />
+          </span>
         </span>
-      </span>
+      </div>
     </div>
   </div>
   <h3>
@@ -4250,21 +4434,29 @@ exports[`Combine demo -- spacing 1`] = `
       class="uc-fe-combine emotion-76 emotion-7"
       spacing="40px"
     >
-      <span
-        class="uc-fe-input uc-fe-combine-item emotion-2 emotion-3"
+      <div
+        class="uc-fe-combine-item"
       >
         <span
-          class="emotion-0 emotion-1"
+          class="uc-fe-input emotion-2 emotion-3"
         >
-          <input />
+          <span
+            class="emotion-0 emotion-1"
+          >
+            <input />
+          </span>
         </span>
-      </span>
-      <button
-        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary uc-fe-combine-item emotion-4 emotion-5"
-        type="button"
+      </div>
+      <div
+        class="uc-fe-combine-item"
       >
-        按钮
-      </button>
+        <button
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-4 emotion-5"
+          type="button"
+        >
+          按钮
+        </button>
+      </div>
     </div>
   </div>
 </div>
