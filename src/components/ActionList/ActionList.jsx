@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 import Button from 'src/components/Button';
 import Menu from 'src/components/Menu';
 import Popover from 'src/components/Popover';
 import Tooltip from 'src/components/Tooltip';
+import Combine from 'src/components/Combine';
 import ConfigContext from 'src/components/ConfigProvider/ConfigContext';
 
-import { ActionButton } from './style';
+import { prefixCls } from './style';
 
 const Sizes = Button.Sizes;
 const ButtonStyleTypes = Button.StyleTypes;
@@ -26,7 +28,9 @@ export default class ActionList extends Component {
         /** 自定义更多按钮内容，也可通过传入 object 来定义 props*/
         dropdownButton: PropTypes.oneOfType([PropTypes.node, PropTypes.object]),
         /** 弹出层的 popover props */
-        popoverProps: PropTypes.object
+        popoverProps: PropTypes.object,
+        /** @ignore */
+        className: PropTypes.string
     };
     static defaultProps = {
         exposeCount: 3,
@@ -47,9 +51,9 @@ export default class ActionList extends Component {
         return list.map((info, i) => {
             const { label, tooltip, ...rest } = info;
             const button = (
-                <ActionButton key={i} size={size} styleType={buttonStyleType} fakeDisabled={!!tooltip} {...rest}>
+                <Button key={i} size={size} styleType={buttonStyleType} fakeDisabled={!!tooltip} {...rest}>
                     {label}
-                </ActionButton>
+                </Button>
             );
             return tooltip ? (
                 typeof tooltip === 'string' || React.isValidElement(tooltip) ? (
@@ -146,6 +150,7 @@ export default class ActionList extends Component {
             buttonStyleType,
             popoverProps,
             dropdownButton,
+            className,
             ...rest
         } = this.props;
         /* eslint-enable no-unused-vars */
@@ -167,10 +172,17 @@ export default class ActionList extends Component {
             menuList = [];
         }
         return (
-            <ul {...rest}>
+            <Combine
+                {...rest}
+                className={classnames(prefixCls, className)}
+                sharedProps={{ size }}
+                spacing="smart"
+                separator=""
+                disabled={false}
+            >
                 {this.renderButtonList(buttonList, size)}
                 {this.renderMenu(menuList, size)}
-            </ul>
+            </Combine>
         );
     }
 }

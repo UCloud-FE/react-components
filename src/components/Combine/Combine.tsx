@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+import classnames from 'classnames';
 
 import { itemCls, separatorCls, CombineWrap } from './style';
 
@@ -12,6 +13,7 @@ const Combine = ({
     children: ReactNode;
     sharedProps?: {
         size?: 'sm' | 'md' | 'lg';
+        className?: string;
         [key: string]: unknown;
     };
     spacing?: 'compact' | 'smart' | 'sm' | 'md' | 'lg' | string;
@@ -25,7 +27,12 @@ const Combine = ({
                 isFirstItem = isFirstItem === undefined ? true : false;
                 const _child = (
                     <div className={itemCls}>
-                        {React.isValidElement(child) ? React.cloneElement(child, { size }) : child}
+                        {React.isValidElement(child)
+                            ? React.cloneElement(child, {
+                                  ...sharedProps,
+                                  className: classnames(child.props.className, sharedProps.className)
+                              })
+                            : child}
                     </div>
                 );
                 return separator && !isFirstItem
