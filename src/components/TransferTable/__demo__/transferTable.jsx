@@ -2,7 +2,6 @@ import React from 'react';
 
 import Switch from 'src/components/Switch';
 import Form from 'src/components/Form';
-import Menu from 'src/components/Menu';
 import TransferTable from 'src/components/TransferTable';
 import Transfer from 'src/components/Transfer';
 import Combine from 'src/components/Combine';
@@ -66,7 +65,7 @@ class Demo extends React.Component {
         this.setState({ dataSource });
     }
     getDisabledOfRow(record) {
-        return record.key % 2;
+        return !!(record.key % 2);
     }
     render() {
         const {
@@ -79,7 +78,8 @@ class Demo extends React.Component {
             targetSearch,
             targetDisabled,
             targetTitle,
-            targetFooter
+            targetFooter,
+            getDisabledOfRow
         } = this.state;
         const itemLayout = {
             labelCol: {
@@ -137,6 +137,9 @@ class Demo extends React.Component {
             search,
             dataSource
         };
+        if (getDisabledOfRow) {
+            props.getDisabledOfRow = this.getDisabledOfRow;
+        }
 
         return (
             <div>
@@ -146,6 +149,12 @@ class Demo extends React.Component {
                     </Form.Item>
                     <Form.Item label="disabled" {...itemLayout}>
                         <Switch checked={disabled} onChange={disabled => this.setState({ disabled })} />
+                    </Form.Item>
+                    <Form.Item label="getDisabledOfRow" {...itemLayout}>
+                        <Switch
+                            checked={getDisabledOfRow}
+                            onChange={getDisabledOfRow => this.setState({ getDisabledOfRow })}
+                        />
                     </Form.Item>
                     <Form.Item label="source.search" {...itemLayout}>
                         <Radio.Group
