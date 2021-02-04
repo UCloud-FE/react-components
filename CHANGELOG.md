@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.31](https://github.com/UCloud-FE/react-components/compare/v1.0.30...v1.0.31) (2021-02-04)
+
+### Features
+
+-   **Calendar:** change a style to avoid override ([4a55453](https://github.com/UCloud-FE/react-components/commit/4a55453ce6f21c3abdeb3c9e00e7ef376532e3c3))
+-   **TransferTable:** add getDisabledOfRow ([1a783f9](https://github.com/UCloud-FE/react-components/commit/1a783f9952920bf78bc01cda810fcb922d1bd86a))
+-   **Tree:** add Tree ([91dfb26](https://github.com/UCloud-FE/react-components/commit/91dfb260c9929a78a9f0a7061fb68edc5c4d6c88))
+
 ### [1.0.30](https://github.com/UCloud-FE/react-components/compare/v1.0.29...v1.0.30) (2021-01-28)
 
 ### Features
