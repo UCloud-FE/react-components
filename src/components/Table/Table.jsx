@@ -656,7 +656,7 @@ class Table extends Component {
         return (key === undefined ? index : key) + '';
     };
     getColumns = (dataSourceOfCurrentPage, filters) => {
-        const { columns, rowSelection, columnPlaceholder, locale } = this.props;
+        const { columns, rowSelection, columnPlaceholder, locale, dataSource } = this.props;
         const { order: currentOrder = {}, selectedRowKeyMap, columnConfig } = this.state;
         const cloneColumns = columns.map((column, index) => ({
             ...column,
@@ -698,6 +698,8 @@ class Table extends Component {
         if (rowSelection) {
             const flatDataSourceOfCurrentPage = this.flatDataSource(dataSourceOfCurrentPage);
             let enableDataSourceOfCurrentPage = flatDataSourceOfCurrentPage;
+            const flatDataSource = this.flatDataSource(dataSource);
+            let enableDataSource = flatDataSource;
 
             const { disabled: selectionDisabled } = rowSelection;
 
@@ -706,11 +708,13 @@ class Table extends Component {
                     flatDataSourceOfCurrentPage,
                     item => !rowSelection.getDisabledOfRow(item.record)
                 );
+                enableDataSource = _.filter(flatDataSource, item => !rowSelection.getDisabledOfRow(item.record));
             }
             const selectedEnableDataSourceOfCurrentPage = _.filter(
                 enableDataSourceOfCurrentPage,
                 item => selectedRowKeyMap[item.key]
             );
+            const selectedEnableDataSource = _.filter(enableDataSource, item => selectedRowKeyMap[item.key]);
 
             const selectedEnableDataSourceOfCurrentPageCount = selectedEnableDataSourceOfCurrentPage.length;
             const isAllSelected =
@@ -742,10 +746,8 @@ class Table extends Component {
                                     {locale.selected} {selectedCount}{' '}
                                     <CancelSelect
                                         onClick={() => {
-                                            const enableKeysOfCurrentPage = enableDataSourceOfCurrentPage.map(
-                                                item => item.key
-                                            );
-                                            this.handleToggleCurrentPage(enableKeysOfCurrentPage, false);
+                                            const enableKeys = selectedEnableDataSource.map(item => item.key);
+                                            this.handleToggleCurrentPage(enableKeys, false);
                                         }}
                                     >
                                         {locale.cancelSelect}
