@@ -16,6 +16,9 @@ export const calendarMixin = props => {
     } = props;
 
     return css`
+        a {
+            color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
+        }
         &.${prefixCls}, .${prefixCls} {
             outline: none;
             position: relative;
@@ -114,7 +117,10 @@ export const calendarMixin = props => {
             width: 150px;
             text-align: center;
             display: block;
-            color: ${DT.T_BUTTON_PRIMARY_COLOR_TEXT_DEFAULT};
+            &,
+            & a {
+                color: ${DT.T_BUTTON_PRIMARY_COLOR_TEXT_DEFAULT};
+            }
         }
 
         .${prefixCls}-body {
@@ -215,6 +221,7 @@ export const calendarMixin = props => {
         }
         .${prefixCls}-disabled-cell, .${prefixCls}-month-panel-cell-disabled {
             color: ${DT.T_COLOR_TEXT_DISABLED};
+            cursor: default;
         }
         .${prefixCls}-month-panel-year-select-arrow, .${prefixCls}-year-panel-decade-select-arrow {
             display: none;
