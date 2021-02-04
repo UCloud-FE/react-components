@@ -87,6 +87,7 @@ module.exports = [
                 name: 'Menu',
                 components: ['Menu', 'SubMenu', 'Item']
             },
+            { name: 'Tree' },
             {
                 name: 'ActionList'
             },

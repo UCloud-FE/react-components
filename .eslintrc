@@ -1,5 +1,5 @@
 {
-    "extends": ["eslint:recommended", "plugin:react/recommended"],
+    "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:react-hooks/recommended"],
     "plugins": ["react"],
     "parser": "babel-eslint",
     "settings": {
@@ -60,7 +60,12 @@
                 "warnOnUnsupportedTypeScriptVersion": true
             },
             "plugins": ["react", "@typescript-eslint"],
-            "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:@typescript-eslint/recommended"],
+            "extends": [
+                "eslint:recommended",
+                "plugin:react/recommended",
+                "plugin:react-hooks/recommended",
+                "plugin:@typescript-eslint/recommended"
+            ],
             "rules": {
                 "@typescript-eslint/explicit-module-boundary-types": 0
             }

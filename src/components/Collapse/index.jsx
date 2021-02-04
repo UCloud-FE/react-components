@@ -3,3 +3,5 @@ export default Collapse;
 
 import Panel from './Panel';
 Collapse.Panel = Panel;
+
+export { Panel };

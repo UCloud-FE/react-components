@@ -1,0 +1,59 @@
+import React from 'react';
+
+import Tree from 'src/components/Tree';
+import Button from 'src/components/Button';
+import Combine from 'src/components/Combine';
+
+// demo start
+const generateNumber = (min, max) => {
+    const random = Math.random();
+    return (min + random * (max + 1 - min)) | 0;
+};
+
+const generateItems = (count, prefix, depth) => {
+    return new Array(count).fill(null).map((v, i) => {
+        const key = `${prefix}-${i}-item`;
+        let subItems = [];
+        if (depth) {
+            subItems = generateItems(generateNumber(0, 5), key, depth - 1);
+        }
+        return {
+            value: key,
+            title: key,
+            children: subItems,
+            disabled: Math.random() > 0.8
+        };
+    });
+};
+
+const generateGroupData = (depth, prefix) => {
+    const itemCount = generateNumber(1, 5);
+    const menuItems = generateItems(itemCount, prefix, depth);
+    return menuItems;
+};
+
+const dataSource = generateGroupData(generateNumber(2, 6), 'root');
+
+const Demo = () => {
+    const ref = React.useRef();
+    return (
+        <>
+            <Combine>
+                <Button onClick={() => ref.current.selectAll()}>全选</Button>
+                <Button onClick={() => ref.current.inverse()}>反选</Button>
+                <Button onClick={() => ref.current.unSelectAll()}>取消选择</Button>
+            </Combine>
+            <Tree
+                key={Math.random()}
+                dataSource={dataSource}
+                multiple
+                onOpenKeysChange={console.log}
+                onChange={console.log}
+                ref={ref}
+            />
+        </>
+    );
+};
+// demo end
+
+export default Demo;

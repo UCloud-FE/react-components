@@ -26,16 +26,31 @@ class Collapse extends Component {
         /** @ignore */
         theme: PropTypes.any,
         /** 变化回调 */
-        onChange: PropTypes.func
+        onChange: PropTypes.func,
+        /** 自定义包裹容器组件 */
+        component: PropTypes.elementType,
+        /** @ignore */
+        children: PropTypes.node
     };
     static defaultProps = {
         selectable: true,
         multiple: true
     };
     render() {
-        // eslint-disable-next-line no-unused-vars
-        const { openKeys, defaultOpenKeys, multiple, selectable, onChange, theme, ...rest } = this.props;
-        return <div {...rest} />;
+        /* eslint-disable no-unused-vars */
+        const {
+            openKeys,
+            defaultOpenKeys,
+            multiple,
+            selectable,
+            onChange,
+            theme,
+            component,
+            children,
+            ...rest
+        } = this.props;
+        /* eslint-enable no-unused-vars */
+        return React.createElement(component || 'div', rest, children);
     }
 }
 
