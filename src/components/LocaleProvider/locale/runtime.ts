@@ -1,6 +1,8 @@
-let runtimeLocale = {};
+import { AllLocaleMap } from '../LocaleContext';
 
-const setRuntimeLocale = _runtimeLocale => {
+let runtimeLocale: AllLocaleMap = {};
+
+const setRuntimeLocale = (_runtimeLocale: AllLocaleMap) => {
     runtimeLocale = _runtimeLocale;
 };
 const getRuntimeLocale = () => {

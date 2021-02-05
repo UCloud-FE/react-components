@@ -57,10 +57,10 @@ export const getItemTree = children => {
     return getTree(children, rootPrefix);
 };
 
-@localeConsumerDecorator({ defaultLocale: LOCALE, localeName: 'Menu' })
 @uncontrolledDecorator({
     valueName: 'selectedKeys'
 })
+@localeConsumerDecorator({ defaultLocale: LOCALE, localeName: 'Menu' })
 class Menu extends Component {
     static propTypes = {
         /** 选中的菜单项的key，controlled */

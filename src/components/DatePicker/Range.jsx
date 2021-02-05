@@ -43,10 +43,8 @@ const cloneDateRange = (range = []) => {
 };
 
 @localeConsumerDecorator({ defaultLocale: LOCALE, localeName: 'DatePicker' })
-@uncontrolledDecorator(
-    { onChangeName: ['onChange', 'onInitialChange'] },
-    { valueName: 'option', onChangeName: 'onOptionChange' }
-)
+@uncontrolledDecorator({ onChangeName: ['onChange', 'onInitialChange'] })
+@uncontrolledDecorator({ valueName: 'option', onChangeName: 'onOptionChange' })
 class Range extends Component {
     constructor(props) {
         super(props);

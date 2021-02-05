@@ -8,7 +8,7 @@ import { MonthCalendarWrap } from './style';
 import LOCALE from './locale/zh_CN';
 import { calCalendarProps } from './Calendar';
 
-@localeConsumerDecorator({ defaultLocale: LOCALE, localeName: 'Calendar', publicFn: ['focus'] })
+@localeConsumerDecorator({ defaultLocale: LOCALE, localeName: 'Calendar' })
 class Month extends Component {
     static propTypes = {
         /** 选中的时间，受控，Moment 类型 */

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback, useRef, Ref, useImperativeHand
 import classnames from 'classnames';
 
 import Collapse from 'src/components/Collapse';
+import withUncontrolled from 'src/decorators/uncontrolled';
 
 import Items from './Items';
 import { multipleCls, prefixCls, singleCls, STree } from './style';
@@ -40,6 +41,8 @@ const keysToMap = (keys: Value[] = []): SelectedMap => {
     return result;
 };
 
+type CollapseProps = Record<string, unknown>;
+
 const Tree = (
     props: {
         /** 数据源 */
@@ -55,23 +58,13 @@ const Tree = (
         /** 选中变化回调 */
         onChange: (v: Value[]) => void;
         /** collapse 的配置，查看 collapse 组件 */
-        collapse: Record<string, unknown>;
+        collapse: CollapseProps;
     },
     ref: Ref<{ selectAll: () => void; unSelectAll: () => void; inverse: () => void }>
 ) => {
-    const {
-        dataSource,
-        disabled = false,
-        multiple = false,
-        selectedKeys,
-        defaultSelectedKeys = [],
-        onChange = noop,
-        collapse
-    } = props;
-    const [selectedKeysS, setSelectedKeysS] = useState(defaultSelectedKeys);
-    const [isControlled] = useState(() => selectedKeys !== undefined);
+    const { dataSource, disabled = false, multiple = false, selectedKeys, onChange = noop, collapse } = props;
     const [[group, allValue], setGroup] = useState(() => groupDataSource(dataSource));
-    const finalSelectedKeys = isControlled ? selectedKeys : selectedKeysS;
+    const finalSelectedKeys = selectedKeys;
     const [selectedMap, setSelectedMap] = useState(() => keysToMap(finalSelectedKeys));
 
     const stateRef = useRef({ selectedMap, finalSelectedKeys });
@@ -97,7 +90,6 @@ const Tree = (
                 selectAll: () => {
                     const value = [...allValue];
                     onChange(value);
-                    if (!isControlled) setSelectedKeysS(value);
                 },
                 /**
                  * 全部取消选择
@@ -105,7 +97,6 @@ const Tree = (
                  */
                 unSelectAll: () => {
                     onChange([]);
-                    if (!isControlled) setSelectedKeysS([]);
                 },
                 /**
                  * 反选
@@ -119,11 +110,10 @@ const Tree = (
                         }
                     });
                     onChange(value);
-                    if (!isControlled) setSelectedKeysS(value);
                 }
             };
         },
-        [allValue, isControlled, onChange, selectedMap]
+        [allValue, onChange, selectedMap]
     );
 
     const onSelect = useCallback(
@@ -153,9 +143,8 @@ const Tree = (
             }
 
             onChange(selectedKeys);
-            if (!isControlled) setSelectedKeysS(selectedKeys);
         },
-        [isControlled, multiple, onChange]
+        [multiple, onChange]
     );
 
     return (
@@ -174,4 +163,4 @@ const Tree = (
     );
 };
 
-export default React.memo(React.forwardRef(Tree));
+export default withUncontrolled({ valueName: 'selectedKeys' })(React.memo(React.forwardRef(Tree)));

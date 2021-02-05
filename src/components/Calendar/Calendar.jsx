@@ -7,7 +7,7 @@ import { isDateDisabled, getValidDate } from './utils';
 import { CalendarWrap, prefixCls } from './style';
 import LOCALE from './locale/zh_CN';
 
-@localeConsumerDecorator({ defaultLocale: LOCALE, localeName: 'Calendar', publicFn: ['focus'] })
+@localeConsumerDecorator({ defaultLocale: LOCALE, localeName: 'Calendar' })
 class Calendar extends Component {
     static propTypes = {
         /** 选中的时间，受控，Moment 类型 */

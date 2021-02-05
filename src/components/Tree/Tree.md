@@ -38,6 +38,11 @@ interface TreeData {
 ```js {"codepath": "method.jsx"}
 ```
 
+#### controlled / uncontrolled - 受控 / 非受控
+
+```js {"codepath": "controlled.jsx"}
+```
+
 #### 大数据性能测试
 
 ```js {"codepath": "bigData.jsx"}
