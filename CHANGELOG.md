@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.32](https://github.com/UCloud-FE/react-components/compare/v1.0.31...v1.0.32) (2021-02-07)
+
+### Features
+
+-   **decorators:** rewrite all decorators ([7655c49](https://github.com/UCloud-FE/react-components/commit/7655c49a41956425a5facd8f5c1196c02233bda1))
+
+### Bug Fixes
+
+-   **Table:** fix table demo combine usage ([7a8f843](https://github.com/UCloud-FE/react-components/commit/7a8f8430058899cdb18be6405379157d7a32384f))
+-   **Table:** fix unselect all only unselect current page bug ([4c264d1](https://github.com/UCloud-FE/react-components/commit/4c264d1a8496ad068ae4899c16cac6d6b125cf1a))
+
 ### [1.0.31](https://github.com/UCloud-FE/react-components/compare/v1.0.30...v1.0.31) (2021-02-04)
 
 ### Features
