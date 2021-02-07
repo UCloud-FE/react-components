@@ -5,6 +5,7 @@ import Table from 'src/components/Table';
 import Button from 'src/components/Button';
 import Menu from 'src/components/Menu';
 import Combine from 'src/components/Combine';
+import Box from 'src/components/Box';
 
 // demo start
 class Demo extends React.Component {
@@ -98,21 +99,23 @@ class Demo extends React.Component {
                 }}
                 title={() => {
                     return (
-                        <Combine>
-                            <Button onClick={() => this.handleAdd()} styleType="primary">
-                                新增
-                            </Button>
-                            <Button
-                                disabled={!selectedRowKeys || !selectedRowKeys.length}
-                                onClick={() => this.handleRemoveSelected()}
-                            >
-                                删除
-                            </Button>
-                            <Combine style={{ float: 'right' }}>
+                        <Box container justifyContent="space-between">
+                            <Combine>
+                                <Button onClick={() => this.handleAdd()} styleType="primary">
+                                    新增
+                                </Button>
+                                <Button
+                                    disabled={!selectedRowKeys || !selectedRowKeys.length}
+                                    onClick={() => this.handleRemoveSelected()}
+                                >
+                                    删除
+                                </Button>
+                            </Combine>
+                            <Combine>
                                 <Table.SearchInput />
                                 <Table.ColumnConfigButton />
                             </Combine>
-                        </Combine>
+                        </Box>
                     );
                 }}
                 defaultColumnConfig={{
