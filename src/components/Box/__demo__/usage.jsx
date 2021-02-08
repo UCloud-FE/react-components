@@ -1,12 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Box from 'src/components/Box';
 import Button from 'src/components/Button';
 import Input from 'src/components/Input';
 import Select from 'src/components/Select';
 import Icon from 'src/components/Icon';
-import Card from 'src/components/Card';
+import Combine from 'src/components/Combine';
 
 // demo start
 const Demo = () => (
@@ -14,16 +13,16 @@ const Demo = () => (
         <h2>工具栏</h2>
         <div className="demo-wrap">
             <Box container justifyContent="space-between" alignItems="center">
-                <Box container spacing="sm" alignItems="center">
+                <Combine>
                     <span>这是一条工具栏</span>
                     <Button>按钮</Button>
                     <Icon type="edit" />
-                </Box>
-                <Box container spacing="sm" alignItems="center">
+                </Combine>
+                <Combine>
                     <Select options={[1, 2, 3].map(v => ({ value: v, label: `option ${v}` }))} />
                     <Input.Search />
                     <Button>按钮</Button>
-                </Box>
+                </Combine>
             </Box>
         </div>
         <h2>简易自适应布局</h2>

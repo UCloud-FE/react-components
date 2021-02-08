@@ -4,6 +4,7 @@ import Box from 'src/components/Box';
 import Button from 'src/components/Button';
 import Icon from 'src/components/Icon';
 import Card from 'src/components/Card';
+import Combine from 'src/components/Combine';
 
 // demo start
 const Demo = () => (
@@ -15,14 +16,14 @@ const Demo = () => (
                     <Card>
                         <Card.Action>
                             <Box container justifyContent="space-between" alignItems="center">
-                                <Box container spacing="sm" alignItems="center">
+                                <Combine>
                                     <span>这是一条工具栏</span>
                                     <Button>按钮</Button>
                                     <Icon type="edit" />
-                                </Box>
-                                <Box container spacing="sm" alignItems="center">
+                                </Combine>
+                                <Combine>
                                     <Button>按钮</Button>
-                                </Box>
+                                </Combine>
                             </Box>
                         </Card.Action>
                     </Card>

@@ -2746,30 +2746,24 @@ exports[`Box demo -- card 1`] = `
   align-items: center;
 }
 
-.emotion-4 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-right: -4px;
-  margin-left: -4px;
+.emotion-4 > .uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-separator {
+  vertical-align: middle;
+  display: inline-block;
 }
 
-.emotion-4.emotion-4.emotion-4>* {
-  margin-right: 4px;
-  margin-left: 4px;
+.emotion-4 > .uc-fe-combine-item:focus {
+  z-index: 2;
 }
 
-.emotion-4.emotion-4.emotion-4>*.uc-fe-box {
-  padding-right: 4px;
-  padding-left: 4px;
-  margin-right: 0;
-  margin-left: 0;
+.emotion-4 > .uc-fe-combine-item:hover {
+  z-index: 3;
+}
+
+.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 .emotion-0 {
@@ -3035,30 +3029,24 @@ exports[`Box demo -- card 1`] = `
   align-items: center;
 }
 
-.emotion-4 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-right: -4px;
-  margin-left: -4px;
+.emotion-4 > .uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-separator {
+  vertical-align: middle;
+  display: inline-block;
 }
 
-.emotion-4.emotion-4.emotion-4>* {
-  margin-right: 4px;
-  margin-left: 4px;
+.emotion-4 > .uc-fe-combine-item:focus {
+  z-index: 2;
 }
 
-.emotion-4.emotion-4.emotion-4>*.uc-fe-box {
-  padding-right: 4px;
-  padding-left: 4px;
-  margin-right: 0;
-  margin-left: 0;
+.emotion-4 > .uc-fe-combine-item:hover {
+  z-index: 3;
+}
+
+.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 .emotion-0 {
@@ -3200,7 +3188,7 @@ exports[`Box demo -- card 1`] = `
 }
 
 <div
-  class="uc-fe-box emotion-144 emotion-5"
+  class="uc-fe-box emotion-144 emotion-11"
   direction="column"
   spacing="md"
 >
@@ -3211,12 +3199,12 @@ exports[`Box demo -- card 1`] = `
       卡片排版
     </h2>
     <div
-      class="uc-fe-box emotion-42 emotion-5"
+      class="uc-fe-box emotion-42 emotion-11"
       spacing="lg,lg"
       wrap="wrap"
     >
       <div
-        class="uc-fe-box emotion-16 emotion-5"
+        class="uc-fe-box emotion-16 emotion-11"
         span="12"
       >
         <div
@@ -3227,42 +3215,60 @@ exports[`Box demo -- card 1`] = `
             class="uc-fe-card-action emotion-12 emotion-13"
           >
             <div
-              class="uc-fe-box emotion-10 emotion-5"
+              class="uc-fe-box emotion-10 emotion-11"
             >
               <div
-                class="uc-fe-box emotion-4 emotion-5"
-                spacing="sm"
+                class="uc-fe-combine emotion-4 emotion-5"
+                spacing="md"
               >
-                <span>
-                  这是一条工具栏
-                </span>
-                <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-0 emotion-1"
-                  type="button"
+                <div
+                  class="uc-fe-combine-item"
                 >
-                  按钮
-                </button>
-                <i
-                  class="uc-fe-icon icon__edit emotion-2 emotion-3"
-                />
+                  <span
+                    class=""
+                  >
+                    这是一条工具栏
+                  </span>
+                </div>
+                <div
+                  class="uc-fe-combine-item"
+                >
+                  <button
+                    class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-0 emotion-1"
+                    type="button"
+                  >
+                    按钮
+                  </button>
+                </div>
+                <div
+                  class="uc-fe-combine-item"
+                >
+                  <i
+                    class="uc-fe-icon icon__edit emotion-2 emotion-3"
+                  />
+                </div>
               </div>
               <div
-                class="uc-fe-box emotion-4 emotion-5"
-                spacing="sm"
+                class="uc-fe-combine emotion-4 emotion-5"
+                spacing="md"
               >
-                <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-0 emotion-1"
-                  type="button"
+                <div
+                  class="uc-fe-combine-item"
                 >
-                  按钮
-                </button>
+                  <button
+                    class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-0 emotion-1"
+                    type="button"
+                  >
+                    按钮
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div
-        class="uc-fe-box emotion-22 emotion-5"
+        class="uc-fe-box emotion-22 emotion-11"
         span="4"
       >
         <div
@@ -3281,7 +3287,7 @@ exports[`Box demo -- card 1`] = `
         </div>
       </div>
       <div
-        class="uc-fe-box emotion-28 emotion-5"
+        class="uc-fe-box emotion-28 emotion-11"
         span="8"
       >
         <div
@@ -3300,7 +3306,7 @@ exports[`Box demo -- card 1`] = `
         </div>
       </div>
       <div
-        class="uc-fe-box emotion-22 emotion-5"
+        class="uc-fe-box emotion-22 emotion-11"
         span="4"
       >
         <div
@@ -3319,7 +3325,7 @@ exports[`Box demo -- card 1`] = `
         </div>
       </div>
       <div
-        class="uc-fe-box emotion-28 emotion-5"
+        class="uc-fe-box emotion-28 emotion-11"
         span="8"
       >
         <div
@@ -3346,12 +3352,12 @@ exports[`Box demo -- card 1`] = `
       卡片自适应宽度排版 - 可以压缩浏览器宽度看效果
     </h2>
     <div
-      class="uc-fe-box emotion-104 emotion-5"
+      class="uc-fe-box emotion-104 emotion-11"
       spacing="lg,lg"
       wrap="wrap"
     >
       <div
-        class="uc-fe-box emotion-48 emotion-5"
+        class="uc-fe-box emotion-48 emotion-11"
         width="300px"
       >
         <div
@@ -3370,7 +3376,7 @@ exports[`Box demo -- card 1`] = `
         </div>
       </div>
       <div
-        class="uc-fe-box emotion-48 emotion-5"
+        class="uc-fe-box emotion-48 emotion-11"
         width="300px"
       >
         <div
@@ -3389,7 +3395,7 @@ exports[`Box demo -- card 1`] = `
         </div>
       </div>
       <div
-        class="uc-fe-box emotion-48 emotion-5"
+        class="uc-fe-box emotion-48 emotion-11"
         width="300px"
       >
         <div
@@ -3408,7 +3414,7 @@ exports[`Box demo -- card 1`] = `
         </div>
       </div>
       <div
-        class="uc-fe-box emotion-48 emotion-5"
+        class="uc-fe-box emotion-48 emotion-11"
         width="300px"
       >
         <div
@@ -3427,7 +3433,7 @@ exports[`Box demo -- card 1`] = `
         </div>
       </div>
       <div
-        class="uc-fe-box emotion-48 emotion-5"
+        class="uc-fe-box emotion-48 emotion-11"
         width="300px"
       >
         <div
@@ -3446,7 +3452,7 @@ exports[`Box demo -- card 1`] = `
         </div>
       </div>
       <div
-        class="uc-fe-box emotion-48 emotion-5"
+        class="uc-fe-box emotion-48 emotion-11"
         width="300px"
       >
         <div
@@ -3465,7 +3471,7 @@ exports[`Box demo -- card 1`] = `
         </div>
       </div>
       <div
-        class="uc-fe-box emotion-48 emotion-5"
+        class="uc-fe-box emotion-48 emotion-11"
         width="300px"
       >
         <div
@@ -3484,7 +3490,7 @@ exports[`Box demo -- card 1`] = `
         </div>
       </div>
       <div
-        class="uc-fe-box emotion-48 emotion-5"
+        class="uc-fe-box emotion-48 emotion-11"
         width="300px"
       >
         <div
@@ -3503,7 +3509,7 @@ exports[`Box demo -- card 1`] = `
         </div>
       </div>
       <div
-        class="uc-fe-box emotion-48 emotion-5"
+        class="uc-fe-box emotion-48 emotion-11"
         width="300px"
       >
         <div
@@ -3522,7 +3528,7 @@ exports[`Box demo -- card 1`] = `
         </div>
       </div>
       <div
-        class="uc-fe-box emotion-48 emotion-5"
+        class="uc-fe-box emotion-48 emotion-11"
         width="300px"
       >
         <div
@@ -3549,15 +3555,15 @@ exports[`Box demo -- card 1`] = `
       卡片纵向排版
     </h2>
     <div
-      class="uc-fe-box emotion-142 emotion-5"
+      class="uc-fe-box emotion-142 emotion-11"
       spacing="lg"
     >
       <div
-        class="uc-fe-box emotion-22 emotion-5"
+        class="uc-fe-box emotion-22 emotion-11"
         span="4"
       >
         <div
-          class="uc-fe-box emotion-126 emotion-5"
+          class="uc-fe-box emotion-126 emotion-11"
           direction="column"
           spacing="lg"
         >
@@ -3634,11 +3640,11 @@ exports[`Box demo -- card 1`] = `
         </div>
       </div>
       <div
-        class="uc-fe-box emotion-28 emotion-5"
+        class="uc-fe-box emotion-28 emotion-11"
         span="8"
       >
         <div
-          class="uc-fe-box emotion-126 emotion-5"
+          class="uc-fe-box emotion-126 emotion-11"
           direction="column"
           spacing="lg"
         >
@@ -4232,30 +4238,24 @@ exports[`Box demo -- float 1`] = `
   align-items: center;
 }
 
-.emotion-4 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-right: -4px;
-  margin-left: -4px;
+.emotion-4 > .uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-separator {
+  vertical-align: middle;
+  display: inline-block;
 }
 
-.emotion-4.emotion-4.emotion-4>* {
-  margin-right: 4px;
-  margin-left: 4px;
+.emotion-4 > .uc-fe-combine-item:focus {
+  z-index: 2;
 }
 
-.emotion-4.emotion-4.emotion-4>*.uc-fe-box {
-  padding-right: 4px;
-  padding-left: 4px;
-  margin-right: 0;
-  margin-left: 0;
+.emotion-4 > .uc-fe-combine-item:hover {
+  z-index: 3;
+}
+
+.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 .emotion-0 {
@@ -4371,30 +4371,24 @@ exports[`Box demo -- float 1`] = `
   align-items: center;
 }
 
-.emotion-4 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-right: -4px;
-  margin-left: -4px;
+.emotion-4 > .uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-separator {
+  vertical-align: middle;
+  display: inline-block;
 }
 
-.emotion-4.emotion-4.emotion-4>* {
-  margin-right: 4px;
-  margin-left: 4px;
+.emotion-4 > .uc-fe-combine-item:focus {
+  z-index: 2;
 }
 
-.emotion-4.emotion-4.emotion-4>*.uc-fe-box {
-  padding-right: 4px;
-  padding-left: 4px;
-  margin-right: 0;
-  margin-left: 0;
+.emotion-4 > .uc-fe-combine-item:hover {
+  z-index: 3;
+}
+
+.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 .emotion-0 {
@@ -4474,7 +4468,7 @@ exports[`Box demo -- float 1`] = `
 }
 
 <div
-  class="uc-fe-box emotion-20 emotion-5"
+  class="uc-fe-box emotion-20 emotion-13"
   direction="column"
   spacing="md"
 >
@@ -4485,41 +4479,69 @@ exports[`Box demo -- float 1`] = `
       类左右浮动布局
     </h2>
     <div
-      class="uc-fe-box emotion-12 emotion-5"
+      class="uc-fe-box emotion-12 emotion-13"
     >
       <div
-        class="uc-fe-box emotion-4 emotion-5"
-        spacing="sm"
+        class="uc-fe-combine emotion-4 emotion-5"
+        spacing="md"
       >
-        <span>
-          文本内容
-        </span>
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-0 emotion-1"
-          type="button"
+        <div
+          class="uc-fe-combine-item"
         >
-          按钮
-        </button>
-        <i
-          class="uc-fe-icon icon__edit emotion-2 emotion-3"
-        />
+          <span
+            class=""
+          >
+            文本内容
+          </span>
+        </div>
+        <div
+          class="uc-fe-combine-item"
+        >
+          <button
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-0 emotion-1"
+            type="button"
+          >
+            按钮
+          </button>
+        </div>
+        <div
+          class="uc-fe-combine-item"
+        >
+          <i
+            class="uc-fe-icon icon__edit emotion-2 emotion-3"
+          />
+        </div>
       </div>
       <div
-        class="uc-fe-box emotion-4 emotion-5"
-        spacing="sm"
+        class="uc-fe-combine emotion-4 emotion-5"
+        spacing="md"
       >
-        <span>
-          文本内容
-        </span>
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-0 emotion-1"
-          type="button"
+        <div
+          class="uc-fe-combine-item"
         >
-          按钮
-        </button>
-        <i
-          class="uc-fe-icon icon__edit emotion-2 emotion-3"
-        />
+          <span
+            class=""
+          >
+            文本内容
+          </span>
+        </div>
+        <div
+          class="uc-fe-combine-item"
+        >
+          <button
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-0 emotion-1"
+            type="button"
+          >
+            按钮
+          </button>
+        </div>
+        <div
+          class="uc-fe-combine-item"
+        >
+          <i
+            class="uc-fe-icon icon__edit emotion-2 emotion-3"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -4530,7 +4552,7 @@ exports[`Box demo -- float 1`] = `
       单右对齐布局
     </h2>
     <div
-      class="uc-fe-box emotion-18 emotion-5"
+      class="uc-fe-box emotion-18 emotion-13"
       spacing="sm"
     >
       <span>
@@ -6933,30 +6955,24 @@ exports[`Box demo -- usage 1`] = `
   align-items: center;
 }
 
-.emotion-4 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-right: -4px;
-  margin-left: -4px;
+.emotion-4 > .uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-separator {
+  vertical-align: middle;
+  display: inline-block;
 }
 
-.emotion-4.emotion-4.emotion-4>* {
-  margin-right: 4px;
-  margin-left: 4px;
+.emotion-4 > .uc-fe-combine-item:focus {
+  z-index: 2;
 }
 
-.emotion-4.emotion-4.emotion-4>*.uc-fe-box {
-  padding-right: 4px;
-  padding-left: 4px;
-  margin-right: 0;
-  margin-left: 0;
+.emotion-4 > .uc-fe-combine-item:hover {
+  z-index: 3;
+}
+
+.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 .emotion-0 {
@@ -7237,30 +7253,24 @@ exports[`Box demo -- usage 1`] = `
   align-items: center;
 }
 
-.emotion-4 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-right: -4px;
-  margin-left: -4px;
+.emotion-4 > .uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-separator {
+  vertical-align: middle;
+  display: inline-block;
 }
 
-.emotion-4.emotion-4.emotion-4>* {
-  margin-right: 4px;
-  margin-left: 4px;
+.emotion-4 > .uc-fe-combine-item:focus {
+  z-index: 2;
 }
 
-.emotion-4.emotion-4.emotion-4>*.uc-fe-box {
-  padding-right: 4px;
-  padding-left: 4px;
-  margin-right: 0;
-  margin-left: 0;
+.emotion-4 > .uc-fe-combine-item:hover {
+  z-index: 3;
+}
+
+.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
 }
 
 .emotion-0 {
@@ -7526,7 +7536,7 @@ exports[`Box demo -- usage 1`] = `
 }
 
 <div
-  class="uc-fe-box emotion-57 emotion-5"
+  class="uc-fe-box emotion-57 emotion-28"
 >
   <h2>
     工具栏
@@ -7535,68 +7545,94 @@ exports[`Box demo -- usage 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-box emotion-27 emotion-5"
+      class="uc-fe-box emotion-27 emotion-28"
     >
       <div
-        class="uc-fe-box emotion-4 emotion-5"
-        spacing="sm"
-      >
-        <span>
-          这是一条工具栏
-        </span>
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-0 emotion-1"
-          type="button"
-        >
-          按钮
-        </button>
-        <i
-          class="uc-fe-icon icon__edit emotion-2 emotion-3"
-        />
-      </div>
-      <div
-        class="uc-fe-box emotion-4 emotion-5"
-        spacing="sm"
+        class="uc-fe-combine emotion-4 emotion-5"
+        spacing="md"
       >
         <div
-          class=" emotion-12 emotion-13"
-        >
-          <div>
-            <button
-              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-9 emotion-10 emotion-1"
-              type="button"
-            >
-              <div>
-                请选择
-              </div>
-              <i
-                class="uc-fe-icon icon__down emotion-6 emotion-7 emotion-3"
-              />
-            </button>
-          </div>
-        </div>
-        <span
-          class="uc-fe-input emotion-21 emotion-22"
+          class="uc-fe-combine-item"
         >
           <span
-            class="emotion-19 emotion-20"
+            class=""
           >
-            <input />
+            这是一条工具栏
+          </span>
+        </div>
+        <div
+          class="uc-fe-combine-item"
+        >
+          <button
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-0 emotion-1"
+            type="button"
+          >
+            按钮
+          </button>
+        </div>
+        <div
+          class="uc-fe-combine-item"
+        >
+          <i
+            class="uc-fe-icon icon__edit emotion-2 emotion-3"
+          />
+        </div>
+      </div>
+      <div
+        class="uc-fe-combine emotion-4 emotion-5"
+        spacing="md"
+      >
+        <div
+          class="uc-fe-combine-item"
+        >
+          <div
+            class=" emotion-12 emotion-13"
+          >
+            <div>
+              <button
+                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-9 emotion-10 emotion-1"
+                type="button"
+              >
+                <div>
+                  请选择
+                </div>
+                <i
+                  class="uc-fe-icon icon__down emotion-6 emotion-7 emotion-3"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="uc-fe-combine-item"
+        >
+          <span
+            class="uc-fe-input emotion-21 emotion-22"
+          >
             <span
-              class="emotion-17 emotion-18"
+              class="emotion-19 emotion-20"
             >
-              <i
-                class="uc-fe-icon icon__search emotion-14 emotion-15 emotion-3"
-              />
+              <input />
+              <span
+                class="emotion-17 emotion-18"
+              >
+                <i
+                  class="uc-fe-icon icon__search emotion-14 emotion-15 emotion-3"
+                />
+              </span>
             </span>
           </span>
-        </span>
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-0 emotion-1"
-          type="button"
+        </div>
+        <div
+          class="uc-fe-combine-item"
         >
-          按钮
-        </button>
+          <button
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-0 emotion-1"
+            type="button"
+          >
+            按钮
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -7607,7 +7643,7 @@ exports[`Box demo -- usage 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-box emotion-33 emotion-5"
+      class="uc-fe-box emotion-33 emotion-28"
       direction="column"
       style="height:300px"
     >
@@ -7615,14 +7651,14 @@ exports[`Box demo -- usage 1`] = `
         style="height:20px;background:black"
       />
       <div
-        class="uc-fe-box emotion-31 emotion-5"
+        class="uc-fe-box emotion-31 emotion-28"
         style="height:100%"
       >
         <div
           style="background:#999;width:100px;height:100%"
         />
         <div
-          class="uc-fe-box emotion-29 emotion-5"
+          class="uc-fe-box emotion-29 emotion-28"
         />
       </div>
     </div>
@@ -7634,12 +7670,12 @@ exports[`Box demo -- usage 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-box emotion-55 emotion-5"
+      class="uc-fe-box emotion-55 emotion-28"
       spacing="md,md"
       wrap="wrap"
     >
       <div
-        class="uc-fe-box emotion-35 emotion-5"
+        class="uc-fe-box emotion-35 emotion-28"
         span="6"
       >
         <div
@@ -7647,7 +7683,7 @@ exports[`Box demo -- usage 1`] = `
         />
       </div>
       <div
-        class="uc-fe-box emotion-35 emotion-5"
+        class="uc-fe-box emotion-35 emotion-28"
         span="6"
       >
         <div
@@ -7655,7 +7691,7 @@ exports[`Box demo -- usage 1`] = `
         />
       </div>
       <div
-        class="uc-fe-box emotion-35 emotion-5"
+        class="uc-fe-box emotion-35 emotion-28"
         span="6"
       >
         <div
@@ -7663,7 +7699,7 @@ exports[`Box demo -- usage 1`] = `
         />
       </div>
       <div
-        class="uc-fe-box emotion-35 emotion-5"
+        class="uc-fe-box emotion-35 emotion-28"
         span="6"
       >
         <div
@@ -7671,7 +7707,7 @@ exports[`Box demo -- usage 1`] = `
         />
       </div>
       <div
-        class="uc-fe-box emotion-35 emotion-5"
+        class="uc-fe-box emotion-35 emotion-28"
         span="6"
       >
         <div
@@ -7679,7 +7715,7 @@ exports[`Box demo -- usage 1`] = `
         />
       </div>
       <div
-        class="uc-fe-box emotion-35 emotion-5"
+        class="uc-fe-box emotion-35 emotion-28"
         span="6"
       >
         <div
@@ -7687,7 +7723,7 @@ exports[`Box demo -- usage 1`] = `
         />
       </div>
       <div
-        class="uc-fe-box emotion-35 emotion-5"
+        class="uc-fe-box emotion-35 emotion-28"
         span="6"
       >
         <div
@@ -7695,7 +7731,7 @@ exports[`Box demo -- usage 1`] = `
         />
       </div>
       <div
-        class="uc-fe-box emotion-35 emotion-5"
+        class="uc-fe-box emotion-35 emotion-28"
         span="6"
       >
         <div
@@ -7703,7 +7739,7 @@ exports[`Box demo -- usage 1`] = `
         />
       </div>
       <div
-        class="uc-fe-box emotion-35 emotion-5"
+        class="uc-fe-box emotion-35 emotion-28"
         span="6"
       >
         <div
@@ -7711,7 +7747,7 @@ exports[`Box demo -- usage 1`] = `
         />
       </div>
       <div
-        class="uc-fe-box emotion-35 emotion-5"
+        class="uc-fe-box emotion-35 emotion-28"
         span="6"
       >
         <div
