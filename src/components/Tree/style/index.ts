@@ -93,12 +93,28 @@ export const STree = styledWrap<{ disabled: boolean }, HTMLDivElement>({})(
             .${expandCls} {
                 text-align: center;
                 cursor: pointer;
-                color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
                 transition: transform 0.2s;
+                position: relative;
+
+                :before {
+                    content: ' ';
+                    display: inline-block;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 5px 0 5px 6px;
+                    border-color: transparent transparent transparent ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
+                    position: absolute;
+                    top: 3px;
+                    left: 5px;
+                }
 
                 &.${disabledCls} {
                     cursor: default;
                     color: ${DT.T_COLOR_TEXT_DISABLED};
+                    :before {
+                        border-color: transparent transparent transparent ${DT.T_COLOR_TEXT_DISABLED};
+                    }
                 }
                 &.${expandedCls} {
                     transform: rotate(90deg);

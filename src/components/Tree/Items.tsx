@@ -46,7 +46,6 @@ const Items = ({
                     return (
                         <Panel
                             key={value}
-                            disabled={finalDisabled}
                             title={({ toggle, open }: { toggle: () => void; open: boolean }) => (
                                 <TitleItem
                                     value={value}

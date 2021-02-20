@@ -21,26 +21,8 @@ import { ChangeValueMap, Group, SelectedMap, Value } from './interface';
 import { getSelectedStatus } from './util';
 
 /** 展开 icon */
-const ExpandIcon = ({
-    disabled,
-    expanded,
-    onChange
-}: {
-    disabled?: boolean;
-    expanded?: boolean;
-    onChange?: (expanded: boolean) => void;
-}) => {
-    const onClick = useCallback(() => {
-        onChange?.(!expanded);
-    }, [expanded, onChange]);
-    return (
-        <span
-            onClick={disabled ? undefined : onClick}
-            className={classnames(expandCls, disabled && disabledCls, expanded && expandedCls)}
-        >
-            ▶
-        </span>
-    );
+const ExpandIcon = ({ disabled, expanded }: { disabled?: boolean; expanded?: boolean }) => {
+    return <span className={classnames(expandCls, disabled && disabledCls, expanded && expandedCls)}></span>;
 };
 const MemoExpandIcon = React.memo(ExpandIcon);
 
@@ -114,8 +96,13 @@ const ItemView = ({
     const onBodyClick = useCallback(
         e => {
             stopPropagation(e);
-            if (disabled) return;
-            expandAble ? onExpandChange?.(!expanded) : multiple ? null : onSelect?.(true);
+            if (expandAble) {
+                onExpandChange?.(!expanded);
+                return;
+            }
+            if (!disabled && !multiple) {
+                onSelect?.(true);
+            }
         },
         [disabled, expandAble, expanded, multiple, onExpandChange, onSelect]
     );
@@ -129,11 +116,7 @@ const ItemView = ({
         >
             <MemoIndents depth={depth} ignoreIndent={finalIgnoreIndent} isLatest={isLatest} />
             <div className={wrapCls}>
-                {expandAble ? (
-                    <MemoExpandIcon disabled={disabled} expanded={expanded} />
-                ) : (
-                    <span className={expandPlaceholderCls}></span>
-                )}
+                {expandAble ? <MemoExpandIcon expanded={expanded} /> : <span className={expandPlaceholderCls}></span>}
                 {multiple && (
                     <Checkbox
                         disabled={disabled}
@@ -201,17 +184,17 @@ const TitleItem = ({
     selectedMap: SelectedMap;
     group: Group;
 } & SharedItemProps) => {
-    const selectedStatus = getSelectedStatus(group[value], selectedMap);
+    const { values, disabledValues } = group[value] || {};
+    const selectedStatus = getSelectedStatus(values, selectedMap, disabledValues);
     const onCheckChange = useCallback(
         checked => {
-            const values = group[value];
             const selectedMap: ChangeValueMap = {};
             values.forEach(v => {
                 selectedMap[v] = checked;
             });
             onSelect(selectedMap);
         },
-        [group, value, onSelect]
+        [values, onSelect]
     );
     const checkProps =
         selectedStatus === 'NONE'

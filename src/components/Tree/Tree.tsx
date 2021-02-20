@@ -11,26 +11,38 @@ import { Group, SelectedMap, Value, TreeData } from './interface';
 // eslint-disable-next-line @typescript-eslint/no-empty-function
 const noop = () => {};
 
-const groupDataSource = (dataSource: TreeData[]): [Group, Value[]] => {
+const groupDataSource = (dataSource: TreeData[]): [Group, Value[], Value[]] => {
     const group: Group = {};
-    const allValue: Value[] = [];
-    const _groupData = (children: TreeData[]): Value[] => {
-        let result: Value[] = [];
+    const allValues: Value[] = [];
+    const allDisabledValues: Value[] = [];
+    const _groupData = (children: TreeData[], disabled?: boolean): [Value[], Value[]] => {
+        let values: Value[] = [];
+        let disabledValues: Value[] = [];
         children.forEach(child => {
-            const { value, children } = child;
+            const { value, disabled: _disabled, children } = child;
+            const finalDisabled = disabled || _disabled;
             if (children && children.length) {
-                const values = _groupData(children);
-                group[value] = values;
-                result = result.concat(values);
+                const [_values, _disabledValues] = _groupData(children, finalDisabled);
+                group[value] = {
+                    values: _values,
+                    disabledValues: _disabledValues
+                };
+                values = values.concat(_values);
+                disabledValues = disabledValues.concat(_disabledValues);
             } else {
-                result.push(value);
-                allValue.push(value);
+                if (finalDisabled) {
+                    disabledValues.push(value);
+                    allDisabledValues.push(value);
+                } else {
+                    values.push(value);
+                    allValues.push(value);
+                }
             }
         });
-        return result;
+        return [values, disabledValues];
     };
     _groupData(dataSource);
-    return [group, allValue];
+    return [group, allValues, allDisabledValues];
 };
 
 const keysToMap = (keys: Value[] = []): SelectedMap => {
@@ -63,7 +75,7 @@ const Tree = (
     ref: Ref<{ selectAll: () => void; unSelectAll: () => void; inverse: () => void }>
 ) => {
     const { dataSource, disabled = false, multiple = false, selectedKeys, onChange = noop, collapse } = props;
-    const [[group, allValue], setGroup] = useState(() => groupDataSource(dataSource));
+    const [[group, allValues, allDisabledValues], setGroup] = useState(() => groupDataSource(dataSource));
     const finalSelectedKeys = selectedKeys;
     const [selectedMap, setSelectedMap] = useState(() => keysToMap(finalSelectedKeys));
 
@@ -88,7 +100,15 @@ const Tree = (
                  * @public
                  */
                 selectAll: () => {
-                    const value = [...allValue];
+                    if (!multiple) {
+                        console.error(`Can't call selectAll for single select Tree`);
+                        return;
+                    }
+                    const disabledSelectedValues: Value[] = [];
+                    allDisabledValues.forEach(v => {
+                        if (selectedMap[v]) disabledSelectedValues.push(v);
+                    });
+                    const value = [...allValues, ...disabledSelectedValues];
                     onChange(value);
                 },
                 /**
@@ -96,15 +116,27 @@ const Tree = (
                  * @public
                  */
                 unSelectAll: () => {
-                    onChange([]);
+                    const disabledSelectedValues: Value[] = [];
+                    allDisabledValues.forEach(v => {
+                        if (selectedMap[v]) disabledSelectedValues.push(v);
+                    });
+                    onChange([...disabledSelectedValues]);
                 },
                 /**
                  * 反选
                  * @public
                  */
                 inverse: () => {
-                    const value: Value[] = [];
-                    allValue.forEach(v => {
+                    if (!multiple) {
+                        console.error(`Can't call selectAll for single select Tree`);
+                        return;
+                    }
+                    const disabledSelectedValues: Value[] = [];
+                    allDisabledValues.forEach(v => {
+                        if (selectedMap[v]) disabledSelectedValues.push(v);
+                    });
+                    const value: Value[] = [...disabledSelectedValues];
+                    allValues.forEach(v => {
                         if (!selectedMap[v]) {
                             value.push(v);
                         }
@@ -113,7 +145,7 @@ const Tree = (
                 }
             };
         },
-        [allValue, onChange, selectedMap]
+        [multiple, allValues, allDisabledValues, onChange, selectedMap]
     );
 
     const onSelect = useCallback(
