@@ -117,7 +117,7 @@ class Demo extends Component {
                     </div>
                 </div>
                 <div className="demo-wrap">
-                    <Menu multiple showSelectAll collapse={{ defaultOpenKeys: ['1', '2'] }}>
+                    <Menu multiple showSelectAll collapseProps={{ defaultOpenKeys: ['1', '2'] }}>
                         <Menu.Item itemKey="1">item 1</Menu.Item>
                         <Menu.SubMenu subMenuKey="1" title="submenu 1">
                             <Menu.Item itemKey="1-1">item 1-1</Menu.Item>

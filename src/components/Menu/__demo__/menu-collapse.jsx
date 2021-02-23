@@ -5,7 +5,7 @@ import Menu from 'components/Menu';
 const Demo = () => (
     <div>
         <div className="demo-wrap">
-            <Menu multiple collapse={{ defaultOpenKeys: ['1', '2'] }} onChange={console.log}>
+            <Menu multiple collapseProps={{ defaultOpenKeys: ['1', '2'] }} onChange={console.log}>
                 <Menu.Item itemKey="1">Menu 1</Menu.Item>
                 <Menu.SubMenu subMenuKey="1" title={'SubMenu 1'}>
                     <Menu.Item itemKey="1-1">Menu 1</Menu.Item>

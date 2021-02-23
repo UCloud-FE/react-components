@@ -73,8 +73,12 @@ class Menu extends Component {
         multiple: PropTypes.bool,
         /** 是否可选 */
         selectable: PropTypes.bool,
-        /** collapse的配置，参考 collapse 组件 */
+        /**
+         * @deprecated 使用 collapseProps 替代
+         */
         collapse: PropTypes.object,
+        /** collapse 的配置，参考 collapse 组件 */
+        collapseProps: PropTypes.object,
         /** 是否显示全选，多选时有效 */
         showSelectAll: PropTypes.bool,
         /** 是否使用块元素显示模式，去除宽高限制，撑满容器，去除外阴影、border，方便放置在自定义容器中 */
@@ -269,6 +273,7 @@ class Menu extends Component {
             className,
             block,
             disabled,
+            collapseProps,
             ...rest
         } = this.props;
         /* eslint-enable no-unused-vars */
@@ -292,6 +297,7 @@ class Menu extends Component {
                 className={classnames(className, prefixCls, multiple ? multipleCls : singleCls, block && blockCls)}
                 {...rest}
                 {...collapse}
+                {...collapseProps}
             >
                 <div>
                     {selectAllCheckbox}
