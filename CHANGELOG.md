@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.33](https://github.com/UCloud-FE/react-components/compare/v1.0.32...v1.0.33) (2021-02-23)
+
+### Features
+
+-   **Menu:** rename collapse to collapseProps ([a1fcfec](https://github.com/UCloud-FE/react-components/commit/a1fcfec367095df4c71a25c52589c680bd3d097a))
+-   **Tree:** change value to key, rename collapse ([0217bfa](https://github.com/UCloud-FE/react-components/commit/0217bfa2ac87fd991fee489a32b9525e5fb93a0a))
+-   **Tree:** optim disabled item select logic ([ec80ef7](https://github.com/UCloud-FE/react-components/commit/ec80ef73bffa9e1c286a5670a18f85bc7f7ea395))
+
 ### [1.0.32](https://github.com/UCloud-FE/react-components/compare/v1.0.31...v1.0.32) (2021-02-07)
 
 ### Features
