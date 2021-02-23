@@ -1,21 +1,21 @@
-import { Value } from './interface';
+import { Key } from './interface';
 
 export const getSelectedStatus = (
-    values: Value[],
-    selectedMap: Record<Value, boolean>,
-    disabledValues?: Value[]
+    keys: Key[],
+    selectedMap: Record<Key, boolean>,
+    disabledKeys?: Key[]
 ): 'ALL' | 'NONE' | 'SOME' => {
-    if ((!values?.length && !disabledValues?.length) || !Object.keys(selectedMap).length) return 'NONE';
-    const total = values.length;
+    if ((!keys?.length && !disabledKeys?.length) || !Object.keys(selectedMap).length) return 'NONE';
+    const total = keys.length;
     let count = 0;
-    values.forEach(v => {
+    keys.forEach(v => {
         if (selectedMap[v]) {
             count++;
         }
     });
-    if (count === 0 && disabledValues?.length) {
+    if (count === 0 && disabledKeys?.length) {
         let disabledSelectedCount = 0;
-        disabledValues.forEach(v => {
+        disabledKeys.forEach(v => {
             if (selectedMap[v]) {
                 disabledSelectedCount++;
             }

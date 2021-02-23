@@ -1,17 +1,17 @@
 import { ReactNode } from 'react';
 
-export type Value = string;
-export type SelectedMap = Record<Value, true>;
-export type Group = Record<Value, GroupDetail>;
+export type Key = string;
+export type SelectedMap = Record<Key, true>;
+export type Group = Record<Key, GroupDetail>;
 export interface GroupDetail {
-    disabledValues: Value[];
-    values: Value[];
+    disabledKeys: Key[];
+    keys: Key[];
 }
 export interface TreeData {
-    value: Value;
+    key: Key;
     title: ReactNode;
     children?: TreeData[];
     disabled?: boolean;
 }
 
-export type ChangeValueMap = Record<Value, boolean>;
+export type ChangeKeyMap = Record<Key, boolean>;

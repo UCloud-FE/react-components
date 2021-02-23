@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Panel } from 'src/components/Collapse';
 
-import { ChangeValueMap, Group, SelectedMap, TreeData } from './interface';
+import { ChangeKeyMap, Group, SelectedMap, TreeData } from './interface';
 import { ChildItem, TitleItem } from './Item';
 
 /** 项 */
@@ -27,7 +27,7 @@ const Items = ({
     // 是否为多选
     multiple: boolean;
     // 选中回调
-    onSelect: (valueMap: ChangeValueMap) => void;
+    onSelect: (keyMap: ChangeKeyMap) => void;
     // 选中数据
     selectedMap: SelectedMap;
     // 分组数据
@@ -39,7 +39,7 @@ const Items = ({
         <>
             {children.map((item, index) => {
                 const isLatest = lastIndex === index;
-                const { children, value, disabled: itemDisabled, title } = item;
+                const { children, key: value, disabled: itemDisabled, title } = item;
                 const finalDisabled = disabled || !!itemDisabled;
 
                 if (children && children.length) {
@@ -62,7 +62,7 @@ const Items = ({
                                     disabled={finalDisabled}
                                 />
                             )}
-                            panelKey={item.value}
+                            panelKey={item.key}
                             ignoreUpdateWhenClose
                         >
                             <MemoItems

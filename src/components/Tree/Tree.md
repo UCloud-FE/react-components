@@ -4,19 +4,19 @@
 
 ### 数据结构
 
-#### Value
+#### Key
 
 ```ts {"static": true}
 // 值需为 string
-type Value = string;
+type Key = string;
 ```
 
 #### TreeData
 
 ```ts {"static": true}
 interface TreeData {
-    // 值，所有值的字符串不得重复，会用作 key 和选中判定，如果为其它值会转为 string 再应用
-    value: Value;
+    // 唯一键，所有值的字符串不得重复，会用作 key 和选中判定，如果为其它值会转为 string 再应用
+    key: Key;
     // 选项标题内容
     title: ReactNode;
     // 子数据
@@ -50,6 +50,11 @@ interface TreeData {
 
 ```js {"codepath": "controlled.jsx"}
 ```
+
+<!-- #### search - 搜索
+
+```js {"codepath": "search.jsx"}
+``` -->
 
 #### 大数据性能测试
 

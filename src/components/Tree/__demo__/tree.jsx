@@ -20,7 +20,7 @@ const generateItems = (count, prefix, depth) => {
             subItems = generateItems(generateNumber(0, 5), key, depth - 1);
         }
         return {
-            value: key,
+            key: key,
             title: key,
             children: subItems,
             disabled: Math.random() > 0.8
@@ -70,7 +70,7 @@ class Demo extends React.PureComponent {
                         multiple={multiple}
                         disabled={disabled}
                         onChange={console.log}
-                        collapse={{ onChange: console.log }}
+                        collapseProps={{ onChange: console.log }}
                     />
                 </DemoWrap>
             </div>

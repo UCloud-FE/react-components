@@ -16,7 +16,7 @@ const generateItems = (count, prefix, depth) => {
             subItems = generateItems(generateNumber(0, 3), key, depth - 1);
         }
         return {
-            value: key,
+            key: key,
             title: key,
             children: subItems,
             disabled: Math.random() > 0.8

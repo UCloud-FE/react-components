@@ -17,7 +17,7 @@ import {
     expandPlaceholderCls,
     selectedCls
 } from './style';
-import { ChangeValueMap, Group, SelectedMap, Value } from './interface';
+import { ChangeKeyMap, Group, SelectedMap, Key } from './interface';
 import { getSelectedStatus } from './util';
 
 /** 展开 icon */
@@ -142,8 +142,8 @@ const ChildItem = ({
     selectedMap,
     ...rest
 }: {
-    value: Value;
-    onSelect: (valueMap: ChangeValueMap) => void;
+    value: Key;
+    onSelect: (keyMap: ChangeKeyMap) => void;
     ignoreIndent: number[];
     selectedMap: SelectedMap;
 } & SharedItemProps) => {
@@ -176,19 +176,19 @@ const TitleItem = ({
     group,
     ...rest
 }: {
-    value: Value;
-    onSelect: (valueMap: ChangeValueMap) => void;
+    value: Key;
+    onSelect: (keyMap: ChangeKeyMap) => void;
     expanded?: boolean;
     onExpandChange?: (expanded: boolean) => void;
     ignoreIndent: number[];
     selectedMap: SelectedMap;
     group: Group;
 } & SharedItemProps) => {
-    const { values, disabledValues } = group[value] || {};
+    const { keys: values, disabledKeys: disabledValues } = group[value] || {};
     const selectedStatus = getSelectedStatus(values, selectedMap, disabledValues);
     const onCheckChange = useCallback(
         checked => {
-            const selectedMap: ChangeValueMap = {};
+            const selectedMap: ChangeKeyMap = {};
             values.forEach(v => {
                 selectedMap[v] = checked;
             });

@@ -13,7 +13,7 @@ const generateItems = (count, prefix, depth) => {
             subItems = generateItems(6, key, depth - 1);
         }
         return {
-            value: key,
+            key: key,
             title: key,
             children: subItems
         };
