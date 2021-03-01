@@ -116,7 +116,7 @@ interface SearchInputProps extends InputProps {
 }
 declare class SearchInput extends PureComponent<SearchInputProps> {}
 export declare class Input extends PureComponent<InputProps> {
-    static Search: SearchInput;
+    static Search: typeof SearchInput;
 }
 
 // NumberInput
@@ -207,9 +207,9 @@ declare class SelectOption extends PureComponent<SelectOptionProps> {}
 declare class SelectGroup extends Component<SelectGroupProps> {}
 declare class SelectExtra extends PureComponent<SelectExtraProps> {}
 export declare class Select extends Component<SelectProps> {
-    static Option: SelectOption;
-    static Group: SelectGroup;
-    static Extra: SelectExtra;
+    static Option: typeof SelectOption;
+    static Group: typeof SelectGroup;
+    static Extra: typeof SelectExtra;
 }
 
 // Checkbox
@@ -238,7 +238,7 @@ export interface CheckboxGroupProps {
 }
 export declare class CheckboxGroup extends Component<CheckboxGroupProps> {}
 export declare class Checkbox extends Component<CheckboxProps> {
-    static Group: CheckboxGroup;
+    static Group: typeof CheckboxGroup;
 }
 
 // Radio
@@ -269,7 +269,7 @@ export interface RadioGroupProps {
 }
 declare class RadioGroup extends Component<RadioGroupProps> {}
 export declare class Radio extends Component<RadioProps> {
-    static Group: RadioGroup;
+    static Group: typeof RadioGroup;
 }
 
 // Switch
@@ -456,8 +456,8 @@ export type RangeProps = Override<HTMLAttributes<HTMLDivElement>,  {
 }>
 declare class DatePickerRange extends Component<RangeProps> {}
 export declare class DatePicker extends Component<DatePickerProps> {
-    static Month: DatePickerMonth;
-    static Range: DatePickerRange;
+    static Month: typeof DatePickerMonth;
+    static Range: typeof DatePickerRange;
 }
 
 // Menu
@@ -491,8 +491,8 @@ export type MenuSubMenuProps = Override<HTMLAttributes<HTMLDivElement>, {
 }>
 declare class MenuSubMenu extends Component<MenuSubMenuProps> {}
 export declare class Menu extends Component<MenuProps> {
-    static Item: MenuItem;
-    static SubMenu: MenuSubMenu;
+    static Item: typeof MenuItem;
+    static SubMenu: typeof MenuSubMenu;
 }
 
 // ActionList
@@ -886,12 +886,12 @@ declare class TableColumnConfigButton extends Component<ColumnConfigButtonProps>
 interface TableExpandedRowContentProps extends HTMLAttributes<HTMLDivElement> {}
 declare class TableExpandedRowContent extends Component<TableExpandedRowContentProps> {}
 export declare class Table extends Component<TableProps> {
-    static ColumnConfigButton: TableColumnConfigButton;
-    static SearchInput: SearchInput;
-    static ActionList: ActionList;
-    static ExpandedRowContent: TableExpandedRowContent;
-    static getColumnConfigFromLocalStorage: Function;
-    static setColumnConfigToLocalStorage: Function;
+    static ColumnConfigButton: typeof TableColumnConfigButton;
+    static SearchInput: typeof SearchInput;
+    static ActionList: typeof ActionList;
+    static ExpandedRowContent: typeof TableExpandedRowContent;
+    static getColumnConfigFromLocalStorage: typeof Function;
+    static setColumnConfigToLocalStorage: typeof Function;
 }
 
 // Tabs
@@ -914,7 +914,7 @@ export interface TabsPaneProps {
 }
 declare class TabPane extends Component<TabsPaneProps> {}
 export declare class Tabs extends Component<TabsProps> {
-    static Pane: TabPane;
+    static Pane: typeof TabPane;
 }
 
 // Collapse
@@ -944,7 +944,7 @@ export interface CollapsePanelProps {
 }
 declare class CollapsePanel extends Component<CollapsePanelProps> {}
 export declare class Collapse extends Component<CollapseProps> {
-    static Panel: CollapsePanel;
+    static Panel: typeof CollapsePanel;
 }
 
 // Form
@@ -983,9 +983,9 @@ declare class FormItem extends PureComponent<FormItemProps> {}
 declare class FormGroup extends Component<FormGroupProps> {}
 declare class FormSubArea extends PureComponent<FormSubAreaProps> {}
 export declare class Form extends PureComponent<FormProps> {
-    static Item: FormItem;
-    static Group: FormGroup;
-    static SubArea: FormSubArea;
+    static Item: typeof FormItem;
+    static Group: typeof FormGroup;
+    static SubArea: typeof FormSubArea;
 }
 
 // Card
@@ -998,10 +998,10 @@ declare class CardFooter extends Component<HTMLAttributes<HTMLDivElement>> {}
 declare class CardAction extends Component<HTMLAttributes<HTMLDivElement>> {}
 export type CardProps = HTMLAttributes<HTMLDivElement>;
 export declare class Card extends PureComponent<CardProps> {
-    static Header: CardHeader;
-    static Content: CardContent;
-    static Footer: CardFooter;
-    static Action: CardAction;
+    static Header: typeof CardHeader;
+    static Content: typeof CardContent;
+    static Footer: typeof CardFooter;
+    static Action: typeof CardAction;
 }
 
 // Steps
@@ -1065,8 +1065,8 @@ interface BreadcrumbProps extends HTMLAttributes<HTMLDivElement> {
 }
 declare class BreadcrumbBackButton extends Component<ButtonProps> {}
 export declare class Breadcrumb extends Component<BreadcrumbProps> {
-    static Item: BreadcrumbItem;
-    static BackButton: BreadcrumbBackButton;
+    static Item: typeof BreadcrumbItem;
+    static BackButton: typeof BreadcrumbBackButton;
 }
 
 // Pagination
