@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Panel } from 'src/components/Collapse';
 
-import { ChangeKeyMap, Group, SelectedMap, TreeData } from './interface';
+import { ChangeKeyMap, Group, LoadData, SelectedMap, TreeData } from './interface';
 import { ChildItem, TitleItem } from './Item';
 
 /** 项 */
@@ -14,10 +14,11 @@ const Items = ({
     multiple,
     onSelect,
     selectedMap,
-    group
+    group,
+    loadData
 }: {
     // 数据
-    children: TreeData[];
+    children?: TreeData[];
     // 层级
     depth: number;
     // 无线缩进
@@ -32,17 +33,20 @@ const Items = ({
     selectedMap: SelectedMap;
     // 分组数据
     group: Group;
+    loadData?: LoadData;
 }) => {
+    if (!children || !children.length) return null;
+
     const lastIndex = children.length - 1;
 
     return (
         <>
             {children.map((item, index) => {
                 const isLatest = lastIndex === index;
-                const { children, key: value, disabled: itemDisabled, title } = item;
+                const { children, key: value, disabled: itemDisabled, title, isParent } = item;
                 const finalDisabled = disabled || !!itemDisabled;
 
-                if (children && children.length) {
+                if (children || isParent) {
                     return (
                         <Panel
                             key={value}
@@ -60,6 +64,8 @@ const Items = ({
                                     selectedMap={selectedMap}
                                     group={group}
                                     disabled={finalDisabled}
+                                    loadData={loadData}
+                                    loaded={!!children}
                                 />
                             )}
                             panelKey={item.key}
@@ -73,6 +79,7 @@ const Items = ({
                                 onSelect={onSelect}
                                 disabled={finalDisabled}
                                 multiple={multiple}
+                                loadData={loadData}
                             >
                                 {children}
                             </MemoItems>

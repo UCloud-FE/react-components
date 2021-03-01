@@ -43,14 +43,7 @@ const Demo = () => {
                 <Button onClick={() => ref.current.inverse()}>反选</Button>
                 <Button onClick={() => ref.current.unSelectAll()}>取消选择</Button>
             </Combine>
-            <Tree
-                key={Math.random()}
-                dataSource={dataSource}
-                multiple
-                onOpenKeysChange={console.log}
-                onChange={console.log}
-                ref={ref}
-            />
+            <Tree key={Math.random()} dataSource={dataSource} multiple onChange={console.log} ref={ref} />
         </>
     );
 };

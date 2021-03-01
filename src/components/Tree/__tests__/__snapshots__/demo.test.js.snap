@@ -73,12 +73,17 @@ exports[`Tree demo -- base 1`] = `
 }
 
 .emotion-18 .uc-fe-tree-expand-ph,
-.emotion-18 .uc-fe-tree-expand-icon {
+.emotion-18 .uc-fe-tree-expand-icon,
+.emotion-18 .uc-fe-tree-loading-icon {
   display: inline-block;
   width: 16px;
   height: 16px;
   line-height: 16px;
   margin-right: 8px;
+}
+
+.emotion-18 .uc-fe-tree-loading-icon {
+  fill: #3860f4;
 }
 
 .emotion-18 .uc-fe-tree-expand-icon {
@@ -283,12 +288,17 @@ exports[`Tree demo -- base 1`] = `
 }
 
 .emotion-18 .uc-fe-tree-expand-ph,
-.emotion-18 .uc-fe-tree-expand-icon {
+.emotion-18 .uc-fe-tree-expand-icon,
+.emotion-18 .uc-fe-tree-loading-icon {
   display: inline-block;
   width: 16px;
   height: 16px;
   line-height: 16px;
   margin-right: 8px;
+}
+
+.emotion-18 .uc-fe-tree-loading-icon {
+  fill: #3860f4;
 }
 
 .emotion-18 .uc-fe-tree-expand-icon {
@@ -769,12 +779,17 @@ Array [
 }
 
 .emotion-36 .uc-fe-tree-expand-ph,
-.emotion-36 .uc-fe-tree-expand-icon {
+.emotion-36 .uc-fe-tree-expand-icon,
+.emotion-36 .uc-fe-tree-loading-icon {
   display: inline-block;
   width: 16px;
   height: 16px;
   line-height: 16px;
   margin-right: 8px;
+}
+
+.emotion-36 .uc-fe-tree-loading-icon {
+  fill: #3860f4;
 }
 
 .emotion-36 .uc-fe-tree-expand-icon {
@@ -979,12 +994,17 @@ Array [
 }
 
 .emotion-36 .uc-fe-tree-expand-ph,
-.emotion-36 .uc-fe-tree-expand-icon {
+.emotion-36 .uc-fe-tree-expand-icon,
+.emotion-36 .uc-fe-tree-loading-icon {
   display: inline-block;
   width: 16px;
   height: 16px;
   line-height: 16px;
   margin-right: 8px;
+}
+
+.emotion-36 .uc-fe-tree-loading-icon {
+  fill: #3860f4;
 }
 
 .emotion-36 .uc-fe-tree-expand-icon {
@@ -1441,12 +1461,17 @@ Array [
 }
 
 .emotion-18 .uc-fe-tree-expand-ph,
-.emotion-18 .uc-fe-tree-expand-icon {
+.emotion-18 .uc-fe-tree-expand-icon,
+.emotion-18 .uc-fe-tree-loading-icon {
   display: inline-block;
   width: 16px;
   height: 16px;
   line-height: 16px;
   margin-right: 8px;
+}
+
+.emotion-18 .uc-fe-tree-loading-icon {
+  fill: #3860f4;
 }
 
 .emotion-18 .uc-fe-tree-expand-icon {
@@ -1651,12 +1676,17 @@ Array [
 }
 
 .emotion-18 .uc-fe-tree-expand-ph,
-.emotion-18 .uc-fe-tree-expand-icon {
+.emotion-18 .uc-fe-tree-expand-icon,
+.emotion-18 .uc-fe-tree-loading-icon {
   display: inline-block;
   width: 16px;
   height: 16px;
   line-height: 16px;
   margin-right: 8px;
+}
+
+.emotion-18 .uc-fe-tree-loading-icon {
+  fill: #3860f4;
 }
 
 .emotion-18 .uc-fe-tree-expand-icon {
@@ -1992,12 +2022,17 @@ Array [
 }
 
 .emotion-18 .uc-fe-tree-expand-ph,
-.emotion-18 .uc-fe-tree-expand-icon {
+.emotion-18 .uc-fe-tree-expand-icon,
+.emotion-18 .uc-fe-tree-loading-icon {
   display: inline-block;
   width: 16px;
   height: 16px;
   line-height: 16px;
   margin-right: 8px;
+}
+
+.emotion-18 .uc-fe-tree-loading-icon {
+  fill: #3860f4;
 }
 
 .emotion-18 .uc-fe-tree-expand-icon {
@@ -2202,12 +2237,17 @@ Array [
 }
 
 .emotion-18 .uc-fe-tree-expand-ph,
-.emotion-18 .uc-fe-tree-expand-icon {
+.emotion-18 .uc-fe-tree-expand-icon,
+.emotion-18 .uc-fe-tree-loading-icon {
   display: inline-block;
   width: 16px;
   height: 16px;
   line-height: 16px;
   margin-right: 8px;
+}
+
+.emotion-18 .uc-fe-tree-loading-icon {
+  fill: #3860f4;
 }
 
 .emotion-18 .uc-fe-tree-expand-icon {
@@ -2467,6 +2507,334 @@ Array [
 ]
 `;
 
+exports[`Tree demo -- loadData 1`] = `
+.emotion-6 {
+  background: transparent;
+  color: #0a1633;
+}
+
+.emotion-6 .uc-fe-tree-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #0a1633;
+  min-height: 36px;
+}
+
+.emotion-6 .uc-fe-tree-item .uc-fe-tree-indent {
+  width: 32px;
+  position: relative;
+}
+
+.emotion-6 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
+  content: ' ';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 100%;
+  width: 1px;
+  border-left: 1px solid #d2d6ea;
+  margin-left: 50%;
+}
+
+.emotion-6 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
+  height: 50%;
+  width: 4px;
+  border-bottom: 1px solid #d2d6ea;
+}
+
+.emotion-6 .uc-fe-tree-item .uc-fe-tree-wrap {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0 8px;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-6 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
+  background: #F4F6FF;
+}
+
+.emotion-6 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
+  margin-left: 8px;
+}
+
+.emotion-6 .uc-fe-tree-item.uc-fe-tree-disabled {
+  color: #cccccc;
+}
+
+.emotion-6 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
+  cursor: default;
+}
+
+.emotion-6.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
+  color: #3860f4;
+}
+
+.emotion-6 .uc-fe-tree-expand-ph,
+.emotion-6 .uc-fe-tree-expand-icon,
+.emotion-6 .uc-fe-tree-loading-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  margin-right: 8px;
+}
+
+.emotion-6 .uc-fe-tree-loading-icon {
+  fill: #3860f4;
+}
+
+.emotion-6 .uc-fe-tree-expand-icon {
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
+  position: relative;
+}
+
+.emotion-6 .uc-fe-tree-expand-icon:before {
+  content: ' ';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 0 5px 6px;
+  border-color: transparent transparent transparent #526075;
+  position: absolute;
+  top: 3px;
+  left: 5px;
+}
+
+.emotion-6 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-6 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
+  border-color: transparent transparent transparent #cccccc;
+}
+
+.emotion-6 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.emotion-0 {
+  display: none;
+}
+
+.emotion-6 {
+  background: transparent;
+  color: #0a1633;
+}
+
+.emotion-6 .uc-fe-tree-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #0a1633;
+  min-height: 36px;
+}
+
+.emotion-6 .uc-fe-tree-item .uc-fe-tree-indent {
+  width: 32px;
+  position: relative;
+}
+
+.emotion-6 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
+  content: ' ';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 100%;
+  width: 1px;
+  border-left: 1px solid #d2d6ea;
+  margin-left: 50%;
+}
+
+.emotion-6 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
+  height: 50%;
+  width: 4px;
+  border-bottom: 1px solid #d2d6ea;
+}
+
+.emotion-6 .uc-fe-tree-item .uc-fe-tree-wrap {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0 8px;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-6 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
+  background: #F4F6FF;
+}
+
+.emotion-6 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
+  margin-left: 8px;
+}
+
+.emotion-6 .uc-fe-tree-item.uc-fe-tree-disabled {
+  color: #cccccc;
+}
+
+.emotion-6 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
+  cursor: default;
+}
+
+.emotion-6.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
+  color: #3860f4;
+}
+
+.emotion-6 .uc-fe-tree-expand-ph,
+.emotion-6 .uc-fe-tree-expand-icon,
+.emotion-6 .uc-fe-tree-loading-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  margin-right: 8px;
+}
+
+.emotion-6 .uc-fe-tree-loading-icon {
+  fill: #3860f4;
+}
+
+.emotion-6 .uc-fe-tree-expand-icon {
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
+  position: relative;
+}
+
+.emotion-6 .uc-fe-tree-expand-icon:before {
+  content: ' ';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 0 5px 6px;
+  border-color: transparent transparent transparent #526075;
+  position: absolute;
+  top: 3px;
+  left: 5px;
+}
+
+.emotion-6 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-6 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
+  border-color: transparent transparent transparent #cccccc;
+}
+
+.emotion-6 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.emotion-0 {
+  display: none;
+}
+
+<div
+  class="uc-fe-tree uc-fe-tree-single emotion-6 emotion-7"
+>
+  <div>
+    <div>
+      <div
+        class="uc-fe-tree-item"
+      >
+        <div
+          class="uc-fe-tree-wrap"
+        >
+          <span
+            class="uc-fe-tree-expand-icon"
+          />
+          <span
+            class="uc-fe-tree-content"
+          >
+            root-0-item
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="emotion-0 emotion-1"
+    />
+  </div>
+  <div>
+    <div>
+      <div
+        class="uc-fe-tree-item"
+      >
+        <div
+          class="uc-fe-tree-wrap"
+        >
+          <span
+            class="uc-fe-tree-expand-icon"
+          />
+          <span
+            class="uc-fe-tree-content"
+          >
+            root-1-item
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="emotion-0 emotion-1"
+    />
+  </div>
+  <div>
+    <div>
+      <div
+        class="uc-fe-tree-item"
+      >
+        <div
+          class="uc-fe-tree-wrap"
+        >
+          <span
+            class="uc-fe-tree-expand-icon"
+          />
+          <span
+            class="uc-fe-tree-content"
+          >
+            root-2-item
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="emotion-0 emotion-1"
+    />
+  </div>
+</div>
+`;
+
 exports[`Tree demo -- method 1`] = `
 Array [
   .emotion-6 > .uc-fe-combine-item,
@@ -2700,12 +3068,17 @@ Array [
 }
 
 .emotion-18 .uc-fe-tree-expand-ph,
-.emotion-18 .uc-fe-tree-expand-icon {
+.emotion-18 .uc-fe-tree-expand-icon,
+.emotion-18 .uc-fe-tree-loading-icon {
   display: inline-block;
   width: 16px;
   height: 16px;
   line-height: 16px;
   margin-right: 8px;
+}
+
+.emotion-18 .uc-fe-tree-loading-icon {
+  fill: #3860f4;
 }
 
 .emotion-18 .uc-fe-tree-expand-icon {
@@ -2910,12 +3283,17 @@ Array [
 }
 
 .emotion-18 .uc-fe-tree-expand-ph,
-.emotion-18 .uc-fe-tree-expand-icon {
+.emotion-18 .uc-fe-tree-expand-icon,
+.emotion-18 .uc-fe-tree-loading-icon {
   display: inline-block;
   width: 16px;
   height: 16px;
   line-height: 16px;
   margin-right: 8px;
+}
+
+.emotion-18 .uc-fe-tree-loading-icon {
+  fill: #3860f4;
 }
 
 .emotion-18 .uc-fe-tree-expand-icon {
@@ -3248,12 +3626,17 @@ exports[`Tree demo -- search 1`] = `
 }
 
 .emotion-27 .uc-fe-tree-expand-ph,
-.emotion-27 .uc-fe-tree-expand-icon {
+.emotion-27 .uc-fe-tree-expand-icon,
+.emotion-27 .uc-fe-tree-loading-icon {
   display: inline-block;
   width: 16px;
   height: 16px;
   line-height: 16px;
   margin-right: 8px;
+}
+
+.emotion-27 .uc-fe-tree-loading-icon {
+  fill: #3860f4;
 }
 
 .emotion-27 .uc-fe-tree-expand-icon {
@@ -3545,12 +3928,17 @@ exports[`Tree demo -- search 1`] = `
 }
 
 .emotion-27 .uc-fe-tree-expand-ph,
-.emotion-27 .uc-fe-tree-expand-icon {
+.emotion-27 .uc-fe-tree-expand-icon,
+.emotion-27 .uc-fe-tree-loading-icon {
   display: inline-block;
   width: 16px;
   height: 16px;
   line-height: 16px;
   margin-right: 8px;
+}
+
+.emotion-27 .uc-fe-tree-loading-icon {
+  fill: #3860f4;
 }
 
 .emotion-27 .uc-fe-tree-expand-icon {
@@ -3989,12 +4377,17 @@ exports[`Tree demo -- tree 1`] = `
 }
 
 .emotion-41 .uc-fe-tree-expand-ph,
-.emotion-41 .uc-fe-tree-expand-icon {
+.emotion-41 .uc-fe-tree-expand-icon,
+.emotion-41 .uc-fe-tree-loading-icon {
   display: inline-block;
   width: 16px;
   height: 16px;
   line-height: 16px;
   margin-right: 8px;
+}
+
+.emotion-41 .uc-fe-tree-loading-icon {
+  fill: #3860f4;
 }
 
 .emotion-41 .uc-fe-tree-expand-icon {
@@ -4325,12 +4718,17 @@ exports[`Tree demo -- tree 1`] = `
 }
 
 .emotion-41 .uc-fe-tree-expand-ph,
-.emotion-41 .uc-fe-tree-expand-icon {
+.emotion-41 .uc-fe-tree-expand-icon,
+.emotion-41 .uc-fe-tree-loading-icon {
   display: inline-block;
   width: 16px;
   height: 16px;
   line-height: 16px;
   margin-right: 8px;
+}
+
+.emotion-41 .uc-fe-tree-loading-icon {
+  fill: #3860f4;
 }
 
 .emotion-41 .uc-fe-tree-expand-icon {

@@ -6,7 +6,7 @@ import withUncontrolled from 'src/decorators/uncontrolled';
 
 import Items from './Items';
 import { multipleCls, prefixCls, singleCls, STree } from './style';
-import { Group, SelectedMap, Key, TreeData } from './interface';
+import { Group, SelectedMap, Key, TreeData, LoadData } from './interface';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function
 const noop = () => {};
@@ -69,12 +69,22 @@ const Tree = (
         defaultSelectedKeys?: Key[];
         /** 选中变化回调 */
         onChange: (v: Key[]) => void;
+        /** 异步加载数据操作 */
+        loadData?: LoadData;
         /** collapse 的配置，查看 collapse 组件 */
         collapseProps: CollapseProps;
     },
     ref: Ref<{ selectAll: () => void; unSelectAll: () => void; inverse: () => void }>
 ) => {
-    const { dataSource, disabled = false, multiple = false, selectedKeys, onChange = noop, collapseProps } = props;
+    const {
+        dataSource,
+        disabled = false,
+        multiple = false,
+        selectedKeys,
+        onChange = noop,
+        loadData,
+        collapseProps
+    } = props;
     const [[group, allKeys, allDisabledKeys], setGroup] = useState(() => groupDataSource(dataSource));
     const finalSelectedKeys = selectedKeys;
     const [selectedMap, setSelectedMap] = useState(() => keysToMap(finalSelectedKeys));
@@ -192,6 +202,7 @@ const Tree = (
                 onSelect={onSelect}
                 group={group}
                 selectedMap={selectedMap}
+                loadData={loadData}
             >
                 {dataSource}
             </Items>

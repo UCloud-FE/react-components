@@ -23,6 +23,16 @@ interface TreeData {
     children?: TreeData[];
     // 是否禁用
     disabled?: boolean;
+    // 是否强制为父节点
+    isParent?: boolean;
+}
+```
+
+#### LoadData
+
+```ts {"static": true}
+interface LoadData {
+    (key: Key): Promise<void>;
 }
 ```
 
@@ -49,6 +59,13 @@ interface TreeData {
 #### controlled / uncontrolled - 受控 / 非受控
 
 ```js {"codepath": "controlled.jsx"}
+```
+
+#### loadData - 异步加载数据
+
+异步加载数据需要在待加载的父级数据中添加 isParent，来告知组件展示展开按钮，通过 loadData 来加载数据后需要更新 DataSource，由于 Tree 为 Memo Component，更新时需要更新引用
+
+```js {"codepath": "loadData.jsx"}
 ```
 
 <!-- #### search - 搜索

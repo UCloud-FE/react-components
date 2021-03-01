@@ -40,7 +40,7 @@ const Demo = () => {
                 <Button onClick={refresh}>Refresh</Button>
                 <h2>总计 6**6 = 46656 条数据</h2>
             </Combine>
-            <Tree dataSource={dataSource} multiple onOpenKeysChange={console.log} onChange={console.log} ref={ref} />
+            <Tree dataSource={dataSource} multiple onChange={console.log} ref={ref} />
         </>
     );
 };

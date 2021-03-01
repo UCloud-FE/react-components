@@ -31,7 +31,7 @@ const generateGroupData = (depth, prefix) => {
 };
 
 const dataSource = generateGroupData(generateNumber(2, 4), 'root');
-const Demo = () => <Tree dataSource={dataSource} multiple onOpenKeysChange={console.log} />;
+const Demo = () => <Tree dataSource={dataSource} multiple />;
 // demo end
 
 export default Demo;

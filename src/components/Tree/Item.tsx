@@ -1,6 +1,7 @@
-import React, { ReactNode, useCallback } from 'react';
+import React, { ReactNode, useCallback, useState } from 'react';
 import classnames from 'classnames';
 
+import SvgIcon from 'src/components/SvgIcon';
 import Checkbox from 'src/components/Checkbox';
 
 import {
@@ -15,14 +16,15 @@ import {
     latestCls,
     expandedCls,
     expandPlaceholderCls,
-    selectedCls
+    selectedCls,
+    loadingIconCls
 } from './style';
-import { ChangeKeyMap, Group, SelectedMap, Key } from './interface';
+import { ChangeKeyMap, Group, SelectedMap, Key, LoadData } from './interface';
 import { getSelectedStatus } from './util';
 
 /** 展开 icon */
-const ExpandIcon = ({ disabled, expanded }: { disabled?: boolean; expanded?: boolean }) => {
-    return <span className={classnames(expandCls, disabled && disabledCls, expanded && expandedCls)}></span>;
+const ExpandIcon = ({ expanded }: { expanded?: boolean }) => {
+    return <span className={classnames(expandCls, expanded && expandedCls)}></span>;
 };
 const MemoExpandIcon = React.memo(ExpandIcon);
 
@@ -76,7 +78,8 @@ const ItemView = ({
     onSelect,
     depth,
     isLatest,
-    ignoreIndent
+    ignoreIndent,
+    loading
 }: {
     // 是否可展开
     expandAble?: boolean;
@@ -92,10 +95,14 @@ const ItemView = ({
     onSelect?: (checked: boolean) => void;
     // 忽略的层级
     ignoreIndent?: string;
+    // 加载中
+    loading?: boolean;
 } & SharedItemProps) => {
     const onBodyClick = useCallback(
         e => {
-            stopPropagation(e);
+            if (loading) {
+                return;
+            }
             if (expandAble) {
                 onExpandChange?.(!expanded);
                 return;
@@ -104,7 +111,7 @@ const ItemView = ({
                 onSelect?.(true);
             }
         },
-        [disabled, expandAble, expanded, multiple, onExpandChange, onSelect]
+        [disabled, expandAble, expanded, multiple, onExpandChange, onSelect, loading]
     );
 
     const finalIgnoreIndent = ignoreIndent ? (JSON.parse(ignoreIndent) as number[]) : [];
@@ -116,7 +123,13 @@ const ItemView = ({
         >
             <MemoIndents depth={depth} ignoreIndent={finalIgnoreIndent} isLatest={isLatest} />
             <div className={wrapCls}>
-                {expandAble ? <MemoExpandIcon expanded={expanded} /> : <span className={expandPlaceholderCls}></span>}
+                {loading ? (
+                    <SvgIcon type="ring-loading" spin className={loadingIconCls} />
+                ) : expandAble ? (
+                    <MemoExpandIcon expanded={expanded} />
+                ) : (
+                    <span className={expandPlaceholderCls}></span>
+                )}
                 {multiple && (
                     <Checkbox
                         disabled={disabled}
@@ -174,6 +187,9 @@ const TitleItem = ({
     ignoreIndent,
     selectedMap,
     group,
+    onExpandChange,
+    loadData,
+    loaded,
     ...rest
 }: {
     value: Key;
@@ -183,9 +199,12 @@ const TitleItem = ({
     ignoreIndent: number[];
     selectedMap: SelectedMap;
     group: Group;
+    loadData?: LoadData;
+    loaded?: boolean;
 } & SharedItemProps) => {
     const { keys: values, disabledKeys: disabledValues } = group[value] || {};
     const selectedStatus = getSelectedStatus(values, selectedMap, disabledValues);
+    const [loading, setLoading] = useState(false);
     const onCheckChange = useCallback(
         checked => {
             const selectedMap: ChangeKeyMap = {};
@@ -202,13 +221,25 @@ const TitleItem = ({
             : selectedStatus === 'ALL'
             ? { selected: true }
             : { indeterminate: true, selected: false };
-
+    const onExpandHandler = useCallback(
+        async (expanded: boolean) => {
+            if (expanded && loadData && !loaded) {
+                setLoading(true);
+                await loadData(value);
+                setLoading(false);
+            }
+            onExpandChange?.(expanded);
+        },
+        [loadData, onExpandChange, value, loaded]
+    );
     return (
         <MemoItemView
             {...checkProps}
             onSelect={onCheckChange}
             expandAble
             ignoreIndent={JSON.stringify(ignoreIndent)}
+            onExpandChange={onExpandHandler}
+            loading={loading}
             {...rest}
         />
     );

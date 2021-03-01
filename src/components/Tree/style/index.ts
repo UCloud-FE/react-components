@@ -20,6 +20,7 @@ export const wrapCls = prefixCls + '-wrap';
 export const latestCls = prefixCls + '-latest';
 export const expandedCls = prefixCls + '-expanded';
 export const expandPlaceholderCls = prefixCls + '-expand-ph';
+export const loadingIconCls = prefixCls + '-loading-icon';
 
 export const STree = styledWrap<{ disabled: boolean }, HTMLDivElement>({})(
     styled.div(props => {
@@ -83,12 +84,15 @@ export const STree = styledWrap<{ disabled: boolean }, HTMLDivElement>({})(
                 color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
             }
 
-            .${expandPlaceholderCls}, .${expandCls} {
+            .${expandPlaceholderCls}, .${expandCls}, .${loadingIconCls} {
                 display: inline-block;
                 width: 16px;
                 height: 16px;
                 line-height: 16px;
                 margin-right: 8px;
+            }
+            .${loadingIconCls} {
+                fill: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
             }
             .${expandCls} {
                 text-align: center;
