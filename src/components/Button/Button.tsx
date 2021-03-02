@@ -11,7 +11,7 @@ const defaultProps = {
     type: 'button'
 };
 
-type ButtonProps = {
+export type ButtonProps = {
     /** 按钮类型 */
     styleType?: 'primary' | 'border' | 'border-gray';
     /** 按钮尺寸 */

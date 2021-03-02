@@ -55,27 +55,26 @@ const keysToMap = (keys: Key[] = []): SelectedMap => {
 
 type CollapseProps = Record<string, unknown>;
 
-const Tree = (
-    props: {
-        /** 数据源 */
-        dataSource: TreeData[];
-        /** 是否禁用 */
-        disabled?: boolean;
-        /** 是否支持多选 */
-        multiple?: boolean;
-        /** 选中的数据 controlled */
-        selectedKeys?: Key[];
-        /** 默认选中的数据 uncontrolled */
-        defaultSelectedKeys?: Key[];
-        /** 选中变化回调 */
-        onChange: (v: Key[]) => void;
-        /** 异步加载数据操作 */
-        loadData?: LoadData;
-        /** collapse 的配置，查看 collapse 组件 */
-        collapseProps: CollapseProps;
-    },
-    ref: Ref<{ selectAll: () => void; unSelectAll: () => void; inverse: () => void }>
-) => {
+interface TreeProps {
+    /** 数据源 */
+    dataSource: TreeData[];
+    /** 是否禁用 */
+    disabled?: boolean;
+    /** 是否支持多选 */
+    multiple?: boolean;
+    /** 选中的数据 controlled */
+    selectedKeys?: Key[];
+    /** 默认选中的数据 uncontrolled */
+    defaultSelectedKeys?: Key[];
+    /** 选中变化回调 */
+    onChange: (v: Key[]) => void;
+    /** 异步加载数据操作 */
+    loadData?: LoadData;
+    /** collapse 的配置，查看 collapse 组件 */
+    collapseProps: CollapseProps;
+}
+
+const Tree = (props: TreeProps, ref: Ref<{ selectAll: () => void; unSelectAll: () => void; inverse: () => void }>) => {
     const {
         dataSource,
         disabled = false,
@@ -210,4 +209,4 @@ const Tree = (
     );
 };
 
-export default withUncontrolled({ valueName: 'selectedKeys' })(React.memo(React.forwardRef(Tree)));
+export default withUncontrolled<any, TreeProps>({ valueName: 'selectedKeys' })(React.memo(React.forwardRef(Tree)));

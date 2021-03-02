@@ -6,7 +6,7 @@ const uncontrolledDecorator = <T, ChildProps = any>(option?: {
     valueName?: string;
     onChangeName?: string | string[];
     defaultValueName?: string;
-}) => (Child: React.ComponentType<ChildProps>) => {
+}) => (Child: React.ComponentType<ChildProps>): React.ComponentType<ChildProps> => {
     const { valueName = 'value', onChangeName = 'onChange', defaultValueName: _defaultValueName } = option || {};
     const defaultValueName = _defaultValueName || `default${valueName.replace(/^\S/, s => s.toUpperCase())}`;
     const onChangeNames = Array.isArray(onChangeName) ? onChangeName : [onChangeName];

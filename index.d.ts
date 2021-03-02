@@ -22,16 +22,8 @@ export interface IconProps extends HTMLAttributes<HTMLSpanElement> {
 export declare class Icon extends PureComponent<IconProps> {}
 
 // Button
-export type ButtonStyleType = "primary" | "border" | "border-gray";
-export type ButtonShape = "circle" | "square";
-export interface ButtonProps extends HTMLAttributes<HTMLSpanElement> {
-    styleType?: ButtonStyleType;
-    size?: SizeType;
-    shape?: ButtonShape;
-    loading?: boolean;
-    icon?: ReactNode;
-}
-export declare class Button extends PureComponent<ButtonProps> {}
+import { ButtonProps } from "./lib/components/Button/Button"
+export { default as Button } from './lib/components/Button';
 
 // Box
 type BoxSpacing = "sm" | "md" | "lg" | number | string;
@@ -503,7 +495,7 @@ interface ActionListProps extends HTMLAttributes<HTMLUListElement> {
     actionList: ActionItem[];
     exposeCount?: number;
     size?: SizeType;
-    buttonStyleType?: ButtonStyleType;
+    buttonStyleType?: 'primary' | 'border' | 'border-gray';
     smart?: boolean;
     popoverProps?: PopoverProps;
 }
@@ -1130,3 +1122,9 @@ interface ThemeProviderProps {
     theme: any;
 }
 export declare class ThemeProvider extends Component<ThemeProviderProps> {}
+
+// Tree
+export { default as Tree } from './lib/components/Tree';
+
+// Link
+export { default as Link } from './lib/components/Link';
