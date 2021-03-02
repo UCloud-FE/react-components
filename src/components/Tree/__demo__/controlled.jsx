@@ -17,13 +17,17 @@ const generateItems = (count, prefix, depth) => {
         if (depth) {
             subItems = generateItems(generateNumber(0, 5), key, depth - 1);
         }
-        if (!subItems.length) keys.push(key);
-        return {
+        const item = {
             key: key,
             title: key,
-            children: subItems,
             disabled: Math.random() > 0.8
         };
+        if (subItems.length) {
+            item.children = subItems;
+        } else {
+            keys.push(key);
+        }
+        return item;
     });
 };
 

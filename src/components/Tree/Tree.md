@@ -1,6 +1,7 @@
 ### 说明
 
 -   这是 Tree - 树组件
+-   与程序树概念不同，按照目前的交互这里的树父节点、子节点有着本质的区别，选中只包括子节点，父节点只做展示，故数据结构中的称谓也有所差异
 
 ### 数据结构
 
@@ -11,6 +12,14 @@
 type Key = string;
 ```
 
+#### LoadData
+
+```ts {"static": true}
+interface LoadData {
+    (key: Key): Promise<void>;
+}
+```
+
 #### TreeData
 
 ```ts {"static": true}
@@ -19,20 +28,12 @@ interface TreeData {
     key: Key;
     // 选项标题内容
     title: ReactNode;
-    // 子数据
+    // 子数据，存在即为父节点，不存在即为叶子结点，与程序树有差异，原因详见说明
     children?: TreeData[];
-    // 是否禁用
+    // 是否禁用，父节点禁用会禁用所有子孙节点
     disabled?: boolean;
     // 是否强制为父节点
     isParent?: boolean;
-}
-```
-
-#### LoadData
-
-```ts {"static": true}
-interface LoadData {
-    (key: Key): Promise<void>;
 }
 ```
 
@@ -63,7 +64,9 @@ interface LoadData {
 
 #### loadData - 异步加载数据
 
-异步加载数据需要在待加载的父级数据中添加 isParent，来告知组件展示展开按钮，通过 loadData 来加载数据后需要更新 DataSource，由于 Tree 为 Memo Component，更新时需要更新引用
+1. 异步加载数据需要在待加载的父级数据中添加 isParent，来告知组件展示展开按钮，通过 loadData 来加载数据后需要更新 DataSource
+2. 由于 Tree 为 Memo Component，更新时需要更新引用
+3. 异步加载需注意无法使用多选场景，多选时数据未加载无法获取选中数据
 
 ```js {"codepath": "loadData.jsx"}
 ```

@@ -12,11 +12,14 @@ const generateItems = (count, prefix, depth) => {
         if (depth) {
             subItems = generateItems(6, key, depth - 1);
         }
-        return {
+        const item = {
             key: key,
-            title: key,
-            children: subItems
+            title: key
         };
+        if (subItems.length) {
+            item.children = subItems;
+        }
+        return item;
     });
 };
 

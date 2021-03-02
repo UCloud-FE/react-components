@@ -208,7 +208,7 @@ const TitleItem = ({
     const onCheckChange = useCallback(
         checked => {
             const selectedMap: ChangeKeyMap = {};
-            values.forEach(v => {
+            values?.forEach(v => {
                 selectedMap[v] = checked;
             });
             onSelect(selectedMap);
