@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.34](https://github.com/UCloud-FE/react-components/compare/v1.0.33...v1.0.34) (2021-03-02)
+
+### Features
+
+-   **Tree:** add support of loadData ([8bb20da](https://github.com/UCloud-FE/react-components/commit/8bb20da6d1c4f7dd151587f9d5ce6ba21de1e8e6))
+-   **type:** update interface output ([3f26501](https://github.com/UCloud-FE/react-components/commit/3f2650139113a6b6ed324f9bdaca5ddcd8b2d726))
+
+### Bug Fixes
+
+-   **Interface:** fix children component type error in index.d.ts ([e36f981](https://github.com/UCloud-FE/react-components/commit/e36f9817b098ffac08d3435249db1484ed10e4d4)), closes [#329](https://github.com/UCloud-FE/react-components/issues/329)
+
 ### [1.0.33](https://github.com/UCloud-FE/react-components/compare/v1.0.32...v1.0.33) (2021-02-23)
 
 ### Features
