@@ -74,139 +74,141 @@ interface TreeProps {
     collapseProps: CollapseProps;
 }
 
-const Tree = (props: TreeProps, ref: Ref<{ selectAll: () => void; unSelectAll: () => void; inverse: () => void }>) => {
-    const {
-        dataSource,
-        disabled = false,
-        multiple = false,
-        selectedKeys,
-        onChange = noop,
-        loadData,
-        collapseProps
-    } = props;
-    const [[group, allKeys, allDisabledKeys], setGroup] = useState(() => groupDataSource(dataSource));
-    const finalSelectedKeys = selectedKeys;
-    const [selectedMap, setSelectedMap] = useState(() => keysToMap(finalSelectedKeys));
+const Tree = React.forwardRef(
+    (props: TreeProps, ref: Ref<{ selectAll: () => void; unSelectAll: () => void; inverse: () => void }>) => {
+        const {
+            dataSource,
+            disabled = false,
+            multiple = false,
+            selectedKeys,
+            onChange = noop,
+            loadData,
+            collapseProps
+        } = props;
+        const [[group, allKeys, allDisabledKeys], setGroup] = useState(() => groupDataSource(dataSource));
+        const finalSelectedKeys = selectedKeys;
+        const [selectedMap, setSelectedMap] = useState(() => keysToMap(finalSelectedKeys));
 
-    const stateRef = useRef({ selectedMap, finalSelectedKeys });
+        const stateRef = useRef({ selectedMap, finalSelectedKeys });
 
-    useEffect(() => {
-        setGroup(groupDataSource(dataSource));
-    }, [dataSource]);
+        useEffect(() => {
+            setGroup(groupDataSource(dataSource));
+        }, [dataSource]);
 
-    useEffect(() => {
-        const selectedMap = keysToMap(finalSelectedKeys);
-        stateRef.current = { selectedMap, finalSelectedKeys };
-        setSelectedMap(selectedMap);
-    }, [finalSelectedKeys]);
+        useEffect(() => {
+            const selectedMap = keysToMap(finalSelectedKeys);
+            stateRef.current = { selectedMap, finalSelectedKeys };
+            setSelectedMap(selectedMap);
+        }, [finalSelectedKeys]);
 
-    useImperativeHandle(
-        ref,
-        () => {
-            return {
-                /**
-                 * 全选
-                 * @public
-                 */
-                selectAll: () => {
-                    if (!multiple) {
-                        console.error(`Can't call selectAll for single select Tree`);
-                        return;
-                    }
-                    const disabledSelectedKeys: Key[] = [];
-                    allDisabledKeys.forEach(v => {
-                        if (selectedMap[v]) disabledSelectedKeys.push(v);
-                    });
-                    const selectedKeys = [...allKeys, ...disabledSelectedKeys];
-                    onChange(selectedKeys);
-                },
-                /**
-                 * 全部取消选择
-                 * @public
-                 */
-                unSelectAll: () => {
-                    const disabledSelectedKeys: Key[] = [];
-                    allDisabledKeys.forEach(v => {
-                        if (selectedMap[v]) disabledSelectedKeys.push(v);
-                    });
-                    onChange([...disabledSelectedKeys]);
-                },
-                /**
-                 * 反选
-                 * @public
-                 */
-                inverse: () => {
-                    if (!multiple) {
-                        console.error(`Can't call selectAll for single select Tree`);
-                        return;
-                    }
-                    const disabledSelectedKeys: Key[] = [];
-                    allDisabledKeys.forEach(v => {
-                        if (selectedMap[v]) disabledSelectedKeys.push(v);
-                    });
-                    const selectedKeys: Key[] = [...disabledSelectedKeys];
-                    allKeys.forEach(v => {
-                        if (!selectedMap[v]) {
-                            selectedKeys.push(v);
+        useImperativeHandle(
+            ref,
+            () => {
+                return {
+                    /**
+                     * 全选
+                     * @public
+                     */
+                    selectAll: () => {
+                        if (!multiple) {
+                            console.error(`Can't call selectAll for single select Tree`);
+                            return;
                         }
-                    });
-                    onChange(selectedKeys);
-                }
-            };
-        },
-        [multiple, allKeys, allDisabledKeys, onChange, selectedMap]
-    );
-
-    const onSelect = useCallback(
-        _selectedMap => {
-            let selectedKeys;
-            if (multiple) {
-                const { selectedMap } = stateRef.current;
-                const clonedMap = { ...selectedMap };
-                for (const key in _selectedMap) {
-                    const v = _selectedMap[key];
-                    if (v) {
-                        clonedMap[key] = true;
-                    } else {
-                        delete clonedMap[key];
+                        const disabledSelectedKeys: Key[] = [];
+                        allDisabledKeys.forEach(v => {
+                            if (selectedMap[v]) disabledSelectedKeys.push(v);
+                        });
+                        const selectedKeys = [...allKeys, ...disabledSelectedKeys];
+                        onChange(selectedKeys);
+                    },
+                    /**
+                     * 全部取消选择
+                     * @public
+                     */
+                    unSelectAll: () => {
+                        const disabledSelectedKeys: Key[] = [];
+                        allDisabledKeys.forEach(v => {
+                            if (selectedMap[v]) disabledSelectedKeys.push(v);
+                        });
+                        onChange([...disabledSelectedKeys]);
+                    },
+                    /**
+                     * 反选
+                     * @public
+                     */
+                    inverse: () => {
+                        if (!multiple) {
+                            console.error(`Can't call selectAll for single select Tree`);
+                            return;
+                        }
+                        const disabledSelectedKeys: Key[] = [];
+                        allDisabledKeys.forEach(v => {
+                            if (selectedMap[v]) disabledSelectedKeys.push(v);
+                        });
+                        const selectedKeys: Key[] = [...disabledSelectedKeys];
+                        allKeys.forEach(v => {
+                            if (!selectedMap[v]) {
+                                selectedKeys.push(v);
+                            }
+                        });
+                        onChange(selectedKeys);
                     }
-                }
-                selectedKeys = Object.keys(clonedMap) as Key[];
-            } else {
-                for (const key in _selectedMap) {
-                    const v = _selectedMap[key];
-                    if (v) {
-                        selectedKeys = [key] as Key[];
-                        break;
+                };
+            },
+            [multiple, allKeys, allDisabledKeys, onChange, selectedMap]
+        );
+
+        const onSelect = useCallback(
+            _selectedMap => {
+                let selectedKeys;
+                if (multiple) {
+                    const { selectedMap } = stateRef.current;
+                    const clonedMap = { ...selectedMap };
+                    for (const key in _selectedMap) {
+                        const v = _selectedMap[key];
+                        if (v) {
+                            clonedMap[key] = true;
+                        } else {
+                            delete clonedMap[key];
+                        }
                     }
+                    selectedKeys = Object.keys(clonedMap) as Key[];
+                } else {
+                    for (const key in _selectedMap) {
+                        const v = _selectedMap[key];
+                        if (v) {
+                            selectedKeys = [key] as Key[];
+                            break;
+                        }
+                    }
+                    if (!selectedKeys) return;
                 }
-                if (!selectedKeys) return;
-            }
 
-            onChange(selectedKeys);
-        },
-        [multiple, onChange]
-    );
+                onChange(selectedKeys);
+            },
+            [multiple, onChange]
+        );
 
-    return (
-        <Collapse
-            {...collapseProps}
-            component={STree}
-            className={classnames(prefixCls, multiple ? multipleCls : singleCls)}
-        >
-            <Items
-                depth={0}
-                disabled={disabled}
-                multiple={multiple}
-                onSelect={onSelect}
-                group={group}
-                selectedMap={selectedMap}
-                loadData={loadData}
+        return (
+            <Collapse
+                {...collapseProps}
+                component={STree}
+                className={classnames(prefixCls, multiple ? multipleCls : singleCls)}
             >
-                {dataSource}
-            </Items>
-        </Collapse>
-    );
-};
+                <Items
+                    depth={0}
+                    disabled={disabled}
+                    multiple={multiple}
+                    onSelect={onSelect}
+                    group={group}
+                    selectedMap={selectedMap}
+                    loadData={loadData}
+                >
+                    {dataSource}
+                </Items>
+            </Collapse>
+        );
+    }
+);
 
-export default withUncontrolled<any, TreeProps>({ valueName: 'selectedKeys' })(React.memo(React.forwardRef(Tree)));
+export default withUncontrolled<any, TreeProps>({ valueName: 'selectedKeys' })(React.memo(Tree));
