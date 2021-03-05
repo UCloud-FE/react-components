@@ -6,6 +6,7 @@ import Collapse from 'src/components/Collapse';
 import Icon from 'src/components/Icon';
 import config from 'src/config';
 import withProps from 'src/utils/withProps';
+import isFirefox from 'src/utils/isFirefox';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-menu';
@@ -52,6 +53,15 @@ const menuStyle = ({ theme: { designTokens: DT } }) => {
         box-shadow: ${DT.T_SHADOW_BLOCK_DEFAULT_LG};
         background: ${DT.T_COLOR_BG_MENU};
 
+        ${
+            isFirefox &&
+            css`
+                & {
+                    overflow-y: scroll;
+                }
+            `
+        }
+        
         .${itemCls}, .${selectallWrapCls}, .${popupTitleCls},.${collapseTitleCls} {
             cursor: pointer;
             white-space: nowrap;
