@@ -24,6 +24,7 @@ const Combine = ({
     return (
         <CombineWrap spacing={spacing === 'smart' ? size : spacing} {...rest}>
             {React.Children.map(children, child => {
+                if (child == null || child === false) return child;
                 isFirstItem = isFirstItem === undefined ? true : false;
                 const _child = (
                     <div className={itemCls}>
