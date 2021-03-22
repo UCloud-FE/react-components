@@ -56,6 +56,9 @@ module.exports = [
                 name: 'Textarea'
             },
             {
+                name: 'AutoComplete'
+            },
+            {
                 name: 'Select',
                 components: ['Select', 'Option', 'Extra', 'Group']
             },

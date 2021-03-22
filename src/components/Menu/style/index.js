@@ -35,14 +35,15 @@ export const SubMenuIcon = styled(Icon)`
     font-size: 14px;
 `;
 
-const menuStyle = ({ theme: { designTokens: DT } }) => {
+const menuStyle = ({ customStyle = {}, theme: { designTokens: DT } }) => {
+    const { maxWidth } = customStyle;
     return css`
         display: inline-block;
         box-sizing: border-box;
         overflow: auto;
         line-height: 32px;
         font-size: 12px;
-        max-width: 360px;
+        max-width: ${maxWidth || '360px'};
         min-width: 64px;
         padding: 4px 0px;
         border-radius: 2px;

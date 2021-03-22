@@ -75,9 +75,9 @@ class NumberInput extends Component {
         min: PropTypes.number,
         /** 按钮每次变动大小 */
         step: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-        /** @ignore */
+        /** 增加按钮点击增加的大小，会覆盖 step */
         upStep: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-        /** @ignore */
+        /** 减少按钮点击减少的大小，会覆盖 step */
         downStep: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
         /** 自定义'+'按钮 */
         upHandler: PropTypes.node,

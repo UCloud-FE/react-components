@@ -44,7 +44,7 @@ const Demo = () => {
         <>
             <h2>Controlled</h2>
             <Tree dataSource={dataSource} multiple onChange={console.log} selectedKeys={[keys[0]]} />
-            <h2>UnControlled</h2>
+            <h2>Uncontrolled</h2>
             <Tree dataSource={dataSource} multiple onChange={console.log} />
         </>
     );

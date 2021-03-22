@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import KEYCODE from 'interfaces/KeyCode';
+import KEYCODE from 'src/interfaces/KeyCode';
 
 import Input from './Input';
 import { SearchIcon } from './style';

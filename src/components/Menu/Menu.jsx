@@ -88,7 +88,9 @@ class Menu extends Component {
         /** 自定义样式 */
         customStyle: PropTypes.shape({
             /** 菜单的最大高度 */
-            maxHeight: PropTypes.string
+            maxHeight: PropTypes.string,
+            /** 菜单的最大宽度 */
+            maxWidth: PropTypes.string
         }),
         /** @ignore */
         theme: PropTypes.any,

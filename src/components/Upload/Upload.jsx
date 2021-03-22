@@ -222,13 +222,13 @@ class Upload extends PureComponent {
     /** 处理change */
     onChange = (fileList, cb) => {
         if (!this.IS_CONTROLLED) {
-            this.onUnControlledChange(fileList, cb);
+            this.onUncontrolledChange(fileList, cb);
         } else {
             this.onControlledChange(fileList, cb);
         }
     };
     /** 非受控处理change */
-    onUnControlledChange = (fileList, cb) => {
+    onUncontrolledChange = (fileList, cb) => {
         const { onChange } = this.props;
         this.setState(
             {

@@ -6,3 +6,5 @@ Menu.Item = Item;
 
 import SubMenu from './SubMenu';
 Menu.SubMenu = SubMenu;
+
+export { Item };
