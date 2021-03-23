@@ -39,11 +39,7 @@ interface AutoCompleteProps {
     /**
      * options 加载中状态
      */
-    optionsLoading?: boolean;
-    /**
-     * 未输入内容时是否展示建议选项
-     */
-    displayOptionsWhenEmpty?: boolean;
+    loading?: boolean;
     /**
      * 自定义搜索，为 false 时不做搜索展示全部
      */
@@ -60,8 +56,7 @@ const AutoComplete = ({
     onChange: _onChange,
     options = [],
     disabled,
-    optionsLoading: loading,
-    displayOptionsWhenEmpty,
+    loading,
     handleSearch,
     popoverProps
 }: AutoCompleteProps) => {
@@ -128,7 +123,7 @@ const AutoComplete = ({
                     />
                 }
                 trigger={[]}
-                visible={!!(value || displayOptionsWhenEmpty) && visible}
+                visible={visible}
                 stretch={['minWidth']}
                 {...popoverContainerProps}
                 {...popoverProps}

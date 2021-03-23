@@ -18,11 +18,10 @@ class Demo extends React.PureComponent {
         };
     }
     render() {
-        const { handleSearch, disabled, displayOptionsWhenEmpty, optionsLoading } = this.state;
+        const { handleSearch, disabled, loading } = this.state;
         const props = {
             disabled,
-            displayOptionsWhenEmpty,
-            optionsLoading
+            loading
         };
         if (handleSearch === 'false') {
             props.handleSearch = false;
@@ -37,17 +36,8 @@ class Demo extends React.PureComponent {
                     <Form.Item label="disabled">
                         <Switch checked={disabled} onChange={disabled => this.setState({ disabled })} />
                     </Form.Item>
-                    <Form.Item label="displayOptionsWhenEmpty">
-                        <Switch
-                            checked={displayOptionsWhenEmpty}
-                            onChange={displayOptionsWhenEmpty => this.setState({ displayOptionsWhenEmpty })}
-                        />
-                    </Form.Item>
-                    <Form.Item label="optionsLoading">
-                        <Switch
-                            checked={optionsLoading}
-                            onChange={optionsLoading => this.setState({ optionsLoading })}
-                        />
+                    <Form.Item label="loading">
+                        <Switch checked={loading} onChange={loading => this.setState({ loading })} />
                     </Form.Item>
                     <Form.Item label="handleSearch">
                         <Radio.Group

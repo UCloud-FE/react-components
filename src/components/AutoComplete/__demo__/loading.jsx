@@ -26,7 +26,7 @@ const Demo = () => {
     }, []);
     return (
         <>
-            <AutoComplete options={options} onChange={onChange} handleSearch={false} optionsLoading={loading} />
+            <AutoComplete options={options} onChange={onChange} handleSearch={false} loading={loading} />
         </>
     );
 };

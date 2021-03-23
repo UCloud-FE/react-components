@@ -5,7 +5,7 @@
 
 ### 数据结构
 
-#### Key
+#### Item
 
 ```ts {"static": true}
 interface Item {
@@ -18,42 +18,47 @@ interface Item {
 
 ### 演示
 
--   普通使用
+#### 普通使用
 
 ```js {"codepath": "autoComplete.jsx"}
 ```
 
--   disabled - 禁用
+#### disabled - 禁用
 
 ```js {"codepath": "disabled.jsx"}
 ```
 
--   options - 选项展示
+#### options - 选项展示
 
 ```js {"codepath": "options.jsx"}
 ```
 
--   handleSearch - 自定义搜索
+#### handleSearch - 自定义搜索
 
 ```js {"codepath": "handleSearch.jsx"}
 ```
 
--   controlled - 受控
+#### controlled - 受控
 
 ```js {"codepath": "controlled.jsx"}
 ```
 
--   动态加载数据
+#### 动态加载数据
 
 ```js {"codepath": "loading.jsx"}
 ```
 
--   输入建议
+#### 如何实现输入为空时隐藏选项
+
+```js {"codepath": "hideOptionsWhenEmpty.jsx"}
+```
+
+#### 输入建议
 
 ```js {"codepath": "suggest.jsx"}
 ```
 
--   popupContainer - 容器测试
+#### popupContainer - 容器测试
 
 ```js {"codepath": "popupContainer.jsx"}
 ```
