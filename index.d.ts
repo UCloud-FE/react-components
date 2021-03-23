@@ -1128,3 +1128,6 @@ export { default as Tree } from './lib/components/Tree';
 
 // Link
 export { default as Link } from './lib/components/Link';
+
+// AutoComplete
+export { default as AutoComplete } from './lib/components/AutoComplete';

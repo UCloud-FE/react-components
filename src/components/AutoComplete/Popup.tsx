@@ -1,7 +1,6 @@
 import React, { ReactNode, Ref, useCallback, useImperativeHandle, useMemo, useState } from 'react';
 
 import Menu, { Item as MenuItem } from 'src/components/Menu';
-import Loading from 'src/components/Loading';
 import { menuCls, PopupWrap } from './style';
 
 interface Item {
@@ -23,7 +22,7 @@ export interface ListRef {
     select: () => void;
 }
 
-const defaultSearch = (item: Item, searchValue: string) => item.value.indexOf(searchValue) >= 0;
+const defaultSearch = (item: Item, searchValue: string) => item?.value?.indexOf(searchValue) >= 0;
 
 const PopupWithOutMemo = React.forwardRef(function Popup(
     { searchValue, options, onChange, handleSearch, loading }: PopupProps,

@@ -3,7 +3,7 @@ import { useCallback, useMemo, useState } from 'react';
 const useUncontrolled = <V, Arg = unknown[], VT = V | undefined>(
     value: VT,
     defaultValue: V,
-    onChange: ((v: V, ...args: Arg[]) => void) | undefined
+    onChange?: ((v: V, ...args: Arg[]) => void) | undefined
 ): [V, (v: V, ...args: Arg[]) => void] => {
     const isControlled = useMemo(() => value !== undefined, [value]);
     const [v, setV] = useState<V>(() => (isControlled ? ((value as unknown) as V) : defaultValue));
