@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.35](https://github.com/UCloud-FE/react-components/compare/v1.0.34...v1.0.35) (2021-03-23)
+
+### Features
+
+-   **AutoComplete:** add AutoComplete ([41350a4](https://github.com/UCloud-FE/react-components/commit/41350a49323e1494e2f92da019180870b13955bc))
+-   **AutoComplete:** remove displayOptionsWhenEmpty & rename loading ([647d780](https://github.com/UCloud-FE/react-components/commit/647d780668876d775f7672789527e61b98525b2b))
+
+### Bug Fixes
+
+-   **AutoComplete:** fix wrong options cause crash ([3e24993](https://github.com/UCloud-FE/react-components/commit/3e249934c3876cd25c5a2930bd7f560aa1a1d1d5))
+-   **Combine:** filter null,undefined,false children ([0f6bd46](https://github.com/UCloud-FE/react-components/commit/0f6bd46fe6a2a0c6a581165e1c61a1e0d72822e1))
+-   **Menu:** fix scroll bar in firefox cause overflow ([a295b91](https://github.com/UCloud-FE/react-components/commit/a295b910e45132b3b2c01b68f1b3a12d64b76518))
+-   **Tree:** fix react warn of forwardRef ([560d0c9](https://github.com/UCloud-FE/react-components/commit/560d0c98d563ee01db49c681b79f5f47bd77aa1c))
+
 ### [1.0.34](https://github.com/UCloud-FE/react-components/compare/v1.0.33...v1.0.34) (2021-03-02)
 
 ### Features
