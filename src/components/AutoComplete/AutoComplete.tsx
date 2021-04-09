@@ -48,6 +48,14 @@ interface AutoCompleteProps {
      * 自定义 popover 的配置
      */
     popoverProps?: { [key: string]: any };
+    /**
+     * 焦点回调
+     */
+    onFocus?: () => void;
+    /**
+     * 失焦回调
+     */
+    onBlur?: () => void;
 }
 
 const AutoComplete = ({
@@ -58,7 +66,9 @@ const AutoComplete = ({
     disabled,
     loading,
     handleSearch,
-    popoverProps
+    popoverProps,
+    onFocus,
+    onBlur
 }: AutoCompleteProps) => {
     const [value, onChange] = useUncontrolled<string>(_value, defaultValue, _onChange);
     const [visible, setVisible] = useState(false);
@@ -70,9 +80,6 @@ const AutoComplete = ({
         },
         [onChange]
     );
-    const onInputFocus = useCallback(() => setVisible(true), []);
-    const onInputBlur = useCallback(() => setVisible(false), []);
-    const onInputClick = useCallback(() => setVisible(true), []);
     const onKeyPress = useCallback((e: KeyboardEvent) => {
         let intercept = true;
         switch (e.keyCode) {
@@ -94,6 +101,7 @@ const AutoComplete = ({
             e.stopPropagation();
         }
     }, []);
+    const handleVisibleChange = useCallback(visible => setVisible(visible), []);
     const onSelect = useCallback(
         (v: string) => {
             onChange(v);
@@ -113,6 +121,8 @@ const AutoComplete = ({
     return (
         <SWrap>
             <Popover
+                {...popoverContainerProps}
+                {...popoverProps}
                 popup={
                     <Popup
                         searchValue={value}
@@ -123,17 +133,17 @@ const AutoComplete = ({
                     />
                 }
                 trigger={[]}
+                showAction={['click', 'focus']}
+                hideAction={['blur']}
                 visible={visible}
                 stretch={['minWidth']}
-                {...popoverContainerProps}
-                {...popoverProps}
+                onVisibleChange={handleVisibleChange}
             >
                 <Input
                     value={value}
                     onChange={onInputChange}
-                    onFocus={onInputFocus}
-                    onBlur={onInputBlur}
-                    onClick={onInputClick}
+                    onFocus={onFocus}
+                    onBlur={onBlur}
                     onKeyPress={onKeyPress}
                     disabled={disabled}
                     suffix={loading && <SvgIcon className={loadingIconCls} type="ring-loading" spin />}
