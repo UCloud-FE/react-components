@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tree demo -- base 1`] = `
-.emotion-18 {
+.emotion-24 {
   background: transparent;
   color: #0a1633;
 }
 
-.emotion-18 .uc-fe-tree-item {
+.emotion-24 .uc-fe-tree-item {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15,12 +15,12 @@ exports[`Tree demo -- base 1`] = `
   min-height: 36px;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-indent {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-indent {
   width: 32px;
   position: relative;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
   content: ' ';
   box-sizing: border-box;
   display: inline-block;
@@ -30,13 +30,13 @@ exports[`Tree demo -- base 1`] = `
   margin-left: 50%;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
   height: 50%;
   width: 4px;
   border-bottom: 1px solid #d2d6ea;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-wrap {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-wrap {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -52,29 +52,29 @@ exports[`Tree demo -- base 1`] = `
   align-items: center;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
   background: #F4F6FF;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
   margin-left: 8px;
 }
 
-.emotion-18 .uc-fe-tree-item.uc-fe-tree-disabled {
+.emotion-24 .uc-fe-tree-item.uc-fe-tree-disabled {
   color: #cccccc;
 }
 
-.emotion-18 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
+.emotion-24 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
   cursor: default;
 }
 
-.emotion-18.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
+.emotion-24.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
   color: #3860f4;
 }
 
-.emotion-18 .uc-fe-tree-expand-ph,
-.emotion-18 .uc-fe-tree-expand-icon,
-.emotion-18 .uc-fe-tree-loading-icon {
+.emotion-24 .uc-fe-tree-expand-ph,
+.emotion-24 .uc-fe-tree-expand-icon,
+.emotion-24 .uc-fe-tree-loading-icon {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -82,11 +82,11 @@ exports[`Tree demo -- base 1`] = `
   margin-right: 8px;
 }
 
-.emotion-18 .uc-fe-tree-loading-icon {
+.emotion-24 .uc-fe-tree-loading-icon {
   fill: #3860f4;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon {
+.emotion-24 .uc-fe-tree-expand-icon {
   text-align: center;
   cursor: pointer;
   -webkit-transition: -webkit-transform 0.2s;
@@ -95,7 +95,7 @@ exports[`Tree demo -- base 1`] = `
   position: relative;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon:before {
+.emotion-24 .uc-fe-tree-expand-icon:before {
   content: ' ';
   display: inline-block;
   width: 0;
@@ -108,22 +108,22 @@ exports[`Tree demo -- base 1`] = `
   left: 5px;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
+.emotion-24 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
   cursor: default;
   color: #cccccc;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
+.emotion-24 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
   border-color: transparent transparent transparent #cccccc;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
+.emotion-24 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.emotion-2 {
+.emotion-4 {
   cursor: pointer;
   position: relative;
   white-space: nowrap;
@@ -135,11 +135,27 @@ exports[`Tree demo -- base 1`] = `
   color: #0a1633;
 }
 
-.emotion-2 > * {
+.emotion-4 > * {
   font-size: 12px;
 }
 
-.emotion-2 .uc-fe-checkbox-icon-wrap {
+.emotion-4 .uc-fe-checkbox-content {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 100%;
+  margin-left: 8px;
+}
+
+.emotion-4.uc-fe-checkbox-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-4:hover .uc-fe-checkbox-icon-wrap {
+  border-color: #3860f4;
+}
+
+.emotion-2.uc-fe-checkbox-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -151,56 +167,12 @@ exports[`Tree demo -- base 1`] = `
   vertical-align: middle;
 }
 
-.emotion-2 .uc-fe-checkbox-icon-wrap .uc-fe-checkbox-icon {
+.emotion-2 .uc-fe-checkbox-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
   top: -1px;
   left: -1px;
-}
-
-.emotion-2 .uc-fe-checkbox-content {
-  display: inline-block;
-  vertical-align: middle;
-  max-height: 100%;
-  margin-left: 8px;
-}
-
-.emotion-2:hover .uc-fe-checkbox-icon-wrap {
-  border-color: #3860f4;
-}
-
-.emotion-2.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
-.emotion-2.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
-  border-color: #3860f4;
-  background: #3860f4;
-}
-
-.emotion-2.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
-.emotion-2.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
-  visibility: visible;
-  opacity: 1;
-  fill: #ffffff;
-}
-
-.emotion-2.uc-fe-checkbox-disabled {
-  cursor: default;
-  color: #cccccc;
-}
-
-.emotion-2.uc-fe-checkbox-disabled .uc-fe-checkbox-icon-wrap {
-  border-color: #d9d9d9;
-  background: #f7f7f7;
-}
-
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
-  fill: #cccccc;
-}
-
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
-  background: none;
 }
 
 .emotion-0 {
@@ -212,16 +184,16 @@ exports[`Tree demo -- base 1`] = `
   height: 14px;
 }
 
-.emotion-4 {
+.emotion-6 {
   display: none;
 }
 
-.emotion-18 {
+.emotion-24 {
   background: transparent;
   color: #0a1633;
 }
 
-.emotion-18 .uc-fe-tree-item {
+.emotion-24 .uc-fe-tree-item {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -230,12 +202,12 @@ exports[`Tree demo -- base 1`] = `
   min-height: 36px;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-indent {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-indent {
   width: 32px;
   position: relative;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
   content: ' ';
   box-sizing: border-box;
   display: inline-block;
@@ -245,13 +217,13 @@ exports[`Tree demo -- base 1`] = `
   margin-left: 50%;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
   height: 50%;
   width: 4px;
   border-bottom: 1px solid #d2d6ea;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-wrap {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-wrap {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -267,29 +239,29 @@ exports[`Tree demo -- base 1`] = `
   align-items: center;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
   background: #F4F6FF;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
   margin-left: 8px;
 }
 
-.emotion-18 .uc-fe-tree-item.uc-fe-tree-disabled {
+.emotion-24 .uc-fe-tree-item.uc-fe-tree-disabled {
   color: #cccccc;
 }
 
-.emotion-18 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
+.emotion-24 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
   cursor: default;
 }
 
-.emotion-18.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
+.emotion-24.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
   color: #3860f4;
 }
 
-.emotion-18 .uc-fe-tree-expand-ph,
-.emotion-18 .uc-fe-tree-expand-icon,
-.emotion-18 .uc-fe-tree-loading-icon {
+.emotion-24 .uc-fe-tree-expand-ph,
+.emotion-24 .uc-fe-tree-expand-icon,
+.emotion-24 .uc-fe-tree-loading-icon {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -297,11 +269,11 @@ exports[`Tree demo -- base 1`] = `
   margin-right: 8px;
 }
 
-.emotion-18 .uc-fe-tree-loading-icon {
+.emotion-24 .uc-fe-tree-loading-icon {
   fill: #3860f4;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon {
+.emotion-24 .uc-fe-tree-expand-icon {
   text-align: center;
   cursor: pointer;
   -webkit-transition: -webkit-transform 0.2s;
@@ -310,7 +282,7 @@ exports[`Tree demo -- base 1`] = `
   position: relative;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon:before {
+.emotion-24 .uc-fe-tree-expand-icon:before {
   content: ' ';
   display: inline-block;
   width: 0;
@@ -323,22 +295,22 @@ exports[`Tree demo -- base 1`] = `
   left: 5px;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
+.emotion-24 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
   cursor: default;
   color: #cccccc;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
+.emotion-24 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
   border-color: transparent transparent transparent #cccccc;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
+.emotion-24 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.emotion-2 {
+.emotion-4 {
   cursor: pointer;
   position: relative;
   white-space: nowrap;
@@ -350,11 +322,27 @@ exports[`Tree demo -- base 1`] = `
   color: #0a1633;
 }
 
-.emotion-2 > * {
+.emotion-4 > * {
   font-size: 12px;
 }
 
-.emotion-2 .uc-fe-checkbox-icon-wrap {
+.emotion-4 .uc-fe-checkbox-content {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 100%;
+  margin-left: 8px;
+}
+
+.emotion-4.uc-fe-checkbox-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-4:hover .uc-fe-checkbox-icon-wrap {
+  border-color: #3860f4;
+}
+
+.emotion-2.uc-fe-checkbox-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -366,56 +354,12 @@ exports[`Tree demo -- base 1`] = `
   vertical-align: middle;
 }
 
-.emotion-2 .uc-fe-checkbox-icon-wrap .uc-fe-checkbox-icon {
+.emotion-2 .uc-fe-checkbox-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
   top: -1px;
   left: -1px;
-}
-
-.emotion-2 .uc-fe-checkbox-content {
-  display: inline-block;
-  vertical-align: middle;
-  max-height: 100%;
-  margin-left: 8px;
-}
-
-.emotion-2:hover .uc-fe-checkbox-icon-wrap {
-  border-color: #3860f4;
-}
-
-.emotion-2.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
-.emotion-2.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
-  border-color: #3860f4;
-  background: #3860f4;
-}
-
-.emotion-2.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
-.emotion-2.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
-  visibility: visible;
-  opacity: 1;
-  fill: #ffffff;
-}
-
-.emotion-2.uc-fe-checkbox-disabled {
-  cursor: default;
-  color: #cccccc;
-}
-
-.emotion-2.uc-fe-checkbox-disabled .uc-fe-checkbox-icon-wrap {
-  border-color: #d9d9d9;
-  background: #f7f7f7;
-}
-
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
-  fill: #cccccc;
-}
-
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
-  background: none;
 }
 
 .emotion-0 {
@@ -427,12 +371,12 @@ exports[`Tree demo -- base 1`] = `
   height: 14px;
 }
 
-.emotion-4 {
+.emotion-6 {
   display: none;
 }
 
 <div
-  class="uc-fe-tree uc-fe-tree-multiple emotion-18 emotion-19"
+  class="uc-fe-tree uc-fe-tree-multiple emotion-24 emotion-25"
 >
   <div>
     <div>
@@ -446,10 +390,10 @@ exports[`Tree demo -- base 1`] = `
             class="uc-fe-tree-expand-icon"
           />
           <span
-            class="uc-fe-checkbox emotion-2 emotion-3"
+            class="uc-fe-checkbox emotion-4 emotion-5"
           >
             <span
-              class="uc-fe-checkbox-icon-wrap"
+              class="uc-fe-checkbox-icon-wrap emotion-2 emotion-3"
             >
               <svg
                 class="uc-fe-checkbox-icon emotion-0 emotion-1"
@@ -471,7 +415,7 @@ exports[`Tree demo -- base 1`] = `
       </div>
     </div>
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-6 emotion-7"
     />
   </div>
   <div>
@@ -486,10 +430,10 @@ exports[`Tree demo -- base 1`] = `
             class="uc-fe-tree-expand-icon"
           />
           <span
-            class="uc-fe-checkbox emotion-2 emotion-3"
+            class="uc-fe-checkbox emotion-4 emotion-5"
           >
             <span
-              class="uc-fe-checkbox-icon-wrap"
+              class="uc-fe-checkbox-icon-wrap emotion-2 emotion-3"
             >
               <svg
                 class="uc-fe-checkbox-icon emotion-0 emotion-1"
@@ -511,7 +455,7 @@ exports[`Tree demo -- base 1`] = `
       </div>
     </div>
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-6 emotion-7"
     />
   </div>
   <div>
@@ -526,10 +470,10 @@ exports[`Tree demo -- base 1`] = `
             class="uc-fe-tree-expand-icon"
           />
           <span
-            class="uc-fe-checkbox emotion-2 emotion-3"
+            class="uc-fe-checkbox emotion-4 emotion-5"
           >
             <span
-              class="uc-fe-checkbox-icon-wrap"
+              class="uc-fe-checkbox-icon-wrap emotion-2 emotion-3"
             >
               <svg
                 class="uc-fe-checkbox-icon emotion-0 emotion-1"
@@ -551,7 +495,7 @@ exports[`Tree demo -- base 1`] = `
       </div>
     </div>
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-6 emotion-7"
     />
   </div>
 </div>
@@ -707,12 +651,12 @@ Array [
       </h2>
     </div>
   </div>,
-  .emotion-36 {
+  .emotion-48 {
   background: transparent;
   color: #0a1633;
 }
 
-.emotion-36 .uc-fe-tree-item {
+.emotion-48 .uc-fe-tree-item {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -721,12 +665,12 @@ Array [
   min-height: 36px;
 }
 
-.emotion-36 .uc-fe-tree-item .uc-fe-tree-indent {
+.emotion-48 .uc-fe-tree-item .uc-fe-tree-indent {
   width: 32px;
   position: relative;
 }
 
-.emotion-36 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
+.emotion-48 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
   content: ' ';
   box-sizing: border-box;
   display: inline-block;
@@ -736,13 +680,13 @@ Array [
   margin-left: 50%;
 }
 
-.emotion-36 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
+.emotion-48 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
   height: 50%;
   width: 4px;
   border-bottom: 1px solid #d2d6ea;
 }
 
-.emotion-36 .uc-fe-tree-item .uc-fe-tree-wrap {
+.emotion-48 .uc-fe-tree-item .uc-fe-tree-wrap {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -758,29 +702,29 @@ Array [
   align-items: center;
 }
 
-.emotion-36 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
+.emotion-48 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
   background: #F4F6FF;
 }
 
-.emotion-36 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
+.emotion-48 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
   margin-left: 8px;
 }
 
-.emotion-36 .uc-fe-tree-item.uc-fe-tree-disabled {
+.emotion-48 .uc-fe-tree-item.uc-fe-tree-disabled {
   color: #cccccc;
 }
 
-.emotion-36 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
+.emotion-48 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
   cursor: default;
 }
 
-.emotion-36.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
+.emotion-48.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
   color: #3860f4;
 }
 
-.emotion-36 .uc-fe-tree-expand-ph,
-.emotion-36 .uc-fe-tree-expand-icon,
-.emotion-36 .uc-fe-tree-loading-icon {
+.emotion-48 .uc-fe-tree-expand-ph,
+.emotion-48 .uc-fe-tree-expand-icon,
+.emotion-48 .uc-fe-tree-loading-icon {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -788,11 +732,11 @@ Array [
   margin-right: 8px;
 }
 
-.emotion-36 .uc-fe-tree-loading-icon {
+.emotion-48 .uc-fe-tree-loading-icon {
   fill: #3860f4;
 }
 
-.emotion-36 .uc-fe-tree-expand-icon {
+.emotion-48 .uc-fe-tree-expand-icon {
   text-align: center;
   cursor: pointer;
   -webkit-transition: -webkit-transform 0.2s;
@@ -801,7 +745,7 @@ Array [
   position: relative;
 }
 
-.emotion-36 .uc-fe-tree-expand-icon:before {
+.emotion-48 .uc-fe-tree-expand-icon:before {
   content: ' ';
   display: inline-block;
   width: 0;
@@ -814,22 +758,22 @@ Array [
   left: 5px;
 }
 
-.emotion-36 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
+.emotion-48 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
   cursor: default;
   color: #cccccc;
 }
 
-.emotion-36 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
+.emotion-48 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
   border-color: transparent transparent transparent #cccccc;
 }
 
-.emotion-36 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
+.emotion-48 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.emotion-2 {
+.emotion-4 {
   cursor: pointer;
   position: relative;
   white-space: nowrap;
@@ -841,11 +785,27 @@ Array [
   color: #0a1633;
 }
 
-.emotion-2 > * {
+.emotion-4 > * {
   font-size: 12px;
 }
 
-.emotion-2 .uc-fe-checkbox-icon-wrap {
+.emotion-4 .uc-fe-checkbox-content {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 100%;
+  margin-left: 8px;
+}
+
+.emotion-4.uc-fe-checkbox-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-4:hover .uc-fe-checkbox-icon-wrap {
+  border-color: #3860f4;
+}
+
+.emotion-2.uc-fe-checkbox-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -857,56 +817,12 @@ Array [
   vertical-align: middle;
 }
 
-.emotion-2 .uc-fe-checkbox-icon-wrap .uc-fe-checkbox-icon {
+.emotion-2 .uc-fe-checkbox-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
   top: -1px;
   left: -1px;
-}
-
-.emotion-2 .uc-fe-checkbox-content {
-  display: inline-block;
-  vertical-align: middle;
-  max-height: 100%;
-  margin-left: 8px;
-}
-
-.emotion-2:hover .uc-fe-checkbox-icon-wrap {
-  border-color: #3860f4;
-}
-
-.emotion-2.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
-.emotion-2.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
-  border-color: #3860f4;
-  background: #3860f4;
-}
-
-.emotion-2.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
-.emotion-2.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
-  visibility: visible;
-  opacity: 1;
-  fill: #ffffff;
-}
-
-.emotion-2.uc-fe-checkbox-disabled {
-  cursor: default;
-  color: #cccccc;
-}
-
-.emotion-2.uc-fe-checkbox-disabled .uc-fe-checkbox-icon-wrap {
-  border-color: #d9d9d9;
-  background: #f7f7f7;
-}
-
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
-  fill: #cccccc;
-}
-
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
-  background: none;
 }
 
 .emotion-0 {
@@ -918,16 +834,16 @@ Array [
   height: 14px;
 }
 
-.emotion-4 {
+.emotion-6 {
   display: none;
 }
 
-.emotion-36 {
+.emotion-48 {
   background: transparent;
   color: #0a1633;
 }
 
-.emotion-36 .uc-fe-tree-item {
+.emotion-48 .uc-fe-tree-item {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -936,12 +852,12 @@ Array [
   min-height: 36px;
 }
 
-.emotion-36 .uc-fe-tree-item .uc-fe-tree-indent {
+.emotion-48 .uc-fe-tree-item .uc-fe-tree-indent {
   width: 32px;
   position: relative;
 }
 
-.emotion-36 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
+.emotion-48 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
   content: ' ';
   box-sizing: border-box;
   display: inline-block;
@@ -951,13 +867,13 @@ Array [
   margin-left: 50%;
 }
 
-.emotion-36 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
+.emotion-48 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
   height: 50%;
   width: 4px;
   border-bottom: 1px solid #d2d6ea;
 }
 
-.emotion-36 .uc-fe-tree-item .uc-fe-tree-wrap {
+.emotion-48 .uc-fe-tree-item .uc-fe-tree-wrap {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -973,29 +889,29 @@ Array [
   align-items: center;
 }
 
-.emotion-36 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
+.emotion-48 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
   background: #F4F6FF;
 }
 
-.emotion-36 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
+.emotion-48 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
   margin-left: 8px;
 }
 
-.emotion-36 .uc-fe-tree-item.uc-fe-tree-disabled {
+.emotion-48 .uc-fe-tree-item.uc-fe-tree-disabled {
   color: #cccccc;
 }
 
-.emotion-36 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
+.emotion-48 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
   cursor: default;
 }
 
-.emotion-36.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
+.emotion-48.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
   color: #3860f4;
 }
 
-.emotion-36 .uc-fe-tree-expand-ph,
-.emotion-36 .uc-fe-tree-expand-icon,
-.emotion-36 .uc-fe-tree-loading-icon {
+.emotion-48 .uc-fe-tree-expand-ph,
+.emotion-48 .uc-fe-tree-expand-icon,
+.emotion-48 .uc-fe-tree-loading-icon {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -1003,11 +919,11 @@ Array [
   margin-right: 8px;
 }
 
-.emotion-36 .uc-fe-tree-loading-icon {
+.emotion-48 .uc-fe-tree-loading-icon {
   fill: #3860f4;
 }
 
-.emotion-36 .uc-fe-tree-expand-icon {
+.emotion-48 .uc-fe-tree-expand-icon {
   text-align: center;
   cursor: pointer;
   -webkit-transition: -webkit-transform 0.2s;
@@ -1016,7 +932,7 @@ Array [
   position: relative;
 }
 
-.emotion-36 .uc-fe-tree-expand-icon:before {
+.emotion-48 .uc-fe-tree-expand-icon:before {
   content: ' ';
   display: inline-block;
   width: 0;
@@ -1029,22 +945,22 @@ Array [
   left: 5px;
 }
 
-.emotion-36 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
+.emotion-48 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
   cursor: default;
   color: #cccccc;
 }
 
-.emotion-36 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
+.emotion-48 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
   border-color: transparent transparent transparent #cccccc;
 }
 
-.emotion-36 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
+.emotion-48 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.emotion-2 {
+.emotion-4 {
   cursor: pointer;
   position: relative;
   white-space: nowrap;
@@ -1056,11 +972,27 @@ Array [
   color: #0a1633;
 }
 
-.emotion-2 > * {
+.emotion-4 > * {
   font-size: 12px;
 }
 
-.emotion-2 .uc-fe-checkbox-icon-wrap {
+.emotion-4 .uc-fe-checkbox-content {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 100%;
+  margin-left: 8px;
+}
+
+.emotion-4.uc-fe-checkbox-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-4:hover .uc-fe-checkbox-icon-wrap {
+  border-color: #3860f4;
+}
+
+.emotion-2.uc-fe-checkbox-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -1072,56 +1004,12 @@ Array [
   vertical-align: middle;
 }
 
-.emotion-2 .uc-fe-checkbox-icon-wrap .uc-fe-checkbox-icon {
+.emotion-2 .uc-fe-checkbox-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
   top: -1px;
   left: -1px;
-}
-
-.emotion-2 .uc-fe-checkbox-content {
-  display: inline-block;
-  vertical-align: middle;
-  max-height: 100%;
-  margin-left: 8px;
-}
-
-.emotion-2:hover .uc-fe-checkbox-icon-wrap {
-  border-color: #3860f4;
-}
-
-.emotion-2.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
-.emotion-2.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
-  border-color: #3860f4;
-  background: #3860f4;
-}
-
-.emotion-2.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
-.emotion-2.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
-  visibility: visible;
-  opacity: 1;
-  fill: #ffffff;
-}
-
-.emotion-2.uc-fe-checkbox-disabled {
-  cursor: default;
-  color: #cccccc;
-}
-
-.emotion-2.uc-fe-checkbox-disabled .uc-fe-checkbox-icon-wrap {
-  border-color: #d9d9d9;
-  background: #f7f7f7;
-}
-
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
-  fill: #cccccc;
-}
-
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
-  background: none;
 }
 
 .emotion-0 {
@@ -1133,12 +1021,12 @@ Array [
   height: 14px;
 }
 
-.emotion-4 {
+.emotion-6 {
   display: none;
 }
 
 <div
-    class="uc-fe-tree uc-fe-tree-multiple emotion-36 emotion-37"
+    class="uc-fe-tree uc-fe-tree-multiple emotion-48 emotion-49"
   >
     <div>
       <div>
@@ -1152,10 +1040,10 @@ Array [
               class="uc-fe-tree-expand-icon"
             />
             <span
-              class="uc-fe-checkbox emotion-2 emotion-3"
+              class="uc-fe-checkbox emotion-4 emotion-5"
             >
               <span
-                class="uc-fe-checkbox-icon-wrap"
+                class="uc-fe-checkbox-icon-wrap emotion-2 emotion-3"
               >
                 <svg
                   class="uc-fe-checkbox-icon emotion-0 emotion-1"
@@ -1177,7 +1065,7 @@ Array [
         </div>
       </div>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-6 emotion-7"
       />
     </div>
     <div>
@@ -1192,10 +1080,10 @@ Array [
               class="uc-fe-tree-expand-icon"
             />
             <span
-              class="uc-fe-checkbox emotion-2 emotion-3"
+              class="uc-fe-checkbox emotion-4 emotion-5"
             >
               <span
-                class="uc-fe-checkbox-icon-wrap"
+                class="uc-fe-checkbox-icon-wrap emotion-2 emotion-3"
               >
                 <svg
                   class="uc-fe-checkbox-icon emotion-0 emotion-1"
@@ -1217,7 +1105,7 @@ Array [
         </div>
       </div>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-6 emotion-7"
       />
     </div>
     <div>
@@ -1232,10 +1120,10 @@ Array [
               class="uc-fe-tree-expand-icon"
             />
             <span
-              class="uc-fe-checkbox emotion-2 emotion-3"
+              class="uc-fe-checkbox emotion-4 emotion-5"
             >
               <span
-                class="uc-fe-checkbox-icon-wrap"
+                class="uc-fe-checkbox-icon-wrap emotion-2 emotion-3"
               >
                 <svg
                   class="uc-fe-checkbox-icon emotion-0 emotion-1"
@@ -1257,7 +1145,7 @@ Array [
         </div>
       </div>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-6 emotion-7"
       />
     </div>
     <div>
@@ -1272,10 +1160,10 @@ Array [
               class="uc-fe-tree-expand-icon"
             />
             <span
-              class="uc-fe-checkbox emotion-2 emotion-3"
+              class="uc-fe-checkbox emotion-4 emotion-5"
             >
               <span
-                class="uc-fe-checkbox-icon-wrap"
+                class="uc-fe-checkbox-icon-wrap emotion-2 emotion-3"
               >
                 <svg
                   class="uc-fe-checkbox-icon emotion-0 emotion-1"
@@ -1297,7 +1185,7 @@ Array [
         </div>
       </div>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-6 emotion-7"
       />
     </div>
     <div>
@@ -1312,10 +1200,10 @@ Array [
               class="uc-fe-tree-expand-icon"
             />
             <span
-              class="uc-fe-checkbox emotion-2 emotion-3"
+              class="uc-fe-checkbox emotion-4 emotion-5"
             >
               <span
-                class="uc-fe-checkbox-icon-wrap"
+                class="uc-fe-checkbox-icon-wrap emotion-2 emotion-3"
               >
                 <svg
                   class="uc-fe-checkbox-icon emotion-0 emotion-1"
@@ -1337,7 +1225,7 @@ Array [
         </div>
       </div>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-6 emotion-7"
       />
     </div>
     <div>
@@ -1352,10 +1240,10 @@ Array [
               class="uc-fe-tree-expand-icon"
             />
             <span
-              class="uc-fe-checkbox emotion-2 emotion-3"
+              class="uc-fe-checkbox emotion-4 emotion-5"
             >
               <span
-                class="uc-fe-checkbox-icon-wrap"
+                class="uc-fe-checkbox-icon-wrap emotion-2 emotion-3"
               >
                 <svg
                   class="uc-fe-checkbox-icon emotion-0 emotion-1"
@@ -1377,7 +1265,7 @@ Array [
         </div>
       </div>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-6 emotion-7"
       />
     </div>
   </div>,
@@ -1389,12 +1277,12 @@ Array [
   <h2>
     Controlled
   </h2>,
-  .emotion-18 {
+  .emotion-24 {
   background: transparent;
   color: #0a1633;
 }
 
-.emotion-18 .uc-fe-tree-item {
+.emotion-24 .uc-fe-tree-item {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1403,12 +1291,12 @@ Array [
   min-height: 36px;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-indent {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-indent {
   width: 32px;
   position: relative;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
   content: ' ';
   box-sizing: border-box;
   display: inline-block;
@@ -1418,13 +1306,13 @@ Array [
   margin-left: 50%;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
   height: 50%;
   width: 4px;
   border-bottom: 1px solid #d2d6ea;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-wrap {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-wrap {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1440,29 +1328,29 @@ Array [
   align-items: center;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
   background: #F4F6FF;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
   margin-left: 8px;
 }
 
-.emotion-18 .uc-fe-tree-item.uc-fe-tree-disabled {
+.emotion-24 .uc-fe-tree-item.uc-fe-tree-disabled {
   color: #cccccc;
 }
 
-.emotion-18 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
+.emotion-24 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
   cursor: default;
 }
 
-.emotion-18.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
+.emotion-24.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
   color: #3860f4;
 }
 
-.emotion-18 .uc-fe-tree-expand-ph,
-.emotion-18 .uc-fe-tree-expand-icon,
-.emotion-18 .uc-fe-tree-loading-icon {
+.emotion-24 .uc-fe-tree-expand-ph,
+.emotion-24 .uc-fe-tree-expand-icon,
+.emotion-24 .uc-fe-tree-loading-icon {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -1470,11 +1358,11 @@ Array [
   margin-right: 8px;
 }
 
-.emotion-18 .uc-fe-tree-loading-icon {
+.emotion-24 .uc-fe-tree-loading-icon {
   fill: #3860f4;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon {
+.emotion-24 .uc-fe-tree-expand-icon {
   text-align: center;
   cursor: pointer;
   -webkit-transition: -webkit-transform 0.2s;
@@ -1483,7 +1371,7 @@ Array [
   position: relative;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon:before {
+.emotion-24 .uc-fe-tree-expand-icon:before {
   content: ' ';
   display: inline-block;
   width: 0;
@@ -1496,22 +1384,22 @@ Array [
   left: 5px;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
+.emotion-24 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
   cursor: default;
   color: #cccccc;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
+.emotion-24 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
   border-color: transparent transparent transparent #cccccc;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
+.emotion-24 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.emotion-2 {
+.emotion-4 {
   cursor: pointer;
   position: relative;
   white-space: nowrap;
@@ -1523,11 +1411,27 @@ Array [
   color: #0a1633;
 }
 
-.emotion-2 > * {
+.emotion-4 > * {
   font-size: 12px;
 }
 
-.emotion-2 .uc-fe-checkbox-icon-wrap {
+.emotion-4 .uc-fe-checkbox-content {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 100%;
+  margin-left: 8px;
+}
+
+.emotion-4.uc-fe-checkbox-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-4:hover .uc-fe-checkbox-icon-wrap {
+  border-color: #3860f4;
+}
+
+.emotion-10.uc-fe-checkbox-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -1539,56 +1443,12 @@ Array [
   vertical-align: middle;
 }
 
-.emotion-2 .uc-fe-checkbox-icon-wrap .uc-fe-checkbox-icon {
+.emotion-10 .uc-fe-checkbox-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
   top: -1px;
   left: -1px;
-}
-
-.emotion-2 .uc-fe-checkbox-content {
-  display: inline-block;
-  vertical-align: middle;
-  max-height: 100%;
-  margin-left: 8px;
-}
-
-.emotion-2:hover .uc-fe-checkbox-icon-wrap {
-  border-color: #3860f4;
-}
-
-.emotion-2.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
-.emotion-2.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
-  border-color: #3860f4;
-  background: #3860f4;
-}
-
-.emotion-2.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
-.emotion-2.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
-  visibility: visible;
-  opacity: 1;
-  fill: #ffffff;
-}
-
-.emotion-2.uc-fe-checkbox-disabled {
-  cursor: default;
-  color: #cccccc;
-}
-
-.emotion-2.uc-fe-checkbox-disabled .uc-fe-checkbox-icon-wrap {
-  border-color: #d9d9d9;
-  background: #f7f7f7;
-}
-
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
-  fill: #cccccc;
-}
-
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
-  background: none;
 }
 
 .emotion-0 {
@@ -1600,16 +1460,47 @@ Array [
   height: 14px;
 }
 
-.emotion-4 {
+.emotion-6 {
   display: none;
 }
 
-.emotion-18 {
+.emotion-2.uc-fe-checkbox-icon-wrap {
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #c3cad9;
+  border-radius: 2px;
+  vertical-align: middle;
+}
+
+.emotion-2 .uc-fe-checkbox-icon {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+}
+
+.emotion-2.uc-fe-checkbox-icon-wrap {
+  border-color: #3860f4;
+  background: #3860f4;
+}
+
+.emotion-2 .uc-fe-checkbox-icon {
+  visibility: visible;
+  opacity: 1;
+  fill: #ffffff;
+}
+
+.emotion-24 {
   background: transparent;
   color: #0a1633;
 }
 
-.emotion-18 .uc-fe-tree-item {
+.emotion-24 .uc-fe-tree-item {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1618,12 +1509,12 @@ Array [
   min-height: 36px;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-indent {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-indent {
   width: 32px;
   position: relative;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
   content: ' ';
   box-sizing: border-box;
   display: inline-block;
@@ -1633,13 +1524,13 @@ Array [
   margin-left: 50%;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
   height: 50%;
   width: 4px;
   border-bottom: 1px solid #d2d6ea;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-wrap {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-wrap {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1655,29 +1546,29 @@ Array [
   align-items: center;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
   background: #F4F6FF;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
   margin-left: 8px;
 }
 
-.emotion-18 .uc-fe-tree-item.uc-fe-tree-disabled {
+.emotion-24 .uc-fe-tree-item.uc-fe-tree-disabled {
   color: #cccccc;
 }
 
-.emotion-18 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
+.emotion-24 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
   cursor: default;
 }
 
-.emotion-18.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
+.emotion-24.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
   color: #3860f4;
 }
 
-.emotion-18 .uc-fe-tree-expand-ph,
-.emotion-18 .uc-fe-tree-expand-icon,
-.emotion-18 .uc-fe-tree-loading-icon {
+.emotion-24 .uc-fe-tree-expand-ph,
+.emotion-24 .uc-fe-tree-expand-icon,
+.emotion-24 .uc-fe-tree-loading-icon {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -1685,11 +1576,11 @@ Array [
   margin-right: 8px;
 }
 
-.emotion-18 .uc-fe-tree-loading-icon {
+.emotion-24 .uc-fe-tree-loading-icon {
   fill: #3860f4;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon {
+.emotion-24 .uc-fe-tree-expand-icon {
   text-align: center;
   cursor: pointer;
   -webkit-transition: -webkit-transform 0.2s;
@@ -1698,7 +1589,7 @@ Array [
   position: relative;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon:before {
+.emotion-24 .uc-fe-tree-expand-icon:before {
   content: ' ';
   display: inline-block;
   width: 0;
@@ -1711,22 +1602,22 @@ Array [
   left: 5px;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
+.emotion-24 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
   cursor: default;
   color: #cccccc;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
+.emotion-24 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
   border-color: transparent transparent transparent #cccccc;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
+.emotion-24 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.emotion-2 {
+.emotion-4 {
   cursor: pointer;
   position: relative;
   white-space: nowrap;
@@ -1738,11 +1629,27 @@ Array [
   color: #0a1633;
 }
 
-.emotion-2 > * {
+.emotion-4 > * {
   font-size: 12px;
 }
 
-.emotion-2 .uc-fe-checkbox-icon-wrap {
+.emotion-4 .uc-fe-checkbox-content {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 100%;
+  margin-left: 8px;
+}
+
+.emotion-4.uc-fe-checkbox-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-4:hover .uc-fe-checkbox-icon-wrap {
+  border-color: #3860f4;
+}
+
+.emotion-10.uc-fe-checkbox-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -1754,56 +1661,12 @@ Array [
   vertical-align: middle;
 }
 
-.emotion-2 .uc-fe-checkbox-icon-wrap .uc-fe-checkbox-icon {
+.emotion-10 .uc-fe-checkbox-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
   top: -1px;
   left: -1px;
-}
-
-.emotion-2 .uc-fe-checkbox-content {
-  display: inline-block;
-  vertical-align: middle;
-  max-height: 100%;
-  margin-left: 8px;
-}
-
-.emotion-2:hover .uc-fe-checkbox-icon-wrap {
-  border-color: #3860f4;
-}
-
-.emotion-2.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
-.emotion-2.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
-  border-color: #3860f4;
-  background: #3860f4;
-}
-
-.emotion-2.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
-.emotion-2.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
-  visibility: visible;
-  opacity: 1;
-  fill: #ffffff;
-}
-
-.emotion-2.uc-fe-checkbox-disabled {
-  cursor: default;
-  color: #cccccc;
-}
-
-.emotion-2.uc-fe-checkbox-disabled .uc-fe-checkbox-icon-wrap {
-  border-color: #d9d9d9;
-  background: #f7f7f7;
-}
-
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
-  fill: #cccccc;
-}
-
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
-  background: none;
 }
 
 .emotion-0 {
@@ -1815,12 +1678,43 @@ Array [
   height: 14px;
 }
 
-.emotion-4 {
+.emotion-6 {
   display: none;
+}
+
+.emotion-2.uc-fe-checkbox-icon-wrap {
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #c3cad9;
+  border-radius: 2px;
+  vertical-align: middle;
+}
+
+.emotion-2 .uc-fe-checkbox-icon {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+}
+
+.emotion-2.uc-fe-checkbox-icon-wrap {
+  border-color: #3860f4;
+  background: #3860f4;
+}
+
+.emotion-2 .uc-fe-checkbox-icon {
+  visibility: visible;
+  opacity: 1;
+  fill: #ffffff;
 }
 
 <div
-    class="uc-fe-tree uc-fe-tree-multiple emotion-18 emotion-19"
+    class="uc-fe-tree uc-fe-tree-multiple emotion-24 emotion-25"
   >
     <div>
       <div>
@@ -1834,10 +1728,10 @@ Array [
               class="uc-fe-tree-expand-icon"
             />
             <span
-              class="uc-fe-checkbox uc-fe-checkbox-indeterminate emotion-2 emotion-3"
+              class="uc-fe-checkbox uc-fe-checkbox-indeterminate emotion-4 emotion-5"
             >
               <span
-                class="uc-fe-checkbox-icon-wrap"
+                class="uc-fe-checkbox-icon-wrap emotion-2 emotion-3"
               >
                 <svg
                   class="uc-fe-checkbox-icon emotion-0 emotion-1"
@@ -1863,7 +1757,7 @@ Array [
         </div>
       </div>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-6 emotion-7"
       />
     </div>
     <div>
@@ -1878,10 +1772,10 @@ Array [
               class="uc-fe-tree-expand-icon"
             />
             <span
-              class="uc-fe-checkbox emotion-2 emotion-3"
+              class="uc-fe-checkbox emotion-4 emotion-5"
             >
               <span
-                class="uc-fe-checkbox-icon-wrap"
+                class="uc-fe-checkbox-icon-wrap emotion-10 emotion-3"
               >
                 <svg
                   class="uc-fe-checkbox-icon emotion-0 emotion-1"
@@ -1903,7 +1797,7 @@ Array [
         </div>
       </div>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-6 emotion-7"
       />
     </div>
     <div>
@@ -1918,10 +1812,10 @@ Array [
               class="uc-fe-tree-expand-icon"
             />
             <span
-              class="uc-fe-checkbox emotion-2 emotion-3"
+              class="uc-fe-checkbox emotion-4 emotion-5"
             >
               <span
-                class="uc-fe-checkbox-icon-wrap"
+                class="uc-fe-checkbox-icon-wrap emotion-10 emotion-3"
               >
                 <svg
                   class="uc-fe-checkbox-icon emotion-0 emotion-1"
@@ -1943,19 +1837,19 @@ Array [
         </div>
       </div>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-6 emotion-7"
       />
     </div>
   </div>,
   <h2>
     Uncontrolled
   </h2>,
-  .emotion-18 {
+  .emotion-24 {
   background: transparent;
   color: #0a1633;
 }
 
-.emotion-18 .uc-fe-tree-item {
+.emotion-24 .uc-fe-tree-item {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1964,12 +1858,12 @@ Array [
   min-height: 36px;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-indent {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-indent {
   width: 32px;
   position: relative;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
   content: ' ';
   box-sizing: border-box;
   display: inline-block;
@@ -1979,13 +1873,13 @@ Array [
   margin-left: 50%;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
   height: 50%;
   width: 4px;
   border-bottom: 1px solid #d2d6ea;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-wrap {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-wrap {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -2001,29 +1895,29 @@ Array [
   align-items: center;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
   background: #F4F6FF;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
   margin-left: 8px;
 }
 
-.emotion-18 .uc-fe-tree-item.uc-fe-tree-disabled {
+.emotion-24 .uc-fe-tree-item.uc-fe-tree-disabled {
   color: #cccccc;
 }
 
-.emotion-18 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
+.emotion-24 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
   cursor: default;
 }
 
-.emotion-18.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
+.emotion-24.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
   color: #3860f4;
 }
 
-.emotion-18 .uc-fe-tree-expand-ph,
-.emotion-18 .uc-fe-tree-expand-icon,
-.emotion-18 .uc-fe-tree-loading-icon {
+.emotion-24 .uc-fe-tree-expand-ph,
+.emotion-24 .uc-fe-tree-expand-icon,
+.emotion-24 .uc-fe-tree-loading-icon {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -2031,11 +1925,11 @@ Array [
   margin-right: 8px;
 }
 
-.emotion-18 .uc-fe-tree-loading-icon {
+.emotion-24 .uc-fe-tree-loading-icon {
   fill: #3860f4;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon {
+.emotion-24 .uc-fe-tree-expand-icon {
   text-align: center;
   cursor: pointer;
   -webkit-transition: -webkit-transform 0.2s;
@@ -2044,7 +1938,7 @@ Array [
   position: relative;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon:before {
+.emotion-24 .uc-fe-tree-expand-icon:before {
   content: ' ';
   display: inline-block;
   width: 0;
@@ -2057,22 +1951,22 @@ Array [
   left: 5px;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
+.emotion-24 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
   cursor: default;
   color: #cccccc;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
+.emotion-24 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
   border-color: transparent transparent transparent #cccccc;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
+.emotion-24 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.emotion-2 {
+.emotion-4 {
   cursor: pointer;
   position: relative;
   white-space: nowrap;
@@ -2084,11 +1978,27 @@ Array [
   color: #0a1633;
 }
 
-.emotion-2 > * {
+.emotion-4 > * {
   font-size: 12px;
 }
 
-.emotion-2 .uc-fe-checkbox-icon-wrap {
+.emotion-4 .uc-fe-checkbox-content {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 100%;
+  margin-left: 8px;
+}
+
+.emotion-4.uc-fe-checkbox-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-4:hover .uc-fe-checkbox-icon-wrap {
+  border-color: #3860f4;
+}
+
+.emotion-2.uc-fe-checkbox-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -2100,56 +2010,12 @@ Array [
   vertical-align: middle;
 }
 
-.emotion-2 .uc-fe-checkbox-icon-wrap .uc-fe-checkbox-icon {
+.emotion-2 .uc-fe-checkbox-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
   top: -1px;
   left: -1px;
-}
-
-.emotion-2 .uc-fe-checkbox-content {
-  display: inline-block;
-  vertical-align: middle;
-  max-height: 100%;
-  margin-left: 8px;
-}
-
-.emotion-2:hover .uc-fe-checkbox-icon-wrap {
-  border-color: #3860f4;
-}
-
-.emotion-2.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
-.emotion-2.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
-  border-color: #3860f4;
-  background: #3860f4;
-}
-
-.emotion-2.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
-.emotion-2.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
-  visibility: visible;
-  opacity: 1;
-  fill: #ffffff;
-}
-
-.emotion-2.uc-fe-checkbox-disabled {
-  cursor: default;
-  color: #cccccc;
-}
-
-.emotion-2.uc-fe-checkbox-disabled .uc-fe-checkbox-icon-wrap {
-  border-color: #d9d9d9;
-  background: #f7f7f7;
-}
-
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
-  fill: #cccccc;
-}
-
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
-  background: none;
 }
 
 .emotion-0 {
@@ -2161,16 +2027,16 @@ Array [
   height: 14px;
 }
 
-.emotion-4 {
+.emotion-6 {
   display: none;
 }
 
-.emotion-18 {
+.emotion-24 {
   background: transparent;
   color: #0a1633;
 }
 
-.emotion-18 .uc-fe-tree-item {
+.emotion-24 .uc-fe-tree-item {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2179,12 +2045,12 @@ Array [
   min-height: 36px;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-indent {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-indent {
   width: 32px;
   position: relative;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
   content: ' ';
   box-sizing: border-box;
   display: inline-block;
@@ -2194,13 +2060,13 @@ Array [
   margin-left: 50%;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
   height: 50%;
   width: 4px;
   border-bottom: 1px solid #d2d6ea;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-wrap {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-wrap {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -2216,29 +2082,29 @@ Array [
   align-items: center;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
   background: #F4F6FF;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
   margin-left: 8px;
 }
 
-.emotion-18 .uc-fe-tree-item.uc-fe-tree-disabled {
+.emotion-24 .uc-fe-tree-item.uc-fe-tree-disabled {
   color: #cccccc;
 }
 
-.emotion-18 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
+.emotion-24 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
   cursor: default;
 }
 
-.emotion-18.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
+.emotion-24.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
   color: #3860f4;
 }
 
-.emotion-18 .uc-fe-tree-expand-ph,
-.emotion-18 .uc-fe-tree-expand-icon,
-.emotion-18 .uc-fe-tree-loading-icon {
+.emotion-24 .uc-fe-tree-expand-ph,
+.emotion-24 .uc-fe-tree-expand-icon,
+.emotion-24 .uc-fe-tree-loading-icon {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -2246,11 +2112,11 @@ Array [
   margin-right: 8px;
 }
 
-.emotion-18 .uc-fe-tree-loading-icon {
+.emotion-24 .uc-fe-tree-loading-icon {
   fill: #3860f4;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon {
+.emotion-24 .uc-fe-tree-expand-icon {
   text-align: center;
   cursor: pointer;
   -webkit-transition: -webkit-transform 0.2s;
@@ -2259,7 +2125,7 @@ Array [
   position: relative;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon:before {
+.emotion-24 .uc-fe-tree-expand-icon:before {
   content: ' ';
   display: inline-block;
   width: 0;
@@ -2272,22 +2138,22 @@ Array [
   left: 5px;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
+.emotion-24 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
   cursor: default;
   color: #cccccc;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
+.emotion-24 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
   border-color: transparent transparent transparent #cccccc;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
+.emotion-24 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.emotion-2 {
+.emotion-4 {
   cursor: pointer;
   position: relative;
   white-space: nowrap;
@@ -2299,11 +2165,27 @@ Array [
   color: #0a1633;
 }
 
-.emotion-2 > * {
+.emotion-4 > * {
   font-size: 12px;
 }
 
-.emotion-2 .uc-fe-checkbox-icon-wrap {
+.emotion-4 .uc-fe-checkbox-content {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 100%;
+  margin-left: 8px;
+}
+
+.emotion-4.uc-fe-checkbox-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-4:hover .uc-fe-checkbox-icon-wrap {
+  border-color: #3860f4;
+}
+
+.emotion-2.uc-fe-checkbox-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -2315,56 +2197,12 @@ Array [
   vertical-align: middle;
 }
 
-.emotion-2 .uc-fe-checkbox-icon-wrap .uc-fe-checkbox-icon {
+.emotion-2 .uc-fe-checkbox-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
   top: -1px;
   left: -1px;
-}
-
-.emotion-2 .uc-fe-checkbox-content {
-  display: inline-block;
-  vertical-align: middle;
-  max-height: 100%;
-  margin-left: 8px;
-}
-
-.emotion-2:hover .uc-fe-checkbox-icon-wrap {
-  border-color: #3860f4;
-}
-
-.emotion-2.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
-.emotion-2.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
-  border-color: #3860f4;
-  background: #3860f4;
-}
-
-.emotion-2.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
-.emotion-2.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
-  visibility: visible;
-  opacity: 1;
-  fill: #ffffff;
-}
-
-.emotion-2.uc-fe-checkbox-disabled {
-  cursor: default;
-  color: #cccccc;
-}
-
-.emotion-2.uc-fe-checkbox-disabled .uc-fe-checkbox-icon-wrap {
-  border-color: #d9d9d9;
-  background: #f7f7f7;
-}
-
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
-  fill: #cccccc;
-}
-
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
-  background: none;
 }
 
 .emotion-0 {
@@ -2376,12 +2214,12 @@ Array [
   height: 14px;
 }
 
-.emotion-4 {
+.emotion-6 {
   display: none;
 }
 
 <div
-    class="uc-fe-tree uc-fe-tree-multiple emotion-18 emotion-19"
+    class="uc-fe-tree uc-fe-tree-multiple emotion-24 emotion-25"
   >
     <div>
       <div>
@@ -2395,10 +2233,10 @@ Array [
               class="uc-fe-tree-expand-icon"
             />
             <span
-              class="uc-fe-checkbox emotion-2 emotion-3"
+              class="uc-fe-checkbox emotion-4 emotion-5"
             >
               <span
-                class="uc-fe-checkbox-icon-wrap"
+                class="uc-fe-checkbox-icon-wrap emotion-2 emotion-3"
               >
                 <svg
                   class="uc-fe-checkbox-icon emotion-0 emotion-1"
@@ -2420,7 +2258,7 @@ Array [
         </div>
       </div>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-6 emotion-7"
       />
     </div>
     <div>
@@ -2435,10 +2273,10 @@ Array [
               class="uc-fe-tree-expand-icon"
             />
             <span
-              class="uc-fe-checkbox emotion-2 emotion-3"
+              class="uc-fe-checkbox emotion-4 emotion-5"
             >
               <span
-                class="uc-fe-checkbox-icon-wrap"
+                class="uc-fe-checkbox-icon-wrap emotion-2 emotion-3"
               >
                 <svg
                   class="uc-fe-checkbox-icon emotion-0 emotion-1"
@@ -2460,7 +2298,7 @@ Array [
         </div>
       </div>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-6 emotion-7"
       />
     </div>
     <div>
@@ -2475,10 +2313,10 @@ Array [
               class="uc-fe-tree-expand-icon"
             />
             <span
-              class="uc-fe-checkbox emotion-2 emotion-3"
+              class="uc-fe-checkbox emotion-4 emotion-5"
             >
               <span
-                class="uc-fe-checkbox-icon-wrap"
+                class="uc-fe-checkbox-icon-wrap emotion-2 emotion-3"
               >
                 <svg
                   class="uc-fe-checkbox-icon emotion-0 emotion-1"
@@ -2500,7 +2338,7 @@ Array [
         </div>
       </div>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-6 emotion-7"
       />
     </div>
   </div>,
@@ -2996,12 +2834,12 @@ Array [
       </button>
     </div>
   </div>,
-  .emotion-18 {
+  .emotion-24 {
   background: transparent;
   color: #0a1633;
 }
 
-.emotion-18 .uc-fe-tree-item {
+.emotion-24 .uc-fe-tree-item {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3010,12 +2848,12 @@ Array [
   min-height: 36px;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-indent {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-indent {
   width: 32px;
   position: relative;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
   content: ' ';
   box-sizing: border-box;
   display: inline-block;
@@ -3025,13 +2863,13 @@ Array [
   margin-left: 50%;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
   height: 50%;
   width: 4px;
   border-bottom: 1px solid #d2d6ea;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-wrap {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-wrap {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -3047,29 +2885,29 @@ Array [
   align-items: center;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
   background: #F4F6FF;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
   margin-left: 8px;
 }
 
-.emotion-18 .uc-fe-tree-item.uc-fe-tree-disabled {
+.emotion-24 .uc-fe-tree-item.uc-fe-tree-disabled {
   color: #cccccc;
 }
 
-.emotion-18 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
+.emotion-24 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
   cursor: default;
 }
 
-.emotion-18.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
+.emotion-24.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
   color: #3860f4;
 }
 
-.emotion-18 .uc-fe-tree-expand-ph,
-.emotion-18 .uc-fe-tree-expand-icon,
-.emotion-18 .uc-fe-tree-loading-icon {
+.emotion-24 .uc-fe-tree-expand-ph,
+.emotion-24 .uc-fe-tree-expand-icon,
+.emotion-24 .uc-fe-tree-loading-icon {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -3077,11 +2915,11 @@ Array [
   margin-right: 8px;
 }
 
-.emotion-18 .uc-fe-tree-loading-icon {
+.emotion-24 .uc-fe-tree-loading-icon {
   fill: #3860f4;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon {
+.emotion-24 .uc-fe-tree-expand-icon {
   text-align: center;
   cursor: pointer;
   -webkit-transition: -webkit-transform 0.2s;
@@ -3090,7 +2928,7 @@ Array [
   position: relative;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon:before {
+.emotion-24 .uc-fe-tree-expand-icon:before {
   content: ' ';
   display: inline-block;
   width: 0;
@@ -3103,22 +2941,22 @@ Array [
   left: 5px;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
+.emotion-24 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
   cursor: default;
   color: #cccccc;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
+.emotion-24 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
   border-color: transparent transparent transparent #cccccc;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
+.emotion-24 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.emotion-2 {
+.emotion-4 {
   cursor: pointer;
   position: relative;
   white-space: nowrap;
@@ -3130,11 +2968,27 @@ Array [
   color: #0a1633;
 }
 
-.emotion-2 > * {
+.emotion-4 > * {
   font-size: 12px;
 }
 
-.emotion-2 .uc-fe-checkbox-icon-wrap {
+.emotion-4 .uc-fe-checkbox-content {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 100%;
+  margin-left: 8px;
+}
+
+.emotion-4.uc-fe-checkbox-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-4:hover .uc-fe-checkbox-icon-wrap {
+  border-color: #3860f4;
+}
+
+.emotion-2.uc-fe-checkbox-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -3146,56 +3000,12 @@ Array [
   vertical-align: middle;
 }
 
-.emotion-2 .uc-fe-checkbox-icon-wrap .uc-fe-checkbox-icon {
+.emotion-2 .uc-fe-checkbox-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
   top: -1px;
   left: -1px;
-}
-
-.emotion-2 .uc-fe-checkbox-content {
-  display: inline-block;
-  vertical-align: middle;
-  max-height: 100%;
-  margin-left: 8px;
-}
-
-.emotion-2:hover .uc-fe-checkbox-icon-wrap {
-  border-color: #3860f4;
-}
-
-.emotion-2.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
-.emotion-2.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
-  border-color: #3860f4;
-  background: #3860f4;
-}
-
-.emotion-2.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
-.emotion-2.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
-  visibility: visible;
-  opacity: 1;
-  fill: #ffffff;
-}
-
-.emotion-2.uc-fe-checkbox-disabled {
-  cursor: default;
-  color: #cccccc;
-}
-
-.emotion-2.uc-fe-checkbox-disabled .uc-fe-checkbox-icon-wrap {
-  border-color: #d9d9d9;
-  background: #f7f7f7;
-}
-
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
-  fill: #cccccc;
-}
-
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
-  background: none;
 }
 
 .emotion-0 {
@@ -3207,16 +3017,16 @@ Array [
   height: 14px;
 }
 
-.emotion-4 {
+.emotion-6 {
   display: none;
 }
 
-.emotion-18 {
+.emotion-24 {
   background: transparent;
   color: #0a1633;
 }
 
-.emotion-18 .uc-fe-tree-item {
+.emotion-24 .uc-fe-tree-item {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3225,12 +3035,12 @@ Array [
   min-height: 36px;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-indent {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-indent {
   width: 32px;
   position: relative;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
   content: ' ';
   box-sizing: border-box;
   display: inline-block;
@@ -3240,13 +3050,13 @@ Array [
   margin-left: 50%;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
   height: 50%;
   width: 4px;
   border-bottom: 1px solid #d2d6ea;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-wrap {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-wrap {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -3262,29 +3072,29 @@ Array [
   align-items: center;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
   background: #F4F6FF;
 }
 
-.emotion-18 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
+.emotion-24 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
   margin-left: 8px;
 }
 
-.emotion-18 .uc-fe-tree-item.uc-fe-tree-disabled {
+.emotion-24 .uc-fe-tree-item.uc-fe-tree-disabled {
   color: #cccccc;
 }
 
-.emotion-18 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
+.emotion-24 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
   cursor: default;
 }
 
-.emotion-18.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
+.emotion-24.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
   color: #3860f4;
 }
 
-.emotion-18 .uc-fe-tree-expand-ph,
-.emotion-18 .uc-fe-tree-expand-icon,
-.emotion-18 .uc-fe-tree-loading-icon {
+.emotion-24 .uc-fe-tree-expand-ph,
+.emotion-24 .uc-fe-tree-expand-icon,
+.emotion-24 .uc-fe-tree-loading-icon {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -3292,11 +3102,11 @@ Array [
   margin-right: 8px;
 }
 
-.emotion-18 .uc-fe-tree-loading-icon {
+.emotion-24 .uc-fe-tree-loading-icon {
   fill: #3860f4;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon {
+.emotion-24 .uc-fe-tree-expand-icon {
   text-align: center;
   cursor: pointer;
   -webkit-transition: -webkit-transform 0.2s;
@@ -3305,7 +3115,7 @@ Array [
   position: relative;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon:before {
+.emotion-24 .uc-fe-tree-expand-icon:before {
   content: ' ';
   display: inline-block;
   width: 0;
@@ -3318,22 +3128,22 @@ Array [
   left: 5px;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
+.emotion-24 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
   cursor: default;
   color: #cccccc;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
+.emotion-24 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
   border-color: transparent transparent transparent #cccccc;
 }
 
-.emotion-18 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
+.emotion-24 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.emotion-2 {
+.emotion-4 {
   cursor: pointer;
   position: relative;
   white-space: nowrap;
@@ -3345,11 +3155,27 @@ Array [
   color: #0a1633;
 }
 
-.emotion-2 > * {
+.emotion-4 > * {
   font-size: 12px;
 }
 
-.emotion-2 .uc-fe-checkbox-icon-wrap {
+.emotion-4 .uc-fe-checkbox-content {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 100%;
+  margin-left: 8px;
+}
+
+.emotion-4.uc-fe-checkbox-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-4:hover .uc-fe-checkbox-icon-wrap {
+  border-color: #3860f4;
+}
+
+.emotion-2.uc-fe-checkbox-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -3361,56 +3187,12 @@ Array [
   vertical-align: middle;
 }
 
-.emotion-2 .uc-fe-checkbox-icon-wrap .uc-fe-checkbox-icon {
+.emotion-2 .uc-fe-checkbox-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
   top: -1px;
   left: -1px;
-}
-
-.emotion-2 .uc-fe-checkbox-content {
-  display: inline-block;
-  vertical-align: middle;
-  max-height: 100%;
-  margin-left: 8px;
-}
-
-.emotion-2:hover .uc-fe-checkbox-icon-wrap {
-  border-color: #3860f4;
-}
-
-.emotion-2.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
-.emotion-2.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
-  border-color: #3860f4;
-  background: #3860f4;
-}
-
-.emotion-2.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
-.emotion-2.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
-  visibility: visible;
-  opacity: 1;
-  fill: #ffffff;
-}
-
-.emotion-2.uc-fe-checkbox-disabled {
-  cursor: default;
-  color: #cccccc;
-}
-
-.emotion-2.uc-fe-checkbox-disabled .uc-fe-checkbox-icon-wrap {
-  border-color: #d9d9d9;
-  background: #f7f7f7;
-}
-
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
-  fill: #cccccc;
-}
-
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
-.emotion-2.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
-  background: none;
 }
 
 .emotion-0 {
@@ -3422,12 +3204,12 @@ Array [
   height: 14px;
 }
 
-.emotion-4 {
+.emotion-6 {
   display: none;
 }
 
 <div
-    class="uc-fe-tree uc-fe-tree-multiple emotion-18 emotion-19"
+    class="uc-fe-tree uc-fe-tree-multiple emotion-24 emotion-25"
   >
     <div>
       <div>
@@ -3441,10 +3223,10 @@ Array [
               class="uc-fe-tree-expand-icon"
             />
             <span
-              class="uc-fe-checkbox emotion-2 emotion-3"
+              class="uc-fe-checkbox emotion-4 emotion-5"
             >
               <span
-                class="uc-fe-checkbox-icon-wrap"
+                class="uc-fe-checkbox-icon-wrap emotion-2 emotion-3"
               >
                 <svg
                   class="uc-fe-checkbox-icon emotion-0 emotion-1"
@@ -3466,7 +3248,7 @@ Array [
         </div>
       </div>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-6 emotion-7"
       />
     </div>
     <div>
@@ -3481,10 +3263,10 @@ Array [
               class="uc-fe-tree-expand-icon"
             />
             <span
-              class="uc-fe-checkbox emotion-2 emotion-3"
+              class="uc-fe-checkbox emotion-4 emotion-5"
             >
               <span
-                class="uc-fe-checkbox-icon-wrap"
+                class="uc-fe-checkbox-icon-wrap emotion-2 emotion-3"
               >
                 <svg
                   class="uc-fe-checkbox-icon emotion-0 emotion-1"
@@ -3506,7 +3288,7 @@ Array [
         </div>
       </div>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-6 emotion-7"
       />
     </div>
     <div>
@@ -3521,10 +3303,10 @@ Array [
               class="uc-fe-tree-expand-icon"
             />
             <span
-              class="uc-fe-checkbox emotion-2 emotion-3"
+              class="uc-fe-checkbox emotion-4 emotion-5"
             >
               <span
-                class="uc-fe-checkbox-icon-wrap"
+                class="uc-fe-checkbox-icon-wrap emotion-2 emotion-3"
               >
                 <svg
                   class="uc-fe-checkbox-icon emotion-0 emotion-1"
@@ -3546,7 +3328,7 @@ Array [
         </div>
       </div>
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-6 emotion-7"
       />
     </div>
   </div>,
@@ -3554,12 +3336,12 @@ Array [
 `;
 
 exports[`Tree demo -- search 1`] = `
-.emotion-27 {
+.emotion-33 {
   background: transparent;
   color: #0a1633;
 }
 
-.emotion-27 .uc-fe-tree-item {
+.emotion-33 .uc-fe-tree-item {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3568,12 +3350,12 @@ exports[`Tree demo -- search 1`] = `
   min-height: 36px;
 }
 
-.emotion-27 .uc-fe-tree-item .uc-fe-tree-indent {
+.emotion-33 .uc-fe-tree-item .uc-fe-tree-indent {
   width: 32px;
   position: relative;
 }
 
-.emotion-27 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
+.emotion-33 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
   content: ' ';
   box-sizing: border-box;
   display: inline-block;
@@ -3583,13 +3365,13 @@ exports[`Tree demo -- search 1`] = `
   margin-left: 50%;
 }
 
-.emotion-27 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
+.emotion-33 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
   height: 50%;
   width: 4px;
   border-bottom: 1px solid #d2d6ea;
 }
 
-.emotion-27 .uc-fe-tree-item .uc-fe-tree-wrap {
+.emotion-33 .uc-fe-tree-item .uc-fe-tree-wrap {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -3605,29 +3387,29 @@ exports[`Tree demo -- search 1`] = `
   align-items: center;
 }
 
-.emotion-27 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
+.emotion-33 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
   background: #F4F6FF;
 }
 
-.emotion-27 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
+.emotion-33 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
   margin-left: 8px;
 }
 
-.emotion-27 .uc-fe-tree-item.uc-fe-tree-disabled {
+.emotion-33 .uc-fe-tree-item.uc-fe-tree-disabled {
   color: #cccccc;
 }
 
-.emotion-27 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
+.emotion-33 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
   cursor: default;
 }
 
-.emotion-27.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
+.emotion-33.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
   color: #3860f4;
 }
 
-.emotion-27 .uc-fe-tree-expand-ph,
-.emotion-27 .uc-fe-tree-expand-icon,
-.emotion-27 .uc-fe-tree-loading-icon {
+.emotion-33 .uc-fe-tree-expand-ph,
+.emotion-33 .uc-fe-tree-expand-icon,
+.emotion-33 .uc-fe-tree-loading-icon {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -3635,11 +3417,11 @@ exports[`Tree demo -- search 1`] = `
   margin-right: 8px;
 }
 
-.emotion-27 .uc-fe-tree-loading-icon {
+.emotion-33 .uc-fe-tree-loading-icon {
   fill: #3860f4;
 }
 
-.emotion-27 .uc-fe-tree-expand-icon {
+.emotion-33 .uc-fe-tree-expand-icon {
   text-align: center;
   cursor: pointer;
   -webkit-transition: -webkit-transform 0.2s;
@@ -3648,7 +3430,7 @@ exports[`Tree demo -- search 1`] = `
   position: relative;
 }
 
-.emotion-27 .uc-fe-tree-expand-icon:before {
+.emotion-33 .uc-fe-tree-expand-icon:before {
   content: ' ';
   display: inline-block;
   width: 0;
@@ -3661,22 +3443,22 @@ exports[`Tree demo -- search 1`] = `
   left: 5px;
 }
 
-.emotion-27 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
+.emotion-33 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
   cursor: default;
   color: #cccccc;
 }
 
-.emotion-27 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
+.emotion-33 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
   border-color: transparent transparent transparent #cccccc;
 }
 
-.emotion-27 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
+.emotion-33 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.emotion-11 {
+.emotion-13 {
   cursor: pointer;
   position: relative;
   white-space: nowrap;
@@ -3688,11 +3470,27 @@ exports[`Tree demo -- search 1`] = `
   color: #0a1633;
 }
 
-.emotion-11 > * {
+.emotion-13 > * {
   font-size: 12px;
 }
 
-.emotion-11 .uc-fe-checkbox-icon-wrap {
+.emotion-13 .uc-fe-checkbox-content {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 100%;
+  margin-left: 8px;
+}
+
+.emotion-13.uc-fe-checkbox-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-13:hover .uc-fe-checkbox-icon-wrap {
+  border-color: #3860f4;
+}
+
+.emotion-11.uc-fe-checkbox-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -3704,56 +3502,12 @@ exports[`Tree demo -- search 1`] = `
   vertical-align: middle;
 }
 
-.emotion-11 .uc-fe-checkbox-icon-wrap .uc-fe-checkbox-icon {
+.emotion-11 .uc-fe-checkbox-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
   top: -1px;
   left: -1px;
-}
-
-.emotion-11 .uc-fe-checkbox-content {
-  display: inline-block;
-  vertical-align: middle;
-  max-height: 100%;
-  margin-left: 8px;
-}
-
-.emotion-11:hover .uc-fe-checkbox-icon-wrap {
-  border-color: #3860f4;
-}
-
-.emotion-11.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
-.emotion-11.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
-  border-color: #3860f4;
-  background: #3860f4;
-}
-
-.emotion-11.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
-.emotion-11.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
-  visibility: visible;
-  opacity: 1;
-  fill: #ffffff;
-}
-
-.emotion-11.uc-fe-checkbox-disabled {
-  cursor: default;
-  color: #cccccc;
-}
-
-.emotion-11.uc-fe-checkbox-disabled .uc-fe-checkbox-icon-wrap {
-  border-color: #d9d9d9;
-  background: #f7f7f7;
-}
-
-.emotion-11.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
-.emotion-11.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
-  fill: #cccccc;
-}
-
-.emotion-11.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
-.emotion-11.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
-  background: none;
 }
 
 .emotion-9 {
@@ -3765,7 +3519,7 @@ exports[`Tree demo -- search 1`] = `
   height: 14px;
 }
 
-.emotion-13 {
+.emotion-15 {
   display: none;
 }
 
@@ -3856,12 +3610,12 @@ exports[`Tree demo -- search 1`] = `
   cursor: pointer;
 }
 
-.emotion-27 {
+.emotion-33 {
   background: transparent;
   color: #0a1633;
 }
 
-.emotion-27 .uc-fe-tree-item {
+.emotion-33 .uc-fe-tree-item {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3870,12 +3624,12 @@ exports[`Tree demo -- search 1`] = `
   min-height: 36px;
 }
 
-.emotion-27 .uc-fe-tree-item .uc-fe-tree-indent {
+.emotion-33 .uc-fe-tree-item .uc-fe-tree-indent {
   width: 32px;
   position: relative;
 }
 
-.emotion-27 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
+.emotion-33 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
   content: ' ';
   box-sizing: border-box;
   display: inline-block;
@@ -3885,13 +3639,13 @@ exports[`Tree demo -- search 1`] = `
   margin-left: 50%;
 }
 
-.emotion-27 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
+.emotion-33 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
   height: 50%;
   width: 4px;
   border-bottom: 1px solid #d2d6ea;
 }
 
-.emotion-27 .uc-fe-tree-item .uc-fe-tree-wrap {
+.emotion-33 .uc-fe-tree-item .uc-fe-tree-wrap {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -3907,29 +3661,29 @@ exports[`Tree demo -- search 1`] = `
   align-items: center;
 }
 
-.emotion-27 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
+.emotion-33 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
   background: #F4F6FF;
 }
 
-.emotion-27 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
+.emotion-33 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
   margin-left: 8px;
 }
 
-.emotion-27 .uc-fe-tree-item.uc-fe-tree-disabled {
+.emotion-33 .uc-fe-tree-item.uc-fe-tree-disabled {
   color: #cccccc;
 }
 
-.emotion-27 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
+.emotion-33 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
   cursor: default;
 }
 
-.emotion-27.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
+.emotion-33.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
   color: #3860f4;
 }
 
-.emotion-27 .uc-fe-tree-expand-ph,
-.emotion-27 .uc-fe-tree-expand-icon,
-.emotion-27 .uc-fe-tree-loading-icon {
+.emotion-33 .uc-fe-tree-expand-ph,
+.emotion-33 .uc-fe-tree-expand-icon,
+.emotion-33 .uc-fe-tree-loading-icon {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -3937,11 +3691,11 @@ exports[`Tree demo -- search 1`] = `
   margin-right: 8px;
 }
 
-.emotion-27 .uc-fe-tree-loading-icon {
+.emotion-33 .uc-fe-tree-loading-icon {
   fill: #3860f4;
 }
 
-.emotion-27 .uc-fe-tree-expand-icon {
+.emotion-33 .uc-fe-tree-expand-icon {
   text-align: center;
   cursor: pointer;
   -webkit-transition: -webkit-transform 0.2s;
@@ -3950,7 +3704,7 @@ exports[`Tree demo -- search 1`] = `
   position: relative;
 }
 
-.emotion-27 .uc-fe-tree-expand-icon:before {
+.emotion-33 .uc-fe-tree-expand-icon:before {
   content: ' ';
   display: inline-block;
   width: 0;
@@ -3963,22 +3717,22 @@ exports[`Tree demo -- search 1`] = `
   left: 5px;
 }
 
-.emotion-27 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
+.emotion-33 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
   cursor: default;
   color: #cccccc;
 }
 
-.emotion-27 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
+.emotion-33 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
   border-color: transparent transparent transparent #cccccc;
 }
 
-.emotion-27 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
+.emotion-33 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.emotion-11 {
+.emotion-13 {
   cursor: pointer;
   position: relative;
   white-space: nowrap;
@@ -3990,11 +3744,27 @@ exports[`Tree demo -- search 1`] = `
   color: #0a1633;
 }
 
-.emotion-11 > * {
+.emotion-13 > * {
   font-size: 12px;
 }
 
-.emotion-11 .uc-fe-checkbox-icon-wrap {
+.emotion-13 .uc-fe-checkbox-content {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 100%;
+  margin-left: 8px;
+}
+
+.emotion-13.uc-fe-checkbox-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-13:hover .uc-fe-checkbox-icon-wrap {
+  border-color: #3860f4;
+}
+
+.emotion-11.uc-fe-checkbox-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -4006,56 +3776,12 @@ exports[`Tree demo -- search 1`] = `
   vertical-align: middle;
 }
 
-.emotion-11 .uc-fe-checkbox-icon-wrap .uc-fe-checkbox-icon {
+.emotion-11 .uc-fe-checkbox-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
   top: -1px;
   left: -1px;
-}
-
-.emotion-11 .uc-fe-checkbox-content {
-  display: inline-block;
-  vertical-align: middle;
-  max-height: 100%;
-  margin-left: 8px;
-}
-
-.emotion-11:hover .uc-fe-checkbox-icon-wrap {
-  border-color: #3860f4;
-}
-
-.emotion-11.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
-.emotion-11.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
-  border-color: #3860f4;
-  background: #3860f4;
-}
-
-.emotion-11.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
-.emotion-11.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
-  visibility: visible;
-  opacity: 1;
-  fill: #ffffff;
-}
-
-.emotion-11.uc-fe-checkbox-disabled {
-  cursor: default;
-  color: #cccccc;
-}
-
-.emotion-11.uc-fe-checkbox-disabled .uc-fe-checkbox-icon-wrap {
-  border-color: #d9d9d9;
-  background: #f7f7f7;
-}
-
-.emotion-11.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
-.emotion-11.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
-  fill: #cccccc;
-}
-
-.emotion-11.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
-.emotion-11.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
-  background: none;
 }
 
 .emotion-9 {
@@ -4067,7 +3793,7 @@ exports[`Tree demo -- search 1`] = `
   height: 14px;
 }
 
-.emotion-13 {
+.emotion-15 {
   display: none;
 }
 
@@ -4178,7 +3904,7 @@ exports[`Tree demo -- search 1`] = `
     </span>
   </span>
   <div
-    class="uc-fe-tree uc-fe-tree-multiple emotion-27 emotion-28"
+    class="uc-fe-tree uc-fe-tree-multiple emotion-33 emotion-34"
   >
     <div>
       <div>
@@ -4192,10 +3918,10 @@ exports[`Tree demo -- search 1`] = `
               class="uc-fe-tree-expand-icon"
             />
             <span
-              class="uc-fe-checkbox emotion-11 emotion-12"
+              class="uc-fe-checkbox emotion-13 emotion-14"
             >
               <span
-                class="uc-fe-checkbox-icon-wrap"
+                class="uc-fe-checkbox-icon-wrap emotion-11 emotion-12"
               >
                 <svg
                   class="uc-fe-checkbox-icon emotion-9 emotion-10"
@@ -4217,7 +3943,7 @@ exports[`Tree demo -- search 1`] = `
         </div>
       </div>
       <div
-        class="emotion-13 emotion-14"
+        class="emotion-15 emotion-16"
       />
     </div>
     <div>
@@ -4232,10 +3958,10 @@ exports[`Tree demo -- search 1`] = `
               class="uc-fe-tree-expand-icon"
             />
             <span
-              class="uc-fe-checkbox emotion-11 emotion-12"
+              class="uc-fe-checkbox emotion-13 emotion-14"
             >
               <span
-                class="uc-fe-checkbox-icon-wrap"
+                class="uc-fe-checkbox-icon-wrap emotion-11 emotion-12"
               >
                 <svg
                   class="uc-fe-checkbox-icon emotion-9 emotion-10"
@@ -4257,7 +3983,7 @@ exports[`Tree demo -- search 1`] = `
         </div>
       </div>
       <div
-        class="emotion-13 emotion-14"
+        class="emotion-15 emotion-16"
       />
     </div>
     <div>
@@ -4272,10 +3998,10 @@ exports[`Tree demo -- search 1`] = `
               class="uc-fe-tree-expand-icon"
             />
             <span
-              class="uc-fe-checkbox emotion-11 emotion-12"
+              class="uc-fe-checkbox emotion-13 emotion-14"
             >
               <span
-                class="uc-fe-checkbox-icon-wrap"
+                class="uc-fe-checkbox-icon-wrap emotion-11 emotion-12"
               >
                 <svg
                   class="uc-fe-checkbox-icon emotion-9 emotion-10"
@@ -4297,7 +4023,7 @@ exports[`Tree demo -- search 1`] = `
         </div>
       </div>
       <div
-        class="emotion-13 emotion-14"
+        class="emotion-15 emotion-16"
       />
     </div>
   </div>

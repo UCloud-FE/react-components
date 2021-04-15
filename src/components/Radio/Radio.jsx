@@ -4,19 +4,10 @@ import createReactContext from 'create-react-context';
 
 import itemDecorator from 'src/decorators/selectableWithStore/item';
 import uncontrolledDecorator from 'src/decorators/uncontrolled';
-import SvgIcon from 'src/components/SvgIcon';
-import {
-    RadioWrap,
-    RadioListWrap,
-    RadioButtonWrap,
-    RadioTagWrap,
-    RadioTextWrap,
-    iconWrapCls,
-    iconCls,
-    contentCls,
-    extraCls
-} from './style';
+
+import { RadioWrap, RadioListWrap, RadioButtonWrap, RadioTagWrap, RadioTextWrap, contentCls, extraCls } from './style';
 import Card from './Card';
+import RadioIcon from './RadioIcon';
 
 export const StoreContext = createReactContext();
 export const RadioContext = createReactContext();
@@ -50,7 +41,9 @@ class Radio extends PureComponent {
         title: PropTypes.node,
         /** 附加内容，styleType 为 list 时使用 */
         extra: PropTypes.node,
-        /** 禁用标识，styleType 为 card 时使用 */
+        /**
+         * @deprecated 弃用
+         */
         disabledLabel: PropTypes.node,
         /** @ignore */
         multiple: PropTypes.bool
@@ -89,9 +82,7 @@ class Radio extends PureComponent {
                 {...rest}
                 onClick={(...args) => this.onClick(props, ...args)}
             >
-                <span className={iconWrapCls}>
-                    <SvgIcon className={iconCls} type="circle" size="14px" />
-                </span>
+                <RadioIcon checked={checked} disabled={disabled} />
                 {children != null && <span className={contentCls}>{children}</span>}
             </RadioWrap>
         );
@@ -120,9 +111,7 @@ class Radio extends PureComponent {
                 {...rest}
                 onClick={(...args) => this.onClick(props, ...args)}
             >
-                <span className={iconWrapCls}>
-                    <SvgIcon className={iconCls} type="circle" size="14px" />
-                </span>
+                <RadioIcon checked={checked} disabled={disabled} />
                 {children != null && <span className={contentCls}>{children}</span>}
                 {extra && <span className={extraCls}>{extra}</span>}
             </RadioListWrap>

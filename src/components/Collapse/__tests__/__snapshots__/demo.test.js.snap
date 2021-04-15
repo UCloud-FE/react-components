@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Collapse demo -- collapse 1`] = `
-.emotion-61 {
+.emotion-71 {
   display: none;
 }
 
-.emotion-57 .uc-fe-form-item {
+.emotion-67 .uc-fe-form-item {
   margin-bottom: 16px;
 }
 
-.emotion-57 .uc-fe-form-item:last-child {
+.emotion-67 .uc-fe-form-item:last-child {
   margin-bottom: 0;
 }
 
@@ -202,15 +202,15 @@ exports[`Collapse demo -- collapse 1`] = `
   display: none;
 }
 
-.emotion-34 .uc-fe-checkbox {
+.emotion-44 .uc-fe-checkbox {
   margin-right: 8px;
 }
 
-.emotion-34 .uc-fe-checkbox:last-child {
+.emotion-44 .uc-fe-checkbox:last-child {
   margin-right: 0;
 }
 
-.emotion-16 {
+.emotion-18 {
   cursor: pointer;
   position: relative;
   white-space: nowrap;
@@ -222,11 +222,27 @@ exports[`Collapse demo -- collapse 1`] = `
   color: #0a1633;
 }
 
-.emotion-16 > * {
+.emotion-18 > * {
   font-size: 12px;
 }
 
-.emotion-16 .uc-fe-checkbox-icon-wrap {
+.emotion-18 .uc-fe-checkbox-content {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 100%;
+  margin-left: 8px;
+}
+
+.emotion-18.uc-fe-checkbox-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-18:hover .uc-fe-checkbox-icon-wrap {
+  border-color: #3860f4;
+}
+
+.emotion-16.uc-fe-checkbox-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -238,7 +254,7 @@ exports[`Collapse demo -- collapse 1`] = `
   vertical-align: middle;
 }
 
-.emotion-16 .uc-fe-checkbox-icon-wrap .uc-fe-checkbox-icon {
+.emotion-16 .uc-fe-checkbox-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -246,48 +262,15 @@ exports[`Collapse demo -- collapse 1`] = `
   left: -1px;
 }
 
-.emotion-16 .uc-fe-checkbox-content {
-  display: inline-block;
-  vertical-align: middle;
-  max-height: 100%;
-  margin-left: 8px;
-}
-
-.emotion-16:hover .uc-fe-checkbox-icon-wrap {
-  border-color: #3860f4;
-}
-
-.emotion-16.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
-.emotion-16.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
+.emotion-16.uc-fe-checkbox-icon-wrap {
   border-color: #3860f4;
   background: #3860f4;
 }
 
-.emotion-16.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
-.emotion-16.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
+.emotion-16 .uc-fe-checkbox-icon {
   visibility: visible;
   opacity: 1;
   fill: #ffffff;
-}
-
-.emotion-16.uc-fe-checkbox-disabled {
-  cursor: default;
-  color: #cccccc;
-}
-
-.emotion-16.uc-fe-checkbox-disabled .uc-fe-checkbox-icon-wrap {
-  border-color: #d9d9d9;
-  background: #f7f7f7;
-}
-
-.emotion-16.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
-.emotion-16.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
-  fill: #cccccc;
-}
-
-.emotion-16.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
-.emotion-16.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
-  background: none;
 }
 
 .emotion-14 {
@@ -299,7 +282,27 @@ exports[`Collapse demo -- collapse 1`] = `
   height: 14px;
 }
 
-.emotion-49 {
+.emotion-22.uc-fe-checkbox-icon-wrap {
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #c3cad9;
+  border-radius: 2px;
+  vertical-align: middle;
+}
+
+.emotion-22 .uc-fe-checkbox-icon {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+}
+
+.emotion-59 {
   position: relative;
   box-sizing: border-box;
   border-radius: 2px;
@@ -312,11 +315,11 @@ exports[`Collapse demo -- collapse 1`] = `
   border-right-width: 0;
 }
 
-.emotion-49 .uc-fe-numberinput-input-wrap {
+.emotion-59 .uc-fe-numberinput-input-wrap {
   position: relative;
 }
 
-.emotion-49 .uc-fe-numberinput-input {
+.emotion-59 .uc-fe-numberinput-input {
   border: none;
   outline: none;
   padding: 0;
@@ -324,15 +327,15 @@ exports[`Collapse demo -- collapse 1`] = `
   color: inherit;
 }
 
-.emotion-49 .uc-fe-numberinput-suffix {
+.emotion-59 .uc-fe-numberinput-suffix {
   color: #7a8baa;
   margin: 0 4px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.emotion-49 .uc-fe-numberinput-handler-up,
-.emotion-49 .uc-fe-numberinput-handler-down {
+.emotion-59 .uc-fe-numberinput-handler-up,
+.emotion-59 .uc-fe-numberinput-handler-down {
   position: absolute;
   box-sizing: border-box;
   text-align: center;
@@ -347,61 +350,61 @@ exports[`Collapse demo -- collapse 1`] = `
   vertical-align: middle;
 }
 
-.emotion-49 .uc-fe-numberinput-handler-up:hover,
-.emotion-49 .uc-fe-numberinput-handler-down:hover {
+.emotion-59 .uc-fe-numberinput-handler-up:hover,
+.emotion-59 .uc-fe-numberinput-handler-down:hover {
   color: #3860f4;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-49 .uc-fe-numberinput-handler-up.uc-fe-numberinput-handler-disabled,
-.emotion-49 .uc-fe-numberinput-handler-down.uc-fe-numberinput-handler-disabled {
+.emotion-59 .uc-fe-numberinput-handler-up.uc-fe-numberinput-handler-disabled,
+.emotion-59 .uc-fe-numberinput-handler-down.uc-fe-numberinput-handler-disabled {
   cursor: default;
   pointer-events: none;
   color: #cccccc;
   border-color: #c3cad9;
 }
 
-.emotion-49 .uc-fe-numberinput-input {
+.emotion-59 .uc-fe-numberinput-input {
   line-height: 26px;
   height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.emotion-49 .uc-fe-numberinput-input::-webkit-input-placeholder {
+.emotion-59 .uc-fe-numberinput-input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-49 .uc-fe-numberinput-input::-moz-placeholder {
+.emotion-59 .uc-fe-numberinput-input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-49 .uc-fe-numberinput-input:-ms-input-placeholder {
+.emotion-59 .uc-fe-numberinput-input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-49 .uc-fe-numberinput-input::placeholder {
+.emotion-59 .uc-fe-numberinput-input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-49:hover {
+.emotion-59:hover {
   border-color: #c3cad9;
 }
 
-.emotion-49 .uc-fe-numberinput-input-wrap {
+.emotion-59 .uc-fe-numberinput-input-wrap {
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
 }
 
-.emotion-49 .uc-fe-numberinput-input-wrap:hover {
+.emotion-59 .uc-fe-numberinput-input-wrap:hover {
   background: #f6f6fb;
 }
 
-.emotion-49 .uc-fe-numberinput-input {
+.emotion-59 .uc-fe-numberinput-input {
   padding: 0 0 0 8px;
   text-align: left;
   box-shadow: none;
@@ -409,8 +412,8 @@ exports[`Collapse demo -- collapse 1`] = `
   width: 34px;
 }
 
-.emotion-49 .uc-fe-numberinput-handler-up,
-.emotion-49 .uc-fe-numberinput-handler-down {
+.emotion-59 .uc-fe-numberinput-handler-up,
+.emotion-59 .uc-fe-numberinput-handler-down {
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
@@ -419,36 +422,36 @@ exports[`Collapse demo -- collapse 1`] = `
   width: 22px;
 }
 
-.emotion-49 .uc-fe-numberinput-handler-up:hover,
-.emotion-49 .uc-fe-numberinput-handler-down:hover {
+.emotion-59 .uc-fe-numberinput-handler-up:hover,
+.emotion-59 .uc-fe-numberinput-handler-down:hover {
   color: #3860f4;
 }
 
-.emotion-49 .uc-fe-numberinput-handler-up {
+.emotion-59 .uc-fe-numberinput-handler-up {
   border-width: 0 0 0 1px;
   top: -1px;
   padding-top: 1px;
 }
 
-.emotion-49 .uc-fe-numberinput-handler-down {
+.emotion-59 .uc-fe-numberinput-handler-down {
   border-width: 1px 0 0 1px;
   bottom: 0;
   border-top-color: #c3cad9;
 }
 
-.emotion-45 {
+.emotion-55 {
   vertical-align: baseline;
 }
 
-.emotion-61 {
+.emotion-71 {
   display: none;
 }
 
-.emotion-57 .uc-fe-form-item {
+.emotion-67 .uc-fe-form-item {
   margin-bottom: 16px;
 }
 
-.emotion-57 .uc-fe-form-item:last-child {
+.emotion-67 .uc-fe-form-item:last-child {
   margin-bottom: 0;
 }
 
@@ -641,15 +644,15 @@ exports[`Collapse demo -- collapse 1`] = `
   display: none;
 }
 
-.emotion-34 .uc-fe-checkbox {
+.emotion-44 .uc-fe-checkbox {
   margin-right: 8px;
 }
 
-.emotion-34 .uc-fe-checkbox:last-child {
+.emotion-44 .uc-fe-checkbox:last-child {
   margin-right: 0;
 }
 
-.emotion-16 {
+.emotion-18 {
   cursor: pointer;
   position: relative;
   white-space: nowrap;
@@ -661,11 +664,27 @@ exports[`Collapse demo -- collapse 1`] = `
   color: #0a1633;
 }
 
-.emotion-16 > * {
+.emotion-18 > * {
   font-size: 12px;
 }
 
-.emotion-16 .uc-fe-checkbox-icon-wrap {
+.emotion-18 .uc-fe-checkbox-content {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 100%;
+  margin-left: 8px;
+}
+
+.emotion-18.uc-fe-checkbox-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-18:hover .uc-fe-checkbox-icon-wrap {
+  border-color: #3860f4;
+}
+
+.emotion-16.uc-fe-checkbox-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -677,7 +696,7 @@ exports[`Collapse demo -- collapse 1`] = `
   vertical-align: middle;
 }
 
-.emotion-16 .uc-fe-checkbox-icon-wrap .uc-fe-checkbox-icon {
+.emotion-16 .uc-fe-checkbox-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -685,48 +704,15 @@ exports[`Collapse demo -- collapse 1`] = `
   left: -1px;
 }
 
-.emotion-16 .uc-fe-checkbox-content {
-  display: inline-block;
-  vertical-align: middle;
-  max-height: 100%;
-  margin-left: 8px;
-}
-
-.emotion-16:hover .uc-fe-checkbox-icon-wrap {
-  border-color: #3860f4;
-}
-
-.emotion-16.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
-.emotion-16.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
+.emotion-16.uc-fe-checkbox-icon-wrap {
   border-color: #3860f4;
   background: #3860f4;
 }
 
-.emotion-16.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
-.emotion-16.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
+.emotion-16 .uc-fe-checkbox-icon {
   visibility: visible;
   opacity: 1;
   fill: #ffffff;
-}
-
-.emotion-16.uc-fe-checkbox-disabled {
-  cursor: default;
-  color: #cccccc;
-}
-
-.emotion-16.uc-fe-checkbox-disabled .uc-fe-checkbox-icon-wrap {
-  border-color: #d9d9d9;
-  background: #f7f7f7;
-}
-
-.emotion-16.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
-.emotion-16.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
-  fill: #cccccc;
-}
-
-.emotion-16.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
-.emotion-16.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
-  background: none;
 }
 
 .emotion-14 {
@@ -738,7 +724,27 @@ exports[`Collapse demo -- collapse 1`] = `
   height: 14px;
 }
 
-.emotion-49 {
+.emotion-22.uc-fe-checkbox-icon-wrap {
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #c3cad9;
+  border-radius: 2px;
+  vertical-align: middle;
+}
+
+.emotion-22 .uc-fe-checkbox-icon {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+}
+
+.emotion-59 {
   position: relative;
   box-sizing: border-box;
   border-radius: 2px;
@@ -751,11 +757,11 @@ exports[`Collapse demo -- collapse 1`] = `
   border-right-width: 0;
 }
 
-.emotion-49 .uc-fe-numberinput-input-wrap {
+.emotion-59 .uc-fe-numberinput-input-wrap {
   position: relative;
 }
 
-.emotion-49 .uc-fe-numberinput-input {
+.emotion-59 .uc-fe-numberinput-input {
   border: none;
   outline: none;
   padding: 0;
@@ -763,15 +769,15 @@ exports[`Collapse demo -- collapse 1`] = `
   color: inherit;
 }
 
-.emotion-49 .uc-fe-numberinput-suffix {
+.emotion-59 .uc-fe-numberinput-suffix {
   color: #7a8baa;
   margin: 0 4px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.emotion-49 .uc-fe-numberinput-handler-up,
-.emotion-49 .uc-fe-numberinput-handler-down {
+.emotion-59 .uc-fe-numberinput-handler-up,
+.emotion-59 .uc-fe-numberinput-handler-down {
   position: absolute;
   box-sizing: border-box;
   text-align: center;
@@ -786,61 +792,61 @@ exports[`Collapse demo -- collapse 1`] = `
   vertical-align: middle;
 }
 
-.emotion-49 .uc-fe-numberinput-handler-up:hover,
-.emotion-49 .uc-fe-numberinput-handler-down:hover {
+.emotion-59 .uc-fe-numberinput-handler-up:hover,
+.emotion-59 .uc-fe-numberinput-handler-down:hover {
   color: #3860f4;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-49 .uc-fe-numberinput-handler-up.uc-fe-numberinput-handler-disabled,
-.emotion-49 .uc-fe-numberinput-handler-down.uc-fe-numberinput-handler-disabled {
+.emotion-59 .uc-fe-numberinput-handler-up.uc-fe-numberinput-handler-disabled,
+.emotion-59 .uc-fe-numberinput-handler-down.uc-fe-numberinput-handler-disabled {
   cursor: default;
   pointer-events: none;
   color: #cccccc;
   border-color: #c3cad9;
 }
 
-.emotion-49 .uc-fe-numberinput-input {
+.emotion-59 .uc-fe-numberinput-input {
   line-height: 26px;
   height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.emotion-49 .uc-fe-numberinput-input::-webkit-input-placeholder {
+.emotion-59 .uc-fe-numberinput-input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-49 .uc-fe-numberinput-input::-moz-placeholder {
+.emotion-59 .uc-fe-numberinput-input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-49 .uc-fe-numberinput-input:-ms-input-placeholder {
+.emotion-59 .uc-fe-numberinput-input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-49 .uc-fe-numberinput-input::placeholder {
+.emotion-59 .uc-fe-numberinput-input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-49:hover {
+.emotion-59:hover {
   border-color: #c3cad9;
 }
 
-.emotion-49 .uc-fe-numberinput-input-wrap {
+.emotion-59 .uc-fe-numberinput-input-wrap {
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
 }
 
-.emotion-49 .uc-fe-numberinput-input-wrap:hover {
+.emotion-59 .uc-fe-numberinput-input-wrap:hover {
   background: #f6f6fb;
 }
 
-.emotion-49 .uc-fe-numberinput-input {
+.emotion-59 .uc-fe-numberinput-input {
   padding: 0 0 0 8px;
   text-align: left;
   box-shadow: none;
@@ -848,8 +854,8 @@ exports[`Collapse demo -- collapse 1`] = `
   width: 34px;
 }
 
-.emotion-49 .uc-fe-numberinput-handler-up,
-.emotion-49 .uc-fe-numberinput-handler-down {
+.emotion-59 .uc-fe-numberinput-handler-up,
+.emotion-59 .uc-fe-numberinput-handler-down {
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
@@ -858,30 +864,30 @@ exports[`Collapse demo -- collapse 1`] = `
   width: 22px;
 }
 
-.emotion-49 .uc-fe-numberinput-handler-up:hover,
-.emotion-49 .uc-fe-numberinput-handler-down:hover {
+.emotion-59 .uc-fe-numberinput-handler-up:hover,
+.emotion-59 .uc-fe-numberinput-handler-down:hover {
   color: #3860f4;
 }
 
-.emotion-49 .uc-fe-numberinput-handler-up {
+.emotion-59 .uc-fe-numberinput-handler-up {
   border-width: 0 0 0 1px;
   top: -1px;
   padding-top: 1px;
 }
 
-.emotion-49 .uc-fe-numberinput-handler-down {
+.emotion-59 .uc-fe-numberinput-handler-down {
   border-width: 1px 0 0 1px;
   bottom: 0;
   border-top-color: #c3cad9;
 }
 
-.emotion-45 {
+.emotion-55 {
   vertical-align: baseline;
 }
 
 <div>
   <form
-    class="uc-fe-form demo-form emotion-57 emotion-58"
+    class="uc-fe-form demo-form emotion-67 emotion-68"
   >
     <div
       class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10"
@@ -940,14 +946,15 @@ exports[`Collapse demo -- collapse 1`] = `
         span="9"
       >
         <div
-          class="uc-fe-checkbox-group emotion-34 emotion-35"
+          class="uc-fe-checkbox-group emotion-44 emotion-45"
         >
           <span
             checked=""
-            class="uc-fe-checkbox uc-fe-checkbox-checked emotion-16 emotion-17"
+            class="uc-fe-checkbox uc-fe-checkbox-checked emotion-18 emotion-19"
           >
             <span
-              class="uc-fe-checkbox-icon-wrap"
+              checked=""
+              class="uc-fe-checkbox-icon-wrap emotion-16 emotion-17"
             >
               <svg
                 class="uc-fe-checkbox-icon emotion-14 emotion-15"
@@ -966,10 +973,10 @@ exports[`Collapse demo -- collapse 1`] = `
             </span>
           </span>
           <span
-            class="uc-fe-checkbox emotion-16 emotion-17"
+            class="uc-fe-checkbox emotion-18 emotion-19"
           >
             <span
-              class="uc-fe-checkbox-icon-wrap"
+              class="uc-fe-checkbox-icon-wrap emotion-22 emotion-17"
             >
               <svg
                 class="uc-fe-checkbox-icon emotion-14 emotion-15"
@@ -988,10 +995,10 @@ exports[`Collapse demo -- collapse 1`] = `
             </span>
           </span>
           <span
-            class="uc-fe-checkbox emotion-16 emotion-17"
+            class="uc-fe-checkbox emotion-18 emotion-19"
           >
             <span
-              class="uc-fe-checkbox-icon-wrap"
+              class="uc-fe-checkbox-icon-wrap emotion-22 emotion-17"
             >
               <svg
                 class="uc-fe-checkbox-icon emotion-14 emotion-15"
@@ -1010,10 +1017,10 @@ exports[`Collapse demo -- collapse 1`] = `
             </span>
           </span>
           <span
-            class="uc-fe-checkbox emotion-16 emotion-17"
+            class="uc-fe-checkbox emotion-18 emotion-19"
           >
             <span
-              class="uc-fe-checkbox-icon-wrap"
+              class="uc-fe-checkbox-icon-wrap emotion-22 emotion-17"
             >
               <svg
                 class="uc-fe-checkbox-icon emotion-14 emotion-15"
@@ -1032,10 +1039,10 @@ exports[`Collapse demo -- collapse 1`] = `
             </span>
           </span>
           <span
-            class="uc-fe-checkbox emotion-16 emotion-17"
+            class="uc-fe-checkbox emotion-18 emotion-19"
           >
             <span
-              class="uc-fe-checkbox-icon-wrap"
+              class="uc-fe-checkbox-icon-wrap emotion-22 emotion-17"
             >
               <svg
                 class="uc-fe-checkbox-icon emotion-14 emotion-15"
@@ -1070,7 +1077,7 @@ exports[`Collapse demo -- collapse 1`] = `
         span="9"
       >
         <div
-          class="uc-fe-numberinput uc-fe-numberinput-styletype-default emotion-49 emotion-50"
+          class="uc-fe-numberinput uc-fe-numberinput-styletype-default emotion-59 emotion-60"
         >
           <div>
             <span
@@ -1078,7 +1085,7 @@ exports[`Collapse demo -- collapse 1`] = `
               unselectable="unselectable"
             >
               <i
-                class="uc-fe-icon icon__caret-up emotion-45 emotion-46"
+                class="uc-fe-icon icon__caret-up emotion-55 emotion-56"
               />
             </span>
             <span
@@ -1086,7 +1093,7 @@ exports[`Collapse demo -- collapse 1`] = `
               unselectable="unselectable"
             >
               <i
-                class="uc-fe-icon icon__caret-down emotion-45 emotion-46"
+                class="uc-fe-icon icon__caret-down emotion-55 emotion-56"
               />
             </span>
           </div>
@@ -1114,7 +1121,7 @@ exports[`Collapse demo -- collapse 1`] = `
           panel 0
         </div>
         <div
-          class="emotion-59 emotion-60"
+          class="emotion-69 emotion-70"
           open=""
         >
           content 0
@@ -1125,7 +1132,7 @@ exports[`Collapse demo -- collapse 1`] = `
           panel 1
         </div>
         <div
-          class="emotion-61 emotion-60"
+          class="emotion-71 emotion-70"
         />
       </div>
       <div>
@@ -1133,7 +1140,7 @@ exports[`Collapse demo -- collapse 1`] = `
           panel 2
         </div>
         <div
-          class="emotion-61 emotion-60"
+          class="emotion-71 emotion-70"
         />
       </div>
       <div>
@@ -1141,7 +1148,7 @@ exports[`Collapse demo -- collapse 1`] = `
           panel 3
         </div>
         <div
-          class="emotion-61 emotion-60"
+          class="emotion-71 emotion-70"
         />
       </div>
       <div>
@@ -1149,7 +1156,7 @@ exports[`Collapse demo -- collapse 1`] = `
           panel 4
         </div>
         <div
-          class="emotion-61 emotion-60"
+          class="emotion-71 emotion-70"
         />
       </div>
     </div>

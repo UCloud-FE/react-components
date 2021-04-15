@@ -562,11 +562,11 @@ exports[`ZForm demo -- name 1`] = `
 `;
 
 exports[`ZForm demo -- rule 1`] = `
-.emotion-138 .uc-fe-form-item {
+.emotion-140 .uc-fe-form-item {
   margin-bottom: 16px;
 }
 
-.emotion-138 .uc-fe-form-item:last-child {
+.emotion-140 .uc-fe-form-item:last-child {
   margin-bottom: 0;
 }
 
@@ -749,7 +749,7 @@ exports[`ZForm demo -- rule 1`] = `
   height: 12px;
 }
 
-.emotion-49 {
+.emotion-51 {
   cursor: pointer;
   position: relative;
   white-space: nowrap;
@@ -761,11 +761,27 @@ exports[`ZForm demo -- rule 1`] = `
   color: #0a1633;
 }
 
-.emotion-49 > * {
+.emotion-51 > * {
   font-size: 12px;
 }
 
-.emotion-49 .uc-fe-checkbox-icon-wrap {
+.emotion-51 .uc-fe-checkbox-content {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 100%;
+  margin-left: 8px;
+}
+
+.emotion-51.uc-fe-checkbox-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-51:hover .uc-fe-checkbox-icon-wrap {
+  border-color: #3860f4;
+}
+
+.emotion-49.uc-fe-checkbox-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -777,7 +793,7 @@ exports[`ZForm demo -- rule 1`] = `
   vertical-align: middle;
 }
 
-.emotion-49 .uc-fe-checkbox-icon-wrap .uc-fe-checkbox-icon {
+.emotion-49 .uc-fe-checkbox-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -785,48 +801,15 @@ exports[`ZForm demo -- rule 1`] = `
   left: -1px;
 }
 
-.emotion-49 .uc-fe-checkbox-content {
-  display: inline-block;
-  vertical-align: middle;
-  max-height: 100%;
-  margin-left: 8px;
-}
-
-.emotion-49:hover .uc-fe-checkbox-icon-wrap {
-  border-color: #3860f4;
-}
-
-.emotion-49.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
-.emotion-49.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
+.emotion-49.uc-fe-checkbox-icon-wrap {
   border-color: #3860f4;
   background: #3860f4;
 }
 
-.emotion-49.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
-.emotion-49.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
+.emotion-49 .uc-fe-checkbox-icon {
   visibility: visible;
   opacity: 1;
   fill: #ffffff;
-}
-
-.emotion-49.uc-fe-checkbox-disabled {
-  cursor: default;
-  color: #cccccc;
-}
-
-.emotion-49.uc-fe-checkbox-disabled .uc-fe-checkbox-icon-wrap {
-  border-color: #d9d9d9;
-  background: #f7f7f7;
-}
-
-.emotion-49.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
-.emotion-49.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
-  fill: #cccccc;
-}
-
-.emotion-49.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
-.emotion-49.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
-  background: none;
 }
 
 .emotion-47 {
@@ -838,7 +821,7 @@ exports[`ZForm demo -- rule 1`] = `
   height: 14px;
 }
 
-.emotion-66 {
+.emotion-68 {
   box-sizing: border-box;
   position: relative;
   display: inline-block;
@@ -847,7 +830,7 @@ exports[`ZForm demo -- rule 1`] = `
   color: #0a1633;
 }
 
-.emotion-64 {
+.emotion-66 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -878,13 +861,13 @@ exports[`ZForm demo -- rule 1`] = `
   text-align: left;
 }
 
-.emotion-64:link,
-.emotion-64:visited {
+.emotion-66:link,
+.emotion-66:visited {
   color: #0a1633;
 }
 
-.emotion-64:hover,
-.emotion-64:active {
+.emotion-66:hover,
+.emotion-66:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -892,7 +875,7 @@ exports[`ZForm demo -- rule 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-61 {
+.emotion-63 {
   vertical-align: baseline;
   position: absolute;
   right: 8px;
@@ -900,21 +883,21 @@ exports[`ZForm demo -- rule 1`] = `
   margin-top: -6px;
 }
 
-.emotion-128 {
+.emotion-130 {
   padding: 20px;
   border: 1px solid #d2d6ea;
   background: #f6f6fb;
 }
 
-* + .emotion-128 {
+* + .emotion-130 {
   margin-top: 12px;
 }
 
-.emotion-128 .uc-fe-form-item {
+.emotion-130 .uc-fe-form-item {
   margin-bottom: 16px;
 }
 
-.emotion-136 {
+.emotion-138 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -938,22 +921,22 @@ exports[`ZForm demo -- rule 1`] = `
   transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
 }
 
-.emotion-136:link,
-.emotion-136:visited {
+.emotion-138:link,
+.emotion-138:visited {
   color: #ffffff;
 }
 
-.emotion-136:hover,
-.emotion-136:active {
+.emotion-138:hover,
+.emotion-138:active {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
 
-.emotion-138 .uc-fe-form-item {
+.emotion-140 .uc-fe-form-item {
   margin-bottom: 16px;
 }
 
-.emotion-138 .uc-fe-form-item:last-child {
+.emotion-140 .uc-fe-form-item:last-child {
   margin-bottom: 0;
 }
 
@@ -1136,7 +1119,7 @@ exports[`ZForm demo -- rule 1`] = `
   height: 12px;
 }
 
-.emotion-49 {
+.emotion-51 {
   cursor: pointer;
   position: relative;
   white-space: nowrap;
@@ -1148,11 +1131,27 @@ exports[`ZForm demo -- rule 1`] = `
   color: #0a1633;
 }
 
-.emotion-49 > * {
+.emotion-51 > * {
   font-size: 12px;
 }
 
-.emotion-49 .uc-fe-checkbox-icon-wrap {
+.emotion-51 .uc-fe-checkbox-content {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 100%;
+  margin-left: 8px;
+}
+
+.emotion-51.uc-fe-checkbox-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-51:hover .uc-fe-checkbox-icon-wrap {
+  border-color: #3860f4;
+}
+
+.emotion-49.uc-fe-checkbox-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -1164,7 +1163,7 @@ exports[`ZForm demo -- rule 1`] = `
   vertical-align: middle;
 }
 
-.emotion-49 .uc-fe-checkbox-icon-wrap .uc-fe-checkbox-icon {
+.emotion-49 .uc-fe-checkbox-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -1172,48 +1171,15 @@ exports[`ZForm demo -- rule 1`] = `
   left: -1px;
 }
 
-.emotion-49 .uc-fe-checkbox-content {
-  display: inline-block;
-  vertical-align: middle;
-  max-height: 100%;
-  margin-left: 8px;
-}
-
-.emotion-49:hover .uc-fe-checkbox-icon-wrap {
-  border-color: #3860f4;
-}
-
-.emotion-49.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
-.emotion-49.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
+.emotion-49.uc-fe-checkbox-icon-wrap {
   border-color: #3860f4;
   background: #3860f4;
 }
 
-.emotion-49.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
-.emotion-49.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
+.emotion-49 .uc-fe-checkbox-icon {
   visibility: visible;
   opacity: 1;
   fill: #ffffff;
-}
-
-.emotion-49.uc-fe-checkbox-disabled {
-  cursor: default;
-  color: #cccccc;
-}
-
-.emotion-49.uc-fe-checkbox-disabled .uc-fe-checkbox-icon-wrap {
-  border-color: #d9d9d9;
-  background: #f7f7f7;
-}
-
-.emotion-49.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon,
-.emotion-49.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon {
-  fill: #cccccc;
-}
-
-.emotion-49.uc-fe-checkbox-disabled.uc-fe-checkbox-checked .uc-fe-checkbox-icon-wrap,
-.emotion-49.uc-fe-checkbox-disabled.uc-fe-checkbox-indeterminate .uc-fe-checkbox-icon-wrap {
-  background: none;
 }
 
 .emotion-47 {
@@ -1225,7 +1191,7 @@ exports[`ZForm demo -- rule 1`] = `
   height: 14px;
 }
 
-.emotion-66 {
+.emotion-68 {
   box-sizing: border-box;
   position: relative;
   display: inline-block;
@@ -1234,7 +1200,7 @@ exports[`ZForm demo -- rule 1`] = `
   color: #0a1633;
 }
 
-.emotion-64 {
+.emotion-66 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -1265,13 +1231,13 @@ exports[`ZForm demo -- rule 1`] = `
   text-align: left;
 }
 
-.emotion-64:link,
-.emotion-64:visited {
+.emotion-66:link,
+.emotion-66:visited {
   color: #0a1633;
 }
 
-.emotion-64:hover,
-.emotion-64:active {
+.emotion-66:hover,
+.emotion-66:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -1279,7 +1245,7 @@ exports[`ZForm demo -- rule 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-61 {
+.emotion-63 {
   vertical-align: baseline;
   position: absolute;
   right: 8px;
@@ -1287,21 +1253,21 @@ exports[`ZForm demo -- rule 1`] = `
   margin-top: -6px;
 }
 
-.emotion-128 {
+.emotion-130 {
   padding: 20px;
   border: 1px solid #d2d6ea;
   background: #f6f6fb;
 }
 
-* + .emotion-128 {
+* + .emotion-130 {
   margin-top: 12px;
 }
 
-.emotion-128 .uc-fe-form-item {
+.emotion-130 .uc-fe-form-item {
   margin-bottom: 16px;
 }
 
-.emotion-136 {
+.emotion-138 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -1325,19 +1291,19 @@ exports[`ZForm demo -- rule 1`] = `
   transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
 }
 
-.emotion-136:link,
-.emotion-136:visited {
+.emotion-138:link,
+.emotion-138:visited {
   color: #ffffff;
 }
 
-.emotion-136:hover,
-.emotion-136:active {
+.emotion-138:hover,
+.emotion-138:active {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
 
 <form
-  class="uc-fe-form emotion-138 emotion-139"
+  class="uc-fe-form emotion-140 emotion-141"
 >
   <div
     class="uc-fe-row uc-fe-form-item emotion-10 emotion-11 emotion-12"
@@ -1464,10 +1430,11 @@ exports[`ZForm demo -- rule 1`] = `
     >
       <span
         checked=""
-        class="uc-fe-checkbox uc-fe-checkbox-checked emotion-49 emotion-50"
+        class="uc-fe-checkbox uc-fe-checkbox-checked emotion-51 emotion-52"
       >
         <span
-          class="uc-fe-checkbox-icon-wrap"
+          checked=""
+          class="uc-fe-checkbox-icon-wrap emotion-49 emotion-50"
         >
           <svg
             class="uc-fe-checkbox-icon emotion-47 emotion-34"
@@ -1496,18 +1463,18 @@ exports[`ZForm demo -- rule 1`] = `
       span="5"
     >
       <div
-        class=" emotion-66 emotion-67"
+        class=" emotion-68 emotion-69"
       >
         <div>
           <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-63 emotion-64 emotion-65"
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-65 emotion-66 emotion-67"
             type="button"
           >
             <div>
               请选择
             </div>
             <i
-              class="uc-fe-icon icon__down emotion-60 emotion-61 emotion-62"
+              class="uc-fe-icon icon__down emotion-62 emotion-63 emotion-64"
             />
           </button>
         </div>
@@ -1528,18 +1495,18 @@ exports[`ZForm demo -- rule 1`] = `
       span="5"
     >
       <div
-        class=" emotion-66 emotion-67"
+        class=" emotion-68 emotion-69"
       >
         <div>
           <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-63 emotion-64 emotion-65"
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-65 emotion-66 emotion-67"
             type="button"
           >
             <div>
               label-1
             </div>
             <i
-              class="uc-fe-icon icon__down emotion-60 emotion-61 emotion-62"
+              class="uc-fe-icon icon__down emotion-62 emotion-63 emotion-64"
             />
           </button>
         </div>
@@ -1560,7 +1527,7 @@ exports[`ZForm demo -- rule 1`] = `
       span="5"
     >
       <div
-        class="uc-fe-form-sub-area emotion-128 emotion-129"
+        class="uc-fe-form-sub-area emotion-130 emotion-131"
       >
         <div
           class="uc-fe-row uc-fe-form-item emotion-10 emotion-11 emotion-12"
@@ -1576,18 +1543,18 @@ exports[`ZForm demo -- rule 1`] = `
             span="5"
           >
             <div
-              class=" emotion-66 emotion-67"
+              class=" emotion-68 emotion-69"
             >
               <div>
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-63 emotion-64 emotion-65"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-65 emotion-66 emotion-67"
                   type="button"
                 >
                   <div>
                     请选择
                   </div>
                   <i
-                    class="uc-fe-icon icon__down emotion-60 emotion-61 emotion-62"
+                    class="uc-fe-icon icon__down emotion-62 emotion-63 emotion-64"
                   />
                 </button>
               </div>
@@ -1608,18 +1575,18 @@ exports[`ZForm demo -- rule 1`] = `
             span="5"
           >
             <div
-              class=" emotion-66 emotion-67"
+              class=" emotion-68 emotion-69"
             >
               <div>
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-63 emotion-64 emotion-65"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-65 emotion-66 emotion-67"
                   type="button"
                 >
                   <div>
                     label-1
                   </div>
                   <i
-                    class="uc-fe-icon icon__down emotion-60 emotion-61 emotion-62"
+                    class="uc-fe-icon icon__down emotion-62 emotion-63 emotion-64"
                   />
                 </button>
               </div>
@@ -1630,7 +1597,7 @@ exports[`ZForm demo -- rule 1`] = `
     </div>
   </div>
   <button
-    class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-136 emotion-65"
+    class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-138 emotion-67"
     type="button"
   >
     submit

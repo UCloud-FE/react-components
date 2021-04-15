@@ -5,10 +5,10 @@ import { css } from '@emotion/core';
 import classnames from 'classnames';
 
 import config from 'src/config';
-import { inlineBlockWithVerticalMixin } from 'src/style';
-import Icon from 'src/components/Icon';
 import Button from 'src/components/Button';
 import withProps from 'src/utils/withProps';
+import { inlineBlockWithVerticalMixin, sWrap } from 'src/style';
+import { iconMixin as checkboxIconMixin } from 'src/components/Checkbox/style';
 
 const { prefixCls: _prefixCls } = config;
 const prefixCls = _prefixCls + '-radio';
@@ -21,6 +21,9 @@ export const checkedCls = prefixCls + '-checked';
 export const extraCls = prefixCls + '-extra';
 
 export const genStyleTypeCls = styleType => prefixCls + '-styletype-' + styleType;
+export const cardHeaderCls = prefixCls + '-card-header';
+export const cardContentCls = prefixCls + '-card-content';
+export const cardTitleCls = prefixCls + '-card-title';
 
 const radioCommonStyleMixin = props => {
     const {
@@ -56,101 +59,40 @@ const sharedClassName = ({ disabled, checked, size, styleType }) =>
         [genStyleTypeCls(styleType)]: true
     });
 
-const radioIconMixin = props => {
-    const {
-        theme: { designTokens: DT }
-    } = props;
-    return css`
-        .${iconWrapCls} {
-            display: inline-block;
-            box-sizing: border-box;
-            overflow: hidden;
-            position: relative;
-            width: 14px;
-            height: 14px;
-            border: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
-            border-radius: 8px;
-            vertical-align: middle;
-
-            .${iconCls} {
-                visibility: hidden;
-                opacity: 0;
-                position: absolute;
-                top: -1px;
-                left: -1px;
-            }
-        }
-        :hover,
-        &.${checkedCls} {
-            .${iconWrapCls} {
-                border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
-            }
-        }
-
-        &.${checkedCls} {
-            .${iconCls} {
-                visibility: visible;
-                opacity: 1;
-                fill: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
-            }
-        }
-
-        &.${disabledCls} {
-            .${iconWrapCls} {
-                border-color: ${DT.T_COLOR_LINE_DISABLED_LIGHT};
-                background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
-            }
-        }
-
-        &.${disabledCls}.${checkedCls} {
-            .${iconCls} {
-                fill: ${DT.T_COLOR_TEXT_DISABLED};
-            }
-            .${iconWrapCls} {
-                background: none;
-            }
-        }
-    `;
-};
-
 /* stylelint-disable no-duplicate-selectors */
-export const RadioWrap = styled(
-    withProps({
-        className: sharedClassName
-    })(
-        styled('span')(props => {
-            const {
-                theme: { designTokens: DT }
-            } = props;
+export const RadioWrap = withProps({
+    className: sharedClassName
+})(
+    styled('span')(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
 
-            return css`
-                ${radioCommonStyleMixin(props)};
-                ${inlineBlockWithVerticalMixin};
-                ${sizeMixin(props)};
-                font-size: 0;
-                color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
-                > * {
-                    font-size: 12px;
-                }
+        return css`
+            ${radioCommonStyleMixin(props)};
+            ${inlineBlockWithVerticalMixin};
+            ${sizeMixin(props)};
+            font-size: 0;
+            color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+            > * {
+                font-size: 12px;
+            }
 
-                .${contentCls} {
-                    display: inline-block;
-                    vertical-align: middle;
-                    max-height: 100%;
-                    margin-left: 8px;
-                }
+            .${contentCls} {
+                display: inline-block;
+                vertical-align: middle;
+                max-height: 100%;
+                margin-left: 8px;
+            }
 
-                &.${disabledCls} {
-                    cursor: default;
-                    color: ${DT.T_COLOR_TEXT_DISABLED};
-                }
-                ${radioIconMixin(props)};
-            `;
-        })
-    )
-)`
-    /* empty */
-`;
+            &.${disabledCls} {
+                cursor: default;
+                color: ${DT.T_COLOR_TEXT_DISABLED};
+            }
+            ${iconMixin(props)};
+        `;
+    })
+);
 
 export const RadioListWrap = withProps({
     className: sharedClassName
@@ -167,7 +109,6 @@ export const RadioListWrap = withProps({
             padding: 8px 8px 8px 0;
             border-bottom: 1px solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
             color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
-            ${radioIconMixin(props)};
 
             .${iconWrapCls} {
                 margin: 0 12px 0 8px;
@@ -185,7 +126,6 @@ export const RadioListWrap = withProps({
                 color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
                 margin-left: 8px;
             }
-
             &.${checkedCls} {
                 background: ${DT.T_COLOR_BG_PRIMARY_5};
                 .${contentCls} {
@@ -202,6 +142,7 @@ export const RadioListWrap = withProps({
             &.${checkedCls}.${disabledCls} {
                 background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
             }
+            ${iconMixin(props)};
         `;
     })
 );
@@ -301,120 +242,94 @@ export const RadioTagWrap = withProps({
     })
 );
 
-export const RadioCardHeader = styled('div')`
-    position: relative;
-    padding: 8px 16px;
-    line-height: 22px;
-    min-height: 22px;
-    font-weight: bold;
-`;
-export const RadioCardContent = styled('div')`
-    padding: 16px;
-    min-height: 20px;
-`;
-const RadioCardTipPosition = css`
-    position: absolute;
-    right: 12px;
-    top: 10px;
-`;
-export const RadioCardIcon = styled(Icon)`
-    font-size: 16px;
-    ${RadioCardTipPosition};
-`;
-export const RadioCardDisabledLabelWrap = styled('span')`
-    font-weight: bold;
-    line-height: 16px;
-    ${RadioCardTipPosition};
-`;
-const cardPropsMixin = props => {
-    const {
-        theme: { designTokens: DT, titleFontSize },
-        disabled,
-        checked
-    } = props;
-
-    return css`
-        border: 1px solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
-        background: ${DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT};
-        box-shadow: ${DT.T_SHADOW_BUTTON_DEFAULT};
-
-        /* stylelint-disable no-descending-specificity */
-        ${RadioCardIcon} {
-            color: ${DT.T_COLOR_LINE_DEFAULT_DARK};
-        }
-        /* stylelint-enable no-descending-specificity */
-
-        ${RadioCardHeader} {
-            color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
-            font-size: ${titleFontSize};
-            border-bottom: 1px solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
-        }
-        ${checked &&
-        css`
-            border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
-            background: ${DT.T_COLOR_BG_DEFAULT_HOVER};
-            box-shadow: ${DT.T_SHADOW_BUTTON_HOVER};
-            ${RadioCardHeader} {
-                border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
-            }
-            ${RadioCardIcon} {
-                color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
-            }
-        `};
-        ${disabled &&
-        css`
-            cursor: default;
-            box-shadow: 0 0 0 0 ${DT.T_COLOR_BG_TRANSPARENT};
-        `};
-        ${disabled &&
-        !checked &&
-        css`
-            border-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
-            ${RadioCardHeader} {
-                background: ${DT.T_COLOR_BG_DISABLED_DARK};
-                color: ${DT.T_COLOR_TEXT_DEFAULT_NORMAL};
-            }
-            ${RadioCardContent} {
-                background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
-                color: ${DT.T_COLOR_TEXT_DISABLED};
-            }
-        `};
-        ${disabled &&
-        checked &&
-        css`
-            ${RadioCardIcon} {
-                color: ${DT.T_COLOR_LINE_DISABLED_DARK};
-            }
-        `};
-
-        ${!checked &&
-        !disabled &&
-        css`
-            :hover {
-                box-shadow: ${DT.T_SHADOW_BUTTON_HOVER};
-                border: 1px solid ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
-
-                ${RadioCardHeader} {
-                    border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
-                }
-
-                ${RadioCardIcon} {
-                    color: ${DT.T_COLOR_LINE_PRIMARY_HOVER};
-                }
-            }
-        `};
-    `;
-};
 export const RadioCardWrap = withProps({
     className: sharedClassName
-})(styled('div')`
-    border-radius: 4px;
-    overflow: hidden;
-    display: inline-block;
-    cursor: pointer;
+})(
+    styled.div(props => {
+        const {
+            theme: { designTokens: DT, titleFontSize },
+            disabled,
+            checked
+        } = props;
 
-    ${cardPropsMixin};
-`);
+        return css`
+            border-radius: 4px;
+            overflow: hidden;
+            display: inline-block;
+            cursor: pointer;
+            border: 1px solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
+            background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
+            box-shadow: ${DT.T_SHADOW_BUTTON_DEFAULT};
+
+            .${cardHeaderCls} {
+                padding: 8px 16px;
+                line-height: 22px;
+                min-height: 22px;
+                font-weight: bold;
+                color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+                font-size: ${titleFontSize};
+                border-bottom: 1px solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
+                background: ${DT.T_COLOR_BG_DEFAULT_LIGHT};
+                display: flex;
+                align-items: center;
+
+                .${cardTitleCls} {
+                    padding-right: 8px;
+                }
+                .${iconWrapCls} {
+                    margin-left: auto;
+                }
+            }
+            .${cardContentCls} {
+                padding: 16px;
+            }
+            ${checked &&
+            css`
+                border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
+                background: ${DT.T_COLOR_BG_DEFAULT_LIGHT};
+                box-shadow: ${DT.T_SHADOW_BUTTON_HOVER};
+                .${cardHeaderCls} {
+                    border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
+                    background: ${DT.T_COLOR_BG_DEFAULT_LIGHT};
+                }
+            `};
+            ${disabled &&
+            css`
+                cursor: default;
+                box-shadow: none;
+            `};
+            ${disabled &&
+            !checked &&
+            css`
+                border-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
+                .${cardHeaderCls} {
+                    background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
+                    color: ${DT.T_COLOR_TEXT_DISABLED};
+                    border-color: ${DT.T_COLOR_LINE_DISABLED_DARK};
+                }
+                .${cardContentCls} {
+                    background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
+                    color: ${DT.T_COLOR_TEXT_DISABLED};
+                }
+            `};
+
+            ${!checked &&
+            !disabled &&
+            css`
+                :hover {
+                    box-shadow: ${DT.T_SHADOW_BUTTON_HOVER};
+                    border: 1px solid ${DT.T_COLOR_LINE_PRIMARY_HOVER};
+
+                    .${cardHeaderCls} {
+                        border-color: ${DT.T_COLOR_LINE_PRIMARY_HOVER};
+                    }
+                }
+            `};
+            ${iconMixin(props)};
+            ${checkboxIconMixin(props)}
+        `;
+    })
+);
 
 export const RadioTextWrap = withProps({
     className: sharedClassName
@@ -519,3 +434,92 @@ export const RadioGroupWrap = styled('div')`
         }
     }
 `;
+
+export const SIconWrap = sWrap({
+    className: iconWrapCls
+})(
+    styled.span(props => {
+        const {
+            theme: { designTokens: DT },
+            checked,
+            disabled
+        } = props;
+        return css`
+            &.${iconWrapCls} {
+                display: inline-block;
+                box-sizing: border-box;
+                overflow: hidden;
+                position: relative;
+                width: 14px;
+                height: 14px;
+                border: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
+                border-radius: 8px;
+                vertical-align: middle;
+            }
+
+            .${iconCls} {
+                visibility: hidden;
+                opacity: 0;
+                position: absolute;
+                top: -1px;
+                left: -1px;
+            }
+
+            ${
+                checked &&
+                css`
+                    &.${iconWrapCls} {
+                        border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
+                    }
+                    .${iconCls} {
+                        visibility: visible;
+                        opacity: 1;
+                        fill: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+                    }
+                `
+            }
+
+            ${
+                disabled &&
+                css`
+                    &.${iconWrapCls} {
+                        border-color: ${DT.T_COLOR_LINE_DISABLED_LIGHT};
+                        background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
+                    }
+                `
+            }
+
+            ${
+                disabled &&
+                checked &&
+                css`
+                    &.${iconWrapCls} {
+                        background: none;
+                    }
+                    .${iconCls} {
+                        fill: ${DT.T_COLOR_TEXT_DISABLED};
+                    }
+                `
+            }
+        `;
+    })
+);
+
+export const iconMixin = props => {
+    const {
+        theme: { designTokens: DT },
+        disabled,
+        checked
+    } = props;
+    return (
+        !disabled &&
+        !checked &&
+        css`
+            :hover {
+                .${iconWrapCls} {
+                    border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
+                }
+            }
+        `
+    );
+};
