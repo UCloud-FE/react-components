@@ -264,18 +264,6 @@ export declare class Radio extends Component<RadioProps> {
     static Group: typeof RadioGroup;
 }
 
-// Switch
-export type SwitchProps = Override<HTMLAttributes<HTMLDivElement>, {
-    checked?: boolean;
-    defaultChecked?: boolean;
-    onChange?: (checked: boolean) => void;
-    disabled?: boolean;
-    size?: SizeType;
-    onText?: ReactNode;
-    offText?: ReactNode;
-}>
-export declare class Switch extends Component<SwitchProps> {}
-
 // Slider
 export interface SliderMark {
     label?: string;
@@ -1131,3 +1119,6 @@ export { default as Link } from './lib/components/Link';
 
 // AutoComplete
 export { default as AutoComplete } from './lib/components/AutoComplete';
+
+// Switch
+export { default as Switch } from './lib/components/Switch';
