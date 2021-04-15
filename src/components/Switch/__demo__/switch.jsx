@@ -5,7 +5,7 @@ import Form from 'components/Form';
 import Input from 'components/Input';
 
 // demo start
-const { Size } = Switch;
+const { Sizes } = Switch;
 const itemLayout = {
     labelCol: {
         span: 3
@@ -32,7 +32,7 @@ class Demo extends React.Component {
                 <Form className="demo-form">
                     <Form.Item label="size" {...itemLayout}>
                         <Radio.Group
-                            options={Size.map(size => ({ value: size }))}
+                            options={Sizes.map(size => ({ value: size }))}
                             value={size}
                             onChange={size => this.setState({ size })}
                         />

@@ -7,7 +7,7 @@ class Demo extends React.Component {
     render() {
         return (
             <div>
-                {Switch.Size.map(size =>
+                {Switch.Sizes.map(size =>
                     [false, true].map(disabled =>
                         [false, true].map(checked => (
                             <div className="demo-wrap" key={`size-${size}_disabled-${disabled}_checked-${checked}`}>

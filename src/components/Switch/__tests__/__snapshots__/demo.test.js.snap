@@ -3,113 +3,121 @@
 exports[`Switch demo -- checked 1`] = `
 .emotion-0 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 28px;
-  width: 78px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
+  width: 73px;
+}
+
+.emotion-0 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-0 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-0 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-0 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-0 .uc-fe-switch-tip-on,
 .emotion-0 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-0 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-0:hover {
-  border-color: #3357df;
-}
-
-.emotion-0:hover .uc-fe-switch-button {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-0 .uc-fe-switch-button {
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+}
+
+.emotion-0 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 20px;
-  height: 20px;
 }
 
 .emotion-0 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-0 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-0 .uc-fe-switch-tip-on,
-.emotion-0 .uc-fe-switch-tip-off {
-  line-height: 16px;
+.emotion-0:hover .uc-fe-switch-inner {
+  border-color: #c3cad9;
+  border-color: #e6ffed;
 }
 
 .emotion-0 .uc-fe-switch-tip-on {
-  padding-right: 20px;
+  padding-right: 28px;
 }
 
 .emotion-0 .uc-fe-switch-tip-off {
-  padding-left: 20px;
+  padding-left: 28px;
 }
 
 .emotion-0 .uc-fe-switch-inner {
-  color: #15ad31;
-  border-color: #9effa5;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #e6ffed;
+  color: #ffffff;
+  border-color: #e6ffed;
+  background: #15ad31;
 }
 
 .emotion-0 .uc-fe-switch-button {
   left: 100%;
-  margin-left: -19px;
+  margin-left: -28px;
 }
 
 .emotion-0 .uc-fe-switch-dot {
@@ -122,101 +130,109 @@ exports[`Switch demo -- checked 1`] = `
 
 .emotion-2 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 28px;
-  width: 78px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
+  width: 73px;
+}
+
+.emotion-2 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-2 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-2 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-2 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-2 .uc-fe-switch-tip-on,
 .emotion-2 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-2 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-2:hover {
-  border-color: #3357df;
-}
-
-.emotion-2:hover .uc-fe-switch-button {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-2 .uc-fe-switch-button {
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+}
+
+.emotion-2 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 20px;
-  height: 20px;
 }
 
 .emotion-2 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-2 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-2 .uc-fe-switch-tip-on,
-.emotion-2 .uc-fe-switch-tip-off {
-  line-height: 16px;
+.emotion-2:hover .uc-fe-switch-inner {
+  border-color: #c3cad9;
 }
 
 .emotion-2 .uc-fe-switch-tip-on {
-  padding-right: 20px;
+  padding-right: 28px;
 }
 
 .emotion-2 .uc-fe-switch-tip-off {
-  padding-left: 20px;
+  padding-left: 28px;
 }
 
 .emotion-2 .uc-fe-switch-tip-on {
@@ -225,113 +241,121 @@ exports[`Switch demo -- checked 1`] = `
 
 .emotion-0 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 28px;
-  width: 78px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
+  width: 73px;
+}
+
+.emotion-0 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-0 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-0 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-0 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-0 .uc-fe-switch-tip-on,
 .emotion-0 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-0 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-0:hover {
-  border-color: #3357df;
-}
-
-.emotion-0:hover .uc-fe-switch-button {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-0 .uc-fe-switch-button {
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+}
+
+.emotion-0 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 20px;
-  height: 20px;
 }
 
 .emotion-0 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-0 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-0 .uc-fe-switch-tip-on,
-.emotion-0 .uc-fe-switch-tip-off {
-  line-height: 16px;
+.emotion-0:hover .uc-fe-switch-inner {
+  border-color: #c3cad9;
+  border-color: #e6ffed;
 }
 
 .emotion-0 .uc-fe-switch-tip-on {
-  padding-right: 20px;
+  padding-right: 28px;
 }
 
 .emotion-0 .uc-fe-switch-tip-off {
-  padding-left: 20px;
+  padding-left: 28px;
 }
 
 .emotion-0 .uc-fe-switch-inner {
-  color: #15ad31;
-  border-color: #9effa5;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #e6ffed;
+  color: #ffffff;
+  border-color: #e6ffed;
+  background: #15ad31;
 }
 
 .emotion-0 .uc-fe-switch-button {
   left: 100%;
-  margin-left: -19px;
+  margin-left: -28px;
 }
 
 .emotion-0 .uc-fe-switch-dot {
@@ -344,101 +368,109 @@ exports[`Switch demo -- checked 1`] = `
 
 .emotion-2 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 28px;
-  width: 78px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
+  width: 73px;
+}
+
+.emotion-2 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-2 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-2 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-2 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-2 .uc-fe-switch-tip-on,
 .emotion-2 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-2 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-2:hover {
-  border-color: #3357df;
-}
-
-.emotion-2:hover .uc-fe-switch-button {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-2 .uc-fe-switch-button {
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+}
+
+.emotion-2 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 20px;
-  height: 20px;
 }
 
 .emotion-2 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-2 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-2 .uc-fe-switch-tip-on,
-.emotion-2 .uc-fe-switch-tip-off {
-  line-height: 16px;
+.emotion-2:hover .uc-fe-switch-inner {
+  border-color: #c3cad9;
 }
 
 .emotion-2 .uc-fe-switch-tip-on {
-  padding-right: 20px;
+  padding-right: 28px;
 }
 
 .emotion-2 .uc-fe-switch-tip-off {
-  padding-left: 20px;
+  padding-left: 28px;
 }
 
 .emotion-2 .uc-fe-switch-tip-on {
@@ -451,9 +483,9 @@ exports[`Switch demo -- checked 1`] = `
   >
     <div
       checked=""
-      class=" emotion-0 emotion-1"
+      class="emotion-0 emotion-1"
     >
-      <div
+      <span
         class="uc-fe-switch-inner"
       >
         <span
@@ -466,23 +498,25 @@ exports[`Switch demo -- checked 1`] = `
         >
           OFF
         </span>
-        <span
-          class="uc-fe-switch-button"
-        >
+      </span>
+      <span
+        class="uc-fe-switch-button"
+      >
+        <span>
           <span
             class="uc-fe-switch-dot"
           />
         </span>
-      </div>
+      </span>
     </div>
   </div>
   <div
     class="demo-wrap"
   >
     <div
-      class=" emotion-2 emotion-1"
+      class="emotion-2 emotion-1"
     >
-      <div
+      <span
         class="uc-fe-switch-inner"
       >
         <span
@@ -495,14 +529,16 @@ exports[`Switch demo -- checked 1`] = `
         >
           OFF
         </span>
-        <span
-          class="uc-fe-switch-button"
-        >
+      </span>
+      <span
+        class="uc-fe-switch-button"
+      >
+        <span>
           <span
             class="uc-fe-switch-dot"
           />
         </span>
-      </div>
+      </span>
     </div>
   </div>
 </div>
@@ -511,113 +547,121 @@ exports[`Switch demo -- checked 1`] = `
 exports[`Switch demo -- demo 1`] = `
 .emotion-10 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 28px;
-  width: 78px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
+  width: 73px;
+}
+
+.emotion-10 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-10 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-10 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-10 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-10 .uc-fe-switch-tip-on,
 .emotion-10 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-10 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-10:hover {
-  border-color: #3357df;
-}
-
-.emotion-10:hover .uc-fe-switch-button {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-10 .uc-fe-switch-button {
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+}
+
+.emotion-10 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 20px;
-  height: 20px;
 }
 
 .emotion-10 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-10 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-10 .uc-fe-switch-tip-on,
-.emotion-10 .uc-fe-switch-tip-off {
-  line-height: 16px;
+.emotion-10:hover .uc-fe-switch-inner {
+  border-color: #c3cad9;
+  border-color: #e6ffed;
 }
 
 .emotion-10 .uc-fe-switch-tip-on {
-  padding-right: 20px;
+  padding-right: 28px;
 }
 
 .emotion-10 .uc-fe-switch-tip-off {
-  padding-left: 20px;
+  padding-left: 28px;
 }
 
 .emotion-10 .uc-fe-switch-inner {
-  color: #15ad31;
-  border-color: #9effa5;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #e6ffed;
+  color: #ffffff;
+  border-color: #e6ffed;
+  background: #15ad31;
 }
 
 .emotion-10 .uc-fe-switch-button {
   left: 100%;
-  margin-left: -19px;
+  margin-left: -28px;
 }
 
 .emotion-10 .uc-fe-switch-dot {
@@ -630,101 +674,109 @@ exports[`Switch demo -- demo 1`] = `
 
 .emotion-8 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 28px;
-  width: 78px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
+  width: 73px;
+}
+
+.emotion-8 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-8 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-8 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-8 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-8 .uc-fe-switch-tip-on,
 .emotion-8 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-8 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-8:hover {
-  border-color: #3357df;
-}
-
-.emotion-8:hover .uc-fe-switch-button {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-8 .uc-fe-switch-button {
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+}
+
+.emotion-8 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 20px;
-  height: 20px;
 }
 
 .emotion-8 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-8 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-8 .uc-fe-switch-tip-on,
-.emotion-8 .uc-fe-switch-tip-off {
-  line-height: 16px;
+.emotion-8:hover .uc-fe-switch-inner {
+  border-color: #c3cad9;
 }
 
 .emotion-8 .uc-fe-switch-tip-on {
-  padding-right: 20px;
+  padding-right: 28px;
 }
 
 .emotion-8 .uc-fe-switch-tip-off {
-  padding-left: 20px;
+  padding-left: 28px;
 }
 
 .emotion-8 .uc-fe-switch-tip-on {
@@ -733,97 +785,106 @@ exports[`Switch demo -- demo 1`] = `
 
 .emotion-0 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 24px;
   width: 44px;
-  padding: 0;
-  border: 1px solid #d2d6ea;
-  border-width: 0;
+}
+
+.emotion-0 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-0 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-0 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-0 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-0 .uc-fe-switch-tip-on,
 .emotion-0 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-0 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-0:hover {
-  border-color: #3357df;
-}
-
-.emotion-0:hover .uc-fe-switch-button {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 0;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-0 .uc-fe-switch-button {
-  background: #ffffff;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  border: 1px solid #d2d6ea;
   width: 24px;
   height: 24px;
+  padding: 0;
+}
+
+.emotion-0 .uc-fe-switch-button > span {
+  background: #ffffff;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
+  border: 0 solid #d2d6ea;
 }
 
 .emotion-0 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-0 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
+.emotion-0:hover .uc-fe-switch-inner {
+  border-color: #c3cad9;
 }
 
 .emotion-0 .uc-fe-switch-tip-on,
 .emotion-0 .uc-fe-switch-tip-off {
   display: none;
-}
-
-.emotion-0 .uc-fe-switch-button {
-  top: -1px;
 }
 
 .emotion-0 .uc-fe-switch-tip-on {
@@ -832,88 +893,102 @@ exports[`Switch demo -- demo 1`] = `
 
 .emotion-2 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 24px;
   width: 44px;
-  padding: 0;
-  border: 1px solid #d2d6ea;
-  border-width: 0;
+}
+
+.emotion-2 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-2 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-2 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-2 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-2 .uc-fe-switch-tip-on,
 .emotion-2 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-2 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-2:hover {
-  border-color: #3357df;
-}
-
-.emotion-2:hover .uc-fe-switch-button {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 0;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-2 .uc-fe-switch-button {
-  background: #ffffff;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  border: 1px solid #d2d6ea;
   width: 24px;
   height: 24px;
+  padding: 0;
+}
+
+.emotion-2 .uc-fe-switch-button > span {
+  background: #ffffff;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
+  border: 0 solid #d2d6ea;
 }
 
 .emotion-2 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-2 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
+.emotion-2:hover .uc-fe-switch-inner {
+  border-color: #c3cad9;
+  border-color: #e6ffed;
 }
 
 .emotion-2 .uc-fe-switch-tip-on,
@@ -921,20 +996,15 @@ exports[`Switch demo -- demo 1`] = `
   display: none;
 }
 
-.emotion-2 .uc-fe-switch-button {
-  top: -1px;
-}
-
 .emotion-2 .uc-fe-switch-inner {
-  color: #15ad31;
-  border-color: #9effa5;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #e6ffed;
+  color: #ffffff;
+  border-color: #e6ffed;
+  background: #15ad31;
 }
 
 .emotion-2 .uc-fe-switch-button {
   left: 100%;
-  margin-left: -23px;
+  margin-left: -24px;
 }
 
 .emotion-2 .uc-fe-switch-dot {
@@ -947,91 +1017,103 @@ exports[`Switch demo -- demo 1`] = `
 
 .emotion-4 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 24px;
   width: 44px;
-  padding: 0;
-  border: 1px solid #d2d6ea;
-  border-width: 0;
-  border-color: #cccccc;
   cursor: default;
+}
+
+.emotion-4 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-4 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-4 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-4 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-4 .uc-fe-switch-tip-on,
 .emotion-4 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-4 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 0;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-4 .uc-fe-switch-button {
-  background: #ffffff;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  border: 1px solid #d2d6ea;
   width: 24px;
   height: 24px;
+  padding: 0;
+}
+
+.emotion-4 .uc-fe-switch-button > span {
+  background: #ffffff;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
+  border: 0 solid #d2d6ea;
 }
 
 .emotion-4 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-4 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
 .emotion-4 .uc-fe-switch-tip-on,
 .emotion-4 .uc-fe-switch-tip-off {
   display: none;
-}
-
-.emotion-4 .uc-fe-switch-button {
-  top: -1px;
 }
 
 .emotion-4 .uc-fe-switch-tip-on {
@@ -1039,10 +1121,9 @@ exports[`Switch demo -- demo 1`] = `
 }
 
 .emotion-4 .uc-fe-switch-inner {
-  color: #cccccc;
   border-color: #d9d9d9;
-  box-shadow: none;
-  background: #f7f7f7;
+  background: #cccccc;
+  color: #ffffff;
 }
 
 .emotion-4 .uc-fe-switch-dot {
@@ -1051,82 +1132,98 @@ exports[`Switch demo -- demo 1`] = `
 
 .emotion-6 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 24px;
   width: 44px;
-  padding: 0;
-  border: 1px solid #d2d6ea;
-  border-width: 0;
-  border-color: #cccccc;
   cursor: default;
+}
+
+.emotion-6 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-6 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-6 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-6 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-6 .uc-fe-switch-tip-on,
 .emotion-6 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-6 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 0;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-6 .uc-fe-switch-button {
-  background: #ffffff;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  border: 1px solid #d2d6ea;
   width: 24px;
   height: 24px;
+  padding: 0;
+}
+
+.emotion-6 .uc-fe-switch-button > span {
+  background: #ffffff;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
+  border: 0 solid #d2d6ea;
 }
 
 .emotion-6 .uc-fe-switch-dot {
   background: #f44336;
-}
-
-.emotion-6 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
 }
 
 .emotion-6 .uc-fe-switch-tip-on,
@@ -1134,20 +1231,15 @@ exports[`Switch demo -- demo 1`] = `
   display: none;
 }
 
-.emotion-6 .uc-fe-switch-button {
-  top: -1px;
-}
-
 .emotion-6 .uc-fe-switch-inner {
-  color: #15ad31;
-  border-color: #9effa5;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #e6ffed;
+  color: #ffffff;
+  border-color: #e6ffed;
+  background: #15ad31;
 }
 
 .emotion-6 .uc-fe-switch-button {
   left: 100%;
-  margin-left: -23px;
+  margin-left: -24px;
 }
 
 .emotion-6 .uc-fe-switch-dot {
@@ -1159,10 +1251,9 @@ exports[`Switch demo -- demo 1`] = `
 }
 
 .emotion-6 .uc-fe-switch-inner {
-  color: #cccccc;
   border-color: #d9d9d9;
-  box-shadow: none;
-  background: #f7f7f7;
+  background: #cccccc;
+  color: #ffffff;
 }
 
 .emotion-6 .uc-fe-switch-dot {
@@ -1171,95 +1262,106 @@ exports[`Switch demo -- demo 1`] = `
 
 .emotion-12 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 28px;
-  width: 78px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
-  border-color: #cccccc;
+  width: 73px;
   cursor: default;
+}
+
+.emotion-12 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-12 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-12 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-12 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-12 .uc-fe-switch-tip-on,
 .emotion-12 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-12 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-12 .uc-fe-switch-button {
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+}
+
+.emotion-12 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 20px;
-  height: 20px;
 }
 
 .emotion-12 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-12 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-12 .uc-fe-switch-tip-on,
-.emotion-12 .uc-fe-switch-tip-off {
-  line-height: 16px;
-}
-
 .emotion-12 .uc-fe-switch-tip-on {
-  padding-right: 20px;
+  padding-right: 28px;
 }
 
 .emotion-12 .uc-fe-switch-tip-off {
-  padding-left: 20px;
+  padding-left: 28px;
 }
 
 .emotion-12 .uc-fe-switch-tip-on {
@@ -1267,10 +1369,9 @@ exports[`Switch demo -- demo 1`] = `
 }
 
 .emotion-12 .uc-fe-switch-inner {
-  color: #cccccc;
   border-color: #d9d9d9;
-  box-shadow: none;
-  background: #f7f7f7;
+  background: #cccccc;
+  color: #ffffff;
 }
 
 .emotion-12 .uc-fe-switch-dot {
@@ -1279,107 +1380,117 @@ exports[`Switch demo -- demo 1`] = `
 
 .emotion-14 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 28px;
-  width: 78px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
-  border-color: #cccccc;
+  width: 73px;
   cursor: default;
+}
+
+.emotion-14 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-14 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-14 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-14 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-14 .uc-fe-switch-tip-on,
 .emotion-14 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-14 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-14 .uc-fe-switch-button {
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+}
+
+.emotion-14 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 20px;
-  height: 20px;
 }
 
 .emotion-14 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-14 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-14 .uc-fe-switch-tip-on,
-.emotion-14 .uc-fe-switch-tip-off {
-  line-height: 16px;
-}
-
 .emotion-14 .uc-fe-switch-tip-on {
-  padding-right: 20px;
+  padding-right: 28px;
 }
 
 .emotion-14 .uc-fe-switch-tip-off {
-  padding-left: 20px;
+  padding-left: 28px;
 }
 
 .emotion-14 .uc-fe-switch-inner {
-  color: #15ad31;
-  border-color: #9effa5;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #e6ffed;
+  color: #ffffff;
+  border-color: #e6ffed;
+  background: #15ad31;
 }
 
 .emotion-14 .uc-fe-switch-button {
   left: 100%;
-  margin-left: -19px;
+  margin-left: -28px;
 }
 
 .emotion-14 .uc-fe-switch-dot {
@@ -1391,10 +1502,9 @@ exports[`Switch demo -- demo 1`] = `
 }
 
 .emotion-14 .uc-fe-switch-inner {
-  color: #cccccc;
   border-color: #d9d9d9;
-  box-shadow: none;
-  background: #f7f7f7;
+  background: #cccccc;
+  color: #ffffff;
 }
 
 .emotion-14 .uc-fe-switch-dot {
@@ -1403,101 +1513,109 @@ exports[`Switch demo -- demo 1`] = `
 
 .emotion-16 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 32px;
-  width: 92px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
+  width: 87px;
+}
+
+.emotion-16 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-16 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-16 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-16 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-16 .uc-fe-switch-tip-on,
 .emotion-16 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-16 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-16:hover {
-  border-color: #3357df;
-}
-
-.emotion-16:hover .uc-fe-switch-button {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-16 .uc-fe-switch-button {
+  width: 32px;
+  height: 32px;
+  padding: 2px;
+}
+
+.emotion-16 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 24px;
-  height: 24px;
 }
 
 .emotion-16 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-16 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-16 .uc-fe-switch-tip-on,
-.emotion-16 .uc-fe-switch-tip-off {
-  line-height: 20px;
+.emotion-16:hover .uc-fe-switch-inner {
+  border-color: #c3cad9;
 }
 
 .emotion-16 .uc-fe-switch-tip-on {
-  padding-right: 26px;
+  padding-right: 32px;
 }
 
 .emotion-16 .uc-fe-switch-tip-off {
-  padding-left: 26px;
+  padding-left: 32px;
 }
 
 .emotion-16 .uc-fe-switch-tip-on {
@@ -1506,113 +1624,121 @@ exports[`Switch demo -- demo 1`] = `
 
 .emotion-18 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 32px;
-  width: 92px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
+  width: 87px;
+}
+
+.emotion-18 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-18 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-18 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-18 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-18 .uc-fe-switch-tip-on,
 .emotion-18 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-18 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-18:hover {
-  border-color: #3357df;
-}
-
-.emotion-18:hover .uc-fe-switch-button {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-18 .uc-fe-switch-button {
+  width: 32px;
+  height: 32px;
+  padding: 2px;
+}
+
+.emotion-18 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 24px;
-  height: 24px;
 }
 
 .emotion-18 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-18 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-18 .uc-fe-switch-tip-on,
-.emotion-18 .uc-fe-switch-tip-off {
-  line-height: 20px;
+.emotion-18:hover .uc-fe-switch-inner {
+  border-color: #c3cad9;
+  border-color: #e6ffed;
 }
 
 .emotion-18 .uc-fe-switch-tip-on {
-  padding-right: 26px;
+  padding-right: 32px;
 }
 
 .emotion-18 .uc-fe-switch-tip-off {
-  padding-left: 26px;
+  padding-left: 32px;
 }
 
 .emotion-18 .uc-fe-switch-inner {
-  color: #15ad31;
-  border-color: #9effa5;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #e6ffed;
+  color: #ffffff;
+  border-color: #e6ffed;
+  background: #15ad31;
 }
 
 .emotion-18 .uc-fe-switch-button {
   left: 100%;
-  margin-left: -23px;
+  margin-left: -32px;
 }
 
 .emotion-18 .uc-fe-switch-dot {
@@ -1625,95 +1751,106 @@ exports[`Switch demo -- demo 1`] = `
 
 .emotion-20 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 32px;
-  width: 92px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
-  border-color: #cccccc;
+  width: 87px;
   cursor: default;
+}
+
+.emotion-20 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-20 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-20 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-20 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-20 .uc-fe-switch-tip-on,
 .emotion-20 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-20 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-20 .uc-fe-switch-button {
+  width: 32px;
+  height: 32px;
+  padding: 2px;
+}
+
+.emotion-20 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 24px;
-  height: 24px;
 }
 
 .emotion-20 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-20 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-20 .uc-fe-switch-tip-on,
-.emotion-20 .uc-fe-switch-tip-off {
-  line-height: 20px;
-}
-
 .emotion-20 .uc-fe-switch-tip-on {
-  padding-right: 26px;
+  padding-right: 32px;
 }
 
 .emotion-20 .uc-fe-switch-tip-off {
-  padding-left: 26px;
+  padding-left: 32px;
 }
 
 .emotion-20 .uc-fe-switch-tip-on {
@@ -1721,10 +1858,9 @@ exports[`Switch demo -- demo 1`] = `
 }
 
 .emotion-20 .uc-fe-switch-inner {
-  color: #cccccc;
   border-color: #d9d9d9;
-  box-shadow: none;
-  background: #f7f7f7;
+  background: #cccccc;
+  color: #ffffff;
 }
 
 .emotion-20 .uc-fe-switch-dot {
@@ -1733,107 +1869,117 @@ exports[`Switch demo -- demo 1`] = `
 
 .emotion-22 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 32px;
-  width: 92px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
-  border-color: #cccccc;
+  width: 87px;
   cursor: default;
+}
+
+.emotion-22 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-22 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-22 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-22 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-22 .uc-fe-switch-tip-on,
 .emotion-22 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-22 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-22 .uc-fe-switch-button {
+  width: 32px;
+  height: 32px;
+  padding: 2px;
+}
+
+.emotion-22 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 24px;
-  height: 24px;
 }
 
 .emotion-22 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-22 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-22 .uc-fe-switch-tip-on,
-.emotion-22 .uc-fe-switch-tip-off {
-  line-height: 20px;
-}
-
 .emotion-22 .uc-fe-switch-tip-on {
-  padding-right: 26px;
+  padding-right: 32px;
 }
 
 .emotion-22 .uc-fe-switch-tip-off {
-  padding-left: 26px;
+  padding-left: 32px;
 }
 
 .emotion-22 .uc-fe-switch-inner {
-  color: #15ad31;
-  border-color: #9effa5;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #e6ffed;
+  color: #ffffff;
+  border-color: #e6ffed;
+  background: #15ad31;
 }
 
 .emotion-22 .uc-fe-switch-button {
   left: 100%;
-  margin-left: -23px;
+  margin-left: -32px;
 }
 
 .emotion-22 .uc-fe-switch-dot {
@@ -1845,10 +1991,9 @@ exports[`Switch demo -- demo 1`] = `
 }
 
 .emotion-22 .uc-fe-switch-inner {
-  color: #cccccc;
   border-color: #d9d9d9;
-  box-shadow: none;
-  background: #f7f7f7;
+  background: #cccccc;
+  color: #ffffff;
 }
 
 .emotion-22 .uc-fe-switch-dot {
@@ -1857,113 +2002,121 @@ exports[`Switch demo -- demo 1`] = `
 
 .emotion-10 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 28px;
-  width: 78px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
+  width: 73px;
+}
+
+.emotion-10 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-10 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-10 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-10 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-10 .uc-fe-switch-tip-on,
 .emotion-10 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-10 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-10:hover {
-  border-color: #3357df;
-}
-
-.emotion-10:hover .uc-fe-switch-button {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-10 .uc-fe-switch-button {
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+}
+
+.emotion-10 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 20px;
-  height: 20px;
 }
 
 .emotion-10 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-10 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-10 .uc-fe-switch-tip-on,
-.emotion-10 .uc-fe-switch-tip-off {
-  line-height: 16px;
+.emotion-10:hover .uc-fe-switch-inner {
+  border-color: #c3cad9;
+  border-color: #e6ffed;
 }
 
 .emotion-10 .uc-fe-switch-tip-on {
-  padding-right: 20px;
+  padding-right: 28px;
 }
 
 .emotion-10 .uc-fe-switch-tip-off {
-  padding-left: 20px;
+  padding-left: 28px;
 }
 
 .emotion-10 .uc-fe-switch-inner {
-  color: #15ad31;
-  border-color: #9effa5;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #e6ffed;
+  color: #ffffff;
+  border-color: #e6ffed;
+  background: #15ad31;
 }
 
 .emotion-10 .uc-fe-switch-button {
   left: 100%;
-  margin-left: -19px;
+  margin-left: -28px;
 }
 
 .emotion-10 .uc-fe-switch-dot {
@@ -1976,101 +2129,109 @@ exports[`Switch demo -- demo 1`] = `
 
 .emotion-8 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 28px;
-  width: 78px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
+  width: 73px;
+}
+
+.emotion-8 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-8 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-8 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-8 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-8 .uc-fe-switch-tip-on,
 .emotion-8 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-8 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-8:hover {
-  border-color: #3357df;
-}
-
-.emotion-8:hover .uc-fe-switch-button {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-8 .uc-fe-switch-button {
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+}
+
+.emotion-8 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 20px;
-  height: 20px;
 }
 
 .emotion-8 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-8 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-8 .uc-fe-switch-tip-on,
-.emotion-8 .uc-fe-switch-tip-off {
-  line-height: 16px;
+.emotion-8:hover .uc-fe-switch-inner {
+  border-color: #c3cad9;
 }
 
 .emotion-8 .uc-fe-switch-tip-on {
-  padding-right: 20px;
+  padding-right: 28px;
 }
 
 .emotion-8 .uc-fe-switch-tip-off {
-  padding-left: 20px;
+  padding-left: 28px;
 }
 
 .emotion-8 .uc-fe-switch-tip-on {
@@ -2079,97 +2240,106 @@ exports[`Switch demo -- demo 1`] = `
 
 .emotion-0 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 24px;
   width: 44px;
-  padding: 0;
-  border: 1px solid #d2d6ea;
-  border-width: 0;
+}
+
+.emotion-0 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-0 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-0 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-0 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-0 .uc-fe-switch-tip-on,
 .emotion-0 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-0 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-0:hover {
-  border-color: #3357df;
-}
-
-.emotion-0:hover .uc-fe-switch-button {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 0;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-0 .uc-fe-switch-button {
-  background: #ffffff;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  border: 1px solid #d2d6ea;
   width: 24px;
   height: 24px;
+  padding: 0;
+}
+
+.emotion-0 .uc-fe-switch-button > span {
+  background: #ffffff;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
+  border: 0 solid #d2d6ea;
 }
 
 .emotion-0 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-0 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
+.emotion-0:hover .uc-fe-switch-inner {
+  border-color: #c3cad9;
 }
 
 .emotion-0 .uc-fe-switch-tip-on,
 .emotion-0 .uc-fe-switch-tip-off {
   display: none;
-}
-
-.emotion-0 .uc-fe-switch-button {
-  top: -1px;
 }
 
 .emotion-0 .uc-fe-switch-tip-on {
@@ -2178,88 +2348,102 @@ exports[`Switch demo -- demo 1`] = `
 
 .emotion-2 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 24px;
   width: 44px;
-  padding: 0;
-  border: 1px solid #d2d6ea;
-  border-width: 0;
+}
+
+.emotion-2 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-2 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-2 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-2 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-2 .uc-fe-switch-tip-on,
 .emotion-2 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-2 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-2:hover {
-  border-color: #3357df;
-}
-
-.emotion-2:hover .uc-fe-switch-button {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 0;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-2 .uc-fe-switch-button {
-  background: #ffffff;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  border: 1px solid #d2d6ea;
   width: 24px;
   height: 24px;
+  padding: 0;
+}
+
+.emotion-2 .uc-fe-switch-button > span {
+  background: #ffffff;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
+  border: 0 solid #d2d6ea;
 }
 
 .emotion-2 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-2 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
+.emotion-2:hover .uc-fe-switch-inner {
+  border-color: #c3cad9;
+  border-color: #e6ffed;
 }
 
 .emotion-2 .uc-fe-switch-tip-on,
@@ -2267,20 +2451,15 @@ exports[`Switch demo -- demo 1`] = `
   display: none;
 }
 
-.emotion-2 .uc-fe-switch-button {
-  top: -1px;
-}
-
 .emotion-2 .uc-fe-switch-inner {
-  color: #15ad31;
-  border-color: #9effa5;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #e6ffed;
+  color: #ffffff;
+  border-color: #e6ffed;
+  background: #15ad31;
 }
 
 .emotion-2 .uc-fe-switch-button {
   left: 100%;
-  margin-left: -23px;
+  margin-left: -24px;
 }
 
 .emotion-2 .uc-fe-switch-dot {
@@ -2293,91 +2472,103 @@ exports[`Switch demo -- demo 1`] = `
 
 .emotion-4 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 24px;
   width: 44px;
-  padding: 0;
-  border: 1px solid #d2d6ea;
-  border-width: 0;
-  border-color: #cccccc;
   cursor: default;
+}
+
+.emotion-4 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-4 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-4 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-4 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-4 .uc-fe-switch-tip-on,
 .emotion-4 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-4 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 0;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-4 .uc-fe-switch-button {
-  background: #ffffff;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  border: 1px solid #d2d6ea;
   width: 24px;
   height: 24px;
+  padding: 0;
+}
+
+.emotion-4 .uc-fe-switch-button > span {
+  background: #ffffff;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
+  border: 0 solid #d2d6ea;
 }
 
 .emotion-4 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-4 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
 .emotion-4 .uc-fe-switch-tip-on,
 .emotion-4 .uc-fe-switch-tip-off {
   display: none;
-}
-
-.emotion-4 .uc-fe-switch-button {
-  top: -1px;
 }
 
 .emotion-4 .uc-fe-switch-tip-on {
@@ -2385,10 +2576,9 @@ exports[`Switch demo -- demo 1`] = `
 }
 
 .emotion-4 .uc-fe-switch-inner {
-  color: #cccccc;
   border-color: #d9d9d9;
-  box-shadow: none;
-  background: #f7f7f7;
+  background: #cccccc;
+  color: #ffffff;
 }
 
 .emotion-4 .uc-fe-switch-dot {
@@ -2397,82 +2587,98 @@ exports[`Switch demo -- demo 1`] = `
 
 .emotion-6 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 24px;
   width: 44px;
-  padding: 0;
-  border: 1px solid #d2d6ea;
-  border-width: 0;
-  border-color: #cccccc;
   cursor: default;
+}
+
+.emotion-6 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-6 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-6 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-6 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-6 .uc-fe-switch-tip-on,
 .emotion-6 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-6 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 0;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-6 .uc-fe-switch-button {
-  background: #ffffff;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  border: 1px solid #d2d6ea;
   width: 24px;
   height: 24px;
+  padding: 0;
+}
+
+.emotion-6 .uc-fe-switch-button > span {
+  background: #ffffff;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
+  border: 0 solid #d2d6ea;
 }
 
 .emotion-6 .uc-fe-switch-dot {
   background: #f44336;
-}
-
-.emotion-6 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
 }
 
 .emotion-6 .uc-fe-switch-tip-on,
@@ -2480,20 +2686,15 @@ exports[`Switch demo -- demo 1`] = `
   display: none;
 }
 
-.emotion-6 .uc-fe-switch-button {
-  top: -1px;
-}
-
 .emotion-6 .uc-fe-switch-inner {
-  color: #15ad31;
-  border-color: #9effa5;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #e6ffed;
+  color: #ffffff;
+  border-color: #e6ffed;
+  background: #15ad31;
 }
 
 .emotion-6 .uc-fe-switch-button {
   left: 100%;
-  margin-left: -23px;
+  margin-left: -24px;
 }
 
 .emotion-6 .uc-fe-switch-dot {
@@ -2505,10 +2706,9 @@ exports[`Switch demo -- demo 1`] = `
 }
 
 .emotion-6 .uc-fe-switch-inner {
-  color: #cccccc;
   border-color: #d9d9d9;
-  box-shadow: none;
-  background: #f7f7f7;
+  background: #cccccc;
+  color: #ffffff;
 }
 
 .emotion-6 .uc-fe-switch-dot {
@@ -2517,95 +2717,106 @@ exports[`Switch demo -- demo 1`] = `
 
 .emotion-12 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 28px;
-  width: 78px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
-  border-color: #cccccc;
+  width: 73px;
   cursor: default;
+}
+
+.emotion-12 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-12 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-12 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-12 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-12 .uc-fe-switch-tip-on,
 .emotion-12 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-12 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-12 .uc-fe-switch-button {
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+}
+
+.emotion-12 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 20px;
-  height: 20px;
 }
 
 .emotion-12 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-12 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-12 .uc-fe-switch-tip-on,
-.emotion-12 .uc-fe-switch-tip-off {
-  line-height: 16px;
-}
-
 .emotion-12 .uc-fe-switch-tip-on {
-  padding-right: 20px;
+  padding-right: 28px;
 }
 
 .emotion-12 .uc-fe-switch-tip-off {
-  padding-left: 20px;
+  padding-left: 28px;
 }
 
 .emotion-12 .uc-fe-switch-tip-on {
@@ -2613,10 +2824,9 @@ exports[`Switch demo -- demo 1`] = `
 }
 
 .emotion-12 .uc-fe-switch-inner {
-  color: #cccccc;
   border-color: #d9d9d9;
-  box-shadow: none;
-  background: #f7f7f7;
+  background: #cccccc;
+  color: #ffffff;
 }
 
 .emotion-12 .uc-fe-switch-dot {
@@ -2625,107 +2835,117 @@ exports[`Switch demo -- demo 1`] = `
 
 .emotion-14 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 28px;
-  width: 78px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
-  border-color: #cccccc;
+  width: 73px;
   cursor: default;
+}
+
+.emotion-14 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-14 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-14 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-14 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-14 .uc-fe-switch-tip-on,
 .emotion-14 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-14 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-14 .uc-fe-switch-button {
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+}
+
+.emotion-14 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 20px;
-  height: 20px;
 }
 
 .emotion-14 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-14 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-14 .uc-fe-switch-tip-on,
-.emotion-14 .uc-fe-switch-tip-off {
-  line-height: 16px;
-}
-
 .emotion-14 .uc-fe-switch-tip-on {
-  padding-right: 20px;
+  padding-right: 28px;
 }
 
 .emotion-14 .uc-fe-switch-tip-off {
-  padding-left: 20px;
+  padding-left: 28px;
 }
 
 .emotion-14 .uc-fe-switch-inner {
-  color: #15ad31;
-  border-color: #9effa5;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #e6ffed;
+  color: #ffffff;
+  border-color: #e6ffed;
+  background: #15ad31;
 }
 
 .emotion-14 .uc-fe-switch-button {
   left: 100%;
-  margin-left: -19px;
+  margin-left: -28px;
 }
 
 .emotion-14 .uc-fe-switch-dot {
@@ -2737,10 +2957,9 @@ exports[`Switch demo -- demo 1`] = `
 }
 
 .emotion-14 .uc-fe-switch-inner {
-  color: #cccccc;
   border-color: #d9d9d9;
-  box-shadow: none;
-  background: #f7f7f7;
+  background: #cccccc;
+  color: #ffffff;
 }
 
 .emotion-14 .uc-fe-switch-dot {
@@ -2749,101 +2968,109 @@ exports[`Switch demo -- demo 1`] = `
 
 .emotion-16 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 32px;
-  width: 92px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
+  width: 87px;
+}
+
+.emotion-16 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-16 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-16 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-16 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-16 .uc-fe-switch-tip-on,
 .emotion-16 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-16 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-16:hover {
-  border-color: #3357df;
-}
-
-.emotion-16:hover .uc-fe-switch-button {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-16 .uc-fe-switch-button {
+  width: 32px;
+  height: 32px;
+  padding: 2px;
+}
+
+.emotion-16 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 24px;
-  height: 24px;
 }
 
 .emotion-16 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-16 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-16 .uc-fe-switch-tip-on,
-.emotion-16 .uc-fe-switch-tip-off {
-  line-height: 20px;
+.emotion-16:hover .uc-fe-switch-inner {
+  border-color: #c3cad9;
 }
 
 .emotion-16 .uc-fe-switch-tip-on {
-  padding-right: 26px;
+  padding-right: 32px;
 }
 
 .emotion-16 .uc-fe-switch-tip-off {
-  padding-left: 26px;
+  padding-left: 32px;
 }
 
 .emotion-16 .uc-fe-switch-tip-on {
@@ -2852,113 +3079,121 @@ exports[`Switch demo -- demo 1`] = `
 
 .emotion-18 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 32px;
-  width: 92px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
+  width: 87px;
+}
+
+.emotion-18 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-18 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-18 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-18 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-18 .uc-fe-switch-tip-on,
 .emotion-18 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-18 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-18:hover {
-  border-color: #3357df;
-}
-
-.emotion-18:hover .uc-fe-switch-button {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-18 .uc-fe-switch-button {
+  width: 32px;
+  height: 32px;
+  padding: 2px;
+}
+
+.emotion-18 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 24px;
-  height: 24px;
 }
 
 .emotion-18 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-18 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-18 .uc-fe-switch-tip-on,
-.emotion-18 .uc-fe-switch-tip-off {
-  line-height: 20px;
+.emotion-18:hover .uc-fe-switch-inner {
+  border-color: #c3cad9;
+  border-color: #e6ffed;
 }
 
 .emotion-18 .uc-fe-switch-tip-on {
-  padding-right: 26px;
+  padding-right: 32px;
 }
 
 .emotion-18 .uc-fe-switch-tip-off {
-  padding-left: 26px;
+  padding-left: 32px;
 }
 
 .emotion-18 .uc-fe-switch-inner {
-  color: #15ad31;
-  border-color: #9effa5;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #e6ffed;
+  color: #ffffff;
+  border-color: #e6ffed;
+  background: #15ad31;
 }
 
 .emotion-18 .uc-fe-switch-button {
   left: 100%;
-  margin-left: -23px;
+  margin-left: -32px;
 }
 
 .emotion-18 .uc-fe-switch-dot {
@@ -2971,95 +3206,106 @@ exports[`Switch demo -- demo 1`] = `
 
 .emotion-20 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 32px;
-  width: 92px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
-  border-color: #cccccc;
+  width: 87px;
   cursor: default;
+}
+
+.emotion-20 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-20 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-20 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-20 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-20 .uc-fe-switch-tip-on,
 .emotion-20 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-20 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-20 .uc-fe-switch-button {
+  width: 32px;
+  height: 32px;
+  padding: 2px;
+}
+
+.emotion-20 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 24px;
-  height: 24px;
 }
 
 .emotion-20 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-20 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-20 .uc-fe-switch-tip-on,
-.emotion-20 .uc-fe-switch-tip-off {
-  line-height: 20px;
-}
-
 .emotion-20 .uc-fe-switch-tip-on {
-  padding-right: 26px;
+  padding-right: 32px;
 }
 
 .emotion-20 .uc-fe-switch-tip-off {
-  padding-left: 26px;
+  padding-left: 32px;
 }
 
 .emotion-20 .uc-fe-switch-tip-on {
@@ -3067,10 +3313,9 @@ exports[`Switch demo -- demo 1`] = `
 }
 
 .emotion-20 .uc-fe-switch-inner {
-  color: #cccccc;
   border-color: #d9d9d9;
-  box-shadow: none;
-  background: #f7f7f7;
+  background: #cccccc;
+  color: #ffffff;
 }
 
 .emotion-20 .uc-fe-switch-dot {
@@ -3079,107 +3324,117 @@ exports[`Switch demo -- demo 1`] = `
 
 .emotion-22 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 32px;
-  width: 92px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
-  border-color: #cccccc;
+  width: 87px;
   cursor: default;
+}
+
+.emotion-22 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-22 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-22 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-22 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-22 .uc-fe-switch-tip-on,
 .emotion-22 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-22 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-22 .uc-fe-switch-button {
+  width: 32px;
+  height: 32px;
+  padding: 2px;
+}
+
+.emotion-22 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 24px;
-  height: 24px;
 }
 
 .emotion-22 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-22 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-22 .uc-fe-switch-tip-on,
-.emotion-22 .uc-fe-switch-tip-off {
-  line-height: 20px;
-}
-
 .emotion-22 .uc-fe-switch-tip-on {
-  padding-right: 26px;
+  padding-right: 32px;
 }
 
 .emotion-22 .uc-fe-switch-tip-off {
-  padding-left: 26px;
+  padding-left: 32px;
 }
 
 .emotion-22 .uc-fe-switch-inner {
-  color: #15ad31;
-  border-color: #9effa5;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #e6ffed;
+  color: #ffffff;
+  border-color: #e6ffed;
+  background: #15ad31;
 }
 
 .emotion-22 .uc-fe-switch-button {
   left: 100%;
-  margin-left: -23px;
+  margin-left: -32px;
 }
 
 .emotion-22 .uc-fe-switch-dot {
@@ -3191,10 +3446,9 @@ exports[`Switch demo -- demo 1`] = `
 }
 
 .emotion-22 .uc-fe-switch-inner {
-  color: #cccccc;
   border-color: #d9d9d9;
-  box-shadow: none;
-  background: #f7f7f7;
+  background: #cccccc;
+  color: #ffffff;
 }
 
 .emotion-22 .uc-fe-switch-dot {
@@ -3206,9 +3460,9 @@ exports[`Switch demo -- demo 1`] = `
     class="demo-wrap"
   >
     <div
-      class=" emotion-0 emotion-1"
+      class="emotion-0 emotion-1"
     >
-      <div
+      <span
         class="uc-fe-switch-inner"
       >
         <span
@@ -3221,14 +3475,16 @@ exports[`Switch demo -- demo 1`] = `
         >
           OFF
         </span>
-        <span
-          class="uc-fe-switch-button"
-        >
+      </span>
+      <span
+        class="uc-fe-switch-button"
+      >
+        <span>
           <span
             class="uc-fe-switch-dot"
           />
         </span>
-      </div>
+      </span>
     </div>
   </div>
   <div
@@ -3236,9 +3492,9 @@ exports[`Switch demo -- demo 1`] = `
   >
     <div
       checked=""
-      class=" emotion-2 emotion-1"
+      class="emotion-2 emotion-1"
     >
-      <div
+      <span
         class="uc-fe-switch-inner"
       >
         <span
@@ -3251,24 +3507,26 @@ exports[`Switch demo -- demo 1`] = `
         >
           OFF
         </span>
-        <span
-          class="uc-fe-switch-button"
-        >
+      </span>
+      <span
+        class="uc-fe-switch-button"
+      >
+        <span>
           <span
             class="uc-fe-switch-dot"
           />
         </span>
-      </div>
+      </span>
     </div>
   </div>
   <div
     class="demo-wrap"
   >
     <div
-      class=" emotion-4 emotion-1"
+      class="emotion-4 emotion-1"
       disabled=""
     >
-      <div
+      <span
         class="uc-fe-switch-inner"
       >
         <span
@@ -3281,14 +3539,16 @@ exports[`Switch demo -- demo 1`] = `
         >
           OFF
         </span>
-        <span
-          class="uc-fe-switch-button"
-        >
+      </span>
+      <span
+        class="uc-fe-switch-button"
+      >
+        <span>
           <span
             class="uc-fe-switch-dot"
           />
         </span>
-      </div>
+      </span>
     </div>
   </div>
   <div
@@ -3296,10 +3556,10 @@ exports[`Switch demo -- demo 1`] = `
   >
     <div
       checked=""
-      class=" emotion-6 emotion-1"
+      class="emotion-6 emotion-1"
       disabled=""
     >
-      <div
+      <span
         class="uc-fe-switch-inner"
       >
         <span
@@ -3312,23 +3572,25 @@ exports[`Switch demo -- demo 1`] = `
         >
           OFF
         </span>
-        <span
-          class="uc-fe-switch-button"
-        >
+      </span>
+      <span
+        class="uc-fe-switch-button"
+      >
+        <span>
           <span
             class="uc-fe-switch-dot"
           />
         </span>
-      </div>
+      </span>
     </div>
   </div>
   <div
     class="demo-wrap"
   >
     <div
-      class=" emotion-8 emotion-1"
+      class="emotion-8 emotion-1"
     >
-      <div
+      <span
         class="uc-fe-switch-inner"
       >
         <span
@@ -3341,14 +3603,16 @@ exports[`Switch demo -- demo 1`] = `
         >
           OFF
         </span>
-        <span
-          class="uc-fe-switch-button"
-        >
+      </span>
+      <span
+        class="uc-fe-switch-button"
+      >
+        <span>
           <span
             class="uc-fe-switch-dot"
           />
         </span>
-      </div>
+      </span>
     </div>
   </div>
   <div
@@ -3356,9 +3620,9 @@ exports[`Switch demo -- demo 1`] = `
   >
     <div
       checked=""
-      class=" emotion-10 emotion-1"
+      class="emotion-10 emotion-1"
     >
-      <div
+      <span
         class="uc-fe-switch-inner"
       >
         <span
@@ -3371,24 +3635,26 @@ exports[`Switch demo -- demo 1`] = `
         >
           OFF
         </span>
-        <span
-          class="uc-fe-switch-button"
-        >
+      </span>
+      <span
+        class="uc-fe-switch-button"
+      >
+        <span>
           <span
             class="uc-fe-switch-dot"
           />
         </span>
-      </div>
+      </span>
     </div>
   </div>
   <div
     class="demo-wrap"
   >
     <div
-      class=" emotion-12 emotion-1"
+      class="emotion-12 emotion-1"
       disabled=""
     >
-      <div
+      <span
         class="uc-fe-switch-inner"
       >
         <span
@@ -3401,14 +3667,16 @@ exports[`Switch demo -- demo 1`] = `
         >
           OFF
         </span>
-        <span
-          class="uc-fe-switch-button"
-        >
+      </span>
+      <span
+        class="uc-fe-switch-button"
+      >
+        <span>
           <span
             class="uc-fe-switch-dot"
           />
         </span>
-      </div>
+      </span>
     </div>
   </div>
   <div
@@ -3416,10 +3684,10 @@ exports[`Switch demo -- demo 1`] = `
   >
     <div
       checked=""
-      class=" emotion-14 emotion-1"
+      class="emotion-14 emotion-1"
       disabled=""
     >
-      <div
+      <span
         class="uc-fe-switch-inner"
       >
         <span
@@ -3432,23 +3700,25 @@ exports[`Switch demo -- demo 1`] = `
         >
           OFF
         </span>
-        <span
-          class="uc-fe-switch-button"
-        >
+      </span>
+      <span
+        class="uc-fe-switch-button"
+      >
+        <span>
           <span
             class="uc-fe-switch-dot"
           />
         </span>
-      </div>
+      </span>
     </div>
   </div>
   <div
     class="demo-wrap"
   >
     <div
-      class=" emotion-16 emotion-1"
+      class="emotion-16 emotion-1"
     >
-      <div
+      <span
         class="uc-fe-switch-inner"
       >
         <span
@@ -3461,14 +3731,16 @@ exports[`Switch demo -- demo 1`] = `
         >
           OFF
         </span>
-        <span
-          class="uc-fe-switch-button"
-        >
+      </span>
+      <span
+        class="uc-fe-switch-button"
+      >
+        <span>
           <span
             class="uc-fe-switch-dot"
           />
         </span>
-      </div>
+      </span>
     </div>
   </div>
   <div
@@ -3476,9 +3748,9 @@ exports[`Switch demo -- demo 1`] = `
   >
     <div
       checked=""
-      class=" emotion-18 emotion-1"
+      class="emotion-18 emotion-1"
     >
-      <div
+      <span
         class="uc-fe-switch-inner"
       >
         <span
@@ -3491,24 +3763,26 @@ exports[`Switch demo -- demo 1`] = `
         >
           OFF
         </span>
-        <span
-          class="uc-fe-switch-button"
-        >
+      </span>
+      <span
+        class="uc-fe-switch-button"
+      >
+        <span>
           <span
             class="uc-fe-switch-dot"
           />
         </span>
-      </div>
+      </span>
     </div>
   </div>
   <div
     class="demo-wrap"
   >
     <div
-      class=" emotion-20 emotion-1"
+      class="emotion-20 emotion-1"
       disabled=""
     >
-      <div
+      <span
         class="uc-fe-switch-inner"
       >
         <span
@@ -3521,14 +3795,16 @@ exports[`Switch demo -- demo 1`] = `
         >
           OFF
         </span>
-        <span
-          class="uc-fe-switch-button"
-        >
+      </span>
+      <span
+        class="uc-fe-switch-button"
+      >
+        <span>
           <span
             class="uc-fe-switch-dot"
           />
         </span>
-      </div>
+      </span>
     </div>
   </div>
   <div
@@ -3536,10 +3812,10 @@ exports[`Switch demo -- demo 1`] = `
   >
     <div
       checked=""
-      class=" emotion-22 emotion-1"
+      class="emotion-22 emotion-1"
       disabled=""
     >
-      <div
+      <span
         class="uc-fe-switch-inner"
       >
         <span
@@ -3552,14 +3828,16 @@ exports[`Switch demo -- demo 1`] = `
         >
           OFF
         </span>
-        <span
-          class="uc-fe-switch-button"
-        >
+      </span>
+      <span
+        class="uc-fe-switch-button"
+      >
+        <span>
           <span
             class="uc-fe-switch-dot"
           />
         </span>
-      </div>
+      </span>
     </div>
   </div>
 </div>
@@ -3568,101 +3846,109 @@ exports[`Switch demo -- demo 1`] = `
 exports[`Switch demo -- disabled 1`] = `
 .emotion-0 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 28px;
-  width: 78px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
+  width: 73px;
+}
+
+.emotion-0 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-0 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-0 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-0 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-0 .uc-fe-switch-tip-on,
 .emotion-0 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-0 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-0:hover {
-  border-color: #3357df;
-}
-
-.emotion-0:hover .uc-fe-switch-button {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-0 .uc-fe-switch-button {
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+}
+
+.emotion-0 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 20px;
-  height: 20px;
 }
 
 .emotion-0 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-0 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-0 .uc-fe-switch-tip-on,
-.emotion-0 .uc-fe-switch-tip-off {
-  line-height: 16px;
+.emotion-0:hover .uc-fe-switch-inner {
+  border-color: #c3cad9;
 }
 
 .emotion-0 .uc-fe-switch-tip-on {
-  padding-right: 20px;
+  padding-right: 28px;
 }
 
 .emotion-0 .uc-fe-switch-tip-off {
-  padding-left: 20px;
+  padding-left: 28px;
 }
 
 .emotion-0 .uc-fe-switch-tip-on {
@@ -3671,95 +3957,106 @@ exports[`Switch demo -- disabled 1`] = `
 
 .emotion-2 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 28px;
-  width: 78px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
-  border-color: #cccccc;
+  width: 73px;
   cursor: default;
+}
+
+.emotion-2 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-2 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-2 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-2 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-2 .uc-fe-switch-tip-on,
 .emotion-2 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-2 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-2 .uc-fe-switch-button {
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+}
+
+.emotion-2 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 20px;
-  height: 20px;
 }
 
 .emotion-2 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-2 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-2 .uc-fe-switch-tip-on,
-.emotion-2 .uc-fe-switch-tip-off {
-  line-height: 16px;
-}
-
 .emotion-2 .uc-fe-switch-tip-on {
-  padding-right: 20px;
+  padding-right: 28px;
 }
 
 .emotion-2 .uc-fe-switch-tip-off {
-  padding-left: 20px;
+  padding-left: 28px;
 }
 
 .emotion-2 .uc-fe-switch-tip-on {
@@ -3767,10 +4064,9 @@ exports[`Switch demo -- disabled 1`] = `
 }
 
 .emotion-2 .uc-fe-switch-inner {
-  color: #cccccc;
   border-color: #d9d9d9;
-  box-shadow: none;
-  background: #f7f7f7;
+  background: #cccccc;
+  color: #ffffff;
 }
 
 .emotion-2 .uc-fe-switch-dot {
@@ -3779,101 +4075,109 @@ exports[`Switch demo -- disabled 1`] = `
 
 .emotion-0 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 28px;
-  width: 78px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
+  width: 73px;
+}
+
+.emotion-0 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-0 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-0 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-0 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-0 .uc-fe-switch-tip-on,
 .emotion-0 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-0 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-0:hover {
-  border-color: #3357df;
-}
-
-.emotion-0:hover .uc-fe-switch-button {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-0 .uc-fe-switch-button {
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+}
+
+.emotion-0 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 20px;
-  height: 20px;
 }
 
 .emotion-0 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-0 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-0 .uc-fe-switch-tip-on,
-.emotion-0 .uc-fe-switch-tip-off {
-  line-height: 16px;
+.emotion-0:hover .uc-fe-switch-inner {
+  border-color: #c3cad9;
 }
 
 .emotion-0 .uc-fe-switch-tip-on {
-  padding-right: 20px;
+  padding-right: 28px;
 }
 
 .emotion-0 .uc-fe-switch-tip-off {
-  padding-left: 20px;
+  padding-left: 28px;
 }
 
 .emotion-0 .uc-fe-switch-tip-on {
@@ -3882,95 +4186,106 @@ exports[`Switch demo -- disabled 1`] = `
 
 .emotion-2 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 28px;
-  width: 78px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
-  border-color: #cccccc;
+  width: 73px;
   cursor: default;
+}
+
+.emotion-2 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-2 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-2 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-2 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-2 .uc-fe-switch-tip-on,
 .emotion-2 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-2 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-2 .uc-fe-switch-button {
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+}
+
+.emotion-2 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 20px;
-  height: 20px;
 }
 
 .emotion-2 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-2 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-2 .uc-fe-switch-tip-on,
-.emotion-2 .uc-fe-switch-tip-off {
-  line-height: 16px;
-}
-
 .emotion-2 .uc-fe-switch-tip-on {
-  padding-right: 20px;
+  padding-right: 28px;
 }
 
 .emotion-2 .uc-fe-switch-tip-off {
-  padding-left: 20px;
+  padding-left: 28px;
 }
 
 .emotion-2 .uc-fe-switch-tip-on {
@@ -3978,10 +4293,9 @@ exports[`Switch demo -- disabled 1`] = `
 }
 
 .emotion-2 .uc-fe-switch-inner {
-  color: #cccccc;
   border-color: #d9d9d9;
-  box-shadow: none;
-  background: #f7f7f7;
+  background: #cccccc;
+  color: #ffffff;
 }
 
 .emotion-2 .uc-fe-switch-dot {
@@ -3993,9 +4307,9 @@ exports[`Switch demo -- disabled 1`] = `
     class="demo-wrap"
   >
     <div
-      class=" emotion-0 emotion-1"
+      class="emotion-0 emotion-1"
     >
-      <div
+      <span
         class="uc-fe-switch-inner"
       >
         <span
@@ -4008,24 +4322,26 @@ exports[`Switch demo -- disabled 1`] = `
         >
           OFF
         </span>
-        <span
-          class="uc-fe-switch-button"
-        >
+      </span>
+      <span
+        class="uc-fe-switch-button"
+      >
+        <span>
           <span
             class="uc-fe-switch-dot"
           />
         </span>
-      </div>
+      </span>
     </div>
   </div>
   <div
     class="demo-wrap"
   >
     <div
-      class=" emotion-2 emotion-1"
+      class="emotion-2 emotion-1"
       disabled=""
     >
-      <div
+      <span
         class="uc-fe-switch-inner"
       >
         <span
@@ -4038,14 +4354,16 @@ exports[`Switch demo -- disabled 1`] = `
         >
           OFF
         </span>
-        <span
-          class="uc-fe-switch-button"
-        >
+      </span>
+      <span
+        class="uc-fe-switch-button"
+      >
+        <span>
           <span
             class="uc-fe-switch-dot"
           />
         </span>
-      </div>
+      </span>
     </div>
   </div>
 </div>
@@ -4054,101 +4372,109 @@ exports[`Switch demo -- disabled 1`] = `
 exports[`Switch demo -- onTextAndOffText 1`] = `
 .emotion-0 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 28px;
-  width: 78px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
+  width: 73px;
+}
+
+.emotion-0 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-0 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-0 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-0 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-0 .uc-fe-switch-tip-on,
 .emotion-0 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-0 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-0:hover {
-  border-color: #3357df;
-}
-
-.emotion-0:hover .uc-fe-switch-button {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-0 .uc-fe-switch-button {
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+}
+
+.emotion-0 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 20px;
-  height: 20px;
 }
 
 .emotion-0 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-0 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-0 .uc-fe-switch-tip-on,
-.emotion-0 .uc-fe-switch-tip-off {
-  line-height: 16px;
+.emotion-0:hover .uc-fe-switch-inner {
+  border-color: #c3cad9;
 }
 
 .emotion-0 .uc-fe-switch-tip-on {
-  padding-right: 20px;
+  padding-right: 28px;
 }
 
 .emotion-0 .uc-fe-switch-tip-off {
-  padding-left: 20px;
+  padding-left: 28px;
 }
 
 .emotion-0 .uc-fe-switch-tip-on {
@@ -4157,101 +4483,109 @@ exports[`Switch demo -- onTextAndOffText 1`] = `
 
 .emotion-0 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 28px;
-  width: 78px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
+  width: 73px;
+}
+
+.emotion-0 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-0 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-0 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-0 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-0 .uc-fe-switch-tip-on,
 .emotion-0 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-0 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-0:hover {
-  border-color: #3357df;
-}
-
-.emotion-0:hover .uc-fe-switch-button {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-0 .uc-fe-switch-button {
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+}
+
+.emotion-0 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 20px;
-  height: 20px;
 }
 
 .emotion-0 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-0 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-0 .uc-fe-switch-tip-on,
-.emotion-0 .uc-fe-switch-tip-off {
-  line-height: 16px;
+.emotion-0:hover .uc-fe-switch-inner {
+  border-color: #c3cad9;
 }
 
 .emotion-0 .uc-fe-switch-tip-on {
-  padding-right: 20px;
+  padding-right: 28px;
 }
 
 .emotion-0 .uc-fe-switch-tip-off {
-  padding-left: 20px;
+  padding-left: 28px;
 }
 
 .emotion-0 .uc-fe-switch-tip-on {
@@ -4263,9 +4597,9 @@ exports[`Switch demo -- onTextAndOffText 1`] = `
     class="demo-wrap"
   >
     <div
-      class=" emotion-0 emotion-1"
+      class="emotion-0 emotion-1"
     >
-      <div
+      <span
         class="uc-fe-switch-inner"
       >
         <span
@@ -4278,23 +4612,25 @@ exports[`Switch demo -- onTextAndOffText 1`] = `
         >
           OFF
         </span>
-        <span
-          class="uc-fe-switch-button"
-        >
+      </span>
+      <span
+        class="uc-fe-switch-button"
+      >
+        <span>
           <span
             class="uc-fe-switch-dot"
           />
         </span>
-      </div>
+      </span>
     </div>
   </div>
   <div
     class="demo-wrap"
   >
     <div
-      class=" emotion-0 emotion-1"
+      class="emotion-0 emotion-1"
     >
-      <div
+      <span
         class="uc-fe-switch-inner"
       >
         <span
@@ -4307,14 +4643,16 @@ exports[`Switch demo -- onTextAndOffText 1`] = `
         >
           关
         </span>
-        <span
-          class="uc-fe-switch-button"
-        >
+      </span>
+      <span
+        class="uc-fe-switch-button"
+      >
+        <span>
           <span
             class="uc-fe-switch-dot"
           />
         </span>
-      </div>
+      </span>
     </div>
   </div>
 </div>
@@ -4323,101 +4661,109 @@ exports[`Switch demo -- onTextAndOffText 1`] = `
 exports[`Switch demo -- size 1`] = `
 .emotion-2 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 28px;
-  width: 78px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
+  width: 73px;
+}
+
+.emotion-2 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-2 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-2 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-2 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-2 .uc-fe-switch-tip-on,
 .emotion-2 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-2 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-2:hover {
-  border-color: #3357df;
-}
-
-.emotion-2:hover .uc-fe-switch-button {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-2 .uc-fe-switch-button {
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+}
+
+.emotion-2 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 20px;
-  height: 20px;
 }
 
 .emotion-2 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-2 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-2 .uc-fe-switch-tip-on,
-.emotion-2 .uc-fe-switch-tip-off {
-  line-height: 16px;
+.emotion-2:hover .uc-fe-switch-inner {
+  border-color: #c3cad9;
 }
 
 .emotion-2 .uc-fe-switch-tip-on {
-  padding-right: 20px;
+  padding-right: 28px;
 }
 
 .emotion-2 .uc-fe-switch-tip-off {
-  padding-left: 20px;
+  padding-left: 28px;
 }
 
 .emotion-2 .uc-fe-switch-tip-on {
@@ -4426,97 +4772,106 @@ exports[`Switch demo -- size 1`] = `
 
 .emotion-0 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 24px;
   width: 44px;
-  padding: 0;
-  border: 1px solid #d2d6ea;
-  border-width: 0;
+}
+
+.emotion-0 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-0 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-0 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-0 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-0 .uc-fe-switch-tip-on,
 .emotion-0 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-0 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-0:hover {
-  border-color: #3357df;
-}
-
-.emotion-0:hover .uc-fe-switch-button {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 0;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-0 .uc-fe-switch-button {
-  background: #ffffff;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  border: 1px solid #d2d6ea;
   width: 24px;
   height: 24px;
+  padding: 0;
+}
+
+.emotion-0 .uc-fe-switch-button > span {
+  background: #ffffff;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
+  border: 0 solid #d2d6ea;
 }
 
 .emotion-0 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-0 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
+.emotion-0:hover .uc-fe-switch-inner {
+  border-color: #c3cad9;
 }
 
 .emotion-0 .uc-fe-switch-tip-on,
 .emotion-0 .uc-fe-switch-tip-off {
   display: none;
-}
-
-.emotion-0 .uc-fe-switch-button {
-  top: -1px;
 }
 
 .emotion-0 .uc-fe-switch-tip-on {
@@ -4525,101 +4880,109 @@ exports[`Switch demo -- size 1`] = `
 
 .emotion-4 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 32px;
-  width: 92px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
+  width: 87px;
+}
+
+.emotion-4 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-4 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-4 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-4 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-4 .uc-fe-switch-tip-on,
 .emotion-4 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-4 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-4:hover {
-  border-color: #3357df;
-}
-
-.emotion-4:hover .uc-fe-switch-button {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-4 .uc-fe-switch-button {
+  width: 32px;
+  height: 32px;
+  padding: 2px;
+}
+
+.emotion-4 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 24px;
-  height: 24px;
 }
 
 .emotion-4 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-4 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-4 .uc-fe-switch-tip-on,
-.emotion-4 .uc-fe-switch-tip-off {
-  line-height: 20px;
+.emotion-4:hover .uc-fe-switch-inner {
+  border-color: #c3cad9;
 }
 
 .emotion-4 .uc-fe-switch-tip-on {
-  padding-right: 26px;
+  padding-right: 32px;
 }
 
 .emotion-4 .uc-fe-switch-tip-off {
-  padding-left: 26px;
+  padding-left: 32px;
 }
 
 .emotion-4 .uc-fe-switch-tip-on {
@@ -4628,101 +4991,109 @@ exports[`Switch demo -- size 1`] = `
 
 .emotion-2 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 28px;
-  width: 78px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
+  width: 73px;
+}
+
+.emotion-2 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-2 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-2 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-2 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-2 .uc-fe-switch-tip-on,
 .emotion-2 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-2 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-2:hover {
-  border-color: #3357df;
-}
-
-.emotion-2:hover .uc-fe-switch-button {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-2 .uc-fe-switch-button {
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+}
+
+.emotion-2 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 20px;
-  height: 20px;
 }
 
 .emotion-2 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-2 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-2 .uc-fe-switch-tip-on,
-.emotion-2 .uc-fe-switch-tip-off {
-  line-height: 16px;
+.emotion-2:hover .uc-fe-switch-inner {
+  border-color: #c3cad9;
 }
 
 .emotion-2 .uc-fe-switch-tip-on {
-  padding-right: 20px;
+  padding-right: 28px;
 }
 
 .emotion-2 .uc-fe-switch-tip-off {
-  padding-left: 20px;
+  padding-left: 28px;
 }
 
 .emotion-2 .uc-fe-switch-tip-on {
@@ -4731,97 +5102,106 @@ exports[`Switch demo -- size 1`] = `
 
 .emotion-0 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 24px;
   width: 44px;
-  padding: 0;
-  border: 1px solid #d2d6ea;
-  border-width: 0;
+}
+
+.emotion-0 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-0 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-0 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-0 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-0 .uc-fe-switch-tip-on,
 .emotion-0 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-0 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-0:hover {
-  border-color: #3357df;
-}
-
-.emotion-0:hover .uc-fe-switch-button {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 0;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-0 .uc-fe-switch-button {
-  background: #ffffff;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  border: 1px solid #d2d6ea;
   width: 24px;
   height: 24px;
+  padding: 0;
+}
+
+.emotion-0 .uc-fe-switch-button > span {
+  background: #ffffff;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
+  border: 0 solid #d2d6ea;
 }
 
 .emotion-0 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-0 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
+.emotion-0:hover .uc-fe-switch-inner {
+  border-color: #c3cad9;
 }
 
 .emotion-0 .uc-fe-switch-tip-on,
 .emotion-0 .uc-fe-switch-tip-off {
   display: none;
-}
-
-.emotion-0 .uc-fe-switch-button {
-  top: -1px;
 }
 
 .emotion-0 .uc-fe-switch-tip-on {
@@ -4830,101 +5210,109 @@ exports[`Switch demo -- size 1`] = `
 
 .emotion-4 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 32px;
-  width: 92px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
+  width: 87px;
+}
+
+.emotion-4 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-4 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-4 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-4 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-4 .uc-fe-switch-tip-on,
 .emotion-4 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-4 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-4:hover {
-  border-color: #3357df;
-}
-
-.emotion-4:hover .uc-fe-switch-button {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-4 .uc-fe-switch-button {
+  width: 32px;
+  height: 32px;
+  padding: 2px;
+}
+
+.emotion-4 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 24px;
-  height: 24px;
 }
 
 .emotion-4 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-4 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-4 .uc-fe-switch-tip-on,
-.emotion-4 .uc-fe-switch-tip-off {
-  line-height: 20px;
+.emotion-4:hover .uc-fe-switch-inner {
+  border-color: #c3cad9;
 }
 
 .emotion-4 .uc-fe-switch-tip-on {
-  padding-right: 26px;
+  padding-right: 32px;
 }
 
 .emotion-4 .uc-fe-switch-tip-off {
-  padding-left: 26px;
+  padding-left: 32px;
 }
 
 .emotion-4 .uc-fe-switch-tip-on {
@@ -4936,9 +5324,9 @@ exports[`Switch demo -- size 1`] = `
     class="demo-wrap"
   >
     <div
-      class=" emotion-0 emotion-1"
+      class="emotion-0 emotion-1"
     >
-      <div
+      <span
         class="uc-fe-switch-inner"
       >
         <span
@@ -4951,23 +5339,25 @@ exports[`Switch demo -- size 1`] = `
         >
           OFF
         </span>
-        <span
-          class="uc-fe-switch-button"
-        >
+      </span>
+      <span
+        class="uc-fe-switch-button"
+      >
+        <span>
           <span
             class="uc-fe-switch-dot"
           />
         </span>
-      </div>
+      </span>
     </div>
   </div>
   <div
     class="demo-wrap"
   >
     <div
-      class=" emotion-2 emotion-1"
+      class="emotion-2 emotion-1"
     >
-      <div
+      <span
         class="uc-fe-switch-inner"
       >
         <span
@@ -4980,23 +5370,25 @@ exports[`Switch demo -- size 1`] = `
         >
           OFF
         </span>
-        <span
-          class="uc-fe-switch-button"
-        >
+      </span>
+      <span
+        class="uc-fe-switch-button"
+      >
+        <span>
           <span
             class="uc-fe-switch-dot"
           />
         </span>
-      </div>
+      </span>
     </div>
   </div>
   <div
     class="demo-wrap"
   >
     <div
-      class=" emotion-4 emotion-1"
+      class="emotion-4 emotion-1"
     >
-      <div
+      <span
         class="uc-fe-switch-inner"
       >
         <span
@@ -5009,14 +5401,16 @@ exports[`Switch demo -- size 1`] = `
         >
           OFF
         </span>
-        <span
-          class="uc-fe-switch-button"
-        >
+      </span>
+      <span
+        class="uc-fe-switch-button"
+      >
+        <span>
           <span
             class="uc-fe-switch-dot"
           />
         </span>
-      </div>
+      </span>
     </div>
   </div>
 </div>
@@ -5025,113 +5419,121 @@ exports[`Switch demo -- size 1`] = `
 exports[`Switch demo -- switch 1`] = `
 .emotion-40 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 28px;
-  width: 78px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
+  width: 73px;
+}
+
+.emotion-40 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-40 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-40 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-40 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-40 .uc-fe-switch-tip-on,
 .emotion-40 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-40 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-40:hover {
-  border-color: #3357df;
-}
-
-.emotion-40:hover .uc-fe-switch-button {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-40 .uc-fe-switch-button {
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+}
+
+.emotion-40 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 20px;
-  height: 20px;
 }
 
 .emotion-40 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-40 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-40 .uc-fe-switch-tip-on,
-.emotion-40 .uc-fe-switch-tip-off {
-  line-height: 16px;
+.emotion-40:hover .uc-fe-switch-inner {
+  border-color: #c3cad9;
+  border-color: #e6ffed;
 }
 
 .emotion-40 .uc-fe-switch-tip-on {
-  padding-right: 20px;
+  padding-right: 28px;
 }
 
 .emotion-40 .uc-fe-switch-tip-off {
-  padding-left: 20px;
+  padding-left: 28px;
 }
 
 .emotion-40 .uc-fe-switch-inner {
-  color: #15ad31;
-  border-color: #9effa5;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #e6ffed;
+  color: #ffffff;
+  border-color: #e6ffed;
+  background: #15ad31;
 }
 
 .emotion-40 .uc-fe-switch-button {
   left: 100%;
-  margin-left: -19px;
+  margin-left: -28px;
 }
 
 .emotion-40 .uc-fe-switch-dot {
@@ -5144,101 +5546,109 @@ exports[`Switch demo -- switch 1`] = `
 
 .emotion-29 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 28px;
-  width: 78px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
+  width: 73px;
+}
+
+.emotion-29 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-29 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-29 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-29 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-29 .uc-fe-switch-tip-on,
 .emotion-29 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-29 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-29:hover {
-  border-color: #3357df;
-}
-
-.emotion-29:hover .uc-fe-switch-button {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-29 .uc-fe-switch-button {
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+}
+
+.emotion-29 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 20px;
-  height: 20px;
 }
 
 .emotion-29 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-29 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-29 .uc-fe-switch-tip-on,
-.emotion-29 .uc-fe-switch-tip-off {
-  line-height: 16px;
+.emotion-29:hover .uc-fe-switch-inner {
+  border-color: #c3cad9;
 }
 
 .emotion-29 .uc-fe-switch-tip-on {
-  padding-right: 20px;
+  padding-right: 28px;
 }
 
 .emotion-29 .uc-fe-switch-tip-off {
-  padding-left: 20px;
+  padding-left: 28px;
 }
 
 .emotion-29 .uc-fe-switch-tip-on {
@@ -5521,113 +5931,121 @@ exports[`Switch demo -- switch 1`] = `
 
 .emotion-40 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 28px;
-  width: 78px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
+  width: 73px;
+}
+
+.emotion-40 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-40 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-40 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-40 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-40 .uc-fe-switch-tip-on,
 .emotion-40 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-40 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-40:hover {
-  border-color: #3357df;
-}
-
-.emotion-40:hover .uc-fe-switch-button {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-40 .uc-fe-switch-button {
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+}
+
+.emotion-40 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 20px;
-  height: 20px;
 }
 
 .emotion-40 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-40 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-40 .uc-fe-switch-tip-on,
-.emotion-40 .uc-fe-switch-tip-off {
-  line-height: 16px;
+.emotion-40:hover .uc-fe-switch-inner {
+  border-color: #c3cad9;
+  border-color: #e6ffed;
 }
 
 .emotion-40 .uc-fe-switch-tip-on {
-  padding-right: 20px;
+  padding-right: 28px;
 }
 
 .emotion-40 .uc-fe-switch-tip-off {
-  padding-left: 20px;
+  padding-left: 28px;
 }
 
 .emotion-40 .uc-fe-switch-inner {
-  color: #15ad31;
-  border-color: #9effa5;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #e6ffed;
+  color: #ffffff;
+  border-color: #e6ffed;
+  background: #15ad31;
 }
 
 .emotion-40 .uc-fe-switch-button {
   left: 100%;
-  margin-left: -19px;
+  margin-left: -28px;
 }
 
 .emotion-40 .uc-fe-switch-dot {
@@ -5640,101 +6058,109 @@ exports[`Switch demo -- switch 1`] = `
 
 .emotion-29 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 28px;
-  width: 78px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
+  width: 73px;
+}
+
+.emotion-29 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-29 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-29 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-29 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-29 .uc-fe-switch-tip-on,
 .emotion-29 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-29 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-29:hover {
-  border-color: #3357df;
-}
-
-.emotion-29:hover .uc-fe-switch-button {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-29 .uc-fe-switch-button {
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+}
+
+.emotion-29 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 20px;
-  height: 20px;
 }
 
 .emotion-29 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-29 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-29 .uc-fe-switch-tip-on,
-.emotion-29 .uc-fe-switch-tip-off {
-  line-height: 16px;
+.emotion-29:hover .uc-fe-switch-inner {
+  border-color: #c3cad9;
 }
 
 .emotion-29 .uc-fe-switch-tip-on {
-  padding-right: 20px;
+  padding-right: 28px;
 }
 
 .emotion-29 .uc-fe-switch-tip-off {
-  padding-left: 20px;
+  padding-left: 28px;
 }
 
 .emotion-29 .uc-fe-switch-tip-on {
@@ -6125,9 +6551,9 @@ exports[`Switch demo -- switch 1`] = `
         span="9"
       >
         <div
-          class=" emotion-29 emotion-30"
+          class="emotion-29 emotion-30"
         >
-          <div
+          <span
             class="uc-fe-switch-inner"
           >
             <span
@@ -6140,14 +6566,16 @@ exports[`Switch demo -- switch 1`] = `
             >
               OFF
             </span>
-            <span
-              class="uc-fe-switch-button"
-            >
+          </span>
+          <span
+            class="uc-fe-switch-button"
+          >
+            <span>
               <span
                 class="uc-fe-switch-dot"
               />
             </span>
-          </div>
+          </span>
         </div>
       </div>
     </div>
@@ -6166,9 +6594,9 @@ exports[`Switch demo -- switch 1`] = `
       >
         <div
           checked=""
-          class=" emotion-40 emotion-30"
+          class="emotion-40 emotion-30"
         >
-          <div
+          <span
             class="uc-fe-switch-inner"
           >
             <span
@@ -6181,14 +6609,16 @@ exports[`Switch demo -- switch 1`] = `
             >
               OFF
             </span>
-            <span
-              class="uc-fe-switch-button"
-            >
+          </span>
+          <span
+            class="uc-fe-switch-button"
+          >
+            <span>
               <span
                 class="uc-fe-switch-dot"
               />
             </span>
-          </div>
+          </span>
         </div>
       </div>
     </div>
@@ -6250,9 +6680,9 @@ exports[`Switch demo -- switch 1`] = `
   >
     <div
       checked=""
-      class=" emotion-40 emotion-30"
+      class="emotion-40 emotion-30"
     >
-      <div
+      <span
         class="uc-fe-switch-inner"
       >
         <span
@@ -6265,14 +6695,16 @@ exports[`Switch demo -- switch 1`] = `
         >
           OFF
         </span>
-        <span
-          class="uc-fe-switch-button"
-        >
+      </span>
+      <span
+        class="uc-fe-switch-button"
+      >
+        <span>
           <span
             class="uc-fe-switch-dot"
           />
         </span>
-      </div>
+      </span>
     </div>
   </div>
 </div>
@@ -6281,113 +6713,121 @@ exports[`Switch demo -- switch 1`] = `
 exports[`Switch demo -- uncontrolled 1`] = `
 .emotion-0 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 28px;
-  width: 78px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
+  width: 73px;
+}
+
+.emotion-0 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-0 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-0 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-0 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-0 .uc-fe-switch-tip-on,
 .emotion-0 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-0 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-0:hover {
-  border-color: #3357df;
-}
-
-.emotion-0:hover .uc-fe-switch-button {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-0 .uc-fe-switch-button {
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+}
+
+.emotion-0 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 20px;
-  height: 20px;
 }
 
 .emotion-0 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-0 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-0 .uc-fe-switch-tip-on,
-.emotion-0 .uc-fe-switch-tip-off {
-  line-height: 16px;
+.emotion-0:hover .uc-fe-switch-inner {
+  border-color: #c3cad9;
+  border-color: #e6ffed;
 }
 
 .emotion-0 .uc-fe-switch-tip-on {
-  padding-right: 20px;
+  padding-right: 28px;
 }
 
 .emotion-0 .uc-fe-switch-tip-off {
-  padding-left: 20px;
+  padding-left: 28px;
 }
 
 .emotion-0 .uc-fe-switch-inner {
-  color: #15ad31;
-  border-color: #9effa5;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #e6ffed;
+  color: #ffffff;
+  border-color: #e6ffed;
+  background: #15ad31;
 }
 
 .emotion-0 .uc-fe-switch-button {
   left: 100%;
-  margin-left: -19px;
+  margin-left: -28px;
 }
 
 .emotion-0 .uc-fe-switch-dot {
@@ -6400,113 +6840,121 @@ exports[`Switch demo -- uncontrolled 1`] = `
 
 .emotion-0 {
   position: relative;
-  border-radius: 2px;
-  box-sizing: border-box;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;
-  background: #ffffff;
   height: 28px;
-  width: 78px;
-  padding: 4px;
-  border: 1px solid #d2d6ea;
-  border-width: 1px;
+  width: 73px;
+}
+
+.emotion-0 .uc-fe-switch-inner {
+  border-radius: 2px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .emotion-0 .uc-fe-switch-dot {
   position: absolute;
   display: block;
-  right: 4px;
+  right: 6px;
   top: 50%;
   margin-top: -2px;
   width: 4px;
   height: 4px;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-radius: 50%;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .emotion-0 .uc-fe-switch-button {
   position: absolute;
   display: block;
-  left: -1px;
-  top: -2px;
-  border-radius: 2px;
   box-sizing: border-box;
+  left: 0;
+  top: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.emotion-0 .uc-fe-switch-button > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
 .emotion-0 .uc-fe-switch-tip-on,
 .emotion-0 .uc-fe-switch-tip-off {
   width: 100%;
-  height: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
 .emotion-0 .uc-fe-switch-inner {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-.emotion-0:hover {
-  border-color: #3357df;
-}
-
-.emotion-0:hover .uc-fe-switch-button {
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+  background: #f6f6fb;
+  border-color: #d2d6ea;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: inset 0 1px 3px 0 #d2d6ea;
+  color: #526075;
 }
 
 .emotion-0 .uc-fe-switch-button {
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+}
+
+.emotion-0 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
-  width: 20px;
-  height: 20px;
 }
 
 .emotion-0 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-0 .uc-fe-switch-inner {
-  color: #526075;
-  border: 1px solid #d2d6ea;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #f6f6fb;
-}
-
-.emotion-0 .uc-fe-switch-tip-on,
-.emotion-0 .uc-fe-switch-tip-off {
-  line-height: 16px;
+.emotion-0:hover .uc-fe-switch-inner {
+  border-color: #c3cad9;
+  border-color: #e6ffed;
 }
 
 .emotion-0 .uc-fe-switch-tip-on {
-  padding-right: 20px;
+  padding-right: 28px;
 }
 
 .emotion-0 .uc-fe-switch-tip-off {
-  padding-left: 20px;
+  padding-left: 28px;
 }
 
 .emotion-0 .uc-fe-switch-inner {
-  color: #15ad31;
-  border-color: #9effa5;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #e6ffed;
+  color: #ffffff;
+  border-color: #e6ffed;
+  background: #15ad31;
 }
 
 .emotion-0 .uc-fe-switch-button {
   left: 100%;
-  margin-left: -19px;
+  margin-left: -28px;
 }
 
 .emotion-0 .uc-fe-switch-dot {
@@ -6523,9 +6971,9 @@ exports[`Switch demo -- uncontrolled 1`] = `
   >
     <div
       checked=""
-      class=" emotion-0 emotion-1"
+      class="emotion-0 emotion-1"
     >
-      <div
+      <span
         class="uc-fe-switch-inner"
       >
         <span
@@ -6538,14 +6986,16 @@ exports[`Switch demo -- uncontrolled 1`] = `
         >
           OFF
         </span>
-        <span
-          class="uc-fe-switch-button"
-        >
+      </span>
+      <span
+        class="uc-fe-switch-button"
+      >
+        <span>
           <span
             class="uc-fe-switch-dot"
           />
         </span>
-      </div>
+      </span>
     </div>
   </div>
   <div
@@ -6553,9 +7003,9 @@ exports[`Switch demo -- uncontrolled 1`] = `
   >
     <div
       checked=""
-      class=" emotion-0 emotion-1"
+      class="emotion-0 emotion-1"
     >
-      <div
+      <span
         class="uc-fe-switch-inner"
       >
         <span
@@ -6568,14 +7018,16 @@ exports[`Switch demo -- uncontrolled 1`] = `
         >
           OFF
         </span>
-        <span
-          class="uc-fe-switch-button"
-        >
+      </span>
+      <span
+        class="uc-fe-switch-button"
+      >
+        <span>
           <span
             class="uc-fe-switch-dot"
           />
         </span>
-      </div>
+      </span>
     </div>
   </div>
 </div>
