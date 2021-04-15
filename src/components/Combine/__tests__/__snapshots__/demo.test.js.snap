@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Combine demo -- combine 1`] = `
-.emotion-99 .uc-fe-form-item {
+.emotion-110 .uc-fe-form-item {
   margin-bottom: 16px;
 }
 
-.emotion-99 .uc-fe-form-item:last-child {
+.emotion-110 .uc-fe-form-item:last-child {
   margin-bottom: 0;
 }
 
-.emotion-24 {
+.emotion-27 {
   position: relative;
   display: block;
   height: auto;
@@ -17,17 +17,17 @@ exports[`Combine demo -- combine 1`] = `
   margin-right: -8px;
 }
 
-.emotion-24:before,
-.emotion-24:after {
+.emotion-27:before,
+.emotion-27:after {
   content: ' ';
   display: table;
 }
 
-.emotion-24:after {
+.emotion-27:after {
   clear: both;
 }
 
-.emotion-24 > .uc-fe-col {
+.emotion-27 > .uc-fe-col {
   padding-left: 8px;
   padding-right: 8px;
 }
@@ -47,7 +47,19 @@ exports[`Combine demo -- combine 1`] = `
   word-break: break-all;
 }
 
-.emotion-21 {
+.emotion-24 {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  min-height: 1px;
+  float: left;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 75%;
+}
+
+.emotion-24 {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -60,65 +72,53 @@ exports[`Combine demo -- combine 1`] = `
 }
 
 .emotion-21 {
-  position: relative;
-  display: block;
-  box-sizing: border-box;
-  min-height: 1px;
-  float: left;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  width: 75%;
-}
-
-.emotion-18 {
   position: relative;
   margin-bottom: -8px;
 }
 
-.emotion-18 .uc-fe-radio-styletype-default,
-.emotion-18 .uc-fe-radio-styletype-tag {
+.emotion-21 .uc-fe-radio-styletype-default,
+.emotion-21 .uc-fe-radio-styletype-tag {
   margin-right: 8px;
   margin-bottom: 8px;
 }
 
-.emotion-18 .uc-fe-radio-styletype-default:last-child,
-.emotion-18 .uc-fe-radio-styletype-tag:last-child {
+.emotion-21 .uc-fe-radio-styletype-default:last-child,
+.emotion-21 .uc-fe-radio-styletype-tag:last-child {
   margin-right: 0;
 }
 
-.emotion-18 .uc-fe-radio-styletype-card {
+.emotion-21 .uc-fe-radio-styletype-card {
   margin-right: 12px;
   margin-bottom: 8px;
 }
 
-.emotion-18 .uc-fe-radio-styletype-card:last-child {
+.emotion-21 .uc-fe-radio-styletype-card:last-child {
   margin-right: 0;
 }
 
-.emotion-18 .uc-fe-radio-styletype-text+.uc-fe-radio-styletype-text {
+.emotion-21 .uc-fe-radio-styletype-text+.uc-fe-radio-styletype-text {
   margin-left: -1px;
 }
 
-.emotion-18 .uc-fe-radio-styletype-button {
+.emotion-21 .uc-fe-radio-styletype-button {
   margin-right: -1px;
   margin-bottom: 8px;
 }
 
-.emotion-18 .uc-fe-radio-styletype-button:first-of-type {
+.emotion-21 .uc-fe-radio-styletype-button:first-of-type {
   border-radius: 2px 0 0 2px;
 }
 
-.emotion-18 .uc-fe-radio-styletype-button:last-of-type {
+.emotion-21 .uc-fe-radio-styletype-button:last-of-type {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
 }
 
-.emotion-18 .uc-fe-radio-styletype-list:last-of-type {
+.emotion-21 .uc-fe-radio-styletype-list:last-of-type {
   margin-bottom: 8px;
 }
 
-.emotion-6 {
+.emotion-7 {
   color: #526075;
   font-size: 12px;
   position: relative;
@@ -131,23 +131,27 @@ exports[`Combine demo -- combine 1`] = `
   color: #0a1633;
 }
 
-.emotion-6 > * {
+.emotion-7 > * {
   font-size: 12px;
 }
 
-.emotion-6 .uc-fe-radio-content {
+.emotion-7 .uc-fe-radio-content {
   display: inline-block;
   vertical-align: middle;
   max-height: 100%;
   margin-left: 8px;
 }
 
-.emotion-6.uc-fe-radio-disabled {
+.emotion-7.uc-fe-radio-disabled {
   cursor: default;
   color: #cccccc;
 }
 
-.emotion-6 .uc-fe-radio-icon-wrap {
+.emotion-7:hover .uc-fe-radio-icon-wrap {
+  border-color: #3860f4;
+}
+
+.emotion-5.uc-fe-radio-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -159,36 +163,12 @@ exports[`Combine demo -- combine 1`] = `
   vertical-align: middle;
 }
 
-.emotion-6 .uc-fe-radio-icon-wrap .uc-fe-radio-icon {
+.emotion-5 .uc-fe-radio-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
   top: -1px;
   left: -1px;
-}
-
-.emotion-6:hover .uc-fe-radio-icon-wrap,
-.emotion-6.uc-fe-radio-checked .uc-fe-radio-icon-wrap {
-  border-color: #3860f4;
-}
-
-.emotion-6.uc-fe-radio-checked .uc-fe-radio-icon {
-  visibility: visible;
-  opacity: 1;
-  fill: #3860f4;
-}
-
-.emotion-6.uc-fe-radio-disabled .uc-fe-radio-icon-wrap {
-  border-color: #d9d9d9;
-  background: #f7f7f7;
-}
-
-.emotion-6.uc-fe-radio-disabled.uc-fe-radio-checked .uc-fe-radio-icon {
-  fill: #cccccc;
-}
-
-.emotion-6.uc-fe-radio-disabled.uc-fe-radio-checked .uc-fe-radio-icon-wrap {
-  background: none;
 }
 
 .emotion-3 {
@@ -200,7 +180,66 @@ exports[`Combine demo -- combine 1`] = `
   height: 14px;
 }
 
-.emotion-29 {
+.emotion-13 {
+  color: #526075;
+  font-size: 12px;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  min-height: 28px;
+  line-height: 28px;
+  font-size: 0;
+  color: #0a1633;
+}
+
+.emotion-13 > * {
+  font-size: 12px;
+}
+
+.emotion-13 .uc-fe-radio-content {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 100%;
+  margin-left: 8px;
+}
+
+.emotion-13.uc-fe-radio-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-11.uc-fe-radio-icon-wrap {
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #c3cad9;
+  border-radius: 8px;
+  vertical-align: middle;
+}
+
+.emotion-11 .uc-fe-radio-icon {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+}
+
+.emotion-11.uc-fe-radio-icon-wrap {
+  border-color: #3860f4;
+}
+
+.emotion-11 .uc-fe-radio-icon {
+  visibility: visible;
+  opacity: 1;
+  fill: #3860f4;
+}
+
+.emotion-32 {
   position: relative;
   cursor: pointer;
   font-size: 12px;
@@ -210,7 +249,7 @@ exports[`Combine demo -- combine 1`] = `
   width: 73px;
 }
 
-.emotion-29 .uc-fe-switch-inner {
+.emotion-32 .uc-fe-switch-inner {
   border-radius: 2px;
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -231,7 +270,7 @@ exports[`Combine demo -- combine 1`] = `
   transition: color 0.3s;
 }
 
-.emotion-29 .uc-fe-switch-dot {
+.emotion-32 .uc-fe-switch-dot {
   position: absolute;
   display: block;
   right: 6px;
@@ -244,7 +283,7 @@ exports[`Combine demo -- combine 1`] = `
   transition: background 0.3s;
 }
 
-.emotion-29 .uc-fe-switch-button {
+.emotion-32 .uc-fe-switch-button {
   position: absolute;
   display: block;
   box-sizing: border-box;
@@ -254,7 +293,7 @@ exports[`Combine demo -- combine 1`] = `
   transition: all 0.3s;
 }
 
-.emotion-29 .uc-fe-switch-button > span {
+.emotion-32 .uc-fe-switch-button > span {
   display: block;
   width: 100%;
   height: 100%;
@@ -262,15 +301,15 @@ exports[`Combine demo -- combine 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-29 .uc-fe-switch-tip-on,
-.emotion-29 .uc-fe-switch-tip-off {
+.emotion-32 .uc-fe-switch-tip-on,
+.emotion-32 .uc-fe-switch-tip-off {
   width: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
-.emotion-29 .uc-fe-switch-inner {
+.emotion-32 .uc-fe-switch-inner {
   background: #f6f6fb;
   border-color: #d2d6ea;
   border-width: 1px;
@@ -279,59 +318,59 @@ exports[`Combine demo -- combine 1`] = `
   color: #526075;
 }
 
-.emotion-29 .uc-fe-switch-button {
+.emotion-32 .uc-fe-switch-button {
   width: 28px;
   height: 28px;
   padding: 2px;
 }
 
-.emotion-29 .uc-fe-switch-button > span {
+.emotion-32 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
 }
 
-.emotion-29 .uc-fe-switch-dot {
+.emotion-32 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-29:hover .uc-fe-switch-inner {
+.emotion-32:hover .uc-fe-switch-inner {
   border-color: #c3cad9;
 }
 
-.emotion-29 .uc-fe-switch-tip-on {
+.emotion-32 .uc-fe-switch-tip-on {
   padding-right: 28px;
 }
 
-.emotion-29 .uc-fe-switch-tip-off {
+.emotion-32 .uc-fe-switch-tip-off {
   padding-left: 28px;
 }
 
-.emotion-29 .uc-fe-switch-tip-on {
+.emotion-32 .uc-fe-switch-tip-on {
   display: none;
 }
 
-.emotion-113 > .uc-fe-combine-item,
-.emotion-113 > .uc-fe-combine-separator {
+.emotion-124 > .uc-fe-combine-item,
+.emotion-124 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-113 > .uc-fe-combine-item:focus {
+.emotion-124 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-113 > .uc-fe-combine-item:hover {
+.emotion-124 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-113 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-113 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-113 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-124 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-124 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-124 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
-.emotion-107 {
+.emotion-118 {
   box-sizing: border-box;
   position: relative;
   display: inline-block;
@@ -340,7 +379,7 @@ exports[`Combine demo -- combine 1`] = `
   color: #0a1633;
 }
 
-.emotion-105 {
+.emotion-116 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -371,13 +410,13 @@ exports[`Combine demo -- combine 1`] = `
   text-align: left;
 }
 
-.emotion-105:link,
-.emotion-105:visited {
+.emotion-116:link,
+.emotion-116:visited {
   color: #0a1633;
 }
 
-.emotion-105:hover,
-.emotion-105:active {
+.emotion-116:hover,
+.emotion-116:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -385,7 +424,7 @@ exports[`Combine demo -- combine 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-102 {
+.emotion-113 {
   vertical-align: baseline;
   position: absolute;
   right: 8px;
@@ -393,7 +432,7 @@ exports[`Combine demo -- combine 1`] = `
   margin-top: -6px;
 }
 
-.emotion-111 {
+.emotion-122 {
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -409,11 +448,11 @@ exports[`Combine demo -- combine 1`] = `
   transition: .18s cubic-bezier(.4,0,.2,1);
 }
 
-.emotion-111.uc-fe-input-block {
+.emotion-122.uc-fe-input-block {
   display: block;
 }
 
-.emotion-111 input {
+.emotion-122 input {
   vertical-align: middle;
   display: table-cell;
   box-sizing: border-box;
@@ -424,59 +463,59 @@ exports[`Combine demo -- combine 1`] = `
   color: inherit;
 }
 
-.emotion-111 input,
-.emotion-111 input:hover,
-.emotion-111 input:focus {
+.emotion-122 input,
+.emotion-122 input:hover,
+.emotion-122 input:focus {
   border: none;
   outline: none;
   background: none;
 }
 
-.emotion-111:hover {
+.emotion-122:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.emotion-111 input {
+.emotion-122 input {
   line-height: 26px;
   height: 26px;
 }
 
-.emotion-111 input::-webkit-input-placeholder {
+.emotion-122 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-111 input::-moz-placeholder {
+.emotion-122 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-111 input:-ms-input-placeholder {
+.emotion-122 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-111 input::placeholder {
+.emotion-122 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-109 {
+.emotion-120 {
   display: table;
   width: 100%;
 }
 
-.emotion-99 .uc-fe-form-item {
+.emotion-110 .uc-fe-form-item {
   margin-bottom: 16px;
 }
 
-.emotion-99 .uc-fe-form-item:last-child {
+.emotion-110 .uc-fe-form-item:last-child {
   margin-bottom: 0;
 }
 
-.emotion-24 {
+.emotion-27 {
   position: relative;
   display: block;
   height: auto;
@@ -484,17 +523,17 @@ exports[`Combine demo -- combine 1`] = `
   margin-right: -8px;
 }
 
-.emotion-24:before,
-.emotion-24:after {
+.emotion-27:before,
+.emotion-27:after {
   content: ' ';
   display: table;
 }
 
-.emotion-24:after {
+.emotion-27:after {
   clear: both;
 }
 
-.emotion-24 > .uc-fe-col {
+.emotion-27 > .uc-fe-col {
   padding-left: 8px;
   padding-right: 8px;
 }
@@ -514,7 +553,19 @@ exports[`Combine demo -- combine 1`] = `
   word-break: break-all;
 }
 
-.emotion-21 {
+.emotion-24 {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  min-height: 1px;
+  float: left;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 75%;
+}
+
+.emotion-24 {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -527,65 +578,53 @@ exports[`Combine demo -- combine 1`] = `
 }
 
 .emotion-21 {
-  position: relative;
-  display: block;
-  box-sizing: border-box;
-  min-height: 1px;
-  float: left;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  width: 75%;
-}
-
-.emotion-18 {
   position: relative;
   margin-bottom: -8px;
 }
 
-.emotion-18 .uc-fe-radio-styletype-default,
-.emotion-18 .uc-fe-radio-styletype-tag {
+.emotion-21 .uc-fe-radio-styletype-default,
+.emotion-21 .uc-fe-radio-styletype-tag {
   margin-right: 8px;
   margin-bottom: 8px;
 }
 
-.emotion-18 .uc-fe-radio-styletype-default:last-child,
-.emotion-18 .uc-fe-radio-styletype-tag:last-child {
+.emotion-21 .uc-fe-radio-styletype-default:last-child,
+.emotion-21 .uc-fe-radio-styletype-tag:last-child {
   margin-right: 0;
 }
 
-.emotion-18 .uc-fe-radio-styletype-card {
+.emotion-21 .uc-fe-radio-styletype-card {
   margin-right: 12px;
   margin-bottom: 8px;
 }
 
-.emotion-18 .uc-fe-radio-styletype-card:last-child {
+.emotion-21 .uc-fe-radio-styletype-card:last-child {
   margin-right: 0;
 }
 
-.emotion-18 .uc-fe-radio-styletype-text+.uc-fe-radio-styletype-text {
+.emotion-21 .uc-fe-radio-styletype-text+.uc-fe-radio-styletype-text {
   margin-left: -1px;
 }
 
-.emotion-18 .uc-fe-radio-styletype-button {
+.emotion-21 .uc-fe-radio-styletype-button {
   margin-right: -1px;
   margin-bottom: 8px;
 }
 
-.emotion-18 .uc-fe-radio-styletype-button:first-of-type {
+.emotion-21 .uc-fe-radio-styletype-button:first-of-type {
   border-radius: 2px 0 0 2px;
 }
 
-.emotion-18 .uc-fe-radio-styletype-button:last-of-type {
+.emotion-21 .uc-fe-radio-styletype-button:last-of-type {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
 }
 
-.emotion-18 .uc-fe-radio-styletype-list:last-of-type {
+.emotion-21 .uc-fe-radio-styletype-list:last-of-type {
   margin-bottom: 8px;
 }
 
-.emotion-6 {
+.emotion-7 {
   color: #526075;
   font-size: 12px;
   position: relative;
@@ -598,23 +637,27 @@ exports[`Combine demo -- combine 1`] = `
   color: #0a1633;
 }
 
-.emotion-6 > * {
+.emotion-7 > * {
   font-size: 12px;
 }
 
-.emotion-6 .uc-fe-radio-content {
+.emotion-7 .uc-fe-radio-content {
   display: inline-block;
   vertical-align: middle;
   max-height: 100%;
   margin-left: 8px;
 }
 
-.emotion-6.uc-fe-radio-disabled {
+.emotion-7.uc-fe-radio-disabled {
   cursor: default;
   color: #cccccc;
 }
 
-.emotion-6 .uc-fe-radio-icon-wrap {
+.emotion-7:hover .uc-fe-radio-icon-wrap {
+  border-color: #3860f4;
+}
+
+.emotion-5.uc-fe-radio-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -626,36 +669,12 @@ exports[`Combine demo -- combine 1`] = `
   vertical-align: middle;
 }
 
-.emotion-6 .uc-fe-radio-icon-wrap .uc-fe-radio-icon {
+.emotion-5 .uc-fe-radio-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
   top: -1px;
   left: -1px;
-}
-
-.emotion-6:hover .uc-fe-radio-icon-wrap,
-.emotion-6.uc-fe-radio-checked .uc-fe-radio-icon-wrap {
-  border-color: #3860f4;
-}
-
-.emotion-6.uc-fe-radio-checked .uc-fe-radio-icon {
-  visibility: visible;
-  opacity: 1;
-  fill: #3860f4;
-}
-
-.emotion-6.uc-fe-radio-disabled .uc-fe-radio-icon-wrap {
-  border-color: #d9d9d9;
-  background: #f7f7f7;
-}
-
-.emotion-6.uc-fe-radio-disabled.uc-fe-radio-checked .uc-fe-radio-icon {
-  fill: #cccccc;
-}
-
-.emotion-6.uc-fe-radio-disabled.uc-fe-radio-checked .uc-fe-radio-icon-wrap {
-  background: none;
 }
 
 .emotion-3 {
@@ -667,7 +686,66 @@ exports[`Combine demo -- combine 1`] = `
   height: 14px;
 }
 
-.emotion-29 {
+.emotion-13 {
+  color: #526075;
+  font-size: 12px;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  min-height: 28px;
+  line-height: 28px;
+  font-size: 0;
+  color: #0a1633;
+}
+
+.emotion-13 > * {
+  font-size: 12px;
+}
+
+.emotion-13 .uc-fe-radio-content {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 100%;
+  margin-left: 8px;
+}
+
+.emotion-13.uc-fe-radio-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-11.uc-fe-radio-icon-wrap {
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #c3cad9;
+  border-radius: 8px;
+  vertical-align: middle;
+}
+
+.emotion-11 .uc-fe-radio-icon {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+}
+
+.emotion-11.uc-fe-radio-icon-wrap {
+  border-color: #3860f4;
+}
+
+.emotion-11 .uc-fe-radio-icon {
+  visibility: visible;
+  opacity: 1;
+  fill: #3860f4;
+}
+
+.emotion-32 {
   position: relative;
   cursor: pointer;
   font-size: 12px;
@@ -677,7 +755,7 @@ exports[`Combine demo -- combine 1`] = `
   width: 73px;
 }
 
-.emotion-29 .uc-fe-switch-inner {
+.emotion-32 .uc-fe-switch-inner {
   border-radius: 2px;
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -698,7 +776,7 @@ exports[`Combine demo -- combine 1`] = `
   transition: color 0.3s;
 }
 
-.emotion-29 .uc-fe-switch-dot {
+.emotion-32 .uc-fe-switch-dot {
   position: absolute;
   display: block;
   right: 6px;
@@ -711,7 +789,7 @@ exports[`Combine demo -- combine 1`] = `
   transition: background 0.3s;
 }
 
-.emotion-29 .uc-fe-switch-button {
+.emotion-32 .uc-fe-switch-button {
   position: absolute;
   display: block;
   box-sizing: border-box;
@@ -721,7 +799,7 @@ exports[`Combine demo -- combine 1`] = `
   transition: all 0.3s;
 }
 
-.emotion-29 .uc-fe-switch-button > span {
+.emotion-32 .uc-fe-switch-button > span {
   display: block;
   width: 100%;
   height: 100%;
@@ -729,15 +807,15 @@ exports[`Combine demo -- combine 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-29 .uc-fe-switch-tip-on,
-.emotion-29 .uc-fe-switch-tip-off {
+.emotion-32 .uc-fe-switch-tip-on,
+.emotion-32 .uc-fe-switch-tip-off {
   width: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
-.emotion-29 .uc-fe-switch-inner {
+.emotion-32 .uc-fe-switch-inner {
   background: #f6f6fb;
   border-color: #d2d6ea;
   border-width: 1px;
@@ -746,59 +824,59 @@ exports[`Combine demo -- combine 1`] = `
   color: #526075;
 }
 
-.emotion-29 .uc-fe-switch-button {
+.emotion-32 .uc-fe-switch-button {
   width: 28px;
   height: 28px;
   padding: 2px;
 }
 
-.emotion-29 .uc-fe-switch-button > span {
+.emotion-32 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
 }
 
-.emotion-29 .uc-fe-switch-dot {
+.emotion-32 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-29:hover .uc-fe-switch-inner {
+.emotion-32:hover .uc-fe-switch-inner {
   border-color: #c3cad9;
 }
 
-.emotion-29 .uc-fe-switch-tip-on {
+.emotion-32 .uc-fe-switch-tip-on {
   padding-right: 28px;
 }
 
-.emotion-29 .uc-fe-switch-tip-off {
+.emotion-32 .uc-fe-switch-tip-off {
   padding-left: 28px;
 }
 
-.emotion-29 .uc-fe-switch-tip-on {
+.emotion-32 .uc-fe-switch-tip-on {
   display: none;
 }
 
-.emotion-113 > .uc-fe-combine-item,
-.emotion-113 > .uc-fe-combine-separator {
+.emotion-124 > .uc-fe-combine-item,
+.emotion-124 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-113 > .uc-fe-combine-item:focus {
+.emotion-124 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-113 > .uc-fe-combine-item:hover {
+.emotion-124 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-113 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-113 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-113 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-124 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-124 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-124 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
-.emotion-107 {
+.emotion-118 {
   box-sizing: border-box;
   position: relative;
   display: inline-block;
@@ -807,7 +885,7 @@ exports[`Combine demo -- combine 1`] = `
   color: #0a1633;
 }
 
-.emotion-105 {
+.emotion-116 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -838,13 +916,13 @@ exports[`Combine demo -- combine 1`] = `
   text-align: left;
 }
 
-.emotion-105:link,
-.emotion-105:visited {
+.emotion-116:link,
+.emotion-116:visited {
   color: #0a1633;
 }
 
-.emotion-105:hover,
-.emotion-105:active {
+.emotion-116:hover,
+.emotion-116:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -852,7 +930,7 @@ exports[`Combine demo -- combine 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-102 {
+.emotion-113 {
   vertical-align: baseline;
   position: absolute;
   right: 8px;
@@ -860,7 +938,7 @@ exports[`Combine demo -- combine 1`] = `
   margin-top: -6px;
 }
 
-.emotion-111 {
+.emotion-122 {
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -876,11 +954,11 @@ exports[`Combine demo -- combine 1`] = `
   transition: .18s cubic-bezier(.4,0,.2,1);
 }
 
-.emotion-111.uc-fe-input-block {
+.emotion-122.uc-fe-input-block {
   display: block;
 }
 
-.emotion-111 input {
+.emotion-122 input {
   vertical-align: middle;
   display: table-cell;
   box-sizing: border-box;
@@ -891,56 +969,56 @@ exports[`Combine demo -- combine 1`] = `
   color: inherit;
 }
 
-.emotion-111 input,
-.emotion-111 input:hover,
-.emotion-111 input:focus {
+.emotion-122 input,
+.emotion-122 input:hover,
+.emotion-122 input:focus {
   border: none;
   outline: none;
   background: none;
 }
 
-.emotion-111:hover {
+.emotion-122:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.emotion-111 input {
+.emotion-122 input {
   line-height: 26px;
   height: 26px;
 }
 
-.emotion-111 input::-webkit-input-placeholder {
+.emotion-122 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-111 input::-moz-placeholder {
+.emotion-122 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-111 input:-ms-input-placeholder {
+.emotion-122 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-111 input::placeholder {
+.emotion-122 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-109 {
+.emotion-120 {
   display: table;
   width: 100%;
 }
 
 <div>
   <form
-    class="uc-fe-form demo-form emotion-99 emotion-100"
+    class="uc-fe-form demo-form emotion-110 emotion-111"
   >
     <div
-      class="uc-fe-row uc-fe-form-item emotion-23 emotion-24 emotion-25"
+      class="uc-fe-row uc-fe-form-item emotion-26 emotion-27 emotion-28"
     >
       <div
         class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
@@ -949,17 +1027,17 @@ exports[`Combine demo -- combine 1`] = `
         size
       </div>
       <div
-        class="uc-fe-col uc-fe-form-controller emotion-20 emotion-21 emotion-2"
+        class="uc-fe-col uc-fe-form-controller emotion-23 emotion-24 emotion-2"
         span="9"
       >
         <div
-          class="emotion-18 emotion-71"
+          class="emotion-21 emotion-22"
         >
           <span
-            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-5 emotion-6 emotion-7"
+            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-7 emotion-8"
           >
             <span
-              class="uc-fe-radio-icon-wrap"
+              class="uc-fe-radio-icon-wrap emotion-5 emotion-6"
             >
               <svg
                 class="uc-fe-radio-icon emotion-3 emotion-4"
@@ -981,10 +1059,11 @@ exports[`Combine demo -- combine 1`] = `
           </span>
           <span
             checked=""
-            class="uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-5 emotion-6 emotion-7"
+            class="uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-13 emotion-8"
           >
             <span
-              class="uc-fe-radio-icon-wrap"
+              checked=""
+              class="uc-fe-radio-icon-wrap emotion-11 emotion-6"
             >
               <svg
                 class="uc-fe-radio-icon emotion-3 emotion-4"
@@ -1005,10 +1084,10 @@ exports[`Combine demo -- combine 1`] = `
             </span>
           </span>
           <span
-            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-5 emotion-6 emotion-7"
+            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-7 emotion-8"
           >
             <span
-              class="uc-fe-radio-icon-wrap"
+              class="uc-fe-radio-icon-wrap emotion-5 emotion-6"
             >
               <svg
                 class="uc-fe-radio-icon emotion-3 emotion-4"
@@ -1032,7 +1111,7 @@ exports[`Combine demo -- combine 1`] = `
       </div>
     </div>
     <div
-      class="uc-fe-row uc-fe-form-item emotion-23 emotion-24 emotion-25"
+      class="uc-fe-row uc-fe-form-item emotion-26 emotion-27 emotion-28"
     >
       <div
         class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
@@ -1041,11 +1120,11 @@ exports[`Combine demo -- combine 1`] = `
         disabled
       </div>
       <div
-        class="uc-fe-col uc-fe-form-controller emotion-20 emotion-21 emotion-2"
+        class="uc-fe-col uc-fe-form-controller emotion-23 emotion-24 emotion-2"
         span="9"
       >
         <div
-          class="emotion-29 emotion-30"
+          class="emotion-32 emotion-33"
         >
           <span
             class="uc-fe-switch-inner"
@@ -1074,7 +1153,7 @@ exports[`Combine demo -- combine 1`] = `
       </div>
     </div>
     <div
-      class="uc-fe-row uc-fe-form-item emotion-23 emotion-24 emotion-25"
+      class="uc-fe-row uc-fe-form-item emotion-26 emotion-27 emotion-28"
     >
       <div
         class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
@@ -1083,18 +1162,19 @@ exports[`Combine demo -- combine 1`] = `
         spacing
       </div>
       <div
-        class="uc-fe-col uc-fe-form-controller emotion-20 emotion-21 emotion-2"
+        class="uc-fe-col uc-fe-form-controller emotion-23 emotion-24 emotion-2"
         span="9"
       >
         <div
-          class="emotion-18 emotion-71"
+          class="emotion-21 emotion-22"
         >
           <span
             checked=""
-            class="uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-5 emotion-6 emotion-7"
+            class="uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-13 emotion-8"
           >
             <span
-              class="uc-fe-radio-icon-wrap"
+              checked=""
+              class="uc-fe-radio-icon-wrap emotion-11 emotion-6"
             >
               <svg
                 class="uc-fe-radio-icon emotion-3 emotion-4"
@@ -1115,10 +1195,10 @@ exports[`Combine demo -- combine 1`] = `
             </span>
           </span>
           <span
-            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-5 emotion-6 emotion-7"
+            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-7 emotion-8"
           >
             <span
-              class="uc-fe-radio-icon-wrap"
+              class="uc-fe-radio-icon-wrap emotion-5 emotion-6"
             >
               <svg
                 class="uc-fe-radio-icon emotion-3 emotion-4"
@@ -1139,10 +1219,10 @@ exports[`Combine demo -- combine 1`] = `
             </span>
           </span>
           <span
-            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-5 emotion-6 emotion-7"
+            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-7 emotion-8"
           >
             <span
-              class="uc-fe-radio-icon-wrap"
+              class="uc-fe-radio-icon-wrap emotion-5 emotion-6"
             >
               <svg
                 class="uc-fe-radio-icon emotion-3 emotion-4"
@@ -1163,10 +1243,10 @@ exports[`Combine demo -- combine 1`] = `
             </span>
           </span>
           <span
-            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-5 emotion-6 emotion-7"
+            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-7 emotion-8"
           >
             <span
-              class="uc-fe-radio-icon-wrap"
+              class="uc-fe-radio-icon-wrap emotion-5 emotion-6"
             >
               <svg
                 class="uc-fe-radio-icon emotion-3 emotion-4"
@@ -1187,10 +1267,10 @@ exports[`Combine demo -- combine 1`] = `
             </span>
           </span>
           <span
-            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-5 emotion-6 emotion-7"
+            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-7 emotion-8"
           >
             <span
-              class="uc-fe-radio-icon-wrap"
+              class="uc-fe-radio-icon-wrap emotion-5 emotion-6"
             >
               <svg
                 class="uc-fe-radio-icon emotion-3 emotion-4"
@@ -1214,7 +1294,7 @@ exports[`Combine demo -- combine 1`] = `
       </div>
     </div>
     <div
-      class="uc-fe-row uc-fe-form-item emotion-23 emotion-24 emotion-25"
+      class="uc-fe-row uc-fe-form-item emotion-26 emotion-27 emotion-28"
     >
       <div
         class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
@@ -1223,18 +1303,19 @@ exports[`Combine demo -- combine 1`] = `
         separator
       </div>
       <div
-        class="uc-fe-col uc-fe-form-controller emotion-20 emotion-21 emotion-2"
+        class="uc-fe-col uc-fe-form-controller emotion-23 emotion-24 emotion-2"
         span="9"
       >
         <div
-          class="emotion-18 emotion-71"
+          class="emotion-21 emotion-22"
         >
           <span
             checked=""
-            class="uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-5 emotion-6 emotion-7"
+            class="uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-13 emotion-8"
           >
             <span
-              class="uc-fe-radio-icon-wrap"
+              checked=""
+              class="uc-fe-radio-icon-wrap emotion-11 emotion-6"
             >
               <svg
                 class="uc-fe-radio-icon emotion-3 emotion-4"
@@ -1255,10 +1336,10 @@ exports[`Combine demo -- combine 1`] = `
             </span>
           </span>
           <span
-            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-5 emotion-6 emotion-7"
+            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-7 emotion-8"
           >
             <span
-              class="uc-fe-radio-icon-wrap"
+              class="uc-fe-radio-icon-wrap emotion-5 emotion-6"
             >
               <svg
                 class="uc-fe-radio-icon emotion-3 emotion-4"
@@ -1279,10 +1360,10 @@ exports[`Combine demo -- combine 1`] = `
             </span>
           </span>
           <span
-            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-5 emotion-6 emotion-7"
+            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-7 emotion-8"
           >
             <span
-              class="uc-fe-radio-icon-wrap"
+              class="uc-fe-radio-icon-wrap emotion-5 emotion-6"
             >
               <svg
                 class="uc-fe-radio-icon emotion-3 emotion-4"
@@ -1310,25 +1391,25 @@ exports[`Combine demo -- combine 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-combine emotion-113 emotion-114"
+      class="uc-fe-combine emotion-124 emotion-125"
       spacing="md"
     >
       <div
         class="uc-fe-combine-item"
       >
         <div
-          class=" emotion-107 emotion-108"
+          class=" emotion-118 emotion-119"
         >
           <div>
             <button
-              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-104 emotion-105 emotion-106"
+              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-115 emotion-116 emotion-117"
               type="button"
             >
               <div>
                 请选择
               </div>
               <i
-                class="uc-fe-icon icon__down emotion-101 emotion-102 emotion-103"
+                class="uc-fe-icon icon__down emotion-112 emotion-113 emotion-114"
               />
             </button>
           </div>
@@ -1338,10 +1419,10 @@ exports[`Combine demo -- combine 1`] = `
         class="uc-fe-combine-item"
       >
         <span
-          class="uc-fe-input emotion-111 emotion-112"
+          class="uc-fe-input emotion-122 emotion-123"
         >
           <span
-            class="emotion-109 emotion-110"
+            class="emotion-120 emotion-121"
           >
             <input />
           </span>

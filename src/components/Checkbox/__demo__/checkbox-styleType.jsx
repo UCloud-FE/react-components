@@ -1,5 +1,7 @@
 import React from 'react';
-import Checkbox from 'components/Checkbox';
+
+import Checkbox from 'src/components/Checkbox';
+import Combine from 'src/components/Combine';
 
 // demo start
 class Demo extends React.Component {
@@ -7,31 +9,46 @@ class Demo extends React.Component {
         return (
             <div>
                 <div className="demo-wrap">
-                    <Checkbox>checkbox</Checkbox>
+                    <Combine>
+                        <Checkbox checked={false}>checkbox</Checkbox>
+                        <Checkbox checked>checkbox</Checkbox>
+                        <Checkbox disabled>checkbox</Checkbox>
+                        <Checkbox checked disabled>
+                            checkbox
+                        </Checkbox>
+                    </Combine>
                 </div>
                 <div className="demo-wrap">
-                    <Checkbox styleType="card" title="title" style={{ marginRight: 8 }}>
-                        checkbox
-                    </Checkbox>
-                    <Checkbox styleType="card" title="title" checked style={{ marginRight: 8 }}>
-                        checkbox
-                    </Checkbox>
-                    <Checkbox styleType="card" title="title" disabledLabel="售罄" disabled style={{ marginRight: 8 }}>
-                        checkbox
-                    </Checkbox>
-                    <Checkbox
-                        styleType="card"
-                        title="title"
-                        disabledLabel="必选"
-                        disabled
-                        checked
-                        style={{ marginRight: 8 }}
-                    >
-                        checkbox
-                    </Checkbox>
-                    <Checkbox styleType="card" title="title" disabled checked style={{ marginRight: 8 }}>
-                        checkbox
-                    </Checkbox>
+                    <Combine>
+                        <Checkbox styleType="card" checked={false}>
+                            checkbox
+                        </Checkbox>
+                        <Checkbox styleType="card" checked>
+                            checkbox
+                        </Checkbox>
+                        <Checkbox styleType="card" disabled>
+                            checkbox
+                        </Checkbox>
+                        <Checkbox styleType="card" checked disabled>
+                            checkbox
+                        </Checkbox>
+                    </Combine>
+                </div>
+                <div className="demo-wrap">
+                    <Combine>
+                        <Checkbox styleType="card" title="title" checked={false}>
+                            checkbox
+                        </Checkbox>
+                        <Checkbox styleType="card" title="title" checked>
+                            checkbox
+                        </Checkbox>
+                        <Checkbox styleType="card" title="title" disabled>
+                            checkbox
+                        </Checkbox>
+                        <Checkbox styleType="card" title="title" checked disabled>
+                            checkbox
+                        </Checkbox>
+                    </Combine>
                 </div>
             </div>
         );

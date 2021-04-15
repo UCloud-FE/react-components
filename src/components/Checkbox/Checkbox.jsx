@@ -5,20 +5,10 @@ import classnames from 'classnames';
 
 import itemDecorator from 'src/decorators/selectableWithStore/item';
 import uncontrolledDecorator from 'src/decorators/uncontrolled';
-import SvgIcon from 'src/components/SvgIcon';
 import Card from 'src/components/Radio/Card';
 
-import {
-    CheckboxWrap,
-    iconWrapCls,
-    iconCls,
-    contentCls,
-    checkedCls,
-    disabledCls,
-    prefixCls,
-    indeterminateCls,
-    cardCls
-} from './style';
+import { CheckboxWrap, contentCls, checkedCls, disabledCls, prefixCls, indeterminateCls, cardCls } from './style';
+import CheckboxIcon from './CheckboxIcon';
 
 const Size = ['sm', 'md', 'lg'];
 const StyleType = ['default', 'card'];
@@ -99,13 +89,7 @@ class Checkbox extends Component {
                 })}
                 onClick={(...args) => this.onClick(props, ...args)}
             >
-                <span className={iconWrapCls}>
-                    {indeterminate ? (
-                        <SvgIcon className={iconCls} type="horz" size="14px" />
-                    ) : (
-                        <SvgIcon className={iconCls} type="tick-small" size="14px" />
-                    )}
-                </span>
+                <CheckboxIcon checked={checked} disabled={disabled} indeterminate={indeterminate} />
                 {children != null && <span className={contentCls}>{children}</span>}
             </CheckboxWrap>
         );
