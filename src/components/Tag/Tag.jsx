@@ -36,7 +36,20 @@ class Tag extends PureComponent {
         /**
          * 是否禁用
          */
-        disabled: PropTypes.bool
+        disabled: PropTypes.bool,
+        /**
+         * 自定义样式
+         */
+        customStyle: PropTypes.shape({
+            /** 字色/图标色 */
+            color: PropTypes.string,
+            /** 边框色 */
+            borderColor: PropTypes.string,
+            /** 背景色 */
+            background: PropTypes.string,
+            /** 关闭按钮 hover 背景色 */
+            closeIconHoverBackground: PropTypes.string
+        })
     };
     static defaultProps = {
         styleType: 'default'
