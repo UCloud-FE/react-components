@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.36](https://github.com/UCloud-FE/react-components/compare/v1.0.35...v1.0.36) (2021-04-19)
+
+### Features
+
+-   **AutoComplete:** add onFocus & onBlur ([5e4576b](https://github.com/UCloud-FE/react-components/commit/5e4576b3b3cf34c23cca5bec4d7fe6fcca201dac))
+-   **Radio:** update radio card style ([e782775](https://github.com/UCloud-FE/react-components/commit/e7827758a945555ae4c818ec35228c6f566e7021)), closes [#333](https://github.com/UCloud-FE/react-components/issues/333)
+-   **Switch:** update style & rewrite with ts ([e453ebe](https://github.com/UCloud-FE/react-components/commit/e453ebeba77d219e3521ab62b47b01fd440c0ea9)), closes [#331](https://github.com/UCloud-FE/react-components/issues/331)
+-   **Tag:** add support of customStyle ([294f70a](https://github.com/UCloud-FE/react-components/commit/294f70ad15e75e0b4b6ee432024a50ce27f51db6)), closes [#334](https://github.com/UCloud-FE/react-components/issues/334)
+
 ### [1.0.35](https://github.com/UCloud-FE/react-components/compare/v1.0.34...v1.0.35) (2021-03-23)
 
 ### Features
