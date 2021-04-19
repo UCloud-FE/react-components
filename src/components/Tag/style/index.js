@@ -160,10 +160,14 @@ export const TagWrapper = withProps({
         const {
             styleType,
             disabled,
-            theme: { designTokens: DT }
+            theme: { designTokens: DT },
+            customStyle
         } = props;
         const colorMap = getColorMap(styleType, disabled);
-        const border = colorMap.border;
+        const color = customStyle?.color || DT[colorMap.color];
+        const bg = customStyle?.background || DT[colorMap.bg];
+        const border = customStyle?.borderColor || DT[colorMap.border];
+        const iconHoverBG = customStyle?.closeIconHoverBackground || DT[colorMap.iconHoverBG];
         return css`
             box-sizing: border-box;
             height: 20px;
@@ -172,9 +176,9 @@ export const TagWrapper = withProps({
             display: inline-flex;
             align-items: center;
 
-            color: ${DT[colorMap.color]};
-            background: ${DT[colorMap.bg]};
-            border: 1px solid ${DT[border]};
+            color: ${color};
+            background: ${bg};
+            border: 1px solid ${border};
 
             ${PrefixIconWrapper} {
                 margin-right: 4px;
@@ -198,17 +202,17 @@ export const TagWrapper = withProps({
                 text-align: center;
                 border-radius: 0 2px 2px 0;
                 ${!disabled && 'cursor: pointer'};
-                color: ${DT[colorMap.color]};
+                color: ${color};
                 transition: background 0.3s;
                 flex-shrink: 0;
 
                 ${CloseIcon} {
-                    fill: ${DT[colorMap.color]};
+                    fill: ${color};
                 }
                 ${!disabled &&
                 css`
                     :hover {
-                        background: ${DT[colorMap.iconHoverBG]};
+                        background: ${iconHoverBG};
                         ${CloseIcon} {
                             fill: ${DT.T_COLOR_TEXT_SYSTEM_WHITE};
                         }
@@ -216,7 +220,7 @@ export const TagWrapper = withProps({
                 `};
             }
             ::after {
-                background: ${DT[colorMap.border]};
+                background: ${border};
             }
         `;
     })
@@ -235,11 +239,15 @@ export const IconTagWrapper = withProps({
     styled('span')(props => {
         const {
             styleType = 'default',
-            theme: { designTokens: DT }
+            theme: { designTokens: DT },
+            disabled,
+            customStyle
         } = props;
 
-        const colorMap = getColorMap(styleType);
-        const border = DT[colorMap.border];
+        const colorMap = getColorMap(styleType, disabled);
+        const color = customStyle?.color || DT[colorMap.color];
+        const bg = customStyle?.background || DT[colorMap.bg];
+        const border = customStyle?.borderColor || DT[colorMap.border];
         return css`
             box-sizing: border-box;
             height: 20px;
@@ -251,8 +259,8 @@ export const IconTagWrapper = withProps({
             position: relative;
 
             border: 1px solid ${border};
-            color: ${DT[colorMap.color]};
-            background: ${DT[colorMap.bg]};
+            color: ${color};
+            background: ${bg};
             ::after {
                 background: ${border};
                 position: absolute;

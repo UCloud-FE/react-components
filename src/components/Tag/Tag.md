@@ -28,3 +28,8 @@
 
 ```js {"codepath": "tag-icon.jsx"}
 ```
+
+#### 自定义样式 - customStyle
+
+```js {"codepath": "tag-customStyle.jsx"}
+```

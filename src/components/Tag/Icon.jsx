@@ -15,7 +15,18 @@ class Icon extends PureComponent {
         /**
          * 样式风格
          */
-        styleType: PropTypes.oneOf(StyleType)
+        styleType: PropTypes.oneOf(StyleType),
+        /**
+         * 自定义样式
+         */
+        customStyle: PropTypes.shape({
+            /** 字色/图标色 */
+            color: PropTypes.string,
+            /** 边框色 */
+            borderColor: PropTypes.string,
+            /** 背景色 */
+            background: PropTypes.string
+        })
     };
     render() {
         // eslint-disable-next-line no-unused-vars
