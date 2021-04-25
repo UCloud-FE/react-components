@@ -7,7 +7,7 @@ import Icon from 'src/components/Icon';
 import deprecatedLog from 'src/utils/deprecatedLog';
 import ControllerContext from 'src/components/Form/ControllerContext';
 
-import { InputWrap, TableWrap, PrefixWrap, SuffixWrap, blockCls } from './style';
+import { InputWrap, inputWrapCls, blockCls, inputPrefixCls, inputSuffixCls } from './style';
 
 const deprecatedLogForIcon = _.once(() => deprecatedLog('Input icon', 'suffix'));
 
@@ -42,7 +42,13 @@ class Input extends PureComponent {
         /** @ignore */
         onFocus: PropTypes.func,
         /** @ignore */
-        onBlur: PropTypes.func
+        onBlur: PropTypes.func,
+        /** 自定义样式 */
+        customStyle: PropTypes.shape({
+            border: PropTypes.string,
+            boxShadow: PropTypes.string,
+            background: PropTypes.string
+        })
     };
     static defaultProps = {
         size: 'md'
@@ -50,23 +56,37 @@ class Input extends PureComponent {
     state = {};
     renderPrefix = () => {
         const { prefix } = this.props;
-        return prefix && <PrefixWrap>{prefix}</PrefixWrap>;
+        return (
+            prefix && (
+                <span className={inputPrefixCls} onMouseDown={this.onMouseDown}>
+                    {prefix}
+                </span>
+            )
+        );
+    };
+    onMouseDown = e => {
+        e.preventDefault();
+        this.focus();
     };
     renderSuffix = () => {
         const { icon, suffix } = this.props;
         if ('icon' in this.props) {
             deprecatedLogForIcon();
         }
+        let renderSuffix = null;
         if (suffix) {
-            return <SuffixWrap>{suffix}</SuffixWrap>;
+            renderSuffix = suffix;
         } else if (_.isString(icon)) {
-            return (
-                <SuffixWrap>
-                    <Icon type={icon} />
-                </SuffixWrap>
-            );
+            renderSuffix = <Icon type={icon} />;
         } else if (React.isValidElement(icon)) {
-            return <SuffixWrap>{icon}</SuffixWrap>;
+            renderSuffix = icon;
+        }
+        if (renderSuffix) {
+            return (
+                <span className={inputSuffixCls} onMouseDown={this.onMouseDown}>
+                    {renderSuffix}
+                </span>
+            );
         }
     };
     onFocus = (...args) => {
@@ -102,6 +122,7 @@ class Input extends PureComponent {
             onBlur,
             status,
             block,
+            customStyle,
             ...rest
         } = this.props;
         /* eslint-enable no-unused-vars */
@@ -110,11 +131,10 @@ class Input extends PureComponent {
             <ControllerContext.Consumer>
                 {({ status: _status }) => (
                     <InputWrap
-                        onClick={this.focus}
                         className={classnames(block && blockCls, className)}
-                        {...{ size, focused, style, disabled, status: status || _status }}
+                        {...{ size, focused, style, disabled, status: status || _status, customStyle }}
                     >
-                        <TableWrap>
+                        <div className={inputWrapCls}>
                             {this.renderPrefix()}
                             <input
                                 {...rest}
@@ -124,7 +144,7 @@ class Input extends PureComponent {
                                 disabled={disabled}
                             />
                             {this.renderSuffix()}
-                        </TableWrap>
+                        </div>
                     </InputWrap>
                 )}
             </ControllerContext.Consumer>

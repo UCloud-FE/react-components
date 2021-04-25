@@ -350,23 +350,23 @@ exports[`Combine demo -- combine 1`] = `
   display: none;
 }
 
-.emotion-124 > .uc-fe-combine-item,
-.emotion-124 > .uc-fe-combine-separator {
+.emotion-122 > .uc-fe-combine-item,
+.emotion-122 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-124 > .uc-fe-combine-item:focus {
+.emotion-122 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-124 > .uc-fe-combine-item:hover {
+.emotion-122 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-124 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-124 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-124 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-122 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-122 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-122 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
@@ -432,10 +432,8 @@ exports[`Combine demo -- combine 1`] = `
   margin-top: -6px;
 }
 
-.emotion-122 {
+.emotion-120 {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
   box-sizing: border-box;
   font-size: 12px;
   border-radius: 2px;
@@ -446,65 +444,89 @@ exports[`Combine demo -- combine 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-}
-
-.emotion-122.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-122 input {
+  display: inline-block;
   vertical-align: middle;
-  display: table-cell;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0px 8px;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
 }
 
-.emotion-122 input,
-.emotion-122 input:hover,
-.emotion-122 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-122:hover {
+.emotion-120:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.emotion-122 input {
-  line-height: 26px;
-  height: 26px;
+.emotion-120 .uc-fe-input-wrap,
+.emotion-120 .uc-fe-input-prefix,
+.emotion-120 .uc-fe-input-suffix,
+.emotion-120 input {
+  padding: 0 4px;
 }
 
-.emotion-122 input::-webkit-input-placeholder {
+.emotion-120.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-120 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-120 .uc-fe-input-prefix,
+.emotion-120 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-120 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-120 input,
+.emotion-120 input:hover,
+.emotion-120 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-120 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-122 input::-moz-placeholder {
+.emotion-120 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-122 input:-ms-input-placeholder {
+.emotion-120 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-122 input::placeholder {
+.emotion-120 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
-}
-
-.emotion-120 {
-  display: table;
-  width: 100%;
 }
 
 .emotion-110 .uc-fe-form-item {
@@ -856,23 +878,23 @@ exports[`Combine demo -- combine 1`] = `
   display: none;
 }
 
-.emotion-124 > .uc-fe-combine-item,
-.emotion-124 > .uc-fe-combine-separator {
+.emotion-122 > .uc-fe-combine-item,
+.emotion-122 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-124 > .uc-fe-combine-item:focus {
+.emotion-122 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-124 > .uc-fe-combine-item:hover {
+.emotion-122 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-124 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-124 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-124 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-122 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-122 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-122 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
@@ -938,10 +960,8 @@ exports[`Combine demo -- combine 1`] = `
   margin-top: -6px;
 }
 
-.emotion-122 {
+.emotion-120 {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
   box-sizing: border-box;
   font-size: 12px;
   border-radius: 2px;
@@ -952,65 +972,89 @@ exports[`Combine demo -- combine 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-}
-
-.emotion-122.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-122 input {
+  display: inline-block;
   vertical-align: middle;
-  display: table-cell;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0px 8px;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
 }
 
-.emotion-122 input,
-.emotion-122 input:hover,
-.emotion-122 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-122:hover {
+.emotion-120:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.emotion-122 input {
-  line-height: 26px;
-  height: 26px;
+.emotion-120 .uc-fe-input-wrap,
+.emotion-120 .uc-fe-input-prefix,
+.emotion-120 .uc-fe-input-suffix,
+.emotion-120 input {
+  padding: 0 4px;
 }
 
-.emotion-122 input::-webkit-input-placeholder {
+.emotion-120.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-120 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-120 .uc-fe-input-prefix,
+.emotion-120 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-120 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-120 input,
+.emotion-120 input:hover,
+.emotion-120 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-120 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-122 input::-moz-placeholder {
+.emotion-120 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-122 input:-ms-input-placeholder {
+.emotion-120 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-122 input::placeholder {
+.emotion-120 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
-}
-
-.emotion-120 {
-  display: table;
-  width: 100%;
 }
 
 <div>
@@ -1391,7 +1435,7 @@ exports[`Combine demo -- combine 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-combine emotion-124 emotion-125"
+      class="uc-fe-combine emotion-122 emotion-123"
       spacing="md"
     >
       <div
@@ -1419,13 +1463,13 @@ exports[`Combine demo -- combine 1`] = `
         class="uc-fe-combine-item"
       >
         <span
-          class="uc-fe-input emotion-122 emotion-123"
+          class="uc-fe-input emotion-120 emotion-121"
         >
-          <span
-            class="emotion-120 emotion-121"
+          <div
+            class="uc-fe-input-wrap"
           >
             <input />
-          </span>
+          </div>
         </span>
       </div>
     </div>
@@ -1434,23 +1478,23 @@ exports[`Combine demo -- combine 1`] = `
 `;
 
 exports[`Combine demo -- demo 1`] = `
-.emotion-16 > .uc-fe-combine-item,
-.emotion-16 > .uc-fe-combine-separator {
+.emotion-14 > .uc-fe-combine-item,
+.emotion-14 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-16 > .uc-fe-combine-item:focus {
+.emotion-14 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-16 > .uc-fe-combine-item:hover {
+.emotion-14 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-16 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-16 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-16 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-14 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-14 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-14 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
@@ -1516,10 +1560,8 @@ exports[`Combine demo -- demo 1`] = `
   margin-top: -6px;
 }
 
-.emotion-10 {
+.emotion-8 {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
   box-sizing: border-box;
   font-size: 12px;
   border-radius: 2px;
@@ -1530,88 +1572,112 @@ exports[`Combine demo -- demo 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-}
-
-.emotion-10.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-10 input {
+  display: inline-block;
   vertical-align: middle;
-  display: table-cell;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0px 8px;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
 }
 
-.emotion-10 input,
-.emotion-10 input:hover,
-.emotion-10 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-10:hover {
+.emotion-8:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.emotion-10 input {
-  line-height: 26px;
-  height: 26px;
+.emotion-8 .uc-fe-input-wrap,
+.emotion-8 .uc-fe-input-prefix,
+.emotion-8 .uc-fe-input-suffix,
+.emotion-8 input {
+  padding: 0 4px;
 }
 
-.emotion-10 input::-webkit-input-placeholder {
+.emotion-8.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-8 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-8 .uc-fe-input-prefix,
+.emotion-8 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-8 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-8 input,
+.emotion-8 input:hover,
+.emotion-8 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-8 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-10 input::-moz-placeholder {
+.emotion-8 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-10 input:-ms-input-placeholder {
+.emotion-8 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-10 input::placeholder {
+.emotion-8 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-8 {
-  display: table;
-  width: 100%;
-}
-
-.emotion-12 > .uc-fe-combine-item,
-.emotion-12 > .uc-fe-combine-separator {
+.emotion-10 > .uc-fe-combine-item,
+.emotion-10 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-12 > .uc-fe-combine-item:focus {
+.emotion-10 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-12 > .uc-fe-combine-item:hover {
+.emotion-10 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-12 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-10 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-10 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-10 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: -1px;
 }
 
-.emotion-14 {
+.emotion-12 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -1635,18 +1701,18 @@ exports[`Combine demo -- demo 1`] = `
   transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
 }
 
-.emotion-14:link,
-.emotion-14:visited {
+.emotion-12:link,
+.emotion-12:visited {
   color: #ffffff;
 }
 
-.emotion-14:hover,
-.emotion-14:active {
+.emotion-12:hover,
+.emotion-12:active {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
 
-.emotion-20 {
+.emotion-18 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -1674,13 +1740,13 @@ exports[`Combine demo -- demo 1`] = `
   line-height: 26px;
 }
 
-.emotion-20:link,
-.emotion-20:visited {
+.emotion-18:link,
+.emotion-18:visited {
   color: #0a1633;
 }
 
-.emotion-20:hover,
-.emotion-20:active {
+.emotion-18:hover,
+.emotion-18:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -1688,7 +1754,7 @@ exports[`Combine demo -- demo 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-24 {
+.emotion-22 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -1717,39 +1783,32 @@ exports[`Combine demo -- demo 1`] = `
   line-height: 26px;
 }
 
-.emotion-31 {
-  vertical-align: middle;
-  display: table-cell;
-  width: 1px;
-  padding-right: 8px;
-}
-
-.emotion-29 {
+.emotion-27 {
   vertical-align: baseline;
   cursor: pointer;
 }
 
-.emotion-37 {
+.emotion-31 {
   vertical-align: baseline;
 }
 
-.emotion-16 > .uc-fe-combine-item,
-.emotion-16 > .uc-fe-combine-separator {
+.emotion-14 > .uc-fe-combine-item,
+.emotion-14 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-16 > .uc-fe-combine-item:focus {
+.emotion-14 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-16 > .uc-fe-combine-item:hover {
+.emotion-14 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-16 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-16 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-16 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-14 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-14 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-14 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
@@ -1815,10 +1874,8 @@ exports[`Combine demo -- demo 1`] = `
   margin-top: -6px;
 }
 
-.emotion-10 {
+.emotion-8 {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
   box-sizing: border-box;
   font-size: 12px;
   border-radius: 2px;
@@ -1829,88 +1886,112 @@ exports[`Combine demo -- demo 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-}
-
-.emotion-10.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-10 input {
+  display: inline-block;
   vertical-align: middle;
-  display: table-cell;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0px 8px;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
 }
 
-.emotion-10 input,
-.emotion-10 input:hover,
-.emotion-10 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-10:hover {
+.emotion-8:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.emotion-10 input {
-  line-height: 26px;
-  height: 26px;
+.emotion-8 .uc-fe-input-wrap,
+.emotion-8 .uc-fe-input-prefix,
+.emotion-8 .uc-fe-input-suffix,
+.emotion-8 input {
+  padding: 0 4px;
 }
 
-.emotion-10 input::-webkit-input-placeholder {
+.emotion-8.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-8 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-8 .uc-fe-input-prefix,
+.emotion-8 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-8 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-8 input,
+.emotion-8 input:hover,
+.emotion-8 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-8 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-10 input::-moz-placeholder {
+.emotion-8 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-10 input:-ms-input-placeholder {
+.emotion-8 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-10 input::placeholder {
+.emotion-8 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-8 {
-  display: table;
-  width: 100%;
-}
-
-.emotion-12 > .uc-fe-combine-item,
-.emotion-12 > .uc-fe-combine-separator {
+.emotion-10 > .uc-fe-combine-item,
+.emotion-10 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-12 > .uc-fe-combine-item:focus {
+.emotion-10 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-12 > .uc-fe-combine-item:hover {
+.emotion-10 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-12 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-10 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-10 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-10 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: -1px;
 }
 
-.emotion-14 {
+.emotion-12 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -1934,18 +2015,18 @@ exports[`Combine demo -- demo 1`] = `
   transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
 }
 
-.emotion-14:link,
-.emotion-14:visited {
+.emotion-12:link,
+.emotion-12:visited {
   color: #ffffff;
 }
 
-.emotion-14:hover,
-.emotion-14:active {
+.emotion-12:hover,
+.emotion-12:active {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
 
-.emotion-20 {
+.emotion-18 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -1973,13 +2054,13 @@ exports[`Combine demo -- demo 1`] = `
   line-height: 26px;
 }
 
-.emotion-20:link,
-.emotion-20:visited {
+.emotion-18:link,
+.emotion-18:visited {
   color: #0a1633;
 }
 
-.emotion-20:hover,
-.emotion-20:active {
+.emotion-18:hover,
+.emotion-18:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -1987,7 +2068,7 @@ exports[`Combine demo -- demo 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-24 {
+.emotion-22 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -2016,19 +2097,12 @@ exports[`Combine demo -- demo 1`] = `
   line-height: 26px;
 }
 
-.emotion-31 {
-  vertical-align: middle;
-  display: table-cell;
-  width: 1px;
-  padding-right: 8px;
-}
-
-.emotion-29 {
+.emotion-27 {
   vertical-align: baseline;
   cursor: pointer;
 }
 
-.emotion-37 {
+.emotion-31 {
   vertical-align: baseline;
 }
 
@@ -2040,14 +2114,14 @@ exports[`Combine demo -- demo 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-combine emotion-16 emotion-13"
+      class="uc-fe-combine emotion-14 emotion-11"
       spacing="md"
     >
       <div
         class="uc-fe-combine-item"
       >
         <div
-          class="uc-fe-combine emotion-12 emotion-13"
+          class="uc-fe-combine emotion-10 emotion-11"
           spacing="compact"
         >
           <div
@@ -2075,13 +2149,13 @@ exports[`Combine demo -- demo 1`] = `
             class="uc-fe-combine-item"
           >
             <span
-              class="uc-fe-input emotion-10 emotion-11"
+              class="uc-fe-input emotion-8 emotion-9"
             >
-              <span
-                class="emotion-8 emotion-9"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input />
-              </span>
+              </div>
             </span>
           </div>
         </div>
@@ -2090,7 +2164,7 @@ exports[`Combine demo -- demo 1`] = `
         class="uc-fe-combine-item"
       >
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-14 emotion-5"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-12 emotion-5"
           type="button"
         >
           按钮
@@ -2105,14 +2179,14 @@ exports[`Combine demo -- demo 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-combine emotion-16 emotion-13"
+      class="uc-fe-combine emotion-14 emotion-11"
       spacing="md"
     >
       <div
         class="uc-fe-combine-item"
       >
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-14 emotion-5"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-12 emotion-5"
           type="button"
         >
           按钮组展示
@@ -2122,7 +2196,7 @@ exports[`Combine demo -- demo 1`] = `
         class="uc-fe-combine-item"
       >
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-20 emotion-5"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-18 emotion-5"
           type="button"
         >
           按钮组展示
@@ -2132,7 +2206,7 @@ exports[`Combine demo -- demo 1`] = `
         class="uc-fe-combine-item"
       >
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-20 emotion-5"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-18 emotion-5"
           type="button"
         >
           按钮组展示
@@ -2142,7 +2216,7 @@ exports[`Combine demo -- demo 1`] = `
         class="uc-fe-combine-item"
       >
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-disabled emotion-24 emotion-5"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-disabled emotion-22 emotion-5"
           disabled=""
           type="button"
         >
@@ -2158,38 +2232,38 @@ exports[`Combine demo -- demo 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-combine emotion-16 emotion-13"
+      class="uc-fe-combine emotion-14 emotion-11"
       spacing="md"
     >
       <div
         class="uc-fe-combine-item"
       >
         <span
-          class="uc-fe-input emotion-10 emotion-11"
+          class="uc-fe-input emotion-8 emotion-9"
         >
-          <span
-            class="emotion-8 emotion-9"
+          <div
+            class="uc-fe-input-wrap"
           >
             <input />
             <span
-              class="emotion-31 emotion-32"
+              class="uc-fe-input-suffix"
             >
               <i
-                class="uc-fe-icon icon__search emotion-28 emotion-29 emotion-2"
+                class="uc-fe-icon icon__search emotion-26 emotion-27 emotion-2"
               />
             </span>
-          </span>
+          </div>
         </span>
       </div>
       <div
         class="uc-fe-combine-item"
       >
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-20 emotion-5"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-18 emotion-5"
           type="button"
         >
           <i
-            class="uc-fe-icon icon__repeat uc-fe-button-icon emotion-37 emotion-2"
+            class="uc-fe-icon icon__repeat uc-fe-button-icon emotion-31 emotion-2"
           />
         </button>
       </div>
@@ -2197,11 +2271,11 @@ exports[`Combine demo -- demo 1`] = `
         class="uc-fe-combine-item"
       >
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-20 emotion-5"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-18 emotion-5"
           type="button"
         >
           <i
-            class="uc-fe-icon icon__cog uc-fe-button-icon emotion-37 emotion-2"
+            class="uc-fe-icon icon__cog uc-fe-button-icon emotion-31 emotion-2"
           />
         </button>
       </div>
@@ -2209,11 +2283,11 @@ exports[`Combine demo -- demo 1`] = `
         class="uc-fe-combine-item"
       >
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-20 emotion-5"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-18 emotion-5"
           type="button"
         >
           <i
-            class="uc-fe-icon icon__cloud-download uc-fe-button-icon emotion-37 emotion-2"
+            class="uc-fe-icon icon__cloud-download uc-fe-button-icon emotion-31 emotion-2"
           />
         </button>
       </div>
@@ -2221,7 +2295,7 @@ exports[`Combine demo -- demo 1`] = `
         class="uc-fe-combine-item"
       >
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-20 emotion-5"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-18 emotion-5"
           type="button"
         >
           按钮
@@ -2233,30 +2307,28 @@ exports[`Combine demo -- demo 1`] = `
 `;
 
 exports[`Combine demo -- null 1`] = `
-.emotion-4 > .uc-fe-combine-item,
-.emotion-4 > .uc-fe-combine-separator {
+.emotion-2 > .uc-fe-combine-item,
+.emotion-2 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-4 > .uc-fe-combine-item:focus {
+.emotion-2 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-4 > .uc-fe-combine-item:hover {
+.emotion-2 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-4 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-2 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-2 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-2 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
-.emotion-2 {
+.emotion-0 {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
   box-sizing: border-box;
   font-size: 12px;
   border-radius: 2px;
@@ -2267,91 +2339,113 @@ exports[`Combine demo -- null 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-}
-
-.emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 input {
+  display: inline-block;
   vertical-align: middle;
-  display: table-cell;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0px 8px;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
 }
 
-.emotion-2 input,
-.emotion-2 input:hover,
-.emotion-2 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-2:hover {
+.emotion-0:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.emotion-2 input {
-  line-height: 26px;
-  height: 26px;
+.emotion-0 .uc-fe-input-wrap,
+.emotion-0 .uc-fe-input-prefix,
+.emotion-0 .uc-fe-input-suffix,
+.emotion-0 input {
+  padding: 0 4px;
 }
 
-.emotion-2 input::-webkit-input-placeholder {
+.emotion-0.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-0 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 .uc-fe-input-prefix,
+.emotion-0 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-0 input,
+.emotion-0 input:hover,
+.emotion-0 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-0 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input::-moz-placeholder {
+.emotion-0 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input:-ms-input-placeholder {
+.emotion-0 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input::placeholder {
+.emotion-0 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-0 {
-  display: table;
-  width: 100%;
-}
-
-.emotion-4 > .uc-fe-combine-item,
-.emotion-4 > .uc-fe-combine-separator {
+.emotion-2 > .uc-fe-combine-item,
+.emotion-2 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-4 > .uc-fe-combine-item:focus {
+.emotion-2 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-4 > .uc-fe-combine-item:hover {
+.emotion-2 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-4 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-2 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-2 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-2 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
-.emotion-2 {
+.emotion-0 {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
   box-sizing: border-box;
   font-size: 12px;
   border-radius: 2px;
@@ -2362,65 +2456,89 @@ exports[`Combine demo -- null 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-}
-
-.emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 input {
+  display: inline-block;
   vertical-align: middle;
-  display: table-cell;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0px 8px;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
 }
 
-.emotion-2 input,
-.emotion-2 input:hover,
-.emotion-2 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-2:hover {
+.emotion-0:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.emotion-2 input {
-  line-height: 26px;
-  height: 26px;
+.emotion-0 .uc-fe-input-wrap,
+.emotion-0 .uc-fe-input-prefix,
+.emotion-0 .uc-fe-input-suffix,
+.emotion-0 input {
+  padding: 0 4px;
 }
 
-.emotion-2 input::-webkit-input-placeholder {
+.emotion-0.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-0 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 .uc-fe-input-prefix,
+.emotion-0 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-0 input,
+.emotion-0 input:hover,
+.emotion-0 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-0 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input::-moz-placeholder {
+.emotion-0 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input:-ms-input-placeholder {
+.emotion-0 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input::placeholder {
+.emotion-0 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
-}
-
-.emotion-0 {
-  display: table;
-  width: 100%;
 }
 
 <div>
@@ -2428,20 +2546,20 @@ exports[`Combine demo -- null 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-combine emotion-4 emotion-5"
+      class="uc-fe-combine emotion-2 emotion-3"
       spacing="md"
     >
       <div
         class="uc-fe-combine-item"
       >
         <span
-          class="uc-fe-input emotion-2 emotion-3"
+          class="uc-fe-input emotion-0 emotion-1"
         >
-          <span
-            class="emotion-0 emotion-1"
+          <div
+            class="uc-fe-input-wrap"
           >
             <input />
-          </span>
+          </div>
         </span>
       </div>
       <span
@@ -2803,23 +2921,23 @@ exports[`Combine demo -- separator 1`] = `
 `;
 
 exports[`Combine demo -- sharedProps 1`] = `
-.emotion-26 > .uc-fe-combine-item,
-.emotion-26 > .uc-fe-combine-separator {
+.emotion-22 > .uc-fe-combine-item,
+.emotion-22 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-26 > .uc-fe-combine-item:focus {
+.emotion-22 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-26 > .uc-fe-combine-item:hover {
+.emotion-22 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-26 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-26 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-26 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-22 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-22 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-22 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
@@ -2832,7 +2950,7 @@ exports[`Combine demo -- sharedProps 1`] = `
   color: #0a1633;
 }
 
-.emotion-18 {
+.emotion-16 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -2863,13 +2981,13 @@ exports[`Combine demo -- sharedProps 1`] = `
   text-align: left;
 }
 
-.emotion-18:link,
-.emotion-18:visited {
+.emotion-16:link,
+.emotion-16:visited {
   color: #0a1633;
 }
 
-.emotion-18:hover,
-.emotion-18:active {
+.emotion-16:hover,
+.emotion-16:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -2885,10 +3003,8 @@ exports[`Combine demo -- sharedProps 1`] = `
   margin-top: -6px;
 }
 
-.emotion-24 {
+.emotion-20 {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
   box-sizing: border-box;
   font-size: 12px;
   border-radius: 2px;
@@ -2899,84 +3015,108 @@ exports[`Combine demo -- sharedProps 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-}
-
-.emotion-24.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-24 input {
+  display: inline-block;
   vertical-align: middle;
-  display: table-cell;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0px 8px;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
 }
 
-.emotion-24 input,
-.emotion-24 input:hover,
-.emotion-24 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-24:hover {
+.emotion-20:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.emotion-24 input {
-  line-height: 26px;
-  height: 26px;
+.emotion-20 .uc-fe-input-wrap,
+.emotion-20 .uc-fe-input-prefix,
+.emotion-20 .uc-fe-input-suffix,
+.emotion-20 input {
+  padding: 0 4px;
 }
 
-.emotion-24 input::-webkit-input-placeholder {
+.emotion-20.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-20 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-20 .uc-fe-input-prefix,
+.emotion-20 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-20 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-20 input,
+.emotion-20 input:hover,
+.emotion-20 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-20 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-24 input::-moz-placeholder {
+.emotion-20 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-24 input:-ms-input-placeholder {
+.emotion-20 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-24 input::placeholder {
+.emotion-20 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-8 {
-  display: table;
-  width: 100%;
-}
-
-.emotion-12 > .uc-fe-combine-item,
-.emotion-12 > .uc-fe-combine-separator {
+.emotion-10 > .uc-fe-combine-item,
+.emotion-10 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-12 > .uc-fe-combine-item:focus {
+.emotion-10 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-12 > .uc-fe-combine-item:hover {
+.emotion-10 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-12 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-10 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-10 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-10 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 4px;
 }
 
@@ -3025,10 +3165,8 @@ exports[`Combine demo -- sharedProps 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-10 {
+.emotion-8 {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
   box-sizing: border-box;
   font-size: 12px;
   border-radius: 2px;
@@ -3039,79 +3177,108 @@ exports[`Combine demo -- sharedProps 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-}
-
-.emotion-10.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-10 input {
+  display: inline-block;
   vertical-align: middle;
-  display: table-cell;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0px 8px;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
 }
 
-.emotion-10 input,
-.emotion-10 input:hover,
-.emotion-10 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-10:hover {
+.emotion-8:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.emotion-10 input {
-  line-height: 22px;
-  height: 22px;
+.emotion-8 .uc-fe-input-wrap,
+.emotion-8 .uc-fe-input-prefix,
+.emotion-8 .uc-fe-input-suffix,
+.emotion-8 input {
+  padding: 0 4px;
 }
 
-.emotion-10 input::-webkit-input-placeholder {
+.emotion-8.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-8 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-8 .uc-fe-input-prefix,
+.emotion-8 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-8 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-8 input,
+.emotion-8 input:hover,
+.emotion-8 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-8 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-10 input::-moz-placeholder {
+.emotion-8 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-10 input:-ms-input-placeholder {
+.emotion-8 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-10 input::placeholder {
+.emotion-8 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-26 > .uc-fe-combine-item,
-.emotion-26 > .uc-fe-combine-separator {
+.emotion-22 > .uc-fe-combine-item,
+.emotion-22 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-26 > .uc-fe-combine-item:focus {
+.emotion-22 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-26 > .uc-fe-combine-item:hover {
+.emotion-22 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-26 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-26 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-26 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-22 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-22 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-22 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
@@ -3124,7 +3291,7 @@ exports[`Combine demo -- sharedProps 1`] = `
   color: #0a1633;
 }
 
-.emotion-18 {
+.emotion-16 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -3155,13 +3322,13 @@ exports[`Combine demo -- sharedProps 1`] = `
   text-align: left;
 }
 
-.emotion-18:link,
-.emotion-18:visited {
+.emotion-16:link,
+.emotion-16:visited {
   color: #0a1633;
 }
 
-.emotion-18:hover,
-.emotion-18:active {
+.emotion-16:hover,
+.emotion-16:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -3177,10 +3344,8 @@ exports[`Combine demo -- sharedProps 1`] = `
   margin-top: -6px;
 }
 
-.emotion-24 {
+.emotion-20 {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
   box-sizing: border-box;
   font-size: 12px;
   border-radius: 2px;
@@ -3191,84 +3356,108 @@ exports[`Combine demo -- sharedProps 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-}
-
-.emotion-24.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-24 input {
+  display: inline-block;
   vertical-align: middle;
-  display: table-cell;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0px 8px;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
 }
 
-.emotion-24 input,
-.emotion-24 input:hover,
-.emotion-24 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-24:hover {
+.emotion-20:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.emotion-24 input {
-  line-height: 26px;
-  height: 26px;
+.emotion-20 .uc-fe-input-wrap,
+.emotion-20 .uc-fe-input-prefix,
+.emotion-20 .uc-fe-input-suffix,
+.emotion-20 input {
+  padding: 0 4px;
 }
 
-.emotion-24 input::-webkit-input-placeholder {
+.emotion-20.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-20 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-20 .uc-fe-input-prefix,
+.emotion-20 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-20 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-20 input,
+.emotion-20 input:hover,
+.emotion-20 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-20 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-24 input::-moz-placeholder {
+.emotion-20 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-24 input:-ms-input-placeholder {
+.emotion-20 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-24 input::placeholder {
+.emotion-20 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-8 {
-  display: table;
-  width: 100%;
-}
-
-.emotion-12 > .uc-fe-combine-item,
-.emotion-12 > .uc-fe-combine-separator {
+.emotion-10 > .uc-fe-combine-item,
+.emotion-10 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-12 > .uc-fe-combine-item:focus {
+.emotion-10 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-12 > .uc-fe-combine-item:hover {
+.emotion-10 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-12 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-10 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-10 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-10 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 4px;
 }
 
@@ -3317,10 +3506,8 @@ exports[`Combine demo -- sharedProps 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-10 {
+.emotion-8 {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
   box-sizing: border-box;
   font-size: 12px;
   border-radius: 2px;
@@ -3331,58 +3518,87 @@ exports[`Combine demo -- sharedProps 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-}
-
-.emotion-10.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-10 input {
+  display: inline-block;
   vertical-align: middle;
-  display: table-cell;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0px 8px;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
 }
 
-.emotion-10 input,
-.emotion-10 input:hover,
-.emotion-10 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-10:hover {
+.emotion-8:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.emotion-10 input {
-  line-height: 22px;
-  height: 22px;
+.emotion-8 .uc-fe-input-wrap,
+.emotion-8 .uc-fe-input-prefix,
+.emotion-8 .uc-fe-input-suffix,
+.emotion-8 input {
+  padding: 0 4px;
 }
 
-.emotion-10 input::-webkit-input-placeholder {
+.emotion-8.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-8 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-8 .uc-fe-input-prefix,
+.emotion-8 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-8 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-8 input,
+.emotion-8 input:hover,
+.emotion-8 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-8 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-10 input::-moz-placeholder {
+.emotion-8 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-10 input:-ms-input-placeholder {
+.emotion-8 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-10 input::placeholder {
+.emotion-8 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
@@ -3392,7 +3608,7 @@ exports[`Combine demo -- sharedProps 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-combine emotion-12 emotion-13"
+      class="uc-fe-combine emotion-10 emotion-11"
       spacing="sm"
     >
       <div
@@ -3420,13 +3636,13 @@ exports[`Combine demo -- sharedProps 1`] = `
         class="uc-fe-combine-item"
       >
         <span
-          class="uc-fe-input emotion-10 emotion-11"
+          class="uc-fe-input emotion-8 emotion-9"
         >
-          <span
-            class="emotion-8 emotion-9"
+          <div
+            class="uc-fe-input-wrap"
           >
             <input />
-          </span>
+          </div>
         </span>
       </div>
     </div>
@@ -3435,7 +3651,7 @@ exports[`Combine demo -- sharedProps 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-combine emotion-26 emotion-13"
+      class="uc-fe-combine emotion-22 emotion-11"
       spacing="md"
     >
       <div
@@ -3446,7 +3662,7 @@ exports[`Combine demo -- sharedProps 1`] = `
         >
           <div>
             <button
-              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-18 emotion-5"
+              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-16 emotion-5"
               type="button"
             >
               <div>
@@ -3463,13 +3679,13 @@ exports[`Combine demo -- sharedProps 1`] = `
         class="uc-fe-combine-item"
       >
         <span
-          class="uc-fe-input test_cls emotion-24 emotion-11"
+          class="uc-fe-input test_cls emotion-20 emotion-9"
         >
-          <span
-            class="emotion-8 emotion-9"
+          <div
+            class="uc-fe-input-wrap"
           >
             <input />
-          </span>
+          </div>
         </span>
       </div>
     </div>
@@ -3478,27 +3694,27 @@ exports[`Combine demo -- sharedProps 1`] = `
 `;
 
 exports[`Combine demo -- spacing 1`] = `
-.emotion-6 > .uc-fe-combine-item,
-.emotion-6 > .uc-fe-combine-separator {
+.emotion-4 > .uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-6 > .uc-fe-combine-item:focus {
+.emotion-4 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-6 > .uc-fe-combine-item:hover {
+.emotion-4 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-6 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
-.emotion-62 {
+.emotion-48 {
   box-sizing: border-box;
   position: relative;
   display: inline-block;
@@ -3507,7 +3723,7 @@ exports[`Combine demo -- spacing 1`] = `
   color: #0a1633;
 }
 
-.emotion-60 {
+.emotion-46 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -3538,13 +3754,13 @@ exports[`Combine demo -- spacing 1`] = `
   text-align: left;
 }
 
-.emotion-60:link,
-.emotion-60:visited {
+.emotion-46:link,
+.emotion-46:visited {
   color: #0a1633;
 }
 
-.emotion-60:hover,
-.emotion-60:active {
+.emotion-46:hover,
+.emotion-46:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -3552,7 +3768,7 @@ exports[`Combine demo -- spacing 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-57 {
+.emotion-43 {
   vertical-align: baseline;
   position: absolute;
   right: 8px;
@@ -3560,10 +3776,8 @@ exports[`Combine demo -- spacing 1`] = `
   margin-top: -6px;
 }
 
-.emotion-2 {
+.emotion-0 {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
   box-sizing: border-box;
   font-size: 12px;
   border-radius: 2px;
@@ -3574,88 +3788,112 @@ exports[`Combine demo -- spacing 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-}
-
-.emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 input {
+  display: inline-block;
   vertical-align: middle;
-  display: table-cell;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0px 8px;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
 }
 
-.emotion-2 input,
-.emotion-2 input:hover,
-.emotion-2 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-2:hover {
+.emotion-0:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.emotion-2 input {
-  line-height: 26px;
-  height: 26px;
+.emotion-0 .uc-fe-input-wrap,
+.emotion-0 .uc-fe-input-prefix,
+.emotion-0 .uc-fe-input-suffix,
+.emotion-0 input {
+  padding: 0 4px;
 }
 
-.emotion-2 input::-webkit-input-placeholder {
+.emotion-0.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-0 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 .uc-fe-input-prefix,
+.emotion-0 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-0 input,
+.emotion-0 input:hover,
+.emotion-0 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-0 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input::-moz-placeholder {
+.emotion-0 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input:-ms-input-placeholder {
+.emotion-0 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input::placeholder {
+.emotion-0 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-0 {
-  display: table;
-  width: 100%;
-}
-
-.emotion-68 > .uc-fe-combine-item,
-.emotion-68 > .uc-fe-combine-separator {
+.emotion-52 > .uc-fe-combine-item,
+.emotion-52 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-68 > .uc-fe-combine-item:focus {
+.emotion-52 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-68 > .uc-fe-combine-item:hover {
+.emotion-52 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-68 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-68 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-68 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-52 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-52 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-52 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: -1px;
 }
 
-.emotion-4 {
+.emotion-2 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -3679,41 +3917,39 @@ exports[`Combine demo -- spacing 1`] = `
   transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
 }
 
-.emotion-4:link,
-.emotion-4:visited {
+.emotion-2:link,
+.emotion-2:visited {
   color: #ffffff;
 }
 
-.emotion-4:hover,
-.emotion-4:active {
+.emotion-2:hover,
+.emotion-2:active {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
 
-.emotion-14 > .uc-fe-combine-item,
-.emotion-14 > .uc-fe-combine-separator {
+.emotion-10 > .uc-fe-combine-item,
+.emotion-10 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-14 > .uc-fe-combine-item:focus {
+.emotion-10 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-14 > .uc-fe-combine-item:hover {
+.emotion-10 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-14 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-14 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-14 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-10 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-10 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-10 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 4px;
 }
 
-.emotion-10 {
+.emotion-6 {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
   box-sizing: border-box;
   font-size: 12px;
   border-radius: 2px;
@@ -3724,63 +3960,92 @@ exports[`Combine demo -- spacing 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-}
-
-.emotion-10.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-10 input {
+  display: inline-block;
   vertical-align: middle;
-  display: table-cell;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0px 8px;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
 }
 
-.emotion-10 input,
-.emotion-10 input:hover,
-.emotion-10 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-10:hover {
+.emotion-6:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.emotion-10 input {
-  line-height: 22px;
-  height: 22px;
+.emotion-6 .uc-fe-input-wrap,
+.emotion-6 .uc-fe-input-prefix,
+.emotion-6 .uc-fe-input-suffix,
+.emotion-6 input {
+  padding: 0 4px;
 }
 
-.emotion-10 input::-webkit-input-placeholder {
+.emotion-6.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-6 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-6 .uc-fe-input-prefix,
+.emotion-6 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-6 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-6 input,
+.emotion-6 input:hover,
+.emotion-6 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-6 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-10 input::-moz-placeholder {
+.emotion-6 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-10 input:-ms-input-placeholder {
+.emotion-6 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-10 input::placeholder {
+.emotion-6 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-12 {
+.emotion-8 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -3804,41 +4069,39 @@ exports[`Combine demo -- spacing 1`] = `
   transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
 }
 
-.emotion-12:link,
-.emotion-12:visited {
+.emotion-8:link,
+.emotion-8:visited {
   color: #ffffff;
 }
 
-.emotion-12:hover,
-.emotion-12:active {
+.emotion-8:hover,
+.emotion-8:active {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
 
-.emotion-30 > .uc-fe-combine-item,
-.emotion-30 > .uc-fe-combine-separator {
+.emotion-22 > .uc-fe-combine-item,
+.emotion-22 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-30 > .uc-fe-combine-item:focus {
+.emotion-22 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-30 > .uc-fe-combine-item:hover {
+.emotion-22 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-30 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-30 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-30 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-22 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-22 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-22 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 12px;
 }
 
-.emotion-26 {
+.emotion-18 {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
   box-sizing: border-box;
   font-size: 12px;
   border-radius: 2px;
@@ -3849,63 +4112,92 @@ exports[`Combine demo -- spacing 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-}
-
-.emotion-26.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-26 input {
+  display: inline-block;
   vertical-align: middle;
-  display: table-cell;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0px 8px;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
 }
 
-.emotion-26 input,
-.emotion-26 input:hover,
-.emotion-26 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-26:hover {
+.emotion-18:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.emotion-26 input {
-  line-height: 30px;
-  height: 30px;
+.emotion-18 .uc-fe-input-wrap,
+.emotion-18 .uc-fe-input-prefix,
+.emotion-18 .uc-fe-input-suffix,
+.emotion-18 input {
+  padding: 0 4px;
 }
 
-.emotion-26 input::-webkit-input-placeholder {
+.emotion-18.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-18 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-18 .uc-fe-input-prefix,
+.emotion-18 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-18 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-18 input,
+.emotion-18 input:hover,
+.emotion-18 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-18 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-26 input::-moz-placeholder {
+.emotion-18 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-26 input:-ms-input-placeholder {
+.emotion-18 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-26 input::placeholder {
+.emotion-18 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-28 {
+.emotion-20 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -3929,58 +4221,58 @@ exports[`Combine demo -- spacing 1`] = `
   transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
 }
 
-.emotion-28:link,
-.emotion-28:visited {
+.emotion-20:link,
+.emotion-20:visited {
   color: #ffffff;
 }
 
-.emotion-28:hover,
-.emotion-28:active {
+.emotion-20:hover,
+.emotion-20:active {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
 
-.emotion-76 > .uc-fe-combine-item,
-.emotion-76 > .uc-fe-combine-separator {
+.emotion-58 > .uc-fe-combine-item,
+.emotion-58 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-76 > .uc-fe-combine-item:focus {
+.emotion-58 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-76 > .uc-fe-combine-item:hover {
+.emotion-58 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-76 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-76 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-76 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-58 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-58 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-58 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 40px;
 }
 
-.emotion-6 > .uc-fe-combine-item,
-.emotion-6 > .uc-fe-combine-separator {
+.emotion-4 > .uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-6 > .uc-fe-combine-item:focus {
+.emotion-4 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-6 > .uc-fe-combine-item:hover {
+.emotion-4 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-6 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
-.emotion-62 {
+.emotion-48 {
   box-sizing: border-box;
   position: relative;
   display: inline-block;
@@ -3989,7 +4281,7 @@ exports[`Combine demo -- spacing 1`] = `
   color: #0a1633;
 }
 
-.emotion-60 {
+.emotion-46 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -4020,13 +4312,13 @@ exports[`Combine demo -- spacing 1`] = `
   text-align: left;
 }
 
-.emotion-60:link,
-.emotion-60:visited {
+.emotion-46:link,
+.emotion-46:visited {
   color: #0a1633;
 }
 
-.emotion-60:hover,
-.emotion-60:active {
+.emotion-46:hover,
+.emotion-46:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -4034,7 +4326,7 @@ exports[`Combine demo -- spacing 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-57 {
+.emotion-43 {
   vertical-align: baseline;
   position: absolute;
   right: 8px;
@@ -4042,10 +4334,8 @@ exports[`Combine demo -- spacing 1`] = `
   margin-top: -6px;
 }
 
-.emotion-2 {
+.emotion-0 {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
   box-sizing: border-box;
   font-size: 12px;
   border-radius: 2px;
@@ -4056,88 +4346,112 @@ exports[`Combine demo -- spacing 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-}
-
-.emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 input {
+  display: inline-block;
   vertical-align: middle;
-  display: table-cell;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0px 8px;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
 }
 
-.emotion-2 input,
-.emotion-2 input:hover,
-.emotion-2 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-2:hover {
+.emotion-0:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.emotion-2 input {
-  line-height: 26px;
-  height: 26px;
+.emotion-0 .uc-fe-input-wrap,
+.emotion-0 .uc-fe-input-prefix,
+.emotion-0 .uc-fe-input-suffix,
+.emotion-0 input {
+  padding: 0 4px;
 }
 
-.emotion-2 input::-webkit-input-placeholder {
+.emotion-0.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-0 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 .uc-fe-input-prefix,
+.emotion-0 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-0 input,
+.emotion-0 input:hover,
+.emotion-0 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-0 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input::-moz-placeholder {
+.emotion-0 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input:-ms-input-placeholder {
+.emotion-0 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input::placeholder {
+.emotion-0 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-0 {
-  display: table;
-  width: 100%;
-}
-
-.emotion-68 > .uc-fe-combine-item,
-.emotion-68 > .uc-fe-combine-separator {
+.emotion-52 > .uc-fe-combine-item,
+.emotion-52 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-68 > .uc-fe-combine-item:focus {
+.emotion-52 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-68 > .uc-fe-combine-item:hover {
+.emotion-52 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-68 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-68 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-68 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-52 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-52 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-52 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: -1px;
 }
 
-.emotion-4 {
+.emotion-2 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -4161,41 +4475,39 @@ exports[`Combine demo -- spacing 1`] = `
   transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
 }
 
-.emotion-4:link,
-.emotion-4:visited {
+.emotion-2:link,
+.emotion-2:visited {
   color: #ffffff;
 }
 
-.emotion-4:hover,
-.emotion-4:active {
+.emotion-2:hover,
+.emotion-2:active {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
 
-.emotion-14 > .uc-fe-combine-item,
-.emotion-14 > .uc-fe-combine-separator {
+.emotion-10 > .uc-fe-combine-item,
+.emotion-10 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-14 > .uc-fe-combine-item:focus {
+.emotion-10 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-14 > .uc-fe-combine-item:hover {
+.emotion-10 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-14 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-14 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-14 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-10 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-10 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-10 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 4px;
 }
 
-.emotion-10 {
+.emotion-6 {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
   box-sizing: border-box;
   font-size: 12px;
   border-radius: 2px;
@@ -4206,63 +4518,92 @@ exports[`Combine demo -- spacing 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-}
-
-.emotion-10.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-10 input {
+  display: inline-block;
   vertical-align: middle;
-  display: table-cell;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0px 8px;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
 }
 
-.emotion-10 input,
-.emotion-10 input:hover,
-.emotion-10 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-10:hover {
+.emotion-6:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.emotion-10 input {
-  line-height: 22px;
-  height: 22px;
+.emotion-6 .uc-fe-input-wrap,
+.emotion-6 .uc-fe-input-prefix,
+.emotion-6 .uc-fe-input-suffix,
+.emotion-6 input {
+  padding: 0 4px;
 }
 
-.emotion-10 input::-webkit-input-placeholder {
+.emotion-6.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-6 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-6 .uc-fe-input-prefix,
+.emotion-6 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-6 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-6 input,
+.emotion-6 input:hover,
+.emotion-6 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-6 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-10 input::-moz-placeholder {
+.emotion-6 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-10 input:-ms-input-placeholder {
+.emotion-6 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-10 input::placeholder {
+.emotion-6 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-12 {
+.emotion-8 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -4286,41 +4627,39 @@ exports[`Combine demo -- spacing 1`] = `
   transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
 }
 
-.emotion-12:link,
-.emotion-12:visited {
+.emotion-8:link,
+.emotion-8:visited {
   color: #ffffff;
 }
 
-.emotion-12:hover,
-.emotion-12:active {
+.emotion-8:hover,
+.emotion-8:active {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
 
-.emotion-30 > .uc-fe-combine-item,
-.emotion-30 > .uc-fe-combine-separator {
+.emotion-22 > .uc-fe-combine-item,
+.emotion-22 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-30 > .uc-fe-combine-item:focus {
+.emotion-22 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-30 > .uc-fe-combine-item:hover {
+.emotion-22 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-30 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-30 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-30 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-22 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-22 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-22 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 12px;
 }
 
-.emotion-26 {
+.emotion-18 {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
   box-sizing: border-box;
   font-size: 12px;
   border-radius: 2px;
@@ -4331,63 +4670,92 @@ exports[`Combine demo -- spacing 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-}
-
-.emotion-26.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-26 input {
+  display: inline-block;
   vertical-align: middle;
-  display: table-cell;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0px 8px;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
 }
 
-.emotion-26 input,
-.emotion-26 input:hover,
-.emotion-26 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-26:hover {
+.emotion-18:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.emotion-26 input {
-  line-height: 30px;
-  height: 30px;
+.emotion-18 .uc-fe-input-wrap,
+.emotion-18 .uc-fe-input-prefix,
+.emotion-18 .uc-fe-input-suffix,
+.emotion-18 input {
+  padding: 0 4px;
 }
 
-.emotion-26 input::-webkit-input-placeholder {
+.emotion-18.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-18 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-18 .uc-fe-input-prefix,
+.emotion-18 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-18 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-18 input,
+.emotion-18 input:hover,
+.emotion-18 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-18 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-26 input::-moz-placeholder {
+.emotion-18 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-26 input:-ms-input-placeholder {
+.emotion-18 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-26 input::placeholder {
+.emotion-18 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-28 {
+.emotion-20 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -4411,34 +4779,34 @@ exports[`Combine demo -- spacing 1`] = `
   transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
 }
 
-.emotion-28:link,
-.emotion-28:visited {
+.emotion-20:link,
+.emotion-20:visited {
   color: #ffffff;
 }
 
-.emotion-28:hover,
-.emotion-28:active {
+.emotion-20:hover,
+.emotion-20:active {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
 
-.emotion-76 > .uc-fe-combine-item,
-.emotion-76 > .uc-fe-combine-separator {
+.emotion-58 > .uc-fe-combine-item,
+.emotion-58 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-76 > .uc-fe-combine-item:focus {
+.emotion-58 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-76 > .uc-fe-combine-item:hover {
+.emotion-58 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-76 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-76 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-76 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-58 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-58 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-58 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 40px;
 }
 
@@ -4451,27 +4819,27 @@ exports[`Combine demo -- spacing 1`] = `
       class="demo-wrap"
     >
       <div
-        class="uc-fe-combine emotion-6 emotion-7"
+        class="uc-fe-combine emotion-4 emotion-5"
         spacing="md"
       >
         <div
           class="uc-fe-combine-item"
         >
           <span
-            class="uc-fe-input emotion-2 emotion-3"
+            class="uc-fe-input emotion-0 emotion-1"
           >
-            <span
-              class="emotion-0 emotion-1"
+            <div
+              class="uc-fe-input-wrap"
             >
               <input />
-            </span>
+            </div>
           </span>
         </div>
         <div
           class="uc-fe-combine-item"
         >
           <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-4 emotion-5"
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-2 emotion-3"
             type="button"
           >
             按钮
@@ -4488,27 +4856,27 @@ exports[`Combine demo -- spacing 1`] = `
       class="demo-wrap"
     >
       <div
-        class="uc-fe-combine emotion-14 emotion-7"
+        class="uc-fe-combine emotion-10 emotion-5"
         spacing="sm"
       >
         <div
           class="uc-fe-combine-item"
         >
           <span
-            class="uc-fe-input emotion-10 emotion-3"
+            class="uc-fe-input emotion-6 emotion-1"
           >
-            <span
-              class="emotion-0 emotion-1"
+            <div
+              class="uc-fe-input-wrap"
             >
               <input />
-            </span>
+            </div>
           </span>
         </div>
         <div
           class="uc-fe-combine-item"
         >
           <button
-            class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-primary emotion-12 emotion-5"
+            class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-primary emotion-8 emotion-3"
             type="button"
           >
             按钮
@@ -4525,27 +4893,27 @@ exports[`Combine demo -- spacing 1`] = `
       class="demo-wrap"
     >
       <div
-        class="uc-fe-combine emotion-6 emotion-7"
+        class="uc-fe-combine emotion-4 emotion-5"
         spacing="md"
       >
         <div
           class="uc-fe-combine-item"
         >
           <span
-            class="uc-fe-input emotion-2 emotion-3"
+            class="uc-fe-input emotion-0 emotion-1"
           >
-            <span
-              class="emotion-0 emotion-1"
+            <div
+              class="uc-fe-input-wrap"
             >
               <input />
-            </span>
+            </div>
           </span>
         </div>
         <div
           class="uc-fe-combine-item"
         >
           <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-4 emotion-5"
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-2 emotion-3"
             type="button"
           >
             按钮
@@ -4562,27 +4930,27 @@ exports[`Combine demo -- spacing 1`] = `
       class="demo-wrap"
     >
       <div
-        class="uc-fe-combine emotion-30 emotion-7"
+        class="uc-fe-combine emotion-22 emotion-5"
         spacing="lg"
       >
         <div
           class="uc-fe-combine-item"
         >
           <span
-            class="uc-fe-input emotion-26 emotion-3"
+            class="uc-fe-input emotion-18 emotion-1"
           >
-            <span
-              class="emotion-0 emotion-1"
+            <div
+              class="uc-fe-input-wrap"
             >
               <input />
-            </span>
+            </div>
           </span>
         </div>
         <div
           class="uc-fe-combine-item"
         >
           <button
-            class="uc-fe-button uc-fe-button-size-lg uc-fe-button-styletype-primary emotion-28 emotion-5"
+            class="uc-fe-button uc-fe-button-size-lg uc-fe-button-styletype-primary emotion-20 emotion-3"
             type="button"
           >
             按钮
@@ -4599,27 +4967,27 @@ exports[`Combine demo -- spacing 1`] = `
       class="demo-wrap"
     >
       <div
-        class="uc-fe-combine emotion-14 emotion-7"
+        class="uc-fe-combine emotion-10 emotion-5"
         spacing="sm"
       >
         <div
           class="uc-fe-combine-item"
         >
           <span
-            class="uc-fe-input emotion-2 emotion-3"
+            class="uc-fe-input emotion-0 emotion-1"
           >
-            <span
-              class="emotion-0 emotion-1"
+            <div
+              class="uc-fe-input-wrap"
             >
               <input />
-            </span>
+            </div>
           </span>
         </div>
         <div
           class="uc-fe-combine-item"
         >
           <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-4 emotion-5"
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-2 emotion-3"
             type="button"
           >
             按钮
@@ -4636,27 +5004,27 @@ exports[`Combine demo -- spacing 1`] = `
       class="demo-wrap"
     >
       <div
-        class="uc-fe-combine emotion-6 emotion-7"
+        class="uc-fe-combine emotion-4 emotion-5"
         spacing="md"
       >
         <div
           class="uc-fe-combine-item"
         >
           <span
-            class="uc-fe-input emotion-2 emotion-3"
+            class="uc-fe-input emotion-0 emotion-1"
           >
-            <span
-              class="emotion-0 emotion-1"
+            <div
+              class="uc-fe-input-wrap"
             >
               <input />
-            </span>
+            </div>
           </span>
         </div>
         <div
           class="uc-fe-combine-item"
         >
           <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-4 emotion-5"
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-2 emotion-3"
             type="button"
           >
             按钮
@@ -4673,27 +5041,27 @@ exports[`Combine demo -- spacing 1`] = `
       class="demo-wrap"
     >
       <div
-        class="uc-fe-combine emotion-30 emotion-7"
+        class="uc-fe-combine emotion-22 emotion-5"
         spacing="lg"
       >
         <div
           class="uc-fe-combine-item"
         >
           <span
-            class="uc-fe-input emotion-2 emotion-3"
+            class="uc-fe-input emotion-0 emotion-1"
           >
-            <span
-              class="emotion-0 emotion-1"
+            <div
+              class="uc-fe-input-wrap"
             >
               <input />
-            </span>
+            </div>
           </span>
         </div>
         <div
           class="uc-fe-combine-item"
         >
           <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-4 emotion-5"
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-2 emotion-3"
             type="button"
           >
             按钮
@@ -4709,25 +5077,25 @@ exports[`Combine demo -- spacing 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-combine emotion-68 emotion-7"
+      class="uc-fe-combine emotion-52 emotion-5"
       spacing="compact"
     >
       <div
         class="uc-fe-combine-item"
       >
         <div
-          class=" emotion-62 emotion-63"
+          class=" emotion-48 emotion-49"
         >
           <div>
             <button
-              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-59 emotion-60 emotion-5"
+              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-45 emotion-46 emotion-3"
               type="button"
             >
               <div>
                 请选择
               </div>
               <i
-                class="uc-fe-icon icon__down emotion-56 emotion-57 emotion-58"
+                class="uc-fe-icon icon__down emotion-42 emotion-43 emotion-44"
               />
             </button>
           </div>
@@ -4737,13 +5105,13 @@ exports[`Combine demo -- spacing 1`] = `
         class="uc-fe-combine-item"
       >
         <span
-          class="uc-fe-input emotion-2 emotion-3"
+          class="uc-fe-input emotion-0 emotion-1"
         >
-          <span
-            class="emotion-0 emotion-1"
+          <div
+            class="uc-fe-input-wrap"
           >
             <input />
-          </span>
+          </div>
         </span>
       </div>
     </div>
@@ -4755,27 +5123,27 @@ exports[`Combine demo -- spacing 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-combine emotion-76 emotion-7"
+      class="uc-fe-combine emotion-58 emotion-5"
       spacing="40px"
     >
       <div
         class="uc-fe-combine-item"
       >
         <span
-          class="uc-fe-input emotion-2 emotion-3"
+          class="uc-fe-input emotion-0 emotion-1"
         >
-          <span
-            class="emotion-0 emotion-1"
+          <div
+            class="uc-fe-input-wrap"
           >
             <input />
-          </span>
+          </div>
         </span>
       </div>
       <div
         class="uc-fe-combine-item"
       >
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-4 emotion-5"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-2 emotion-3"
           type="button"
         >
           按钮

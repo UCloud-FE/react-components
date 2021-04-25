@@ -4,7 +4,5 @@ export default {
     maxRangeErrorTip: 'greater than max range',
     minRangeErrorTip: 'less than min range',
     startGreaterThanEndTip: "start can't greater than end",
-    rangeConfirm: 'confirm',
-    start: 'start',
-    end: 'end'
+    confirm: 'confirm'
 };

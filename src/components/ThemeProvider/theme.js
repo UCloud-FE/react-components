@@ -101,5 +101,6 @@ export const generateTheme = (originTheme = {}) => {
 const defaultTheme = generateTheme({ colorList: defaultColorList });
 
 export default defaultTheme;
+export { defaultTheme };
 
 export { designTokens as defaultDesignTokens };

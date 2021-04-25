@@ -1,6 +1,7 @@
 import React from 'react';
-import Calendar from 'components/Calendar';
 import moment from 'moment';
+
+import Calendar from 'src/components/Calendar';
 
 // demo start
 class Demo extends React.Component {

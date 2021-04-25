@@ -1,13 +1,14 @@
 import React from 'react';
 import moment from 'moment';
-import DatePicker from 'components/DatePicker';
-import Switch from 'components/Switch';
-import Form from 'components/Form';
-import Input from 'components/Input';
-import Radio from 'components/Radio';
+
+import DatePicker from 'src/components/DatePicker';
+import Switch from 'src/components/Switch';
+import Form from 'src/components/Form';
+import Input from 'src/components/Input';
+import Radio from 'src/components/Radio';
 
 // demo start
-const { Size } = DatePicker;
+const { Sizes } = DatePicker;
 class Demo extends React.Component {
     constructor(props) {
         super(props);
@@ -25,7 +26,7 @@ class Demo extends React.Component {
         };
     }
     render() {
-        const { display, disabled, size } = this.state;
+        const { display, disabled, size, nullable } = this.state;
         const { date, hour, minute, second } = display;
         const itemLayout = {
             labelCol: {
@@ -38,6 +39,16 @@ class Demo extends React.Component {
         return (
             <div>
                 <Form className="demo-form">
+                    <Form.Item label="nullable" {...itemLayout}>
+                        <Switch
+                            checked={nullable}
+                            onChange={nullable =>
+                                this.setState({
+                                    nullable
+                                })
+                            }
+                        />
+                    </Form.Item>
                     <Form.Item label="display.date.format" {...itemLayout}>
                         <Input
                             value={date.format}
@@ -99,7 +110,7 @@ class Demo extends React.Component {
                     <Form.Item label="size" {...itemLayout}>
                         <Radio.Group
                             value={size}
-                            options={Size.map(value => ({ value }))}
+                            options={Sizes.map(value => ({ value }))}
                             onChange={size => this.setState({ size })}
                         />
                     </Form.Item>
@@ -108,16 +119,13 @@ class Demo extends React.Component {
                     <DatePicker
                         display={display}
                         size={size}
-                        onChange={v => console.log(v.format())}
+                        onChange={v => console.log(v && v.format())}
                         disabled={disabled}
+                        nullable={nullable}
                         rules={{
                             range: [
-                                moment()
-                                    .set({ hour: 0, minute: 0, second: 0 })
-                                    .add({ day: -7 }),
-                                moment()
-                                    .set({ hour: 0, minute: 0, second: 0 })
-                                    .add({ day: 7 })
+                                moment().set({ hour: 0, minute: 0, second: 0 }).add({ day: -7 }),
+                                moment().set({ hour: 0, minute: 0, second: 0 }).add({ day: 7 })
                             ]
                         }}
                     />

@@ -7,7 +7,7 @@ import Radio from 'components/Radio';
 import Switch from 'components/Switch';
 
 // demo start
-const { Size } = DatePicker;
+const { Sizes } = DatePicker;
 class Demo extends React.Component {
     constructor(props) {
         super(props);
@@ -56,7 +56,7 @@ class Demo extends React.Component {
                     <Form.Item label="size" {...itemLayout}>
                         <Radio.Group
                             value={size}
-                            options={Size.map(value => ({ value }))}
+                            options={Sizes.map(value => ({ value }))}
                             onChange={size => this.setState({ size })}
                         />
                     </Form.Item>
@@ -69,12 +69,8 @@ class Demo extends React.Component {
                         disabled={disabled}
                         rules={{
                             range: [
-                                moment()
-                                    .set({ hour: 0, minute: 0, second: 0 })
-                                    .add({ month: -7 }),
-                                moment()
-                                    .set({ hour: 0, minute: 0, second: 0 })
-                                    .add({ month: 7 })
+                                moment().set({ hour: 0, minute: 0, second: 0 }).add({ month: -7 }),
+                                moment().set({ hour: 0, minute: 0, second: 0 }).add({ month: 7 })
                             ]
                         }}
                     />

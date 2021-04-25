@@ -86,6 +86,9 @@ module.exports = [
                 name: 'DatePicker',
                 components: ['DatePicker', 'Month', 'Range']
             },
+            // {
+            //     name: 'TimePicker'
+            // },
             {
                 name: 'Menu',
                 components: ['Menu', 'SubMenu', 'Item']

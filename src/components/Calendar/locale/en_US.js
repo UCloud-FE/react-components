@@ -1,28 +1,12 @@
+const months = 'January_February_March_April_May_June_July_August_September_October_November_December'
+    .split('_')
+    .map(v => v.substr(0, 3));
+const weekdays = 'Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday'.split('_').map(v => v.substr(0, 2));
+
 export default {
-    today: 'Today',
-    now: 'Now',
-    backToToday: 'Back to today',
-    ok: 'Ok',
-    clear: 'Clear',
-    month: 'Month',
-    year: 'Year',
-    timeSelect: 'select time',
-    dateSelect: 'select date',
-    weekSelect: 'Choose a week',
-    monthSelect: 'Choose a month',
-    yearSelect: 'Choose a year',
-    decadeSelect: 'Choose a decade',
-    yearFormat: 'YYYY',
-    dateFormat: 'M/D/YYYY',
-    dayFormat: 'D',
-    dateTimeFormat: 'M/D/YYYY HH:mm:ss',
-    previousMonth: 'Previous month (PageUp)',
-    nextMonth: 'Next month (PageDown)',
-    previousYear: 'Last year (Control + left)',
-    nextYear: 'Next year (Control + right)',
-    previousDecade: 'Last decade',
-    nextDecade: 'Next decade',
-    previousCentury: 'Last century',
-    nextCentury: 'Next century',
-    monthBeforeYear: true
+    month: '',
+    year: '',
+    monthBeforeYear: true,
+    months,
+    weekdays
 };

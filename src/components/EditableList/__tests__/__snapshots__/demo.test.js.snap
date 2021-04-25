@@ -48,10 +48,8 @@ exports[`EditableList demo -- addition 1`] = `
   line-height: 26px;
 }
 
-.emotion-6 {
+.emotion-4 {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
   box-sizing: border-box;
   font-size: 12px;
   border-radius: 2px;
@@ -62,88 +60,112 @@ exports[`EditableList demo -- addition 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-}
-
-.emotion-6.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-6 input {
+  display: inline-block;
   vertical-align: middle;
-  display: table-cell;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0px 8px;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
 }
 
-.emotion-6 input,
-.emotion-6 input:hover,
-.emotion-6 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-6:hover {
+.emotion-4:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.emotion-6 input {
-  line-height: 26px;
-  height: 26px;
+.emotion-4 .uc-fe-input-wrap,
+.emotion-4 .uc-fe-input-prefix,
+.emotion-4 .uc-fe-input-suffix,
+.emotion-4 input {
+  padding: 0 4px;
 }
 
-.emotion-6 input::-webkit-input-placeholder {
+.emotion-4.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-4 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 .uc-fe-input-prefix,
+.emotion-4 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-4 input,
+.emotion-4 input:hover,
+.emotion-4 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-4 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-6 input::-moz-placeholder {
+.emotion-4 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-6 input:-ms-input-placeholder {
+.emotion-4 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-6 input::placeholder {
+.emotion-4 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-4 {
-  display: table;
-  width: 100%;
-}
-
-.emotion-12 > .uc-fe-combine-item,
-.emotion-12 > .uc-fe-combine-separator {
+.emotion-10 > .uc-fe-combine-item,
+.emotion-10 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-12 > .uc-fe-combine-item:focus {
+.emotion-10 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-12 > .uc-fe-combine-item:hover {
+.emotion-10 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-12 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-10 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-10 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-10 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
-.emotion-10 {
+.emotion-8 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -174,13 +196,13 @@ exports[`EditableList demo -- addition 1`] = `
   width: 28px;
 }
 
-.emotion-10:link,
-.emotion-10:visited {
+.emotion-8:link,
+.emotion-8:visited {
   color: #0a1633;
 }
 
-.emotion-10:hover,
-.emotion-10:active {
+.emotion-8:hover,
+.emotion-8:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -188,7 +210,7 @@ exports[`EditableList demo -- addition 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-8 {
+.emotion-6 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -197,7 +219,7 @@ exports[`EditableList demo -- addition 1`] = `
   height: 12px;
 }
 
-.emotion-26 {
+.emotion-22 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -225,13 +247,13 @@ exports[`EditableList demo -- addition 1`] = `
   line-height: 26px;
 }
 
-.emotion-26:link,
-.emotion-26:visited {
+.emotion-22:link,
+.emotion-22:visited {
   color: #0a1633;
 }
 
-.emotion-26:hover,
-.emotion-26:active {
+.emotion-22:hover,
+.emotion-22:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -286,10 +308,8 @@ exports[`EditableList demo -- addition 1`] = `
   line-height: 26px;
 }
 
-.emotion-6 {
+.emotion-4 {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
   box-sizing: border-box;
   font-size: 12px;
   border-radius: 2px;
@@ -300,88 +320,112 @@ exports[`EditableList demo -- addition 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-}
-
-.emotion-6.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-6 input {
+  display: inline-block;
   vertical-align: middle;
-  display: table-cell;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0px 8px;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
 }
 
-.emotion-6 input,
-.emotion-6 input:hover,
-.emotion-6 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-6:hover {
+.emotion-4:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.emotion-6 input {
-  line-height: 26px;
-  height: 26px;
+.emotion-4 .uc-fe-input-wrap,
+.emotion-4 .uc-fe-input-prefix,
+.emotion-4 .uc-fe-input-suffix,
+.emotion-4 input {
+  padding: 0 4px;
 }
 
-.emotion-6 input::-webkit-input-placeholder {
+.emotion-4.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-4 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 .uc-fe-input-prefix,
+.emotion-4 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-4 input,
+.emotion-4 input:hover,
+.emotion-4 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-4 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-6 input::-moz-placeholder {
+.emotion-4 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-6 input:-ms-input-placeholder {
+.emotion-4 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-6 input::placeholder {
+.emotion-4 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-4 {
-  display: table;
-  width: 100%;
-}
-
-.emotion-12 > .uc-fe-combine-item,
-.emotion-12 > .uc-fe-combine-separator {
+.emotion-10 > .uc-fe-combine-item,
+.emotion-10 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-12 > .uc-fe-combine-item:focus {
+.emotion-10 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-12 > .uc-fe-combine-item:hover {
+.emotion-10 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-12 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-10 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-10 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-10 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
-.emotion-10 {
+.emotion-8 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -412,13 +456,13 @@ exports[`EditableList demo -- addition 1`] = `
   width: 28px;
 }
 
-.emotion-10:link,
-.emotion-10:visited {
+.emotion-8:link,
+.emotion-8:visited {
   color: #0a1633;
 }
 
-.emotion-10:hover,
-.emotion-10:active {
+.emotion-8:hover,
+.emotion-8:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -426,7 +470,7 @@ exports[`EditableList demo -- addition 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-8 {
+.emotion-6 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -435,7 +479,7 @@ exports[`EditableList demo -- addition 1`] = `
   height: 12px;
 }
 
-.emotion-26 {
+.emotion-22 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -463,13 +507,13 @@ exports[`EditableList demo -- addition 1`] = `
   line-height: 26px;
 }
 
-.emotion-26:link,
-.emotion-26:visited {
+.emotion-22:link,
+.emotion-22:visited {
   color: #0a1633;
 }
 
-.emotion-26:hover,
-.emotion-26:active {
+.emotion-22:hover,
+.emotion-22:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -510,34 +554,34 @@ exports[`EditableList demo -- addition 1`] = `
             class="uc-fe-editable-list-item"
           >
             <span
-              class="uc-fe-input emotion-6 emotion-7"
+              class="uc-fe-input emotion-4 emotion-5"
             >
-              <span
-                class="emotion-4 emotion-5"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-0"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-12 emotion-13"
+              class="uc-fe-combine emotion-10 emotion-11"
               spacing="md"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-10 emotion-1"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-8 emotion-1"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-8 emotion-9"
+                    class=" emotion-6 emotion-7"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -558,34 +602,34 @@ exports[`EditableList demo -- addition 1`] = `
             class="uc-fe-editable-list-item"
           >
             <span
-              class="uc-fe-input emotion-6 emotion-7"
+              class="uc-fe-input emotion-4 emotion-5"
             >
-              <span
-                class="emotion-4 emotion-5"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-1"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-12 emotion-13"
+              class="uc-fe-combine emotion-10 emotion-11"
               spacing="md"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-10 emotion-1"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-8 emotion-1"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-8 emotion-9"
+                    class=" emotion-6 emotion-7"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -613,7 +657,7 @@ exports[`EditableList demo -- addition 1`] = `
         class="emotion-2 emotion-3"
       >
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-26 emotion-1"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-22 emotion-1"
           type="button"
         >
           添加数据
@@ -633,34 +677,34 @@ exports[`EditableList demo -- addition 1`] = `
             class="uc-fe-editable-list-item"
           >
             <span
-              class="uc-fe-input emotion-6 emotion-7"
+              class="uc-fe-input emotion-4 emotion-5"
             >
-              <span
-                class="emotion-4 emotion-5"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-0"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-12 emotion-13"
+              class="uc-fe-combine emotion-10 emotion-11"
               spacing="md"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-10 emotion-1"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-8 emotion-1"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-8 emotion-9"
+                    class=" emotion-6 emotion-7"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -681,34 +725,34 @@ exports[`EditableList demo -- addition 1`] = `
             class="uc-fe-editable-list-item"
           >
             <span
-              class="uc-fe-input emotion-6 emotion-7"
+              class="uc-fe-input emotion-4 emotion-5"
             >
-              <span
-                class="emotion-4 emotion-5"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-1"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-12 emotion-13"
+              class="uc-fe-combine emotion-10 emotion-11"
               spacing="md"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-10 emotion-1"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-8 emotion-1"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-8 emotion-9"
+                    class=" emotion-6 emotion-7"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -723,12 +767,12 @@ exports[`EditableList demo -- addition 1`] = `
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-10 emotion-1"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-8 emotion-1"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-8 emotion-9"
+                    class=" emotion-6 emotion-7"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -776,34 +820,34 @@ exports[`EditableList demo -- addition 1`] = `
             class="uc-fe-editable-list-item"
           >
             <span
-              class="uc-fe-input emotion-6 emotion-7"
+              class="uc-fe-input emotion-4 emotion-5"
             >
-              <span
-                class="emotion-4 emotion-5"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-0"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-12 emotion-13"
+              class="uc-fe-combine emotion-10 emotion-11"
               spacing="md"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-10 emotion-1"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-8 emotion-1"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-8 emotion-9"
+                    class=" emotion-6 emotion-7"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -824,34 +868,34 @@ exports[`EditableList demo -- addition 1`] = `
             class="uc-fe-editable-list-item"
           >
             <span
-              class="uc-fe-input emotion-6 emotion-7"
+              class="uc-fe-input emotion-4 emotion-5"
             >
-              <span
-                class="emotion-4 emotion-5"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-1"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-12 emotion-13"
+              class="uc-fe-combine emotion-10 emotion-11"
               spacing="md"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-10 emotion-1"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-8 emotion-1"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-8 emotion-9"
+                    class=" emotion-6 emotion-7"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -872,28 +916,26 @@ exports[`EditableList demo -- addition 1`] = `
 `;
 
 exports[`EditableList demo -- demo 1`] = `
-.emotion-16 > .uc-fe-editable-list-li+.uc-fe-editable-list-li {
+.emotion-12 > .uc-fe-editable-list-li+.uc-fe-editable-list-li {
   margin-top: 16px;
 }
 
-.emotion-16 > .uc-fe-editable-list-li-grid+.uc-fe-editable-list-li-grid {
+.emotion-12 > .uc-fe-editable-list-li-grid+.uc-fe-editable-list-li-grid {
   margin-top: 16px;
 }
 
-.emotion-16 .uc-fe-editable-list-li .uc-fe-editable-list-item,
-.emotion-16 .uc-fe-editable-list-li .uc-fe-editable-list-action {
+.emotion-12 .uc-fe-editable-list-li .uc-fe-editable-list-item,
+.emotion-12 .uc-fe-editable-list-li .uc-fe-editable-list-action {
   display: inline-block;
   vertical-align: top;
 }
 
-.emotion-16 .uc-fe-editable-list-li .uc-fe-editable-list-action {
+.emotion-12 .uc-fe-editable-list-li .uc-fe-editable-list-action {
   margin-left: 24px;
 }
 
-.emotion-2 {
+.emotion-0 {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
   box-sizing: border-box;
   font-size: 12px;
   border-radius: 2px;
@@ -904,88 +946,112 @@ exports[`EditableList demo -- demo 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-}
-
-.emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 input {
+  display: inline-block;
   vertical-align: middle;
-  display: table-cell;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0px 8px;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
 }
 
-.emotion-2 input,
-.emotion-2 input:hover,
-.emotion-2 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-2:hover {
+.emotion-0:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.emotion-2 input {
-  line-height: 26px;
-  height: 26px;
+.emotion-0 .uc-fe-input-wrap,
+.emotion-0 .uc-fe-input-prefix,
+.emotion-0 .uc-fe-input-suffix,
+.emotion-0 input {
+  padding: 0 4px;
 }
 
-.emotion-2 input::-webkit-input-placeholder {
+.emotion-0.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-0 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 .uc-fe-input-prefix,
+.emotion-0 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-0 input,
+.emotion-0 input:hover,
+.emotion-0 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-0 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input::-moz-placeholder {
+.emotion-0 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input:-ms-input-placeholder {
+.emotion-0 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input::placeholder {
+.emotion-0 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-0 {
-  display: table;
-  width: 100%;
-}
-
-.emotion-4 > .uc-fe-combine-item,
-.emotion-4 > .uc-fe-combine-separator {
+.emotion-2 > .uc-fe-combine-item,
+.emotion-2 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-4 > .uc-fe-combine-item:focus {
+.emotion-2 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-4 > .uc-fe-combine-item:hover {
+.emotion-2 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-4 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-2 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-2 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-2 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
-.emotion-12 {
+.emotion-8 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -1016,13 +1082,13 @@ exports[`EditableList demo -- demo 1`] = `
   width: 28px;
 }
 
-.emotion-12:link,
-.emotion-12:visited {
+.emotion-8:link,
+.emotion-8:visited {
   color: #0a1633;
 }
 
-.emotion-12:hover,
-.emotion-12:active {
+.emotion-8:hover,
+.emotion-8:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -1030,7 +1096,7 @@ exports[`EditableList demo -- demo 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-10 {
+.emotion-6 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -1039,7 +1105,7 @@ exports[`EditableList demo -- demo 1`] = `
   height: 12px;
 }
 
-.emotion-18 {
+.emotion-14 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -1067,13 +1133,13 @@ exports[`EditableList demo -- demo 1`] = `
   line-height: 26px;
 }
 
-.emotion-18:link,
-.emotion-18:visited {
+.emotion-14:link,
+.emotion-14:visited {
   color: #0a1633;
 }
 
-.emotion-18:hover,
-.emotion-18:active {
+.emotion-14:hover,
+.emotion-14:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -1081,15 +1147,15 @@ exports[`EditableList demo -- demo 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-28 .uc-fe-form-item {
+.emotion-24 .uc-fe-form-item {
   margin-bottom: 16px;
 }
 
-.emotion-28 .uc-fe-form-item:last-child {
+.emotion-24 .uc-fe-form-item:last-child {
   margin-bottom: 0;
 }
 
-.emotion-26 {
+.emotion-22 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -1113,39 +1179,37 @@ exports[`EditableList demo -- demo 1`] = `
   transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
 }
 
-.emotion-26:link,
-.emotion-26:visited {
+.emotion-22:link,
+.emotion-22:visited {
   color: #ffffff;
 }
 
-.emotion-26:hover,
-.emotion-26:active {
+.emotion-22:hover,
+.emotion-22:active {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
 
-.emotion-16 > .uc-fe-editable-list-li+.uc-fe-editable-list-li {
+.emotion-12 > .uc-fe-editable-list-li+.uc-fe-editable-list-li {
   margin-top: 16px;
 }
 
-.emotion-16 > .uc-fe-editable-list-li-grid+.uc-fe-editable-list-li-grid {
+.emotion-12 > .uc-fe-editable-list-li-grid+.uc-fe-editable-list-li-grid {
   margin-top: 16px;
 }
 
-.emotion-16 .uc-fe-editable-list-li .uc-fe-editable-list-item,
-.emotion-16 .uc-fe-editable-list-li .uc-fe-editable-list-action {
+.emotion-12 .uc-fe-editable-list-li .uc-fe-editable-list-item,
+.emotion-12 .uc-fe-editable-list-li .uc-fe-editable-list-action {
   display: inline-block;
   vertical-align: top;
 }
 
-.emotion-16 .uc-fe-editable-list-li .uc-fe-editable-list-action {
+.emotion-12 .uc-fe-editable-list-li .uc-fe-editable-list-action {
   margin-left: 24px;
 }
 
-.emotion-2 {
+.emotion-0 {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
   box-sizing: border-box;
   font-size: 12px;
   border-radius: 2px;
@@ -1156,88 +1220,112 @@ exports[`EditableList demo -- demo 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-}
-
-.emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 input {
+  display: inline-block;
   vertical-align: middle;
-  display: table-cell;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0px 8px;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
 }
 
-.emotion-2 input,
-.emotion-2 input:hover,
-.emotion-2 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-2:hover {
+.emotion-0:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.emotion-2 input {
-  line-height: 26px;
-  height: 26px;
+.emotion-0 .uc-fe-input-wrap,
+.emotion-0 .uc-fe-input-prefix,
+.emotion-0 .uc-fe-input-suffix,
+.emotion-0 input {
+  padding: 0 4px;
 }
 
-.emotion-2 input::-webkit-input-placeholder {
+.emotion-0.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-0 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 .uc-fe-input-prefix,
+.emotion-0 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-0 input,
+.emotion-0 input:hover,
+.emotion-0 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-0 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input::-moz-placeholder {
+.emotion-0 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input:-ms-input-placeholder {
+.emotion-0 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input::placeholder {
+.emotion-0 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-0 {
-  display: table;
-  width: 100%;
-}
-
-.emotion-4 > .uc-fe-combine-item,
-.emotion-4 > .uc-fe-combine-separator {
+.emotion-2 > .uc-fe-combine-item,
+.emotion-2 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-4 > .uc-fe-combine-item:focus {
+.emotion-2 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-4 > .uc-fe-combine-item:hover {
+.emotion-2 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-4 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-2 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-2 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-2 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
-.emotion-12 {
+.emotion-8 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -1268,13 +1356,13 @@ exports[`EditableList demo -- demo 1`] = `
   width: 28px;
 }
 
-.emotion-12:link,
-.emotion-12:visited {
+.emotion-8:link,
+.emotion-8:visited {
   color: #0a1633;
 }
 
-.emotion-12:hover,
-.emotion-12:active {
+.emotion-8:hover,
+.emotion-8:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -1282,7 +1370,7 @@ exports[`EditableList demo -- demo 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-10 {
+.emotion-6 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -1291,7 +1379,7 @@ exports[`EditableList demo -- demo 1`] = `
   height: 12px;
 }
 
-.emotion-18 {
+.emotion-14 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -1319,13 +1407,13 @@ exports[`EditableList demo -- demo 1`] = `
   line-height: 26px;
 }
 
-.emotion-18:link,
-.emotion-18:visited {
+.emotion-14:link,
+.emotion-14:visited {
   color: #0a1633;
 }
 
-.emotion-18:hover,
-.emotion-18:active {
+.emotion-14:hover,
+.emotion-14:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -1333,15 +1421,15 @@ exports[`EditableList demo -- demo 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-28 .uc-fe-form-item {
+.emotion-24 .uc-fe-form-item {
   margin-bottom: 16px;
 }
 
-.emotion-28 .uc-fe-form-item:last-child {
+.emotion-24 .uc-fe-form-item:last-child {
   margin-bottom: 0;
 }
 
-.emotion-26 {
+.emotion-22 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -1365,13 +1453,13 @@ exports[`EditableList demo -- demo 1`] = `
   transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
 }
 
-.emotion-26:link,
-.emotion-26:visited {
+.emotion-22:link,
+.emotion-22:visited {
   color: #ffffff;
 }
 
-.emotion-26:hover,
-.emotion-26:active {
+.emotion-22:hover,
+.emotion-22:active {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
@@ -1384,7 +1472,7 @@ exports[`EditableList demo -- demo 1`] = `
     class="demo-wrap"
   >
     <div
-      class="emotion-16 emotion-17"
+      class="emotion-12 emotion-13"
     >
       <div
         class="uc-fe-editable-list-li"
@@ -1393,22 +1481,22 @@ exports[`EditableList demo -- demo 1`] = `
           class="uc-fe-editable-list-item"
         >
           <span
-            class="uc-fe-input emotion-2 emotion-3"
+            class="uc-fe-input emotion-0 emotion-1"
           >
-            <span
-              class="emotion-0 emotion-1"
+            <div
+              class="uc-fe-input-wrap"
             >
               <input
                 value="默认数据，不能删除"
               />
-            </span>
+            </div>
           </span>
         </div>
         <div
           class="uc-fe-editable-list-action"
         >
           <div
-            class="uc-fe-combine emotion-4 emotion-5"
+            class="uc-fe-combine emotion-2 emotion-3"
             spacing="md"
           />
         </div>
@@ -1420,34 +1508,34 @@ exports[`EditableList demo -- demo 1`] = `
           class="uc-fe-editable-list-item"
         >
           <span
-            class="uc-fe-input emotion-2 emotion-3"
+            class="uc-fe-input emotion-0 emotion-1"
           >
-            <span
-              class="emotion-0 emotion-1"
+            <div
+              class="uc-fe-input-wrap"
             >
               <input
                 value="默认数据，不能删除"
               />
-            </span>
+            </div>
           </span>
         </div>
         <div
           class="uc-fe-editable-list-action"
         >
           <div
-            class="uc-fe-combine emotion-4 emotion-5"
+            class="uc-fe-combine emotion-2 emotion-3"
             spacing="md"
           >
             <div
               class="uc-fe-combine-item"
             >
               <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-12 emotion-13"
+                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-8 emotion-9"
                 shape="square"
                 type="button"
               >
                 <svg
-                  class=" emotion-10 emotion-11"
+                  class=" emotion-6 emotion-7"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -1469,10 +1557,10 @@ exports[`EditableList demo -- demo 1`] = `
     class="demo-wrap"
   >
     <div
-      class="emotion-16 emotion-17"
+      class="emotion-12 emotion-13"
     >
       <button
-        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-18 emotion-13"
+        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-14 emotion-9"
         type="button"
       >
         添加数据
@@ -1487,13 +1575,13 @@ exports[`EditableList demo -- demo 1`] = `
   >
     <div>
       <form
-        class="uc-fe-form emotion-28 emotion-29"
+        class="uc-fe-form emotion-24 emotion-25"
       >
         <div
-          class="emotion-16 emotion-17"
+          class="emotion-12 emotion-13"
         >
           <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-18 emotion-13"
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-14 emotion-9"
             type="button"
           >
             添加数据
@@ -1503,7 +1591,7 @@ exports[`EditableList demo -- demo 1`] = `
           style="text-align:center"
         >
           <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-26 emotion-13"
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-22 emotion-9"
             type="button"
           >
             submit
@@ -2874,28 +2962,26 @@ exports[`EditableList demo -- editableList 1`] = `
 `;
 
 exports[`EditableList demo -- grid 1`] = `
-.emotion-54 > .uc-fe-editable-list-li+.uc-fe-editable-list-li {
+.emotion-44 > .uc-fe-editable-list-li+.uc-fe-editable-list-li {
   margin-top: 16px;
 }
 
-.emotion-54 > .uc-fe-editable-list-li-grid+.uc-fe-editable-list-li-grid {
+.emotion-44 > .uc-fe-editable-list-li-grid+.uc-fe-editable-list-li-grid {
   margin-top: 16px;
 }
 
-.emotion-54 .uc-fe-editable-list-li .uc-fe-editable-list-item,
-.emotion-54 .uc-fe-editable-list-li .uc-fe-editable-list-action {
+.emotion-44 .uc-fe-editable-list-li .uc-fe-editable-list-item,
+.emotion-44 .uc-fe-editable-list-li .uc-fe-editable-list-action {
   display: inline-block;
   vertical-align: top;
 }
 
-.emotion-54 .uc-fe-editable-list-li .uc-fe-editable-list-action {
+.emotion-44 .uc-fe-editable-list-li .uc-fe-editable-list-action {
   margin-left: 24px;
 }
 
-.emotion-2 {
+.emotion-0 {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
   box-sizing: border-box;
   font-size: 12px;
   border-radius: 2px;
@@ -2906,88 +2992,112 @@ exports[`EditableList demo -- grid 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-}
-
-.emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 input {
+  display: inline-block;
   vertical-align: middle;
-  display: table-cell;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0px 8px;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
 }
 
-.emotion-2 input,
-.emotion-2 input:hover,
-.emotion-2 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-2:hover {
+.emotion-0:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.emotion-2 input {
-  line-height: 26px;
-  height: 26px;
+.emotion-0 .uc-fe-input-wrap,
+.emotion-0 .uc-fe-input-prefix,
+.emotion-0 .uc-fe-input-suffix,
+.emotion-0 input {
+  padding: 0 4px;
 }
 
-.emotion-2 input::-webkit-input-placeholder {
+.emotion-0.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-0 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 .uc-fe-input-prefix,
+.emotion-0 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-0 input,
+.emotion-0 input:hover,
+.emotion-0 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-0 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input::-moz-placeholder {
+.emotion-0 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input:-ms-input-placeholder {
+.emotion-0 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input::placeholder {
+.emotion-0 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-0 {
-  display: table;
-  width: 100%;
-}
-
-.emotion-8 > .uc-fe-combine-item,
-.emotion-8 > .uc-fe-combine-separator {
+.emotion-6 > .uc-fe-combine-item,
+.emotion-6 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-8 > .uc-fe-combine-item:focus {
+.emotion-6 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-8 > .uc-fe-combine-item:hover {
+.emotion-6 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-8 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-8 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-8 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-6 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
-.emotion-6 {
+.emotion-4 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -3018,13 +3128,13 @@ exports[`EditableList demo -- grid 1`] = `
   width: 28px;
 }
 
-.emotion-6:link,
-.emotion-6:visited {
+.emotion-4:link,
+.emotion-4:visited {
   color: #0a1633;
 }
 
-.emotion-6:hover,
-.emotion-6:active {
+.emotion-4:hover,
+.emotion-4:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -3032,7 +3142,7 @@ exports[`EditableList demo -- grid 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-4 {
+.emotion-2 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -3041,7 +3151,7 @@ exports[`EditableList demo -- grid 1`] = `
   height: 12px;
 }
 
-.emotion-70 {
+.emotion-58 {
   position: relative;
   display: block;
   height: auto;
@@ -3049,22 +3159,22 @@ exports[`EditableList demo -- grid 1`] = `
   margin-right: -8px;
 }
 
-.emotion-70:before,
-.emotion-70:after {
+.emotion-58:before,
+.emotion-58:after {
   content: ' ';
   display: table;
 }
 
-.emotion-70:after {
+.emotion-58:after {
   clear: both;
 }
 
-.emotion-70 > .uc-fe-col {
+.emotion-58 > .uc-fe-col {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.emotion-60 {
+.emotion-48 {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -3076,7 +3186,7 @@ exports[`EditableList demo -- grid 1`] = `
   width: 66.66666667%;
 }
 
-.emotion-68 {
+.emotion-56 {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -3088,7 +3198,7 @@ exports[`EditableList demo -- grid 1`] = `
   width: 33.33333333%;
 }
 
-.emotion-146 {
+.emotion-124 {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -3101,7 +3211,7 @@ exports[`EditableList demo -- grid 1`] = `
   margin-left: 8.33333333%;
 }
 
-.emotion-154 {
+.emotion-132 {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -3113,28 +3223,26 @@ exports[`EditableList demo -- grid 1`] = `
   width: 25%;
 }
 
-.emotion-54 > .uc-fe-editable-list-li+.uc-fe-editable-list-li {
+.emotion-44 > .uc-fe-editable-list-li+.uc-fe-editable-list-li {
   margin-top: 16px;
 }
 
-.emotion-54 > .uc-fe-editable-list-li-grid+.uc-fe-editable-list-li-grid {
+.emotion-44 > .uc-fe-editable-list-li-grid+.uc-fe-editable-list-li-grid {
   margin-top: 16px;
 }
 
-.emotion-54 .uc-fe-editable-list-li .uc-fe-editable-list-item,
-.emotion-54 .uc-fe-editable-list-li .uc-fe-editable-list-action {
+.emotion-44 .uc-fe-editable-list-li .uc-fe-editable-list-item,
+.emotion-44 .uc-fe-editable-list-li .uc-fe-editable-list-action {
   display: inline-block;
   vertical-align: top;
 }
 
-.emotion-54 .uc-fe-editable-list-li .uc-fe-editable-list-action {
+.emotion-44 .uc-fe-editable-list-li .uc-fe-editable-list-action {
   margin-left: 24px;
 }
 
-.emotion-2 {
+.emotion-0 {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
   box-sizing: border-box;
   font-size: 12px;
   border-radius: 2px;
@@ -3145,88 +3253,112 @@ exports[`EditableList demo -- grid 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-}
-
-.emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 input {
+  display: inline-block;
   vertical-align: middle;
-  display: table-cell;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0px 8px;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
 }
 
-.emotion-2 input,
-.emotion-2 input:hover,
-.emotion-2 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-2:hover {
+.emotion-0:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.emotion-2 input {
-  line-height: 26px;
-  height: 26px;
+.emotion-0 .uc-fe-input-wrap,
+.emotion-0 .uc-fe-input-prefix,
+.emotion-0 .uc-fe-input-suffix,
+.emotion-0 input {
+  padding: 0 4px;
 }
 
-.emotion-2 input::-webkit-input-placeholder {
+.emotion-0.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-0 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 .uc-fe-input-prefix,
+.emotion-0 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-0 input,
+.emotion-0 input:hover,
+.emotion-0 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-0 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input::-moz-placeholder {
+.emotion-0 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input:-ms-input-placeholder {
+.emotion-0 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input::placeholder {
+.emotion-0 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-0 {
-  display: table;
-  width: 100%;
-}
-
-.emotion-8 > .uc-fe-combine-item,
-.emotion-8 > .uc-fe-combine-separator {
+.emotion-6 > .uc-fe-combine-item,
+.emotion-6 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-8 > .uc-fe-combine-item:focus {
+.emotion-6 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-8 > .uc-fe-combine-item:hover {
+.emotion-6 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-8 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-8 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-8 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-6 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
-.emotion-6 {
+.emotion-4 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -3257,13 +3389,13 @@ exports[`EditableList demo -- grid 1`] = `
   width: 28px;
 }
 
-.emotion-6:link,
-.emotion-6:visited {
+.emotion-4:link,
+.emotion-4:visited {
   color: #0a1633;
 }
 
-.emotion-6:hover,
-.emotion-6:active {
+.emotion-4:hover,
+.emotion-4:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -3271,7 +3403,7 @@ exports[`EditableList demo -- grid 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-4 {
+.emotion-2 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -3280,7 +3412,7 @@ exports[`EditableList demo -- grid 1`] = `
   height: 12px;
 }
 
-.emotion-70 {
+.emotion-58 {
   position: relative;
   display: block;
   height: auto;
@@ -3288,22 +3420,22 @@ exports[`EditableList demo -- grid 1`] = `
   margin-right: -8px;
 }
 
-.emotion-70:before,
-.emotion-70:after {
+.emotion-58:before,
+.emotion-58:after {
   content: ' ';
   display: table;
 }
 
-.emotion-70:after {
+.emotion-58:after {
   clear: both;
 }
 
-.emotion-70 > .uc-fe-col {
+.emotion-58 > .uc-fe-col {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.emotion-60 {
+.emotion-48 {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -3315,7 +3447,7 @@ exports[`EditableList demo -- grid 1`] = `
   width: 66.66666667%;
 }
 
-.emotion-68 {
+.emotion-56 {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -3327,7 +3459,7 @@ exports[`EditableList demo -- grid 1`] = `
   width: 33.33333333%;
 }
 
-.emotion-146 {
+.emotion-124 {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -3340,7 +3472,7 @@ exports[`EditableList demo -- grid 1`] = `
   margin-left: 8.33333333%;
 }
 
-.emotion-154 {
+.emotion-132 {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -3361,7 +3493,7 @@ exports[`EditableList demo -- grid 1`] = `
       class="demo-wrap"
     >
       <div
-        class="emotion-54 emotion-55"
+        class="emotion-44 emotion-45"
       >
         <div
           class="uc-fe-editable-list-li"
@@ -3370,34 +3502,34 @@ exports[`EditableList demo -- grid 1`] = `
             class="uc-fe-editable-list-item"
           >
             <span
-              class="uc-fe-input emotion-2 emotion-3"
+              class="uc-fe-input emotion-0 emotion-1"
             >
-              <span
-                class="emotion-0 emotion-1"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-0"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-8 emotion-9"
+              class="uc-fe-combine emotion-6 emotion-7"
               spacing="md"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-4 emotion-5"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-4 emotion-5"
+                    class=" emotion-2 emotion-3"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -3418,34 +3550,34 @@ exports[`EditableList demo -- grid 1`] = `
             class="uc-fe-editable-list-item"
           >
             <span
-              class="uc-fe-input emotion-2 emotion-3"
+              class="uc-fe-input emotion-0 emotion-1"
             >
-              <span
-                class="emotion-0 emotion-1"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-1"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-8 emotion-9"
+              class="uc-fe-combine emotion-6 emotion-7"
               spacing="md"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-4 emotion-5"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-4 emotion-5"
+                    class=" emotion-2 emotion-3"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -3466,34 +3598,34 @@ exports[`EditableList demo -- grid 1`] = `
             class="uc-fe-editable-list-item"
           >
             <span
-              class="uc-fe-input emotion-2 emotion-3"
+              class="uc-fe-input emotion-0 emotion-1"
             >
-              <span
-                class="emotion-0 emotion-1"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-2"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-8 emotion-9"
+              class="uc-fe-combine emotion-6 emotion-7"
               spacing="md"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-4 emotion-5"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-4 emotion-5"
+                    class=" emotion-2 emotion-3"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -3514,34 +3646,34 @@ exports[`EditableList demo -- grid 1`] = `
             class="uc-fe-editable-list-item"
           >
             <span
-              class="uc-fe-input emotion-2 emotion-3"
+              class="uc-fe-input emotion-0 emotion-1"
             >
-              <span
-                class="emotion-0 emotion-1"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-3"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-8 emotion-9"
+              class="uc-fe-combine emotion-6 emotion-7"
               spacing="md"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-4 emotion-5"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-4 emotion-5"
+                    class=" emotion-2 emotion-3"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -3562,34 +3694,34 @@ exports[`EditableList demo -- grid 1`] = `
             class="uc-fe-editable-list-item"
           >
             <span
-              class="uc-fe-input emotion-2 emotion-3"
+              class="uc-fe-input emotion-0 emotion-1"
             >
-              <span
-                class="emotion-0 emotion-1"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-4"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-8 emotion-9"
+              class="uc-fe-combine emotion-6 emotion-7"
               spacing="md"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-4 emotion-5"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-4 emotion-5"
+                    class=" emotion-2 emotion-3"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -3604,12 +3736,12 @@ exports[`EditableList demo -- grid 1`] = `
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-4 emotion-5"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-4 emotion-5"
+                    class=" emotion-2 emotion-3"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -3633,45 +3765,45 @@ exports[`EditableList demo -- grid 1`] = `
       class="demo-wrap"
     >
       <div
-        class="emotion-54 emotion-55"
+        class="emotion-44 emotion-45"
       >
         <div
-          class="uc-fe-row uc-fe-editable-list-li-grid emotion-70 emotion-71"
+          class="uc-fe-row uc-fe-editable-list-li-grid emotion-58 emotion-59"
         >
           <div
-            class="uc-fe-col uc-fe-editable-list-item emotion-60 emotion-61"
+            class="uc-fe-col uc-fe-editable-list-item emotion-48 emotion-49"
             span="8"
           >
             <span
-              class="uc-fe-input emotion-2 emotion-3"
+              class="uc-fe-input emotion-0 emotion-1"
             >
-              <span
-                class="emotion-0 emotion-1"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-0"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
-            class="uc-fe-col uc-fe-editable-list-action emotion-68 emotion-61"
+            class="uc-fe-col uc-fe-editable-list-action emotion-56 emotion-49"
             span="4"
           >
             <div
-              class="uc-fe-combine emotion-8 emotion-9"
+              class="uc-fe-combine emotion-6 emotion-7"
               spacing="md"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-4 emotion-5"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-4 emotion-5"
+                    class=" emotion-2 emotion-3"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -3686,42 +3818,42 @@ exports[`EditableList demo -- grid 1`] = `
           </div>
         </div>
         <div
-          class="uc-fe-row uc-fe-editable-list-li-grid emotion-70 emotion-71"
+          class="uc-fe-row uc-fe-editable-list-li-grid emotion-58 emotion-59"
         >
           <div
-            class="uc-fe-col uc-fe-editable-list-item emotion-60 emotion-61"
+            class="uc-fe-col uc-fe-editable-list-item emotion-48 emotion-49"
             span="8"
           >
             <span
-              class="uc-fe-input emotion-2 emotion-3"
+              class="uc-fe-input emotion-0 emotion-1"
             >
-              <span
-                class="emotion-0 emotion-1"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-1"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
-            class="uc-fe-col uc-fe-editable-list-action emotion-68 emotion-61"
+            class="uc-fe-col uc-fe-editable-list-action emotion-56 emotion-49"
             span="4"
           >
             <div
-              class="uc-fe-combine emotion-8 emotion-9"
+              class="uc-fe-combine emotion-6 emotion-7"
               spacing="md"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-4 emotion-5"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-4 emotion-5"
+                    class=" emotion-2 emotion-3"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -3736,42 +3868,42 @@ exports[`EditableList demo -- grid 1`] = `
           </div>
         </div>
         <div
-          class="uc-fe-row uc-fe-editable-list-li-grid emotion-70 emotion-71"
+          class="uc-fe-row uc-fe-editable-list-li-grid emotion-58 emotion-59"
         >
           <div
-            class="uc-fe-col uc-fe-editable-list-item emotion-60 emotion-61"
+            class="uc-fe-col uc-fe-editable-list-item emotion-48 emotion-49"
             span="8"
           >
             <span
-              class="uc-fe-input emotion-2 emotion-3"
+              class="uc-fe-input emotion-0 emotion-1"
             >
-              <span
-                class="emotion-0 emotion-1"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-2"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
-            class="uc-fe-col uc-fe-editable-list-action emotion-68 emotion-61"
+            class="uc-fe-col uc-fe-editable-list-action emotion-56 emotion-49"
             span="4"
           >
             <div
-              class="uc-fe-combine emotion-8 emotion-9"
+              class="uc-fe-combine emotion-6 emotion-7"
               spacing="md"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-4 emotion-5"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-4 emotion-5"
+                    class=" emotion-2 emotion-3"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -3786,42 +3918,42 @@ exports[`EditableList demo -- grid 1`] = `
           </div>
         </div>
         <div
-          class="uc-fe-row uc-fe-editable-list-li-grid emotion-70 emotion-71"
+          class="uc-fe-row uc-fe-editable-list-li-grid emotion-58 emotion-59"
         >
           <div
-            class="uc-fe-col uc-fe-editable-list-item emotion-60 emotion-61"
+            class="uc-fe-col uc-fe-editable-list-item emotion-48 emotion-49"
             span="8"
           >
             <span
-              class="uc-fe-input emotion-2 emotion-3"
+              class="uc-fe-input emotion-0 emotion-1"
             >
-              <span
-                class="emotion-0 emotion-1"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-3"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
-            class="uc-fe-col uc-fe-editable-list-action emotion-68 emotion-61"
+            class="uc-fe-col uc-fe-editable-list-action emotion-56 emotion-49"
             span="4"
           >
             <div
-              class="uc-fe-combine emotion-8 emotion-9"
+              class="uc-fe-combine emotion-6 emotion-7"
               spacing="md"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-4 emotion-5"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-4 emotion-5"
+                    class=" emotion-2 emotion-3"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -3836,42 +3968,42 @@ exports[`EditableList demo -- grid 1`] = `
           </div>
         </div>
         <div
-          class="uc-fe-row uc-fe-editable-list-li-grid emotion-70 emotion-71"
+          class="uc-fe-row uc-fe-editable-list-li-grid emotion-58 emotion-59"
         >
           <div
-            class="uc-fe-col uc-fe-editable-list-item emotion-60 emotion-61"
+            class="uc-fe-col uc-fe-editable-list-item emotion-48 emotion-49"
             span="8"
           >
             <span
-              class="uc-fe-input emotion-2 emotion-3"
+              class="uc-fe-input emotion-0 emotion-1"
             >
-              <span
-                class="emotion-0 emotion-1"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-4"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
-            class="uc-fe-col uc-fe-editable-list-action emotion-68 emotion-61"
+            class="uc-fe-col uc-fe-editable-list-action emotion-56 emotion-49"
             span="4"
           >
             <div
-              class="uc-fe-combine emotion-8 emotion-9"
+              class="uc-fe-combine emotion-6 emotion-7"
               spacing="md"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-4 emotion-5"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-4 emotion-5"
+                    class=" emotion-2 emotion-3"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -3886,12 +4018,12 @@ exports[`EditableList demo -- grid 1`] = `
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-4 emotion-5"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-4 emotion-5"
+                    class=" emotion-2 emotion-3"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -3915,46 +4047,46 @@ exports[`EditableList demo -- grid 1`] = `
       class="demo-wrap"
     >
       <div
-        class="emotion-54 emotion-55"
+        class="emotion-44 emotion-45"
       >
         <div
-          class="uc-fe-row uc-fe-editable-list-li-grid emotion-70 emotion-71"
+          class="uc-fe-row uc-fe-editable-list-li-grid emotion-58 emotion-59"
         >
           <div
-            class="uc-fe-col uc-fe-editable-list-item emotion-146 emotion-61"
+            class="uc-fe-col uc-fe-editable-list-item emotion-124 emotion-49"
             offset="1"
             span="3"
           >
             <span
-              class="uc-fe-input emotion-2 emotion-3"
+              class="uc-fe-input emotion-0 emotion-1"
             >
-              <span
-                class="emotion-0 emotion-1"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-0"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
-            class="uc-fe-col uc-fe-editable-list-action emotion-154 emotion-61"
+            class="uc-fe-col uc-fe-editable-list-action emotion-132 emotion-49"
             span="3"
           >
             <div
-              class="uc-fe-combine emotion-8 emotion-9"
+              class="uc-fe-combine emotion-6 emotion-7"
               spacing="md"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-4 emotion-5"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-4 emotion-5"
+                    class=" emotion-2 emotion-3"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -3969,43 +4101,43 @@ exports[`EditableList demo -- grid 1`] = `
           </div>
         </div>
         <div
-          class="uc-fe-row uc-fe-editable-list-li-grid emotion-70 emotion-71"
+          class="uc-fe-row uc-fe-editable-list-li-grid emotion-58 emotion-59"
         >
           <div
-            class="uc-fe-col uc-fe-editable-list-item emotion-146 emotion-61"
+            class="uc-fe-col uc-fe-editable-list-item emotion-124 emotion-49"
             offset="1"
             span="3"
           >
             <span
-              class="uc-fe-input emotion-2 emotion-3"
+              class="uc-fe-input emotion-0 emotion-1"
             >
-              <span
-                class="emotion-0 emotion-1"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-1"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
-            class="uc-fe-col uc-fe-editable-list-action emotion-154 emotion-61"
+            class="uc-fe-col uc-fe-editable-list-action emotion-132 emotion-49"
             span="3"
           >
             <div
-              class="uc-fe-combine emotion-8 emotion-9"
+              class="uc-fe-combine emotion-6 emotion-7"
               spacing="md"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-4 emotion-5"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-4 emotion-5"
+                    class=" emotion-2 emotion-3"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -4020,43 +4152,43 @@ exports[`EditableList demo -- grid 1`] = `
           </div>
         </div>
         <div
-          class="uc-fe-row uc-fe-editable-list-li-grid emotion-70 emotion-71"
+          class="uc-fe-row uc-fe-editable-list-li-grid emotion-58 emotion-59"
         >
           <div
-            class="uc-fe-col uc-fe-editable-list-item emotion-146 emotion-61"
+            class="uc-fe-col uc-fe-editable-list-item emotion-124 emotion-49"
             offset="1"
             span="3"
           >
             <span
-              class="uc-fe-input emotion-2 emotion-3"
+              class="uc-fe-input emotion-0 emotion-1"
             >
-              <span
-                class="emotion-0 emotion-1"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-2"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
-            class="uc-fe-col uc-fe-editable-list-action emotion-154 emotion-61"
+            class="uc-fe-col uc-fe-editable-list-action emotion-132 emotion-49"
             span="3"
           >
             <div
-              class="uc-fe-combine emotion-8 emotion-9"
+              class="uc-fe-combine emotion-6 emotion-7"
               spacing="md"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-4 emotion-5"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-4 emotion-5"
+                    class=" emotion-2 emotion-3"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -4071,43 +4203,43 @@ exports[`EditableList demo -- grid 1`] = `
           </div>
         </div>
         <div
-          class="uc-fe-row uc-fe-editable-list-li-grid emotion-70 emotion-71"
+          class="uc-fe-row uc-fe-editable-list-li-grid emotion-58 emotion-59"
         >
           <div
-            class="uc-fe-col uc-fe-editable-list-item emotion-146 emotion-61"
+            class="uc-fe-col uc-fe-editable-list-item emotion-124 emotion-49"
             offset="1"
             span="3"
           >
             <span
-              class="uc-fe-input emotion-2 emotion-3"
+              class="uc-fe-input emotion-0 emotion-1"
             >
-              <span
-                class="emotion-0 emotion-1"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-3"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
-            class="uc-fe-col uc-fe-editable-list-action emotion-154 emotion-61"
+            class="uc-fe-col uc-fe-editable-list-action emotion-132 emotion-49"
             span="3"
           >
             <div
-              class="uc-fe-combine emotion-8 emotion-9"
+              class="uc-fe-combine emotion-6 emotion-7"
               spacing="md"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-4 emotion-5"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-4 emotion-5"
+                    class=" emotion-2 emotion-3"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -4122,43 +4254,43 @@ exports[`EditableList demo -- grid 1`] = `
           </div>
         </div>
         <div
-          class="uc-fe-row uc-fe-editable-list-li-grid emotion-70 emotion-71"
+          class="uc-fe-row uc-fe-editable-list-li-grid emotion-58 emotion-59"
         >
           <div
-            class="uc-fe-col uc-fe-editable-list-item emotion-146 emotion-61"
+            class="uc-fe-col uc-fe-editable-list-item emotion-124 emotion-49"
             offset="1"
             span="3"
           >
             <span
-              class="uc-fe-input emotion-2 emotion-3"
+              class="uc-fe-input emotion-0 emotion-1"
             >
-              <span
-                class="emotion-0 emotion-1"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-4"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
-            class="uc-fe-col uc-fe-editable-list-action emotion-154 emotion-61"
+            class="uc-fe-col uc-fe-editable-list-action emotion-132 emotion-49"
             span="3"
           >
             <div
-              class="uc-fe-combine emotion-8 emotion-9"
+              class="uc-fe-combine emotion-6 emotion-7"
               spacing="md"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-4 emotion-5"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-4 emotion-5"
+                    class=" emotion-2 emotion-3"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -4173,12 +4305,12 @@ exports[`EditableList demo -- grid 1`] = `
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-6 emotion-7"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-4 emotion-5"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-4 emotion-5"
+                    class=" emotion-2 emotion-3"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -4198,28 +4330,26 @@ exports[`EditableList demo -- grid 1`] = `
 `;
 
 exports[`EditableList demo -- itemDeletion 1`] = `
-.emotion-34 > .uc-fe-editable-list-li+.uc-fe-editable-list-li {
+.emotion-24 > .uc-fe-editable-list-li+.uc-fe-editable-list-li {
   margin-top: 16px;
 }
 
-.emotion-34 > .uc-fe-editable-list-li-grid+.uc-fe-editable-list-li-grid {
+.emotion-24 > .uc-fe-editable-list-li-grid+.uc-fe-editable-list-li-grid {
   margin-top: 16px;
 }
 
-.emotion-34 .uc-fe-editable-list-li .uc-fe-editable-list-item,
-.emotion-34 .uc-fe-editable-list-li .uc-fe-editable-list-action {
+.emotion-24 .uc-fe-editable-list-li .uc-fe-editable-list-item,
+.emotion-24 .uc-fe-editable-list-li .uc-fe-editable-list-action {
   display: inline-block;
   vertical-align: top;
 }
 
-.emotion-34 .uc-fe-editable-list-li .uc-fe-editable-list-action {
+.emotion-24 .uc-fe-editable-list-li .uc-fe-editable-list-action {
   margin-left: 24px;
 }
 
-.emotion-2 {
+.emotion-0 {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
   box-sizing: border-box;
   font-size: 12px;
   border-radius: 2px;
@@ -4230,88 +4360,112 @@ exports[`EditableList demo -- itemDeletion 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-}
-
-.emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 input {
+  display: inline-block;
   vertical-align: middle;
-  display: table-cell;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0px 8px;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
 }
 
-.emotion-2 input,
-.emotion-2 input:hover,
-.emotion-2 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-2:hover {
+.emotion-0:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.emotion-2 input {
-  line-height: 26px;
-  height: 26px;
+.emotion-0 .uc-fe-input-wrap,
+.emotion-0 .uc-fe-input-prefix,
+.emotion-0 .uc-fe-input-suffix,
+.emotion-0 input {
+  padding: 0 4px;
 }
 
-.emotion-2 input::-webkit-input-placeholder {
+.emotion-0.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-0 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 .uc-fe-input-prefix,
+.emotion-0 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-0 input,
+.emotion-0 input:hover,
+.emotion-0 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-0 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input::-moz-placeholder {
+.emotion-0 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input:-ms-input-placeholder {
+.emotion-0 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input::placeholder {
+.emotion-0 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-0 {
-  display: table;
-  width: 100%;
-}
-
-.emotion-4 > .uc-fe-combine-item,
-.emotion-4 > .uc-fe-combine-separator {
+.emotion-2 > .uc-fe-combine-item,
+.emotion-2 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-4 > .uc-fe-combine-item:focus {
+.emotion-2 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-4 > .uc-fe-combine-item:hover {
+.emotion-2 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-4 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-2 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-2 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-2 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
-.emotion-30 {
+.emotion-20 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -4342,13 +4496,13 @@ exports[`EditableList demo -- itemDeletion 1`] = `
   width: 28px;
 }
 
-.emotion-30:link,
-.emotion-30:visited {
+.emotion-20:link,
+.emotion-20:visited {
   color: #0a1633;
 }
 
-.emotion-30:hover,
-.emotion-30:active {
+.emotion-20:hover,
+.emotion-20:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -4356,7 +4510,7 @@ exports[`EditableList demo -- itemDeletion 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-28 {
+.emotion-18 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -4365,28 +4519,26 @@ exports[`EditableList demo -- itemDeletion 1`] = `
   height: 12px;
 }
 
-.emotion-34 > .uc-fe-editable-list-li+.uc-fe-editable-list-li {
+.emotion-24 > .uc-fe-editable-list-li+.uc-fe-editable-list-li {
   margin-top: 16px;
 }
 
-.emotion-34 > .uc-fe-editable-list-li-grid+.uc-fe-editable-list-li-grid {
+.emotion-24 > .uc-fe-editable-list-li-grid+.uc-fe-editable-list-li-grid {
   margin-top: 16px;
 }
 
-.emotion-34 .uc-fe-editable-list-li .uc-fe-editable-list-item,
-.emotion-34 .uc-fe-editable-list-li .uc-fe-editable-list-action {
+.emotion-24 .uc-fe-editable-list-li .uc-fe-editable-list-item,
+.emotion-24 .uc-fe-editable-list-li .uc-fe-editable-list-action {
   display: inline-block;
   vertical-align: top;
 }
 
-.emotion-34 .uc-fe-editable-list-li .uc-fe-editable-list-action {
+.emotion-24 .uc-fe-editable-list-li .uc-fe-editable-list-action {
   margin-left: 24px;
 }
 
-.emotion-2 {
+.emotion-0 {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
   box-sizing: border-box;
   font-size: 12px;
   border-radius: 2px;
@@ -4397,88 +4549,112 @@ exports[`EditableList demo -- itemDeletion 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-}
-
-.emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 input {
+  display: inline-block;
   vertical-align: middle;
-  display: table-cell;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0px 8px;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
 }
 
-.emotion-2 input,
-.emotion-2 input:hover,
-.emotion-2 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-2:hover {
+.emotion-0:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.emotion-2 input {
-  line-height: 26px;
-  height: 26px;
+.emotion-0 .uc-fe-input-wrap,
+.emotion-0 .uc-fe-input-prefix,
+.emotion-0 .uc-fe-input-suffix,
+.emotion-0 input {
+  padding: 0 4px;
 }
 
-.emotion-2 input::-webkit-input-placeholder {
+.emotion-0.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-0 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 .uc-fe-input-prefix,
+.emotion-0 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-0 input,
+.emotion-0 input:hover,
+.emotion-0 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-0 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input::-moz-placeholder {
+.emotion-0 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input:-ms-input-placeholder {
+.emotion-0 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input::placeholder {
+.emotion-0 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-0 {
-  display: table;
-  width: 100%;
-}
-
-.emotion-4 > .uc-fe-combine-item,
-.emotion-4 > .uc-fe-combine-separator {
+.emotion-2 > .uc-fe-combine-item,
+.emotion-2 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-4 > .uc-fe-combine-item:focus {
+.emotion-2 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-4 > .uc-fe-combine-item:hover {
+.emotion-2 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-4 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-2 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-2 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-2 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
-.emotion-30 {
+.emotion-20 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -4509,13 +4685,13 @@ exports[`EditableList demo -- itemDeletion 1`] = `
   width: 28px;
 }
 
-.emotion-30:link,
-.emotion-30:visited {
+.emotion-20:link,
+.emotion-20:visited {
   color: #0a1633;
 }
 
-.emotion-30:hover,
-.emotion-30:active {
+.emotion-20:hover,
+.emotion-20:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -4523,7 +4699,7 @@ exports[`EditableList demo -- itemDeletion 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-28 {
+.emotion-18 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -4541,7 +4717,7 @@ exports[`EditableList demo -- itemDeletion 1`] = `
       class="demo-wrap"
     >
       <div
-        class="emotion-34 emotion-35"
+        class="emotion-24 emotion-25"
       >
         <div
           class="uc-fe-editable-list-li"
@@ -4550,22 +4726,22 @@ exports[`EditableList demo -- itemDeletion 1`] = `
             class="uc-fe-editable-list-item"
           >
             <span
-              class="uc-fe-input emotion-2 emotion-3"
+              class="uc-fe-input emotion-0 emotion-1"
             >
-              <span
-                class="emotion-0 emotion-1"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-0"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-4 emotion-5"
+              class="uc-fe-combine emotion-2 emotion-3"
               spacing="md"
             />
           </div>
@@ -4577,22 +4753,22 @@ exports[`EditableList demo -- itemDeletion 1`] = `
             class="uc-fe-editable-list-item"
           >
             <span
-              class="uc-fe-input emotion-2 emotion-3"
+              class="uc-fe-input emotion-0 emotion-1"
             >
-              <span
-                class="emotion-0 emotion-1"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-1"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-4 emotion-5"
+              class="uc-fe-combine emotion-2 emotion-3"
               spacing="md"
             />
           </div>
@@ -4604,22 +4780,22 @@ exports[`EditableList demo -- itemDeletion 1`] = `
             class="uc-fe-editable-list-item"
           >
             <span
-              class="uc-fe-input emotion-2 emotion-3"
+              class="uc-fe-input emotion-0 emotion-1"
             >
-              <span
-                class="emotion-0 emotion-1"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-2"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-4 emotion-5"
+              class="uc-fe-combine emotion-2 emotion-3"
               spacing="md"
             />
           </div>
@@ -4631,22 +4807,22 @@ exports[`EditableList demo -- itemDeletion 1`] = `
             class="uc-fe-editable-list-item"
           >
             <span
-              class="uc-fe-input emotion-2 emotion-3"
+              class="uc-fe-input emotion-0 emotion-1"
             >
-              <span
-                class="emotion-0 emotion-1"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-3"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-4 emotion-5"
+              class="uc-fe-combine emotion-2 emotion-3"
               spacing="md"
             />
           </div>
@@ -4658,34 +4834,34 @@ exports[`EditableList demo -- itemDeletion 1`] = `
             class="uc-fe-editable-list-item"
           >
             <span
-              class="uc-fe-input emotion-2 emotion-3"
+              class="uc-fe-input emotion-0 emotion-1"
             >
-              <span
-                class="emotion-0 emotion-1"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-4"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-4 emotion-5"
+              class="uc-fe-combine emotion-2 emotion-3"
               spacing="md"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-30 emotion-31"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-20 emotion-21"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-28 emotion-29"
+                    class=" emotion-18 emotion-19"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -4709,7 +4885,7 @@ exports[`EditableList demo -- itemDeletion 1`] = `
       class="demo-wrap"
     >
       <div
-        class="emotion-34 emotion-35"
+        class="emotion-24 emotion-25"
       >
         <div
           class="uc-fe-editable-list-li"
@@ -4718,34 +4894,34 @@ exports[`EditableList demo -- itemDeletion 1`] = `
             class="uc-fe-editable-list-item"
           >
             <span
-              class="uc-fe-input emotion-2 emotion-3"
+              class="uc-fe-input emotion-0 emotion-1"
             >
-              <span
-                class="emotion-0 emotion-1"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-0"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-4 emotion-5"
+              class="uc-fe-combine emotion-2 emotion-3"
               spacing="md"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-30 emotion-31"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-20 emotion-21"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-28 emotion-29"
+                    class=" emotion-18 emotion-19"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -4766,34 +4942,34 @@ exports[`EditableList demo -- itemDeletion 1`] = `
             class="uc-fe-editable-list-item"
           >
             <span
-              class="uc-fe-input emotion-2 emotion-3"
+              class="uc-fe-input emotion-0 emotion-1"
             >
-              <span
-                class="emotion-0 emotion-1"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-1"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-4 emotion-5"
+              class="uc-fe-combine emotion-2 emotion-3"
               spacing="md"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-30 emotion-31"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-20 emotion-21"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-28 emotion-29"
+                    class=" emotion-18 emotion-19"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -4814,34 +4990,34 @@ exports[`EditableList demo -- itemDeletion 1`] = `
             class="uc-fe-editable-list-item"
           >
             <span
-              class="uc-fe-input emotion-2 emotion-3"
+              class="uc-fe-input emotion-0 emotion-1"
             >
-              <span
-                class="emotion-0 emotion-1"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-2"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-4 emotion-5"
+              class="uc-fe-combine emotion-2 emotion-3"
               spacing="md"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-30 emotion-31"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-20 emotion-21"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-28 emotion-29"
+                    class=" emotion-18 emotion-19"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -4862,34 +5038,34 @@ exports[`EditableList demo -- itemDeletion 1`] = `
             class="uc-fe-editable-list-item"
           >
             <span
-              class="uc-fe-input emotion-2 emotion-3"
+              class="uc-fe-input emotion-0 emotion-1"
             >
-              <span
-                class="emotion-0 emotion-1"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-3"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-4 emotion-5"
+              class="uc-fe-combine emotion-2 emotion-3"
               spacing="md"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-30 emotion-31"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-20 emotion-21"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-28 emotion-29"
+                    class=" emotion-18 emotion-19"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -4910,34 +5086,34 @@ exports[`EditableList demo -- itemDeletion 1`] = `
             class="uc-fe-editable-list-item"
           >
             <span
-              class="uc-fe-input emotion-2 emotion-3"
+              class="uc-fe-input emotion-0 emotion-1"
             >
-              <span
-                class="emotion-0 emotion-1"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-4"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-4 emotion-5"
+              class="uc-fe-combine emotion-2 emotion-3"
               spacing="md"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-30 emotion-31"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-20 emotion-21"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-28 emotion-29"
+                    class=" emotion-18 emotion-19"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -4952,12 +5128,12 @@ exports[`EditableList demo -- itemDeletion 1`] = `
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-30 emotion-31"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-20 emotion-21"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-28 emotion-29"
+                    class=" emotion-18 emotion-19"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -4981,7 +5157,7 @@ exports[`EditableList demo -- itemDeletion 1`] = `
       class="demo-wrap"
     >
       <div
-        class="emotion-34 emotion-35"
+        class="emotion-24 emotion-25"
       >
         <div
           class="uc-fe-editable-list-li"
@@ -4990,34 +5166,34 @@ exports[`EditableList demo -- itemDeletion 1`] = `
             class="uc-fe-editable-list-item"
           >
             <span
-              class="uc-fe-input emotion-2 emotion-3"
+              class="uc-fe-input emotion-0 emotion-1"
             >
-              <span
-                class="emotion-0 emotion-1"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-0"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-4 emotion-5"
+              class="uc-fe-combine emotion-2 emotion-3"
               spacing="md"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-30 emotion-31"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-20 emotion-21"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-28 emotion-29"
+                    class=" emotion-18 emotion-19"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -5038,22 +5214,22 @@ exports[`EditableList demo -- itemDeletion 1`] = `
             class="uc-fe-editable-list-item"
           >
             <span
-              class="uc-fe-input emotion-2 emotion-3"
+              class="uc-fe-input emotion-0 emotion-1"
             >
-              <span
-                class="emotion-0 emotion-1"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-1"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-4 emotion-5"
+              class="uc-fe-combine emotion-2 emotion-3"
               spacing="md"
             />
           </div>
@@ -5065,34 +5241,34 @@ exports[`EditableList demo -- itemDeletion 1`] = `
             class="uc-fe-editable-list-item"
           >
             <span
-              class="uc-fe-input emotion-2 emotion-3"
+              class="uc-fe-input emotion-0 emotion-1"
             >
-              <span
-                class="emotion-0 emotion-1"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-2"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-4 emotion-5"
+              class="uc-fe-combine emotion-2 emotion-3"
               spacing="md"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-30 emotion-31"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-20 emotion-21"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-28 emotion-29"
+                    class=" emotion-18 emotion-19"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -5113,22 +5289,22 @@ exports[`EditableList demo -- itemDeletion 1`] = `
             class="uc-fe-editable-list-item"
           >
             <span
-              class="uc-fe-input emotion-2 emotion-3"
+              class="uc-fe-input emotion-0 emotion-1"
             >
-              <span
-                class="emotion-0 emotion-1"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-3"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-4 emotion-5"
+              class="uc-fe-combine emotion-2 emotion-3"
               spacing="md"
             />
           </div>
@@ -5140,34 +5316,34 @@ exports[`EditableList demo -- itemDeletion 1`] = `
             class="uc-fe-editable-list-item"
           >
             <span
-              class="uc-fe-input emotion-2 emotion-3"
+              class="uc-fe-input emotion-0 emotion-1"
             >
-              <span
-                class="emotion-0 emotion-1"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-4"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-4 emotion-5"
+              class="uc-fe-combine emotion-2 emotion-3"
               spacing="md"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-30 emotion-31"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-20 emotion-21"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-28 emotion-29"
+                    class=" emotion-18 emotion-19"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -5182,12 +5358,12 @@ exports[`EditableList demo -- itemDeletion 1`] = `
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-30 emotion-31"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-20 emotion-21"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-28 emotion-29"
+                    class=" emotion-18 emotion-19"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -5225,10 +5401,8 @@ exports[`EditableList demo -- size 1`] = `
   margin-left: 24px;
 }
 
-.emotion-36 {
+.emotion-30 {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
   box-sizing: border-box;
   font-size: 12px;
   border-radius: 2px;
@@ -5239,88 +5413,112 @@ exports[`EditableList demo -- size 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-}
-
-.emotion-36.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-36 input {
+  display: inline-block;
   vertical-align: middle;
-  display: table-cell;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0px 8px;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
 }
 
-.emotion-36 input,
-.emotion-36 input:hover,
-.emotion-36 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-36:hover {
+.emotion-30:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.emotion-36 input {
-  line-height: 26px;
-  height: 26px;
+.emotion-30 .uc-fe-input-wrap,
+.emotion-30 .uc-fe-input-prefix,
+.emotion-30 .uc-fe-input-suffix,
+.emotion-30 input {
+  padding: 0 4px;
 }
 
-.emotion-36 input::-webkit-input-placeholder {
+.emotion-30.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-30 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-30 .uc-fe-input-prefix,
+.emotion-30 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-30 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-30 input,
+.emotion-30 input:hover,
+.emotion-30 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-30 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-36 input::-moz-placeholder {
+.emotion-30 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-36 input:-ms-input-placeholder {
+.emotion-30 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-36 input::placeholder {
+.emotion-30 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-4 {
-  display: table;
-  width: 100%;
-}
-
-.emotion-42 > .uc-fe-combine-item,
-.emotion-42 > .uc-fe-combine-separator {
+.emotion-36 > .uc-fe-combine-item,
+.emotion-36 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-42 > .uc-fe-combine-item:focus {
+.emotion-36 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-42 > .uc-fe-combine-item:hover {
+.emotion-36 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-42 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-42 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-42 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-36 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-36 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-36 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
-.emotion-40 {
+.emotion-34 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -5351,13 +5549,13 @@ exports[`EditableList demo -- size 1`] = `
   width: 28px;
 }
 
-.emotion-40:link,
-.emotion-40:visited {
+.emotion-34:link,
+.emotion-34:visited {
   color: #0a1633;
 }
 
-.emotion-40:hover,
-.emotion-40:active {
+.emotion-34:hover,
+.emotion-34:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -5365,7 +5563,7 @@ exports[`EditableList demo -- size 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-8 {
+.emotion-6 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -5374,7 +5572,7 @@ exports[`EditableList demo -- size 1`] = `
   height: 12px;
 }
 
-.emotion-30 {
+.emotion-26 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -5402,13 +5600,13 @@ exports[`EditableList demo -- size 1`] = `
   line-height: 26px;
 }
 
-.emotion-30:link,
-.emotion-30:visited {
+.emotion-26:link,
+.emotion-26:visited {
   color: #0a1633;
 }
 
-.emotion-30:hover,
-.emotion-30:active {
+.emotion-26:hover,
+.emotion-26:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -5458,10 +5656,8 @@ exports[`EditableList demo -- size 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-6 {
+.emotion-4 {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
   box-sizing: border-box;
   font-size: 12px;
   border-radius: 2px;
@@ -5472,83 +5668,112 @@ exports[`EditableList demo -- size 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-}
-
-.emotion-6.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-6 input {
+  display: inline-block;
   vertical-align: middle;
-  display: table-cell;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0px 8px;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
 }
 
-.emotion-6 input,
-.emotion-6 input:hover,
-.emotion-6 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-6:hover {
+.emotion-4:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.emotion-6 input {
-  line-height: 22px;
-  height: 22px;
+.emotion-4 .uc-fe-input-wrap,
+.emotion-4 .uc-fe-input-prefix,
+.emotion-4 .uc-fe-input-suffix,
+.emotion-4 input {
+  padding: 0 4px;
 }
 
-.emotion-6 input::-webkit-input-placeholder {
+.emotion-4.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-4 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 .uc-fe-input-prefix,
+.emotion-4 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-4 input,
+.emotion-4 input:hover,
+.emotion-4 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-4 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-6 input::-moz-placeholder {
+.emotion-4 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-6 input:-ms-input-placeholder {
+.emotion-4 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-6 input::placeholder {
+.emotion-4 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-12 > .uc-fe-combine-item,
-.emotion-12 > .uc-fe-combine-separator {
+.emotion-10 > .uc-fe-combine-item,
+.emotion-10 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-12 > .uc-fe-combine-item:focus {
+.emotion-10 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-12 > .uc-fe-combine-item:hover {
+.emotion-10 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-12 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-10 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-10 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-10 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 4px;
 }
 
-.emotion-10 {
+.emotion-8 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -5579,13 +5804,13 @@ exports[`EditableList demo -- size 1`] = `
   width: 24px;
 }
 
-.emotion-10:link,
-.emotion-10:visited {
+.emotion-8:link,
+.emotion-8:visited {
   color: #0a1633;
 }
 
-.emotion-10:hover,
-.emotion-10:active {
+.emotion-8:hover,
+.emotion-8:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -5593,7 +5818,7 @@ exports[`EditableList demo -- size 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-60 {
+.emotion-52 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -5621,13 +5846,13 @@ exports[`EditableList demo -- size 1`] = `
   line-height: 30px;
 }
 
-.emotion-60:link,
-.emotion-60:visited {
+.emotion-52:link,
+.emotion-52:visited {
   color: #0a1633;
 }
 
-.emotion-60:hover,
-.emotion-60:active {
+.emotion-52:hover,
+.emotion-52:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -5635,10 +5860,8 @@ exports[`EditableList demo -- size 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-66 {
+.emotion-56 {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
   box-sizing: border-box;
   font-size: 12px;
   border-radius: 2px;
@@ -5649,83 +5872,112 @@ exports[`EditableList demo -- size 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-}
-
-.emotion-66.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-66 input {
+  display: inline-block;
   vertical-align: middle;
-  display: table-cell;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0px 8px;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
 }
 
-.emotion-66 input,
-.emotion-66 input:hover,
-.emotion-66 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-66:hover {
+.emotion-56:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.emotion-66 input {
-  line-height: 30px;
-  height: 30px;
+.emotion-56 .uc-fe-input-wrap,
+.emotion-56 .uc-fe-input-prefix,
+.emotion-56 .uc-fe-input-suffix,
+.emotion-56 input {
+  padding: 0 4px;
 }
 
-.emotion-66 input::-webkit-input-placeholder {
+.emotion-56.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-56 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-56 .uc-fe-input-prefix,
+.emotion-56 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-56 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-56 input,
+.emotion-56 input:hover,
+.emotion-56 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-56 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-66 input::-moz-placeholder {
+.emotion-56 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-66 input:-ms-input-placeholder {
+.emotion-56 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-66 input::placeholder {
+.emotion-56 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-72 > .uc-fe-combine-item,
-.emotion-72 > .uc-fe-combine-separator {
+.emotion-62 > .uc-fe-combine-item,
+.emotion-62 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-72 > .uc-fe-combine-item:focus {
+.emotion-62 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-72 > .uc-fe-combine-item:hover {
+.emotion-62 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-72 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-72 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-72 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-62 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-62 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-62 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 12px;
 }
 
-.emotion-70 {
+.emotion-60 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -5756,13 +6008,13 @@ exports[`EditableList demo -- size 1`] = `
   width: 32px;
 }
 
-.emotion-70:link,
-.emotion-70:visited {
+.emotion-60:link,
+.emotion-60:visited {
   color: #0a1633;
 }
 
-.emotion-70:hover,
-.emotion-70:active {
+.emotion-60:hover,
+.emotion-60:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -5788,10 +6040,8 @@ exports[`EditableList demo -- size 1`] = `
   margin-left: 24px;
 }
 
-.emotion-36 {
+.emotion-30 {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
   box-sizing: border-box;
   font-size: 12px;
   border-radius: 2px;
@@ -5802,88 +6052,112 @@ exports[`EditableList demo -- size 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-}
-
-.emotion-36.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-36 input {
+  display: inline-block;
   vertical-align: middle;
-  display: table-cell;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0px 8px;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
 }
 
-.emotion-36 input,
-.emotion-36 input:hover,
-.emotion-36 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-36:hover {
+.emotion-30:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.emotion-36 input {
-  line-height: 26px;
-  height: 26px;
+.emotion-30 .uc-fe-input-wrap,
+.emotion-30 .uc-fe-input-prefix,
+.emotion-30 .uc-fe-input-suffix,
+.emotion-30 input {
+  padding: 0 4px;
 }
 
-.emotion-36 input::-webkit-input-placeholder {
+.emotion-30.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-30 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-30 .uc-fe-input-prefix,
+.emotion-30 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-30 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-30 input,
+.emotion-30 input:hover,
+.emotion-30 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-30 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-36 input::-moz-placeholder {
+.emotion-30 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-36 input:-ms-input-placeholder {
+.emotion-30 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-36 input::placeholder {
+.emotion-30 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-4 {
-  display: table;
-  width: 100%;
-}
-
-.emotion-42 > .uc-fe-combine-item,
-.emotion-42 > .uc-fe-combine-separator {
+.emotion-36 > .uc-fe-combine-item,
+.emotion-36 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-42 > .uc-fe-combine-item:focus {
+.emotion-36 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-42 > .uc-fe-combine-item:hover {
+.emotion-36 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-42 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-42 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-42 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-36 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-36 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-36 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
-.emotion-40 {
+.emotion-34 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -5914,13 +6188,13 @@ exports[`EditableList demo -- size 1`] = `
   width: 28px;
 }
 
-.emotion-40:link,
-.emotion-40:visited {
+.emotion-34:link,
+.emotion-34:visited {
   color: #0a1633;
 }
 
-.emotion-40:hover,
-.emotion-40:active {
+.emotion-34:hover,
+.emotion-34:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -5928,7 +6202,7 @@ exports[`EditableList demo -- size 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-8 {
+.emotion-6 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -5937,7 +6211,7 @@ exports[`EditableList demo -- size 1`] = `
   height: 12px;
 }
 
-.emotion-30 {
+.emotion-26 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -5965,13 +6239,13 @@ exports[`EditableList demo -- size 1`] = `
   line-height: 26px;
 }
 
-.emotion-30:link,
-.emotion-30:visited {
+.emotion-26:link,
+.emotion-26:visited {
   color: #0a1633;
 }
 
-.emotion-30:hover,
-.emotion-30:active {
+.emotion-26:hover,
+.emotion-26:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -6021,10 +6295,8 @@ exports[`EditableList demo -- size 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-6 {
+.emotion-4 {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
   box-sizing: border-box;
   font-size: 12px;
   border-radius: 2px;
@@ -6035,83 +6307,112 @@ exports[`EditableList demo -- size 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-}
-
-.emotion-6.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-6 input {
+  display: inline-block;
   vertical-align: middle;
-  display: table-cell;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0px 8px;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
 }
 
-.emotion-6 input,
-.emotion-6 input:hover,
-.emotion-6 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-6:hover {
+.emotion-4:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.emotion-6 input {
-  line-height: 22px;
-  height: 22px;
+.emotion-4 .uc-fe-input-wrap,
+.emotion-4 .uc-fe-input-prefix,
+.emotion-4 .uc-fe-input-suffix,
+.emotion-4 input {
+  padding: 0 4px;
 }
 
-.emotion-6 input::-webkit-input-placeholder {
+.emotion-4.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-4 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 .uc-fe-input-prefix,
+.emotion-4 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-4 input,
+.emotion-4 input:hover,
+.emotion-4 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-4 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-6 input::-moz-placeholder {
+.emotion-4 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-6 input:-ms-input-placeholder {
+.emotion-4 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-6 input::placeholder {
+.emotion-4 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-12 > .uc-fe-combine-item,
-.emotion-12 > .uc-fe-combine-separator {
+.emotion-10 > .uc-fe-combine-item,
+.emotion-10 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-12 > .uc-fe-combine-item:focus {
+.emotion-10 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-12 > .uc-fe-combine-item:hover {
+.emotion-10 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-12 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-10 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-10 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-10 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 4px;
 }
 
-.emotion-10 {
+.emotion-8 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -6142,13 +6443,13 @@ exports[`EditableList demo -- size 1`] = `
   width: 24px;
 }
 
-.emotion-10:link,
-.emotion-10:visited {
+.emotion-8:link,
+.emotion-8:visited {
   color: #0a1633;
 }
 
-.emotion-10:hover,
-.emotion-10:active {
+.emotion-8:hover,
+.emotion-8:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -6156,7 +6457,7 @@ exports[`EditableList demo -- size 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-60 {
+.emotion-52 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -6184,13 +6485,13 @@ exports[`EditableList demo -- size 1`] = `
   line-height: 30px;
 }
 
-.emotion-60:link,
-.emotion-60:visited {
+.emotion-52:link,
+.emotion-52:visited {
   color: #0a1633;
 }
 
-.emotion-60:hover,
-.emotion-60:active {
+.emotion-52:hover,
+.emotion-52:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -6198,10 +6499,8 @@ exports[`EditableList demo -- size 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-66 {
+.emotion-56 {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
   box-sizing: border-box;
   font-size: 12px;
   border-radius: 2px;
@@ -6212,83 +6511,112 @@ exports[`EditableList demo -- size 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-}
-
-.emotion-66.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-66 input {
+  display: inline-block;
   vertical-align: middle;
-  display: table-cell;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0px 8px;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
 }
 
-.emotion-66 input,
-.emotion-66 input:hover,
-.emotion-66 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-66:hover {
+.emotion-56:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #fafafc;
 }
 
-.emotion-66 input {
-  line-height: 30px;
-  height: 30px;
+.emotion-56 .uc-fe-input-wrap,
+.emotion-56 .uc-fe-input-prefix,
+.emotion-56 .uc-fe-input-suffix,
+.emotion-56 input {
+  padding: 0 4px;
 }
 
-.emotion-66 input::-webkit-input-placeholder {
+.emotion-56.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-56 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-56 .uc-fe-input-prefix,
+.emotion-56 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-56 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-56 input,
+.emotion-56 input:hover,
+.emotion-56 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-56 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-66 input::-moz-placeholder {
+.emotion-56 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-66 input:-ms-input-placeholder {
+.emotion-56 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-66 input::placeholder {
+.emotion-56 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-72 > .uc-fe-combine-item,
-.emotion-72 > .uc-fe-combine-separator {
+.emotion-62 > .uc-fe-combine-item,
+.emotion-62 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-72 > .uc-fe-combine-item:focus {
+.emotion-62 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-72 > .uc-fe-combine-item:hover {
+.emotion-62 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-72 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-72 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-72 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-62 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-62 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-62 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 12px;
 }
 
-.emotion-70 {
+.emotion-60 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -6319,13 +6647,13 @@ exports[`EditableList demo -- size 1`] = `
   width: 32px;
 }
 
-.emotion-70:link,
-.emotion-70:visited {
+.emotion-60:link,
+.emotion-60:visited {
   color: #0a1633;
 }
 
-.emotion-70:hover,
-.emotion-70:active {
+.emotion-60:hover,
+.emotion-60:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -6365,34 +6693,34 @@ exports[`EditableList demo -- size 1`] = `
             class="uc-fe-editable-list-item"
           >
             <span
-              class="uc-fe-input emotion-6 emotion-7"
+              class="uc-fe-input emotion-4 emotion-5"
             >
-              <span
-                class="emotion-4 emotion-5"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-0"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-12 emotion-13"
+              class="uc-fe-combine emotion-10 emotion-11"
               spacing="sm"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border uc-fe-button-square emotion-10 emotion-1"
+                  class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border uc-fe-button-square emotion-8 emotion-1"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-8 emotion-9"
+                    class=" emotion-6 emotion-7"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -6413,34 +6741,34 @@ exports[`EditableList demo -- size 1`] = `
             class="uc-fe-editable-list-item"
           >
             <span
-              class="uc-fe-input emotion-6 emotion-7"
+              class="uc-fe-input emotion-4 emotion-5"
             >
-              <span
-                class="emotion-4 emotion-5"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-1"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-12 emotion-13"
+              class="uc-fe-combine emotion-10 emotion-11"
               spacing="sm"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border uc-fe-button-square emotion-10 emotion-1"
+                  class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border uc-fe-button-square emotion-8 emotion-1"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-8 emotion-9"
+                    class=" emotion-6 emotion-7"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -6455,12 +6783,12 @@ exports[`EditableList demo -- size 1`] = `
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border uc-fe-button-square emotion-10 emotion-1"
+                  class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border uc-fe-button-square emotion-8 emotion-1"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-8 emotion-9"
+                    class=" emotion-6 emotion-7"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -6487,7 +6815,7 @@ exports[`EditableList demo -- size 1`] = `
         class="emotion-2 emotion-3"
       >
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-30 emotion-1"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-26 emotion-1"
           type="button"
         >
           添加数据
@@ -6507,34 +6835,34 @@ exports[`EditableList demo -- size 1`] = `
             class="uc-fe-editable-list-item"
           >
             <span
-              class="uc-fe-input emotion-36 emotion-7"
+              class="uc-fe-input emotion-30 emotion-5"
             >
-              <span
-                class="emotion-4 emotion-5"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-0"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-42 emotion-13"
+              class="uc-fe-combine emotion-36 emotion-11"
               spacing="md"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-40 emotion-1"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-34 emotion-1"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-8 emotion-9"
+                    class=" emotion-6 emotion-7"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -6555,34 +6883,34 @@ exports[`EditableList demo -- size 1`] = `
             class="uc-fe-editable-list-item"
           >
             <span
-              class="uc-fe-input emotion-36 emotion-7"
+              class="uc-fe-input emotion-30 emotion-5"
             >
-              <span
-                class="emotion-4 emotion-5"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-1"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-42 emotion-13"
+              class="uc-fe-combine emotion-36 emotion-11"
               spacing="md"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-40 emotion-1"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-34 emotion-1"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-8 emotion-9"
+                    class=" emotion-6 emotion-7"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -6597,12 +6925,12 @@ exports[`EditableList demo -- size 1`] = `
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-40 emotion-1"
+                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-square emotion-34 emotion-1"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-8 emotion-9"
+                    class=" emotion-6 emotion-7"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -6629,7 +6957,7 @@ exports[`EditableList demo -- size 1`] = `
         class="emotion-2 emotion-3"
       >
         <button
-          class="uc-fe-button uc-fe-button-size-lg uc-fe-button-styletype-border emotion-60 emotion-1"
+          class="uc-fe-button uc-fe-button-size-lg uc-fe-button-styletype-border emotion-52 emotion-1"
           type="button"
         >
           添加数据
@@ -6649,34 +6977,34 @@ exports[`EditableList demo -- size 1`] = `
             class="uc-fe-editable-list-item"
           >
             <span
-              class="uc-fe-input emotion-66 emotion-7"
+              class="uc-fe-input emotion-56 emotion-5"
             >
-              <span
-                class="emotion-4 emotion-5"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-0"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-72 emotion-13"
+              class="uc-fe-combine emotion-62 emotion-11"
               spacing="lg"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-lg uc-fe-button-styletype-border uc-fe-button-square emotion-70 emotion-1"
+                  class="uc-fe-button uc-fe-button-size-lg uc-fe-button-styletype-border uc-fe-button-square emotion-60 emotion-1"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-8 emotion-9"
+                    class=" emotion-6 emotion-7"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -6697,34 +7025,34 @@ exports[`EditableList demo -- size 1`] = `
             class="uc-fe-editable-list-item"
           >
             <span
-              class="uc-fe-input emotion-66 emotion-7"
+              class="uc-fe-input emotion-56 emotion-5"
             >
-              <span
-                class="emotion-4 emotion-5"
+              <div
+                class="uc-fe-input-wrap"
               >
                 <input
                   value="name-1"
                 />
-              </span>
+              </div>
             </span>
           </div>
           <div
             class="uc-fe-editable-list-action"
           >
             <div
-              class="uc-fe-combine emotion-72 emotion-13"
+              class="uc-fe-combine emotion-62 emotion-11"
               spacing="lg"
             >
               <div
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-lg uc-fe-button-styletype-border uc-fe-button-square emotion-70 emotion-1"
+                  class="uc-fe-button uc-fe-button-size-lg uc-fe-button-styletype-border uc-fe-button-square emotion-60 emotion-1"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-8 emotion-9"
+                    class=" emotion-6 emotion-7"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -6739,12 +7067,12 @@ exports[`EditableList demo -- size 1`] = `
                 class="uc-fe-combine-item"
               >
                 <button
-                  class="uc-fe-button uc-fe-button-size-lg uc-fe-button-styletype-border uc-fe-button-square emotion-70 emotion-1"
+                  class="uc-fe-button uc-fe-button-size-lg uc-fe-button-styletype-border uc-fe-button-square emotion-60 emotion-1"
                   shape="square"
                   type="button"
                 >
                   <svg
-                    class=" emotion-8 emotion-9"
+                    class=" emotion-6 emotion-7"
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
                   >

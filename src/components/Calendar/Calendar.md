@@ -2,7 +2,6 @@
 
 -   这是 日历 组件
 -   需要自行导入 moment 语言包、设置时区
--   默认的弹出层容器为 forwardPopupContainer={triggerNode => triggerNode.parentNode}，默认会查找上层的建议容器
 
 ### 演示
 

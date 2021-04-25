@@ -1,13 +1,14 @@
 import React from 'react';
-import DatePicker from 'components/DatePicker';
+
+import DatePicker from 'src/components/DatePicker';
 
 // demo start
-const { Size } = DatePicker;
+const { Sizes } = DatePicker;
 class Demo extends React.Component {
     render() {
         return (
             <div>
-                {Size.map(size => (
+                {Sizes.map(size => (
                     <div className="demo-wrap" key={size}>
                         <DatePicker size={size} />
                     </div>
