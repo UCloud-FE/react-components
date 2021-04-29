@@ -4,8 +4,8 @@ import { DesignToken, DesignTokens } from './interface';
 
 export const tuple = <T extends string[]>(...args: T) => args;
 
-const Sizes = tuple('sm', 'md', 'lg');
-type Size = typeof Sizes[number];
+export const Sizes = tuple('sm', 'md', 'lg');
+export type Size = typeof Sizes[number];
 const keyMap: Record<Size, DesignToken> = {
     sm: 'T_HEIGHT_SM',
     md: 'T_HEIGHT_MD',

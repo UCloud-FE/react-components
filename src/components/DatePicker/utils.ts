@@ -1,7 +1,13 @@
-import moment from 'moment';
+import moment, { Moment } from 'moment';
 import _ from 'lodash';
+import { TDate } from '@z-r/calendar/types/interface';
 
-import { isDateDisabled, getValidDate } from 'components/Calendar/utils';
+export interface Rules {
+    range?: [TDate, TDate];
+    custom?: (date: Moment, value?: Moment | null) => boolean;
+}
+
+import { isDateDisabled, getValidDate } from 'src/components/Calendar/utils';
 
 /**
  *
@@ -50,27 +56,29 @@ const isRangeDateDisabled = (date, value, rules, start, end, tag) => {
     });
 };
 
-const isRangeDateValid = (start, end, rules, precision) => {
-    start = moment(start);
-    end = moment(end);
-    const precisionMap = {
-        millisecond: 0,
-        second: 1,
-        minute: 2,
-        hour: 3,
-        date: 4,
-        month: 5,
-        year: 6
-    };
-    const resetValueMap = {
-        millisecond: 0,
-        second: 0,
-        minute: 0,
-        hour: 0,
-        date: 1,
-        month: 0
-    };
-    let resetMap;
+const precisionMap = {
+    millisecond: 0,
+    second: 1,
+    minute: 2,
+    hour: 3,
+    date: 4,
+    month: 5,
+    year: 6
+};
+const resetValueMap = {
+    millisecond: 0,
+    second: 0,
+    minute: 0,
+    hour: 0,
+    date: 1,
+    month: 0
+};
+
+const isRangeDateValid = (value: [TDate | null, TDate | null], rules, precision: null | keyof typeof precisionMap) => {
+    let [start, end] = value;
+    start = start == null ? null : moment(+start);
+    end = end === null ? null : moment(+end);
+    let resetMap: Record<keyof typeof precisionMap, number>;
     if (precision) {
         const precisionLevel = precisionMap[precision];
         resetMap = {};
@@ -111,4 +119,21 @@ const isRangeDateValid = (start, end, rules, precision) => {
     return true;
 };
 
-export { isDateDisabled, isRangeDateDisabled, getValidDate, isRangeDateValid };
+const isDateValid = (date: TDate, value?: TDate | null, rules?: Rules) => {
+    date = moment(+date);
+    if (!rules) {
+        return false;
+    }
+    const { range, custom } = rules;
+    if (range) {
+        const [start, end] = range;
+        if ((start != null && date < start) || (end != null && date > end)) {
+            return true;
+        }
+    }
+    if (custom) {
+        return custom(date, value == null ? value : moment(+value));
+    }
+};
+
+export { isDateDisabled, isRangeDateDisabled, getValidDate, isDateValid, isRangeDateValid };

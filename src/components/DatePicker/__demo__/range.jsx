@@ -6,7 +6,7 @@ import Radio from 'components/Radio';
 import Switch from 'components/Switch';
 
 // demo start
-const { Size } = DatePicker;
+const { Sizes } = DatePicker;
 class Demo extends React.Component {
     constructor(props) {
         super(props);
@@ -16,7 +16,7 @@ class Demo extends React.Component {
         };
     }
     render() {
-        const { size, type, disabled, hideOptions } = this.state;
+        const { size, type, disabled, nullableS, nullableE } = this.state;
         const itemLayout = {
             labelCol: {
                 span: 3
@@ -38,15 +38,18 @@ class Demo extends React.Component {
                     <Form.Item label="size" {...itemLayout}>
                         <Radio.Group
                             value={size}
-                            options={Size.map(value => ({ value }))}
+                            options={Sizes.map(value => ({ value }))}
                             onChange={size => this.setState({ size })}
                         />
                     </Form.Item>
                     <Form.Item label="disabled" {...itemLayout}>
                         <Switch checked={disabled} onChange={disabled => this.setState({ disabled })} />
                     </Form.Item>
-                    <Form.Item label="hideOptions" {...itemLayout}>
-                        <Switch checked={hideOptions} onChange={hideOptions => this.setState({ hideOptions })} />
+                    <Form.Item label="nullable[0]" {...itemLayout}>
+                        <Switch checked={nullableS} onChange={nullableS => this.setState({ nullableS })} />
+                    </Form.Item>
+                    <Form.Item label="nullable[1]" {...itemLayout}>
+                        <Switch checked={nullableE} onChange={nullableE => this.setState({ nullableE })} />
                     </Form.Item>
                 </Form>
                 <div className="demo-wrap">
@@ -87,7 +90,7 @@ class Demo extends React.Component {
                             size,
                             type,
                             disabled,
-                            hideOptions
+                            nullable: [nullableS, nullableE]
                         }}
                         rules={{
                             range: [moment().add({ month: -1 }), moment().add({ month: 1 })],

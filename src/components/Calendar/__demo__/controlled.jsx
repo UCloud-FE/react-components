@@ -1,6 +1,7 @@
 import React from 'react';
-import Calendar from 'components/Calendar';
 import moment from 'moment';
+
+import Calendar from 'src/components/Calendar';
 
 // demo start
 class Demo extends React.Component {
@@ -14,11 +15,7 @@ class Demo extends React.Component {
         return (
             <div>
                 <div className="demo-wrap">
-                    <Calendar
-                        value={this.state.value}
-                        onSelect={v => this.setState(v)}
-                        onChange={v => console.log('change', v)}
-                    />
+                    <Calendar value={this.state.value} onChange={v => this.setState({ value: v })} />
                 </div>
                 <div className="demo-wrap">
                     <Calendar defaultValue={moment()} />

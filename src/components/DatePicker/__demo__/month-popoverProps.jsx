@@ -1,4 +1,5 @@
 import React from 'react';
+
 import DatePicker from 'src/components/DatePicker';
 import Modal from 'src/components/Modal';
 import Button from 'src/components/Button';
@@ -14,7 +15,7 @@ const Demo = () => (
                             title: 'datePicker'
                         },
                         <div style={{ padding: 24 }}>
-                            <DatePicker onChange={v => console.log(v.format())} />
+                            <DatePicker.Month onChange={v => console.log(v.format())} />
                         </div>
                     );
                 }}
@@ -28,7 +29,7 @@ const Demo = () => (
                             title: 'datePicker'
                         },
                         <div style={{ padding: 24, position: 'relative', overflow: 'auto' }}>
-                            <DatePicker onChange={v => console.log(v.format())} />
+                            <DatePicker.Month onChange={v => console.log(v.format())} />
                         </div>
                     );
                 }}
@@ -42,9 +43,9 @@ const Demo = () => (
                             title: 'datePicker'
                         },
                         <div style={{ padding: 24, position: 'relative', overflow: 'auto' }}>
-                            <DatePicker
+                            <DatePicker.Month
                                 onChange={v => console.log(v.format())}
-                                getCalendarContainer={() => document.body}
+                                popoverProps={{ getPopupContainer: () => document.body }}
                                 zIndex={1020}
                             />
                         </div>

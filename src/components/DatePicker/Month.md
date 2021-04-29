@@ -19,9 +19,24 @@
 ```js {"codepath": "month-rules.jsx"}
 ```
 
+#### nullable - 是否可为空/输入
+
+```js {"codepath": "month-nullable.jsx"}
+```
+
 #### display - 自定义展示形式
 
 ```js {"codepath": "month-display.jsx"}
+```
+
+#### format - 自定义格式化/输入
+
+```js {"codepath": "month-format.jsx"}
+```
+
+#### status - 状态
+
+```js {"codepath": "month-status.jsx"}
 ```
 
 #### disabled - 禁用
@@ -34,7 +49,7 @@
 ```js {"codepath": "month-uncontrolled.jsx"}
 ```
 
-#### getCalendarContainer - 弹出层容器
+#### popoverProps - 弹出层容器
 
-```js {"codepath": "month-getcalendarcontainer.jsx"}
+```js {"codepath": "month-popoverProps.jsx"}
 ```

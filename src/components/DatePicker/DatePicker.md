@@ -20,9 +20,24 @@
 ```js {"codepath": "datepicker-rules.jsx"}
 ```
 
+#### nullable - 是否可为空/输入
+
+```js {"codepath": "datepicker-nullable.jsx"}
+```
+
 #### display - 自定义展示形式
 
 ```js {"codepath": "datepicker-display.jsx"}
+```
+
+#### format - 自定义格式化/输入
+
+```js {"codepath": "datepicker-format.jsx"}
+```
+
+#### status - 状态
+
+```js {"codepath": "datepicker-status.jsx"}
 ```
 
 #### disabled - 禁用
@@ -35,7 +50,7 @@
 ```js {"codepath": "datepicker-uncontrolled.jsx"}
 ```
 
-#### getCalendarContainer - 弹出容器定义
+#### popoverProps - 弹出容器定义
 
-```js {"codepath": "datepicker-getcalendarcontainer.jsx"}
+```js {"codepath": "datepicker-popoverProps.jsx"}
 ```

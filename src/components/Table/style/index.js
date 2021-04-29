@@ -150,7 +150,7 @@ export const TableWrap = withProps({
                     &-row-expand-icon-cell,
                     &-expand-icon-th,
                     &-expand-icon-col,
-                    &-expanded-row > td:first-child {
+                    &-expanded-row > td:first-of-type {
                         display: none;
                     }
                 `

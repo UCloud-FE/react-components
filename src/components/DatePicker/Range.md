@@ -24,9 +24,24 @@
 ```js {"codepath": "range-display.jsx"}
 ```
 
+#### format - 自定义格式化/输入
+
+```js {"codepath": "range-format.jsx"}
+```
+
 #### rules - 自定义规则
 
 ```js {"codepath": "range-rules.jsx"}
+```
+
+#### status - 状态
+
+```js {"codepath": "range-status.jsx"}
+```
+
+#### rangeTip - 自定义提示
+
+```js {"codepath": "range-rangeTip.jsx"}
 ```
 
 #### disabled - 禁用
@@ -34,14 +49,14 @@
 ```js {"codepath": "range-disabled.jsx"}
 ```
 
+#### nullable - 是否可为空
+
+```js {"codepath": "range-nullable.jsx"}
+```
+
 #### options - 自定义快捷选项
 
 ```js {"codepath": "range-options.jsx"}
-```
-
-#### hideOptions - 隐藏快捷选项框
-
-```js {"codepath": "range-hideOptions.jsx"}
 ```
 
 #### onInitialChange - 初始化回调
@@ -56,5 +71,5 @@
 
 #### popoverProps - 自定义弹出层
 
-```js {"codepath": "range-popoverprops.jsx"}
+```js {"codepath": "range-popoverProps.jsx"}
 ```

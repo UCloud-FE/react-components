@@ -12,6 +12,7 @@ import Gitalk from 'gitalk/dist/gitalk-component';
 
 import { toggleDarkTheme, isDarkTheme } from './ReactExample';
 import Switch from 'src/components/Switch';
+import Combine from 'src/components/Combine';
 
 export const DarkThemeContext = React.createContext();
 
@@ -164,7 +165,7 @@ export function StyleGuideRenderer({ classes, title, homepageUrl, children, toc,
                 <header className={classes.header}>
                     <div className={classes.bar}>
                         <Logo show>{title}</Logo>
-                        <nav className={classes.nav}>
+                        <Combine className={classes.nav}>
                             <a
                                 className={classes.headerLink}
                                 target="_blank"
@@ -186,18 +187,17 @@ export function StyleGuideRenderer({ classes, title, homepageUrl, children, toc,
                             >
                                 NPM
                             </a>
-                            <span>
-                                <span className={classes.darkLabel}>Dark:</span>
-                                <Switch
-                                    value={darkTheme}
-                                    size="sm"
-                                    onChange={v => {
-                                        setDarkTheme(v);
-                                        toggleDarkTheme(v);
-                                    }}
-                                />
-                            </span>
-                        </nav>
+                            <Switch onChange={v => {}} offText="CN" onText="EN" />
+                            <Switch
+                                value={darkTheme}
+                                offText="NOR"
+                                onText="DARK"
+                                onChange={v => {
+                                    setDarkTheme(v);
+                                    toggleDarkTheme(v);
+                                }}
+                            />
+                        </Combine>
                     </div>
                 </header>
                 <div className={cx(classes.wrapper, hasSidebar && classes.hasSidebar, classes.fixPaddingTop)}>

@@ -1,5 +1,6 @@
 import React from 'react';
-import Calendar from 'components/Calendar';
+
+import Calendar from 'src/components/Calendar';
 
 // demo start
 const Demo = () => (

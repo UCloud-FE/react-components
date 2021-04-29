@@ -1,5 +1,6 @@
 import React from 'react';
-import DatePicker from 'components/DatePicker';
+
+import DatePicker from 'src/components/DatePicker';
 
 // demo start
 class Demo extends React.Component {
@@ -7,10 +8,10 @@ class Demo extends React.Component {
         return (
             <div>
                 <div className="demo-wrap">
-                    <DatePicker.Range hideOptions />
+                    <DatePicker.Month />
                 </div>
                 <div className="demo-wrap">
-                    <DatePicker.Range />
+                    <DatePicker.Month status="error" />
                 </div>
             </div>
         );
