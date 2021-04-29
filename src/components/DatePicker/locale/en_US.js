@@ -1,5 +1,10 @@
 export default {
     custom: 'Custom',
+    inputErrorTip: 'Input is invalid',
+    dateErrorTip: 'Date is invalid',
+    nullableErrorTip: "Can't be empty",
+    chooseTodayNow: 'Choose now',
+    chooseThisMonth: 'Choose this month',
     rangeErrorTip: 'Out of range',
     maxRangeErrorTip: 'Greater than max range',
     minRangeErrorTip: 'Less than min range',
