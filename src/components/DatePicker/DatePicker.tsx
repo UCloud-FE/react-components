@@ -55,6 +55,8 @@ export type DatePickerProps = {
     disabled?: boolean;
     /** 状态 */
     status?: 'default' | 'error';
+    /** placeholder */
+    placeholder?: string;
     /** 自定义 popover，参考 popover */
     popoverProps?: any;
     /**

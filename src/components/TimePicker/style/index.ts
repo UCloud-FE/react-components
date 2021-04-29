@@ -53,7 +53,7 @@ export const STime = sWrap<any>({})(
                         position: absolute;
                         display: block;
                         height: 32px;
-                        width: 100%;
+                        width: 40px;
                         box-sizing: border-box;
                         pointer-events: none;
                         background: ${DT.T_COLOR_BG_DEFAULT_HOVER};

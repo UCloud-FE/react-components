@@ -33,7 +33,8 @@ const RangePickerWithoutMemo = forwardRef(
             type = 'date',
             readonly,
             tip,
-            error
+            error,
+            placeholder
         }: DatePickerProps & {
             prefix?: boolean;
             onActiveChange: (active: boolean) => void;
@@ -64,7 +65,8 @@ const RangePickerWithoutMemo = forwardRef(
                 display,
                 disabled,
                 popoverProps: _popoverProps,
-                zIndex
+                zIndex,
+                placeholder
             },
             type === 'month' ? displayToFormatAndTimeModeM : displayToFormatAndTimeMode,
             type

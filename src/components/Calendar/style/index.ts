@@ -47,6 +47,9 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
             text-align: center;
             color: ${DT.T_COLOR_TEXT_REMARK_DARK};
             cursor: pointer;
+            :hover {
+                color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+            }
         }
         .${prefixCls}-header-switcher-wrap {
             display: block;
@@ -109,13 +112,28 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
                 &.${prefixCls}-disabled {
                     background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
                     color: ${DT.T_COLOR_TEXT_DISABLED};
+                    cursor: default;
+                    border-radius: 0;
+                    &.${prefixCls}-prev, &.${prefixCls}-next {
+                        background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
+                    }
+                    &.${prefixCls}-cell-disabled-first {
+                        border-top-left-radius: 2px;
+                        border-bottom-left-radius: 2px;
+                    }
+                    &.${prefixCls}-cell-disabled-last {
+                        border-top-right-radius: 2px;
+                        border-bottom-right-radius: 2px;
+                    }
                 }
+
                 &.${prefixCls}-now {
                     color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
                 }
                 &.${prefixCls}-active {
                     background: ${DT.T_COLOR_BG_PRIMARY_1};
                     color: ${DT.T_COLOR_TEXT_WHITE};
+                    font-weight: bold;
                 }
             }
         }

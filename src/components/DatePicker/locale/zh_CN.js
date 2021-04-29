@@ -9,5 +9,8 @@ export default {
     maxRangeErrorTip: '超出最大范围',
     minRangeErrorTip: '小于最小范围',
     startGreaterThanEndTip: '起始时间不得大于结束时间',
-    confirm: '确定'
+    confirm: '确定',
+    placeholder: '选择日期',
+    placeholderRangeStart: '开始时间',
+    placeholderRangeEnd: '结束时间'
 };

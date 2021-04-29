@@ -7,9 +7,8 @@ import Select from 'src/components/Select';
 import { tableCls } from 'src/components/Calendar/style';
 import { timePrefixCls } from 'src/components/TimePicker/style';
 import { prefixCls as inputPrefixCls } from 'src/components/Input/style';
-import { inlineBlockWithVerticalMixin, Theme, sWrap } from 'src/style';
+import { inlineBlockWithVerticalMixin, Theme, sWrap, getHeightBySize, Size } from 'src/style';
 import config from 'src/config';
-import { SizeDTMap, Size } from 'src/type';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-datepicker';
@@ -33,8 +32,9 @@ export const SPopup = sWrap({})(
         } = props;
         return css`
             box-shadow: ${DT.T_SHADOW_BLOCK_DEFAULT_LG};
+            background: ${DT.T_COLOR_BG_DEFAULT_DARK};
+            border-radius: 2px;
             .${footerCls} {
-                background: ${DT.T_COLOR_BG_DEFAULT_DARK};
                 padding: 12px;
                 .${shortcutCls} {
                     cursor: pointer;
@@ -48,6 +48,7 @@ export const SPopup = sWrap({})(
             .${timePrefixCls} {
                 background: ${DT.T_COLOR_BG_DEFAULT_LIGHT};
                 padding: 0 8px;
+                border-left: 1px solid ${DT.T_COLOR_BG_DEFAULT_DARK};
             }
         `;
     })
@@ -69,9 +70,10 @@ export const SRangeInputWrap = sWrap<{
             readonly,
             status
         } = props;
+        const height = getHeightBySize(DT, size);
         return css`
             display: inline-flex;
-            height: ${DT[SizeDTMap[size]]};
+            height: ${height};
             align-items: center;
             box-sizing: border-box;
             ${

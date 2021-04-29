@@ -41,6 +41,10 @@ exports[`Calendar demo -- base 1`] = `
   cursor: pointer;
 }
 
+.emotion-0 .uc-fe-calendar-header-button:hover {
+  color: #3860f4;
+}
+
 .emotion-0 .uc-fe-calendar-header-switcher-wrap {
   display: block;
   -webkit-flex: 1;
@@ -136,6 +140,23 @@ exports[`Calendar demo -- base 1`] = `
 .emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled {
   background: #f7f7f7;
   color: #cccccc;
+  cursor: default;
+  border-radius: 0;
+}
+
+.emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-prev,
+.emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-next {
+  background: #f7f7f7;
+}
+
+.emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-cell-disabled-first {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-cell-disabled-last {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 
 .emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-now {
@@ -145,6 +166,7 @@ exports[`Calendar demo -- base 1`] = `
 .emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-active {
   background: #3860f4;
   color: #ffffff;
+  font-weight: bold;
 }
 
 .emotion-0 .uc-fe-calendar-prev,
@@ -266,6 +288,10 @@ exports[`Calendar demo -- base 1`] = `
   cursor: pointer;
 }
 
+.emotion-0 .uc-fe-calendar-header-button:hover {
+  color: #3860f4;
+}
+
 .emotion-0 .uc-fe-calendar-header-switcher-wrap {
   display: block;
   -webkit-flex: 1;
@@ -361,6 +387,23 @@ exports[`Calendar demo -- base 1`] = `
 .emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled {
   background: #f7f7f7;
   color: #cccccc;
+  cursor: default;
+  border-radius: 0;
+}
+
+.emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-prev,
+.emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-next {
+  background: #f7f7f7;
+}
+
+.emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-cell-disabled-first {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-cell-disabled-last {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 
 .emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-now {
@@ -370,6 +413,7 @@ exports[`Calendar demo -- base 1`] = `
 .emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-active {
   background: #3860f4;
   color: #ffffff;
+  font-weight: bold;
 }
 
 .emotion-0 .uc-fe-calendar-prev,
@@ -554,7 +598,7 @@ exports[`Calendar demo -- base 1`] = `
               class="uc-fe-calendar-row"
             >
               <div
-                class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  "
+                class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  uc-fe-calendar-cell-disabled-first "
               >
                 1
               </div>
@@ -584,7 +628,7 @@ exports[`Calendar demo -- base 1`] = `
                 6
               </div>
               <div
-                class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  "
+                class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  uc-fe-calendar-cell-disabled-last "
               >
                 7
               </div>
@@ -593,7 +637,7 @@ exports[`Calendar demo -- base 1`] = `
               class="uc-fe-calendar-row"
             >
               <div
-                class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  "
+                class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  uc-fe-calendar-cell-disabled-first "
               >
                 8
               </div>
@@ -618,7 +662,7 @@ exports[`Calendar demo -- base 1`] = `
                 12
               </div>
               <div
-                class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  "
+                class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  uc-fe-calendar-cell-disabled-last "
               >
                 13
               </div>
@@ -710,7 +754,7 @@ exports[`Calendar demo -- base 1`] = `
               class="uc-fe-calendar-row"
             >
               <div
-                class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  "
+                class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  uc-fe-calendar-cell-disabled-first "
               >
                 29
               </div>
@@ -740,7 +784,7 @@ exports[`Calendar demo -- base 1`] = `
                 3
               </div>
               <div
-                class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled uc-fe-calendar-next  "
+                class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled uc-fe-calendar-next  uc-fe-calendar-cell-disabled-last "
               >
                 4
               </div>
@@ -749,7 +793,7 @@ exports[`Calendar demo -- base 1`] = `
               class="uc-fe-calendar-row"
             >
               <div
-                class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled uc-fe-calendar-next  "
+                class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled uc-fe-calendar-next  uc-fe-calendar-cell-disabled-first "
               >
                 5
               </div>
@@ -779,7 +823,7 @@ exports[`Calendar demo -- base 1`] = `
                 10
               </div>
               <div
-                class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled uc-fe-calendar-next  "
+                class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled uc-fe-calendar-next  uc-fe-calendar-cell-disabled-last "
               >
                 11
               </div>
@@ -831,6 +875,10 @@ exports[`Calendar demo -- controlled 1`] = `
   text-align: center;
   color: #7a8baa;
   cursor: pointer;
+}
+
+.emotion-0 .uc-fe-calendar-header-button:hover {
+  color: #3860f4;
 }
 
 .emotion-0 .uc-fe-calendar-header-switcher-wrap {
@@ -928,6 +976,23 @@ exports[`Calendar demo -- controlled 1`] = `
 .emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled {
   background: #f7f7f7;
   color: #cccccc;
+  cursor: default;
+  border-radius: 0;
+}
+
+.emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-prev,
+.emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-next {
+  background: #f7f7f7;
+}
+
+.emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-cell-disabled-first {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-cell-disabled-last {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 
 .emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-now {
@@ -937,6 +1002,7 @@ exports[`Calendar demo -- controlled 1`] = `
 .emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-active {
   background: #3860f4;
   color: #ffffff;
+  font-weight: bold;
 }
 
 .emotion-0 .uc-fe-calendar-prev,
@@ -1058,6 +1124,10 @@ exports[`Calendar demo -- controlled 1`] = `
   cursor: pointer;
 }
 
+.emotion-0 .uc-fe-calendar-header-button:hover {
+  color: #3860f4;
+}
+
 .emotion-0 .uc-fe-calendar-header-switcher-wrap {
   display: block;
   -webkit-flex: 1;
@@ -1153,6 +1223,23 @@ exports[`Calendar demo -- controlled 1`] = `
 .emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled {
   background: #f7f7f7;
   color: #cccccc;
+  cursor: default;
+  border-radius: 0;
+}
+
+.emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-prev,
+.emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-next {
+  background: #f7f7f7;
+}
+
+.emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-cell-disabled-first {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-cell-disabled-last {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 
 .emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-now {
@@ -1162,6 +1249,7 @@ exports[`Calendar demo -- controlled 1`] = `
 .emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-active {
   background: #3860f4;
   color: #ffffff;
+  font-weight: bold;
 }
 
 .emotion-0 .uc-fe-calendar-prev,
@@ -1970,6 +2058,10 @@ exports[`Calendar demo -- month 1`] = `
   cursor: pointer;
 }
 
+.emotion-0 .uc-fe-calendar-header-button:hover {
+  color: #3860f4;
+}
+
 .emotion-0 .uc-fe-calendar-header-switcher-wrap {
   display: block;
   -webkit-flex: 1;
@@ -2065,6 +2157,23 @@ exports[`Calendar demo -- month 1`] = `
 .emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled {
   background: #f7f7f7;
   color: #cccccc;
+  cursor: default;
+  border-radius: 0;
+}
+
+.emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-prev,
+.emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-next {
+  background: #f7f7f7;
+}
+
+.emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-cell-disabled-first {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-cell-disabled-last {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 
 .emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-now {
@@ -2074,6 +2183,7 @@ exports[`Calendar demo -- month 1`] = `
 .emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-active {
   background: #3860f4;
   color: #ffffff;
+  font-weight: bold;
 }
 
 .emotion-0 .uc-fe-calendar-prev,
@@ -2195,6 +2305,10 @@ exports[`Calendar demo -- month 1`] = `
   cursor: pointer;
 }
 
+.emotion-0 .uc-fe-calendar-header-button:hover {
+  color: #3860f4;
+}
+
 .emotion-0 .uc-fe-calendar-header-switcher-wrap {
   display: block;
   -webkit-flex: 1;
@@ -2290,6 +2404,23 @@ exports[`Calendar demo -- month 1`] = `
 .emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled {
   background: #f7f7f7;
   color: #cccccc;
+  cursor: default;
+  border-radius: 0;
+}
+
+.emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-prev,
+.emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-next {
+  background: #f7f7f7;
+}
+
+.emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-cell-disabled-first {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-cell-disabled-last {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 
 .emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-now {
@@ -2299,6 +2430,7 @@ exports[`Calendar demo -- month 1`] = `
 .emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-active {
   background: #3860f4;
   color: #ffffff;
+  font-weight: bold;
 }
 
 .emotion-0 .uc-fe-calendar-prev,
@@ -2545,6 +2677,10 @@ exports[`Calendar demo -- rules 1`] = `
   cursor: pointer;
 }
 
+.emotion-0 .uc-fe-calendar-header-button:hover {
+  color: #3860f4;
+}
+
 .emotion-0 .uc-fe-calendar-header-switcher-wrap {
   display: block;
   -webkit-flex: 1;
@@ -2640,6 +2776,23 @@ exports[`Calendar demo -- rules 1`] = `
 .emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled {
   background: #f7f7f7;
   color: #cccccc;
+  cursor: default;
+  border-radius: 0;
+}
+
+.emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-prev,
+.emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-next {
+  background: #f7f7f7;
+}
+
+.emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-cell-disabled-first {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-cell-disabled-last {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 
 .emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-now {
@@ -2649,6 +2802,7 @@ exports[`Calendar demo -- rules 1`] = `
 .emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-active {
   background: #3860f4;
   color: #ffffff;
+  font-weight: bold;
 }
 
 .emotion-0 .uc-fe-calendar-prev,
@@ -2770,6 +2924,10 @@ exports[`Calendar demo -- rules 1`] = `
   cursor: pointer;
 }
 
+.emotion-0 .uc-fe-calendar-header-button:hover {
+  color: #3860f4;
+}
+
 .emotion-0 .uc-fe-calendar-header-switcher-wrap {
   display: block;
   -webkit-flex: 1;
@@ -2865,6 +3023,23 @@ exports[`Calendar demo -- rules 1`] = `
 .emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled {
   background: #f7f7f7;
   color: #cccccc;
+  cursor: default;
+  border-radius: 0;
+}
+
+.emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-prev,
+.emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-next {
+  background: #f7f7f7;
+}
+
+.emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-cell-disabled-first {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-cell-disabled-last {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 
 .emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-now {
@@ -2874,6 +3049,7 @@ exports[`Calendar demo -- rules 1`] = `
 .emotion-0 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-active {
   background: #3860f4;
   color: #ffffff;
+  font-weight: bold;
 }
 
 .emotion-0 .uc-fe-calendar-prev,
@@ -3061,7 +3237,7 @@ exports[`Calendar demo -- rules 1`] = `
                 class="uc-fe-calendar-row"
               >
                 <div
-                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  "
+                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  uc-fe-calendar-cell-disabled-first "
                 >
                   1
                 </div>
@@ -3091,7 +3267,7 @@ exports[`Calendar demo -- rules 1`] = `
                   6
                 </div>
                 <div
-                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  "
+                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  uc-fe-calendar-cell-disabled-last "
                 >
                   7
                 </div>
@@ -3100,7 +3276,7 @@ exports[`Calendar demo -- rules 1`] = `
                 class="uc-fe-calendar-row"
               >
                 <div
-                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  "
+                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  uc-fe-calendar-cell-disabled-first "
                 >
                   8
                 </div>
@@ -3125,7 +3301,7 @@ exports[`Calendar demo -- rules 1`] = `
                   12
                 </div>
                 <div
-                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  "
+                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  uc-fe-calendar-cell-disabled-last "
                 >
                   13
                 </div>
@@ -3217,7 +3393,7 @@ exports[`Calendar demo -- rules 1`] = `
                 class="uc-fe-calendar-row"
               >
                 <div
-                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  "
+                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  uc-fe-calendar-cell-disabled-first "
                 >
                   29
                 </div>
@@ -3247,7 +3423,7 @@ exports[`Calendar demo -- rules 1`] = `
                   3
                 </div>
                 <div
-                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled uc-fe-calendar-next  "
+                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled uc-fe-calendar-next  uc-fe-calendar-cell-disabled-last "
                 >
                   4
                 </div>
@@ -3256,7 +3432,7 @@ exports[`Calendar demo -- rules 1`] = `
                 class="uc-fe-calendar-row"
               >
                 <div
-                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled uc-fe-calendar-next  "
+                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled uc-fe-calendar-next  uc-fe-calendar-cell-disabled-first "
                 >
                   5
                 </div>
@@ -3286,7 +3462,7 @@ exports[`Calendar demo -- rules 1`] = `
                   10
                 </div>
                 <div
-                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled uc-fe-calendar-next  "
+                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled uc-fe-calendar-next  uc-fe-calendar-cell-disabled-last "
                 >
                   11
                 </div>
@@ -3402,7 +3578,7 @@ exports[`Calendar demo -- rules 1`] = `
                 class="uc-fe-calendar-row"
               >
                 <div
-                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  "
+                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  uc-fe-calendar-cell-disabled-first "
                 >
                   1
                 </div>
@@ -3432,7 +3608,7 @@ exports[`Calendar demo -- rules 1`] = `
                   6
                 </div>
                 <div
-                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  "
+                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  uc-fe-calendar-cell-disabled-last "
                 >
                   7
                 </div>
@@ -3441,7 +3617,7 @@ exports[`Calendar demo -- rules 1`] = `
                 class="uc-fe-calendar-row"
               >
                 <div
-                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  "
+                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  uc-fe-calendar-cell-disabled-first "
                 >
                   8
                 </div>
@@ -3466,7 +3642,7 @@ exports[`Calendar demo -- rules 1`] = `
                   12
                 </div>
                 <div
-                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  "
+                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  uc-fe-calendar-cell-disabled-last "
                 >
                   13
                 </div>
@@ -3558,7 +3734,7 @@ exports[`Calendar demo -- rules 1`] = `
                 class="uc-fe-calendar-row"
               >
                 <div
-                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  "
+                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  uc-fe-calendar-cell-disabled-first "
                 >
                   29
                 </div>
@@ -3588,7 +3764,7 @@ exports[`Calendar demo -- rules 1`] = `
                   3
                 </div>
                 <div
-                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled uc-fe-calendar-next  "
+                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled uc-fe-calendar-next  uc-fe-calendar-cell-disabled-last "
                 >
                   4
                 </div>
@@ -3597,7 +3773,7 @@ exports[`Calendar demo -- rules 1`] = `
                 class="uc-fe-calendar-row"
               >
                 <div
-                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled uc-fe-calendar-next  "
+                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled uc-fe-calendar-next  uc-fe-calendar-cell-disabled-first "
                 >
                   5
                 </div>
@@ -3627,7 +3803,7 @@ exports[`Calendar demo -- rules 1`] = `
                   10
                 </div>
                 <div
-                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled uc-fe-calendar-next  "
+                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled uc-fe-calendar-next  uc-fe-calendar-cell-disabled-last "
                 >
                   11
                 </div>
@@ -3743,7 +3919,7 @@ exports[`Calendar demo -- rules 1`] = `
                 class="uc-fe-calendar-row"
               >
                 <div
-                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  "
+                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  uc-fe-calendar-cell-disabled-first "
                 >
                   1
                 </div>
@@ -3773,7 +3949,7 @@ exports[`Calendar demo -- rules 1`] = `
                   6
                 </div>
                 <div
-                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  "
+                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  uc-fe-calendar-cell-disabled-last "
                 >
                   7
                 </div>
@@ -3782,7 +3958,7 @@ exports[`Calendar demo -- rules 1`] = `
                 class="uc-fe-calendar-row"
               >
                 <div
-                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  "
+                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  uc-fe-calendar-cell-disabled-first "
                 >
                   8
                 </div>
@@ -3812,7 +3988,7 @@ exports[`Calendar demo -- rules 1`] = `
                   13
                 </div>
                 <div
-                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  "
+                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  uc-fe-calendar-cell-disabled-last "
                 >
                   14
                 </div>
@@ -3890,7 +4066,7 @@ exports[`Calendar demo -- rules 1`] = `
                   27
                 </div>
                 <div
-                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  "
+                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  uc-fe-calendar-cell-disabled-first uc-fe-calendar-cell-disabled-last "
                 >
                   28
                 </div>
@@ -3899,7 +4075,7 @@ exports[`Calendar demo -- rules 1`] = `
                 class="uc-fe-calendar-row"
               >
                 <div
-                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  "
+                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled  uc-fe-calendar-cell-disabled-first "
                 >
                   29
                 </div>
@@ -3929,7 +4105,7 @@ exports[`Calendar demo -- rules 1`] = `
                   3
                 </div>
                 <div
-                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled uc-fe-calendar-next  "
+                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled uc-fe-calendar-next  uc-fe-calendar-cell-disabled-last "
                 >
                   4
                 </div>
@@ -3938,7 +4114,7 @@ exports[`Calendar demo -- rules 1`] = `
                 class="uc-fe-calendar-row"
               >
                 <div
-                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled uc-fe-calendar-next  "
+                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled uc-fe-calendar-next  uc-fe-calendar-cell-disabled-first "
                 >
                   5
                 </div>
@@ -3968,7 +4144,7 @@ exports[`Calendar demo -- rules 1`] = `
                   10
                 </div>
                 <div
-                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled uc-fe-calendar-next  "
+                  class="uc-fe-calendar-cell uc-fe-calendar-cell uc-fe-calendar-disabled uc-fe-calendar-next  uc-fe-calendar-cell-disabled-last "
                 >
                   11
                 </div>

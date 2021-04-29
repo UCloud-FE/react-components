@@ -10,6 +10,7 @@ import usePopoverContainer from 'src/hooks/usePopoverContainer';
 
 import LOCALE from './locale/zh_CN';
 import { isDateDisabled, getValidDate, isDateValid } from './utils';
+import { string } from 'prop-types';
 
 const formatInput = (v: string, allFormat: string[]): Moment | null | false => {
     if (v == '') return null;
@@ -52,6 +53,7 @@ interface TProps<D> {
     getCalendarContainer?: (triggerNode: Element) => Element;
     locale?: typeof LOCALE;
     status?: 'default' | 'error';
+    placeholder?: string;
 }
 interface DisplayToFormatAndTimeMode<D> {
     (display?: D): [string] | [string, string[]];
@@ -77,6 +79,7 @@ const usePicker = <D,>(
         format: _format,
         locale: _locale,
         status,
+        placeholder,
         ...rest
     } = props;
 
@@ -212,7 +215,8 @@ const usePicker = <D,>(
         onFocus: handleInputFocus,
         disabled,
         size,
-        status
+        status,
+        placeholder: placeholder === undefined ? locale.placeholder : placeholder
     };
     const containerProps = rest;
     const _popoverProps = {

@@ -75,10 +75,12 @@ export const CardWrap = withProps()(
             text-align: left;
             overflow: auto;
 
-            .${headerCls}:last-child, .${actionCls}:last-child, .${contentCls}:last-child {
+            .${headerCls}:last-of-type, .${actionCls}:last-of-type, .${contentCls}:last-of-type {
                 margin-bottom: 24px;
             }
-            .${headerCls}:first-child, .${actionCls}:first-child, .${contentCls}:first-child {
+            .${headerCls}:nth-of-type(2),
+            .${actionCls}:nth-of-type(2),
+            .${contentCls}:nth-of-type(2) {
                 margin-top: 24px;
             }
 

@@ -1832,6 +1832,10 @@ exports[`LocaleProvider demo -- list 1`] = `
   cursor: pointer;
 }
 
+.emotion-39 .uc-fe-calendar-header-button:hover {
+  color: #3860f4;
+}
+
 .emotion-39 .uc-fe-calendar-header-switcher-wrap {
   display: block;
   -webkit-flex: 1;
@@ -1927,6 +1931,23 @@ exports[`LocaleProvider demo -- list 1`] = `
 .emotion-39 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled {
   background: #f7f7f7;
   color: #cccccc;
+  cursor: default;
+  border-radius: 0;
+}
+
+.emotion-39 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-prev,
+.emotion-39 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-next {
+  background: #f7f7f7;
+}
+
+.emotion-39 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-cell-disabled-first {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.emotion-39 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-cell-disabled-last {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 
 .emotion-39 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-now {
@@ -1936,6 +1957,7 @@ exports[`LocaleProvider demo -- list 1`] = `
 .emotion-39 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-active {
   background: #3860f4;
   color: #ffffff;
+  font-weight: bold;
 }
 
 .emotion-39 .uc-fe-calendar-prev,
@@ -4624,6 +4646,10 @@ exports[`LocaleProvider demo -- list 1`] = `
   cursor: pointer;
 }
 
+.emotion-39 .uc-fe-calendar-header-button:hover {
+  color: #3860f4;
+}
+
 .emotion-39 .uc-fe-calendar-header-switcher-wrap {
   display: block;
   -webkit-flex: 1;
@@ -4719,6 +4745,23 @@ exports[`LocaleProvider demo -- list 1`] = `
 .emotion-39 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled {
   background: #f7f7f7;
   color: #cccccc;
+  cursor: default;
+  border-radius: 0;
+}
+
+.emotion-39 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-prev,
+.emotion-39 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-next {
+  background: #f7f7f7;
+}
+
+.emotion-39 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-cell-disabled-first {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.emotion-39 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-disabled.uc-fe-calendar-cell-disabled-last {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 
 .emotion-39 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-now {
@@ -4728,6 +4771,7 @@ exports[`LocaleProvider demo -- list 1`] = `
 .emotion-39 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-active {
   background: #3860f4;
   color: #ffffff;
+  font-weight: bold;
 }
 
 .emotion-39 .uc-fe-calendar-prev,
@@ -6994,6 +7038,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                 />
               </span>
               <input
+                placeholder="选择日期"
                 value="2018-07-21 07:55:21"
               />
             </div>
@@ -7021,6 +7066,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                 />
               </span>
               <input
+                placeholder="选择日期"
                 value="2018-07"
               />
             </div>
@@ -7051,6 +7097,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                   />
                 </span>
                 <input
+                  placeholder="开始时间"
                   value="2018-07-21 19:55:21"
                 />
               </div>
@@ -7065,6 +7112,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                 class="uc-fe-input-wrap"
               >
                 <input
+                  placeholder="结束时间"
                   value="2018-07-21 19:55:21"
                 />
               </div>

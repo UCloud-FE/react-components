@@ -81,6 +81,8 @@ interface RangeProps {
     };
     /** 状态 */
     status?: 'default' | 'error';
+    /** placeholder */
+    placeholder?: [string | undefined, string | undefined] | [string | undefined] | [];
     /** picker 类型 */
     type?: 'date' | 'month';
     /** 控件尺寸 */
@@ -154,6 +156,7 @@ const Range = ({
     popoverProps,
     rangeTip,
     status,
+    placeholder = [],
     ...rest
 }: RangeProps) => {
     const d = useMemo(() => new Date(), []);
@@ -267,6 +270,7 @@ const Range = ({
         rules
     };
     const [valueS, valueE] = cacheValue;
+    const [placeholderS = locale.placeholderRangeStart, placeholderE = locale.placeholderRangeEnd] = placeholder;
 
     return (
         <RangeContainer {...rest} disabled={disabled}>
@@ -295,6 +299,7 @@ const Range = ({
                     prefix
                     ref={inputRefS}
                     onActiveChange={handleStartActiveChange}
+                    placeholder={placeholderS}
                     {...sharedPickerProps}
                 />
                 <RangeDateSeparator />
@@ -304,6 +309,7 @@ const Range = ({
                     nullable={nullableE}
                     ref={inputRefE}
                     onActiveChange={handleEndActiveChange}
+                    placeholder={placeholderE}
                     {...sharedPickerProps}
                 />
             </SRangeInputWrap>

@@ -1,8 +1,11 @@
 export default {
-    custom: 'custom',
-    rangeErrorTip: 'out of range',
-    maxRangeErrorTip: 'greater than max range',
-    minRangeErrorTip: 'less than min range',
-    startGreaterThanEndTip: "start can't greater than end",
-    confirm: 'confirm'
+    custom: 'Custom',
+    rangeErrorTip: 'Out of range',
+    maxRangeErrorTip: 'Greater than max range',
+    minRangeErrorTip: 'Less than min range',
+    startGreaterThanEndTip: "Start can't greater than end",
+    confirm: 'Confirm',
+    placeholder: 'Choose date',
+    placeholderRangeStart: 'Start date',
+    placeholderRangeEnd: 'End date'
 };
