@@ -122,13 +122,13 @@ export const DrawerWrap = withProps({
                 height: 100%;
                 width: 100%;
                 overflow: auto;
+                background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
             }
 
             .${prefixCls}-content-wrapper {
                 height: 100%;
                 width: 100%;
                 position: absolute;
-                background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
             }
             .${prefixCls}-content-wrapper, .${prefixCls}-mask {
                 transition: all 0.1s;
