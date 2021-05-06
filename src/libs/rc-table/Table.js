@@ -116,10 +116,14 @@ class Table extends React.Component {
         return null;
     }
 
-    componentDidUpdate(prevProps) {
+    componentDidUpdate(prevProps, prevState) {
         // when table changes to empty, reset scrollLeft
         if (prevProps.data.length > 0 && this.props.data.length === 0 && this.hasScrollX()) {
             this.resetScrollX();
+        }
+        // update scroll position
+        if (this.props.columns !== prevState.columns) {
+            this.setScrollPositionClassName();
         }
     }
 
