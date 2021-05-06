@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.37](https://github.com/UCloud-FE/react-components/compare/v1.0.36...v1.0.37) (2021-05-06)
+
+### Features
+
+-   **DatePicker:** update DatePicker & Calendar ([aa2b24d](https://github.com/UCloud-FE/react-components/commit/aa2b24ddb6d8b410495c8700e2993bcac4c587c1)), closes [#335](https://github.com/UCloud-FE/react-components/issues/335)
+-   **Drawer:** change background wrap ([1c4d3b3](https://github.com/UCloud-FE/react-components/commit/1c4d3b38404bee5c78e6ae5658165be7412c8e39))
+
+### Bug Fixes
+
+-   **DatePicker:** fix typescript interface ([f0463db](https://github.com/UCloud-FE/react-components/commit/f0463db4d469415c5837d501eb03ae2549aad754))
+-   **Table:** fix table scroll position when column change ([842d6d0](https://github.com/UCloud-FE/react-components/commit/842d6d0fe986cd0065739fbbbe2d67417e73f707))
+
 ### [1.0.36](https://github.com/UCloud-FE/react-components/compare/v1.0.35...v1.0.36) (2021-04-19)
 
 ### Features
