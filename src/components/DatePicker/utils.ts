@@ -1,5 +1,4 @@
 import moment, { Moment } from 'moment';
-import _ from 'lodash';
 import { TDate } from '@z-r/calendar/types/interface';
 
 export interface Rules {
@@ -8,53 +7,6 @@ export interface Rules {
 }
 
 import { isDateDisabled, getValidDate } from 'src/components/Calendar/utils';
-
-/**
- *
- * @param {moment{}} date 判断的时间
- * @param {moment{}} value 当前的时间
- * @param {object} rules 规则
- * @param {moment{}} start 当前开始时间
- * @param {moment{}} end 当前结束时间
- * @param {string} tag 标记
- */
-const isRangeDateDisabled = (date, value, rules, start, end, tag) => {
-    date = moment(date);
-    value = moment(value);
-    start = moment(start);
-    end = moment(end);
-
-    if (!rules) {
-        return false;
-    }
-    const { range, custom: _c, minRange } = rules;
-
-    const custom = (date, value) => {
-        if (!_.isEmpty(range)) {
-            if (tag === 'start') {
-                if (minRange) {
-                    if (date > moment(end).subtract(minRange)) {
-                        return true;
-                    }
-                }
-            } else if (tag === 'end') {
-                if (minRange) {
-                    if (date < moment(start).add(minRange)) {
-                        return true;
-                    }
-                }
-            }
-        }
-        if (_c) {
-            return _c(date, value, start, end, tag);
-        }
-    };
-
-    return isDateDisabled(date, value, {
-        range,
-        custom
-    });
-};
 
 const precisionMap = {
     millisecond: 0,
@@ -71,44 +23,56 @@ const resetValueMap = {
     minute: 0,
     hour: 0,
     date: 1,
-    month: 0
+    month: 0,
+    year: 0
 };
 
-const isRangeDateValid = (value: [TDate | null, TDate | null], rules, precision: null | keyof typeof precisionMap) => {
+const isRangeDateValid = (
+    value: [TDate | null, TDate | null],
+    rules: {
+        range?: [TDate | void, TDate | void];
+        maxRange?: any;
+        minRange?: any;
+    },
+    precision: null | keyof typeof precisionMap
+) => {
     let [start, end] = value;
     start = start == null ? null : moment(+start);
     end = end === null ? null : moment(+end);
-    let resetMap: Record<keyof typeof precisionMap, number>;
+    const resetMap: { [key: string]: number } = {};
     if (precision) {
         const precisionLevel = precisionMap[precision];
-        resetMap = {};
-        _.each(precisionMap, (level, key) => {
+        Object.keys(precisionMap).forEach(key => {
+            const level = precisionMap[key as keyof typeof precisionMap];
             if (level < precisionLevel) {
-                resetMap[key] = resetValueMap[key];
+                resetMap[key] = resetValueMap[key as keyof typeof precisionMap];
             }
         });
-        start.set(resetMap);
-        end.set(resetMap);
+        start && start.set(resetMap);
+        end && end.set(resetMap);
     }
     const { range, maxRange, minRange } = rules;
-
-    if (start > end) {
-        return 'startGreaterThanEnd';
-    }
     if (range) {
         let [s, e] = range;
-        s = moment(s);
-        e = moment(e);
-        if (resetMap) {
+        s = moment(+s);
+        e = moment(+e);
+        if (Object.keys(resetMap).length) {
             s.set(resetMap);
             e.set(resetMap);
         }
-        if (s != null && start < s) {
+        if (s != null && start != null && start < s) {
             return 'rangeError';
         }
-        if (e != null && end > e) {
+        if (e != null && end != null && end > e) {
             return 'rangeError';
         }
+    }
+
+    if (start == null || end == null) {
+        return true;
+    }
+    if (start > end) {
+        return 'startGreaterThanEnd';
     }
     if (maxRange && moment(start).add(maxRange) < end) {
         return 'maxRangeError';
@@ -136,4 +100,4 @@ const isDateValid = (date: TDate, value?: TDate | null, rules?: Rules) => {
     }
 };
 
-export { isDateDisabled, isRangeDateDisabled, getValidDate, isDateValid, isRangeDateValid };
+export { isDateDisabled, getValidDate, isDateValid, isRangeDateValid };

@@ -78,6 +78,8 @@ interface RangeProps {
     /** 自定义规则 */
     rules?: {
         range?: [TDate | void, TDate | void];
+        maxRange?: any;
+        minRange?: any;
     };
     /** 状态 */
     status?: 'default' | 'error';
