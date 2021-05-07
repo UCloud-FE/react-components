@@ -9,7 +9,6 @@ import React, {
     useEffect,
     useContext
 } from 'react';
-import _ from 'lodash';
 import moment, { Moment } from 'moment';
 import { TDate } from '@z-r/calendar/types/interface';
 
@@ -17,6 +16,9 @@ import useUncontrolled from 'src/hooks/useUncontrolled';
 import useLocale from 'src/components/LocaleProvider/useLocale';
 import ControllerContext from 'src/components/Form/ControllerContext';
 import useInitial from 'src/hooks/useInitial';
+import isArray from 'src/utils/isArray';
+import isNumber from 'src/utils/isNumber';
+import pick from 'src/utils/pick';
 
 import Picker, { RangePickerRef } from './RangePicker';
 import LOCALE from './locale/zh_CN';
@@ -36,6 +38,7 @@ interface RangeProps {
     options?: {
         label: ReactNode;
         value: string;
+        disabled?: boolean;
         range?: {
             start?: TDate;
             end?: TDate;
@@ -118,7 +121,7 @@ const formatRangeValue = (value: RangeValue, nullable: RangeProps['nullable'] = 
 
 const getDateFromOption = (option: TDate | any) => {
     if (option === null) return null;
-    if (moment.isDate(option) || moment.isMoment(option) || _.isNumber(option)) {
+    if (moment.isDate(option) || moment.isMoment(option) || isNumber(option)) {
         return moment(option);
     } else {
         return moment().add(option);
@@ -158,7 +161,7 @@ const Range = ({
     popoverProps,
     rangeTip,
     status,
-    placeholder = [],
+    placeholder,
     ...rest
 }: RangeProps) => {
     const d = useMemo(() => new Date(), []);
@@ -188,13 +191,13 @@ const Range = ({
     const { status: contextStatus } = useContext(ControllerContext);
 
     const readonly = option !== 'custom';
-    const [nullableS, nullableE] = nullable || [];
+    const [nullableS, nullableE] = isArray(nullable) ? nullable : [];
     const precision = type === 'month' ? 'month' : null;
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { range: rangeDisplay, ...pickerDisplay } = display;
 
     useInitial(() => {
-        const [valueS, valueE] = value;
+        const [valueS, valueE] = isArray(value) ? value : [null, null];
         let initialValue: CallbackRangeValue;
         if (defaultOption) {
             initialValue = getValueFromOption(options, defaultOption);
@@ -272,14 +275,18 @@ const Range = ({
         rules
     };
     const [valueS, valueE] = cacheValue;
-    const [placeholderS = locale.placeholderRangeStart, placeholderE = locale.placeholderRangeEnd] = placeholder;
+    const [placeholderS = locale.placeholderRangeStart, placeholderE = locale.placeholderRangeEnd] = isArray(
+        placeholder
+    )
+        ? placeholder
+        : [];
 
     return (
         <RangeContainer {...rest} disabled={disabled}>
             {!!options.length && (
                 <RangeSelect
                     {...selectProps}
-                    options={options.map(option => _.pick(option, ['label', 'value', 'disabled']))}
+                    options={options.map(option => pick(option, ['label', 'value', 'disabled']))}
                     size={size}
                     value={option}
                     disabled={disabled}
