@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.38](https://github.com/UCloud-FE/react-components/compare/v1.0.37...v1.0.38) (2021-05-07)
+
+### Bug Fixes
+
+-   **DatePicker:** fix non iterable placeholder ([7eaf417](https://github.com/UCloud-FE/react-components/commit/7eaf417061baff287ce255c7e76226c2c956e822))
+
 ### [1.0.37](https://github.com/UCloud-FE/react-components/compare/v1.0.36...v1.0.37) (2021-05-06)
 
 ### Features
