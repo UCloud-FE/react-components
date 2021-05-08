@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.39](https://github.com/UCloud-FE/react-components/compare/v1.0.38...v1.0.39) (2021-05-08)
+
+### Bug Fixes
+
+-   **DatePicker:** fix onInitialChange when option controlled ([fba39e4](https://github.com/UCloud-FE/react-components/commit/fba39e4a5cab27206e0ed7de020155228b6f6953))
+
 ### [1.0.38](https://github.com/UCloud-FE/react-components/compare/v1.0.37...v1.0.38) (2021-05-07)
 
 ### Bug Fixes
