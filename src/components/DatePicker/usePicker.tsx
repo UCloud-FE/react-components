@@ -10,7 +10,6 @@ import usePopoverContainer from 'src/hooks/usePopoverContainer';
 
 import LOCALE from './locale/zh_CN';
 import { isDateDisabled, getValidDate, isDateValid } from './utils';
-import { string } from 'prop-types';
 
 const formatInput = (v: string, allFormat: string[]): Moment | null | false => {
     if (v == '') return null;

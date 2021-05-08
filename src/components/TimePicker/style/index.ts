@@ -13,6 +13,17 @@ const shouldForwardProp = (propName: string): boolean => {
     return !({ customStyle: 1, theme: 1 } as { [key: string]: 1 })[propName];
 };
 
+export const SPopup = sWrap({})(
+    styled.div(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
+        return css`
+            background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
+        `;
+    })
+);
+
 export const STime = sWrap<any>({})(
     styled(Timer, { shouldForwardProp })(props => {
         const {
@@ -28,12 +39,11 @@ export const STime = sWrap<any>({})(
                 .${timePrefixCls}-scroller {
                     height: 36px;
                     padding: 126px 0;
-                    /* scroll-behavior: smooth; */
-                    /* overflow-y: hidden; */
-                    overflow-y: scroll;
+                    scroll-behavior: smooth;
+                    overflow-y: hidden;
                     z-index: 1;
                     &:hover {
-                        /* overflow-y: scroll; */
+                        overflow-y: scroll;
                     }
 
                     .${timePrefixCls}-stepper {

@@ -199,8 +199,8 @@ const Range = ({
     useInitial(() => {
         const [valueS, valueE] = isArray(value) ? value : [null, null];
         let initialValue: CallbackRangeValue;
-        if (defaultOption) {
-            initialValue = getValueFromOption(options, defaultOption);
+        if (option !== 'custom') {
+            initialValue = getValueFromOption(options, option);
         } else {
             initialValue = [formatValue(valueS, nullableS, d), formatValue(valueE, nullableE, d)];
         }
