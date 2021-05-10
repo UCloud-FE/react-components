@@ -39,12 +39,8 @@ export const STime = sWrap<any>({})(
                 .${timePrefixCls}-scroller {
                     height: 36px;
                     padding: 126px 0;
-                    scroll-behavior: smooth;
-                    overflow-y: hidden;
+                    overflow-y: scroll;
                     z-index: 1;
-                    &:hover {
-                        overflow-y: scroll;
-                    }
 
                     .${timePrefixCls}-stepper {
                         width: 40px;

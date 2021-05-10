@@ -16,7 +16,7 @@ import usePicker from './usePicker';
 const defaultProps: {
     format?: string | string[];
 } = {
-    format: ['YYYY-MM-DD hh:mm:ss', 'YYYY-M-D h:m:s']
+    format: ['YYYY-MM-DD HH:mm:ss', 'YYYY-M-D H:m:s']
 };
 
 export type DatePickerProps = {

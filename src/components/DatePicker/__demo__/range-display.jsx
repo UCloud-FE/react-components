@@ -20,7 +20,7 @@ class Demo extends React.Component {
                     <DatePicker.Range
                         display={{
                             range: {
-                                format: 'YY-MM-DD hh:mm'
+                                format: 'YY-MM-DD HH:mm'
                             }
                         }}
                     />

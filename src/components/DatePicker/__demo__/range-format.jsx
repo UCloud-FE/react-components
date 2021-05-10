@@ -4,10 +4,10 @@ import DatePicker from 'src/components/DatePicker';
 
 // demo start
 const formats = [
-    'YYYYMMDD hh:mm:ss',
-    'YYYY-M-D h:m:s',
-    'YY-M-D h:m:s',
-    ['YYYY-MM-DD hh:mm:ss', 'YYYY-M-D h:m:s', 'YY-M-D h:m:s']
+    'YYYYMMDD HH:mm:ss',
+    'YYYY-M-D H:m:s',
+    'YY-M-D H:m:s',
+    ['YYYY-MM-DD HH:mm:ss', 'YYYY-M-D H:m:s', 'YY-M-D H:m:s']
 ];
 class Demo extends React.Component {
     render() {
