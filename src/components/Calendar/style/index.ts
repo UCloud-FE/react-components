@@ -145,22 +145,22 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
             flex-direction: column;
             height: 100%;
             .${prefixCls}-body {
-                flex: 1;
+                flex-grow: 1;
                 display: flex;
             }
             .${tableCls} {
                 height: 100%;
                 display: flex;
                 flex-direction: column;
-                flex: 1;
+                flex-grow: 1;
             }
             .${prefixCls}-tbody {
-                flex: 1;
+                flex-grow: 1;
                 display: flex;
                 flex-direction: column;
             }
             .${prefixCls}-row {
-                flex: 1;
+                flex-grow: 1;
             }
         }
         &.${prefixCls} .${prefixCls} {

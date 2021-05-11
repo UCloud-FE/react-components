@@ -73,7 +73,8 @@ export const InputWrap = withProps({
                 margin: 0;
                 font-size: inherit;
                 color: inherit;
-                flex: 1;
+                flex: 1 1 130px;
+                min-width: 0px;
                 &,
                 &:hover,
                 &:focus {

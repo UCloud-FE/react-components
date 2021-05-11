@@ -1,3 +1,1 @@
-const isFirefox = navigator?.userAgent?.indexOf?.('Firefox') > -1;
-
-export default isFirefox;
+export default navigator?.userAgent?.indexOf?.('Firefox') > -1;

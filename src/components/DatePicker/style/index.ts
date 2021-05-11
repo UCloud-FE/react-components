@@ -115,7 +115,7 @@ export const SRangeInputWrap = sWrap<{
                 `
             }
             .${inputPrefixCls} {
-                flex: 1;
+                flex-grow: 1;
                 height: 100%;
             }
             .${readonlyInputCls} {

@@ -4,6 +4,8 @@ import { Timer } from '@z-r/calendar';
 
 import { sWrap } from 'src/style';
 import config from 'src/config';
+import isFirefox from 'src/utils/isFirefox';
+import isIE from 'src/utils/isIE';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-timepicker';
@@ -39,8 +41,25 @@ export const STime = sWrap<any>({})(
                 .${timePrefixCls}-scroller {
                     height: 36px;
                     padding: 126px 0;
-                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    overflow-y: hidden;
                     z-index: 1;
+                    width: 50px;
+                    :hover {
+                        overflow-y: scroll;
+                    }
+
+                    ${
+                        (isFirefox || isIE) &&
+                        css`
+                            ::after {
+                                content: ' ';
+                                visibility: hidden;
+                                height: 126px;
+                                display: block;
+                            }
+                        `
+                    }
 
                     .${timePrefixCls}-stepper {
                         width: 40px;
@@ -53,8 +72,11 @@ export const STime = sWrap<any>({})(
                             font-weight: bold;
                         }
                     }
-                    :after,
-                    .${timePrefixCls}-stepper:hover:after {
+                    .${timePrefixCls}-stepper:hover {
+                        position: relative;
+                    }
+                    ::before,
+                    .${timePrefixCls}-stepper:hover::after {
                         content: ' ';
                         position: absolute;
                         display: block;
@@ -65,14 +87,13 @@ export const STime = sWrap<any>({})(
                         background: ${DT.T_COLOR_BG_DEFAULT_HOVER};
                         z-index: -1;
                     }
-                    :after {
+                    ::before {
                         top: 128px;
+                        left: 0;
                     }
-                    .${timePrefixCls}-stepper:hover {
-                        position: relative;
-                    }
-                    .${timePrefixCls}-stepper:hover:after {
+                    .${timePrefixCls}-stepper:hover::after {
                         top: 2px;
+                        left: 0;
                     }
                 }
             }
