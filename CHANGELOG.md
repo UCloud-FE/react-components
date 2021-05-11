@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.41](https://github.com/UCloud-FE/react-components/compare/v1.0.40...v1.0.41) (2021-05-11)
+
+### Bug Fixes
+
+-   **DatePicker:** fix IE flex/Firefox scroll style bug ([6a6d6c8](https://github.com/UCloud-FE/react-components/commit/6a6d6c84eb25eae72dc69eb4a30d12c420eeb29d))
+
 ### [1.0.40](https://github.com/UCloud-FE/react-components/compare/v1.0.39...v1.0.40) (2021-05-10)
 
 ### Bug Fixes
