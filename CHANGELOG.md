@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.42](https://github.com/UCloud-FE/react-components/compare/v1.0.41...v1.0.42) (2021-05-12)
+
+### Features
+
+-   **DatePicker:** change date valid precision to second ([4920678](https://github.com/UCloud-FE/react-components/commit/492067852cb7ac7be8e894ed71f294291cdcaebf))
+-   **DatePicker:** export ts interface ([8a2a86b](https://github.com/UCloud-FE/react-components/commit/8a2a86bffee341ee1573d3935df657d637297952))
+
 ### [1.0.41](https://github.com/UCloud-FE/react-components/compare/v1.0.40...v1.0.41) (2021-05-11)
 
 ### Bug Fixes
