@@ -1,17 +1,11 @@
-import type {
-    CSSProperties,
-    ReactNode,
-    Component,
-    PureComponent,
-    HTMLAttributes,
-} from "react";
-import { Moment, MomentInput } from "moment";
+import type { CSSProperties, ReactNode, Component, PureComponent, HTMLAttributes } from 'react';
+import { Moment } from 'moment';
 
 // 忽略 T 对象中 键在 K 中的所有的属性
 type Override<T1, T2> = Omit<T1, keyof T2> & T2;
 
 // base type
-export type SizeType = "sm" | "md" | "lg";
+export type SizeType = 'sm' | 'md' | 'lg';
 
 // Icon
 export interface IconProps extends HTMLAttributes<HTMLSpanElement> {
@@ -22,19 +16,19 @@ export interface IconProps extends HTMLAttributes<HTMLSpanElement> {
 export declare class Icon extends PureComponent<IconProps> {}
 
 // Button
-import { ButtonProps } from "./lib/components/Button/Button"
+import { ButtonProps } from './lib/components/Button/Button';
 export { default as Button } from './lib/components/Button';
 
 // Box
-type BoxSpacing = "sm" | "md" | "lg" | number | string;
+type BoxSpacing = 'sm' | 'md' | 'lg' | number | string;
 export interface BoxProps extends HTMLAttributes<HTMLDivElement> {
     container?: boolean;
     spacing?: BoxSpacing | [BoxSpacing, BoxSpacing?];
-    direction?: "row" | "row-reverse" | "column" | "column-reverse";
-    wrap?: "nowrap" | "wrap" | "wrap-reverse";
-    alignItems?: "center" | "flex-start" | "flex-end" | "stretch";
-    alignContent?: "center" | "flex-start" | "flex-end" | "space-between" | "space-around";
-    justifyContent?: "center" | "flex-start" | "flex-end" | "space-between" | "space-around" | "stretch";
+    direction?: 'row' | 'row-reverse' | 'column' | 'column-reverse';
+    wrap?: 'nowrap' | 'wrap' | 'wrap-reverse';
+    alignItems?: 'center' | 'flex-start' | 'flex-end' | 'stretch';
+    alignContent?: 'center' | 'flex-start' | 'flex-end' | 'space-between' | 'space-around';
+    justifyContent?: 'center' | 'flex-start' | 'flex-end' | 'space-between' | 'space-around' | 'stretch';
     padding?: BoxSpacing;
     width?: string;
     height?: string;
@@ -46,14 +40,9 @@ export interface BoxProps extends HTMLAttributes<HTMLDivElement> {
 export declare class Box extends PureComponent<BoxProps> {}
 
 // Row
-export type RowType = "flex";
-export type RowAlign = "top" | "middle" | "bottom";
-export type RowJustify =
-    | "start"
-    | "end"
-    | "center"
-    | "space-around"
-    | "space-between";
+export type RowType = 'flex';
+export type RowAlign = 'top' | 'middle' | 'bottom';
+export type RowJustify = 'start' | 'end' | 'center' | 'space-around' | 'space-between';
 export interface RowProps extends HTMLAttributes<HTMLDivElement> {
     type?: RowType;
     align?: RowAlign;
@@ -82,7 +71,7 @@ export declare const Grid: GridType;
 // Combine
 export interface CombineProps extends HTMLAttributes<HTMLDivElement> {
     sharedProps?: CompactSharedProps;
-    spacing?: "compact" | "smart" | "sm" | "md" | "lg" | string;
+    spacing?: 'compact' | 'smart' | 'sm' | 'md' | 'lg' | string;
 }
 export declare class Combine extends PureComponent<CombineProps> {}
 
@@ -96,13 +85,16 @@ export interface CompactProps extends HTMLAttributes<HTMLDivElement> {
 export declare class Compact extends Component<CompactProps> {}
 
 // Input
-export type InputProps = Override<HTMLAttributes<HTMLInputElement>, {
-    icon?: ReactNode;
-    prefix?: ReactNode;
-    suffix?: ReactNode;
-    size?: SizeType;
-    status?: "default" | "error";
-}>
+export type InputProps = Override<
+    HTMLAttributes<HTMLInputElement>,
+    {
+        icon?: ReactNode;
+        prefix?: ReactNode;
+        suffix?: ReactNode;
+        size?: SizeType;
+        status?: 'default' | 'error';
+    }
+>;
 interface SearchInputProps extends InputProps {
     onSearch?: (value: string) => void;
 }
@@ -112,29 +104,32 @@ export declare class Input extends PureComponent<InputProps> {
 }
 
 // NumberInput
-export type NumberInputStyleType = "default" | "split" | "pagination";
-export type NumberInputProps = Override<HTMLAttributes<HTMLInputElement>, {
-    value?: number | string;
-    defaultValue?: number | string;
-    onChange?: (value: number | string) => void;
-    onNumberChange?: (value: number) => void;
-    disabled?: boolean;
-    readOnly?: boolean;
-    max?: number;
-    min?: number;
-    step?: number | string;
-    upHandler?: ReactNode;
-    downHandler?: ReactNode;
-    formatter?: (value: number) => number | string;
-    parser?: (value: string) => string;
-    precision?: number;
-    styleType?: NumberInputStyleType;
-    size?: SizeType;
-    suffix?: ReactNode;
-    inputStyle?: CSSProperties;
-    computeValidNumber?: (value: number) => number;
-    hideHandler?: boolean;
-}>
+export type NumberInputStyleType = 'default' | 'split' | 'pagination';
+export type NumberInputProps = Override<
+    HTMLAttributes<HTMLInputElement>,
+    {
+        value?: number | string;
+        defaultValue?: number | string;
+        onChange?: (value: number | string) => void;
+        onNumberChange?: (value: number) => void;
+        disabled?: boolean;
+        readOnly?: boolean;
+        max?: number;
+        min?: number;
+        step?: number | string;
+        upHandler?: ReactNode;
+        downHandler?: ReactNode;
+        formatter?: (value: number) => number | string;
+        parser?: (value: string) => string;
+        precision?: number;
+        styleType?: NumberInputStyleType;
+        size?: SizeType;
+        suffix?: ReactNode;
+        inputStyle?: CSSProperties;
+        computeValidNumber?: (value: number) => number;
+        hideHandler?: boolean;
+    }
+>;
 export declare class NumberInput extends Component<NumberInputProps> {}
 
 // Textarea
@@ -161,7 +156,7 @@ interface SelectGroupProps {
 }
 interface SelectCustomStyle {
     optionListMaxHeight?: number;
-    [key: string]: any
+    [key: string]: any;
 }
 interface SelectShapeExtra extends SelectExtraProps {
     content?: ReactNode;
@@ -205,19 +200,22 @@ export declare class Select extends Component<SelectProps> {
 }
 
 // Checkbox
-export type CheckboxStyleType = "default" | "card";
-export type CheckboxProps = Override<HTMLAttributes<HTMLSpanElement>, {
-    checked?: boolean;
-    defaultChecked?: boolean;
-    disabled?: boolean;
-    onChange?: (checked: boolean) => void;
-    indeterminate?: boolean;
-    value?: any;
-    size?: SizeType;
-    styleType?: CheckboxStyleType;
-    title?: ReactNode;
-    disabledLabel?: ReactNode;
-}>
+export type CheckboxStyleType = 'default' | 'card';
+export type CheckboxProps = Override<
+    HTMLAttributes<HTMLSpanElement>,
+    {
+        checked?: boolean;
+        defaultChecked?: boolean;
+        disabled?: boolean;
+        onChange?: (checked: boolean) => void;
+        indeterminate?: boolean;
+        value?: any;
+        size?: SizeType;
+        styleType?: CheckboxStyleType;
+        title?: ReactNode;
+        disabledLabel?: ReactNode;
+    }
+>;
 export type CheckboxOptions = SelectOptions;
 export interface CheckboxGroupProps {
     value?: any[];
@@ -234,7 +232,7 @@ export declare class Checkbox extends Component<CheckboxProps> {
 }
 
 // Radio
-export type RadioStyleType = "default" | "button" | "tag" | "card" | "text";
+export type RadioStyleType = 'default' | 'button' | 'tag' | 'card' | 'text';
 export interface RadioProps {
     checked?: boolean;
     defaultChecked?: boolean;
@@ -271,7 +269,7 @@ export interface SliderMark {
     ratio?: number;
 }
 export interface SliderMarks {
-    [key: string]: SliderMark
+    [key: string]: SliderMark;
 }
 interface NumberInputTipFormatterOption {
     currentValue: number;
@@ -279,27 +277,28 @@ interface NumberInputTipFormatterOption {
     isSensitive: boolean;
     locale: any;
 }
-export type SliderProps = Override<HTMLAttributes<HTMLDivElement>, {
-    value?: number;
-    defaultValue?: number;
-    onChange?: (value: number) => void;
-    onLastChange?: (value: number) => void;
-    disabled?: boolean;
-    min?: number;
-    max?: number;
-    step?: number | string;
-    marks?: SliderMarks;
-    className?: string;
-    style?: CSSProperties;
-    sliderClassName?: string;
-    numberInput?: NumberInputProps;
-    isSensitive?: boolean;
-    numberInputTipFormatter?: (
-        option: NumberInputTipFormatterOption
-    ) => ReactNode;
-    tipFormatter?: (value: number) => ReactNode;
-    size?: SizeType;
-}>
+export type SliderProps = Override<
+    HTMLAttributes<HTMLDivElement>,
+    {
+        value?: number;
+        defaultValue?: number;
+        onChange?: (value: number) => void;
+        onLastChange?: (value: number) => void;
+        disabled?: boolean;
+        min?: number;
+        max?: number;
+        step?: number | string;
+        marks?: SliderMarks;
+        className?: string;
+        style?: CSSProperties;
+        sliderClassName?: string;
+        numberInput?: NumberInputProps;
+        isSensitive?: boolean;
+        numberInputTipFormatter?: (option: NumberInputTipFormatterOption) => ReactNode;
+        tipFormatter?: (value: number) => ReactNode;
+        size?: SizeType;
+    }
+>;
 export declare class Slider extends Component<SliderProps> {}
 
 // Upload
@@ -308,15 +307,21 @@ export interface UploadFile {
     uid: string;
     size: number;
     type: string;
-    status?: "uploading" | "success" | "error";
+    status?: 'uploading' | 'success' | 'error';
     lastModified?: number;
     lastModifiedDate?: Date;
 }
 interface UpdateProgress {
     (progress: number): void;
 }
-type UploadListTypeOption<T> = [T, "none" | "dropzone" | "thumbnail"];
-export type UploadListType = "none" | "text" | "list" | "dropzone" | UploadListTypeOption<"list"> | UploadListTypeOption<"dropzone">;
+type UploadListTypeOption<T> = [T, 'none' | 'dropzone' | 'thumbnail'];
+export type UploadListType =
+    | 'none'
+    | 'text'
+    | 'list'
+    | 'dropzone'
+    | UploadListTypeOption<'list'>
+    | UploadListTypeOption<'dropzone'>;
 export interface UploadCustomStyle {
     listMaxHeight?: string;
     [key: string]: any;
@@ -345,100 +350,10 @@ export interface UploadProps {
 export declare class Upload extends Component<UploadProps> {}
 
 // Calendar
-type DateValue = Date | Moment | number;
-export interface CalendarRule {
-    range?: [DateValue?, DateValue?];
-    custom?: (current: DateValue, value: DateValue) => boolean;
-}
-interface DateChangeEvent {
-    (value: DateValue): void;
-}
-export interface CalendarProps {
-    value?: DateValue;
-    defaultValue?: DateValue;
-    onSelect?: DateChangeEvent;
-    onChange?: DateChangeEvent;
-    rules?: CalendarRule;
-}
-export declare class Calendar extends Component<CalendarProps> {}
+export { default as Calendar } from './lib/components/Calendar';
 
 // DatePicker
-interface DatePickerDisplayOption {
-    format?: string;
-    display?: boolean;
-}
-export interface DatePickerDisplay {
-    date?: boolean | DatePickerDisplayOption;
-    hour?: boolean;
-    minute?: boolean;
-    second?: boolean;
-}
-export type DatePickerProps = Override<HTMLAttributes<HTMLDivElement>, {
-    value?: DateValue;
-    defaultValue?: DateValue;
-    onChange?: DateChangeEvent;
-    rules?: CalendarRule;
-    size?: SizeType;
-    display?: DatePickerDisplay;
-    disabled?: boolean;
-    zIndex?: number;
-    getCalendarContainer?: () => ReactNode;
-}>
-interface MonthDisplayOption {
-    format?: string;
-}
-interface MonthDisplay {
-    date?: MonthDisplayOption;
-}
-export type MonthProps = Override<HTMLAttributes<HTMLDivElement>, {
-    value?: DateValue;
-    defaultValue?: DateValue;
-    onChange?: DateChangeEvent;
-    rules?: CalendarRule;
-    display?: MonthDisplay;
-    size?: SizeType;
-    disabled?: boolean;
-    zIndex?: number;
-    getCalendarContainer?: () => ReactNode;
-}>
-declare class DatePickerMonth extends Component<MonthProps> {}
-type DateRangeValue = DateValue[];
-interface DateRangeChangeEvent {
-    (value: DateRangeValue): void;
-}
-export interface DatePickerRangeSelectOption extends SelectOptionProps {
-    label?: ReactNode;
-    range?: {
-        start?: MomentInput;
-        end?: MomentInput;
-    }
-}
-export type RangeProps = Override<HTMLAttributes<HTMLDivElement>,  {
-    value?: DateRangeValue;
-    defaultValue?: DateRangeValue;
-    onChange?: DateRangeChangeEvent;
-    onInitialChange?: DateRangeChangeEvent;
-    options?: DatePickerRangeSelectOption[];
-    option?: string | number;
-    defaultOption?: string | number;
-    onOptionChange?: (value: string | number) => void;
-    hideOptions?: boolean;
-    display?: DatePickerDisplay;
-    rules?: CalendarRule;
-    type?: "date" | "month";
-    size?: SizeType;
-    disabled?: boolean;
-    zIndex?: number;
-    selectProps?: SelectProps;
-    popoverProps?: PopoverProps;
-    datePickerProps?: DatePickerProps;
-    rangeTip?: ReactNode
-}>
-declare class DatePickerRange extends Component<RangeProps> {}
-export declare class DatePicker extends Component<DatePickerProps> {
-    static Month: typeof DatePickerMonth;
-    static Range: typeof DatePickerRange;
-}
+export { default as DatePicker } from './lib/components/DatePicker';
 
 // Menu
 export interface MenuCustomStyle {
@@ -463,12 +378,15 @@ export interface MenuItemProps extends HTMLAttributes<HTMLDivElement> {
     tooltip?: ReactNode | TooltipProps;
 }
 declare class MenuItem extends PureComponent<MenuItemProps> {}
-export type MenuSubMenuProps = Override<HTMLAttributes<HTMLDivElement>, {
-    title?: ReactNode;
-    styleType?: "collapse" | "popover";
-    subMenuKey?: string;
-    disabled?: boolean;
-}>
+export type MenuSubMenuProps = Override<
+    HTMLAttributes<HTMLDivElement>,
+    {
+        title?: ReactNode;
+        styleType?: 'collapse' | 'popover';
+        subMenuKey?: string;
+        disabled?: boolean;
+    }
+>;
 declare class MenuSubMenu extends Component<MenuSubMenuProps> {}
 export declare class Menu extends Component<MenuProps> {
     static Item: typeof MenuItem;
@@ -491,30 +409,30 @@ export declare class ActionList extends Component<ActionListProps> {}
 
 // ZForm
 export interface FormShape {
-    getFieldsValue: Function,
-    getFieldValue: Function,
-    getFieldInstance: Function,
-    setFieldsValue: Function,
-    setFields: Function,
-    setFieldsInitialValue: Function,
-    getFieldDecorator: Function,
-    getFieldProps: Function,
-    getFieldsError: Function,
-    getFieldError: Function,
-    isFieldValidating: Function,
-    isFieldsValidating: Function,
-    isFieldsTouched: Function,
-    isFieldTouched: Function,
-    isSubmitting: Function,
-    submit: Function,
-    validateFields: Function,
-    resetFields: Function
+    getFieldsValue: Function;
+    getFieldValue: Function;
+    getFieldInstance: Function;
+    setFieldsValue: Function;
+    setFields: Function;
+    setFieldsInitialValue: Function;
+    getFieldDecorator: Function;
+    getFieldProps: Function;
+    getFieldsError: Function;
+    getFieldError: Function;
+    isFieldValidating: Function;
+    isFieldsValidating: Function;
+    isFieldsTouched: Function;
+    isFieldTouched: Function;
+    isSubmitting: Function;
+    submit: Function;
+    validateFields: Function;
+    resetFields: Function;
 }
 export interface ZFormProps extends FormProps {
     form?: FormShape;
 }
 interface ControllerDecoratorOptions {
-    [key: string]: any
+    [key: string]: any;
 }
 export declare class ZForm extends Component<ZFormProps> {
     static formDecorator?: (options: FormShape) => Function;
@@ -529,17 +447,20 @@ interface TransferSource {
     search?: boolean | SelectSearch;
     disabled?: boolean;
 }
-export type TransferProps = Override<HTMLAttributes<HTMLDivElement>, {
-    dataSource?: any[];
-    renderList?: (options: TransferProps) => ReactNode;
-    selectedKeys?: string[];
-    defaultSelectedKeys?: string[];
-    onChange?: (keys: string[]) => void;
-    disabled?: boolean;
-    search?: boolean | SelectSearch;
-    source?: TransferSource;
-    target?: TransferSource;
-}>
+export type TransferProps = Override<
+    HTMLAttributes<HTMLDivElement>,
+    {
+        dataSource?: any[];
+        renderList?: (options: TransferProps) => ReactNode;
+        selectedKeys?: string[];
+        defaultSelectedKeys?: string[];
+        onChange?: (keys: string[]) => void;
+        disabled?: boolean;
+        search?: boolean | SelectSearch;
+        source?: TransferSource;
+        target?: TransferSource;
+    }
+>;
 export declare class Transfer extends PureComponent<TransferProps> {}
 
 // TransferMenu
@@ -596,7 +517,7 @@ export interface EditableListProps {
 export declare class EditableList extends PureComponent<EditableListProps> {}
 
 // Notice
-export type NoticeStyleType = "default" | "success" | "warning" | "error" | "disabled";
+export type NoticeStyleType = 'default' | 'success' | 'warning' | 'error' | 'disabled';
 export interface NoticeProps extends HTMLAttributes<HTMLDivElement> {
     closable?: boolean;
     icon?: ReactNode;
@@ -611,31 +532,31 @@ export { default as Badge } from './lib/components/Badge';
 
 // Tag
 export type TagStyleType =
-    "default"
-    | "green"
-    | "yellow"
-    | "red"
-    | "primary"
-    | "purple"
-    | "lightblue"
-    | "blue"
-    | "orange"
-    | "cyan"
-    | "success"
-    | "warning"
-    | "error"
-    | "purple-fill"
-    | "lightblue-fill"
-    | "blue-fill"
-    | "orange-fill"
-    | "yellow-fill"
-    | "cyan-fill"
+    | 'default'
+    | 'green'
+    | 'yellow'
+    | 'red'
+    | 'primary'
+    | 'purple'
+    | 'lightblue'
+    | 'blue'
+    | 'orange'
+    | 'cyan'
+    | 'success'
+    | 'warning'
+    | 'error'
+    | 'purple-fill'
+    | 'lightblue-fill'
+    | 'blue-fill'
+    | 'orange-fill'
+    | 'yellow-fill'
+    | 'cyan-fill'
     | string;
 export interface TagProps extends HTMLAttributes<HTMLSpanElement> {
     styleType?: TagStyleType;
     closable?: boolean;
     onClose?: () => void;
-    icon?: "circle-fill" | "circle" | "loading" | "custom" | ReactNode;
+    icon?: 'circle-fill' | 'circle' | 'loading' | 'custom' | ReactNode;
     disabled?: boolean;
 }
 export declare class Tag extends PureComponent<TagProps> {}
@@ -646,30 +567,30 @@ interface PopupAlign {
     offset?: number[];
 }
 export type PopoverPlacement =
-    "topLeft"
-    | "top"
-    | "topRight"
-    | "bottomLeft"
-    | "bottom"
-    | "bottomRight"
-    | "leftTop"
-    | "left"
-    | "leftBottom"
-    | "rightTop"
-    | "right"
-    | "rightBottom";
+    | 'topLeft'
+    | 'top'
+    | 'topRight'
+    | 'bottomLeft'
+    | 'bottom'
+    | 'bottomRight'
+    | 'leftTop'
+    | 'left'
+    | 'leftBottom'
+    | 'rightTop'
+    | 'right'
+    | 'rightBottom';
 export interface GetPopupContainer {
-    (): HTMLElement
+    (): HTMLElement;
 }
 export interface PopoverProps extends HTMLAttributes<HTMLDivElement> {
     visible?: boolean;
     defaultVisible?: boolean;
     onVisibleChange?: (visible: boolean) => void;
-    trigger?: "hover" | "focus" | "click" | "contextMenu";
+    trigger?: 'hover' | 'focus' | 'click' | 'contextMenu';
     alignPoint?: boolean;
     placement?: PopoverPlacement;
     align?: PopupAlign;
-    stretch?: "with" | "minWidth" | "height" | "minHeight";
+    stretch?: 'with' | 'minWidth' | 'height' | 'minHeight';
     popup?: ReactNode;
     popupClassName?: string;
     popupStyle?: CSSProperties;
@@ -677,7 +598,7 @@ export interface PopoverProps extends HTMLAttributes<HTMLDivElement> {
     getPopupContainer?: GetPopupContainer;
     forwardPopupContainer?: boolean | GetPopupContainer;
     prefixCls?: string;
-    animation?: "fade" | "zoom" | "bounce" | "slide-up";
+    animation?: 'fade' | 'zoom' | 'bounce' | 'slide-up';
 }
 export declare class Popover extends Component<PopoverProps> {}
 
@@ -686,7 +607,7 @@ interface TooltipCustomStyle {
     popupWrapperPadding?: string;
     [key: string]: any;
 }
-export type TooltipTheme = "light" | "dark";
+export type TooltipTheme = 'light' | 'dark';
 export interface TooltipProps extends PopoverProps {
     arrow?: boolean;
     theme?: TooltipTheme;
@@ -735,7 +656,7 @@ interface ModalConfirmHandle {
     destroy(): void;
 }
 interface ModalConfirm {
-    (options: ModalProps): ModalConfirmHandle
+    (options: ModalProps): ModalConfirmHandle;
 }
 export declare class Modal extends Component<ModalProps> {
     static confirm: ModalConfirm;
@@ -751,7 +672,7 @@ export interface DrawerProps {
     keyboard?: boolean;
     onClose?: () => void;
     destroyOnClose?: boolean;
-    placement?: "left" | "right" | "top" | "bottom";
+    placement?: 'left' | 'right' | 'top' | 'bottom';
     width?: string | number;
     height?: string | number;
     getContainer?: () => ReactNode;
@@ -774,11 +695,11 @@ export interface RowSelection {
     selectedRowKeys?: string[];
     getDisabledOfRow?: (row: any) => boolean;
     multiple?: boolean;
-    selectedTip?: boolean | "button";
+    selectedTip?: boolean | 'button';
     disabled?: boolean;
 }
 interface GetRowClassName {
-    (): string
+    (): string;
 }
 interface ColumnRender {
     (col: any, row?: any): ReactNode;
@@ -790,7 +711,7 @@ export interface Column {
     title?: ReactNode;
     dataIndex?: string;
     width?: string | number;
-    fixed?: "left" | "right";
+    fixed?: 'left' | 'right';
     render?: ColumnRender;
     onCellClick?: Function;
     onCell?: Function;
@@ -798,7 +719,7 @@ export interface Column {
     [key: string]: any;
 }
 interface DefaultColumnConfig {
-    [key: string]: string
+    [key: string]: string;
 }
 interface TableRowBack extends HTMLTableDataCellElement {}
 interface TableCustomStyle {
@@ -807,7 +728,7 @@ interface TableCustomStyle {
 }
 interface TableDefaultOrder {
     key: string;
-    state: "desc" | "asc"
+    state: 'desc' | 'asc';
 }
 export interface TableConditionChangeEventOrder {
     order: string;
@@ -848,7 +769,7 @@ export interface TableProps {
     handleSearch?: (row: any, searchValue: string) => boolean;
     customStyle?: TableCustomStyle;
     scroll?: TableScroll;
-    tableLayout?: "auto" |"fixed";
+    tableLayout?: 'auto' | 'fixed';
     rowKey?: string | RowKey;
     zebraCrossing?: boolean;
     components?: any;
@@ -875,8 +796,8 @@ export declare class Table extends Component<TableProps> {
 }
 
 // Tabs
-export type TabsStyleType = "default" | "ink";
-export type TabBarPosition = "left" | "right" | "top" | "bottom";
+export type TabsStyleType = 'default' | 'ink';
+export type TabBarPosition = 'left' | 'right' | 'top' | 'bottom';
 export interface TabsProps {
     activeKey?: string;
     defaultActiveKey?: string;
@@ -898,12 +819,15 @@ export declare class Tabs extends Component<TabsProps> {
 }
 
 // Collapse
-export type CollapseProps = Override<HTMLAttributes<HTMLDivElement>, {
-    openKeys?: any[];
-    defaultOpenKeys?: any[];
-    multiple?: boolean;
-    onChange?: (keys: any[]) => void;
-}>
+export type CollapseProps = Override<
+    HTMLAttributes<HTMLDivElement>,
+    {
+        openKeys?: any[];
+        defaultOpenKeys?: any[];
+        multiple?: boolean;
+        onChange?: (keys: any[]) => void;
+    }
+>;
 export interface CollapsePanelToggle {
     (open: boolean): void;
 }
@@ -919,7 +843,7 @@ export interface CollapsePanelProps {
     forceRender?: boolean;
     disabled?: boolean;
     panelKey?: any;
-    titlePosition?: "top" | "bottom";
+    titlePosition?: 'top' | 'bottom';
     multiple?: boolean;
 }
 declare class CollapsePanel extends Component<CollapsePanelProps> {}
@@ -944,19 +868,22 @@ export interface FormItemProps extends RowProps {
     controllerCol?: FormLabelCol;
     help?: ReactNode;
     required?: boolean;
-    status?: "default" | "success" | "warning" | "error" | "loading";
+    status?: 'default' | 'success' | 'warning' | 'error' | 'loading';
     shareStatus?: boolean;
     tip?: ReactNode | FormItemTip;
 }
-export type FormGroupProps = Override<HTMLAttributes<HTMLDivElement>, {
-    title?: ReactNode;
-    itemProps?: FormItemProps;
-}>
+export type FormGroupProps = Override<
+    HTMLAttributes<HTMLDivElement>,
+    {
+        title?: ReactNode;
+        itemProps?: FormItemProps;
+    }
+>;
 export interface FormSubAreaProps extends HTMLAttributes<HTMLFormElement> {
     itemProps?: FormItemProps;
 }
 export interface FormProps extends HTMLAttributes<HTMLFormElement> {
-    size?: "md" | "lg";
+    size?: 'md' | 'lg';
     itemProps?: FormItemProps;
 }
 declare class FormItem extends PureComponent<FormItemProps> {}
@@ -994,17 +921,20 @@ interface Step {
 export interface StepsProps extends HTMLAttributes<HTMLDivElement> {
     steps: Step[];
     current?: string | number;
-    status?: "current" | "loading" | "error";
+    status?: 'current' | 'loading' | 'error';
 }
 export declare class Steps extends Component<StepsProps> {}
 
 // Message
-export type MessageProps = Override<HTMLAttributes<HTMLDivElement>, {
-    closable?: boolean;
-    title?: ReactNode;
-    footer?: ReactNode;
-    styleType?: "default" | "success" | "loading" | "warning" | "error";
-}>
+export type MessageProps = Override<
+    HTMLAttributes<HTMLDivElement>,
+    {
+        closable?: boolean;
+        title?: ReactNode;
+        footer?: ReactNode;
+        styleType?: 'default' | 'success' | 'loading' | 'warning' | 'error';
+    }
+>;
 interface MessageOption {
     zIndex?: number;
     style?: CSSProperties;
@@ -1041,7 +971,7 @@ interface BreadcrumbItemProps {
 declare class BreadcrumbItem extends Component<BreadcrumbItemProps> {}
 interface BreadcrumbProps extends HTMLAttributes<HTMLDivElement> {
     separator?: ReactNode;
-    styleType?: "block-hover" | "hover" | "active";
+    styleType?: 'block-hover' | 'hover' | 'active';
 }
 declare class BreadcrumbBackButton extends Component<ButtonProps> {}
 export declare class Breadcrumb extends Component<BreadcrumbProps> {
@@ -1056,25 +986,28 @@ interface GetPaginationShowTotal {
 interface ShowQuickJumperObject {
     goButton?: ReactNode;
 }
-export type PaginationProps = Override<HTMLAttributes<HTMLUListElement>, {
-    current?: number;
-    defaultCurrent?: number;
-    total?: number;
-    showTotal?: number | GetPaginationShowTotal;
-    pageSize?: number;
-    defaultPageSize?: number;
-    onChange?: (page: number, pageSize: number) => void;
-    onAdvise?: (newCurrent: number, pageSize: number) => void;
-    showSizeChanger?: boolean;
-    showLessItems?: boolean;
-    onPageSizeChange?: (current: number, pageSize: number) => void;
-    showPrevNextJumpers?: boolean;
-    showQuickJumper?: boolean | ShowQuickJumperObject;
-    showTitle?: boolean;
-    pageSizeOptions?: Array<number | string>;
-    simple?: boolean;
-    size?: SizeType;
-}>
+export type PaginationProps = Override<
+    HTMLAttributes<HTMLUListElement>,
+    {
+        current?: number;
+        defaultCurrent?: number;
+        total?: number;
+        showTotal?: number | GetPaginationShowTotal;
+        pageSize?: number;
+        defaultPageSize?: number;
+        onChange?: (page: number, pageSize: number) => void;
+        onAdvise?: (newCurrent: number, pageSize: number) => void;
+        showSizeChanger?: boolean;
+        showLessItems?: boolean;
+        onPageSizeChange?: (current: number, pageSize: number) => void;
+        showPrevNextJumpers?: boolean;
+        showQuickJumper?: boolean | ShowQuickJumperObject;
+        showTitle?: boolean;
+        pageSizeOptions?: Array<number | string>;
+        simple?: boolean;
+        size?: SizeType;
+    }
+>;
 export declare class Pagination extends Component<PaginationProps> {}
 
 // Progress
@@ -1083,7 +1016,7 @@ interface ProgressFormat {
 }
 export interface ProgressProps extends HTMLAttributes<HTMLDivElement> {
     percent?: number;
-    color?: "success" | "warn" | "error" | string
+    color?: 'success' | 'warn' | 'error' | string;
     format?: null | ProgressFormat;
 }
 export declare class Progress extends Component<ProgressProps> {}
