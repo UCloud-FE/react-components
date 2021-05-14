@@ -10,7 +10,7 @@ import Time from 'src/components/TimePicker/Time';
 import { Size } from 'src/type';
 
 import { PickerContainer, PickerIcon, SPopup } from './style';
-import Footer from './Footer';
+import Footer, { TShortcut } from './Footer';
 import usePicker from './usePicker';
 
 const defaultProps: {
@@ -57,6 +57,8 @@ export type DatePickerProps = {
     status?: 'default' | 'error';
     /** placeholder */
     placeholder?: string;
+    /** 面板快捷内容 */
+    shortcuts?: TShortcut[] | null;
     /** 自定义 popover，参考 popover */
     popoverProps?: any;
     /**

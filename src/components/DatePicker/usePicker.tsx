@@ -10,6 +10,7 @@ import usePopoverContainer from 'src/hooks/usePopoverContainer';
 
 import LOCALE from './locale/zh_CN';
 import { isDateDisabled, getValidDate, isDateValid } from './utils';
+import { TShortcut } from './Footer';
 
 const formatInput = (v: string, allFormat: string[]): Moment | null | false => {
     if (v == '') return null;
@@ -53,6 +54,7 @@ interface TProps<D> {
     locale?: typeof LOCALE;
     status?: 'default' | 'error';
     placeholder?: string;
+    shortcuts?: TShortcut[] | null;
 }
 interface DisplayToFormatAndTimeMode<D> {
     (display?: D): [string] | [string, string[]];
@@ -79,6 +81,7 @@ const usePicker = <D,>(
         locale: _locale,
         status,
         placeholder,
+        shortcuts,
         ...rest
     } = props;
 
@@ -250,7 +253,8 @@ const usePicker = <D,>(
         onShortcut: handleShortcut,
         confirmAble: error === true,
         onConfirm: handleConfirm,
-        locale: _locale
+        locale: _locale,
+        shortcuts
     };
 
     return [

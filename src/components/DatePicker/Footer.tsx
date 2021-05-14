@@ -9,7 +9,7 @@ import useLocale from 'src/components/LocaleProvider/useLocale';
 import LOCALE from './locale/zh_CN';
 import { shortcutCls, footerCls } from './style';
 
-interface TShortcut {
+export interface TShortcut {
     handle: () => TDate;
     locale?: keyof typeof LOCALE;
     label?: ReactNode;
@@ -55,12 +55,16 @@ interface FooterProps {
     mode: Mode;
     confirmAble: boolean;
     onConfirm: () => void;
-    shortcuts?: TShortcut[];
+    shortcuts?: TShortcut[] | null;
     onShortcut: (d: TDate) => void;
     locale?: typeof LOCALE;
 }
 const Footer = ({ mode, confirmAble, onConfirm, shortcuts, onShortcut, locale: _locale }: FooterProps) => {
-    if (!shortcuts) shortcuts = [presetShortcuts[mode]];
+    if (shortcuts === undefined) {
+        shortcuts = [presetShortcuts[mode]];
+    } else if (shortcuts === null) {
+        shortcuts = [];
+    }
     const handleShortcutClick = useCallback(
         i => {
             const shortcut = shortcuts?.[i];

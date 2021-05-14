@@ -24,6 +24,7 @@ import Picker, { RangePickerRef } from './RangePicker';
 import LOCALE from './locale/zh_CN';
 import { isRangeDateValid } from './utils';
 import { RangeSelect, RangeDateSeparator, RangeContainer, SRangeInputWrap } from './style';
+import { TShortcut } from './Footer';
 
 interface RangeProps {
     /** 当前值，受控 */
@@ -90,6 +91,8 @@ interface RangeProps {
     placeholder?: [string | undefined, string | undefined] | [string | undefined] | [];
     /** picker 类型 */
     type?: 'date' | 'month';
+    /** 面板快捷内容 */
+    shortcuts?: [TShortcut[] | null, TShortcut[] | null] | [TShortcut[] | null];
     /** 控件尺寸 */
     size?: 'sm' | 'md' | 'lg';
     /** 是否禁用 */
@@ -162,6 +165,7 @@ const Range = ({
     rangeTip,
     status,
     placeholder,
+    shortcuts,
     ...rest
 }: RangeProps) => {
     const d = useMemo(() => new Date(), []);
@@ -195,6 +199,7 @@ const Range = ({
     const precision = type === 'month' ? 'month' : null;
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { range: rangeDisplay, ...pickerDisplay } = display;
+    const [shortcutsS, shortcutsE] = isArray(shortcuts) ? shortcuts : [];
 
     useInitial(() => {
         const [valueS, valueE] = isArray(value) ? value : [null, null];
@@ -309,6 +314,7 @@ const Range = ({
                     ref={inputRefS}
                     onActiveChange={handleStartActiveChange}
                     placeholder={placeholderS}
+                    shortcuts={shortcutsS}
                     {...sharedPickerProps}
                 />
                 <RangeDateSeparator />
@@ -319,6 +325,7 @@ const Range = ({
                     ref={inputRefE}
                     onActiveChange={handleEndActiveChange}
                     placeholder={placeholderE}
+                    shortcuts={shortcutsE}
                     {...sharedPickerProps}
                 />
             </SRangeInputWrap>
