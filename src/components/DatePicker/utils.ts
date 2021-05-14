@@ -69,8 +69,9 @@ const isDateValid = (date: TDate, value?: TDate | null, rules?: Rules) => {
         let [start, end] = range;
         if (start != null) start = moment(+start).startOf('second');
         if (end != null) end = moment(+end).startOf('second');
+        const v = date.startOf('second');
 
-        if ((start != null && date < start) || (end != null && date > end)) {
+        if ((start != null && v < start) || (end != null && v > end)) {
             return true;
         }
     }
