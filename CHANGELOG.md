@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.43](https://github.com/UCloud-FE/react-components/compare/v1.0.42...v1.0.43) (2021-05-14)
+
+### Features
+
+-   **DatePicker:** add shortcuts ([597d2fc](https://github.com/UCloud-FE/react-components/commit/597d2fc6ba4e4d664a5fe6a5c2cbe39acbfb5977))
+
+### Bug Fixes
+
+-   **DatePicker:** fix date valid ([0e400b2](https://github.com/UCloud-FE/react-components/commit/0e400b24c85aa0d6237e6ad3d0ab56ed79924bc4))
+-   **DatePicker:** fix null range change logic ([2c40c2c](https://github.com/UCloud-FE/react-components/commit/2c40c2ce7a3a5b0d2df841d155e9245544ee2e87))
+
 ### [1.0.42](https://github.com/UCloud-FE/react-components/compare/v1.0.41...v1.0.42) (2021-05-12)
 
 ### Features
