@@ -243,7 +243,7 @@ const Range = ({
 
     const handleOptionChange = useCallback(
         (value: string) => {
-            onChange(getValueFromOption(options, value));
+            if (value !== 'custom') onChange(getValueFromOption(options, value));
             onOptionChange(value);
         },
         [onChange, onOptionChange, options]
