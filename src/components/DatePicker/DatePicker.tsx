@@ -12,12 +12,7 @@ import { Size } from 'src/type';
 import { PickerContainer, PickerIcon, SPopup } from './style';
 import Footer, { TShortcut } from './Footer';
 import usePicker from './usePicker';
-
-const defaultProps: {
-    format?: string | string[];
-} = {
-    format: ['YYYY-MM-DD HH:mm:ss', 'YYYY-M-D H:m:s']
-};
+import { formatToShort } from './utils';
 
 export type DatePickerProps = {
     /** 值，受控 */
@@ -71,26 +66,31 @@ export type DatePickerProps = {
      * 弹出层容器，参考 popover.getPopupContainer
      */
     getCalendarContainer?: (triggerNode: Element) => Element;
-} & typeof defaultProps;
+};
 
-export const displayToFormatAndTimeMode = (display: DatePickerProps['display']): [string, ('HH' | 'mm' | 'ss')[]] => {
-    if (!display) return ['YYYY-MM-DD HH:mm:ss', ['HH', 'mm', 'ss']];
-    let dateFormat = 'YYYY-MM-DD';
-    if (display.date && display.date.format) {
-        dateFormat = display.date.format;
+type Time = 'HH' | 'mm' | 'ss';
+
+export const displayToFormatAndTimeMode = (display: DatePickerProps['display']): [string[], Time[]] => {
+    let format = 'YYYY-MM-DD HH:mm:ss';
+    let timeFormatA: Time[] = ['HH', 'mm', 'ss'];
+    if (display) {
+        let dateFormat = 'YYYY-MM-DD';
+        if (display.date && display.date.format) {
+            dateFormat = display.date.format;
+        }
+        timeFormatA = [];
+        if (display.hour !== false) {
+            timeFormatA.push('HH');
+        }
+        if (display.minute !== false) {
+            timeFormatA.push('mm');
+        }
+        if (display.second !== false) {
+            timeFormatA.push('ss');
+        }
+        format = timeFormatA.length ? dateFormat + ' ' + timeFormatA.join(':') : dateFormat;
     }
-    const timeFormatA: ('HH' | 'mm' | 'ss')[] = [];
-    if (display.hour !== false) {
-        timeFormatA.push('HH');
-    }
-    if (display.minute !== false) {
-        timeFormatA.push('mm');
-    }
-    if (display.second !== false) {
-        timeFormatA.push('ss');
-    }
-    const timeFormat = timeFormatA.join(':');
-    return [timeFormat ? dateFormat + ' ' + timeFormat : dateFormat, timeFormatA];
+    return [[format, formatToShort(format)], timeFormatA];
 };
 
 const DatePicker = (props: DatePickerProps) => {
@@ -103,7 +103,7 @@ const DatePicker = (props: DatePickerProps) => {
         timeProps,
         footerProps,
         { error }
-    ] = usePicker<DatePickerProps['display']>({ ...defaultProps, ...props }, displayToFormatAndTimeMode, 'date');
+    ] = usePicker<DatePickerProps['display']>(props, displayToFormatAndTimeMode, 'date');
 
     return (
         <PickerContainer {...containerProps}>

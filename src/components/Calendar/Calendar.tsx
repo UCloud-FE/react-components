@@ -5,7 +5,7 @@ import { TDate } from '@z-r/calendar/types/interface';
 import { Override } from 'src/type';
 import useLocale from 'src/components/LocaleProvider/useLocale';
 
-import { isDateDisabled, getValidDate, Rules } from './utils';
+import { getValidDate, Rules, getDisabledRule } from './utils';
 import { SCalendar, prefixCls } from './style';
 import HeaderSwitcher from './HeaderSwitcher';
 import LOCALE from './locale/zh_CN';
@@ -41,8 +41,8 @@ const Calendar = ({
     locale: _locale,
     ...rest
 }: CalendarProps & Override<HTMLAttributes<HTMLDivElement>, CalendarProps>) => {
-    const disabledDate = useMemo(() => {
-        return rules ? (date: TDate, value: TDate) => isDateDisabled(date, value, rules) : null;
+    const disabledRule = useMemo(() => {
+        return getDisabledRule(rules);
     }, [rules]);
     const handleChange = useCallback(
         (v: TDate) => {
@@ -62,7 +62,7 @@ const Calendar = ({
     return (
         <SCalendar
             prefixCls={prefixCls}
-            disabledRule={{ date: disabledDate }}
+            disabledRule={disabledRule}
             onChange={handleChange}
             locale={calendarLocale}
             components={{ HeaderSwitcher: renderHeaderSwitcher }}

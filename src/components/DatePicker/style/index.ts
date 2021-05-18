@@ -47,7 +47,7 @@ export const SPopup = sWrap({})(
             }
             .${timePrefixCls} {
                 background: ${DT.T_COLOR_BG_DEFAULT_LIGHT};
-                padding: 0 8px;
+                padding: 0 0 0 16px;
                 border-left: 1px solid ${DT.T_COLOR_BG_DEFAULT_DARK};
             }
         `;

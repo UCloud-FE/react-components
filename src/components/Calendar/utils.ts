@@ -1,12 +1,39 @@
-import { TDate } from '@z-r/calendar/types/interface';
+import { DisabledFunc, TDate } from '@z-r/calendar/types/interface';
 import moment, { Moment } from 'moment';
 
 export interface Rules {
+    /** 范围值 */
     range?: [TDate, TDate];
+    /** @deprecated */
     custom?: (date: Moment, value?: Moment | null) => boolean;
 }
 
-const isDateDisabled = (date: TDate, value?: TDate | null, rules?: Rules) => {
+export const getDisabledRule = (
+    rules?: Rules
+): {
+    date?: DisabledFunc;
+    month?: DisabledFunc;
+    year?: DisabledFunc;
+    decade?: DisabledFunc;
+} => {
+    if (!rules) return {};
+    const disabledRule: {
+        date?: DisabledFunc;
+        month?: DisabledFunc;
+        year?: DisabledFunc;
+        decade?: DisabledFunc;
+    } = {};
+    if (rules.range) {
+        disabledRule.date = (date: TDate, value?: TDate) => !!isDateDisabled(date, value, rules);
+        disabledRule.month = (date: TDate) => !!isMonthDisabled(date, rules);
+        disabledRule.year = (date: TDate) => !!isYearDisabled(date, rules);
+        disabledRule.decade = (date: TDate) => !!isDecadeDisabled(date, rules);
+        return disabledRule;
+    }
+    return {};
+};
+
+export const isDateDisabled = (date: TDate, value?: TDate | null, rules?: Rules) => {
     date = moment(+date);
     if (!rules) {
         return false;
@@ -15,8 +42,8 @@ const isDateDisabled = (date: TDate, value?: TDate | null, rules?: Rules) => {
     if (range) {
         const [start, end] = range;
         if (
-            (start != null && moment(date).set({ hour: 23, minute: 59, second: 59, millisecond: 999 }) < start) ||
-            (end != null && moment(date).set({ hour: 0, minute: 0, second: 0, millisecond: 0 }) > end)
+            (start != null && moment(date).endOf('date') < start) ||
+            (end != null && moment(date).startOf('date') > end)
         ) {
             return true;
         }
@@ -26,7 +53,56 @@ const isDateDisabled = (date: TDate, value?: TDate | null, rules?: Rules) => {
     }
 };
 
-const getValidDate = (date: TDate, rules?: Rules) => {
+const isMonthDisabled = (date: TDate, rules?: Rules) => {
+    date = moment(+date);
+    if (!rules) return false;
+    const { range } = rules;
+    if (range) {
+        const [start, end] = range;
+        if (
+            (start != null && moment(date).endOf('month') < start) ||
+            (end != null && moment(date).startOf('month') > end)
+        ) {
+            return true;
+        }
+    }
+};
+
+const isYearDisabled = (date: TDate, rules?: Rules) => {
+    date = moment(+date);
+    if (!rules) return false;
+    const { range } = rules;
+    if (range) {
+        const [start, end] = range;
+        if (
+            (start != null && moment(date).endOf('year') < start) ||
+            (end != null && moment(date).startOf('year') > end)
+        ) {
+            return true;
+        }
+    }
+};
+
+const isDecadeDisabled = (date: TDate, rules?: Rules) => {
+    date = moment(+date);
+    if (!rules) return false;
+    const { range } = rules;
+    if (range) {
+        const [start, end] = range;
+        const baseYear = (((date as Moment).year() / 10) | 0) * 10;
+        if (
+            (start != null &&
+                moment(date)
+                    .set('year', baseYear + 10)
+                    .endOf('year') < start) ||
+            (end != null && moment(date).set('year', baseYear).startOf('year') > end)
+        ) {
+            return true;
+        }
+    }
+};
+
+export const getValidDate = (date: TDate, rules?: Rules) => {
     const d = moment(+date);
     if (!rules) {
         return d;
@@ -44,5 +120,3 @@ const getValidDate = (date: TDate, rules?: Rules) => {
     }
     return d;
 };
-
-export { isDateDisabled, getValidDate };

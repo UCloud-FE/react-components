@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import { Timer } from '@z-r/calendar';
+import { Time } from '@z-r/calendar';
 
 import { sWrap } from 'src/style';
 import config from 'src/config';
@@ -27,7 +27,7 @@ export const SPopup = sWrap({})(
 );
 
 export const STime = sWrap<any>({})(
-    styled(Timer, { shouldForwardProp })(props => {
+    styled(Time, { shouldForwardProp })(props => {
         const {
             theme: { designTokens: DT }
         } = props;
@@ -44,7 +44,7 @@ export const STime = sWrap<any>({})(
                     overflow-x: hidden;
                     overflow-y: hidden;
                     z-index: 1;
-                    width: 50px;
+                    width: 56px;
                     :hover {
                         overflow-y: scroll;
                     }
@@ -96,9 +96,6 @@ export const STime = sWrap<any>({})(
                         left: 0;
                     }
                 }
-            }
-            .${timePrefixCls}-wrap + .${timePrefixCls}-wrap {
-                margin-left: 4px;
             }
         `;
     })

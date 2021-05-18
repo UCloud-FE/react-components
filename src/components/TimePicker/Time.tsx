@@ -1,7 +1,9 @@
 import React, { memo } from 'react';
+
 import { Override } from 'src/type';
 
 import { timePrefixCls, STime } from './style';
+import { scrollTo } from './util';
 
 type TimeProps = Override<
     React.HTMLAttributes<HTMLDivElement>,
@@ -15,7 +17,7 @@ type TimeProps = Override<
 >;
 
 const Time = (props: TimeProps) => {
-    return <STime {...props} prefixCls={timePrefixCls} />;
+    return <STime scrollTo={scrollTo} {...props} prefixCls={timePrefixCls} />;
 };
 
 export default memo(Time);

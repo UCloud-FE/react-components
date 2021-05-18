@@ -12,12 +12,7 @@ import { Size } from 'src/type';
 import { PickerContainer, PickerIcon, SPopup } from './style';
 import Footer, { TShortcut } from './Footer';
 import usePicker from './usePicker';
-
-const defaultProps: {
-    format?: string | string[];
-} = {
-    format: ['YYYY-MM', 'YYYY-M']
-};
+import { formatToShort } from './utils';
 
 export type MonthProps = {
     /** 值，受控 */
@@ -63,21 +58,22 @@ export type MonthProps = {
      * 弹出层容器，参考 popover.getPopupContainer
      */
     getCalendarContainer?: (triggerNode: Element) => Element;
-} & typeof defaultProps;
+};
 
-export const displayToFormatAndTimeMode = (display: MonthProps['display']): [string] => {
-    if (!display) return ['YYYY-MM'];
-    let dateFormat = 'YYYY-MM';
-    if (display.date && display.date.format) {
-        dateFormat = display.date.format;
+export const displayToFormatAndTimeMode = (display: MonthProps['display']): [string[]] => {
+    let format = 'YYYY-MM';
+    if (display) {
+        if (display.date && display.date.format) {
+            format = display.date.format;
+        }
     }
-    return [dateFormat];
+    return [[format, formatToShort(format)]];
 };
 
 const Month = (props: MonthProps) => {
     const [inputProps, containerProps, popoverProps, popupProps, calendarProps, , footerProps, { error }] = usePicker<
         MonthProps['display']
-    >({ ...defaultProps, ...props }, displayToFormatAndTimeMode, 'month');
+    >(props, displayToFormatAndTimeMode, 'month');
     const popoverContainerProps = usePopoverContainer();
 
     return (

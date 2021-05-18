@@ -11,6 +11,18 @@ export interface Rules {
     custom?: (date: Moment, value?: Moment | null) => boolean;
 }
 
+export const formatToShort = (format: string): string => {
+    console.error(format);
+    
+    return format
+        .replace('YYYY', 'YY')
+        .replace('MM', 'M')
+        .replace('DD', 'D')
+        .replace('HH', 'H')
+        .replace('mm', 'm')
+        .replace('ss', 's');
+};
+
 const isRangeDateValid = (
     value: [TDate | null, TDate | null],
     rules: {

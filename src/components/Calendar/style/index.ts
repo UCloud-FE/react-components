@@ -100,16 +100,19 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
                 cursor: pointer;
                 user-select: none;
 
-                :hover {
+                :not(.${prefixCls}-cell-empty):hover {
                     background: ${DT.T_COLOR_BG_DEFAULT_HOVER};
                 }
-                &.${prefixCls}-prev, &.${prefixCls}-next {
+                &.${prefixCls}-cell-empty {
+                    cursor: default;
+                }
+                &.${prefixCls}-cell.${prefixCls}-prev, &.${prefixCls}-cell.${prefixCls}-next {
                     color: ${DT.T_COLOR_TEXT_DISABLED};
                     :hover {
                         background: ${DT.T_COLOR_BG_DEFAULT_HOVER};
                     }
                 }
-                &.${prefixCls}-disabled {
+                &.${prefixCls}-cell.${prefixCls}-disabled {
                     background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
                     color: ${DT.T_COLOR_TEXT_DISABLED};
                     cursor: default;
@@ -130,7 +133,7 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
                 &.${prefixCls}-now {
                     color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
                 }
-                &.${prefixCls}-active {
+                &.${prefixCls}-cell.${prefixCls}-active {
                     background: ${DT.T_COLOR_BG_PRIMARY_1};
                     color: ${DT.T_COLOR_TEXT_WHITE};
                     font-weight: bold;

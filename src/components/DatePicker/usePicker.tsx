@@ -57,7 +57,7 @@ interface TProps<D> {
     shortcuts?: TShortcut[] | null;
 }
 interface DisplayToFormatAndTimeMode<D> {
-    (display?: D): [string] | [string, string[]];
+    (display?: D): [string[]] | [string[], string[]];
 }
 
 const usePicker = <D,>(
@@ -90,13 +90,10 @@ const usePicker = <D,>(
         displayToFormatAndTimeMode
     ]);
     const [format, allFormat] = useMemo(() => {
-        const allFormat = _format
-            ? Array.isArray(_format)
-                ? _format.concat(displayFormat)
-                : [_format, displayFormat]
-            : [displayFormat];
+        const allFormat = _format ? displayFormat.concat(_format) : displayFormat;
         return [allFormat[0], allFormat];
     }, [_format, displayFormat]);
+
     const d = useMemo(() => new Date(), []);
 
     let [value, onChange] = useUncontrolled<TDate | null | undefined, Moment | null>(_value, defaultValue, _onChange);
@@ -178,8 +175,8 @@ const usePicker = <D,>(
     );
 
     const handleInputFocus = useCallback(() => {
-        setCalValue(value);
-        setCalCurrentValue(value || d);
+        setCalValue(value == null ? null : value);
+        setCalCurrentValue(value == null ? d : value);
         setUseInputValue(true);
         setActive(true);
     }, [d, value]);
@@ -187,7 +184,7 @@ const usePicker = <D,>(
 
     const handleConfirm = useCallback(
         (v?: TDate) => {
-            const currentValue = v ? v : calValue;
+            const currentValue = v != null ? v : calValue;
             if (!currentValue) {
                 if (!nullable) return;
             } else if (isDateDisabled(+currentValue, value, rules)) {
