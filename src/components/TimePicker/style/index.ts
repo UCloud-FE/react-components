@@ -10,6 +10,8 @@ import isIE from 'src/utils/isIE';
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-timepicker';
 export const timePrefixCls = _prefixCls + '-time';
+export const shortcutCls = prefixCls + '-shortcut';
+export const footerCls = prefixCls + '-footer';
 
 const shouldForwardProp = (propName: string): boolean => {
     return !({ customStyle: 1, theme: 1 } as { [key: string]: 1 })[propName];
@@ -21,7 +23,21 @@ export const SPopup = sWrap({})(
             theme: { designTokens: DT }
         } = props;
         return css`
-            background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
+            background: ${DT.T_COLOR_BG_DEFAULT_DARK};
+            box-shadow: ${DT.T_SHADOW_BLOCK_DEFAULT_LG};
+            border-radius: 2px;
+            .${timePrefixCls} {
+                padding: 0 0 0 16px;
+                border-left: 1px solid ${DT.T_COLOR_BG_DEFAULT_DARK};
+                background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
+            }
+            .${footerCls} {
+                padding: 12px;
+                .${shortcutCls} {
+                    cursor: pointer;
+                    color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+                }
+            }
         `;
     })
 );
@@ -33,7 +49,6 @@ export const STime = sWrap<any>({})(
         } = props;
         return css`
             display: flex;
-            /* background: ${DT.T_COLOR_BG_DEFAULT_NORMAL}; */
             .${timePrefixCls}-wrap {
                 overflow: hidden;
                 display: flex;
