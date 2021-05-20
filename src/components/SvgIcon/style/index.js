@@ -12,6 +12,7 @@ export const SvgIconWrapper = withProps({
 
         return css`
             transition: all 0.3s;
+            fill: currentcolor;
 
             ${inlineBlockWithVerticalMixin};
 

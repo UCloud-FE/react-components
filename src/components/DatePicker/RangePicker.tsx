@@ -5,11 +5,12 @@ import Input from 'src/components/Input';
 import Calendar from 'src/components/Calendar';
 import Notice from 'src/components/Notice';
 import Time from 'src/components/TimePicker/Time';
+import SvgIcon from 'src/components/SvgIcon';
 import usePopoverContainer from 'src/hooks/usePopoverContainer';
 
 import { DatePickerProps, displayToFormatAndTimeMode } from './DatePicker';
 import { displayToFormatAndTimeMode as displayToFormatAndTimeModeM } from './Month';
-import { PickerIcon, SPopup, readonlyInputCls } from './style';
+import { SPopup, readonlyInputCls } from './style';
 import usePicker from './usePicker';
 import Footer from './Footer';
 
@@ -119,7 +120,7 @@ const RangePickerWithoutMemo = forwardRef(
             >
                 <Input
                     {...inputProps}
-                    prefix={prefix ? <PickerIcon type="calendar" color="blue" /> : null}
+                    prefix={prefix ? <SvgIcon type="calendar" /> : null}
                     customStyle={{ border: 'none', boxShadow: 'none', background: 'none' }}
                     ref={inputRef}
                 />

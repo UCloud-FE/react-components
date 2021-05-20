@@ -12,8 +12,6 @@ export interface Rules {
 }
 
 export const formatToShort = (format: string): string => {
-    console.error(format);
-    
     return format
         .replace('YYYY', 'YY')
         .replace('MM', 'M')

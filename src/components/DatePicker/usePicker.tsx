@@ -15,10 +15,11 @@ import { TShortcut } from './Footer';
 const formatInput = (v: string, allFormat: string[]): Moment | null | false => {
     if (v == '') return null;
     const l = allFormat.length;
-    v = v.replace(/：/g, ':');
-    v = v.replace(/—/g, '-');
-    v = v.replace(/\s{2,}/g, ' ');
-    v = v.trim();
+    v = v
+        .replace(/：/g, ':')
+        .replace(/—/g, '-')
+        .replace(/\s{2,}/g, ' ')
+        .trim();
 
     for (let i = 0; i < l; i++) {
         let format = allFormat[i];

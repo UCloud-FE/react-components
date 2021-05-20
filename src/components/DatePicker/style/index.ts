@@ -2,13 +2,13 @@ import classnames from 'classnames';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import Icon from 'src/components/Icon';
 import Select from 'src/components/Select';
 import { tableCls } from 'src/components/Calendar/style';
 import { timePrefixCls } from 'src/components/TimePicker/style';
 import { prefixCls as inputPrefixCls } from 'src/components/Input/style';
 import { inlineBlockWithVerticalMixin, Theme, sWrap, getHeightBySize, Size } from 'src/style';
 import config from 'src/config';
+import SvgIcon from 'src/components/SvgIcon';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-datepicker';
@@ -125,11 +125,6 @@ export const SRangeInputWrap = sWrap<{
         `;
     })
 );
-
-export const PickerIcon = styled(Icon)`
-    margin-left: 5px;
-    display: inline-block;
-`;
 
 export const RangeContainer = sWrap<{ disabled?: boolean }>({
     className: ({ disabled }) => classnames(`${prefixCls}-range`, disabled && `${prefixCls}-range-disabled`)

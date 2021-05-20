@@ -6,10 +6,11 @@ import Input from 'src/components/Input';
 import Calendar from 'src/components/Calendar';
 import Popover from 'src/components/Popover';
 import Notice from 'src/components/Notice';
+import SvgIcon from 'src/components/SvgIcon';
 import usePopoverContainer from 'src/hooks/usePopoverContainer';
 import { Size } from 'src/type';
 
-import { PickerContainer, PickerIcon, SPopup } from './style';
+import { PickerContainer,  SPopup } from './style';
 import Footer, { TShortcut } from './Footer';
 import usePicker from './usePicker';
 import { formatToShort } from './utils';
@@ -93,7 +94,7 @@ const Month = (props: MonthProps) => {
                     </SPopup>
                 }
             >
-                <Input {...inputProps} prefix={<PickerIcon type="calendar" color="blue" />} />
+                <Input {...inputProps} prefix={<SvgIcon type="calendar" />} />
             </Popover>
         </PickerContainer>
     );

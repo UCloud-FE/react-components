@@ -7,9 +7,10 @@ import Calendar from 'src/components/Calendar';
 import Popover from 'src/components/Popover';
 import Notice from 'src/components/Notice';
 import Time from 'src/components/TimePicker/Time';
+import SvgIcon from 'src/components/SvgIcon';
 import { Size } from 'src/type';
 
-import { PickerContainer, PickerIcon, SPopup } from './style';
+import { PickerContainer, SPopup } from './style';
 import Footer, { TShortcut } from './Footer';
 import usePicker from './usePicker';
 import { formatToShort } from './utils';
@@ -121,7 +122,7 @@ const DatePicker = (props: DatePickerProps) => {
                     </SPopup>
                 }
             >
-                <Input {...inputProps} prefix={<PickerIcon type="calendar" color="blue" />} />
+                <Input {...inputProps} prefix={<SvgIcon type="calendar" />} />
             </Popover>
         </PickerContainer>
     );

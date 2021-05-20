@@ -22,6 +22,8 @@ import Refresh from './icons/Refresh';
 import Trash from './icons/Trash';
 import Eye from './icons/Eye';
 import QuestionCircle from './icons/QuestionCircle';
+import Calendar from './icons/Calendar';
+import Clock from './icons/Clock';
 
 // circle filled
 import ExclamationCircleFilled from './icons/ExclamationCircleFilled';
@@ -44,7 +46,9 @@ const IconMap = {
     'arrow-right': RightArrow,
     refresh: Refresh,
     trash: Trash,
-    eye: Eye
+    eye: Eye,
+    calendar: Calendar,
+    clock: Clock
 };
 
 // circle
