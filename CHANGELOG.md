@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/UCloud-FE/react-components/compare/v1.0.43...v1.1.0) (2021-05-20)
+
+### Features
+
+-   **DatePicker:** change icon to svg ([f1d1dae](https://github.com/UCloud-FE/react-components/commit/f1d1dae7d0e0da8fc1c679bd3aa4e4e30fdae630))
+-   **DatePicker:** optimize disable rule & fix some bug ([81b43e9](https://github.com/UCloud-FE/react-components/commit/81b43e9a445ba266caac53e1ba3d3ac2ae1699b0))
+-   **TimePicker:** add TimePicker ([379bd87](https://github.com/UCloud-FE/react-components/commit/379bd873fb8c125e79c22abbc0004b3fd79c3e51))
+
 ### [1.0.43](https://github.com/UCloud-FE/react-components/compare/v1.0.42...v1.0.43) (2021-05-14)
 
 ### Features
