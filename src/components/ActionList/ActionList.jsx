@@ -11,6 +11,25 @@ import ConfigContext from 'src/components/ConfigProvider/ConfigContext';
 
 import { prefixCls } from './style';
 
+const SubMenuItem = ({ onClick, disabled, handleHide, ...rest }) => {
+    const clickHandler = React.useCallback(
+        (...args) => {
+            if (disabled) return;
+            if (onClick) {
+                onClick(...args);
+                handleHide();
+            }
+        },
+        [disabled, handleHide, onClick]
+    );
+    return <Menu.Item onClick={clickHandler} disabled={disabled} {...rest} />;
+};
+SubMenuItem.propTypes = {
+    disabled: PropTypes.bool,
+    onClick: PropTypes.func,
+    handleHide: PropTypes.func
+};
+
 const Sizes = Button.Sizes;
 const ButtonStyleTypes = Button.StyleTypes;
 export default class ActionList extends Component {
@@ -39,12 +58,6 @@ export default class ActionList extends Component {
         smart: true
     };
     state = {};
-    handleDisabledClick = e => {
-        if (e) {
-            e.stopPropagation();
-            e.preventDefault();
-        }
-    };
     getPopupContainer = triggerNode => triggerNode.parentNode;
     renderButtonList = (list, size) => {
         const { buttonStyleType } = this.props;
@@ -95,14 +108,9 @@ export default class ActionList extends Component {
                 }
                 const { label, disabled, onClick, ...rest } = info;
                 return (
-                    <Menu.Item
-                        key={i}
-                        disabled={disabled}
-                        onClick={disabled ? this.handleDisabledClick : onClick}
-                        {...rest}
-                    >
+                    <SubMenuItem key={i} disabled={disabled} onClick={onClick} handleHide={this.hideMenu} {...rest}>
                         {label}
-                    </Menu.Item>
+                    </SubMenuItem>
                 );
             });
         return (
@@ -118,7 +126,7 @@ export default class ActionList extends Component {
                                 ? { forwardPopupContainer: this.getPopupContainer }
                                 : { getPopupContainer: this.getPopupContainer })}
                             popup={
-                                <Menu selectable={false} onClick={this.hideMenu} customStyle={{ maxHeight: '380px' }}>
+                                <Menu selectable={false} customStyle={{ maxHeight: '380px' }}>
                                     {renderList(list)}
                                 </Menu>
                             }
