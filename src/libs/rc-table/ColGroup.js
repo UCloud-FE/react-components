@@ -14,7 +14,7 @@ export default function ColGroup(props, { table }) {
 
     cols = cols.concat(
         leafColumns.map(c => {
-            return <col key={c.key || c.dataIndex} style={{ width: c.width, minWidth: c.minWidth || c.width }} />;
+            return <col key={c.key || c.dataIndex} style={{ width: c.width }} />;
         })
     );
 
