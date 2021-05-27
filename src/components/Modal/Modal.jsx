@@ -117,7 +117,7 @@ class Modal extends Component {
             ...rest
         } = this.props;
         const width = {
-            sm: 300,
+            sm: 400,
             md: 700,
             lg: 800
         }[size];
