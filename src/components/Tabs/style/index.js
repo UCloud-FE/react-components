@@ -129,6 +129,7 @@ ${clearFixMixin};
                 color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
                 border-color: ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
                 background: ${DT.T_TABS_DEFAULT_COLOR_BG_DEFAULT};
+                font-weight: bold;
             }
         }
     }
@@ -154,6 +155,7 @@ ${clearFixMixin};
             &-tab-active,
             &-tab-active:hover {
                 color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+                font-weight: bold;
             }
         }
     }
@@ -340,7 +342,7 @@ ${clearFixMixin};
                     width: 100%;
                 }
                 .${prefixCls}-nav-container-scrolling {
-                    padding: 0 20px;
+                    padding: 0 32px;
                 }
                 .${prefixCls}-tab-prev {
                     left: 0;
@@ -369,7 +371,7 @@ ${clearFixMixin};
                     height: 100%;
                 }
                 .${prefixCls}-nav-container-scrolling {
-                    padding: 20px 0;
+                    padding: 28px 0;
                 }
                 .${prefixCls}-tab-prev {
                     top: 0;
