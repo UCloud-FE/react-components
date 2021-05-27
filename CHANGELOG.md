@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/UCloud-FE/react-components/compare/v1.1.0...v1.1.1) (2021-05-27)
+
+### Features
+
+-   **Modal:** change size of sm size ([3d549b8](https://github.com/UCloud-FE/react-components/commit/3d549b82abcd12c8f084a86c8581eaad1505fdd2))
+-   **Tabs:** change some style ([421935b](https://github.com/UCloud-FE/react-components/commit/421935b01e872af756e6ed0cd1d456b152fe4ec0))
+
+### Bug Fixes
+
+-   **Table:** fix col width on newest chrome ([d1874ce](https://github.com/UCloud-FE/react-components/commit/d1874ce2921b882e7d37e9bdacb80bd21cf010dd))
+
 ## [1.1.0](https://github.com/UCloud-FE/react-components/compare/v1.0.43...v1.1.0) (2021-05-20)
 
 ### Features
