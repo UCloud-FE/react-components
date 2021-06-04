@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.2](https://github.com/UCloud-FE/react-components/compare/v1.1.1...v1.1.2) (2021-06-04)
+
+### Bug Fixes
+
+-   **ActionList:** fix click hide on subMenu title ([02cc23c](https://github.com/UCloud-FE/react-components/commit/02cc23c1c41ae896e21b3e81f0038686daf32143))
+-   **DatePicker:** fix invalid current calendar value ([18511c1](https://github.com/UCloud-FE/react-components/commit/18511c11e3ebe09bd54c6ddf23b647f203789eb8))
+-   **Input:** fix disabled color in safari ([1e5fd14](https://github.com/UCloud-FE/react-components/commit/1e5fd14f6cce8d6ba486f7890624a4b2b538b1fc))
+
 ### [1.1.1](https://github.com/UCloud-FE/react-components/compare/v1.1.0...v1.1.1) (2021-05-27)
 
 ### Features
