@@ -17,7 +17,7 @@ import classnames from 'classnames';
 import ResizeObserver from 'resize-observer-polyfill';
 import _ from 'lodash';
 
-import { setTransform, isTransform3dSupported, getLeft, getStyle, getTop, isVertical } from './utils';
+import { setTransform, isTransform3dSupported, getStyle, isVertical } from './utils';
 import RefContext, { GetRef } from './RefContext';
 import { Panes, TabBarPosition } from './shared';
 import { prefixCls } from './style';
@@ -175,7 +175,7 @@ function scrollInkBar(props: Pick<BarContext, 'getRef' | 'direction' | 'tabBarPo
         inkBarNodeStyle.right = '';
 
         if (isVertical(tabBarPosition)) {
-            const top = getTop(tabNode, wrapNode);
+            const top = tabNode.offsetTop;
             const height = tabNode.offsetHeight;
             if (transformSupported) {
                 setTransform(inkBarNodeStyle, `translate3d(0,${top}px,0)`);
@@ -185,7 +185,7 @@ function scrollInkBar(props: Pick<BarContext, 'getRef' | 'direction' | 'tabBarPo
             }
             inkBarNodeStyle.height = `${height}px`;
         } else {
-            let left = getLeft(tabNode, wrapNode);
+            let left = tabNode.offsetLeft;
             let width = tabNode.offsetWidth;
             // If tabNode width equal to wrapNode width when tabBarPosition is top or bottom
             // It means no css working, then ink bar should not have width until css is loaded
@@ -206,13 +206,7 @@ function scrollInkBar(props: Pick<BarContext, 'getRef' | 'direction' | 'tabBarPo
         }
     }
 }
-const InkTabBarNode = ({
-    panes,
-    activeKey,
-    tabBarPosition,
-    inkBarAnimated = true,
-    direction
-}: InkTabBarNodeProps) => {
+const InkTabBarNode = ({ panes, activeKey, tabBarPosition, inkBarAnimated = true, direction }: InkTabBarNodeProps) => {
     const { saveRef, getRef } = useContext(RefContext);
     useEffect(() => {
         const activeIndex = getActiveIndex(panes, activeKey);
