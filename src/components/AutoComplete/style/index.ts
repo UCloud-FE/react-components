@@ -1,11 +1,10 @@
+import { ReactNode } from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import classnames from 'classnames';
 
 import config from 'src/config';
-import { sWrap, DesignToken } from 'src/style';
+import { sWrap } from 'src/style';
 import Loading from 'src/components/Loading';
-import { ReactNode } from 'react';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-auto-complete';

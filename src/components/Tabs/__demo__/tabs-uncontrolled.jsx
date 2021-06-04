@@ -1,5 +1,6 @@
 import React from 'react';
-import Tabs from 'components/Tabs';
+
+import Tabs from 'src/components/Tabs';
 
 // demo start
 const Demo = () => {

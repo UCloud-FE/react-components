@@ -1,9 +1,9 @@
 import React from 'react';
-import Tabs from 'components/Tabs';
-import Switch from 'components/Switch';
-import Form from 'components/Form';
-
 import _ from 'lodash';
+
+import Tabs from 'src/components/Tabs';
+import Switch from 'src/components/Switch';
+import Form from 'src/components/Form';
 
 // demo start
 class PaneContent extends React.Component {

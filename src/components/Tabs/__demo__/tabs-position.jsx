@@ -1,12 +1,13 @@
 import React from 'react';
-import Tabs from 'components/Tabs';
+
+import Tabs from 'src/components/Tabs';
 
 // demo start
-const { Position } = Tabs;
+const { TabBarPositions } = Tabs;
 const Demo = () => {
     return (
         <div>
-            {Position.map(position => (
+            {TabBarPositions.map(position => (
                 <div className="demo-wrap" key={position}>
                     <Tabs tabBarPosition={position}>
                         {[1, 2, 3].map(i => (

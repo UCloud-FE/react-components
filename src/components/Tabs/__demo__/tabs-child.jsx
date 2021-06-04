@@ -1,8 +1,9 @@
 import React from 'react';
-import Tabs from 'components/Tabs';
+
+import Tabs from 'src/components/Tabs';
 
 // demo start
-const { Position } = Tabs;
+const { TabBarPositions } = Tabs;
 const Demo = () => {
     return (
         <div>
@@ -19,7 +20,7 @@ const Demo = () => {
                                 borderColor: '#ccc'
                             }}
                         >
-                            <Tabs tabBarPosition={Position[i]}>
+                            <Tabs tabBarPosition={TabBarPositions[i]}>
                                 {[1, 2, 3].map(i => (
                                     <Tabs.Pane key={i} tab={`tab ${i}`} style={{ padding: 16 }}>
                                         Pane {i}
@@ -43,7 +44,7 @@ const Demo = () => {
                                 borderColor: '#ccc'
                             }}
                         >
-                            <Tabs tabBarPosition={Position[i]}>
+                            <Tabs tabBarPosition={TabBarPositions[i]}>
                                 {[1, 2, 3].map(i => (
                                     <Tabs.Pane key={i} tab={`tab ${i}`} style={{ padding: 16 }}>
                                         Pane {i}
@@ -67,7 +68,7 @@ const Demo = () => {
                                 borderColor: '#ccc'
                             }}
                         >
-                            <Tabs tabBarPosition={Position[i]} styleType="ink">
+                            <Tabs tabBarPosition={TabBarPositions[i]} styleType="ink">
                                 {[1, 2, 3].map(i => (
                                     <Tabs.Pane key={i} tab={`tab ${i}`} style={{ padding: 16 }}>
                                         Pane {i}

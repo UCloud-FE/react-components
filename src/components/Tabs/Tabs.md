@@ -40,3 +40,8 @@
 
 ```js {"codepath": "tabs-child.jsx"}
 ```
+
+#### 手动测试
+
+```js {"codepath": "tabs-manual-test.jsx"}
+```

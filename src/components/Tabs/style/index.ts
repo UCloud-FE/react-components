@@ -1,25 +1,46 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import RcTabs from 'rc-tabs';
 
 import config from 'src/config';
-import { clearFixMixin } from 'src/style';
-import withProps from 'src/utils/withProps';
+import { clearFixMixin, sWrap } from 'src/style';
+
+import { TabsProps } from '../Tabs';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-tabs';
 
 /* stylelint-disable no-descending-specificity */
-export const TabsWrap = withProps({
+export const SWrap = sWrap<Required<Pick<TabsProps, 'size' | 'tabBarPosition' | 'styleType'>>>({
     className: ({ styleType }) => `${prefixCls}-styletype-${styleType}`
 })(
-    styled(RcTabs)(props => {
+    styled.div(props => {
         const {
             theme: { designTokens: DT },
             tabBarPosition,
             styleType,
             size
         } = props;
+
+        const padding = {
+            sm: '6px 10px',
+            md: '8px 16px',
+            lg: '8px 16px'
+        }[size];
+        const lineHeight = {
+            sm: '18px',
+            md: '20px',
+            lg: '22px'
+        }[size];
+        const fontSize = {
+            sm: '12px',
+            md: '14px',
+            lg: '16px'
+        }[size];
+        const fontWeight = {
+            sm: 'normal',
+            md: 'normal',
+            lg: 'bold'
+        }[size];
 
         return css`
 overflow: hidden;
@@ -46,26 +67,10 @@ ${clearFixMixin};
         box-sizing: border-box;
         cursor: pointer;
         ${css`
-            padding: ${{
-                sm: '6px 10px',
-                md: '8px 16px',
-                lg: '8px 16px'
-            }[size]};
-            line-height: ${{
-                sm: '18px',
-                md: '20px',
-                lg: '22px'
-            }[size]};
-            font-size: ${{
-                sm: '12px',
-                md: '14px',
-                lg: '16px'
-            }[size]};
-            font-weight: ${{
-                sm: 'normal',
-                md: 'normal',
-                lg: 'bold'
-            }[size]};
+            padding: ${padding};
+            line-height: ${lineHeight};
+            font-size: ${fontSize};
+            font-weight: ${fontWeight};
         `}
     }
     &-nav {
@@ -140,7 +145,7 @@ ${clearFixMixin};
                 width: 2px;
                 height: 2px;
                 position: absolute;
-                transition: transform 0.3s;
+                transition: transform 0.3s ease-out 0s;
                 background: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
             }
             &-tab {

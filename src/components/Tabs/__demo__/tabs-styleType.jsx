@@ -1,12 +1,13 @@
 import React from 'react';
-import Tabs from 'components/Tabs';
+
+import Tabs from 'src/components/Tabs';
 
 // demo start
-const { StyleType } = Tabs;
+const { StyleTypes } = Tabs;
 const Demo = () => {
     return (
         <div>
-            {StyleType.map(styleType => (
+            {StyleTypes.map(styleType => (
                 <div className="demo-wrap" key={styleType}>
                     <Tabs styleType={styleType}>
                         {[1, 2, 3].map(i => (

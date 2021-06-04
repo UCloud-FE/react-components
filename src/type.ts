@@ -12,3 +12,15 @@ export const SizeDTMap: Record<Size, DesignToken> = {
     md: 'T_HEIGHT_MD',
     lg: 'T_HEIGHT_LG'
 };
+
+export const ExportComponent = <T, T1 extends Record<string, unknown>>(
+    Component: T,
+    ComponentExtends: T1
+): Override<T, T1> => {
+    type TExportComponent = Override<T, T1>;
+    const ExportComponent = Component as TExportComponent;
+    for (const ExtendKey in ComponentExtends) {
+        ExportComponent[ExtendKey] = ComponentExtends[ExtendKey] as Override<T, T1>[Extract<keyof T1, string>];
+    }
+    return ExportComponent;
+};
