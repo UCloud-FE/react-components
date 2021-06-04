@@ -24,6 +24,10 @@ import Eye from './icons/Eye';
 import QuestionCircle from './icons/QuestionCircle';
 import Calendar from './icons/Calendar';
 import Clock from './icons/Clock';
+import TriangleUp from './icons/TriangleUp';
+import TriangleDown from './icons/TriangleDown';
+import TriangleLeft from './icons/TriangleLeft';
+import TriangleRight from './icons/TriangleRight';
 
 // circle filled
 import ExclamationCircleFilled from './icons/ExclamationCircleFilled';
@@ -48,7 +52,11 @@ const IconMap = {
     trash: Trash,
     eye: Eye,
     calendar: Calendar,
-    clock: Clock
+    clock: Clock,
+    'triangle-up': TriangleUp,
+    'triangle-down': TriangleDown,
+    'triangle-left': TriangleLeft,
+    'triangle-right': TriangleRight
 };
 
 // circle

@@ -1,6 +1,7 @@
 import React, { Key, ReactElement, ReactNode, UIEvent, KeyboardEvent, useCallback, useMemo, memo } from 'react';
 import classnames from 'classnames';
 
+import SvgIcon from 'src/components/SvgIcon';
 import KeyCode from 'src/interfaces/KeyCode';
 import useUncontrolled from 'src/hooks/useUncontrolled';
 
@@ -106,7 +107,7 @@ const Tabs = ({
         defaultActiveKey == null ? _defaultActiveKey : defaultActiveKey,
         _onChange
     );
-    const setActiveKey = useCallback((key: Key) => _setActiveKey(key + ''), []);
+    const setActiveKey = useCallback((key: Key) => _setActiveKey(key + ''), [_setActiveKey]);
     const onNavKeyDown = useCallback(
         (e: KeyboardEvent) => {
             const nextPrevKey = getNextPrevActiveKey(e, activeKey, panes);
@@ -127,7 +128,7 @@ const Tabs = ({
                 direction === 'rtl' && `${prefixCls}-rtl`,
                 className
             ),
-        [className, direction, prefixCls, tabBarPosition]
+        [className, direction, tabBarPosition]
     );
 
     const tabBar = (
@@ -140,7 +141,9 @@ const Tabs = ({
                 panes: panes,
                 activeKey,
                 direction,
-                styleType
+                styleType,
+                prevIcon: <SvgIcon type="triangle-left" />,
+                nextIcon: <SvgIcon type="triangle-right" />
             }}
         />
     );

@@ -100,6 +100,7 @@ ${clearFixMixin};
         width: 20px;
         text-align: center;
         cursor: pointer;
+        fill: currentcolor;
     }
     &-tab-btn-disabled {
         pointer-events: none;
