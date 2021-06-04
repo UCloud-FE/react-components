@@ -795,29 +795,6 @@ export declare class Table extends Component<TableProps> {
     static setColumnConfigToLocalStorage: typeof Function;
 }
 
-// Tabs
-export type TabsStyleType = 'default' | 'ink';
-export type TabBarPosition = 'left' | 'right' | 'top' | 'bottom';
-export interface TabsProps {
-    activeKey?: string;
-    defaultActiveKey?: string;
-    onChange?: (key: string) => void;
-    tabBarPosition?: TabBarPosition;
-    styleType?: TabsStyleType;
-    size?: SizeType;
-    destroyInactiveTabPane?: boolean;
-}
-export interface TabsPaneProps {
-    key: string;
-    tab?: ReactNode;
-    forceRender?: boolean;
-    disabled?: boolean;
-}
-declare class TabPane extends Component<TabsPaneProps> {}
-export declare class Tabs extends Component<TabsProps> {
-    static Pane: typeof TabPane;
-}
-
 // Collapse
 export type CollapseProps = Override<
     HTMLAttributes<HTMLDivElement>,
@@ -1055,3 +1032,6 @@ export { default as AutoComplete } from './lib/components/AutoComplete';
 
 // Switch
 export { default as Switch } from './lib/components/Switch';
+
+// Tabs
+export { default as Tabs } from './lib/components/Tabs';
