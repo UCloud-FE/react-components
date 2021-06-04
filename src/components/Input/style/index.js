@@ -36,6 +36,7 @@ export const InputWrap = withProps({
             border-radius: ${DT.T_CORNER_SM};
             height: ${Height[size]};
             color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
+            fill: currentColor;
             border: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
             box-shadow: ${DT.T_SHADOW_INSET_DEFAULT};
             background: ${DT.T_INPUT_COLOR_BG_DEFAULT};
@@ -118,12 +119,10 @@ export const InputWrap = withProps({
                     &,
                     &:hover {
                         color: ${DT.T_COLOR_TEXT_DISABLED};
-                        -webkit-text-fill-color: currentcolor;
+                        /* fix disabled color in safari */
+                        -webkit-text-fill-color: ${DT.T_COLOR_TEXT_DISABLED};
                         border-color: ${DT.T_COLOR_LINE_DISABLED_LIGHT};
                         background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
-                    }
-                    .${inputSuffixCls}, .${inputPrefixCls} {
-                        color: inherit;
                     }
                 `
             };
