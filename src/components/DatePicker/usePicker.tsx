@@ -61,6 +61,9 @@ interface DisplayToFormatAndTimeMode<D> {
     (display?: D): [string[]] | [string[], string[]];
 }
 
+const getValidCurrentDate = (value: TDate | null | undefined, d: Date) =>
+    value != null && moment(+value).isValid() ? value : d;
+
 const usePicker = <D,>(
     props: TProps<D>,
     displayToFormatAndTimeMode: DisplayToFormatAndTimeMode<D>,
@@ -98,7 +101,7 @@ const usePicker = <D,>(
     const d = useMemo(() => new Date(), []);
 
     let [value, onChange] = useUncontrolled<TDate | null | undefined, Moment | null>(_value, defaultValue, _onChange);
-    const [calCurrentValue, setCalCurrentValue] = useState(value);
+    const [calCurrentValue, setCalCurrentValue] = useState(() => getValidCurrentDate(value, d));
     if (!nullable && value == null) value = d;
     const [inputValue, setInputValue] = useState(() => formatDate(value, format));
     const [calValue, setCalValue] = useState(value);
@@ -177,7 +180,7 @@ const usePicker = <D,>(
 
     const handleInputFocus = useCallback(() => {
         setCalValue(value == null ? null : value);
-        setCalCurrentValue(value == null ? d : value);
+        setCalCurrentValue(getValidCurrentDate(value, d));
         setUseInputValue(true);
         setActive(true);
     }, [d, value]);
