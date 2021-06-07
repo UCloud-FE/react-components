@@ -822,9 +822,26 @@ exports[`Card demo -- popupContainer 1`] = `
   background: #fafafc;
 }
 
+.emotion-18 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
 .emotion-18 .uc-fe-input-wrap,
 .emotion-18 .uc-fe-input-prefix,
 .emotion-18 .uc-fe-input-suffix,
+.emotion-18 .uc-fe-input-clear,
 .emotion-18 input {
   padding: 0 4px;
 }
@@ -896,6 +913,12 @@ exports[`Card demo -- popupContainer 1`] = `
 .emotion-18 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
+}
+
+.emotion-18:hover .uc-fe-input-clear,
+.emotion-18.uc-fe-input-focused .uc-fe-input-clear {
+  opacity: 1;
+  cursor: pointer;
 }
 
 .emotion-16 {
@@ -1040,9 +1063,26 @@ exports[`Card demo -- popupContainer 1`] = `
   background: #fafafc;
 }
 
+.emotion-18 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
 .emotion-18 .uc-fe-input-wrap,
 .emotion-18 .uc-fe-input-prefix,
 .emotion-18 .uc-fe-input-suffix,
+.emotion-18 .uc-fe-input-clear,
 .emotion-18 input {
   padding: 0 4px;
 }
@@ -1114,6 +1154,12 @@ exports[`Card demo -- popupContainer 1`] = `
 .emotion-18 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
+}
+
+.emotion-18:hover .uc-fe-input-clear,
+.emotion-18.uc-fe-input-focused .uc-fe-input-clear {
+  opacity: 1;
+  cursor: pointer;
 }
 
 .emotion-16 {
@@ -1204,7 +1250,7 @@ exports[`Card demo -- popupContainer 1`] = `
             <span
               class="uc-fe-input emotion-18 emotion-19"
             >
-              <div
+              <span
                 class="uc-fe-input-wrap"
               >
                 <span
@@ -1224,7 +1270,7 @@ exports[`Card demo -- popupContainer 1`] = `
                   placeholder="选择日期"
                   value="2018-07-21 19:55:21"
                 />
-              </div>
+              </span>
             </span>
           </div>
         </div>
@@ -1250,7 +1296,7 @@ exports[`Card demo -- popupContainer 1`] = `
             <span
               class="uc-fe-input emotion-18 emotion-19"
             >
-              <div
+              <span
                 class="uc-fe-input-wrap"
               >
                 <span
@@ -1270,7 +1316,7 @@ exports[`Card demo -- popupContainer 1`] = `
                   placeholder="选择日期"
                   value="2018-07"
                 />
-              </div>
+              </span>
             </span>
           </div>
         </div>

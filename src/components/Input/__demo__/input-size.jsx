@@ -1,13 +1,14 @@
 import React from 'react';
-import Input from 'components/Input';
+
+import Input from 'src/components/Input';
 
 // demo start
-const { Size } = Input;
+const { Sizes } = Input;
 class Demo extends React.Component {
     render() {
         return (
             <div>
-                {Size.map(size => (
+                {Sizes.map(size => (
                     <div className="demo-wrap" key={size}>
                         <Input size={size} />
                     </div>

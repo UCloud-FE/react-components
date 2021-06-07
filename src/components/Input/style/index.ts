@@ -1,46 +1,63 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
+import classnames from 'classnames';
+import { InputHTMLAttributes } from 'react';
 
-import { inlineBlockWithVerticalMixin } from 'src/style';
 import Icon from 'src/components/Icon';
+import { getHeightBySize, inlineBlockWithVerticalMixin, sWrap } from 'src/style';
 import config from 'src/config';
-import withProps from 'src/utils/withProps';
+import { Override } from 'src/type';
+
+import { InputProps } from '../Input';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-input';
+export const focusedCls = prefixCls + '-focused';
+export const disabledCls = prefixCls + '-disabled';
 export const blockCls = prefixCls + '-block';
 export const inputWrapCls = prefixCls + '-wrap';
 export const inputPrefixCls = prefixCls + '-prefix';
 export const inputSuffixCls = prefixCls + '-suffix';
+export const clearCls = prefixCls + '-clear';
 
 export const SearchIcon = styled(Icon)`
     cursor: pointer;
 `;
 
-export const InputWrap = withProps({
-    className: prefixCls
+export const SWrap = sWrap<
+    Pick<Override<InputHTMLAttributes<HTMLInputElement>, InputProps>, 'disabled' | 'status' | 'customStyle'> &
+        Required<Pick<InputProps, 'size'>> & {
+            focused: boolean;
+            empty: boolean;
+        },
+    HTMLSpanElement
+>({
+    className: ({ focused, disabled }) => classnames(prefixCls, focused && focusedCls, disabled && disabledCls)
 })(
-    styled('span')(props => {
+    styled.span(props => {
         const {
-            theme: { designTokens: DT, Height, materialVars },
+            theme: { designTokens: DT },
             disabled,
             size,
             focused,
             status,
-            customStyle
+            customStyle,
+            empty
         } = props;
+        const height = getHeightBySize(DT, size);
+
         return css`
             position: relative;
             box-sizing: border-box;
             font-size: 12px;
             border-radius: ${DT.T_CORNER_SM};
-            height: ${Height[size]};
+            height: ${height};
             color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
             fill: currentColor;
             border: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
             box-shadow: ${DT.T_SHADOW_INSET_DEFAULT};
             background: ${DT.T_INPUT_COLOR_BG_DEFAULT};
-            transition: ${materialVars.transitionDown};
+            transition: .18s cubic-bezier(.4,0,.2,1);
             ${inlineBlockWithVerticalMixin};
 
             :hover {
@@ -49,7 +66,15 @@ export const InputWrap = withProps({
                 background: ${DT.T_INPUT_COLOR_BG_DEFAULT};
             }
 
-            .${inputWrapCls}, .${inputPrefixCls}, .${inputSuffixCls}, input {
+            .${clearCls} {
+                height: 100%;
+                align-items: center;
+                display: flex;
+                fill: ${DT.T_COLOR_TEXT_REMARK_DARK};
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+            .${inputWrapCls}, .${inputPrefixCls}, .${inputSuffixCls}, .${clearCls}, input {
                 padding: 0 4px;
             }
 
@@ -88,6 +113,18 @@ export const InputWrap = withProps({
                     color: ${DT.T_COLOR_TEXT_REMARK_LIGHT};
                 }
             }
+            ${
+                !empty &&
+                css`
+                    :hover,
+                    &.${focusedCls} {
+                        .${clearCls} {
+                            opacity: 1;
+                            cursor: pointer;
+                        }
+                    }
+                `
+            }
 
             ${
                 focused &&
@@ -100,6 +137,8 @@ export const InputWrap = withProps({
                     }
                 `
             };
+
+
 
             ${
                 status === 'error' &&

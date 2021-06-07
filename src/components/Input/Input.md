@@ -31,6 +31,11 @@
 ```js {"codepath": "input-disabled.jsx"}
 ```
 
+#### clearable - 可清空
+
+```js {"codepath": "input-clearable.jsx"}
+```
+
 #### status - 状态
 
 ```js {"codepath": "input-status.jsx"}

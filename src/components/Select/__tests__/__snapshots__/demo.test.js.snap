@@ -2213,9 +2213,26 @@ exports[`Select demo -- select 1`] = `
   background: #fafafc;
 }
 
+.emotion-32 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
 .emotion-32 .uc-fe-input-wrap,
 .emotion-32 .uc-fe-input-prefix,
 .emotion-32 .uc-fe-input-suffix,
+.emotion-32 .uc-fe-input-clear,
 .emotion-32 input {
   padding: 0 4px;
 }
@@ -2287,6 +2304,12 @@ exports[`Select demo -- select 1`] = `
 .emotion-32 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
+}
+
+.emotion-32:hover .uc-fe-input-clear,
+.emotion-32.uc-fe-input-focused .uc-fe-input-clear {
+  opacity: 1;
+  cursor: pointer;
 }
 
 .emotion-43 {
@@ -2723,9 +2746,26 @@ exports[`Select demo -- select 1`] = `
   background: #fafafc;
 }
 
+.emotion-32 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
 .emotion-32 .uc-fe-input-wrap,
 .emotion-32 .uc-fe-input-prefix,
 .emotion-32 .uc-fe-input-suffix,
+.emotion-32 .uc-fe-input-clear,
 .emotion-32 input {
   padding: 0 4px;
 }
@@ -2797,6 +2837,12 @@ exports[`Select demo -- select 1`] = `
 .emotion-32 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
+}
+
+.emotion-32:hover .uc-fe-input-clear,
+.emotion-32.uc-fe-input-focused .uc-fe-input-clear {
+  opacity: 1;
+  cursor: pointer;
 }
 
 .emotion-43 {
@@ -3023,13 +3069,13 @@ exports[`Select demo -- select 1`] = `
         <span
           class="uc-fe-input emotion-32 emotion-33"
         >
-          <div
+          <span
             class="uc-fe-input-wrap"
           >
             <input
               value="placeholder"
             />
-          </div>
+          </span>
         </span>
       </div>
     </div>

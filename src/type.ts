@@ -1,3 +1,5 @@
+import { ComponentType } from 'react';
+
 import { DesignToken } from './style';
 
 export type Override<T1, T2> = Omit<T1, keyof T2> & T2;
@@ -13,14 +15,14 @@ export const SizeDTMap: Record<Size, DesignToken> = {
     lg: 'T_HEIGHT_LG'
 };
 
-export const ExportComponent = <T, T1 extends Record<string, unknown>>(
+export const ExportComponent = <T extends ComponentType<any>, T1 extends Record<string, unknown>>(
     Component: T,
     ComponentExtends: T1
-): Override<T, T1> => {
-    type TExportComponent = Override<T, T1>;
+): T & T1 => {
+    type TExportComponent = T & T1;
     const ExportComponent = Component as TExportComponent;
     for (const ExtendKey in ComponentExtends) {
-        ExportComponent[ExtendKey] = ComponentExtends[ExtendKey] as Override<T, T1>[Extract<keyof T1, string>];
+        ExportComponent[ExtendKey] = ComponentExtends[ExtendKey] as TExportComponent[Extract<keyof T1, string>];
     }
     return ExportComponent;
 };

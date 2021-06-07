@@ -7,7 +7,7 @@ import Switch from 'src/components/Switch';
 import Icon from 'src/components/Icon';
 
 // demo start
-const { Size } = Input;
+const { Sizes } = Input;
 class Demo extends React.Component {
     constructor(props) {
         super(props);
@@ -16,7 +16,7 @@ class Demo extends React.Component {
         };
     }
     render() {
-        const { size, disabled, prefix, suffix, block } = this.state;
+        const { size, disabled, prefix, suffix, block, clearable, error } = this.state;
         const itemLayout = {
             labelCol: {
                 span: 3
@@ -25,6 +25,17 @@ class Demo extends React.Component {
                 span: 9
             }
         };
+        const props = {
+            size,
+            disabled,
+            block,
+            clearable,
+            prefix: prefix && <Icon type="circle" />,
+            suffix: suffix && <Icon type="circle" />
+        };
+        if (error) {
+            props.status = 'error';
+        }
         return (
             <div>
                 <Form className="demo-form">
@@ -32,7 +43,7 @@ class Demo extends React.Component {
                         <Radio.Group
                             value={size}
                             onChange={size => this.setState({ size })}
-                            options={Size.map(size => ({
+                            options={Sizes.map(size => ({
                                 value: size
                             }))}
                         />
@@ -46,20 +57,18 @@ class Demo extends React.Component {
                     <Form.Item label="disabled" {...itemLayout}>
                         <Switch checked={disabled} onChange={disabled => this.setState({ disabled })} />
                     </Form.Item>
+                    <Form.Item label="clearable" {...itemLayout}>
+                        <Switch checked={clearable} onChange={clearable => this.setState({ clearable })} />
+                    </Form.Item>
+                    <Form.Item label="status error" {...itemLayout}>
+                        <Switch checked={error} onChange={error => this.setState({ error })} />
+                    </Form.Item>
                     <Form.Item label="block" {...itemLayout}>
                         <Switch checked={block} onChange={block => this.setState({ block })} />
                     </Form.Item>
                 </Form>
                 <div className="demo-wrap">
-                    <Input
-                        {...{
-                            size,
-                            disabled,
-                            block,
-                            prefix: prefix && <Icon type="circle" />,
-                            suffix: suffix && <Icon type="circle" />
-                        }}
-                    />
+                    <Input {...props} />
                 </div>
             </div>
         );

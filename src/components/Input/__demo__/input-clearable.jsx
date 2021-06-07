@@ -11,7 +11,7 @@ class Demo extends React.Component {
                     <Input />
                 </div>
                 <div className="demo-wrap">
-                    <Input status="error" />
+                    <Input clearable />
                 </div>
             </div>
         );

@@ -9,7 +9,7 @@ import Switch from 'src/components/Switch';
 import Icon from 'src/components/Icon';
 
 // demo start
-const { Size } = Input;
+const Sizes = ['sm', 'md', 'lg'];
 class Demo extends React.Component {
     constructor(props) {
         super(props);
@@ -45,7 +45,7 @@ class Demo extends React.Component {
                         <Radio.Group
                             value={size}
                             onChange={size => this.setState({ size })}
-                            options={Size.map(size => ({
+                            options={Sizes.map(size => ({
                                 value: size
                             }))}
                         />

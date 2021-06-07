@@ -373,9 +373,26 @@ exports[`SvgIcon demo -- svgIcon 1`] = `
   background: #fafafc;
 }
 
+.emotion-181 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
 .emotion-181 .uc-fe-input-wrap,
 .emotion-181 .uc-fe-input-prefix,
 .emotion-181 .uc-fe-input-suffix,
+.emotion-181 .uc-fe-input-clear,
 .emotion-181 input {
   padding: 0 4px;
 }
@@ -447,6 +464,12 @@ exports[`SvgIcon demo -- svgIcon 1`] = `
 .emotion-181 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
+}
+
+.emotion-181:hover .uc-fe-input-clear,
+.emotion-181.uc-fe-input-focused .uc-fe-input-clear {
+  opacity: 1;
+  cursor: pointer;
 }
 
 .emotion-200 {
@@ -831,9 +854,26 @@ exports[`SvgIcon demo -- svgIcon 1`] = `
   background: #fafafc;
 }
 
+.emotion-181 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
 .emotion-181 .uc-fe-input-wrap,
 .emotion-181 .uc-fe-input-prefix,
 .emotion-181 .uc-fe-input-suffix,
+.emotion-181 .uc-fe-input-clear,
 .emotion-181 input {
   padding: 0 4px;
 }
@@ -905,6 +945,12 @@ exports[`SvgIcon demo -- svgIcon 1`] = `
 .emotion-181 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
+}
+
+.emotion-181:hover .uc-fe-input-clear,
+.emotion-181.uc-fe-input-focused .uc-fe-input-clear {
+  opacity: 1;
+  cursor: pointer;
 }
 
 .emotion-200 {
@@ -1624,13 +1670,13 @@ exports[`SvgIcon demo -- svgIcon 1`] = `
         <span
           class="uc-fe-input emotion-181 emotion-182"
         >
-          <div
+          <span
             class="uc-fe-input-wrap"
           >
             <input
               value="12px"
             />
-          </div>
+          </span>
         </span>
       </div>
     </div>
