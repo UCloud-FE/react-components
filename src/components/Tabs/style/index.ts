@@ -135,7 +135,6 @@ ${clearFixMixin};
                 color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
                 border-color: ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
                 background: ${DT.T_TABS_DEFAULT_COLOR_BG_DEFAULT};
-                font-weight: bold;
             }
         }
     }
@@ -161,7 +160,6 @@ ${clearFixMixin};
             &-tab-active,
             &-tab-active:hover {
                 color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
-                font-weight: bold;
             }
         }
     }
