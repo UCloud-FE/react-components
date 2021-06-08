@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.4](https://github.com/UCloud-FE/react-components/compare/v1.1.3...v1.1.4) (2021-06-08)
+
+### Features
+
+-   **Input:** rewrite & add clearable ([f669491](https://github.com/UCloud-FE/react-components/commit/f6694910e3352d905a7a994417d3cab7f81d79b6))
+-   **Tabs:** change prev/next icon ([a2a2e6e](https://github.com/UCloud-FE/react-components/commit/a2a2e6e442009c14a94e9d9823e1cb00f1f76aa7))
+-   **Tabs:** remove tabs active tab font-weight to avoid redraw ([6c1cc14](https://github.com/UCloud-FE/react-components/commit/6c1cc1457825c55ed548f0ae45bdccedad290dd2))
+-   **Tabs:** rewrite tabs ([4a00e3f](https://github.com/UCloud-FE/react-components/commit/4a00e3f4da6449383fb1c910b0c42693bf7bcadc))
+
+### Bug Fixes
+
+-   **Input:** add max width to fix width in container ([b01b696](https://github.com/UCloud-FE/react-components/commit/b01b6962188ff11bce4118f933411ad300f7f853))
+-   **Input:** fix input status interface ([f94faa4](https://github.com/UCloud-FE/react-components/commit/f94faa43746c9acf486f7699064f0103cc284b3e))
+-   **Tabs:** fix tabs ink bar offset ([5c2541c](https://github.com/UCloud-FE/react-components/commit/5c2541cd76baeb0436ed56b40330af22d5c4b708))
+
 ### [1.1.3](https://github.com/UCloud-FE/react-components/compare/v1.1.2...v1.1.3) (2021-06-04)
 
 ### [1.1.2](https://github.com/UCloud-FE/react-components/compare/v1.1.1...v1.1.2) (2021-06-04)
