@@ -52,6 +52,7 @@ export const SWrap = sWrap<
             font-size: 12px;
             border-radius: ${DT.T_CORNER_SM};
             height: ${height};
+            max-width: 100%;
             color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
             fill: currentColor;
             border: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
