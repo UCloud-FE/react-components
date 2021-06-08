@@ -113,6 +113,9 @@ export const SWrap = sWrap<
                     opacity: 1;
                     color: ${DT.T_COLOR_TEXT_REMARK_LIGHT};
                 }
+                &::-ms-clear {
+                    display: none;
+                }
             }
             ${
                 !empty &&
