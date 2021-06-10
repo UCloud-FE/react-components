@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, memo, ReactNode, useCallback } from 'react';
+import React, { HTMLAttributes, ReactNode, forwardRef, memo, useCallback } from 'react';
 
 import useUncontrolled from 'src/hooks/useUncontrolled';
 
@@ -23,34 +23,40 @@ interface SwitchProps {
     offText?: ReactNode;
 }
 
-const Switch = ({
-    checked: _checked,
-    defaultChecked,
-    onChange: _onChange,
-    disabled,
-    size = 'md',
-    onText = 'ON',
-    offText = 'OFF',
-    ...rest
-}: SwitchProps & Override<HTMLAttributes<HTMLDivElement>, SwitchProps>) => {
-    const [checked, onChange] = useUncontrolled(_checked, defaultChecked || false, _onChange);
-    const handleClick = useCallback(() => {
-        if (disabled) return;
-        onChange(!checked);
-    }, [checked, disabled, onChange]);
-    return (
-        <SwitchWrap {...rest} checked={checked} disabled={disabled} size={size} onClick={handleClick}>
-            <span className={innerCls}>
-                <span className={onTipCls}>{onText}</span>
-                <span className={offTipCls}>{offText}</span>
-            </span>
-            <span className={buttonCls}>
-                <span>
-                    <span className={dotCls} />
+// eslint-disable-next-line react/display-name
+const Switch = forwardRef(
+    (
+        {
+            checked: _checked,
+            defaultChecked,
+            onChange: _onChange,
+            disabled,
+            size = 'md',
+            onText = 'ON',
+            offText = 'OFF',
+            ...rest
+        }: SwitchProps & Override<HTMLAttributes<HTMLDivElement>, SwitchProps>,
+        ref
+    ) => {
+        const [checked, onChange] = useUncontrolled(_checked, defaultChecked || false, _onChange);
+        const handleClick = useCallback(() => {
+            if (disabled) return;
+            onChange(!checked);
+        }, [checked, disabled, onChange]);
+        return (
+            <SwitchWrap {...rest} checked={checked} disabled={disabled} size={size} onClick={handleClick}>
+                <span className={innerCls}>
+                    <span className={onTipCls}>{onText}</span>
+                    <span className={offTipCls}>{offText}</span>
                 </span>
-            </span>
-        </SwitchWrap>
-    );
-};
+                <span className={buttonCls}>
+                    <span>
+                        <span className={dotCls} />
+                    </span>
+                </span>
+            </SwitchWrap>
+        );
+    }
+);
 
 export default memo(Switch);
