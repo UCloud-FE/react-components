@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.5](https://github.com/UCloud-FE/react-components/compare/v1.1.4...v1.1.5) (2021-06-11)
+
+### Features
+
+-   **Input:** hide ie clear icon ([d42898d](https://github.com/UCloud-FE/react-components/commit/d42898d734f0d8f4a086c2328aadee248762a2b0))
+-   **Select:** add max/min width and overflow to selector & popup ([b109f73](https://github.com/UCloud-FE/react-components/commit/b109f7381db1b319941f538351395a2e0457218e))
+
+### Bug Fixes
+
+-   **Input:** change input to class for finddomnode ([5980cce](https://github.com/UCloud-FE/react-components/commit/5980cce96f7d31f23777620f7c6d0d90d3931553))
+-   **Switch:** add forwardRef to avoid warning in zform ([830eb92](https://github.com/UCloud-FE/react-components/commit/830eb92401832ee0b104f87aa1223b562bac1a22))
+
 ### [1.1.4](https://github.com/UCloud-FE/react-components/compare/v1.1.3...v1.1.4) (2021-06-08)
 
 ### Features
