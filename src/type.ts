@@ -1,4 +1,4 @@
-import { ComponentType } from 'react';
+import React, { ComponentType, ComponentClass, FC, Component } from 'react';
 
 import { DesignToken } from './style';
 
@@ -25,4 +25,17 @@ export const ExportComponent = <T extends ComponentType<any>, T1 extends Record<
         ExportComponent[ExtendKey] = ComponentExtends[ExtendKey] as TExportComponent[Extract<keyof T1, string>];
     }
     return ExportComponent;
+};
+
+export const FunctionToClassComponent = <T>(FComponent: FC<T>): ComponentClass<T> => {
+    class ClassComponent extends Component<T> {
+        // extend ref properties to this
+        saveRef = (ref: any) => {
+            Object.assign(this, ref);
+        };
+        render() {
+            return React.createElement(FComponent, { ...this.props, ref: this.saveRef });
+        }
+    }
+    return ClassComponent;
 };

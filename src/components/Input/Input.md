@@ -40,3 +40,8 @@
 
 ```js {"codepath": "input-status.jsx"}
 ```
+
+#### 测试
+
+```js {"codepath": "manual-test.jsx"}
+```

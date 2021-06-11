@@ -52,12 +52,14 @@ if (typeof require.context === 'undefined') {
 
 import React from 'react';
 
-const demoTest = () => {
+const demoTest = (ignoreList = []) => {
     const componentsName = module.parent.filename.match(/\/src\/components\/(\w*)\/.*/)[1];
     const demoFiles = require.context(`../../src/components/${componentsName}/__demo__`, true, /.*.jsx$/).keys();
 
     demoFiles.forEach(file => {
-        test(`${componentsName} demo -- ${file.match(/^.*\/([^/]*)\.jsx?$/)[1]}`, () => {
+        const demoName = file.match(/^.*\/([^/]*)\.jsx?$/)[1];
+        if (ignoreList.includes(demoName)) return;
+        test(`${componentsName} demo -- ${demoName}`, () => {
             const Demo = require(file).default;
             if (Demo.__ignore__test) return;
             const component = render(<Demo />);
