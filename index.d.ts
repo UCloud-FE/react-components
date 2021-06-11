@@ -84,25 +84,6 @@ export interface CompactProps extends HTMLAttributes<HTMLDivElement> {
 }
 export declare class Compact extends Component<CompactProps> {}
 
-// Input
-export type InputProps = Override<
-    HTMLAttributes<HTMLInputElement>,
-    {
-        icon?: ReactNode;
-        prefix?: ReactNode;
-        suffix?: ReactNode;
-        size?: SizeType;
-        status?: 'default' | 'error';
-    }
->;
-interface SearchInputProps extends InputProps {
-    onSearch?: (value: string) => void;
-}
-declare class SearchInput extends PureComponent<SearchInputProps> {}
-export declare class Input extends PureComponent<InputProps> {
-    static Search: typeof SearchInput;
-}
-
 // NumberInput
 export type NumberInputStyleType = 'default' | 'split' | 'pagination';
 export type NumberInputProps = Override<
@@ -1035,3 +1016,6 @@ export { default as Switch } from './lib/components/Switch';
 
 // Tabs
 export { default as Tabs } from './lib/components/Tabs';
+
+// Input
+export { default as Input } from './lib/components/Input';
