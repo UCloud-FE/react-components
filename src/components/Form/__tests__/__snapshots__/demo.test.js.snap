@@ -474,6 +474,7 @@ exports[`Form demo -- form 1`] = `
 .emotion-56 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -508,7 +509,9 @@ exports[`Form demo -- form 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-54:link,
@@ -523,6 +526,12 @@ exports[`Form demo -- form 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-54 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-51 {
@@ -1006,6 +1015,7 @@ exports[`Form demo -- form 1`] = `
 .emotion-56 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -1040,7 +1050,9 @@ exports[`Form demo -- form 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-54:link,
@@ -1055,6 +1067,12 @@ exports[`Form demo -- form 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-54 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-51 {
@@ -1229,19 +1247,20 @@ exports[`Form demo -- form 1`] = `
           <div
             class=" emotion-56 emotion-57"
           >
-            <div>
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-53 emotion-54 emotion-55"
-                type="button"
+            <button
+              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-53 emotion-54 emotion-55"
+              title="请选择"
+              type="button"
+            >
+              <div
+                class="uc-fe-select-content"
               >
-                <div>
-                  请选择
-                </div>
-                <i
-                  class="uc-fe-icon icon__down emotion-50 emotion-51 emotion-52"
-                />
-              </button>
-            </div>
+                请选择
+              </div>
+              <i
+                class="uc-fe-icon icon__down emotion-50 emotion-51 emotion-52"
+              />
+            </button>
           </div>
         </div>
       </div>

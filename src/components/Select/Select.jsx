@@ -4,7 +4,7 @@ import _ from 'lodash';
 import createReactContext from 'create-react-context';
 
 import Popover from 'src/components/Popover';
-import uncontrolledDecorator from 'decorators/uncontrolled';
+import uncontrolledDecorator from 'src/decorators/uncontrolled';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
 import { getItemTree, rootPrefix } from 'src/components/Menu/Menu';
 import deprecatedLog from 'src/utils/deprecatedLog';
@@ -12,7 +12,16 @@ import ConfigContext from 'src/components/ConfigProvider/ConfigContext';
 
 import Option from './Option';
 import Extra from './Extra';
-import { SelectWrap, SelectSearchInput, Selector, Arrow, BlockMenu, MenuWrap, EmptyContentWrapper } from './style';
+import {
+    SelectWrap,
+    SelectSearchInput,
+    Selector,
+    Arrow,
+    BlockMenu,
+    MenuWrap,
+    EmptyContentWrapper,
+    selectorContentCls
+} from './style';
 import LOCALE from './locale/zh_CN';
 
 export const deprecatedLogForPopover = _.once(() => deprecatedLog('Select popover', 'popoverProps'));
@@ -116,10 +125,13 @@ class Select extends Component {
         /** @ignore */
         locale: PropTypes.object,
         /**
-         * 可修改自定义样式集中营
+         * 自定义样式
          */
         customStyle: PropTypes.shape({
-            optionListMaxHeight: PropTypes.number
+            /** 列表最大高度 */
+            optionListMaxHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+            /**  */
+            popupMaxWidth: PropTypes.string
         }),
         /**
          * 可选性为空时展示内容
@@ -247,7 +259,7 @@ class Select extends Component {
                 children
             });
         }
-
+        const maxWidth = customStyle.popupMaxWidth ? customStyle.popupMaxWidth : 'none';
         return (
             <MenuWrap>
                 {search && (
@@ -270,6 +282,7 @@ class Select extends Component {
                         }
                     }}
                     customStyle={customStyle}
+                    menuCustomStyle={{ maxWidth }}
                     itemTree={itemTree}
                     multiple={multiple}
                     showSelectAll={showSelectAll}
@@ -308,18 +321,22 @@ class Select extends Component {
     renderSelector = () => {
         const { renderSelector } = this.props;
         const { visible } = this.state;
+        const content = this.renderContent();
         if (renderSelector) {
-            return renderSelector(this.renderContent(), visible);
+            return <div>{renderSelector(content, visible)}</div>;
         } else {
-            return this.defaultRenderSelector();
+            return this.defaultRenderSelector(content);
         }
     };
-    defaultRenderSelector = () => {
+    defaultRenderSelector = content => {
         const { visible } = this.state;
         const { size, disabled } = this.props;
+        const title = typeof content === 'string' ? content : null;
         return (
-            <Selector styleType="border" size={size} disabled={disabled}>
-                <div key="content">{this.renderContent()}</div>
+            <Selector styleType="border" size={size} disabled={disabled} title={title}>
+                <div className={selectorContentCls} key="content">
+                    {content}
+                </div>
                 <Arrow key="icon" type={visible ? 'up' : 'down'} />
             </Selector>
         );
@@ -374,7 +391,7 @@ class Select extends Component {
                                     {...popover}
                                     {...popoverProps}
                                 >
-                                    <div>{this.renderSelector()}</div>
+                                    {this.renderSelector()}
                                 </Popover>
                             </SelectWrap>
                         </SelectContext.Provider>

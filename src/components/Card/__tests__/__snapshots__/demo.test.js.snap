@@ -735,6 +735,7 @@ exports[`Card demo -- popupContainer 1`] = `
 .emotion-10 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -769,7 +770,9 @@ exports[`Card demo -- popupContainer 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-8:link,
@@ -784,6 +787,12 @@ exports[`Card demo -- popupContainer 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-8 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-5 {
@@ -981,6 +990,7 @@ exports[`Card demo -- popupContainer 1`] = `
 .emotion-10 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -1015,7 +1025,9 @@ exports[`Card demo -- popupContainer 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-8:link,
@@ -1030,6 +1042,12 @@ exports[`Card demo -- popupContainer 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-8 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-5 {
@@ -1223,19 +1241,20 @@ exports[`Card demo -- popupContainer 1`] = `
           <div
             class=" emotion-10 emotion-11"
           >
-            <div>
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-7 emotion-8 emotion-9"
-                type="button"
+            <button
+              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-7 emotion-8 emotion-9"
+              title="请选择"
+              type="button"
+            >
+              <div
+                class="uc-fe-select-content"
               >
-                <div>
-                  请选择
-                </div>
-                <i
-                  class="uc-fe-icon icon__down emotion-4 emotion-5 emotion-6"
-                />
-              </button>
-            </div>
+                请选择
+              </div>
+              <i
+                class="uc-fe-icon icon__down emotion-4 emotion-5 emotion-6"
+              />
+            </button>
           </div>
         </div>
       </div>

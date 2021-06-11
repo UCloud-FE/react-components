@@ -74,3 +74,8 @@
 
 ```js {"codepath": "customStyle.jsx"}
 ```
+
+#### 边界测试
+
+```js {"codepath": "manual-test.jsx"}
+```

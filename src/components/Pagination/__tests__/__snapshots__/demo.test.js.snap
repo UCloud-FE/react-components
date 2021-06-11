@@ -118,6 +118,7 @@ exports[`Pagination demo -- pageSize 1`] = `
 .emotion-10 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -152,7 +153,9 @@ exports[`Pagination demo -- pageSize 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-8:link,
@@ -167,6 +170,12 @@ exports[`Pagination demo -- pageSize 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-8 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-5 {
@@ -294,6 +303,7 @@ exports[`Pagination demo -- pageSize 1`] = `
 .emotion-10 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -328,7 +338,9 @@ exports[`Pagination demo -- pageSize 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-8:link,
@@ -343,6 +355,12 @@ exports[`Pagination demo -- pageSize 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-8 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-5 {
@@ -431,19 +449,20 @@ exports[`Pagination demo -- pageSize 1`] = `
         <div
           class="uc-fe-pagination-options-size-changer emotion-10 emotion-11"
         >
-          <div>
-            <button
-              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-7 emotion-8 emotion-9"
-              type="button"
+          <button
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-7 emotion-8 emotion-9"
+            title="20 条/页"
+            type="button"
+          >
+            <div
+              class="uc-fe-select-content"
             >
-              <div>
-                20 条/页
-              </div>
-              <i
-                class="uc-fe-icon icon__down emotion-4 emotion-5 emotion-1"
-              />
-            </button>
-          </div>
+              20 条/页
+            </div>
+            <i
+              class="uc-fe-icon icon__down emotion-4 emotion-5 emotion-1"
+            />
+          </button>
         </div>
       </li>
     </ul>
@@ -525,19 +544,20 @@ exports[`Pagination demo -- pageSize 1`] = `
         <div
           class="uc-fe-pagination-options-size-changer emotion-10 emotion-11"
         >
-          <div>
-            <button
-              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-7 emotion-8 emotion-9"
-              type="button"
+          <button
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-7 emotion-8 emotion-9"
+            title="20 条/页"
+            type="button"
+          >
+            <div
+              class="uc-fe-select-content"
             >
-              <div>
-                20 条/页
-              </div>
-              <i
-                class="uc-fe-icon icon__down emotion-4 emotion-5 emotion-1"
-              />
-            </button>
-          </div>
+              20 条/页
+            </div>
+            <i
+              class="uc-fe-icon icon__down emotion-4 emotion-5 emotion-1"
+            />
+          </button>
         </div>
       </li>
     </ul>
@@ -663,6 +683,7 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
 .emotion-12 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -697,7 +718,9 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-10:link,
@@ -712,6 +735,12 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-10 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-7 {
@@ -839,6 +868,7 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
 .emotion-12 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -873,7 +903,9 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-10:link,
@@ -888,6 +920,12 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-10 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-7 {
@@ -994,19 +1032,20 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
         <div
           class="uc-fe-pagination-options-size-changer emotion-12 emotion-13"
         >
-          <div>
-            <button
-              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-9 emotion-10 emotion-11"
-              type="button"
+          <button
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-9 emotion-10 emotion-11"
+            title="10 条/页"
+            type="button"
+          >
+            <div
+              class="uc-fe-select-content"
             >
-              <div>
-                10 条/页
-              </div>
-              <i
-                class="uc-fe-icon icon__down emotion-6 emotion-7 emotion-1"
-              />
-            </button>
-          </div>
+              10 条/页
+            </div>
+            <i
+              class="uc-fe-icon icon__down emotion-6 emotion-7 emotion-1"
+            />
+          </button>
         </div>
       </li>
     </ul>
@@ -1106,19 +1145,20 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
         <div
           class="uc-fe-pagination-options-size-changer emotion-12 emotion-13"
         >
-          <div>
-            <button
-              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-9 emotion-10 emotion-11"
-              type="button"
+          <button
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-9 emotion-10 emotion-11"
+            title="10 条/页"
+            type="button"
+          >
+            <div
+              class="uc-fe-select-content"
             >
-              <div>
-                10 条/页
-              </div>
-              <i
-                class="uc-fe-icon icon__down emotion-6 emotion-7 emotion-1"
-              />
-            </button>
-          </div>
+              10 条/页
+            </div>
+            <i
+              class="uc-fe-icon icon__down emotion-6 emotion-7 emotion-1"
+            />
+          </button>
         </div>
       </li>
     </ul>
@@ -4680,6 +4720,7 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
 .emotion-20 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -4714,7 +4755,9 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-18:link,
@@ -4729,6 +4772,12 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-18 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-15 {
@@ -4856,6 +4905,7 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
 .emotion-20 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -4890,7 +4940,9 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-18:link,
@@ -4905,6 +4957,12 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-18 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-15 {
@@ -5102,19 +5160,20 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
         <div
           class="uc-fe-pagination-options-size-changer emotion-20 emotion-21"
         >
-          <div>
-            <button
-              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-17 emotion-18 emotion-19"
-              type="button"
+          <button
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-17 emotion-18 emotion-19"
+            title="10 条/页"
+            type="button"
+          >
+            <div
+              class="uc-fe-select-content"
             >
-              <div>
-                10 条/页
-              </div>
-              <i
-                class="uc-fe-icon icon__down emotion-14 emotion-15 emotion-1"
-              />
-            </button>
-          </div>
+              10 条/页
+            </div>
+            <i
+              class="uc-fe-icon icon__down emotion-14 emotion-15 emotion-1"
+            />
+          </button>
         </div>
       </li>
     </ul>

@@ -3987,6 +3987,7 @@ exports[`LocaleProvider switch locale 1`] = `
 .emotion-46 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -4168,7 +4169,9 @@ exports[`LocaleProvider switch locale 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-29:link,
@@ -4183,6 +4186,12 @@ exports[`LocaleProvider switch locale 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-29 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-26 {
@@ -5837,7 +5846,9 @@ exports[`LocaleProvider switch locale 1`] = `
   line-height: 22px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-276:link,
@@ -5852,6 +5863,12 @@ exports[`LocaleProvider switch locale 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-276 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-280 {
@@ -6399,6 +6416,7 @@ exports[`LocaleProvider switch locale 1`] = `
   border-radius: 2px;
   display: inline-block;
   width: 100%;
+  min-width: 78px;
 }
 
 .emotion-42 > .ezjenqk4:last-child {
@@ -6411,7 +6429,7 @@ exports[`LocaleProvider switch locale 1`] = `
   overflow: auto;
   line-height: 32px;
   font-size: 12px;
-  max-width: 360px;
+  max-width: none;
   min-width: 64px;
   padding: 4px 0px;
   border-radius: 2px;
@@ -6425,7 +6443,6 @@ exports[`LocaleProvider switch locale 1`] = `
   border: none;
   box-shadow: none;
   max-height: 380px;
-  max-width: none;
 }
 
 .emotion-40 .uc-fe-menu-item,
@@ -6705,19 +6722,20 @@ exports[`LocaleProvider switch locale 1`] = `
             <div
               class="uc-fe-pagination-options-size-changer emotion-46 emotion-47"
             >
-              <div>
-                <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-28 emotion-29 emotion-5"
-                  type="button"
+              <button
+                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-28 emotion-29 emotion-5"
+                title="10 条/页"
+                type="button"
+              >
+                <div
+                  class="uc-fe-select-content"
                 >
-                  <div>
-                    10 条/页
-                  </div>
-                  <i
-                    class="uc-fe-icon icon__down emotion-25 emotion-26 emotion-20"
-                  />
-                </button>
-              </div>
+                  10 条/页
+                </div>
+                <i
+                  class="uc-fe-icon icon__down emotion-25 emotion-26 emotion-20"
+                />
+              </button>
               <div
                 style="position: absolute; top: 0px; left: 0px; width: 100%;"
               >
@@ -7268,19 +7286,20 @@ exports[`LocaleProvider switch locale 1`] = `
           <div
             class=" emotion-46 emotion-47"
           >
-            <div>
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-28 emotion-29 emotion-5"
-                type="button"
+            <button
+              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-28 emotion-29 emotion-5"
+              title="请选择"
+              type="button"
+            >
+              <div
+                class="uc-fe-select-content"
               >
-                <div>
-                  请选择
-                </div>
-                <i
-                  class="uc-fe-icon icon__down emotion-25 emotion-26 emotion-20"
-                />
-              </button>
-            </div>
+                请选择
+              </div>
+              <i
+                class="uc-fe-icon icon__down emotion-25 emotion-26 emotion-20"
+              />
+            </button>
             <div
               style="position: absolute; top: 0px; left: 0px; width: 100%;"
             >
@@ -7327,19 +7346,20 @@ exports[`LocaleProvider switch locale 1`] = `
           <div
             class=" emotion-46 emotion-47"
           >
-            <div>
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-28 emotion-29 emotion-5"
-                type="button"
+            <button
+              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-28 emotion-29 emotion-5"
+              title="已选择 2 项"
+              type="button"
+            >
+              <div
+                class="uc-fe-select-content"
               >
-                <div>
-                  已选择 2 项
-                </div>
-                <i
-                  class="uc-fe-icon icon__down emotion-25 emotion-26 emotion-20"
-                />
-              </button>
-            </div>
+                已选择 2 项
+              </div>
+              <i
+                class="uc-fe-icon icon__down emotion-25 emotion-26 emotion-20"
+              />
+            </button>
             <div
               style="position: absolute; top: 0px; left: 0px; width: 100%;"
             >
@@ -8043,19 +8063,20 @@ exports[`LocaleProvider switch locale 1`] = `
               <div
                 class="uc-fe-pagination-options-size-changer emotion-46 emotion-47"
               >
-                <div>
-                  <button
-                    class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border emotion-28 emotion-276 emotion-5"
-                    type="button"
+                <button
+                  class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border emotion-28 emotion-276 emotion-5"
+                  title="10 条/页"
+                  type="button"
+                >
+                  <div
+                    class="uc-fe-select-content"
                   >
-                    <div>
-                      10 条/页
-                    </div>
-                    <i
-                      class="uc-fe-icon icon__down emotion-25 emotion-26 emotion-20"
-                    />
-                  </button>
-                </div>
+                    10 条/页
+                  </div>
+                  <i
+                    class="uc-fe-icon icon__down emotion-25 emotion-26 emotion-20"
+                  />
+                </button>
               </div>
               <div
                 class="uc-fe-pagination-options-quick-jumper"
@@ -9081,19 +9102,20 @@ exports[`LocaleProvider switch locale 1`] = `
               <div
                 class="uc-fe-pagination-options-size-changer emotion-46 emotion-47"
               >
-                <div>
-                  <button
-                    class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border emotion-28 emotion-276 emotion-5"
-                    type="button"
+                <button
+                  class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border emotion-28 emotion-276 emotion-5"
+                  title="10 条/页"
+                  type="button"
+                >
+                  <div
+                    class="uc-fe-select-content"
                   >
-                    <div>
-                      10 条/页
-                    </div>
-                    <i
-                      class="uc-fe-icon icon__down emotion-25 emotion-26 emotion-20"
-                    />
-                  </button>
-                </div>
+                    10 条/页
+                  </div>
+                  <i
+                    class="uc-fe-icon icon__down emotion-25 emotion-26 emotion-20"
+                  />
+                </button>
               </div>
               <div
                 class="uc-fe-pagination-options-quick-jumper"
@@ -9862,6 +9884,7 @@ exports[`LocaleProvider switch locale 2`] = `
 .emotion-46 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -10043,7 +10066,9 @@ exports[`LocaleProvider switch locale 2`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-29:link,
@@ -10058,6 +10083,12 @@ exports[`LocaleProvider switch locale 2`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-29 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-26 {
@@ -11712,7 +11743,9 @@ exports[`LocaleProvider switch locale 2`] = `
   line-height: 22px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-276:link,
@@ -11727,6 +11760,12 @@ exports[`LocaleProvider switch locale 2`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-276 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-280 {
@@ -12274,6 +12313,7 @@ exports[`LocaleProvider switch locale 2`] = `
   border-radius: 2px;
   display: inline-block;
   width: 100%;
+  min-width: 78px;
 }
 
 .emotion-42 > .ezjenqk4:last-child {
@@ -12286,7 +12326,7 @@ exports[`LocaleProvider switch locale 2`] = `
   overflow: auto;
   line-height: 32px;
   font-size: 12px;
-  max-width: 360px;
+  max-width: none;
   min-width: 64px;
   padding: 4px 0px;
   border-radius: 2px;
@@ -12300,7 +12340,6 @@ exports[`LocaleProvider switch locale 2`] = `
   border: none;
   box-shadow: none;
   max-height: 380px;
-  max-width: none;
 }
 
 .emotion-40 .uc-fe-menu-item,
@@ -12580,19 +12619,20 @@ exports[`LocaleProvider switch locale 2`] = `
             <div
               class="uc-fe-pagination-options-size-changer emotion-46 emotion-47"
             >
-              <div>
-                <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-28 emotion-29 emotion-5"
-                  type="button"
+              <button
+                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-28 emotion-29 emotion-5"
+                title="10 items/page"
+                type="button"
+              >
+                <div
+                  class="uc-fe-select-content"
                 >
-                  <div>
-                    10 items/page
-                  </div>
-                  <i
-                    class="uc-fe-icon icon__down emotion-25 emotion-26 emotion-20"
-                  />
-                </button>
-              </div>
+                  10 items/page
+                </div>
+                <i
+                  class="uc-fe-icon icon__down emotion-25 emotion-26 emotion-20"
+                />
+              </button>
               <div
                 style="position: absolute; top: 0px; left: 0px; width: 100%;"
               >
@@ -13143,19 +13183,20 @@ exports[`LocaleProvider switch locale 2`] = `
           <div
             class=" emotion-46 emotion-47"
           >
-            <div>
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-28 emotion-29 emotion-5"
-                type="button"
+            <button
+              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-28 emotion-29 emotion-5"
+              title="please select"
+              type="button"
+            >
+              <div
+                class="uc-fe-select-content"
               >
-                <div>
-                  please select
-                </div>
-                <i
-                  class="uc-fe-icon icon__down emotion-25 emotion-26 emotion-20"
-                />
-              </button>
-            </div>
+                please select
+              </div>
+              <i
+                class="uc-fe-icon icon__down emotion-25 emotion-26 emotion-20"
+              />
+            </button>
             <div
               style="position: absolute; top: 0px; left: 0px; width: 100%;"
             >
@@ -13202,19 +13243,20 @@ exports[`LocaleProvider switch locale 2`] = `
           <div
             class=" emotion-46 emotion-47"
           >
-            <div>
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-28 emotion-29 emotion-5"
-                type="button"
+            <button
+              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-28 emotion-29 emotion-5"
+              title="selected 2 items"
+              type="button"
+            >
+              <div
+                class="uc-fe-select-content"
               >
-                <div>
-                  selected 2 items
-                </div>
-                <i
-                  class="uc-fe-icon icon__down emotion-25 emotion-26 emotion-20"
-                />
-              </button>
-            </div>
+                selected 2 items
+              </div>
+              <i
+                class="uc-fe-icon icon__down emotion-25 emotion-26 emotion-20"
+              />
+            </button>
             <div
               style="position: absolute; top: 0px; left: 0px; width: 100%;"
             >
@@ -13918,19 +13960,20 @@ exports[`LocaleProvider switch locale 2`] = `
               <div
                 class="uc-fe-pagination-options-size-changer emotion-46 emotion-47"
               >
-                <div>
-                  <button
-                    class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border emotion-28 emotion-276 emotion-5"
-                    type="button"
+                <button
+                  class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border emotion-28 emotion-276 emotion-5"
+                  title="10 items/page"
+                  type="button"
+                >
+                  <div
+                    class="uc-fe-select-content"
                   >
-                    <div>
-                      10 items/page
-                    </div>
-                    <i
-                      class="uc-fe-icon icon__down emotion-25 emotion-26 emotion-20"
-                    />
-                  </button>
-                </div>
+                    10 items/page
+                  </div>
+                  <i
+                    class="uc-fe-icon icon__down emotion-25 emotion-26 emotion-20"
+                  />
+                </button>
               </div>
               <div
                 class="uc-fe-pagination-options-quick-jumper"
@@ -14956,19 +14999,20 @@ exports[`LocaleProvider switch locale 2`] = `
               <div
                 class="uc-fe-pagination-options-size-changer emotion-46 emotion-47"
               >
-                <div>
-                  <button
-                    class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border emotion-28 emotion-276 emotion-5"
-                    type="button"
+                <button
+                  class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border emotion-28 emotion-276 emotion-5"
+                  title="10 items/page"
+                  type="button"
+                >
+                  <div
+                    class="uc-fe-select-content"
                   >
-                    <div>
-                      10 items/page
-                    </div>
-                    <i
-                      class="uc-fe-icon icon__down emotion-25 emotion-26 emotion-20"
-                    />
-                  </button>
-                </div>
+                    10 items/page
+                  </div>
+                  <i
+                    class="uc-fe-icon icon__down emotion-25 emotion-26 emotion-20"
+                  />
+                </button>
               </div>
               <div
                 class="uc-fe-pagination-options-quick-jumper"

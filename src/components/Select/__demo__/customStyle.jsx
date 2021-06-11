@@ -25,6 +25,22 @@ class Demo extends React.Component {
                         ))}
                     </Select>
                 </div>
+                <h3>popupMaxWidth</h3>
+                <div className="demo-wrap">
+                    <Select
+                        multiple
+                        showSelectAll
+                        search
+                        onChange={console.log}
+                        customStyle={{ popupMaxWidth: '200px' }}
+                    >
+                        {new Array(100).fill(null).map((v, i) => (
+                            <Option key={i} value={`v_${i}`}>
+                                optionoptionoptionoptionoptionoptionoptionoptionoptionoptionoption{i}
+                            </Option>
+                        ))}
+                    </Select>
+                </div>
             </div>
         );
     }

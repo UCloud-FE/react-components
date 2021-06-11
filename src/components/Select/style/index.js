@@ -8,6 +8,11 @@ import Menu from 'src/components/Menu';
 import Button from 'src/components/Button';
 import { inlineBlockWithVerticalMixin } from 'src/style';
 import withProps from 'src/utils/withProps';
+import config from 'src/config';
+
+const { prefixCls: _prefixCls } = config;
+export const prefixCls = _prefixCls + '-select';
+export const selectorContentCls = prefixCls + '-content';
 
 export const SelectSearchInput = styled(Input.Search)`
     min-width: 100px;
@@ -19,7 +24,14 @@ export const SelectSearchInput = styled(Input.Search)`
 export const Selector = styled(Button)`
     padding-right: 28px;
     width: 100%;
+    min-width: 78px;
     text-align: left;
+    overflow: hidden;
+    .${selectorContentCls} {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
 `;
 
 export const Arrow = styled(Icon)`
@@ -53,6 +65,7 @@ export const MenuWrap = withProps()(
             border-radius: ${DT.T_CORNER_SM};
             display: inline-block;
             width: 100%;
+            min-width: 78px;
             /* stylelint-disable selector-type-no-unknown */
             & > ${ExtraWrap}:last-child {
                 margin-bottom: 10px;
@@ -63,17 +76,21 @@ export const MenuWrap = withProps()(
 );
 
 // eslint-disable-next-line react/prop-types,no-unused-vars
-const CustomMenu = ({ customStyle, ...rest }) => <Menu {...rest} />;
+const CustomMenu = ({ customStyle, menuCustomStyle, ...rest }) => <Menu customStyle={menuCustomStyle} {...rest} />;
 
 export const BlockMenu = styled(CustomMenu)(props => {
     const { customStyle } = props;
+    const maxHeight = customStyle.optionListMaxHeight
+        ? typeof customStyle.optionListMaxHeight === 'string'
+            ? customStyle.optionListMaxHeight
+            : customStyle.optionListMaxHeight + 'px'
+        : '380px';
 
     return css`
         display: block;
         border: none;
         box-shadow: none;
-        max-height: ${customStyle.optionListMaxHeight || 380}px;
-        max-width: none;
+        max-height: ${maxHeight};
     `;
 });
 
@@ -100,6 +117,7 @@ const propsMixin = props => {
 export const SelectWrap = withProps()(styled('div')`
     box-sizing: border-box;
     position: relative;
+    max-width: 100%;
 
     ${inlineBlockWithVerticalMixin};
     ${propsMixin};

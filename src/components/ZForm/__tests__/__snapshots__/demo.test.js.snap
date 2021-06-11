@@ -870,6 +870,7 @@ exports[`ZForm demo -- rule 1`] = `
 .emotion-62 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -904,7 +905,9 @@ exports[`ZForm demo -- rule 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-60:link,
@@ -919,6 +922,12 @@ exports[`ZForm demo -- rule 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-60 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-57 {
@@ -1286,6 +1295,7 @@ exports[`ZForm demo -- rule 1`] = `
 .emotion-62 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -1320,7 +1330,9 @@ exports[`ZForm demo -- rule 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-60:link,
@@ -1335,6 +1347,12 @@ exports[`ZForm demo -- rule 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-60 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-57 {
@@ -1557,19 +1575,20 @@ exports[`ZForm demo -- rule 1`] = `
       <div
         class=" emotion-62 emotion-63"
       >
-        <div>
-          <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-59 emotion-60 emotion-61"
-            type="button"
+        <button
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-59 emotion-60 emotion-61"
+          title="请选择"
+          type="button"
+        >
+          <div
+            class="uc-fe-select-content"
           >
-            <div>
-              请选择
-            </div>
-            <i
-              class="uc-fe-icon icon__down emotion-56 emotion-57 emotion-58"
-            />
-          </button>
-        </div>
+            请选择
+          </div>
+          <i
+            class="uc-fe-icon icon__down emotion-56 emotion-57 emotion-58"
+          />
+        </button>
       </div>
     </div>
   </div>
@@ -1589,19 +1608,20 @@ exports[`ZForm demo -- rule 1`] = `
       <div
         class=" emotion-62 emotion-63"
       >
-        <div>
-          <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-59 emotion-60 emotion-61"
-            type="button"
+        <button
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-59 emotion-60 emotion-61"
+          title="label-1"
+          type="button"
+        >
+          <div
+            class="uc-fe-select-content"
           >
-            <div>
-              label-1
-            </div>
-            <i
-              class="uc-fe-icon icon__down emotion-56 emotion-57 emotion-58"
-            />
-          </button>
-        </div>
+            label-1
+          </div>
+          <i
+            class="uc-fe-icon icon__down emotion-56 emotion-57 emotion-58"
+          />
+        </button>
       </div>
     </div>
   </div>
@@ -1637,19 +1657,20 @@ exports[`ZForm demo -- rule 1`] = `
             <div
               class=" emotion-62 emotion-63"
             >
-              <div>
-                <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-59 emotion-60 emotion-61"
-                  type="button"
+              <button
+                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-59 emotion-60 emotion-61"
+                title="请选择"
+                type="button"
+              >
+                <div
+                  class="uc-fe-select-content"
                 >
-                  <div>
-                    请选择
-                  </div>
-                  <i
-                    class="uc-fe-icon icon__down emotion-56 emotion-57 emotion-58"
-                  />
-                </button>
-              </div>
+                  请选择
+                </div>
+                <i
+                  class="uc-fe-icon icon__down emotion-56 emotion-57 emotion-58"
+                />
+              </button>
             </div>
           </div>
         </div>
@@ -1669,19 +1690,20 @@ exports[`ZForm demo -- rule 1`] = `
             <div
               class=" emotion-62 emotion-63"
             >
-              <div>
-                <button
-                  class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-59 emotion-60 emotion-61"
-                  type="button"
+              <button
+                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-59 emotion-60 emotion-61"
+                title="label-1"
+                type="button"
+              >
+                <div
+                  class="uc-fe-select-content"
                 >
-                  <div>
-                    label-1
-                  </div>
-                  <i
-                    class="uc-fe-icon icon__down emotion-56 emotion-57 emotion-58"
-                  />
-                </button>
-              </div>
+                  label-1
+                </div>
+                <i
+                  class="uc-fe-icon icon__down emotion-56 emotion-57 emotion-58"
+                />
+              </button>
             </div>
           </div>
         </div>
@@ -1747,6 +1769,7 @@ exports[`ZForm demo -- uhost 1`] = `
 .emotion-127 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -1781,7 +1804,9 @@ exports[`ZForm demo -- uhost 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-125:link,
@@ -1796,6 +1821,12 @@ exports[`ZForm demo -- uhost 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-125 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-122 {
@@ -2186,6 +2217,7 @@ exports[`ZForm demo -- uhost 1`] = `
 .emotion-127 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -2220,7 +2252,9 @@ exports[`ZForm demo -- uhost 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-125:link,
@@ -2235,6 +2269,12 @@ exports[`ZForm demo -- uhost 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-125 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-122 {
@@ -2846,19 +2886,20 @@ exports[`ZForm demo -- uhost 1`] = `
       <div
         class=" emotion-127 emotion-128"
       >
-        <div>
-          <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-124 emotion-125 emotion-5"
-            type="button"
+        <button
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-124 emotion-125 emotion-5"
+          title="请选择"
+          type="button"
+        >
+          <div
+            class="uc-fe-select-content"
           >
-            <div>
-              请选择
-            </div>
-            <i
-              class="uc-fe-icon icon__down emotion-121 emotion-122 emotion-123"
-            />
-          </button>
-        </div>
+            请选择
+          </div>
+          <i
+            class="uc-fe-icon icon__down emotion-121 emotion-122 emotion-123"
+          />
+        </button>
       </div>
     </div>
   </div>

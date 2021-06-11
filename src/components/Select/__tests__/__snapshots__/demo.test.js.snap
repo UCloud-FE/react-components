@@ -4,6 +4,7 @@ exports[`Select demo -- customStyle 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -38,7 +39,9 @@ exports[`Select demo -- customStyle 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-4:link,
@@ -53,6 +56,12 @@ exports[`Select demo -- customStyle 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-4 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-1 {
@@ -66,6 +75,7 @@ exports[`Select demo -- customStyle 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -100,7 +110,9 @@ exports[`Select demo -- customStyle 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-4:link,
@@ -115,6 +127,12 @@ exports[`Select demo -- customStyle 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-4 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-1 {
@@ -135,19 +153,45 @@ exports[`Select demo -- customStyle 1`] = `
     <div
       class=" emotion-6 emotion-7"
     >
-      <div>
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-          type="button"
+      <button
+        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
+        title="请选择"
+        type="button"
+      >
+        <div
+          class="uc-fe-select-content"
         >
-          <div>
-            请选择
-          </div>
-          <i
-            class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
-          />
-        </button>
-      </div>
+          请选择
+        </div>
+        <i
+          class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+        />
+      </button>
+    </div>
+  </div>
+  <h3>
+    popupMaxWidth
+  </h3>
+  <div
+    class="demo-wrap"
+  >
+    <div
+      class=" emotion-6 emotion-7"
+    >
+      <button
+        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
+        title="请选择"
+        type="button"
+      >
+        <div
+          class="uc-fe-select-content"
+        >
+          请选择
+        </div>
+        <i
+          class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+        />
+      </button>
     </div>
   </div>
 </div>
@@ -157,6 +201,7 @@ exports[`Select demo -- disabled 1`] = `
 .emotion-14 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -191,7 +236,9 @@ exports[`Select demo -- disabled 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-12:link,
@@ -208,6 +255,12 @@ exports[`Select demo -- disabled 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
+.emotion-12 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .emotion-1 {
   vertical-align: baseline;
   position: absolute;
@@ -219,6 +272,7 @@ exports[`Select demo -- disabled 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -256,12 +310,21 @@ exports[`Select demo -- disabled 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
+}
+
+.emotion-4 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-14 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -296,7 +359,9 @@ exports[`Select demo -- disabled 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-12:link,
@@ -313,6 +378,12 @@ exports[`Select demo -- disabled 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
+.emotion-12 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .emotion-1 {
   vertical-align: baseline;
   position: absolute;
@@ -324,6 +395,7 @@ exports[`Select demo -- disabled 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -361,7 +433,15 @@ exports[`Select demo -- disabled 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
+}
+
+.emotion-4 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 <div>
@@ -372,20 +452,21 @@ exports[`Select demo -- disabled 1`] = `
       class=" emotion-6 emotion-7"
       disabled=""
     >
-      <div>
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-disabled emotion-3 emotion-4 emotion-5"
-          disabled=""
-          type="button"
+      <button
+        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-disabled emotion-3 emotion-4 emotion-5"
+        disabled=""
+        title="1"
+        type="button"
+      >
+        <div
+          class="uc-fe-select-content"
         >
-          <div>
-            1
-          </div>
-          <i
-            class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
-          />
-        </button>
-      </div>
+          1
+        </div>
+        <i
+          class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+        />
+      </button>
     </div>
   </div>
   <div
@@ -394,19 +475,20 @@ exports[`Select demo -- disabled 1`] = `
     <div
       class=" emotion-14 emotion-7"
     >
-      <div>
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-12 emotion-5"
-          type="button"
+      <button
+        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-12 emotion-5"
+        title="1"
+        type="button"
+      >
+        <div
+          class="uc-fe-select-content"
         >
-          <div>
-            1
-          </div>
-          <i
-            class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
-          />
-        </button>
-      </div>
+          1
+        </div>
+        <i
+          class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+        />
+      </button>
     </div>
   </div>
 </div>
@@ -416,6 +498,7 @@ exports[`Select demo -- emptyContent 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -450,7 +533,9 @@ exports[`Select demo -- emptyContent 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-4:link,
@@ -465,6 +550,12 @@ exports[`Select demo -- emptyContent 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-4 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-1 {
@@ -478,6 +569,7 @@ exports[`Select demo -- emptyContent 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -512,7 +604,9 @@ exports[`Select demo -- emptyContent 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-4:link,
@@ -527,6 +621,12 @@ exports[`Select demo -- emptyContent 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-4 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-1 {
@@ -544,19 +644,20 @@ exports[`Select demo -- emptyContent 1`] = `
     <div
       class=" emotion-6 emotion-7"
     >
-      <div>
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-          type="button"
+      <button
+        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
+        title="请选择"
+        type="button"
+      >
+        <div
+          class="uc-fe-select-content"
         >
-          <div>
-            请选择
-          </div>
-          <i
-            class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
-          />
-        </button>
-      </div>
+          请选择
+        </div>
+        <i
+          class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+        />
+      </button>
     </div>
   </div>
   <div
@@ -565,19 +666,20 @@ exports[`Select demo -- emptyContent 1`] = `
     <div
       class=" emotion-6 emotion-7"
     >
-      <div>
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-          type="button"
+      <button
+        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
+        title="请选择"
+        type="button"
+      >
+        <div
+          class="uc-fe-select-content"
         >
-          <div>
-            请选择
-          </div>
-          <i
-            class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
-          />
-        </button>
-      </div>
+          请选择
+        </div>
+        <i
+          class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+        />
+      </button>
     </div>
   </div>
   <div
@@ -586,19 +688,20 @@ exports[`Select demo -- emptyContent 1`] = `
     <div
       class=" emotion-6 emotion-7"
     >
-      <div>
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-          type="button"
+      <button
+        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
+        title="请选择"
+        type="button"
+      >
+        <div
+          class="uc-fe-select-content"
         >
-          <div>
-            请选择
-          </div>
-          <i
-            class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
-          />
-        </button>
-      </div>
+          请选择
+        </div>
+        <i
+          class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+        />
+      </button>
     </div>
   </div>
 </div>
@@ -608,6 +711,7 @@ exports[`Select demo -- extra 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -642,7 +746,9 @@ exports[`Select demo -- extra 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-4:link,
@@ -657,6 +763,12 @@ exports[`Select demo -- extra 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-4 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-1 {
@@ -670,6 +782,7 @@ exports[`Select demo -- extra 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -704,7 +817,9 @@ exports[`Select demo -- extra 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-4:link,
@@ -719,6 +834,12 @@ exports[`Select demo -- extra 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-4 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-1 {
@@ -736,19 +857,20 @@ exports[`Select demo -- extra 1`] = `
     <div
       class=" emotion-6 emotion-7"
     >
-      <div>
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-          type="button"
+      <button
+        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
+        title="请选择"
+        type="button"
+      >
+        <div
+          class="uc-fe-select-content"
         >
-          <div>
-            请选择
-          </div>
-          <i
-            class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
-          />
-        </button>
-      </div>
+          请选择
+        </div>
+        <i
+          class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+        />
+      </button>
     </div>
   </div>
 </div>
@@ -758,6 +880,7 @@ exports[`Select demo -- group 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -792,7 +915,9 @@ exports[`Select demo -- group 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-4:link,
@@ -807,6 +932,12 @@ exports[`Select demo -- group 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-4 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-1 {
@@ -820,6 +951,7 @@ exports[`Select demo -- group 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -854,7 +986,9 @@ exports[`Select demo -- group 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-4:link,
@@ -869,6 +1003,12 @@ exports[`Select demo -- group 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-4 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-1 {
@@ -883,14 +1023,209 @@ exports[`Select demo -- group 1`] = `
   <div
     class=" emotion-6 emotion-7"
   >
-    <div>
+    <button
+      class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
+      title="2"
+      type="button"
+    >
+      <div
+        class="uc-fe-select-content"
+      >
+        2
+      </div>
+      <i
+        class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Select demo -- manual-test 1`] = `
+.emotion-6 {
+  box-sizing: border-box;
+  position: relative;
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  color: #0a1633;
+}
+
+.emotion-4 {
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 8px;
+  color: #0a1633;
+  fill: #0a1633;
+  background: #ffffff;
+  border: 1px solid #c3cad9;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
+  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
+  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
+  border-width: 1px;
+  border-style: solid;
+  padding: 0 7px;
+  line-height: 26px;
+  padding-right: 28px;
+  width: 100%;
+  min-width: 78px;
+  text-align: left;
+  overflow: hidden;
+}
+
+.emotion-4:link,
+.emotion-4:visited {
+  color: #0a1633;
+}
+
+.emotion-4:hover,
+.emotion-4:active {
+  color: #3860f4;
+  fill: #3860f4;
+  border: 1px solid #d2d6ea;
+  background: #ffffff;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-4 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-1 {
+  vertical-align: baseline;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  margin-top: -6px;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  position: relative;
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  color: #0a1633;
+}
+
+.emotion-4 {
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 8px;
+  color: #0a1633;
+  fill: #0a1633;
+  background: #ffffff;
+  border: 1px solid #c3cad9;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
+  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
+  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
+  border-width: 1px;
+  border-style: solid;
+  padding: 0 7px;
+  line-height: 26px;
+  padding-right: 28px;
+  width: 100%;
+  min-width: 78px;
+  text-align: left;
+  overflow: hidden;
+}
+
+.emotion-4:link,
+.emotion-4:visited {
+  color: #0a1633;
+}
+
+.emotion-4:hover,
+.emotion-4:active {
+  color: #3860f4;
+  fill: #3860f4;
+  border: 1px solid #d2d6ea;
+  background: #ffffff;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-4 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-1 {
+  vertical-align: baseline;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  margin-top: -6px;
+}
+
+<div>
+  <h2>
+    最大宽度
+  </h2>
+  <div
+    class="demo-wrap"
+  >
+    <div
+      class=" emotion-6 emotion-7"
+    >
+      <button
+        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
+        title="1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111"
+        type="button"
+      >
+        <div
+          class="uc-fe-select-content"
+        >
+          1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+        </div>
+        <i
+          class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+        />
+      </button>
+    </div>
+  </div>
+  <h2>
+    最小宽度
+  </h2>
+  <div
+    class="demo-wrap"
+  >
+    <div
+      class=" emotion-6 emotion-7"
+    >
       <button
         class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
         type="button"
       >
-        <div>
-          2
-        </div>
+        <div
+          class="uc-fe-select-content"
+        />
         <i
           class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
         />
@@ -904,6 +1239,7 @@ exports[`Select demo -- multiple 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -938,7 +1274,9 @@ exports[`Select demo -- multiple 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-4:link,
@@ -953,6 +1291,12 @@ exports[`Select demo -- multiple 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-4 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-1 {
@@ -966,6 +1310,7 @@ exports[`Select demo -- multiple 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -1000,7 +1345,9 @@ exports[`Select demo -- multiple 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-4:link,
@@ -1015,6 +1362,12 @@ exports[`Select demo -- multiple 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-4 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-1 {
@@ -1029,13 +1382,249 @@ exports[`Select demo -- multiple 1`] = `
   <div
     class=" emotion-6 emotion-7"
   >
-    <div>
+    <button
+      class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
+      title="已选择 2 项"
+      type="button"
+    >
+      <div
+        class="uc-fe-select-content"
+      >
+        已选择 2 项
+      </div>
+      <i
+        class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Select demo -- popoverProps 1`] = `
+.emotion-6 {
+  box-sizing: border-box;
+  position: relative;
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  color: #0a1633;
+}
+
+.emotion-4 {
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 8px;
+  color: #0a1633;
+  fill: #0a1633;
+  background: #ffffff;
+  border: 1px solid #c3cad9;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
+  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
+  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
+  border-width: 1px;
+  border-style: solid;
+  padding: 0 7px;
+  line-height: 26px;
+  padding-right: 28px;
+  width: 100%;
+  min-width: 78px;
+  text-align: left;
+  overflow: hidden;
+}
+
+.emotion-4:link,
+.emotion-4:visited {
+  color: #0a1633;
+}
+
+.emotion-4:hover,
+.emotion-4:active {
+  color: #3860f4;
+  fill: #3860f4;
+  border: 1px solid #d2d6ea;
+  background: #ffffff;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-4 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-1 {
+  vertical-align: baseline;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  margin-top: -6px;
+}
+
+.emotion-6 {
+  box-sizing: border-box;
+  position: relative;
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  color: #0a1633;
+}
+
+.emotion-4 {
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 8px;
+  color: #0a1633;
+  fill: #0a1633;
+  background: #ffffff;
+  border: 1px solid #c3cad9;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
+  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
+  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
+  border-width: 1px;
+  border-style: solid;
+  padding: 0 7px;
+  line-height: 26px;
+  padding-right: 28px;
+  width: 100%;
+  min-width: 78px;
+  text-align: left;
+  overflow: hidden;
+}
+
+.emotion-4:link,
+.emotion-4:visited {
+  color: #0a1633;
+}
+
+.emotion-4:hover,
+.emotion-4:active {
+  color: #3860f4;
+  fill: #3860f4;
+  border: 1px solid #d2d6ea;
+  background: #ffffff;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-4 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-1 {
+  vertical-align: baseline;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  margin-top: -6px;
+}
+
+<div>
+  <div
+    class="demo-wrap"
+  >
+    <div
+      class=" emotion-6 emotion-7"
+    >
       <button
         class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
+        title="1"
         type="button"
       >
-        <div>
-          已选择 2 项
+        <div
+          class="uc-fe-select-content"
+        >
+          1
+        </div>
+        <i
+          class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+        />
+      </button>
+    </div>
+  </div>
+  <div
+    class="demo-wrap"
+  >
+    <div
+      class=" emotion-6 emotion-7"
+    >
+      <button
+        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
+        title="1"
+        type="button"
+      >
+        <div
+          class="uc-fe-select-content"
+        >
+          1
+        </div>
+        <i
+          class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+        />
+      </button>
+    </div>
+  </div>
+  <div
+    class="demo-wrap"
+  >
+    <div
+      class=" emotion-6 emotion-7"
+    >
+      <button
+        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
+        title="1"
+        type="button"
+      >
+        <div
+          class="uc-fe-select-content"
+        >
+          1
+        </div>
+        <i
+          class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+        />
+      </button>
+    </div>
+  </div>
+  <div
+    class="demo-wrap"
+  >
+    <div
+      class=" emotion-6 emotion-7"
+    >
+      <button
+        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
+        title="1"
+        type="button"
+      >
+        <div
+          class="uc-fe-select-content"
+        >
+          1
         </div>
         <i
           class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
@@ -1046,223 +1635,11 @@ exports[`Select demo -- multiple 1`] = `
 </div>
 `;
 
-exports[`Select demo -- popoverProps 1`] = `
-.emotion-6 {
-  box-sizing: border-box;
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 12px;
-  color: #0a1633;
-}
-
-.emotion-4 {
-  margin: 0;
-  box-sizing: border-box;
-  border-radius: 2px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  font-size: 12px;
-  display: inline-block;
-  vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
-  padding: 0 8px;
-  color: #0a1633;
-  fill: #0a1633;
-  background: #ffffff;
-  border: 1px solid #c3cad9;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  border-width: 1px;
-  border-style: solid;
-  padding: 0 7px;
-  line-height: 26px;
-  padding-right: 28px;
-  width: 100%;
-  text-align: left;
-}
-
-.emotion-4:link,
-.emotion-4:visited {
-  color: #0a1633;
-}
-
-.emotion-4:hover,
-.emotion-4:active {
-  color: #3860f4;
-  fill: #3860f4;
-  border: 1px solid #d2d6ea;
-  background: #ffffff;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
-}
-
-.emotion-1 {
-  vertical-align: baseline;
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  margin-top: -6px;
-}
-
-.emotion-6 {
-  box-sizing: border-box;
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 12px;
-  color: #0a1633;
-}
-
-.emotion-4 {
-  margin: 0;
-  box-sizing: border-box;
-  border-radius: 2px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  font-size: 12px;
-  display: inline-block;
-  vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
-  padding: 0 8px;
-  color: #0a1633;
-  fill: #0a1633;
-  background: #ffffff;
-  border: 1px solid #c3cad9;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  border-width: 1px;
-  border-style: solid;
-  padding: 0 7px;
-  line-height: 26px;
-  padding-right: 28px;
-  width: 100%;
-  text-align: left;
-}
-
-.emotion-4:link,
-.emotion-4:visited {
-  color: #0a1633;
-}
-
-.emotion-4:hover,
-.emotion-4:active {
-  color: #3860f4;
-  fill: #3860f4;
-  border: 1px solid #d2d6ea;
-  background: #ffffff;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
-}
-
-.emotion-1 {
-  vertical-align: baseline;
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  margin-top: -6px;
-}
-
-<div>
-  <div
-    class="demo-wrap"
-  >
-    <div
-      class=" emotion-6 emotion-7"
-    >
-      <div>
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-          type="button"
-        >
-          <div>
-            1
-          </div>
-          <i
-            class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
-          />
-        </button>
-      </div>
-    </div>
-  </div>
-  <div
-    class="demo-wrap"
-  >
-    <div
-      class=" emotion-6 emotion-7"
-    >
-      <div>
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-          type="button"
-        >
-          <div>
-            1
-          </div>
-          <i
-            class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
-          />
-        </button>
-      </div>
-    </div>
-  </div>
-  <div
-    class="demo-wrap"
-  >
-    <div
-      class=" emotion-6 emotion-7"
-    >
-      <div>
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-          type="button"
-        >
-          <div>
-            1
-          </div>
-          <i
-            class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
-          />
-        </button>
-      </div>
-    </div>
-  </div>
-  <div
-    class="demo-wrap"
-  >
-    <div
-      class=" emotion-6 emotion-7"
-    >
-      <div>
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-          type="button"
-        >
-          <div>
-            1
-          </div>
-          <i
-            class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
-          />
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`Select demo -- renderContent 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -1297,7 +1674,9 @@ exports[`Select demo -- renderContent 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-4:link,
@@ -1312,6 +1691,12 @@ exports[`Select demo -- renderContent 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-4 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-1 {
@@ -1325,6 +1710,7 @@ exports[`Select demo -- renderContent 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -1359,7 +1745,9 @@ exports[`Select demo -- renderContent 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-4:link,
@@ -1374,6 +1762,12 @@ exports[`Select demo -- renderContent 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-4 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-1 {
@@ -1391,23 +1785,23 @@ exports[`Select demo -- renderContent 1`] = `
     <div
       class=" emotion-6 emotion-7"
     >
-      <div>
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-          type="button"
+      <button
+        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
+        type="button"
+      >
+        <div
+          class="uc-fe-select-content"
         >
-          <div>
-            <span
-              style="color:red"
-            >
-              1
-            </span>
-          </div>
-          <i
-            class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
-          />
-        </button>
-      </div>
+          <span
+            style="color:red"
+          >
+            1
+          </span>
+        </div>
+        <i
+          class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+        />
+      </button>
     </div>
   </div>
 </div>
@@ -1417,6 +1811,7 @@ exports[`Select demo -- renderPopup 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -1451,7 +1846,9 @@ exports[`Select demo -- renderPopup 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-4:link,
@@ -1466,6 +1863,12 @@ exports[`Select demo -- renderPopup 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-4 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-1 {
@@ -1479,6 +1882,7 @@ exports[`Select demo -- renderPopup 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -1513,7 +1917,9 @@ exports[`Select demo -- renderPopup 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-4:link,
@@ -1528,6 +1934,12 @@ exports[`Select demo -- renderPopup 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-4 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-1 {
@@ -1545,19 +1957,20 @@ exports[`Select demo -- renderPopup 1`] = `
     <div
       class=" emotion-6 emotion-7"
     >
-      <div>
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-          type="button"
+      <button
+        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
+        title="请选择"
+        type="button"
+      >
+        <div
+          class="uc-fe-select-content"
         >
-          <div>
-            请选择
-          </div>
-          <i
-            class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
-          />
-        </button>
-      </div>
+          请选择
+        </div>
+        <i
+          class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+        />
+      </button>
     </div>
   </div>
   <div
@@ -1566,19 +1979,20 @@ exports[`Select demo -- renderPopup 1`] = `
     <div
       class=" emotion-6 emotion-7"
     >
-      <div>
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-          type="button"
+      <button
+        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
+        title="请选择"
+        type="button"
+      >
+        <div
+          class="uc-fe-select-content"
         >
-          <div>
-            请选择
-          </div>
-          <i
-            class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
-          />
-        </button>
-      </div>
+          请选择
+        </div>
+        <i
+          class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+        />
+      </button>
     </div>
   </div>
 </div>
@@ -1588,6 +2002,7 @@ exports[`Select demo -- renderSelector 1`] = `
 .emotion-4 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -1643,6 +2058,7 @@ exports[`Select demo -- renderSelector 1`] = `
 .emotion-4 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -1722,6 +2138,7 @@ exports[`Select demo -- search 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -1756,7 +2173,9 @@ exports[`Select demo -- search 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-4:link,
@@ -1771,6 +2190,12 @@ exports[`Select demo -- search 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-4 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-1 {
@@ -1784,6 +2209,7 @@ exports[`Select demo -- search 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -1818,7 +2244,9 @@ exports[`Select demo -- search 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-4:link,
@@ -1833,6 +2261,12 @@ exports[`Select demo -- search 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-4 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-1 {
@@ -1850,19 +2284,20 @@ exports[`Select demo -- search 1`] = `
     <div
       class=" emotion-6 emotion-7"
     >
-      <div>
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-          type="button"
+      <button
+        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
+        title="1"
+        type="button"
+      >
+        <div
+          class="uc-fe-select-content"
         >
-          <div>
-            1
-          </div>
-          <i
-            class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
-          />
-        </button>
-      </div>
+          1
+        </div>
+        <i
+          class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+        />
+      </button>
     </div>
   </div>
   <div
@@ -1871,19 +2306,20 @@ exports[`Select demo -- search 1`] = `
     <div
       class=" emotion-6 emotion-7"
     >
-      <div>
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-          type="button"
+      <button
+        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
+        title="1"
+        type="button"
+      >
+        <div
+          class="uc-fe-select-content"
         >
-          <div>
-            1
-          </div>
-          <i
-            class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
-          />
-        </button>
-      </div>
+          1
+        </div>
+        <i
+          class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+        />
+      </button>
     </div>
   </div>
 </div>
@@ -1893,6 +2329,7 @@ exports[`Select demo -- select 1`] = `
 .emotion-92 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -1927,7 +2364,9 @@ exports[`Select demo -- select 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-90:link,
@@ -1942,6 +2381,12 @@ exports[`Select demo -- select 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-90 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-87 {
@@ -2431,6 +2876,7 @@ exports[`Select demo -- select 1`] = `
 .emotion-92 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -2465,7 +2911,9 @@ exports[`Select demo -- select 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-90:link,
@@ -2480,6 +2928,12 @@ exports[`Select demo -- select 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-90 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-87 {
@@ -3268,19 +3722,20 @@ exports[`Select demo -- select 1`] = `
       class=" emotion-92 emotion-93"
       placeholder="placeholder"
     >
-      <div>
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-89 emotion-90 emotion-91"
-          type="button"
+      <button
+        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-89 emotion-90 emotion-91"
+        title="placeholder"
+        type="button"
+      >
+        <div
+          class="uc-fe-select-content"
         >
-          <div>
-            placeholder
-          </div>
-          <i
-            class="uc-fe-icon icon__down emotion-86 emotion-87 emotion-88"
-          />
-        </button>
-      </div>
+          placeholder
+        </div>
+        <i
+          class="uc-fe-icon icon__down emotion-86 emotion-87 emotion-88"
+        />
+      </button>
     </div>
   </div>
 </div>
@@ -3290,6 +3745,7 @@ exports[`Select demo -- select-extra 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -3324,7 +3780,9 @@ exports[`Select demo -- select-extra 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-4:link,
@@ -3339,6 +3797,12 @@ exports[`Select demo -- select-extra 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-4 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-1 {
@@ -3352,6 +3816,7 @@ exports[`Select demo -- select-extra 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -3386,7 +3851,9 @@ exports[`Select demo -- select-extra 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-4:link,
@@ -3401,6 +3868,12 @@ exports[`Select demo -- select-extra 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-4 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-1 {
@@ -3418,19 +3891,20 @@ exports[`Select demo -- select-extra 1`] = `
     <div
       class=" emotion-6 emotion-7"
     >
-      <div>
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-          type="button"
+      <button
+        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
+        title="请选择"
+        type="button"
+      >
+        <div
+          class="uc-fe-select-content"
         >
-          <div>
-            请选择
-          </div>
-          <i
-            class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
-          />
-        </button>
-      </div>
+          请选择
+        </div>
+        <i
+          class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+        />
+      </button>
     </div>
   </div>
 </div>
@@ -3440,6 +3914,7 @@ exports[`Select demo -- showSelectAll 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -3474,7 +3949,9 @@ exports[`Select demo -- showSelectAll 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-4:link,
@@ -3489,6 +3966,12 @@ exports[`Select demo -- showSelectAll 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-4 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-1 {
@@ -3502,6 +3985,7 @@ exports[`Select demo -- showSelectAll 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -3536,7 +4020,9 @@ exports[`Select demo -- showSelectAll 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-4:link,
@@ -3551,6 +4037,12 @@ exports[`Select demo -- showSelectAll 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-4 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-1 {
@@ -3568,19 +4060,20 @@ exports[`Select demo -- showSelectAll 1`] = `
     <div
       class=" emotion-6 emotion-7"
     >
-      <div>
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-          type="button"
+      <button
+        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
+        title="请选择"
+        type="button"
+      >
+        <div
+          class="uc-fe-select-content"
         >
-          <div>
-            请选择
-          </div>
-          <i
-            class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
-          />
-        </button>
-      </div>
+          请选择
+        </div>
+        <i
+          class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+        />
+      </button>
     </div>
   </div>
 </div>
@@ -3590,6 +4083,7 @@ exports[`Select demo -- size 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -3624,7 +4118,9 @@ exports[`Select demo -- size 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-12:link,
@@ -3639,6 +4135,12 @@ exports[`Select demo -- size 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-12 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-1 {
@@ -3677,7 +4179,9 @@ exports[`Select demo -- size 1`] = `
   line-height: 22px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-4:link,
@@ -3692,6 +4196,12 @@ exports[`Select demo -- size 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-4 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-20 {
@@ -3722,7 +4232,9 @@ exports[`Select demo -- size 1`] = `
   line-height: 30px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-20:link,
@@ -3737,11 +4249,18 @@ exports[`Select demo -- size 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-20 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-6 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -3776,7 +4295,9 @@ exports[`Select demo -- size 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-12:link,
@@ -3791,6 +4312,12 @@ exports[`Select demo -- size 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-12 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-1 {
@@ -3829,7 +4356,9 @@ exports[`Select demo -- size 1`] = `
   line-height: 22px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-4:link,
@@ -3844,6 +4373,12 @@ exports[`Select demo -- size 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-4 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-20 {
@@ -3874,7 +4409,9 @@ exports[`Select demo -- size 1`] = `
   line-height: 30px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-20:link,
@@ -3889,6 +4426,12 @@ exports[`Select demo -- size 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-20 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 <div>
@@ -3898,19 +4441,20 @@ exports[`Select demo -- size 1`] = `
     <div
       class=" emotion-6 emotion-7"
     >
-      <div>
-        <button
-          class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-          type="button"
+      <button
+        class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
+        title="1"
+        type="button"
+      >
+        <div
+          class="uc-fe-select-content"
         >
-          <div>
-            1
-          </div>
-          <i
-            class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
-          />
-        </button>
-      </div>
+          1
+        </div>
+        <i
+          class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+        />
+      </button>
     </div>
   </div>
   <div
@@ -3919,19 +4463,20 @@ exports[`Select demo -- size 1`] = `
     <div
       class=" emotion-6 emotion-7"
     >
-      <div>
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-12 emotion-5"
-          type="button"
+      <button
+        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-12 emotion-5"
+        title="1"
+        type="button"
+      >
+        <div
+          class="uc-fe-select-content"
         >
-          <div>
-            1
-          </div>
-          <i
-            class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
-          />
-        </button>
-      </div>
+          1
+        </div>
+        <i
+          class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+        />
+      </button>
     </div>
   </div>
   <div
@@ -3940,19 +4485,20 @@ exports[`Select demo -- size 1`] = `
     <div
       class=" emotion-6 emotion-7"
     >
-      <div>
-        <button
-          class="uc-fe-button uc-fe-button-size-lg uc-fe-button-styletype-border emotion-3 emotion-20 emotion-5"
-          type="button"
+      <button
+        class="uc-fe-button uc-fe-button-size-lg uc-fe-button-styletype-border emotion-3 emotion-20 emotion-5"
+        title="1"
+        type="button"
+      >
+        <div
+          class="uc-fe-select-content"
         >
-          <div>
-            1
-          </div>
-          <i
-            class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
-          />
-        </button>
-      </div>
+          1
+        </div>
+        <i
+          class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+        />
+      </button>
     </div>
   </div>
 </div>
@@ -3962,6 +4508,7 @@ exports[`Select demo -- uncontrolled 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -3996,7 +4543,9 @@ exports[`Select demo -- uncontrolled 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-4:link,
@@ -4011,6 +4560,12 @@ exports[`Select demo -- uncontrolled 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-4 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-1 {
@@ -4024,6 +4579,7 @@ exports[`Select demo -- uncontrolled 1`] = `
 .emotion-6 {
   box-sizing: border-box;
   position: relative;
+  max-width: 100%;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
@@ -4058,7 +4614,9 @@ exports[`Select demo -- uncontrolled 1`] = `
   line-height: 26px;
   padding-right: 28px;
   width: 100%;
+  min-width: 78px;
   text-align: left;
+  overflow: hidden;
 }
 
 .emotion-4:link,
@@ -4073,6 +4631,12 @@ exports[`Select demo -- uncontrolled 1`] = `
   border: 1px solid #d2d6ea;
   background: #ffffff;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-4 .uc-fe-select-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .emotion-1 {
@@ -4087,19 +4651,20 @@ exports[`Select demo -- uncontrolled 1`] = `
   <div
     class=" emotion-6 emotion-7"
   >
-    <div>
-      <button
-        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-        type="button"
+    <button
+      class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
+      title="1"
+      type="button"
+    >
+      <div
+        class="uc-fe-select-content"
       >
-        <div>
-          1
-        </div>
-        <i
-          class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
-        />
-      </button>
-    </div>
+        1
+      </div>
+      <i
+        class="uc-fe-icon icon__down emotion-0 emotion-1 emotion-2"
+      />
+    </button>
   </div>
 </div>
 `;
