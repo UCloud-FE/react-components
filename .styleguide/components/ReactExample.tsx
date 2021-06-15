@@ -7,6 +7,8 @@ import splitExampleCode from 'react-styleguidist/lib/client/utils/splitExampleCo
 
 import ThemeProvider from 'src/components/ThemeProvider';
 import darkTheme from 'src/components/ThemeProvider/dark';
+import LocaleProvider from 'src/components/LocaleProvider';
+import enLocale from 'src/components/LocaleProvider/locale/en_US';
 
 export let isDarkTheme = false;
 let themeListeners = [];
@@ -14,6 +16,17 @@ export const toggleDarkTheme = isDark => {
     isDarkTheme = isDark;
     themeListeners.forEach(listener => {
         listener(isDarkTheme);
+    });
+};
+
+export let isEN = false;
+let localeListeners = [];
+export const toggleLocale = _isEN => {
+    isEN = _isEN;
+    localeListeners.forEach(listener => {
+        listener(isEN);
+        console.log(listener, isEN);
+        
     });
 };
 
@@ -33,25 +46,32 @@ export default class ReactExample extends Component<ReactExampleProps> {
     };
 
     state = {
-        dark: isDarkTheme
+        dark: isDarkTheme,
+        en: isEN
     };
 
     constructor(props) {
         super(props);
         const listener = dark => {
-            this.setState({
-                dark
-            });
+            this.setState({ dark });
+        };
+        const localeListener = en => {
+            console.log(en, this.state.en);
+            this.setState({ en });
         };
         this.removeListener = () => (themeListeners = themeListeners.filter(_listener => listener !== _listener));
+        this.removeLocaleListener = () =>
+            (localeListeners = localeListeners.filter(_listener => listener !== _listener));
         themeListeners.push(listener);
+        localeListeners.push(localeListener);
     }
     componentWillUnmount() {
         this.removeListener();
+        this.removeLocaleListener();
     }
 
     public shouldComponentUpdate(nextProps: ReactExampleProps, nextState) {
-        return this.props.code !== nextProps.code || this.state.dark !== nextState.dark;
+        return this.props.code !== nextProps.code || this.state.dark !== nextState.dark || this.state.en !== nextState.en;
     }
 
     // Run example code and return the last top-level expression
@@ -65,7 +85,7 @@ export default class ReactExample extends Component<ReactExampleProps> {
 
     public render() {
         const { code, compilerConfig = {}, onError } = this.props;
-        const { dark } = this.state;
+        const { dark, en } = this.state;
         const compiledCode = compileCode(code, compilerConfig, onError);
         if (!compiledCode) {
             return null;
@@ -82,6 +102,11 @@ export default class ReactExample extends Component<ReactExampleProps> {
         );
         if (dark) {
             wrappedComponent = <ThemeProvider theme={darkTheme}>{wrappedComponent}</ThemeProvider>;
+        }
+        console.log(en);
+        
+        if (en) {
+            wrappedComponent = <LocaleProvider locale={enLocale}>{wrappedComponent}</LocaleProvider>;
         }
         return wrappedComponent;
     }

@@ -10,7 +10,7 @@ import _ from 'lodash';
 import '!style-loader!css-loader!gitalk/dist/gitalk.css';
 import Gitalk from 'gitalk/dist/gitalk-component';
 
-import { toggleDarkTheme, isDarkTheme } from './ReactExample';
+import { toggleDarkTheme, isDarkTheme, toggleLocale, isEN } from './ReactExample';
 import Switch from 'src/components/Switch';
 import Combine from 'src/components/Combine';
 
@@ -147,6 +147,7 @@ const gitalkSec =
 const createIssueManually = location.hostname === 'localhost';
 export function StyleGuideRenderer({ classes, title, homepageUrl, children, toc, hasSidebar }) {
     const [darkTheme, setDarkTheme] = useState(isDarkTheme);
+    const [enLocale, setEnLocale] = useState(isEN)
     const ComponentName =
         location.hash.indexOf('%E2%9D%96%20%20') >= 0
             ? location.hash
@@ -187,7 +188,15 @@ export function StyleGuideRenderer({ classes, title, homepageUrl, children, toc,
                             >
                                 NPM
                             </a>
-                            <Switch onChange={v => {}} offText="CN" onText="EN" />
+                            <Switch
+                                value={enLocale}
+                                onChange={v => {
+                                    setEnLocale(v);
+                                    toggleLocale(v);
+                                }}
+                                offText="CN"
+                                onText="EN"
+                            />
                             <Switch
                                 value={darkTheme}
                                 offText="NOR"
