@@ -382,6 +382,7 @@ exports[`Tree demo -- base 1`] = `
     <div>
       <div
         class="uc-fe-tree-item"
+        data-tree-item-value="root-0-item"
       >
         <div
           class="uc-fe-tree-wrap"
@@ -422,6 +423,7 @@ exports[`Tree demo -- base 1`] = `
     <div>
       <div
         class="uc-fe-tree-item"
+        data-tree-item-value="root-1-item"
       >
         <div
           class="uc-fe-tree-wrap"
@@ -462,6 +464,7 @@ exports[`Tree demo -- base 1`] = `
     <div>
       <div
         class="uc-fe-tree-item"
+        data-tree-item-value="root-2-item"
       >
         <div
           class="uc-fe-tree-wrap"
@@ -1032,6 +1035,7 @@ Array [
       <div>
         <div
           class="uc-fe-tree-item"
+          data-tree-item-value="root-0-item"
         >
           <div
             class="uc-fe-tree-wrap"
@@ -1072,6 +1076,7 @@ Array [
       <div>
         <div
           class="uc-fe-tree-item"
+          data-tree-item-value="root-1-item"
         >
           <div
             class="uc-fe-tree-wrap"
@@ -1112,6 +1117,7 @@ Array [
       <div>
         <div
           class="uc-fe-tree-item"
+          data-tree-item-value="root-2-item"
         >
           <div
             class="uc-fe-tree-wrap"
@@ -1152,6 +1158,7 @@ Array [
       <div>
         <div
           class="uc-fe-tree-item"
+          data-tree-item-value="root-3-item"
         >
           <div
             class="uc-fe-tree-wrap"
@@ -1192,6 +1199,7 @@ Array [
       <div>
         <div
           class="uc-fe-tree-item"
+          data-tree-item-value="root-4-item"
         >
           <div
             class="uc-fe-tree-wrap"
@@ -1232,6 +1240,7 @@ Array [
       <div>
         <div
           class="uc-fe-tree-item"
+          data-tree-item-value="root-5-item"
         >
           <div
             class="uc-fe-tree-wrap"
@@ -1720,6 +1729,7 @@ Array [
       <div>
         <div
           class="uc-fe-tree-item"
+          data-tree-item-value="root-0-item"
         >
           <div
             class="uc-fe-tree-wrap"
@@ -1764,6 +1774,7 @@ Array [
       <div>
         <div
           class="uc-fe-tree-item"
+          data-tree-item-value="root-1-item"
         >
           <div
             class="uc-fe-tree-wrap"
@@ -1804,6 +1815,7 @@ Array [
       <div>
         <div
           class="uc-fe-tree-item"
+          data-tree-item-value="root-2-item"
         >
           <div
             class="uc-fe-tree-wrap"
@@ -2225,6 +2237,7 @@ Array [
       <div>
         <div
           class="uc-fe-tree-item"
+          data-tree-item-value="root-0-item"
         >
           <div
             class="uc-fe-tree-wrap"
@@ -2265,6 +2278,7 @@ Array [
       <div>
         <div
           class="uc-fe-tree-item"
+          data-tree-item-value="root-1-item"
         >
           <div
             class="uc-fe-tree-wrap"
@@ -2305,6 +2319,7 @@ Array [
       <div>
         <div
           class="uc-fe-tree-item"
+          data-tree-item-value="root-2-item"
         >
           <div
             class="uc-fe-tree-wrap"
@@ -2605,6 +2620,7 @@ exports[`Tree demo -- loadData 1`] = `
     <div>
       <div
         class="uc-fe-tree-item"
+        data-tree-item-value="root-0-item"
       >
         <div
           class="uc-fe-tree-wrap"
@@ -2628,6 +2644,7 @@ exports[`Tree demo -- loadData 1`] = `
     <div>
       <div
         class="uc-fe-tree-item"
+        data-tree-item-value="root-1-item"
       >
         <div
           class="uc-fe-tree-wrap"
@@ -2651,6 +2668,7 @@ exports[`Tree demo -- loadData 1`] = `
     <div>
       <div
         class="uc-fe-tree-item"
+        data-tree-item-value="root-2-item"
       >
         <div
           class="uc-fe-tree-wrap"
@@ -2674,67 +2692,191 @@ exports[`Tree demo -- loadData 1`] = `
 `;
 
 exports[`Tree demo -- method 1`] = `
-Array [
-  .emotion-6 > .uc-fe-combine-item,
-.emotion-6 > .uc-fe-combine-separator {
-  vertical-align: middle;
+.emotion-32 {
+  background: transparent;
+  color: #0a1633;
+}
+
+.emotion-32 .uc-fe-tree-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #0a1633;
+  min-height: 36px;
+}
+
+.emotion-32 .uc-fe-tree-item .uc-fe-tree-indent {
+  width: 32px;
+  position: relative;
+}
+
+.emotion-32 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
+  content: ' ';
+  box-sizing: border-box;
   display: inline-block;
+  height: 100%;
+  width: 1px;
+  border-left: 1px solid #d2d6ea;
+  margin-left: 50%;
 }
 
-.emotion-6 > .uc-fe-combine-item:focus {
-  z-index: 2;
+.emotion-32 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
+  height: 50%;
+  width: 4px;
+  border-bottom: 1px solid #d2d6ea;
 }
 
-.emotion-6 > .uc-fe-combine-item:hover {
-  z-index: 3;
+.emotion-32 .uc-fe-tree-item .uc-fe-tree-wrap {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0 8px;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-6 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-32 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
+  background: #F4F6FF;
+}
+
+.emotion-32 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
   margin-left: 8px;
 }
 
-.emotion-0 {
-  margin: 0;
-  box-sizing: border-box;
-  border-radius: 2px;
+.emotion-32 .uc-fe-tree-item.uc-fe-tree-disabled {
+  color: #cccccc;
+}
+
+.emotion-32 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
+  cursor: default;
+}
+
+.emotion-32.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
+  color: #3860f4;
+}
+
+.emotion-32 .uc-fe-tree-expand-ph,
+.emotion-32 .uc-fe-tree-expand-icon,
+.emotion-32 .uc-fe-tree-loading-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  margin-right: 8px;
+}
+
+.emotion-32 .uc-fe-tree-loading-icon {
+  fill: #3860f4;
+}
+
+.emotion-32 .uc-fe-tree-expand-icon {
   text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
   cursor: pointer;
-  outline: none;
-  font-size: 12px;
+  -webkit-transition: -webkit-transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
+  position: relative;
+}
+
+.emotion-32 .uc-fe-tree-expand-icon:before {
+  content: ' ';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 0 5px 6px;
+  border-color: transparent transparent transparent #526075;
+  position: absolute;
+  top: 3px;
+  left: 5px;
+}
+
+.emotion-32 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-32 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
+  border-color: transparent transparent transparent #cccccc;
+}
+
+.emotion-32 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.emotion-12 {
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+  min-height: 28px;
+  line-height: 28px;
   display: inline-block;
   vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
-  padding: 0 8px;
+  font-size: 0;
   color: #0a1633;
-  fill: #0a1633;
-  background: #ffffff;
+}
+
+.emotion-12 > * {
+  font-size: 12px;
+}
+
+.emotion-12 .uc-fe-checkbox-content {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 100%;
+  margin-left: 8px;
+}
+
+.emotion-12.uc-fe-checkbox-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-12:hover .uc-fe-checkbox-icon-wrap {
+  border-color: #3860f4;
+}
+
+.emotion-10.uc-fe-checkbox-icon-wrap {
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  width: 14px;
+  height: 14px;
   border: 1px solid #c3cad9;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  border-width: 1px;
-  border-style: solid;
-  padding: 0 7px;
-  line-height: 26px;
+  border-radius: 2px;
+  vertical-align: middle;
 }
 
-.emotion-0:link,
-.emotion-0:visited {
-  color: #0a1633;
+.emotion-10 .uc-fe-checkbox-icon {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -1px;
+  left: -1px;
 }
 
-.emotion-0:hover,
-.emotion-0:active {
-  color: #3860f4;
-  fill: #3860f4;
-  border: 1px solid #d2d6ea;
-  background: #ffffff;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+.emotion-8 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+}
+
+.emotion-14 {
+  display: none;
 }
 
 .emotion-6 > .uc-fe-combine-item,
@@ -2757,7 +2899,7 @@ Array [
   margin-left: 8px;
 }
 
-.emotion-0 {
+.emotion-2 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -2785,13 +2927,13 @@ Array [
   line-height: 26px;
 }
 
-.emotion-0:link,
-.emotion-0:visited {
+.emotion-2:link,
+.emotion-2:visited {
   color: #0a1633;
 }
 
-.emotion-0:hover,
-.emotion-0:active {
+.emotion-2:hover,
+.emotion-2:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -2799,7 +2941,373 @@ Array [
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
+.emotion-34 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: -12px;
+}
+
+.emotion-34.emotion-34.emotion-34>* {
+  margin-bottom: 12px;
+}
+
+.emotion-34.emotion-34.emotion-34>*.uc-fe-box {
+  padding-bottom: 12px;
+  margin-bottom: 0;
+}
+
+.emotion-0 {
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 8px;
+  color: #ffffff;
+  fill: #ffffff;
+  border: none;
+  background: linear-gradient(135deg,#6488fc 0%,#3860f4 100%);
+  box-shadow: 0 2px 4px -1px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
+  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
+  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
+}
+
+.emotion-0:link,
+.emotion-0:visited {
+  color: #ffffff;
+}
+
+.emotion-0:hover,
+.emotion-0:active {
+  background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
+  box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
+}
+
+.emotion-32 {
+  background: transparent;
+  color: #0a1633;
+}
+
+.emotion-32 .uc-fe-tree-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #0a1633;
+  min-height: 36px;
+}
+
+.emotion-32 .uc-fe-tree-item .uc-fe-tree-indent {
+  width: 32px;
+  position: relative;
+}
+
+.emotion-32 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
+  content: ' ';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 100%;
+  width: 1px;
+  border-left: 1px solid #d2d6ea;
+  margin-left: 50%;
+}
+
+.emotion-32 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
+  height: 50%;
+  width: 4px;
+  border-bottom: 1px solid #d2d6ea;
+}
+
+.emotion-32 .uc-fe-tree-item .uc-fe-tree-wrap {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0 8px;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-32 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
+  background: #F4F6FF;
+}
+
+.emotion-32 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
+  margin-left: 8px;
+}
+
+.emotion-32 .uc-fe-tree-item.uc-fe-tree-disabled {
+  color: #cccccc;
+}
+
+.emotion-32 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
+  cursor: default;
+}
+
+.emotion-32.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
+  color: #3860f4;
+}
+
+.emotion-32 .uc-fe-tree-expand-ph,
+.emotion-32 .uc-fe-tree-expand-icon,
+.emotion-32 .uc-fe-tree-loading-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  margin-right: 8px;
+}
+
+.emotion-32 .uc-fe-tree-loading-icon {
+  fill: #3860f4;
+}
+
+.emotion-32 .uc-fe-tree-expand-icon {
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
+  position: relative;
+}
+
+.emotion-32 .uc-fe-tree-expand-icon:before {
+  content: ' ';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 0 5px 6px;
+  border-color: transparent transparent transparent #526075;
+  position: absolute;
+  top: 3px;
+  left: 5px;
+}
+
+.emotion-32 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-32 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
+  border-color: transparent transparent transparent #cccccc;
+}
+
+.emotion-32 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.emotion-12 {
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+  min-height: 28px;
+  line-height: 28px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  color: #0a1633;
+}
+
+.emotion-12 > * {
+  font-size: 12px;
+}
+
+.emotion-12 .uc-fe-checkbox-content {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 100%;
+  margin-left: 8px;
+}
+
+.emotion-12.uc-fe-checkbox-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-12:hover .uc-fe-checkbox-icon-wrap {
+  border-color: #3860f4;
+}
+
+.emotion-10.uc-fe-checkbox-icon-wrap {
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #c3cad9;
+  border-radius: 2px;
+  vertical-align: middle;
+}
+
+.emotion-10 .uc-fe-checkbox-icon {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+}
+
+.emotion-8 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+}
+
+.emotion-14 {
+  display: none;
+}
+
+.emotion-6 > .uc-fe-combine-item,
+.emotion-6 > .uc-fe-combine-separator {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.emotion-6 > .uc-fe-combine-item:focus {
+  z-index: 2;
+}
+
+.emotion-6 > .uc-fe-combine-item:hover {
+  z-index: 3;
+}
+
+.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-6 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
+}
+
+.emotion-2 {
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 8px;
+  color: #0a1633;
+  fill: #0a1633;
+  background: #ffffff;
+  border: 1px solid #c3cad9;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
+  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
+  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
+  border-width: 1px;
+  border-style: solid;
+  padding: 0 7px;
+  line-height: 26px;
+}
+
+.emotion-2:link,
+.emotion-2:visited {
+  color: #0a1633;
+}
+
+.emotion-2:hover,
+.emotion-2:active {
+  color: #3860f4;
+  fill: #3860f4;
+  border: 1px solid #d2d6ea;
+  background: #ffffff;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-34 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: -12px;
+}
+
+.emotion-34.emotion-34.emotion-34>* {
+  margin-bottom: 12px;
+}
+
+.emotion-34.emotion-34.emotion-34>*.uc-fe-box {
+  padding-bottom: 12px;
+  margin-bottom: 0;
+}
+
+.emotion-0 {
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 8px;
+  color: #ffffff;
+  fill: #ffffff;
+  border: none;
+  background: linear-gradient(135deg,#6488fc 0%,#3860f4 100%);
+  box-shadow: 0 2px 4px -1px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
+  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
+  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
+}
+
+.emotion-0:link,
+.emotion-0:visited {
+  color: #ffffff;
+}
+
+.emotion-0:hover,
+.emotion-0:active {
+  background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
+  box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
+}
+
 <div
+  class="uc-fe-box emotion-34 emotion-35"
+  direction="column"
+  spacing="md"
+>
+  <div
     class="uc-fe-combine emotion-6 emotion-7"
     spacing="md"
   >
@@ -2807,7 +3315,7 @@ Array [
       class="uc-fe-combine-item"
     >
       <button
-        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-0 emotion-1"
+        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-0 emotion-1"
         type="button"
       >
         全选
@@ -2817,7 +3325,7 @@ Array [
       class="uc-fe-combine-item"
     >
       <button
-        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-0 emotion-1"
+        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-2 emotion-1"
         type="button"
       >
         反选
@@ -2827,1169 +3335,21 @@ Array [
       class="uc-fe-combine-item"
     >
       <button
-        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-0 emotion-1"
+        class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-2 emotion-1"
         type="button"
       >
         取消选择
       </button>
     </div>
-  </div>,
-  .emotion-24 {
-  background: transparent;
-  color: #0a1633;
-}
-
-.emotion-24 .uc-fe-tree-item {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #0a1633;
-  min-height: 36px;
-}
-
-.emotion-24 .uc-fe-tree-item .uc-fe-tree-indent {
-  width: 32px;
-  position: relative;
-}
-
-.emotion-24 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
-  content: ' ';
-  box-sizing: border-box;
-  display: inline-block;
-  height: 100%;
-  width: 1px;
-  border-left: 1px solid #d2d6ea;
-  margin-left: 50%;
-}
-
-.emotion-24 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
-  height: 50%;
-  width: 4px;
-  border-bottom: 1px solid #d2d6ea;
-}
-
-.emotion-24 .uc-fe-tree-item .uc-fe-tree-wrap {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  padding: 0 8px;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-24 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
-  background: #F4F6FF;
-}
-
-.emotion-24 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
-  margin-left: 8px;
-}
-
-.emotion-24 .uc-fe-tree-item.uc-fe-tree-disabled {
-  color: #cccccc;
-}
-
-.emotion-24 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
-  cursor: default;
-}
-
-.emotion-24.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
-  color: #3860f4;
-}
-
-.emotion-24 .uc-fe-tree-expand-ph,
-.emotion-24 .uc-fe-tree-expand-icon,
-.emotion-24 .uc-fe-tree-loading-icon {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  margin-right: 8px;
-}
-
-.emotion-24 .uc-fe-tree-loading-icon {
-  fill: #3860f4;
-}
-
-.emotion-24 .uc-fe-tree-expand-icon {
-  text-align: center;
-  cursor: pointer;
-  -webkit-transition: -webkit-transform 0.2s;
-  -webkit-transition: transform 0.2s;
-  transition: transform 0.2s;
-  position: relative;
-}
-
-.emotion-24 .uc-fe-tree-expand-icon:before {
-  content: ' ';
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 5px 0 5px 6px;
-  border-color: transparent transparent transparent #526075;
-  position: absolute;
-  top: 3px;
-  left: 5px;
-}
-
-.emotion-24 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
-  cursor: default;
-  color: #cccccc;
-}
-
-.emotion-24 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
-  border-color: transparent transparent transparent #cccccc;
-}
-
-.emotion-24 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.emotion-4 {
-  cursor: pointer;
-  position: relative;
-  white-space: nowrap;
-  min-height: 28px;
-  line-height: 28px;
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 0;
-  color: #0a1633;
-}
-
-.emotion-4 > * {
-  font-size: 12px;
-}
-
-.emotion-4 .uc-fe-checkbox-content {
-  display: inline-block;
-  vertical-align: middle;
-  max-height: 100%;
-  margin-left: 8px;
-}
-
-.emotion-4.uc-fe-checkbox-disabled {
-  cursor: default;
-  color: #cccccc;
-}
-
-.emotion-4:hover .uc-fe-checkbox-icon-wrap {
-  border-color: #3860f4;
-}
-
-.emotion-2.uc-fe-checkbox-icon-wrap {
-  display: inline-block;
-  box-sizing: border-box;
-  overflow: hidden;
-  position: relative;
-  width: 14px;
-  height: 14px;
-  border: 1px solid #c3cad9;
-  border-radius: 2px;
-  vertical-align: middle;
-}
-
-.emotion-2 .uc-fe-checkbox-icon {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  top: -1px;
-  left: -1px;
-}
-
-.emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  display: inline-block;
-  vertical-align: middle;
-  width: 14px;
-  height: 14px;
-}
-
-.emotion-6 {
-  display: none;
-}
-
-.emotion-24 {
-  background: transparent;
-  color: #0a1633;
-}
-
-.emotion-24 .uc-fe-tree-item {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #0a1633;
-  min-height: 36px;
-}
-
-.emotion-24 .uc-fe-tree-item .uc-fe-tree-indent {
-  width: 32px;
-  position: relative;
-}
-
-.emotion-24 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
-  content: ' ';
-  box-sizing: border-box;
-  display: inline-block;
-  height: 100%;
-  width: 1px;
-  border-left: 1px solid #d2d6ea;
-  margin-left: 50%;
-}
-
-.emotion-24 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
-  height: 50%;
-  width: 4px;
-  border-bottom: 1px solid #d2d6ea;
-}
-
-.emotion-24 .uc-fe-tree-item .uc-fe-tree-wrap {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  padding: 0 8px;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-24 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
-  background: #F4F6FF;
-}
-
-.emotion-24 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
-  margin-left: 8px;
-}
-
-.emotion-24 .uc-fe-tree-item.uc-fe-tree-disabled {
-  color: #cccccc;
-}
-
-.emotion-24 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
-  cursor: default;
-}
-
-.emotion-24.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
-  color: #3860f4;
-}
-
-.emotion-24 .uc-fe-tree-expand-ph,
-.emotion-24 .uc-fe-tree-expand-icon,
-.emotion-24 .uc-fe-tree-loading-icon {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  margin-right: 8px;
-}
-
-.emotion-24 .uc-fe-tree-loading-icon {
-  fill: #3860f4;
-}
-
-.emotion-24 .uc-fe-tree-expand-icon {
-  text-align: center;
-  cursor: pointer;
-  -webkit-transition: -webkit-transform 0.2s;
-  -webkit-transition: transform 0.2s;
-  transition: transform 0.2s;
-  position: relative;
-}
-
-.emotion-24 .uc-fe-tree-expand-icon:before {
-  content: ' ';
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 5px 0 5px 6px;
-  border-color: transparent transparent transparent #526075;
-  position: absolute;
-  top: 3px;
-  left: 5px;
-}
-
-.emotion-24 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
-  cursor: default;
-  color: #cccccc;
-}
-
-.emotion-24 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
-  border-color: transparent transparent transparent #cccccc;
-}
-
-.emotion-24 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.emotion-4 {
-  cursor: pointer;
-  position: relative;
-  white-space: nowrap;
-  min-height: 28px;
-  line-height: 28px;
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 0;
-  color: #0a1633;
-}
-
-.emotion-4 > * {
-  font-size: 12px;
-}
-
-.emotion-4 .uc-fe-checkbox-content {
-  display: inline-block;
-  vertical-align: middle;
-  max-height: 100%;
-  margin-left: 8px;
-}
-
-.emotion-4.uc-fe-checkbox-disabled {
-  cursor: default;
-  color: #cccccc;
-}
-
-.emotion-4:hover .uc-fe-checkbox-icon-wrap {
-  border-color: #3860f4;
-}
-
-.emotion-2.uc-fe-checkbox-icon-wrap {
-  display: inline-block;
-  box-sizing: border-box;
-  overflow: hidden;
-  position: relative;
-  width: 14px;
-  height: 14px;
-  border: 1px solid #c3cad9;
-  border-radius: 2px;
-  vertical-align: middle;
-}
-
-.emotion-2 .uc-fe-checkbox-icon {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  top: -1px;
-  left: -1px;
-}
-
-.emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  display: inline-block;
-  vertical-align: middle;
-  width: 14px;
-  height: 14px;
-}
-
-.emotion-6 {
-  display: none;
-}
-
-<div
-    class="uc-fe-tree uc-fe-tree-multiple emotion-24 emotion-25"
-  >
-    <div>
-      <div>
-        <div
-          class="uc-fe-tree-item"
-        >
-          <div
-            class="uc-fe-tree-wrap"
-          >
-            <span
-              class="uc-fe-tree-expand-icon"
-            />
-            <span
-              class="uc-fe-checkbox emotion-4 emotion-5"
-            >
-              <span
-                class="uc-fe-checkbox-icon-wrap emotion-2 emotion-3"
-              >
-                <svg
-                  class="uc-fe-checkbox-icon emotion-0 emotion-1"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
-                  />
-                </svg>
-              </span>
-            </span>
-            <span
-              class="uc-fe-tree-content"
-            >
-              root-0-item
-            </span>
-          </div>
-        </div>
-      </div>
-      <div
-        class="emotion-6 emotion-7"
-      />
-    </div>
-    <div>
-      <div>
-        <div
-          class="uc-fe-tree-item"
-        >
-          <div
-            class="uc-fe-tree-wrap"
-          >
-            <span
-              class="uc-fe-tree-expand-icon"
-            />
-            <span
-              class="uc-fe-checkbox emotion-4 emotion-5"
-            >
-              <span
-                class="uc-fe-checkbox-icon-wrap emotion-2 emotion-3"
-              >
-                <svg
-                  class="uc-fe-checkbox-icon emotion-0 emotion-1"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
-                  />
-                </svg>
-              </span>
-            </span>
-            <span
-              class="uc-fe-tree-content"
-            >
-              root-1-item
-            </span>
-          </div>
-        </div>
-      </div>
-      <div
-        class="emotion-6 emotion-7"
-      />
-    </div>
-    <div>
-      <div>
-        <div
-          class="uc-fe-tree-item"
-        >
-          <div
-            class="uc-fe-tree-wrap"
-          >
-            <span
-              class="uc-fe-tree-expand-icon"
-            />
-            <span
-              class="uc-fe-checkbox emotion-4 emotion-5"
-            >
-              <span
-                class="uc-fe-checkbox-icon-wrap emotion-2 emotion-3"
-              >
-                <svg
-                  class="uc-fe-checkbox-icon emotion-0 emotion-1"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
-                  />
-                </svg>
-              </span>
-            </span>
-            <span
-              class="uc-fe-tree-content"
-            >
-              root-2-item
-            </span>
-          </div>
-        </div>
-      </div>
-      <div
-        class="emotion-6 emotion-7"
-      />
-    </div>
-  </div>,
-]
-`;
-
-exports[`Tree demo -- search 1`] = `
-.emotion-29 {
-  background: transparent;
-  color: #0a1633;
-}
-
-.emotion-29 .uc-fe-tree-item {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #0a1633;
-  min-height: 36px;
-}
-
-.emotion-29 .uc-fe-tree-item .uc-fe-tree-indent {
-  width: 32px;
-  position: relative;
-}
-
-.emotion-29 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
-  content: ' ';
-  box-sizing: border-box;
-  display: inline-block;
-  height: 100%;
-  width: 1px;
-  border-left: 1px solid #d2d6ea;
-  margin-left: 50%;
-}
-
-.emotion-29 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
-  height: 50%;
-  width: 4px;
-  border-bottom: 1px solid #d2d6ea;
-}
-
-.emotion-29 .uc-fe-tree-item .uc-fe-tree-wrap {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  padding: 0 8px;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-29 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
-  background: #F4F6FF;
-}
-
-.emotion-29 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
-  margin-left: 8px;
-}
-
-.emotion-29 .uc-fe-tree-item.uc-fe-tree-disabled {
-  color: #cccccc;
-}
-
-.emotion-29 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
-  cursor: default;
-}
-
-.emotion-29.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
-  color: #3860f4;
-}
-
-.emotion-29 .uc-fe-tree-expand-ph,
-.emotion-29 .uc-fe-tree-expand-icon,
-.emotion-29 .uc-fe-tree-loading-icon {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  margin-right: 8px;
-}
-
-.emotion-29 .uc-fe-tree-loading-icon {
-  fill: #3860f4;
-}
-
-.emotion-29 .uc-fe-tree-expand-icon {
-  text-align: center;
-  cursor: pointer;
-  -webkit-transition: -webkit-transform 0.2s;
-  -webkit-transition: transform 0.2s;
-  transition: transform 0.2s;
-  position: relative;
-}
-
-.emotion-29 .uc-fe-tree-expand-icon:before {
-  content: ' ';
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 5px 0 5px 6px;
-  border-color: transparent transparent transparent #526075;
-  position: absolute;
-  top: 3px;
-  left: 5px;
-}
-
-.emotion-29 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
-  cursor: default;
-  color: #cccccc;
-}
-
-.emotion-29 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
-  border-color: transparent transparent transparent #cccccc;
-}
-
-.emotion-29 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.emotion-9 {
-  cursor: pointer;
-  position: relative;
-  white-space: nowrap;
-  min-height: 28px;
-  line-height: 28px;
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 0;
-  color: #0a1633;
-}
-
-.emotion-9 > * {
-  font-size: 12px;
-}
-
-.emotion-9 .uc-fe-checkbox-content {
-  display: inline-block;
-  vertical-align: middle;
-  max-height: 100%;
-  margin-left: 8px;
-}
-
-.emotion-9.uc-fe-checkbox-disabled {
-  cursor: default;
-  color: #cccccc;
-}
-
-.emotion-9:hover .uc-fe-checkbox-icon-wrap {
-  border-color: #3860f4;
-}
-
-.emotion-7.uc-fe-checkbox-icon-wrap {
-  display: inline-block;
-  box-sizing: border-box;
-  overflow: hidden;
-  position: relative;
-  width: 14px;
-  height: 14px;
-  border: 1px solid #c3cad9;
-  border-radius: 2px;
-  vertical-align: middle;
-}
-
-.emotion-7 .uc-fe-checkbox-icon {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  top: -1px;
-  left: -1px;
-}
-
-.emotion-5 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  display: inline-block;
-  vertical-align: middle;
-  width: 14px;
-  height: 14px;
-}
-
-.emotion-11 {
-  display: none;
-}
-
-.emotion-3 {
-  position: relative;
-  box-sizing: border-box;
-  font-size: 12px;
-  border-radius: 2px;
-  height: 28px;
-  max-width: 100%;
-  color: #526075;
-  fill: currentColor;
-  border: 1px solid #c3cad9;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.emotion-3:hover {
-  color: #0a1633;
-  border-color: #c3cad9;
-  background: #fafafc;
-}
-
-.emotion-3 .uc-fe-input-clear {
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  fill: #7a8baa;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
-.emotion-3 .uc-fe-input-wrap,
-.emotion-3 .uc-fe-input-prefix,
-.emotion-3 .uc-fe-input-suffix,
-.emotion-3 .uc-fe-input-clear,
-.emotion-3 input {
-  padding: 0 4px;
-}
-
-.emotion-3.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-3 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-3 .uc-fe-input-prefix,
-.emotion-3 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-3 input {
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
-  -webkit-flex: 1 1 130px;
-  -ms-flex: 1 1 130px;
-  flex: 1 1 130px;
-  min-width: 0px;
-}
-
-.emotion-3 input,
-.emotion-3 input:hover,
-.emotion-3 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-3 input::-webkit-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-3 input::-moz-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-3 input:-ms-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-3 input::placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-3 input::-ms-clear {
-  display: none;
-}
-
-.emotion-1 {
-  vertical-align: baseline;
-  cursor: pointer;
-}
-
-.emotion-29 {
-  background: transparent;
-  color: #0a1633;
-}
-
-.emotion-29 .uc-fe-tree-item {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #0a1633;
-  min-height: 36px;
-}
-
-.emotion-29 .uc-fe-tree-item .uc-fe-tree-indent {
-  width: 32px;
-  position: relative;
-}
-
-.emotion-29 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
-  content: ' ';
-  box-sizing: border-box;
-  display: inline-block;
-  height: 100%;
-  width: 1px;
-  border-left: 1px solid #d2d6ea;
-  margin-left: 50%;
-}
-
-.emotion-29 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
-  height: 50%;
-  width: 4px;
-  border-bottom: 1px solid #d2d6ea;
-}
-
-.emotion-29 .uc-fe-tree-item .uc-fe-tree-wrap {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  padding: 0 8px;
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-29 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
-  background: #F4F6FF;
-}
-
-.emotion-29 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
-  margin-left: 8px;
-}
-
-.emotion-29 .uc-fe-tree-item.uc-fe-tree-disabled {
-  color: #cccccc;
-}
-
-.emotion-29 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
-  cursor: default;
-}
-
-.emotion-29.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
-  color: #3860f4;
-}
-
-.emotion-29 .uc-fe-tree-expand-ph,
-.emotion-29 .uc-fe-tree-expand-icon,
-.emotion-29 .uc-fe-tree-loading-icon {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  margin-right: 8px;
-}
-
-.emotion-29 .uc-fe-tree-loading-icon {
-  fill: #3860f4;
-}
-
-.emotion-29 .uc-fe-tree-expand-icon {
-  text-align: center;
-  cursor: pointer;
-  -webkit-transition: -webkit-transform 0.2s;
-  -webkit-transition: transform 0.2s;
-  transition: transform 0.2s;
-  position: relative;
-}
-
-.emotion-29 .uc-fe-tree-expand-icon:before {
-  content: ' ';
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 5px 0 5px 6px;
-  border-color: transparent transparent transparent #526075;
-  position: absolute;
-  top: 3px;
-  left: 5px;
-}
-
-.emotion-29 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
-  cursor: default;
-  color: #cccccc;
-}
-
-.emotion-29 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
-  border-color: transparent transparent transparent #cccccc;
-}
-
-.emotion-29 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.emotion-9 {
-  cursor: pointer;
-  position: relative;
-  white-space: nowrap;
-  min-height: 28px;
-  line-height: 28px;
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 0;
-  color: #0a1633;
-}
-
-.emotion-9 > * {
-  font-size: 12px;
-}
-
-.emotion-9 .uc-fe-checkbox-content {
-  display: inline-block;
-  vertical-align: middle;
-  max-height: 100%;
-  margin-left: 8px;
-}
-
-.emotion-9.uc-fe-checkbox-disabled {
-  cursor: default;
-  color: #cccccc;
-}
-
-.emotion-9:hover .uc-fe-checkbox-icon-wrap {
-  border-color: #3860f4;
-}
-
-.emotion-7.uc-fe-checkbox-icon-wrap {
-  display: inline-block;
-  box-sizing: border-box;
-  overflow: hidden;
-  position: relative;
-  width: 14px;
-  height: 14px;
-  border: 1px solid #c3cad9;
-  border-radius: 2px;
-  vertical-align: middle;
-}
-
-.emotion-7 .uc-fe-checkbox-icon {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  top: -1px;
-  left: -1px;
-}
-
-.emotion-5 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  display: inline-block;
-  vertical-align: middle;
-  width: 14px;
-  height: 14px;
-}
-
-.emotion-11 {
-  display: none;
-}
-
-.emotion-3 {
-  position: relative;
-  box-sizing: border-box;
-  font-size: 12px;
-  border-radius: 2px;
-  height: 28px;
-  max-width: 100%;
-  color: #526075;
-  fill: currentColor;
-  border: 1px solid #c3cad9;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.emotion-3:hover {
-  color: #0a1633;
-  border-color: #c3cad9;
-  background: #fafafc;
-}
-
-.emotion-3 .uc-fe-input-clear {
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  fill: #7a8baa;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
-.emotion-3 .uc-fe-input-wrap,
-.emotion-3 .uc-fe-input-prefix,
-.emotion-3 .uc-fe-input-suffix,
-.emotion-3 .uc-fe-input-clear,
-.emotion-3 input {
-  padding: 0 4px;
-}
-
-.emotion-3.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-3 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-3 .uc-fe-input-prefix,
-.emotion-3 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-3 input {
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
-  -webkit-flex: 1 1 130px;
-  -ms-flex: 1 1 130px;
-  flex: 1 1 130px;
-  min-width: 0px;
-}
-
-.emotion-3 input,
-.emotion-3 input:hover,
-.emotion-3 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-3 input::-webkit-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-3 input::-moz-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-3 input:-ms-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-3 input::placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-3 input::-ms-clear {
-  display: none;
-}
-
-.emotion-1 {
-  vertical-align: baseline;
-  cursor: pointer;
-}
-
-<div
-  class="demo-wrap"
->
-  <span
-    class="uc-fe-input uc-fe-input-block emotion-3 emotion-4"
-  >
-    <span
-      class="uc-fe-input-wrap"
-    >
-      <input
-        value=""
-      />
-      <span
-        class="uc-fe-input-suffix"
-      >
-        <i
-          class="uc-fe-icon icon__search emotion-0 emotion-1 emotion-2"
-        />
-      </span>
-    </span>
-  </span>
+  </div>
   <div
-    class="uc-fe-tree uc-fe-tree-multiple emotion-29 emotion-30"
+    class="uc-fe-tree uc-fe-tree-multiple emotion-32 emotion-33"
   >
     <div>
       <div>
         <div
           class="uc-fe-tree-item"
+          data-tree-item-value="root-0-item"
         >
           <div
             class="uc-fe-tree-wrap"
@@ -3998,13 +3358,13 @@ exports[`Tree demo -- search 1`] = `
               class="uc-fe-tree-expand-icon"
             />
             <span
-              class="uc-fe-checkbox emotion-9 emotion-10"
+              class="uc-fe-checkbox emotion-12 emotion-13"
             >
               <span
-                class="uc-fe-checkbox-icon-wrap emotion-7 emotion-8"
+                class="uc-fe-checkbox-icon-wrap emotion-10 emotion-11"
               >
                 <svg
-                  class="uc-fe-checkbox-icon emotion-5 emotion-6"
+                  class="uc-fe-checkbox-icon emotion-8 emotion-9"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -4023,13 +3383,14 @@ exports[`Tree demo -- search 1`] = `
         </div>
       </div>
       <div
-        class="emotion-11 emotion-12"
+        class="emotion-14 emotion-15"
       />
     </div>
     <div>
       <div>
         <div
           class="uc-fe-tree-item"
+          data-tree-item-value="root-1-item"
         >
           <div
             class="uc-fe-tree-wrap"
@@ -4038,13 +3399,13 @@ exports[`Tree demo -- search 1`] = `
               class="uc-fe-tree-expand-icon"
             />
             <span
-              class="uc-fe-checkbox emotion-9 emotion-10"
+              class="uc-fe-checkbox emotion-12 emotion-13"
             >
               <span
-                class="uc-fe-checkbox-icon-wrap emotion-7 emotion-8"
+                class="uc-fe-checkbox-icon-wrap emotion-10 emotion-11"
               >
                 <svg
-                  class="uc-fe-checkbox-icon emotion-5 emotion-6"
+                  class="uc-fe-checkbox-icon emotion-8 emotion-9"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -4063,13 +3424,14 @@ exports[`Tree demo -- search 1`] = `
         </div>
       </div>
       <div
-        class="emotion-11 emotion-12"
+        class="emotion-14 emotion-15"
       />
     </div>
     <div>
       <div>
         <div
           class="uc-fe-tree-item"
+          data-tree-item-value="root-2-item"
         >
           <div
             class="uc-fe-tree-wrap"
@@ -4078,13 +3440,13 @@ exports[`Tree demo -- search 1`] = `
               class="uc-fe-tree-expand-icon"
             />
             <span
-              class="uc-fe-checkbox emotion-9 emotion-10"
+              class="uc-fe-checkbox emotion-12 emotion-13"
             >
               <span
-                class="uc-fe-checkbox-icon-wrap emotion-7 emotion-8"
+                class="uc-fe-checkbox-icon-wrap emotion-10 emotion-11"
               >
                 <svg
-                  class="uc-fe-checkbox-icon emotion-5 emotion-6"
+                  class="uc-fe-checkbox-icon emotion-8 emotion-9"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -4103,11 +3465,2897 @@ exports[`Tree demo -- search 1`] = `
         </div>
       </div>
       <div
-        class="emotion-11 emotion-12"
+        class="emotion-14 emotion-15"
       />
     </div>
   </div>
 </div>
+`;
+
+exports[`Tree demo -- search 1`] = `
+Array [
+  .emotion-30 {
+  background: transparent;
+  color: #0a1633;
+}
+
+.emotion-30 .uc-fe-tree-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #0a1633;
+  min-height: 36px;
+}
+
+.emotion-30 .uc-fe-tree-item .uc-fe-tree-indent {
+  width: 32px;
+  position: relative;
+}
+
+.emotion-30 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
+  content: ' ';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 100%;
+  width: 1px;
+  border-left: 1px solid #d2d6ea;
+  margin-left: 50%;
+}
+
+.emotion-30 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
+  height: 50%;
+  width: 4px;
+  border-bottom: 1px solid #d2d6ea;
+}
+
+.emotion-30 .uc-fe-tree-item .uc-fe-tree-wrap {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0 8px;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-30 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
+  background: #F4F6FF;
+}
+
+.emotion-30 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
+  margin-left: 8px;
+}
+
+.emotion-30 .uc-fe-tree-item.uc-fe-tree-disabled {
+  color: #cccccc;
+}
+
+.emotion-30 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
+  cursor: default;
+}
+
+.emotion-30.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
+  color: #3860f4;
+}
+
+.emotion-30 .uc-fe-tree-expand-ph,
+.emotion-30 .uc-fe-tree-expand-icon,
+.emotion-30 .uc-fe-tree-loading-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  margin-right: 8px;
+}
+
+.emotion-30 .uc-fe-tree-loading-icon {
+  fill: #3860f4;
+}
+
+.emotion-30 .uc-fe-tree-expand-icon {
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
+  position: relative;
+}
+
+.emotion-30 .uc-fe-tree-expand-icon:before {
+  content: ' ';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 0 5px 6px;
+  border-color: transparent transparent transparent #526075;
+  position: absolute;
+  top: 3px;
+  left: 5px;
+}
+
+.emotion-30 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-30 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
+  border-color: transparent transparent transparent #cccccc;
+}
+
+.emotion-30 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.emotion-10 {
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+  min-height: 28px;
+  line-height: 28px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  color: #0a1633;
+}
+
+.emotion-10 > * {
+  font-size: 12px;
+}
+
+.emotion-10 .uc-fe-checkbox-content {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 100%;
+  margin-left: 8px;
+}
+
+.emotion-10.uc-fe-checkbox-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-10:hover .uc-fe-checkbox-icon-wrap {
+  border-color: #3860f4;
+}
+
+.emotion-8.uc-fe-checkbox-icon-wrap {
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #c3cad9;
+  border-radius: 2px;
+  vertical-align: middle;
+}
+
+.emotion-8 .uc-fe-checkbox-icon {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+}
+
+.emotion-6 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+}
+
+.emotion-12 {
+  display: none;
+}
+
+.emotion-32 .uc-fe-shared-search-highlight {
+  background: #fff5bd;
+}
+
+.emotion-32 .uc-fe-shared-search-input {
+  margin-bottom: 8px;
+}
+
+.emotion-32 .uc-fe-shared-search-count {
+  line-height: 16px;
+  padding-left: 8px;
+  border-left: 1px solid #d2d6ea;
+  color: #526075;
+}
+
+.emotion-32 .uc-fe-shared-search-empty-tip {
+  padding: 8px 0 8px 32px;
+}
+
+.emotion-32 .uc-fe-shared-search-loading {
+  height: 36px;
+}
+
+.emotion-32 .uc-fe-shared-search-empty-content {
+  display: none;
+}
+
+.emotion-4 {
+  position: relative;
+  box-sizing: border-box;
+  font-size: 12px;
+  border-radius: 2px;
+  height: 28px;
+  max-width: 100%;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-4:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #fafafc;
+}
+
+.emotion-4 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-4 .uc-fe-input-wrap,
+.emotion-4 .uc-fe-input-prefix,
+.emotion-4 .uc-fe-input-suffix,
+.emotion-4 .uc-fe-input-clear,
+.emotion-4 input {
+  padding: 0 4px;
+}
+
+.emotion-4.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-4 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 .uc-fe-input-prefix,
+.emotion-4 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-4 input,
+.emotion-4 input:hover,
+.emotion-4 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-4 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input::-ms-clear {
+  display: none;
+}
+
+.emotion-0 {
+  vertical-align: baseline;
+}
+
+.emotion-2 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
+}
+
+.emotion-30 {
+  background: transparent;
+  color: #0a1633;
+}
+
+.emotion-30 .uc-fe-tree-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #0a1633;
+  min-height: 36px;
+}
+
+.emotion-30 .uc-fe-tree-item .uc-fe-tree-indent {
+  width: 32px;
+  position: relative;
+}
+
+.emotion-30 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
+  content: ' ';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 100%;
+  width: 1px;
+  border-left: 1px solid #d2d6ea;
+  margin-left: 50%;
+}
+
+.emotion-30 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
+  height: 50%;
+  width: 4px;
+  border-bottom: 1px solid #d2d6ea;
+}
+
+.emotion-30 .uc-fe-tree-item .uc-fe-tree-wrap {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0 8px;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-30 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
+  background: #F4F6FF;
+}
+
+.emotion-30 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
+  margin-left: 8px;
+}
+
+.emotion-30 .uc-fe-tree-item.uc-fe-tree-disabled {
+  color: #cccccc;
+}
+
+.emotion-30 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
+  cursor: default;
+}
+
+.emotion-30.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
+  color: #3860f4;
+}
+
+.emotion-30 .uc-fe-tree-expand-ph,
+.emotion-30 .uc-fe-tree-expand-icon,
+.emotion-30 .uc-fe-tree-loading-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  margin-right: 8px;
+}
+
+.emotion-30 .uc-fe-tree-loading-icon {
+  fill: #3860f4;
+}
+
+.emotion-30 .uc-fe-tree-expand-icon {
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
+  position: relative;
+}
+
+.emotion-30 .uc-fe-tree-expand-icon:before {
+  content: ' ';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 0 5px 6px;
+  border-color: transparent transparent transparent #526075;
+  position: absolute;
+  top: 3px;
+  left: 5px;
+}
+
+.emotion-30 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-30 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
+  border-color: transparent transparent transparent #cccccc;
+}
+
+.emotion-30 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.emotion-10 {
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+  min-height: 28px;
+  line-height: 28px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  color: #0a1633;
+}
+
+.emotion-10 > * {
+  font-size: 12px;
+}
+
+.emotion-10 .uc-fe-checkbox-content {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 100%;
+  margin-left: 8px;
+}
+
+.emotion-10.uc-fe-checkbox-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-10:hover .uc-fe-checkbox-icon-wrap {
+  border-color: #3860f4;
+}
+
+.emotion-8.uc-fe-checkbox-icon-wrap {
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #c3cad9;
+  border-radius: 2px;
+  vertical-align: middle;
+}
+
+.emotion-8 .uc-fe-checkbox-icon {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+}
+
+.emotion-6 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+}
+
+.emotion-12 {
+  display: none;
+}
+
+.emotion-32 .uc-fe-shared-search-highlight {
+  background: #fff5bd;
+}
+
+.emotion-32 .uc-fe-shared-search-input {
+  margin-bottom: 8px;
+}
+
+.emotion-32 .uc-fe-shared-search-count {
+  line-height: 16px;
+  padding-left: 8px;
+  border-left: 1px solid #d2d6ea;
+  color: #526075;
+}
+
+.emotion-32 .uc-fe-shared-search-empty-tip {
+  padding: 8px 0 8px 32px;
+}
+
+.emotion-32 .uc-fe-shared-search-loading {
+  height: 36px;
+}
+
+.emotion-32 .uc-fe-shared-search-empty-content {
+  display: none;
+}
+
+.emotion-4 {
+  position: relative;
+  box-sizing: border-box;
+  font-size: 12px;
+  border-radius: 2px;
+  height: 28px;
+  max-width: 100%;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-4:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #fafafc;
+}
+
+.emotion-4 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-4 .uc-fe-input-wrap,
+.emotion-4 .uc-fe-input-prefix,
+.emotion-4 .uc-fe-input-suffix,
+.emotion-4 .uc-fe-input-clear,
+.emotion-4 input {
+  padding: 0 4px;
+}
+
+.emotion-4.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-4 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 .uc-fe-input-prefix,
+.emotion-4 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-4 input,
+.emotion-4 input:hover,
+.emotion-4 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-4 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input::-ms-clear {
+  display: none;
+}
+
+.emotion-0 {
+  vertical-align: baseline;
+}
+
+.emotion-2 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
+}
+
+<div
+    class="demo-wrap"
+  >
+    <div
+      class="emotion-32 emotion-33"
+    >
+      <span
+        class="uc-fe-input uc-fe-input-block uc-fe-shared-search-input emotion-4 emotion-5"
+      >
+        <span
+          class="uc-fe-input-wrap"
+        >
+          <span
+            class="uc-fe-input-prefix"
+          >
+            <i
+              class="uc-fe-icon icon__search emotion-0 emotion-1"
+            />
+          </span>
+          <input
+            value=""
+          />
+          <span
+            class="uc-fe-input-clear"
+          >
+            <svg
+              class=" emotion-2 emotion-3"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.0796033,4.93039665 C22.9806039,8.83139725 22.9806039,15.1786027 19.0796033,19.0796033 C15.1786027,22.9806039 8.83139725,22.9806039 4.93039665,19.0796033 C1.02939605,15.1786027 1.02939605,8.83139725 4.93039665,4.93039665 C8.83139725,1.02939605 15.1786027,1.02939605 19.0796033,4.93039665 Z M15.8638746,8.14612545 C15.5086973,7.7909482 14.9327603,7.7909482 14.577583,8.14612545 L12.005,10.7187085 L9.43241697,8.14612545 C9.07723972,7.7909482 8.50130269,7.7909482 8.14612545,8.14612545 C7.7909482,8.50130269 7.7909482,9.07723972 8.14612545,9.43241697 L10.7187085,12.005 L8.14612545,14.577583 C7.7909482,14.9327603 7.7909482,15.5086973 8.14612545,15.8638746 C8.50130269,16.2190518 9.07723972,16.2190518 9.43241697,15.8638746 L12.005,13.2912915 L14.577583,15.8638746 C14.9327603,16.2190518 15.5086973,16.2190518 15.8638746,15.8638746 C16.2190518,15.5086973 16.2190518,14.9327603 15.8638746,14.577583 L13.2912915,12.005 L15.8638746,9.43241697 C16.2190518,9.07723972 16.2190518,8.50130269 15.8638746,8.14612545 Z"
+              />
+            </svg>
+          </span>
+        </span>
+      </span>
+      <div
+        class=""
+      >
+        <div
+          class="uc-fe-tree uc-fe-tree-multiple emotion-30 emotion-31"
+        >
+          <div>
+            <div>
+              <div
+                class="uc-fe-tree-item"
+                data-tree-item-value="root-0-item"
+              >
+                <div
+                  class="uc-fe-tree-wrap"
+                >
+                  <span
+                    class="uc-fe-tree-expand-icon"
+                  />
+                  <span
+                    class="uc-fe-checkbox emotion-10 emotion-11"
+                  >
+                    <span
+                      class="uc-fe-checkbox-icon-wrap emotion-8 emotion-9"
+                    >
+                      <svg
+                        class="uc-fe-checkbox-icon emotion-6 emotion-3"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                  <span
+                    class="uc-fe-tree-content"
+                  >
+                    root-0-item
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="emotion-12 emotion-13"
+            />
+          </div>
+          <div>
+            <div>
+              <div
+                class="uc-fe-tree-item"
+                data-tree-item-value="root-1-item"
+              >
+                <div
+                  class="uc-fe-tree-wrap"
+                >
+                  <span
+                    class="uc-fe-tree-expand-icon"
+                  />
+                  <span
+                    class="uc-fe-checkbox emotion-10 emotion-11"
+                  >
+                    <span
+                      class="uc-fe-checkbox-icon-wrap emotion-8 emotion-9"
+                    >
+                      <svg
+                        class="uc-fe-checkbox-icon emotion-6 emotion-3"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                  <span
+                    class="uc-fe-tree-content"
+                  >
+                    root-1-item
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="emotion-12 emotion-13"
+            />
+          </div>
+          <div>
+            <div>
+              <div
+                class="uc-fe-tree-item"
+                data-tree-item-value="root-2-item"
+              >
+                <div
+                  class="uc-fe-tree-wrap"
+                >
+                  <span
+                    class="uc-fe-tree-expand-icon"
+                  />
+                  <span
+                    class="uc-fe-checkbox emotion-10 emotion-11"
+                  >
+                    <span
+                      class="uc-fe-checkbox-icon-wrap emotion-8 emotion-9"
+                    >
+                      <svg
+                        class="uc-fe-checkbox-icon emotion-6 emotion-3"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                  <span
+                    class="uc-fe-tree-content"
+                  >
+                    root-2-item
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="emotion-12 emotion-13"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  .emotion-30 {
+  background: transparent;
+  color: #0a1633;
+}
+
+.emotion-30 .uc-fe-tree-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #0a1633;
+  min-height: 36px;
+}
+
+.emotion-30 .uc-fe-tree-item .uc-fe-tree-indent {
+  width: 32px;
+  position: relative;
+}
+
+.emotion-30 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
+  content: ' ';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 100%;
+  width: 1px;
+  border-left: 1px solid #d2d6ea;
+  margin-left: 50%;
+}
+
+.emotion-30 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
+  height: 50%;
+  width: 4px;
+  border-bottom: 1px solid #d2d6ea;
+}
+
+.emotion-30 .uc-fe-tree-item .uc-fe-tree-wrap {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0 8px;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-30 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
+  background: #F4F6FF;
+}
+
+.emotion-30 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
+  margin-left: 8px;
+}
+
+.emotion-30 .uc-fe-tree-item.uc-fe-tree-disabled {
+  color: #cccccc;
+}
+
+.emotion-30 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
+  cursor: default;
+}
+
+.emotion-30.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
+  color: #3860f4;
+}
+
+.emotion-30 .uc-fe-tree-expand-ph,
+.emotion-30 .uc-fe-tree-expand-icon,
+.emotion-30 .uc-fe-tree-loading-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  margin-right: 8px;
+}
+
+.emotion-30 .uc-fe-tree-loading-icon {
+  fill: #3860f4;
+}
+
+.emotion-30 .uc-fe-tree-expand-icon {
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
+  position: relative;
+}
+
+.emotion-30 .uc-fe-tree-expand-icon:before {
+  content: ' ';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 0 5px 6px;
+  border-color: transparent transparent transparent #526075;
+  position: absolute;
+  top: 3px;
+  left: 5px;
+}
+
+.emotion-30 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-30 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
+  border-color: transparent transparent transparent #cccccc;
+}
+
+.emotion-30 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.emotion-10 {
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+  min-height: 28px;
+  line-height: 28px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  color: #0a1633;
+}
+
+.emotion-10 > * {
+  font-size: 12px;
+}
+
+.emotion-10 .uc-fe-checkbox-content {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 100%;
+  margin-left: 8px;
+}
+
+.emotion-10.uc-fe-checkbox-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-10:hover .uc-fe-checkbox-icon-wrap {
+  border-color: #3860f4;
+}
+
+.emotion-8.uc-fe-checkbox-icon-wrap {
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #c3cad9;
+  border-radius: 2px;
+  vertical-align: middle;
+}
+
+.emotion-8 .uc-fe-checkbox-icon {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+}
+
+.emotion-6 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+}
+
+.emotion-12 {
+  display: none;
+}
+
+.emotion-32 .uc-fe-shared-search-highlight {
+  background: #fff5bd;
+}
+
+.emotion-32 .uc-fe-shared-search-input {
+  margin-bottom: 8px;
+}
+
+.emotion-32 .uc-fe-shared-search-count {
+  line-height: 16px;
+  padding-left: 8px;
+  border-left: 1px solid #d2d6ea;
+  color: #526075;
+}
+
+.emotion-32 .uc-fe-shared-search-empty-tip {
+  padding: 8px 0 8px 32px;
+}
+
+.emotion-32 .uc-fe-shared-search-loading {
+  height: 36px;
+}
+
+.emotion-32 .uc-fe-shared-search-empty-content {
+  display: none;
+}
+
+.emotion-4 {
+  position: relative;
+  box-sizing: border-box;
+  font-size: 12px;
+  border-radius: 2px;
+  height: 28px;
+  max-width: 100%;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-4:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #fafafc;
+}
+
+.emotion-4 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-4 .uc-fe-input-wrap,
+.emotion-4 .uc-fe-input-prefix,
+.emotion-4 .uc-fe-input-suffix,
+.emotion-4 .uc-fe-input-clear,
+.emotion-4 input {
+  padding: 0 4px;
+}
+
+.emotion-4.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-4 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 .uc-fe-input-prefix,
+.emotion-4 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-4 input,
+.emotion-4 input:hover,
+.emotion-4 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-4 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input::-ms-clear {
+  display: none;
+}
+
+.emotion-0 {
+  vertical-align: baseline;
+}
+
+.emotion-2 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
+}
+
+.emotion-30 {
+  background: transparent;
+  color: #0a1633;
+}
+
+.emotion-30 .uc-fe-tree-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #0a1633;
+  min-height: 36px;
+}
+
+.emotion-30 .uc-fe-tree-item .uc-fe-tree-indent {
+  width: 32px;
+  position: relative;
+}
+
+.emotion-30 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
+  content: ' ';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 100%;
+  width: 1px;
+  border-left: 1px solid #d2d6ea;
+  margin-left: 50%;
+}
+
+.emotion-30 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
+  height: 50%;
+  width: 4px;
+  border-bottom: 1px solid #d2d6ea;
+}
+
+.emotion-30 .uc-fe-tree-item .uc-fe-tree-wrap {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0 8px;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-30 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
+  background: #F4F6FF;
+}
+
+.emotion-30 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
+  margin-left: 8px;
+}
+
+.emotion-30 .uc-fe-tree-item.uc-fe-tree-disabled {
+  color: #cccccc;
+}
+
+.emotion-30 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
+  cursor: default;
+}
+
+.emotion-30.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
+  color: #3860f4;
+}
+
+.emotion-30 .uc-fe-tree-expand-ph,
+.emotion-30 .uc-fe-tree-expand-icon,
+.emotion-30 .uc-fe-tree-loading-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  margin-right: 8px;
+}
+
+.emotion-30 .uc-fe-tree-loading-icon {
+  fill: #3860f4;
+}
+
+.emotion-30 .uc-fe-tree-expand-icon {
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
+  position: relative;
+}
+
+.emotion-30 .uc-fe-tree-expand-icon:before {
+  content: ' ';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 0 5px 6px;
+  border-color: transparent transparent transparent #526075;
+  position: absolute;
+  top: 3px;
+  left: 5px;
+}
+
+.emotion-30 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-30 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
+  border-color: transparent transparent transparent #cccccc;
+}
+
+.emotion-30 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.emotion-10 {
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+  min-height: 28px;
+  line-height: 28px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  color: #0a1633;
+}
+
+.emotion-10 > * {
+  font-size: 12px;
+}
+
+.emotion-10 .uc-fe-checkbox-content {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 100%;
+  margin-left: 8px;
+}
+
+.emotion-10.uc-fe-checkbox-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-10:hover .uc-fe-checkbox-icon-wrap {
+  border-color: #3860f4;
+}
+
+.emotion-8.uc-fe-checkbox-icon-wrap {
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #c3cad9;
+  border-radius: 2px;
+  vertical-align: middle;
+}
+
+.emotion-8 .uc-fe-checkbox-icon {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+}
+
+.emotion-6 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+}
+
+.emotion-12 {
+  display: none;
+}
+
+.emotion-32 .uc-fe-shared-search-highlight {
+  background: #fff5bd;
+}
+
+.emotion-32 .uc-fe-shared-search-input {
+  margin-bottom: 8px;
+}
+
+.emotion-32 .uc-fe-shared-search-count {
+  line-height: 16px;
+  padding-left: 8px;
+  border-left: 1px solid #d2d6ea;
+  color: #526075;
+}
+
+.emotion-32 .uc-fe-shared-search-empty-tip {
+  padding: 8px 0 8px 32px;
+}
+
+.emotion-32 .uc-fe-shared-search-loading {
+  height: 36px;
+}
+
+.emotion-32 .uc-fe-shared-search-empty-content {
+  display: none;
+}
+
+.emotion-4 {
+  position: relative;
+  box-sizing: border-box;
+  font-size: 12px;
+  border-radius: 2px;
+  height: 28px;
+  max-width: 100%;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-4:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #fafafc;
+}
+
+.emotion-4 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-4 .uc-fe-input-wrap,
+.emotion-4 .uc-fe-input-prefix,
+.emotion-4 .uc-fe-input-suffix,
+.emotion-4 .uc-fe-input-clear,
+.emotion-4 input {
+  padding: 0 4px;
+}
+
+.emotion-4.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-4 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 .uc-fe-input-prefix,
+.emotion-4 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-4 input,
+.emotion-4 input:hover,
+.emotion-4 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-4 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input::-ms-clear {
+  display: none;
+}
+
+.emotion-0 {
+  vertical-align: baseline;
+}
+
+.emotion-2 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
+}
+
+<div
+    class="demo-wrap"
+  >
+    <h2>
+      自定义模拟后端搜索
+    </h2>
+    <div
+      class="emotion-32 emotion-33"
+    >
+      <span
+        class="uc-fe-input uc-fe-input-block uc-fe-shared-search-input emotion-4 emotion-5"
+      >
+        <span
+          class="uc-fe-input-wrap"
+        >
+          <span
+            class="uc-fe-input-prefix"
+          >
+            <i
+              class="uc-fe-icon icon__search emotion-0 emotion-1"
+            />
+          </span>
+          <input
+            value=""
+          />
+          <span
+            class="uc-fe-input-clear"
+          >
+            <svg
+              class=" emotion-2 emotion-3"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.0796033,4.93039665 C22.9806039,8.83139725 22.9806039,15.1786027 19.0796033,19.0796033 C15.1786027,22.9806039 8.83139725,22.9806039 4.93039665,19.0796033 C1.02939605,15.1786027 1.02939605,8.83139725 4.93039665,4.93039665 C8.83139725,1.02939605 15.1786027,1.02939605 19.0796033,4.93039665 Z M15.8638746,8.14612545 C15.5086973,7.7909482 14.9327603,7.7909482 14.577583,8.14612545 L12.005,10.7187085 L9.43241697,8.14612545 C9.07723972,7.7909482 8.50130269,7.7909482 8.14612545,8.14612545 C7.7909482,8.50130269 7.7909482,9.07723972 8.14612545,9.43241697 L10.7187085,12.005 L8.14612545,14.577583 C7.7909482,14.9327603 7.7909482,15.5086973 8.14612545,15.8638746 C8.50130269,16.2190518 9.07723972,16.2190518 9.43241697,15.8638746 L12.005,13.2912915 L14.577583,15.8638746 C14.9327603,16.2190518 15.5086973,16.2190518 15.8638746,15.8638746 C16.2190518,15.5086973 16.2190518,14.9327603 15.8638746,14.577583 L13.2912915,12.005 L15.8638746,9.43241697 C16.2190518,9.07723972 16.2190518,8.50130269 15.8638746,8.14612545 Z"
+              />
+            </svg>
+          </span>
+        </span>
+      </span>
+      <div
+        class=""
+      >
+        <div
+          class="uc-fe-tree uc-fe-tree-multiple emotion-30 emotion-31"
+        >
+          <div>
+            <div>
+              <div
+                class="uc-fe-tree-item"
+                data-tree-item-value="root-0-item"
+              >
+                <div
+                  class="uc-fe-tree-wrap"
+                >
+                  <span
+                    class="uc-fe-tree-expand-icon"
+                  />
+                  <span
+                    class="uc-fe-checkbox emotion-10 emotion-11"
+                  >
+                    <span
+                      class="uc-fe-checkbox-icon-wrap emotion-8 emotion-9"
+                    >
+                      <svg
+                        class="uc-fe-checkbox-icon emotion-6 emotion-3"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                  <span
+                    class="uc-fe-tree-content"
+                  >
+                    root-0-item
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="emotion-12 emotion-13"
+            />
+          </div>
+          <div>
+            <div>
+              <div
+                class="uc-fe-tree-item"
+                data-tree-item-value="root-1-item"
+              >
+                <div
+                  class="uc-fe-tree-wrap"
+                >
+                  <span
+                    class="uc-fe-tree-expand-icon"
+                  />
+                  <span
+                    class="uc-fe-checkbox emotion-10 emotion-11"
+                  >
+                    <span
+                      class="uc-fe-checkbox-icon-wrap emotion-8 emotion-9"
+                    >
+                      <svg
+                        class="uc-fe-checkbox-icon emotion-6 emotion-3"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                  <span
+                    class="uc-fe-tree-content"
+                  >
+                    root-1-item
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="emotion-12 emotion-13"
+            />
+          </div>
+          <div>
+            <div>
+              <div
+                class="uc-fe-tree-item"
+                data-tree-item-value="root-2-item"
+              >
+                <div
+                  class="uc-fe-tree-wrap"
+                >
+                  <span
+                    class="uc-fe-tree-expand-icon"
+                  />
+                  <span
+                    class="uc-fe-checkbox emotion-10 emotion-11"
+                  >
+                    <span
+                      class="uc-fe-checkbox-icon-wrap emotion-8 emotion-9"
+                    >
+                      <svg
+                        class="uc-fe-checkbox-icon emotion-6 emotion-3"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                        />
+                      </svg>
+                    </span>
+                  </span>
+                  <span
+                    class="uc-fe-tree-content"
+                  >
+                    root-2-item
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="emotion-12 emotion-13"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  .emotion-38 {
+  background: transparent;
+  color: #0a1633;
+}
+
+.emotion-38 .uc-fe-tree-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #0a1633;
+  min-height: 36px;
+}
+
+.emotion-38 .uc-fe-tree-item .uc-fe-tree-indent {
+  width: 32px;
+  position: relative;
+}
+
+.emotion-38 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
+  content: ' ';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 100%;
+  width: 1px;
+  border-left: 1px solid #d2d6ea;
+  margin-left: 50%;
+}
+
+.emotion-38 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
+  height: 50%;
+  width: 4px;
+  border-bottom: 1px solid #d2d6ea;
+}
+
+.emotion-38 .uc-fe-tree-item .uc-fe-tree-wrap {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0 8px;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-38 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
+  background: #F4F6FF;
+}
+
+.emotion-38 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
+  margin-left: 8px;
+}
+
+.emotion-38 .uc-fe-tree-item.uc-fe-tree-disabled {
+  color: #cccccc;
+}
+
+.emotion-38 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
+  cursor: default;
+}
+
+.emotion-38.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
+  color: #3860f4;
+}
+
+.emotion-38 .uc-fe-tree-expand-ph,
+.emotion-38 .uc-fe-tree-expand-icon,
+.emotion-38 .uc-fe-tree-loading-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  margin-right: 8px;
+}
+
+.emotion-38 .uc-fe-tree-loading-icon {
+  fill: #3860f4;
+}
+
+.emotion-38 .uc-fe-tree-expand-icon {
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
+  position: relative;
+}
+
+.emotion-38 .uc-fe-tree-expand-icon:before {
+  content: ' ';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 0 5px 6px;
+  border-color: transparent transparent transparent #526075;
+  position: absolute;
+  top: 3px;
+  left: 5px;
+}
+
+.emotion-38 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-38 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
+  border-color: transparent transparent transparent #cccccc;
+}
+
+.emotion-38 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.emotion-18 {
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+  min-height: 28px;
+  line-height: 28px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  color: #0a1633;
+}
+
+.emotion-18 > * {
+  font-size: 12px;
+}
+
+.emotion-18 .uc-fe-checkbox-content {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 100%;
+  margin-left: 8px;
+}
+
+.emotion-18.uc-fe-checkbox-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-18:hover .uc-fe-checkbox-icon-wrap {
+  border-color: #3860f4;
+}
+
+.emotion-16.uc-fe-checkbox-icon-wrap {
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #c3cad9;
+  border-radius: 2px;
+  vertical-align: middle;
+}
+
+.emotion-16 .uc-fe-checkbox-icon {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+}
+
+.emotion-14 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+}
+
+.emotion-20 {
+  display: none;
+}
+
+.emotion-6 > .uc-fe-combine-item,
+.emotion-6 > .uc-fe-combine-separator {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.emotion-6 > .uc-fe-combine-item:focus {
+  z-index: 2;
+}
+
+.emotion-6 > .uc-fe-combine-item:hover {
+  z-index: 3;
+}
+
+.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-6 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
+}
+
+.emotion-2 {
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 8px;
+  color: #0a1633;
+  fill: #0a1633;
+  background: #ffffff;
+  border: 1px solid #c3cad9;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
+  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
+  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
+  border-width: 1px;
+  border-style: solid;
+  padding: 0 7px;
+  line-height: 26px;
+}
+
+.emotion-2:link,
+.emotion-2:visited {
+  color: #0a1633;
+}
+
+.emotion-2:hover,
+.emotion-2:active {
+  color: #3860f4;
+  fill: #3860f4;
+  border: 1px solid #d2d6ea;
+  background: #ffffff;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-42 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: -12px;
+}
+
+.emotion-42.emotion-42.emotion-42>* {
+  margin-bottom: 12px;
+}
+
+.emotion-42.emotion-42.emotion-42>*.uc-fe-box {
+  padding-bottom: 12px;
+  margin-bottom: 0;
+}
+
+.emotion-0 {
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 8px;
+  color: #ffffff;
+  fill: #ffffff;
+  border: none;
+  background: linear-gradient(135deg,#6488fc 0%,#3860f4 100%);
+  box-shadow: 0 2px 4px -1px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
+  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
+  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
+}
+
+.emotion-0:link,
+.emotion-0:visited {
+  color: #ffffff;
+}
+
+.emotion-0:hover,
+.emotion-0:active {
+  background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
+  box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
+}
+
+.emotion-40 .uc-fe-shared-search-highlight {
+  background: #fff5bd;
+}
+
+.emotion-40 .uc-fe-shared-search-input {
+  margin-bottom: 8px;
+}
+
+.emotion-40 .uc-fe-shared-search-count {
+  line-height: 16px;
+  padding-left: 8px;
+  border-left: 1px solid #d2d6ea;
+  color: #526075;
+}
+
+.emotion-40 .uc-fe-shared-search-empty-tip {
+  padding: 8px 0 8px 32px;
+}
+
+.emotion-40 .uc-fe-shared-search-loading {
+  height: 36px;
+}
+
+.emotion-40 .uc-fe-shared-search-empty-content {
+  display: none;
+}
+
+.emotion-12 {
+  position: relative;
+  box-sizing: border-box;
+  font-size: 12px;
+  border-radius: 2px;
+  height: 28px;
+  max-width: 100%;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-12:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #fafafc;
+}
+
+.emotion-12 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-12 .uc-fe-input-wrap,
+.emotion-12 .uc-fe-input-prefix,
+.emotion-12 .uc-fe-input-suffix,
+.emotion-12 .uc-fe-input-clear,
+.emotion-12 input {
+  padding: 0 4px;
+}
+
+.emotion-12.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-12 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-12 .uc-fe-input-prefix,
+.emotion-12 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-12 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-12 input,
+.emotion-12 input:hover,
+.emotion-12 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-12 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-12 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-12 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-12 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-12 input::-ms-clear {
+  display: none;
+}
+
+.emotion-8 {
+  vertical-align: baseline;
+}
+
+.emotion-10 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
+}
+
+.emotion-38 {
+  background: transparent;
+  color: #0a1633;
+}
+
+.emotion-38 .uc-fe-tree-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #0a1633;
+  min-height: 36px;
+}
+
+.emotion-38 .uc-fe-tree-item .uc-fe-tree-indent {
+  width: 32px;
+  position: relative;
+}
+
+.emotion-38 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner::after {
+  content: ' ';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 100%;
+  width: 1px;
+  border-left: 1px solid #d2d6ea;
+  margin-left: 50%;
+}
+
+.emotion-38 .uc-fe-tree-item .uc-fe-tree-indent.uc-fe-tree-indent-inner.uc-fe-tree-latest::after {
+  height: 50%;
+  width: 4px;
+  border-bottom: 1px solid #d2d6ea;
+}
+
+.emotion-38 .uc-fe-tree-item .uc-fe-tree-wrap {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0 8px;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-38 .uc-fe-tree-item .uc-fe-tree-wrap:hover {
+  background: #F4F6FF;
+}
+
+.emotion-38 .uc-fe-tree-item .uc-fe-tree-wrap .uc-fe-tree-content {
+  margin-left: 8px;
+}
+
+.emotion-38 .uc-fe-tree-item.uc-fe-tree-disabled {
+  color: #cccccc;
+}
+
+.emotion-38 .uc-fe-tree-item.uc-fe-tree-disabled .uc-fe-tree-wrap {
+  cursor: default;
+}
+
+.emotion-38.uc-fe-tree-single .uc-fe-tree-item.uc-fe-tree-selected {
+  color: #3860f4;
+}
+
+.emotion-38 .uc-fe-tree-expand-ph,
+.emotion-38 .uc-fe-tree-expand-icon,
+.emotion-38 .uc-fe-tree-loading-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  margin-right: 8px;
+}
+
+.emotion-38 .uc-fe-tree-loading-icon {
+  fill: #3860f4;
+}
+
+.emotion-38 .uc-fe-tree-expand-icon {
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.2s;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
+  position: relative;
+}
+
+.emotion-38 .uc-fe-tree-expand-icon:before {
+  content: ' ';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 0 5px 6px;
+  border-color: transparent transparent transparent #526075;
+  position: absolute;
+  top: 3px;
+  left: 5px;
+}
+
+.emotion-38 .uc-fe-tree-expand-icon.uc-fe-tree-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-38 .uc-fe-tree-expand-icon.uc-fe-tree-disabled:before {
+  border-color: transparent transparent transparent #cccccc;
+}
+
+.emotion-38 .uc-fe-tree-expand-icon.uc-fe-tree-expanded {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.emotion-18 {
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+  min-height: 28px;
+  line-height: 28px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  color: #0a1633;
+}
+
+.emotion-18 > * {
+  font-size: 12px;
+}
+
+.emotion-18 .uc-fe-checkbox-content {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 100%;
+  margin-left: 8px;
+}
+
+.emotion-18.uc-fe-checkbox-disabled {
+  cursor: default;
+  color: #cccccc;
+}
+
+.emotion-18:hover .uc-fe-checkbox-icon-wrap {
+  border-color: #3860f4;
+}
+
+.emotion-16.uc-fe-checkbox-icon-wrap {
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #c3cad9;
+  border-radius: 2px;
+  vertical-align: middle;
+}
+
+.emotion-16 .uc-fe-checkbox-icon {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+}
+
+.emotion-14 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+}
+
+.emotion-20 {
+  display: none;
+}
+
+.emotion-6 > .uc-fe-combine-item,
+.emotion-6 > .uc-fe-combine-separator {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.emotion-6 > .uc-fe-combine-item:focus {
+  z-index: 2;
+}
+
+.emotion-6 > .uc-fe-combine-item:hover {
+  z-index: 3;
+}
+
+.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-6 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-6 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
+}
+
+.emotion-2 {
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 8px;
+  color: #0a1633;
+  fill: #0a1633;
+  background: #ffffff;
+  border: 1px solid #c3cad9;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
+  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
+  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
+  border-width: 1px;
+  border-style: solid;
+  padding: 0 7px;
+  line-height: 26px;
+}
+
+.emotion-2:link,
+.emotion-2:visited {
+  color: #0a1633;
+}
+
+.emotion-2:hover,
+.emotion-2:active {
+  color: #3860f4;
+  fill: #3860f4;
+  border: 1px solid #d2d6ea;
+  background: #ffffff;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+}
+
+.emotion-42 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: -12px;
+}
+
+.emotion-42.emotion-42.emotion-42>* {
+  margin-bottom: 12px;
+}
+
+.emotion-42.emotion-42.emotion-42>*.uc-fe-box {
+  padding-bottom: 12px;
+  margin-bottom: 0;
+}
+
+.emotion-0 {
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 8px;
+  color: #ffffff;
+  fill: #ffffff;
+  border: none;
+  background: linear-gradient(135deg,#6488fc 0%,#3860f4 100%);
+  box-shadow: 0 2px 4px -1px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
+  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
+  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
+}
+
+.emotion-0:link,
+.emotion-0:visited {
+  color: #ffffff;
+}
+
+.emotion-0:hover,
+.emotion-0:active {
+  background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
+  box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
+}
+
+.emotion-40 .uc-fe-shared-search-highlight {
+  background: #fff5bd;
+}
+
+.emotion-40 .uc-fe-shared-search-input {
+  margin-bottom: 8px;
+}
+
+.emotion-40 .uc-fe-shared-search-count {
+  line-height: 16px;
+  padding-left: 8px;
+  border-left: 1px solid #d2d6ea;
+  color: #526075;
+}
+
+.emotion-40 .uc-fe-shared-search-empty-tip {
+  padding: 8px 0 8px 32px;
+}
+
+.emotion-40 .uc-fe-shared-search-loading {
+  height: 36px;
+}
+
+.emotion-40 .uc-fe-shared-search-empty-content {
+  display: none;
+}
+
+.emotion-12 {
+  position: relative;
+  box-sizing: border-box;
+  font-size: 12px;
+  border-radius: 2px;
+  height: 28px;
+  max-width: 100%;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-12:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #fafafc;
+}
+
+.emotion-12 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-12 .uc-fe-input-wrap,
+.emotion-12 .uc-fe-input-prefix,
+.emotion-12 .uc-fe-input-suffix,
+.emotion-12 .uc-fe-input-clear,
+.emotion-12 input {
+  padding: 0 4px;
+}
+
+.emotion-12.uc-fe-input-block {
+  display: block;
+}
+
+.emotion-12 .uc-fe-input-wrap {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-12 .uc-fe-input-prefix,
+.emotion-12 .uc-fe-input-suffix {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-12 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-12 input,
+.emotion-12 input:hover,
+.emotion-12 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-12 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-12 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-12 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-12 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-12 input::-ms-clear {
+  display: none;
+}
+
+.emotion-8 {
+  vertical-align: baseline;
+}
+
+.emotion-10 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
+}
+
+<div
+    class="demo-wrap"
+  >
+    <h2>
+      搜索+全选等，搜索结果页面后的全选、反选、取消选择针对的是当前搜索结果
+    </h2>
+    <div
+      class="uc-fe-box emotion-42 emotion-43"
+      direction="column"
+      spacing="md"
+    >
+      <div
+        class="uc-fe-combine emotion-6 emotion-7"
+        spacing="md"
+      >
+        <div
+          class="uc-fe-combine-item"
+        >
+          <button
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-0 emotion-1"
+            type="button"
+          >
+            全选
+          </button>
+        </div>
+        <div
+          class="uc-fe-combine-item"
+        >
+          <button
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-2 emotion-1"
+            type="button"
+          >
+            反选
+          </button>
+        </div>
+        <div
+          class="uc-fe-combine-item"
+        >
+          <button
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-2 emotion-1"
+            type="button"
+          >
+            取消选择
+          </button>
+        </div>
+      </div>
+      <div
+        class="emotion-40 emotion-41"
+      >
+        <span
+          class="uc-fe-input uc-fe-input-block uc-fe-shared-search-input emotion-12 emotion-13"
+        >
+          <span
+            class="uc-fe-input-wrap"
+          >
+            <span
+              class="uc-fe-input-prefix"
+            >
+              <i
+                class="uc-fe-icon icon__search emotion-8 emotion-9"
+              />
+            </span>
+            <input
+              value=""
+            />
+            <span
+              class="uc-fe-input-clear"
+            >
+              <svg
+                class=" emotion-10 emotion-11"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19.0796033,4.93039665 C22.9806039,8.83139725 22.9806039,15.1786027 19.0796033,19.0796033 C15.1786027,22.9806039 8.83139725,22.9806039 4.93039665,19.0796033 C1.02939605,15.1786027 1.02939605,8.83139725 4.93039665,4.93039665 C8.83139725,1.02939605 15.1786027,1.02939605 19.0796033,4.93039665 Z M15.8638746,8.14612545 C15.5086973,7.7909482 14.9327603,7.7909482 14.577583,8.14612545 L12.005,10.7187085 L9.43241697,8.14612545 C9.07723972,7.7909482 8.50130269,7.7909482 8.14612545,8.14612545 C7.7909482,8.50130269 7.7909482,9.07723972 8.14612545,9.43241697 L10.7187085,12.005 L8.14612545,14.577583 C7.7909482,14.9327603 7.7909482,15.5086973 8.14612545,15.8638746 C8.50130269,16.2190518 9.07723972,16.2190518 9.43241697,15.8638746 L12.005,13.2912915 L14.577583,15.8638746 C14.9327603,16.2190518 15.5086973,16.2190518 15.8638746,15.8638746 C16.2190518,15.5086973 16.2190518,14.9327603 15.8638746,14.577583 L13.2912915,12.005 L15.8638746,9.43241697 C16.2190518,9.07723972 16.2190518,8.50130269 15.8638746,8.14612545 Z"
+                />
+              </svg>
+            </span>
+          </span>
+        </span>
+        <div
+          class=""
+        >
+          <div
+            class="uc-fe-tree uc-fe-tree-multiple emotion-38 emotion-39"
+          >
+            <div>
+              <div>
+                <div
+                  class="uc-fe-tree-item"
+                  data-tree-item-value="root-0-item"
+                >
+                  <div
+                    class="uc-fe-tree-wrap"
+                  >
+                    <span
+                      class="uc-fe-tree-expand-icon"
+                    />
+                    <span
+                      class="uc-fe-checkbox emotion-18 emotion-19"
+                    >
+                      <span
+                        class="uc-fe-checkbox-icon-wrap emotion-16 emotion-17"
+                      >
+                        <svg
+                          class="uc-fe-checkbox-icon emotion-14 emotion-11"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                          />
+                        </svg>
+                      </span>
+                    </span>
+                    <span
+                      class="uc-fe-tree-content"
+                    >
+                      root-0-item
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="emotion-20 emotion-21"
+              />
+            </div>
+            <div>
+              <div>
+                <div
+                  class="uc-fe-tree-item"
+                  data-tree-item-value="root-1-item"
+                >
+                  <div
+                    class="uc-fe-tree-wrap"
+                  >
+                    <span
+                      class="uc-fe-tree-expand-icon"
+                    />
+                    <span
+                      class="uc-fe-checkbox emotion-18 emotion-19"
+                    >
+                      <span
+                        class="uc-fe-checkbox-icon-wrap emotion-16 emotion-17"
+                      >
+                        <svg
+                          class="uc-fe-checkbox-icon emotion-14 emotion-11"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                          />
+                        </svg>
+                      </span>
+                    </span>
+                    <span
+                      class="uc-fe-tree-content"
+                    >
+                      root-1-item
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="emotion-20 emotion-21"
+              />
+            </div>
+            <div>
+              <div>
+                <div
+                  class="uc-fe-tree-item"
+                  data-tree-item-value="root-2-item"
+                >
+                  <div
+                    class="uc-fe-tree-wrap"
+                  >
+                    <span
+                      class="uc-fe-tree-expand-icon"
+                    />
+                    <span
+                      class="uc-fe-checkbox emotion-18 emotion-19"
+                    >
+                      <span
+                        class="uc-fe-checkbox-icon-wrap emotion-16 emotion-17"
+                      >
+                        <svg
+                          class="uc-fe-checkbox-icon emotion-14 emotion-11"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M17.7546146,7 L16.3114912,7 C15.9976349,7 15.6991638,7.15410017 15.5145424,7.41827188 L10.6774635,14.2741568 L8.48662368,11.1669943 C8.30200234,10.9059675 8.00660821,10.7487224 7.68967492,10.7487224 L6.24655149,10.7487224 C6.04654505,10.7487224 5.9296182,10.9814451 6.04654505,11.1481249 L9.88051475,16.5825143 C10.2712966,17.1391619 11.0805534,17.1391619 11.4713352,16.5825143 L17.9515441,7.39940247 C18.0715479,7.2327227 17.9546211,7 17.7546146,7 Z"
+                          />
+                        </svg>
+                      </span>
+                    </span>
+                    <span
+                      class="uc-fe-tree-content"
+                    >
+                      root-2-item
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="emotion-20 emotion-21"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
 `;
 
 exports[`Tree demo -- tree 1`] = `
@@ -4929,6 +7177,7 @@ exports[`Tree demo -- tree 1`] = `
         <div>
           <div
             class="uc-fe-tree-item"
+            data-tree-item-value="root-0-item"
           >
             <div
               class="uc-fe-tree-wrap"
@@ -4952,6 +7201,7 @@ exports[`Tree demo -- tree 1`] = `
         <div>
           <div
             class="uc-fe-tree-item"
+            data-tree-item-value="root-1-item"
           >
             <div
               class="uc-fe-tree-wrap"
@@ -4975,6 +7225,7 @@ exports[`Tree demo -- tree 1`] = `
         <div>
           <div
             class="uc-fe-tree-item"
+            data-tree-item-value="root-2-item"
           >
             <div
               class="uc-fe-tree-wrap"

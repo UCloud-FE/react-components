@@ -79,7 +79,8 @@ const ItemView = ({
     depth,
     isLatest,
     ignoreIndent,
-    loading
+    loading,
+    value
 }: {
     // 是否可展开
     expandAble?: boolean;
@@ -97,6 +98,7 @@ const ItemView = ({
     ignoreIndent?: string;
     // 加载中
     loading?: boolean;
+    value: Key;
 } & SharedItemProps) => {
     const onBodyClick = useCallback(
         e => {
@@ -120,6 +122,7 @@ const ItemView = ({
         <div
             className={classnames(itemCls, !expandAble && selected && selectedCls, disabled && disabledCls)}
             onClick={onBodyClick}
+            data-tree-item-value={value}
         >
             <MemoIndents depth={depth} ignoreIndent={finalIgnoreIndent} isLatest={isLatest} />
             <div className={wrapCls}>
@@ -173,6 +176,7 @@ const ChildItem = ({
             selected={checked}
             onSelect={onCheckChange}
             ignoreIndent={JSON.stringify(ignoreIndent)}
+            value={value}
             {...rest}
         />
     );
@@ -240,6 +244,7 @@ const TitleItem = ({
             ignoreIndent={JSON.stringify(ignoreIndent)}
             onExpandChange={onExpandHandler}
             loading={loading}
+            value={value}
             {...rest}
         />
     );

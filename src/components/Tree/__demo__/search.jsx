@@ -1,10 +1,13 @@
 import React from 'react';
 
 import Tree from 'src/components/Tree';
+import Button from 'src/components/Button';
+import Combine from 'src/components/Combine';
+import Box from 'src/components/Box';
 import demoUtil from 'tests/shared/demoUtil';
-import Input from 'src/components/Input';
 
 // demo start
+const { DemoWrap } = demoUtil;
 const generateNumber = (min, max) => {
     const random = Math.random();
     return (min + random * (max + 1 - min)) | 0;
@@ -37,39 +40,38 @@ const generateGroupData = (depth, prefix) => {
 
 const _dataSource = generateGroupData(generateNumber(3, 3), 'root');
 
-const { DemoWrap } = demoUtil;
-class Demo extends React.PureComponent {
-    constructor(props) {
-        super(props);
-        this.state = {
-            multiple: false,
-            disabled: false,
-            dataSource: _dataSource,
-            dataSourceAfterSearch: _dataSource,
-            expandedKeys: []
-        };
-    }
-    onSearch(searchValue) {
-        const { dataSource, expandedKeys } = this.state;
+const wait = t => new Promise(resolve => setTimeout(resolve, t));
+
+const Demo = () => {
+    const ref = React.useRef();
+    const handleSearch = React.useCallback(async (searchValue, dataSource) => {
+        if (!searchValue) return { dataSource, count: null };
+        await wait(2000);
+        let count = 0;
         const finalExpandedKeyMap = {};
-        expandedKeys.forEach(key => (finalExpandedKeyMap[key] = 1));
         const handle = children => {
             let childrenHit = false;
-            const newChildren = children.map(child => {
+            const newChildren = [];
+            children.forEach(child => {
                 const { title, key, children } = child;
                 const override = {};
-                const index = title.indexOf(searchValue);
-                let searchHit = index >= 0;
-                if (searchHit) {
-                    const beforeStr = title.substr(0, index);
-                    const afterStr = title.substr(index + searchValue.length);
-                    override.title = (
-                        <span>
-                            {beforeStr}
-                            <span style={{ background: 'yellow' }}>{searchValue}</span>
-                            {afterStr}
-                        </span>
-                    );
+                let searchHit = false;
+                if (typeof title === 'string') {
+                    searchHit = index >= 0;
+                    const index = (Math.random() * title.length) | 0;
+                    searchHit = index + searchValue.length < title.length;
+                    if (searchHit) {
+                        count++;
+                        const beforeStr = title.substr(0, index);
+                        const afterStr = title.substr(index + searchValue.length);
+                        override.title = (
+                            <>
+                                {beforeStr}
+                                <span style={{ background: 'red' }}>{searchValue}</span>
+                                {afterStr}
+                            </>
+                        );
+                    }
                 }
                 if (children) {
                     const [_children, _searchHit] = handle(children);
@@ -77,37 +79,71 @@ class Demo extends React.PureComponent {
                     searchHit = _searchHit || searchHit;
                     if (_searchHit) finalExpandedKeyMap[key] = 1;
                 }
-                if (searchHit) childrenHit = true;
-                return {
-                    ...child,
-                    ...override
-                };
+                if (searchHit) {
+                    childrenHit = true;
+                    newChildren.push({ ...child, ...override });
+                }
             });
             return [newChildren, childrenHit];
         };
         const dataSourceAfterSearch = handle(dataSource)[0];
-        console.log(finalExpandedKeyMap);
-        this.setState({ dataSourceAfterSearch, expandedKeys: Object.keys(finalExpandedKeyMap) });
-    }
-    render() {
-        const { dataSourceAfterSearch, expandedKeys } = this.state;
-        console.log(expandedKeys);
-        return (
+        return {
+            dataSource: dataSourceAfterSearch,
+            count,
+            openKeys: Object.keys(finalExpandedKeyMap)
+        };
+    }, []);
+    return (
+        <>
             <DemoWrap>
-                <Input.Search block onSearch={v => this.onSearch(v)} />
                 <Tree
-                    dataSource={dataSourceAfterSearch}
+                    dataSource={_dataSource}
                     multiple
                     onChange={console.log}
                     collapseProps={{
-                        onChange: expandedKeys => this.setState({ expandedKeys }),
-                        openKeys: expandedKeys
+                        onChange: console.log
                     }}
+                    search
                 />
             </DemoWrap>
-        );
-    }
-}
+            <DemoWrap>
+                <h2>自定义模拟后端搜索</h2>
+                <Tree
+                    dataSource={_dataSource}
+                    multiple
+                    onChange={console.log}
+                    collapseProps={{
+                        onChange: console.log
+                    }}
+                    search={{ handleSearch }}
+                />
+            </DemoWrap>
+            <DemoWrap>
+                <h2>搜索+全选等，搜索结果页面后的全选、反选、取消选择针对的是当前搜索结果</h2>
+                <Box container spacing="md" direction="column">
+                    <Combine>
+                        <Button styleType="primary" onClick={() => ref.current.selectAll()}>
+                            全选
+                        </Button>
+                        <Button onClick={() => ref.current.inverse()}>反选</Button>
+                        <Button onClick={() => ref.current.unSelectAll()}>取消选择</Button>
+                    </Combine>
+                    <Tree
+                        dataSource={_dataSource}
+                        multiple
+                        onChange={console.log}
+                        collapseProps={{
+                            onChange: console.log
+                        }}
+                        search
+                        ref={ref}
+                    />
+                </Box>
+            </DemoWrap>
+        </>
+    );
+};
+
 // demo end
 
 export default Demo;

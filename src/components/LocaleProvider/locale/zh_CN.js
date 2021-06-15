@@ -10,6 +10,7 @@ import Menu from 'src/components/Menu/locale/zh_CN';
 import PopConfirm from 'src/components/PopConfirm/locale/zh_CN';
 import EditableList from 'src/components/EditableList/locale/zh_CN';
 import Transfer from 'src/components/Transfer/locale/zh_CN';
+import SharedSearch from 'src/sharedComponents/Search/locale/zh_CN';
 
 export default {
     locale: 'zh-cn',
@@ -24,5 +25,6 @@ export default {
     Menu,
     PopConfirm,
     EditableList,
-    Transfer
+    Transfer,
+    SharedSearch
 };

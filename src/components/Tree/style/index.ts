@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import config from 'src/config';
-import styledWrap from 'src/utils/styledWrap';
+import { sWrap } from 'src/style';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-tree';
@@ -22,7 +22,7 @@ export const expandedCls = prefixCls + '-expanded';
 export const expandPlaceholderCls = prefixCls + '-expand-ph';
 export const loadingIconCls = prefixCls + '-loading-icon';
 
-export const STree = styledWrap<{ disabled: boolean }, HTMLDivElement>({})(
+export const STree = sWrap<{ disabled: boolean }, HTMLDivElement>({})(
     styled.div(props => {
         const {
             theme: { designTokens: DT }

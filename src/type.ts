@@ -15,14 +15,14 @@ export const SizeDTMap: Record<Size, DesignToken> = {
     lg: 'T_HEIGHT_LG'
 };
 
-export const ExportComponent = <T extends ComponentType<any>, T1 extends Record<string, unknown>>(
-    Component: T,
-    ComponentExtends: T1
-): T & T1 => {
-    type TExportComponent = T & T1;
+export const ExportComponent = <C extends ComponentType<any>, P extends Record<string, unknown>>(
+    Component: C,
+    ComponentExtends: P
+): C & P => {
+    type TExportComponent = C & P;
     const ExportComponent = Component as TExportComponent;
     for (const ExtendKey in ComponentExtends) {
-        ExportComponent[ExtendKey] = ComponentExtends[ExtendKey] as TExportComponent[Extract<keyof T1, string>];
+        ExportComponent[ExtendKey] = ComponentExtends[ExtendKey] as TExportComponent[Extract<keyof P, string>];
     }
     return ExportComponent;
 };

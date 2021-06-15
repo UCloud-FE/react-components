@@ -3,6 +3,7 @@ import React from 'react';
 import Tree from 'src/components/Tree';
 import Button from 'src/components/Button';
 import Combine from 'src/components/Combine';
+import Box from 'src/components/Box';
 
 // demo start
 const generateNumber = (min, max) => {
@@ -41,12 +42,16 @@ const Demo = () => {
     const ref = React.useRef();
     return (
         <>
-            <Combine>
-                <Button onClick={() => ref.current.selectAll()}>全选</Button>
-                <Button onClick={() => ref.current.inverse()}>反选</Button>
-                <Button onClick={() => ref.current.unSelectAll()}>取消选择</Button>
-            </Combine>
-            <Tree key={Math.random()} dataSource={dataSource} multiple onChange={console.log} ref={ref} />
+            <Box container spacing="md" direction="column">
+                <Combine>
+                    <Button styleType="primary" onClick={() => ref.current.selectAll()}>
+                        全选
+                    </Button>
+                    <Button onClick={() => ref.current.inverse()}>反选</Button>
+                    <Button onClick={() => ref.current.unSelectAll()}>取消选择</Button>
+                </Combine>
+                <Tree key={Math.random()} dataSource={dataSource} multiple onChange={console.log} ref={ref} />
+            </Box>
         </>
     );
 };

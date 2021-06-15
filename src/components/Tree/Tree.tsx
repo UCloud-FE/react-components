@@ -1,15 +1,17 @@
-import React, { useState, useEffect, useCallback, useRef, Ref, useImperativeHandle } from 'react';
+/* eslint-disable react/prop-types */
+/* eslint-disable react/display-name */
+import React, { Ref, useState, useEffect, useCallback, useRef, useImperativeHandle, forwardRef } from 'react';
 import classnames from 'classnames';
 
 import Collapse from 'src/components/Collapse';
-import withUncontrolled from 'src/decorators/uncontrolled';
+import useUncontrolled from 'src/hooks/useUncontrolled';
+import Search, { Highlight } from 'src/sharedComponents/Search';
+import noop from 'src/utils/noop';
+import each from 'src/utils/each';
 
 import Items from './Items';
 import { multipleCls, prefixCls, singleCls, STree } from './style';
 import { Group, SelectedMap, Key, TreeData, LoadData } from './interface';
-
-// eslint-disable-next-line @typescript-eslint/no-empty-function
-const noop = () => {};
 
 const groupDataSource = (dataSource: TreeData[]): [Group, Key[], Key[]] => {
     const group: Group = {};
@@ -53,9 +55,14 @@ const keysToMap = (keys: Key[] = []): SelectedMap => {
     return result;
 };
 
-type CollapseProps = Record<string, unknown>;
+type CollapseProps = {
+    openKeys?: string[];
+    defaultOpenKeys?: string[];
+    onChange?: (keys: string[]) => void;
+    [key: string]: unknown;
+};
 
-interface TreeProps {
+export interface TreeProps {
     /** 数据源 */
     dataSource: TreeData[];
     /** 是否禁用 */
@@ -67,48 +74,167 @@ interface TreeProps {
     /** 默认选中的数据 uncontrolled */
     defaultSelectedKeys?: Key[];
     /** 选中变化回调 */
-    onChange: (v: Key[]) => void;
+    onChange?: (v: Key[]) => void;
     /** 异步加载数据操作 */
     loadData?: LoadData;
     /** collapse 的配置，查看 collapse 组件 */
-    collapseProps: CollapseProps;
+    collapseProps?: CollapseProps;
+    /** 使用搜索 */
+    search?:
+        | true
+        | {
+              /** 自定义搜索函数 */
+              handleSearch?: (
+                  searchValue: string,
+                  dataSource: TreeData[]
+              ) => {
+                  dataSource: TreeData[];
+                  count: number;
+                  openKeys: Key[];
+              };
+          };
 }
 
-const Tree = React.forwardRef(
-    (props: TreeProps, ref: Ref<{ selectAll: () => void; unSelectAll: () => void; inverse: () => void }>) => {
-        const {
-            dataSource,
+export type TreeRef = {
+    /**
+     * 全选
+     * @public
+     */
+    selectAll: () => void;
+    /**
+     * 全部取消选择
+     * @public
+     */
+    unSelectAll: () => void;
+    /**
+     * 反选
+     * @public
+     */
+    inverse: () => void;
+};
+
+const defaultSearchHandle = (searchValue: string, dataSource: TreeData[]) => {
+    if (!searchValue) return { dataSource, count: null };
+    let count = 0;
+    const finalExpandedKeyMap: Record<Key, 1> = {};
+    const handle = (children: TreeData[]): [TreeData[], boolean] => {
+        let childrenHit = false;
+        const newChildren: TreeData[] = [];
+        children.forEach(child => {
+            const { title, key, children } = child;
+            const override: Partial<TreeData> = {};
+            let searchHit = false;
+            if (typeof title === 'string') {
+                const index = title.indexOf(searchValue);
+                searchHit = index >= 0;
+                if (searchHit) {
+                    count++;
+                    const beforeStr = title.substr(0, index);
+                    const afterStr = title.substr(index + searchValue.length);
+                    override.title = (
+                        <>
+                            {beforeStr}
+                            <Highlight>{searchValue}</Highlight>
+                            {afterStr}
+                        </>
+                    );
+                }
+            }
+            if (children) {
+                const [_children, _searchHit] = handle(children);
+                override.children = _children;
+                searchHit = _searchHit || searchHit;
+                if (_searchHit) finalExpandedKeyMap[key] = 1;
+            }
+            if (searchHit) {
+                childrenHit = true;
+                newChildren.push({ ...child, ...override });
+            }
+        });
+        return [newChildren, childrenHit];
+    };
+    const dataSourceAfterSearch = handle(dataSource)[0];
+    return {
+        dataSource: dataSourceAfterSearch,
+        count,
+        openKeys: Object.keys(finalExpandedKeyMap)
+    };
+};
+
+const CommonTree = forwardRef(
+    (
+        {
+            dataSource = [],
             disabled = false,
             multiple = false,
-            selectedKeys,
-            onChange = noop,
+            selectedKeys: _selectedKeys,
+            defaultSelectedKeys,
+            onChange: _onChange = noop,
+            onDiff,
             loadData,
             collapseProps
-        } = props;
+        }: TreeProps & {
+            onDiff?: (diffData: { select: Key[]; unselect: Key[] }) => void;
+        },
+        ref: Ref<TreeRef>
+    ) => {
         const [[group, allKeys, allDisabledKeys], setGroup] = useState(() => groupDataSource(dataSource));
-        const finalSelectedKeys = selectedKeys;
-        const [selectedMap, setSelectedMap] = useState(() => keysToMap(finalSelectedKeys));
+        const [selectedKeys, onChange] = useUncontrolled(_selectedKeys, defaultSelectedKeys || [], _onChange);
+        const [selectedMap, setSelectedMap] = useState(() => keysToMap(selectedKeys));
+        const stateRef = useRef({ selectedMap, selectedKeys });
 
-        const stateRef = useRef({ selectedMap, finalSelectedKeys });
+        const handleDiff = useCallback(
+            newSelectedKeys => {
+                if (!onDiff) return;
+                const selectKeys = [];
+                const unselectKeys = [];
+                const newSelectedMap = keysToMap(newSelectedKeys);
+                const allMap = keysToMap(allKeys);
+                for (const newKey in newSelectedMap) {
+                    // don't in dataSource, ignore
+                    if (!(newKey in allMap)) continue;
+                    if (!(newKey in selectedMap)) {
+                        selectKeys.push(newKey);
+                    }
+                }
+                for (const oldKey in selectedMap) {
+                    // don't in dataSource, ignore
+                    if (!(oldKey in allMap)) continue;
+                    if (!(oldKey in newSelectedMap)) {
+                        unselectKeys.push(oldKey);
+                    }
+                }
+
+                onDiff({
+                    select: selectKeys,
+                    unselect: unselectKeys
+                });
+            },
+            [allKeys, onDiff, selectedMap]
+        );
+
+        const finalOnChange = useCallback(
+            selectedKeys => {
+                onChange(selectedKeys);
+                handleDiff(selectedKeys);
+            },
+            [handleDiff, onChange]
+        );
 
         useEffect(() => {
             setGroup(groupDataSource(dataSource));
         }, [dataSource]);
 
         useEffect(() => {
-            const selectedMap = keysToMap(finalSelectedKeys);
-            stateRef.current = { selectedMap, finalSelectedKeys };
+            const selectedMap = keysToMap(selectedKeys);
+            stateRef.current = { selectedMap, selectedKeys };
             setSelectedMap(selectedMap);
-        }, [finalSelectedKeys]);
+        }, [selectedKeys]);
 
         useImperativeHandle(
             ref,
             () => {
                 return {
-                    /**
-                     * 全选
-                     * @public
-                     */
                     selectAll: () => {
                         if (!multiple) {
                             console.error(`Can't call selectAll for single select Tree`);
@@ -119,26 +245,18 @@ const Tree = React.forwardRef(
                             if (selectedMap[v]) disabledSelectedKeys.push(v);
                         });
                         const selectedKeys = [...allKeys, ...disabledSelectedKeys];
-                        onChange(selectedKeys);
+                        finalOnChange(selectedKeys);
                     },
-                    /**
-                     * 全部取消选择
-                     * @public
-                     */
                     unSelectAll: () => {
                         const disabledSelectedKeys: Key[] = [];
                         allDisabledKeys.forEach(v => {
                             if (selectedMap[v]) disabledSelectedKeys.push(v);
                         });
-                        onChange([...disabledSelectedKeys]);
+                        finalOnChange([...disabledSelectedKeys]);
                     },
-                    /**
-                     * 反选
-                     * @public
-                     */
                     inverse: () => {
                         if (!multiple) {
-                            console.error(`Can't call selectAll for single select Tree`);
+                            console.error(`Can't call inverse for single select Tree`);
                             return;
                         }
                         const disabledSelectedKeys: Key[] = [];
@@ -151,11 +269,11 @@ const Tree = React.forwardRef(
                                 selectedKeys.push(v);
                             }
                         });
-                        onChange(selectedKeys);
+                        finalOnChange(selectedKeys);
                     }
                 };
             },
-            [multiple, allKeys, allDisabledKeys, onChange, selectedMap]
+            [multiple, allDisabledKeys, allKeys, finalOnChange, selectedMap]
         );
 
         const onSelect = useCallback(
@@ -184,9 +302,9 @@ const Tree = React.forwardRef(
                     if (!selectedKeys) return;
                 }
 
-                onChange(selectedKeys);
+                finalOnChange(selectedKeys);
             },
-            [multiple, onChange]
+            [finalOnChange, multiple]
         );
 
         return (
@@ -211,4 +329,99 @@ const Tree = React.forwardRef(
     }
 );
 
-export default withUncontrolled<any, TreeProps>({ valueName: 'selectedKeys' })(React.memo(Tree));
+const SearchTree = forwardRef(
+    (
+        {
+            dataSource,
+            search,
+            collapseProps,
+            selectedKeys: _selectedKeys,
+            onChange: _onChange,
+            defaultSelectedKeys,
+            ...rest
+        }: TreeProps,
+        ref: Ref<TreeRef>
+    ) => {
+        const [dataSourceAfterSearch, setDataSourceAfterSearch] = useState(dataSource);
+        const [searchValue, setSearchValue] = useState('');
+        const [loading, setLoading] = useState(false);
+        const [count, setCount] = useState<number | null>(null);
+        const [empty, setEmpty] = useState(false);
+        const [selectedKeys, onChange] = useUncontrolled(_selectedKeys, defaultSelectedKeys || [], _onChange);
+        const { openKeys: _openKeys, defaultOpenKeys, onChange: _onOpenKeysChange, ...restCollapseProps } =
+            collapseProps || {};
+        const [openKeys, onOpenKeysChange] = useUncontrolled(_openKeys, defaultOpenKeys || [], _onOpenKeysChange);
+        const handleSearch = useCallback((searchValue: string) => {
+            setSearchValue(searchValue);
+        }, []);
+        const handleDiff = useCallback(
+            ({ select, unselect }: { select: Key[]; unselect: Key[] }) => {
+                const newSelectedKeysMap = keysToMap(selectedKeys);
+                each(select, item => (newSelectedKeysMap[item] = true));
+                each(unselect, item => delete newSelectedKeysMap[item]);
+                onChange(Object.keys(newSelectedKeysMap));
+            },
+            [onChange, selectedKeys]
+        );
+        useEffect(() => {
+            let exited = false;
+            (async () => {
+                if (!searchValue) {
+                    setDataSourceAfterSearch(dataSource);
+                    setCount(null);
+                    setEmpty(false);
+                    setLoading(false);
+                    return;
+                }
+                const handler =
+                    typeof search === 'object' && search.handleSearch ? search.handleSearch : defaultSearchHandle;
+                setLoading(true);
+                const { dataSource: dataSourceAfterSearch, count, openKeys } = await handler(searchValue, dataSource);
+                // 中断未完成的操作
+                if (exited) return;
+                setLoading(false);
+                setDataSourceAfterSearch(dataSourceAfterSearch);
+                setCount(count);
+                setEmpty(count === 0);
+                if (openKeys) {
+                    onOpenKeysChange(openKeys);
+                }
+            })();
+            return () => {
+                exited = true;
+            };
+            // don't update search result when onOpenKeysChange change
+            // eslint-disable-next-line react-hooks/exhaustive-deps
+        }, [dataSource, search, searchValue]);
+
+        return (
+            <Search onSearch={handleSearch} empty={empty} count={count} loading={loading}>
+                <CommonTree
+                    dataSource={dataSourceAfterSearch}
+                    collapseProps={{
+                        ...restCollapseProps,
+                        openKeys,
+                        onChange: onOpenKeysChange
+                    }}
+                    selectedKeys={selectedKeys}
+                    onDiff={handleDiff}
+                    ref={ref}
+                    {...rest}
+                />
+            </Search>
+        );
+    }
+);
+
+const Tree = forwardRef(({ search, ...rest }: TreeProps, ref: Ref<TreeRef>) => {
+    // force delete onDiff to avoid developer use onDiff
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    delete (rest as any)['onDiff'];
+    if (search) {
+        return <SearchTree search={search} {...rest} ref={ref} />;
+    } else {
+        return <CommonTree {...rest} ref={ref} />;
+    }
+});
+
+export default React.memo(Tree);

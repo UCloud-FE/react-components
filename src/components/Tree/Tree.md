@@ -39,7 +39,7 @@ interface TreeData {
 
 ### 交互逻辑
 
-1. 全选、反选、取消选择 等内置方法不会影响禁用项目的勾选状态。
+1. 全选、反选、取消选择 等内置方法不会影响禁用项目的勾选状态
 2. 全选状态的展示与禁用项目无关
 3. 存在禁用选中项时会展示部分选中
 
@@ -71,10 +71,12 @@ interface TreeData {
 ```js {"codepath": "loadData.jsx"}
 ```
 
-<!-- #### search - 搜索
+#### search - 搜索
+
+使用 Promise search.handleSearch，来控制搜索 loading 状态，后触发的搜索搜索结果会覆盖之前的，内部已处理
 
 ```js {"codepath": "search.jsx"}
-``` -->
+```
 
 #### 大数据性能测试
 
