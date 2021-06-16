@@ -12,6 +12,8 @@ class ConfigProvider extends PureComponent {
         children: PropTypes.node,
         /** 控制全局的 forwardPopupContainer 属性，默认为 true，为 false 时默认关闭 datepicker、select、actionList 等内部的 forwardPopupContainer */
         forwardPopupContainer: PropTypes.bool,
+        /** 阻止 Form 组件的默认事件，避免在回车时触发页面提交 */
+        preventFormDefaultAction: PropTypes.bool,
         /** 提供时会使用 ThemeProvider 包裹 */
         theme: PropTypes.object,
         /** 提供时会使用 LocaleProvider 包裹 */
