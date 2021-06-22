@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.6](https://github.com/UCloud-FE/react-components/compare/v1.1.5...v1.1.6) (2021-06-22)
+
+### Features
+
+-   **Form:** add config to prevent default form action ([15f9fcb](https://github.com/UCloud-FE/react-components/commit/15f9fcb7a5817ec9306aa0a62a26b72b6fb888a0))
+-   **Tree:** add support of search ([e65211a](https://github.com/UCloud-FE/react-components/commit/e65211af96993b7343b3a8d42278fd826ac242d3))
+
 ### [1.1.5](https://github.com/UCloud-FE/react-components/compare/v1.1.4...v1.1.5) (2021-06-11)
 
 ### Features
