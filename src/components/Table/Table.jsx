@@ -988,8 +988,7 @@ class Table extends Component {
                   const expandedRowKeys = this.getExpandedRowKeys(dataSource, changedUnExpandedRowKeys);
 
                   return {
-                      expandedRowKeys,
-                      onExpand: this.onExpandHandler
+                      expandedRowKeys
                   };
               })();
 
@@ -1014,6 +1013,7 @@ class Table extends Component {
                         <PopupContainer ref={this.savePopupContainer} />
                         <RcTable
                             {...defaultExpandAllRowsProps}
+                            onExpand={this.onExpandHandler}
                             {...rest}
                             scroll={scroll}
                             tableLayout={tableLayout ? tableLayout : scroll && scroll.x ? 'fixed' : undefined}
