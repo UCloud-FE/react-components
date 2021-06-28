@@ -106,6 +106,13 @@ export const RowWrap = withProps({
 })(
     styled('div')(props => {
         const { type, gutter } = props;
+        let gutterHor = gutter;
+        let gutterVer = null;
+        if (Array.isArray(gutter)) {
+            [gutterHor, gutterVer] = gutter;
+        }
+        gutterHor = gutterHor / 2 || 0;
+        gutterVer = gutterVer / 2 || 0;
 
         return css`
             position: relative;
@@ -113,14 +120,42 @@ export const RowWrap = withProps({
             height: auto;
 
             ${type === 'flex' ? flexMixin : clearFixMixin};
-            margin-left: ${-(gutter / 2) + 'px'};
-            margin-right: ${-(gutter / 2) + 'px'};
+            ${
+                gutterHor
+                    ? css`
+                          margin-left: ${-gutterHor + 'px'};
+                          margin-right: ${-gutterHor + 'px'};
+                      `
+                    : null
+            }
+            ${
+                gutterVer
+                    ? css`
+                          margin-top: ${-gutterVer + 'px'};
+                          margin-bottom: ${-gutterVer + 'px'};
+                      `
+                    : null
+            }
             ${justifyMixin(props)};
             ${alignMixin(props)};
 
             > .${colPrefixCls} {
-                padding-left: ${gutter / 2 + 'px'};
-                padding-right: ${gutter / 2 + 'px'};
+                ${
+                    gutterHor
+                        ? css`
+                              padding-left: ${gutterHor + 'px'};
+                              padding-right: ${gutterHor + 'px'};
+                          `
+                        : null
+                }
+                ${
+                    gutterVer
+                        ? css`
+                              padding-top: ${gutterVer + 'px'};
+                              padding-bottom: ${gutterVer + 'px'};
+                          `
+                        : null
+                }
             }
         `;
     })
