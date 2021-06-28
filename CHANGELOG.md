@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.7](https://github.com/UCloud-FE/react-components/compare/v1.1.6...v1.1.7) (2021-06-28)
+
+### Features
+
+-   **All:** update all icon to svgicon ([823919b](https://github.com/UCloud-FE/react-components/commit/823919baaeaba049488970f94a5c9637e9702cbc))
+
+### Bug Fixes
+
+-   **Table:** fix onExpand not trigger bug ([5f80b49](https://github.com/UCloud-FE/react-components/commit/5f80b49a8b89850729e1a82cac29c4826180cdc3))
+
 ### [1.1.6](https://github.com/UCloud-FE/react-components/compare/v1.1.5...v1.1.6) (2021-06-22)
 
 ### Features
