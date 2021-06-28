@@ -28,7 +28,7 @@ import { SWrap, inputWrapCls, blockCls, inputPrefixCls, inputSuffixCls, clearCls
 
 const deprecatedLogForIcon = once(() => deprecatedLog('Input icon', 'suffix'));
 
-export type InputProps = {
+export interface InputProps {
     /**
      * @deprecated 使用 suffix 替换
      * 图标，传入 string 时为图标类型，也可直接传入图标组件
@@ -54,7 +54,11 @@ export type InputProps = {
         boxShadow?: string;
         background?: string;
     };
-};
+    /** @ignore */
+    onFocus?: InputHTMLAttributes<HTMLInputElement>['onFocus'];
+    /** @ignore */
+    onBlur?: InputHTMLAttributes<HTMLInputElement>['onBlur'];
+}
 
 export type InputRef = {
     /** input 焦点 */
