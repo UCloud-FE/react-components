@@ -12,6 +12,8 @@ class Icon extends PureComponent {
          * 自定义 icon
          */
         icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+        /** 同 Icon 组件 prefix */
+        prefix: PropTypes.string,
         /**
          * 样式风格
          */
@@ -30,8 +32,12 @@ class Icon extends PureComponent {
     };
     render() {
         // eslint-disable-next-line no-unused-vars
-        const { children, icon, ...rest } = this.props;
-        return <IconTagWrapper {...rest}>{typeof icon === 'string' ? <IconTag type={icon} /> : icon}</IconTagWrapper>;
+        const { children, icon, prefix, ...rest } = this.props;
+        return (
+            <IconTagWrapper {...rest}>
+                {typeof icon === 'string' ? <IconTag type={icon} prefix={prefix} /> : icon}
+            </IconTagWrapper>
+        );
     }
 }
 

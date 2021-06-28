@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import _ from 'lodash';
 
-import Icon from 'src/components/Icon';
+import SvgIcon from 'src/components/SvgIcon';
 import NumberInput from 'src/components/NumberInput';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
 
@@ -18,13 +18,13 @@ function isInteger(value) {
 }
 function defaultItemRender(page, type, element) {
     if (type === 'prev') {
-        return <Icon type="left" className={`${prefixCls}-prev-icon`} />;
+        return <SvgIcon type="arrow-left" className={`${prefixCls}-prev-icon`} />;
     }
     if (type === 'next') {
-        return <Icon type="right" className={`${prefixCls}-next-icon`} />;
+        return <SvgIcon type="arrow-right" className={`${prefixCls}-next-icon`} />;
     }
     if (type === 'jump-prev' || type === 'jump-next') {
-        return <Icon type="more-three" className={`${prefixCls}-jump-icon`} />;
+        return <SvgIcon type="ellipsis" className={`${prefixCls}-jump-icon`} />;
     }
     return element;
 }

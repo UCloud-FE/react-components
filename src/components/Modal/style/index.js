@@ -104,7 +104,7 @@ export const ModalWrap = withProps()(
                     height: 20px;
                     font-size: 20px;
                     cursor: pointer;
-                    color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
+                    fill: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
                 }
                 &-close-x {
                     display: none;

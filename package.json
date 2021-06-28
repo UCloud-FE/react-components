@@ -28,7 +28,7 @@
     "cm": "git-cz",
     "precommit": "lint-staged",
     "commitmsg": "commitlint -E GIT_PARAMS",
-    "build": "webpack --display-error-details",
+    "build": "webpack",
     "build:analyzer": "NODE_ENV=production ANALYZER=true npm run build -- --config webpack.dist.config.js",
     "build:lib": "babel src/ --extensions '.js,.jsx,.ts,.tsx' -d lib/ --ignore '**/__demo__/*','**/__tests__/*' && node build-index.js",
     "build:dist": "NODE_ENV=production npm run build -- --config webpack.dist.config.js",

@@ -251,7 +251,7 @@ exports[`ActionList demo -- actionList 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-72 {
+.emotion-107 {
   vertical-align: baseline;
 }
 
@@ -655,16 +655,26 @@ exports[`ActionList demo -- actionList 1`] = `
 .emotion-76 .uc-fe-numberinput-handler-up,
 .emotion-76 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -732,12 +742,11 @@ exports[`ActionList demo -- actionList 1`] = `
 
 .emotion-76 .uc-fe-numberinput-handler-up,
 .emotion-76 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-76 .uc-fe-numberinput-handler-up:hover,
@@ -755,6 +764,15 @@ exports[`ActionList demo -- actionList 1`] = `
   border-width: 1px 0 0 1px;
   bottom: 0;
   border-top-color: #c3cad9;
+}
+
+.emotion-72 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-111 > .uc-fe-combine-item,
@@ -819,7 +837,7 @@ exports[`ActionList demo -- actionList 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-72 {
+.emotion-107 {
   vertical-align: baseline;
 }
 
@@ -1223,16 +1241,26 @@ exports[`ActionList demo -- actionList 1`] = `
 .emotion-76 .uc-fe-numberinput-handler-up,
 .emotion-76 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -1300,12 +1328,11 @@ exports[`ActionList demo -- actionList 1`] = `
 
 .emotion-76 .uc-fe-numberinput-handler-up,
 .emotion-76 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-76 .uc-fe-numberinput-handler-up:hover,
@@ -1323,6 +1350,15 @@ exports[`ActionList demo -- actionList 1`] = `
   border-width: 1px 0 0 1px;
   bottom: 0;
   border-top-color: #c3cad9;
+}
+
+.emotion-72 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 <div>
@@ -1579,17 +1615,29 @@ exports[`ActionList demo -- actionList 1`] = `
               class="uc-fe-numberinput-handler-up"
               unselectable="unselectable"
             >
-              <i
-                class="uc-fe-icon icon__caret-up emotion-72 emotion-73"
-              />
+              <svg
+                class=" emotion-72 emotion-4"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+                />
+              </svg>
             </span>
             <span
               class="uc-fe-numberinput-handler-down"
               unselectable="unselectable"
             >
-              <i
-                class="uc-fe-icon icon__caret-down emotion-72 emotion-73"
-              />
+              <svg
+                class=" emotion-72 emotion-4"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+                />
+              </svg>
             </span>
           </div>
           <div
@@ -1627,17 +1675,29 @@ exports[`ActionList demo -- actionList 1`] = `
               class="uc-fe-numberinput-handler-up"
               unselectable="unselectable"
             >
-              <i
-                class="uc-fe-icon icon__caret-up emotion-72 emotion-73"
-              />
+              <svg
+                class=" emotion-72 emotion-4"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+                />
+              </svg>
             </span>
             <span
               class="uc-fe-numberinput-handler-down"
               unselectable="unselectable"
             >
-              <i
-                class="uc-fe-icon icon__caret-down emotion-72 emotion-73"
-              />
+              <svg
+                class=" emotion-72 emotion-4"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+                />
+              </svg>
             </span>
           </div>
           <div
@@ -1700,7 +1760,7 @@ exports[`ActionList demo -- actionList 1`] = `
           type="button"
         >
           <i
-            class="uc-fe-icon icon__ellipsis uc-fe-button-icon emotion-72 emotion-73"
+            class="uc-fe-icon icon__ellipsis uc-fe-button-icon emotion-107 emotion-108"
           />
         </button>
       </div>

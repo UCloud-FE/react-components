@@ -112,7 +112,12 @@ exports[`Pagination demo -- pageSize 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-10 {
@@ -179,7 +184,12 @@ exports[`Pagination demo -- pageSize 1`] = `
 }
 
 .emotion-5 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
   position: absolute;
   right: 8px;
   top: 50%;
@@ -297,7 +307,12 @@ exports[`Pagination demo -- pageSize 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-10 {
@@ -364,7 +379,12 @@ exports[`Pagination demo -- pageSize 1`] = `
 }
 
 .emotion-5 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
   position: absolute;
   right: 8px;
   top: 50%;
@@ -384,9 +404,16 @@ exports[`Pagination demo -- pageSize 1`] = `
         class="uc-fe-pagination-disabled uc-fe-pagination-prev"
         title="上一页"
       >
-        <i
-          class="uc-fe-icon icon__left uc-fe-pagination-prev-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-prev-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="rotate(90 12 12)"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-1 uc-fe-pagination-item-active"
@@ -439,9 +466,16 @@ exports[`Pagination demo -- pageSize 1`] = `
         tabindex="0"
         title="下一页"
       >
-        <i
-          class="uc-fe-icon icon__right uc-fe-pagination-next-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-next-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="matrix(0 1 1 0 0 0)"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-options"
@@ -459,9 +493,16 @@ exports[`Pagination demo -- pageSize 1`] = `
             >
               20 条/页
             </div>
-            <i
-              class="uc-fe-icon icon__down emotion-4 emotion-5 emotion-1"
-            />
+            <svg
+              class="emotion-4 emotion-5 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+                transform="matrix(-1 0 0 1 24 0)"
+              />
+            </svg>
           </button>
         </div>
       </li>
@@ -479,9 +520,16 @@ exports[`Pagination demo -- pageSize 1`] = `
         class="uc-fe-pagination-disabled uc-fe-pagination-prev"
         title="上一页"
       >
-        <i
-          class="uc-fe-icon icon__left uc-fe-pagination-prev-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-prev-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="rotate(90 12 12)"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-1 uc-fe-pagination-item-active"
@@ -534,9 +582,16 @@ exports[`Pagination demo -- pageSize 1`] = `
         tabindex="0"
         title="下一页"
       >
-        <i
-          class="uc-fe-icon icon__right uc-fe-pagination-next-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-next-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="matrix(0 1 1 0 0 0)"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-options"
@@ -554,9 +609,16 @@ exports[`Pagination demo -- pageSize 1`] = `
             >
               20 条/页
             </div>
-            <i
-              class="uc-fe-icon icon__down emotion-4 emotion-5 emotion-1"
-            />
+            <svg
+              class="emotion-4 emotion-5 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+                transform="matrix(-1 0 0 1 24 0)"
+              />
+            </svg>
           </button>
         </div>
       </li>
@@ -677,7 +739,12 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-12 {
@@ -744,7 +811,12 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
 }
 
 .emotion-7 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
   position: absolute;
   right: 8px;
   top: 50%;
@@ -862,7 +934,12 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-12 {
@@ -929,7 +1006,12 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
 }
 
 .emotion-7 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
   position: absolute;
   right: 8px;
   top: 50%;
@@ -949,9 +1031,16 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
         class="uc-fe-pagination-disabled uc-fe-pagination-prev"
         title="上一页"
       >
-        <i
-          class="uc-fe-icon icon__left uc-fe-pagination-prev-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-prev-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="rotate(90 12 12)"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-1 uc-fe-pagination-item-active"
@@ -1003,9 +1092,15 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
         tabindex="0"
         title="向后 5 页"
       >
-        <i
-          class="uc-fe-icon icon__more-three uc-fe-pagination-jump-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-jump-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12,10 C13.1045695,10 14,10.8954305 14,12 C14,13.1045695 13.1045695,14 12,14 C10.8954305,14 10,13.1045695 10,12 C10,10.8954305 10.8954305,10 12,10 Z M5,10 C6.1045695,10 7,10.8954305 7,12 C7,13.1045695 6.1045695,14 5,14 C3.8954305,14 3,13.1045695 3,12 C3,10.8954305 3.8954305,10 5,10 Z M19,10 C20.1045695,10 21,10.8954305 21,12 C21,13.1045695 20.1045695,14 19,14 C17.8954305,14 17,13.1045695 17,12 C17,10.8954305 17.8954305,10 19,10 Z"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-10"
@@ -1022,9 +1117,16 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
         tabindex="0"
         title="下一页"
       >
-        <i
-          class="uc-fe-icon icon__right uc-fe-pagination-next-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-next-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="matrix(0 1 1 0 0 0)"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-options"
@@ -1042,9 +1144,16 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
             >
               10 条/页
             </div>
-            <i
-              class="uc-fe-icon icon__down emotion-6 emotion-7 emotion-1"
-            />
+            <svg
+              class="emotion-6 emotion-7 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+                transform="matrix(-1 0 0 1 24 0)"
+              />
+            </svg>
           </button>
         </div>
       </li>
@@ -1062,9 +1171,16 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
         class="uc-fe-pagination-disabled uc-fe-pagination-prev"
         title="上一页"
       >
-        <i
-          class="uc-fe-icon icon__left uc-fe-pagination-prev-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-prev-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="rotate(90 12 12)"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-1 uc-fe-pagination-item-active"
@@ -1116,9 +1232,15 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
         tabindex="0"
         title="向后 5 页"
       >
-        <i
-          class="uc-fe-icon icon__more-three uc-fe-pagination-jump-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-jump-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12,10 C13.1045695,10 14,10.8954305 14,12 C14,13.1045695 13.1045695,14 12,14 C10.8954305,14 10,13.1045695 10,12 C10,10.8954305 10.8954305,10 12,10 Z M5,10 C6.1045695,10 7,10.8954305 7,12 C7,13.1045695 6.1045695,14 5,14 C3.8954305,14 3,13.1045695 3,12 C3,10.8954305 3.8954305,10 5,10 Z M19,10 C20.1045695,10 21,10.8954305 21,12 C21,13.1045695 20.1045695,14 19,14 C17.8954305,14 17,13.1045695 17,12 C17,10.8954305 17.8954305,10 19,10 Z"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-10"
@@ -1135,9 +1257,16 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
         tabindex="0"
         title="下一页"
       >
-        <i
-          class="uc-fe-icon icon__right uc-fe-pagination-next-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-next-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="matrix(0 1 1 0 0 0)"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-options"
@@ -1155,9 +1284,16 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
             >
               10 条/页
             </div>
-            <i
-              class="uc-fe-icon icon__down emotion-6 emotion-7 emotion-1"
-            />
+            <svg
+              class="emotion-6 emotion-7 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+                transform="matrix(-1 0 0 1 24 0)"
+              />
+            </svg>
           </button>
         </div>
       </li>
@@ -1278,7 +1414,12 @@ exports[`Pagination demo -- pagination 1`] = `
 }
 
 .emotion-109 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-121 .uc-fe-form-item {
@@ -1665,16 +1806,26 @@ exports[`Pagination demo -- pagination 1`] = `
 .emotion-113 .uc-fe-numberinput-handler-up,
 .emotion-113 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -1742,12 +1893,11 @@ exports[`Pagination demo -- pagination 1`] = `
 
 .emotion-113 .uc-fe-numberinput-handler-up,
 .emotion-113 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-113 .uc-fe-numberinput-handler-up:hover,
@@ -1878,7 +2028,12 @@ exports[`Pagination demo -- pagination 1`] = `
 }
 
 .emotion-109 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-121 .uc-fe-form-item {
@@ -2265,16 +2420,26 @@ exports[`Pagination demo -- pagination 1`] = `
 .emotion-113 .uc-fe-numberinput-handler-up,
 .emotion-113 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -2342,12 +2507,11 @@ exports[`Pagination demo -- pagination 1`] = `
 
 .emotion-113 .uc-fe-numberinput-handler-up,
 .emotion-113 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-113 .uc-fe-numberinput-handler-up:hover,
@@ -2779,17 +2943,29 @@ exports[`Pagination demo -- pagination 1`] = `
               class="uc-fe-numberinput-handler-up"
               unselectable="unselectable"
             >
-              <i
-                class="uc-fe-icon icon__caret-up emotion-109 emotion-110"
-              />
+              <svg
+                class=" emotion-109 emotion-4"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+                />
+              </svg>
             </span>
             <span
               class="uc-fe-numberinput-handler-down"
               unselectable="unselectable"
             >
-              <i
-                class="uc-fe-icon icon__caret-down emotion-109 emotion-110"
-              />
+              <svg
+                class=" emotion-109 emotion-4"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+                />
+              </svg>
             </span>
           </div>
           <div
@@ -2818,9 +2994,16 @@ exports[`Pagination demo -- pagination 1`] = `
         aria-disabled="true"
         class="uc-fe-pagination-disabled uc-fe-pagination-prev"
       >
-        <i
-          class="uc-fe-icon icon__left uc-fe-pagination-prev-icon emotion-109 emotion-110"
-        />
+        <svg
+          class="uc-fe-pagination-prev-icon emotion-109 emotion-4"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="rotate(90 12 12)"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-1 uc-fe-pagination-item-active"
@@ -2867,9 +3050,16 @@ exports[`Pagination demo -- pagination 1`] = `
         class=" uc-fe-pagination-next"
         tabindex="0"
       >
-        <i
-          class="uc-fe-icon icon__right uc-fe-pagination-next-icon emotion-109 emotion-110"
-        />
+        <svg
+          class="uc-fe-pagination-next-icon emotion-109 emotion-4"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="matrix(0 1 1 0 0 0)"
+          />
+        </svg>
       </li>
     </ul>
   </div>
@@ -2988,7 +3178,12 @@ exports[`Pagination demo -- showLessItems 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-6 {
@@ -3102,7 +3297,12 @@ exports[`Pagination demo -- showLessItems 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 <div>
@@ -3118,9 +3318,16 @@ exports[`Pagination demo -- showLessItems 1`] = `
         class="uc-fe-pagination-disabled uc-fe-pagination-prev"
         title="上一页"
       >
-        <i
-          class="uc-fe-icon icon__left uc-fe-pagination-prev-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-prev-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="rotate(90 12 12)"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-1 uc-fe-pagination-item-active"
@@ -3172,9 +3379,15 @@ exports[`Pagination demo -- showLessItems 1`] = `
         tabindex="0"
         title="向后 5 页"
       >
-        <i
-          class="uc-fe-icon icon__more-three uc-fe-pagination-jump-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-jump-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12,10 C13.1045695,10 14,10.8954305 14,12 C14,13.1045695 13.1045695,14 12,14 C10.8954305,14 10,13.1045695 10,12 C10,10.8954305 10.8954305,10 12,10 Z M5,10 C6.1045695,10 7,10.8954305 7,12 C7,13.1045695 6.1045695,14 5,14 C3.8954305,14 3,13.1045695 3,12 C3,10.8954305 3.8954305,10 5,10 Z M19,10 C20.1045695,10 21,10.8954305 21,12 C21,13.1045695 20.1045695,14 19,14 C17.8954305,14 17,13.1045695 17,12 C17,10.8954305 17.8954305,10 19,10 Z"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-10"
@@ -3191,9 +3404,16 @@ exports[`Pagination demo -- showLessItems 1`] = `
         tabindex="0"
         title="下一页"
       >
-        <i
-          class="uc-fe-icon icon__right uc-fe-pagination-next-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-next-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="matrix(0 1 1 0 0 0)"
+          />
+        </svg>
       </li>
     </ul>
   </div>
@@ -3209,9 +3429,16 @@ exports[`Pagination demo -- showLessItems 1`] = `
         class="uc-fe-pagination-disabled uc-fe-pagination-prev"
         title="上一页"
       >
-        <i
-          class="uc-fe-icon icon__left uc-fe-pagination-prev-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-prev-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="rotate(90 12 12)"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-1 uc-fe-pagination-item-active"
@@ -3245,9 +3472,15 @@ exports[`Pagination demo -- showLessItems 1`] = `
         tabindex="0"
         title="向后 3 页"
       >
-        <i
-          class="uc-fe-icon icon__more-three uc-fe-pagination-jump-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-jump-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12,10 C13.1045695,10 14,10.8954305 14,12 C14,13.1045695 13.1045695,14 12,14 C10.8954305,14 10,13.1045695 10,12 C10,10.8954305 10.8954305,10 12,10 Z M5,10 C6.1045695,10 7,10.8954305 7,12 C7,13.1045695 6.1045695,14 5,14 C3.8954305,14 3,13.1045695 3,12 C3,10.8954305 3.8954305,10 5,10 Z M19,10 C20.1045695,10 21,10.8954305 21,12 C21,13.1045695 20.1045695,14 19,14 C17.8954305,14 17,13.1045695 17,12 C17,10.8954305 17.8954305,10 19,10 Z"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-10"
@@ -3264,9 +3497,16 @@ exports[`Pagination demo -- showLessItems 1`] = `
         tabindex="0"
         title="下一页"
       >
-        <i
-          class="uc-fe-icon icon__right uc-fe-pagination-next-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-next-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="matrix(0 1 1 0 0 0)"
+          />
+        </svg>
       </li>
     </ul>
   </div>
@@ -3385,7 +3625,12 @@ exports[`Pagination demo -- showPrevNextJumpers 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-6 {
@@ -3499,7 +3744,12 @@ exports[`Pagination demo -- showPrevNextJumpers 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 <div>
@@ -3515,9 +3765,16 @@ exports[`Pagination demo -- showPrevNextJumpers 1`] = `
         class="uc-fe-pagination-disabled uc-fe-pagination-prev"
         title="上一页"
       >
-        <i
-          class="uc-fe-icon icon__left uc-fe-pagination-prev-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-prev-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="rotate(90 12 12)"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-1 uc-fe-pagination-item-active"
@@ -3569,9 +3826,15 @@ exports[`Pagination demo -- showPrevNextJumpers 1`] = `
         tabindex="0"
         title="向后 5 页"
       >
-        <i
-          class="uc-fe-icon icon__more-three uc-fe-pagination-jump-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-jump-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12,10 C13.1045695,10 14,10.8954305 14,12 C14,13.1045695 13.1045695,14 12,14 C10.8954305,14 10,13.1045695 10,12 C10,10.8954305 10.8954305,10 12,10 Z M5,10 C6.1045695,10 7,10.8954305 7,12 C7,13.1045695 6.1045695,14 5,14 C3.8954305,14 3,13.1045695 3,12 C3,10.8954305 3.8954305,10 5,10 Z M19,10 C20.1045695,10 21,10.8954305 21,12 C21,13.1045695 20.1045695,14 19,14 C17.8954305,14 17,13.1045695 17,12 C17,10.8954305 17.8954305,10 19,10 Z"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-10"
@@ -3588,9 +3851,16 @@ exports[`Pagination demo -- showPrevNextJumpers 1`] = `
         tabindex="0"
         title="下一页"
       >
-        <i
-          class="uc-fe-icon icon__right uc-fe-pagination-next-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-next-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="matrix(0 1 1 0 0 0)"
+          />
+        </svg>
       </li>
     </ul>
   </div>
@@ -3606,9 +3876,16 @@ exports[`Pagination demo -- showPrevNextJumpers 1`] = `
         class="uc-fe-pagination-disabled uc-fe-pagination-prev"
         title="上一页"
       >
-        <i
-          class="uc-fe-icon icon__left uc-fe-pagination-prev-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-prev-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="rotate(90 12 12)"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-1 uc-fe-pagination-item-active"
@@ -3661,9 +3938,16 @@ exports[`Pagination demo -- showPrevNextJumpers 1`] = `
         tabindex="0"
         title="下一页"
       >
-        <i
-          class="uc-fe-icon icon__right uc-fe-pagination-next-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-next-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="matrix(0 1 1 0 0 0)"
+          />
+        </svg>
       </li>
     </ul>
   </div>
@@ -3782,7 +4066,12 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-14 {
@@ -3820,16 +4109,26 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
 .emotion-14 .uc-fe-numberinput-handler-up,
 .emotion-14 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -3893,11 +4192,10 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
 
 .emotion-14 .uc-fe-numberinput-handler-up,
 .emotion-14 .uc-fe-numberinput-handler-down {
-  text-align: center;
-  top: 0;
   height: 28px;
   width: 28px;
-  line-height: 28px;
+  top: 0;
+  text-align: center;
   border-width: 1px;
 }
 
@@ -4073,7 +4371,12 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-14 {
@@ -4111,16 +4414,26 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
 .emotion-14 .uc-fe-numberinput-handler-up,
 .emotion-14 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -4184,11 +4497,10 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
 
 .emotion-14 .uc-fe-numberinput-handler-up,
 .emotion-14 .uc-fe-numberinput-handler-down {
-  text-align: center;
-  top: 0;
   height: 28px;
   width: 28px;
-  line-height: 28px;
+  top: 0;
+  text-align: center;
   border-width: 1px;
 }
 
@@ -4266,9 +4578,16 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
         class="uc-fe-pagination-disabled uc-fe-pagination-prev"
         title="上一页"
       >
-        <i
-          class="uc-fe-icon icon__left uc-fe-pagination-prev-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-prev-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="rotate(90 12 12)"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-1 uc-fe-pagination-item-active"
@@ -4320,9 +4639,15 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
         tabindex="0"
         title="向后 5 页"
       >
-        <i
-          class="uc-fe-icon icon__more-three uc-fe-pagination-jump-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-jump-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12,10 C13.1045695,10 14,10.8954305 14,12 C14,13.1045695 13.1045695,14 12,14 C10.8954305,14 10,13.1045695 10,12 C10,10.8954305 10.8954305,10 12,10 Z M5,10 C6.1045695,10 7,10.8954305 7,12 C7,13.1045695 6.1045695,14 5,14 C3.8954305,14 3,13.1045695 3,12 C3,10.8954305 3.8954305,10 5,10 Z M19,10 C20.1045695,10 21,10.8954305 21,12 C21,13.1045695 20.1045695,14 19,14 C17.8954305,14 17,13.1045695 17,12 C17,10.8954305 17.8954305,10 19,10 Z"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-10"
@@ -4339,9 +4664,16 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
         tabindex="0"
         title="下一页"
       >
-        <i
-          class="uc-fe-icon icon__right uc-fe-pagination-next-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-next-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="matrix(0 1 1 0 0 0)"
+          />
+        </svg>
       </li>
     </ul>
   </div>
@@ -4357,9 +4689,16 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
         class="uc-fe-pagination-disabled uc-fe-pagination-prev"
         title="上一页"
       >
-        <i
-          class="uc-fe-icon icon__left uc-fe-pagination-prev-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-prev-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="rotate(90 12 12)"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-1 uc-fe-pagination-item-active"
@@ -4411,9 +4750,15 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
         tabindex="0"
         title="向后 5 页"
       >
-        <i
-          class="uc-fe-icon icon__more-three uc-fe-pagination-jump-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-jump-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12,10 C13.1045695,10 14,10.8954305 14,12 C14,13.1045695 13.1045695,14 12,14 C10.8954305,14 10,13.1045695 10,12 C10,10.8954305 10.8954305,10 12,10 Z M5,10 C6.1045695,10 7,10.8954305 7,12 C7,13.1045695 6.1045695,14 5,14 C3.8954305,14 3,13.1045695 3,12 C3,10.8954305 3.8954305,10 5,10 Z M19,10 C20.1045695,10 21,10.8954305 21,12 C21,13.1045695 20.1045695,14 19,14 C17.8954305,14 17,13.1045695 17,12 C17,10.8954305 17.8954305,10 19,10 Z"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-10"
@@ -4430,9 +4775,16 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
         tabindex="0"
         title="下一页"
       >
-        <i
-          class="uc-fe-icon icon__right uc-fe-pagination-next-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-next-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="matrix(0 1 1 0 0 0)"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-options"
@@ -4481,9 +4833,16 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
         class="uc-fe-pagination-disabled uc-fe-pagination-prev"
         title="上一页"
       >
-        <i
-          class="uc-fe-icon icon__left uc-fe-pagination-prev-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-prev-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="rotate(90 12 12)"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-1 uc-fe-pagination-item-active"
@@ -4535,9 +4894,15 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
         tabindex="0"
         title="向后 5 页"
       >
-        <i
-          class="uc-fe-icon icon__more-three uc-fe-pagination-jump-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-jump-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12,10 C13.1045695,10 14,10.8954305 14,12 C14,13.1045695 13.1045695,14 12,14 C10.8954305,14 10,13.1045695 10,12 C10,10.8954305 10.8954305,10 12,10 Z M5,10 C6.1045695,10 7,10.8954305 7,12 C7,13.1045695 6.1045695,14 5,14 C3.8954305,14 3,13.1045695 3,12 C3,10.8954305 3.8954305,10 5,10 Z M19,10 C20.1045695,10 21,10.8954305 21,12 C21,13.1045695 20.1045695,14 19,14 C17.8954305,14 17,13.1045695 17,12 C17,10.8954305 17.8954305,10 19,10 Z"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-10"
@@ -4554,9 +4919,16 @@ exports[`Pagination demo -- showQuickJumper 1`] = `
         tabindex="0"
         title="下一页"
       >
-        <i
-          class="uc-fe-icon icon__right uc-fe-pagination-next-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-next-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="matrix(0 1 1 0 0 0)"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-options"
@@ -4714,7 +5086,12 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-20 {
@@ -4781,7 +5158,12 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
 }
 
 .emotion-15 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
   position: absolute;
   right: 8px;
   top: 50%;
@@ -4899,7 +5281,12 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-20 {
@@ -4966,7 +5353,12 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
 }
 
 .emotion-15 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
   position: absolute;
   right: 8px;
   top: 50%;
@@ -4986,9 +5378,16 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
         class="uc-fe-pagination-disabled uc-fe-pagination-prev"
         title="上一页"
       >
-        <i
-          class="uc-fe-icon icon__left uc-fe-pagination-prev-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-prev-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="rotate(90 12 12)"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-1 uc-fe-pagination-item-active"
@@ -5040,9 +5439,15 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
         tabindex="0"
         title="向后 5 页"
       >
-        <i
-          class="uc-fe-icon icon__more-three uc-fe-pagination-jump-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-jump-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12,10 C13.1045695,10 14,10.8954305 14,12 C14,13.1045695 13.1045695,14 12,14 C10.8954305,14 10,13.1045695 10,12 C10,10.8954305 10.8954305,10 12,10 Z M5,10 C6.1045695,10 7,10.8954305 7,12 C7,13.1045695 6.1045695,14 5,14 C3.8954305,14 3,13.1045695 3,12 C3,10.8954305 3.8954305,10 5,10 Z M19,10 C20.1045695,10 21,10.8954305 21,12 C21,13.1045695 20.1045695,14 19,14 C17.8954305,14 17,13.1045695 17,12 C17,10.8954305 17.8954305,10 19,10 Z"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-10"
@@ -5059,9 +5464,16 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
         tabindex="0"
         title="下一页"
       >
-        <i
-          class="uc-fe-icon icon__right uc-fe-pagination-next-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-next-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="matrix(0 1 1 0 0 0)"
+          />
+        </svg>
       </li>
     </ul>
   </div>
@@ -5077,9 +5489,16 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
         class="uc-fe-pagination-disabled uc-fe-pagination-prev"
         title="上一页"
       >
-        <i
-          class="uc-fe-icon icon__left uc-fe-pagination-prev-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-prev-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="rotate(90 12 12)"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-1 uc-fe-pagination-item-active"
@@ -5131,9 +5550,15 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
         tabindex="0"
         title="向后 5 页"
       >
-        <i
-          class="uc-fe-icon icon__more-three uc-fe-pagination-jump-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-jump-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12,10 C13.1045695,10 14,10.8954305 14,12 C14,13.1045695 13.1045695,14 12,14 C10.8954305,14 10,13.1045695 10,12 C10,10.8954305 10.8954305,10 12,10 Z M5,10 C6.1045695,10 7,10.8954305 7,12 C7,13.1045695 6.1045695,14 5,14 C3.8954305,14 3,13.1045695 3,12 C3,10.8954305 3.8954305,10 5,10 Z M19,10 C20.1045695,10 21,10.8954305 21,12 C21,13.1045695 20.1045695,14 19,14 C17.8954305,14 17,13.1045695 17,12 C17,10.8954305 17.8954305,10 19,10 Z"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-10"
@@ -5150,9 +5575,16 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
         tabindex="0"
         title="下一页"
       >
-        <i
-          class="uc-fe-icon icon__right uc-fe-pagination-next-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-next-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="matrix(0 1 1 0 0 0)"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-options"
@@ -5170,9 +5602,16 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
             >
               10 条/页
             </div>
-            <i
-              class="uc-fe-icon icon__down emotion-14 emotion-15 emotion-1"
-            />
+            <svg
+              class="emotion-14 emotion-15 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+                transform="matrix(-1 0 0 1 24 0)"
+              />
+            </svg>
           </button>
         </div>
       </li>
@@ -5293,7 +5732,12 @@ exports[`Pagination demo -- showTitle 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-6 {
@@ -5407,7 +5851,12 @@ exports[`Pagination demo -- showTitle 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 <div>
@@ -5423,9 +5872,16 @@ exports[`Pagination demo -- showTitle 1`] = `
         class="uc-fe-pagination-disabled uc-fe-pagination-prev"
         title="上一页"
       >
-        <i
-          class="uc-fe-icon icon__left uc-fe-pagination-prev-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-prev-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="rotate(90 12 12)"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-1 uc-fe-pagination-item-active"
@@ -5477,9 +5933,15 @@ exports[`Pagination demo -- showTitle 1`] = `
         tabindex="0"
         title="向后 5 页"
       >
-        <i
-          class="uc-fe-icon icon__more-three uc-fe-pagination-jump-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-jump-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12,10 C13.1045695,10 14,10.8954305 14,12 C14,13.1045695 13.1045695,14 12,14 C10.8954305,14 10,13.1045695 10,12 C10,10.8954305 10.8954305,10 12,10 Z M5,10 C6.1045695,10 7,10.8954305 7,12 C7,13.1045695 6.1045695,14 5,14 C3.8954305,14 3,13.1045695 3,12 C3,10.8954305 3.8954305,10 5,10 Z M19,10 C20.1045695,10 21,10.8954305 21,12 C21,13.1045695 20.1045695,14 19,14 C17.8954305,14 17,13.1045695 17,12 C17,10.8954305 17.8954305,10 19,10 Z"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-10"
@@ -5496,9 +5958,16 @@ exports[`Pagination demo -- showTitle 1`] = `
         tabindex="0"
         title="下一页"
       >
-        <i
-          class="uc-fe-icon icon__right uc-fe-pagination-next-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-next-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="matrix(0 1 1 0 0 0)"
+          />
+        </svg>
       </li>
     </ul>
   </div>
@@ -5513,9 +5982,16 @@ exports[`Pagination demo -- showTitle 1`] = `
         aria-disabled="true"
         class="uc-fe-pagination-disabled uc-fe-pagination-prev"
       >
-        <i
-          class="uc-fe-icon icon__left uc-fe-pagination-prev-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-prev-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="rotate(90 12 12)"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-1 uc-fe-pagination-item-active"
@@ -5561,9 +6037,15 @@ exports[`Pagination demo -- showTitle 1`] = `
         class="uc-fe-pagination-jump-next"
         tabindex="0"
       >
-        <i
-          class="uc-fe-icon icon__more-three uc-fe-pagination-jump-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-jump-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12,10 C13.1045695,10 14,10.8954305 14,12 C14,13.1045695 13.1045695,14 12,14 C10.8954305,14 10,13.1045695 10,12 C10,10.8954305 10.8954305,10 12,10 Z M5,10 C6.1045695,10 7,10.8954305 7,12 C7,13.1045695 6.1045695,14 5,14 C3.8954305,14 3,13.1045695 3,12 C3,10.8954305 3.8954305,10 5,10 Z M19,10 C20.1045695,10 21,10.8954305 21,12 C21,13.1045695 20.1045695,14 19,14 C17.8954305,14 17,13.1045695 17,12 C17,10.8954305 17.8954305,10 19,10 Z"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-10"
@@ -5578,9 +6060,16 @@ exports[`Pagination demo -- showTitle 1`] = `
         class=" uc-fe-pagination-next"
         tabindex="0"
       >
-        <i
-          class="uc-fe-icon icon__right uc-fe-pagination-next-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-next-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="matrix(0 1 1 0 0 0)"
+          />
+        </svg>
       </li>
     </ul>
   </div>
@@ -5699,7 +6188,12 @@ exports[`Pagination demo -- showTotal 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-6 {
@@ -5813,7 +6307,12 @@ exports[`Pagination demo -- showTotal 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 <div>
@@ -5834,9 +6333,16 @@ exports[`Pagination demo -- showTotal 1`] = `
         class="uc-fe-pagination-disabled uc-fe-pagination-prev"
         title="上一页"
       >
-        <i
-          class="uc-fe-icon icon__left uc-fe-pagination-prev-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-prev-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="rotate(90 12 12)"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-1 uc-fe-pagination-item-active"
@@ -5888,9 +6394,15 @@ exports[`Pagination demo -- showTotal 1`] = `
         tabindex="0"
         title="向后 5 页"
       >
-        <i
-          class="uc-fe-icon icon__more-three uc-fe-pagination-jump-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-jump-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12,10 C13.1045695,10 14,10.8954305 14,12 C14,13.1045695 13.1045695,14 12,14 C10.8954305,14 10,13.1045695 10,12 C10,10.8954305 10.8954305,10 12,10 Z M5,10 C6.1045695,10 7,10.8954305 7,12 C7,13.1045695 6.1045695,14 5,14 C3.8954305,14 3,13.1045695 3,12 C3,10.8954305 3.8954305,10 5,10 Z M19,10 C20.1045695,10 21,10.8954305 21,12 C21,13.1045695 20.1045695,14 19,14 C17.8954305,14 17,13.1045695 17,12 C17,10.8954305 17.8954305,10 19,10 Z"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-10"
@@ -5907,9 +6419,16 @@ exports[`Pagination demo -- showTotal 1`] = `
         tabindex="0"
         title="下一页"
       >
-        <i
-          class="uc-fe-icon icon__right uc-fe-pagination-next-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-next-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="matrix(0 1 1 0 0 0)"
+          />
+        </svg>
       </li>
     </ul>
   </div>
@@ -5930,9 +6449,16 @@ exports[`Pagination demo -- showTotal 1`] = `
         class="uc-fe-pagination-disabled uc-fe-pagination-prev"
         title="上一页"
       >
-        <i
-          class="uc-fe-icon icon__left uc-fe-pagination-prev-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-prev-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="rotate(90 12 12)"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-1 uc-fe-pagination-item-active"
@@ -5984,9 +6510,15 @@ exports[`Pagination demo -- showTotal 1`] = `
         tabindex="0"
         title="向后 5 页"
       >
-        <i
-          class="uc-fe-icon icon__more-three uc-fe-pagination-jump-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-jump-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12,10 C13.1045695,10 14,10.8954305 14,12 C14,13.1045695 13.1045695,14 12,14 C10.8954305,14 10,13.1045695 10,12 C10,10.8954305 10.8954305,10 12,10 Z M5,10 C6.1045695,10 7,10.8954305 7,12 C7,13.1045695 6.1045695,14 5,14 C3.8954305,14 3,13.1045695 3,12 C3,10.8954305 3.8954305,10 5,10 Z M19,10 C20.1045695,10 21,10.8954305 21,12 C21,13.1045695 20.1045695,14 19,14 C17.8954305,14 17,13.1045695 17,12 C17,10.8954305 17.8954305,10 19,10 Z"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-10"
@@ -6003,9 +6535,16 @@ exports[`Pagination demo -- showTotal 1`] = `
         tabindex="0"
         title="下一页"
       >
-        <i
-          class="uc-fe-icon icon__right uc-fe-pagination-next-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-next-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="matrix(0 1 1 0 0 0)"
+          />
+        </svg>
       </li>
     </ul>
   </div>
@@ -6124,7 +6663,12 @@ exports[`Pagination demo -- simple 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-12 {
@@ -6160,16 +6704,26 @@ exports[`Pagination demo -- simple 1`] = `
 .emotion-12 .uc-fe-numberinput-handler-up,
 .emotion-12 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -6233,11 +6787,10 @@ exports[`Pagination demo -- simple 1`] = `
 
 .emotion-12 .uc-fe-numberinput-handler-up,
 .emotion-12 .uc-fe-numberinput-handler-down {
-  text-align: center;
-  top: 0;
   height: 28px;
   width: 28px;
-  line-height: 28px;
+  top: 0;
+  text-align: center;
   border-width: 1px;
 }
 
@@ -6369,7 +6922,12 @@ exports[`Pagination demo -- simple 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-12 {
@@ -6405,16 +6963,26 @@ exports[`Pagination demo -- simple 1`] = `
 .emotion-12 .uc-fe-numberinput-handler-up,
 .emotion-12 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -6478,11 +7046,10 @@ exports[`Pagination demo -- simple 1`] = `
 
 .emotion-12 .uc-fe-numberinput-handler-up,
 .emotion-12 .uc-fe-numberinput-handler-down {
-  text-align: center;
-  top: 0;
   height: 28px;
   width: 28px;
-  line-height: 28px;
+  top: 0;
+  text-align: center;
   border-width: 1px;
 }
 
@@ -6516,9 +7083,16 @@ exports[`Pagination demo -- simple 1`] = `
         class="uc-fe-pagination-disabled uc-fe-pagination-prev"
         title="上一页"
       >
-        <i
-          class="uc-fe-icon icon__left uc-fe-pagination-prev-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-prev-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="rotate(90 12 12)"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-1 uc-fe-pagination-item-active"
@@ -6570,9 +7144,15 @@ exports[`Pagination demo -- simple 1`] = `
         tabindex="0"
         title="向后 5 页"
       >
-        <i
-          class="uc-fe-icon icon__more-three uc-fe-pagination-jump-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-jump-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12,10 C13.1045695,10 14,10.8954305 14,12 C14,13.1045695 13.1045695,14 12,14 C10.8954305,14 10,13.1045695 10,12 C10,10.8954305 10.8954305,10 12,10 Z M5,10 C6.1045695,10 7,10.8954305 7,12 C7,13.1045695 6.1045695,14 5,14 C3.8954305,14 3,13.1045695 3,12 C3,10.8954305 3.8954305,10 5,10 Z M19,10 C20.1045695,10 21,10.8954305 21,12 C21,13.1045695 20.1045695,14 19,14 C17.8954305,14 17,13.1045695 17,12 C17,10.8954305 17.8954305,10 19,10 Z"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-10"
@@ -6589,9 +7169,16 @@ exports[`Pagination demo -- simple 1`] = `
         tabindex="0"
         title="下一页"
       >
-        <i
-          class="uc-fe-icon icon__right uc-fe-pagination-next-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-next-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="matrix(0 1 1 0 0 0)"
+          />
+        </svg>
       </li>
     </ul>
   </div>
@@ -6610,18 +7197,32 @@ exports[`Pagination demo -- simple 1`] = `
             class="uc-fe-numberinput-handler-up"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__right emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+                transform="matrix(0 1 1 0 0 0)"
+              />
+            </svg>
           </span>
           <span
             class="uc-fe-numberinput-handler-down uc-fe-numberinput-handler-disabled"
             disabled=""
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__left emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+                transform="rotate(90 12 12)"
+              />
+            </svg>
           </span>
         </div>
         <div
@@ -6763,7 +7364,12 @@ exports[`Pagination demo -- size 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-6 {
@@ -7097,7 +7703,12 @@ exports[`Pagination demo -- size 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-6 {
@@ -7333,9 +7944,16 @@ exports[`Pagination demo -- size 1`] = `
         class="uc-fe-pagination-disabled uc-fe-pagination-prev"
         title="上一页"
       >
-        <i
-          class="uc-fe-icon icon__left uc-fe-pagination-prev-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-prev-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="rotate(90 12 12)"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-1 uc-fe-pagination-item-active"
@@ -7387,9 +8005,15 @@ exports[`Pagination demo -- size 1`] = `
         tabindex="0"
         title="向后 5 页"
       >
-        <i
-          class="uc-fe-icon icon__more-three uc-fe-pagination-jump-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-jump-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12,10 C13.1045695,10 14,10.8954305 14,12 C14,13.1045695 13.1045695,14 12,14 C10.8954305,14 10,13.1045695 10,12 C10,10.8954305 10.8954305,10 12,10 Z M5,10 C6.1045695,10 7,10.8954305 7,12 C7,13.1045695 6.1045695,14 5,14 C3.8954305,14 3,13.1045695 3,12 C3,10.8954305 3.8954305,10 5,10 Z M19,10 C20.1045695,10 21,10.8954305 21,12 C21,13.1045695 20.1045695,14 19,14 C17.8954305,14 17,13.1045695 17,12 C17,10.8954305 17.8954305,10 19,10 Z"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-10"
@@ -7406,9 +8030,16 @@ exports[`Pagination demo -- size 1`] = `
         tabindex="0"
         title="下一页"
       >
-        <i
-          class="uc-fe-icon icon__right uc-fe-pagination-next-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-next-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="matrix(0 1 1 0 0 0)"
+          />
+        </svg>
       </li>
     </ul>
   </div>
@@ -7424,9 +8055,16 @@ exports[`Pagination demo -- size 1`] = `
         class="uc-fe-pagination-disabled uc-fe-pagination-prev"
         title="上一页"
       >
-        <i
-          class="uc-fe-icon icon__left uc-fe-pagination-prev-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-prev-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="rotate(90 12 12)"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-1 uc-fe-pagination-item-active"
@@ -7478,9 +8116,15 @@ exports[`Pagination demo -- size 1`] = `
         tabindex="0"
         title="向后 5 页"
       >
-        <i
-          class="uc-fe-icon icon__more-three uc-fe-pagination-jump-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-jump-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12,10 C13.1045695,10 14,10.8954305 14,12 C14,13.1045695 13.1045695,14 12,14 C10.8954305,14 10,13.1045695 10,12 C10,10.8954305 10.8954305,10 12,10 Z M5,10 C6.1045695,10 7,10.8954305 7,12 C7,13.1045695 6.1045695,14 5,14 C3.8954305,14 3,13.1045695 3,12 C3,10.8954305 3.8954305,10 5,10 Z M19,10 C20.1045695,10 21,10.8954305 21,12 C21,13.1045695 20.1045695,14 19,14 C17.8954305,14 17,13.1045695 17,12 C17,10.8954305 17.8954305,10 19,10 Z"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-10"
@@ -7497,9 +8141,16 @@ exports[`Pagination demo -- size 1`] = `
         tabindex="0"
         title="下一页"
       >
-        <i
-          class="uc-fe-icon icon__right uc-fe-pagination-next-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-next-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="matrix(0 1 1 0 0 0)"
+          />
+        </svg>
       </li>
     </ul>
   </div>
@@ -7515,9 +8166,16 @@ exports[`Pagination demo -- size 1`] = `
         class="uc-fe-pagination-disabled uc-fe-pagination-prev"
         title="上一页"
       >
-        <i
-          class="uc-fe-icon icon__left uc-fe-pagination-prev-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-prev-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="rotate(90 12 12)"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-1 uc-fe-pagination-item-active"
@@ -7569,9 +8227,15 @@ exports[`Pagination demo -- size 1`] = `
         tabindex="0"
         title="向后 5 页"
       >
-        <i
-          class="uc-fe-icon icon__more-three uc-fe-pagination-jump-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-jump-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12,10 C13.1045695,10 14,10.8954305 14,12 C14,13.1045695 13.1045695,14 12,14 C10.8954305,14 10,13.1045695 10,12 C10,10.8954305 10.8954305,10 12,10 Z M5,10 C6.1045695,10 7,10.8954305 7,12 C7,13.1045695 6.1045695,14 5,14 C3.8954305,14 3,13.1045695 3,12 C3,10.8954305 3.8954305,10 5,10 Z M19,10 C20.1045695,10 21,10.8954305 21,12 C21,13.1045695 20.1045695,14 19,14 C17.8954305,14 17,13.1045695 17,12 C17,10.8954305 17.8954305,10 19,10 Z"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-10"
@@ -7588,9 +8252,16 @@ exports[`Pagination demo -- size 1`] = `
         tabindex="0"
         title="下一页"
       >
-        <i
-          class="uc-fe-icon icon__right uc-fe-pagination-next-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-next-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="matrix(0 1 1 0 0 0)"
+          />
+        </svg>
       </li>
     </ul>
   </div>
@@ -7709,7 +8380,12 @@ exports[`Pagination demo -- total 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-6 {
@@ -7823,7 +8499,12 @@ exports[`Pagination demo -- total 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 <div>
@@ -7839,9 +8520,16 @@ exports[`Pagination demo -- total 1`] = `
         class="uc-fe-pagination-disabled uc-fe-pagination-prev"
         title="上一页"
       >
-        <i
-          class="uc-fe-icon icon__left uc-fe-pagination-prev-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-prev-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="rotate(90 12 12)"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-1 uc-fe-pagination-item-active"
@@ -7893,9 +8581,15 @@ exports[`Pagination demo -- total 1`] = `
         tabindex="0"
         title="向后 5 页"
       >
-        <i
-          class="uc-fe-icon icon__more-three uc-fe-pagination-jump-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-jump-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12,10 C13.1045695,10 14,10.8954305 14,12 C14,13.1045695 13.1045695,14 12,14 C10.8954305,14 10,13.1045695 10,12 C10,10.8954305 10.8954305,10 12,10 Z M5,10 C6.1045695,10 7,10.8954305 7,12 C7,13.1045695 6.1045695,14 5,14 C3.8954305,14 3,13.1045695 3,12 C3,10.8954305 3.8954305,10 5,10 Z M19,10 C20.1045695,10 21,10.8954305 21,12 C21,13.1045695 20.1045695,14 19,14 C17.8954305,14 17,13.1045695 17,12 C17,10.8954305 17.8954305,10 19,10 Z"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-10"
@@ -7912,9 +8606,16 @@ exports[`Pagination demo -- total 1`] = `
         tabindex="0"
         title="下一页"
       >
-        <i
-          class="uc-fe-icon icon__right uc-fe-pagination-next-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-next-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="matrix(0 1 1 0 0 0)"
+          />
+        </svg>
       </li>
     </ul>
   </div>
@@ -7930,9 +8631,16 @@ exports[`Pagination demo -- total 1`] = `
         class="uc-fe-pagination-disabled uc-fe-pagination-prev"
         title="上一页"
       >
-        <i
-          class="uc-fe-icon icon__left uc-fe-pagination-prev-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-prev-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="rotate(90 12 12)"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-1 uc-fe-pagination-item-active"
@@ -7967,9 +8675,16 @@ exports[`Pagination demo -- total 1`] = `
         tabindex="0"
         title="下一页"
       >
-        <i
-          class="uc-fe-icon icon__right uc-fe-pagination-next-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-next-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="matrix(0 1 1 0 0 0)"
+          />
+        </svg>
       </li>
     </ul>
   </div>
@@ -8088,7 +8803,12 @@ exports[`Pagination demo -- uncontrolled 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-6 {
@@ -8202,7 +8922,12 @@ exports[`Pagination demo -- uncontrolled 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 <div>
@@ -8218,9 +8943,16 @@ exports[`Pagination demo -- uncontrolled 1`] = `
         class="uc-fe-pagination-disabled uc-fe-pagination-prev"
         title="上一页"
       >
-        <i
-          class="uc-fe-icon icon__left uc-fe-pagination-prev-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-prev-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="rotate(90 12 12)"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-1 uc-fe-pagination-item-active"
@@ -8272,9 +9004,15 @@ exports[`Pagination demo -- uncontrolled 1`] = `
         tabindex="0"
         title="向后 5 页"
       >
-        <i
-          class="uc-fe-icon icon__more-three uc-fe-pagination-jump-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-jump-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12,10 C13.1045695,10 14,10.8954305 14,12 C14,13.1045695 13.1045695,14 12,14 C10.8954305,14 10,13.1045695 10,12 C10,10.8954305 10.8954305,10 12,10 Z M5,10 C6.1045695,10 7,10.8954305 7,12 C7,13.1045695 6.1045695,14 5,14 C3.8954305,14 3,13.1045695 3,12 C3,10.8954305 3.8954305,10 5,10 Z M19,10 C20.1045695,10 21,10.8954305 21,12 C21,13.1045695 20.1045695,14 19,14 C17.8954305,14 17,13.1045695 17,12 C17,10.8954305 17.8954305,10 19,10 Z"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-10"
@@ -8291,9 +9029,16 @@ exports[`Pagination demo -- uncontrolled 1`] = `
         tabindex="0"
         title="下一页"
       >
-        <i
-          class="uc-fe-icon icon__right uc-fe-pagination-next-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-next-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="matrix(0 1 1 0 0 0)"
+          />
+        </svg>
       </li>
     </ul>
   </div>
@@ -8309,9 +9054,16 @@ exports[`Pagination demo -- uncontrolled 1`] = `
         class="uc-fe-pagination-disabled uc-fe-pagination-prev"
         title="上一页"
       >
-        <i
-          class="uc-fe-icon icon__left uc-fe-pagination-prev-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-prev-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="rotate(90 12 12)"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-1 uc-fe-pagination-item-active"
@@ -8363,9 +9115,15 @@ exports[`Pagination demo -- uncontrolled 1`] = `
         tabindex="0"
         title="向后 5 页"
       >
-        <i
-          class="uc-fe-icon icon__more-three uc-fe-pagination-jump-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-jump-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12,10 C13.1045695,10 14,10.8954305 14,12 C14,13.1045695 13.1045695,14 12,14 C10.8954305,14 10,13.1045695 10,12 C10,10.8954305 10.8954305,10 12,10 Z M5,10 C6.1045695,10 7,10.8954305 7,12 C7,13.1045695 6.1045695,14 5,14 C3.8954305,14 3,13.1045695 3,12 C3,10.8954305 3.8954305,10 5,10 Z M19,10 C20.1045695,10 21,10.8954305 21,12 C21,13.1045695 20.1045695,14 19,14 C17.8954305,14 17,13.1045695 17,12 C17,10.8954305 17.8954305,10 19,10 Z"
+          />
+        </svg>
       </li>
       <li
         class="uc-fe-pagination-item uc-fe-pagination-item-10"
@@ -8382,9 +9140,16 @@ exports[`Pagination demo -- uncontrolled 1`] = `
         tabindex="0"
         title="下一页"
       >
-        <i
-          class="uc-fe-icon icon__right uc-fe-pagination-next-icon emotion-0 emotion-1"
-        />
+        <svg
+          class="uc-fe-pagination-next-icon emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+            transform="matrix(0 1 1 0 0 0)"
+          />
+        </svg>
       </li>
     </ul>
   </div>

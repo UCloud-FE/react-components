@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import Input from 'src/components/Input';
-import Icon from 'src/components/Icon';
+import SvgIcon from 'src/components/SvgIcon';
 import Menu from 'src/components/Menu';
 import Button from 'src/components/Button';
 import { inlineBlockWithVerticalMixin } from 'src/style';
@@ -34,7 +34,7 @@ export const Selector = styled(Button)`
     }
 `;
 
-export const Arrow = styled(Icon)`
+export const Arrow = styled(SvgIcon)`
     position: absolute;
     right: 8px;
     top: 50%;

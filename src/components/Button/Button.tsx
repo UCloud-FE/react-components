@@ -1,6 +1,7 @@
 import React, { ButtonHTMLAttributes, PureComponent, ReactNode } from 'react';
 
 import Icon from 'src/components/Icon';
+import SvgIcon from 'src/components/SvgIcon';
 import { Override } from 'src/type';
 
 import { SButton, iconCls } from './style';
@@ -56,7 +57,7 @@ export default class Button extends PureComponent<ButtonProps> {
     renderIcon = () => {
         const { loading, icon } = this.props;
         if (loading) {
-            return <Icon className={iconCls} type="loading" spin />;
+            return <SvgIcon className={iconCls} type="ring-loading" spin />;
         } else if (typeof icon === 'string') {
             return <Icon className={iconCls} type={icon} />;
         }

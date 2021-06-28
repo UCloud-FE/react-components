@@ -36,16 +36,26 @@ exports[`NumberInput demo -- computeValidNumber 1`] = `
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -113,12 +123,11 @@ exports[`NumberInput demo -- computeValidNumber 1`] = `
 
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-4 .uc-fe-numberinput-handler-up:hover,
@@ -139,7 +148,12 @@ exports[`NumberInput demo -- computeValidNumber 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-4 {
@@ -177,16 +191,26 @@ exports[`NumberInput demo -- computeValidNumber 1`] = `
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -254,12 +278,11 @@ exports[`NumberInput demo -- computeValidNumber 1`] = `
 
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-4 .uc-fe-numberinput-handler-up:hover,
@@ -280,7 +303,12 @@ exports[`NumberInput demo -- computeValidNumber 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 <div>
@@ -292,17 +320,29 @@ exports[`NumberInput demo -- computeValidNumber 1`] = `
         class="uc-fe-numberinput-handler-up"
         unselectable="unselectable"
       >
-        <i
-          class="uc-fe-icon icon__caret-up emotion-0 emotion-1"
-        />
+        <svg
+          class=" emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+          />
+        </svg>
       </span>
       <span
         class="uc-fe-numberinput-handler-down"
         unselectable="unselectable"
       >
-        <i
-          class="uc-fe-icon icon__caret-down emotion-0 emotion-1"
-        />
+        <svg
+          class=" emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+          />
+        </svg>
       </span>
     </div>
     <div
@@ -356,16 +396,26 @@ exports[`NumberInput demo -- disabled 1`] = `
 .emotion-10 .uc-fe-numberinput-handler-up,
 .emotion-10 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -433,12 +483,11 @@ exports[`NumberInput demo -- disabled 1`] = `
 
 .emotion-10 .uc-fe-numberinput-handler-up,
 .emotion-10 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-10 .uc-fe-numberinput-handler-up:hover,
@@ -459,7 +508,12 @@ exports[`NumberInput demo -- disabled 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-4 {
@@ -501,16 +555,26 @@ exports[`NumberInput demo -- disabled 1`] = `
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -583,12 +647,11 @@ exports[`NumberInput demo -- disabled 1`] = `
 
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-4 .uc-fe-numberinput-handler-up:hover,
@@ -643,16 +706,26 @@ exports[`NumberInput demo -- disabled 1`] = `
 .emotion-10 .uc-fe-numberinput-handler-up,
 .emotion-10 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -720,12 +793,11 @@ exports[`NumberInput demo -- disabled 1`] = `
 
 .emotion-10 .uc-fe-numberinput-handler-up,
 .emotion-10 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-10 .uc-fe-numberinput-handler-up:hover,
@@ -746,7 +818,12 @@ exports[`NumberInput demo -- disabled 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-4 {
@@ -788,16 +865,26 @@ exports[`NumberInput demo -- disabled 1`] = `
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -870,12 +957,11 @@ exports[`NumberInput demo -- disabled 1`] = `
 
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-4 .uc-fe-numberinput-handler-up:hover,
@@ -909,18 +995,30 @@ exports[`NumberInput demo -- disabled 1`] = `
           disabled=""
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-up emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+            />
+          </svg>
         </span>
         <span
           class="uc-fe-numberinput-handler-down uc-fe-numberinput-handler-disabled"
           disabled=""
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-down emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+            />
+          </svg>
         </span>
       </div>
       <div
@@ -948,17 +1046,29 @@ exports[`NumberInput demo -- disabled 1`] = `
           class="uc-fe-numberinput-handler-up"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-up emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+            />
+          </svg>
         </span>
         <span
           class="uc-fe-numberinput-handler-down"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-down emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+            />
+          </svg>
         </span>
       </div>
       <div
@@ -1013,16 +1123,26 @@ exports[`NumberInput demo -- formatter 1`] = `
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -1090,12 +1210,11 @@ exports[`NumberInput demo -- formatter 1`] = `
 
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-4 .uc-fe-numberinput-handler-up:hover,
@@ -1116,7 +1235,12 @@ exports[`NumberInput demo -- formatter 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-4 {
@@ -1154,16 +1278,26 @@ exports[`NumberInput demo -- formatter 1`] = `
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -1231,12 +1365,11 @@ exports[`NumberInput demo -- formatter 1`] = `
 
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-4 .uc-fe-numberinput-handler-up:hover,
@@ -1257,7 +1390,12 @@ exports[`NumberInput demo -- formatter 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 <div>
@@ -1272,17 +1410,29 @@ exports[`NumberInput demo -- formatter 1`] = `
           class="uc-fe-numberinput-handler-up"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-up emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+            />
+          </svg>
         </span>
         <span
           class="uc-fe-numberinput-handler-down"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-down emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+            />
+          </svg>
         </span>
       </div>
       <div
@@ -1309,17 +1459,29 @@ exports[`NumberInput demo -- formatter 1`] = `
           class="uc-fe-numberinput-handler-up"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-up emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+            />
+          </svg>
         </span>
         <span
           class="uc-fe-numberinput-handler-down"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-down emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+            />
+          </svg>
         </span>
       </div>
       <div
@@ -1375,16 +1537,26 @@ exports[`NumberInput demo -- hideHandler 1`] = `
 .emotion-6 .uc-fe-numberinput-handler-up,
 .emotion-6 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -1452,12 +1624,11 @@ exports[`NumberInput demo -- hideHandler 1`] = `
 
 .emotion-6 .uc-fe-numberinput-handler-up,
 .emotion-6 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-6 .uc-fe-numberinput-handler-up:hover,
@@ -1478,7 +1649,12 @@ exports[`NumberInput demo -- hideHandler 1`] = `
 }
 
 .emotion-2 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-0 {
@@ -1518,16 +1694,26 @@ exports[`NumberInput demo -- hideHandler 1`] = `
 .emotion-0 .uc-fe-numberinput-handler-up,
 .emotion-0 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -1595,12 +1781,11 @@ exports[`NumberInput demo -- hideHandler 1`] = `
 
 .emotion-0 .uc-fe-numberinput-handler-up,
 .emotion-0 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-0 .uc-fe-numberinput-handler-up:hover,
@@ -1655,16 +1840,26 @@ exports[`NumberInput demo -- hideHandler 1`] = `
 .emotion-6 .uc-fe-numberinput-handler-up,
 .emotion-6 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -1732,12 +1927,11 @@ exports[`NumberInput demo -- hideHandler 1`] = `
 
 .emotion-6 .uc-fe-numberinput-handler-up,
 .emotion-6 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-6 .uc-fe-numberinput-handler-up:hover,
@@ -1758,7 +1952,12 @@ exports[`NumberInput demo -- hideHandler 1`] = `
 }
 
 .emotion-2 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-0 {
@@ -1798,16 +1997,26 @@ exports[`NumberInput demo -- hideHandler 1`] = `
 .emotion-0 .uc-fe-numberinput-handler-up,
 .emotion-0 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -1875,12 +2084,11 @@ exports[`NumberInput demo -- hideHandler 1`] = `
 
 .emotion-0 .uc-fe-numberinput-handler-up,
 .emotion-0 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-0 .uc-fe-numberinput-handler-up:hover,
@@ -1931,17 +2139,29 @@ exports[`NumberInput demo -- hideHandler 1`] = `
           class="uc-fe-numberinput-handler-up"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-up emotion-2 emotion-3"
-          />
+          <svg
+            class=" emotion-2 emotion-3"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+            />
+          </svg>
         </span>
         <span
           class="uc-fe-numberinput-handler-down"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-down emotion-2 emotion-3"
-          />
+          <svg
+            class=" emotion-2 emotion-3"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+            />
+          </svg>
         </span>
       </div>
       <div
@@ -1996,16 +2216,26 @@ exports[`NumberInput demo -- inputStyle 1`] = `
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -2073,12 +2303,11 @@ exports[`NumberInput demo -- inputStyle 1`] = `
 
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-4 .uc-fe-numberinput-handler-up:hover,
@@ -2099,7 +2328,12 @@ exports[`NumberInput demo -- inputStyle 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-10 {
@@ -2135,16 +2369,26 @@ exports[`NumberInput demo -- inputStyle 1`] = `
 .emotion-10 .uc-fe-numberinput-handler-up,
 .emotion-10 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -2219,7 +2463,6 @@ exports[`NumberInput demo -- inputStyle 1`] = `
   top: 0;
   height: 28px;
   width: 28px;
-  line-height: 28px;
   border-width: 1px;
 }
 
@@ -2269,16 +2512,26 @@ exports[`NumberInput demo -- inputStyle 1`] = `
 .emotion-16 .uc-fe-numberinput-handler-up,
 .emotion-16 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -2342,11 +2595,10 @@ exports[`NumberInput demo -- inputStyle 1`] = `
 
 .emotion-16 .uc-fe-numberinput-handler-up,
 .emotion-16 .uc-fe-numberinput-handler-down {
-  text-align: center;
-  top: 0;
   height: 28px;
   width: 28px;
-  line-height: 28px;
+  top: 0;
+  text-align: center;
   border-width: 1px;
 }
 
@@ -2402,16 +2654,26 @@ exports[`NumberInput demo -- inputStyle 1`] = `
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -2479,12 +2741,11 @@ exports[`NumberInput demo -- inputStyle 1`] = `
 
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-4 .uc-fe-numberinput-handler-up:hover,
@@ -2505,7 +2766,12 @@ exports[`NumberInput demo -- inputStyle 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-10 {
@@ -2541,16 +2807,26 @@ exports[`NumberInput demo -- inputStyle 1`] = `
 .emotion-10 .uc-fe-numberinput-handler-up,
 .emotion-10 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -2625,7 +2901,6 @@ exports[`NumberInput demo -- inputStyle 1`] = `
   top: 0;
   height: 28px;
   width: 28px;
-  line-height: 28px;
   border-width: 1px;
 }
 
@@ -2675,16 +2950,26 @@ exports[`NumberInput demo -- inputStyle 1`] = `
 .emotion-16 .uc-fe-numberinput-handler-up,
 .emotion-16 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -2748,11 +3033,10 @@ exports[`NumberInput demo -- inputStyle 1`] = `
 
 .emotion-16 .uc-fe-numberinput-handler-up,
 .emotion-16 .uc-fe-numberinput-handler-down {
-  text-align: center;
-  top: 0;
   height: 28px;
   width: 28px;
-  line-height: 28px;
+  top: 0;
+  text-align: center;
   border-width: 1px;
 }
 
@@ -2785,17 +3069,29 @@ exports[`NumberInput demo -- inputStyle 1`] = `
           class="uc-fe-numberinput-handler-up"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-up emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+            />
+          </svg>
         </span>
         <span
           class="uc-fe-numberinput-handler-down"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-down emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+            />
+          </svg>
         </span>
       </div>
       <div
@@ -2823,17 +3119,30 @@ exports[`NumberInput demo -- inputStyle 1`] = `
           class="uc-fe-numberinput-handler-up"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__plus emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+            />
+          </svg>
         </span>
         <span
           class="uc-fe-numberinput-handler-down"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__minus emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+              transform="rotate(90 12 12)"
+            />
+          </svg>
         </span>
       </div>
       <div
@@ -2861,17 +3170,31 @@ exports[`NumberInput demo -- inputStyle 1`] = `
           class="uc-fe-numberinput-handler-up"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__right emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+              transform="matrix(0 1 1 0 0 0)"
+            />
+          </svg>
         </span>
         <span
           class="uc-fe-numberinput-handler-down"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__left emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+              transform="rotate(90 12 12)"
+            />
+          </svg>
         </span>
       </div>
       <div
@@ -2927,16 +3250,26 @@ exports[`NumberInput demo -- maxAndMin 1`] = `
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -3004,12 +3337,11 @@ exports[`NumberInput demo -- maxAndMin 1`] = `
 
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-4 .uc-fe-numberinput-handler-up:hover,
@@ -3030,7 +3362,12 @@ exports[`NumberInput demo -- maxAndMin 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-4 {
@@ -3068,16 +3405,26 @@ exports[`NumberInput demo -- maxAndMin 1`] = `
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -3145,12 +3492,11 @@ exports[`NumberInput demo -- maxAndMin 1`] = `
 
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-4 .uc-fe-numberinput-handler-up:hover,
@@ -3171,7 +3517,12 @@ exports[`NumberInput demo -- maxAndMin 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 <div>
@@ -3186,17 +3537,29 @@ exports[`NumberInput demo -- maxAndMin 1`] = `
           class="uc-fe-numberinput-handler-up"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-up emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+            />
+          </svg>
         </span>
         <span
           class="uc-fe-numberinput-handler-down"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-down emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+            />
+          </svg>
         </span>
       </div>
       <div
@@ -3224,17 +3587,29 @@ exports[`NumberInput demo -- maxAndMin 1`] = `
           class="uc-fe-numberinput-handler-up"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-up emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+            />
+          </svg>
         </span>
         <span
           class="uc-fe-numberinput-handler-down"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-down emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+            />
+          </svg>
         </span>
       </div>
       <div
@@ -3289,16 +3664,26 @@ exports[`NumberInput demo -- numberInput 1`] = `
 .emotion-87 .uc-fe-numberinput-handler-up,
 .emotion-87 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -3366,12 +3751,11 @@ exports[`NumberInput demo -- numberInput 1`] = `
 
 .emotion-87 .uc-fe-numberinput-handler-up,
 .emotion-87 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-87 .uc-fe-numberinput-handler-up:hover,
@@ -3392,7 +3776,12 @@ exports[`NumberInput demo -- numberInput 1`] = `
 }
 
 .emotion-83 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-147 .uc-fe-form-item {
@@ -3900,16 +4289,26 @@ exports[`NumberInput demo -- numberInput 1`] = `
 .emotion-87 .uc-fe-numberinput-handler-up,
 .emotion-87 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -3977,12 +4376,11 @@ exports[`NumberInput demo -- numberInput 1`] = `
 
 .emotion-87 .uc-fe-numberinput-handler-up,
 .emotion-87 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-87 .uc-fe-numberinput-handler-up:hover,
@@ -4003,7 +4401,12 @@ exports[`NumberInput demo -- numberInput 1`] = `
 }
 
 .emotion-83 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-147 .uc-fe-form-item {
@@ -4771,17 +5174,29 @@ exports[`NumberInput demo -- numberInput 1`] = `
               class="uc-fe-numberinput-handler-up"
               unselectable="unselectable"
             >
-              <i
-                class="uc-fe-icon icon__caret-up emotion-83 emotion-84"
-              />
+              <svg
+                class=" emotion-83 emotion-4"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+                />
+              </svg>
             </span>
             <span
               class="uc-fe-numberinput-handler-down"
               unselectable="unselectable"
             >
-              <i
-                class="uc-fe-icon icon__caret-down emotion-83 emotion-84"
-              />
+              <svg
+                class=" emotion-83 emotion-4"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+                />
+              </svg>
             </span>
           </div>
           <div
@@ -4820,17 +5235,29 @@ exports[`NumberInput demo -- numberInput 1`] = `
               class="uc-fe-numberinput-handler-up"
               unselectable="unselectable"
             >
-              <i
-                class="uc-fe-icon icon__caret-up emotion-83 emotion-84"
-              />
+              <svg
+                class=" emotion-83 emotion-4"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+                />
+              </svg>
             </span>
             <span
               class="uc-fe-numberinput-handler-down"
               unselectable="unselectable"
             >
-              <i
-                class="uc-fe-icon icon__caret-down emotion-83 emotion-84"
-              />
+              <svg
+                class=" emotion-83 emotion-4"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+                />
+              </svg>
             </span>
           </div>
           <div
@@ -4869,17 +5296,29 @@ exports[`NumberInput demo -- numberInput 1`] = `
               class="uc-fe-numberinput-handler-up"
               unselectable="unselectable"
             >
-              <i
-                class="uc-fe-icon icon__caret-up emotion-83 emotion-84"
-              />
+              <svg
+                class=" emotion-83 emotion-4"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+                />
+              </svg>
             </span>
             <span
               class="uc-fe-numberinput-handler-down"
               unselectable="unselectable"
             >
-              <i
-                class="uc-fe-icon icon__caret-down emotion-83 emotion-84"
-              />
+              <svg
+                class=" emotion-83 emotion-4"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+                />
+              </svg>
             </span>
           </div>
           <div
@@ -4978,17 +5417,29 @@ exports[`NumberInput demo -- numberInput 1`] = `
           class="uc-fe-numberinput-handler-up"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-up emotion-83 emotion-84"
-          />
+          <svg
+            class=" emotion-83 emotion-4"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+            />
+          </svg>
         </span>
         <span
           class="uc-fe-numberinput-handler-down"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-down emotion-83 emotion-84"
-          />
+          <svg
+            class=" emotion-83 emotion-4"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+            />
+          </svg>
         </span>
       </div>
       <div
@@ -5043,16 +5494,26 @@ exports[`NumberInput demo -- onNumberChange 1`] = `
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -5120,12 +5581,11 @@ exports[`NumberInput demo -- onNumberChange 1`] = `
 
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-4 .uc-fe-numberinput-handler-up:hover,
@@ -5146,7 +5606,12 @@ exports[`NumberInput demo -- onNumberChange 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-4 {
@@ -5184,16 +5649,26 @@ exports[`NumberInput demo -- onNumberChange 1`] = `
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -5261,12 +5736,11 @@ exports[`NumberInput demo -- onNumberChange 1`] = `
 
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-4 .uc-fe-numberinput-handler-up:hover,
@@ -5287,7 +5761,12 @@ exports[`NumberInput demo -- onNumberChange 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 <div>
@@ -5302,17 +5781,29 @@ exports[`NumberInput demo -- onNumberChange 1`] = `
           class="uc-fe-numberinput-handler-up"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-up emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+            />
+          </svg>
         </span>
         <span
           class="uc-fe-numberinput-handler-down"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-down emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+            />
+          </svg>
         </span>
       </div>
       <div
@@ -5367,16 +5858,26 @@ exports[`NumberInput demo -- parser 1`] = `
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -5444,12 +5945,11 @@ exports[`NumberInput demo -- parser 1`] = `
 
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-4 .uc-fe-numberinput-handler-up:hover,
@@ -5470,7 +5970,12 @@ exports[`NumberInput demo -- parser 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-4 {
@@ -5508,16 +6013,26 @@ exports[`NumberInput demo -- parser 1`] = `
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -5585,12 +6100,11 @@ exports[`NumberInput demo -- parser 1`] = `
 
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-4 .uc-fe-numberinput-handler-up:hover,
@@ -5611,7 +6125,12 @@ exports[`NumberInput demo -- parser 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 <div>
@@ -5626,17 +6145,29 @@ exports[`NumberInput demo -- parser 1`] = `
           class="uc-fe-numberinput-handler-up"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-up emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+            />
+          </svg>
         </span>
         <span
           class="uc-fe-numberinput-handler-down"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-down emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+            />
+          </svg>
         </span>
       </div>
       <div
@@ -5663,17 +6194,29 @@ exports[`NumberInput demo -- parser 1`] = `
           class="uc-fe-numberinput-handler-up"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-up emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+            />
+          </svg>
         </span>
         <span
           class="uc-fe-numberinput-handler-down"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-down emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+            />
+          </svg>
         </span>
       </div>
       <div
@@ -5728,16 +6271,26 @@ exports[`NumberInput demo -- precision 1`] = `
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -5805,12 +6358,11 @@ exports[`NumberInput demo -- precision 1`] = `
 
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-4 .uc-fe-numberinput-handler-up:hover,
@@ -5831,7 +6383,12 @@ exports[`NumberInput demo -- precision 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-4 {
@@ -5869,16 +6426,26 @@ exports[`NumberInput demo -- precision 1`] = `
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -5946,12 +6513,11 @@ exports[`NumberInput demo -- precision 1`] = `
 
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-4 .uc-fe-numberinput-handler-up:hover,
@@ -5972,7 +6538,12 @@ exports[`NumberInput demo -- precision 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 <div>
@@ -5987,17 +6558,29 @@ exports[`NumberInput demo -- precision 1`] = `
           class="uc-fe-numberinput-handler-up"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-up emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+            />
+          </svg>
         </span>
         <span
           class="uc-fe-numberinput-handler-down"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-down emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+            />
+          </svg>
         </span>
       </div>
       <div
@@ -6024,17 +6607,29 @@ exports[`NumberInput demo -- precision 1`] = `
           class="uc-fe-numberinput-handler-up"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-up emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+            />
+          </svg>
         </span>
         <span
           class="uc-fe-numberinput-handler-down"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-down emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+            />
+          </svg>
         </span>
       </div>
       <div
@@ -6089,16 +6684,26 @@ exports[`NumberInput demo -- readOnly 1`] = `
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -6166,12 +6771,11 @@ exports[`NumberInput demo -- readOnly 1`] = `
 
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-4 .uc-fe-numberinput-handler-up:hover,
@@ -6192,7 +6796,12 @@ exports[`NumberInput demo -- readOnly 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-4 {
@@ -6230,16 +6839,26 @@ exports[`NumberInput demo -- readOnly 1`] = `
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -6307,12 +6926,11 @@ exports[`NumberInput demo -- readOnly 1`] = `
 
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-4 .uc-fe-numberinput-handler-up:hover,
@@ -6333,7 +6951,12 @@ exports[`NumberInput demo -- readOnly 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 <div>
@@ -6348,17 +6971,29 @@ exports[`NumberInput demo -- readOnly 1`] = `
           class="uc-fe-numberinput-handler-up"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-up emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+            />
+          </svg>
         </span>
         <span
           class="uc-fe-numberinput-handler-down"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-down emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+            />
+          </svg>
         </span>
       </div>
       <div
@@ -6386,17 +7021,29 @@ exports[`NumberInput demo -- readOnly 1`] = `
           class="uc-fe-numberinput-handler-up"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-up emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+            />
+          </svg>
         </span>
         <span
           class="uc-fe-numberinput-handler-down"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-down emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+            />
+          </svg>
         </span>
       </div>
       <div
@@ -6451,16 +7098,26 @@ exports[`NumberInput demo -- size 1`] = `
 .emotion-22 .uc-fe-numberinput-handler-up,
 .emotion-22 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -6528,12 +7185,11 @@ exports[`NumberInput demo -- size 1`] = `
 
 .emotion-22 .uc-fe-numberinput-handler-up,
 .emotion-22 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-22 .uc-fe-numberinput-handler-up:hover,
@@ -6554,7 +7210,12 @@ exports[`NumberInput demo -- size 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-28 {
@@ -6590,16 +7251,26 @@ exports[`NumberInput demo -- size 1`] = `
 .emotion-28 .uc-fe-numberinput-handler-up,
 .emotion-28 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -6674,7 +7345,6 @@ exports[`NumberInput demo -- size 1`] = `
   top: 0;
   height: 28px;
   width: 28px;
-  line-height: 28px;
   border-width: 1px;
 }
 
@@ -6724,16 +7394,26 @@ exports[`NumberInput demo -- size 1`] = `
 .emotion-34 .uc-fe-numberinput-handler-up,
 .emotion-34 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -6797,11 +7477,10 @@ exports[`NumberInput demo -- size 1`] = `
 
 .emotion-34 .uc-fe-numberinput-handler-up,
 .emotion-34 .uc-fe-numberinput-handler-down {
-  text-align: center;
-  top: 0;
   height: 28px;
   width: 28px;
-  line-height: 28px;
+  top: 0;
+  text-align: center;
   border-width: 1px;
 }
 
@@ -6857,16 +7536,26 @@ exports[`NumberInput demo -- size 1`] = `
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -6934,12 +7623,11 @@ exports[`NumberInput demo -- size 1`] = `
 
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
+  height: 11px;
+  width: 18px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 11px;
-  line-height: 11px;
-  width: 18px;
 }
 
 .emotion-4 .uc-fe-numberinput-handler-up:hover,
@@ -6992,16 +7680,26 @@ exports[`NumberInput demo -- size 1`] = `
 .emotion-10 .uc-fe-numberinput-handler-up,
 .emotion-10 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -7076,7 +7774,6 @@ exports[`NumberInput demo -- size 1`] = `
   top: 0;
   height: 24px;
   width: 24px;
-  line-height: 24px;
   border-width: 1px;
 }
 
@@ -7126,16 +7823,26 @@ exports[`NumberInput demo -- size 1`] = `
 .emotion-16 .uc-fe-numberinput-handler-up,
 .emotion-16 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -7199,11 +7906,10 @@ exports[`NumberInput demo -- size 1`] = `
 
 .emotion-16 .uc-fe-numberinput-handler-up,
 .emotion-16 .uc-fe-numberinput-handler-down {
-  text-align: center;
-  top: 0;
   height: 24px;
   width: 24px;
-  line-height: 24px;
+  top: 0;
+  text-align: center;
   border-width: 1px;
 }
 
@@ -7259,16 +7965,26 @@ exports[`NumberInput demo -- size 1`] = `
 .emotion-40 .uc-fe-numberinput-handler-up,
 .emotion-40 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -7336,12 +8052,11 @@ exports[`NumberInput demo -- size 1`] = `
 
 .emotion-40 .uc-fe-numberinput-handler-up,
 .emotion-40 .uc-fe-numberinput-handler-down {
+  height: 15px;
+  width: 26px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 15px;
-  line-height: 15px;
-  width: 26px;
 }
 
 .emotion-40 .uc-fe-numberinput-handler-up:hover,
@@ -7394,16 +8109,26 @@ exports[`NumberInput demo -- size 1`] = `
 .emotion-46 .uc-fe-numberinput-handler-up,
 .emotion-46 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -7478,7 +8203,6 @@ exports[`NumberInput demo -- size 1`] = `
   top: 0;
   height: 32px;
   width: 32px;
-  line-height: 32px;
   border-width: 1px;
 }
 
@@ -7528,16 +8252,26 @@ exports[`NumberInput demo -- size 1`] = `
 .emotion-52 .uc-fe-numberinput-handler-up,
 .emotion-52 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -7601,11 +8335,10 @@ exports[`NumberInput demo -- size 1`] = `
 
 .emotion-52 .uc-fe-numberinput-handler-up,
 .emotion-52 .uc-fe-numberinput-handler-down {
-  text-align: center;
-  top: 0;
   height: 32px;
   width: 32px;
-  line-height: 32px;
+  top: 0;
+  text-align: center;
   border-width: 1px;
 }
 
@@ -7661,16 +8394,26 @@ exports[`NumberInput demo -- size 1`] = `
 .emotion-22 .uc-fe-numberinput-handler-up,
 .emotion-22 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -7738,12 +8481,11 @@ exports[`NumberInput demo -- size 1`] = `
 
 .emotion-22 .uc-fe-numberinput-handler-up,
 .emotion-22 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-22 .uc-fe-numberinput-handler-up:hover,
@@ -7764,7 +8506,12 @@ exports[`NumberInput demo -- size 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-28 {
@@ -7800,16 +8547,26 @@ exports[`NumberInput demo -- size 1`] = `
 .emotion-28 .uc-fe-numberinput-handler-up,
 .emotion-28 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -7884,7 +8641,6 @@ exports[`NumberInput demo -- size 1`] = `
   top: 0;
   height: 28px;
   width: 28px;
-  line-height: 28px;
   border-width: 1px;
 }
 
@@ -7934,16 +8690,26 @@ exports[`NumberInput demo -- size 1`] = `
 .emotion-34 .uc-fe-numberinput-handler-up,
 .emotion-34 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -8007,11 +8773,10 @@ exports[`NumberInput demo -- size 1`] = `
 
 .emotion-34 .uc-fe-numberinput-handler-up,
 .emotion-34 .uc-fe-numberinput-handler-down {
-  text-align: center;
-  top: 0;
   height: 28px;
   width: 28px;
-  line-height: 28px;
+  top: 0;
+  text-align: center;
   border-width: 1px;
 }
 
@@ -8067,16 +8832,26 @@ exports[`NumberInput demo -- size 1`] = `
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -8144,12 +8919,11 @@ exports[`NumberInput demo -- size 1`] = `
 
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
+  height: 11px;
+  width: 18px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 11px;
-  line-height: 11px;
-  width: 18px;
 }
 
 .emotion-4 .uc-fe-numberinput-handler-up:hover,
@@ -8202,16 +8976,26 @@ exports[`NumberInput demo -- size 1`] = `
 .emotion-10 .uc-fe-numberinput-handler-up,
 .emotion-10 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -8286,7 +9070,6 @@ exports[`NumberInput demo -- size 1`] = `
   top: 0;
   height: 24px;
   width: 24px;
-  line-height: 24px;
   border-width: 1px;
 }
 
@@ -8336,16 +9119,26 @@ exports[`NumberInput demo -- size 1`] = `
 .emotion-16 .uc-fe-numberinput-handler-up,
 .emotion-16 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -8409,11 +9202,10 @@ exports[`NumberInput demo -- size 1`] = `
 
 .emotion-16 .uc-fe-numberinput-handler-up,
 .emotion-16 .uc-fe-numberinput-handler-down {
-  text-align: center;
-  top: 0;
   height: 24px;
   width: 24px;
-  line-height: 24px;
+  top: 0;
+  text-align: center;
   border-width: 1px;
 }
 
@@ -8469,16 +9261,26 @@ exports[`NumberInput demo -- size 1`] = `
 .emotion-40 .uc-fe-numberinput-handler-up,
 .emotion-40 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -8546,12 +9348,11 @@ exports[`NumberInput demo -- size 1`] = `
 
 .emotion-40 .uc-fe-numberinput-handler-up,
 .emotion-40 .uc-fe-numberinput-handler-down {
+  height: 15px;
+  width: 26px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 15px;
-  line-height: 15px;
-  width: 26px;
 }
 
 .emotion-40 .uc-fe-numberinput-handler-up:hover,
@@ -8604,16 +9405,26 @@ exports[`NumberInput demo -- size 1`] = `
 .emotion-46 .uc-fe-numberinput-handler-up,
 .emotion-46 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -8688,7 +9499,6 @@ exports[`NumberInput demo -- size 1`] = `
   top: 0;
   height: 32px;
   width: 32px;
-  line-height: 32px;
   border-width: 1px;
 }
 
@@ -8738,16 +9548,26 @@ exports[`NumberInput demo -- size 1`] = `
 .emotion-52 .uc-fe-numberinput-handler-up,
 .emotion-52 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -8811,11 +9631,10 @@ exports[`NumberInput demo -- size 1`] = `
 
 .emotion-52 .uc-fe-numberinput-handler-up,
 .emotion-52 .uc-fe-numberinput-handler-down {
-  text-align: center;
-  top: 0;
   height: 32px;
   width: 32px;
-  line-height: 32px;
+  top: 0;
+  text-align: center;
   border-width: 1px;
 }
 
@@ -8851,17 +9670,29 @@ exports[`NumberInput demo -- size 1`] = `
             class="uc-fe-numberinput-handler-up"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__caret-up emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+              />
+            </svg>
           </span>
           <span
             class="uc-fe-numberinput-handler-down"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__caret-down emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+              />
+            </svg>
           </span>
         </div>
         <div
@@ -8888,17 +9719,30 @@ exports[`NumberInput demo -- size 1`] = `
             class="uc-fe-numberinput-handler-up"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__plus emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+              />
+            </svg>
           </span>
           <span
             class="uc-fe-numberinput-handler-down"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__minus emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                transform="rotate(90 12 12)"
+              />
+            </svg>
           </span>
         </div>
         <div
@@ -8925,17 +9769,31 @@ exports[`NumberInput demo -- size 1`] = `
             class="uc-fe-numberinput-handler-up"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__right emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+                transform="matrix(0 1 1 0 0 0)"
+              />
+            </svg>
           </span>
           <span
             class="uc-fe-numberinput-handler-down"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__left emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+                transform="rotate(90 12 12)"
+              />
+            </svg>
           </span>
         </div>
         <div
@@ -8966,17 +9824,29 @@ exports[`NumberInput demo -- size 1`] = `
             class="uc-fe-numberinput-handler-up"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__caret-up emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+              />
+            </svg>
           </span>
           <span
             class="uc-fe-numberinput-handler-down"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__caret-down emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+              />
+            </svg>
           </span>
         </div>
         <div
@@ -9003,17 +9873,30 @@ exports[`NumberInput demo -- size 1`] = `
             class="uc-fe-numberinput-handler-up"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__plus emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+              />
+            </svg>
           </span>
           <span
             class="uc-fe-numberinput-handler-down"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__minus emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                transform="rotate(90 12 12)"
+              />
+            </svg>
           </span>
         </div>
         <div
@@ -9040,17 +9923,31 @@ exports[`NumberInput demo -- size 1`] = `
             class="uc-fe-numberinput-handler-up"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__right emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+                transform="matrix(0 1 1 0 0 0)"
+              />
+            </svg>
           </span>
           <span
             class="uc-fe-numberinput-handler-down"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__left emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+                transform="rotate(90 12 12)"
+              />
+            </svg>
           </span>
         </div>
         <div
@@ -9081,17 +9978,29 @@ exports[`NumberInput demo -- size 1`] = `
             class="uc-fe-numberinput-handler-up"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__caret-up emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+              />
+            </svg>
           </span>
           <span
             class="uc-fe-numberinput-handler-down"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__caret-down emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+              />
+            </svg>
           </span>
         </div>
         <div
@@ -9118,17 +10027,30 @@ exports[`NumberInput demo -- size 1`] = `
             class="uc-fe-numberinput-handler-up"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__plus emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+              />
+            </svg>
           </span>
           <span
             class="uc-fe-numberinput-handler-down"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__minus emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                transform="rotate(90 12 12)"
+              />
+            </svg>
           </span>
         </div>
         <div
@@ -9155,17 +10077,31 @@ exports[`NumberInput demo -- size 1`] = `
             class="uc-fe-numberinput-handler-up"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__right emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+                transform="matrix(0 1 1 0 0 0)"
+              />
+            </svg>
           </span>
           <span
             class="uc-fe-numberinput-handler-down"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__left emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+                transform="rotate(90 12 12)"
+              />
+            </svg>
           </span>
         </div>
         <div
@@ -9221,16 +10157,26 @@ exports[`NumberInput demo -- step 1`] = `
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -9298,12 +10244,11 @@ exports[`NumberInput demo -- step 1`] = `
 
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-4 .uc-fe-numberinput-handler-up:hover,
@@ -9324,7 +10269,12 @@ exports[`NumberInput demo -- step 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-4 {
@@ -9362,16 +10312,26 @@ exports[`NumberInput demo -- step 1`] = `
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -9439,12 +10399,11 @@ exports[`NumberInput demo -- step 1`] = `
 
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-4 .uc-fe-numberinput-handler-up:hover,
@@ -9465,7 +10424,12 @@ exports[`NumberInput demo -- step 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 <div>
@@ -9480,17 +10444,29 @@ exports[`NumberInput demo -- step 1`] = `
           class="uc-fe-numberinput-handler-up"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-up emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+            />
+          </svg>
         </span>
         <span
           class="uc-fe-numberinput-handler-down"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-down emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+            />
+          </svg>
         </span>
       </div>
       <div
@@ -9517,17 +10493,29 @@ exports[`NumberInput demo -- step 1`] = `
           class="uc-fe-numberinput-handler-up"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-up emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+            />
+          </svg>
         </span>
         <span
           class="uc-fe-numberinput-handler-down"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-down emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+            />
+          </svg>
         </span>
       </div>
       <div
@@ -9582,16 +10570,26 @@ exports[`NumberInput demo -- styleType 1`] = `
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -9659,12 +10657,11 @@ exports[`NumberInput demo -- styleType 1`] = `
 
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-4 .uc-fe-numberinput-handler-up:hover,
@@ -9685,7 +10682,12 @@ exports[`NumberInput demo -- styleType 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-10 {
@@ -9721,16 +10723,26 @@ exports[`NumberInput demo -- styleType 1`] = `
 .emotion-10 .uc-fe-numberinput-handler-up,
 .emotion-10 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -9805,7 +10817,6 @@ exports[`NumberInput demo -- styleType 1`] = `
   top: 0;
   height: 28px;
   width: 28px;
-  line-height: 28px;
   border-width: 1px;
 }
 
@@ -9855,16 +10866,26 @@ exports[`NumberInput demo -- styleType 1`] = `
 .emotion-16 .uc-fe-numberinput-handler-up,
 .emotion-16 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -9928,11 +10949,10 @@ exports[`NumberInput demo -- styleType 1`] = `
 
 .emotion-16 .uc-fe-numberinput-handler-up,
 .emotion-16 .uc-fe-numberinput-handler-down {
-  text-align: center;
-  top: 0;
   height: 28px;
   width: 28px;
-  line-height: 28px;
+  top: 0;
+  text-align: center;
   border-width: 1px;
 }
 
@@ -9988,16 +11008,26 @@ exports[`NumberInput demo -- styleType 1`] = `
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -10065,12 +11095,11 @@ exports[`NumberInput demo -- styleType 1`] = `
 
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-4 .uc-fe-numberinput-handler-up:hover,
@@ -10091,7 +11120,12 @@ exports[`NumberInput demo -- styleType 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-10 {
@@ -10127,16 +11161,26 @@ exports[`NumberInput demo -- styleType 1`] = `
 .emotion-10 .uc-fe-numberinput-handler-up,
 .emotion-10 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -10211,7 +11255,6 @@ exports[`NumberInput demo -- styleType 1`] = `
   top: 0;
   height: 28px;
   width: 28px;
-  line-height: 28px;
   border-width: 1px;
 }
 
@@ -10261,16 +11304,26 @@ exports[`NumberInput demo -- styleType 1`] = `
 .emotion-16 .uc-fe-numberinput-handler-up,
 .emotion-16 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -10334,11 +11387,10 @@ exports[`NumberInput demo -- styleType 1`] = `
 
 .emotion-16 .uc-fe-numberinput-handler-up,
 .emotion-16 .uc-fe-numberinput-handler-down {
-  text-align: center;
-  top: 0;
   height: 28px;
   width: 28px;
-  line-height: 28px;
+  top: 0;
+  text-align: center;
   border-width: 1px;
 }
 
@@ -10371,17 +11423,29 @@ exports[`NumberInput demo -- styleType 1`] = `
           class="uc-fe-numberinput-handler-up"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-up emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+            />
+          </svg>
         </span>
         <span
           class="uc-fe-numberinput-handler-down"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-down emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+            />
+          </svg>
         </span>
       </div>
       <div
@@ -10408,17 +11472,30 @@ exports[`NumberInput demo -- styleType 1`] = `
           class="uc-fe-numberinput-handler-up"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__plus emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+            />
+          </svg>
         </span>
         <span
           class="uc-fe-numberinput-handler-down"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__minus emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+              transform="rotate(90 12 12)"
+            />
+          </svg>
         </span>
       </div>
       <div
@@ -10445,17 +11522,31 @@ exports[`NumberInput demo -- styleType 1`] = `
           class="uc-fe-numberinput-handler-up"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__right emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+              transform="matrix(0 1 1 0 0 0)"
+            />
+          </svg>
         </span>
         <span
           class="uc-fe-numberinput-handler-down"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__left emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+              transform="rotate(90 12 12)"
+            />
+          </svg>
         </span>
       </div>
       <div
@@ -10510,16 +11601,26 @@ exports[`NumberInput demo -- suffix 1`] = `
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -10587,12 +11688,11 @@ exports[`NumberInput demo -- suffix 1`] = `
 
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-4 .uc-fe-numberinput-handler-up:hover,
@@ -10613,7 +11713,12 @@ exports[`NumberInput demo -- suffix 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-22 {
@@ -10649,16 +11754,26 @@ exports[`NumberInput demo -- suffix 1`] = `
 .emotion-22 .uc-fe-numberinput-handler-up,
 .emotion-22 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -10733,7 +11848,6 @@ exports[`NumberInput demo -- suffix 1`] = `
   top: 0;
   height: 28px;
   width: 28px;
-  line-height: 28px;
   border-width: 1px;
 }
 
@@ -10783,16 +11897,26 @@ exports[`NumberInput demo -- suffix 1`] = `
 .emotion-40 .uc-fe-numberinput-handler-up,
 .emotion-40 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -10856,11 +11980,10 @@ exports[`NumberInput demo -- suffix 1`] = `
 
 .emotion-40 .uc-fe-numberinput-handler-up,
 .emotion-40 .uc-fe-numberinput-handler-down {
-  text-align: center;
-  top: 0;
   height: 28px;
   width: 28px;
-  line-height: 28px;
+  top: 0;
+  text-align: center;
   border-width: 1px;
 }
 
@@ -10916,16 +12039,26 @@ exports[`NumberInput demo -- suffix 1`] = `
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -10993,12 +12126,11 @@ exports[`NumberInput demo -- suffix 1`] = `
 
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-4 .uc-fe-numberinput-handler-up:hover,
@@ -11019,7 +12151,12 @@ exports[`NumberInput demo -- suffix 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-22 {
@@ -11055,16 +12192,26 @@ exports[`NumberInput demo -- suffix 1`] = `
 .emotion-22 .uc-fe-numberinput-handler-up,
 .emotion-22 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -11139,7 +12286,6 @@ exports[`NumberInput demo -- suffix 1`] = `
   top: 0;
   height: 28px;
   width: 28px;
-  line-height: 28px;
   border-width: 1px;
 }
 
@@ -11189,16 +12335,26 @@ exports[`NumberInput demo -- suffix 1`] = `
 .emotion-40 .uc-fe-numberinput-handler-up,
 .emotion-40 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -11262,11 +12418,10 @@ exports[`NumberInput demo -- suffix 1`] = `
 
 .emotion-40 .uc-fe-numberinput-handler-up,
 .emotion-40 .uc-fe-numberinput-handler-down {
-  text-align: center;
-  top: 0;
   height: 28px;
   width: 28px;
-  line-height: 28px;
+  top: 0;
+  text-align: center;
   border-width: 1px;
 }
 
@@ -11302,17 +12457,29 @@ exports[`NumberInput demo -- suffix 1`] = `
             class="uc-fe-numberinput-handler-up"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__caret-up emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+              />
+            </svg>
           </span>
           <span
             class="uc-fe-numberinput-handler-down"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__caret-down emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+              />
+            </svg>
           </span>
         </div>
         <div
@@ -11344,17 +12511,29 @@ exports[`NumberInput demo -- suffix 1`] = `
             class="uc-fe-numberinput-handler-up"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__caret-up emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+              />
+            </svg>
           </span>
           <span
             class="uc-fe-numberinput-handler-down"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__caret-down emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+              />
+            </svg>
           </span>
         </div>
         <div
@@ -11386,17 +12565,29 @@ exports[`NumberInput demo -- suffix 1`] = `
             class="uc-fe-numberinput-handler-up"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__caret-up emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+              />
+            </svg>
           </span>
           <span
             class="uc-fe-numberinput-handler-down"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__caret-down emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+              />
+            </svg>
           </span>
         </div>
         <div
@@ -11433,17 +12624,30 @@ exports[`NumberInput demo -- suffix 1`] = `
             class="uc-fe-numberinput-handler-up"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__plus emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+              />
+            </svg>
           </span>
           <span
             class="uc-fe-numberinput-handler-down"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__minus emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                transform="rotate(90 12 12)"
+              />
+            </svg>
           </span>
         </div>
         <div
@@ -11475,17 +12679,30 @@ exports[`NumberInput demo -- suffix 1`] = `
             class="uc-fe-numberinput-handler-up"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__plus emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+              />
+            </svg>
           </span>
           <span
             class="uc-fe-numberinput-handler-down"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__minus emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                transform="rotate(90 12 12)"
+              />
+            </svg>
           </span>
         </div>
         <div
@@ -11517,17 +12734,30 @@ exports[`NumberInput demo -- suffix 1`] = `
             class="uc-fe-numberinput-handler-up"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__plus emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+              />
+            </svg>
           </span>
           <span
             class="uc-fe-numberinput-handler-down"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__minus emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+                transform="rotate(90 12 12)"
+              />
+            </svg>
           </span>
         </div>
         <div
@@ -11564,17 +12794,31 @@ exports[`NumberInput demo -- suffix 1`] = `
             class="uc-fe-numberinput-handler-up"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__right emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+                transform="matrix(0 1 1 0 0 0)"
+              />
+            </svg>
           </span>
           <span
             class="uc-fe-numberinput-handler-down"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__left emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+                transform="rotate(90 12 12)"
+              />
+            </svg>
           </span>
         </div>
         <div
@@ -11606,17 +12850,31 @@ exports[`NumberInput demo -- suffix 1`] = `
             class="uc-fe-numberinput-handler-up"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__right emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+                transform="matrix(0 1 1 0 0 0)"
+              />
+            </svg>
           </span>
           <span
             class="uc-fe-numberinput-handler-down"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__left emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+                transform="rotate(90 12 12)"
+              />
+            </svg>
           </span>
         </div>
         <div
@@ -11648,17 +12906,31 @@ exports[`NumberInput demo -- suffix 1`] = `
             class="uc-fe-numberinput-handler-up"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__right emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+                transform="matrix(0 1 1 0 0 0)"
+              />
+            </svg>
           </span>
           <span
             class="uc-fe-numberinput-handler-down"
             unselectable="unselectable"
           >
-            <i
-              class="uc-fe-icon icon__left emotion-0 emotion-1"
-            />
+            <svg
+              class=" emotion-0 emotion-1"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+                transform="rotate(90 12 12)"
+              />
+            </svg>
           </span>
         </div>
         <div
@@ -11720,16 +12992,26 @@ exports[`NumberInput demo -- tooltip 1`] = `
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -11797,12 +13079,11 @@ exports[`NumberInput demo -- tooltip 1`] = `
 
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-4 .uc-fe-numberinput-handler-up:hover,
@@ -11823,7 +13104,12 @@ exports[`NumberInput demo -- tooltip 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-10 {
@@ -11859,16 +13145,26 @@ exports[`NumberInput demo -- tooltip 1`] = `
 .emotion-10 .uc-fe-numberinput-handler-up,
 .emotion-10 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -11943,7 +13239,6 @@ exports[`NumberInput demo -- tooltip 1`] = `
   top: 0;
   height: 28px;
   width: 28px;
-  line-height: 28px;
   border-width: 1px;
 }
 
@@ -11993,16 +13288,26 @@ exports[`NumberInput demo -- tooltip 1`] = `
 .emotion-16 .uc-fe-numberinput-handler-up,
 .emotion-16 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -12066,11 +13371,10 @@ exports[`NumberInput demo -- tooltip 1`] = `
 
 .emotion-16 .uc-fe-numberinput-handler-up,
 .emotion-16 .uc-fe-numberinput-handler-down {
-  text-align: center;
-  top: 0;
   height: 28px;
   width: 28px;
-  line-height: 28px;
+  top: 0;
+  text-align: center;
   border-width: 1px;
 }
 
@@ -12126,16 +13430,26 @@ exports[`NumberInput demo -- tooltip 1`] = `
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -12203,12 +13517,11 @@ exports[`NumberInput demo -- tooltip 1`] = `
 
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-4 .uc-fe-numberinput-handler-up:hover,
@@ -12229,7 +13542,12 @@ exports[`NumberInput demo -- tooltip 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-10 {
@@ -12265,16 +13583,26 @@ exports[`NumberInput demo -- tooltip 1`] = `
 .emotion-10 .uc-fe-numberinput-handler-up,
 .emotion-10 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -12349,7 +13677,6 @@ exports[`NumberInput demo -- tooltip 1`] = `
   top: 0;
   height: 28px;
   width: 28px;
-  line-height: 28px;
   border-width: 1px;
 }
 
@@ -12399,16 +13726,26 @@ exports[`NumberInput demo -- tooltip 1`] = `
 .emotion-16 .uc-fe-numberinput-handler-up,
 .emotion-16 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -12472,11 +13809,10 @@ exports[`NumberInput demo -- tooltip 1`] = `
 
 .emotion-16 .uc-fe-numberinput-handler-up,
 .emotion-16 .uc-fe-numberinput-handler-down {
-  text-align: center;
-  top: 0;
   height: 28px;
   width: 28px;
-  line-height: 28px;
+  top: 0;
+  text-align: center;
   border-width: 1px;
 }
 
@@ -12509,17 +13845,29 @@ exports[`NumberInput demo -- tooltip 1`] = `
           class="uc-fe-numberinput-handler-up"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-up emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+            />
+          </svg>
         </span>
         <span
           class="uc-fe-numberinput-handler-down"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__caret-down emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+            />
+          </svg>
         </span>
       </div>
       <div
@@ -12546,17 +13894,30 @@ exports[`NumberInput demo -- tooltip 1`] = `
           class="uc-fe-numberinput-handler-up"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__plus emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12,2 C12.5522847,2 13,2.44771525 13,3 L13,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L13,13 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 L11,11 L11,3 C11,2.44771525 11.4477153,2 12,2 Z"
+            />
+          </svg>
         </span>
         <span
           class="uc-fe-numberinput-handler-down"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__minus emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12,3 C12.5522847,3 13,3.44771525 13,4 L13,20 C13,20.5522847 12.5522847,21 12,21 C11.4477153,21 11,20.5522847 11,20 L11,4 C11,3.44771525 11.4477153,3 12,3 Z"
+              transform="rotate(90 12 12)"
+            />
+          </svg>
         </span>
       </div>
       <div
@@ -12583,17 +13944,31 @@ exports[`NumberInput demo -- tooltip 1`] = `
           class="uc-fe-numberinput-handler-up"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__right emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+              transform="matrix(0 1 1 0 0 0)"
+            />
+          </svg>
         </span>
         <span
           class="uc-fe-numberinput-handler-down"
           unselectable="unselectable"
         >
-          <i
-            class="uc-fe-icon icon__left emotion-0 emotion-1"
-          />
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18.3986407,7.65510741 L12,13.8300075 L5.60135725,7.65510546 C5.14150935,7.21129876 4.43778366,7.25756618 4.03031254,7.7552821 C3.62357936,8.25209663 3.66385814,9.01317255 4.12257613,9.45588874 L11.2606084,16.34492 C11.6820987,16.7517071 12.3179013,16.7517071 12.7393916,16.34492 L19.8774239,9.45588874 C20.3361419,9.01317255 20.3764206,8.25209663 19.9696875,7.7552821 C19.5622163,7.25756619 18.8584907,7.21129876 18.3986407,7.65510741 Z"
+              transform="rotate(90 12 12)"
+            />
+          </svg>
         </span>
       </div>
       <div
@@ -12648,16 +14023,26 @@ exports[`NumberInput demo -- uncontrolled 1`] = `
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -12725,12 +14110,11 @@ exports[`NumberInput demo -- uncontrolled 1`] = `
 
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-4 .uc-fe-numberinput-handler-up:hover,
@@ -12751,7 +14135,12 @@ exports[`NumberInput demo -- uncontrolled 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 .emotion-4 {
@@ -12789,16 +14178,26 @@ exports[`NumberInput demo -- uncontrolled 1`] = `
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -12866,12 +14265,11 @@ exports[`NumberInput demo -- uncontrolled 1`] = `
 
 .emotion-4 .uc-fe-numberinput-handler-up,
 .emotion-4 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-4 .uc-fe-numberinput-handler-up:hover,
@@ -12892,7 +14290,12 @@ exports[`NumberInput demo -- uncontrolled 1`] = `
 }
 
 .emotion-0 {
-  vertical-align: baseline;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
 }
 
 <div>
@@ -12905,17 +14308,29 @@ exports[`NumberInput demo -- uncontrolled 1`] = `
         class="uc-fe-numberinput-handler-up"
         unselectable="unselectable"
       >
-        <i
-          class="uc-fe-icon icon__caret-up emotion-0 emotion-1"
-        />
+        <svg
+          class=" emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+          />
+        </svg>
       </span>
       <span
         class="uc-fe-numberinput-handler-down"
         unselectable="unselectable"
       >
-        <i
-          class="uc-fe-icon icon__caret-down emotion-0 emotion-1"
-        />
+        <svg
+          class=" emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+          />
+        </svg>
       </span>
     </div>
     <div
@@ -12939,17 +14354,29 @@ exports[`NumberInput demo -- uncontrolled 1`] = `
         class="uc-fe-numberinput-handler-up"
         unselectable="unselectable"
       >
-        <i
-          class="uc-fe-icon icon__caret-up emotion-0 emotion-1"
-        />
+        <svg
+          class=" emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12.6965559,6.27668537 L21.8268863,15.0324157 C22.0577046,15.253764 22.0577046,15.6126405 21.8268863,15.8339888 C21.7160434,15.940284 21.5657082,16 21.4089527,16 L2.5910473,16 C2.26462089,16 2,15.746236 2,15.4332022 C2,15.2828781 2.06227088,15.1387109 2.17311375,15.0324157 L11.3034441,6.27668537 C11.6881413,5.90777154 12.3118587,5.90777154 12.6965559,6.27668537 Z"
+          />
+        </svg>
       </span>
       <span
         class="uc-fe-numberinput-handler-down"
         unselectable="unselectable"
       >
-        <i
-          class="uc-fe-icon icon__caret-down emotion-0 emotion-1"
-        />
+        <svg
+          class=" emotion-0 emotion-1"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12.6965559,17.7233146 L21.8268863,8.96758429 C22.0577046,8.746236 22.0577046,8.38735951 21.8268863,8.16601122 C21.7160434,8.05971602 21.5657082,8 21.4089527,8 L2.5910473,8 C2.26462089,8 2,8.253764 2,8.56679776 C2,8.71712187 2.06227088,8.86128909 2.17311375,8.96758429 L11.3034441,17.7233146 C11.6881413,18.0922285 12.3118587,18.0922285 12.6965559,17.7233146 Z"
+          />
+        </svg>
       </span>
     </div>
     <div
@@ -13003,16 +14430,26 @@ exports[`NumberInput demo -- upHandlerAndDownHandler 1`] = `
 .emotion-0 .uc-fe-numberinput-handler-up,
 .emotion-0 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -13080,12 +14517,11 @@ exports[`NumberInput demo -- upHandlerAndDownHandler 1`] = `
 
 .emotion-0 .uc-fe-numberinput-handler-up,
 .emotion-0 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-0 .uc-fe-numberinput-handler-up:hover,
@@ -13144,16 +14580,26 @@ exports[`NumberInput demo -- upHandlerAndDownHandler 1`] = `
 .emotion-0 .uc-fe-numberinput-handler-up,
 .emotion-0 .uc-fe-numberinput-handler-down {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   box-sizing: border-box;
-  text-align: center;
   border-radius: 2px;
   border-style: solid;
+  border-color: #d2d6ea;
   cursor: pointer;
   color: #0a1633;
-  border-color: #d2d6ea;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   background: #ffffff;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -13221,12 +14667,11 @@ exports[`NumberInput demo -- upHandlerAndDownHandler 1`] = `
 
 .emotion-0 .uc-fe-numberinput-handler-up,
 .emotion-0 .uc-fe-numberinput-handler-down {
+  height: 13px;
+  width: 22px;
   right: 0;
   box-sizing: content-box;
   border-radius: 0;
-  height: 13px;
-  line-height: 13px;
-  width: 22px;
 }
 
 .emotion-0 .uc-fe-numberinput-handler-up:hover,

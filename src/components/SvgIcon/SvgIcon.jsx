@@ -11,23 +11,34 @@ import TickSmall from './icons/TickSmall';
 import Cross from './icons/Cross';
 import CrossBold from './icons/CrossBold';
 import RingLoading from './icons/RingLoading';
-import DottedRightLineArrow from './icons/DottedRightLineArrow';
+import DottedLineArrowRight from './icons/DottedLineArrowRight';
 import Plus from './icons/Plus';
 import Minus from './icons/Minus';
 import Circle from './icons/Circle';
 import Horz from './icons/Horz';
-import LeftArrow from './icons/ArrowLeft';
-import RightArrow from './icons/ArrowRight';
-import Refresh from './icons/Refresh';
-import Trash from './icons/Trash';
-import Eye from './icons/Eye';
-import QuestionCircle from './icons/QuestionCircle';
-import Calendar from './icons/Calendar';
-import Clock from './icons/Clock';
+import ArrowUp from './icons/ArrowUp';
+import ArrowDown from './icons/ArrowDown';
+import ArrowLeft from './icons/ArrowLeft';
+import ArrowRight from './icons/ArrowRight';
 import TriangleUp from './icons/TriangleUp';
 import TriangleDown from './icons/TriangleDown';
 import TriangleLeft from './icons/TriangleLeft';
 import TriangleRight from './icons/TriangleRight';
+import LineArrowUp from './icons/LineArrowUp';
+import LineArrowDown from './icons/LineArrowDown';
+import Search from './icons/Search';
+import Ellipsis from './icons/Ellipsis';
+import Refresh from './icons/Refresh';
+import Trash from './icons/Trash';
+import Eye from './icons/Eye';
+import Calendar from './icons/Calendar';
+import Clock from './icons/Clock';
+import Sort from './icons/Sort';
+import Filter from './icons/Filter';
+
+// circle
+import QuestionCircle from './icons/QuestionCircle';
+import CrossCircle from './icons/CrossCircle';
 
 // circle filled
 import ExclamationCircleFilled from './icons/ExclamationCircleFilled';
@@ -41,26 +52,34 @@ const IconMap = {
     cross: Cross,
     'cross-bold': CrossBold,
     'ring-loading': RingLoading,
-    'dotted-right-line-arrow': DottedRightLineArrow,
+    'dotted-line-arrow-right': DottedLineArrowRight,
     plus: Plus,
     minus: Minus,
     circle: Circle,
     horz: Horz,
-    'arrow-left': LeftArrow,
-    'arrow-right': RightArrow,
+    'arrow-up': ArrowUp,
+    'arrow-down': ArrowDown,
+    'arrow-left': ArrowLeft,
+    'arrow-right': ArrowRight,
+    'triangle-up': TriangleUp,
+    'triangle-down': TriangleDown,
+    'triangle-left': TriangleLeft,
+    'triangle-right': TriangleRight,
+    'line-arrow-up': LineArrowUp,
+    'line-arrow-down': LineArrowDown,
+    search: Search,
+    ellipsis: Ellipsis,
     refresh: Refresh,
     trash: Trash,
     eye: Eye,
     calendar: Calendar,
     clock: Clock,
-    'triangle-up': TriangleUp,
-    'triangle-down': TriangleDown,
-    'triangle-left': TriangleLeft,
-    'triangle-right': TriangleRight
+    sort: Sort,
+    filter: Filter
 };
 
 // circle
-_.forEach({ question: QuestionCircle }, (Icon, key) => {
+_.forEach({ question: QuestionCircle, cross: CrossCircle }, (Icon, key) => {
     IconMap[key + '-circle'] = Icon;
 });
 

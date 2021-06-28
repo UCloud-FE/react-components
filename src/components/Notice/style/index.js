@@ -1,8 +1,13 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import Icon from 'src/components/Icon';
+import SvgIcon from 'src/components/SvgIcon';
 import withProps from 'src/utils/withProps';
+import config from 'src/config';
+
+const { prefixCls: _prefixCls } = config;
+export const prefixCls = _prefixCls + '-notice';
+export const iconCls = prefixCls + '-icon';
 
 const map = {
     default: 'info',
@@ -19,11 +24,6 @@ export const NoticeIconWrap = styled('span')`
     width: 15px;
     color: inherit;
     padding-right: 8px;
-    padding-top: 2px;
-`;
-
-export const NoticeIcon = styled(Icon)`
-    /* empty */
 `;
 
 export const ContentWrap = styled('div')`
@@ -36,6 +36,9 @@ export const ActionWrap = styled('div')`
     padding-left: 8px;
     white-space: nowrap;
     text-align: right;
+    > * {
+        vertical-align: middle;
+    }
 `;
 
 export const CloseWrap = styled('div')`
@@ -46,7 +49,7 @@ export const CloseWrap = styled('div')`
     width: 12px;
 `;
 
-export const CloseIcon = styled(Icon)`
+export const CloseIcon = styled(SvgIcon)`
     cursor: pointer;
 `;
 
@@ -93,8 +96,10 @@ const themeMixin = props => {
         color: ${colorMap.color};
         border: ${DT.T_LINE_WIDTH_BASE} solid ${colorMap.border};
         background: ${colorMap.background};
-        ${NoticeIcon} {
+        .${iconCls} {
+            fill: ${colorMap.icon};
             color: ${colorMap.icon};
+            vertical-align: middle;
         }
         ${ActionWrap} {
             color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};

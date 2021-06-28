@@ -23,7 +23,7 @@ class Loading extends Component {
     };
     static defaultProps = {
         loading: false,
-        indicator: <LoadingIcon type="loading" spin />
+        indicator: <LoadingIcon size="14px" type="ring-loading" spin />
     };
     render() {
         const { loading, children, indicator, tip, maskStyle, maskClassName, ...rest } = this.props;

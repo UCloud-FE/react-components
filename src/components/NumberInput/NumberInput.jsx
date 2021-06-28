@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 import classnames from 'classnames';
 
-import Icon from 'src/components/Icon';
+import SvgIcon from 'src/components/SvgIcon';
 import Tooltip from 'src/components/Tooltip';
 import KEYCODE from 'src/interfaces/KeyCode';
 import {
@@ -556,12 +556,12 @@ class NumberInput extends Component {
                     {...upEvents}
                 >
                     {upHandler || (
-                        <Icon
+                        <SvgIcon
                             type={
                                 {
-                                    default: 'caret-up',
+                                    default: 'triangle-up',
                                     split: 'plus',
-                                    pagination: 'right'
+                                    pagination: 'arrow-right'
                                 }[styleType]
                             }
                         />
@@ -574,12 +574,12 @@ class NumberInput extends Component {
                     {...downEvents}
                 >
                     {downHandler || (
-                        <Icon
+                        <SvgIcon
                             type={
                                 {
-                                    default: 'caret-down',
+                                    default: 'triangle-down',
                                     split: 'minus',
-                                    pagination: 'left'
+                                    pagination: 'arrow-left'
                                 }[styleType]
                             }
                         />

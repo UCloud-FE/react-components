@@ -10,7 +10,7 @@ import Notice from 'src/components/Notice';
 import Checkbox from 'src/components/Checkbox';
 import Radio from 'src/components/Radio';
 import Select from 'src/components/Select';
-import Icon from 'src/components/Icon';
+import SvgIcon from 'src/components/SvgIcon';
 import Tooltip from 'src/components/Tooltip';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
 import { InheritProvider } from 'src/components/Popover/ContainerContext';
@@ -447,7 +447,7 @@ class Table extends Component {
                 }}
                 className={`${prefixCls}-filter`}
                 renderSelector={(content, visible) => {
-                    return <Icon key="icon" type="filter" size="xs" color={visible ? 'blue' : null} />;
+                    return <SvgIcon key="icon" type="filter" color={visible ? 'blue' : null} />;
                 }}
                 multiple={multiple}
                 {...rest}
@@ -483,8 +483,8 @@ class Table extends Component {
                 type={
                     {
                         none: 'sort',
-                        desc: 'arrow-down',
-                        asc: 'arrow-up'
+                        desc: 'line-arrow-down',
+                        asc: 'line-arrow-up'
                     }[state]
                 }
                 onClick={() => {

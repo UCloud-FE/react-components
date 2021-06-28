@@ -52,17 +52,18 @@ export const NumberInputWrap = withProps()(
             }
             .${handlerUpCls}, .${handlerDownCls} {
                 position: absolute;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
                 box-sizing: border-box;
-                text-align: center;
                 border-radius: ${DT.T_CORNER_SM};
                 border-style: solid;
+                border-color: ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
                 cursor: pointer;
                 color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
-                border-color: ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
                 box-shadow: ${DT.T_SHADOW_BUTTON_DEFAULT};
                 background: ${DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT};
-
-                ${inlineBlockWithVerticalMixin};
+                vertical-align: middle;
 
                 :hover {
                     color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
@@ -148,12 +149,11 @@ export const NumberInputWrap = withProps()(
                 }
 
                 .${handlerUpCls}, .${handlerDownCls} {
+                    height: ${(+Height[size].replace('px', '') - 2) / 2}px;
+                    width: ${HeightNumber[size] - 6}px;
                     right: 0;
                     box-sizing: content-box;
                     border-radius: 0;
-                    height: ${(+Height[size].replace('px', '') - 2) / 2}px;
-                    line-height: ${(+Height[size].replace('px', '') - 2) / 2}px;
-                    width: ${HeightNumber[size] - 6}px;
 
                     &:hover {
                         color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
@@ -215,7 +215,6 @@ export const NumberInputWrap = withProps()(
                     top: 0;
                     height: ${Height[size]};
                     width: ${Height[size]};
-                    line-height: ${Height[size]};
                     border-width: 1px;
 
                     &:hover {
@@ -278,11 +277,10 @@ export const NumberInputWrap = withProps()(
                     `};
                 }
                 .${handlerUpCls}, .${handlerDownCls} {
-                    text-align: center;
-                    top: 0;
                     height: ${Height[size]};
                     width: ${Height[size]};
-                    line-height: ${Height[size]};
+                    top: 0;
+                    text-align: center;
                     border-width: 1px;
                     &:hover {
                         z-index: 1;

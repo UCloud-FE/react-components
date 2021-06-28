@@ -92,7 +92,7 @@ class SubMenu extends Component {
                 title={({ open }) => (
                     <div className={classnames(collapseTitleCls, allSelectedStatus !== 'NONE' && selectedCls)}>
                         {title}
-                        <SubMenuIcon type={open ? 'up' : 'down'} />
+                        <SubMenuIcon size="14px" type={open ? 'arrow-up' : 'arrow-down'} />
                     </div>
                 )}
                 panelKey={subMenuKey}
@@ -117,7 +117,7 @@ class SubMenu extends Component {
                 <div className={className}>
                     <div className={classnames(popupTitleCls, allSelectedStatus !== 'NONE' && selectedCls)}>
                         {title}
-                        <SubMenuIcon type="caret-right" />
+                        <SubMenuIcon type="triangle-right" />
                     </div>
                 </div>
             </Popover>

@@ -4,7 +4,7 @@ import _ from 'lodash';
 import classnames from 'classnames';
 
 import Button from 'src/components/Button';
-import Icon from 'src/components/Icon';
+import SvgIcon from 'src/components/SvgIcon';
 import Notice from 'src/components/Notice';
 import { animationPrefixCls } from 'src/style/globalAnimation';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
@@ -140,7 +140,12 @@ class Modal extends Component {
                             {title}
                         </div>,
                         closable && (
-                            <Icon key="close" type="circle-cross" className={`${prefixCls}-close`} onClick={onClose} />
+                            <SvgIcon
+                                key="close"
+                                type="cross-circle"
+                                className={`${prefixCls}-close`}
+                                onClick={onClose}
+                            />
                         )
                     ]}
                     footer={_.isFunction(footer) ? footer({ locale }) : footer}

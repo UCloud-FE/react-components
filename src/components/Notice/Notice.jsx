@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
+import Icon from 'src/components/Icon';
+import SvgIcon from 'src/components/SvgIcon';
 import deprecatedLog from 'src/utils/deprecatedLog';
 
-import { NoticeWrap, NoticeIconWrap, ContentWrap, ActionWrap, CloseWrap, CloseIcon, NoticeIcon } from './style';
+import { NoticeWrap, NoticeIconWrap, ContentWrap, ActionWrap, CloseWrap, CloseIcon, iconCls } from './style';
 
 const deprecatedLogForStyleTypeInfo = _.once(() => deprecatedLog('Notice styleType "info"', '"success"'));
 
@@ -56,11 +58,11 @@ class Notice extends Component {
         if (_icon === null || _icon === false) {
             icon = null;
         } else if (_.isString(_icon)) {
-            icon = <NoticeIcon type={_icon} styleType={styleType} />;
+            icon = <Icon className={iconCls} type={_icon} />;
         } else if (React.isValidElement(_icon)) {
             icon = _icon;
         } else {
-            icon = <NoticeIcon type="circle-mark2" styleType={styleType} />;
+            icon = <SvgIcon size="15px" className={iconCls} type="exclamation-circle-filled" />;
         }
         return closed ? null : (
             <NoticeWrap {...rest} styleType={styleType}>

@@ -25,8 +25,6 @@ export const toggleLocale = _isEN => {
     isEN = _isEN;
     localeListeners.forEach(listener => {
         listener(isEN);
-        console.log(listener, isEN);
-        
     });
 };
 
@@ -71,7 +69,9 @@ export default class ReactExample extends Component<ReactExampleProps> {
     }
 
     public shouldComponentUpdate(nextProps: ReactExampleProps, nextState) {
-        return this.props.code !== nextProps.code || this.state.dark !== nextState.dark || this.state.en !== nextState.en;
+        return (
+            this.props.code !== nextProps.code || this.state.dark !== nextState.dark || this.state.en !== nextState.en
+        );
     }
 
     // Run example code and return the last top-level expression
@@ -103,8 +103,6 @@ export default class ReactExample extends Component<ReactExampleProps> {
         if (dark) {
             wrappedComponent = <ThemeProvider theme={darkTheme}>{wrappedComponent}</ThemeProvider>;
         }
-        console.log(en);
-        
         if (en) {
             wrappedComponent = <LocaleProvider locale={enLocale}>{wrappedComponent}</LocaleProvider>;
         }

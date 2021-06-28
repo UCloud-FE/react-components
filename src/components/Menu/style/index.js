@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import Collapse from 'src/components/Collapse';
-import Icon from 'src/components/Icon';
+import SvgIcon from 'src/components/SvgIcon';
 import config from 'src/config';
 import withProps from 'src/utils/withProps';
 import isFirefox from 'src/utils/isFirefox';
@@ -27,12 +27,11 @@ export const popupWrapCls = prefixCls + '-popup-wrap';
 export const popupContentCls = prefixCls + '-popup-content';
 export const checkboxCls = prefixCls + '-checkbox';
 
-export const SubMenuIcon = styled(Icon)`
+export const SubMenuIcon = styled(SvgIcon)`
     position: absolute;
     right: 8px;
     top: 50%;
     margin-top: -0.5em;
-    font-size: 14px;
 `;
 
 const menuStyle = ({ customStyle = {}, theme: { designTokens: DT } }) => {

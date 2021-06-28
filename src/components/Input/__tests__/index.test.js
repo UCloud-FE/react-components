@@ -10,7 +10,7 @@ describe('Input Search', () => {
         const onKeyDown = jest.fn();
         const wrapper = mount(<Input.Search onSearch={onSearch} onKeyDown={onKeyDown} />);
         wrapper.find('input').instance().value = 'searchValue';
-        wrapper.find('i.icon__search').simulate('click');
+        wrapper.find('.uc-fe-input-suffix svg').simulate('click');
         expect(onSearch).toHaveBeenCalledTimes(1);
         expect(onSearch).toHaveBeenLastCalledWith('searchValue');
 

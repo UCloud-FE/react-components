@@ -3,7 +3,7 @@ import { css } from '@emotion/core';
 import classnames from 'classnames';
 import { InputHTMLAttributes } from 'react';
 
-import Icon from 'src/components/Icon';
+import SvgIcon from 'src/components/SvgIcon';
 import { getHeightBySize, inlineBlockWithVerticalMixin, sWrap } from 'src/style';
 import config from 'src/config';
 import { Override } from 'src/type';
@@ -20,7 +20,7 @@ export const inputPrefixCls = prefixCls + '-prefix';
 export const inputSuffixCls = prefixCls + '-suffix';
 export const clearCls = prefixCls + '-clear';
 
-export const SearchIcon = styled(Icon)`
+export const SearchIcon = styled(SvgIcon)`
     cursor: pointer;
 `;
 

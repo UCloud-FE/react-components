@@ -337,7 +337,7 @@ class Select extends Component {
                 <div className={selectorContentCls} key="content">
                     {content}
                 </div>
-                <Arrow key="icon" type={visible ? 'up' : 'down'} />
+                <Arrow key="icon" type={visible ? 'arrow-up' : 'arrow-down'} />
             </Selector>
         );
     };

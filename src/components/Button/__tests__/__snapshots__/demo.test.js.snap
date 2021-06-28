@@ -1889,14 +1889,18 @@ exports[`Button demo -- loading 1`] = `
   }
 }
 
-.emotion-0 {
-  vertical-align: baseline;
-}
+@keyframes animation-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
 
-.emotion-0.emotion-0.emotion-0 {
-  -webkit-animation: animation-0 1.2s infinite linear;
-  animation: animation-0 1.2s infinite linear;
-  line-height: normal;
+  to {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 .emotion-2 {
@@ -1958,6 +1962,17 @@ exports[`Button demo -- loading 1`] = `
   transition: opacity 0.2s;
 }
 
+.emotion-0 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
+  -webkit-animation: animation-0 1.2s infinite linear;
+  animation: animation-0 1.2s infinite linear;
+}
+
 .emotion-10 {
   margin: 0;
   box-sizing: border-box;
@@ -2008,6 +2023,10 @@ exports[`Button demo -- loading 1`] = `
   z-index: 1;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
 }
 
 @keyframes animation-0 {
@@ -2024,14 +2043,18 @@ exports[`Button demo -- loading 1`] = `
   }
 }
 
-.emotion-0 {
-  vertical-align: baseline;
-}
+@keyframes animation-0 {
+  from {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
 
-.emotion-0.emotion-0.emotion-0 {
-  -webkit-animation: animation-0 1.2s infinite linear;
-  animation: animation-0 1.2s infinite linear;
-  line-height: normal;
+  to {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 .emotion-2 {
@@ -2093,6 +2116,17 @@ exports[`Button demo -- loading 1`] = `
   transition: opacity 0.2s;
 }
 
+.emotion-0 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
+  -webkit-animation: animation-0 1.2s infinite linear;
+  animation: animation-0 1.2s infinite linear;
+}
+
 .emotion-10 {
   margin: 0;
   box-sizing: border-box;
@@ -2143,6 +2177,10 @@ exports[`Button demo -- loading 1`] = `
   z-index: 1;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
 }
 
 <div>
@@ -2150,26 +2188,44 @@ exports[`Button demo -- loading 1`] = `
     class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-loading emotion-2 emotion-3"
     type="button"
   >
-    <i
-      class="uc-fe-icon icon__loading uc-fe-icon-spin uc-fe-button-icon emotion-0 emotion-1"
-    />
+    <svg
+      class="uc-fe-button-icon emotion-0 emotion-1"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12 2a1 1 0 010 2.09A7.91 7.91 0 1019.91 12 1 1 0 0122 12 10 10 0 1112 2z"
+      />
+    </svg>
     Button
   </button>
   <button
     class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-loading emotion-2 emotion-3"
     type="button"
   >
-    <i
-      class="uc-fe-icon icon__loading uc-fe-icon-spin uc-fe-button-icon emotion-0 emotion-1"
-    />
+    <svg
+      class="uc-fe-button-icon emotion-0 emotion-1"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12 2a1 1 0 010 2.09A7.91 7.91 0 1019.91 12 1 1 0 0122 12 10 10 0 1112 2z"
+      />
+    </svg>
   </button>
   <button
     class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary uc-fe-button-loading emotion-10 emotion-3"
     type="button"
   >
-    <i
-      class="uc-fe-icon icon__loading uc-fe-icon-spin uc-fe-button-icon emotion-0 emotion-1"
-    />
+    <svg
+      class="uc-fe-button-icon emotion-0 emotion-1"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12 2a1 1 0 010 2.09A7.91 7.91 0 1019.91 12 1 1 0 0122 12 10 10 0 1112 2z"
+      />
+    </svg>
   </button>
 </div>
 `;

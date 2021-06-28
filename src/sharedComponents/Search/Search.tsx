@@ -1,7 +1,7 @@
 import React, { ChangeEvent, useCallback, HTMLAttributes, useMemo, memo } from 'react';
 import _ from 'lodash';
 
-import Icon from 'src/components/Icon';
+import SvgIcon from 'src/components/SvgIcon';
 import Input from 'src/components/Input';
 import Loading from 'src/components/Loading';
 import useLocale from 'src/components/LocaleProvider/useLocale';
@@ -43,7 +43,7 @@ const Search = function ({
     );
     const locale = useLocale(LOCALE, 'SharedSearch', _locale);
 
-    const prefix = <Icon type="search" />;
+    const prefix = <SvgIcon type="search" />;
     const suffix =
         count != null ? (
             <span className={countCls}>
@@ -59,7 +59,6 @@ const Search = function ({
                 <Loading
                     loading={loading}
                     className={loadingCls}
-                    indicator={<Icon style={{ fontSize: '14px' }} type="loading" spin />}
                 />
             ) : null}
             {empty ? <div className={emptyTipCls}>{locale.empty}</div> : null}

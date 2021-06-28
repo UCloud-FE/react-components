@@ -157,7 +157,8 @@ const shapeMixin = (props: SButtonPropsFinal) => {
 
 const loadingMixin = (props: SButtonPropsFinal) => {
     const {
-        theme: { designTokens: DT }
+        theme: { designTokens: DT },
+        styleType
     } = props;
 
     return css`
@@ -176,6 +177,13 @@ const loadingMixin = (props: SButtonPropsFinal) => {
             border-radius: inherit;
             z-index: 1;
             transition: opacity 0.2s;
+            ${styleType === 'primary' &&
+            css`
+                top: 0px;
+                left: 0px;
+                bottom: 0px;
+                right: 0px;
+            `}
         }
     `;
 };
@@ -251,10 +259,6 @@ export const SButtonA = sWrap<SButtonProps, HTMLAnchorElement>(
     styled('a')(props => {
         return css`
             ${buttonStyleMixin(props)};
-            :link,
-            :visited {
-                color: ;
-            }
         `;
     })
 );

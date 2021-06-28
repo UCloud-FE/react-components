@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import Icon from 'src/components/Icon';
+import SvgIcon from 'src/components/SvgIcon';
 import { fadeIn, fadeOut } from 'src/style/animation';
 import withProps from 'src/utils/withProps';
 
@@ -54,14 +54,14 @@ export const IndicatorWrap = styled('div')`
 `;
 
 export const LoadingIcon = withProps()(
-    styled(Icon)(props => {
+    styled(SvgIcon)(props => {
         const {
             theme: { designTokens: DT }
         } = props;
 
         return css`
             font-size: 20px;
-            color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+            fill: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
         `;
     })
 );

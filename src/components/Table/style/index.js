@@ -5,7 +5,7 @@ import { clearFixMixin, inlineBlockWithVerticalMixin } from 'src/style';
 import Button from 'src/components/Button';
 import Notice from 'src/components/Notice';
 import Checkbox from 'src/components/Checkbox';
-import Icon from 'src/components/Icon';
+import SvgIcon from 'src/components/SvgIcon';
 import config from 'src/config';
 
 import withProps from 'src/utils/withProps';
@@ -15,14 +15,15 @@ export const prefixCls = _prefixCls + '-table';
 export const wrapperCls = prefixCls + '-wrapper';
 
 export const SortIcon = withProps()(
-    styled(Icon)(props => {
+    styled(SvgIcon)(props => {
         const {
             theme: { designTokens: DT }
         } = props;
 
         return css`
             vertical-align: middle;
-            color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+            cursor: pointer;
+            fill: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
         `;
     })
 );
@@ -80,6 +81,7 @@ export const TableWrap = withProps({
                 border: none;
                 padding: 0;
                 cursor: pointer;
+                line-height: 0;
             }
             table {
                 border-collapse: separate;
