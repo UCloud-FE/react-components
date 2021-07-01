@@ -2540,7 +2540,73 @@
             }
         }
     },
-    "Switch": { "undefined": { "path": "Switch/Switch.tsx", "info": { "description": "", "methods": [] } } },
+    "Switch": {
+        "Switch": {
+            "path": "Switch/Switch.tsx",
+            "name": "Switch",
+            "info": {
+                "description": "",
+                "displayName": "Switch",
+                "methods": [],
+                "props": {
+                    "checked": {
+                        "required": false,
+                        "tsType": { "name": "boolean" },
+                        "description": { "description": "是否选中", "tags": [] }
+                    },
+                    "defaultChecked": {
+                        "required": false,
+                        "tsType": { "name": "boolean" },
+                        "description": { "description": "默认选中状态", "tags": [] }
+                    },
+                    "onChange": {
+                        "required": false,
+                        "tsType": {
+                            "name": "signature",
+                            "type": "function",
+                            "raw": "(checked: boolean) => void",
+                            "signature": {
+                                "arguments": [{ "name": "checked", "type": { "name": "boolean" } }],
+                                "return": { "name": "void" }
+                            }
+                        },
+                        "description": { "description": "选中状态改变时的回调", "tags": [] }
+                    },
+                    "disabled": {
+                        "required": false,
+                        "tsType": { "name": "boolean" },
+                        "description": { "description": "是否禁用", "tags": [] }
+                    },
+                    "size": {
+                        "required": false,
+                        "tsType": {
+                            "name": "union",
+                            "raw": "'sm' | 'md' | 'lg'",
+                            "elements": [
+                                { "name": "literal", "value": "'sm'" },
+                                { "name": "literal", "value": "'md'" },
+                                { "name": "literal", "value": "'lg'" }
+                            ]
+                        },
+                        "description": { "description": "尺寸", "tags": [] },
+                        "defaultValue": { "value": "'md'", "computed": false }
+                    },
+                    "onText": {
+                        "required": false,
+                        "tsType": { "name": "ReactNode" },
+                        "description": { "description": "打开的文字", "tags": [] },
+                        "defaultValue": { "value": "'ON'", "computed": false }
+                    },
+                    "offText": {
+                        "required": false,
+                        "tsType": { "name": "ReactNode" },
+                        "description": { "description": "关闭的文字", "tags": [] },
+                        "defaultValue": { "value": "'OFF'", "computed": false }
+                    }
+                }
+            }
+        }
+    },
     "SvgIcon": {
         "SvgIcon": {
             "path": "SvgIcon/SvgIcon.jsx",
@@ -7520,7 +7586,7 @@
                         "tsType": {
                             "name": "signature",
                             "type": "object",
-                            "raw": "{\n    size?: 'sm' | 'md' | 'lg';\n    className?: string;\n    [key: string]: unknown;\n}",
+                            "raw": "{\n    /** 尺寸 */\n    size?: 'sm' | 'md' | 'lg';\n    /** className */\n    className?: string;\n    [key: string]: unknown;\n}",
                             "signature": {
                                 "properties": [
                                     {
@@ -7541,7 +7607,7 @@
                                 ]
                             }
                         },
-                        "description": "",
+                        "description": { "description": "children 共享属性", "tags": [] },
                         "defaultValue": { "value": "{}", "computed": false }
                     },
                     "spacing": {
@@ -7558,10 +7624,14 @@
                                 { "name": "string" }
                             ]
                         },
-                        "description": "",
+                        "description": { "description": "间距", "tags": [] },
                         "defaultValue": { "value": "'smart'", "computed": false }
                     },
-                    "separator": { "required": false, "tsType": { "name": "ReactNode" }, "description": "" }
+                    "separator": {
+                        "required": false,
+                        "tsType": { "name": "ReactNode" },
+                        "description": { "description": "分隔符", "tags": [] }
+                    }
                 }
             }
         }

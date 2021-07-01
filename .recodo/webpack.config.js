@@ -30,6 +30,18 @@ const config = {
                     loader: 'babel-loader',
                     options: babelConfig
                 }
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            minimize: true
+                        }
+                    }
+                ]
             }
         ]
     },

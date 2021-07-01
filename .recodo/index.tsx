@@ -36,8 +36,6 @@ const renderDoc = (name, dom: Element) => {
     mod.import(['@ucloud-fe/react-components', 'moment', 'lodash', 'react', 'react-dom']).then(dependences => {
         const [components, moment, lodash, React, ReactDOM] = dependences as any;
         const { Doc } = require('./run');
-        console.log(components);
-        
         ReactDOM.render(<Doc name={name} components={components} />, dom);
     });
 };
