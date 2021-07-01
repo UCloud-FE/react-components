@@ -11,12 +11,17 @@ const Combine = ({
     ...rest
 }: {
     children: ReactNode;
+    /** children 共享属性 */
     sharedProps?: {
+        /** 尺寸 */
         size?: 'sm' | 'md' | 'lg';
+        /** className */
         className?: string;
         [key: string]: unknown;
     };
+    /** 间距 */
     spacing?: 'compact' | 'smart' | 'sm' | 'md' | 'lg' | string;
+    /** 分隔符 */
     separator?: ReactNode;
 }) => {
     const { size = 'md' } = sharedProps;

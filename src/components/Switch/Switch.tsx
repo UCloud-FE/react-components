@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, ReactNode, forwardRef, memo, useCallback } from 'react';
+import React, { HTMLAttributes, ReactNode, useCallback } from 'react';
 
 import useUncontrolled from 'src/hooks/useUncontrolled';
 
@@ -24,7 +24,7 @@ interface SwitchProps {
 }
 
 // eslint-disable-next-line react/display-name
-const Switch = forwardRef(
+const Switch = React.forwardRef(
     (
         {
             checked: _checked,
@@ -36,7 +36,7 @@ const Switch = forwardRef(
             offText = 'OFF',
             ...rest
         }: SwitchProps & Override<HTMLAttributes<HTMLDivElement>, SwitchProps>,
-        ref
+        ref: any
     ) => {
         const [checked, onChange] = useUncontrolled(_checked, defaultChecked || false, _onChange);
         const handleClick = useCallback(() => {
@@ -59,4 +59,4 @@ const Switch = forwardRef(
     }
 );
 
-export default memo(Switch);
+export default React.memo(Switch);
