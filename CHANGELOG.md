@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.8](https://github.com/UCloud-FE/react-components/compare/v1.1.7...v1.1.8) (2021-07-01)
+
+### Features
+
+-   **Grid:** add support of array gutter ([fe3dc7d](https://github.com/UCloud-FE/react-components/commit/fe3dc7d31653600654cb280ff1d112154e92cf5c))
+
+### Bug Fixes
+
+-   **Button:** fix interface ([b16563f](https://github.com/UCloud-FE/react-components/commit/b16563fb05b3a0ff89fd841ca87e24507b2204ac))
+-   **Input:** fix input interface ([078e467](https://github.com/UCloud-FE/react-components/commit/078e467377d54e6c7648e8360796f69f9f683166))
+-   **NumberInput:** fix disable icon color ([c7bb52e](https://github.com/UCloud-FE/react-components/commit/c7bb52e3c11a943a95ad66a8aa8251837e178dcb))
+
 ### [1.1.7](https://github.com/UCloud-FE/react-components/compare/v1.1.6...v1.1.7) (2021-06-28)
 
 ### Features
