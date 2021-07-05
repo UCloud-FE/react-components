@@ -35,6 +35,7 @@ import Calendar from './icons/Calendar';
 import Clock from './icons/Clock';
 import Sort from './icons/Sort';
 import Filter from './icons/Filter';
+import Cog from './icons/Cog';
 
 // circle
 import QuestionCircle from './icons/QuestionCircle';
@@ -75,7 +76,8 @@ const IconMap = {
     calendar: Calendar,
     clock: Clock,
     sort: Sort,
-    filter: Filter
+    filter: Filter,
+    cog: Cog
 };
 
 // circle

@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
@@ -5,6 +6,7 @@ import config from 'src/config';
 import { inlineBlockWithVerticalMixin } from 'src/style';
 import Button from 'src/components/Button';
 import withProps from 'src/utils/withProps';
+import SvgIcon from 'src/components/SvgIcon';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-breadcrumb';
@@ -18,7 +20,7 @@ const textStyleMixin = css`
 `;
 
 export const BackButtonWrap = withProps({
-    icon: 'left',
+    icon: <SvgIcon type="arrow-left" />,
     size: 'sm',
     styleType: 'border-gray',
     className: backBtnCls

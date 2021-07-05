@@ -2,8 +2,9 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
-import Modal from 'components/Modal';
-import Grid from 'components/Grid';
+import Modal from 'src/components/Modal';
+import Grid from 'src/components/Grid';
+import SvgIcon from 'src/components/SvgIcon';
 
 import {
     ColumnConfigModalNotice,
@@ -136,7 +137,7 @@ export default class ColumnConfigButton extends PureComponent {
 
         return (
             <ColumnConfigWrap {...rest}>
-                <ColumnConfigButtonWrap icon="cog" onClick={this.showModal} />
+                <ColumnConfigButtonWrap icon={<SvgIcon type="cog" size="14px" />} onClick={this.showModal} />
                 {modalVisible && (
                     <TableContext.Consumer>
                         {({ columns, columnConfig, onColumnConfigChange, locale }) => (

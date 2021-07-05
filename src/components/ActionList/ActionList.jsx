@@ -8,6 +8,7 @@ import Popover from 'src/components/Popover';
 import Tooltip from 'src/components/Tooltip';
 import Combine from 'src/components/Combine';
 import ConfigContext from 'src/components/ConfigProvider/ConfigContext';
+import SvgIcon from 'src/components/SvgIcon';
 
 import { prefixCls } from './style';
 
@@ -140,7 +141,7 @@ export default class ActionList extends Component {
                                     <Button {...dropdownButton} />
                                 )
                             ) : (
-                                <Button size={size} styleType={buttonStyleType} icon="ellipsis" />
+                                <Button size={size} styleType={buttonStyleType} icon={<SvgIcon type="ellipsis" />} />
                             )}
                         </Popover>
                     );
