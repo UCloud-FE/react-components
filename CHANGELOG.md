@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.9](https://github.com/UCloud-FE/react-components/compare/v1.1.8...v1.1.9) (2021-07-05)
+
+### Features
+
+-   **All:** change some icon to svg ([fa51d99](https://github.com/UCloud-FE/react-components/commit/fa51d9987c63ffe6d418985f1f0db99b58735d6a))
+
 ### [1.1.8](https://github.com/UCloud-FE/react-components/compare/v1.1.7...v1.1.8) (2021-07-01)
 
 ### Features
