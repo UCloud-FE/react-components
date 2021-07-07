@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Transfer from 'src/components/Transfer';
 import Table from 'src/components/Table';
 
-import { tableWrapCls } from './style';
+import { SWrap } from './style';
 
 class TransferTable extends PureComponent {
     static propTypes = {
@@ -16,10 +16,22 @@ class TransferTable extends PureComponent {
         /** 自定义 table 的 props，如 tableLayout 等，两个 table 共享，部分参数写死无法自定义 */
         tableProps: PropTypes.object
     };
+    onRow = record => {
+        const { getDisabledOfRow, disabled } = this.props;
+        let _disabled;
+        if (getDisabledOfRow) {
+            _disabled = getDisabledOfRow(record);
+        }
+        return _disabled || disabled
+            ? {
+                  'data-disabled': true
+              }
+            : {};
+    };
     renderList = ({ dataSource, selectedKeys, onChange, disabled }) => {
         const { columns, tableProps, getDisabledOfRow } = this.props;
         return (
-            <div className={tableWrapCls}>
+            <SWrap>
                 <Table
                     {...tableProps}
                     customStyle={{ outerPadding: '0 12px 8px 12px' }}
@@ -33,9 +45,10 @@ class TransferTable extends PureComponent {
                     }}
                     pagination={null}
                     columns={columns}
+                    onRow={this.onRow}
                     scroll={{ ...tableProps?.scroll, y: 300 }}
                 />
-            </div>
+            </SWrap>
         );
     };
     render() {
