@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.11](https://github.com/UCloud-FE/react-components/compare/v1.1.10...v1.1.11) (2021-07-09)
+
+### Features
+
+-   **AutoComplete:** add block & placeholder & style & className ([d275594](https://github.com/UCloud-FE/react-components/commit/d275594f0b333d58f41f34e845b56b792b7fbd2e))
+
 ### [1.1.10](https://github.com/UCloud-FE/react-components/compare/v1.1.9...v1.1.10) (2021-07-09)
 
 ### Features
