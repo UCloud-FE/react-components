@@ -50,6 +50,8 @@ interface AutoCompleteProps {
      * options 加载中状态
      */
     loading?: boolean;
+    /** 前缀 */
+    prefix?: ReactNode;
     /**
      * 自定义搜索，为 false 时不做搜索展示全部
      */
@@ -75,6 +77,7 @@ const AutoComplete = ({
     options = [],
     disabled,
     loading,
+    prefix,
     handleSearch,
     popoverProps,
     onFocus,
@@ -156,6 +159,7 @@ const AutoComplete = ({
                     onBlur={onBlur}
                     onKeyPress={onKeyPress}
                     disabled={disabled}
+                    prefix={prefix}
                     suffix={loading && <SvgIcon className={loadingIconCls} type="ring-loading" spin />}
                     className={inputCls}
                 />

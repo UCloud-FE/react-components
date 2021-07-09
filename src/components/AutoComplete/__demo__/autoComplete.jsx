@@ -5,6 +5,7 @@ import AutoComplete from 'src/components/AutoComplete';
 import Form from 'src/components/Form';
 import Radio from 'src/components/Radio';
 import Switch from 'src/components/Switch';
+import Icon from 'src/components/Icon';
 
 // demo start
 const { formLayout, DemoWrap } = demoUtil;
@@ -18,7 +19,7 @@ class Demo extends React.PureComponent {
         };
     }
     render() {
-        const { handleSearch, disabled, loading } = this.state;
+        const { handleSearch, disabled, loading, prefix } = this.state;
         const props = {
             disabled,
             loading
@@ -30,6 +31,9 @@ class Demo extends React.PureComponent {
                 return item.value.toUpperCase().indexOf(searchValue.toUpperCase()) >= 0;
             };
         }
+        if (prefix) {
+            props.prefix = <Icon type="circle" />;
+        }
         return (
             <div>
                 <Form className="demo-form" itemProps={{ ...formLayout }}>
@@ -38,6 +42,9 @@ class Demo extends React.PureComponent {
                     </Form.Item>
                     <Form.Item label="loading">
                         <Switch checked={loading} onChange={loading => this.setState({ loading })} />
+                    </Form.Item>
+                    <Form.Item label="prefix">
+                        <Switch checked={prefix} onChange={prefix => this.setState({ prefix })} />
                     </Form.Item>
                     <Form.Item label="handleSearch">
                         <Radio.Group
