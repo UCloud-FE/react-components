@@ -7,7 +7,8 @@ import React, {
     useContext,
     useMemo,
     useRef,
-    useState
+    useState,
+    HTMLAttributes
 } from 'react';
 
 import Input from 'src/components/Input';
@@ -18,6 +19,9 @@ import KeyCode from 'src/interfaces/KeyCode';
 import ConfigContext from 'src/components/ConfigProvider/ConfigContext';
 import Popup, { ListRef } from './Popup';
 import { inputCls, loadingIconCls, SWrap } from './style';
+import { Override } from 'src/type';
+
+type InputProps = HTMLAttributes<HTMLDivElement>;
 
 interface Item {
     // 项的值
@@ -26,48 +30,32 @@ interface Item {
     label?: ReactNode;
 }
 interface AutoCompleteProps {
-    /**
-     * 待筛选选项
-     */
+    /** 待筛选选项 */
     options: Item[];
-    /**
-     * 值，controlled
-     */
+    /** 值，controlled */
     value?: string;
-    /**
-     * 默认值
-     */
+    /** 默认值 */
     defaultValue?: string;
-    /**
-     * 选中回调
-     */
+    /** 选中回调 */
     onChange?: (v: string) => void;
-    /**
-     * 是否禁用
-     */
+    /** 是否禁用 */
     disabled?: boolean;
-    /**
-     * options 加载中状态
-     */
+    /** options 加载中状态 */
     loading?: boolean;
     /** 前缀 */
     prefix?: ReactNode;
-    /**
-     * 自定义搜索，为 false 时不做搜索展示全部
-     */
+    /** 展示变更为块占位 */
+    block?: boolean;
+    /** 自定义搜索，为 false 时不做搜索展示全部 */
     handleSearch?: false | ((v: Item) => boolean);
-    /**
-     * 自定义 popover 的配置
-     */
+    /** 自定义 popover 的配置 */
     popoverProps?: { [key: string]: any };
-    /**
-     * 焦点回调
-     */
+    /** 焦点回调 */
     onFocus?: () => void;
-    /**
-     * 失焦回调
-     */
+    /** 失焦回调 */
     onBlur?: () => void;
+    /** @ignore */
+    placeholder?: InputProps['placeholder'];
 }
 
 const AutoComplete = ({
@@ -78,11 +66,15 @@ const AutoComplete = ({
     disabled,
     loading,
     prefix,
+    block,
     handleSearch,
     popoverProps,
     onFocus,
-    onBlur
-}: AutoCompleteProps) => {
+    onBlur,
+    style,
+    className,
+    placeholder
+}: AutoCompleteProps & Override<InputProps, AutoCompleteProps>) => {
     const [value, onChange] = useUncontrolled<string>(_value, defaultValue, _onChange);
     const [visible, setVisible] = useState(false);
     const list = useRef<ListRef>(null);
@@ -132,7 +124,7 @@ const AutoComplete = ({
     }, [configContext.forwardPopupContainer]);
 
     return (
-        <SWrap>
+        <SWrap {...{ className, style, block }}>
             <Popover
                 {...popoverContainerProps}
                 {...popoverProps}
@@ -162,6 +154,8 @@ const AutoComplete = ({
                     prefix={prefix}
                     suffix={loading && <SvgIcon className={loadingIconCls} type="ring-loading" spin />}
                     className={inputCls}
+                    block
+                    placeholder={placeholder}
                 />
             </Popover>
         </SWrap>

@@ -19,10 +19,11 @@ class Demo extends React.PureComponent {
         };
     }
     render() {
-        const { handleSearch, disabled, loading, prefix } = this.state;
+        const { handleSearch, disabled, loading, prefix, block } = this.state;
         const props = {
             disabled,
-            loading
+            loading,
+            block
         };
         if (handleSearch === 'false') {
             props.handleSearch = false;
@@ -42,6 +43,9 @@ class Demo extends React.PureComponent {
                     </Form.Item>
                     <Form.Item label="loading">
                         <Switch checked={loading} onChange={loading => this.setState({ loading })} />
+                    </Form.Item>
+                    <Form.Item label="block">
+                        <Switch checked={block} onChange={block => this.setState({ block })} />
                     </Form.Item>
                     <Form.Item label="prefix">
                         <Switch checked={prefix} onChange={prefix => this.setState({ prefix })} />

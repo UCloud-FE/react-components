@@ -13,20 +13,21 @@ export const loadingIconCls = prefixCls + '-loading-icon';
 export const popupWrapCls = prefixCls + '-popup';
 export const menuCls = popupWrapCls + '-menu';
 
-export const SWrap = sWrap({
+export const SWrap = sWrap<{ block?: boolean }>({
     className: prefixCls
 })(
     styled.div(props => {
         const {
-            theme: { designTokens: DT }
+            theme: { designTokens: DT },
+            block
         } = props;
+
         return css`
             position: relative;
-            display: inline-block;
+            display: ${block ? 'block' : 'inline-block'};
+            vertical-align: middle;
+            width: ${block ? '100%' : '200px'};
 
-            .${inputCls} {
-                width: 200px;
-            }
             .${loadingIconCls} {
                 fill: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
             }
@@ -39,5 +40,6 @@ export const PopupWrap = sWrap<{ loading?: boolean; indicator?: ReactNode }>({
 })(styled(Loading)`
     .${menuCls} {
         width: 100%;
+        max-width: unset;
     }
 `);
