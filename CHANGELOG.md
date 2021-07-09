@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.10](https://github.com/UCloud-FE/react-components/compare/v1.1.9...v1.1.10) (2021-07-09)
+
+### Features
+
+-   **AutoComplete:** add prefix ([26f128e](https://github.com/UCloud-FE/react-components/commit/26f128edf21be657bb8b8d8b8c3748d34e2f4fe2))
+-   **TransferTable:** add disabled style for table row ([43259ec](https://github.com/UCloud-FE/react-components/commit/43259ec0ecb183c1e5afc79bac0ed7e8d07c2752))
+
 ### [1.1.9](https://github.com/UCloud-FE/react-components/compare/v1.1.8...v1.1.9) (2021-07-05)
 
 ### Features
