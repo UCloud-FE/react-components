@@ -119,6 +119,7 @@ export const SWrap = sWrap<
             }
             ${
                 !empty &&
+                !disabled &&
                 css`
                     :hover,
                     &.${focusedCls} {

@@ -36,6 +36,10 @@ class InputDemo extends React.Component {
                     <Input ref={_ref => (this.input2 = _ref)} />
                     <Button onClick={() => this.testRef()}>check</Button>
                 </div>
+                <h2>禁用状态下 clear 测试</h2>
+                <div className="demo-wrap">
+                    <Input clearable disabled defaultValue="default" />
+                </div>
             </div>
         );
     }

@@ -131,6 +131,7 @@ const Input = forwardRef(
         );
         const handleClear = useCallback(
             e => {
+                if (disabled) return;
                 onClear();
                 const input = inputRef.current;
                 if (!input) return;
@@ -141,7 +142,7 @@ const Input = forwardRef(
                 onChange(e);
                 input.value = cacheV;
             },
-            [onChange, onClear]
+            [disabled, onChange, onClear]
         );
         const renderClear = useMemo(() => {
             if (clearable) {
