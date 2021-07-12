@@ -188,22 +188,47 @@ class Transfer extends PureComponent {
     handleTargetSearch = item => {
         return this.handleSearch('target', item);
     };
-    onSearch = (part, v) => {
+    setSourceSearchValue = _.debounce(v => {
         this.setState({
-            [part === 'source' ? 'sourceSearchValue' : 'targetSearchValue']: v
+            sourceSearchValue: v
         });
+    }, 200);
+    setTargetSearchValue = _.debounce(v => {
+        this.setState({
+            targetSearchValue: v
+        });
+    }, 200);
+    onSourceSearch = e => {
+        let v;
+        if (typeof e === 'string') {
+            v = e;
+        } else if (!e || !e.target) {
+            return;
+        } else {
+            v = e.target.value;
+        }
+        this.setSourceSearchValue(v);
     };
-    onSourceSearch = v => {
-        this.onSearch('source', v);
-    };
-    onTargetSearch = v => {
-        this.onSearch('target', v);
+    onTargetSearch = e => {
+        let v;
+        if (typeof e === 'string') {
+            v = e;
+        } else if (!e || !e.target) {
+            return;
+        } else {
+            v = e.target.value;
+        }
+        this.setTargetSearchValue(v);
     };
     clearSourceSearch = () => {
-        this.onSourceSearch('');
+        this.setState({
+            sourceSearchValue: ''
+        });
     };
     clearTargetSearch = () => {
-        this.onTargetSearch('');
+        this.setState({
+            targetSearchValue: ''
+        });
     };
     renderPart = part => {
         const { dataSourceGroup, sourceSelectedKeys, targetSelectedKeys } = this.state;
@@ -227,7 +252,7 @@ class Transfer extends PureComponent {
                 <div className={partContentCls}>
                     {search && (
                         <div className={searchCls}>
-                            <Input.Search block onSearch={onSearch} disabled={disabled} />
+                            <Input.Search block onSearch={onSearch} onChange={onSearch} disabled={disabled} />
                         </div>
                     )}
                     {this.renderContent({
