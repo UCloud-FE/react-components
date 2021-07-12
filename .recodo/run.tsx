@@ -1,4 +1,7 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+import moment from 'moment';
+import lodash from 'lodash';
 import { Provider, Page } from 'recodo-doc';
 import 'recodo-doc/lib/doc.css';
 
@@ -14,7 +17,7 @@ const Doc = ({ name, components }: { name: string; components: any }) => {
         <Provider
             content={{ examples, docs }}
             getRemoteUrl={getRemoteUrl}
-            scope={{ React: React, ...components, components }}
+            scope={{ React, ReactDOM, lodash, _: lodash, moment, ...components, components }}
         >
             <Page name={name} />
         </Provider>
