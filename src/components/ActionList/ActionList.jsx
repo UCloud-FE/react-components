@@ -186,7 +186,6 @@ export default class ActionList extends Component {
                 className={classnames(prefixCls, className)}
                 sharedProps={{ size }}
                 spacing="smart"
-                separator=""
                 disabled={false}
             >
                 {this.renderButtonList(buttonList, size)}

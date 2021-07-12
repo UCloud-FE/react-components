@@ -857,6 +857,13 @@
                 "displayName": "TransferTable",
                 "methods": [
                     {
+                        "name": "onRow",
+                        "docblock": null,
+                        "modifiers": [],
+                        "params": [{ "name": "record", "type": null }],
+                        "returns": null
+                    },
+                    {
                         "name": "renderList",
                         "docblock": null,
                         "modifiers": [],
@@ -979,27 +986,17 @@
                         "returns": null
                     },
                     {
-                        "name": "onSearch",
-                        "docblock": null,
-                        "modifiers": [],
-                        "params": [
-                            { "name": "part", "type": null },
-                            { "name": "v", "type": null }
-                        ],
-                        "returns": null
-                    },
-                    {
                         "name": "onSourceSearch",
                         "docblock": null,
                         "modifiers": [],
-                        "params": [{ "name": "v", "type": null }],
+                        "params": [{ "name": "e", "type": null }],
                         "returns": null
                     },
                     {
                         "name": "onTargetSearch",
                         "docblock": null,
                         "modifiers": [],
-                        "params": [{ "name": "v", "type": null }],
+                        "params": [{ "name": "e", "type": null }],
                         "returns": null
                     },
                     { "name": "clearSourceSearch", "docblock": null, "modifiers": [], "params": [], "returns": null },
@@ -8725,6 +8722,16 @@
                         "tsType": { "name": "boolean" },
                         "description": { "description": "options 加载中状态", "tags": [] }
                     },
+                    "prefix": {
+                        "required": false,
+                        "tsType": { "name": "ReactNode" },
+                        "description": { "description": "前缀", "tags": [] }
+                    },
+                    "block": {
+                        "required": false,
+                        "tsType": { "name": "boolean" },
+                        "description": { "description": "展示变更为块占位", "tags": [] }
+                    },
                     "handleSearch": {
                         "required": false,
                         "tsType": {
@@ -8767,6 +8774,11 @@
                             "signature": { "arguments": [], "return": { "name": "void" } }
                         },
                         "description": { "description": "失焦回调", "tags": [] }
+                    },
+                    "placeholder": {
+                        "required": false,
+                        "tsType": { "name": "HTMLAttributes['placeholder']", "raw": "InputProps['placeholder']" },
+                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
                     }
                 }
             }
