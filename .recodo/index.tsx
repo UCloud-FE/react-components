@@ -43,8 +43,17 @@ mod.config({
 });
 
 const renderDoc = (name, dom: Element) => {
+    let destroyAction;
+    let destroyed = false;
+    let destroy = () => {
+        if (destroyed) return;
+        destroyed = true;
+        if (!destroyAction) return;
+        destroyAction();
+    };
     mod.import(['@ucloud-fe/react-components', 'moment', 'lodash', 'react', 'react-dom', 'prop-types']).then(
         dependences => {
+            if (destroyed) return;
             const [components, moment, lodash, React, ReactDOM, PropTypes] = dependences as any;
             const { Doc } = require('./run');
             ReactDOM.render(
@@ -54,8 +63,10 @@ const renderDoc = (name, dom: Element) => {
                 />,
                 dom
             );
+            destroyAction = () => ReactDOM.unmountComponentAtNode(dom);
         }
     );
+    return destroy;
 };
 
 export { renderDoc };
