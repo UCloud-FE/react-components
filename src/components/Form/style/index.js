@@ -78,7 +78,10 @@ export const FormWrap = withProps({
     className: prefixCls
 })(
     styled('form')(props => {
-        const { size } = props;
+        const {
+            size,
+            theme: { designTokens: DT }
+        } = props;
 
         return css`
             .${itemCls} {
@@ -86,6 +89,9 @@ export const FormWrap = withProps({
                 &:last-child {
                     margin-bottom: 0;
                 }
+            }
+            .${labelCls} {
+                color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
             }
             ${size === 'lg' &&
             css`

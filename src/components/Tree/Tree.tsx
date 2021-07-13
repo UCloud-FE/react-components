@@ -77,7 +77,7 @@ export interface TreeProps {
     onChange?: (v: Key[]) => void;
     /** 异步加载数据操作 */
     loadData?: LoadData;
-    /** collapse 的配置，查看 collapse 组件 */
+    /** collapse 的配置，参考 collapse 组件 */
     collapseProps?: CollapseProps;
     /** 使用搜索 */
     search?:
