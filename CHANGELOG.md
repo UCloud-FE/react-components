@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.12](https://github.com/UCloud-FE/react-components/compare/v1.1.11...v1.1.12) (2021-07-13)
+
+### Features
+
+-   **Form:** update label color ([879cc3a](https://github.com/UCloud-FE/react-components/commit/879cc3a754ed17c8efe57db74180ae6d663cbf6f))
+-   **recodo:** update recodo ([6306d6e](https://github.com/UCloud-FE/react-components/commit/6306d6ed0b9f9a962186ea95d9551b2c67f2c6fa))
+-   **Transfer:** change search trigger to immediately ([3776321](https://github.com/UCloud-FE/react-components/commit/3776321218f938c8e706511916692c8c17ccff76))
+
+### Bug Fixes
+
+-   **Input:** fix clearable when disabled ([0066677](https://github.com/UCloud-FE/react-components/commit/0066677906088ee060f4cf6feee9b47f0cef154f))
+
 ### [1.1.11](https://github.com/UCloud-FE/react-components/compare/v1.1.10...v1.1.11) (2021-07-09)
 
 ### Features
