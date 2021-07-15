@@ -39,6 +39,7 @@ export const STree = sWrap<{ disabled: boolean }, HTMLDivElement>({})(
                 .${indentCls} {
                     width: 32px;
                     position: relative;
+                    flex-shrink: 0;
                     &.${innerIndentCls} {
                         ::after {
                             content: ' ';
@@ -90,6 +91,7 @@ export const STree = sWrap<{ disabled: boolean }, HTMLDivElement>({})(
                 height: 16px;
                 line-height: 16px;
                 margin-right: 8px;
+                flex-shrink: 0;
             }
             .${loadingIconCls} {
                 fill: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
