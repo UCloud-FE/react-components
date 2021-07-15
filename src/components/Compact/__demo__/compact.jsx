@@ -1,10 +1,10 @@
 import React from 'react';
-import Compact from 'components/Compact';
-import Select from 'components/Select';
-import Input from 'components/Input';
-import Radio from 'components/Radio';
-import Form from 'components/Form';
-import Switch from 'components/Switch';
+import Compact from 'src/components/Compact';
+import Select from 'src/components/Select';
+import Input from 'src/components/Input';
+import Radio from 'src/components/Radio';
+import Form from 'src/components/Form';
+import Switch from 'src/components/Switch';
 
 // demo start
 const Sizes = ['sm', 'md', 'lg'];

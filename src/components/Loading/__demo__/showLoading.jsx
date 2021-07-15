@@ -1,5 +1,5 @@
 import React from 'react';
-import Loading from 'components/Loading';
+import Loading from 'src/components/Loading';
 
 // demo start
 class Demo extends React.Component {

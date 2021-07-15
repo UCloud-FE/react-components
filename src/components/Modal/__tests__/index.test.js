@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 
 import Modal from 'src/components/Modal';
 import Button from 'src/components/Button';
-import sleep from 'tests/shared/sleep';
+import sleep from 'shared/sleep';
 
 describe('Modal', () => {
     test('Modal method alert', async () => {

@@ -1,7 +1,7 @@
 import React from 'react';
-import Radio from 'components/Radio';
-import Form from 'components/Form';
-import Switch from 'components/Switch';
+import Radio from 'src/components/Radio';
+import Form from 'src/components/Form';
+import Switch from 'src/components/Switch';
 
 // demo start
 const { Size, StyleType } = Radio;

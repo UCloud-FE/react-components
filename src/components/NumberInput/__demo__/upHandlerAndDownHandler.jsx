@@ -1,6 +1,6 @@
 import React from 'react';
-import NumberInput from 'components/NumberInput';
-import Icon from 'components/Icon';
+import NumberInput from 'src/components/NumberInput';
+import Icon from 'src/components/Icon';
 
 // demo start
 class Demo extends React.Component {

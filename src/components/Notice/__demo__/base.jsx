@@ -1,5 +1,5 @@
 import React from 'react';
-import Notice from 'components/Notice';
+import Notice from 'src/components/Notice';
 
 // demo start
 const { StyleType } = Notice;

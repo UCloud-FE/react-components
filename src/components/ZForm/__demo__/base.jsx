@@ -1,8 +1,8 @@
 /* eslint-disable no-console */
 import React from 'react';
 import _ from 'lodash';
-import ZForm from 'components/ZForm';
-import Form from 'components/Form';
+import ZForm from 'src/components/ZForm';
+import Form from 'src/components/Form';
 
 // demo start
 const { formDecorator, controllerDecorator, formShape } = ZForm;

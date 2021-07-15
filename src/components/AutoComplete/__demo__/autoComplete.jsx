@@ -1,6 +1,6 @@
 import React from 'react';
 
-import demoUtil from 'tests/shared/demoUtil';
+import demoUtil from 'shared/demoUtil';
 import AutoComplete from 'src/components/AutoComplete';
 import Form from 'src/components/Form';
 import Radio from 'src/components/Radio';

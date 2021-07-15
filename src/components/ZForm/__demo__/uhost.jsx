@@ -3,14 +3,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
-import ZForm from 'components/ZForm';
-import Form from 'components/Form';
-import Input from 'components/Input';
-import Select from 'components/Select';
-import Switch from 'components/Switch';
-import Checkbox from 'components/Checkbox';
-import Radio from 'components/Radio';
-import Button from 'components/Button';
+import ZForm from 'src/components/ZForm';
+import Form from 'src/components/Form';
+import Input from 'src/components/Input';
+import Select from 'src/components/Select';
+import Switch from 'src/components/Switch';
+import Checkbox from 'src/components/Checkbox';
+import Radio from 'src/components/Radio';
+import Button from 'src/components/Button';
 
 // demo start
 const { formDecorator, controllerDecorator, formShape } = ZForm;

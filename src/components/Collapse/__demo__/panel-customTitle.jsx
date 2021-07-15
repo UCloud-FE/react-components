@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Collapse from 'components/Collapse';
-import Button from 'components/Button';
+import Collapse from 'src/components/Collapse';
+import Button from 'src/components/Button';
 
 // demo start
 class PanelTitle extends React.Component {

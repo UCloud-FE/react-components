@@ -1,6 +1,6 @@
 import React from 'react';
-import Message from 'components/Message';
-import Button from 'components/Button';
+import Message from 'src/components/Message';
+import Button from 'src/components/Button';
 
 // demo start
 const Demo = () => {

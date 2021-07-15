@@ -1,6 +1,6 @@
 import React from 'react';
 
-import demoUtil from 'tests/shared/demoUtil';
+import demoUtil from 'shared/demoUtil';
 import TimePicker from 'src/components/TimePicker';
 
 // demo start

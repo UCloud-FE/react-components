@@ -4,7 +4,7 @@ import { renderToJson } from 'enzyme-to-json';
 
 import Slider from 'src/components/Slider';
 import KeyCode from 'src/interfaces/KeyCode';
-import sleep from 'tests/shared/sleep';
+import sleep from 'shared/sleep';
 
 jest.unmock('rc-trigger');
 

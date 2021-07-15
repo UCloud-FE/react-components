@@ -1,7 +1,7 @@
 import React from 'react';
-import Grid from 'components/Grid';
-import NumberInput from 'components/NumberInput';
-import Form from 'components/Form';
+import Grid from 'src/components/Grid';
+import NumberInput from 'src/components/NumberInput';
+import Form from 'src/components/Form';
 
 // demo start
 const { Row, Col } = Grid;

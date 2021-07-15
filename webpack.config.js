@@ -62,15 +62,9 @@ const config = {
     resolve: {
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
         alias: {
-            utils: path.join(__dirname, 'src/utils'),
-            components: path.join(__dirname, 'src/components'),
-            interfaces: path.join(__dirname, 'src/interfaces'),
-            style: path.join(__dirname, 'src/style'),
-            decorators: path.join(__dirname, 'src/decorators'),
-            stores: path.join(__dirname, 'src/stores'),
-            config: path.join(__dirname, 'src/config.js'),
+            src: path.join(__dirname, 'src'),
             tests: path.join(__dirname, 'tests'),
-            src: path.join(__dirname, 'src')
+            shared: path.join(__dirname, 'shared')
         }
     },
     externals: {

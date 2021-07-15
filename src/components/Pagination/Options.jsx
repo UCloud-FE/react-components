@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Select from 'components/Select';
-import Button from 'components/Button';
-import KEYCODE from 'interfaces/KeyCode';
 
-import NumberInput from 'components/NumberInput';
+import Select from 'src/components/Select';
+import Button from 'src/components/Button';
+import NumberInput from 'src/components/NumberInput';
+import KEYCODE from 'src/interfaces/KeyCode';
 
 class Options extends React.Component {
     static propTypes = {

@@ -1,5 +1,5 @@
 import React from 'react';
-import Switch from 'components/Switch';
+import Switch from 'src/components/Switch';
 
 // demo start
 class Demo extends React.Component {

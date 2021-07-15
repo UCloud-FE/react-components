@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import Menu from 'components/Menu';
+import Menu from 'src/components/Menu';
 
 export default class Group extends Component {
     static propTypes = {

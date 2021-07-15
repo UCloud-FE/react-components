@@ -1,9 +1,9 @@
 import React from 'react';
-import Pagination from 'components/Pagination';
-import Radio from 'components/Radio';
-import Switch from 'components/Switch';
-import Form from 'components/Form';
-import NumberInput from 'components/NumberInput';
+import Pagination from 'src/components/Pagination';
+import Radio from 'src/components/Radio';
+import Switch from 'src/components/Switch';
+import Form from 'src/components/Form';
+import NumberInput from 'src/components/NumberInput';
 
 // demo start
 const { Size } = Pagination;

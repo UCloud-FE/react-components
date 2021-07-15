@@ -1,11 +1,11 @@
 /* eslint-disable no-console */
 import React from 'react';
-import Notice from 'components/Notice';
+import Notice from 'src/components/Notice';
 
-import Form from 'components/Form';
-import Radio from 'components/Radio';
-import Icon from 'components/Icon';
-import Switch from 'components/Switch';
+import Form from 'src/components/Form';
+import Radio from 'src/components/Radio';
+import Icon from 'src/components/Icon';
+import Switch from 'src/components/Switch';
 
 // demo start
 const { StyleType } = Notice;

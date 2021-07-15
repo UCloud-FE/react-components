@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 import RcSlider from 'rc-slider';
 
-import Tooltip from 'components/Tooltip';
-import NumberInput from 'components/NumberInput';
+import Tooltip from 'src/components/Tooltip';
+import NumberInput from 'src/components/NumberInput';
 import uncontrolledDecorator from 'src/decorators/uncontrolled';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
 

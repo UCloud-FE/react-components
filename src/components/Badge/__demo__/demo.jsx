@@ -2,7 +2,7 @@ import React from 'react';
 
 import Badge from 'src/components/Badge';
 import Combine from 'src/components/Combine';
-import demoUtil from 'tests/shared/demoUtil';
+import demoUtil from 'shared/demoUtil';
 
 // demo start
 const { DemoWrap, DemoBlock } = demoUtil;

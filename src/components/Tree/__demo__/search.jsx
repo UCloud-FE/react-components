@@ -4,7 +4,7 @@ import Tree from 'src/components/Tree';
 import Button from 'src/components/Button';
 import Combine from 'src/components/Combine';
 import Box from 'src/components/Box';
-import demoUtil from 'tests/shared/demoUtil';
+import demoUtil from 'shared/demoUtil';
 
 // demo start
 const { DemoWrap } = demoUtil;

@@ -1,6 +1,6 @@
 import React from 'react';
-import Menu from 'components/Menu';
-import Icon from 'components/Icon';
+import Menu from 'src/components/Menu';
+import Icon from 'src/components/Icon';
 
 // demo start
 const Demo = () => (

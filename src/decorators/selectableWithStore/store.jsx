@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
-import SimpleStore from 'stores/SimpleStore';
+import SimpleStore from 'src/stores/SimpleStore';
 
 const noop = () => {};
 

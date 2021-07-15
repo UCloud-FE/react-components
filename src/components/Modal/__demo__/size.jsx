@@ -1,6 +1,6 @@
 import React from 'react';
-import Modal from 'components/Modal';
-import Button from 'components/Button';
+import Modal from 'src/components/Modal';
+import Button from 'src/components/Button';
 
 // demo start
 const { Size } = Modal;

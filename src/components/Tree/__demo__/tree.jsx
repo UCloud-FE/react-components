@@ -3,7 +3,7 @@ import React from 'react';
 import Tree from 'src/components/Tree';
 import Switch from 'src/components/Switch';
 import Form from 'src/components/Form';
-import demoUtil from 'tests/shared/demoUtil';
+import demoUtil from 'shared/demoUtil';
 import Button from 'src/components/Button';
 
 // demo start

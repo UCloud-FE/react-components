@@ -1,6 +1,6 @@
 import React from 'react';
-import Table from 'components/Table';
-import _ResizableTH from 'components/Table/ResizableTH';
+import Table from 'src/components/Table';
+import _ResizableTH from 'src/components/Table/ResizableTH';
 
 Table.ResizableTH = _ResizableTH;
 

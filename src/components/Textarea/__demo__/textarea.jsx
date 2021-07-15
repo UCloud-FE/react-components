@@ -1,7 +1,7 @@
 import React from 'react';
-import Textarea from 'components/Textarea';
-import Form from 'components/Form';
-import Switch from 'components/Switch';
+import Textarea from 'src/components/Textarea';
+import Form from 'src/components/Form';
+import Switch from 'src/components/Switch';
 
 // demo start
 class Demo extends React.Component {

@@ -1,10 +1,10 @@
 import React from 'react';
-import Collapse from 'components/Collapse';
-import Form from 'components/Form';
-import Switch from 'components/Switch';
-import Checkbox from 'components/Checkbox';
-import Radio from 'components/Radio';
-import NumberInput from 'components/NumberInput';
+import Collapse from 'src/components/Collapse';
+import Form from 'src/components/Form';
+import Switch from 'src/components/Switch';
+import Checkbox from 'src/components/Checkbox';
+import Radio from 'src/components/Radio';
+import NumberInput from 'src/components/NumberInput';
 
 // demo start
 class Demo extends React.Component {

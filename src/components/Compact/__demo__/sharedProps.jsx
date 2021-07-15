@@ -1,7 +1,7 @@
 import React from 'react';
-import Compact from 'components/Compact';
-import Select from 'components/Select';
-import Input from 'components/Input';
+import Compact from 'src/components/Compact';
+import Select from 'src/components/Select';
+import Input from 'src/components/Input';
 
 // demo start
 const Demo = () => (

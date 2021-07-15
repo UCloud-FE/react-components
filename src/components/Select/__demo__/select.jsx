@@ -1,9 +1,9 @@
 import React from 'react';
-import Select from 'components/Select';
-import Radio from 'components/Radio';
-import Switch from 'components/Switch';
-import Input from 'components/Input';
-import Form from 'components/Form';
+import Select from 'src/components/Select';
+import Radio from 'src/components/Radio';
+import Switch from 'src/components/Switch';
+import Input from 'src/components/Input';
+import Form from 'src/components/Form';
 
 // demo start
 const { Option, Size } = Select;

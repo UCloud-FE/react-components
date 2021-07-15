@@ -1,9 +1,9 @@
 import React from 'react';
-import Slider from 'components/Slider';
-import Radio from 'components/Radio';
-import NumberInput from 'components/NumberInput';
-import Switch from 'components/Switch';
-import Form from 'components/Form';
+import Slider from 'src/components/Slider';
+import Radio from 'src/components/Radio';
+import NumberInput from 'src/components/NumberInput';
+import Switch from 'src/components/Switch';
+import Form from 'src/components/Form';
 
 // demo start
 const itemLayout = {

@@ -1,5 +1,5 @@
 import React from 'react';
-import DatePicker from 'components/DatePicker';
+import DatePicker from 'src/components/DatePicker';
 import moment from 'moment';
 
 // demo start
@@ -10,12 +10,8 @@ const Demo = () => (
                 onChange={console.log}
                 rules={{
                     range: [
-                        moment()
-                            .set({ hour: 0, minute: 0, second: 0 })
-                            .add({ month: -4 }),
-                        moment()
-                            .set({ hour: 0, minute: 0, second: 0 })
-                            .add({ month: 4 })
+                        moment().set({ hour: 0, minute: 0, second: 0 }).add({ month: -4 }),
+                        moment().set({ hour: 0, minute: 0, second: 0 }).add({ month: 4 })
                     ]
                 }}
             />

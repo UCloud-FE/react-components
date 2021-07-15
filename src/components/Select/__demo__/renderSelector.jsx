@@ -1,6 +1,6 @@
 import React from 'react';
-import Select from 'components/Select';
-import Button from 'components/Button';
+import Select from 'src/components/Select';
+import Button from 'src/components/Button';
 
 // demo start
 const { Option } = Select;

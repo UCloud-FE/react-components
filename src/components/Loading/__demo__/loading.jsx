@@ -1,8 +1,8 @@
 import React from 'react';
-import Loading from 'components/Loading';
-import Switch from 'components/Switch';
-import Button from 'components/Button';
-import Form from 'components/Form';
+import Loading from 'src/components/Loading';
+import Switch from 'src/components/Switch';
+import Button from 'src/components/Button';
+import Form from 'src/components/Form';
 
 // demo start
 class Demo extends React.Component {

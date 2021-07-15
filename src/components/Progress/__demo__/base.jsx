@@ -1,7 +1,7 @@
 import React from 'react';
-import Progress from 'components/Progress';
-import Input from 'components/Input';
-import Form from 'components/Form';
+import Progress from 'src/components/Progress';
+import Input from 'src/components/Input';
+import Form from 'src/components/Form';
 
 // demo start
 class Demo extends React.Component {

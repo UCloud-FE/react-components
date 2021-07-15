@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid from 'components/Grid';
+import Grid from 'src/components/Grid';
 const { Row, Col } = Grid;
 
 // demo start

@@ -1,9 +1,9 @@
 import React from 'react';
-import Icon from 'components/Icon';
-import Form from 'components/Form';
-import Radio from 'components/Radio';
-import Switch from 'components/Switch';
-import NumberInput from 'components/NumberInput';
+import Icon from 'src/components/Icon';
+import Form from 'src/components/Form';
+import Radio from 'src/components/Radio';
+import Switch from 'src/components/Switch';
+import NumberInput from 'src/components/NumberInput';
 
 // demo start
 const Type = ['circle-fill', 'circle', 'loading'];

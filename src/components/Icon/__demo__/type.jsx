@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from 'components/Icon';
+import Icon from 'src/components/Icon';
 
 // demo start
 const layout = {

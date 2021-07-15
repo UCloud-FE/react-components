@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
-import generateError from 'utils/generateError';
+import generateError from 'src/utils/generateError';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
 import Modal from 'src/components/Modal';
 import deprecatedLog from 'src/utils/deprecatedLog';

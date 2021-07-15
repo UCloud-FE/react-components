@@ -1,5 +1,5 @@
 import React from 'react';
-import Checkbox from 'components/Checkbox';
+import Checkbox from 'src/components/Checkbox';
 
 // demo start
 class Demo extends React.Component {

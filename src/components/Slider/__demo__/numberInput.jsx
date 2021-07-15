@@ -1,6 +1,6 @@
 import React from 'react';
-import Slider from 'components/Slider';
-import Icon from 'components/Icon';
+import Slider from 'src/components/Slider';
+import Icon from 'src/components/Icon';
 
 // demo start
 class Demo extends React.Component {

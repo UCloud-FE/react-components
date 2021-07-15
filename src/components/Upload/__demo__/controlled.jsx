@@ -1,5 +1,5 @@
 import React from 'react';
-import Upload from 'components/Upload';
+import Upload from 'src/components/Upload';
 
 // demo start
 class Demo extends React.Component {

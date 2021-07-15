@@ -1,9 +1,9 @@
 import React from 'react';
-import Menu from 'components/Menu';
+import Menu from 'src/components/Menu';
 
-import Form from 'components/Form';
-import Button from 'components/Button';
-import Switch from 'components/Switch';
+import Form from 'src/components/Form';
+import Button from 'src/components/Button';
+import Switch from 'src/components/Switch';
 
 // demo start
 const generateNumber = (min, max) => {

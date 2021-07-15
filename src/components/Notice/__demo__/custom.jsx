@@ -1,6 +1,6 @@
 import React from 'react';
-import Notice from 'components/Notice';
-import Icon from 'components/Icon';
+import Notice from 'src/components/Notice';
+import Icon from 'src/components/Icon';
 
 // demo start
 const layout = { style: { marginBottom: 8 } };

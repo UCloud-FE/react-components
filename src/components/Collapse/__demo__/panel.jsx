@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Collapse from 'components/Collapse';
-import Form from 'components/Form';
-import Switch from 'components/Switch';
-import Icon from 'components/Icon';
+import Collapse from 'src/components/Collapse';
+import Form from 'src/components/Form';
+import Switch from 'src/components/Switch';
+import Icon from 'src/components/Icon';
 
 // demo start
 const CustomTitle = ({ open, disabled, children, ...rest }) => {

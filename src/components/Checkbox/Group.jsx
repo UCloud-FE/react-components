@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
-import storeDecorator from 'decorators/selectableWithStore/store';
-import uncontrolledDecorator from 'decorators/uncontrolled';
+import storeDecorator from 'src/decorators/selectableWithStore/store';
+import uncontrolledDecorator from 'src/decorators/uncontrolled';
 
 import Checkbox, { StoreContext, CheckboxContext } from './Checkbox';
 import { CheckboxGroupWrap } from './style';

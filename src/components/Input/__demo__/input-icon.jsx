@@ -1,5 +1,5 @@
 import React from 'react';
-import Input from 'components/Input';
+import Input from 'src/components/Input';
 
 // demo start
 const IconType = ['circle-fill', 'circle', 'loading'];

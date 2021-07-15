@@ -1,8 +1,8 @@
 import React from 'react';
-import Checkbox from 'components/Checkbox';
-import Radio from 'components/Radio';
-import Switch from 'components/Switch';
-import Form from 'components/Form';
+import Checkbox from 'src/components/Checkbox';
+import Radio from 'src/components/Radio';
+import Switch from 'src/components/Switch';
+import Form from 'src/components/Form';
 
 // demo start
 const { Group, Size, StyleType } = Checkbox;

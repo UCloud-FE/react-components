@@ -1,5 +1,5 @@
 import React from 'react';
-import Checkbox from 'components/Checkbox';
+import Checkbox from 'src/components/Checkbox';
 
 // demo start
 const options = [1, 2, 3];

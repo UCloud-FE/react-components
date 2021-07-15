@@ -1,7 +1,7 @@
 import React from 'react';
-import Table from 'components/Table';
-import Pagination from 'components/Pagination';
-import Loading from 'components/Loading';
+import Table from 'src/components/Table';
+import Pagination from 'src/components/Pagination';
+import Loading from 'src/components/Loading';
 
 // demo start
 class Demo extends React.Component {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import demoUtil from 'tests/shared/demoUtil';
+import demoUtil from 'shared/demoUtil';
 import Select from 'src/components/Select';
 
 // demo start

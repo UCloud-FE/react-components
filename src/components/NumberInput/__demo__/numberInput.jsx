@@ -1,9 +1,9 @@
 import React from 'react';
-import NumberInput from 'components/NumberInput';
-import Switch from 'components/Switch';
-import Radio from 'components/Radio';
-import Input from 'components/Input';
-import Form from 'components/Form';
+import NumberInput from 'src/components/NumberInput';
+import Switch from 'src/components/Switch';
+import Radio from 'src/components/Radio';
+import Input from 'src/components/Input';
+import Form from 'src/components/Form';
 
 // demo start
 const { Size, StyleType } = NumberInput;

@@ -1,10 +1,10 @@
 import React from 'react';
 import moment from 'moment';
-import DatePicker from 'components/DatePicker';
-import Form from 'components/Form';
-import Input from 'components/Input';
-import Radio from 'components/Radio';
-import Switch from 'components/Switch';
+import DatePicker from 'src/components/DatePicker';
+import Form from 'src/components/Form';
+import Input from 'src/components/Input';
+import Radio from 'src/components/Radio';
+import Switch from 'src/components/Switch';
 
 // demo start
 const { Sizes } = DatePicker;

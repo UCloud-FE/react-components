@@ -1,8 +1,8 @@
 import React from 'react';
-import Switch from 'components/Switch';
-import Radio from 'components/Radio';
-import Form from 'components/Form';
-import Input from 'components/Input';
+import Switch from 'src/components/Switch';
+import Radio from 'src/components/Radio';
+import Form from 'src/components/Form';
+import Input from 'src/components/Input';
 
 // demo start
 const { Sizes } = Switch;

@@ -1,5 +1,5 @@
 import React from 'react';
-import Popover from 'components/Popover';
+import Popover from 'src/components/Popover';
 
 // demo start
 const Popup = () => <div style={{ border: '1px solid #ddd', background: '#fff', height: '100%' }}>This is a popup</div>;

@@ -1,6 +1,6 @@
 import React from 'react';
-import Card from 'components/Card';
-import Button from 'components/Button';
+import Card from 'src/components/Card';
+import Button from 'src/components/Button';
 
 // demo start
 const Demo = () => (

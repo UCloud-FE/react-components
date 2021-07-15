@@ -1,5 +1,5 @@
 import React from 'react';
-import Pagination from 'components/Pagination';
+import Pagination from 'src/components/Pagination';
 
 // demo start
 class Demo extends React.Component {

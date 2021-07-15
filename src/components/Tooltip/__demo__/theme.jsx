@@ -1,6 +1,6 @@
 import React from 'react';
-import Tooltip from 'components/Tooltip';
-import Button from 'components/Button';
+import Tooltip from 'src/components/Tooltip';
+import Button from 'src/components/Button';
 
 // demo start
 const { Theme } = Tooltip;

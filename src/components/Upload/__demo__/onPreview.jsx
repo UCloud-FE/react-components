@@ -1,6 +1,6 @@
 import React from 'react';
-import Upload from 'components/Upload';
-import Modal from 'components/Modal';
+import Upload from 'src/components/Upload';
+import Modal from 'src/components/Modal';
 
 // demo start
 const { readFile } = Upload;

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Popover from 'components/Popover';
+import Popover from 'src/components/Popover';
 
 // demo start
 const Popup = () => (

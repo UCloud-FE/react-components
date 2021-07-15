@@ -1,5 +1,5 @@
 import React from 'react';
-import NumberInput from 'components/NumberInput';
+import NumberInput from 'src/components/NumberInput';
 
 // demo start
 class Demo extends React.Component {

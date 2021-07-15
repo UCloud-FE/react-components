@@ -1,6 +1,6 @@
 import { injectGlobal } from 'emotion';
 
-import config from 'config';
+import config from 'src/config';
 import { fadeIn, fadeOut, bounceIn, bounceOut, zoomIn, zoomOut, slideDownIn, slideDownOut } from './animation';
 
 const { prefixCls: _prefixCls } = config;

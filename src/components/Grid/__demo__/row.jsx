@@ -1,9 +1,9 @@
 import React from 'react';
-import Grid from 'components/Grid';
-import Radio from 'components/Radio';
-import Switch from 'components/Switch';
-import NumberInput from 'components/NumberInput';
-import Form from 'components/Form';
+import Grid from 'src/components/Grid';
+import Radio from 'src/components/Radio';
+import Switch from 'src/components/Switch';
+import NumberInput from 'src/components/NumberInput';
+import Form from 'src/components/Form';
 
 // demo start
 const { Row, Col } = Grid;

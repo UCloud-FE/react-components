@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { renderToJson } from 'enzyme-to-json';
-import sleep from 'tests/shared/sleep';
+import sleep from 'shared/sleep';
 
 import Demo from '../__demo__/list';
 

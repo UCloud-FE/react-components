@@ -1,6 +1,6 @@
 import React from 'react';
-import Table from 'components/Table';
-import Button from 'components/Button';
+import Table from 'src/components/Table';
+import Button from 'src/components/Button';
 
 // demo start
 class Demo extends React.Component {

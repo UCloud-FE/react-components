@@ -1,5 +1,5 @@
 import React from 'react';
-import DatePicker from 'components/DatePicker';
+import DatePicker from 'src/components/DatePicker';
 
 // demo start
 const Display = [{ second: false }, { minute: false }, { hour: false }, { date: { format: 'YY:MM:DD' } }];

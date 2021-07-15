@@ -1,5 +1,5 @@
 import React from 'react';
-import Collapse from 'components/Collapse';
+import Collapse from 'src/components/Collapse';
 
 // demo start
 class Demo extends React.Component {

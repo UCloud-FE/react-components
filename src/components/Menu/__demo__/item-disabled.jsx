@@ -1,5 +1,5 @@
 import React from 'react';
-import Menu from 'components/Menu';
+import Menu from 'src/components/Menu';
 
 // demo start
 const Demo = () => (

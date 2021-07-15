@@ -1,5 +1,5 @@
 import React from 'react';
-import Textarea from 'components/Textarea';
+import Textarea from 'src/components/Textarea';
 
 // demo start
 class Demo extends React.Component {

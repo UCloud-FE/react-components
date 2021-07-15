@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import styled from '@emotion/styled';
 import RcTrigger from 'rc-trigger';
 
-import config from 'config';
+import config from 'src/config';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-popover';
