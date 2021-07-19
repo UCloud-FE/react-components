@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.13](https://github.com/UCloud-FE/react-components/compare/v1.1.12...v1.1.13) (2021-07-19)
+
+### Features
+
+-   **Select:** add support of function extra ([835c688](https://github.com/UCloud-FE/react-components/commit/835c68807c32765f540dabd1ba35542d40b7a84f))
+
+### Bug Fixes
+
+-   **Tree:** fix shrink on indent&icon ([2612f04](https://github.com/UCloud-FE/react-components/commit/2612f0423faf145875fac370321941b23adcdcab))
+
 ### [1.1.12](https://github.com/UCloud-FE/react-components/compare/v1.1.11...v1.1.12) (2021-07-13)
 
 ### Features
