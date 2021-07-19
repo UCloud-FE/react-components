@@ -32,6 +32,23 @@ class Demo extends React.Component {
                         <Option value={3}>3</Option>
                     </Select>
                 </div>
+                <div className="demo-wrap">
+                    <Select
+                        multiple
+                        showSelectAll
+                        search
+                        onChange={console.log}
+                        options={[1, 2, 3].map(v => ({ value: v, label: v + '' }))}
+                        extra={hide => {
+                            return (
+                                <div>
+                                    <Button onClick={() => console.log(123)}>xxx</Button>
+                                    <Button onClick={hide}>hide</Button>
+                                </div>
+                            );
+                        }}
+                    />
+                </div>
             </div>
         );
     }

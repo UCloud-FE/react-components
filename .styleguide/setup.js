@@ -34,5 +34,6 @@ global.SizeInterface = require('src/interfaces/Size').default;
 global.axios = require('axios');
 
 global.demoUtil = require('shared/demoUtil').default;
+global.InteractionDemo = require('shared/InteractionDemo').default;
 
 global.components = components;

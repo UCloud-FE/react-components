@@ -69,7 +69,8 @@ class Select extends Component {
             PropTypes.shape({
                 content: PropTypes.node.isRequired
             }),
-            PropTypes.node
+            PropTypes.node,
+            PropTypes.func
         ]),
         /** @ignore */
         className: PropTypes.string,
@@ -309,7 +310,9 @@ class Select extends Component {
         }
     };
     renderExtra = extra => {
-        if (!_.isEmpty(extra)) {
+        if (typeof extra === 'function') {
+            return <Extra>{extra(this.hidePopup)}</Extra>;
+        } else if (!_.isEmpty(extra)) {
             if (React.isValidElement(extra)) {
                 return <Extra>{extra}</Extra>;
             } else {

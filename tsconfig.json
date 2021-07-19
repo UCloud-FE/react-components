@@ -21,9 +21,10 @@
         "baseUrl": "./",
         "outDir": "./lib",
         "paths": {
-            "src/*": ["src/*"]
+            "src/*": ["src/*"],
+            "shared/*": ["shared/*"]
         }
     },
-    "include": ["src/**/*.ts", "src/**/*.tsx"],
+    "include": ["src/**/*.ts", "src/**/*.tsx", ".recodo/**/*.tsx", "tests/**/*.tsx"],
     "exclude": ["src/**/*.js", "src/**/*.jsx"]
 }
