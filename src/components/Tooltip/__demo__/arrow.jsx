@@ -7,12 +7,12 @@ import Button from 'src/components/Button';
 const Demo = () => (
     <div>
         <div className="demo-wrap">
-            <Tooltip popup={<p>tooltip message</p>} visible>
+            <Tooltip popup="tooltip message" visible>
                 <Button>Hover</Button>
             </Tooltip>
         </div>
         <div className="demo-wrap">
-            <Tooltip popup={<p>tooltip message</p>} arrow={false} visible>
+            <Tooltip popup="tooltip message" arrow={false} visible>
                 <Button>Hover</Button>
             </Tooltip>
         </div>

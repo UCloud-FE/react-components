@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Tooltip from 'src/components/Tooltip';
 import Button from 'src/components/Button';
 
@@ -9,7 +10,7 @@ const Demo = () => (
     <div>
         {Theme.map(theme => (
             <div className="demo-wrap" key={theme}>
-                <Tooltip theme={theme} popup={<p>tooltip message</p>} visible>
+                <Tooltip theme={theme} popup="tooltip message" visible>
                     <Button>Hover</Button>
                 </Tooltip>
             </div>

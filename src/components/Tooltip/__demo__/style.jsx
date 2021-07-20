@@ -7,21 +7,14 @@ import Button from 'src/components/Button';
 const Demo = () => (
     <div>
         <div className="demo-wrap">
-            <Tooltip
-                popup={
-                    <p>
-                        tooltip message! tooltip message! tooltip message! tooltip message! tooltip message! tooltip
-                        message!
-                    </p>
-                }
-            >
+            <Tooltip popup="tooltip message! tooltip message! tooltip message! tooltip message! tooltip message! tooltip message!">
                 <Button>Hover</Button>
             </Tooltip>
         </div>
         <div className="demo-wrap">
             <Tooltip
                 popup={
-                    <p style={{ maxWidth: '100px', wordBreak: 'break-all' }}>
+                    <p style={{ maxWidth: '100px', wordBreak: 'break-all', margin: 0 }}>
                         tooltip message! tooltip message! tooltip message! tooltip message! tooltip message! tooltip
                         message!
                     </p>
