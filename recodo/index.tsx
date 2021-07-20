@@ -1,21 +1,28 @@
 import mod from '@rapiop/mod';
 import amdResolver from '@rapiop/mod/lib/resolver/amd';
+import jsonResolver from '@rapiop/mod/lib/resolver/json';
 import { moduleMap } from '@rapiop/mod/lib/module';
 
 import './index.css';
 
+mod.registerModuleResolver(amdResolver);
+mod.registerModuleResolver(jsonResolver);
+
 (window as any).__recodo_module_namespace__ = moduleMap;
 
-mod.registerModuleResolver(amdResolver);
-
 mod.import({
-    css: 'https://cdn.jsdelivr.net/npm/@ucloud-fe/react-components@1.1.6/dist/icon.min.css'
+    css: [
+        'https://cdn.jsdelivr.net/npm/@ucloud-fe/react-components/dist/icon.min.css',
+        'https://cdn.jsdelivr.net/npm/recodo-doc@0.1.9/lib/doc.css'
+    ]
 });
+
+mod.export('@rapiop/mod', mod);
 
 mod.config({
     modules: {
         '@ucloud-fe/react-components': {
-            js: 'https://cdn.jsdelivr.net/npm/@ucloud-fe/react-components@1.1.6/dist/main.min.js',
+            js: 'https://cdn.jsdelivr.net/npm/@ucloud-fe/react-components/dist/main.min.js',
             type: 'amd',
             dep: ['moment', 'react', 'react-dom']
         },
@@ -37,25 +44,127 @@ mod.config({
         },
         'react-dom': {
             js: 'https://cdn.jsdelivr.net/npm/react-dom@16.14.0/umd/react-dom.production.min.js',
-            type: 'amd'
+            type: 'amd',
+            dep: ['react']
+        },
+        'recodo-doc': {
+            js: 'https://cdn.jsdelivr.net/npm/recodo-doc@0.1.9/dist/main.min.js',
+            type: 'amd',
+            dep: ['react']
+        },
+        '@rapiop/mod': { js: [] },
+        'examples-data': {
+            file: 'https://raw.githubusercontent.com/UCloud-FE/react-components/master/.recodo/data/examples.json',
+            type: 'json'
+        },
+        'docs-data': {
+            file: 'https://raw.githubusercontent.com/UCloud-FE/react-components/master/.recodo/data/docs.json',
+            type: 'json'
         }
     }
 });
 
-const renderDoc = (name, dom: Element) => {
-    mod.import(['@ucloud-fe/react-components', 'moment', 'lodash', 'react', 'react-dom', 'prop-types']).then(
-        dependences => {
-            const [components, moment, lodash, React, ReactDOM, PropTypes] = dependences as any;
-            const { Doc } = require('./run');
-            ReactDOM.render(
-                <Doc
-                    name={name}
-                    scope={{ ...components, components, moment, lodash, React, ReactDOM, PropTypes, _: lodash }}
-                />,
-                dom
-            );
-        }
-    );
+const renderDoc = (
+    name: string,
+    dom: Element,
+    options?: {
+        reportAnchorList: any;
+    }
+) => {
+    let destroyAction: () => void;
+    let destroyed = false;
+    let destroy = () => {
+        if (destroyed) return;
+        destroyed = true;
+        if (!destroyAction) return;
+        destroyAction();
+    };
+    mod.import([
+        '@ucloud-fe/react-components',
+        'moment',
+        'lodash',
+        'react',
+        'react-dom',
+        'prop-types',
+        'examples-data',
+        'docs-data',
+        'recodo-doc'
+    ]).then(dependences => {
+        if (destroyed) return;
+        const [components, moment, lodash, React, ReactDOM, PropTypes, examples, docs] = dependences as any;
+        const { Doc } = require('./run');
+        const demoUtil = require('shared/demoUtil').default;
+
+        ReactDOM.render(
+            <Doc
+                name={name}
+                examples={examples}
+                docs={docs}
+                scope={{
+                    ...components,
+                    components,
+                    moment,
+                    lodash,
+                    React,
+                    ReactDOM,
+                    PropTypes: PropTypes,
+                    _: lodash,
+                    demoUtil
+                }}
+                reportAnchorList={options?.reportAnchorList}
+            />,
+            dom
+        );
+        destroyAction = () => ReactDOM.unmountComponentAtNode(dom);
+    });
+    return destroy;
 };
 
-export { renderDoc };
+const renderInteractionDemo = (name: string, dom: string) => {
+    let destroyAction: () => void;
+    let destroyed = false;
+    let destroy = () => {
+        if (destroyed) return;
+        destroyed = true;
+        if (!destroyAction) return;
+        destroyAction();
+    };
+    mod.import([
+        '@ucloud-fe/react-components',
+        'moment',
+        'lodash',
+        'react',
+        'react-dom',
+        'prop-types',
+        'examples-data',
+        'docs-data',
+        'recodo-doc'
+    ]).then(dependences => {
+        if (destroyed) return;
+        const [components, moment, lodash, React, ReactDOM, PropTypes, examples, docs] = dependences as any;
+        const { Demo } = require('./run');
+        const InteractionDemo = require('./InteractionDemo');
+
+        ReactDOM.render(
+            <InteractionDemo.Provider props={examples[name][name].info.props}>
+                <Demo
+                    name={name}
+                    modules={{
+                        '@ucloud-fe/react-components': components,
+                        moment: moment,
+                        lodash: lodash,
+                        react: React,
+                        'react-dom': ReactDOM,
+                        'prop-types': PropTypes,
+                        'interaction-demo': InteractionDemo
+                    }}
+                />
+            </InteractionDemo.Provider>,
+            dom
+        );
+        destroyAction = () => ReactDOM.unmountComponentAtNode(dom);
+    });
+    return destroy;
+};
+
+export { renderDoc, renderInteractionDemo };

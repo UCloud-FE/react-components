@@ -2,13 +2,14 @@ const path = require('path');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 
+const projectWebpackConfig = require('../webpack.config');
 const babelConfig = require('../.babelrc.json');
 
 const isProd = process.env.NODE_ENV === 'production';
 const isAnalyzer = !!process.env.ANALYZER;
 
 const externals = {};
-['moment', 'react', 'react-dom'].forEach(dep => {
+['moment', 'react', 'react-dom', 'prop-types', 'recodo-doc', '@ucloud-fe/react-components'].forEach(dep => {
     externals[dep] = ['__recodo_module_namespace__', dep];
 });
 
@@ -49,9 +50,7 @@ const config = {
         ...externals
     },
     mode: process.env.NODE_ENV || 'development',
-    resolve: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx', '.json']
-    },
+    resolve: projectWebpackConfig.resolve,
     devtool: 'eval-source-map',
     node: {
         fs: 'empty'
