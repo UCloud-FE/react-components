@@ -118,7 +118,7 @@ class Anchor extends React.PureComponent {
                     }
                     return findParent(level, pos.parent);
                 };
-                parent = findParent(level, pos);
+                const parent = findParent(level, pos);
                 const i = {
                     level,
                     text: h.innerText || h.querySelector('a')?.innerText,

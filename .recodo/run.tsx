@@ -1,16 +1,27 @@
-import React, { useState, useCallback, ReactNode, ReactElement } from 'react';
+import React from 'react';
 
 import { Provider, Page, Editor, RemoteEditor } from 'recodo-doc';
-import 'recodo-doc/lib/doc.css';
 
 const getRemoteUrl = (codePath: string, componentName: string) => {
     return `https://raw.githubusercontent.com/UCloud-FE/react-components/master/src/components/${componentName}/__demo__/${codePath}`;
 };
 
-const Doc = ({ name, scope, examples, docs }: { name: string; scope: any; examples: any; docs: any }) => {
+const Doc = ({
+    name,
+    scope,
+    examples,
+    docs,
+    reportAnchorList
+}: {
+    name: string;
+    scope: any;
+    examples: any;
+    docs: any;
+    reportAnchorList: (anchorList: any) => void;
+}) => {
     return (
         <Provider content={{ examples, docs }} getRemoteUrl={getRemoteUrl} scope={scope}>
-            <Page name={name} />
+            <Page name={name} reportAnchorList={reportAnchorList} />
         </Provider>
     );
 };

@@ -11,7 +11,10 @@ mod.registerModuleResolver(jsonResolver);
 (window as any).__recodo_module_namespace__ = moduleMap;
 
 mod.import({
-    css: 'https://cdn.jsdelivr.net/npm/@ucloud-fe/react-components/dist/icon.min.css'
+    css: [
+        'https://cdn.jsdelivr.net/npm/@ucloud-fe/react-components/dist/icon.min.css',
+        'https://cdn.jsdelivr.net/npm/recodo-doc@0.1.9/lib/doc.css'
+    ]
 });
 
 mod.export('@rapiop/mod', mod);
@@ -45,7 +48,7 @@ mod.config({
             dep: ['react']
         },
         'recodo-doc': {
-            js: 'https://cdn.jsdelivr.net/npm/recodo-doc@0.1.8/dist/main.min.js',
+            js: 'https://cdn.jsdelivr.net/npm/recodo-doc@0.1.9/dist/main.min.js',
             type: 'amd',
             dep: ['react']
         },
@@ -61,7 +64,13 @@ mod.config({
     }
 });
 
-const renderDoc = (name: string, dom: Element) => {
+const renderDoc = (
+    name: string,
+    dom: Element,
+    options?: {
+        reportAnchorList: any;
+    }
+) => {
     let destroyAction: () => void;
     let destroyed = false;
     let destroy = () => {
@@ -85,7 +94,6 @@ const renderDoc = (name: string, dom: Element) => {
         const [components, moment, lodash, React, ReactDOM, PropTypes, examples, docs] = dependences as any;
         const { Doc } = require('./run');
         const demoUtil = require('shared/demoUtil').default;
-        console.log(examples);
 
         ReactDOM.render(
             <Doc
@@ -103,6 +111,7 @@ const renderDoc = (name: string, dom: Element) => {
                     _: lodash,
                     demoUtil
                 }}
+                reportAnchorList={options?.reportAnchorList}
             />,
             dom
         );
