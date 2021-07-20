@@ -84,6 +84,8 @@ export const FormWrap = withProps({
         } = props;
 
         return css`
+            font-size: 12px;
+
             .${itemCls} {
                 margin-bottom: 16px;
                 &:last-child {

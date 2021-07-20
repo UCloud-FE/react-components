@@ -39,15 +39,16 @@ export const ContentWrap = withProps({
         };
         map = map[themeType];
         return css`
+            line-height: 20px;
             padding: ${popupWrapperPadding || '8px 10px'};
+            border: ${DT.T_LINE_WIDTH_BASE} solid ${map.border};
+            border-radius: 3px;
+            font-size: 12px;
             text-align: left;
             text-decoration: none;
-            border-radius: 3px;
             word-break: keep-all;
             box-sizing: border-box;
-            line-height: 20px;
             color: ${map.text};
-            border: ${DT.T_LINE_WIDTH_BASE} solid ${map.border};
             background: ${map.background};
         `;
     })
