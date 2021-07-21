@@ -48,7 +48,7 @@ mod.config({
             dep: ['react']
         },
         'recodo-doc': {
-            js: 'https://cdn.jsdelivr.net/npm/recodo-doc@0.1.9/dist/main.min.js',
+            js: 'https://cdn.jsdelivr.net/npm/recodo-doc/dist/main.min.js',
             type: 'amd',
             dep: ['react']
         },
@@ -92,7 +92,7 @@ const renderDoc = (
     ]).then(dependences => {
         if (destroyed) return;
         const [components, moment, lodash, React, ReactDOM, PropTypes, examples, docs] = dependences as any;
-        const { Doc } = require('./run');
+        const { Doc } = require('./Component');
         const demoUtil = require('shared/demoUtil').default;
 
         ReactDOM.render(
@@ -142,7 +142,7 @@ const renderInteractionDemo = (name: string, dom: string) => {
     ]).then(dependences => {
         if (destroyed) return;
         const [components, moment, lodash, React, ReactDOM, PropTypes, examples, docs] = dependences as any;
-        const { Demo } = require('./run');
+        const { Demo } = require('./Component');
         const InteractionDemo = require('./InteractionDemo');
 
         ReactDOM.render(

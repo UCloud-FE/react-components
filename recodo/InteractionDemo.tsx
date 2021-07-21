@@ -1,5 +1,5 @@
 import React, { useState, useCallback, createContext, ReactElement, useContext, useMemo } from 'react';
-import { Switch, Radio, Input, Button } from '@ucloud-fe/react-components';
+import { Switch, Radio, Input, Button, Tabs, Card } from '@ucloud-fe/react-components';
 
 import { Config, ConfigInfo } from './interface';
 
@@ -70,12 +70,13 @@ const style = `
 }
 .interaction-demo .demo-area {
     flex: 1;
+    padding: 0 8px;
 }
 .interaction-demo .action-area {
     width: 250px;
     flex-shrink: 0;
     border-left: 1px solid #EFEFF8;
-    padding-left: 8px;
+    padding: 0 8px;
 }
 .interaction-demo .action-area > div {
     margin: 4px 0;
@@ -95,44 +96,67 @@ const style = `
 }
 `;
 
-const InteractionDemo = ({
-    config,
-    initialState = {},
-    children
-}: {
-    config: Config;
-    initialState: Record<string, any>;
-    children: ReactElement;
-}) => {
+const InteractionDemo = ({ config, children }: { config: Config; children: ReactElement }) => {
     const { props: propsInfo } = useContext(Context);
-    const [finalDemoPropsDefine] = useMemo(() => {
-        const finalProps = {};
+    console.log(propsInfo);
+
+    const [finalDemoPropsDefine, initialState] = useMemo(() => {
+        const finalProps: { [key: string]: ConfigInfo } = {};
+        const initialState = {};
         Object.keys(config).map(name => {
             let prop = config[name];
             let finalProp: ConfigInfo = { type: 'unknown' };
             const propInfo = propsInfo[name];
             if (prop === USE_DEFINE) {
-                switch (propInfo.tsType.name) {
-                    case 'boolean': {
-                        finalProp = { type: 'boolean' };
-                        break;
+                if (propInfo.tsType) {
+                    switch (propInfo.tsType.name) {
+                        case 'boolean': {
+                            finalProp = { type: 'boolean' };
+                            break;
+                        }
+                        case 'string': {
+                            finalProp = { type: 'string' };
+                            break;
+                        }
+                        case 'union': {
+                            finalProp = {
+                                type: 'union',
+                                options: propInfo.tsType.elements.map((element: { value: string }) =>
+                                    fixString(element.value)
+                                )
+                            };
+                            break;
+                        }
+                        default: {
+                            console.warn(name, propInfo);
+                        }
                     }
-                    case 'string': {
-                        finalProp = { type: 'string' };
-                        break;
+                } else {
+                    switch (propInfo.type.name) {
+                        case 'bool': {
+                            finalProp = { type: 'boolean' };
+                            break;
+                        }
+                        case 'string': {
+                            finalProp = { type: 'string' };
+                            break;
+                        }
+                        case 'enum': {
+                            finalProp = {
+                                type: 'union',
+                                options: propInfo.type.value.map((element: { value: string }) =>
+                                    fixString(element.value)
+                                )
+                            };
+                            break;
+                        }
+                        default: {
+                            console.warn(name, propInfo);
+                        }
                     }
-                    case 'union': {
-                        finalProp = {
-                            type: 'union',
-                            options: propInfo.tsType.elements.map((element: { value: string }) =>
-                                fixString(element.value)
-                            )
-                        };
-                        break;
-                    }
-                    default: {
-                        console.warn(name, propInfo);
-                    }
+                }
+                if (propInfo.defaultValue) {
+                    finalProp[name] = propInfo.defaultValue.value;
                 }
             } else if (typeof prop === 'string') {
                 finalProp = { type: prop };
@@ -141,10 +165,13 @@ const InteractionDemo = ({
             } else {
                 finalProp = prop;
             }
+            if ('defaultValue' in finalProp) {
+                initialState[name] = finalProp.defaultValue;
+            }
             finalProp.desc = propInfo?.description?.description;
             finalProps[name] = finalProp;
         });
-        return [finalProps];
+        return [finalProps, initialState];
     }, []);
     const [componentState, setComponentState] = useState(initialState);
     const handleValueChange = useCallback(
@@ -160,7 +187,7 @@ const InteractionDemo = ({
         ...componentState
     };
     Object.keys(finalDemoPropsDefine).map(name => {
-        let prop = config[name];
+        let prop = finalDemoPropsDefine[name];
         if (prop.optionToProps) {
             componentProps[name] = prop.optionToProps(componentProps[name]);
         }
@@ -199,3 +226,19 @@ const Provider = ({ props, children }: { props: any; children: any }) => {
 };
 
 export { Provider };
+
+const Group = ({ list }: { list: any[] }) => {
+    return (
+        <Tabs styleType="ink">
+            {list.map((item, i) => {
+                return (
+                    <Tabs.Pane tab={item.title} key={i}>
+                        <div style={{ padding: '8px' }}>{item.children}</div>
+                    </Tabs.Pane>
+                );
+            })}
+        </Tabs>
+    );
+};
+
+export { Group };
