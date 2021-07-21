@@ -271,6 +271,7 @@ export const RadioCardWrap = withProps({
                 border-bottom: 1px solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
                 background: ${DT.T_COLOR_BG_DEFAULT_LIGHT};
                 display: flex;
+                justify-content: space-between;
                 align-items: center;
 
                 .${cardTitleCls} {

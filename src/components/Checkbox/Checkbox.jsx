@@ -38,13 +38,13 @@ class Checkbox extends Component {
         onClick: PropTypes.func,
         /** checkbox的值 */
         value: PropTypes.any,
-        /** 尺寸，styleType为card时无效 */
+        /** 尺寸，styleType 为 card 时无效 */
         size: PropTypes.oneOf(Size),
         /** 样式风格 */
         styleType: PropTypes.oneOf(StyleType),
-        /** 标题，styleType为card时使用 */
+        /** 标题，styleType 为 card 时使用 */
         title: PropTypes.node,
-        /** 禁用标识，styleType为card时使用 */
+        /** 禁用标识，styleType 为 card 时使用 */
         disabledLabel: PropTypes.node,
         /** @ignore */
         multiple: PropTypes.bool
