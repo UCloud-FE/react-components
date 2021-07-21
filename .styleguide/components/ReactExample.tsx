@@ -54,7 +54,6 @@ export default class ReactExample extends Component<ReactExampleProps> {
             this.setState({ dark });
         };
         const localeListener = en => {
-            console.log(en, this.state.en);
             this.setState({ en });
         };
         this.removeListener = () => (themeListeners = themeListeners.filter(_listener => listener !== _listener));

@@ -19,7 +19,7 @@ class Popover extends Component {
         defaultVisible: PropTypes.bool,
         /** 弹出层显示隐藏时触发 */
         onVisibleChange: PropTypes.func,
-        /** 如何触发弹出层，focus需要注意被包裹元素必须能触发focus事件，如链接、按钮、input等 */
+        /** 如何触发弹出层，focus 需要注意被包裹元素必须能触发 focus 事件，如链接、按钮、input 等 */
         trigger: PropTypes.arrayOf(PropTypes.oneOf(Trigger)),
         /** 根据鼠标位置定位 */
         alignPoint: PropTypes.bool,
@@ -44,7 +44,7 @@ class Popover extends Component {
         popupClassName: PropTypes.string,
         /** 弹出层的样式 */
         popupStyle: PropTypes.object,
-        /** 弹出层的z-index */
+        /** 弹出层的 z-index */
         zIndex: PropTypes.number,
         /** 自定义弹出层容器 */
         getPopupContainer: PropTypes.func,
@@ -55,11 +55,9 @@ class Popover extends Component {
          * 自定义类名前缀
          */
         prefixCls: PropTypes.string,
-        /**
-         * 需要对子元素进行定位，所以只接收一个有效 react 元素（不接收文本节点）
-         */
+        /** 需要对子元素进行定位，所以只接收一个有效 react 元素（不接收文本节点） */
         children: PropTypes.element.isRequired,
-        /** 动画名称，slide-up只支持上下方向的弹窗 */
+        /** 动画名称，slide-up 只支持上下方向的弹窗 */
         animation: PropTypes.oneOf(Animation),
         /**
          * @ignore
@@ -67,10 +65,12 @@ class Popover extends Component {
          */
         transitionName: PropTypes.string,
         /**
-         * 更新时强制重新定位
          * @ignore
+         * 更新时强制重新定位
          */
         forceAlignWhenUpdate: PropTypes.bool,
+        /** 滚动时强制重新定位 */
+        forceAlignWhenScroll: PropTypes.bool,
         /** @ignore */
         className: PropTypes.string
     };
@@ -86,6 +86,7 @@ class Popover extends Component {
         onVisibleChange() {},
         placement: 'bottomLeft',
         builtinPlacements: placements,
+        forceAlignWhenScroll: true,
         prefixCls: prefixCls
     };
 
@@ -102,7 +103,10 @@ class Popover extends Component {
         }
     }
 
+    // 滚动锁
     __scroll_lock = false;
+    // 滚动绑定
+    __scroll_bind = false;
     bindPopupWrap = _ref => {
         if (this.popupWrap === _ref) return;
         if (this.popupWrap) {
@@ -117,26 +121,48 @@ class Popover extends Component {
         this.__scroll_lock = true;
         this.unlockScroll();
     };
-    unlockScroll = _.debounce(() => {
+    unlockScroll = _.throttle(() => {
         this.__scroll_lock = false;
     }, 200);
 
-    componentDidMount = () => {
-        document.addEventListener('scroll', this.onScroll, true);
-    };
-    componentWillUnmount = () => {
-        document.removeEventListener('scroll', this.onScroll, true);
-    };
     onScroll = () => {
         if (this.__scroll_lock) return;
         this.forceAlign();
     };
-    forceAlign = _.debounce(() => {
+    forceAlign = _.throttle(() => {
         if (this.__scroll_lock) return;
         this.trigger && this.trigger.forcePopupAlign();
     }, 33);
 
-    componentDidUpdate = () => {
+    bindScroll = () => {
+        if (!this.__scroll_bind) {
+            document.addEventListener('scroll', this.onScroll, true);
+            this.__scroll_bind = true;
+        }
+    };
+    unbindScroll = () => {
+        if (this.__scroll_bind) {
+            document.removeEventListener('scroll', this.onScroll, true);
+            this.__scroll_bind = false;
+        }
+    };
+    updateScroll = () => {
+        if (this.props.forceAlignWhenScroll) {
+            this.bindScroll();
+        } else {
+            this.unbindScroll();
+        }
+    };
+    componentDidMount = () => {
+        this.updateScroll();
+    };
+    componentWillUnmount = () => {
+        this.unbindScroll();
+    };
+    componentDidUpdate = prevProps => {
+        if (prevProps.forceAlignWhenScroll !== this.props.forceAlignWhenScroll) {
+            this.updateScroll();
+        }
         this.props.forceAlignWhenUpdate && this.forceAlign();
     };
 

@@ -7,6 +7,11 @@
 
 ### 演示
 
+#### 演示
+
+```js {"codepath": "popover.jsx"}
+```
+
 #### 普通使用
 
 ```js {"codepath": "base.jsx"}
