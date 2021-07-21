@@ -1,6 +1,8 @@
 export interface ConfigInfo {
     type: string;
+    desc?: string;
     options?: [];
+    defaultValue?: any;
     optionToProps?: (option: any) => any;
 }
 

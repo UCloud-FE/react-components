@@ -1,4 +1,5 @@
 import React from 'react';
+
 import InteractionDemo, { USE_DEFINE } from 'interaction-demo';
 import { Button, Tooltip } from '@ucloud-fe/react-components';
 
@@ -9,11 +10,7 @@ const config = {
     fakeDisabled: USE_DEFINE,
     loading: USE_DEFINE,
     shape: USE_DEFINE,
-    icon: {
-        type: 'union',
-        options: ['default', 'loading', 'check', 'square'],
-        optionToProps: option => (option === 'default' ? undefined : option)
-    }
+    icon: ['loading', 'check', 'square']
 };
 const DemoButton = props => {
     return (
@@ -26,11 +23,10 @@ const DemoButton = props => {
 };
 const Demo = () => {
     return (
-        <InteractionDemo config={config} Component={Button} initialState={{ styleType: 'border', size: 'md' }}>
+        <InteractionDemo config={config} initialState={{ styleType: 'border', size: 'md' }}>
             <DemoButton />
         </InteractionDemo>
     );
 };
-// demo end
 
 export default Demo;

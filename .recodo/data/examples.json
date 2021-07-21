@@ -3803,6 +3803,10 @@
                         "returns": null
                     },
                     { "name": "onPopupWrapScroll", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                    { "name": "onScroll", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                    { "name": "bindScroll", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                    { "name": "unbindScroll", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                    { "name": "updateScroll", "docblock": null, "modifiers": [], "params": [], "returns": null },
                     { "name": "componentDidMount", "docblock": null, "modifiers": [], "params": [], "returns": null },
                     {
                         "name": "componentWillUnmount",
@@ -3811,8 +3815,13 @@
                         "params": [],
                         "returns": null
                     },
-                    { "name": "onScroll", "docblock": null, "modifiers": [], "params": [], "returns": null },
-                    { "name": "componentDidUpdate", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                    {
+                        "name": "componentDidUpdate",
+                        "docblock": null,
+                        "modifiers": [],
+                        "params": [{ "name": "prevProps", "type": null }],
+                        "returns": null
+                    },
                     {
                         "name": "onVisibleChange",
                         "docblock": null,
@@ -3863,7 +3872,7 @@
                         },
                         "required": false,
                         "description": {
-                            "description": "如何触发弹出层，focus需要注意被包裹元素必须能触发focus事件，如链接、按钮、input等",
+                            "description": "如何触发弹出层，focus 需要注意被包裹元素必须能触发 focus 事件，如链接、按钮、input 等",
                             "tags": []
                         },
                         "defaultValue": { "value": "['hover']", "computed": false }
@@ -3944,7 +3953,7 @@
                     "zIndex": {
                         "type": { "name": "number" },
                         "required": false,
-                        "description": { "description": "弹出层的z-index", "tags": [] }
+                        "description": { "description": "弹出层的 z-index", "tags": [] }
                     },
                     "getPopupContainer": {
                         "type": { "name": "func" },
@@ -3987,7 +3996,7 @@
                             ]
                         },
                         "required": false,
-                        "description": { "description": "动画名称，slide-up只支持上下方向的弹窗", "tags": [] },
+                        "description": { "description": "动画名称，slide-up 只支持上下方向的弹窗", "tags": [] },
                         "defaultValue": { "value": "'fade'", "computed": false }
                     },
                     "transitionName": {
@@ -4002,9 +4011,15 @@
                         "type": { "name": "bool" },
                         "required": false,
                         "description": {
-                            "description": "更新时强制重新定位",
-                            "tags": [{ "title": "ignore", "description": null }]
+                            "description": "",
+                            "tags": [{ "title": "ignore", "description": "更新时强制重新定位" }]
                         }
+                    },
+                    "forceAlignWhenScroll": {
+                        "type": { "name": "bool" },
+                        "required": false,
+                        "description": { "description": "滚动时强制重新定位", "tags": [] },
+                        "defaultValue": { "value": "true", "computed": false }
                     },
                     "className": {
                         "type": { "name": "string" },
@@ -7867,7 +7882,7 @@
                             ]
                         },
                         "required": false,
-                        "description": { "description": "尺寸，styleType为card时无效", "tags": [] }
+                        "description": { "description": "尺寸，styleType 为 card 时无效", "tags": [] }
                     },
                     "styleType": {
                         "type": {
@@ -7883,12 +7898,12 @@
                     "title": {
                         "type": { "name": "node" },
                         "required": false,
-                        "description": { "description": "标题，styleType为card时使用", "tags": [] }
+                        "description": { "description": "标题，styleType 为 card 时使用", "tags": [] }
                     },
                     "disabledLabel": {
                         "type": { "name": "node" },
                         "required": false,
-                        "description": { "description": "禁用标识，styleType为card时使用", "tags": [] }
+                        "description": { "description": "禁用标识，styleType 为 card 时使用", "tags": [] }
                     },
                     "multiple": {
                         "type": { "name": "bool" },
