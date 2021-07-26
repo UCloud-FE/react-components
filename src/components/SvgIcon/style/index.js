@@ -4,9 +4,7 @@ import { css } from '@emotion/core';
 import { spinMixin, inlineBlockWithVerticalMixin } from 'src/style';
 import withProps from 'src/utils/withProps';
 
-export const SvgIconWrapper = withProps({
-    xmlns: 'http://www.w3.org/2000/svg'
-})(
+export const SvgIconWrapper = withProps({})(
     styled('svg')(props => {
         const { color, size, spin } = props;
 
