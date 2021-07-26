@@ -121,7 +121,7 @@ class Popover extends Component {
         this.__scroll_lock = true;
         this.unlockScroll();
     };
-    unlockScroll = _.throttle(() => {
+    unlockScroll = _.debounce(() => {
         this.__scroll_lock = false;
     }, 200);
 
@@ -129,10 +129,15 @@ class Popover extends Component {
         if (this.__scroll_lock) return;
         this.forceAlign();
     };
-    forceAlign = _.throttle(() => {
-        if (this.__scroll_lock) return;
-        this.trigger && this.trigger.forcePopupAlign();
-    }, 33);
+    forceAlign = _.throttle(
+        () => {
+            if (!this.state.visible) return;
+            if (this.__scroll_lock) return;
+            this.trigger && this.trigger.forcePopupAlign();
+        },
+        33,
+        { leading: false }
+    );
 
     bindScroll = () => {
         if (!this.__scroll_bind) {
