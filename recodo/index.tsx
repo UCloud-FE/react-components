@@ -94,6 +94,9 @@ const renderDoc = (
         const [components, moment, lodash, React, ReactDOM, PropTypes, examples, docs] = dependences as any;
         const { Doc } = require('./Component');
         const demoUtil = require('shared/demoUtil').default;
+        const darkTheme = require('src/components/ThemeProvider/dark').default;
+        const ENLocale = require('src/components/LocaleProvider/locale/en_US').default;
+        const SizeInterface = require('src/interfaces/Size').default;
 
         ReactDOM.render(
             <Doc
@@ -109,7 +112,10 @@ const renderDoc = (
                     ReactDOM,
                     PropTypes: PropTypes,
                     _: lodash,
-                    demoUtil
+                    demoUtil,
+                    darkTheme,
+                    SizeInterface,
+                    ENLocale
                 }}
                 reportAnchorList={options?.reportAnchorList}
             />,
