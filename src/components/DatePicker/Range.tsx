@@ -75,7 +75,7 @@ interface RangeProps {
         /** 设置为 false，隐藏秒 */
         second?: boolean;
         range?: {
-            /** @deprecated */
+            /** @deprecated 新版无用 */
             format?: string;
         };
     };

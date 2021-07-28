@@ -94,7 +94,9 @@ const usePicker = <D,>(
         displayToFormatAndTimeMode
     ]);
     const [format, allFormat] = useMemo(() => {
-        const allFormat = _format ? displayFormat.concat(_format) : displayFormat;
+        const allFormat = _format
+            ? (Array.isArray(_format) ? _format : [_format]).concat(displayFormat)
+            : displayFormat;
         return [allFormat[0], allFormat];
     }, [_format, displayFormat]);
 

@@ -16,15 +16,6 @@ class Demo extends React.Component {
                         }}
                     />
                 </div>
-                <div className="demo-wrap">
-                    <DatePicker.Range
-                        display={{
-                            range: {
-                                format: 'YY-MM-DD HH:mm'
-                            }
-                        }}
-                    />
-                </div>
             </div>
         );
     }

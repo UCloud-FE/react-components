@@ -19,23 +19,13 @@ export type RangePickerRef = { focus: () => void } | undefined;
 const RangePickerWithoutMemo = forwardRef(
     (
         {
-            value,
-            onChange,
-            rules,
-            size,
-            format,
-            nullable,
-            display,
-            disabled,
-            popoverProps: _popoverProps,
-            zIndex,
             prefix,
             onActiveChange,
             type = 'date',
             readonly,
             tip,
             error,
-            placeholder
+            ...pickProps
         }: DatePickerProps & {
             prefix?: boolean;
             onActiveChange: (active: boolean) => void;
@@ -57,17 +47,7 @@ const RangePickerWithoutMemo = forwardRef(
             { error: pickerError, active }
         ] = usePicker(
             {
-                value,
-                onChange,
-                rules,
-                size,
-                format,
-                nullable,
-                display,
-                disabled,
-                popoverProps: _popoverProps,
-                zIndex,
-                placeholder
+                ...pickProps
             },
             type === 'month' ? displayToFormatAndTimeModeM : displayToFormatAndTimeMode,
             type
