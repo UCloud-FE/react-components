@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import moment from 'moment';
 
 import Button from 'src/components/Button';
@@ -16,36 +16,40 @@ import Table from 'src/components/Table';
 import Menu from 'src/components/Menu';
 import PopConfirm from 'src/components/PopConfirm';
 import EditableList from 'src/components/EditableList';
-import zh_CN from 'src/components/LocaleProvider/locale/zh_CN';
-import en_US from 'src/components/LocaleProvider/locale/en_US';
+import ENLocale from 'src/components/LocaleProvider/locale/en_US';
 
-import 'moment/locale/zh-cn';
+// demo start
+const CNLocale = {};
 const localeMap = {
-    zh_CN,
-    en_US
+    zh_CN: CNLocale,
+    en_US: ENLocale
 };
 const momentLocaleMap = {
     zh_CN: 'zh-cn',
     en_US: 'en'
 };
 const defaultLocale = 'zh_CN';
-class Demo extends Component {
-    state = {
-        localeStr: defaultLocale,
-        momentLocale: momentLocaleMap[defaultLocale],
-        locale: localeMap[defaultLocale]
-    };
-    setLocale = locale => {
+class Demo extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            localeStr: defaultLocale,
+            momentLocale: momentLocaleMap[defaultLocale],
+            locale: localeMap[defaultLocale]
+        };
+        this.setLocale = this.setLocale.bind(this);
+    }
+    setLocale(locale) {
         moment.locale(momentLocaleMap[locale]);
         this.setState({
             localeStr: locale,
             momentLocale: momentLocaleMap[locale],
             locale: localeMap[locale]
         });
-    };
-    componentWillUnmount = () => {
+    }
+    componentWillUnmount() {
         moment.locale(momentLocaleMap[defaultLocale]);
-    };
+    }
     render() {
         const itemLayout = {
             labelCol: {
@@ -194,5 +198,6 @@ class Demo extends Component {
         );
     }
 }
+// demo end
 
 export default Demo;

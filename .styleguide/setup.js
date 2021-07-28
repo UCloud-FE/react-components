@@ -37,3 +37,5 @@ global.demoUtil = require('shared/demoUtil').default;
 global.InteractionDemo = require('shared/InteractionDemo').default;
 
 global.components = components;
+
+global.ENLocale = require('src/components/LocaleProvider/locale/en_US').default;

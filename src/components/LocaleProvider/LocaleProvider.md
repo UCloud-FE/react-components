@@ -40,16 +40,10 @@ const Demo = () => (
 
 效果:
 
-```js noeditor
-const Demo = require('./__demo__/localefile').default;
-
-<Demo />;
+```js {"codepath": "localefile.jsx", "noeditor": true}
 ```
 
 #### 全语言列表
 
-```js noeditor
-const Demo = require('./__demo__/list').default;
-
-<Demo />;
+```js {"codepath": "list.jsx", "noeditor": true}
 ```
