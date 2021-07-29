@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.16](https://github.com/UCloud-FE/react-components/compare/v1.1.15...v1.1.16) (2021-07-29)
+
+### Features
+
+-   **All:** add reset style for Form & Tooltip ([24e7d94](https://github.com/UCloud-FE/react-components/commit/24e7d9430d55f56897df8d3b865745f9a32b2980))
+-   **DatePicker:** use format control timeMode ([984c61c](https://github.com/UCloud-FE/react-components/commit/984c61c86fe13fcb043484e9434fee0a94bad682))
+-   **Popover:** add forceAlignWhenScroll ([ddffa6c](https://github.com/UCloud-FE/react-components/commit/ddffa6c62582ec437321e8f40f12c26063f34314))
+-   **Radio:** fix card radio title spacing ([225f9b9](https://github.com/UCloud-FE/react-components/commit/225f9b93bc0c429a1b738ccfa77ecacb0a95aae3))
+-   **SvgIcon:** clean xmlns ([d0be9f5](https://github.com/UCloud-FE/react-components/commit/d0be9f5c03e30ebafdb0a89f7142287482abd84a))
+
+### Bug Fixes
+
+-   **DataPicker:** fix format display & shortcuts for Range ([894d1e3](https://github.com/UCloud-FE/react-components/commit/894d1e392f30573218a5a9d7ceb6282e3472b262))
+
 ### [1.1.15](https://github.com/UCloud-FE/react-components/compare/v1.1.14...v1.1.15) (2021-07-19)
 
 ### Bug Fixes
