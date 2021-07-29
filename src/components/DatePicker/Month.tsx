@@ -26,7 +26,7 @@ export type MonthProps = {
     rules?: any;
     /** 尺寸 */
     size?: Size;
-    /** 输入和展示的字符串格式，为数组时，第一个 */
+    /** 输入和展示的字符串格式，为数组时，第一个用作展示 */
     format?: string | string[];
     /** 是否可为空，为空时不传或传入空值会默认为当前时刻 */
     nullable?: boolean;

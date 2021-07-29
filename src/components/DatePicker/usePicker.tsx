@@ -37,6 +37,14 @@ const formatDate = (v: TDate | null | undefined, format: string) => {
     const d = moment(+v);
     return d.isValid() ? d.format(format) : '';
 };
+type Time = 'HH' | 'mm' | 'ss';
+const formatToTimeMode = (format: string): Time[] => {
+    const timeMode: Time[] = [];
+    if (format.indexOf('H') >= 0) timeMode.push('HH');
+    if (format.indexOf('m') >= 0) timeMode.push('mm');
+    if (format.indexOf('s') >= 0) timeMode.push('ss');
+    return timeMode;
+};
 
 interface TProps<D> {
     value?: TDate | null;
@@ -89,16 +97,19 @@ const usePicker = <D,>(
         ...rest
     } = props;
 
-    const [displayFormat, timeMode] = useMemo(() => displayToFormatAndTimeMode(display), [
+    const [displayFormat, displayTimeMode] = useMemo(() => displayToFormatAndTimeMode(display), [
         display,
         displayToFormatAndTimeMode
     ]);
-    const [format, allFormat] = useMemo(() => {
-        const allFormat = _format
-            ? (Array.isArray(_format) ? _format : [_format]).concat(displayFormat)
-            : displayFormat;
-        return [allFormat[0], allFormat];
-    }, [_format, displayFormat]);
+    const [format, allFormat, timeMode] = useMemo(() => {
+        let allFormat = displayFormat;
+        let timeMode = displayTimeMode;
+        if (_format) {
+            allFormat = (Array.isArray(_format) ? _format : [_format]).concat(displayFormat);
+            timeMode = formatToTimeMode(allFormat[0]);
+        }
+        return [allFormat[0], allFormat, timeMode];
+    }, [_format, displayFormat, displayTimeMode]);
 
     const d = useMemo(() => new Date(), []);
 

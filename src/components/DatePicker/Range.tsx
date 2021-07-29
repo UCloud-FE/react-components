@@ -58,9 +58,12 @@ interface RangeProps {
     hideOptions?: boolean;
     /** 是否可为空 */
     nullable?: [boolean | undefined, boolean | undefined] | [boolean | undefined] | [];
-    /** 输入和展示的字符串格式，为数组时，第一个 */
+    /** 输入和展示的字符串格式，为数组时，第一个用作展示 */
     format?: string | string[];
-    /** 展示格式，除了 range 以外的属性会传入 DatePicker 和 Month 中（按照 type） */
+    /**
+     * @deprecated 使用 format 替换
+     * 展示格式，会传入 DatePicker 和 Month 中（按照 type）
+     */
     display?: {
         date?: {
             /** @deprecated 设置日期展示格式，使用 format 替换 */
