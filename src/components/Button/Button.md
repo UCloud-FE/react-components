@@ -35,6 +35,11 @@
 ```js {"codepath": "disabled.jsx"}
 ```
 
+#### block - 禁用
+
+```js {"codepath": "block.jsx"}
+```
+
 #### fakeDisabled - 特殊禁用（仅禁用 onClick）
 
 ```js {"codepath": "fakeDisabled.jsx"}

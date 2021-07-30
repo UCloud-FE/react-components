@@ -34,6 +34,8 @@ export interface ButtonProps {
     icon?: string | ReactNode;
     /** 设置原生的 button 上 type 属性 */
     type?: string;
+    /** 展示设置为块元素 */
+    block?: boolean;
     /**
      * @ignore
      * 内部使用，请勿使用，是否可选中，样式会有区别

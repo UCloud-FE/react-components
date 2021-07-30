@@ -30,6 +30,7 @@ interface SButtonProps {
     fakeDisabled?: boolean;
     checkAble?: boolean;
     checked?: boolean;
+    block?: boolean;
 }
 type SButtonPropsWithTag = SButtonProps & HTMLAttributes<HTMLButtonElement>;
 type SButtonPropsFinal = SButtonPropsWithTag & { theme: Theme };
@@ -218,7 +219,7 @@ const classNameMixin = ({ size, styleType, shape, loading, disabled, fakeDisable
     );
 
 const buttonStyleMixin = <T extends SButtonProps & { theme: Theme }>(props: T) => {
-    const { theme, loading, shape, checked } = props;
+    const { theme, loading, shape, checked, block } = props;
     const { designTokens: DT } = theme;
     return css`
         margin: 0;
@@ -236,11 +237,15 @@ const buttonStyleMixin = <T extends SButtonProps & { theme: Theme }>(props: T) =
         ${shape && shapeMixin(props)};
         ${loading && loadingMixin(props)};
         ${checked && checkedMixin(props)};
+        ${block &&
+        css`
+            width: 100%;
+        `};
     `;
 };
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
-const Button = ({ loading, styleType, disabled, fakeDisabled, onClick, checkAble, ...rest }: SButtonPropsWithTag) => (
+const Button = ({ loading, styleType, disabled, fakeDisabled, onClick, checkAble, block, ...rest }: SButtonPropsWithTag) => (
     <button disabled={disabled && !fakeDisabled} onClick={!disabled ? onClick : undefined} {...rest} />
 );
 /* eslint-enable @typescript-eslint/no-unused-vars */
