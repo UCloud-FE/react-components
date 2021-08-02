@@ -53,17 +53,6 @@ class Demo extends React.Component {
             targetFooter: false
         };
     }
-    onDelete(record) {
-        console.log('Delete', record);
-        const key = record.key;
-        const dataSource = this.state.dataSource.filter(item => item.key !== key);
-        this.setState({ dataSource });
-    }
-    onAdd() {
-        const dataSource = [...this.state.dataSource];
-        dataSource.push(generateData());
-        this.setState({ dataSource });
-    }
     getDisabledOfRow(record) {
         return !!(record.key % 2);
     }

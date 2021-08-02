@@ -6,6 +6,8 @@ import Table from 'src/components/Table';
 
 import { SWrap } from './style';
 
+const OverPagination = { pageSize: 200, simple: true };
+
 class TransferTable extends PureComponent {
     static propTypes = {
         ...Transfer.propTypes,
@@ -29,7 +31,7 @@ class TransferTable extends PureComponent {
             : {};
     };
     renderList = ({ dataSource, selectedKeys, onChange, disabled }) => {
-        const { columns, tableProps, getDisabledOfRow } = this.props;
+        const { columns, tableProps, getDisabledOfRow, dataSource: fullDataSource } = this.props;
         return (
             <SWrap>
                 <Table
@@ -43,7 +45,7 @@ class TransferTable extends PureComponent {
                         selectedTip: false,
                         getDisabledOfRow
                     }}
-                    pagination={null}
+                    pagination={fullDataSource.length > 400 ? OverPagination : null}
                     columns={columns}
                     onRow={this.onRow}
                     scroll={{ ...tableProps?.scroll, y: 300 }}
