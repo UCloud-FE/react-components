@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.17](https://github.com/UCloud-FE/react-components/compare/v1.1.16...v1.1.17) (2021-08-02)
+
+### Features
+
+-   **Button:** add block ([a65ed6e](https://github.com/UCloud-FE/react-components/commit/a65ed6ea3b45faed5189ab1110f702d631ec560a))
+-   **TransferTable:** add pagination when count over 400 ([277d3e8](https://github.com/UCloud-FE/react-components/commit/277d3e8f1726da7cfe00ab0aafa7a545c05c196f))
+
 ### [1.1.16](https://github.com/UCloud-FE/react-components/compare/v1.1.15...v1.1.16) (2021-07-29)
 
 ### Features
