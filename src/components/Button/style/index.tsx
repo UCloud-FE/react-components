@@ -230,6 +230,7 @@ const buttonStyleMixin = <T extends SButtonProps & { theme: Theme }>(props: T) =
         cursor: pointer;
         outline: none;
         font-size: ${DT.T_TYPO_FONT_SIZE_1};
+        white-space: nowrap;
         ${inlineBlockWithVerticalMixin};
 
         ${sizeMixin(props)};
