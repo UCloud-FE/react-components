@@ -6,7 +6,7 @@ import Input from 'src/components/Input';
 import SvgIcon from 'src/components/SvgIcon';
 import Menu from 'src/components/Menu';
 import Button from 'src/components/Button';
-import { inlineBlockWithVerticalMixin } from 'src/style';
+import { inlineBlockWithVerticalMixin, sWrap } from 'src/style';
 import withProps from 'src/utils/withProps';
 import config from 'src/config';
 
@@ -50,6 +50,18 @@ export const OptionWrap = styled(Menu.Item)(props => {
         `};
     `;
 });
+export const FooterWrap = sWrap({})(
+    styled.div(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
+
+        return css`
+            padding: 8px 0;
+            box-shadow: ${DT.T_SHADOW_BLOCK_TOP_SM};
+        `;
+    })
+);
 export const ExtraWrap = styled('div')`
     margin: 0 8px;
 `;
@@ -91,6 +103,7 @@ export const BlockMenu = styled(CustomMenu)(props => {
         border: none;
         box-shadow: none;
         max-height: ${maxHeight};
+        background: unset;
     `;
 });
 

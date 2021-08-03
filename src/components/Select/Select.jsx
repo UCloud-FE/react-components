@@ -20,7 +20,8 @@ import {
     BlockMenu,
     MenuWrap,
     EmptyContentWrapper,
-    selectorContentCls
+    selectorContentCls,
+    FooterWrap
 } from './style';
 import LOCALE from './locale/zh_CN';
 
@@ -291,7 +292,7 @@ class Select extends Component {
                 >
                     {Options || children || this.renderEmptyContent()}
                 </BlockMenu>
-                {Extra}
+                {Extra ? <FooterWrap>{Extra}</FooterWrap> : null}
             </MenuWrap>
         );
     };
