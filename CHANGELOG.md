@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.18](https://github.com/UCloud-FE/react-components/compare/v1.1.17...v1.1.18) (2021-08-03)
+
+### Features
+
+-   **Button:** fix white-space ([874432e](https://github.com/UCloud-FE/react-components/commit/874432e3efe1ce8439b8bd01c64ae3e99d31a59e))
+-   **Select:** add shadow to extra ([47d2c1c](https://github.com/UCloud-FE/react-components/commit/47d2c1c9f9b033a295fb7d24ac643b9543e357cd))
+
 ### [1.1.17](https://github.com/UCloud-FE/react-components/compare/v1.1.16...v1.1.17) (2021-08-02)
 
 ### Features
