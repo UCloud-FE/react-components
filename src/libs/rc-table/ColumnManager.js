@@ -1,5 +1,3 @@
-import _ from 'lodash';
-
 import checkStickySupport from 'src/utils/checkStickySupport';
 import warning from 'src/utils/warning';
 

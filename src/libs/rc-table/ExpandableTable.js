@@ -50,17 +50,17 @@ class ExpandableTable extends React.Component {
             getRowKey
         } = props;
 
-        let finnalExpandedRowKeys = [];
+        let finalExpandedRowKeys = [];
         let rows = [...data];
 
         if (defaultExpandAllRows) {
             for (let i = 0; i < rows.length; i++) {
                 const row = rows[i];
-                finnalExpandedRowKeys.push(getRowKey(row, i));
+                finalExpandedRowKeys.push(getRowKey(row, i));
                 rows = rows.concat(row[childrenColumnName] || []);
             }
         } else {
-            finnalExpandedRowKeys = expandedRowKeys || defaultExpandedRowKeys;
+            finalExpandedRowKeys = expandedRowKeys || defaultExpandedRowKeys;
         }
 
         this.columnManager = props.columnManager;
@@ -68,7 +68,7 @@ class ExpandableTable extends React.Component {
 
         this.store.setState({
             expandedRowsHeight: {},
-            expandedRowKeys: finnalExpandedRowKeys
+            expandedRowKeys: finalExpandedRowKeys
         });
     }
 
@@ -90,7 +90,7 @@ class ExpandableTable extends React.Component {
         let { expandedRowKeys } = this.store.getState();
 
         if (expanded) {
-            // row was expaned
+            // row was expanded
             expandedRowKeys = [...expandedRowKeys, rowKey];
         } else {
             // row was collapse
