@@ -180,38 +180,6 @@ export declare class Select extends Component<SelectProps> {
     static Extra: typeof SelectExtra;
 }
 
-// Checkbox
-export type CheckboxStyleType = 'default' | 'card';
-export type CheckboxProps = Override<
-    HTMLAttributes<HTMLSpanElement>,
-    {
-        checked?: boolean;
-        defaultChecked?: boolean;
-        disabled?: boolean;
-        onChange?: (checked: boolean) => void;
-        indeterminate?: boolean;
-        value?: any;
-        size?: SizeType;
-        styleType?: CheckboxStyleType;
-        title?: ReactNode;
-        disabledLabel?: ReactNode;
-    }
->;
-export type CheckboxOptions = SelectOptions;
-export interface CheckboxGroupProps {
-    value?: any[];
-    defaultValue?: any[];
-    onChange?: (value: any[]) => void;
-    options?: CheckboxOptions;
-    disabled?: boolean;
-    size?: SizeType;
-    styleType?: CheckboxStyleType;
-}
-export declare class CheckboxGroup extends Component<CheckboxGroupProps> {}
-export declare class Checkbox extends Component<CheckboxProps> {
-    static Group: typeof CheckboxGroup;
-}
-
 // Radio
 export type RadioStyleType = 'default' | 'button' | 'tag' | 'card' | 'text';
 export interface RadioProps {
@@ -1019,3 +987,6 @@ export { default as Tabs } from './lib/components/Tabs';
 
 // Input
 export { default as Input } from './lib/components/Input';
+
+// Checkbox
+export { default as Checkbox } from './lib/components/Checkbox';

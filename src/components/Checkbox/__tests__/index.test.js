@@ -16,26 +16,26 @@ describe('Checkbox', () => {
     test('click default checked', () => {
         const onChange = jest.fn();
         const wrapper = mount(<Checkbox defaultChecked onChange={onChange} />);
-        wrapper.simulate('click');
+        wrapper.find('.uc-fe-checkbox').at(0).simulate('click');
         expect(getCheckedStatus(wrapper)).toBe(false);
         expect(onChange).toHaveBeenCalledTimes(1);
         expect(onChange).toHaveBeenLastCalledWith(false);
 
         wrapper.setProps({ disabled: true });
-        wrapper.simulate('click');
+        wrapper.find('.uc-fe-checkbox').at(0).simulate('click');
         expect(getCheckedStatus(wrapper)).toBe(false);
         expect(onChange).toHaveBeenCalledTimes(1);
     });
     test('click default unchecked', () => {
         const wrapper = mount(<Checkbox />);
-        wrapper.simulate('click');
+        wrapper.find('.uc-fe-checkbox').at(0).simulate('click');
     });
     test('click controlled', () => {
         let checkedProps = false;
         const onChange = jest.fn(checked => (checkedProps = checked));
         const wrapper = mount(<Checkbox checked={checkedProps} onChange={onChange} />);
         expect(getCheckedStatus(wrapper)).toBe(false);
-        wrapper.simulate('click');
+        wrapper.find('.uc-fe-checkbox').at(0).simulate('click');
         expect(onChange).toHaveBeenCalledTimes(1);
         expect(onChange).toHaveBeenLastCalledWith(true);
         expect(getCheckedStatus(wrapper)).toBe(false);

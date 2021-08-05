@@ -1,9 +1,19 @@
-import React, { ReactNode } from 'react';
+import React, { HTMLAttributes, ReactNode } from 'react';
 
 import CheckboxIcon from 'src/components/Checkbox/CheckboxIcon';
+import { Override } from 'src/type';
 
 import { RadioCardWrap, cardHeaderCls, cardTitleCls, cardContentCls } from './style';
 import RadioIcon from './RadioIcon';
+
+interface CardProps {
+    title?: ReactNode;
+    children?: ReactNode;
+    checked?: boolean;
+    disabled?: boolean;
+    indeterminate?: boolean;
+    multiple?: boolean;
+}
 
 const Card = ({
     title,
@@ -13,14 +23,7 @@ const Card = ({
     indeterminate,
     multiple,
     ...rest
-}: {
-    title: ReactNode;
-    children: ReactNode;
-    checked: boolean;
-    disabled: boolean;
-    indeterminate: boolean;
-    multiple: boolean;
-}) => {
+}: Override<HTMLAttributes<HTMLDivElement>, CardProps>) => {
     return (
         <RadioCardWrap {...{ checked, disabled }} {...rest}>
             {title == null ? null : (
@@ -38,4 +41,4 @@ const Card = ({
     );
 };
 
-export default Card;
+export default React.memo(Card);

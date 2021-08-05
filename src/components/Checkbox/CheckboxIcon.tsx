@@ -4,7 +4,7 @@ import SvgIcon from 'src/components/SvgIcon';
 
 import { iconCls, SIconWrap } from './style';
 
-const CheckboxIcon = (props: { indeterminate: boolean; checked: boolean; disabled: boolean }) => {
+const CheckboxIcon = (props: { indeterminate?: boolean; checked?: boolean; disabled?: boolean }) => {
     const { indeterminate } = props;
     return (
         <SIconWrap {...props}>

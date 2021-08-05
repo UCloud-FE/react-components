@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import { inlineBlockWithVerticalMixin, sWrap } from 'src/style';
 import config from 'src/config';
-import withProps from 'src/utils/withProps';
+import { inlineBlockWithVerticalMixin, sWrap, getHeightBySize, Theme } from 'src/style';
+import { Size } from 'src/type';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-checkbox';
@@ -16,19 +16,26 @@ export const checkedCls = prefixCls + '-checked';
 export const indeterminateCls = prefixCls + '-indeterminate';
 export const groupCls = prefixCls + '-group';
 
-export const CheckboxWrap = withProps()(
-    styled('span')(props => {
+interface CheckboxProps {
+    size?: Size;
+    checked?: boolean;
+    indeterminate?: boolean;
+    disabled?: boolean;
+}
+
+export const CheckboxWrap = sWrap<CheckboxProps>({})(
+    styled.span(props => {
         const {
-            theme: { designTokens: DT, Height },
-            size
+            theme: { designTokens: DT },
+            size = 'md'
         } = props;
 
         return css`
             cursor: pointer;
             position: relative;
             white-space: nowrap;
-            min-height: ${Height[size]};
-            line-height: ${Height[size]};
+            min-height: ${getHeightBySize(DT, size)};
+            line-height: ${getHeightBySize(DT, size)};
             ${inlineBlockWithVerticalMixin};
 
             font-size: 0;
@@ -53,7 +60,7 @@ export const CheckboxWrap = withProps()(
     })
 );
 
-export const SIconWrap = sWrap({
+export const SIconWrap = sWrap<CheckboxProps>({
     className: iconWrapCls
 })(
     styled.span(props => {
@@ -125,7 +132,7 @@ export const SIconWrap = sWrap({
     })
 );
 
-export const iconMixin = props => {
+export const iconMixin = (props: CheckboxProps & { theme: Theme }) => {
     const {
         theme: { designTokens: DT },
         disabled
@@ -142,9 +149,9 @@ export const iconMixin = props => {
     );
 };
 
-export const CheckboxGroupWrap = withProps({
+export const CheckboxGroupWrap = sWrap({
     className: groupCls
-})(styled('div')`
+})(styled.div`
     .${prefixCls} {
         margin-right: 8px;
 

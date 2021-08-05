@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Checkbox from 'src/components/Checkbox';
 import Radio from 'src/components/Radio';
 import Switch from 'src/components/Switch';
@@ -10,7 +11,7 @@ class Demo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: ['1'],
+            value: [1],
             size: 'md',
             styleType: 'default',
             disabled: false,

@@ -50,7 +50,7 @@ const sizeMixin = props => {
     `;
 };
 
-const sharedClassName = ({ disabled, checked, size, styleType }) =>
+export const sharedClassName = ({ disabled, checked, size, styleType }) =>
     classnames({
         [prefixCls]: true,
         [disabledCls]: disabled,
@@ -242,9 +242,7 @@ export const RadioTagWrap = withProps({
     })
 );
 
-export const RadioCardWrap = withProps({
-    className: sharedClassName
-})(
+export const RadioCardWrap = withProps({})(
     styled.div(props => {
         const {
             theme: { designTokens: DT, titleFontSize },

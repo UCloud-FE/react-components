@@ -1,19 +1,19 @@
 import { useCallback, useMemo, useState } from 'react';
 
-const useUncontrolled = <V, P = V, VT = V | undefined>(
+const useUncontrolled = <V, P = V, VT = V | undefined, U = never>(
     value: VT,
     defaultValue: V,
-    onChange?: (v: P) => void,
+    onChange?: (v: P, ...rest: U[]) => void,
     options?: { setter?: (e: P) => V }
 ): [V, (v: P) => void, (v: P) => void] => {
     const isControlled = useMemo(() => value !== undefined, [value]);
     const [v, setV] = useState<V>(() => (isControlled ? ((value as unknown) as V) : defaultValue));
     const finalValue = isControlled ? ((value as unknown) as V) : v;
     const o = useCallback(
-        (v: P) => {
+        (v: P, ...rest: U[]) => {
             const r = options?.setter ? options?.setter(v) : v;
             if (!isControlled) setV((r as unknown) as V);
-            onChange?.(v);
+            onChange?.(v, ...rest);
         },
         [options, isControlled, onChange]
     );

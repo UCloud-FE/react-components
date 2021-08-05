@@ -36,3 +36,8 @@
 
 ```js {"codepath": "group-uncontrolled.jsx"}
 ```
+
+<!-- #### performance - 性能测试
+
+```js {"codepath": "performance.jsx"}
+``` -->

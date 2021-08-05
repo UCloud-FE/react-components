@@ -9,8 +9,12 @@ describe('Tabs', () => {
         const onChange = jest.fn();
         const wrapper = mount(
             <Tabs onChange={onChange} defaultActiveKey="2">
-                <Pane tab="Tab1" key="1" />
-                <Pane tab="Tab2" key="2" />
+                <Pane tab="Tab1" key="1">
+                    Tab1
+                </Pane>
+                <Pane tab="Tab2" key="2">
+                    Tab2
+                </Pane>
             </Tabs>
         );
         const children = wrapper.find('.uc-fe-tabs-tab');
@@ -26,8 +30,12 @@ describe('Tabs', () => {
         const onChange = jest.fn(value => (activeKey = value));
         const wrapper = mount(
             <Tabs onChange={onChange} activeKey={activeKey}>
-                <Pane tab="Tab1" key="1" />
-                <Pane tab="Tab2" key="2" />
+                <Pane tab="Tab1" key="1">
+                    Tab1
+                </Pane>
+                <Pane tab="Tab2" key="2">
+                    Tab2
+                </Pane>
             </Tabs>
         );
         const children = wrapper.find('.uc-fe-tabs-tab');
