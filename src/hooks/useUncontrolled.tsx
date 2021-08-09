@@ -1,4 +1,6 @@
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+
+import useIsInitial from './useIsInitial';
 
 const useUncontrolled = <V, P = V, VT = V | undefined, U = never>(
     value: VT,
@@ -7,12 +9,31 @@ const useUncontrolled = <V, P = V, VT = V | undefined, U = never>(
     options?: { setter?: (e: P) => V }
 ): [V, (v: P) => void, (v: P) => void] => {
     const isControlled = useMemo(() => value !== undefined, [value]);
+    const isInitial = useIsInitial();
     const [v, setV] = useState<V>(() => (isControlled ? ((value as unknown) as V) : defaultValue));
-    const finalValue = isControlled ? ((value as unknown) as V) : v;
+    const cacheVRef = useRef(v);
+
+    useEffect(() => {
+        if (isInitial) return;
+        if (isControlled) {
+            // console.warn(`Can't change Component from uncontrolled to be controlled`);
+        } else {
+            // console.warn(`Can't change Component from controlled to be uncontrolled`);
+        }
+        // only update when isControlled change
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [isControlled]);
+
+    const finalValue = isControlled ? ((value as unknown) as V) : cacheVRef.current;
+
     const o = useCallback(
         (v: P, ...rest: U[]) => {
             const r = options?.setter ? options?.setter(v) : v;
             if (!isControlled) setV((r as unknown) as V);
+            // save value for controlled change to be uncontrolled
+            // don't use state for reduce necessary update
+            // still keep state for uncontrolled update
+            cacheVRef.current = (r as unknown) as V;
             onChange?.(v, ...rest);
         },
         [options, isControlled, onChange]

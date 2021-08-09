@@ -779,13 +779,13 @@ class Table extends Component {
                         <Radio
                             disabled={disabled}
                             onChange={() => this.handleSelectRecord(rowKey)}
-                            checked={selectedRowKeyMap[rowKey]}
+                            checked={!!selectedRowKeyMap[rowKey]}
                         />
                     ) : (
                         <Checkbox
                             disabled={disabled}
                             onChange={() => this.handleSelectRecord(rowKey, !selectedRowKeyMap[rowKey])}
-                            checked={selectedRowKeyMap[rowKey]}
+                            checked={!!selectedRowKeyMap[rowKey]}
                         />
                     );
                 }
