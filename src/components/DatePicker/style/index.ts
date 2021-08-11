@@ -8,7 +8,6 @@ import { timePrefixCls } from 'src/components/TimePicker/style';
 import { prefixCls as inputPrefixCls } from 'src/components/Input/style';
 import { inlineBlockWithVerticalMixin, Theme, sWrap, getHeightBySize, Size } from 'src/style';
 import config from 'src/config';
-import SvgIcon from 'src/components/SvgIcon';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-datepicker';
@@ -18,6 +17,7 @@ export const dataWrapCls = prefixCls + '-data-wrap';
 export const dateSeparatorCls = prefixCls + '-data-separator';
 export const shortcutCls = prefixCls + '-shortcut';
 export const footerCls = prefixCls + '-footer';
+export const tipCls = prefixCls + '-tip';
 export const readonlyInputCls = prefixCls + '-input-readonly';
 
 export const PickerContainer = sWrap<{ disabled: boolean; isMonth: boolean }, HTMLDivElement>({
@@ -40,10 +40,13 @@ export const SPopup = sWrap({})(
                     cursor: pointer;
                     color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
                 }
+                .${tipCls} {
+                    color: ${DT.T_COLOR_TEXT_REMARK_DARK};
+                }
             }
             .${tableCls} {
                 width: 296px;
-                min-height: 288px;
+                min-height: 236px;
             }
             .${timePrefixCls} {
                 background: ${DT.T_COLOR_BG_DEFAULT_LIGHT};

@@ -12,5 +12,7 @@ export default {
     confirm: 'Confirm',
     placeholder: 'Choose date',
     placeholderRangeStart: 'Start date',
-    placeholderRangeEnd: 'End date'
+    placeholderRangeEnd: 'End date',
+    chooseTipRangeStart: 'Choose start date',
+    chooseTipRangeEnd: 'Choose end date'
 };

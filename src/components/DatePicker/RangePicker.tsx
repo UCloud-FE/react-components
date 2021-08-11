@@ -25,6 +25,7 @@ const RangePickerWithoutMemo = forwardRef(
             readonly,
             tip,
             error,
+            footerTip,
             ...pickProps
         }: DatePickerProps & {
             prefix?: boolean;
@@ -33,6 +34,7 @@ const RangePickerWithoutMemo = forwardRef(
             readonly?: boolean;
             tip?: ReactNode;
             error?: ReactNode;
+            footerTip?: ReactNode;
         },
         ref: Ref<RangePickerRef>
     ) => {
@@ -94,7 +96,7 @@ const RangePickerWithoutMemo = forwardRef(
                             </Notice>
                         )}
                         {tip && <Notice closable={false}>{tip}</Notice>}
-                        <Footer {...footerProps} />
+                        <Footer {...footerProps} tip={footerTip} />
                     </SPopup>
                 }
             >

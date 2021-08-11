@@ -7,7 +7,7 @@ import Combine from 'src/components/Combine';
 import useLocale from 'src/components/LocaleProvider/useLocale';
 
 import LOCALE from './locale/zh_CN';
-import { shortcutCls, footerCls } from './style';
+import { shortcutCls, footerCls, tipCls } from './style';
 
 export interface TShortcut {
     handle: () => TDate;
@@ -57,9 +57,10 @@ interface FooterProps {
     onConfirm: () => void;
     shortcuts?: TShortcut[] | null;
     onShortcut: (d: TDate) => void;
+    tip?: ReactNode;
     locale?: typeof LOCALE;
 }
-const Footer = ({ mode, confirmAble, onConfirm, shortcuts, onShortcut, locale: _locale }: FooterProps) => {
+const Footer = ({ mode, confirmAble, onConfirm, shortcuts, onShortcut, tip, locale: _locale }: FooterProps) => {
     if (shortcuts === undefined) {
         shortcuts = [presetShortcuts[mode]];
     } else if (shortcuts === null) {
@@ -84,9 +85,12 @@ const Footer = ({ mode, confirmAble, onConfirm, shortcuts, onShortcut, locale: _
                     <Shortcut index={i} key={i} shortcut={shortcut} onShortcutClick={handleShortcutClick} />
                 ))}
             </Combine>
-            <Button styleType="primary" disabled={!confirmAble} onClick={handleConfirm}>
-                {locale.confirm}
-            </Button>
+            <Combine>
+                {tip ? <span className={tipCls}>{tip}</span> : null}
+                <Button styleType="primary" disabled={!confirmAble} onClick={handleConfirm}>
+                    {locale.confirm}
+                </Button>
+            </Combine>
         </Box>
     );
 };

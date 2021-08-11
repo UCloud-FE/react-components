@@ -42,6 +42,12 @@ export const SPopup = sWrap({})(
     })
 );
 
+const StepperHeight = 32;
+const SpacingHeight = 104;
+const StepperVisibleHeight = 28;
+const ActiveOffset = (SpacingHeight * 2 + StepperHeight - StepperVisibleHeight) / 2;
+const StepperActiveOffset = (StepperHeight - StepperVisibleHeight) / 2;
+
 export const STime = sWrap<any>({})(
     styled(Time, { shouldForwardProp })(props => {
         const {
@@ -54,8 +60,8 @@ export const STime = sWrap<any>({})(
                 display: flex;
                 position: relative;
                 .${timePrefixCls}-scroller {
-                    height: 36px;
-                    padding: 126px 0;
+                    height: ${StepperHeight}px;
+                    padding: ${SpacingHeight}px 0;
                     overflow-x: hidden;
                     overflow-y: hidden;
                     z-index: 1;
@@ -70,7 +76,7 @@ export const STime = sWrap<any>({})(
                             ::after {
                                 content: ' ';
                                 visibility: hidden;
-                                height: 126px;
+                                height: ${SpacingHeight}px;
                                 display: block;
                             }
                         `
@@ -79,7 +85,7 @@ export const STime = sWrap<any>({})(
                     .${timePrefixCls}-stepper {
                         width: 40px;
                         text-align: center;
-                        line-height: 36px;
+                        line-height: ${StepperHeight}px;
                         color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
                         cursor: pointer;
                         user-select: none;
@@ -95,7 +101,7 @@ export const STime = sWrap<any>({})(
                         content: ' ';
                         position: absolute;
                         display: block;
-                        height: 32px;
+                        height: ${StepperVisibleHeight}px;
                         width: 40px;
                         box-sizing: border-box;
                         pointer-events: none;
@@ -103,11 +109,11 @@ export const STime = sWrap<any>({})(
                         z-index: -1;
                     }
                     ::before {
-                        top: 128px;
+                        top: ${ActiveOffset}px;
                         left: 0;
                     }
                     .${timePrefixCls}-stepper:hover::after {
-                        top: 2px;
+                        top: ${StepperActiveOffset}px;
                         left: 0;
                     }
                 }

@@ -12,5 +12,7 @@ export default {
     confirm: '确定',
     placeholder: '选择日期',
     placeholderRangeStart: '开始时间',
-    placeholderRangeEnd: '结束时间'
+    placeholderRangeEnd: '结束时间',
+    chooseTipRangeStart: '选择开始时间',
+    chooseTipRangeEnd: '选择结束时间'
 };

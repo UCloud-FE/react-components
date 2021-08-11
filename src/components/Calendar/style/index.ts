@@ -34,7 +34,7 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
             flex: none;
             box-sizing: border-box;
             width: 100%;
-            height: 48px;
+            height: 44px;
             padding: 0 8px;
             border-bottom: 1px solid ${DT.T_COLOR_BG_DEFAULT_DARK};
             align-items: center;
@@ -42,7 +42,7 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
         }
         .${prefixCls}-header-button {
             display: block;
-            width: 40px;
+            width: 28px;
             font-size: 16px;
             text-align: center;
             color: ${DT.T_COLOR_TEXT_REMARK_DARK};
@@ -77,7 +77,7 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
             font-weight: 600;
             background: ${DT.T_COLOR_BG_DEFAULT_LIGHT};
             .${prefixCls}-cell {
-                line-height: 40px;
+                line-height: 32px;
                 text-align: center;
                 vertical-align: middle;
             }
@@ -88,13 +88,13 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
             display: flex;
             flex-direction: column;
             .${prefixCls}-row {
-                margin-top: 8px;
+                margin-top: 4px;
             }
             .${prefixCls}-cell {
                 display: inline-block;
-                height: 32px;
+                height: 28px;
                 margin: 0 auto;
-                line-height: 32px;
+                line-height: 28px;
                 text-align: center;
                 border-radius: 2px;
                 cursor: pointer;

@@ -318,6 +318,7 @@ const Range = ({
                     onActiveChange={handleStartActiveChange}
                     placeholder={placeholderS}
                     shortcuts={shortcutsS}
+                    footerTip={locale.chooseTipRangeStart}
                     {...sharedPickerProps}
                 />
                 <RangeDateSeparator />
@@ -329,6 +330,7 @@ const Range = ({
                     onActiveChange={handleEndActiveChange}
                     placeholder={placeholderE}
                     shortcuts={shortcutsE}
+                    footerTip={locale.chooseTipRangeEnd}
                     {...sharedPickerProps}
                 />
             </SRangeInputWrap>
