@@ -27,6 +27,18 @@ export const SortIcon = withProps()(
         `;
     })
 );
+export const FilterIcon = withProps()(
+    styled(SvgIcon)(props => {
+        const {
+            active,
+            theme: { designTokens: DT }
+        } = props;
+
+        return css`
+            fill: ${active ? DT.T_COLOR_TEXT_PRIMARY_DEFAULT : DT.T_COLOR_TEXT_DEFAULT_DARK};
+        `;
+    })
+);
 
 export const selectIconCellCls = prefixCls + '-row-select-icon-cell';
 export const selectIconHeaderCls = prefixCls + '-select-icon-th';

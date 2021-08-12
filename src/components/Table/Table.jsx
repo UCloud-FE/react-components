@@ -10,7 +10,6 @@ import Notice from 'src/components/Notice';
 import Checkbox from 'src/components/Checkbox';
 import Radio from 'src/components/Radio';
 import Select from 'src/components/Select';
-import SvgIcon from 'src/components/SvgIcon';
 import Tooltip from 'src/components/Tooltip';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
 import { InheritProvider } from 'src/components/Popover/ContainerContext';
@@ -20,6 +19,7 @@ import {
     TableWrap,
     PopupContainer,
     SortIcon,
+    FilterIcon,
     CancelSelect,
     selectIconCellCls,
     selectIconHeaderCls,
@@ -446,8 +446,8 @@ class Table extends Component {
                     onChange(value);
                 }}
                 className={`${prefixCls}-filter`}
-                renderSelector={(content, visible) => {
-                    return <SvgIcon key="icon" type="filter" color={visible ? 'blue' : null} />;
+                renderSelector={(content, active) => {
+                    return <FilterIcon key="icon" type="filter" active={active} />;
                 }}
                 multiple={multiple}
                 {...rest}
