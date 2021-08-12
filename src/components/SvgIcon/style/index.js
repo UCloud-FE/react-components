@@ -13,6 +13,8 @@ export const SvgIconWrapper = withProps({})(
 
             ${inlineBlockWithVerticalMixin};
 
+            fill: currentcolor;
+
             ${color &&
             css`
                 fill: ${color};
