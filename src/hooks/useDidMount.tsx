@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const useInitial = (callBack: () => void) => {
+const useDidMount = (callBack: () => void) => {
     useEffect(() => {
         callBack?.();
         // only run when first mounted
@@ -8,4 +8,4 @@ const useInitial = (callBack: () => void) => {
     }, []);
 };
 
-export default useInitial;
+export default useDidMount;

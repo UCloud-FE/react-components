@@ -15,7 +15,7 @@ import { TDate } from '@z-r/calendar/types/interface';
 import useUncontrolled from 'src/hooks/useUncontrolled';
 import useLocale from 'src/components/LocaleProvider/useLocale';
 import ControllerContext from 'src/components/Form/ControllerContext';
-import useInitial from 'src/hooks/useInitial';
+import useDidMount from 'src/hooks/useDidMount';
 import isArray from 'src/utils/isArray';
 import isNumber from 'src/utils/isNumber';
 import pick from 'src/utils/pick';
@@ -204,7 +204,7 @@ const Range = ({
     const { range: rangeDisplay, ...pickerDisplay } = display;
     const [shortcutsS, shortcutsE] = isArray(shortcuts) ? shortcuts : [];
 
-    useInitial(() => {
+    useDidMount(() => {
         const [valueS, valueE] = isArray(value) ? value : [null, null];
         let initialValue: CallbackRangeValue;
         if (option !== 'custom') {
