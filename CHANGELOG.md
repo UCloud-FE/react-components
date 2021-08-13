@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.19](https://github.com/UCloud-FE/react-components/compare/v1.1.18...v1.1.19) (2021-08-13)
+
+### Features
+
+-   **DataPicker:** update styles & add choose tip ([aa25419](https://github.com/UCloud-FE/react-components/commit/aa25419d53702399b701a7ff2233b6f8c5911ace))
+
+### Bug Fixes
+
+-   **SvgIcon:** set default color to currentcolor ([ebd204a](https://github.com/UCloud-FE/react-components/commit/ebd204ac47b01ec13cd29fdf8db243e649000a1f))
+-   **Table:** fix checkbox controll switch cause bug ([7fde5b1](https://github.com/UCloud-FE/react-components/commit/7fde5b1ceabca36f86a32e603127442ad949b428))
+-   **Table:** fix svg color when use dark themm ([6f485d9](https://github.com/UCloud-FE/react-components/commit/6f485d936cdd94d927e21a39632d6310d36bcabd))
+-   **ThemeProvider:** fix runtime theme reset bug ([6c7d979](https://github.com/UCloud-FE/react-components/commit/6c7d979621b542935135ccff37cc57edb1c5f65a))
+-   **Tree:** fix item interface bug ([cdd4e6e](https://github.com/UCloud-FE/react-components/commit/cdd4e6ec03d869f1861d77f20b663a6a5e3a2f63))
+
 ### [1.1.18](https://github.com/UCloud-FE/react-components/compare/v1.1.17...v1.1.18) (2021-08-03)
 
 ### Features
