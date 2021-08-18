@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.20](https://github.com/UCloud-FE/react-components/compare/v1.1.19...v1.1.20) (2021-08-18)
+
+### Bug Fixes
+
+-   **useUncontrolled:** place ref before state to fix value cache bug ([e10a27d](https://github.com/UCloud-FE/react-components/commit/e10a27d478b291a586386d43bff7ed561c247c00))
+
 ### [1.1.19](https://github.com/UCloud-FE/react-components/compare/v1.1.18...v1.1.19) (2021-08-13)
 
 ### Features
