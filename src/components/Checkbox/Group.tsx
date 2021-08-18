@@ -42,7 +42,7 @@ const Group = ({
     const { valueMap, toggleSelect, addItem, removeItem } = useGroup(value, onChange);
     const renderOptions = () => {
         if (options) {
-            return options.map(option => {
+            return options.map?.(option => {
                 const { label, ...restOptionProps } = option;
                 return (
                     <Checkbox key={option.value} {...restOptionProps}>

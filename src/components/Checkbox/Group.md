@@ -37,6 +37,11 @@
 ```js {"codepath": "group-uncontrolled.jsx"}
 ```
 
+#### boundary - 边界测试
+
+```js {"codepath": "boundary.jsx"}
+```
+
 <!-- #### performance - 性能测试
 
 ```js {"codepath": "performance.jsx"}

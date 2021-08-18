@@ -10,10 +10,14 @@ export interface SelectableContext {
 }
 export type SelectedStatus = 'NONE' | 'ALL' | 'PART';
 
+const formatValue = (value: V[]): V[] => {
+    return Array.isArray(value) ? value : [];
+};
+
 const useGroup = (value: V[], onChange: (v: V[], selectedStatus: SelectedStatus) => void) => {
     const valueMap = useMemo(() => {
         const m: ValueMap = new Map();
-        value.forEach(v => m.set(v, true));
+        formatValue(value).forEach(v => m.set(v, true));
         return m;
     }, [value]);
     const itemCountRef = useRef(0);
@@ -27,9 +31,9 @@ const useGroup = (value: V[], onChange: (v: V[], selectedStatus: SelectedStatus)
         (v: V) => {
             let newValue: V[];
             if (valueMap.get(v)) {
-                newValue = value.filter(_v => _v !== v);
+                newValue = formatValue(value).filter(_v => _v !== v);
             } else {
-                newValue = value.concat(v);
+                newValue = formatValue(value).concat(v);
             }
             const selectedStatus =
                 newValue.length === 0 ? 'NONE' : newValue.length >= itemCountRef.current ? 'ALL' : 'PART';
