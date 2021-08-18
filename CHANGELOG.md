@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.21](https://github.com/UCloud-FE/react-components/compare/v1.1.20...v1.1.21) (2021-08-18)
+
+### Bug Fixes
+
+-   **icons:** fix wrong icon color cause by currentcolor ([d9414f6](https://github.com/UCloud-FE/react-components/commit/d9414f64040300f57412852c7f82b8130ddbe719))
+
 ### [1.1.20](https://github.com/UCloud-FE/react-components/compare/v1.1.19...v1.1.20) (2021-08-18)
 
 ### Bug Fixes
