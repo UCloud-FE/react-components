@@ -29,11 +29,11 @@ const useUncontrolled = <V, P = V, VT = V | undefined, U = never>(
     const o = useCallback(
         (v: P, ...rest: U[]) => {
             const r = options?.setter ? options?.setter(v) : v;
-            if (!isControlled) setV((r as unknown) as V);
             // save value for controlled change to be uncontrolled
             // don't use state for reduce necessary update
             // still keep state for uncontrolled update
             cacheVRef.current = (r as unknown) as V;
+            if (!isControlled) setV((r as unknown) as V);
             onChange?.(v, ...rest);
         },
         [options, isControlled, onChange]
