@@ -45,6 +45,7 @@ export const IconWrap = withProps()(
             position: absolute;
             left: 12px;
             top: 14px;
+            color: ${DT.T_COLOR_TEXT_WARNING};
             fill: ${DT.T_COLOR_TEXT_WARNING};
         `;
     })

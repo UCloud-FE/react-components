@@ -90,7 +90,7 @@ export const CloseHandlerWrapper = withProps({
             transition: all 0.3s;
 
             ${closeHandlerPropsMixin(props)};
-
+            color: ${DT.T_BUTTON_PRIMARY_COLOR_TEXT_DEFAULT};
             fill: ${DT.T_BUTTON_PRIMARY_COLOR_TEXT_DEFAULT};
         `;
     })

@@ -73,6 +73,7 @@ export const NumberInputWrap = withProps()(
                 &.${handlerDisabledCls} {
                     cursor: default;
                     pointer-events: none;
+                    color: ${DT.T_COLOR_TEXT_DISABLED};
                     fill: ${DT.T_COLOR_TEXT_DISABLED};
                     border-color: ${DT.T_COLOR_LINE_DEFAULT_DARK};
                 }

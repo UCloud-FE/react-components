@@ -71,6 +71,7 @@ export const SWrap = sWrap<
                 height: 100%;
                 align-items: center;
                 display: flex;
+                color: ${DT.T_COLOR_TEXT_REMARK_DARK};
                 fill: ${DT.T_COLOR_TEXT_REMARK_DARK};
                 opacity: 0;
                 transition: opacity 0.3s;
