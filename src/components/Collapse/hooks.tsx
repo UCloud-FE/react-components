@@ -22,7 +22,13 @@ export const useCollapse = ({
     onChange: _onChange,
     multiple = true
 }: CollapseProps) => {
-    const [openKeys, onChange] = useUncontrolled(_openKeys, defaultOpenKeys, _onChange);
+    const [openKeys, onChangeS] = useUncontrolled(_openKeys, defaultOpenKeys, _onChange);
+    const onChange = useCallback(
+        (keys: Key[]) => {
+            onChangeS(keys);
+        },
+        [onChangeS]
+    );
     const [collapseContext] = useGroup(openKeys, onChange, multiple);
     return [collapseContext];
 };

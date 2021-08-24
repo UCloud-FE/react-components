@@ -304,44 +304,6 @@ export { default as Calendar } from './lib/components/Calendar';
 // DatePicker
 export { default as DatePicker } from './lib/components/DatePicker';
 
-// Menu
-export interface MenuCustomStyle {
-    maxHeight?: string;
-    [key: string]: any;
-}
-export interface MenuProps {
-    selectedKeys?: string[];
-    defaultSelectedKeys?: string[];
-    onChange?: (selectedKeys: string[]) => void;
-    multiple?: boolean;
-    selectable?: boolean;
-    collapse?: CollapseProps;
-    showSelectAll?: boolean;
-    block?: boolean;
-    disabled?: boolean;
-    customStyle?: MenuCustomStyle;
-}
-export interface MenuItemProps extends HTMLAttributes<HTMLDivElement> {
-    itemKey?: number | string;
-    disabled?: boolean;
-    tooltip?: ReactNode | TooltipProps;
-}
-declare class MenuItem extends PureComponent<MenuItemProps> {}
-export type MenuSubMenuProps = Override<
-    HTMLAttributes<HTMLDivElement>,
-    {
-        title?: ReactNode;
-        styleType?: 'collapse' | 'popover';
-        subMenuKey?: string;
-        disabled?: boolean;
-    }
->;
-declare class MenuSubMenu extends Component<MenuSubMenuProps> {}
-export declare class Menu extends Component<MenuProps> {
-    static Item: typeof MenuItem;
-    static SubMenu: typeof MenuSubMenu;
-}
-
 // ActionList
 interface ActionItem extends ButtonProps {
     label?: ReactNode;
@@ -744,39 +706,6 @@ export declare class Table extends Component<TableProps> {
     static setColumnConfigToLocalStorage: typeof Function;
 }
 
-// Collapse
-export type CollapseProps = Override<
-    HTMLAttributes<HTMLDivElement>,
-    {
-        openKeys?: any[];
-        defaultOpenKeys?: any[];
-        multiple?: boolean;
-        onChange?: (keys: any[]) => void;
-    }
->;
-export interface CollapsePanelToggle {
-    (open: boolean): void;
-}
-export interface CollapsePanelTitleFunction {
-    (open: boolean, disabled: boolean, toggle: CollapsePanelToggle): ReactNode;
-}
-export interface CollapsePanelProps {
-    title?: ReactNode | CollapsePanelTitleFunction;
-    children?: ReactNode;
-    onChange?: (open: boolean) => void;
-    open?: boolean;
-    defaultOpen?: boolean;
-    forceRender?: boolean;
-    disabled?: boolean;
-    panelKey?: any;
-    titlePosition?: 'top' | 'bottom';
-    multiple?: boolean;
-}
-declare class CollapsePanel extends Component<CollapsePanelProps> {}
-export declare class Collapse extends Component<CollapseProps> {
-    static Panel: typeof CollapsePanel;
-}
-
 // Form
 export interface FormLabelCol {
     span?: number;
@@ -970,23 +899,20 @@ interface ThemeProviderProps {
 }
 export declare class ThemeProvider extends Component<ThemeProviderProps> {}
 
-// Tree
 export { default as Tree } from './lib/components/Tree';
 
-// Link
 export { default as Link } from './lib/components/Link';
 
-// AutoComplete
 export { default as AutoComplete } from './lib/components/AutoComplete';
 
-// Switch
 export { default as Switch } from './lib/components/Switch';
 
-// Tabs
 export { default as Tabs } from './lib/components/Tabs';
 
-// Input
 export { default as Input } from './lib/components/Input';
 
-// Checkbox
 export { default as Checkbox } from './lib/components/Checkbox';
+
+export { default as Menu } from './lib/components/Menu';
+
+export { default as Collapse } from './lib/components/Collapse';
