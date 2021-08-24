@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.22](https://github.com/UCloud-FE/react-components/compare/v1.1.21...v1.1.22) (2021-08-24)
+
+### Bug Fixes
+
+-   **Checkbox:** increase fault tolerance of unvalid value/options ([22d1954](https://github.com/UCloud-FE/react-components/commit/22d1954aaba92093f5e726beb0aec0d2ddf3718f))
+
 ### [1.1.21](https://github.com/UCloud-FE/react-components/compare/v1.1.20...v1.1.21) (2021-08-18)
 
 ### Bug Fixes
