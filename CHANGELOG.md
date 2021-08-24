@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.23](https://github.com/UCloud-FE/react-components/compare/v1.1.22...v1.1.23) (2021-08-24)
+
+### Bug Fixes
+
+-   **Collapse:** remove selectedStatus in callback ([4d08cf7](https://github.com/UCloud-FE/react-components/commit/4d08cf7fb50d67df24d31d0755664d2232158a08))
+
 ### [1.1.22](https://github.com/UCloud-FE/react-components/compare/v1.1.21...v1.1.22) (2021-08-24)
 
 ### Bug Fixes
