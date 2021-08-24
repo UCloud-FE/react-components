@@ -6,8 +6,8 @@ import Input from 'src/components/Input';
 import SvgIcon from 'src/components/SvgIcon';
 import Menu from 'src/components/Menu';
 import Button from 'src/components/Button';
-import { inlineBlockWithVerticalMixin, sWrap } from 'src/style';
 import withProps from 'src/utils/withProps';
+import { inlineBlockWithVerticalMixin, sWrap } from 'src/style';
 import config from 'src/config';
 
 const { prefixCls: _prefixCls } = config;

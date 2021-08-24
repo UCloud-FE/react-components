@@ -1,12 +1,10 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import Collapse from 'src/components/Collapse';
 import SvgIcon from 'src/components/SvgIcon';
 import config from 'src/config';
-import withProps from 'src/utils/withProps';
 import isFirefox from 'src/utils/isFirefox';
+import { sWrap, Theme } from 'src/style';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-menu';
@@ -15,7 +13,6 @@ export const singleCls = prefixCls + '-single';
 export const multipleCls = prefixCls + '-multiple';
 export const itemCls = prefixCls + '-item';
 export const disabledCls = itemCls + '-disabled';
-export const hiddenCls = itemCls + '-hidden';
 export const firstCls = prefixCls + '-first';
 export const lastCls = prefixCls + '-last';
 export const selectedCls = prefixCls + '-selected';
@@ -34,7 +31,19 @@ export const SubMenuIcon = styled(SvgIcon)`
     margin-top: -0.5em;
 `;
 
-const menuStyle = ({ customStyle = {}, theme: { designTokens: DT } }) => {
+interface MenuProps {
+    customStyle?: {
+        maxHeight?: string;
+        maxWidth?: string;
+    };
+}
+
+const menuStyle = ({
+    customStyle = {},
+    theme: { designTokens: DT }
+}: MenuProps & {
+    theme: Theme;
+}) => {
     const { maxWidth } = customStyle;
     return css`
         display: inline-block;
@@ -83,9 +92,6 @@ const menuStyle = ({ customStyle = {}, theme: { designTokens: DT } }) => {
                 background: none;
             }
         }
-        .${hiddenCls} {
-            display: none;
-        }
         .${popupTitleCls}, .${collapseTitleCls} {
             position: relative;
             padding: 0px 40px 0px 8px;
@@ -127,11 +133,8 @@ const menuStyle = ({ customStyle = {}, theme: { designTokens: DT } }) => {
     `;
 };
 
-// eslint-disable-next-line react/prop-types,no-unused-vars
-const CleanCollapse = ({ customStyle, ...rest }) => <Collapse {...rest} />;
-
-export const MenuWrap = withProps()(
-    styled(CleanCollapse)(props => {
+export const MenuWrap = sWrap<MenuProps>({})(
+    styled.div(props => {
         const { customStyle = {} } = props;
         return css`
             ${menuStyle(props)};
@@ -147,7 +150,7 @@ export const MenuWrap = withProps()(
     })
 );
 
-export const PopupMenuWrap = withProps()(
+export const PopupMenuWrap = sWrap<MenuProps>({})(
     styled('div')(props => {
         return css`
             display: inline-block;

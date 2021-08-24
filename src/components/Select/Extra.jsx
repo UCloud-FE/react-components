@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import { ExtraWrap } from './style';
-import { SelectContext } from './Select';
+import SelectContext from './SelectContext';
 
 class Extra extends PureComponent {
     static propTypes = {

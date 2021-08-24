@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
-import createReactContext from 'create-react-context';
 
 import Popover from 'src/components/Popover';
 import uncontrolledDecorator from 'src/decorators/uncontrolled';
 import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsumerDecorator';
-import { getItemTree, rootPrefix } from 'src/components/Menu/Menu';
 import deprecatedLog from 'src/utils/deprecatedLog';
 import ConfigContext from 'src/components/ConfigProvider/ConfigContext';
+import { groupChildrenAsDataSource, groupOptionsAsDataSource } from 'src/hooks/group';
 
 import Option from './Option';
+import Group from './Group';
 import Extra from './Extra';
 import {
     SelectWrap,
@@ -23,13 +23,23 @@ import {
     selectorContentCls,
     FooterWrap
 } from './style';
+import SelectContext from './SelectContext';
 import LOCALE from './locale/zh_CN';
 
 export const deprecatedLogForPopover = _.once(() => deprecatedLog('Select popover', 'popoverProps'));
 
 const Size = ['sm', 'md', 'lg'];
 
-export const SelectContext = createReactContext();
+const groupOptions = {
+    itemTag: 'isMenuItem',
+    subGroupTag: 'isMenuSubMenu',
+    itemKeyName: 'value',
+    subGroupKeyName: 'groupKey',
+    displayName: 'label',
+    subGroupName: 'children',
+    ItemComponent: Option,
+    SubGroupComponent: Group
+};
 
 @localeConsumerDecorator({ defaultLocale: LOCALE, localeName: 'Select' })
 @uncontrolledDecorator({})
@@ -37,16 +47,16 @@ class Select extends Component {
     constructor(props) {
         super(props);
 
-        const { children, options } = this.props;
-        let itemTree;
+        const { children, options, disabled } = this.props;
+        let dataSource;
         if (_.isEmpty(options)) {
-            itemTree = getItemTree(children);
+            dataSource = groupChildrenAsDataSource(children, disabled, groupOptions);
         } else {
-            itemTree = getItemTree(this.renderOptions(options));
+            dataSource = groupOptionsAsDataSource(options, disabled, groupOptions);
         }
         this.state = {
-            searchValue: '',
-            itemTree
+            dataSource,
+            searchValue: ''
         };
         if ('popover' in props) {
             deprecatedLogForPopover();
@@ -147,29 +157,30 @@ class Select extends Component {
         customStyle: {}
     };
     componentWillReceiveProps(nextProps) {
-        const { children, options } = nextProps;
-        if (children === this.props.children && options === this.props.options) return;
-        let itemTree;
+        const { children, options, disabled } = nextProps;
+        if (children === this.props.children && options === this.props.options && disabled === this.props.disabled)
+            return;
+        let dataSource;
         if (_.isEmpty(options)) {
-            itemTree = getItemTree(children);
+            dataSource = groupChildrenAsDataSource(children, disabled, { ...groupOptions, useRenderChildren: false });
         } else {
-            itemTree = getItemTree(this.renderOptions(options));
+            dataSource = groupOptionsAsDataSource(options, disabled, groupOptions);
         }
         this.setState({
-            itemTree
+            dataSource
         });
     }
 
-    handleSearch = (value, item) => {
+    handleSearch = (value, props) => {
         const { search } = this.props;
         const { searchValue } = this.state;
         if (!search || !searchValue) {
             return true;
         }
         if (search.handleSearch) {
-            return search.handleSearch(searchValue, value, item);
+            return search.handleSearch(searchValue, value, { props });
         } else {
-            const { children } = item.props;
+            const { children } = props;
             return (
                 (value + '').indexOf(searchValue) >= 0 ||
                 (children && _.isString(children) && children.indexOf(searchValue) >= 0)
@@ -187,18 +198,14 @@ class Select extends Component {
         this.handleVisibleChange(false);
     };
     renderContent = () => {
-        const { state, props } = this;
+        const { props, state } = this;
         const { renderContent, multiple, value } = props;
-        const { itemTree } = state;
+        const { dataSource = [] } = state;
+        const [, , , , childrenMap = new Map()] = dataSource;
+
         let valueChild;
-        const rootItemTree = itemTree[rootPrefix];
         const getValueChild = v => {
-            const itemKey = _.findKey(rootItemTree, item => item.props.value === v);
-            if (itemKey) {
-                return rootItemTree[itemKey].props.children;
-            } else {
-                return v;
-            }
+            return childrenMap.has(v) ? childrenMap.get(v) : v;
         };
 
         if (!multiple) {
@@ -246,7 +253,7 @@ class Select extends Component {
             customStyle,
             renderPopup
         } = this.props;
-        const { searchValue, itemTree } = this.state;
+        const { searchValue, dataSource } = this.state;
         const Options = this.renderOptions(options);
         const Extra = this.renderExtra(extra);
 
@@ -285,7 +292,7 @@ class Select extends Component {
                     }}
                     customStyle={customStyle}
                     menuCustomStyle={{ maxWidth }}
-                    itemTree={itemTree}
+                    dataSource={dataSource}
                     multiple={multiple}
                     showSelectAll={showSelectAll}
                     selectedKeys={multiple ? value : [value]}
@@ -375,7 +382,7 @@ class Select extends Component {
                     return (
                         <SelectContext.Provider
                             value={{
-                                searchValue: searchValue,
+                                searchValue,
                                 handleSearch: this.handleSearch,
                                 hidePopup: this.hidePopup
                             }}

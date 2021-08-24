@@ -12,6 +12,7 @@ import each from 'src/utils/each';
 import Items from './Items';
 import { multipleCls, prefixCls, singleCls, STree } from './style';
 import { Group, SelectedMap, Key, TreeData, LoadData } from './interface';
+import { CollapseProps } from '../Collapse/hooks';
 
 const groupDataSource = (dataSource: TreeData[]): [Group, Key[], Key[]] => {
     const group: Group = {};
@@ -53,13 +54,6 @@ const keysToMap = (keys: Key[] = []): SelectedMap => {
         result[key] = true;
     });
     return result;
-};
-
-type CollapseProps = {
-    openKeys?: string[];
-    defaultOpenKeys?: string[];
-    onChange?: (keys: string[]) => void;
-    [key: string]: unknown;
 };
 
 export interface TreeProps {

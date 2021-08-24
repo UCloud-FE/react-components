@@ -88,7 +88,7 @@ const Checkbox = ({
     ...restProps
 }: CheckboxProps & Override<HTMLAttributes<HTMLElement>, CheckboxProps>) => {
     const [__checked, onChange] = useUncontrolled(_checked, defaultChecked, _onChange);
-    const { checked, toggle, addItem, removeItem, restContext } = useItem(value, __checked, CheckboxContext);
+    const { checked, toggle, restContext } = useItem(value, __checked, CheckboxContext);
 
     const finalProps = {
         size: 'md' as Size,
@@ -106,12 +106,6 @@ const Checkbox = ({
         },
         [checked, disabled, onChange, onClick, toggle, value]
     );
-    useEffect(() => {
-        addItem();
-        return () => {
-            removeItem();
-        };
-    }, [addItem, removeItem]);
     const { styleType } = finalProps;
 
     if (styleType === 'card') {

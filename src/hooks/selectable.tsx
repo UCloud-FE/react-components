@@ -61,12 +61,16 @@ const useItem = <T extends SelectableContext>(value: V, checked: boolean, contex
         checked = !!valueMap.get(value);
     }
     const toggle = useCallback((v: V) => toggleRef.current(v), []);
+    useEffect(() => {
+        addItem();
+        return () => {
+            removeItem();
+        };
+    }, [addItem, removeItem]);
     return {
         checked,
         toggle,
-        restContext,
-        addItem,
-        removeItem
+        restContext
     };
 };
 
