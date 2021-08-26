@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.24](https://github.com/UCloud-FE/react-components/compare/v1.1.23...v1.1.24) (2021-08-26)
+
+### Features
+
+-   **ConfigProvider:** add getPopupContainer support ([19ebe80](https://github.com/UCloud-FE/react-components/commit/19ebe80d7785aa65f890e22ca9ce2eb2e6e856fb))
+
 ### [1.1.23](https://github.com/UCloud-FE/react-components/compare/v1.1.22...v1.1.23) (2021-08-24)
 
 ### Bug Fixes
