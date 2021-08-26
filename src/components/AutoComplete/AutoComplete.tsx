@@ -2,24 +2,23 @@ import React, {
     ChangeEvent,
     KeyboardEvent,
     ReactNode,
+    HTMLAttributes,
     memo,
     useCallback,
-    useContext,
-    useMemo,
     useRef,
-    useState,
-    HTMLAttributes
+    useState
 } from 'react';
 
 import Input from 'src/components/Input';
 import Popover from 'src/components/Popover';
 import SvgIcon from 'src/components/SvgIcon';
 import useUncontrolled from 'src/hooks/useUncontrolled';
+import usePopoverContainer from 'src/hooks/usePopoverContainer';
 import KeyCode from 'src/interfaces/KeyCode';
-import ConfigContext from 'src/components/ConfigProvider/ConfigContext';
+import { Override } from 'src/type';
+
 import Popup, { ListRef } from './Popup';
 import { inputCls, loadingIconCls, SWrap } from './style';
-import { Override } from 'src/type';
 
 type InputProps = HTMLAttributes<HTMLDivElement>;
 
@@ -114,14 +113,7 @@ const AutoComplete = ({
         },
         [onChange]
     );
-    const configContext = useContext(ConfigContext);
-    const popoverContainerProps = useMemo(() => {
-        return {
-            ...(configContext.forwardPopupContainer
-                ? { forwardPopupContainer: (triggerNode: HTMLElement) => triggerNode.parentNode }
-                : { getPopupContainer: (triggerNode: HTMLElement) => triggerNode.parentNode })
-        };
-    }, [configContext.forwardPopupContainer]);
+    const popoverContainerProps = usePopoverContainer();
 
     return (
         <SWrap {...{ className, style, block }}>

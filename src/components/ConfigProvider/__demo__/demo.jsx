@@ -73,7 +73,11 @@ const render = (title, key) => {
 const Demo = () =>
     [
         { title: 'default', config: false },
-        { title: 'forwardPopupContainer: false', config: { forwardPopupContainer: false } }
+        { title: 'forwardPopupContainer: false', config: { forwardPopupContainer: false } },
+        {
+            title: 'getPopupContainer: body, forwardPopupContainer: false',
+            config: { forwardPopupContainer: false, getPopupContainer: () => document.body }
+        }
     ].map(({ title, config }, i) => {
         if (config) {
             return (

@@ -352,6 +352,7 @@ class Select extends Component {
             </Selector>
         );
     };
+    getPopupContainer = triggerNode => triggerNode.parentNode;
     render() {
         /* eslint-disable no-unused-vars */
         const {
@@ -378,7 +379,7 @@ class Select extends Component {
         const { visible, searchValue } = this.state;
         return (
             <ConfigContext.Consumer>
-                {({ forwardPopupContainer } = {}) => {
+                {({ forwardPopupContainer, getPopupContainer } = {}) => {
                     return (
                         <SelectContext.Provider
                             value={{
@@ -390,17 +391,19 @@ class Select extends Component {
                             <SelectWrap {...rest}>
                                 <Popover
                                     forceRender
-                                    popup={this.renderPopup()}
                                     onVisibleChange={this.handleVisibleChange}
                                     placement="bottomLeft"
                                     trigger={['click']}
-                                    {...(forwardPopupContainer
-                                        ? { forwardPopupContainer: triggerNode => triggerNode.parentNode }
-                                        : { getPopupContainer: triggerNode => triggerNode.parentNode })}
+                                    {...(getPopupContainer
+                                        ? { getPopupContainer }
+                                        : forwardPopupContainer
+                                        ? { forwardPopupContainer: this.getPopupContainer }
+                                        : { getPopupContainer: this.getPopupContainer })}
                                     visible={visible}
                                     zIndex={100}
                                     {...popover}
                                     {...popoverProps}
+                                    popup={this.renderPopup()}
                                 >
                                     {this.renderSelector()}
                                 </Popover>

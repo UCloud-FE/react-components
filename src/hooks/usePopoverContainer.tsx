@@ -7,12 +7,12 @@ const usePopoverContainer = (getContainer?: (triggerNode: Element) => Element) =
     const popoverContainerProps = useMemo(() => {
         return getContainer
             ? { getPopupContainer: getContainer }
-            : {
-                  ...(configContext.forwardPopupContainer
-                      ? { forwardPopupContainer: (triggerNode: HTMLElement) => triggerNode.parentNode }
-                      : { getPopupContainer: (triggerNode: HTMLElement) => triggerNode.parentNode })
-              };
-    }, [configContext.forwardPopupContainer, getContainer]);
+            : configContext.getPopupContainer
+            ? { getPopupContainer: configContext.getPopupContainer }
+            : configContext.forwardPopupContainer
+            ? { forwardPopupContainer: (triggerNode: HTMLElement) => triggerNode.parentNode }
+            : { getPopupContainer: (triggerNode: HTMLElement) => triggerNode.parentNode };
+    }, [configContext.forwardPopupContainer, configContext.getPopupContainer, getContainer]);
     return popoverContainerProps;
 };
 

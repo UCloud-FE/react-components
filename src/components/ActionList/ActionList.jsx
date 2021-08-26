@@ -116,16 +116,18 @@ export default class ActionList extends Component {
             });
         return (
             <ConfigContext.Consumer>
-                {({ forwardPopupContainer } = {}) => {
+                {({ forwardPopupContainer, getPopupContainer } = {}) => {
                     return (
                         <Popover
                             trigger={['click']}
+                            {...(getPopupContainer
+                                ? { getPopupContainer }
+                                : forwardPopupContainer
+                                ? { forwardPopupContainer: this.getPopupContainer }
+                                : { getPopupContainer: this.getPopupContainer })}
                             {...popoverProps}
                             visible={visible}
                             onVisibleChange={this.toggleMenu}
-                            {...(forwardPopupContainer
-                                ? { forwardPopupContainer: this.getPopupContainer }
-                                : { getPopupContainer: this.getPopupContainer })}
                             popup={
                                 <Menu selectable={false} customStyle={{ maxHeight: '380px' }}>
                                     {renderList(list)}
