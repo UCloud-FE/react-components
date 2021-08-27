@@ -47,8 +47,9 @@ const getSelectedStatus = (selectedKeys: Key[], validKeys: Key[], disabledKeys: 
     if (sL === 0) return 'NONE';
     const vL = validKeys.length,
         dL = disabledKeys.length;
-    if (sL < vL) return 'PART';
     if (sL >= vL + dL) return 'ALL';
+    if (dL === 0 && sL < vL) return 'PART';
+
     return getSelectedStatusByUnionCount(selectedKeys, validKeys);
 };
 
@@ -232,7 +233,7 @@ const useSubGroup = (key: Key, groupContext: GroupContext): [SelectedStatus, () 
 
 const groupChildrenAsDataSource = (
     children: ReactNode,
-    disabled = false,
+    globalDisabled = false,
     {
         itemTag,
         subGroupTag,
@@ -274,7 +275,7 @@ const groupChildrenAsDataSource = (
                     childrenMap.set(key, props.children);
                     return React.cloneElement(child, {
                         [itemKeyName]: key,
-                        disabled: isDisabled,
+                        disabled: globalDisabled || isDisabled,
                         isFirst,
                         isLast
                     });
@@ -301,7 +302,7 @@ const groupChildrenAsDataSource = (
                     return React.cloneElement(
                         child,
                         {
-                            disabled: isDisabled,
+                            disabled: globalDisabled || isDisabled,
                             [subGroupKeyName]: key,
                             isFirst,
                             isLast
@@ -316,7 +317,7 @@ const groupChildrenAsDataSource = (
         return [validKeys, disabledKeys, renderChildren];
     };
 
-    return [...group(children, disabled, 'group-root'), subGroupMap, childrenMap];
+    return [...group(children, false, 'group-root'), subGroupMap, childrenMap];
 };
 
 const groupOptionsAsDataSource = <
@@ -327,7 +328,7 @@ const groupOptionsAsDataSource = <
     }
 >(
     options: T[],
-    disabled = false,
+    globalDisabled = false,
     {
         subGroupName,
         displayName,
@@ -367,7 +368,11 @@ const groupOptionsAsDataSource = <
                 validKeys.push(...subValidKeys);
                 disabledKeys.push(...subDisabledKeys);
                 renderChildren.push(
-                    <SubGroupComponent key={key} {...child} {...{ disabled: isDisabled, [subGroupKeyName]: key }}>
+                    <SubGroupComponent
+                        key={key}
+                        {...child}
+                        {...{ disabled: globalDisabled || isDisabled, [subGroupKeyName]: key }}
+                    >
                         {subRenderChildren}
                     </SubGroupComponent>
                 );
@@ -381,7 +386,11 @@ const groupOptionsAsDataSource = <
                 }
                 const display = (child[displayName] as ReactNode) || key;
                 renderChildren.push(
-                    <ItemComponent key={key} {...child} {...{ disabled: isDisabled, [itemKeyName]: key }}>
+                    <ItemComponent
+                        key={key}
+                        {...child}
+                        {...{ disabled: globalDisabled || isDisabled, [itemKeyName]: key }}
+                    >
                         {display}
                     </ItemComponent>
                 );
@@ -391,7 +400,7 @@ const groupOptionsAsDataSource = <
         return [validKeys, disabledKeys, renderChildren];
     };
 
-    return [...group(options, disabled, 'group-root'), subGroupMap, childrenMap];
+    return [...group(options, false, 'group-root'), subGroupMap, childrenMap];
 };
 
 export { useGroup, useItem, useSubGroup, groupChildrenAsDataSource, groupOptionsAsDataSource };

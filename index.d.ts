@@ -304,20 +304,6 @@ export { default as Calendar } from './lib/components/Calendar';
 // DatePicker
 export { default as DatePicker } from './lib/components/DatePicker';
 
-// ActionList
-interface ActionItem extends ButtonProps {
-    label?: ReactNode;
-}
-interface ActionListProps extends HTMLAttributes<HTMLUListElement> {
-    actionList: ActionItem[];
-    exposeCount?: number;
-    size?: SizeType;
-    buttonStyleType?: 'primary' | 'border' | 'border-gray';
-    smart?: boolean;
-    popoverProps?: PopoverProps;
-}
-export declare class ActionList extends Component<ActionListProps> {}
-
 // ZForm
 export interface FormShape {
     getFieldsValue: Function;
@@ -916,3 +902,5 @@ export { default as Checkbox } from './lib/components/Checkbox';
 export { default as Menu } from './lib/components/Menu';
 
 export { default as Collapse } from './lib/components/Collapse';
+
+export { default as ActionList } from './lib/components/ActionList';
