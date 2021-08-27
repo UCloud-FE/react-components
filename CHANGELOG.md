@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.25](https://github.com/UCloud-FE/react-components/compare/v1.1.24...v1.1.25) (2021-08-27)
+
+### Bug Fixes
+
+-   **Menu:** fix all selected status when disabled ([a34d477](https://github.com/UCloud-FE/react-components/commit/a34d4777157c3403a48b14b15666b2dadb12dea6))
+-   **Tree:** fix collapse warn & selected status unupdate bug ([fd6cba5](https://github.com/UCloud-FE/react-components/commit/fd6cba51244441baa0fae430207736222f0afca1))
+
 ### [1.1.24](https://github.com/UCloud-FE/react-components/compare/v1.1.23...v1.1.24) (2021-08-26)
 
 ### Features
