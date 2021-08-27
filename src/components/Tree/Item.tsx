@@ -173,7 +173,7 @@ const ChildItem = ({
 
     return (
         <MemoItemView
-            selected={checked}
+            selected={!!checked}
             onSelect={onCheckChange}
             ignoreIndent={JSON.stringify(ignoreIndent)}
             value={value}

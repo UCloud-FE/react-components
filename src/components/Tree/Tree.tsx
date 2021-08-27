@@ -3,7 +3,8 @@
 import React, { Ref, useState, useEffect, useCallback, useRef, useImperativeHandle, forwardRef } from 'react';
 import classnames from 'classnames';
 
-import Collapse from 'src/components/Collapse';
+import { CollapseProps, useCollapse } from 'src/components/Collapse/hooks';
+import CollapseContext from 'src/components/Collapse/CollapseContext';
 import useUncontrolled from 'src/hooks/useUncontrolled';
 import Search, { Highlight } from 'src/sharedComponents/Search';
 import noop from 'src/utils/noop';
@@ -12,7 +13,6 @@ import each from 'src/utils/each';
 import Items from './Items';
 import { multipleCls, prefixCls, singleCls, STree } from './style';
 import { Group, SelectedMap, Key, TreeData, LoadData } from './interface';
-import { CollapseProps } from '../Collapse/hooks';
 
 const groupDataSource = (dataSource: TreeData[]): [Group, Key[], Key[]] => {
     const group: Group = {};
@@ -301,24 +301,24 @@ const CommonTree = forwardRef(
             [finalOnChange, multiple]
         );
 
+        const [collapseContext] = useCollapse(collapseProps || {});
+
         return (
-            <Collapse
-                {...collapseProps}
-                component={STree}
-                className={classnames(prefixCls, multiple ? multipleCls : singleCls)}
-            >
-                <Items
-                    depth={0}
-                    disabled={disabled}
-                    multiple={multiple}
-                    onSelect={onSelect}
-                    group={group}
-                    selectedMap={selectedMap}
-                    loadData={loadData}
-                >
-                    {dataSource}
-                </Items>
-            </Collapse>
+            <CollapseContext.Provider value={collapseContext}>
+                <STree disabled={disabled} className={classnames(prefixCls, multiple ? multipleCls : singleCls)}>
+                    <Items
+                        depth={0}
+                        disabled={disabled}
+                        multiple={multiple}
+                        onSelect={onSelect}
+                        group={group}
+                        selectedMap={selectedMap}
+                        loadData={loadData}
+                    >
+                        {dataSource}
+                    </Items>
+                </STree>
+            </CollapseContext.Provider>
         );
     }
 );
