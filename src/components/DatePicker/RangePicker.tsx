@@ -77,8 +77,6 @@ const RangePickerWithoutMemo = forwardRef(
             <span className={readonlyInputCls}>{inputProps.value}</span>
         ) : (
             <Popover
-                {...popoverProps}
-                {...popoverContainerProps}
                 popup={
                     <SPopup {...popupProps}>
                         <CalendarComp
@@ -99,6 +97,8 @@ const RangePickerWithoutMemo = forwardRef(
                         <Footer {...footerProps} tip={footerTip} />
                     </SPopup>
                 }
+                {...popoverContainerProps}
+                {...popoverProps}
             >
                 <Input
                     {...inputProps}

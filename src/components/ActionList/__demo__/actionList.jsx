@@ -7,15 +7,15 @@ import Radio from 'src/components/Radio';
 import NumberInput from 'src/components/NumberInput';
 
 // demo start
-const { Sizes, ButtonStyleTypes, defaultProps } = ActionList;
+const { Sizes, ButtonStyleTypes } = ActionList;
 class Demo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            size: defaultProps.size,
-            smart: defaultProps.smart,
-            buttonStyleType: defaultProps.buttonStyleType,
-            exposeCount: defaultProps.exposeCount,
+            size: 'md',
+            smart: true,
+            buttonStyleType: 'border',
+            exposeCount: 3,
             actionListLength: 5
         };
     }

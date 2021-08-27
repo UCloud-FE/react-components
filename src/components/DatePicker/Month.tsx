@@ -10,7 +10,7 @@ import SvgIcon from 'src/components/SvgIcon';
 import usePopoverContainer from 'src/hooks/usePopoverContainer';
 import { Size } from 'src/type';
 
-import { PickerContainer,  SPopup } from './style';
+import { PickerContainer, SPopup } from './style';
 import Footer, { TShortcut } from './Footer';
 import usePicker from './usePicker';
 import { formatToShort } from './utils';
@@ -80,8 +80,6 @@ const Month = (props: MonthProps) => {
     return (
         <PickerContainer isMonth {...containerProps}>
             <Popover
-                {...popoverProps}
-                {...popoverContainerProps}
                 popup={
                     <SPopup {...popupProps}>
                         <Calendar.Month {...calendarProps} />
@@ -93,6 +91,8 @@ const Month = (props: MonthProps) => {
                         <Footer {...footerProps} />
                     </SPopup>
                 }
+                {...popoverContainerProps}
+                {...popoverProps}
             >
                 <Input {...inputProps} prefix={<SvgIcon type="calendar" />} />
             </Popover>

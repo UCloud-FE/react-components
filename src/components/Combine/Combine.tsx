@@ -1,15 +1,11 @@
-import React, { ReactNode } from 'react';
+import React, { HTMLAttributes, ReactNode } from 'react';
 import classnames from 'classnames';
+
+import { Override } from 'src/type';
 
 import { itemCls, separatorCls, CombineWrap } from './style';
 
-const Combine = ({
-    children,
-    sharedProps = {},
-    spacing = 'smart',
-    separator,
-    ...rest
-}: {
+interface CombineProps {
     children: ReactNode;
     /** children 共享属性 */
     sharedProps?: {
@@ -23,7 +19,15 @@ const Combine = ({
     spacing?: 'compact' | 'smart' | 'sm' | 'md' | 'lg' | string;
     /** 分隔符 */
     separator?: ReactNode;
-}) => {
+}
+
+const Combine = ({
+    children,
+    sharedProps = {},
+    spacing = 'smart',
+    separator,
+    ...rest
+}: CombineProps & Override<HTMLAttributes<HTMLDivElement>, CombineProps>) => {
     const { size = 'md' } = sharedProps;
     let isFirstItem: boolean;
     return (

@@ -238,8 +238,8 @@ const usePicker = <D,>(
     const _popoverProps = {
         zIndex,
         transitionName: `${animationPrefixCls}-fade`,
-        ...popoverProps,
         ...popoverContainerProps,
+        ...popoverProps,
         trigger: [],
         showAction: ['click', 'focus'],
         hideAction: ['blur'],
