@@ -4,7 +4,7 @@ import { injectGlobal } from 'emotion';
 
 import { prefixCls as popoverPrefixCls } from 'src/components/Popover/style';
 import config from 'src/config';
-import withProps from 'src/utils/withProps';
+import { sWrap } from 'src/style';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-tooltip';
@@ -15,17 +15,17 @@ const borderWidth = '1px';
 export const tooltipPopupClassName = prefixCls + '-popup';
 export const contentCls = prefixCls + '-content';
 
-export const ContentWrap = withProps({
+export const ContentWrap = sWrap<{ themeType: 'light' | 'dark'; customStyle?: { popupWrapperPadding?: string } }>({
     className: contentCls
 })(
     styled('div')(props => {
         const {
             theme: { designTokens: DT },
             themeType,
-            popupWrapperPadding
+            customStyle
         } = props;
 
-        let map = {
+        const map = {
             light: {
                 text: DT.T_COLOR_TEXT_DEFAULT_DARK,
                 border: DT.T_POPOVER_COLOR_LINE_LIGHT,
@@ -37,19 +37,19 @@ export const ContentWrap = withProps({
                 background: DT.T_POPOVER_COLOR_BG_DARK
             }
         };
-        map = map[themeType];
+        const colorMap = map[themeType];
         return css`
             line-height: 20px;
-            padding: ${popupWrapperPadding || '8px 10px'};
-            border: ${DT.T_LINE_WIDTH_BASE} solid ${map.border};
+            padding: ${customStyle?.popupWrapperPadding || '8px 10px'};
+            border: ${DT.T_LINE_WIDTH_BASE} solid ${colorMap.border};
             border-radius: 3px;
             font-size: 12px;
             text-align: left;
             text-decoration: none;
             word-break: keep-all;
             box-sizing: border-box;
-            color: ${map.text};
-            background: ${map.background};
+            color: ${colorMap.text};
+            background: ${colorMap.background};
         `;
     })
 );
@@ -199,14 +199,14 @@ injectGlobal`
     }
 `;
 
-export const TooltipWrap = withProps()(
+export const TooltipWrap = sWrap<{ themeType: 'light' | 'dark' }>({})(
     styled('div')(props => {
         const {
             theme: { designTokens: DT },
             themeType
         } = props;
 
-        let map = {
+        const map = {
             light: {
                 border: DT.T_POPOVER_COLOR_LINE_LIGHT,
                 background: DT.T_POPOVER_COLOR_BG_LIGHT
@@ -216,13 +216,13 @@ export const TooltipWrap = withProps()(
                 background: DT.T_POPOVER_COLOR_BG_DARK
             }
         };
-        map = map[themeType];
+        const colorMap = map[themeType];
         return css`
             ${Arrow} {
-                border-color: ${map.border};
+                border-color: ${colorMap.border};
             }
             ${ArrowInner} {
-                border-color: ${map.background};
+                border-color: ${colorMap.background};
             }
         `;
     })

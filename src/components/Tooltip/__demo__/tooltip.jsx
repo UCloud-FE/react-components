@@ -19,9 +19,9 @@ class Demo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            placement: Placement[0],
-            theme: Theme[0],
-            arrow: Tooltip.defaultProps.arrow
+            placement: 'top',
+            theme: 'light',
+            arrow: true
         };
     }
     render() {
