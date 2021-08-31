@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Card from 'src/components/Card';
-import Button from 'src/components/Button';
 import Popover from 'src/components/Popover';
 import Select from 'src/components/Select';
 import DatePicker from 'src/components/DatePicker';

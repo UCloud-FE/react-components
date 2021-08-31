@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import config from 'src/config';
-import withProps from 'src/utils/withProps';
+import { sWrap } from 'src/style';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-popconfirm';
@@ -13,7 +13,7 @@ export const PopupWrap = styled('div')`
     box-sizing: border-box;
     padding: 12px 16px 12px 40px;
 `;
-export const ContentWrap = withProps()(
+export const ContentWrap = sWrap({})(
     styled('div')(props => {
         const {
             theme: { designTokens: DT }
@@ -35,7 +35,7 @@ export const FooterWrap = styled('div')`
     margin-top: 12px;
 `;
 
-export const IconWrap = withProps()(
+export const IconWrap = sWrap({})(
     styled('div')(props => {
         const {
             theme: { designTokens: DT }
