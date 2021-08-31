@@ -7,9 +7,9 @@ import placements from './placements';
 import { prefixCls, animationPrefixCls, PopoverWrap } from './style';
 import { Consumer } from './ContainerContext';
 
-const Animation = ['fade', 'zoom', 'bounce', 'slide-up'];
-const Trigger = ['hover', 'focus', 'click', 'contextMenu'];
-const Placement = Object.keys(placements);
+export const Animation = ['fade', 'zoom', 'bounce', 'slide-up'];
+export const Trigger = ['hover', 'focus', 'click', 'contextMenu'];
+export const Placement = Object.keys(placements);
 
 class Popover extends Component {
     static propTypes = {
@@ -251,12 +251,6 @@ class Popover extends Component {
         );
     }
 }
-
-Object.assign(Popover, {
-    Animation,
-    Trigger,
-    Placement
-});
 
 polyfill(Popover);
 export default Popover;
