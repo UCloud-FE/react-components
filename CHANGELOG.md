@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/UCloud-FE/react-components/compare/v1.1.26...v1.2.0) (2021-08-31)
+
+### Features
+
+-   **Calendar:** fix calendar add month, year bug ([a8ee849](https://github.com/UCloud-FE/react-components/commit/a8ee8492cdbfcfeadf68687df8922e260e810130))
+
 ### [1.1.26](https://github.com/UCloud-FE/react-components/compare/v1.1.25...v1.1.26) (2021-08-31)
 
 ### Features
