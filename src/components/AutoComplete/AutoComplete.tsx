@@ -13,7 +13,7 @@ import Input from 'src/components/Input';
 import Popover from 'src/components/Popover';
 import SvgIcon from 'src/components/SvgIcon';
 import useUncontrolled from 'src/hooks/useUncontrolled';
-import usePopoverContainer from 'src/hooks/usePopoverContainer';
+import usePopoverConfig from 'src/hooks/usePopoverConfig';
 import KeyCode from 'src/interfaces/KeyCode';
 import { Override } from 'src/type';
 
@@ -113,12 +113,12 @@ const AutoComplete = ({
         },
         [onChange]
     );
-    const popoverContainerProps = usePopoverContainer();
+    const popoverConfigProps = usePopoverConfig();
 
     return (
         <SWrap {...{ className, style, block }}>
             <Popover
-                {...popoverContainerProps}
+                {...popoverConfigProps}
                 {...popoverProps}
                 popup={
                     <Popup

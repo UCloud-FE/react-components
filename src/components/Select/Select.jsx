@@ -8,6 +8,7 @@ import localeConsumerDecorator from 'src/components/LocaleProvider/localeConsume
 import deprecatedLog from 'src/utils/deprecatedLog';
 import ConfigContext from 'src/components/ConfigProvider/ConfigContext';
 import { groupChildrenAsDataSource, groupOptionsAsDataSource } from 'src/hooks/group';
+import { getPopoverConfigFromContext } from 'src/hooks/usePopoverConfig';
 
 import Option from './Option';
 import Group from './Group';
@@ -379,7 +380,8 @@ class Select extends Component {
         const { visible, searchValue } = this.state;
         return (
             <ConfigContext.Consumer>
-                {({ forwardPopupContainer, getPopupContainer } = {}) => {
+                {configContext => {
+                    const popupConfigProps = getPopoverConfigFromContext(configContext);
                     return (
                         <SelectContext.Provider
                             value={{
@@ -394,13 +396,8 @@ class Select extends Component {
                                     onVisibleChange={this.handleVisibleChange}
                                     placement="bottomLeft"
                                     trigger={['click']}
-                                    {...(getPopupContainer
-                                        ? { getPopupContainer }
-                                        : forwardPopupContainer
-                                        ? { forwardPopupContainer: this.getPopupContainer }
-                                        : { getPopupContainer: this.getPopupContainer })}
+                                    {...popupConfigProps}
                                     visible={visible}
-                                    zIndex={100}
                                     {...popover}
                                     {...popoverProps}
                                     popup={this.renderPopup()}

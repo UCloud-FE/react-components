@@ -499,26 +499,6 @@ export interface PopoverProps extends HTMLAttributes<HTMLDivElement> {
 }
 export declare class Popover extends Component<PopoverProps> {}
 
-// Tooltip
-interface TooltipCustomStyle {
-    popupWrapperPadding?: string;
-    [key: string]: any;
-}
-export type TooltipTheme = 'light' | 'dark';
-export interface TooltipProps extends PopoverProps {
-    arrow?: boolean;
-    theme?: TooltipTheme;
-    customStyle?: TooltipCustomStyle;
-}
-export declare class Tooltip extends Component<TooltipProps> {}
-
-// PopConfirm
-interface PopConfirmProps extends TooltipProps {
-    onConfirm?: () => void;
-    onCancel?: () => void;
-}
-export declare class PopConfirm extends Component<PopConfirmProps> {}
-
 // Modal
 interface ModalGetFooter {
     (): ReactNode;
@@ -904,3 +884,9 @@ export { default as Menu } from './lib/components/Menu';
 export { default as Collapse } from './lib/components/Collapse';
 
 export { default as ActionList } from './lib/components/ActionList';
+
+export { default as Tooltip } from './lib/components/Tooltip';
+
+export { default as PopConfirm } from './lib/components/PopConfirm';
+
+export { default as ConfigProvider } from './lib/components/ConfigProvider';

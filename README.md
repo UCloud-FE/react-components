@@ -124,14 +124,14 @@ export default App;
 
 #### 模块化支持
 
-1.  修改项目的自定义配置，不支持的需要先执行`npm run eject`。
+1.  修改项目的自定义配置，不支持的需要先执行 `npm run eject`。
 2.  按照上述文档在 babel 的 plugin 中添加配置
 
 ### zIndex 说明
 
--   Modal,Drawer 默认的 zIndex 为 1010
--   Popover，Tooltip 默认的 zIndex 为 1030，包括其他的用到 Popover 且默认容器为 body 的地方，如 Table.ActionList、Table 的 contxtMenu 等
+-   Modal、Drawer 默认的 zIndex 为 1010
+-   Popover 默认的 zIndex 为 1030
+-   Tooltip、Select、DatePicker、TimePicker、ActionList、PopConfirm 等 zIndex 同为 1030，弹出层容器、层级、滚动定位可通过 ConfigProvider 统一配置
 -   Message 默认的 zIndex 为 1060
--   Select、DatePicker 等的弹出层默认容器为组件内部，所以 zIndex 比较低为 100
 -   Loading 默认的 zIndex 为 10
 -   其余内部使用的 zIndex 为 10 以下

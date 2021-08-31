@@ -7,8 +7,14 @@ import Popover from 'src/components/Popover';
 jest.unmock('rc-trigger');
 describe('Popover', () => {
     test('popover align', () => {
+        let instanceRef = null;
         const wrapper = mount(
-            <Popover popup={<div>popup</div>} forceAlignWhenUpdate getPopupContainer={triggerNode => triggerNode}>
+            <Popover
+                popup={<div>popup</div>}
+                ref={_ref => (instanceRef = _ref)}
+                forceAlignWhenUpdate
+                getPopupContainer={triggerNode => triggerNode}
+            >
                 <div className="content">content</div>
             </Popover>
         );
@@ -18,8 +24,8 @@ describe('Popover', () => {
         });
         expect(renderToJson(wrapper.render())).toMatchSnapshot();
 
-        wrapper.instance().getPopupDomNode();
-        wrapper.instance().forceAlign();
+        instanceRef.getPopupDomNode();
+        instanceRef.forceAlign();
     });
 
     test('empty', () => {

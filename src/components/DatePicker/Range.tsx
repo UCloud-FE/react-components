@@ -106,8 +106,11 @@ interface RangeProps {
     selectProps?: any;
     /** 自定义时间选择框弹出层props */
     popoverProps?: any;
-    /** 自定义 datePicker 的 props */
-    datePickerProps?: any;
+    /**
+     * @ignore
+     * 自定义 datePicker 的 props
+     */
+    // datePickerProps?: any;
     /** 提示信息,展示在时间选择弹窗中 */
     rangeTip?: ReactNode;
     /** @ignore */

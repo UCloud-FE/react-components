@@ -6,7 +6,7 @@ import Calendar from 'src/components/Calendar';
 import Notice from 'src/components/Notice';
 import Time from 'src/components/TimePicker/Time';
 import SvgIcon from 'src/components/SvgIcon';
-import usePopoverContainer from 'src/hooks/usePopoverContainer';
+import usePopoverConfig from 'src/hooks/usePopoverConfig';
 
 import { DatePickerProps, displayToFormatAndTimeMode } from './DatePicker';
 import { displayToFormatAndTimeMode as displayToFormatAndTimeModeM } from './Month';
@@ -69,7 +69,7 @@ const RangePickerWithoutMemo = forwardRef(
         useEffect(() => {
             onActiveChange(active);
         }, [active, onActiveChange]);
-        const popoverContainerProps = usePopoverContainer();
+        const popoverConfigProps = usePopoverConfig();
 
         const CalendarComp = type === 'month' ? Calendar.Month : Calendar;
 
@@ -97,7 +97,7 @@ const RangePickerWithoutMemo = forwardRef(
                         <Footer {...footerProps} tip={footerTip} />
                     </SPopup>
                 }
-                {...popoverContainerProps}
+                {...popoverConfigProps}
                 {...popoverProps}
             >
                 <Input

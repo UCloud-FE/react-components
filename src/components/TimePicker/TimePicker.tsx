@@ -5,13 +5,14 @@ import { TDate } from '@z-r/calendar/types/interface';
 import Input from 'src/components/Input';
 import Popover from 'src/components/Popover';
 import Box from 'src/components/Box';
-import Combine from 'src/components/Combine';
+// import Combine from 'src/components/Combine';
 import Button from 'src/components/Button';
 import SvgIcon from 'src/components/SvgIcon';
 import useLocale from 'src/components/LocaleProvider/useLocale';
 import { animationPrefixCls } from 'src/style/globalAnimation';
 import useUncontrolled from 'src/hooks/useUncontrolled';
 import { Size } from 'src/style';
+import usePopoverConfig from 'src/hooks/usePopoverConfig';
 
 import { footerCls, SPopup } from './style';
 import Time from './Time';
@@ -19,7 +20,7 @@ import LOCALE from './locale/zh_CN';
 
 interface TimeProps {
     /** 当前值，受控 */
-    value: TDate | null;
+    value?: TDate | null;
     /** 默认值，非受控 */
     defaultValue?: TDate | null;
     /** 修改回调 */
@@ -50,11 +51,12 @@ const FooterWithoutMemo = ({
     const locale = useLocale(LOCALE, 'DatePicker', _locale);
     return (
         <Box className={footerCls} container justifyContent="space-between" alignItems="center">
-            <Combine>
-                {/* {shortcuts.map((shortcut, i) => (
+            {/* <Combine>
+                {shortcuts.map((shortcut, i) => (
                     <Shortcut index={i} key={i} shortcut={shortcut} onShortcutClick={handleShortcutClick} />
-                ))} */}
-            </Combine>
+                ))}
+            </Combine> */}
+            <span></span>
             <Button styleType="primary" onClick={onConfirm} disabled={disabled}>
                 {locale.confirm}
             </Button>
@@ -155,6 +157,7 @@ const TimePicker = ({
     }, [format, inputValue, nullable, useInputValue]);
 
     const timeMode = useMemo(() => formatToTimeMode(format), [format]);
+    const popoverConfigProps = usePopoverConfig();
 
     useEffect(() => {
         if (!active) {
@@ -168,6 +171,7 @@ const TimePicker = ({
     return (
         <Popover
             transitionName={`${animationPrefixCls}-fade`}
+            {...popoverConfigProps}
             {...popoverProps}
             trigger={[]}
             showAction={['click', 'focus']}

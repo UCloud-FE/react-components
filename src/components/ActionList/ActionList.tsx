@@ -8,7 +8,7 @@ import Tooltip from 'src/components/Tooltip';
 import Combine from 'src/components/Combine';
 import SvgIcon from 'src/components/SvgIcon';
 import { ButtonProps } from 'src/components/Button/Button';
-import usePopoverContainer from 'src/hooks/usePopoverContainer';
+import usePopoverConfig from 'src/hooks/usePopoverConfig';
 import { Override, Size } from 'src/type';
 
 import { prefixCls } from './style';
@@ -101,7 +101,7 @@ const ActionMenu = ({
 }: Pick<ActionListProps, 'size' | 'buttonStyleType' | 'dropdownButton' | 'popoverProps'> & {
     list: ActionInfo[];
 }) => {
-    const popoverContainerProps = usePopoverContainer();
+    const popoverConfigProps = usePopoverConfig();
     const [visible, setVisible] = useState(false);
     const hide = useCallback(() => {
         setVisible(false);
@@ -131,7 +131,7 @@ const ActionMenu = ({
                     {renderList(list)}
                 </Menu>
             }
-            {...popoverContainerProps}
+            {...popoverConfigProps}
             {...popoverProps}
             visible={visible}
             onVisibleChange={setVisible}

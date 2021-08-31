@@ -6,7 +6,7 @@ import { animationPrefixCls } from 'src/style/globalAnimation';
 import useLocale from 'src/components/LocaleProvider/useLocale';
 import useUncontrolled from 'src/hooks/useUncontrolled';
 import { Size } from 'src/type';
-import usePopoverContainer from 'src/hooks/usePopoverContainer';
+import usePopoverConfig from 'src/hooks/usePopoverConfig';
 
 import LOCALE from './locale/zh_CN';
 import { isDateDisabled, getValidDate, isDateValid } from './utils';
@@ -221,7 +221,7 @@ const usePicker = <D,>(
         [handleCalendarChange, handleConfirm]
     );
 
-    const popoverContainerProps = usePopoverContainer(getCalendarContainer);
+    const popoverConfigProps = usePopoverConfig();
     const avoidBlur = useCallback(e => e.preventDefault(), []);
 
     const inputProps = {
@@ -238,8 +238,9 @@ const usePicker = <D,>(
     const _popoverProps = {
         zIndex,
         transitionName: `${animationPrefixCls}-fade`,
-        ...popoverContainerProps,
+        ...popoverConfigProps,
         ...popoverProps,
+        ...(getCalendarContainer ? { getPopupContainer: getCalendarContainer } : {}),
         trigger: [],
         showAction: ['click', 'focus'],
         hideAction: ['blur'],
