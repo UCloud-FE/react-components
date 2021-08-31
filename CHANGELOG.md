@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.26](https://github.com/UCloud-FE/react-components/compare/v1.1.25...v1.1.26) (2021-08-31)
+
+### Features
+
+-   **ConfigProvider:** add popover to control all popover items ([8e03009](https://github.com/UCloud-FE/react-components/commit/8e0300971117b5fde4c880898803320dc6cc8676))
+
 ### [1.1.25](https://github.com/UCloud-FE/react-components/compare/v1.1.24...v1.1.25) (2021-08-27)
 
 ### Bug Fixes
