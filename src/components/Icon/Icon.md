@@ -1,8 +1,15 @@
 ### 说明
 
 -   传入其它原生的 props 会自动附加到最外层上，如 style、className 等
--   所有支持图标地址点这里[UCloud Icon Font](https://console-font.pre.ucloudadmin.com/)
 -   配合 prefix，可使用其它字体图标库
+-   需要修改默认 prefix 的可使用 ConfigProvider
+-   组件库中存在一份字体，需要使用可自行导入字体样式并使用
+-   所有支持图标地址点这里[UCloud Icon Font](https://console-font.pre.ucloudadmin.com/)
+
+```js static
+// 按需导入字体icon样式
+import '@ucloud-fe/react-components/dist/icon.min.css';
+```
 
 ### 演示
 

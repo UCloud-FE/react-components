@@ -11,6 +11,7 @@ export interface ConfigProviderProps {
     children: ReactNode;
     /**
      * @deprecated 使用 popover 替换
+     * 默认为 true。
      * 控制全局的 forwardPopupContainer 属性，默认为 true，为 false 时默认关闭 datepicker、select、actionList 等内部的 forwardPopupContainer
      */
     forwardPopupContainer?: boolean;
@@ -25,8 +26,15 @@ export interface ConfigProviderProps {
         /** 配置不影响 Popover 组件 */
         ignorePopover?: boolean;
     };
-    /** 阻止 Form 组件的默认事件，避免在回车时触发页面提交 */
+    /**
+     * 默认为 true。
+     * 阻止 Form 组件的默认事件，避免在回车时触发页面提交，原生 form 在某些情况下会触发原生的提交，由于现在基本 SPA，页面提交概率不大，故默认屏蔽 Form 组件该行文，如需开启，可设置为 false
+     */
     preventFormDefaultAction?: boolean;
+    /**
+     * 设置 Icon 组件的默认 prefix，默认为 icon__，
+     */
+    iconDefaultPrefix?: string;
     /** 提供时会使用 ThemeProvider 包裹 */
     theme?: any;
     /** 提供时会使用 LocaleProvider 包裹 */

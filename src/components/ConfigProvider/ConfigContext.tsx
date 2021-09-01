@@ -9,7 +9,7 @@ export const defaultConfig = {
 
 export type ConfigContextType = Pick<
     ConfigProviderProps,
-    'forwardPopupContainer' | 'popover' | 'preventFormDefaultAction'
+    'forwardPopupContainer' | 'popover' | 'preventFormDefaultAction' | 'iconDefaultPrefix'
 >;
 
 export default createContext<ConfigContextType>(defaultConfig);

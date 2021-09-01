@@ -18,3 +18,8 @@
 
 ```js {"codepath": "locale.jsx"}
 ```
+
+#### iconDefaultPrefix - icon 默认前缀
+
+```js {"codepath": "icon.jsx"}
+```

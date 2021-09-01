@@ -40,26 +40,6 @@ npm install @ucloud-fe/react-components
 yarn add @ucloud-fe/react-components@0.3.1
 ```
 
--   导入组件并按需导入字体样式并使用
-
-```js static
-import { Button } from '@ucloud-fe/react-components';
-// 按需导入字体icon样式，可省略
-import '@ucloud-fe/react-components/dist/icon.min.css';
-
-class App extends Component {
-    render() {
-        return (
-            <div>
-                <Button>按钮</Button>
-            </div>
-        );
-    }
-}
-
-export default App;
-```
-
 -   需要注意对应修改 webpack 的 loader 配置，根据项目具体配置
 
 ```js static
