@@ -1,19 +1,10 @@
 import type { CSSProperties, ReactNode, Component, PureComponent, HTMLAttributes } from 'react';
-import { Moment } from 'moment';
 
 // 忽略 T 对象中 键在 K 中的所有的属性
 type Override<T1, T2> = Omit<T1, keyof T2> & T2;
 
 // base type
 export type SizeType = 'sm' | 'md' | 'lg';
-
-// Icon
-export interface IconProps extends HTMLAttributes<HTMLSpanElement> {
-    type: string;
-    spin?: boolean;
-    prefix?: string;
-}
-export declare class Icon extends PureComponent<IconProps> {}
 
 // Button
 import { ButtonProps } from './lib/components/Button/Button';
@@ -890,3 +881,5 @@ export { default as Tooltip } from './lib/components/Tooltip';
 export { default as PopConfirm } from './lib/components/PopConfirm';
 
 export { default as ConfigProvider } from './lib/components/ConfigProvider';
+
+export { default as Icon } from './lib/components/Icon';

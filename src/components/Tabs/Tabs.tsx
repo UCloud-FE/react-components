@@ -37,7 +37,7 @@ function getNextActiveKey(panes: Panes, currentKey: Key, next?: boolean): Key {
     }
 }
 
-const getPanesFromChildren = (children: ReactElement<TabPaneProps>[]) => {
+const getPanesFromChildren = (children: ReactNode) => {
     const panes: Panes = [];
     React.Children.forEach(children, (pane, index) => {
         if (React.isValidElement(pane)) {
@@ -74,7 +74,7 @@ export interface TabsProps {
     /** 是否销毁不展示的 tab 内容 */
     destroyInactiveTabPane?: boolean;
     /** panes */
-    children: ReactElement<TabPaneProps>[];
+    children: ReactElement<TabPaneProps>[] | ReactNode;
     /** @ignore */
     className?: string;
     /** bar 的定位 */

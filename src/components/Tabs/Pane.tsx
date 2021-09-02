@@ -21,7 +21,7 @@ export interface TabPaneProps {
     /** @ignore */
     placeholder?: ReactNode;
     /** 面板内容 */
-    children: ReactNode;
+    children?: ReactNode;
     /** 是否禁用 */
     disabled?: boolean;
     /** tab 的 title */
