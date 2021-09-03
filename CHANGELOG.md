@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.2](https://github.com/UCloud-FE/react-components/compare/v1.2.1...v1.2.2) (2021-09-03)
+
+### Features
+
+-   **ConfigProvider:** add iconDefaultPrefix & refactor icon ([8cb4a27](https://github.com/UCloud-FE/react-components/commit/8cb4a27bbf84893cd279bcf450fe18ceef95781a))
+
+### Bug Fixes
+
+-   **Tabs:** loosen tabs interface ([b33d121](https://github.com/UCloud-FE/react-components/commit/b33d12169f02e4a0031811e2f522647d683e2ba2))
+
 ### [1.2.1](https://github.com/UCloud-FE/react-components/compare/v1.2.0...v1.2.1) (2021-08-31)
 
 ### Bug Fixes
