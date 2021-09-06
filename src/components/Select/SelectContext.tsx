@@ -1,12 +1,15 @@
 import { createContext } from 'react';
 
 import { Key } from 'src/hooks/group';
+import noop from 'src/utils/noop';
 
 const SelectContext = createContext<{
+    hidePopup: () => void;
+    handleSearch: (value: Key, props: any) => boolean;
     searchValue: string;
-    handleSearch: (value: Key, item: any) => boolean;
 }>({
-    searchValue: '',
-    handleSearch: () => true
+    hidePopup: noop,
+    handleSearch: () => true,
+    searchValue: ''
 });
 export default SelectContext;

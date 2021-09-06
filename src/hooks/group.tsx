@@ -292,13 +292,6 @@ const groupChildrenAsDataSource = (
                     subGroupMap.set(key, { validKeys: subValidKeys, disabledKeys: subDisabledKeys });
                     validKeys.push(...subValidKeys);
                     disabledKeys.push(...subDisabledKeys);
-                    // const flatChildren = props.styleType !== 'popover';
-                    // if (flatChildren) {
-                    //     renderChildren.push(
-                    //         <SubMenu {...child.props} disabled={isDisabled} subMenuKey={key} key={`sub-menu-${key}`} />,
-                    //         ...subRenderChildren
-                    //     );
-                    // } else {
                     return React.cloneElement(
                         child,
                         {
@@ -309,7 +302,6 @@ const groupChildrenAsDataSource = (
                         },
                         subRenderChildren
                     );
-                    // }
                 }
                 return child;
             }
@@ -341,8 +333,8 @@ const groupOptionsAsDataSource = <
         displayName: string;
         itemKeyName: string;
         subGroupKeyName: string;
-        ItemComponent: ComponentType;
-        SubGroupComponent: ComponentType;
+        ItemComponent: ComponentType<any>;
+        SubGroupComponent: ComponentType<any>;
     } = {
         subGroupName: 'children',
         displayName: 'label',
@@ -351,7 +343,7 @@ const groupOptionsAsDataSource = <
         ItemComponent: () => null,
         SubGroupComponent: () => null
     }
-) => {
+): [Key[], Key[], ReactNode, SubGroupMap, ChildrenMap] => {
     const subGroupMap: SubGroupMap = new Map();
     const childrenMap: ChildrenMap = new Map();
     const group = (options: T[], disabled = false, prefixKey: Key): [Key[], Key[], ReactNode[]] => {

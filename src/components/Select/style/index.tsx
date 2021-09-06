@@ -6,7 +6,6 @@ import Input from 'src/components/Input';
 import SvgIcon from 'src/components/SvgIcon';
 import Menu from 'src/components/Menu';
 import Button from 'src/components/Button';
-import withProps from 'src/utils/withProps';
 import { inlineBlockWithVerticalMixin, sWrap } from 'src/style';
 import config from 'src/config';
 
@@ -21,7 +20,7 @@ export const SelectSearchInput = styled(Input.Search)`
     margin-top: 10px;
 `;
 
-export const Selector = styled(Button)`
+export const SSelector = styled(Button)`
     padding-right: 28px;
     width: 100%;
     min-width: 78px;
@@ -65,7 +64,7 @@ export const FooterWrap = sWrap({})(
 export const ExtraWrap = styled('div')`
     margin: 0 8px;
 `;
-export const MenuWrap = withProps()(
+export const MenuWrap = sWrap({})(
     styled('div')(props => {
         const {
             theme: { designTokens: DT }
@@ -88,10 +87,10 @@ export const MenuWrap = withProps()(
 );
 
 // eslint-disable-next-line react/prop-types,no-unused-vars
-const CustomMenu = ({ customStyle, menuCustomStyle, ...rest }) => <Menu customStyle={menuCustomStyle} {...rest} />;
+const CustomMenu = ({ customStyle, menuCustomStyle, ...rest }: any) => <Menu customStyle={menuCustomStyle} {...rest} />;
 
 export const BlockMenu = styled(CustomMenu)(props => {
-    const { customStyle } = props;
+    const { customStyle = {} } = props;
     const maxHeight = customStyle.optionListMaxHeight
         ? typeof customStyle.optionListMaxHeight === 'string'
             ? customStyle.optionListMaxHeight
@@ -107,36 +106,31 @@ export const BlockMenu = styled(CustomMenu)(props => {
     `;
 });
 
-/* stylelint-disable no-duplicate-selectors */
-const propsMixin = props => {
-    const {
-        theme: { designTokens: DT },
-        disabled
-    } = props;
+export const SelectWrap = sWrap<{ disabled?: boolean }>({})(
+    styled('div')(props => {
+        const {
+            theme: { designTokens: DT },
+            disabled
+        } = props;
 
-    return css`
-        font-size: ${DT.T_TYPO_FONT_SIZE_1};
-        color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+        return css`
+            box-sizing: border-box;
+            position: relative;
+            max-width: 100%;
 
-        ${disabled &&
-        css`
-            color: ${DT.T_COLOR_TEXT_DISABLED};
-            pointer-events: none;
-        `};
-    `;
-};
-/* stylelint-enable no-duplicate-selectors */
+            ${inlineBlockWithVerticalMixin};
+            font-size: ${DT.T_TYPO_FONT_SIZE_1};
+            color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+            ${disabled &&
+            css`
+                color: ${DT.T_COLOR_TEXT_DISABLED};
+                pointer-events: none;
+            `};
+        `;
+    })
+);
 
-export const SelectWrap = withProps()(styled('div')`
-    box-sizing: border-box;
-    position: relative;
-    max-width: 100%;
-
-    ${inlineBlockWithVerticalMixin};
-    ${propsMixin};
-`);
-
-export const EmptyContentWrapper = withProps()(
+export const EmptyContentWrapper = sWrap({})(
     styled('div')(props => {
         const {
             theme: { designTokens: DT }

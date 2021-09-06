@@ -108,69 +108,6 @@ export declare class NumberInput extends Component<NumberInputProps> {}
 export type TextareaProps = HTMLAttributes<HTMLTextAreaElement>;
 export declare class Textarea extends Component<TextareaProps> {}
 
-// Select
-interface SelectOptionProps extends HTMLAttributes<HTMLDivElement> {
-    value?: any;
-    disabled?: boolean;
-}
-interface InterfaceSelectOption extends SelectOptionProps {
-    label?: ReactNode;
-}
-interface SelectSearch {
-    handleSearch(searchValue: string, value: any, item: InterfaceSelectOption): boolean;
-}
-interface SelectExtraProps extends HTMLAttributes<HTMLDivElement> {
-    autoHidePopup?: boolean;
-}
-interface SelectGroupProps {
-    title?: ReactNode;
-    groupKey?: any;
-}
-interface SelectCustomStyle {
-    optionListMaxHeight?: number;
-    [key: string]: any;
-}
-interface SelectShapeExtra extends SelectExtraProps {
-    content?: ReactNode;
-}
-interface SelectRenderPopupOptions {
-    handleVisible: (open: boolean) => void;
-    onChange: (value: any) => void;
-    value: any;
-    multiple: boolean;
-    extra: ReactNode | SelectShapeExtra;
-    search: true | SelectSearch;
-    children: ReactNode;
-}
-export type SelectOptions = InterfaceSelectOption[];
-export interface SelectProps extends HTMLAttributes<HTMLDivElement> {
-    value?: any;
-    defaultValue?: any;
-    placeholder?: string;
-    onChange?: (value: any) => void;
-    options?: SelectOptions;
-    extra?: ReactNode | SelectShapeExtra;
-    multiple?: boolean;
-    showSelectAll?: boolean;
-    disabled?: boolean;
-    renderContent?: (value: any, valueChild: any) => ReactNode;
-    renderSelector?: (node: ReactNode, visible: boolean) => ReactNode;
-    renderPopup?: (options: SelectRenderPopupOptions) => ReactNode;
-    search?: true | SelectSearch;
-    size?: SizeType;
-    popoverProps?: PopoverProps;
-    customStyle?: SelectCustomStyle;
-    emptyContent?: ReactNode;
-}
-declare class SelectOption extends PureComponent<SelectOptionProps> {}
-declare class SelectGroup extends Component<SelectGroupProps> {}
-declare class SelectExtra extends PureComponent<SelectExtraProps> {}
-export declare class Select extends Component<SelectProps> {
-    static Option: typeof SelectOption;
-    static Group: typeof SelectGroup;
-    static Extra: typeof SelectExtra;
-}
-
 // Radio
 export type RadioStyleType = 'default' | 'button' | 'tag' | 'card' | 'text';
 export interface RadioProps {
@@ -883,3 +820,5 @@ export { default as PopConfirm } from './lib/components/PopConfirm';
 export { default as ConfigProvider } from './lib/components/ConfigProvider';
 
 export { default as Icon } from './lib/components/Icon';
+
+export { default as Select } from './lib/components/Select';
