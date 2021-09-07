@@ -1,7 +1,5 @@
 import _ from 'lodash';
 
-import { generateColorTheme, defaultColorList } from './color';
-
 import { designTokens } from './designTokens';
 
 const defaultSizeTheme = {
@@ -42,12 +40,9 @@ export const extend = (source, target) => {
 
 export const generateTheme = (originTheme = {}) => {
     const { designTokens: originDesignTokens } = originTheme;
-    const { colorList, colorMap } = generateColorTheme(originTheme.colorList);
     const sizeTheme = _.pick(originTheme, ['fontSize', 'titleFontSize', 'Height', 'Padding']);
 
     let theme = {
-        colorList,
-        colorMap,
         ...defaultSizeTheme,
         ...sizeTheme,
         designTokens: {
@@ -73,7 +68,7 @@ export const generateTheme = (originTheme = {}) => {
     );
 };
 
-const defaultTheme = generateTheme({ colorList: defaultColorList });
+const defaultTheme = generateTheme();
 
 export default defaultTheme;
 export { defaultTheme };
