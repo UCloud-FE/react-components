@@ -710,24 +710,6 @@ export declare class Message extends Component<MessageProps> {
     static config: (config: MessageConfig) => void;
 }
 
-// Breadcrumb
-interface BreadcrumbItemProps {
-    disabled?: boolean;
-    current?: boolean;
-    noAction?: boolean;
-    onClick?: Function;
-}
-declare class BreadcrumbItem extends Component<BreadcrumbItemProps> {}
-interface BreadcrumbProps extends HTMLAttributes<HTMLDivElement> {
-    separator?: ReactNode;
-    styleType?: 'block-hover' | 'hover' | 'active';
-}
-declare class BreadcrumbBackButton extends Component<ButtonProps> {}
-export declare class Breadcrumb extends Component<BreadcrumbProps> {
-    static Item: typeof BreadcrumbItem;
-    static BackButton: typeof BreadcrumbBackButton;
-}
-
 // Pagination
 interface GetPaginationShowTotal {
     (total: number): string;
@@ -822,3 +804,5 @@ export { default as ConfigProvider } from './lib/components/ConfigProvider';
 export { default as Icon } from './lib/components/Icon';
 
 export { default as Select } from './lib/components/Select';
+
+export { default as Breadcrumb } from './lib/components/Breadcrumb';

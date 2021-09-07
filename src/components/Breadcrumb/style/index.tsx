@@ -3,10 +3,13 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import config from 'src/config';
-import { inlineBlockWithVerticalMixin } from 'src/style';
+import { inlineBlockWithVerticalMixin, sWrap, Theme } from 'src/style';
 import Button from 'src/components/Button';
-import withProps from 'src/utils/withProps';
 import SvgIcon from 'src/components/SvgIcon';
+import { ButtonProps } from 'src/components/Button/Button';
+
+import { ItemProps } from '../Item';
+import { BreadcrumbProps } from '../Breadcrumb';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-breadcrumb';
@@ -19,7 +22,7 @@ const textStyleMixin = css`
     ${inlineBlockWithVerticalMixin};
 `;
 
-export const BackButtonWrap = withProps({
+export const BackButtonWrap = sWrap<ButtonProps, HTMLButtonElement>({
     icon: <SvgIcon type="arrow-left" />,
     size: 'sm',
     styleType: 'border-gray',
@@ -29,9 +32,9 @@ export const BackButtonWrap = withProps({
     padding: 0 5px;
 `);
 
-const itemStyle = props => {
+const itemStyle = (props: { theme: Theme } & ItemProps) => {
     const {
-        theme: { colorMap, colorList },
+        theme: { designTokens: DT },
         disabled,
         current,
         noAction
@@ -46,35 +49,35 @@ const itemStyle = props => {
         ${noAction &&
         css`
             pointer-events: none;
-            color: ${colorMap.default.text} !important;
+            color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT} !important;
             cursor: default;
         `};
 
         ${current &&
         css`
             pointer-events: none;
-            color: ${colorList.black} !important;
+            color: ${DT.T_COLOR_TEXT_DEFAULT_DARK} !important;
             font-weight: bold;
         `};
 
         ${disabled &&
         css`
             pointer-events: none;
-            color: ${colorMap.disabled.text} !important;
+            color: ${DT.T_COLOR_TEXT_DISABLED} !important;
         `};
     `;
 };
 
-export const ItemSpan = withProps({
+export const ItemSpan = sWrap({
     className: itemCls
 })(styled.span(itemStyle));
 
-export const ItemA = withProps({
+export const ItemA = sWrap({
     className: itemCls
 })(
     styled.a(props => {
         const {
-            theme: { colorMap }
+            theme: { designTokens: DT }
         } = props;
         return css`
             ${itemStyle(props)};
@@ -84,7 +87,7 @@ export const ItemA = withProps({
             &:visited,
             &:link,
             &:active {
-                color: ${colorMap.default.text};
+                color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
             }
         `;
     })
@@ -96,23 +99,23 @@ export const SeparatorWrap = styled('span')`
     cursor: default;
 `;
 
-export const BreadcrumbWrap = withProps()(
-    styled('div')(props => {
+export const BreadcrumbWrap = sWrap<Required<Pick<BreadcrumbProps, 'styleType'>>>({})(
+    styled.div(props => {
         const {
-            theme: { colorMap, fontSize },
+            theme: { designTokens: DT },
             styleType
         } = props;
 
         return css`
-            font-size: ${fontSize};
-            color: ${colorMap.default.text};
+            font-size: 12px;
+            color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
             vertical-align: baseline;
 
             ${{
                 'block-hover': css`
                     :hover {
                         span.${itemCls} {
-                            color: ${colorMap.active.text};
+                            color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
                         }
                         a.${itemCls} {
                             &,
@@ -120,14 +123,14 @@ export const BreadcrumbWrap = withProps()(
                             &:visited,
                             &:link,
                             &:active {
-                                color: ${colorMap.active.text};
+                                color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
                             }
                         }
                     }
                 `,
                 active: css`
                     span.${itemCls} {
-                        color: ${colorMap.active.text};
+                        color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
                     }
                     a.${itemCls} {
                         &,
@@ -135,14 +138,14 @@ export const BreadcrumbWrap = withProps()(
                         &:visited,
                         &:link,
                         &:active {
-                            color: ${colorMap.active.text};
+                            color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
                         }
                     }
                 `,
                 hover: css`
                     span.${itemCls}, a.${itemCls} {
                         :hover {
-                            color: ${colorMap.active.text};
+                            color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
                         }
                     }
                 `

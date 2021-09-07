@@ -15,13 +15,13 @@ const itemLayout = {
         span: 9
     }
 };
-const StyleType = Breadcrumb.StyleType;
+const StyleType = ['block-hover', 'hover', 'active'];
 class Demo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            separator: Breadcrumb.defaultProps.separator,
-            styleType: Breadcrumb.defaultProps.styleType
+            separator: '/',
+            styleType: 'block-hover'
         };
     }
     render() {
