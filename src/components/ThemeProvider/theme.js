@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-import { generateColorTheme, defaultColorList, TColorList, TColorMap } from './color';
+import { generateColorTheme, defaultColorList } from './color';
 
 import { designTokens } from './designTokens';
 
@@ -48,8 +48,6 @@ export const generateTheme = (originTheme = {}) => {
     let theme = {
         colorList,
         colorMap,
-        TColorList,
-        TColorMap,
         ...defaultSizeTheme,
         ...sizeTheme,
         designTokens: {
@@ -58,7 +56,6 @@ export const generateTheme = (originTheme = {}) => {
         }
     };
     theme.HeightNumber = _.mapValues(theme.Height, v => +v.replace('px', ''));
-    theme.PaddingNumber = _.mapValues(theme.Padding, v => +v.replace('px', ''));
 
     const componentNames = _.keys(componentThemeGeneratorMap);
     theme = extend(theme, _.omit(originTheme, componentNames));
