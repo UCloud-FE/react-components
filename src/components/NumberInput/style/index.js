@@ -4,6 +4,7 @@ import { css } from '@emotion/core';
 import { inlineBlockWithVerticalMixin } from 'src/style';
 import config from 'src/config';
 import withProps from 'src/utils/withProps';
+import { transitionDown } from 'src/style/animation';
 
 const { prefixCls: _prefixCls } = config;
 
@@ -19,7 +20,7 @@ export const handlerDisabledCls = handlerCls + '-disabled';
 export const NumberInputWrap = withProps()(
     styled('div')(props => {
         const {
-            theme: { designTokens: DT, Height, HeightNumber, materialVars = {} },
+            theme: { designTokens: DT, Height, HeightNumber },
             styleType,
             focused,
             size,
@@ -108,7 +109,6 @@ export const NumberInputWrap = withProps()(
                 border: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
                 padding-right: ${HeightNumber[size] - 6}px;
                 border-right-width: 0;
-                transition: ${materialVars.transitiondown};
 
                 &:hover {
                     border-color: ${DT.T_COLOR_LINE_DEFAULT_DARK};
@@ -195,7 +195,7 @@ export const NumberInputWrap = withProps()(
                     border: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
                     box-shadow: ${DT.T_SHADOW_INSET_DEFAULT};
                     background: ${DT.T_INPUT_COLOR_BG_DEFAULT};
-                    transition: ${materialVars.transitionDown};
+                    transition: ${transitionDown};
                     margin: 0;
                     &:hover {
                         border-color: ${DT.T_COLOR_LINE_DEFAULT_DARK};
@@ -255,7 +255,7 @@ export const NumberInputWrap = withProps()(
                     border: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
                     box-shadow: ${DT.T_SHADOW_INSET_DEFAULT};
                     background: ${DT.T_INPUT_COLOR_BG_DEFAULT};
-                    transition: ${materialVars.transitionDown};
+                    transition: ${transitionDown};
 
                     &:hover {
                         z-index: 1;
