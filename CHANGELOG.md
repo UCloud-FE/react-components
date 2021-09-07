@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.3](https://github.com/UCloud-FE/react-components/compare/v1.2.2...v1.2.3) (2021-09-07)
+
+### Features
+
+-   **Select:** add virtualList support ([cbb23d3](https://github.com/UCloud-FE/react-components/commit/cbb23d3c410ffb7bd054f2be2249bae26be9251b))
+
 ### [1.2.2](https://github.com/UCloud-FE/react-components/compare/v1.2.1...v1.2.2) (2021-09-03)
 
 ### Features
