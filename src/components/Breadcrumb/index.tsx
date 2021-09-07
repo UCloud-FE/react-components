@@ -1,8 +1,9 @@
 import { ExportComponent } from 'src/type';
 
-import Breadcrumb, { StyleTypes } from './Breadcrumb';
+import Breadcrumb from './Breadcrumb';
 import Item from './Item';
 import BackButton from './BackButton';
+import { StyleTypes } from './interface';
 
 const ExportBreadcrumb = ExportComponent(Breadcrumb, {
     Item,
