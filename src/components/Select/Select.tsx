@@ -3,7 +3,7 @@ import React, { ComponentType, HTMLAttributes, ReactNode, useCallback, useMemo, 
 import Popover from 'src/components/Popover';
 import ConfigContext from 'src/components/ConfigProvider/ConfigContext';
 import useLocale from 'src/components/LocaleProvider/useLocale';
-import { Override, Size, Sizes } from 'src/type';
+import { Override, Size } from 'src/type';
 import { ChildrenMap, groupChildrenAsDataSource, Key, SubGroupMap } from 'src/hooks/group';
 import { getPopoverConfigFromContext } from 'src/hooks/usePopoverConfig';
 import useUncontrolled from 'src/hooks/useUncontrolled';
@@ -105,10 +105,23 @@ export interface SelectProps {
     /**
      * - 是否展示搜索框，可以为 true 或者 Object
      * - 为 Object 时可传入 handleSearch 对搜索筛选进行自定义
-     * @argument searchValue - 搜索的值
-     * @argument value - option的值
      */
-    search?: true | { handleSearch?: (searchValue: string, value: Key, s: any) => boolean };
+    search?:
+        | true
+        | {
+              /**
+               * 自定义搜索
+               * @argument searchValue - 搜索的值
+               * @argument value - option的值
+               */
+              handleSearch?: (searchValue: string, value: Key, s: any) => boolean;
+              /** 搜索值 受控 */
+              searchValue?: string;
+              /** 默认搜索值 非受控 */
+              defaultSearchValue?: string;
+              /** 搜索值变化回调 */
+              onSearchValueChange?: (searchValue: string) => void;
+          };
     /** 尺寸 */
     size?: Size;
     /**
@@ -473,7 +486,12 @@ const Select = ({
     const [value, onChange] = useUncontrolled(_value, defaultValue, _onChange);
     const [visible, setVisible] = useState(false);
     const locale = useLocale(LOCALE, 'Select', _locale);
-    const [searchValue, setSearchValue] = useState('');
+    if (search === true) search = {};
+    const [searchValue, setSearchValue] = useUncontrolled(
+        search?.searchValue,
+        search?.defaultSearchValue || '',
+        search?.onSearchValueChange
+    );
 
     useInitial(() => {
         if (popover) deprecatedLogForPopover();
@@ -597,5 +615,4 @@ const Select = ({
     );
 };
 
-Select.Size = Sizes;
 export default Select;
