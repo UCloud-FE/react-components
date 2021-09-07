@@ -1,14 +1,17 @@
-import React, { HTMLAttributes, useCallback, useMemo } from 'react';
+import React, { HTMLAttributes, ReactNode, useCallback, useMemo, useRef } from 'react';
 import classnames from 'classnames';
 
 import Checkbox from 'src/components/Checkbox';
 import useLocale from 'src/components/LocaleProvider/useLocale';
 import { CollapseProps, useCollapse } from 'src/components/Collapse/hooks';
 import CollapseContext from 'src/components/Collapse/CollapseContext';
-import { useGroup, Key, groupChildrenAsDataSource } from 'src/hooks/group';
+import { useGroup, Key, groupChildrenAsDataSource, SubGroupMap, ChildrenMap } from 'src/hooks/group';
 import useUncontrolled from 'src/hooks/useUncontrolled';
 import noop from 'src/utils/noop';
 import { Override } from 'src/type';
+import once from 'src/utils/once';
+import useVirtualList from 'src/hooks/useVirtualList';
+import useSimpleVirtualList from 'src/hooks/useSimpleVirtualList';
 
 import {
     MenuWrap,
@@ -42,6 +45,15 @@ export interface MenuProps {
     disabled?: boolean;
     /** collapse 的配置，参考 collapse 组件 */
     collapseProps?: CollapseProps;
+    /** 启用虚拟滚动，启用后需要注意所有 item 需提供 key（可不提供 itemKey 和 subMenuKey，会使用 key 作为对应），且 Item key 和 SubMenu 不可重复，目前不支持 collapse 类 SubMenu */
+    virtualList?:
+        | boolean
+        | {
+              // 简易模式，如确认每个 item 高度一致且不会变化可启用，可一定程度上优化性能
+              simple?: true;
+              // 虚拟滚动的高度，默认为 200
+              height?: number;
+          };
     /** 自定义样式 */
     customStyle?: {
         /** 菜单的最大高度 */
@@ -58,6 +70,99 @@ export interface MenuProps {
     dataSource?: ReturnType<typeof groupChildrenAsDataSource>;
 }
 
+const warn = once(() => console.warn(`Virtual menu only support popover type of SubMenu`));
+
+export const strictGroupChildrenAsDataSource = (
+    children: ReactNode,
+    globalDisabled = false,
+    {
+        itemTag,
+        subGroupTag,
+        itemKeyName,
+        subGroupKeyName
+    }: {
+        itemTag: string;
+        subGroupTag?: string;
+        itemKeyName: string;
+        subGroupKeyName?: string;
+    } = {
+        itemTag: 'isItem',
+        subGroupTag: 'isSubGroup',
+        itemKeyName: 'itemKey',
+        subGroupKeyName: 'subGroupKey'
+    }
+): [Key[], Key[], ReactNode[], SubGroupMap, ChildrenMap] => {
+    const subGroupMap: SubGroupMap = new Map();
+    const childrenMap: ChildrenMap = new Map();
+    const group = (children: ReactNode, disabled: boolean, prefix: string): [Key[], Key[], ReactNode[]] => {
+        const validKeys: Key[] = [];
+        const disabledKeys: Key[] = [];
+        const l = React.Children.count(children);
+        const renderChildren: ReactNode[] = [];
+        React.Children.forEach(children, (child, i) => {
+            const isFirst = i === 0;
+            const isLast = i === l - 1;
+            if (React.isValidElement(child)) {
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                if ((child.type as any)?.[itemTag]) {
+                    const props = child.props;
+                    const key = props[itemKeyName] ?? child.key;
+                    const isDisabled = disabled || props.disabled;
+                    if (isDisabled) {
+                        disabledKeys.push(key);
+                    } else {
+                        validKeys.push(key);
+                    }
+
+                    childrenMap.set(key, props.children);
+                    renderChildren.push(
+                        React.cloneElement(child, {
+                            [itemKeyName]: key,
+                            disabled: globalDisabled || isDisabled,
+                            isFirst,
+                            isLast
+                        })
+                    );
+                    return;
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                } else if (subGroupTag && subGroupKeyName && (child.type as any)?.[subGroupTag]) {
+                    const props = child.props;
+                    const key = props[subGroupKeyName] || child.key || `${prefix}-${i}`;
+                    const isDisabled = disabled || props.disabled;
+                    const [subValidKeys, subDisabledKeys, subRenderChildren] = group(
+                        child.props.children,
+                        isDisabled,
+                        key
+                    );
+                    subGroupMap.set(key, { validKeys: subValidKeys, disabledKeys: subDisabledKeys });
+                    validKeys.push(...subValidKeys);
+                    disabledKeys.push(...subDisabledKeys);
+                    if (props.styleType === 'collapse') warn();
+
+                    return renderChildren.push(
+                        React.cloneElement(
+                            child,
+                            {
+                                disabled: globalDisabled || isDisabled,
+                                [subGroupKeyName]: key,
+                                isFirst,
+                                isLast,
+                                styleType: 'popover'
+                            },
+                            subRenderChildren
+                        )
+                    );
+                }
+                renderChildren.push(child);
+                return;
+            }
+        });
+        return [validKeys, disabledKeys, renderChildren];
+    };
+
+    return [...group(children, false, 'group-root'), subGroupMap, childrenMap];
+};
+
 const Menu = ({
     selectedKeys: _selectedKeys,
     defaultSelectedKeys = [],
@@ -72,6 +177,7 @@ const Menu = ({
     children,
     dataSource,
     collapseProps,
+    virtualList,
     ...rest
 }: MenuProps & Override<HTMLAttributes<HTMLDivElement>, MenuProps>) => {
     let [selectedKeys, onSelectedKeysChange] = useUncontrolled(_selectedKeys, defaultSelectedKeys, _onChange);
@@ -87,13 +193,13 @@ const Menu = ({
         () =>
             dataSource
                 ? dataSource
-                : groupChildrenAsDataSource(children, disabled, {
+                : (virtualList ? strictGroupChildrenAsDataSource : groupChildrenAsDataSource)(children, disabled, {
                       itemTag: 'isMenuItem',
                       subGroupTag: 'isMenuSubMenu',
                       itemKeyName: 'itemKey',
                       subGroupKeyName: 'subMenuKey'
                   }),
-        [children, dataSource, disabled]
+        [children, dataSource, disabled, virtualList]
     );
     const [collapseContext] = useCollapse(collapseProps || {});
 
@@ -105,20 +211,52 @@ const Menu = ({
         disabledKeys,
         subGroupMap
     );
-    const selectAllCheckbox = selectable && multiple && showSelectAll && (
-        <div className={classnames(selectallWrapCls, disabled && disabledCls)} key="menu-select-all">
-            <Checkbox
-                className={checkboxCls}
-                checked={selectedStatus === 'ALL'}
-                indeterminate={selectedStatus === 'PART'}
-                onChange={toggleAllItems}
-                size="lg"
-                disabled={disabled}
-            >
-                {locale.selectAll}
-            </Checkbox>
-        </div>
+    const selectAllCheckbox = useMemo(
+        () =>
+            selectable &&
+            multiple &&
+            showSelectAll && (
+                <div className={classnames(selectallWrapCls, disabled && disabledCls)} key="menu-select-all">
+                    <Checkbox
+                        className={checkboxCls}
+                        checked={selectedStatus === 'ALL'}
+                        indeterminate={selectedStatus === 'PART'}
+                        onChange={toggleAllItems}
+                        size="lg"
+                        disabled={disabled}
+                    >
+                        {locale.selectAll}
+                    </Checkbox>
+                </div>
+            ),
+        [disabled, locale.selectAll, multiple, selectable, selectedStatus, showSelectAll, toggleAllItems]
     );
+
+    const renderList = useMemo(() => {
+        if (virtualList) {
+            const virtualRenderChildren: ReactNode[] = (selectAllCheckbox
+                ? [selectAllCheckbox as ReactNode]
+                : []
+            ).concat(renderChildren as ReactNode[]);
+            const virtualInfo = typeof virtualList === 'object' ? virtualList : { simple: false, height: 200 };
+            return virtualInfo.simple ? (
+                <SimpleVirtualScrollList height={virtualInfo.height ?? 200} width="100%">
+                    {virtualRenderChildren}
+                </SimpleVirtualScrollList>
+            ) : (
+                <VirtualScrollList height={virtualInfo.height ?? 200} width="100%">
+                    {virtualRenderChildren}
+                </VirtualScrollList>
+            );
+        } else {
+            return (
+                <div>
+                    {selectAllCheckbox}
+                    {renderChildren}
+                </div>
+            );
+        }
+    }, [renderChildren, selectAllCheckbox, virtualList]);
 
     return (
         <CollapseContext.Provider value={collapseContext}>
@@ -127,13 +265,62 @@ const Menu = ({
                     className={classnames(className, prefixCls, multiple ? multipleCls : singleCls, block && blockCls)}
                     {...rest}
                 >
-                    <div>
-                        {selectAllCheckbox}
-                        {renderChildren}
-                    </div>
+                    {renderList}
                 </MenuWrap>
             </MenuContext.Provider>
         </CollapseContext.Provider>
+    );
+};
+
+const VirtualScrollList = ({
+    children,
+    height,
+    width
+}: {
+    children: ReactNode[];
+    height: number;
+    width?: number | string;
+}) => {
+    const scrollerRef = useRef(null);
+    const heightWrapperRef = useRef(null);
+    const wrapperRef = useRef(null);
+    const [renderChildren, offsetTop] = useVirtualList(scrollerRef, wrapperRef, heightWrapperRef, children, {
+        clientHeight: height
+    });
+    return (
+        <div ref={scrollerRef} style={{ maxHeight: height, width, overflowY: 'auto' }}>
+            <div ref={heightWrapperRef}>
+                <div ref={wrapperRef} style={{ transform: `translate(0, ${offsetTop}px)` }}>
+                    {renderChildren}
+                </div>
+            </div>
+        </div>
+    );
+};
+
+const SimpleVirtualScrollList = ({
+    children,
+    height,
+    width
+}: {
+    children: ReactNode[];
+    height: number;
+    width?: number | string;
+}) => {
+    const scrollerRef = useRef(null);
+    const heightWrapperRef = useRef(null);
+    const wrapperRef = useRef(null);
+    const [renderChildren, offsetTop] = useSimpleVirtualList(scrollerRef, wrapperRef, heightWrapperRef, children, {
+        clientHeight: height
+    });
+    return (
+        <div ref={scrollerRef} style={{ maxHeight: height, width, overflowY: 'auto' }}>
+            <div ref={heightWrapperRef}>
+                <div ref={wrapperRef} style={{ transform: `translate(0, ${offsetTop}px)` }}>
+                    {renderChildren}
+                </div>
+            </div>
+        </div>
     );
 };
 

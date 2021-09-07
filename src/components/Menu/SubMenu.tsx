@@ -42,7 +42,7 @@ export interface SubMenuProps {
     isLast?: boolean;
 }
 
-const getPopoverContainer = (triggerNode: Element) => triggerNode.parentNode;
+const getPopoverContainer = (triggerNode: Element) => triggerNode.parentNode?.parentNode;
 
 const SubMenu = ({
     title,

@@ -1,10 +1,10 @@
-import React, { HTMLAttributes, ReactNode, useCallback, useMemo, useState } from 'react';
+import React, { ComponentType, HTMLAttributes, ReactNode, useCallback, useMemo, useState } from 'react';
 
 import Popover from 'src/components/Popover';
 import ConfigContext from 'src/components/ConfigProvider/ConfigContext';
 import useLocale from 'src/components/LocaleProvider/useLocale';
 import { Override, Size, Sizes } from 'src/type';
-import { groupChildrenAsDataSource, groupOptionsAsDataSource, Key } from 'src/hooks/group';
+import { ChildrenMap, groupChildrenAsDataSource, Key, SubGroupMap } from 'src/hooks/group';
 import { getPopoverConfigFromContext } from 'src/hooks/usePopoverConfig';
 import useUncontrolled from 'src/hooks/useUncontrolled';
 import useInitial from 'src/hooks/useInitial';
@@ -14,7 +14,7 @@ import isObject from 'src/utils/isObject';
 import once from 'src/utils/once';
 import isEmpty from 'src/utils/isEmpty';
 
-import Option from './Option';
+import { PureOption } from './Option';
 import Group from './Group';
 import Extra from './Extra';
 import {
@@ -32,6 +32,10 @@ import SelectContext from './SelectContext';
 import LOCALE from './locale/zh_CN';
 
 export const deprecatedLogForPopover = once(() => deprecatedLog('Select popover', 'popoverProps'));
+const warnLogForVirtualList = once(() => console.warn('Select virtualList only valid when use options'));
+const warnLogForCustomHeight = once(() =>
+    console.warn('CustomStyle.optionListMaxHeight is invalid when use virtualList, please use virtualList.height')
+);
 
 const groupOptions = {
     itemTag: 'isMenuItem',
@@ -40,7 +44,7 @@ const groupOptions = {
     subGroupKeyName: 'groupKey',
     displayName: 'label',
     subGroupName: 'children',
-    ItemComponent: Option,
+    ItemComponent: PureOption,
     SubGroupComponent: Group
 };
 
@@ -58,7 +62,7 @@ export interface SelectProps {
     /** 快速设置选项 */
     options?: {
         /** 选项展示 */
-        label: ReactNode;
+        label?: ReactNode;
         /** 选项 value，不可重复 */
         value: Key;
     }[];
@@ -129,11 +133,22 @@ export interface SelectProps {
         optionListMaxHeight?: number | string;
         /** 弹出菜单的最大宽度  */
         popupMaxWidth?: string;
+        /** 弹出菜单的宽度 */
+        popupWidth?: string;
     };
     /**
      * 可选性为空时展示内容
      */
     emptyContent?: ReactNode;
+    /**
+     * 启用虚拟列表，仅使用 options 时生效
+     */
+    virtualList?:
+        | boolean
+        | {
+              simple?: true;
+              height?: number;
+          };
 }
 
 const Selector = ({
@@ -156,7 +171,7 @@ const Selector = ({
     locale: typeof LOCALE;
     dataSource: ReturnType<typeof groupChildrenAsDataSource>;
 }) => {
-    placeholder = useMemo(() => placeholder || locale.placeholder, []);
+    placeholder = useMemo(() => placeholder || locale.placeholder, [locale.placeholder, placeholder]);
     const defaultRenderContent = useCallback(
         (value, valueChild) => {
             if (!multiple) {
@@ -234,7 +249,8 @@ const Popup = ({
     hidePopup,
     dataSource,
     searchValue,
-    setSearchValue
+    setSearchValue,
+    virtualList
 }: Pick<
     SelectProps,
     | 'extra'
@@ -246,6 +262,7 @@ const Popup = ({
     | 'value'
     | 'renderPopup'
     | 'options'
+    | 'virtualList'
 > &
     Required<Pick<SelectProps, 'onChange'>> & {
         children?: ReactNode;
@@ -305,6 +322,11 @@ const Popup = ({
     }
 
     const maxWidth = customStyle.popupMaxWidth ? customStyle.popupMaxWidth : 'none';
+    const newCustomStyle = { ...customStyle };
+    if (virtualList) {
+        newCustomStyle.optionListMaxHeight = 'none';
+        if ('optionListMaxHeight' in newCustomStyle) warnLogForCustomHeight();
+    }
 
     const renderEmptyContent = () => {
         return emptyContent || <EmptyContentWrapper>{locale.emptyTip}</EmptyContentWrapper>;
@@ -316,12 +338,13 @@ const Popup = ({
             {children || options ? (
                 <BlockMenu
                     onChange={handleChange}
-                    customStyle={customStyle}
+                    customStyle={newCustomStyle}
                     menuCustomStyle={{ maxWidth }}
                     dataSource={dataSource}
                     multiple={multiple}
                     showSelectAll={showSelectAll}
                     selectedKeys={multiple ? value : [value]}
+                    virtualList={options ? virtualList : false}
                 />
             ) : (
                 <BlockMenu>{renderEmptyContent()}</BlockMenu>
@@ -329,6 +352,97 @@ const Popup = ({
             {finalExtra ? <FooterWrap>{finalExtra}</FooterWrap> : null}
         </MenuWrap>
     );
+};
+
+const groupOptionsAsDataSource = <
+    T extends {
+        disabled?: boolean;
+        key?: Key;
+        [key: string]: Key | ReactNode | unknown;
+    }
+>(
+    options: T[],
+    globalDisabled = false,
+    {
+        subGroupName,
+        displayName,
+        itemKeyName,
+        subGroupKeyName,
+        ItemComponent,
+        SubGroupComponent
+    }: {
+        subGroupName: string;
+        displayName: string;
+        itemKeyName: string;
+        subGroupKeyName: string;
+        ItemComponent: ComponentType<any>;
+        SubGroupComponent: ComponentType<any>;
+    } = {
+        subGroupName: 'children',
+        displayName: 'label',
+        itemKeyName: 'itemKey',
+        subGroupKeyName: 'subGroupKey',
+        ItemComponent: () => null,
+        SubGroupComponent: () => null
+    },
+    searchValue: string,
+    handleSearch: (value: Key, props: any) => boolean
+): [Key[], Key[], ReactNode[], SubGroupMap, ChildrenMap] => {
+    const subGroupMap: SubGroupMap = new Map();
+    const childrenMap: ChildrenMap = new Map();
+    const group = (options: T[], disabled = false, prefixKey: Key): [Key[], Key[], ReactNode[]] => {
+        const validKeys: Key[] = [];
+        const disabledKeys: Key[] = [];
+        const renderChildren: ReactNode[] = [];
+        options.forEach((child, i) => {
+            const subChildren = child[subGroupName] as T[];
+            if (subChildren) {
+                const key = (child[subGroupKeyName] as Key) || child.key || `${prefixKey}-${i}`;
+                const isDisabled = disabled || child.disabled;
+                const [subValidKeys, subDisabledKeys, subRenderChildren] = group(subChildren, isDisabled, key);
+                subGroupMap.set(key, { validKeys: subValidKeys, disabledKeys: subDisabledKeys });
+                validKeys.push(...subValidKeys);
+                disabledKeys.push(...subDisabledKeys);
+                const visible = searchValue ? !!subRenderChildren.length : true;
+                if (visible) {
+                    renderChildren.push(
+                        <SubGroupComponent
+                            key={key}
+                            {...child}
+                            {...{ disabled: globalDisabled || isDisabled, [subGroupKeyName]: key }}
+                        >
+                            {subRenderChildren}
+                        </SubGroupComponent>
+                    );
+                }
+            } else {
+                const key = (child[itemKeyName] === undefined ? child.key : child[itemKeyName]) as Key;
+                const isDisabled = disabled || child.disabled;
+                if (isDisabled) {
+                    disabledKeys.push(key);
+                } else {
+                    validKeys.push(key);
+                }
+                const display = (child[displayName] as ReactNode) ?? key;
+                const visible = searchValue ? handleSearch(key, child) : true;
+                if (visible) {
+                    renderChildren.push(
+                        <ItemComponent
+                            key={key}
+                            {...child}
+                            {...{ disabled: globalDisabled || isDisabled, [itemKeyName]: key }}
+                        >
+                            {display}
+                        </ItemComponent>
+                    );
+                }
+                childrenMap.set(key, display);
+            }
+        });
+        return [validKeys, disabledKeys, renderChildren];
+    };
+
+    return [...group(options, false, 'group-root'), subGroupMap, childrenMap];
 };
 
 const Select = ({
@@ -353,6 +467,7 @@ const Select = ({
     popover,
     popoverProps,
     renderPopup,
+    virtualList,
     ...rest
 }: SelectProps & Override<HTMLAttributes<HTMLDivElement>, SelectProps>) => {
     const [value, onChange] = useUncontrolled(_value, defaultValue, _onChange);
@@ -362,25 +477,8 @@ const Select = ({
 
     useInitial(() => {
         if (popover) deprecatedLogForPopover();
+        if (virtualList && !options) warnLogForVirtualList();
     });
-
-    const dataSource = useMemo(() => {
-        if (!options) {
-            return groupChildrenAsDataSource(children, disabled, groupOptions);
-        } else {
-            return groupOptionsAsDataSource(options, disabled, groupOptions);
-        }
-    }, [children, options, disabled]);
-
-    const handleVisibleChange = useCallback(
-        (open: boolean) => {
-            setVisible(open);
-            onVisibleChange(open);
-        },
-        [onVisibleChange]
-    );
-
-    const hidePopup = useCallback(() => handleVisibleChange(false), [handleVisibleChange]);
 
     const handleSearch = useCallback(
         (value: Key, props: any) => {
@@ -388,7 +486,7 @@ const Select = ({
                 return true;
             }
             if (typeof search === 'object' && search.handleSearch) {
-                return search.handleSearch(searchValue, value, { props });
+                return search.handleSearch(searchValue, value, { ...props, props });
             } else {
                 const { children } = props;
                 return (
@@ -399,6 +497,35 @@ const Select = ({
         },
         [search, searchValue]
     );
+
+    const childrenDataSource = useMemo(
+        () => (options ? [] : groupChildrenAsDataSource(children, disabled, groupOptions)),
+        [children, disabled, options]
+    );
+    const optionsDataSource = useMemo(
+        () => (options ? groupOptionsAsDataSource(options, disabled, groupOptions, searchValue, handleSearch) : []),
+        [disabled, handleSearch, options, searchValue]
+    );
+
+    virtualList = useMemo(() => (options ? virtualList : false), [options, virtualList]);
+
+    const dataSource = useMemo(
+        () =>
+            (options ? optionsDataSource : childrenDataSource) as
+                | ReturnType<typeof groupOptionsAsDataSource>
+                | ReturnType<typeof groupChildrenAsDataSource>,
+        [options, childrenDataSource, optionsDataSource]
+    );
+
+    const handleVisibleChange = useCallback(
+        (open: boolean) => {
+            setVisible(open);
+            onVisibleChange(open);
+        },
+        [onVisibleChange]
+    );
+
+    const hidePopup = useCallback(() => handleVisibleChange(false), [handleVisibleChange]);
 
     return (
         <ConfigContext.Consumer>
@@ -414,7 +541,6 @@ const Select = ({
                     >
                         <SelectWrap {...rest}>
                             <Popover
-                                forceRender
                                 onVisibleChange={handleVisibleChange}
                                 placement="bottomLeft"
                                 trigger={['click']}
@@ -441,10 +567,12 @@ const Select = ({
                                             hidePopup,
                                             dataSource,
                                             searchValue,
-                                            setSearchValue
+                                            setSearchValue,
+                                            virtualList
                                         }}
                                     />
                                 }
+                                forceRender={false}
                             >
                                 <Selector
                                     {...{

@@ -41,6 +41,17 @@ class Demo extends React.Component {
                         ))}
                     </Select>
                 </div>
+                <h3>popupWidth</h3>
+                <div className="demo-wrap">
+                    <Select
+                        multiple
+                        showSelectAll
+                        search
+                        onChange={console.log}
+                        customStyle={{ popupWidth: '400px' }}
+                        options={new Array(100).fill(null).map((v, i) => ({ value: i, label: `option ${i}` }))}
+                    />
+                </div>
             </div>
         );
     }

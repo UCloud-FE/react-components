@@ -12,14 +12,20 @@ export interface OptionProps {
      * tooltip 提示，可以为文本或 node，也可以是 tooltip 的 props object
      */
     tooltip?: ReactNode | any;
+    /** @ignore */
     children?: ReactNode;
+    /**
+     * @ignore
+     * @description 内部使用，请勿使用
+     */
+    label?: ReactNode;
 }
 
-const Option = ({ value = '', children, ...rest }: OptionProps) => {
+const Option = ({ value, children, ...rest }: OptionProps) => {
     const { handleSearch, searchValue } = useContext(SelectContext);
     const visible = useMemo(
         () =>
-            handleSearch(value, {
+            handleSearch(value as Key, {
                 value,
                 children
             }),
@@ -35,5 +41,13 @@ const Option = ({ value = '', children, ...rest }: OptionProps) => {
 };
 
 Option.isMenuItem = true;
+
+export const PureOption = ({ value, label, children, ...rest }: OptionProps) => {
+    return (
+        <OptionWrap {...rest} itemKey={value}>
+            {children}
+        </OptionWrap>
+    );
+};
 
 export default Option;

@@ -103,6 +103,11 @@ export const BlockMenu = styled(CustomMenu)(props => {
         box-shadow: none;
         max-height: ${maxHeight};
         background: unset;
+        ${customStyle.popupWidth
+            ? css`
+                  width: ${customStyle.popupWidth};
+              `
+            : null}
     `;
 });
 

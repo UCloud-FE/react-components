@@ -1,4 +1,4 @@
-import { ReactNode, RefObject, useEffect, useMemo, useRef, useState } from 'react';
+import { ReactNode, RefObject, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 
 const CLIENT_HEIGHT = window.innerHeight;
 const FAIL_OFFSET = 2;
@@ -55,7 +55,7 @@ const getClosedOffset = (
     return Math.min(Math.max(min - 2, 0), Math.max(0, total - visibleCount));
 };
 
-const useVisibleScroll = <
+const useVisibleList = <
     E1 extends HTMLElement = HTMLDivElement,
     E2 extends HTMLElement = HTMLDivElement,
     E3 extends HTMLElement = HTMLDivElement
@@ -70,9 +70,13 @@ const useVisibleScroll = <
     const heightsRef = useRef<number[]>([]);
     const offsetTopsRef = useRef([0]);
     const lastUnmeasuredIndexRef = useRef(0);
+    const [measuredClientHeight, setMeasuredClientHeight] = useState(clientHeight);
 
     // visible count of children
-    const visibleCount = useMemo(() => ((clientHeight / itemHeight) | 0) + FAIL_OFFSET * 2, [clientHeight, itemHeight]);
+    const visibleCount = useMemo(() => ((measuredClientHeight / itemHeight) | 0) + FAIL_OFFSET * 2, [
+        measuredClientHeight,
+        itemHeight
+    ]);
 
     // offset from first visible child
     const offset = useMemo(
@@ -90,9 +94,9 @@ const useVisibleScroll = <
     );
 
     // measure item heights
-    const wrapper = wrapperRef.current;
-    const heightWrapper = heightWrapperRef.current;
     useEffect(() => {
+        const wrapper = wrapperRef.current;
+        const heightWrapper = heightWrapperRef.current;
         if (!wrapper) return;
         const renderChildrenDOM = wrapper.childNodes;
         const l = renderChildrenDOM.length;
@@ -101,7 +105,8 @@ const useVisibleScroll = <
         for (let i = 0; i < l; i++) {
             const index = i + offset;
             if (renderChildrenDOM[i].nodeType === 1) {
-                heights[index] = (renderChildrenDOM[i] as HTMLElement).offsetHeight;
+                const rect = (renderChildrenDOM[i] as HTMLElement).getBoundingClientRect();
+                heights[index] = rect.height;
             } else {
                 heights[index] = itemHeight;
                 console.warn(renderChildrenDOM[i], ' is not a valid Element, this may cause height flashing');
@@ -124,11 +129,24 @@ const useVisibleScroll = <
         if (heightWrapper) {
             heightWrapper.style.height = fullHeight + 'px';
         }
-    }, [children.length, heightWrapper, itemHeight, offset, wrapper]);
+    }, [children.length, heightWrapperRef, itemHeight, offset, wrapperRef]);
+
+    // measure when first mount or child changed
+    useEffect(() => {
+        const scroller = scrollerRef.current;
+        const wrapper = wrapperRef.current;
+        if (!scroller || !wrapper) {
+            console.error('scroller, wrapper is invalid');
+            return;
+        }
+        const scrollRect = scroller.getBoundingClientRect();
+        setScrollTop(scroller.scrollTop);
+        setMeasuredClientHeight(scrollRect.height);
+    }, [children.length, heightWrapperRef, scrollerRef, wrapperRef]);
 
     // listen onscroll
-    const scroller = scrollerRef.current;
     useEffect(() => {
+        const scroller = scrollerRef.current;
         const onScroll = (e: Event) => {
             if (!scroller) return;
             if (e.currentTarget !== scroller) return;
@@ -142,7 +160,7 @@ const useVisibleScroll = <
         return () => {
             if (scroller) scroller.removeEventListener('scroll', onScroll);
         };
-    }, [scroller]);
+    }, [scrollerRef]);
 
     // children should render
     const renderChildren = useMemo(() => children.slice(offset, visibleCount + offset), [
@@ -161,4 +179,4 @@ const useVisibleScroll = <
     return [renderChildren, offsetTop];
 };
 
-export default useVisibleScroll;
+export default useVisibleList;
