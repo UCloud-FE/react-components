@@ -2,6 +2,8 @@ import React from 'react';
 
 import demoUtil from 'shared/demoUtil';
 import Select from 'src/components/Select';
+import Card from 'src/components/Card';
+import Radio from 'src/components/Radio';
 
 // demo start
 const { DemoWrap } = demoUtil;
@@ -9,6 +11,42 @@ const { Option } = Select;
 
 const objectValue = {};
 const arrayValue = [];
+
+class DemoA extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { options: [] };
+        setTimeout(() => {
+            this.setState({ options: [{ value: 1, label: 'label-1' }] });
+        }, 1000);
+        this.getContent = this._getContent.bind(this);
+    }
+    _getContent(value) {
+        const o = this.state.options.find(o => o.value === value);
+        return o ? o.label : value;
+    }
+    render() {
+        return (
+            <>
+                <h2>使用 renderPopup 且不传入 options 时，自定义渲染 content</h2>
+                <DemoWrap>
+                    <Select
+                        onChange={console.log}
+                        defaultValue={1}
+                        renderPopup={({ onChange, value }) => (
+                            <Card style={{ width: 200 }}>
+                                <Card.Content>
+                                    <Radio.Group value={value} options={this.state.options} onChange={onChange} />
+                                </Card.Content>
+                            </Card>
+                        )}
+                        renderContent={this.getContent}
+                    />
+                </DemoWrap>
+            </>
+        );
+    }
+}
 
 class Demo extends React.Component {
     render() {
@@ -70,6 +108,7 @@ class Demo extends React.Component {
                         <Option key="string">string key</Option>
                     </Select>
                 </DemoWrap>
+                <DemoA />
             </div>
         );
     }

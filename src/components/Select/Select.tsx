@@ -171,6 +171,7 @@ const Selector = ({
     placeholder,
     renderContent,
     renderSelector,
+    renderPopup,
     value,
     visible,
     locale,
@@ -178,7 +179,7 @@ const Selector = ({
     ...rest
 }: Pick<
     SelectProps,
-    'size' | 'disabled' | 'multiple' | 'placeholder' | 'renderContent' | 'renderSelector' | 'value'
+    'size' | 'disabled' | 'multiple' | 'placeholder' | 'renderContent' | 'renderSelector' | 'renderPopup' | 'value'
 > & {
     visible: boolean;
     locale: typeof LOCALE;
@@ -204,7 +205,7 @@ const Selector = ({
         [locale.items, locale.selected, multiple, placeholder]
     );
 
-    const content = useMemo(() => {
+    const getContent = useCallback(() => {
         const [, , , , childrenMap = new Map()] = dataSource;
 
         let valueChild;
@@ -229,6 +230,11 @@ const Selector = ({
             return defaultRenderContent(value, valueChild);
         }
     }, [dataSource, defaultRenderContent, multiple, renderContent, value]);
+
+    let content = useMemo(getContent, [getContent]);
+
+    // 自定义渲染弹层时，开发者可能不传入 options 和 children，导致 content memo deps 不触发变更，故强制更新
+    if (renderPopup) content = getContent();
 
     if (renderSelector) {
         const selector = renderSelector(content, visible) || <></>;
@@ -600,6 +606,7 @@ const Select = ({
                                         placeholder,
                                         renderContent,
                                         renderSelector,
+                                        renderPopup,
                                         value,
                                         visible,
                                         locale,
