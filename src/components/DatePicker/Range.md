@@ -73,3 +73,8 @@
 
 ```js {"codepath": "range-popoverProps.jsx"}
 ```
+
+#### customRender - 自定义渲染
+
+```js {"codepath": "range-customRender.jsx"}
+```

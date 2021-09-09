@@ -106,6 +106,11 @@ interface RangeProps {
     selectProps?: any;
     /** 自定义时间选择框弹出层props */
     popoverProps?: any;
+    /** 自定义渲染 */
+    customRender?: {
+        /** 自定义渲染只读时（非自定义选项）的展示内容（时间区域） */
+        readonlyDisplay?: (value: [TDate | null, TDate | null]) => ReactNode;
+    };
     /**
      * @ignore
      * 自定义 datePicker 的 props
@@ -124,7 +129,11 @@ const formatValue = (v: TDate | null, nullable = false, defaultV: TDate) => {
     return v == null ? (nullable ? null : moment(+defaultV)) : moment(+v);
 };
 
-const formatRangeValue = (value: RangeValue, nullable: RangeProps['nullable'] = [], d: TDate) => {
+const formatRangeValue = (
+    value: RangeValue,
+    nullable: RangeProps['nullable'] = [],
+    d: TDate
+): [Moment | null, Moment | null] => {
     return [formatValue(value[0], nullable[0], d), formatValue(value[1], nullable[1], d)];
 };
 
@@ -172,6 +181,7 @@ const Range = ({
     status,
     placeholder,
     shortcuts,
+    customRender,
     ...rest
 }: RangeProps) => {
     const d = useMemo(() => new Date(), []);
@@ -304,39 +314,43 @@ const Range = ({
                     onChange={handleOptionChange}
                 />
             )}
-            <SRangeInputWrap
-                size={size}
-                disabled={disabled}
-                focused={activeS || activeE}
-                readonly={readonly}
-                onMouseDown={handleInputMouseDown}
-                status={status || contextStatus}
-            >
-                <Picker
-                    value={valueS}
-                    onChange={handleStartChange}
-                    nullable={nullableS}
-                    prefix
-                    ref={inputRefS}
-                    onActiveChange={handleStartActiveChange}
-                    placeholder={placeholderS}
-                    shortcuts={shortcutsS}
-                    footerTip={locale.chooseTipRangeStart}
-                    {...sharedPickerProps}
-                />
-                <RangeDateSeparator />
-                <Picker
-                    value={valueE}
-                    onChange={handleEndChange}
-                    nullable={nullableE}
-                    ref={inputRefE}
-                    onActiveChange={handleEndActiveChange}
-                    placeholder={placeholderE}
-                    shortcuts={shortcutsE}
-                    footerTip={locale.chooseTipRangeEnd}
-                    {...sharedPickerProps}
-                />
-            </SRangeInputWrap>
+            {readonly && customRender?.readonlyDisplay ? (
+                customRender.readonlyDisplay(cacheValue)
+            ) : (
+                <SRangeInputWrap
+                    size={size}
+                    disabled={disabled}
+                    focused={activeS || activeE}
+                    readonly={readonly}
+                    onMouseDown={handleInputMouseDown}
+                    status={status || contextStatus}
+                >
+                    <Picker
+                        value={valueS}
+                        onChange={handleStartChange}
+                        nullable={nullableS}
+                        prefix
+                        ref={inputRefS}
+                        onActiveChange={handleStartActiveChange}
+                        placeholder={placeholderS}
+                        shortcuts={shortcutsS}
+                        footerTip={locale.chooseTipRangeStart}
+                        {...sharedPickerProps}
+                    />
+                    <RangeDateSeparator />
+                    <Picker
+                        value={valueE}
+                        onChange={handleEndChange}
+                        nullable={nullableE}
+                        ref={inputRefE}
+                        onActiveChange={handleEndActiveChange}
+                        placeholder={placeholderE}
+                        shortcuts={shortcutsE}
+                        footerTip={locale.chooseTipRangeEnd}
+                        {...sharedPickerProps}
+                    />
+                </SRangeInputWrap>
+            )}
         </RangeContainer>
     );
 };
