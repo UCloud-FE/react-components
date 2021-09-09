@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.4](https://github.com/UCloud-FE/react-components/compare/v1.2.3...v1.2.4) (2021-09-09)
+
+### Features
+
+-   **DatePicker:** add range.customRender.readonlyDisplay ([ee7421b](https://github.com/UCloud-FE/react-components/commit/ee7421b1fec8056c76e7a65a2c06cb82177eb159))
+-   **Select:** add search controlled and defaultValue ([191afc1](https://github.com/UCloud-FE/react-components/commit/191afc15da46bd77ee13909b695f85e2a7604e0f))
+-   **ThemeProvider:** clean material vars use ([10a439d](https://github.com/UCloud-FE/react-components/commit/10a439de79ed6c35724844ad0aff6d77bb3a8df3))
+
+### Bug Fixes
+
+-   **Breadcrumb:** fix docs inferface ([568fc88](https://github.com/UCloud-FE/react-components/commit/568fc883df30935016023a2839e77e96b5c4f188))
+
 ### [1.2.3](https://github.com/UCloud-FE/react-components/compare/v1.2.2...v1.2.3) (2021-09-07)
 
 ### Features
