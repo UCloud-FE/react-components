@@ -409,6 +409,9 @@ const groupOptionsAsDataSource = <
 ): [Key[], Key[], ReactNode[], SubGroupMap, ChildrenMap] => {
     const subGroupMap: SubGroupMap = new Map();
     const childrenMap: ChildrenMap = new Map();
+    const isValidKey = (v: any) => {
+        return typeof v === 'string' || typeof v === 'number';
+    };
     const group = (options: T[], disabled = false, prefixKey: Key): [Key[], Key[], ReactNode[]] => {
         const validKeys: Key[] = [];
         const disabledKeys: Key[] = [];
@@ -417,6 +420,8 @@ const groupOptionsAsDataSource = <
             const subChildren = child[subGroupName] as T[];
             if (subChildren) {
                 const key = (child[subGroupKeyName] as Key) || child.key || `${prefixKey}-${i}`;
+                const reactKey =
+                    child.key || isValidKey(child[subGroupKeyName]) ? child[subGroupKeyName] : `${prefixKey}-${i}`;
                 const isDisabled = disabled || child.disabled;
                 const [subValidKeys, subDisabledKeys, subRenderChildren] = group(subChildren, isDisabled, key);
                 subGroupMap.set(key, { validKeys: subValidKeys, disabledKeys: subDisabledKeys });
@@ -426,7 +431,7 @@ const groupOptionsAsDataSource = <
                 if (visible) {
                     renderChildren.push(
                         <SubGroupComponent
-                            key={key}
+                            key={reactKey}
                             {...child}
                             {...{ disabled: globalDisabled || isDisabled, [subGroupKeyName]: key }}
                         >
@@ -436,6 +441,7 @@ const groupOptionsAsDataSource = <
                 }
             } else {
                 const key = (child[itemKeyName] === undefined ? child.key : child[itemKeyName]) as Key;
+                const reactKey = child.key || isValidKey(child[itemKeyName]) ? child[itemKeyName] : `${prefixKey}-${i}`;
                 const isDisabled = disabled || child.disabled;
                 if (isDisabled) {
                     disabledKeys.push(key);
@@ -447,7 +453,7 @@ const groupOptionsAsDataSource = <
                 if (visible) {
                     renderChildren.push(
                         <ItemComponent
-                            key={key}
+                            key={reactKey}
                             {...child}
                             {...{ disabled: globalDisabled || isDisabled, [itemKeyName]: key }}
                         >

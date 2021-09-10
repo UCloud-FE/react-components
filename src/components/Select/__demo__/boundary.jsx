@@ -88,14 +88,20 @@ class Demo extends React.Component {
                 <DemoWrap>
                     <Select
                         defaultValue={null}
-                        options={[null, objectValue, arrayValue].map((v, i) => ({ value: v, label: `option ${i}` }))}
+                        options={[null, objectValue, {}, arrayValue].map((v, i) => ({
+                            value: v,
+                            label: `option ${i}`
+                        }))}
                         onChange={console.log}
                     />
                 </DemoWrap>
                 <DemoWrap>
                     <Select
                         multiple
-                        options={[null, objectValue, arrayValue].map((v, i) => ({ value: v, label: `option ${i}` }))}
+                        options={[null, objectValue, {}, arrayValue].map((v, i) => ({
+                            value: v,
+                            label: `option ${i}`
+                        }))}
                         onChange={console.log}
                     />
                 </DemoWrap>
