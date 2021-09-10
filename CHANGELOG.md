@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.6](https://github.com/UCloud-FE/react-components/compare/v1.2.5...v1.2.6) (2021-09-10)
+
+### Bug Fixes
+
+-   **Select:** change options reactKey to key first for fix non-str value ([2ab4dcd](https://github.com/UCloud-FE/react-components/commit/2ab4dcdbfd87a03e4e3de02634e67bf40546aa38))
+
 ### [1.2.5](https://github.com/UCloud-FE/react-components/compare/v1.2.4...v1.2.5) (2021-09-09)
 
 ### Bug Fixes
