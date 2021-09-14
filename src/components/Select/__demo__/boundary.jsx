@@ -114,6 +114,42 @@ class Demo extends React.Component {
                         <Option key="string">string key</Option>
                     </Select>
                 </DemoWrap>
+                <h2>老版搜索兼容告警</h2>
+                <DemoWrap>
+                    <Select
+                        multiple
+                        onChange={console.log}
+                        search={{
+                            handleSearch: (s, v, item) => {
+                                return (
+                                    ('' + v).indexOf(s) >= 0 ||
+                                    (typeof item.props.children === 'string' && item.props.children.indexOf(s) >= 0)
+                                );
+                            }
+                        }}
+                    >
+                        {new Array(100).fill(null).map((v, i) => (
+                            <Select.Option key={i} value={i}>
+                                {`option ${i}`}
+                            </Select.Option>
+                        ))}
+                    </Select>
+                </DemoWrap>
+                <DemoWrap>
+                    <Select
+                        multiple
+                        onChange={console.log}
+                        search={{
+                            handleSearch: (s, v, item) => {
+                                return (
+                                    ('' + v).indexOf(s) >= 0 ||
+                                    (typeof item.props.children === 'string' && item.props.children.indexOf(s) >= 0)
+                                );
+                            }
+                        }}
+                        options={new Array(100).fill(null).map((v, i) => ({ value: i, label: `option ${i}` }))}
+                    ></Select>
+                </DemoWrap>
                 <DemoA />
             </div>
         );

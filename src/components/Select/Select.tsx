@@ -32,9 +32,12 @@ import SelectContext from './SelectContext';
 import LOCALE from './locale/zh_CN';
 
 export const deprecatedLogForPopover = once(() => deprecatedLog('Select popover', 'popoverProps'));
-const warnLogForVirtualList = once(() => console.warn('Select virtualList only valid when use options'));
+const warnLogForVirtualList = once(() => console.error('Select virtualList only valid when use options'));
 const warnLogForCustomHeight = once(() =>
-    console.warn('CustomStyle.optionListMaxHeight is invalid when use virtualList, please use virtualList.height')
+    console.error('CustomStyle.optionListMaxHeight is invalid when use virtualList, please use virtualList.height')
+);
+const warnLogForSearchProps = once(() =>
+    console.error(`Don't use item.props in custom search, just use item as props.`)
 );
 
 const groupOptions = {
@@ -517,7 +520,18 @@ const Select = ({
             }
             if (typeof search === 'object' && search.handleSearch) {
                 // assign props for forward compatible
-                return search.handleSearch(searchValue, value, { ...props, props });
+                const beforeProps = { ...props };
+                if (options) beforeProps.children = beforeProps.label ?? beforeProps.value;
+                const itemInfo = { ...props };
+                if (!('props' in itemInfo)) {
+                    Object.defineProperty(itemInfo, 'props', {
+                        get: () => {
+                            warnLogForSearchProps();
+                            return beforeProps;
+                        }
+                    });
+                }
+                return search.handleSearch(searchValue, value, itemInfo);
             } else {
                 // use label for options case
                 const children = options ? props.label : props.children;

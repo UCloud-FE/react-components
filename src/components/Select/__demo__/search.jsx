@@ -38,6 +38,13 @@ const Demo = () => {
                     <Option value={3}>3</Option>
                 </Select>
             </div>
+            <h2>options search</h2>
+            <div className="demo-wrap">
+                <Select
+                    search
+                    options={new Array(100).fill(null).map((v, i) => ({ value: i, label: `option ${i}` }))}
+                ></Select>
+            </div>
         </div>
     );
 };
