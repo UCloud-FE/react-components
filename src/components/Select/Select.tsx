@@ -516,16 +516,18 @@ const Select = ({
                 return true;
             }
             if (typeof search === 'object' && search.handleSearch) {
+                // assign props for forward compatible
                 return search.handleSearch(searchValue, value, { ...props, props });
             } else {
-                const { children } = props;
+                // use label for options case
+                const children = options ? props.label : props.children;
                 return (
                     (value + '').indexOf(searchValue) >= 0 ||
                     (children && typeof children === 'string' && children.indexOf(searchValue) >= 0)
                 );
             }
         },
-        [search, searchValue]
+        [options, search, searchValue]
     );
 
     const childrenDataSource = useMemo(
