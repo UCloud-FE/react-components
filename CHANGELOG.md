@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.7](https://github.com/UCloud-FE/react-components/compare/v1.2.6...v1.2.7) (2021-09-14)
+
+### Bug Fixes
+
+-   **Select:** fix search for options label ([3b0bd44](https://github.com/UCloud-FE/react-components/commit/3b0bd44cf0f1db57b694f6b15e23bd0eb0d10724))
+
 ### [1.2.6](https://github.com/UCloud-FE/react-components/compare/v1.2.5...v1.2.6) (2021-09-10)
 
 ### Bug Fixes
