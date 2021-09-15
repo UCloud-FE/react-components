@@ -1,9 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import Popover from 'src/components/Popover';
 
 // demo start
-const { Placement } = Popover;
+const Placement = [
+    'topLeft',
+    'top',
+    'topRight',
+    'bottomLeft',
+    'bottom',
+    'bottomRight',
+    'leftTop',
+    'left',
+    'leftBottom',
+    'rightTop',
+    'right',
+    'rightBottom'
+];
 const Popup = () => <div style={{ height: 30, border: '1px solid #ddd', background: '#fff' }}>This is a popup</div>;
 const Content = props => (
     <button style={{ width: 100, height: 40, background: '#ddd', display: 'inline-block', margin: 5 }} {...props} />
