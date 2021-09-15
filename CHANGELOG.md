@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.8](https://github.com/UCloud-FE/react-components/compare/v1.2.7...v1.2.8) (2021-09-15)
+
+### Bug Fixes
+
+-   **Popover:** fix popover demo bug ([07e7457](https://github.com/UCloud-FE/react-components/commit/07e7457e9c4c6961921980e410a65139740e3456))
+-   **Select:** fix custom search item's children when use options ([ef54c73](https://github.com/UCloud-FE/react-components/commit/ef54c7383bdcda405f07322e1a7e66f2a921b6ab))
+
 ### [1.2.7](https://github.com/UCloud-FE/react-components/compare/v1.2.6...v1.2.7) (2021-09-14)
 
 ### Bug Fixes
