@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.9](https://github.com/UCloud-FE/react-components/compare/v1.2.8...v1.2.9) (2021-09-29)
+
+### Bug Fixes
+
+-   **Input:** fix status usage under context ([1dd5228](https://github.com/UCloud-FE/react-components/commit/1dd52285c054fac6f11df30f8b84cb8465b6e799))
+
 ### [1.2.8](https://github.com/UCloud-FE/react-components/compare/v1.2.7...v1.2.8) (2021-09-15)
 
 ### Bug Fixes
