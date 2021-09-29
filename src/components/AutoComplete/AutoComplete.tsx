@@ -2,14 +2,13 @@ import React, {
     ChangeEvent,
     KeyboardEvent,
     ReactNode,
-    HTMLAttributes,
     memo,
     useCallback,
     useRef,
     useState
 } from 'react';
 
-import Input from 'src/components/Input';
+import Input, { InputProps } from 'src/components/Input';
 import Popover from 'src/components/Popover';
 import SvgIcon from 'src/components/SvgIcon';
 import useUncontrolled from 'src/hooks/useUncontrolled';
@@ -19,8 +18,6 @@ import { Override } from 'src/type';
 
 import Popup, { ListRef } from './Popup';
 import { inputCls, loadingIconCls, SWrap } from './style';
-
-type InputProps = HTMLAttributes<HTMLDivElement>;
 
 interface Item {
     // 项的值
@@ -53,6 +50,8 @@ interface AutoCompleteProps {
     onFocus?: () => void;
     /** 失焦回调 */
     onBlur?: () => void;
+    /** 状态 */
+    status: InputProps['status'];
     /** @ignore */
     placeholder?: InputProps['placeholder'];
 }
@@ -72,6 +71,7 @@ const AutoComplete = ({
     onBlur,
     style,
     className,
+    status,
     placeholder
 }: AutoCompleteProps & Override<InputProps, AutoCompleteProps>) => {
     const [value, onChange] = useUncontrolled<string>(_value, defaultValue, _onChange);
@@ -148,6 +148,7 @@ const AutoComplete = ({
                     className={inputCls}
                     block
                     placeholder={placeholder}
+                    status={status}
                 />
             </Popover>
         </SWrap>

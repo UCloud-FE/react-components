@@ -18,6 +18,7 @@ const groupDataSource = (dataSource: TreeData[]): [Group, Key[], Key[]] => {
     const group: Group = {};
     const allKeys: Key[] = [];
     const allDisabledKeys: Key[] = [];
+    if (!dataSource) dataSource = [];
     const _groupData = (children: TreeData[], disabled?: boolean): [Key[], Key[]] => {
         let keys: Key[] = [];
         let disabledKeys: Key[] = [];
@@ -107,7 +108,7 @@ export type TreeRef = {
     inverse: () => void;
 };
 
-const defaultSearchHandle = (searchValue: string, dataSource: TreeData[]) => {
+const defaultSearchHandle = (searchValue: string, dataSource: TreeData[] = []) => {
     if (!searchValue) return { dataSource, count: null };
     let count = 0;
     const finalExpandedKeyMap: Record<Key, 1> = {};
@@ -158,7 +159,7 @@ const defaultSearchHandle = (searchValue: string, dataSource: TreeData[]) => {
 const CommonTree = forwardRef(
     (
         {
-            dataSource = [],
+            dataSource,
             disabled = false,
             multiple = false,
             selectedKeys: _selectedKeys,

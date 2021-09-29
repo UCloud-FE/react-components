@@ -54,13 +54,16 @@ const Search = function ({
 
     return (
         <SWrap>
-            <Input className={inputCls} suffix={suffix} prefix={prefix} onChange={handleChange} clearable block />
-            {loading ? (
-                <Loading
-                    loading={loading}
-                    className={loadingCls}
-                />
-            ) : null}
+            <Input
+                className={inputCls}
+                suffix={suffix}
+                prefix={prefix}
+                onChange={handleChange}
+                clearable
+                block
+                status="default"
+            />
+            {loading ? <Loading loading={loading} className={loadingCls} /> : null}
             {empty ? <div className={emptyTipCls}>{locale.empty}</div> : null}
             <div className={empty ? emptyContentCls : ''}>{children}</div>
         </SWrap>

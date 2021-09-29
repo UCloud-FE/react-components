@@ -2,7 +2,7 @@ import NumberInput from 'src/components/NumberInput';
 import Textarea from 'src/components/Textarea';
 import { ExportComponent, FunctionToClassComponent, Sizes } from 'src/type';
 
-import Input from './Input';
+import Input, { FullInputProps as InputProps } from './Input';
 import Search from './Search';
 
 // bind to avoid demo crash
@@ -23,5 +23,7 @@ const ExportClassInput = ExportComponent(ClassInput, {
     Textarea,
     Sizes
 });
+
+export type { InputProps };
 
 export default ExportClassInput;

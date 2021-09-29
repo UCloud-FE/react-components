@@ -9,7 +9,7 @@ export default class SearchInput extends Component {
         const { ...rest } = this.props;
         return (
             <TableContext.Consumer>
-                {({ handleSearch }) => <Input.Search onSearch={handleSearch} {...rest} />}
+                {({ handleSearch }) => <Input.Search status="default" onSearch={handleSearch} {...rest} />}
             </TableContext.Consumer>
         );
     }

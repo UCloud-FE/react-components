@@ -252,7 +252,13 @@ class Transfer extends PureComponent {
                 <div className={partContentCls}>
                     {search && (
                         <div className={searchCls}>
-                            <Input.Search block onSearch={onSearch} onChange={onSearch} disabled={disabled} />
+                            <Input.Search
+                                block
+                                onSearch={onSearch}
+                                onChange={onSearch}
+                                disabled={disabled}
+                                status="default"
+                            />
                         </div>
                     )}
                     {this.renderContent({

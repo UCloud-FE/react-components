@@ -43,7 +43,7 @@ export interface InputProps {
     /** 尺寸 */
     size?: Size;
     /** 状态 */
-    status?: 'error';
+    status?: 'default' | 'error';
     /** 展示变更为块占位 */
     block?: boolean;
     /** 点击 clear 按钮回调 */
@@ -66,6 +66,8 @@ export type InputRef = {
     /** input 元素 */
     input?: HTMLInputElement | null;
 };
+
+export type FullInputProps = InputProps & Override<InputHTMLAttributes<HTMLInputElement>, InputProps>;
 
 const Input = forwardRef(
     (
@@ -188,7 +190,7 @@ const Input = forwardRef(
         return (
             <SWrap
                 className={classnames(block && blockCls, className)}
-                {...{ size, focused, style, disabled, status: status || _status, customStyle }}
+                {...{ size, focused, style, disabled, status: _status || status, customStyle }}
                 empty={!value}
             >
                 <span className={inputWrapCls}>

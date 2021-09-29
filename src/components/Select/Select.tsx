@@ -356,7 +356,7 @@ const Popup = ({
 
     return (
         <MenuWrap>
-            {search && <SelectSearchInput onChange={handleSearchInput} value={searchValue} />}
+            {search && <SelectSearchInput onChange={handleSearchInput} value={searchValue} status="default" />}
             {children || options ? (
                 <BlockMenu
                     onChange={handleChange}
