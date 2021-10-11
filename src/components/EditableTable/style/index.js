@@ -54,20 +54,21 @@ export const AddBar = withProps()(
         return css`
             width: 100%;
             height: 60px;
-            background: ${DT.T_COLOR_BG_DEFAULT_LIGHT};
+            background: ${DT.T_TABLE_ROW_COLOR_BG_DEFAULT};
             color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
             cursor: pointer;
             text-align: center;
             line-height: 60px;
+            border-top: 1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
 
             .${btnCls} {
-                fill: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+                fill: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
             }
 
             :hover {
                 background: ${DT.T_COLOR_BG_DEFAULT_HOVER};
                 .${btnCls} {
-                    fill: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+                    fill: ${DT.T_COLOR_TEXT_PRIMARY_HOVER};
                 }
             }
 
