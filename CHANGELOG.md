@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.10](https://github.com/UCloud-FE/react-components/compare/v1.2.9...v1.2.10) (2021-10-12)
+
+### Features
+
+-   **Drawer:** support custom node closeHandle ([32a9aab](https://github.com/UCloud-FE/react-components/commit/32a9aab547f464ed4c79f902d310615c5f607f13))
+-   **EditableTable:** change some style ([dfef717](https://github.com/UCloud-FE/react-components/commit/dfef717c419420da82abcae9737e47cbeb26cf2d))
+
 ### [1.2.9](https://github.com/UCloud-FE/react-components/compare/v1.2.8...v1.2.9) (2021-09-29)
 
 ### Bug Fixes
