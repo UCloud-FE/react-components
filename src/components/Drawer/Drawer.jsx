@@ -52,8 +52,8 @@ class Drawer extends Component {
         getContainer: PropTypes.func,
         /** 弹出层的z-index */
         zIndex: PropTypes.number,
-        /** 传入 false/null 隐藏关闭控件 */
-        closeHandler: PropTypes.oneOf([null, false]),
+        /** 传入 false/null 隐藏关闭控件，或自定义控件 */
+        closeHandler: PropTypes.oneOfType([PropTypes.oneOf([null, false]), PropTypes.node]),
         /** @ignore */
         level: PropTypes.any
     };
