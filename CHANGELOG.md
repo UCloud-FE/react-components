@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.11](https://github.com/UCloud-FE/react-components/compare/v1.2.10...v1.2.11) (2021-10-12)
+
+### Bug Fixes
+
+-   **ZForm:** upgrade rc-form to fix function comp bug ([9bc1944](https://github.com/UCloud-FE/react-components/commit/9bc1944496477c58c5b3f3ae470c7ef4832ee42f))
+
 ### [1.2.10](https://github.com/UCloud-FE/react-components/compare/v1.2.9...v1.2.10) (2021-10-12)
 
 ### Features
