@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.12](https://github.com/UCloud-FE/react-components/compare/v1.2.11...v1.2.12) (2021-10-21)
+
+### Bug Fixes
+
+-   **Table:** fix uncontrolled change logic ([d0e9272](https://github.com/UCloud-FE/react-components/commit/d0e92729b28176fe2a32a53e97c06dc39dedb9f6))
+
 ### [1.2.11](https://github.com/UCloud-FE/react-components/compare/v1.2.10...v1.2.11) (2021-10-12)
 
 ### Bug Fixes
