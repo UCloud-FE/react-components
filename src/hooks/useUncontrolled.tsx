@@ -1,6 +1,6 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useMemo, useRef, useState } from 'react';
 
-import useIsInitial from './useIsInitial';
+// import once from 'src/utils/once';
 
 const useUncontrolled = <V, P = V, VT = V | undefined, U = never>(
     value: VT,
@@ -8,21 +8,28 @@ const useUncontrolled = <V, P = V, VT = V | undefined, U = never>(
     onChange?: (v: P, ...rest: U[]) => void,
     options?: { setter?: (e: P) => V }
 ): [V, (v: P) => void, (v: P) => void] => {
-    const isControlled = useMemo(() => value !== undefined, [value]);
-    const isInitial = useIsInitial();
+    const _isControlled = useMemo(() => value !== undefined, [value]);
+    const isControlledRef = useRef(_isControlled);
+
+    // const warningUncontrolledToControlled = useMemo(() => {
+    //     return once(() => console.error(`Can't change Component from controlled to uncontrolled`));
+    // }, []);
+    // const warningControlledToUncontrolled = useMemo(() => {
+    //     return once(() => console.error(`Can't change Component from controlled to uncontrolled`));
+    // }, []);
+
+    if (isControlledRef.current !== _isControlled) {
+        if (_isControlled) {
+            // warningUncontrolledToControlled();
+            isControlledRef.current = _isControlled;
+        } else {
+            // warningControlledToUncontrolled();
+            // don't change a controlled component to be uncontrolled to avoid unexpected undefined value
+        }
+    }
+    const isControlled = isControlledRef.current;
     const [v, setV] = useState<V>(() => (isControlled ? ((value as unknown) as V) : defaultValue));
     const cacheVRef = useRef(v);
-
-    useEffect(() => {
-        if (isInitial) return;
-        if (isControlled) {
-            // console.warn(`Can't change Component from uncontrolled to be controlled`);
-        } else {
-            // console.warn(`Can't change Component from controlled to be uncontrolled`);
-        }
-        // only update when isControlled change
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [isControlled]);
 
     const finalValue = isControlled ? ((value as unknown) as V) : cacheVRef.current;
 

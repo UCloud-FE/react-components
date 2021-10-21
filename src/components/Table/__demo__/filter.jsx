@@ -112,8 +112,9 @@ class Demo extends React.Component {
                                 filter => filter.key === 'controlledMultiple'
                             );
                             this.setState({
-                                controlledFilter: controlledFilter && controlledFilter.value,
-                                controlledMultipleFilter: controlledMultipleFilter && controlledMultipleFilter.value
+                                controlledFilter: controlledFilter == null ? null : controlledFilter.value,
+                                controlledMultipleFilter:
+                                    controlledMultipleFilter == null ? [] : controlledMultipleFilter.value
                             });
                         }}
                     />

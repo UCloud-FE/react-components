@@ -331,7 +331,7 @@ class Table extends Component {
         };
         _.each(filters, (filter, key) => {
             const column = _.find(columns, (column, i) => this.getColumnKey(column, i) === key);
-            if (!column || filter.value == null || (column.multiple && _.isEmpty(filter.value))) {
+            if (!column || filter.value == null || (column.filter.multiple && !filter.value.length)) {
                 delete filters[key];
             } else {
                 filter.column = column;
@@ -435,7 +435,7 @@ class Table extends Component {
         const newOptions = _.map(options, option => (_.isObject(option) ? option : { value: option }));
 
         const { value } = filterInfo;
-        const finalValue = value == null ? undefined : multiple && _.isEmpty(value) ? undefined : value;
+        const finalValue = value == null || (multiple && !value.length) ? null : value;
 
         return (
             <Select
