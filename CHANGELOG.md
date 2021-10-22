@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.13](https://github.com/UCloud-FE/react-components/compare/v1.2.12...v1.2.13) (2021-10-22)
+
+### Features
+
+-   **Card:** add SubArea ([93217ab](https://github.com/UCloud-FE/react-components/commit/93217abb1f25989ac30b7105f2c10360e99c4518))
+
 ### [1.2.12](https://github.com/UCloud-FE/react-components/compare/v1.2.11...v1.2.12) (2021-10-21)
 
 ### Bug Fixes
