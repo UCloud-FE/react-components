@@ -14,6 +14,8 @@ export const commentCls = prefixCls + '-comment';
 export const actionCls = prefixCls + '-action';
 export const contentCls = prefixCls + '-content';
 export const footerCls = prefixCls + '-footer';
+export const subAreaCls = prefixCls + '-sub-area';
+export const subAreaContentCls = prefixCls + '-sub-area-content';
 
 const sharedGutter = css`
     padding: 0 24px;
@@ -63,6 +65,37 @@ export const FooterWrap = withProps({
     padding-top: 12px;
     ${clearFixMixin};
 `);
+
+export const SubAreaWrap = withProps({
+    className: subAreaCls
+})(
+    styled('div')(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
+        return css`
+            .${titleCls} {
+                line-height: 22px;
+                font-size: 14px;
+                font-weight: bold;
+                margin-bottom: 16px;
+                color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+            }
+            .${subAreaContentCls} {
+                /* empty */
+            }
+            & + & {
+                &::before {
+                    content: ' ';
+                    display: block;
+                    height: 1px;
+                    background: ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
+                    margin: 16px 0;
+                }
+            }
+        `;
+    })
+);
 
 export const CardWrap = withProps()(
     styled('div')(props => {

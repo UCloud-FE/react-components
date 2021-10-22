@@ -20,6 +20,12 @@ const Demo = () => (
         <Card style={{ marginTop: 12 }}>
             <div style={{ background: '#e1e6f0', height: 50, padding: 10 }}>卡片本身无间距</div>
         </Card>
+        <Card style={{ marginTop: 12 }}>
+            <Card.Content>
+                <Card.SubArea title="xxxxx">XXXXXXXXX</Card.SubArea>
+                <Card.SubArea title="xxxxx">XXXXXXXXX</Card.SubArea>
+            </Card.Content>
+        </Card>
     </div>
 );
 // demo end

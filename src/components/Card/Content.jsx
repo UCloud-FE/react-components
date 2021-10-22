@@ -6,4 +6,4 @@ const Content = ({ ...rest }) => {
     return <ContentWrap {...rest} />;
 };
 
-export default Content;
+export default React.memo(Content);
