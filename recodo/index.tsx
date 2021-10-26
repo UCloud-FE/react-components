@@ -13,7 +13,8 @@ mod.registerModuleResolver(jsonResolver);
 mod.import({
     css: [
         'https://cdn.jsdelivr.net/npm/@ucloud-fe/react-components/dist/icon.min.css',
-        'https://cdn.jsdelivr.net/npm/recodo-doc@0.1.9/lib/doc.css'
+        'https://cdn.jsdelivr.net/npm/recodo-doc@0.1.9/lib/doc.css',
+        'https://cdn.jsdelivr.net/npm/@ucloud-fe/design-token-editor/dist/style.css'
     ]
 });
 
@@ -60,6 +61,11 @@ mod.config({
         'docs-data': {
             file: 'https://raw.githubusercontent.com/UCloud-FE/react-components/master/.recodo/data/docs.json',
             type: 'json'
+        },
+        'design-token-editor': {
+            js: 'https://cdn.jsdelivr.net/npm/@ucloud-fe/design-token-editor/dist/design-token-editor.umd.js',
+            type: 'amd',
+            dep: ['react', '@ucloud-fe/react-components']
         }
     }
 });
@@ -173,4 +179,23 @@ const renderInteractionDemo = (name: string, dom: string) => {
     return destroy;
 };
 
-export { renderDoc, renderInteractionDemo };
+const renderDesignTokenEditor = (dom: string) => {
+    let destroyAction: () => void;
+    let destroyed = false;
+    let destroy = () => {
+        if (destroyed) return;
+        destroyed = true;
+        if (!destroyAction) return;
+        destroyAction();
+    };
+    mod.import(['@ucloud-fe/react-components', 'react', 'react-dom', 'design-token-editor']).then(dependences => {
+        if (destroyed) return;
+        const [components, React, ReactDOM, Editor] = dependences as any;
+
+        ReactDOM.render(<Editor />, dom);
+        destroyAction = () => ReactDOM.unmountComponentAtNode(dom);
+    });
+    return destroy;
+};
+
+export { renderDoc, renderInteractionDemo, renderDesignTokenEditor };
