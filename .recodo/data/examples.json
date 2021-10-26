@@ -719,63 +719,14 @@
                     },
                     "collapseProps": {
                         "required": false,
-                        "tsType": {
-                            "name": "signature",
-                            "type": "object",
-                            "raw": "{\n    openKeys?: string[];\n    defaultOpenKeys?: string[];\n    onChange?: (keys: string[]) => void;\n    [key: string]: unknown;\n}",
-                            "signature": {
-                                "properties": [
-                                    {
-                                        "key": "openKeys",
-                                        "value": {
-                                            "name": "Array",
-                                            "elements": [{ "name": "string" }],
-                                            "raw": "string[]",
-                                            "required": false
-                                        }
-                                    },
-                                    {
-                                        "key": "defaultOpenKeys",
-                                        "value": {
-                                            "name": "Array",
-                                            "elements": [{ "name": "string" }],
-                                            "raw": "string[]",
-                                            "required": false
-                                        }
-                                    },
-                                    {
-                                        "key": "onChange",
-                                        "value": {
-                                            "name": "signature",
-                                            "type": "function",
-                                            "raw": "(keys: string[]) => void",
-                                            "signature": {
-                                                "arguments": [
-                                                    {
-                                                        "name": "keys",
-                                                        "type": {
-                                                            "name": "Array",
-                                                            "elements": [{ "name": "string" }],
-                                                            "raw": "string[]"
-                                                        }
-                                                    }
-                                                ],
-                                                "return": { "name": "void" }
-                                            },
-                                            "required": false
-                                        }
-                                    },
-                                    { "key": { "name": "string" }, "value": { "name": "unknown", "required": true } }
-                                ]
-                            }
-                        },
+                        "tsType": { "name": "CollapseProps" },
                         "description": { "description": "collapse 的配置，参考 collapse 组件", "tags": [] }
                     },
                     "search": {
                         "required": false,
                         "tsType": {
                             "name": "union",
-                            "raw": "true\n| {\n      /** 自定义搜索函数 */\n      handleSearch?: (\n          searchValue: string,\n          dataSource: TreeData[]\n      ) => {\n          dataSource: TreeData[];\n          count: number;\n          openKeys: Key[];\n      };\n  }",
+                            "raw": "| true\n| {\n      /** 自定义搜索函数 */\n      handleSearch?: (\n          searchValue: string,\n          dataSource: TreeData[]\n      ) => {\n          dataSource: TreeData[];\n          count: number;\n          openKeys: Key[];\n      };\n  }",
                             "elements": [
                                 { "name": "literal", "value": "true" },
                                 {
@@ -1196,76 +1147,48 @@
     },
     "Tooltip": {
         "Tooltip": {
-            "path": "Tooltip/Tooltip.jsx",
+            "path": "Tooltip/Tooltip.tsx",
             "name": "Tooltip",
             "info": {
                 "description": "",
                 "displayName": "Tooltip",
-                "methods": [
-                    {
-                        "name": "renderPopup",
-                        "docblock": null,
-                        "modifiers": [],
-                        "params": [{ "name": "theme", "type": null }],
-                        "returns": null
-                    }
-                ],
+                "methods": [],
                 "props": {
-                    "popup": {
-                        "type": { "name": "node" },
-                        "required": true,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
-                    "placement": {
-                        "type": { "name": "enum", "computed": true, "value": "Placement" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] },
-                        "defaultValue": { "value": "Placement[0]", "computed": true }
-                    },
-                    "popupClassName": {
-                        "type": { "name": "string" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
                     "arrow": {
-                        "type": { "name": "bool" },
                         "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": { "description": "是否显示箭头", "tags": [] },
                         "defaultValue": { "value": "true", "computed": false }
                     },
                     "theme": {
-                        "type": {
+                        "required": false,
+                        "tsType": {
                             "name": "union",
-                            "value": [
-                                {
-                                    "name": "enum",
-                                    "value": [
-                                        { "value": "'light'", "computed": false },
-                                        { "value": "'dark'", "computed": false }
-                                    ]
-                                },
-                                { "name": "object" }
+                            "raw": "'light' | 'dark'",
+                            "elements": [
+                                { "name": "literal", "value": "'light'" },
+                                { "name": "literal", "value": "'dark'" }
                             ]
                         },
-                        "required": false,
                         "description": { "description": "主题风格", "tags": [] },
                         "defaultValue": { "value": "'light'", "computed": false }
                     },
                     "customStyle": {
-                        "type": {
-                            "name": "shape",
-                            "value": {
-                                "popupWrapperPadding": {
-                                    "name": "string",
-                                    "description": "弹出层外层 padding",
-                                    "required": false
-                                }
+                        "required": false,
+                        "tsType": {
+                            "name": "signature",
+                            "type": "object",
+                            "raw": "{\n    /** 弹出层外层 padding */\n    popupWrapperPadding?: string;\n}",
+                            "signature": {
+                                "properties": [
+                                    { "key": "popupWrapperPadding", "value": { "name": "string", "required": false } }
+                                ]
                             }
                         },
-                        "required": false,
                         "description": { "description": "自定义样式", "tags": [] },
                         "defaultValue": { "value": "{}", "computed": false }
-                    }
+                    },
+                    "placement": { "defaultValue": { "value": "'topLeft'", "computed": false }, "required": false }
                 }
             }
         }
@@ -1285,7 +1208,7 @@
                 "methods": [],
                 "props": {
                     "value": {
-                        "required": true,
+                        "required": false,
                         "tsType": {
                             "name": "union",
                             "raw": "TDate | null",
@@ -1360,21 +1283,6 @@
         }
     },
     "ThemeProvider": {
-        "InnerDefaultThemeProvider": {
-            "path": "ThemeProvider/InnerDefaultThemeProvider.jsx",
-            "name": "InnerDefaultThemeProvider",
-            "info": {
-                "description": "",
-                "displayName": "InnerDefaultThemeProvider",
-                "methods": [],
-                "props": { "children": { "type": { "name": "node" }, "required": true, "description": "" } }
-            }
-        },
-        "ThemeGetterWithDefaultTheme": {
-            "path": "ThemeProvider/ThemeGetter.jsx",
-            "name": "ThemeGetterWithDefaultTheme",
-            "info": { "description": "", "displayName": "ThemeGetterWithDefaultTheme", "methods": [] }
-        },
         "ThemeProvider": {
             "path": "ThemeProvider/ThemeProvider.jsx",
             "name": "ThemeProvider",
@@ -1579,7 +1487,7 @@
                         "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
                     },
                     "children": {
-                        "required": true,
+                        "required": false,
                         "tsType": { "name": "ReactNode" },
                         "description": { "description": "面板内容", "tags": [] }
                     },
@@ -1711,15 +1619,22 @@
                     "children": {
                         "required": true,
                         "tsType": {
-                            "name": "Array",
+                            "name": "union",
+                            "raw": "ReactElement<TabPaneProps>[] | ReactNode",
                             "elements": [
                                 {
-                                    "name": "ReactElement",
-                                    "elements": [{ "name": "TabPaneProps" }],
-                                    "raw": "ReactElement<TabPaneProps>"
-                                }
-                            ],
-                            "raw": "ReactElement<TabPaneProps>[]"
+                                    "name": "Array",
+                                    "elements": [
+                                        {
+                                            "name": "ReactElement",
+                                            "elements": [{ "name": "TabPaneProps" }],
+                                            "raw": "ReactElement<TabPaneProps>"
+                                        }
+                                    ],
+                                    "raw": "ReactElement<TabPaneProps>[]"
+                                },
+                                { "name": "ReactNode" }
+                            ]
                         },
                         "description": { "description": "panes", "tags": [] }
                     },
@@ -3058,7 +2973,7 @@
     },
     "Select": {
         "Extra": {
-            "path": "Select/Extra.jsx",
+            "path": "Select/Extra.tsx",
             "name": "Extra",
             "info": {
                 "description": "",
@@ -3066,25 +2981,15 @@
                 "methods": [],
                 "props": {
                     "autoHidePopup": {
-                        "type": { "name": "bool" },
                         "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": { "description": "扩展区域被点击后是否自动关闭弹出层", "tags": [] }
-                    },
-                    "children": {
-                        "type": { "name": "node" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
-                    "onClick": {
-                        "type": { "name": "func" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
                     }
                 }
             }
         },
         "Group": {
-            "path": "Select/Group.jsx",
+            "path": "Select/Group.tsx",
             "name": "Group",
             "info": {
                 "description": "",
@@ -3092,255 +2997,205 @@
                 "methods": [],
                 "props": {
                     "title": {
-                        "type": { "name": "node" },
-                        "required": false,
+                        "required": true,
+                        "tsType": { "name": "ReactNode" },
                         "description": { "description": "标题内容", "tags": [] }
                     },
-                    "className": {
-                        "type": { "name": "string" },
+                    "styleType": {
                         "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
-                    "children": {
-                        "type": { "name": "node" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
-                    "allSelectedStatus": {
-                        "type": { "name": "string" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
-                    "multiple": {
-                        "type": { "name": "bool" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
-                    "selectAll": {
-                        "type": { "name": "func" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
-                    "unselectAll": {
-                        "type": { "name": "func" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                        "tsType": {
+                            "name": "union",
+                            "raw": "'collapse' | 'popover'",
+                            "elements": [
+                                { "name": "literal", "value": "'collapse'" },
+                                { "name": "literal", "value": "'popover'" }
+                            ]
+                        },
+                        "description": { "description": "为弹出菜单、或是折叠层", "tags": [] }
                     },
                     "groupKey": {
-                        "type": { "name": "any" },
                         "required": false,
-                        "description": { "description": "子菜单的唯一key，也用作collapse的panel的key", "tags": [] }
-                    }
-                }
-            }
-        },
-        "Option": {
-            "path": "Select/Option.jsx",
-            "name": "Option",
-            "info": {
-                "description": "",
-                "displayName": "Option",
-                "methods": [
-                    {
-                        "name": "getItemKey",
-                        "docblock": null,
-                        "modifiers": ["static"],
-                        "params": [{ "name": "item", "type": null }],
-                        "returns": null
-                    },
-                    {
-                        "name": "getVisible",
-                        "docblock": null,
-                        "modifiers": [],
-                        "params": [{ "name": "handleSearch", "type": null }],
-                        "returns": null
-                    }
-                ],
-                "props": {
-                    "value": {
-                        "type": { "name": "any" },
-                        "required": false,
-                        "description": { "description": "值", "tags": [] }
-                    },
-                    "className": {
-                        "type": { "name": "string" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                        "tsType": { "name": "Key" },
+                        "description": {
+                            "description": "子菜单的唯一 key，也用作 collapse 的 panel 的 key，不存在时使用 key 代替",
+                            "tags": []
+                        }
                     },
                     "disabled": {
-                        "type": { "name": "bool" },
                         "required": false,
-                        "description": { "description": "是否禁用", "tags": [] }
-                    },
-                    "onChange": {
-                        "type": { "name": "func" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
-                    "selected": {
-                        "type": { "name": "bool" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
-                    "multiple": {
-                        "type": { "name": "bool" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
-                    "children": {
-                        "type": { "name": "node" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                        "tsType": { "name": "boolean" },
+                        "description": { "description": "禁用", "tags": [] }
                     }
                 }
             }
         },
         "Select": {
-            "path": "Select/Select.jsx",
+            "path": "Select/Select.tsx",
             "name": "Select",
             "info": {
                 "description": "",
                 "displayName": "Select",
-                "methods": [
-                    {
-                        "name": "handleSearch",
-                        "docblock": null,
-                        "modifiers": [],
-                        "params": [
-                            { "name": "value", "type": null },
-                            { "name": "item", "type": null }
-                        ],
-                        "returns": null
-                    },
-                    {
-                        "name": "handleVisibleChange",
-                        "docblock": null,
-                        "modifiers": [],
-                        "params": [{ "name": "open", "type": null }],
-                        "returns": null
-                    },
-                    { "name": "hidePopup", "docblock": null, "modifiers": [], "params": [], "returns": null },
-                    { "name": "renderContent", "docblock": null, "modifiers": [], "params": [], "returns": null },
-                    {
-                        "name": "defaultRenderContent",
-                        "docblock": null,
-                        "modifiers": [],
-                        "params": [
-                            { "name": "value", "type": null },
-                            { "name": "valueChild", "type": null }
-                        ],
-                        "returns": null
-                    },
-                    { "name": "renderEmptyContent", "docblock": null, "modifiers": [], "params": [], "returns": null },
-                    { "name": "renderPopup", "docblock": null, "modifiers": [], "params": [], "returns": null },
-                    {
-                        "name": "renderOptions",
-                        "docblock": null,
-                        "modifiers": [],
-                        "params": [{ "name": "options", "type": null }],
-                        "returns": null
-                    },
-                    {
-                        "name": "renderExtra",
-                        "docblock": null,
-                        "modifiers": [],
-                        "params": [{ "name": "extra", "type": null }],
-                        "returns": null
-                    },
-                    { "name": "renderSelector", "docblock": null, "modifiers": [], "params": [], "returns": null },
-                    {
-                        "name": "defaultRenderSelector",
-                        "docblock": null,
-                        "modifiers": [],
-                        "params": [{ "name": "content", "type": null }],
-                        "returns": null
-                    }
-                ],
+                "methods": [],
                 "props": {
-                    "children": {
-                        "type": { "name": "node" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
                     "value": {
-                        "type": { "name": "any" },
                         "required": false,
+                        "tsType": { "name": "Key" },
                         "description": { "description": "当前值，controlled", "tags": [] }
                     },
                     "defaultValue": {
-                        "type": { "name": "any" },
                         "required": false,
+                        "tsType": { "name": "Key" },
                         "description": { "description": "默认值，uncontrolled", "tags": [] }
                     },
                     "placeholder": {
-                        "type": { "name": "node" },
                         "required": false,
+                        "tsType": { "name": "ReactNode" },
                         "description": { "description": "无选项时显示内容", "tags": [] }
                     },
                     "onChange": {
-                        "type": { "name": "func" },
                         "required": false,
-                        "description": { "description": "修改时的回调", "tags": [] },
-                        "defaultValue": { "value": "() => {}", "computed": false }
+                        "tsType": {
+                            "name": "signature",
+                            "type": "function",
+                            "raw": "(value: Key | Key[]) => void",
+                            "signature": {
+                                "arguments": [
+                                    {
+                                        "name": "value",
+                                        "type": {
+                                            "name": "union",
+                                            "raw": "Key | Key[]",
+                                            "elements": [
+                                                { "name": "Key" },
+                                                { "name": "Array", "elements": [{ "name": "Key" }], "raw": "Key[]" }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "return": { "name": "void" }
+                            }
+                        },
+                        "description": { "description": "修改时的回调", "tags": [] }
                     },
                     "options": {
-                        "type": { "name": "array" },
                         "required": false,
+                        "tsType": {
+                            "name": "Array",
+                            "elements": [
+                                {
+                                    "name": "signature",
+                                    "type": "object",
+                                    "raw": "{\n    /** 选项展示 */\n    label?: ReactNode;\n    /** 选项 value，不可重复 */\n    value: Key;\n}",
+                                    "signature": {
+                                        "properties": [
+                                            { "key": "label", "value": { "name": "ReactNode", "required": false } },
+                                            { "key": "value", "value": { "name": "Key", "required": true } }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "raw": "{\n    /** 选项展示 */\n    label?: ReactNode;\n    /** 选项 value，不可重复 */\n    value: Key;\n}[]"
+                        },
                         "description": { "description": "快速设置选项", "tags": [] }
                     },
                     "extra": {
-                        "type": {
+                        "required": false,
+                        "tsType": {
                             "name": "union",
-                            "value": [
-                                { "name": "shape", "value": { "content": { "name": "node", "required": true } } },
-                                { "name": "node" },
-                                { "name": "func" }
+                            "raw": "{ content: ReactNode } | ReactNode | ((hidePopup: () => void) => ReactNode)",
+                            "elements": [
+                                {
+                                    "name": "signature",
+                                    "type": "object",
+                                    "raw": "{ content: ReactNode }",
+                                    "signature": {
+                                        "properties": [
+                                            { "key": "content", "value": { "name": "ReactNode", "required": true } }
+                                        ]
+                                    }
+                                },
+                                { "name": "ReactNode" },
+                                { "name": "unknown" }
                             ]
                         },
-                        "required": false,
                         "description": {
                             "description": "在尾部增加附加内容，会脱离选项流容器，超高度时不会一起滚动，如需在选项中嵌入附加内容，可使用 Select.Extra",
                             "tags": []
                         }
                     },
-                    "className": {
-                        "type": { "name": "string" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
                     "multiple": {
-                        "type": { "name": "bool" },
                         "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": { "description": "是否多选", "tags": [] }
                     },
                     "showSelectAll": {
-                        "type": { "name": "bool" },
                         "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": { "description": "是否显示全选", "tags": [] }
                     },
                     "disabled": {
-                        "type": { "name": "bool" },
                         "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": { "description": "是否禁用", "tags": [] }
                     },
                     "renderContent": {
-                        "type": { "name": "func" },
                         "required": false,
+                        "tsType": {
+                            "name": "signature",
+                            "type": "function",
+                            "raw": "(value?: Key | Key[], valueChild?: ReactNode[]) => ReactNode",
+                            "signature": {
+                                "arguments": [
+                                    {
+                                        "name": "value",
+                                        "type": {
+                                            "name": "union",
+                                            "raw": "Key | Key[]",
+                                            "elements": [
+                                                { "name": "Key" },
+                                                { "name": "Array", "elements": [{ "name": "Key" }], "raw": "Key[]" }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "valueChild",
+                                        "type": {
+                                            "name": "Array",
+                                            "elements": [{ "name": "ReactNode" }],
+                                            "raw": "ReactNode[]"
+                                        }
+                                    }
+                                ],
+                                "return": { "name": "ReactNode" }
+                            }
+                        },
                         "description": {
                             "description": "如何渲染选中项的展示",
                             "tags": [
+                                { "title": "param", "description": "当前 select 的值", "type": null, "name": "value" },
                                 {
                                     "title": "param",
-                                    "description": "当前 select 的值",
-                                    "type": { "type": "NameExpression", "name": "any" },
-                                    "name": "value"
+                                    "description": "当前值对应的展示内容（为性能考虑，只提供前 20 个选项，如果需要获取所有，请自行拿 value 获取）",
+                                    "type": null,
+                                    "name": "valueChild"
                                 }
                             ]
                         }
                     },
                     "renderSelector": {
-                        "type": { "name": "func" },
                         "required": false,
+                        "tsType": {
+                            "name": "signature",
+                            "type": "function",
+                            "raw": "(content: ReactNode, visible: boolean) => ReactNode",
+                            "signature": {
+                                "arguments": [
+                                    { "name": "content", "type": { "name": "ReactNode" } },
+                                    { "name": "visible", "type": { "name": "boolean" } }
+                                ],
+                                "return": { "name": "ReactNode" }
+                            }
+                        },
                         "description": {
                             "description": "自定义渲染选择器",
                             "tags": [
@@ -3360,8 +3215,121 @@
                         }
                     },
                     "renderPopup": {
-                        "type": { "name": "func" },
                         "required": false,
+                        "tsType": {
+                            "name": "signature",
+                            "type": "function",
+                            "raw": "(\n    options: {\n        handleVisible: (visible: boolean) => void;\n        onChange: (v: Key | Key[]) => void;\n        value?: Key | Key[];\n        /** @ignore */\n        children?: ReactNode;\n    } & Pick<SelectProps, 'multiple' | 'extra' | 'search' | 'options'>\n) => ReactNode",
+                            "signature": {
+                                "arguments": [
+                                    {
+                                        "name": "options",
+                                        "type": {
+                                            "name": "intersection",
+                                            "raw": "{\n    handleVisible: (visible: boolean) => void;\n    onChange: (v: Key | Key[]) => void;\n    value?: Key | Key[];\n    /** @ignore */\n    children?: ReactNode;\n} & Pick<SelectProps, 'multiple' | 'extra' | 'search' | 'options'>",
+                                            "elements": [
+                                                {
+                                                    "name": "signature",
+                                                    "type": "object",
+                                                    "raw": "{\n    handleVisible: (visible: boolean) => void;\n    onChange: (v: Key | Key[]) => void;\n    value?: Key | Key[];\n    /** @ignore */\n    children?: ReactNode;\n}",
+                                                    "signature": {
+                                                        "properties": [
+                                                            {
+                                                                "key": "handleVisible",
+                                                                "value": {
+                                                                    "name": "signature",
+                                                                    "type": "function",
+                                                                    "raw": "(visible: boolean) => void",
+                                                                    "signature": {
+                                                                        "arguments": [
+                                                                            {
+                                                                                "name": "visible",
+                                                                                "type": { "name": "boolean" }
+                                                                            }
+                                                                        ],
+                                                                        "return": { "name": "void" }
+                                                                    },
+                                                                    "required": true
+                                                                }
+                                                            },
+                                                            {
+                                                                "key": "onChange",
+                                                                "value": {
+                                                                    "name": "signature",
+                                                                    "type": "function",
+                                                                    "raw": "(v: Key | Key[]) => void",
+                                                                    "signature": {
+                                                                        "arguments": [
+                                                                            {
+                                                                                "name": "v",
+                                                                                "type": {
+                                                                                    "name": "union",
+                                                                                    "raw": "Key | Key[]",
+                                                                                    "elements": [
+                                                                                        { "name": "Key" },
+                                                                                        {
+                                                                                            "name": "Array",
+                                                                                            "elements": [
+                                                                                                { "name": "Key" }
+                                                                                            ],
+                                                                                            "raw": "Key[]"
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            }
+                                                                        ],
+                                                                        "return": { "name": "void" }
+                                                                    },
+                                                                    "required": true
+                                                                }
+                                                            },
+                                                            {
+                                                                "key": "value",
+                                                                "value": {
+                                                                    "name": "union",
+                                                                    "raw": "Key | Key[]",
+                                                                    "elements": [
+                                                                        { "name": "Key" },
+                                                                        {
+                                                                            "name": "Array",
+                                                                            "elements": [{ "name": "Key" }],
+                                                                            "raw": "Key[]"
+                                                                        }
+                                                                    ],
+                                                                    "required": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "key": "children",
+                                                                "value": { "name": "ReactNode", "required": false }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "name": "Pick",
+                                                    "elements": [
+                                                        { "name": "SelectProps" },
+                                                        {
+                                                            "name": "union",
+                                                            "raw": "'multiple' | 'extra' | 'search' | 'options'",
+                                                            "elements": [
+                                                                { "name": "literal", "value": "'multiple'" },
+                                                                { "name": "literal", "value": "'extra'" },
+                                                                { "name": "literal", "value": "'search'" },
+                                                                { "name": "literal", "value": "'options'" }
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "raw": "Pick<SelectProps, 'multiple' | 'extra' | 'search' | 'options'>"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "return": { "name": "ReactNode" }
+                            }
+                        },
                         "description": {
                             "description": "自定义渲染弹出内容",
                             "tags": [
@@ -3386,88 +3354,169 @@
                                 {
                                     "title": "param",
                                     "description": "select 的当前值",
-                                    "type": { "type": "NameExpression", "name": "any" },
+                                    "type": null,
                                     "name": "options.value"
                                 }
                             ]
                         }
                     },
                     "search": {
-                        "type": {
+                        "required": false,
+                        "tsType": {
                             "name": "union",
-                            "value": [
-                                { "name": "enum", "value": [{ "value": "true", "computed": false }] },
-                                { "name": "shape", "value": { "handleSearch": { "name": "func", "required": false } } }
+                            "raw": "| true\n| {\n      /**\n       * 自定义搜索\n       * @argument searchValue - 搜索的值\n       * @argument value - option的值\n       */\n      handleSearch?: (searchValue: string, value: Key, s: any) => boolean;\n      /** 搜索值 受控 */\n      searchValue?: string;\n      /** 默认搜索值 非受控 */\n      defaultSearchValue?: string;\n      /** 搜索值变化回调 */\n      onSearchValueChange?: (searchValue: string) => void;\n  }",
+                            "elements": [
+                                { "name": "literal", "value": "true" },
+                                {
+                                    "name": "signature",
+                                    "type": "object",
+                                    "raw": "{\n    /**\n     * 自定义搜索\n     * @argument searchValue - 搜索的值\n     * @argument value - option的值\n     */\n    handleSearch?: (searchValue: string, value: Key, s: any) => boolean;\n    /** 搜索值 受控 */\n    searchValue?: string;\n    /** 默认搜索值 非受控 */\n    defaultSearchValue?: string;\n    /** 搜索值变化回调 */\n    onSearchValueChange?: (searchValue: string) => void;\n}",
+                                    "signature": {
+                                        "properties": [
+                                            {
+                                                "key": "handleSearch",
+                                                "value": {
+                                                    "name": "signature",
+                                                    "type": "function",
+                                                    "raw": "(searchValue: string, value: Key, s: any) => boolean",
+                                                    "signature": {
+                                                        "arguments": [
+                                                            { "name": "searchValue", "type": { "name": "string" } },
+                                                            { "name": "value", "type": { "name": "Key" } },
+                                                            { "name": "s", "type": { "name": "any" } }
+                                                        ],
+                                                        "return": { "name": "boolean" }
+                                                    },
+                                                    "required": false
+                                                }
+                                            },
+                                            { "key": "searchValue", "value": { "name": "string", "required": false } },
+                                            {
+                                                "key": "defaultSearchValue",
+                                                "value": { "name": "string", "required": false }
+                                            },
+                                            {
+                                                "key": "onSearchValueChange",
+                                                "value": {
+                                                    "name": "signature",
+                                                    "type": "function",
+                                                    "raw": "(searchValue: string) => void",
+                                                    "signature": {
+                                                        "arguments": [
+                                                            { "name": "searchValue", "type": { "name": "string" } }
+                                                        ],
+                                                        "return": { "name": "void" }
+                                                    },
+                                                    "required": false
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
                             ]
                         },
-                        "required": false,
                         "description": {
-                            "description": "- 是否展示搜索框，可以为true或者Object\n- 为Object时可传入handleSearch对搜索筛选进行自定义",
-                            "tags": [
-                                { "title": "argument", "description": "搜索的值", "type": null, "name": "searchValue" },
-                                { "title": "argument", "description": "option的值", "type": null, "name": "value" },
-                                { "title": "argument", "description": "option的引用", "type": null, "name": "item" }
-                            ]
+                            "description": "- 是否展示搜索框，可以为 true 或者 Object\n- 为 Object 时可传入 handleSearch 对搜索筛选进行自定义",
+                            "tags": []
                         }
                     },
                     "size": {
-                        "type": {
-                            "name": "enum",
-                            "value": [
-                                { "value": "'sm'", "computed": false },
-                                { "value": "'md'", "computed": false },
-                                { "value": "'lg'", "computed": false }
-                            ]
-                        },
                         "required": false,
+                        "tsType": { "name": "Size" },
                         "description": { "description": "尺寸", "tags": [] },
                         "defaultValue": { "value": "'md'", "computed": false }
                     },
                     "popover": {
-                        "type": { "name": "object" },
                         "required": false,
+                        "tsType": { "name": "any" },
                         "description": {
                             "description": "弹出层的popover props",
                             "tags": [{ "title": "deprecated", "description": "请使用popoverProps替换" }]
                         }
                     },
                     "popoverProps": {
-                        "type": { "name": "object" },
                         "required": false,
+                        "tsType": { "name": "any" },
                         "description": { "description": "弹出层的popover props", "tags": [] }
                     },
                     "onVisibleChange": {
-                        "type": { "name": "func" },
                         "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] },
-                        "defaultValue": { "value": "() => {}", "computed": false }
+                        "tsType": {
+                            "name": "signature",
+                            "type": "function",
+                            "raw": "(visible?: boolean) => void",
+                            "signature": {
+                                "arguments": [{ "name": "visible", "type": { "name": "boolean" } }],
+                                "return": { "name": "void" }
+                            }
+                        },
+                        "description": {
+                            "description": "",
+                            "tags": [
+                                { "title": "deprecated", "description": "请勿使用" },
+                                { "title": "ignore", "description": null }
+                            ]
+                        },
+                        "defaultValue": { "value": "noop", "computed": true }
                     },
                     "locale": {
-                        "type": { "name": "object" },
                         "required": false,
+                        "tsType": { "name": "LOCALE" },
                         "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
                     },
                     "customStyle": {
-                        "type": {
-                            "name": "shape",
-                            "value": {
-                                "optionListMaxHeight": {
-                                    "name": "union",
-                                    "value": [{ "name": "number" }, { "name": "string" }],
-                                    "description": "列表最大高度",
-                                    "required": false
-                                },
-                                "popupMaxWidth": { "name": "string", "required": false }
+                        "required": false,
+                        "tsType": {
+                            "name": "signature",
+                            "type": "object",
+                            "raw": "{\n    /** 列表最大高度 */\n    optionListMaxHeight?: number | string;\n    /** 弹出菜单的最大宽度  */\n    popupMaxWidth?: string;\n    /** 弹出菜单的宽度 */\n    popupWidth?: string;\n}",
+                            "signature": {
+                                "properties": [
+                                    {
+                                        "key": "optionListMaxHeight",
+                                        "value": {
+                                            "name": "union",
+                                            "raw": "number | string",
+                                            "elements": [{ "name": "number" }, { "name": "string" }],
+                                            "required": false
+                                        }
+                                    },
+                                    { "key": "popupMaxWidth", "value": { "name": "string", "required": false } },
+                                    { "key": "popupWidth", "value": { "name": "string", "required": false } }
+                                ]
                             }
                         },
-                        "required": false,
-                        "description": { "description": "自定义样式", "tags": [] },
-                        "defaultValue": { "value": "{}", "computed": false }
+                        "description": { "description": "自定义样式", "tags": [] }
                     },
                     "emptyContent": {
-                        "type": { "name": "node" },
                         "required": false,
+                        "tsType": { "name": "ReactNode" },
                         "description": { "description": "可选性为空时展示内容", "tags": [] }
+                    },
+                    "virtualList": {
+                        "required": false,
+                        "tsType": {
+                            "name": "union",
+                            "raw": "| boolean\n| {\n      simple?: true;\n      height?: number;\n  }",
+                            "elements": [
+                                { "name": "boolean" },
+                                {
+                                    "name": "signature",
+                                    "type": "object",
+                                    "raw": "{\n    simple?: true;\n    height?: number;\n}",
+                                    "signature": {
+                                        "properties": [
+                                            {
+                                                "key": "simple",
+                                                "value": { "name": "literal", "value": "true", "required": false }
+                                            },
+                                            { "key": "height", "value": { "name": "number", "required": false } }
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        "description": { "description": "启用虚拟列表，仅使用 options 时生效", "tags": [] }
                     }
                 }
             }
@@ -3487,19 +3536,7 @@
         "Card": {
             "path": "Radio/Card.tsx",
             "name": "Card",
-            "info": {
-                "description": "",
-                "displayName": "Card",
-                "methods": [],
-                "props": {
-                    "title": { "required": true, "tsType": { "name": "ReactNode" }, "description": "" },
-                    "children": { "required": true, "tsType": { "name": "ReactNode" }, "description": "" },
-                    "checked": { "required": true, "tsType": { "name": "boolean" }, "description": "" },
-                    "disabled": { "required": true, "tsType": { "name": "boolean" }, "description": "" },
-                    "indeterminate": { "required": true, "tsType": { "name": "boolean" }, "description": "" },
-                    "multiple": { "required": true, "tsType": { "name": "boolean" }, "description": "" }
-                }
-            }
+            "info": { "description": "", "displayName": "Card", "methods": [] }
         },
         "Group": {
             "path": "Radio/Group.jsx",
@@ -3705,7 +3742,13 @@
                     "disabledLabel": {
                         "type": { "name": "node" },
                         "required": false,
-                        "description": { "description": "", "tags": [{ "title": "deprecated", "description": "弃用" }] }
+                        "description": {
+                            "description": "",
+                            "tags": [
+                                { "title": "ignore", "description": null },
+                                { "title": "deprecated", "description": "弃用" }
+                            ]
+                        }
                     },
                     "multiple": {
                         "type": { "name": "bool" },
@@ -3723,8 +3766,8 @@
                 "displayName": "RadioIcon",
                 "methods": [],
                 "props": {
-                    "checked": { "required": true, "tsType": { "name": "boolean" }, "description": "" },
-                    "disabled": { "required": true, "tsType": { "name": "boolean" }, "description": "" }
+                    "checked": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                    "disabled": { "required": false, "tsType": { "name": "boolean" }, "description": "" }
                 }
             }
         }
@@ -4032,55 +4075,41 @@
     },
     "PopConfirm": {
         "PopConfirm": {
-            "path": "PopConfirm/PopConfirm.jsx",
+            "path": "PopConfirm/PopConfirm.tsx",
             "name": "PopConfirm",
             "info": {
                 "description": "",
                 "displayName": "PopConfirm",
-                "methods": [
-                    { "name": "onConfirm", "docblock": null, "modifiers": [], "params": [], "returns": null },
-                    { "name": "onCancel", "docblock": null, "modifiers": [], "params": [], "returns": null },
-                    { "name": "renderPopup", "docblock": null, "modifiers": [], "params": [], "returns": null }
-                ],
+                "methods": [],
                 "props": {
-                    "popup": {
-                        "type": { "name": "node" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
-                    "defaultVisible": {
-                        "type": { "name": "bool" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
-                    "visible": {
-                        "type": { "name": "bool" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
-                    "onVisibleChange": {
-                        "type": { "name": "func" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] },
-                        "defaultValue": { "value": "() => {}", "computed": false }
-                    },
                     "locale": {
-                        "type": { "name": "object" },
                         "required": false,
+                        "tsType": { "name": "LOCALE" },
                         "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
                     },
                     "onConfirm": {
-                        "type": { "name": "func" },
                         "required": false,
+                        "tsType": {
+                            "name": "signature",
+                            "type": "function",
+                            "raw": "() => void",
+                            "signature": { "arguments": [], "return": { "name": "void" } }
+                        },
                         "description": { "description": "确认按钮回调", "tags": [] },
-                        "defaultValue": { "value": "() => {}", "computed": false }
+                        "defaultValue": { "value": "noop", "computed": true }
                     },
                     "onCancel": {
-                        "type": { "name": "func" },
                         "required": false,
+                        "tsType": {
+                            "name": "signature",
+                            "type": "function",
+                            "raw": "() => void",
+                            "signature": { "arguments": [], "return": { "name": "void" } }
+                        },
                         "description": { "description": "取消按钮回调", "tags": [] },
-                        "defaultValue": { "value": "() => {}", "computed": false }
-                    }
+                        "defaultValue": { "value": "noop", "computed": true }
+                    },
+                    "defaultVisible": { "defaultValue": { "value": "false", "computed": false }, "required": false }
                 }
             }
         }
@@ -5215,248 +5244,186 @@
     },
     "Menu": {
         "Item": {
-            "path": "Menu/Item.jsx",
+            "path": "Menu/Item.tsx",
             "name": "Item",
             "info": {
                 "description": "",
                 "displayName": "Item",
-                "methods": [
-                    {
-                        "name": "getItemKey",
-                        "docblock": null,
-                        "modifiers": ["static"],
-                        "params": [{ "name": "item", "type": null }],
-                        "returns": null
-                    }
-                ],
+                "methods": [],
                 "props": {
                     "itemKey": {
-                        "type": { "name": "any" },
                         "required": false,
-                        "description": { "description": "item的唯一键", "tags": [] }
+                        "tsType": { "name": "Key" },
+                        "description": { "description": "item的唯一键，不传使用 key 作为键值", "tags": [] },
+                        "defaultValue": { "value": "''", "computed": false }
                     },
                     "disabled": {
-                        "type": { "name": "bool" },
                         "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": { "description": "是否禁用", "tags": [] }
                     },
                     "tooltip": {
-                        "type": { "name": "union", "value": [{ "name": "node" }, { "name": "object" }] },
                         "required": false,
+                        "tsType": {
+                            "name": "union",
+                            "raw": "ReactNode | any",
+                            "elements": [{ "name": "ReactNode" }, { "name": "any" }]
+                        },
                         "description": {
                             "description": "tooltip 提示，可以为文本或 node，也可以是 tooltip 的 props object",
                             "tags": []
                         }
                     },
-                    "uid": {
-                        "type": { "name": "string" },
+                    "isFirst": {
                         "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
                     },
-                    "selected": {
-                        "type": { "name": "bool" },
+                    "isLast": {
                         "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
-                    "multiple": {
-                        "type": { "name": "bool" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
-                    "onSelect": {
-                        "type": { "name": "func" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
-                    "children": {
-                        "type": { "name": "node" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
-                    "className": {
-                        "type": { "name": "string" },
-                        "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
                     }
                 }
             }
         },
         "Menu": {
-            "path": "Menu/Menu.jsx",
+            "path": "Menu/Menu.tsx",
             "name": "Menu",
             "info": {
                 "description": "",
                 "displayName": "Menu",
-                "methods": [
-                    {
-                        "name": "getAllSelectedStatus",
-                        "docblock": null,
-                        "modifiers": [],
-                        "params": [{ "name": "groupUid", "type": null }],
-                        "returns": null
-                    },
-                    {
-                        "name": "getItemSelected",
-                        "docblock": null,
-                        "modifiers": [],
-                        "params": [{ "name": "itemUid", "type": null }],
-                        "returns": null
-                    },
-                    {
-                        "name": "getItemKey",
-                        "docblock": null,
-                        "modifiers": [],
-                        "params": [{ "name": "itemUid", "type": null }],
-                        "returns": null
-                    },
-                    {
-                        "name": "_selectItem",
-                        "docblock": null,
-                        "modifiers": [],
-                        "params": [
-                            { "name": "selectedKeys", "type": null },
-                            { "name": "selected", "type": null },
-                            { "name": "uid", "type": null }
-                        ],
-                        "returns": null
-                    },
-                    {
-                        "name": "onSelect",
-                        "docblock": null,
-                        "modifiers": [],
-                        "params": [
-                            { "name": "selected", "type": null },
-                            { "name": "uid", "type": null }
-                        ],
-                        "returns": null
-                    },
-                    {
-                        "name": "onMultipleSelect",
-                        "docblock": null,
-                        "modifiers": [],
-                        "params": [
-                            { "name": "selected", "type": null },
-                            { "name": "groupUid", "type": null }
-                        ],
-                        "returns": null
-                    },
-                    {
-                        "name": "renderChildren",
-                        "docblock": null,
-                        "modifiers": [],
-                        "params": [
-                            { "name": "children", "type": null },
-                            { "name": "prefix", "type": null }
-                        ],
-                        "returns": null
-                    }
-                ],
+                "methods": [],
                 "props": {
                     "selectedKeys": {
-                        "type": { "name": "array" },
                         "required": false,
+                        "tsType": { "name": "Array", "elements": [{ "name": "Key" }], "raw": "Key[]" },
                         "description": { "description": "选中的菜单项的key，controlled", "tags": [] }
                     },
                     "defaultSelectedKeys": {
-                        "type": { "name": "array" },
                         "required": false,
+                        "tsType": { "name": "Array", "elements": [{ "name": "Key" }], "raw": "Key[]" },
                         "description": { "description": "默认选中的菜单项的key，uncontrolled", "tags": [] },
                         "defaultValue": { "value": "[]", "computed": false }
                     },
                     "onChange": {
-                        "type": { "name": "func" },
                         "required": false,
-                        "description": { "description": "选中变化时的回调", "tags": [] },
-                        "defaultValue": { "value": "() => {}", "computed": false }
+                        "tsType": {
+                            "name": "signature",
+                            "type": "function",
+                            "raw": "(keys: Key[]) => void",
+                            "signature": {
+                                "arguments": [
+                                    {
+                                        "name": "keys",
+                                        "type": { "name": "Array", "elements": [{ "name": "Key" }], "raw": "Key[]" }
+                                    }
+                                ],
+                                "return": { "name": "void" }
+                            }
+                        },
+                        "description": { "description": "选中变化时的回调", "tags": [] }
                     },
                     "multiple": {
-                        "type": { "name": "bool" },
                         "required": false,
-                        "description": { "description": "是否支持多选", "tags": [] }
+                        "tsType": { "name": "boolean" },
+                        "description": { "description": "是否支持多选", "tags": [] },
+                        "defaultValue": { "value": "false", "computed": false }
                     },
                     "selectable": {
-                        "type": { "name": "bool" },
                         "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": { "description": "是否可选", "tags": [] },
                         "defaultValue": { "value": "true", "computed": false }
                     },
-                    "collapse": {
-                        "type": { "name": "object" },
-                        "required": false,
-                        "description": {
-                            "description": "",
-                            "tags": [{ "title": "deprecated", "description": "使用 collapseProps 替代" }]
-                        }
-                    },
-                    "collapseProps": {
-                        "type": { "name": "object" },
-                        "required": false,
-                        "description": { "description": "collapse 的配置，参考 collapse 组件", "tags": [] }
-                    },
                     "showSelectAll": {
-                        "type": { "name": "bool" },
                         "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": { "description": "是否显示全选，多选时有效", "tags": [] }
                     },
                     "block": {
-                        "type": { "name": "bool" },
                         "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": {
                             "description": "是否使用块元素显示模式，去除宽高限制，撑满容器，去除外阴影、border，方便放置在自定义容器中",
                             "tags": []
                         }
                     },
                     "disabled": {
-                        "type": { "name": "bool" },
                         "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": { "description": "是否禁用", "tags": [] }
                     },
+                    "collapseProps": {
+                        "required": false,
+                        "tsType": { "name": "CollapseProps" },
+                        "description": { "description": "collapse 的配置，参考 collapse 组件", "tags": [] }
+                    },
+                    "virtualList": {
+                        "required": false,
+                        "tsType": {
+                            "name": "union",
+                            "raw": "| boolean\n| {\n      // 简易模式，如确认每个 item 高度一致且不会变化可启用，可一定程度上优化性能\n      simple?: true;\n      // 虚拟滚动的高度，默认为 200\n      height?: number;\n  }",
+                            "elements": [
+                                { "name": "boolean" },
+                                {
+                                    "name": "signature",
+                                    "type": "object",
+                                    "raw": "{\n    // 简易模式，如确认每个 item 高度一致且不会变化可启用，可一定程度上优化性能\n    simple?: true;\n    // 虚拟滚动的高度，默认为 200\n    height?: number;\n}",
+                                    "signature": {
+                                        "properties": [
+                                            {
+                                                "key": "simple",
+                                                "value": { "name": "literal", "value": "true", "required": false }
+                                            },
+                                            { "key": "height", "value": { "name": "number", "required": false } }
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        "description": {
+                            "description": "启用虚拟滚动，启用后需要注意所有 item 需提供 key（可不提供 itemKey 和 subMenuKey，会使用 key 作为对应），且 Item key 和 SubMenu 不可重复，目前不支持 collapse 类 SubMenu",
+                            "tags": []
+                        }
+                    },
                     "customStyle": {
-                        "type": {
-                            "name": "shape",
-                            "value": {
-                                "maxHeight": { "name": "string", "description": "菜单的最大高度", "required": false },
-                                "maxWidth": { "name": "string", "description": "菜单的最大宽度", "required": false }
+                        "required": false,
+                        "tsType": {
+                            "name": "signature",
+                            "type": "object",
+                            "raw": "{\n    /** 菜单的最大高度 */\n    maxHeight?: string;\n    /** 菜单的最大宽度 */\n    maxWidth?: string;\n}",
+                            "signature": {
+                                "properties": [
+                                    { "key": "maxHeight", "value": { "name": "string", "required": false } },
+                                    { "key": "maxWidth", "value": { "name": "string", "required": false } }
+                                ]
                             }
                         },
-                        "required": false,
                         "description": { "description": "自定义样式", "tags": [] }
                     },
-                    "theme": {
-                        "type": { "name": "any" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
-                    "themeType": {
-                        "type": { "name": "any" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
-                    "children": {
-                        "type": { "name": "node" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
-                    "itemTree": {
-                        "type": { "name": "any" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
                     "locale": {
-                        "type": { "name": "object" },
                         "required": false,
+                        "tsType": { "name": "LOCALE" },
                         "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
                     },
-                    "className": {
-                        "type": { "name": "string" },
+                    "dataSource": {
                         "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                        "tsType": {
+                            "name": "ReturnType",
+                            "elements": [{ "name": "groupChildrenAsDataSource" }],
+                            "raw": "ReturnType<typeof groupChildrenAsDataSource>"
+                        },
+                        "description": {
+                            "description": "",
+                            "tags": [{ "title": "ignore", "description": "use for inner usage" }]
+                        }
                     }
                 }
             }
         },
         "SubMenu": {
-            "path": "Menu/SubMenu.jsx",
+            "path": "Menu/SubMenu.tsx",
             "name": "SubMenu",
             "info": {
                 "description": "",
@@ -5464,70 +5431,44 @@
                 "methods": [],
                 "props": {
                     "title": {
-                        "type": { "name": "node" },
-                        "required": false,
+                        "required": true,
+                        "tsType": { "name": "ReactNode" },
                         "description": { "description": "标题内容", "tags": [] }
                     },
                     "styleType": {
-                        "type": {
-                            "name": "enum",
-                            "value": [
-                                { "value": "'collapse'", "computed": false },
-                                { "value": "'popover'", "computed": false }
+                        "required": false,
+                        "tsType": {
+                            "name": "union",
+                            "raw": "'collapse' | 'popover'",
+                            "elements": [
+                                { "name": "literal", "value": "'collapse'" },
+                                { "name": "literal", "value": "'popover'" }
                             ]
                         },
-                        "required": false,
                         "description": { "description": "为弹出菜单、或是折叠层", "tags": [] },
                         "defaultValue": { "value": "'collapse'", "computed": false }
                     },
                     "subMenuKey": {
-                        "type": { "name": "any" },
                         "required": false,
-                        "description": { "description": "子菜单的唯一key，也用作collapse的panel的key", "tags": [] }
+                        "tsType": { "name": "Key" },
+                        "description": {
+                            "description": "子菜单的唯一 key，也用作 collapse 的 panel 的 key，不存在时使用 key 代替",
+                            "tags": []
+                        }
                     },
                     "disabled": {
-                        "type": { "name": "bool" },
                         "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": { "description": "禁用", "tags": [] }
                     },
-                    "uid": {
-                        "type": { "name": "string" },
+                    "isFirst": {
                         "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
                     },
-                    "multiple": {
-                        "type": { "name": "bool" },
+                    "isLast": {
                         "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
-                    "allSelectedStatus": {
-                        "type": { "name": "string" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
-                    "onMultipleSelect": {
-                        "type": { "name": "func" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
-                    "renderChildren": {
-                        "type": { "name": "func" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
-                    "children": {
-                        "type": { "name": "node" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
-                    "locale": {
-                        "type": { "name": "object" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
-                    "className": {
-                        "type": { "name": "string" },
-                        "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
                     }
                 }
@@ -5737,7 +5678,14 @@
                     },
                     "status": {
                         "required": false,
-                        "tsType": { "name": "literal", "value": "'error'" },
+                        "tsType": {
+                            "name": "union",
+                            "raw": "'default' | 'error'",
+                            "elements": [
+                                { "name": "literal", "value": "'default'" },
+                                { "name": "literal", "value": "'error'" }
+                            ]
+                        },
                         "description": { "description": "状态", "tags": [] }
                     },
                     "block": {
@@ -5820,7 +5768,7 @@
     },
     "Icon": {
         "Icon": {
-            "path": "Icon/Icon.jsx",
+            "path": "Icon/Icon.tsx",
             "name": "Icon",
             "info": {
                 "description": { "description": "图标控件", "tags": [] },
@@ -5828,25 +5776,22 @@
                 "methods": [],
                 "props": {
                     "type": {
-                        "type": { "name": "string" },
                         "required": true,
+                        "tsType": { "name": "string" },
                         "description": { "description": "图标类型", "tags": [] }
                     },
                     "spin": {
-                        "type": { "name": "bool" },
                         "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": { "description": "是否旋转", "tags": [] }
                     },
                     "prefix": {
-                        "type": { "name": "string" },
                         "required": false,
-                        "description": { "description": "自定义 icon 类名前缀，使用自定义图标库时使用", "tags": [] },
-                        "defaultValue": { "value": "'icon__'", "computed": false }
-                    },
-                    "className": {
-                        "type": { "name": "string" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                        "tsType": { "name": "string" },
+                        "description": {
+                            "description": "自定义 icon 类名前缀，使用自定义图标库时使用，默认为 icon\\_\\_",
+                            "tags": []
+                        }
                     }
                 }
             }
@@ -6570,14 +6515,20 @@
                     },
                     "closeHandler": {
                         "type": {
-                            "name": "enum",
+                            "name": "union",
                             "value": [
-                                { "value": "null", "computed": false },
-                                { "value": "false", "computed": false }
+                                {
+                                    "name": "enum",
+                                    "value": [
+                                        { "value": "null", "computed": false },
+                                        { "value": "false", "computed": false }
+                                    ]
+                                },
+                                { "name": "node" }
                             ]
                         },
                         "required": false,
-                        "description": { "description": "传入 false/null 隐藏关闭控件", "tags": [] }
+                        "description": { "description": "传入 false/null 隐藏关闭控件，或自定义控件", "tags": [] }
                     },
                     "level": {
                         "type": { "name": "any" },
@@ -6638,7 +6589,11 @@
                         },
                         "description": { "description": "修改回调", "tags": [] }
                     },
-                    "rules": { "required": false, "tsType": { "name": "any" }, "description": "" },
+                    "rules": {
+                        "required": false,
+                        "tsType": { "name": "any" },
+                        "description": { "description": "自定义规则", "tags": [] }
+                    },
                     "size": {
                         "required": false,
                         "tsType": { "name": "Size" },
@@ -6654,7 +6609,10 @@
                                 { "name": "Array", "elements": [{ "name": "string" }], "raw": "string[]" }
                             ]
                         },
-                        "description": { "description": "输入和展示的字符串格式，为数组时，第一个", "tags": [] }
+                        "description": {
+                            "description": "输入和展示的字符串格式，为数组时，第一个用作展示，并影响时间面板",
+                            "tags": []
+                        }
                     },
                     "nullable": {
                         "required": false,
@@ -6824,6 +6782,7 @@
                         },
                         "description": ""
                     },
+                    "tip": { "required": false, "tsType": { "name": "ReactNode" }, "description": "" },
                     "locale": { "required": false, "tsType": { "name": "LOCALE" }, "description": "" }
                 }
             }
@@ -6892,7 +6851,7 @@
                                 { "name": "Array", "elements": [{ "name": "string" }], "raw": "string[]" }
                             ]
                         },
-                        "description": { "description": "输入和展示的字符串格式，为数组时，第一个", "tags": [] }
+                        "description": { "description": "输入和展示的字符串格式，为数组时，第一个用作展示", "tags": [] }
                     },
                     "nullable": {
                         "required": false,
@@ -7241,14 +7200,14 @@
                                 { "name": "Array", "elements": [{ "name": "string" }], "raw": "string[]" }
                             ]
                         },
-                        "description": { "description": "输入和展示的字符串格式，为数组时，第一个", "tags": [] }
+                        "description": { "description": "输入和展示的字符串格式，为数组时，第一个用作展示", "tags": [] }
                     },
                     "display": {
                         "required": false,
                         "tsType": {
                             "name": "signature",
                             "type": "object",
-                            "raw": "{\n    date?: {\n        /** @deprecated 设置日期展示格式，使用 format 替换 */\n        format?: string;\n        /** @deprecated 是否展示日期选择，仅时间选择需求使用 TimePicker 替换 */\n        show?: boolean;\n    };\n    /** 设置为 false，隐藏时 */\n    hour?: boolean;\n    /** 设置为 false，隐藏分 */\n    minute?: boolean;\n    /** 设置为 false，隐藏秒 */\n    second?: boolean;\n    range?: {\n        /** @deprecated */\n        format?: string;\n    };\n}",
+                            "raw": "{\n    date?: {\n        /** @deprecated 设置日期展示格式，使用 format 替换 */\n        format?: string;\n        /** @deprecated 是否展示日期选择，仅时间选择需求使用 TimePicker 替换 */\n        show?: boolean;\n    };\n    /** 设置为 false，隐藏时 */\n    hour?: boolean;\n    /** 设置为 false，隐藏分 */\n    minute?: boolean;\n    /** 设置为 false，隐藏秒 */\n    second?: boolean;\n    range?: {\n        /** @deprecated 新版无用 */\n        format?: string;\n    };\n}",
                             "signature": {
                                 "properties": [
                                     {
@@ -7277,7 +7236,7 @@
                                         "value": {
                                             "name": "signature",
                                             "type": "object",
-                                            "raw": "{\n    /** @deprecated */\n    format?: string;\n}",
+                                            "raw": "{\n    /** @deprecated 新版无用 */\n    format?: string;\n}",
                                             "signature": {
                                                 "properties": [
                                                     {
@@ -7293,8 +7252,13 @@
                             }
                         },
                         "description": {
-                            "description": "展示格式，除了 range 以外的属性会传入 DatePicker 和 Month 中（按照 type）",
-                            "tags": []
+                            "description": "",
+                            "tags": [
+                                {
+                                    "title": "deprecated",
+                                    "description": "使用 format 替换\n展示格式，会传入 DatePicker 和 Month 中（按照 type）"
+                                }
+                            ]
                         },
                         "defaultValue": { "value": "{}", "computed": false }
                     },
@@ -7488,10 +7452,57 @@
                         "tsType": { "name": "any" },
                         "description": { "description": "自定义时间选择框弹出层props", "tags": [] }
                     },
-                    "datePickerProps": {
+                    "customRender": {
                         "required": false,
-                        "tsType": { "name": "any" },
-                        "description": { "description": "自定义 datePicker 的 props", "tags": [] }
+                        "tsType": {
+                            "name": "signature",
+                            "type": "object",
+                            "raw": "{\n    /** 自定义渲染只读时（非自定义选项）的展示内容（时间区域） */\n    readonlyDisplay?: (value: [TDate | null, TDate | null]) => ReactNode;\n}",
+                            "signature": {
+                                "properties": [
+                                    {
+                                        "key": "readonlyDisplay",
+                                        "value": {
+                                            "name": "signature",
+                                            "type": "function",
+                                            "raw": "(value: [TDate | null, TDate | null]) => ReactNode",
+                                            "signature": {
+                                                "arguments": [
+                                                    {
+                                                        "name": "value",
+                                                        "type": {
+                                                            "name": "tuple",
+                                                            "raw": "[TDate | null, TDate | null]",
+                                                            "elements": [
+                                                                {
+                                                                    "name": "union",
+                                                                    "raw": "TDate | null",
+                                                                    "elements": [
+                                                                        { "name": "TDate" },
+                                                                        { "name": "null" }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "name": "union",
+                                                                    "raw": "TDate | null",
+                                                                    "elements": [
+                                                                        { "name": "TDate" },
+                                                                        { "name": "null" }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
+                                                "return": { "name": "ReactNode" }
+                                            },
+                                            "required": false
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "description": { "description": "自定义渲染", "tags": [] }
                     },
                     "rangeTip": {
                         "required": false,
@@ -7510,7 +7521,7 @@
     },
     "ConfigProvider": {
         "ConfigProvider": {
-            "path": "ConfigProvider/ConfigProvider.jsx",
+            "path": "ConfigProvider/ConfigProvider.tsx",
             "name": "ConfigProvider",
             "info": {
                 "description": "",
@@ -7518,34 +7529,87 @@
                 "methods": [],
                 "props": {
                     "children": {
-                        "type": { "name": "node" },
-                        "required": false,
+                        "required": true,
+                        "tsType": { "name": "ReactNode" },
                         "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
                     },
                     "forwardPopupContainer": {
-                        "type": { "name": "bool" },
                         "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": {
-                            "description": "控制全局的 forwardPopupContainer 属性，默认为 true，为 false 时默认关闭 datepicker、select、actionList 等内部的 forwardPopupContainer",
+                            "description": "",
+                            "tags": [
+                                {
+                                    "title": "deprecated",
+                                    "description": "使用 popover 替换\n默认为 true。\n控制全局的 forwardPopupContainer 属性，默认为 true，为 false 时默认关闭 datepicker、select、actionList 等内部的 forwardPopupContainer"
+                                }
+                            ]
+                        }
+                    },
+                    "popover": {
+                        "required": false,
+                        "tsType": {
+                            "name": "signature",
+                            "type": "object",
+                            "raw": "{\n    /** 控制弹出层默认容器 */\n    getPopupContainer?: (triggerNode: Element) => Element;\n    /** 滚动时是否重新定位 */\n    forceAlignWhenScroll?: boolean;\n    /** 控制默认的 forwardPopupContainer */\n    forwardPopupContainer?: boolean | ((triggerNode: Element) => Element);\n    /** 配置不影响 Popover 组件 */\n    ignorePopover?: boolean;\n}",
+                            "signature": {
+                                "properties": [
+                                    {
+                                        "key": "getPopupContainer",
+                                        "value": {
+                                            "name": "signature",
+                                            "type": "function",
+                                            "raw": "(triggerNode: Element) => Element",
+                                            "signature": {
+                                                "arguments": [{ "name": "triggerNode", "type": { "name": "Element" } }],
+                                                "return": { "name": "Element" }
+                                            },
+                                            "required": false
+                                        }
+                                    },
+                                    {
+                                        "key": "forceAlignWhenScroll",
+                                        "value": { "name": "boolean", "required": false }
+                                    },
+                                    {
+                                        "key": "forwardPopupContainer",
+                                        "value": {
+                                            "name": "union",
+                                            "raw": "boolean | ((triggerNode: Element) => Element)",
+                                            "elements": [{ "name": "boolean" }, { "name": "unknown" }],
+                                            "required": false
+                                        }
+                                    },
+                                    { "key": "ignorePopover", "value": { "name": "boolean", "required": false } }
+                                ]
+                            }
+                        },
+                        "description": {
+                            "description": "全局控制 popover 类组件行为，datepicker、select、actionList",
                             "tags": []
                         }
                     },
                     "preventFormDefaultAction": {
-                        "type": { "name": "bool" },
                         "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": {
-                            "description": "阻止 Form 组件的默认事件，避免在回车时触发页面提交",
+                            "description": "默认为 true。\n阻止 Form 组件的默认事件，避免在回车时触发页面提交，原生 form 在某些情况下会触发原生的提交，由于现在基本 SPA，页面提交概率不大，故默认屏蔽 Form 组件该行文，如需开启，可设置为 false",
                             "tags": []
                         }
                     },
-                    "theme": {
-                        "type": { "name": "object" },
+                    "iconDefaultPrefix": {
                         "required": false,
+                        "tsType": { "name": "string" },
+                        "description": { "description": "设置 Icon 组件的默认 prefix，默认为 icon__，", "tags": [] }
+                    },
+                    "theme": {
+                        "required": false,
+                        "tsType": { "name": "any" },
                         "description": { "description": "提供时会使用 ThemeProvider 包裹", "tags": [] }
                     },
                     "locale": {
-                        "type": { "name": "object" },
                         "required": false,
+                        "tsType": { "name": "AllLocaleMap" },
                         "description": { "description": "提供时会使用 LocaleProvider 包裹", "tags": [] }
                     }
                 }
@@ -7651,7 +7715,7 @@
     },
     "Collapse": {
         "Collapse": {
-            "path": "Collapse/Collapse.jsx",
+            "path": "Collapse/Collapse.tsx",
             "name": "Collapse",
             "info": {
                 "description": "",
@@ -7659,132 +7723,129 @@
                 "methods": [],
                 "props": {
                     "openKeys": {
-                        "type": { "name": "any" },
                         "required": false,
-                        "description": { "description": "激活的面板，multiple时为数组值，controlled", "tags": [] }
+                        "tsType": { "name": "Array", "elements": [{ "name": "Key" }], "raw": "Key[]" },
+                        "description": { "description": "激活的面板，multiple 时为数组值，controlled", "tags": [] }
                     },
                     "defaultOpenKeys": {
-                        "type": { "name": "array" },
                         "required": false,
-                        "description": { "description": "默认激活的面板，multiple时为数组值，uncontrolled", "tags": [] }
+                        "tsType": { "name": "Array", "elements": [{ "name": "Key" }], "raw": "Key[]" },
+                        "description": {
+                            "description": "默认激活的面板，multiple 时为数组值，uncontrolled",
+                            "tags": []
+                        }
+                    },
+                    "onChange": {
+                        "required": false,
+                        "tsType": {
+                            "name": "signature",
+                            "type": "function",
+                            "raw": "(keys: Key[]) => void",
+                            "signature": {
+                                "arguments": [
+                                    {
+                                        "name": "keys",
+                                        "type": { "name": "Array", "elements": [{ "name": "Key" }], "raw": "Key[]" }
+                                    }
+                                ],
+                                "return": { "name": "void" }
+                            }
+                        },
+                        "description": { "description": "变化回调", "tags": [] }
                     },
                     "multiple": {
-                        "type": { "name": "bool" },
                         "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": { "description": "是否可以多个同时打开", "tags": [] },
                         "defaultValue": { "value": "true", "computed": false }
                     },
-                    "selectable": {
-                        "type": { "name": "bool" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] },
-                        "defaultValue": { "value": "true", "computed": false }
-                    },
-                    "theme": {
-                        "type": { "name": "any" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
-                    "onChange": {
-                        "type": { "name": "func" },
-                        "required": false,
-                        "description": { "description": "变化回调", "tags": [] }
-                    },
                     "component": {
-                        "type": { "name": "elementType" },
                         "required": false,
-                        "description": { "description": "自定义包裹容器组件", "tags": [] }
-                    },
-                    "children": {
-                        "type": { "name": "node" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                        "tsType": { "name": "ElementType" },
+                        "description": {
+                            "description": "",
+                            "tags": [{ "title": "ignore", "description": "自定义包裹容器组件" }]
+                        }
                     }
                 }
             }
         },
         "Panel": {
-            "path": "Collapse/Panel.jsx",
+            "path": "Collapse/Panel.tsx",
             "name": "Panel",
             "info": {
                 "description": "",
                 "displayName": "Panel",
-                "methods": [
-                    {
-                        "name": "toggle",
-                        "docblock": null,
-                        "modifiers": [],
-                        "params": [{ "name": "_open", "type": null }],
-                        "returns": null
-                    },
-                    { "name": "renderTitle", "docblock": null, "modifiers": [], "params": [], "returns": null },
-                    { "name": "renderChildren", "docblock": null, "modifiers": [], "params": [], "returns": null }
-                ],
+                "methods": [],
                 "props": {
                     "title": {
-                        "type": { "name": "union", "value": [{ "name": "node" }, { "name": "func" }] },
                         "required": false,
+                        "tsType": {
+                            "name": "union",
+                            "raw": "ReactNode | ((options: { open: boolean; disabled?: boolean; toggle: () => void }) => ReactNode)",
+                            "elements": [{ "name": "ReactNode" }, { "name": "unknown" }]
+                        },
                         "description": {
-                            "description": "标题项，为函数时会传入面板当前open和disabled状态，和toggle函数",
+                            "description": "标题项，为函数时会传入面板当前 open 和 disabled 状态，和 toggle 函数",
                             "tags": []
                         }
                     },
-                    "children": {
-                        "type": { "name": "node" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
                     "onChange": {
-                        "type": { "name": "func" },
                         "required": false,
+                        "tsType": {
+                            "name": "signature",
+                            "type": "function",
+                            "raw": "(open: boolean) => void",
+                            "signature": {
+                                "arguments": [{ "name": "open", "type": { "name": "boolean" } }],
+                                "return": { "name": "void" }
+                            }
+                        },
                         "description": { "description": "修改回调", "tags": [] }
                     },
                     "open": {
-                        "type": { "name": "bool" },
                         "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": { "description": "是否展开，controlled", "tags": [] }
                     },
                     "defaultOpen": {
-                        "type": { "name": "bool" },
                         "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": { "description": "默认展开状态，uncontrolled", "tags": [] }
                     },
                     "forceRender": {
-                        "type": { "name": "bool" },
                         "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": { "description": "是否强制渲染", "tags": [] }
                     },
                     "ignoreUpdateWhenClose": {
-                        "type": { "name": "bool" },
                         "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": { "description": "关闭时子组件不会更新", "tags": [] }
                     },
                     "disabled": {
-                        "type": { "name": "bool" },
                         "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": { "description": "是否禁用", "tags": [] }
                     },
                     "panelKey": {
-                        "type": { "name": "any" },
                         "required": false,
-                        "description": { "description": "唯一键值", "tags": [] }
+                        "tsType": { "name": "Key" },
+                        "description": { "description": "唯一键值", "tags": [] },
+                        "defaultValue": { "value": "''", "computed": false }
                     },
                     "titlePosition": {
-                        "type": {
-                            "name": "enum",
-                            "value": [
-                                { "value": "'top'", "computed": false },
-                                { "value": "'bottom'", "computed": false }
+                        "required": false,
+                        "tsType": {
+                            "name": "union",
+                            "raw": "'top' | 'bottom'",
+                            "elements": [
+                                { "name": "literal", "value": "'top'" },
+                                { "name": "literal", "value": "'bottom'" }
                             ]
                         },
-                        "required": false,
                         "description": { "description": "title的位置", "tags": [] },
                         "defaultValue": { "value": "'top'", "computed": false }
-                    },
-                    "multiple": {
-                        "type": { "name": "bool" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
                     }
                 }
             }
@@ -7793,122 +7854,78 @@
     "Col": {},
     "Checkbox": {
         "Checkbox": {
-            "path": "Checkbox/Checkbox.jsx",
+            "path": "Checkbox/Checkbox.tsx",
             "name": "Checkbox",
             "info": {
                 "description": "",
                 "displayName": "Checkbox",
-                "methods": [
-                    {
-                        "name": "onClick",
-                        "docblock": null,
-                        "modifiers": [],
-                        "params": [
-                            { "name": "props", "type": null },
-                            { "name": "e", "type": null }
-                        ],
-                        "returns": null
-                    },
-                    {
-                        "name": "renderCheckbox",
-                        "docblock": null,
-                        "modifiers": [],
-                        "params": [{ "name": "props", "type": null }],
-                        "returns": null
-                    },
-                    {
-                        "name": "renderCheckboxCard",
-                        "docblock": null,
-                        "modifiers": [],
-                        "params": [{ "name": "props", "type": null }],
-                        "returns": null
-                    }
-                ],
+                "methods": [],
                 "props": {
-                    "children": {
-                        "type": { "name": "node" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
-                    "className": {
-                        "type": { "name": "string" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
                     "checked": {
-                        "type": { "name": "bool" },
                         "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": { "description": "是否选中", "tags": [] }
                     },
                     "defaultChecked": {
-                        "type": { "name": "bool" },
                         "required": false,
-                        "description": { "description": "默认是否选中", "tags": [] }
+                        "tsType": { "name": "boolean" },
+                        "description": { "description": "默认是否选中", "tags": [] },
+                        "defaultValue": { "value": "false", "computed": false }
                     },
                     "disabled": {
-                        "type": { "name": "bool" },
                         "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": { "description": "是否禁用", "tags": [] }
                     },
                     "onChange": {
-                        "type": { "name": "func" },
                         "required": false,
-                        "description": { "description": "点选时的回调", "tags": [] },
-                        "defaultValue": { "value": "() => {}", "computed": false }
+                        "tsType": {
+                            "name": "signature",
+                            "type": "function",
+                            "raw": "(value: boolean) => void",
+                            "signature": {
+                                "arguments": [{ "name": "value", "type": { "name": "boolean" } }],
+                                "return": { "name": "void" }
+                            }
+                        },
+                        "description": { "description": "点选时的回调", "tags": [] }
                     },
                     "indeterminate": {
-                        "type": { "name": "bool" },
                         "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": { "description": "一般用于全选，部分选中的状态", "tags": [] }
                     },
-                    "onClick": {
-                        "type": { "name": "func" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] },
-                        "defaultValue": { "value": "() => {}", "computed": false }
-                    },
                     "value": {
-                        "type": { "name": "any" },
                         "required": false,
-                        "description": { "description": "checkbox的值", "tags": [] }
+                        "tsType": { "name": "Value" },
+                        "description": { "description": "checkbox的值", "tags": [] },
+                        "defaultValue": { "value": "''", "computed": false }
                     },
                     "size": {
-                        "type": {
-                            "name": "enum",
-                            "value": [
-                                { "value": "'sm'", "computed": false },
-                                { "value": "'md'", "computed": false },
-                                { "value": "'lg'", "computed": false }
-                            ]
-                        },
                         "required": false,
+                        "tsType": { "name": "Size" },
                         "description": { "description": "尺寸，styleType 为 card 时无效", "tags": [] }
                     },
                     "styleType": {
-                        "type": {
-                            "name": "enum",
-                            "value": [
-                                { "value": "'default'", "computed": false },
-                                { "value": "'card'", "computed": false }
-                            ]
-                        },
                         "required": false,
+                        "tsType": { "name": "StyleType" },
                         "description": { "description": "样式风格", "tags": [] }
                     },
                     "title": {
-                        "type": { "name": "node" },
                         "required": false,
+                        "tsType": { "name": "ReactNode" },
                         "description": { "description": "标题，styleType 为 card 时使用", "tags": [] }
                     },
                     "disabledLabel": {
-                        "type": { "name": "node" },
                         "required": false,
-                        "description": { "description": "禁用标识，styleType 为 card 时使用", "tags": [] }
-                    },
-                    "multiple": {
-                        "type": { "name": "bool" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                        "tsType": { "name": "ReactNode" },
+                        "description": {
+                            "description": "",
+                            "tags": [
+                                { "title": "ignore", "description": null },
+                                { "title": "deprecated", "description": "弃用" }
+                            ]
+                        }
                     }
                 }
             }
@@ -7921,75 +7938,78 @@
                 "displayName": "CheckboxIcon",
                 "methods": [],
                 "props": {
-                    "indeterminate": { "required": true, "tsType": { "name": "boolean" }, "description": "" },
-                    "checked": { "required": true, "tsType": { "name": "boolean" }, "description": "" },
-                    "disabled": { "required": true, "tsType": { "name": "boolean" }, "description": "" }
+                    "indeterminate": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                    "checked": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                    "disabled": { "required": false, "tsType": { "name": "boolean" }, "description": "" }
                 }
             }
         },
         "Group": {
-            "path": "Checkbox/Group.jsx",
+            "path": "Checkbox/Group.tsx",
             "name": "Group",
             "info": {
                 "description": "",
                 "displayName": "Group",
-                "methods": [
-                    { "name": "renderOptions", "docblock": null, "modifiers": [], "params": [], "returns": null }
-                ],
+                "methods": [],
                 "props": {
                     "value": {
-                        "type": { "name": "array" },
                         "required": false,
+                        "tsType": { "name": "Array", "elements": [{ "name": "Value" }], "raw": "Value[]" },
                         "description": { "description": "当前值，controlled", "tags": [] }
                     },
                     "defaultValue": {
-                        "type": { "name": "array" },
                         "required": false,
+                        "tsType": { "name": "Array", "elements": [{ "name": "Value" }], "raw": "Value[]" },
                         "description": { "description": "默认值，uncontrolled", "tags": [] },
                         "defaultValue": { "value": "[]", "computed": false }
                     },
                     "onChange": {
-                        "type": { "name": "func" },
                         "required": false,
-                        "description": { "description": "修改时的回调", "tags": [] },
-                        "defaultValue": { "value": "() => {}", "computed": false }
+                        "tsType": {
+                            "name": "signature",
+                            "type": "function",
+                            "raw": "(value: Value[], selectedStatus: SelectedStatus) => void",
+                            "signature": {
+                                "arguments": [
+                                    {
+                                        "name": "value",
+                                        "type": { "name": "Array", "elements": [{ "name": "Value" }], "raw": "Value[]" }
+                                    },
+                                    { "name": "selectedStatus", "type": { "name": "SelectedStatus" } }
+                                ],
+                                "return": { "name": "void" }
+                            }
+                        },
+                        "description": { "description": "修改时的回调", "tags": [] }
                     },
                     "options": {
-                        "type": { "name": "array" },
                         "required": false,
+                        "tsType": {
+                            "name": "Array",
+                            "elements": [{ "name": "unknown" }],
+                            "raw": "({ label: ReactNode } & CheckboxProps)[]"
+                        },
                         "description": { "description": "快速定义选项", "tags": [] }
                     },
                     "disabled": {
-                        "type": { "name": "bool" },
                         "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": { "description": "禁用", "tags": [] }
                     },
                     "size": {
-                        "type": { "name": "enum", "computed": true, "value": "Checkbox.Size" },
                         "required": false,
+                        "tsType": { "name": "Size" },
                         "description": { "description": "尺寸", "tags": [] }
                     },
                     "styleType": {
-                        "type": { "name": "enum", "computed": true, "value": "Checkbox.StyleType" },
                         "required": false,
+                        "tsType": { "name": "StyleType" },
                         "description": { "description": "样式风格", "tags": [] }
                     },
                     "children": {
-                        "type": { "name": "node" },
                         "required": false,
+                        "tsType": { "name": "ReactNode" },
                         "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
-                    "selectable": {
-                        "type": { "name": "bool" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] },
-                        "defaultValue": { "value": "true", "computed": false }
-                    },
-                    "multiple": {
-                        "type": { "name": "bool" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] },
-                        "defaultValue": { "value": "true", "computed": false }
                     }
                 }
             }
@@ -8069,6 +8089,19 @@
                         "required": false,
                         "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
                     }
+                }
+            }
+        },
+        "SubArea": {
+            "path": "Card/SubArea.jsx",
+            "name": "SubArea",
+            "info": {
+                "description": "",
+                "displayName": "SubArea",
+                "methods": [],
+                "props": {
+                    "title": { "type": { "name": "node" }, "required": false, "description": "" },
+                    "children": { "type": { "name": "node" }, "required": false, "description": "" }
                 }
             }
         }
@@ -8324,6 +8357,11 @@
                         "description": { "description": "设置原生的 button 上 type 属性", "tags": [] },
                         "defaultValue": { "value": "'button'", "computed": false }
                     },
+                    "block": {
+                        "required": false,
+                        "tsType": { "name": "boolean" },
+                        "description": { "description": "展示设置为块元素", "tags": [] }
+                    },
                     "checkAble": {
                         "required": false,
                         "tsType": { "name": "boolean" },
@@ -8348,12 +8386,12 @@
     },
     "Breadcrumb": {
         "BackButton": {
-            "path": "Breadcrumb/BackButton.jsx",
+            "path": "Breadcrumb/BackButton.tsx",
             "name": "BackButton",
             "info": { "description": "", "displayName": "BackButton", "methods": [] }
         },
         "Breadcrumb": {
-            "path": "Breadcrumb/Breadcrumb.jsx",
+            "path": "Breadcrumb/Breadcrumb.tsx",
             "name": "Breadcrumb",
             "info": {
                 "description": "",
@@ -8361,34 +8399,22 @@
                 "methods": [],
                 "props": {
                     "separator": {
-                        "type": { "name": "node" },
                         "required": false,
+                        "tsType": { "name": "ReactNode" },
                         "description": { "description": "自定义分隔符", "tags": [] },
                         "defaultValue": { "value": "'/'", "computed": false }
                     },
                     "styleType": {
-                        "type": {
-                            "name": "enum",
-                            "value": [
-                                { "value": "'block-hover'", "computed": false },
-                                { "value": "'hover'", "computed": false },
-                                { "value": "'active'", "computed": false }
-                            ]
-                        },
                         "required": false,
+                        "tsType": { "name": "StyleType" },
                         "description": { "description": "展示项激活样式的方式", "tags": [] },
                         "defaultValue": { "value": "'block-hover'", "computed": false }
-                    },
-                    "children": {
-                        "type": { "name": "node" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
                     }
                 }
             }
         },
         "Item": {
-            "path": "Breadcrumb/Item.jsx",
+            "path": "Breadcrumb/Item.tsx",
             "name": "Item",
             "info": {
                 "description": "",
@@ -8396,28 +8422,23 @@
                 "methods": [],
                 "props": {
                     "disabled": {
-                        "type": { "name": "bool" },
                         "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": { "description": "禁用", "tags": [] }
                     },
                     "current": {
-                        "type": { "name": "bool" },
                         "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": { "description": "标明当前路由", "tags": [] }
                     },
                     "noAction": {
-                        "type": { "name": "bool" },
                         "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": { "description": "标明节点无点击跳转事件", "tags": [] }
                     },
-                    "onClick": {
-                        "type": { "name": "func" },
+                    "href": {
                         "required": false,
-                        "description": { "description": "点击事件", "tags": [] }
-                    },
-                    "className": {
-                        "type": { "name": "string" },
-                        "required": false,
+                        "tsType": { "name": "string" },
                         "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
                     }
                 }
@@ -8791,9 +8812,14 @@
                         },
                         "description": { "description": "失焦回调", "tags": [] }
                     },
+                    "status": {
+                        "required": true,
+                        "tsType": { "name": "InputProps['status']", "raw": "InputProps['status']" },
+                        "description": { "description": "状态", "tags": [] }
+                    },
                     "placeholder": {
                         "required": false,
-                        "tsType": { "name": "HTMLAttributes['placeholder']", "raw": "InputProps['placeholder']" },
+                        "tsType": { "name": "InputProps['placeholder']", "raw": "InputProps['placeholder']" },
                         "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
                     }
                 }
@@ -8842,98 +8868,62 @@
     },
     "ActionList": {
         "ActionList": {
-            "path": "ActionList/ActionList.jsx",
+            "path": "ActionList/ActionList.tsx",
             "name": "ActionList",
             "info": {
                 "description": "",
                 "displayName": "ActionList",
-                "methods": [
-                    {
-                        "name": "getPopupContainer",
-                        "docblock": null,
-                        "modifiers": [],
-                        "params": [{ "name": "triggerNode", "type": null }],
-                        "returns": null
-                    },
-                    {
-                        "name": "renderButtonList",
-                        "docblock": null,
-                        "modifiers": [],
-                        "params": [
-                            { "name": "list", "type": null },
-                            { "name": "size", "type": null }
-                        ],
-                        "returns": null
-                    },
-                    {
-                        "name": "toggleMenu",
-                        "docblock": null,
-                        "modifiers": [],
-                        "params": [{ "name": "visible", "type": null }],
-                        "returns": null
-                    },
-                    { "name": "hideMenu", "docblock": null, "modifiers": [], "params": [], "returns": null },
-                    {
-                        "name": "renderMenu",
-                        "docblock": null,
-                        "modifiers": [],
-                        "params": [
-                            { "name": "list", "type": null },
-                            { "name": "size", "type": null }
-                        ],
-                        "returns": null
-                    }
-                ],
+                "methods": [],
                 "props": {
                     "actionList": {
-                        "type": { "name": "array" },
-                        "required": true,
-                        "description": { "description": "操作列表", "tags": [] }
+                        "required": false,
+                        "tsType": { "name": "Array", "elements": [{ "name": "ActionInfo" }], "raw": "ActionInfo[]" },
+                        "description": { "description": "操作列表", "tags": [] },
+                        "defaultValue": { "value": "[]", "computed": false }
                     },
                     "exposeCount": {
-                        "type": { "name": "number" },
                         "required": false,
+                        "tsType": { "name": "number" },
                         "description": { "description": "暴露的操作数量", "tags": [] },
                         "defaultValue": { "value": "3", "computed": false }
                     },
                     "size": {
-                        "type": { "name": "enum", "computed": true, "value": "Sizes" },
                         "required": false,
+                        "tsType": { "name": "Size" },
                         "description": { "description": "控件尺寸", "tags": [] },
                         "defaultValue": { "value": "'md'", "computed": false }
                     },
-                    "buttonStyleType": {
-                        "type": { "name": "enum", "computed": true, "value": "ButtonStyleTypes" },
-                        "required": false,
-                        "description": { "description": "按钮的默认样式类别，参考 Button 的 styleType", "tags": [] },
-                        "defaultValue": { "value": "'border'", "computed": false }
-                    },
                     "smart": {
-                        "type": { "name": "bool" },
                         "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": {
                             "description": "操作数量等于 exposeCount+1 时是否直接显示按钮而不是显示下拉菜单",
                             "tags": []
                         },
                         "defaultValue": { "value": "true", "computed": false }
                     },
-                    "dropdownButton": {
-                        "type": { "name": "union", "value": [{ "name": "node" }, { "name": "object" }] },
+                    "buttonStyleType": {
                         "required": false,
+                        "tsType": { "name": "ButtonProps['styleType']", "raw": "ButtonProps['styleType']" },
+                        "description": { "description": "按钮的默认样式类别，参考 Button 的 styleType", "tags": [] },
+                        "defaultValue": { "value": "'border'", "computed": false }
+                    },
+                    "dropdownButton": {
+                        "required": false,
+                        "tsType": {
+                            "name": "union",
+                            "raw": "ReactNode | ButtonProps",
+                            "elements": [{ "name": "ReactNode" }, { "name": "ButtonProps" }]
+                        },
                         "description": {
                             "description": "自定义更多按钮内容，也可通过传入 object 来定义 props",
                             "tags": []
                         }
                     },
                     "popoverProps": {
-                        "type": { "name": "object" },
                         "required": false,
+                        "tsType": { "name": "any" },
                         "description": { "description": "弹出层的 popover props", "tags": [] }
-                    },
-                    "className": {
-                        "type": { "name": "string" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
                     }
                 }
             }
