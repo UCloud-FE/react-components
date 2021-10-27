@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.14](https://github.com/UCloud-FE/react-components/compare/v1.2.13...v1.2.14) (2021-10-27)
+
+### Features
+
+-   **Form:** change input token & add portait layout ([a596afe](https://github.com/UCloud-FE/react-components/commit/a596afe442f6e5ec86494b58b796a726e7fde7e1))
+
+### Bug Fixes
+
+-   **Form:** fix portrait form comment font-weight ([5473913](https://github.com/UCloud-FE/react-components/commit/54739131c241eed957d9b8dd9793084b6b7ccd26))
+
 ### [1.2.13](https://github.com/UCloud-FE/react-components/compare/v1.2.12...v1.2.13) (2021-10-22)
 
 ### Features
