@@ -1,12 +1,17 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import classnames from 'classnames';
-import { InputHTMLAttributes } from 'react';
 
 import SvgIcon from 'src/components/SvgIcon';
-import { getHeightBySize, inlineBlockWithVerticalMixin, sWrap } from 'src/style';
+import {
+    execSizeCal,
+    getControlFontSizeBySize,
+    getControlHeightBySize,
+    getControlSpacingBySize,
+    inlineBlockWithVerticalMixin,
+    sWrap
+} from 'src/style';
 import config from 'src/config';
-import { Override } from 'src/type';
 
 import { InputProps } from '../Input';
 
@@ -25,7 +30,7 @@ export const SearchIcon = styled(SvgIcon)`
 `;
 
 export const SWrap = sWrap<
-    Pick<Override<InputHTMLAttributes<HTMLInputElement>, InputProps>, 'disabled' | 'status' | 'customStyle'> &
+    Pick<InputProps, 'disabled' | 'status' | 'customStyle'> &
         Required<Pick<InputProps, 'size'>> & {
             focused: boolean;
             empty: boolean;
@@ -44,15 +49,18 @@ export const SWrap = sWrap<
             customStyle,
             empty
         } = props;
-        const height = getHeightBySize(DT, size);
+        const height = getControlHeightBySize(DT, size);
+        const fontSize = getControlFontSizeBySize(DT, size);
+        const spacing = getControlSpacingBySize(DT, size);
+        const halfSpacing = execSizeCal(spacing, '/2');
 
         return css`
             position: relative;
             box-sizing: border-box;
-            font-size: 12px;
-            border-radius: ${DT.T_CORNER_SM};
             height: ${height};
             max-width: 100%;
+            font-size: ${fontSize};
+            border-radius: ${DT.T_CORNER_SM};
             color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
             fill: currentColor;
             border: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
@@ -77,7 +85,7 @@ export const SWrap = sWrap<
                 transition: opacity 0.3s;
             }
             .${inputWrapCls}, .${inputPrefixCls}, .${inputSuffixCls}, .${clearCls}, input {
-                padding: 0 4px;
+                padding: 0 ${halfSpacing};
             }
 
             &.${blockCls} {
@@ -143,8 +151,6 @@ export const SWrap = sWrap<
                     }
                 `
             };
-
-
 
             ${
                 status === 'error' &&

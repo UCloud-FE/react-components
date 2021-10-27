@@ -23,13 +23,13 @@ const horizontalLayout6 = {
 };
 const Demo = () => (
     <Form>
-        <Item label="横向布局 3-9" {...horizontalLayout}>
+        <Item label="横向布局 3-9" {...horizontalLayout} required help="帮助内容">
             <Input block />
         </Item>
-        <Item label="横向布局 6-6" {...horizontalLayout6}>
+        <Item label="横向布局 6-6" {...horizontalLayout6} required help="帮助内容">
             <Input block />
         </Item>
-        <Item label="默认布局">
+        <Item label="默认布局" required help="帮助内容">
             <Input block />
         </Item>
     </Form>

@@ -1,9 +1,7 @@
-/* eslint-disable react/display-name */
-import React, { InputHTMLAttributes, Ref, forwardRef, useCallback, useImperativeHandle, useRef } from 'react';
+import React, { Ref, forwardRef, useCallback, useImperativeHandle, useRef } from 'react';
 
 import KEYCODE from 'src/interfaces/KeyCode';
 import noop from 'src/utils/noop';
-import { Override } from 'src/type';
 
 import Input, { InputProps, InputRef } from './Input';
 import { SearchIcon } from './style';
@@ -13,16 +11,9 @@ export interface SearchProps {
     onSearch?: (value: string) => void;
 }
 
+// eslint-disable-next-line react/display-name
 const Search = forwardRef(
-    (
-        {
-            onSearch: _onSearch,
-            onKeyDown,
-            disabled,
-            ...rest
-        }: SearchProps & InputProps & Override<InputHTMLAttributes<HTMLInputElement>, InputProps>,
-        ref: Ref<InputRef>
-    ) => {
+    ({ onSearch: _onSearch, onKeyDown, disabled, ...rest }: SearchProps & InputProps, ref: Ref<InputRef>) => {
         const inputRef = useRef<InputRef>(null);
         const onSearch = useCallback(() => {
             !disabled &&

@@ -1,11 +1,9 @@
 import React, { HTMLAttributes, ReactNode } from 'react';
 import classnames from 'classnames';
 
-import { Override } from 'src/type';
-
 import { itemCls, separatorCls, CombineWrap } from './style';
 
-interface CombineProps {
+export interface DefinedCombineProps {
     children: ReactNode;
     /** children 共享属性 */
     sharedProps?: {
@@ -21,13 +19,9 @@ interface CombineProps {
     separator?: ReactNode;
 }
 
-const Combine = ({
-    children,
-    sharedProps = {},
-    spacing = 'smart',
-    separator,
-    ...rest
-}: CombineProps & Override<HTMLAttributes<HTMLDivElement>, CombineProps>) => {
+export type CombineProps = DefinedCombineProps & Omit<HTMLAttributes<HTMLDivElement>, keyof DefinedCombineProps>;
+
+const Combine = ({ children, sharedProps = {}, spacing = 'smart', separator, ...rest }: CombineProps) => {
     const { size = 'md' } = sharedProps;
     let isFirstItem: boolean;
     return (
@@ -58,4 +52,4 @@ const Combine = ({
     );
 };
 
-export default Combine;
+export default React.memo(Combine);

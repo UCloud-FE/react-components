@@ -2,7 +2,7 @@ import NumberInput from 'src/components/NumberInput';
 import Textarea from 'src/components/Textarea';
 import { ExportComponent, FunctionToClassComponent, Sizes } from 'src/type';
 
-import Input, { FullInputProps as InputProps } from './Input';
+import Input, { InputProps } from './Input';
 import Search from './Search';
 
 // bind to avoid demo crash

@@ -20,31 +20,35 @@ class Demo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            size: 'md'
+            size: 'md',
+            useGrid: true
         };
     }
     render() {
-        const { size } = this.state;
+        const { size, useGrid } = this.state;
         return (
             <div>
-                <Form className="demo-form">
-                    <Form.Item label="size" {...itemLayout}>
+                <Form className="demo-form" itemProps={{ ...itemLayout }}>
+                    <Form.Item label="size">
                         <Radio.Group
                             value={size}
                             options={['md', 'lg'].map(value => ({ value }))}
                             onChange={size => this.setState({ size })}
                         />
                     </Form.Item>
+                    <Form.Item label="useGrid">
+                        <Switch checked={useGrid} onChange={useGrid => this.setState({ useGrid })} />
+                    </Form.Item>
                 </Form>
                 <div className="demo-wrap">
-                    <Form size={size}>
-                        <Item label="Input" {...itemLayout}>
+                    <Form size={size} itemProps={{ ...(useGrid ? itemLayout : {}) }}>
+                        <Item label="Input" help="Please input" required tip="Help content">
                             <Input size={size} />
                         </Item>
-                        <Item label="Switch" {...itemLayout}>
+                        <Item label="Switch">
                             <Switch size={size} />
                         </Item>
-                        <Item label="Select" {...itemLayout}>
+                        <Item label="Select">
                             <Select size={size} options={[{ value: '123' }, { value: '1231' }, { value: '1232' }]} />
                         </Item>
                     </Form>

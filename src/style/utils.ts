@@ -16,6 +16,21 @@ const paddingKeyMap: Record<Size, DesignToken> = {
     md: 'T_SPACING_COMMON_SM',
     lg: 'T_SPACING_COMMON_MD'
 };
+const controlHeightMap: Record<Size, DesignToken> = {
+    sm: 'T_CONTROL_HEIGHT_SM',
+    md: 'T_CONTROL_HEIGHT_MD',
+    lg: 'T_CONTROL_HEIGHT_LG'
+};
+const controlFontSizeMap: Record<Size, DesignToken> = {
+    sm: 'T_CONTROL_FONT_SIZE_SM',
+    md: 'T_CONTROL_FONT_SIZE_MD',
+    lg: 'T_CONTROL_FONT_SIZE_LG'
+};
+const controlSpacingMap: Record<Size, DesignToken> = {
+    sm: 'T_CONTROL_SPACING_SM',
+    md: 'T_CONTROL_SPACING_MD',
+    lg: 'T_CONTROL_SPACING_LG'
+};
 
 export const offsetValue = (value: string, offset: number) => {
     const [, number, unit] = /^(\d+)(\S+)$/.exec(value) || [];
@@ -46,4 +61,38 @@ export const ignoreProps = (...props: string[]) => {
     return (prop: string) => {
         return isPropValid(prop) && !props.includes(prop);
     };
+};
+
+export const getControlHeightBySize = (DT: DesignTokens, size: Size) => {
+    const token = controlHeightMap[size];
+    return DT[token];
+};
+
+export const getControlFontSizeBySize = (DT: DesignTokens, size: Size) => {
+    const token = controlFontSizeMap[size];
+    return DT[token];
+};
+
+export const getControlSpacingBySize = (DT: DesignTokens, size: Size) => {
+    const token = controlSpacingMap[size];
+    return DT[token];
+};
+
+const getSizeNumber = (size: string) => {
+    const [, number = 0, unit = 'px'] = /^(\d+)(.*)$/.exec(size) || [];
+    return {
+        number,
+        unit
+    };
+};
+
+const cacheMap: { [key: string]: string } = {};
+
+export const execSizeCal = (size: string, formula: string) => {
+    const key = `size${size}-formula${formula}`;
+    if (key in cacheMap) return cacheMap[key];
+    const { number, unit } = getSizeNumber(size);
+    const exec = new Function('number', `return number${formula}`);
+    const result = exec(number) + unit;
+    return (cacheMap[key] = result);
 };

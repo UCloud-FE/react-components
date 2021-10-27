@@ -16,7 +16,7 @@ type Input<Props extends { className?: string }> = Omit<Partial<Props>, 'classNa
  * @param input {object} 需要注入组件的 props
  */
 const sWrap = <Props, IHTMLElement = HTMLElement>(
-    input: Input<Props>,
+    input?: Input<Props>,
     options?: {
         ignoreProps?: (keyof Props)[];
     }
@@ -26,7 +26,7 @@ const sWrap = <Props, IHTMLElement = HTMLElement>(
     type PropsFinal = PropsWithTag & { theme?: Theme };
     return (Comp: StyledComponent<Props, PropsWithTag, Theme>) => {
         const WithThemeComponent = (props: PropsFinal, ref: Ref<IHTMLElement>) => {
-            const { className, ...rest } = input;
+            const { className, ...rest } = input || {};
 
             const memoClassName = useMemo(() => {
                 let cn;

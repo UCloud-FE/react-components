@@ -22,13 +22,13 @@ import deprecatedLog from 'src/utils/deprecatedLog';
 import once from 'src/utils/once';
 import noop from 'src/utils/noop';
 import useUncontrolled from 'src/hooks/useUncontrolled';
-import { Override, Size } from 'src/type';
+import { Size } from 'src/type';
 
 import { SWrap, inputWrapCls, blockCls, inputPrefixCls, inputSuffixCls, clearCls } from './style';
 
 const deprecatedLogForIcon = once(() => deprecatedLog('Input icon', 'suffix'));
 
-export interface InputProps {
+export interface DefinedInputProps {
     /**
      * @deprecated 使用 suffix 替换
      * 图标，传入 string 时为图标类型，也可直接传入图标组件
@@ -43,7 +43,7 @@ export interface InputProps {
     /** 尺寸 */
     size?: Size;
     /** 状态 */
-    status?: 'default' | 'error';
+    status?: 'default' | 'error' | string;
     /** 展示变更为块占位 */
     block?: boolean;
     /** 点击 clear 按钮回调 */
@@ -67,7 +67,7 @@ export type InputRef = {
     input?: HTMLInputElement | null;
 };
 
-export type FullInputProps = InputProps & Override<InputHTMLAttributes<HTMLInputElement>, InputProps>;
+export type InputProps = DefinedInputProps & Omit<InputHTMLAttributes<HTMLInputElement>, keyof DefinedInputProps>;
 
 const Input = forwardRef(
     (
@@ -90,7 +90,7 @@ const Input = forwardRef(
             onBlur = noop,
             onClear = noop,
             ...rest
-        }: InputProps & Override<InputHTMLAttributes<HTMLInputElement>, InputProps>,
+        }: InputProps,
         ref: Ref<InputRef>
     ) => {
         const valueGetter = useCallback((e: ChangeEvent<HTMLInputElement>) => e.target.value, []);

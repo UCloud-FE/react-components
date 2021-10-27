@@ -256,7 +256,16 @@ const designTokens = {
     T_TYPO_FONT_WEIGHT_BOLD: '600',
     T_WIDTH_SM: '144px',
     T_WIDTH_MD: '192px',
-    T_WIDTH_LG: '320px'
+    T_WIDTH_LG: '320px',
+    T_CONTROL_HEIGHT_SM: '24px',
+    T_CONTROL_HEIGHT_MD: '28px',
+    T_CONTROL_HEIGHT_LG: '32px',
+    T_CONTROL_SPACING_SM: '8px',
+    T_CONTROL_SPACING_MD: '8px',
+    T_CONTROL_SPACING_LG: '12px',
+    T_CONTROL_FONT_SIZE_SM: '12px',
+    T_CONTROL_FONT_SIZE_MD: '12px',
+    T_CONTROL_FONT_SIZE_LG: '14px'
 };
 
 export { designTokens };

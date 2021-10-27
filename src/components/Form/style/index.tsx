@@ -1,14 +1,12 @@
 import React, { memo } from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import PropTypes from 'prop-types';
 
 import SvgIcon from 'src/components/SvgIcon';
 import { Row, Col } from 'src/components/Grid';
-import Combine from 'src/components/Combine';
+import Combine, { CombineProps } from 'src/components/Combine';
 import config from 'src/config';
-
-import withProps from 'src/utils/withProps';
+import { DesignToken, sWrap } from 'src/style';
 
 const { prefixCls: _prefixCls } = config;
 const prefixCls = _prefixCls + '-form';
@@ -17,41 +15,94 @@ const labelCls = prefixCls + '-label';
 const controllerCls = prefixCls + '-controller';
 const groupCls = prefixCls + '-group';
 const groupTitleCls = groupCls + '-title';
-export const tipCls = prefixCls + '-tip';
+const tipCls = prefixCls + '-tip';
 export const tipIconCls = tipCls + '-icon';
 export const tipContentCls = tipCls + '-content';
 const subAreaCls = prefixCls + '-sub-area';
 
-export const ItemWrap = withProps({
-    className: itemCls
-})(styled(Row)`
-    /* empty */
-`);
+export const GridItemWrap = styled(
+    sWrap({
+        className: itemCls
+    })(styled(Row)`
+        /* empty */
+    `)
+)();
 
-export const LabelWrap = withProps({
+export const GridLabelWrap = sWrap({
     className: labelCls
-})(styled(Col)`
-    padding-top: 4px;
-    line-height: 20px;
-    word-break: break-all;
-`);
+})(
+    styled(Col)(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
 
-export const ControllerWrap = withProps({
+        return css`
+            padding-top: 4px;
+            line-height: 20px;
+            word-break: break-all;
+            color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
+        `;
+    })
+);
+
+export const GridControllerWrap = sWrap({
     className: controllerCls
 })(styled(Col)`
     /* empty */
 `);
 
-export const GroupWrap = withProps({
+export const ItemWrap = sWrap({
+    className: itemCls
+})(styled('div')`
+    /* empty */
+`);
+
+export const LabelWrap = sWrap({
+    className: labelCls
+})(
+    styled('div')(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
+
+        return css`
+            line-height: 20px;
+            font-weight: ${DT.T_TYPO_FONT_WEIGHT_BOLD};
+            color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+            margin-bottom: ${DT.T_SPACING_COMMON_SM};
+        `;
+    })
+);
+
+export const CommentWrap = sWrap()(
+    styled.div(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
+
+        return css`
+            line-height: 20px;
+            margin-top: ${DT.T_SPACING_COMMON_XS};
+            color: ${DT.T_COLOR_TEXT_REMARK_DARK};
+        `;
+    })
+);
+
+export const ControllerWrap = sWrap({
+    className: controllerCls
+})(styled('div')`
+    /* empty */
+`);
+
+export const GroupWrap = sWrap({
     className: groupCls
 })(styled('div')`
     & + & {
         margin-top: 24px;
     }
-    /* empty */
 `);
 
-export const GroupTitle = withProps({
+export const GroupTitle = sWrap({
     className: groupTitleCls
 })(
     styled('div')(props => {
@@ -74,14 +125,11 @@ export const GroupTitle = withProps({
     })
 );
 
-export const FormWrap = withProps({
+export const FormWrap = sWrap<{ size: string }>({
     className: prefixCls
 })(
     styled('form')(props => {
-        const {
-            size,
-            theme: { designTokens: DT }
-        } = props;
+        const { size } = props;
 
         return css`
             font-size: 12px;
@@ -92,39 +140,37 @@ export const FormWrap = withProps({
                     margin-bottom: 0;
                 }
             }
-            .${labelCls} {
-                color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
-            }
             ${size === 'lg' &&
             css`
-                .${itemCls} {
+                ${GridItemWrap} {
                     margin-bottom: 24px;
-                }
-                .${labelCls} {
-                    padding-top: 6px;
+                    .${labelCls} {
+                        padding-top: 6px;
+                    }
                 }
             `};
         `;
     })
 );
 
-export const Tip = withProps({ className: tipCls })(
+const IconColorMap: { [key: string]: DesignToken } = {
+    success: 'T_COLOR_BG_SUCCESS_DARK',
+    warning: 'T_COLOR_BG_WARNING_DARK',
+    error: 'T_COLOR_BG_ERROR_DARK',
+    loading: 'T_COLOR_TEXT_PRIMARY_DEFAULT'
+};
+const ColorMap: { [key: string]: DesignToken } = {
+    error: 'T_COLOR_TEXT_ERROR'
+};
+
+export const Tip = sWrap<{ status: string } & CombineProps>({ className: tipCls })(
     styled(Combine)(props => {
         const {
             status,
             theme: { designTokens: DT }
         } = props;
-        const iconColorDT =
-            {
-                success: 'T_COLOR_BG_SUCCESS_DARK',
-                warning: 'T_COLOR_BG_WARNING_DARK',
-                error: 'T_COLOR_BG_ERROR_DARK',
-                loading: 'T_COLOR_TEXT_PRIMARY_DEFAULT'
-            }[status] || 'T_COLOR_TEXT_PRIMARY_DEFAULT';
-        const colorDt =
-            {
-                error: 'T_COLOR_TEXT_ERROR'
-            }[status] || 'T_COLOR_TEXT_DEFAULT_LIGHT';
+        const iconColorDT: DesignToken = IconColorMap[status] || 'T_COLOR_TEXT_PRIMARY_DEFAULT';
+        const colorDt: DesignToken = ColorMap[status] || 'T_COLOR_TEXT_DEFAULT_LIGHT';
         return css`
             margin-top: 4px;
             color: ${DT[colorDt]};
@@ -138,7 +184,7 @@ export const Tip = withProps({ className: tipCls })(
     })
 );
 
-export const RequiredLabel = withProps()(
+export const RequiredLabel = sWrap()(
     styled.span(props => {
         const {
             theme: { designTokens: DT }
@@ -150,7 +196,7 @@ export const RequiredLabel = withProps()(
     })
 );
 
-export const HelpIcon = withProps()(
+export const HelpIcon = sWrap<{ type: string; size?: string }>()(
     styled(SvgIcon)(props => {
         const {
             theme: { designTokens: DT }
@@ -163,7 +209,7 @@ export const HelpIcon = withProps()(
     })
 );
 
-let StatusIcon = ({ status, ...rest }) => {
+const StatusIconWithoutMemo = ({ status, ...rest }: { status: string; spin?: boolean }) => {
     const iconType =
         {
             success: 'tick-circle-filled',
@@ -173,14 +219,11 @@ let StatusIcon = ({ status, ...rest }) => {
         }[status] || 'info-circle-filled';
     return <SvgIcon type={iconType} className={tipIconCls} {...rest} />;
 };
-StatusIcon.propTypes = {
-    status: PropTypes.string
-};
-StatusIcon = memo(StatusIcon);
+const StatusIcon = memo(StatusIconWithoutMemo);
 
 export { StatusIcon };
 
-export const SubAreaWrap = withProps({ className: subAreaCls })(
+export const SubAreaWrap = sWrap({ className: subAreaCls })(
     styled.div(props => {
         const {
             theme: { designTokens: DT }
