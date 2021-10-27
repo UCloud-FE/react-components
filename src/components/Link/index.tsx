@@ -1,6 +1,10 @@
 import Link from './Link';
 import Button from './Button';
 
-(Link as any).Button = Button;
+import { ExportComponent } from 'src/type';
 
-export default Link;
+const ExportLink = ExportComponent(Link, {
+    Button
+});
+
+export default ExportLink;
