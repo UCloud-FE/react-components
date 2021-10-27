@@ -84,6 +84,8 @@ export const CommentWrap = sWrap()(
             line-height: 20px;
             margin-top: ${DT.T_SPACING_COMMON_XS};
             color: ${DT.T_COLOR_TEXT_REMARK_DARK};
+            /* overwrite inherit */
+            font-weight: normal;
         `;
     })
 );
