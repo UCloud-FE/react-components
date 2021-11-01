@@ -231,7 +231,7 @@ export const SubAreaWrap = sWrap({ className: subAreaCls })(
             theme: { designTokens: DT }
         } = props;
         return css`
-            padding: 20px;
+            padding: 16px;
             border: 1px solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
             background: ${DT.T_COLOR_BG_DEFAULT_DARK};
 
