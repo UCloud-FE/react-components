@@ -41,6 +41,11 @@
 ```js {"codepath": "tabs-child.jsx"}
 ```
 
+#### 边界测试
+
+```js {"codepath": "tabs-boundary.jsx"}
+```
+
 #### 手动测试
 
 ```js {"codepath": "tabs-manual-test.jsx"}

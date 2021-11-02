@@ -25,15 +25,6 @@ import { prefixCls } from './style';
 const noop = () => undefined;
 const warning = (skip: boolean, msg: string) => !skip && console.warn(msg);
 
-function getActiveIndex(panes: Panes, activeKey: Key | null) {
-    for (let i = 0; i < panes.length; i++) {
-        if (panes[i].key === activeKey) {
-            return i;
-        }
-    }
-    return -1;
-}
-
 interface TabBarTabsNodeProps {
     activeKey: Key | null;
     panes: Panes;
@@ -152,14 +143,16 @@ interface InkTabBarNodeProps {
     panes: Panes;
     activeKey: Key | null;
 }
-function scrollInkBar(props: Pick<BarContext, 'getRef' | 'direction' | 'tabBarPosition'> & { display: boolean }) {
-    const { getRef, direction, tabBarPosition, display } = props;
+
+function scrollInkBar(props: Pick<BarContext, 'getRef' | 'direction' | 'tabBarPosition'>) {
+    const { getRef, direction, tabBarPosition } = props;
     const rootNode = getRef('root');
     const wrapNode = getRef('nav') || rootNode;
     const inkBarNode = getRef('inkBar');
     const activeTab = getRef('activeTab');
     if (!inkBarNode || !wrapNode || !rootNode) return;
     const inkBarNodeStyle = inkBarNode.style;
+    const display = !!activeTab;
     inkBarNodeStyle.display = display ? 'block' : 'none';
     if (!display) return;
     if (activeTab) {
@@ -208,15 +201,26 @@ function scrollInkBar(props: Pick<BarContext, 'getRef' | 'direction' | 'tabBarPo
 }
 const InkTabBarNode = ({ panes, activeKey, tabBarPosition, inkBarAnimated = true, direction }: InkTabBarNodeProps) => {
     const { saveRef, getRef } = useContext(RefContext);
-    useEffect(() => {
-        const activeIndex = getActiveIndex(panes, activeKey);
+    const onResize = useCallback(() => {
         scrollInkBar({
-            display: activeIndex >= -1,
             getRef,
             tabBarPosition,
             direction
         });
-    }, [activeKey, direction, getRef, panes, tabBarPosition]);
+    }, [direction, getRef, tabBarPosition]);
+    useEffect(() => {
+        onResize();
+    }, [panes, activeKey, onResize]);
+    useEffect(() => {
+        const resizeObserver = new ResizeObserver(onResize);
+        const containerNode = getRef('container');
+        if (containerNode) resizeObserver.observe(containerNode);
+        return () => {
+            if (resizeObserver) {
+                resizeObserver.disconnect();
+            }
+        };
+    }, [getRef, onResize]);
     const className = `${prefixCls}-ink-bar`;
     const classes = classnames(className, inkBarAnimated ? `${className}-animated` : `${className}-no-animated`);
 
@@ -570,12 +574,13 @@ const TabBar = (props: TabBarProps) => {
         },
         []
     );
+    const { styleType } = props;
     return (
         <RefContext.Provider value={{ getRef, saveRef }}>
             <TabBarRootNode {...props}>
                 <ScrollableTabBarNode {...props}>
                     <TabBarTabsNode {...props} />
-                    <InkTabBarNode {...props} />
+                    {styleType === 'ink' ? <InkTabBarNode {...props} /> : null}
                 </ScrollableTabBarNode>
             </TabBarRootNode>
         </RefContext.Provider>
