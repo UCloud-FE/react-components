@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.16](https://github.com/UCloud-FE/react-components/compare/v1.2.15...v1.2.16) (2021-11-03)
+
+### Features
+
+-   **Form:** change form subarea padding ([1b4c18b](https://github.com/UCloud-FE/react-components/commit/1b4c18b9801d4ab5ed7f68d713bfd12c6a873857))
+-   **LocaleProvider:** add useLocale for use i18n plan ([d3dd414](https://github.com/UCloud-FE/react-components/commit/d3dd4148047f915c3494a165240cb8e8ae371356))
+
+### Bug Fixes
+
+-   **Tabs:** add resize observer for inkbar ([884b757](https://github.com/UCloud-FE/react-components/commit/884b75726acc02de3375731e42e9dcf8f6757e78))
+
 ### [1.2.15](https://github.com/UCloud-FE/react-components/compare/v1.2.14...v1.2.15) (2021-10-29)
 
 ### Bug Fixes
