@@ -47,3 +47,8 @@ const Demo = () => (
 
 ```js {"codepath": "list.jsx", "noeditor": true}
 ```
+
+#### useLocale - 使用组件中提供的多语言方案实现自己的多语言
+
+```js {"codepath": "useLocale.jsx"}
+```

@@ -1,2 +1,10 @@
+import { ExportComponent } from 'src/type';
+
 import LocaleProvider from './LocaleProvider';
-export default LocaleProvider;
+import useLocale from './useLocale';
+
+const ExportLocaleProvider = ExportComponent(LocaleProvider, {
+    useLocale
+});
+
+export default ExportLocaleProvider;
