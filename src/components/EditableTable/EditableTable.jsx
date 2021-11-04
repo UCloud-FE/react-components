@@ -35,7 +35,11 @@ class EditableTable extends PureComponent {
                 /**
                  * 是否禁用
                  */
-                disabled: PropTypes.bool
+                disabled: PropTypes.bool,
+                /**
+                 * 是否隐藏
+                 */
+                hidden: PropTypes.bool
             })
         ]),
         /**
@@ -76,19 +80,21 @@ class EditableTable extends PureComponent {
     };
     renderFooter = () => {
         const { footer, addition } = this.props;
-        const { tip, disabled } = addition;
+        const { tip, disabled, hidden } = addition;
         const _disabled = !addition || disabled;
         return [
-            <AddBar key="add" onClick={_disabled ? null : this.onAdd} disabled={_disabled}>
-                {tip ? (
-                    [
-                        <SvgIcon className={btnCls} type="plus" key="add_btn" size="16px" />,
-                        <AddTip key="add_tip">{tip}</AddTip>
-                    ]
-                ) : (
-                    <SvgIcon className={btnCls} type="plus" size="20px" />
-                )}
-            </AddBar>,
+            hidden ? null : (
+                <AddBar key="add" onClick={_disabled ? null : this.onAdd} disabled={_disabled}>
+                    {tip ? (
+                        [
+                            <SvgIcon className={btnCls} type="plus" key="add_btn" size="16px" />,
+                            <AddTip key="add_tip">{tip}</AddTip>
+                        ]
+                    ) : (
+                        <SvgIcon className={btnCls} type="plus" size="20px" />
+                    )}
+                </AddBar>
+            ),
             footer()
         ];
     };

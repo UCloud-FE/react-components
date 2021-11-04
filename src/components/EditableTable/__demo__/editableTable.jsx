@@ -67,7 +67,7 @@ class Demo extends React.Component {
         return record.key % 2;
     }
     render() {
-        const { addition, rowDeletion, additionTip, randomRowDeletionDisable, dataSource } = this.state;
+        const { addition, rowDeletion, additionTip, additionHidden, randomRowDeletionDisable, dataSource } = this.state;
         const itemLayout = {
             labelCol: {
                 span: 3
@@ -76,14 +76,13 @@ class Demo extends React.Component {
                 span: 9
             }
         };
-        let _addition = addition,
-            _rowDeletion = rowDeletion;
-        if (addition) {
-            _addition = {
-                onAdd: () => this.onAdd(),
-                tip: additionTip
-            };
-        }
+        const _addition = {
+            onAdd: () => this.onAdd(),
+            tip: additionTip,
+            disabled: !addition,
+            hidden: additionHidden
+        };
+        let _rowDeletion = rowDeletion;
         if (rowDeletion) {
             _rowDeletion = {
                 onDelete: record => this.onDelete(record),
@@ -106,6 +105,12 @@ class Demo extends React.Component {
                                 })
                             }
                             type="input"
+                        />
+                    </Form.Item>
+                    <Form.Item label="additionHidden" {...itemLayout}>
+                        <Switch
+                            checked={additionHidden}
+                            onChange={additionHidden => this.setState({ additionHidden })}
                         />
                     </Form.Item>
                     <Form.Item label="rowDeletion" {...itemLayout}>

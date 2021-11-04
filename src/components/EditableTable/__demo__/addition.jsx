@@ -8,7 +8,8 @@ const list = [
     { label: 'onAdd', props: { onAdd: () => console.log('onAdd') } },
     { label: 'tip', props: { tip: '自定义提示' } },
     { label: 'disabled', props: { disabled: true } },
-    { label: 'disabledWithTip', props: { disabled: true, tip: '自定义提示' } }
+    { label: 'disabledWithTip', props: { disabled: true, tip: '自定义提示' } },
+    { label: 'hidden', props: { hidden: true } }
 ];
 
 const columns = [
@@ -49,7 +50,7 @@ class InstanceDemo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            dataSource: []
+            dataSource: new Array(2).fill(null).map((v, i) => generateData({ deletable: i % 2 }))
         };
     }
     handleDelete(record) {
