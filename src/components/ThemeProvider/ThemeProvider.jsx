@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
-import { ThemeProvider as SCThemeProvider } from 'emotion-theming';
+import { ThemeProvider as EThemeProvider } from 'emotion-theming';
 
 import { generateTheme } from './theme';
 import { setRuntimeTheme } from './runtime';
@@ -59,7 +59,7 @@ class ThemeProvider extends Component {
         // eslint-disable-next-line no-unused-vars
         const { theme: _theme, ...rest } = this.props;
         const { theme } = this.state;
-        return <SCThemeProvider theme={theme} {...rest} />;
+        return <EThemeProvider theme={theme} {...rest} />;
     }
 }
 
