@@ -53,6 +53,7 @@ export const CurrentText = styled('span')(props => {
     return css`
         position: relative;
         left: ${percent}%;
+        transition: left 0.5s;
         width: 50px;
         margin-left: -25px;
         display: inline-block;
