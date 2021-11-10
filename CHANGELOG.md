@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.17](https://github.com/UCloud-FE/react-components/compare/v1.2.16...v1.2.17) (2021-11-10)
+
+### Features
+
+-   **DesignTokens:** update control tokens ([8154c87](https://github.com/UCloud-FE/react-components/commit/8154c87c73c66a51346d5549de22c214b985ec9e))
+-   **EditableTable:** add addition.hidden to hide additionbar ([6cba291](https://github.com/UCloud-FE/react-components/commit/6cba291eac7bfe937bd20ff4b928179139f0882d))
+-   **Progress:** optimize text transition ([c745081](https://github.com/UCloud-FE/react-components/commit/c74508183d3109c99fc9f2663397a1de83928244))
+-   **ThemeProvider:** add useDesignTokens ([f2356fd](https://github.com/UCloud-FE/react-components/commit/f2356fd85f95e2732435afa8913dd892928285aa))
+
 ### [1.2.16](https://github.com/UCloud-FE/react-components/compare/v1.2.15...v1.2.16) (2021-11-03)
 
 ### Features
