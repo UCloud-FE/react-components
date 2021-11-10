@@ -262,10 +262,10 @@ const designTokens = {
     T_CONTROL_HEIGHT_LG: '32px',
     T_CONTROL_SPACING_SM: '8px',
     T_CONTROL_SPACING_MD: '8px',
-    T_CONTROL_SPACING_LG: '12px',
+    T_CONTROL_SPACING_LG: '8px',
     T_CONTROL_FONT_SIZE_SM: '12px',
     T_CONTROL_FONT_SIZE_MD: '12px',
-    T_CONTROL_FONT_SIZE_LG: '14px'
+    T_CONTROL_FONT_SIZE_LG: '12px'
 };
 
 export { designTokens };
