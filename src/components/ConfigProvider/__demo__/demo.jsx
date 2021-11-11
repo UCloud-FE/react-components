@@ -25,7 +25,7 @@ const list = [
     },
     {
         title: 'DatePicker.Month',
-        demo: <DatePicker.Month />
+        demo: <DatePicker type="month" />
     },
     {
         title: 'DatePicker.Range',

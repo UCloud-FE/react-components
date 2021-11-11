@@ -10,10 +10,12 @@ import Time from 'src/components/TimePicker/Time';
 import SvgIcon from 'src/components/SvgIcon';
 import { Size } from 'src/type';
 
+import LOCALE from './locale/zh_CN';
 import { PickerContainer, SPopup } from './style';
 import Footer, { TShortcut } from './Footer';
 import usePicker from './usePicker';
 import { formatToShort } from './utils';
+import Month from './Month';
 
 export type DatePickerProps = {
     /** 值，受控 */
@@ -31,6 +33,7 @@ export type DatePickerProps = {
     /** 是否可为空，为空时不传或传入空值会默认为当前时刻 */
     nullable?: boolean;
     /**
+     *  @deprecated 使用 format 替换
      * 设置操作面板，时分秒
      */
     display?: {
@@ -57,6 +60,10 @@ export type DatePickerProps = {
     shortcuts?: TShortcut[] | null;
     /** 自定义 popover，参考 popover */
     popoverProps?: any;
+    /** 类型 */
+    type?: 'date' | 'month';
+    /** 自定义语言 */
+    locale?: typeof LOCALE;
     /**
      * @deprecated 使用 popoverProps 替换
      * 弹出层的 z-index
@@ -94,7 +101,7 @@ export const displayToFormatAndTimeMode = (display: DatePickerProps['display']):
     return [[format, formatToShort(format)], timeFormatA];
 };
 
-const DatePicker = (props: DatePickerProps) => {
+const DatePickerForDate = (props: DatePickerProps) => {
     const [
         inputProps,
         containerProps,
@@ -126,6 +133,11 @@ const DatePicker = (props: DatePickerProps) => {
             </Popover>
         </PickerContainer>
     );
+};
+
+const DatePicker = (props: DatePickerProps) => {
+    const { type } = props;
+    return type === 'month' ? <Month {...props} /> : <DatePickerForDate {...props} />;
 };
 
 export default React.memo(DatePicker);

@@ -7,7 +7,8 @@ class Demo extends React.Component {
         return (
             <div>
                 <div className="demo-wrap">
-                    <DatePicker.Month
+                    <DatePicker
+                        type="month"
                         display={{
                             date: {
                                 format: 'YYYY---MM'
@@ -16,7 +17,7 @@ class Demo extends React.Component {
                     />
                 </div>
                 <div className="demo-wrap">
-                    <DatePicker.Month />
+                    <DatePicker type="month" />
                 </div>
             </div>
         );

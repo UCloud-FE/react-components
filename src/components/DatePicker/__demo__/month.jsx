@@ -62,7 +62,8 @@ class Demo extends React.Component {
                     </Form.Item>
                 </Form>
                 <div className="demo-wrap">
-                    <DatePicker.Month
+                    <DatePicker
+                        type="month"
                         display={display}
                         size={size}
                         onChange={v => console.log(v.format())}

@@ -11,7 +11,7 @@ class Demo extends React.Component {
                 {formats.map((format, i) => {
                     return (
                         <div className="demo-wrap" key={i}>
-                            <DatePicker.Month format={format} />
+                            <DatePicker type="month" format={format} />
                         </div>
                     );
                 })}

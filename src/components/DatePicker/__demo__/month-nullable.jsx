@@ -8,10 +8,10 @@ class Demo extends React.Component {
         return (
             <div>
                 <div className="demo-wrap">
-                    <DatePicker.Month nullable />
+                    <DatePicker type="month" nullable />
                 </div>
                 <div className="demo-wrap">
-                    <DatePicker.Month />
+                    <DatePicker type="month" />
                 </div>
             </div>
         );

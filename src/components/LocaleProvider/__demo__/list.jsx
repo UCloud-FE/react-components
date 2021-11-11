@@ -84,7 +84,7 @@ class Demo extends React.Component {
                     <DatePicker value={moment()} />
                 </div>
                 <div className="demo-wrap">
-                    <DatePicker.Month value={moment()} />
+                    <DatePicker type="month" value={moment()} />
                 </div>
                 <div className="demo-wrap">
                     <DatePicker.Range value={[moment(), moment()]} />

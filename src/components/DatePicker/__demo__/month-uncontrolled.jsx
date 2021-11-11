@@ -7,10 +7,10 @@ class Demo extends React.Component {
         return (
             <div>
                 <div className="demo-wrap">
-                    <DatePicker.Month value={Date.now()} />
+                    <DatePicker type="month" value={Date.now()} />
                 </div>
                 <div className="demo-wrap">
-                    <DatePicker.Month />
+                    <DatePicker type="month" />
                 </div>
             </div>
         );

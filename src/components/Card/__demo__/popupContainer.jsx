@@ -51,7 +51,7 @@ const Demo = () => (
             <Card>
                 <Card.Content>
                     <div style={{ position: 'relative' }}>
-                        <DatePicker.Month />
+                        <DatePicker type="month" />
                     </div>
                 </Card.Content>
             </Card>

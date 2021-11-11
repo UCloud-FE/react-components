@@ -11,6 +11,7 @@ import usePopoverConfig from 'src/hooks/usePopoverConfig';
 import LOCALE from './locale/zh_CN';
 import { isDateDisabled, getValidDate, isDateValid } from './utils';
 import { TShortcut } from './Footer';
+import { DatePickerProps } from './DatePicker';
 
 const formatInput = (v: string, allFormat: string[]): Moment | null | false => {
     if (v == '') return null;
@@ -46,25 +47,10 @@ const formatToTimeMode = (format: string): Time[] => {
     return timeMode;
 };
 
-interface TProps<D> {
-    value?: TDate | null;
-    defaultValue?: TDate | null;
-    onChange?: (v: Moment | null) => void;
+type TProps<D> = {
     onInitialChange?: (v: Moment | null) => void;
-    rules?: any;
-    size?: Size;
-    format?: string | string[];
-    nullable?: boolean;
     display?: D;
-    disabled?: boolean;
-    popoverProps?: any;
-    zIndex?: number;
-    getCalendarContainer?: (triggerNode: Element) => Element;
-    locale?: typeof LOCALE;
-    status?: 'default' | 'error';
-    placeholder?: string;
-    shortcuts?: TShortcut[] | null;
-}
+} & DatePickerProps;
 interface DisplayToFormatAndTimeMode<D> {
     (display?: D): [string[]] | [string[], string[]];
 }
@@ -94,6 +80,8 @@ const usePicker = <D,>(
         status,
         placeholder,
         shortcuts,
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        type,
         ...rest
     } = props;
 

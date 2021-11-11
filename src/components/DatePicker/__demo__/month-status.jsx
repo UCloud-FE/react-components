@@ -8,10 +8,10 @@ class Demo extends React.Component {
         return (
             <div>
                 <div className="demo-wrap">
-                    <DatePicker.Month />
+                    <DatePicker type="month" />
                 </div>
                 <div className="demo-wrap">
-                    <DatePicker.Month status="error" />
+                    <DatePicker type="month" status="error" />
                 </div>
             </div>
         );

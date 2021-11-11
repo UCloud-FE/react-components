@@ -15,7 +15,7 @@ const Demo = () => (
                             title: 'datePicker'
                         },
                         <div style={{ padding: 24 }}>
-                            <DatePicker.Month onChange={v => console.log(v.format())} />
+                            <DatePicker type="month" onChange={v => console.log(v.format())} />
                         </div>
                     );
                 }}
@@ -29,7 +29,7 @@ const Demo = () => (
                             title: 'datePicker'
                         },
                         <div style={{ padding: 24, position: 'relative', overflow: 'auto' }}>
-                            <DatePicker.Month onChange={v => console.log(v.format())} />
+                            <DatePicker type="month" onChange={v => console.log(v.format())} />
                         </div>
                     );
                 }}
@@ -43,7 +43,8 @@ const Demo = () => (
                             title: 'datePicker'
                         },
                         <div style={{ padding: 24, position: 'relative', overflow: 'auto' }}>
-                            <DatePicker.Month
+                            <DatePicker
+                                type="month"
                                 onChange={v => console.log(v.format())}
                                 popoverProps={{ getPopupContainer: () => document.body }}
                                 zIndex={1020}

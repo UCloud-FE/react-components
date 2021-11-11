@@ -6,7 +6,8 @@ import moment from 'moment';
 const Demo = () => (
     <div>
         <div className="demo-wrap">
-            <DatePicker.Month
+            <DatePicker
+                type="month"
                 onChange={console.log}
                 rules={{
                     range: [

@@ -9,7 +9,7 @@ class Demo extends React.Component {
             <div>
                 {Sizes.map(size => (
                     <div className="demo-wrap" key={size}>
-                        <DatePicker.Month size={size} />
+                        <DatePicker type="month" size={size} />
                     </div>
                 ))}
             </div>

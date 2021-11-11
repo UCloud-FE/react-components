@@ -20,7 +20,7 @@ const columns = [
     ),
     () => <Select options={new Array(100).fill(null).map((v, i) => ({ value: i, label: `option-${i}` }))} />,
     () => <DatePicker />,
-    () => <DatePicker.Month />,
+    () => <DatePicker type="month" />,
     record => (
         <Table.ActionList
             exposeCount={1}
