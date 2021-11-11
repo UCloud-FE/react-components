@@ -41,9 +41,13 @@ const getPanesFromChildren = (children: ReactNode) => {
     const panes: Panes = [];
     React.Children.forEach(children, (pane, index) => {
         if (React.isValidElement(pane)) {
+            const tabKey = pane.props?.tabKey as string;
+            const key =
+                pane.key == null ? (tabKey == null ? `__default_tab_key_${index}` : tabKey + '') : pane.key + '';
             panes.push({
                 pane,
-                key: pane.key == null ? `__default_tab_key_${index}` : pane.key + ''
+                // to string
+                key: tabKey == null ? key : tabKey + ''
             });
         }
     });

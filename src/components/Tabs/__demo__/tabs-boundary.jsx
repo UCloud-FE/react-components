@@ -22,6 +22,14 @@ const Demo = () => {
                 </Tabs>
                 <Lazy />
             </React.Suspense>
+            <Tabs styleType="ink" defaultActiveKey="2">
+                {[1, 2, 3].map(i => (
+                    // eslint-disable-next-line react/jsx-key
+                    <Tabs.Pane tabKey={i + ''} tab={`tab ${i}`} style={{ padding: 16 }}>
+                        Pane {i}
+                    </Tabs.Pane>
+                ))}
+            </Tabs>
         </div>
     );
 };
