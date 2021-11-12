@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.19](https://github.com/UCloud-FE/react-components/compare/v1.2.18...v1.2.19) (2021-11-12)
+
+### Bug Fixes
+
+-   **Select:** fix null value override by key ([acc91e2](https://github.com/UCloud-FE/react-components/commit/acc91e24b645eada75656d8c24ae579932ff236e))
+
 ### [1.2.18](https://github.com/UCloud-FE/react-components/compare/v1.2.17...v1.2.18) (2021-11-12)
 
 ### Features
