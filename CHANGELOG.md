@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.18](https://github.com/UCloud-FE/react-components/compare/v1.2.17...v1.2.18) (2021-11-12)
+
+### Features
+
+-   **DatePicker:** add type of month and deprecated Month ([6a7edb0](https://github.com/UCloud-FE/react-components/commit/6a7edb0b7552dd499a35f38da2489bdad4b4bb0a))
+-   **DatePicker:** change defaultTime when empty ([48772cc](https://github.com/UCloud-FE/react-components/commit/48772cc5d9984cac22e69c80c9ebf6f161db32fb))
+-   **Tabs:** add tabKey to tabPane ([fdc5a65](https://github.com/UCloud-FE/react-components/commit/fdc5a65c7dba210c9710a0d36b5e4bcb68249dae))
+
 ### [1.2.17](https://github.com/UCloud-FE/react-components/compare/v1.2.16...v1.2.17) (2021-11-10)
 
 ### Features
