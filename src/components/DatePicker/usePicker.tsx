@@ -55,8 +55,12 @@ interface DisplayToFormatAndTimeMode<D> {
     (display?: D): [string[]] | [string[], string[]];
 }
 
-const getValidCurrentDate = (value: TDate | null | undefined, d: Date) =>
-    value != null && moment(+value).isValid() ? value : d;
+const getValidCurrentDate = (value: TDate | null | undefined, d: Date, currentValue?: TDate) =>
+    value != null && moment(+value).isValid()
+        ? value
+        : currentValue != null
+        ? currentValue
+        : moment(d).set({ hour: 0, minute: 0, second: 0, millisecond: 0 });
 
 const usePicker = <D,>(
     props: TProps<D>,
@@ -181,7 +185,7 @@ const usePicker = <D,>(
 
     const handleInputFocus = useCallback(() => {
         setCalValue(value == null ? null : value);
-        setCalCurrentValue(getValidCurrentDate(value, d));
+        setCalCurrentValue(currentValue => getValidCurrentDate(value, d, currentValue));
         setUseInputValue(true);
         setActive(true);
     }, [d, value]);
