@@ -79,6 +79,15 @@ class Demo extends React.Component {
                     </Select>
                 </DemoWrap>
                 <DemoWrap>
+                    <Select defaultValue={null} onChange={console.log}>
+                        <Option key={123} value={null}>
+                            null value
+                        </Option>
+                        <Option value={objectValue}>object value</Option>
+                        <Option value={arrayValue}>array value</Option>
+                    </Select>
+                </DemoWrap>
+                <DemoWrap>
                     <Select multiple onChange={console.log}>
                         <Option value={null}>null value</Option>
                         <Option value={objectValue}>object value</Option>

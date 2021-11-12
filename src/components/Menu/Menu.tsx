@@ -106,7 +106,7 @@ export const strictGroupChildrenAsDataSource = (
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 if ((child.type as any)?.[itemTag]) {
                     const props = child.props;
-                    const key = props[itemKeyName] ?? child.key;
+                    const key = props[itemKeyName] === undefined ? child.key : props[itemKeyName];
                     const isDisabled = disabled || props.disabled;
                     if (isDisabled) {
                         disabledKeys.push(key);
