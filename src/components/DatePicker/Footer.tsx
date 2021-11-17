@@ -16,17 +16,6 @@ export interface TShortcut {
 }
 type Mode = 'date' | 'month';
 
-const presetShortcuts: Record<Mode, TShortcut> = {
-    date: {
-        handle: () => new Date(),
-        locale: 'chooseTodayNow'
-    },
-    month: {
-        handle: () => new Date(),
-        locale: 'chooseThisMonth'
-    }
-};
-
 const ShortcutWithoutMemo = ({
     index,
     shortcut,
@@ -45,7 +34,7 @@ const ShortcutWithoutMemo = ({
 
     return (
         <span className={shortcutCls} onClick={handleClick}>
-            {shortcut.label ? shortcut.label : shortcut.locale ? locale[shortcut.locale] : shortcut.locale}
+            {shortcut.label ? shortcut.label : shortcut.locale ? locale[shortcut.locale] : 'shortcut'}
         </span>
     );
 };
@@ -60,12 +49,8 @@ interface FooterProps {
     tip?: ReactNode;
     locale?: typeof LOCALE;
 }
-const Footer = ({ mode, confirmAble, onConfirm, shortcuts, onShortcut, tip, locale: _locale }: FooterProps) => {
-    if (shortcuts === undefined) {
-        shortcuts = [presetShortcuts[mode]];
-    } else if (shortcuts === null) {
-        shortcuts = [];
-    }
+const Footer = ({ confirmAble, onConfirm, shortcuts, onShortcut, tip, locale: _locale }: FooterProps) => {
+    if (shortcuts == null) shortcuts = [];
     const handleShortcutClick = useCallback(
         i => {
             const shortcut = shortcuts?.[i];

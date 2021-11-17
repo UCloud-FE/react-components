@@ -5,12 +5,10 @@ import { TDate } from '@z-r/calendar/types/interface';
 import { animationPrefixCls } from 'src/style/globalAnimation';
 import useLocale from 'src/components/LocaleProvider/useLocale';
 import useUncontrolled from 'src/hooks/useUncontrolled';
-import { Size } from 'src/type';
 import usePopoverConfig from 'src/hooks/usePopoverConfig';
 
 import LOCALE from './locale/zh_CN';
 import { isDateDisabled, getValidDate, isDateValid } from './utils';
-import { TShortcut } from './Footer';
 import { DatePickerProps } from './DatePicker';
 
 const formatInput = (v: string, allFormat: string[]): Moment | null | false => {
