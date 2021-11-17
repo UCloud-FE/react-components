@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.20](https://github.com/UCloud-FE/react-components/compare/v1.2.19...v1.2.20) (2021-11-17)
+
+### Features
+
+-   **DatePicker:** remove default shortcuts ([90ee420](https://github.com/UCloud-FE/react-components/commit/90ee42046904a821aea9dc9892bb0419df8da9a6))
+
 ### [1.2.19](https://github.com/UCloud-FE/react-components/compare/v1.2.18...v1.2.19) (2021-11-12)
 
 ### Bug Fixes
