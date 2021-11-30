@@ -1,10 +1,5 @@
-import React, { HTMLAttributes, memo } from 'react';
-import classnames from 'classnames';
+import { memo } from 'react';
 
-import { highlightCls } from './style';
+import { SHighlight } from './style';
 
-const Highlight = ({ className, ...rest }: HTMLAttributes<HTMLSpanElement>) => {
-    return <span {...rest} className={classnames(highlightCls, className)} />;
-};
-
-export default memo(Highlight);
+export default memo(SHighlight);

@@ -27,7 +27,7 @@ interface Item {
 }
 interface AutoCompleteProps {
     /** 待筛选选项 */
-    options: Item[];
+    options?: Item[];
     /** 值，controlled */
     value?: string;
     /** 默认值 */

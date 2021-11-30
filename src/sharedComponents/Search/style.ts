@@ -19,9 +19,6 @@ export const SWrap = sWrap<unknown, HTMLDivElement>({})(
             theme: { designTokens: DT }
         } = props;
         return css`
-            .${highlightCls} {
-                background: ${DT.T_COLOR_BG_HIGHLIGHT};
-            }
             .${inputCls} {
                 margin-bottom: 8px;
             }
@@ -40,6 +37,17 @@ export const SWrap = sWrap<unknown, HTMLDivElement>({})(
             .${emptyContentCls} {
                 display: none;
             }
+        `;
+    })
+);
+
+export const SHighlight = sWrap<unknown, HTMLSpanElement>({ className: highlightCls })(
+    styled.span(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
+        return css`
+            background: ${DT.T_COLOR_BG_HIGHLIGHT};
         `;
     })
 );

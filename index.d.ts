@@ -6,6 +6,48 @@ type Override<T1, T2> = Omit<T1, keyof T2> & T2;
 // base type
 export type SizeType = 'sm' | 'md' | 'lg';
 
+// ThemeProvider
+interface ThemeProviderProps {
+    theme: any;
+}
+export declare class ThemeProvider extends Component<ThemeProviderProps> {}
+
+export { default as Tree } from './lib/components/Tree';
+
+export { default as Cascader } from './lib/components/Cascader';
+
+export { default as Link } from './lib/components/Link';
+
+export { default as AutoComplete } from './lib/components/AutoComplete';
+
+export { default as Switch } from './lib/components/Switch';
+
+export { default as Tabs } from './lib/components/Tabs';
+
+export { default as Input } from './lib/components/Input';
+import Input from './lib/components/Input';
+
+export { default as Checkbox } from './lib/components/Checkbox';
+
+export { default as Menu } from './lib/components/Menu';
+
+export { default as Collapse } from './lib/components/Collapse';
+
+export { default as ActionList } from './lib/components/ActionList';
+import ActionList from './lib/components/ActionList';
+
+export { default as Tooltip } from './lib/components/Tooltip';
+
+export { default as PopConfirm } from './lib/components/PopConfirm';
+
+export { default as ConfigProvider } from './lib/components/ConfigProvider';
+
+export { default as Icon } from './lib/components/Icon';
+
+export { default as Select } from './lib/components/Select';
+
+export { default as Breadcrumb } from './lib/components/Breadcrumb';
+
 // Button
 import { ButtonProps } from './lib/components/Button/Button';
 export { default as Button } from './lib/components/Button';
@@ -266,10 +308,11 @@ export declare class ZForm extends Component<ZFormProps> {
 }
 
 // Transfer
+type TransferSearch = (searchValue: string, item: any) => boolean;
 interface TransferSource {
     title?: ReactNode;
     footer?: ReactNode;
-    search?: boolean | SelectSearch;
+    search?: boolean | TransferSearch;
     disabled?: boolean;
 }
 export type TransferProps = Override<
@@ -281,7 +324,7 @@ export type TransferProps = Override<
         defaultSelectedKeys?: string[];
         onChange?: (keys: string[]) => void;
         disabled?: boolean;
-        search?: boolean | SelectSearch;
+        search?: boolean | TransferSearch;
         source?: TransferSource;
         target?: TransferSource;
     }
@@ -593,7 +636,7 @@ interface TableExpandedRowContentProps extends HTMLAttributes<HTMLDivElement> {}
 declare class TableExpandedRowContent extends Component<TableExpandedRowContentProps> {}
 export declare class Table extends Component<TableProps> {
     static ColumnConfigButton: typeof TableColumnConfigButton;
-    static SearchInput: typeof SearchInput;
+    static SearchInput: typeof Input['Search'];
     static ActionList: typeof ActionList;
     static ExpandedRowContent: typeof TableExpandedRowContent;
     static getColumnConfigFromLocalStorage: typeof Function;
@@ -768,41 +811,3 @@ interface LocaleProviderProps {
     locale?: any;
 }
 export declare class LocaleProvider extends Component<LocaleProviderProps> {}
-
-// ThemeProvider
-interface ThemeProviderProps {
-    theme: any;
-}
-export declare class ThemeProvider extends Component<ThemeProviderProps> {}
-
-export { default as Tree } from './lib/components/Tree';
-
-export { default as Link } from './lib/components/Link';
-
-export { default as AutoComplete } from './lib/components/AutoComplete';
-
-export { default as Switch } from './lib/components/Switch';
-
-export { default as Tabs } from './lib/components/Tabs';
-
-export { default as Input } from './lib/components/Input';
-
-export { default as Checkbox } from './lib/components/Checkbox';
-
-export { default as Menu } from './lib/components/Menu';
-
-export { default as Collapse } from './lib/components/Collapse';
-
-export { default as ActionList } from './lib/components/ActionList';
-
-export { default as Tooltip } from './lib/components/Tooltip';
-
-export { default as PopConfirm } from './lib/components/PopConfirm';
-
-export { default as ConfigProvider } from './lib/components/ConfigProvider';
-
-export { default as Icon } from './lib/components/Icon';
-
-export { default as Select } from './lib/components/Select';
-
-export { default as Breadcrumb } from './lib/components/Breadcrumb';

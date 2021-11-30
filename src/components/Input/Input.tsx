@@ -124,16 +124,14 @@ const Input = forwardRef(
             },
             [onBlur]
         );
-        const onMouseDown = useCallback(
-            (e: MouseEvent) => {
-                e.preventDefault();
-                focus();
-            },
-            [focus]
-        );
+        const handleClearMouseDown = useCallback((e: MouseEvent) => {
+            e.preventDefault();
+            e.stopPropagation();
+        }, []);
         const handleClear = useCallback(
-            e => {
+            (e: MouseEvent) => {
                 if (disabled) return;
+                e.stopPropagation();
                 onClear();
                 const input = inputRef.current;
                 if (!input) return;
@@ -141,29 +139,28 @@ const Input = forwardRef(
                 e.currentTarget = input;
                 const cacheV = input.value;
                 input.value = '';
-                onChange(e);
+                onChange(e as any);
                 input.value = cacheV;
+                input.focus();
             },
             [disabled, onChange, onClear]
         );
+        const handleWrapMouseDown = useCallback((e: MouseEvent) => {
+            e.preventDefault();
+            inputRef.current?.focus();
+        }, []);
         const renderClear = useMemo(() => {
             if (clearable) {
                 return (
-                    <span className={clearCls} onClick={handleClear} onMouseDown={onMouseDown}>
+                    <span className={clearCls} onClick={handleClear} onMouseDown={handleClearMouseDown}>
                         <SvgIcon type="cross-circle-filled" />
                     </span>
                 );
             }
-        }, [clearable, handleClear, onMouseDown]);
+        }, [clearable, handleClear, handleClearMouseDown]);
         const renderPrefix = useMemo(() => {
-            return (
-                prefix && (
-                    <span className={inputPrefixCls} onMouseDown={onMouseDown}>
-                        {prefix}
-                    </span>
-                )
-            );
-        }, [onMouseDown, prefix]);
+            return prefix && <span className={inputPrefixCls}>{prefix}</span>;
+        }, [prefix]);
         const renderSuffix = useMemo(() => {
             if (icon) {
                 deprecatedLogForIcon();
@@ -177,13 +174,9 @@ const Input = forwardRef(
                 renderSuffix = icon;
             }
             if (renderSuffix) {
-                return (
-                    <span className={inputSuffixCls} onMouseDown={onMouseDown}>
-                        {renderSuffix}
-                    </span>
-                );
+                return <span className={inputSuffixCls}>{renderSuffix}</span>;
             }
-        }, [icon, onMouseDown, suffix]);
+        }, [icon, suffix]);
 
         const { status } = useContext(ControllerContext);
 
@@ -192,6 +185,7 @@ const Input = forwardRef(
                 className={classnames(block && blockCls, className)}
                 {...{ size, focused, style, disabled, status: _status || status, customStyle }}
                 empty={!value}
+                onMouseDown={handleWrapMouseDown}
             >
                 <span className={inputWrapCls}>
                     {renderPrefix}

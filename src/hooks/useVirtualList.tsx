@@ -1,4 +1,4 @@
-import { ReactNode, RefObject, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { ReactNode, RefObject, useEffect, useMemo, useRef, useState } from 'react';
 
 const CLIENT_HEIGHT = window.innerHeight;
 const FAIL_OFFSET = 2;

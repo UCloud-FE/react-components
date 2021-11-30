@@ -1,18 +1,17 @@
 import React, { ChangeEvent, useCallback, HTMLAttributes, useMemo, memo } from 'react';
 import _ from 'lodash';
 
-import SvgIcon from 'src/components/SvgIcon';
-import Input from 'src/components/Input';
 import Loading from 'src/components/Loading';
 import useLocale from 'src/components/LocaleProvider/useLocale';
 import { Override } from 'src/type';
 
-import { countCls, emptyTipCls, inputCls, loadingCls, emptyContentCls, SWrap } from './style';
+import { emptyTipCls, loadingCls, emptyContentCls, SWrap } from './style';
 import LOCALE from './locale/zh_CN';
+import SearchInput from './SearchInput';
 
-interface SearchProps {
+export interface SearchProps {
     /** 搜索后数量，null 不展示 */
-    count?: number | null;
+    count?: number | null | void;
     /** 为空 */
     empty?: boolean;
     /** 展示 loading */
@@ -26,7 +25,6 @@ interface SearchProps {
 }
 
 const Search = function ({
-    locale: _locale,
     count,
     empty,
     loading,
@@ -38,31 +36,14 @@ const Search = function ({
     const handleChange = useCallback(
         (e: ChangeEvent<HTMLInputElement>) => {
             handleSearch(e.target.value);
-        },
+    },
         [handleSearch]
     );
-    const locale = useLocale(LOCALE, 'SharedSearch', _locale);
-
-    const prefix = <SvgIcon type="search" />;
-    const suffix =
-        count != null ? (
-            <span className={countCls}>
-                {count}
-                {locale.unit}
-            </span>
-        ) : null;
+    const locale = useLocale(LOCALE, 'SharedSearch');
 
     return (
         <SWrap>
-            <Input
-                className={inputCls}
-                suffix={suffix}
-                prefix={prefix}
-                onChange={handleChange}
-                clearable
-                block
-                status="default"
-            />
+            <SearchInput onChange={handleChange} count={count} status="default" />
             {loading ? <Loading loading={loading} className={loadingCls} /> : null}
             {empty ? <div className={emptyTipCls}>{locale.empty}</div> : null}
             <div className={empty ? emptyContentCls : ''}>{children}</div>
