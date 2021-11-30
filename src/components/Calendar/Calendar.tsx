@@ -9,8 +9,9 @@ import { getValidDate, Rules, getDisabledRule } from './utils';
 import { SCalendar, prefixCls } from './style';
 import HeaderSwitcher from './HeaderSwitcher';
 import LOCALE from './locale/zh_CN';
+import Month from './Month';
 
-interface CalendarProps {
+export interface CalendarProps {
     /** 当前值，受控 */
     value?: TDate | null;
     /** 默认值，非受控 */
@@ -30,17 +31,19 @@ interface CalendarProps {
          */
         boxShadow?: boolean;
     };
+    /** 类型 */
+    type?: 'date' | 'month';
     /** @ignore */
     locale?: typeof LOCALE;
 }
 
-const Calendar = ({
+const DateCalendar = React.memo(function DateCalendar({
     onSelect,
     onChange,
     rules,
     locale: _locale,
     ...rest
-}: CalendarProps & Override<HTMLAttributes<HTMLDivElement>, CalendarProps>) => {
+}: CalendarProps & Override<HTMLAttributes<HTMLDivElement>, CalendarProps>) {
     const disabledRule = useMemo(() => {
         return getDisabledRule(rules);
     }, [rules]);
@@ -69,6 +72,9 @@ const Calendar = ({
             {...rest}
         />
     );
+});
+const Calendar = ({ type, ...props }: CalendarProps) => {
+    return type === 'month' ? <Month {...props} /> : <DateCalendar {...props} />;
 };
 
 export default memo(Calendar);
