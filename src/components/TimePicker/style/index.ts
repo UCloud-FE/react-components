@@ -17,6 +17,15 @@ const shouldForwardProp = (propName: string): boolean => {
     return !({ customStyle: 1, theme: 1 } as { [key: string]: 1 })[propName];
 };
 
+export const SWrap = sWrap({ className: prefixCls })(
+    styled.div(() => {
+        return css`
+            display: inline-block;
+            width: 140px;
+        `;
+    })
+);
+
 export const SPopup = sWrap({})(
     styled.div(props => {
         const {

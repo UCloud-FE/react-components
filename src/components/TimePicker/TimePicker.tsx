@@ -14,7 +14,7 @@ import useUncontrolled from 'src/hooks/useUncontrolled';
 import { Size } from 'src/style';
 import usePopoverConfig from 'src/hooks/usePopoverConfig';
 
-import { footerCls, SPopup } from './style';
+import { footerCls, SPopup, SWrap } from './style';
 import Time from './Time';
 import LOCALE from './locale/zh_CN';
 
@@ -185,15 +185,17 @@ const TimePicker = ({
                 </SPopup>
             }
         >
-            <Input
-                value={inputValue}
-                onChange={handleInputChange}
-                onBlur={handleInputBlur}
-                onFocus={handleInputFocus}
-                size={size}
-                disabled={disabled}
-                prefix={<SvgIcon type="clock" />}
-            />
+            <SWrap>
+                <Input
+                    value={inputValue}
+                    onChange={handleInputChange}
+                    onBlur={handleInputBlur}
+                    onFocus={handleInputFocus}
+                    size={size}
+                    disabled={disabled}
+                    prefix={<SvgIcon type="clock" />}
+                />
+            </SWrap>
         </Popover>
     );
 };
