@@ -11,19 +11,23 @@ import config from 'src/config';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-datepicker';
-export const pickerPrefixCls = prefixCls + '–picker';
-export const monthPickerPrefixCls = prefixCls + '-month-picker';
-export const dataWrapCls = prefixCls + '-data-wrap';
-export const dateSeparatorCls = prefixCls + '-data-separator';
+export const dateSeparatorCls = prefixCls + '-date-separator';
 export const shortcutCls = prefixCls + '-shortcut';
 export const footerCls = prefixCls + '-footer';
 export const tipCls = prefixCls + '-tip';
 export const readonlyInputCls = prefixCls + '-input-readonly';
 
-export const PickerContainer = sWrap<{ disabled: boolean; isMonth: boolean }, HTMLDivElement>({
+export const PickerContainer = sWrap<{ disabled?: boolean; isMonth?: boolean; hasTime?: boolean }, HTMLDivElement>({
     className: ({ disabled, isMonth }) =>
         classnames(prefixCls, isMonth && `${prefixCls}-month`, disabled && `${prefixCls}-disabled`)
-})(styled('div')(inlineBlockWithVerticalMixin));
+})(
+    styled('div')(({ hasTime }) => {
+        return css`
+            ${inlineBlockWithVerticalMixin};
+            width: ${hasTime ? 180 : 140}px;
+        `;
+    })
+);
 
 export const SPopup = sWrap({})(
     styled('div')((props: { theme: Theme }) => {
@@ -119,10 +123,8 @@ export const SRangeInputWrap = sWrap<{
             }
             .${inputPrefixCls} {
                 flex-grow: 1;
-                height: 100%;
             }
             .${readonlyInputCls} {
-                min-width: 100px;
                 padding: 0 8px
             }
         `;
@@ -136,6 +138,14 @@ export const RangeContainer = sWrap<{ disabled?: boolean }>({
         display: inline-flex;
         align-items: center;
     `
+);
+
+export const RangeInputWrap = sWrap<{ isMonth?: boolean; hasTime?: boolean; hasPrefix?: boolean }>()(
+    styled.div(({ isMonth, hasTime, hasPrefix }) => {
+        return css`
+            width: ${(isMonth ? 69 : hasTime ? 145 : 106) + (hasPrefix ? 20 : 0)}px;
+        `;
+    })
 );
 
 export const RangeSelect = styled(Select)`

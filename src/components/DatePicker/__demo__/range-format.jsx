@@ -7,6 +7,7 @@ const formats = [
     'YYYYMMDD HH:mm:ss',
     'YYYY-M-D H:m:s',
     'YY-M-D H:m:s',
+    'YYYY-MM-DD',
     ['YYYY-MM-DD HH:mm:ss', 'YYYY-M-D H:m:s', 'YY-M-D H:m:s']
 ];
 class Demo extends React.Component {

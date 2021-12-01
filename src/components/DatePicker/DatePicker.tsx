@@ -113,13 +113,15 @@ const DatePickerForDate = (props: DatePickerProps) => {
         { error }
     ] = usePicker<DatePickerProps['display']>(props, displayToFormatAndTimeMode, 'date');
 
+    const hasTime = !!timeProps.mode?.length;
+
     return (
-        <PickerContainer {...containerProps}>
+        <PickerContainer {...containerProps} hasTime={hasTime}>
             <Popover
                 {...popoverProps}
                 popup={
                     <SPopup {...popupProps}>
-                        <Calendar {...calendarProps} sidebar={timeProps.mode.length ? <Time {...timeProps} /> : null} />
+                        <Calendar {...calendarProps} sidebar={hasTime ? <Time {...timeProps} /> : null} />
                         {error && (
                             <Notice styleType="error" closable={false}>
                                 {error}
@@ -129,7 +131,7 @@ const DatePickerForDate = (props: DatePickerProps) => {
                     </SPopup>
                 }
             >
-                <Input {...inputProps} prefix={<SvgIcon type="calendar" />} />
+                <Input {...inputProps} prefix={<SvgIcon type="calendar" />} block />
             </Popover>
         </PickerContainer>
     );

@@ -49,7 +49,7 @@ const Month = (props: DatePickerProps) => {
                 {...popoverConfigProps}
                 {...popoverProps}
             >
-                <Input {...inputProps} prefix={<SvgIcon type="calendar" />} />
+                <Input {...inputProps} prefix={<SvgIcon type="calendar" />} block />
             </Popover>
         </PickerContainer>
     );

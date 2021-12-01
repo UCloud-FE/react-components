@@ -10,7 +10,7 @@ import usePopoverConfig from 'src/hooks/usePopoverConfig';
 
 import { DatePickerProps, displayToFormatAndTimeMode } from './DatePicker';
 import { displayToFormatAndTimeMode as displayToFormatAndTimeModeM } from './Month';
-import { SPopup, readonlyInputCls } from './style';
+import { SPopup, readonlyInputCls, RangeInputWrap } from './style';
 import usePicker from './usePicker';
 import Footer from './Footer';
 
@@ -38,6 +38,7 @@ const RangePickerWithoutMemo = forwardRef(
         },
         ref: Ref<RangePickerRef>
     ) => {
+        const isMonth = type === 'month';
         const [
             inputProps,
             ,
@@ -51,7 +52,7 @@ const RangePickerWithoutMemo = forwardRef(
             {
                 ...pickProps
             },
-            type === 'month' ? displayToFormatAndTimeModeM : displayToFormatAndTimeMode,
+            isMonth ? displayToFormatAndTimeModeM : displayToFormatAndTimeMode,
             type
         );
 
@@ -71,42 +72,47 @@ const RangePickerWithoutMemo = forwardRef(
         }, [active, onActiveChange]);
         const popoverConfigProps = usePopoverConfig();
 
-        const CalendarComp = type === 'month' ? Calendar.Month : Calendar;
+        const hasTime = !!timeProps.mode?.length;
+
+        const CalendarComp = isMonth ? Calendar.Month : Calendar;
 
         return readonly ? (
             <span className={readonlyInputCls}>{inputProps.value}</span>
         ) : (
-            <Popover
-                popup={
-                    <SPopup {...popupProps}>
-                        <CalendarComp
-                            {...calendarProps}
-                            sidebar={type === 'month' ? null : timeProps.mode.length ? <Time {...timeProps} /> : null}
-                        />
-                        {pickerError && (
-                            <Notice styleType="error" closable={false}>
-                                {pickerError}
-                            </Notice>
-                        )}
-                        {error && (
-                            <Notice styleType="error" closable={false}>
-                                {error}
-                            </Notice>
-                        )}
-                        {tip && <Notice closable={false}>{tip}</Notice>}
-                        <Footer {...footerProps} tip={footerTip} />
-                    </SPopup>
-                }
-                {...popoverConfigProps}
-                {...popoverProps}
-            >
-                <Input
-                    {...inputProps}
-                    prefix={prefix ? <SvgIcon type="calendar" /> : null}
-                    customStyle={{ border: 'none', boxShadow: 'none', background: 'none' }}
-                    ref={inputRef}
-                />
-            </Popover>
+            <RangeInputWrap isMonth={isMonth} hasTime={hasTime} hasPrefix={prefix}>
+                <Popover
+                    popup={
+                        <SPopup {...popupProps}>
+                            <CalendarComp
+                                {...calendarProps}
+                                sidebar={isMonth ? null : hasTime ? <Time {...timeProps} /> : null}
+                            />
+                            {pickerError && (
+                                <Notice styleType="error" closable={false}>
+                                    {pickerError}
+                                </Notice>
+                            )}
+                            {error && (
+                                <Notice styleType="error" closable={false}>
+                                    {error}
+                                </Notice>
+                            )}
+                            {tip && <Notice closable={false}>{tip}</Notice>}
+                            <Footer {...footerProps} tip={footerTip} />
+                        </SPopup>
+                    }
+                    {...popoverConfigProps}
+                    {...popoverProps}
+                >
+                    <Input
+                        {...inputProps}
+                        customStyle={{ border: 'none', boxShadow: 'none', background: 'none' }}
+                        ref={inputRef}
+                        block
+                        prefix={prefix ? <SvgIcon type="calendar" /> : null}
+                    />
+                </Popover>
+            </RangeInputWrap>
         );
     }
 );
