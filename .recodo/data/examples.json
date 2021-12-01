@@ -1500,6 +1500,14 @@
                         "required": true,
                         "tsType": { "name": "ReactNode" },
                         "description": { "description": "tab 的 title", "tags": [] }
+                    },
+                    "tabKey": {
+                        "required": false,
+                        "tsType": { "name": "string" },
+                        "description": {
+                            "description": "tab 的 key，由于 react 会在某些情况下改变传递的 key，顾直接使用 key 是不安全的，如发现 key 被修改，可使用 tabKey 来替换",
+                            "tags": []
+                        }
                     }
                 }
             }
@@ -5680,10 +5688,11 @@
                         "required": false,
                         "tsType": {
                             "name": "union",
-                            "raw": "'default' | 'error'",
+                            "raw": "'default' | 'error' | string",
                             "elements": [
                                 { "name": "literal", "value": "'default'" },
-                                { "name": "literal", "value": "'error'" }
+                                { "name": "literal", "value": "'error'" },
+                                { "name": "string" }
                             ]
                         },
                         "description": { "description": "状态", "tags": [] }
@@ -6000,7 +6009,7 @@
             }
         },
         "Item": {
-            "path": "Form/Item.jsx",
+            "path": "Form/Item.tsx",
             "name": "Item",
             "info": {
                 "description": "",
@@ -6008,120 +6017,76 @@
                 "methods": [],
                 "props": {
                     "label": {
-                        "type": { "name": "node" },
-                        "required": false,
+                        "required": true,
+                        "tsType": { "name": "ReactNode" },
                         "description": { "description": "表单项标签", "tags": [] }
                     },
-                    "children": {
-                        "type": { "name": "node" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
                     "labelCol": {
-                        "type": {
-                            "name": "shape",
-                            "value": {
-                                "span": { "name": "number", "description": "栅格占位格数", "required": false },
-                                "offset": {
-                                    "name": "number",
-                                    "description": "栅格向右偏移格数，偏移占位",
-                                    "required": false
-                                },
-                                "pull": {
-                                    "name": "number",
-                                    "description": "栅格向左偏移格数，偏移不占位",
-                                    "required": false
-                                },
-                                "push": {
-                                    "name": "number",
-                                    "description": "栅格向右偏移格数，偏移不占位",
-                                    "required": false
-                                }
-                            }
-                        },
                         "required": false,
+                        "tsType": { "name": "ColShape" },
                         "description": { "description": "标签的col配置", "tags": [] }
                     },
                     "controllerCol": {
-                        "type": {
-                            "name": "shape",
-                            "value": {
-                                "span": { "name": "number", "description": "栅格占位格数", "required": false },
-                                "offset": {
-                                    "name": "number",
-                                    "description": "栅格向右偏移格数，偏移占位",
-                                    "required": false
-                                },
-                                "pull": {
-                                    "name": "number",
-                                    "description": "栅格向左偏移格数，偏移不占位",
-                                    "required": false
-                                },
-                                "push": {
-                                    "name": "number",
-                                    "description": "栅格向右偏移格数，偏移不占位",
-                                    "required": false
-                                }
-                            }
-                        },
                         "required": false,
+                        "tsType": { "name": "ColShape" },
                         "description": { "description": "控件的col配置", "tags": [] }
                     },
                     "help": {
-                        "type": { "name": "node" },
                         "required": false,
+                        "tsType": { "name": "ReactNode" },
                         "description": { "description": "表单项的提示描述", "tags": [] }
                     },
                     "required": {
-                        "type": { "name": "bool" },
                         "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": {
                             "description": "表单项是否为必填/必选，仅影响 UI，逻辑必须请看 ZForm rules 的 required",
                             "tags": []
                         }
                     },
-                    "className": {
-                        "type": { "name": "string" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
                     "status": {
-                        "type": {
-                            "name": "enum",
-                            "value": [
-                                { "value": "'default'", "computed": false },
-                                { "value": "'success'", "computed": false },
-                                { "value": "'warning'", "computed": false },
-                                { "value": "'error'", "computed": false },
-                                { "value": "'loading'", "computed": false }
+                        "required": false,
+                        "tsType": {
+                            "name": "union",
+                            "raw": "'default' | 'success' | 'warning' | 'error' | 'loading'",
+                            "elements": [
+                                { "name": "literal", "value": "'default'" },
+                                { "name": "literal", "value": "'success'" },
+                                { "name": "literal", "value": "'warning'" },
+                                { "name": "literal", "value": "'error'" },
+                                { "name": "literal", "value": "'loading'" }
                             ]
                         },
-                        "required": false,
                         "description": { "description": "影响提示的状态/类型、包裹的控件的状态", "tags": [] }
                     },
                     "shareStatus": {
-                        "type": { "name": "bool" },
                         "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": {
                             "description": "是否将状态传递给 item 下的表单控件（目前仅 Input 支持部分状态）",
                             "tags": []
                         }
                     },
                     "tip": {
-                        "type": {
+                        "required": false,
+                        "tsType": {
                             "name": "union",
-                            "value": [
+                            "raw": "| {\n      /** 自定义提示图标 */\n      icon?: ReactNode;\n      /** 提示内容 */\n      content?: ReactNode;\n  }\n| ReactNode",
+                            "elements": [
                                 {
-                                    "name": "shape",
-                                    "value": {
-                                        "icon": { "name": "node", "description": "自定义提示图标", "required": false },
-                                        "content": { "name": "node", "description": "提示内容", "required": false }
+                                    "name": "signature",
+                                    "type": "object",
+                                    "raw": "{\n    /** 自定义提示图标 */\n    icon?: ReactNode;\n    /** 提示内容 */\n    content?: ReactNode;\n}",
+                                    "signature": {
+                                        "properties": [
+                                            { "key": "icon", "value": { "name": "ReactNode", "required": false } },
+                                            { "key": "content", "value": { "name": "ReactNode", "required": false } }
+                                        ]
                                     }
                                 },
-                                { "name": "node" }
+                                { "name": "ReactNode" }
                             ]
                         },
-                        "required": false,
                         "description": { "description": "提示信息", "tags": [] }
                     }
                 }
@@ -6216,7 +6181,8 @@
                                             "description": "添加区域的自定义提示信息",
                                             "required": false
                                         },
-                                        "disabled": { "name": "bool", "description": "是否禁用", "required": false }
+                                        "disabled": { "name": "bool", "description": "是否禁用", "required": false },
+                                        "hidden": { "name": "bool", "description": "是否隐藏", "required": false }
                                     }
                                 }
                             ]
@@ -6651,7 +6617,10 @@
                                 ]
                             }
                         },
-                        "description": { "description": "设置操作面板，时分秒", "tags": [] }
+                        "description": {
+                            "description": "",
+                            "tags": [{ "title": "deprecated", "description": "使用 format 替换\n设置操作面板，时分秒" }]
+                        }
                     },
                     "disabled": {
                         "required": false,
@@ -6691,6 +6660,23 @@
                         "required": false,
                         "tsType": { "name": "any" },
                         "description": { "description": "自定义 popover，参考 popover", "tags": [] }
+                    },
+                    "type": {
+                        "required": false,
+                        "tsType": {
+                            "name": "union",
+                            "raw": "'date' | 'month'",
+                            "elements": [
+                                { "name": "literal", "value": "'date'" },
+                                { "name": "literal", "value": "'month'" }
+                            ]
+                        },
+                        "description": { "description": "类型", "tags": [] }
+                    },
+                    "locale": {
+                        "required": false,
+                        "tsType": { "name": "LOCALE" },
+                        "description": { "description": "自定义语言", "tags": [] }
                     },
                     "zIndex": {
                         "required": false,
@@ -6791,174 +6777,12 @@
             "path": "DatePicker/Month.tsx",
             "name": "Month",
             "info": {
-                "description": "",
+                "description": {
+                    "description": "",
+                    "tags": [{ "title": "deprecated", "description": "请使用 ```<DatePicker type='month' />``` 替换" }]
+                },
                 "displayName": "Month",
-                "methods": [],
-                "props": {
-                    "value": {
-                        "required": false,
-                        "tsType": {
-                            "name": "union",
-                            "raw": "TDate | null",
-                            "elements": [{ "name": "TDate" }, { "name": "null" }]
-                        },
-                        "description": { "description": "值，受控", "tags": [] }
-                    },
-                    "defaultValue": {
-                        "required": false,
-                        "tsType": {
-                            "name": "union",
-                            "raw": "TDate | null",
-                            "elements": [{ "name": "TDate" }, { "name": "null" }]
-                        },
-                        "description": { "description": "默认值，非受控", "tags": [] }
-                    },
-                    "onChange": {
-                        "required": false,
-                        "tsType": {
-                            "name": "signature",
-                            "type": "function",
-                            "raw": "(v: Moment | null) => void",
-                            "signature": {
-                                "arguments": [
-                                    {
-                                        "name": "v",
-                                        "type": {
-                                            "name": "union",
-                                            "raw": "Moment | null",
-                                            "elements": [{ "name": "Moment" }, { "name": "null" }]
-                                        }
-                                    }
-                                ],
-                                "return": { "name": "void" }
-                            }
-                        },
-                        "description": { "description": "修改回调", "tags": [] }
-                    },
-                    "rules": { "required": false, "tsType": { "name": "any" }, "description": "" },
-                    "size": {
-                        "required": false,
-                        "tsType": { "name": "Size" },
-                        "description": { "description": "尺寸", "tags": [] }
-                    },
-                    "format": {
-                        "required": false,
-                        "tsType": {
-                            "name": "union",
-                            "raw": "string | string[]",
-                            "elements": [
-                                { "name": "string" },
-                                { "name": "Array", "elements": [{ "name": "string" }], "raw": "string[]" }
-                            ]
-                        },
-                        "description": { "description": "输入和展示的字符串格式，为数组时，第一个用作展示", "tags": [] }
-                    },
-                    "nullable": {
-                        "required": false,
-                        "tsType": { "name": "boolean" },
-                        "description": { "description": "是否可为空，为空时不传或传入空值会默认为当前时刻", "tags": [] }
-                    },
-                    "display": {
-                        "required": false,
-                        "tsType": {
-                            "name": "signature",
-                            "type": "object",
-                            "raw": "{\n    date?: {\n        /** @deprecated 设置日期展示格式，使用 format 替换 */\n        format?: string;\n    };\n}",
-                            "signature": {
-                                "properties": [
-                                    {
-                                        "key": "date",
-                                        "value": {
-                                            "name": "signature",
-                                            "type": "object",
-                                            "raw": "{\n    /** @deprecated 设置日期展示格式，使用 format 替换 */\n    format?: string;\n}",
-                                            "signature": {
-                                                "properties": [
-                                                    {
-                                                        "key": "format",
-                                                        "value": { "name": "string", "required": false }
-                                                    }
-                                                ]
-                                            },
-                                            "required": false
-                                        }
-                                    }
-                                ]
-                            }
-                        },
-                        "description": { "description": "设置操作面板，时分秒", "tags": [] }
-                    },
-                    "disabled": {
-                        "required": false,
-                        "tsType": { "name": "boolean" },
-                        "description": { "description": "是否禁用", "tags": [] }
-                    },
-                    "status": {
-                        "required": false,
-                        "tsType": {
-                            "name": "union",
-                            "raw": "'default' | 'error'",
-                            "elements": [
-                                { "name": "literal", "value": "'default'" },
-                                { "name": "literal", "value": "'error'" }
-                            ]
-                        },
-                        "description": { "description": "状态", "tags": [] }
-                    },
-                    "placeholder": {
-                        "required": false,
-                        "tsType": { "name": "string" },
-                        "description": { "description": "placeholder", "tags": [] }
-                    },
-                    "shortcuts": {
-                        "required": false,
-                        "tsType": {
-                            "name": "union",
-                            "raw": "TShortcut[] | null",
-                            "elements": [
-                                { "name": "Array", "elements": [{ "name": "TShortcut" }], "raw": "TShortcut[]" },
-                                { "name": "null" }
-                            ]
-                        },
-                        "description": { "description": "面板快捷内容", "tags": [] }
-                    },
-                    "popoverProps": {
-                        "required": false,
-                        "tsType": { "name": "any" },
-                        "description": { "description": "自定义 popover，参考 popover", "tags": [] }
-                    },
-                    "zIndex": {
-                        "required": false,
-                        "tsType": { "name": "number" },
-                        "description": {
-                            "description": "",
-                            "tags": [
-                                { "title": "deprecated", "description": "使用 popoverProps 替换\n弹出层的 z-index" }
-                            ]
-                        }
-                    },
-                    "getCalendarContainer": {
-                        "required": false,
-                        "tsType": {
-                            "name": "signature",
-                            "type": "function",
-                            "raw": "(triggerNode: Element) => Element",
-                            "signature": {
-                                "arguments": [{ "name": "triggerNode", "type": { "name": "Element" } }],
-                                "return": { "name": "Element" }
-                            }
-                        },
-                        "description": {
-                            "description": "",
-                            "tags": [
-                                {
-                                    "title": "deprecated",
-                                    "description": "使用 popoverProps 替换\n弹出层容器，参考 popover.getPopupContainer"
-                                }
-                            ]
-                        }
-                    }
-                }
+                "methods": []
             }
         },
         "Range": {
@@ -8015,6 +7839,215 @@
             }
         }
     },
+    "Cascader": {
+        "Cascader": {
+            "path": "Cascader/Cascader.tsx",
+            "name": "Cascader",
+            "info": {
+                "description": "",
+                "displayName": "Cascader",
+                "methods": [],
+                "props": {
+                    "dataSource": {
+                        "required": false,
+                        "tsType": { "name": "Array", "elements": [{ "name": "CascadeData" }], "raw": "CascadeData[]" },
+                        "description": { "description": "数据源", "tags": [] }
+                    },
+                    "value": {
+                        "required": false,
+                        "tsType": { "name": "Array", "elements": [{ "name": "Key" }], "raw": "Key[]" },
+                        "description": { "description": "选中的值", "tags": [] }
+                    },
+                    "defaultValue": {
+                        "required": false,
+                        "tsType": { "name": "Array", "elements": [{ "name": "Key" }], "raw": "Key[]" },
+                        "description": { "description": "默认值，非受控", "tags": [] }
+                    },
+                    "onChange": {
+                        "required": false,
+                        "tsType": {
+                            "name": "signature",
+                            "type": "function",
+                            "raw": "(value: Key[] | void) => void",
+                            "signature": {
+                                "arguments": [
+                                    {
+                                        "name": "value",
+                                        "type": {
+                                            "name": "union",
+                                            "raw": "Key[] | void",
+                                            "elements": [
+                                                { "name": "Array", "elements": [{ "name": "Key" }], "raw": "Key[]" },
+                                                { "name": "void" }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "return": { "name": "void" }
+                            }
+                        },
+                        "description": { "description": "选中回调", "tags": [] }
+                    },
+                    "disabled": {
+                        "required": false,
+                        "tsType": { "name": "boolean" },
+                        "description": { "description": "是否禁用", "tags": [] }
+                    },
+                    "size": {
+                        "required": false,
+                        "tsType": { "name": "Size" },
+                        "description": { "description": "尺寸", "tags": [] }
+                    },
+                    "search": {
+                        "required": false,
+                        "tsType": {
+                            "name": "union",
+                            "raw": "| boolean\n| {\n      /** 自定义搜索函数 */\n      handleSearch?: (\n          searchValue: string,\n          dataSource: CascadeData[]\n      ) => {\n          dataSource: CascadeData[];\n          count?: number;\n      };\n  }",
+                            "elements": [
+                                { "name": "boolean" },
+                                {
+                                    "name": "signature",
+                                    "type": "object",
+                                    "raw": "{\n    /** 自定义搜索函数 */\n    handleSearch?: (\n        searchValue: string,\n        dataSource: CascadeData[]\n    ) => {\n        dataSource: CascadeData[];\n        count?: number;\n    };\n}",
+                                    "signature": {
+                                        "properties": [
+                                            {
+                                                "key": "handleSearch",
+                                                "value": {
+                                                    "name": "signature",
+                                                    "type": "function",
+                                                    "raw": "(\n    searchValue: string,\n    dataSource: CascadeData[]\n) => {\n    dataSource: CascadeData[];\n    count?: number;\n}",
+                                                    "signature": {
+                                                        "arguments": [
+                                                            { "name": "searchValue", "type": { "name": "string" } },
+                                                            {
+                                                                "name": "dataSource",
+                                                                "type": {
+                                                                    "name": "Array",
+                                                                    "elements": [{ "name": "CascadeData" }],
+                                                                    "raw": "CascadeData[]"
+                                                                }
+                                                            }
+                                                        ],
+                                                        "return": {
+                                                            "name": "signature",
+                                                            "type": "object",
+                                                            "raw": "{\n    dataSource: CascadeData[];\n    count?: number;\n}",
+                                                            "signature": {
+                                                                "properties": [
+                                                                    {
+                                                                        "key": "dataSource",
+                                                                        "value": {
+                                                                            "name": "Array",
+                                                                            "elements": [{ "name": "CascadeData" }],
+                                                                            "raw": "CascadeData[]",
+                                                                            "required": true
+                                                                        }
+                                                                    },
+                                                                    {
+                                                                        "key": "count",
+                                                                        "value": { "name": "number", "required": false }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    },
+                                                    "required": false
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        "description": { "description": "使用搜索", "tags": [] }
+                    },
+                    "loadData": {
+                        "required": false,
+                        "tsType": { "name": "LoadData" },
+                        "description": { "description": "异步加载数据操作", "tags": [] }
+                    },
+                    "clearable": {
+                        "required": false,
+                        "tsType": { "name": "boolean" },
+                        "description": { "description": "是否可清空", "tags": [] }
+                    },
+                    "status": {
+                        "required": true,
+                        "tsType": { "name": "InputProps['status']", "raw": "InputProps['status']" },
+                        "description": { "description": "状态", "tags": [] }
+                    },
+                    "placeholder": {
+                        "required": false,
+                        "tsType": { "name": "string" },
+                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                    },
+                    "popoverProps": {
+                        "required": false,
+                        "tsType": {
+                            "name": "signature",
+                            "type": "object",
+                            "raw": "{ [key: string]: any }",
+                            "signature": {
+                                "properties": [
+                                    { "key": { "name": "string" }, "value": { "name": "any", "required": true } }
+                                ]
+                            }
+                        },
+                        "description": { "description": "自定义 popover 的配置", "tags": [] }
+                    }
+                }
+            }
+        },
+        "Item": {
+            "path": "Cascader/Item.tsx",
+            "name": "Item",
+            "info": {
+                "description": "",
+                "displayName": "Item",
+                "methods": [],
+                "props": {
+                    "expandAble": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                    "expanded": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                    "selected": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                    "loading": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                    "value": { "required": true, "tsType": { "name": "Key" }, "description": "" },
+                    "title": { "required": true, "tsType": { "name": "ReactNode" }, "description": "" },
+                    "disabled": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                    "parents": {
+                        "required": false,
+                        "tsType": { "name": "Array", "elements": [{ "name": "CascadeData" }], "raw": "CascadeData[]" },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "Items": {
+            "path": "Cascader/Items.tsx",
+            "name": "Items",
+            "info": {
+                "description": "",
+                "displayName": "Items",
+                "methods": [],
+                "props": {
+                    "items": {
+                        "required": false,
+                        "tsType": { "name": "Array", "elements": [{ "name": "CascadeData" }], "raw": "CascadeData[]" },
+                        "description": ""
+                    },
+                    "selectedKey": { "required": false, "tsType": { "name": "Key" }, "description": "" },
+                    "expandedKey": { "required": false, "tsType": { "name": "Key" }, "description": "" },
+                    "disabled": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                    "parents": {
+                        "required": false,
+                        "tsType": { "name": "Array", "elements": [{ "name": "CascadeData" }], "raw": "CascadeData[]" },
+                        "description": ""
+                    },
+                    "loadData": { "required": false, "tsType": { "name": "LoadData" }, "description": "" }
+                }
+            }
+        }
+    },
     "Card": {
         "Action": {
             "path": "Card/Action.jsx",
@@ -8181,6 +8214,18 @@
                         },
                         "description": { "description": "自定义样式", "tags": [] }
                     },
+                    "type": {
+                        "required": false,
+                        "tsType": {
+                            "name": "union",
+                            "raw": "'date' | 'month'",
+                            "elements": [
+                                { "name": "literal", "value": "'date'" },
+                                { "name": "literal", "value": "'month'" }
+                            ]
+                        },
+                        "description": { "description": "类型", "tags": [] }
+                    },
                     "locale": {
                         "required": false,
                         "tsType": { "name": "LOCALE" },
@@ -8198,82 +8243,12 @@
             "path": "Calendar/Month.tsx",
             "name": "Month",
             "info": {
-                "description": "",
+                "description": {
+                    "description": "",
+                    "tags": [{ "title": "deprecated", "description": "请使用 ```<Calendar type='month' />``` 替换" }]
+                },
                 "displayName": "Month",
-                "methods": [],
-                "props": {
-                    "value": {
-                        "required": false,
-                        "tsType": {
-                            "name": "union",
-                            "raw": "TDate | null",
-                            "elements": [{ "name": "TDate" }, { "name": "null" }]
-                        },
-                        "description": { "description": "当前值，受控", "tags": [] }
-                    },
-                    "defaultValue": {
-                        "required": false,
-                        "tsType": {
-                            "name": "union",
-                            "raw": "TDate | null",
-                            "elements": [{ "name": "TDate" }, { "name": "null" }]
-                        },
-                        "description": { "description": "默认值，非受控", "tags": [] }
-                    },
-                    "onSelect": {
-                        "required": false,
-                        "tsType": {
-                            "name": "signature",
-                            "type": "function",
-                            "raw": "(t: Moment) => void",
-                            "signature": {
-                                "arguments": [{ "name": "t", "type": { "name": "Moment" } }],
-                                "return": { "name": "void" }
-                            }
-                        },
-                        "description": {
-                            "description": "",
-                            "tags": [{ "title": "deprecated", "description": "使用 onChange 来替换" }]
-                        }
-                    },
-                    "onChange": {
-                        "required": false,
-                        "tsType": {
-                            "name": "signature",
-                            "type": "function",
-                            "raw": "(t: Moment) => void",
-                            "signature": {
-                                "arguments": [{ "name": "t", "type": { "name": "Moment" } }],
-                                "return": { "name": "void" }
-                            }
-                        },
-                        "description": { "description": "选中变化回调", "tags": [] }
-                    },
-                    "rules": {
-                        "required": false,
-                        "tsType": { "name": "Rules" },
-                        "description": { "description": "自定义规则", "tags": [] }
-                    },
-                    "customStyle": {
-                        "required": false,
-                        "tsType": {
-                            "name": "signature",
-                            "type": "object",
-                            "raw": "{\n    /**\n     * 外层阴影，为 false 时隐藏\n     */\n    boxShadow?: boolean;\n}",
-                            "signature": {
-                                "properties": [
-                                    { "key": "boxShadow", "value": { "name": "boolean", "required": false } }
-                                ]
-                            }
-                        },
-                        "description": { "description": "自定义样式", "tags": [] }
-                    },
-                    "locale": {
-                        "required": false,
-                        "tsType": { "name": "LOCALE" },
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    }
-                }
+                "methods": []
             }
         }
     },

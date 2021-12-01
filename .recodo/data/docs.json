@@ -59,7 +59,7 @@
         "ThemeProvider": {
             "path": "ThemeProvider/ThemeProvider.md",
             "name": "ThemeProvider",
-            "info": "### 说明\n\n这是主题化组件，正常用于包裹整个程序来替换颜色主题等\n\n### 演示\n\n```js {\"codepath\": \"themeprovider.jsx\"}\n```\n"
+            "info": "### 说明\n\n这是主题化组件，正常用于包裹整个程序来替换颜色主题等\n\n### 演示\n\n#### 主题展示\n\n```js {\"codepath\": \"themeprovider.jsx\"}\n```\n\n#### useDesignTokens\n\n不提供 useTheme 是因为 theme 中除了 DT 还有一些其它内部属性，不适合暴露，故只暴露 DT。\n\n```js {\"codepath\": \"useDesignTokens.jsx\"}\n```\n"
         }
     },
     "Textarea": {
@@ -95,7 +95,7 @@
         "Tabs": {
             "path": "Tabs/Tabs.md",
             "name": "Tabs",
-            "info": "### 说明\n\n-   所有的 pane 必须传入唯一 key\n-   支持键盘切换 tab\n-   tab 数量多时会自动出现滚动按钮\n\n### 演示\n\n#### 演示\n\n```js {\"codepath\": \"tabs.jsx\"}\n```\n\n#### position - 位置\n\n```js {\"codepath\": \"tabs-position.jsx\"}\n```\n\n#### styleType - 样式风格\n\n```js {\"codepath\": \"tabs-styleType.jsx\"}\n```\n\n#### destroyInactiveTabPane - 销毁不活动的 tab\n\n```js {\"codepath\": \"tabs-destroyInactiveTabPane.jsx\"}\n```\n\n#### scroll - 滚动\n\n```js {\"codepath\": \"tabs-scroll.jsx\"}\n```\n\n#### uncontrolled\n\n```js {\"codepath\": \"tabs-uncontrolled.jsx\"}\n```\n\n#### child - 嵌套\n\n```js {\"codepath\": \"tabs-child.jsx\"}\n```\n\n#### 手动测试\n\n```js {\"codepath\": \"tabs-manual-test.jsx\"}\n```\n"
+            "info": "### 说明\n\n-   所有的 pane 必须传入唯一 key\n-   支持键盘切换 tab\n-   tab 数量多时会自动出现滚动按钮\n\n### 演示\n\n#### 演示\n\n```js {\"codepath\": \"tabs.jsx\"}\n```\n\n#### position - 位置\n\n```js {\"codepath\": \"tabs-position.jsx\"}\n```\n\n#### styleType - 样式风格\n\n```js {\"codepath\": \"tabs-styleType.jsx\"}\n```\n\n#### destroyInactiveTabPane - 销毁不活动的 tab\n\n```js {\"codepath\": \"tabs-destroyInactiveTabPane.jsx\"}\n```\n\n#### scroll - 滚动\n\n```js {\"codepath\": \"tabs-scroll.jsx\"}\n```\n\n#### uncontrolled\n\n```js {\"codepath\": \"tabs-uncontrolled.jsx\"}\n```\n\n#### child - 嵌套\n\n```js {\"codepath\": \"tabs-child.jsx\"}\n```\n\n#### 边界测试\n\n```js {\"codepath\": \"tabs-boundary.jsx\"}\n```\n\n#### 手动测试\n\n```js {\"codepath\": \"tabs-manual-test.jsx\"}\n```\n"
         }
     },
     "Table": {
@@ -277,7 +277,7 @@
         "LocaleProvider": {
             "path": "LocaleProvider/LocaleProvider.md",
             "name": "LocaleProvider",
-            "info": "### 说明\n\n-   国际化语言组件，用于外围包裹来支持统一控制组件的语言\n-   语言控制分为 3 层，开发者可控制的为 2 层，均为可选，优先级从低到高分别是: `组件默认语言（开发者不可控） -> LocaleProvider.locale -> Component.locale`\n\n### 注意点\n\n-   通过 Modal.method 生成的 Modal 组件的语言控制无法通过 context 简单的传输，所以使用了 runtimeLocale，如果一个页面用到了两个传入不同 locale 的 LocaleProvider，那么 runtimeLocale 可能会错乱，请务必注意\n-   如用到 DatePicker、Calendar 等日期相关组件，LocaleProvider 由于生命周期顺序的问题无法实时变更语言，需要手动设置 moment 的语言。\n\n### 演示\n\n#### 自定义语言\n\n```js {\"codepath\": \"localeprovider.jsx\"}\n```\n\n#### 组件语言\n\n```js {\"codepath\": \"componentlocale.jsx\"}\n```\n\n#### 引入语言文件\n\n代码:\n\n```js static\nimport locale from '@ucloud-fe/react-components/lib/components/LocaleProvider/locale/en_US';\n// 使用到DatePicker等日期相关组件的情况下需要手动设置moment语言\nmoment.locale('en');\nconst Demo = () => (\n    <div>\n        <LocaleProvider locale={locale}>\n            <Pagination total={100} showSizeChanger showQuickJumper={{ goButton: true }} />\n        </LocaleProvider>\n    </div>\n);\n<Demo />;\n```\n\n效果:\n\n```js {\"codepath\": \"localefile.jsx\", \"noeditor\": true}\n```\n\n#### 全语言列表\n\n```js {\"codepath\": \"list.jsx\", \"noeditor\": true}\n```\n"
+            "info": "### 说明\n\n-   国际化语言组件，用于外围包裹来支持统一控制组件的语言\n-   语言控制分为 3 层，开发者可控制的为 2 层，均为可选，优先级从低到高分别是: `组件默认语言（开发者不可控） -> LocaleProvider.locale -> Component.locale`\n\n### 注意点\n\n-   通过 Modal.method 生成的 Modal 组件的语言控制无法通过 context 简单的传输，所以使用了 runtimeLocale，如果一个页面用到了两个传入不同 locale 的 LocaleProvider，那么 runtimeLocale 可能会错乱，请务必注意\n-   如用到 DatePicker、Calendar 等日期相关组件，LocaleProvider 由于生命周期顺序的问题无法实时变更语言，需要手动设置 moment 的语言。\n\n### 演示\n\n#### 自定义语言\n\n```js {\"codepath\": \"localeprovider.jsx\"}\n```\n\n#### 组件语言\n\n```js {\"codepath\": \"componentlocale.jsx\"}\n```\n\n#### 引入语言文件\n\n代码:\n\n```js static\nimport locale from '@ucloud-fe/react-components/lib/components/LocaleProvider/locale/en_US';\n// 使用到DatePicker等日期相关组件的情况下需要手动设置moment语言\nmoment.locale('en');\nconst Demo = () => (\n    <div>\n        <LocaleProvider locale={locale}>\n            <Pagination total={100} showSizeChanger showQuickJumper={{ goButton: true }} />\n        </LocaleProvider>\n    </div>\n);\n<Demo />;\n```\n\n效果:\n\n```js {\"codepath\": \"localefile.jsx\", \"noeditor\": true}\n```\n\n#### 全语言列表\n\n```js {\"codepath\": \"list.jsx\", \"noeditor\": true}\n```\n\n#### useLocale - 使用组件中提供的多语言方案实现自己的多语言\n\n```js {\"codepath\": \"useLocale.jsx\"}\n```\n"
         }
     },
     "Loading": {
@@ -382,12 +382,12 @@
         "DatePicker": {
             "path": "DatePicker/DatePicker.md",
             "name": "DatePicker",
-            "info": "### 说明\n\n-   这是 日期选择 组件\n-   需要自行导入 moment 语言包、设置时区\n\n### 数据结构\n\n#### TDate\n\n```ts {\"static\": true}\ntype TDate = number | Date | Moment | Dayjs;\n```\n\n#### TShortcut\n\n```ts {\"static\": true}\ninterface TShortcut {\n    handle: () => TDate;\n    label: ReactNode;\n}\n```\n\n### 演示\n\n#### 演示\n\n```js {\"codepath\": \"datepicker.jsx\"}\n```\n\n#### size - 尺寸\n\n```js {\"codepath\": \"datepicker-size.jsx\"}\n```\n\n#### rules - 自定义规则\n\n```js {\"codepath\": \"datepicker-rules.jsx\"}\n```\n\n#### nullable - 是否可为空/输入\n\n```js {\"codepath\": \"datepicker-nullable.jsx\"}\n```\n\n#### display - 自定义展示形式\n\n```js {\"codepath\": \"datepicker-display.jsx\"}\n```\n\n#### format - 自定义格式化/输入\n\n```js {\"codepath\": \"datepicker-format.jsx\"}\n```\n\n#### status - 状态\n\n```js {\"codepath\": \"datepicker-status.jsx\"}\n```\n\n#### disabled - 禁用\n\n```js {\"codepath\": \"datepicker-disabled.jsx\"}\n```\n\n#### uncontrolled\n\n```js {\"codepath\": \"datepicker-uncontrolled.jsx\"}\n```\n\n#### popoverProps - 弹出容器定义\n\n```js {\"codepath\": \"datepicker-popoverProps.jsx\"}\n```\n"
+            "info": "### 说明\n\n-   这是 日期选择 组件\n-   需要自行导入 moment 语言包、设置时区\n\n### 数据结构\n\n#### TDate\n\n```ts {\"static\": true}\ntype TDate = number | Date | Moment | Dayjs;\n```\n\n#### TShortcut\n\n```ts {\"static\": true}\ninterface TShortcut {\n    handle: () => TDate;\n    label: ReactNode;\n}\n```\n\n### 演示\n\n#### 演示\n\n```js {\"codepath\": \"datepicker.jsx\"}\n```\n\n#### size - 尺寸\n\n```js {\"codepath\": \"datepicker-size.jsx\"}\n```\n\n#### rules - 自定义规则\n\n```js {\"codepath\": \"datepicker-rules.jsx\"}\n```\n\n#### nullable - 是否可为空/输入\n\n```js {\"codepath\": \"datepicker-nullable.jsx\"}\n```\n\n#### display - 自定义展示形式\n\n```js {\"codepath\": \"datepicker-display.jsx\"}\n```\n\n#### format - 自定义格式化/输入\n\n```js {\"codepath\": \"datepicker-format.jsx\"}\n```\n\n#### status - 状态\n\n```js {\"codepath\": \"datepicker-status.jsx\"}\n```\n\n#### disabled - 禁用\n\n```js {\"codepath\": \"datepicker-disabled.jsx\"}\n```\n\n#### uncontrolled\n\n```js {\"codepath\": \"datepicker-uncontrolled.jsx\"}\n```\n\n#### popoverProps - 弹出容器定义\n\n```js {\"codepath\": \"datepicker-popoverProps.jsx\"}\n```\n\n#### 月份演示\n\n```js {\"codepath\": \"month.jsx\"}\n```\n\n#### size - 月份尺寸\n\n```js {\"codepath\": \"month-size.jsx\"}\n```\n\n#### rules - 月份自定义规则\n\n```js {\"codepath\": \"month-rules.jsx\"}\n```\n\n#### nullable - 月份是否可为空/输入\n\n```js {\"codepath\": \"month-nullable.jsx\"}\n```\n\n#### display - 月份自定义展示形式\n\n```js {\"codepath\": \"month-display.jsx\"}\n```\n\n#### format - 月份自定义格式化/输入\n\n```js {\"codepath\": \"month-format.jsx\"}\n```\n\n#### status - 月份状态\n\n```js {\"codepath\": \"month-status.jsx\"}\n```\n\n#### disabled - 月份禁用\n\n```js {\"codepath\": \"month-disabled.jsx\"}\n```\n\n#### uncontrolled - 月份非受控\n\n```js {\"codepath\": \"month-uncontrolled.jsx\"}\n```\n\n#### popoverProps - 月份弹出层容器\n\n```js {\"codepath\": \"month-popoverProps.jsx\"}\n```\n"
         },
         "Month": {
             "path": "DatePicker/Month.md",
             "name": "Month",
-            "info": "### 说明\n\n这是 月份选择 组件\n\n### 演示\n\n#### 演示\n\n```js {\"codepath\": \"month.jsx\"}\n```\n\n#### size - 尺寸\n\n```js {\"codepath\": \"month-size.jsx\"}\n```\n\n#### rules - 自定义规则\n\n```js {\"codepath\": \"month-rules.jsx\"}\n```\n\n#### nullable - 是否可为空/输入\n\n```js {\"codepath\": \"month-nullable.jsx\"}\n```\n\n#### display - 自定义展示形式\n\n```js {\"codepath\": \"month-display.jsx\"}\n```\n\n#### format - 自定义格式化/输入\n\n```js {\"codepath\": \"month-format.jsx\"}\n```\n\n#### status - 状态\n\n```js {\"codepath\": \"month-status.jsx\"}\n```\n\n#### disabled - 禁用\n\n```js {\"codepath\": \"month-disabled.jsx\"}\n```\n\n#### uncontrolled\n\n```js {\"codepath\": \"month-uncontrolled.jsx\"}\n```\n\n#### popoverProps - 弹出层容器\n\n```js {\"codepath\": \"month-popoverProps.jsx\"}\n```\n"
+            "info": "### 说明\n\n请使用 `<DatePicker type='month' />` 替换\n"
         },
         "Range": {
             "path": "DatePicker/Range.md",
@@ -441,6 +441,13 @@
             "info": "### 说明\n\n-   这是 Checkbox Group 组件，用于包裹 Checkbox 组件并获取数据\n-   也可以直接使用 options 来定义选项\n-   使用 group 时请使用 value 或 defaultValue 来控制 checkbox 的勾选，不要使用 checked 或 defaultChecked\n-   初始值请注意保证准确性防止出现意外的情况\n\n### 演示\n\n#### 演示\n\n```js {\"codepath\": \"group.jsx\"}\n```\n\n#### size - 尺寸\n\n```js {\"codepath\": \"group-size.jsx\"}\n```\n\n#### styleType - 样式风格\n\n```js {\"codepath\": \"group-styleType.jsx\"}\n```\n\n#### disabled - 禁用\n\n```js {\"codepath\": \"group-disabled.jsx\"}\n```\n\n#### options - 快捷选项\n\n```js {\"codepath\": \"group-options.jsx\"}\n```\n\n#### uncontrolled\n\n```js {\"codepath\": \"group-uncontrolled.jsx\"}\n```\n\n#### boundary - 边界测试\n\n```js {\"codepath\": \"boundary.jsx\"}\n```\n\n<!-- #### performance - 性能测试\n\n```js {\"codepath\": \"performance.jsx\"}\n``` -->\n"
         }
     },
+    "Cascader": {
+        "Cascader": {
+            "path": "Cascader/Cascader.md",
+            "name": "Cascader",
+            "info": "### 说明\n\n-   这是 Cascader 集联选择器组件\n-   一般用于选择一些层级关联的数据，如选择地区等\n\n### 数据结构\n\n#### Key\n\n```ts {\"static\": true}\n// 值需为 string\ntype Key = string;\n```\n\n#### LoadData\n\n```ts {\"static\": true}\ninterface LoadData {\n    (expandedKeys: Key[]): Promise<void>;\n}\n```\n\n#### CascadeData\n\n```ts {\"static\": true}\ninterface CascadeData {\n    // 唯一键，所有值的字符串不得重复，会用作 key 和选中判定，如果为其它值会转为 string 再应用\n    key: Key;\n    // 选项标题内容\n    title: ReactNode;\n    // 子数据，存在即为父节点，不存在即为叶子结点，与程序树有差异，原因详见说明\n    children?: CascadeData[];\n    // 是否禁用，父节点禁用会禁用所有子孙节点\n    disabled?: boolean;\n    // 是否强制为父节点\n    isParent?: boolean;\n}\n```\n\n### 演示\n\n#### 功能演示\n\n```js {\"codepath\": \"cascader.jsx\"}\n```\n\n#### 尺寸 - size\n\n```js {\"codepath\": \"size.jsx\"}\n```\n\n#### 禁用 - disabled\n\n```js {\"codepath\": \"disabled.jsx\"}\n```\n\n#### 是否可清空 - clearable\n\n```js {\"codepath\": \"clearable.jsx\"}\n```\n\n#### 搜索 - search\n\n```js {\"codepath\": \"search.jsx\"}\n```\n\n#### 异步加载 - loadData\n\n```js {\"codepath\": \"loadData.jsx\"}\n```\n\n#### 性能测试\n\n```js {\"codepath\": \"performance.jsx\"}\n```\n\n#### 边界测试\n\n```js {\"codepath\": \"boundary.jsx\"}\n```\n"
+        }
+    },
     "Card": {
         "Card": {
             "path": "Card/Card.md",
@@ -452,7 +459,7 @@
         "Calendar": {
             "path": "Calendar/Calendar.md",
             "name": "Calendar",
-            "info": "### 说明\n\n-   这是 日历 组件\n-   需要自行导入 moment 语言包、设置时区\n\n### 演示\n\n#### 普通使用\n\n```js {\"codepath\": \"base.jsx\"}\n```\n\n#### value / defaultValue - 选中的时间 （受控 / 非受控）\n\n```js {\"codepath\": \"controlled.jsx\"}\n```\n\n#### rules - 自定义规则\n\n```js {\"codepath\": \"rules.jsx\"}\n```\n"
+            "info": "### 说明\n\n-   这是 日历 组件\n-   需要自行导入 moment 语言包、设置时区\n\n### 演示\n\n#### 普通使用\n\n```js {\"codepath\": \"base.jsx\"}\n```\n\n#### value / defaultValue - 选中的时间 （受控 / 非受控）\n\n```js {\"codepath\": \"controlled.jsx\"}\n```\n\n#### rules - 自定义规则\n\n```js {\"codepath\": \"rules.jsx\"}\n```\n\n#### month - 月历\n\n```js {\"codepath\": \"month.jsx\"}\n```\n"
         }
     },
     "Button": {
