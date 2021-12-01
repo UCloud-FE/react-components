@@ -232,7 +232,7 @@ class Transfer extends PureComponent {
     };
     renderPart = part => {
         const { dataSourceGroup, sourceSelectedKeys, targetSelectedKeys } = this.state;
-        const { source, target, search: sharedSearch, disabled: sharedDisabled } = this.props;
+        const { source, target, search: sharedSearch, disabled: sharedDisabled, locale } = this.props;
         const partDataSource = dataSourceGroup[part] || [];
         const partProps = {
             search: sharedSearch,
@@ -247,7 +247,9 @@ class Transfer extends PureComponent {
         return (
             <div className={classnames(partWrapCls, disabled && disabledCls)}>
                 {title === null ? null : (
-                    <h3 className={titleCls}>{title ? title : { source: '可选', target: '已选' }[part]}</h3>
+                    <h3 className={titleCls}>
+                        {title ? title : { source: locale.sourceTitle, target: locale.targetTitle }[part]}
+                    </h3>
                 )}
                 <div className={partContentCls}>
                     {search && (

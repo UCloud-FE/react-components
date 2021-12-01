@@ -16,6 +16,9 @@ import Table from 'src/components/Table';
 import Menu from 'src/components/Menu';
 import PopConfirm from 'src/components/PopConfirm';
 import EditableList from 'src/components/EditableList';
+import Transfer from 'src/components/Transfer';
+import Tree from 'src/components/Tree';
+import Cascader from 'src/components/Cascader';
 import ENLocale from 'src/components/LocaleProvider/locale/en_US';
 
 // demo start
@@ -174,6 +177,15 @@ class Demo extends React.Component {
                 </div>
                 <div className="demo-wrap">
                     <EditableList dataSource={[]} />
+                </div>
+                <div className="demo-wrap">
+                    <Transfer dataSource={[]} />
+                </div>
+                <div className="demo-wrap">
+                    <Tree search />
+                </div>
+                <div className="demo-wrap">
+                    <Cascader />
                 </div>
             </div>
         );

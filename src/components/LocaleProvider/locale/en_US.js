@@ -10,6 +10,7 @@ import Menu from 'src/components/Menu/locale/en_US';
 import PopConfirm from 'src/components/PopConfirm/locale/en_US';
 import EditableList from 'src/components/EditableList/locale/en_US';
 import Transfer from 'src/components/Transfer/locale/en_US';
+import Cascader from 'src/components/Cascader/locale/en_US';
 import SharedSearch from 'src/sharedComponents/Search/locale/en_US';
 
 export default {
@@ -26,5 +27,6 @@ export default {
     PopConfirm,
     EditableList,
     Transfer,
+    Cascader,
     SharedSearch
 };
