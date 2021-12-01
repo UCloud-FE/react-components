@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/UCloud-FE/react-components/compare/v1.2.20...v1.3.0) (2021-12-01)
+
+### Features
+
+-   **Calendar:** merge month to calendar type ([93a3c4d](https://github.com/UCloud-FE/react-components/commit/93a3c4d9f57c9e338282501d5be1477a91de333d))
+-   **Cascader:** add Cascader ([470e2ac](https://github.com/UCloud-FE/react-components/commit/470e2ac455dc6450ea691626015baad372e2aff3))
+-   **DatePicker:** auto adapt input width for diff usage ([a653b3f](https://github.com/UCloud-FE/react-components/commit/a653b3f21c2d0579fef49a9ea2532fa1104d094e))
+-   **TimePicker:** add default width ([2187628](https://github.com/UCloud-FE/react-components/commit/21876287469847150007a8a91427e7356fb3140d))
+
+### Bug Fixes
+
+-   **LocaleProvider:** add some demos & fix missing locales ([032bbec](https://github.com/UCloud-FE/react-components/commit/032bbec0b3b96a7cb035be53a9e29a516426a353))
+-   **Select:** fix missing empty tip when options is empty ([662d3c3](https://github.com/UCloud-FE/react-components/commit/662d3c30f8b8ccf9257b3d488422d237bddc6f61))
+
 ### [1.2.20](https://github.com/UCloud-FE/react-components/compare/v1.2.19...v1.2.20) (2021-11-17)
 
 ### Features
