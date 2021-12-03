@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.1](https://github.com/UCloud-FE/react-components/compare/v1.3.0...v1.3.1) (2021-12-03)
+
+### Features
+
+-   **log:** clear log usage ([17154dd](https://github.com/UCloud-FE/react-components/commit/17154ddeb3c8d522906e0cebb1d69277bdb11a67))
+-   **Modal:** add destroyAll to close all method modals ([1eaafc0](https://github.com/UCloud-FE/react-components/commit/1eaafc048475daf3949d703236bed99c2278cf09))
+-   **Modal:** add method usage warning, docs & add runtime locale ([638a83d](https://github.com/UCloud-FE/react-components/commit/638a83dc12509adace21b01b38c3f77dc2b867d1))
+
 ## [1.3.0](https://github.com/UCloud-FE/react-components/compare/v1.2.20...v1.3.0) (2021-12-01)
 
 ### Features
