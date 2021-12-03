@@ -24,6 +24,8 @@ const fileShape = PropTypes.shape({
     thumbnailUrl: PropTypes.string
 });
 
+const deprecatedLogForListTypeText = deprecatedLog('listType text', 'list');
+
 /**
  * 文件上传控件
  */
@@ -40,7 +42,7 @@ class Upload extends PureComponent {
             this.IS_CONTROLLED = true;
         }
         if (props.listType === 'text') {
-            deprecatedLog('listType text', 'list');
+            deprecatedLogForListTypeText();
         }
         this.state = {
             fileList: props.fileList || props.defaultFileList || []

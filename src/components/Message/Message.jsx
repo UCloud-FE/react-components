@@ -7,7 +7,7 @@ import deprecatedLog from 'src/utils/deprecatedLog';
 
 import { MessageWrap, TipIcon, IconWrap, CloseIconWrap, TitleWrap, FooterWrap, ContentWrap } from './style';
 
-export const deprecatedLogForStyleTypeInfo = _.once(() => deprecatedLog('Message styleType "info"', '"success"'));
+export const deprecatedLogForStyleTypeInfo = deprecatedLog('Message styleType "info"', '"success"');
 
 const StyleType = ['default', 'success', 'loading', 'warning', 'error'];
 

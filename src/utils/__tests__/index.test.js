@@ -14,7 +14,8 @@ test('deprecatedLog', () => {
     global.console.error = jest.fn(mockConsole.error);
     const deprecatedName = 'deprecatedName',
         insteadName = 'insteadName';
-    deprecatedLog(deprecatedName, insteadName);
+    const log = deprecatedLog(deprecatedName, insteadName);
+    log();
     expect(outputData.error[outputData.error.length - 1]).toEqual([
         `Deprecated: ${deprecatedName} will be deprecated, please use ${insteadName} to replace`
     ]);

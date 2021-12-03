@@ -19,14 +19,13 @@ import Icon from 'src/components/Icon';
 import SvgIcon from 'src/components/SvgIcon';
 import ControllerContext from 'src/components/Form/ControllerContext';
 import deprecatedLog from 'src/utils/deprecatedLog';
-import once from 'src/utils/once';
 import noop from 'src/utils/noop';
 import useUncontrolled from 'src/hooks/useUncontrolled';
 import { Size } from 'src/type';
 
 import { SWrap, inputWrapCls, blockCls, inputPrefixCls, inputSuffixCls, clearCls } from './style';
 
-const deprecatedLogForIcon = once(() => deprecatedLog('Input icon', 'suffix'));
+const deprecatedLogForIcon = deprecatedLog('Input icon', 'suffix');
 
 export interface DefinedInputProps {
     /**

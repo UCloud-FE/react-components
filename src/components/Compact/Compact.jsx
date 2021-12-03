@@ -7,7 +7,7 @@ import Combine from 'src/components/Combine';
 import deprecatedLog from 'src/utils/deprecatedLog';
 import { prefixCls, controllerPrefix } from './style';
 
-const _deprecatedLog = _.once(() => deprecatedLog('Compact', 'Combine(spacing="compact")'));
+const deprecatedLogForReplace = deprecatedLog('Compact', 'Combine(spacing="compact")');
 
 /**
  * @deprecated 请使用 Combine 替代
@@ -26,7 +26,7 @@ class Compact extends Component {
     };
     constructor(props) {
         super(props);
-        _deprecatedLog();
+        deprecatedLogForReplace();
     }
     render() {
         const { className, sharedProps, ...rest } = this.props;

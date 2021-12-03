@@ -8,7 +8,7 @@ import deprecatedLog from 'src/utils/deprecatedLog';
 
 import { NoticeWrap, NoticeIconWrap, ContentWrap, ActionWrap, CloseWrap, CloseIcon, iconCls } from './style';
 
-const deprecatedLogForStyleTypeInfo = _.once(() => deprecatedLog('Notice styleType "info"', '"success"'));
+const deprecatedLogForStyleTypeInfo = deprecatedLog('Notice styleType "info"', '"success"');
 
 const StyleType = ['default', 'success', 'warning', 'error', 'disabled'];
 

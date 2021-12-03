@@ -10,8 +10,8 @@ import useUncontrolled from 'src/hooks/useUncontrolled';
 import useInitial from 'src/hooks/useInitial';
 import noop from 'src/utils/noop';
 import deprecatedLog from 'src/utils/deprecatedLog';
+import { onceWarning } from 'src/utils/warning';
 import isObject from 'src/utils/isObject';
-import once from 'src/utils/once';
 import isEmpty from 'src/utils/isEmpty';
 
 import { PureOption } from './Option';
@@ -31,14 +31,12 @@ import {
 import SelectContext from './SelectContext';
 import LOCALE from './locale/zh_CN';
 
-export const deprecatedLogForPopover = once(() => deprecatedLog('Select popover', 'popoverProps'));
-const warnLogForVirtualList = once(() => console.error('Select virtualList only valid when use options'));
-const warnLogForCustomHeight = once(() =>
-    console.error('CustomStyle.optionListMaxHeight is invalid when use virtualList, please use virtualList.height')
+export const deprecatedLogForPopover = deprecatedLog('Select popover', 'popoverProps');
+const warnLogForVirtualList = onceWarning('Select virtualList only valid when use options');
+const warnLogForCustomHeight = onceWarning(
+    'CustomStyle.optionListMaxHeight is invalid when use virtualList, please use virtualList.height'
 );
-const warnLogForSearchProps = once(() =>
-    console.error(`Don't use item.props in custom search, just use item as props.`)
-);
+const warnLogForSearchProps = onceWarning(`Don't use item.props in custom search, just use item as props.`);
 
 const groupOptions = {
     itemTag: 'isMenuItem',

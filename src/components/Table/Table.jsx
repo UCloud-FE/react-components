@@ -30,7 +30,7 @@ import LOCALE from './locale/zh_CN';
 import TableRow from './TableRow';
 
 const noop = () => {};
-export const deprecatedLogForOnRowSelect = _.once(() => deprecatedLog('Table onRowSelect', 'rowSelection.onChange'));
+export const deprecatedLogForOnRowSelect = deprecatedLog('Table onRowSelect', 'rowSelection.onChange');
 
 export const placeholderKey = 'table_column_width_placeholder';
 

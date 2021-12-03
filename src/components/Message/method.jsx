@@ -3,9 +3,14 @@ import ReactDOM from 'react-dom';
 import { ThemeProvider } from 'emotion-theming';
 
 import { getRuntimeTheme } from 'src/components/ThemeProvider/runtime';
+import { onceWarning } from 'src/utils/warning';
 
 import Message from './Message';
 import MessageContainer from './MessageContainer';
+
+const methodWarning = onceWarning(
+    `You're use a ReactNode as Message content, please make sure you know about the risk of `
+);
 
 const config = {
     duration: 4500,
