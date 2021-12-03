@@ -12,7 +12,7 @@ const isIgnoreProp = (prop: { description?: { tags?: { title: string; descriptio
     return false;
 };
 
-const fixString = (str: string) => str.slice(1, -1);
+const fixString = (str: string) => (str ? str.slice(1, -1) : '');
 
 const Context = createContext<any>({ props: {} });
 
