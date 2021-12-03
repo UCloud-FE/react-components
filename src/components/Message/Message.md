@@ -3,6 +3,7 @@
 -   Message 用来弹出提示框。
 -   普遍会使用 method 调用的方式
 -   有 message, success, warning, error, loading 几种不同的方法。
+-   由于命令式调用，同样存在与命令式调用 Modal 同样的风险（具体查看 Modal 页面），但是由于 Message 一般用于展示文本信息，且定时关闭，占位较小，顾风险性相对较小，但是<b style="color:red;">如果在 Message 中传入的内容依赖上下文或添加了操作按钮记得要自行添加依赖和卸载销毁</b>
 
 ### 演示
 

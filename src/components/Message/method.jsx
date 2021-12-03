@@ -1,16 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ThemeProvider } from 'emotion-theming';
+import PropTypes from 'prop-types';
 
+import ThemeProvider from 'src/components/ThemeProvider';
+import LocaleProvider from 'src/components/LocaleProvider';
 import { getRuntimeTheme } from 'src/components/ThemeProvider/runtime';
-import { onceWarning } from 'src/utils/warning';
+import { getRuntimeLocale } from 'src/components/LocaleProvider/runtime';
 
 import Message from './Message';
 import MessageContainer from './MessageContainer';
-
-const methodWarning = onceWarning(
-    `You're use a ReactNode as Message content, please make sure you know about the risk of `
-);
 
 const config = {
     duration: 4500,
@@ -29,8 +27,17 @@ ReactDOM.render(
 
 mainContainerDom.appendChild(messageContainerDom);
 
+const ContextWrap = ({ children }) => {
+    return (
+        <ThemeProvider theme={getRuntimeTheme()}>
+            <LocaleProvider locale={getRuntimeLocale()}>{children}</LocaleProvider>
+        </ThemeProvider>
+    );
+};
+ContextWrap.propTypes = { children: PropTypes.node };
+
 const popupMessage = (message, duration = config.duration, onClose = () => {}) => {
-    const messageUid = containerRef.appendMessage(<ThemeProvider theme={getRuntimeTheme()}>{message}</ThemeProvider>);
+    const messageUid = containerRef.appendMessage(<ContextWrap>{message}</ContextWrap>);
     const destroy = () => {
         containerRef.removeMessage(messageUid) && onClose();
     };
