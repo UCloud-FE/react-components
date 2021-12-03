@@ -59,7 +59,7 @@ export interface DefinedCascaderProps {
     /** 是否可清空 */
     clearable?: boolean;
     /** 状态 */
-    status: InputProps['status'];
+    status?: InputProps['status'];
     /** @ignore */
     placeholder?: string;
     /** 自定义 popover 的配置 */
