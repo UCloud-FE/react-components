@@ -1,7 +1,7 @@
 import { useContext, useMemo } from 'react';
 
 import LocaleContext, { LocaleMap } from './LocaleContext';
-import { getRuntimeLocale } from './locale/runtime';
+import { getRuntimeLocale } from './runtime';
 
 const useLocale = <T = LocaleMap>(
     defaultLocale: T,

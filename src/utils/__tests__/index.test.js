@@ -17,7 +17,7 @@ test('deprecatedLog', () => {
     const log = deprecatedLog(deprecatedName, insteadName);
     log();
     expect(outputData.error[outputData.error.length - 1]).toEqual([
-        `Deprecated: ${deprecatedName} will be deprecated, please use ${insteadName} to replace`
+        `URC Deprecated: ${deprecatedName} will be deprecated, please use ${insteadName} to replace`
     ]);
 });
 

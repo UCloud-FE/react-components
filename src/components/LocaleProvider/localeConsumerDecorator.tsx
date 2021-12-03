@@ -2,7 +2,7 @@ import React, { useContext, useMemo } from 'react';
 
 import hoistStatics from 'src/utils/hoistStatics';
 
-import { getRuntimeLocale } from './locale/runtime';
+import { getRuntimeLocale } from './runtime';
 import LocaleContext, { LocaleMap } from './LocaleContext';
 
 const localeConsumerDecorator = ({

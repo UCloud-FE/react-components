@@ -1,7 +1,7 @@
 import once from './once';
 
 const warning = (msg: string) => {
-    console.error(`Warning: ${msg}`);
+    console.error(`URC Warning: ${msg}`);
 };
 export default warning;
 

@@ -1,13 +1,28 @@
 import React, { PureComponent } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import { ThemeProvider } from 'emotion-theming';
 import _ from 'lodash';
 
 import Button from 'src/components/Button';
+import ThemeProvider from 'src/components/ThemeProvider';
+import LocaleProvider from 'src/components/LocaleProvider';
 import { getRuntimeTheme } from 'src/components/ThemeProvider/runtime';
+import { getRuntimeLocale } from 'src/components/LocaleProvider/runtime';
+import warning from 'src/utils/warning';
 
 import Modal from './Modal';
+
+const methodWarning = () => warning(`You're using a method to call a Modal, this may cause a lot of problems.`);
+const destroyWarning = () => warning(`Wrong name of destory, please use destroy to instead`);
+
+const ContextWrap = ({ children }) => {
+    return (
+        <ThemeProvider theme={getRuntimeTheme()}>
+            <LocaleProvider locale={getRuntimeLocale()}>{children}</LocaleProvider>
+        </ThemeProvider>
+    );
+};
+ContextWrap.propTypes = { children: PropTypes.node };
 
 class ModalWrap extends PureComponent {
     static propTypes = {
@@ -23,9 +38,9 @@ class ModalWrap extends PureComponent {
         // eslint-disable-next-line no-unused-vars
         const { reportUpdate, ...rest } = this.props;
         return (
-            <ThemeProvider theme={getRuntimeTheme()}>
+            <ContextWrap>
                 <Modal {...rest} visible {...this.state} />
-            </ThemeProvider>
+            </ContextWrap>
         );
     }
 }
@@ -43,10 +58,11 @@ const pop = props => {
     let update = null;
     ReactDOM.render(<ModalWrap {...props} reportUpdate={_update => (update = _update)} />, container);
 
+    methodWarning();
     return {
         destory: () => {
-            console.error(`Warning: wrong name of destory, please use destroy to instead`);
             destroy();
+            destroyWarning();
         },
         destroy,
         update
@@ -63,8 +79,9 @@ const openModal = modal => {
         }
     };
 
-    ReactDOM.render(<ThemeProvider theme={getRuntimeTheme()}>{modal}</ThemeProvider>, container);
+    ReactDOM.render(<ContextWrap>{modal}</ContextWrap>, container);
 
+    methodWarning();
     return {
         destroy
     };

@@ -1,4 +1,4 @@
-import { AllLocaleMap } from '../LocaleContext';
+import { AllLocaleMap } from './LocaleContext';
 
 let runtimeLocale: AllLocaleMap = {};
 
