@@ -15,6 +15,26 @@ import Modal from './Modal';
 const methodWarning = () => warning(`You're using a method to call a Modal, this may cause a lot of problems.`);
 const destroyWarning = () => warning(`Wrong name of destory, please use destroy to instead`);
 
+let i = 0;
+const getCallUID = () => '_modal_id_' + i++;
+const queueMap = {};
+
+const cleanModal = id => {
+    const modal = queueMap[id];
+    if (modal && modal.destroy) {
+        modal.destroy();
+    }
+    delete queueMap[id];
+};
+const addModal = modal => {
+    const id = getCallUID();
+    queueMap[id] = modal;
+    return id;
+};
+const cleanAllModal = () => {
+    Object.keys(queueMap).forEach(cleanModal);
+};
+
 const ContextWrap = ({ children }) => {
     return (
         <ThemeProvider theme={getRuntimeTheme()}>
@@ -59,12 +79,15 @@ const pop = props => {
     ReactDOM.render(<ModalWrap {...props} reportUpdate={_update => (update = _update)} />, container);
 
     methodWarning();
+
+    const callID = addModal({ destroy });
+
     return {
         destory: () => {
-            destroy();
+            cleanModal(callID);
             destroyWarning();
         },
-        destroy,
+        destroy: () => cleanModal(callID),
         update
     };
 };
@@ -82,8 +105,10 @@ const openModal = modal => {
     ReactDOM.render(<ContextWrap>{modal}</ContextWrap>, container);
 
     methodWarning();
+
+    const callID = addModal({ destroy });
     return {
-        destroy
+        destroy: () => cleanModal(callID)
     };
 };
 
@@ -164,4 +189,4 @@ const open = ({ onOk = () => {}, onClose = () => {}, ...rest }, content) => {
     return modal;
 };
 
-export { alert, confirm, open, openModal };
+export { alert, confirm, open, openModal, cleanAllModal as destroyAll };
