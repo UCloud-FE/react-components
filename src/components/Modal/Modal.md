@@ -183,6 +183,11 @@ const Demo = () => {
 ```js {"codepath": "mask.jsx"}
 ```
 
+#### buttonProps - 自定义按钮属性
+
+```js {"codepath": "buttonProps.jsx"}
+```
+
 #### maskClosable - 是否可通过点击遮罩层关闭
 
 ```js {"codepath": "maskClosable.jsx"}

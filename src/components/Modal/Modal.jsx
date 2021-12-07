@@ -52,6 +52,10 @@ class Modal extends Component {
         onClose: PropTypes.func,
         /** 点击默认的确认按钮时的回调 */
         onOk: PropTypes.func,
+        /** 默认展示的确定按钮的自定义 props */
+        okButtonProps: PropTypes.object,
+        /** 默认展示的取消按钮的自定义 props */
+        cancelButtonProps: PropTypes.object,
         /** 关闭后的回调 */
         afterClose: PropTypes.func,
         /** 关闭后是否自动销毁 */
@@ -86,12 +90,12 @@ class Modal extends Component {
         mask: true
     };
     getDefaultFooter = () => {
-        const { onOk, onClose, locale } = this.props;
+        const { onOk, onClose, locale, okButtonProps, cancelButtonProps } = this.props;
         return [
-            <Button size="lg" key="cancel" onClick={onClose} style={{ marginRight: 8 }}>
+            <Button size="lg" key="cancel" onClick={onClose} style={{ marginRight: 8 }} {...okButtonProps}>
                 {locale.cancel}
             </Button>,
-            <Button size="lg" key="confirm" onClick={onOk} styleType="primary">
+            <Button size="lg" key="confirm" onClick={onOk} styleType="primary" {...cancelButtonProps}>
                 {locale.confirm}
             </Button>
         ];
