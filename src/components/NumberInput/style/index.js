@@ -44,7 +44,6 @@ export const NumberInputWrap = withProps()(
                 outline: none;
                 padding: 0;
                 margin: 0;
-                color: inherit;
             }
             .${suffixCls} {
                 color: ${DT.T_COLOR_TEXT_REMARK_DARK};
@@ -84,7 +83,10 @@ export const NumberInputWrap = withProps()(
             css`
                 pointer-events: none;
                 color: ${DT.T_COLOR_TEXT_DISABLED};
-                -webkit-text-fill-color: currentcolor;
+                .${inputCls} {
+                    /* fix disabled color in safari */
+                    -webkit-text-fill-color: ${DT.T_COLOR_TEXT_DISABLED};
+                }
             `};
 
             .${inputCls} {
