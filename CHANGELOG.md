@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.3](https://github.com/UCloud-FE/react-components/compare/v1.3.2...v1.3.3) (2021-12-13)
+
+### Bug Fixes
+
+-   **Input:** fix input unselectable ([3f0d0d5](https://github.com/UCloud-FE/react-components/commit/3f0d0d5a64804f589bf19533220dc52cce8ab947))
+
 ### [1.3.2](https://github.com/UCloud-FE/react-components/compare/v1.3.1...v1.3.2) (2021-12-13)
 
 ### Features
