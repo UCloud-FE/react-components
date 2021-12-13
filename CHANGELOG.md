@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.2](https://github.com/UCloud-FE/react-components/compare/v1.3.1...v1.3.2) (2021-12-13)
+
+### Features
+
+-   **Modal:** add buttonProps for custom footer buttons ([8626a50](https://github.com/UCloud-FE/react-components/commit/8626a50c7b78d16921ba6671a2b4e3cc46d20fb5))
+
+### Bug Fixes
+
+-   **Cascader:** fix status required ([e097795](https://github.com/UCloud-FE/react-components/commit/e097795675979fb89184b631a4b50082ff4a5b95))
+-   **NumberInput:** fix disabled numberInput color in safari ([b5091ee](https://github.com/UCloud-FE/react-components/commit/b5091eec0d353f6f7f8ad29a222f3addc8729256))
+
 ### [1.3.1](https://github.com/UCloud-FE/react-components/compare/v1.3.0...v1.3.1) (2021-12-03)
 
 ### Features
