@@ -145,6 +145,8 @@ const Input = forwardRef(
             [disabled, onChange, onClear]
         );
         const handleWrapMouseDown = useCallback((e: MouseEvent) => {
+            // 避免影响输入框的选中、移动光标等操作
+            if (e.target === inputRef.current) return;
             e.preventDefault();
             inputRef.current?.focus();
         }, []);
