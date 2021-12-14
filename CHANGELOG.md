@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.5](https://github.com/UCloud-FE/react-components/compare/v1.3.4...v1.3.5) (2021-12-14)
+
+### Bug Fixes
+
+-   **Modal:** fix modal buttonProps ([43c2f05](https://github.com/UCloud-FE/react-components/commit/43c2f0559a7c10d09d773a5f03e46c22c8894dbc))
+
 ### [1.3.4](https://github.com/UCloud-FE/react-components/compare/v1.3.3...v1.3.4) (2021-12-14)
 
 ### Bug Fixes
