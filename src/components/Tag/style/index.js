@@ -257,14 +257,16 @@ export const IconTagWrapper = withProps({
             display: inline-block;
             border-radius: 2px;
             position: relative;
-
             border: 1px solid ${border};
             color: ${color};
             background: ${bg};
-            :after {
-                background: ${border};
+            ::after {
                 position: absolute;
-                right: 0;
+                right: -1px;
+                background: ${border};
+                box-sizing: border-box;
+                border: 0 solid ${bg};
+                border-width: 5px 0;
             }
         `;
     })
@@ -301,8 +303,16 @@ export const TagGroupWrapper = withProps()(
                           border-top-right-radius: 2px;
                           border-bottom-right-radius: 2px;
                           ::after {
+                              height: 100%;
                               content: none;
                           }
+                      }
+                  }
+                  .${iconCls} {
+                      border-right-style: solid;
+                      :after {
+                          margin: 0;
+                          height: 100%;
                       }
                   }
                   .${prefixCls} {
