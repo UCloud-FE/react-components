@@ -92,10 +92,10 @@ class Modal extends Component {
     getDefaultFooter = () => {
         const { onOk, onClose, locale, okButtonProps, cancelButtonProps } = this.props;
         return [
-            <Button size="lg" key="cancel" onClick={onClose} style={{ marginRight: 8 }} {...okButtonProps}>
+            <Button size="lg" key="cancel" onClick={onClose} style={{ marginRight: 8 }} {...cancelButtonProps}>
                 {locale.cancel}
             </Button>,
-            <Button size="lg" key="confirm" onClick={onOk} styleType="primary" {...cancelButtonProps}>
+            <Button size="lg" key="confirm" onClick={onOk} styleType="primary" {...okButtonProps}>
                 {locale.confirm}
             </Button>
         ];
