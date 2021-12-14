@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.4](https://github.com/UCloud-FE/react-components/compare/v1.3.3...v1.3.4) (2021-12-14)
+
+### Bug Fixes
+
+-   **Tag:** fix tag icon align center ([7599bbc](https://github.com/UCloud-FE/react-components/commit/7599bbc3bd89df41324b34dc36b1287041b2d421))
+
 ### [1.3.3](https://github.com/UCloud-FE/react-components/compare/v1.3.2...v1.3.3) (2021-12-13)
 
 ### Bug Fixes
