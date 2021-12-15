@@ -63,7 +63,7 @@ mod.config({
             type: 'json'
         },
         'design-token-editor': {
-            js: 'https://cdn.jsdelivr.net/npm/@ucloud-fe/design-token-editor@0.0.1/dist/design-token-editor.umd.js',
+            js: 'https://cdn.jsdelivr.net/npm/@ucloud-fe/design-token-editor@0.0.2/dist/design-token-editor.umd.js',
             type: 'amd',
             dep: ['react', '@ucloud-fe/react-components']
         }
