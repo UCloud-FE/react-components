@@ -5081,6 +5081,16 @@
                         "required": false,
                         "description": { "description": "点击默认的确认按钮时的回调", "tags": [] }
                     },
+                    "okButtonProps": {
+                        "type": { "name": "object" },
+                        "required": false,
+                        "description": { "description": "默认展示的确定按钮的自定义 props", "tags": [] }
+                    },
+                    "cancelButtonProps": {
+                        "type": { "name": "object" },
+                        "required": false,
+                        "description": { "description": "默认展示的取消按钮的自定义 props", "tags": [] }
+                    },
                     "afterClose": {
                         "type": { "name": "func" },
                         "required": false,
@@ -7973,7 +7983,7 @@
                         "description": { "description": "是否可清空", "tags": [] }
                     },
                     "status": {
-                        "required": true,
+                        "required": false,
                         "tsType": { "name": "InputProps['status']", "raw": "InputProps['status']" },
                         "description": { "description": "状态", "tags": [] }
                     },

@@ -68,13 +68,15 @@ yarn add @ucloud-fe/react-components@0.3.1
 
     -   通过`babel-plugin-import`实现模块化加载
 
+    添加 import 插件
+
     ```bash
-    <!-- 添加import插件 -->
     npm install babel-plugin-import --dev
     ```
 
+    在 babel 的 plugins 中添加配置
+
     ```json
-    <!-- 在babel的plugins中添加配置 -->
     {
         "plugins": [
             [
