@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.6](https://github.com/UCloud-FE/react-components/compare/v1.3.5...v1.3.6) (2021-12-20)
+
+### Bug Fixes
+
+-   **NumberInput:** fix input color ([779657b](https://github.com/UCloud-FE/react-components/commit/779657b98bc291817c7188685c584f57669692e9))
+
 ### [1.3.5](https://github.com/UCloud-FE/react-components/compare/v1.3.4...v1.3.5) (2021-12-14)
 
 ### Bug Fixes
