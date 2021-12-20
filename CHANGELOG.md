@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.7](https://github.com/UCloud-FE/react-components/compare/v1.3.6...v1.3.7) (2021-12-20)
+
+### Features
+
+-   **all:** update a lot of ts interface define ([1f527a3](https://github.com/UCloud-FE/react-components/commit/1f527a3eba1665f53b822cc89b2fe6c76d925f1f))
+-   **Notice:** refactor code & use flex for align ([6e3f8de](https://github.com/UCloud-FE/react-components/commit/6e3f8de3379f285d8b7ee712b334846ac2de07ad))
+
 ### [1.3.6](https://github.com/UCloud-FE/react-components/compare/v1.3.5...v1.3.6) (2021-12-20)
 
 ### Bug Fixes
