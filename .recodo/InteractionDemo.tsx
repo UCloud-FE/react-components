@@ -1,5 +1,5 @@
 import React, { useState, useCallback, createContext, ReactElement, useContext, useMemo } from 'react';
-import { Switch, Radio, Input, Button, Tabs, Card } from '@ucloud-fe/react-components';
+import { Switch, Radio, Input, Button, Tabs } from '@ucloud-fe/react-components';
 
 import { Config, ConfigInfo } from './interface';
 
@@ -102,7 +102,7 @@ const InteractionDemo = ({ config, children }: { config: Config; children: React
 
     const [finalDemoPropsDefine, initialState] = useMemo(() => {
         const finalProps: { [key: string]: ConfigInfo } = {};
-        const initialState = {};
+        const initialState: Record<string, any> = {};
         Object.keys(config).map(name => {
             let prop = config[name];
             let finalProp: ConfigInfo = { type: 'unknown' };
@@ -156,7 +156,7 @@ const InteractionDemo = ({ config, children }: { config: Config; children: React
                     }
                 }
                 if (propInfo.defaultValue) {
-                    finalProp[name] = propInfo.defaultValue.value;
+                    finalProp.defaultValue = propInfo.defaultValue.value;
                 }
             } else if (typeof prop === 'string') {
                 finalProp = { type: prop };
