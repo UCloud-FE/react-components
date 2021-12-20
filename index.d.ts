@@ -226,7 +226,6 @@ export interface UploadFile {
     name: string;
     uid: string;
     size?: number;
-    type: string;
     status?: 'uploading' | 'success' | 'error';
     thumbnailUrl?: string;
     url?: string;
@@ -392,15 +391,7 @@ export interface EditableListProps {
 export declare class EditableList extends PureComponent<EditableListProps> {}
 
 // Notice
-export type NoticeStyleType = 'default' | 'success' | 'warning' | 'error' | 'disabled';
-export interface NoticeProps extends HTMLAttributes<HTMLDivElement> {
-    closable?: boolean;
-    icon?: ReactNode;
-    onClose?: Function;
-    styleType?: NoticeStyleType;
-    action?: ReactNode;
-}
-export declare class Notice extends Component<NoticeProps> {}
+export { default as Notice, NoticeProps } from './lib/components/Notice';
 
 // Badge
 export { default as Badge, BadgeProps } from './lib/components/Badge';

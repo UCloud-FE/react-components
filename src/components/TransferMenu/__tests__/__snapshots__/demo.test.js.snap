@@ -471,7 +471,7 @@ exports[`TransferMenu demo -- transferMenu 1`] = `
   left: -1px;
 }
 
-.emotion-866 {
+.emotion-862 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -486,7 +486,7 @@ exports[`TransferMenu demo -- transferMenu 1`] = `
   justify-content: flex-start;
 }
 
-.emotion-866 .uc-fe-transfer-part-wrap {
+.emotion-862 .uc-fe-transfer-part-wrap {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -500,18 +500,18 @@ exports[`TransferMenu demo -- transferMenu 1`] = `
   overflow: hidden;
 }
 
-.emotion-866 .uc-fe-transfer-search-wrap {
+.emotion-862 .uc-fe-transfer-search-wrap {
   margin: 12px;
 }
 
-.emotion-866 .uc-fe-transfer-title {
+.emotion-862 .uc-fe-transfer-title {
   color: #0a1633;
   font-size: 12px;
   line-height: 20px;
   padding: 6px 4px;
 }
 
-.emotion-866 .uc-fe-transfer-part-content {
+.emotion-862 .uc-fe-transfer-part-content {
   border-radius: 2px;
   width: 100%;
   border: 1px solid #c3cad9;
@@ -528,16 +528,16 @@ exports[`TransferMenu demo -- transferMenu 1`] = `
   flex-direction: column;
 }
 
-.emotion-866 .uc-fe-transfer-disabled .uc-fe-transfer-part-content,
-.emotion-866 .uc-fe-transfer-disabled .uc-fe-transfer-footer {
+.emotion-862 .uc-fe-transfer-disabled .uc-fe-transfer-part-content,
+.emotion-862 .uc-fe-transfer-disabled .uc-fe-transfer-footer {
   border-color: #d9d9d9;
 }
 
-.emotion-866 .uc-fe-transfer-disabled .uc-fe-transfer-title {
+.emotion-862 .uc-fe-transfer-disabled .uc-fe-transfer-title {
   color: #cccccc;
 }
 
-.emotion-866 .uc-fe-transfer-action-wrap {
+.emotion-862 .uc-fe-transfer-action-wrap {
   padding: 12px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -555,11 +555,11 @@ exports[`TransferMenu demo -- transferMenu 1`] = `
   align-self: center;
 }
 
-.emotion-866 .uc-fe-transfer-action-wrap .uc-fe-transfer-action+.uc-fe-transfer-action {
+.emotion-862 .uc-fe-transfer-action-wrap .uc-fe-transfer-action+.uc-fe-transfer-action {
   margin-top: 8px;
 }
 
-.emotion-866 .uc-fe-transfer-tip-wrap {
+.emotion-862 .uc-fe-transfer-tip-wrap {
   margin: 50px;
   padding: 8px;
   -webkit-flex: auto;
@@ -567,18 +567,18 @@ exports[`TransferMenu demo -- transferMenu 1`] = `
   flex: auto;
 }
 
-.emotion-866 .uc-fe-transfer-list-wrap {
+.emotion-862 .uc-fe-transfer-list-wrap {
   -webkit-flex: auto;
   -ms-flex: auto;
   flex: auto;
 }
 
-.emotion-866 .uc-fe-transfer-footer {
+.emotion-862 .uc-fe-transfer-footer {
   border-top: 1px solid #c3cad9;
   padding: 8px;
 }
 
-.emotion-866 .uc-fe-transfer-clear-search-btn {
+.emotion-862 .uc-fe-transfer-clear-search-btn {
   margin-left: 4px;
   cursor: pointer;
   color: #3860f4;
@@ -920,8 +920,11 @@ exports[`TransferMenu demo -- transferMenu 1`] = `
   height: 12px;
 }
 
-.emotion-864 {
-  display: table;
+.emotion-860 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -935,22 +938,56 @@ exports[`TransferMenu demo -- transferMenu 1`] = `
   background: #fafafc;
 }
 
-.emotion-864 .uc-fe-notice-icon {
-  fill: #3860f4;
-  color: #3860f4;
-  vertical-align: middle;
+.emotion-860 .uc-fe-notice-icon-wrap,
+.emotion-860 .uc-fe-notice-action,
+.emotion-860 .uc-fe-notice-close {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 18px;
+  line-height: 18px;
 }
 
-.emotion-864 .e1aspfr52 {
+.emotion-860 .uc-fe-notice-icon-wrap {
+  width: 15px;
+  padding-right: 8px;
+  font-size: 15px;
+  color: inherit;
+}
+
+.emotion-860 .uc-fe-notice-icon-wrap .uc-fe-notice-icon {
+  fill: #3860f4;
+  color: #3860f4;
+}
+
+.emotion-860 .uc-fe-notice-content {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-860 .uc-fe-notice-action {
+  padding-left: 8px;
+  white-space: nowrap;
+  text-align: right;
   color: #526075;
 }
 
-.emotion-860 {
-  display: table-cell;
-  font-size: 15px;
-  width: 15px;
-  color: inherit;
-  padding-right: 8px;
+.emotion-860 .uc-fe-notice-close {
+  padding-left: 8px;
+  width: 12px;
+}
+
+.emotion-860 .uc-fe-notice-close > .uc-fe-notice-icon {
+  cursor: pointer;
 }
 
 .emotion-858 {
@@ -961,11 +998,6 @@ exports[`TransferMenu demo -- transferMenu 1`] = `
   fill: currentcolor;
   width: 15px;
   height: 15px;
-}
-
-.emotion-862 {
-  display: table-cell;
-  vertical-align: middle;
 }
 
 .emotion-228 {
@@ -1438,7 +1470,7 @@ exports[`TransferMenu demo -- transferMenu 1`] = `
   left: -1px;
 }
 
-.emotion-866 {
+.emotion-862 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1453,7 +1485,7 @@ exports[`TransferMenu demo -- transferMenu 1`] = `
   justify-content: flex-start;
 }
 
-.emotion-866 .uc-fe-transfer-part-wrap {
+.emotion-862 .uc-fe-transfer-part-wrap {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1467,18 +1499,18 @@ exports[`TransferMenu demo -- transferMenu 1`] = `
   overflow: hidden;
 }
 
-.emotion-866 .uc-fe-transfer-search-wrap {
+.emotion-862 .uc-fe-transfer-search-wrap {
   margin: 12px;
 }
 
-.emotion-866 .uc-fe-transfer-title {
+.emotion-862 .uc-fe-transfer-title {
   color: #0a1633;
   font-size: 12px;
   line-height: 20px;
   padding: 6px 4px;
 }
 
-.emotion-866 .uc-fe-transfer-part-content {
+.emotion-862 .uc-fe-transfer-part-content {
   border-radius: 2px;
   width: 100%;
   border: 1px solid #c3cad9;
@@ -1495,16 +1527,16 @@ exports[`TransferMenu demo -- transferMenu 1`] = `
   flex-direction: column;
 }
 
-.emotion-866 .uc-fe-transfer-disabled .uc-fe-transfer-part-content,
-.emotion-866 .uc-fe-transfer-disabled .uc-fe-transfer-footer {
+.emotion-862 .uc-fe-transfer-disabled .uc-fe-transfer-part-content,
+.emotion-862 .uc-fe-transfer-disabled .uc-fe-transfer-footer {
   border-color: #d9d9d9;
 }
 
-.emotion-866 .uc-fe-transfer-disabled .uc-fe-transfer-title {
+.emotion-862 .uc-fe-transfer-disabled .uc-fe-transfer-title {
   color: #cccccc;
 }
 
-.emotion-866 .uc-fe-transfer-action-wrap {
+.emotion-862 .uc-fe-transfer-action-wrap {
   padding: 12px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1522,11 +1554,11 @@ exports[`TransferMenu demo -- transferMenu 1`] = `
   align-self: center;
 }
 
-.emotion-866 .uc-fe-transfer-action-wrap .uc-fe-transfer-action+.uc-fe-transfer-action {
+.emotion-862 .uc-fe-transfer-action-wrap .uc-fe-transfer-action+.uc-fe-transfer-action {
   margin-top: 8px;
 }
 
-.emotion-866 .uc-fe-transfer-tip-wrap {
+.emotion-862 .uc-fe-transfer-tip-wrap {
   margin: 50px;
   padding: 8px;
   -webkit-flex: auto;
@@ -1534,18 +1566,18 @@ exports[`TransferMenu demo -- transferMenu 1`] = `
   flex: auto;
 }
 
-.emotion-866 .uc-fe-transfer-list-wrap {
+.emotion-862 .uc-fe-transfer-list-wrap {
   -webkit-flex: auto;
   -ms-flex: auto;
   flex: auto;
 }
 
-.emotion-866 .uc-fe-transfer-footer {
+.emotion-862 .uc-fe-transfer-footer {
   border-top: 1px solid #c3cad9;
   padding: 8px;
 }
 
-.emotion-866 .uc-fe-transfer-clear-search-btn {
+.emotion-862 .uc-fe-transfer-clear-search-btn {
   margin-left: 4px;
   cursor: pointer;
   color: #3860f4;
@@ -1887,8 +1919,11 @@ exports[`TransferMenu demo -- transferMenu 1`] = `
   height: 12px;
 }
 
-.emotion-864 {
-  display: table;
+.emotion-860 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -1902,22 +1937,56 @@ exports[`TransferMenu demo -- transferMenu 1`] = `
   background: #fafafc;
 }
 
-.emotion-864 .uc-fe-notice-icon {
-  fill: #3860f4;
-  color: #3860f4;
-  vertical-align: middle;
+.emotion-860 .uc-fe-notice-icon-wrap,
+.emotion-860 .uc-fe-notice-action,
+.emotion-860 .uc-fe-notice-close {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 18px;
+  line-height: 18px;
 }
 
-.emotion-864 .e1aspfr52 {
+.emotion-860 .uc-fe-notice-icon-wrap {
+  width: 15px;
+  padding-right: 8px;
+  font-size: 15px;
+  color: inherit;
+}
+
+.emotion-860 .uc-fe-notice-icon-wrap .uc-fe-notice-icon {
+  fill: #3860f4;
+  color: #3860f4;
+}
+
+.emotion-860 .uc-fe-notice-content {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-860 .uc-fe-notice-action {
+  padding-left: 8px;
+  white-space: nowrap;
+  text-align: right;
   color: #526075;
 }
 
-.emotion-860 {
-  display: table-cell;
-  font-size: 15px;
-  width: 15px;
-  color: inherit;
-  padding-right: 8px;
+.emotion-860 .uc-fe-notice-close {
+  padding-left: 8px;
+  width: 12px;
+}
+
+.emotion-860 .uc-fe-notice-close > .uc-fe-notice-icon {
+  cursor: pointer;
 }
 
 .emotion-858 {
@@ -1928,11 +1997,6 @@ exports[`TransferMenu demo -- transferMenu 1`] = `
   fill: currentcolor;
   width: 15px;
   height: 15px;
-}
-
-.emotion-862 {
-  display: table-cell;
-  vertical-align: middle;
 }
 
 <div>
@@ -2655,7 +2719,7 @@ exports[`TransferMenu demo -- transferMenu 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-transfer emotion-866 emotion-867"
+      class="uc-fe-transfer emotion-862 emotion-863"
     >
       <div
         class="uc-fe-transfer-part-wrap"
@@ -5322,10 +5386,10 @@ exports[`TransferMenu demo -- transferMenu 1`] = `
             class="uc-fe-transfer-tip-wrap"
           >
             <div
-              class=" emotion-864 emotion-865"
+              class="emotion-860 emotion-861"
             >
               <span
-                class="emotion-860 emotion-861"
+                class="uc-fe-notice-icon-wrap"
               >
                 <svg
                   class="uc-fe-notice-icon emotion-858 emotion-28"
@@ -5338,7 +5402,7 @@ exports[`TransferMenu demo -- transferMenu 1`] = `
                 </svg>
               </span>
               <div
-                class="emotion-862 emotion-863"
+                class="uc-fe-notice-content"
               >
                 请从左侧列表选择
               </div>
