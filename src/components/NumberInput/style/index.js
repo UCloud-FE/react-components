@@ -44,6 +44,7 @@ export const NumberInputWrap = withProps()(
                 outline: none;
                 padding: 0;
                 margin: 0;
+                color: inherit;
             }
             .${suffixCls} {
                 color: ${DT.T_COLOR_TEXT_REMARK_DARK};
