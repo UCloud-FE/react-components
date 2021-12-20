@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, useCallback } from 'react';
+import React, { AnchorHTMLAttributes, useCallback } from 'react';
 
 import { ItemSpan, ItemA } from './style';
 
@@ -13,7 +13,7 @@ export interface ItemProps {
     href?: string;
 }
 
-const Item = ({ disabled, onClick, href, ...rest }: ItemProps & HTMLAttributes<HTMLElement>) => {
+const Item = ({ disabled, onClick, href, ...rest }: ItemProps & AnchorHTMLAttributes<HTMLAnchorElement>) => {
     const handleClick = useCallback(
         e => {
             if (disabled) return;

@@ -13,7 +13,7 @@ const defaultProps = {
     zIndex: 9
 };
 
-type BadgeProps = {
+export type BadgeProps = {
     /** 显示内容 */
     value?: ReactNode;
     /** 为数字时能显示的最大值，超过将显示最大值+ */

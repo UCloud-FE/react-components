@@ -6,7 +6,7 @@ import { SwitchWrap, buttonCls, onTipCls, offTipCls, innerCls, dotCls } from './
 
 type Override<T1, T2> = Omit<T1, keyof T2> & T2;
 
-interface SwitchProps {
+export interface SwitchProps {
     /** 是否选中 */
     checked?: boolean;
     /** 默认选中状态 */

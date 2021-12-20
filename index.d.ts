@@ -1,4 +1,4 @@
-import type { CSSProperties, ReactNode, Component, PureComponent, HTMLAttributes } from 'react';
+import type { CSSProperties, ReactNode, Component, PureComponent, HTMLAttributes, TextareaHTMLAttributes } from 'react';
 
 // 忽略 T 对象中 键在 K 中的所有的属性
 type Override<T1, T2> = Omit<T1, keyof T2> & T2;
@@ -20,14 +20,14 @@ export { default as Link } from './lib/components/Link';
 
 export { default as AutoComplete } from './lib/components/AutoComplete';
 
-export { default as Switch } from './lib/components/Switch';
+export { default as Switch, SwitchProps } from './lib/components/Switch';
 
-export { default as Tabs } from './lib/components/Tabs';
+export { default as Tabs, TabsProps, TabPaneProps } from './lib/components/Tabs';
 
 export { default as Input } from './lib/components/Input';
 import Input from './lib/components/Input';
 
-export { default as Checkbox } from './lib/components/Checkbox';
+export { default as Checkbox, CheckboxProps } from './lib/components/Checkbox';
 
 export { default as Menu } from './lib/components/Menu';
 
@@ -147,11 +147,11 @@ export type NumberInputProps = Override<
 export declare class NumberInput extends Component<NumberInputProps> {}
 
 // Textarea
-export type TextareaProps = HTMLAttributes<HTMLTextAreaElement>;
+export type TextareaProps = TextareaHTMLAttributes<HTMLTextAreaElement>;
 export declare class Textarea extends Component<TextareaProps> {}
 
 // Radio
-export type RadioStyleType = 'default' | 'button' | 'tag' | 'card' | 'text';
+export type RadioStyleType = 'default' | 'button' | 'tag' | 'card' | 'text' | 'list';
 export interface RadioProps {
     checked?: boolean;
     defaultChecked?: boolean;
@@ -161,12 +161,13 @@ export interface RadioProps {
     styleType?: RadioStyleType;
     size?: SizeType;
     title?: ReactNode;
+    extra?: ReactNode;
     disabledLabel?: ReactNode;
 }
 interface RadioOption extends RadioProps {
     label?: ReactNode;
 }
-export type RadioOptions = RadioGroup[];
+export type RadioOptions = RadioOption[];
 export interface RadioGroupProps {
     value?: any;
     defaultValue?: any;
@@ -188,7 +189,7 @@ export interface SliderMark {
     ratio?: number;
 }
 export interface SliderMarks {
-    [key: string]: SliderMark;
+    [key: string]: SliderMark | ReactNode;
 }
 interface NumberInputTipFormatterOption {
     currentValue: number;
@@ -224,11 +225,16 @@ export declare class Slider extends Component<SliderProps> {}
 export interface UploadFile {
     name: string;
     uid: string;
-    size: number;
+    size?: number;
     type: string;
     status?: 'uploading' | 'success' | 'error';
+    thumbnailUrl?: string;
+    url?: string;
+    type?: string;
     lastModified?: number;
     lastModifiedDate?: Date;
+    progress?: number;
+    error?: Error;
 }
 interface UpdateProgress {
     (progress: number): void;
@@ -245,6 +251,7 @@ export interface UploadCustomStyle {
     listMaxHeight?: string;
     [key: string]: any;
 }
+
 export interface UploadProps {
     onChange?: (fileList: UploadFile[]) => void;
     onAdd?: (fileList: UploadFile[]) => boolean;
@@ -261,8 +268,8 @@ export interface UploadProps {
     maxCount?: number;
     selector?: ReactNode;
     listType?: UploadListType;
-    defaultFileList?: File[];
-    fileList?: File[];
+    defaultFileList?: (File | UploadFile)[];
+    fileList?: (File | UploadFile)[];
     style?: CSSProperties;
     customStyle?: UploadCustomStyle;
 }
@@ -396,7 +403,7 @@ export interface NoticeProps extends HTMLAttributes<HTMLDivElement> {
 export declare class Notice extends Component<NoticeProps> {}
 
 // Badge
-export { default as Badge } from './lib/components/Badge';
+export { default as Badge, BadgeProps } from './lib/components/Badge';
 
 // Tag
 export type TagStyleType =
@@ -427,7 +434,10 @@ export interface TagProps extends HTMLAttributes<HTMLSpanElement> {
     icon?: 'circle-fill' | 'circle' | 'loading' | 'custom' | ReactNode;
     disabled?: boolean;
 }
-export declare class Tag extends PureComponent<TagProps> {}
+export declare class TagIcon extends PureComponent<TagProps> {}
+export declare class Tag extends PureComponent<TagProps> {
+    declare static Icon: typeof TagIcon;
+}
 
 // Popover
 interface PopupAlign {
@@ -506,10 +516,12 @@ interface ModalConfirmHandle {
 interface ModalConfirm {
     (options: ModalProps): ModalConfirmHandle;
 }
+export declare class ModalContent extends Component<HTMLAttributes<HTMLDivElement>> {}
 export declare class Modal extends Component<ModalProps> {
     static confirm: ModalConfirm;
     static alert: ModalConfirm;
     static open: ModalConfirm;
+    static Content: typeof ModalContent;
 }
 
 // Drawer
@@ -634,11 +646,13 @@ interface ColumnConfigButtonProps extends ButtonProps {
 declare class TableColumnConfigButton extends Component<ColumnConfigButtonProps> {}
 interface TableExpandedRowContentProps extends HTMLAttributes<HTMLDivElement> {}
 declare class TableExpandedRowContent extends Component<TableExpandedRowContentProps> {}
+declare class HoverDisplayArea extends Component<HTMLAttributes<HTMLDivElement>> {}
 export declare class Table extends Component<TableProps> {
     static ColumnConfigButton: typeof TableColumnConfigButton;
     static SearchInput: typeof Input['Search'];
     static ActionList: typeof ActionList;
     static ExpandedRowContent: typeof TableExpandedRowContent;
+    static HoverDisplayArea: typeof HoverDisplayArea;
     static getColumnConfigFromLocalStorage: typeof Function;
     static setColumnConfigToLocalStorage: typeof Function;
 }
@@ -766,7 +780,7 @@ export type PaginationProps = Override<
         current?: number;
         defaultCurrent?: number;
         total?: number;
-        showTotal?: number | GetPaginationShowTotal;
+        showTotal?: boolean | GetPaginationShowTotal;
         pageSize?: number;
         defaultPageSize?: number;
         onChange?: (page: number, pageSize: number) => void;

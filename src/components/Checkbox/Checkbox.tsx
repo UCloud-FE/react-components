@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, MouseEvent, ReactNode, useCallback, useEffect } from 'react';
+import React, { HTMLAttributes, MouseEvent, ReactNode, useCallback } from 'react';
 import classnames from 'classnames';
 
 import Card from 'src/components/Radio/Card';

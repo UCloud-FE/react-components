@@ -1,6 +1,11 @@
-import Badge from './Badge';
+import { ExportComponent } from 'src/type';
+
+import Badge, { BadgeProps } from './Badge';
 import Bubble from './Bubble';
 
-(Badge as any).Bubble = Bubble;
+const ExportBadge = ExportComponent(Badge, {
+    Bubble
+});
 
-export default Badge;
+export default ExportBadge;
+export type { BadgeProps };

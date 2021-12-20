@@ -1,6 +1,6 @@
 import { ExportComponent } from 'src/type';
 
-import Checkbox from './Checkbox';
+import Checkbox, { CheckboxProps } from './Checkbox';
 import Group from './Group';
 import { StyleTypes, Sizes } from './interface';
 
@@ -13,3 +13,4 @@ const ExportCheckbox = ExportComponent(Checkbox, {
 });
 
 export default ExportCheckbox;
+export type { CheckboxProps };

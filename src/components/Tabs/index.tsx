@@ -1,7 +1,7 @@
 import { ExportComponent } from 'src/type';
 
-import Tabs from './Tabs';
-import Pane from './Pane';
+import Tabs, { TabsProps } from './Tabs';
+import Pane, { TabPaneProps } from './Pane';
 import { TabBarPositions, Sizes, StyleTypes } from './shared';
 
 const ExportTabs = ExportComponent<
@@ -31,3 +31,5 @@ const ExportTabs = ExportComponent<
     Position: TabBarPositions
 });
 export default ExportTabs;
+
+export type { TabsProps, TabPaneProps };

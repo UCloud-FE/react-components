@@ -63,6 +63,7 @@ class Demo extends React.Component {
                         components={{ header: { cell: ResizableTH } }}
                         dataSource={dataSource}
                         columns={columns}
+                        columnPlaceholder
                     />
                 </div>
             </div>

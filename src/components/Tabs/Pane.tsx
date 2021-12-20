@@ -1,9 +1,9 @@
-import React, { memo, ReactNode, useEffect, useRef } from 'react';
+import React, { HTMLAttributes, memo, ReactNode, useEffect, useRef } from 'react';
 import classnames from 'classnames';
 
 import { prefixCls } from './style';
 
-export interface TabPaneProps {
+export interface DefinedTabPaneProps {
     /** @ignore */
     className?: string;
     /**
@@ -29,6 +29,8 @@ export interface TabPaneProps {
     /** tab 的 key，由于 react 会在某些情况下改变传递的 key，顾直接使用 key 是不安全的，如发现 key 被修改，可使用 tabKey 来替换 */
     tabKey?: string;
 }
+
+export type TabPaneProps = DefinedTabPaneProps & Omit<HTMLAttributes<HTMLDivElement>, keyof DefinedTabPaneProps>;
 
 const Pane = ({
     className,

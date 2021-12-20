@@ -45,9 +45,13 @@ interface ActionInfo {
     tooltip?: ReactNode | any;
     /** 禁用 */
     disabled?: boolean;
+    /** 尺寸，仅展示在外可用 */
+    size?: Size;
+    /** 按钮的 styleType，仅展示在外可用 */
+    styleType?: ButtonProps['styleType'];
 }
 
-export interface ActionListProps {
+export interface DefinedActionListProps {
     /** 操作列表 */
     actionList: ActionInfo[];
     /** 暴露的操作数量 */
@@ -63,6 +67,8 @@ export interface ActionListProps {
     /** 弹出层的 popover props */
     popoverProps?: any;
 }
+
+export type ActionListProps = DefinedActionListProps & Override<HTMLAttributes<HTMLDivElement>, DefinedActionListProps>;
 
 const renderActionButtonList = ({
     list,
@@ -161,7 +167,7 @@ const ActionList = ({
     dropdownButton,
     className,
     ...rest
-}: ActionListProps & Override<HTMLAttributes<HTMLDivElement>, ActionListProps>) => {
+}: ActionListProps) => {
     const l = actionList.length;
     let buttonList: ActionInfo[], menuList: ActionInfo[];
     if (l > exposeCount + 1) {
