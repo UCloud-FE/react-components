@@ -32,7 +32,11 @@ const addModal = modal => {
     return id;
 };
 const cleanAllModal = () => {
-    Object.keys(queueMap).forEach(cleanModal);
+    const remainModalCount = Object.keys(queueMap).length;
+    if (remainModalCount) {
+        Object.keys(queueMap).forEach(cleanModal);
+        return remainModalCount;
+    }
 };
 
 const ContextWrap = ({ children }) => {
