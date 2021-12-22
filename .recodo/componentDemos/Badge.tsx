@@ -20,7 +20,7 @@ const Demo = () => {
                     </Badge>
                 ),
                 (color: Color) => (
-                    <Badge value="文本提示" color={color}>
+                    <Badge value="文本" color={color}>
                         {square}
                     </Badge>
                 ),
@@ -37,7 +37,7 @@ const Demo = () => {
                     </Combine>
                 )
             ].map(render => (
-                <Box spacing="lg">{(['red', 'green', 'yellow', 'primary'] as Color[]).map(render)}</Box>
+                <Box spacing={24}>{(['red', 'green', 'yellow', 'primary'] as Color[]).map(render)}</Box>
             ))}
         </Box>
     );

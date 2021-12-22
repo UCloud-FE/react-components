@@ -4888,82 +4888,70 @@
     },
     "Notice": {
         "Notice": {
-            "path": "Notice/Notice.jsx",
+            "path": "Notice/Notice.tsx",
             "name": "Notice",
             "info": {
                 "description": "",
                 "displayName": "Notice",
-                "methods": [
-                    {
-                        "name": "onClose",
-                        "docblock": null,
-                        "modifiers": [],
-                        "params": [{ "name": "e", "type": null }],
-                        "returns": null
-                    }
-                ],
+                "methods": [],
                 "props": {
-                    "className": {
-                        "type": { "name": "string" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
                     "closable": {
-                        "type": { "name": "bool" },
                         "required": false,
+                        "tsType": { "name": "boolean" },
                         "description": { "description": "是否显示关闭按钮", "tags": [] },
                         "defaultValue": { "value": "true", "computed": false }
                     },
                     "icon": {
-                        "type": {
+                        "required": false,
+                        "tsType": {
                             "name": "union",
-                            "value": [
-                                {
-                                    "name": "enum",
-                                    "value": [
-                                        { "value": "null", "computed": false },
-                                        { "value": "false", "computed": false }
-                                    ]
-                                },
+                            "raw": "null | false | string | ReactNode",
+                            "elements": [
+                                { "name": "null" },
+                                { "name": "literal", "value": "false" },
                                 { "name": "string" },
-                                { "name": "node" }
+                                { "name": "ReactNode" }
                             ]
                         },
-                        "required": false,
                         "description": {
                             "description": "自定义前置icon，可传入Icon type或者自定义Icon，传入null、false隐藏，默认显示感叹号icon",
                             "tags": []
                         }
                     },
-                    "children": {
-                        "type": { "name": "node" },
-                        "required": false,
-                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    },
                     "onClose": {
-                        "type": { "name": "func" },
                         "required": false,
+                        "tsType": {
+                            "name": "signature",
+                            "type": "function",
+                            "raw": "(e: MouseEvent) => void",
+                            "signature": {
+                                "arguments": [{ "name": "e", "type": { "name": "MouseEvent" } }],
+                                "return": { "name": "void" }
+                            }
+                        },
                         "description": { "description": "关闭的回调", "tags": [] },
-                        "defaultValue": { "value": "() => {}", "computed": false }
+                        "defaultValue": { "value": "noop", "computed": true }
                     },
                     "styleType": {
-                        "type": {
-                            "name": "enum",
-                            "value": [
-                                { "value": "'default'", "computed": false },
-                                { "value": "'success'", "computed": false },
-                                { "value": "'warning'", "computed": false },
-                                { "value": "'error'", "computed": false },
-                                { "value": "'disabled'", "computed": false }
+                        "required": false,
+                        "tsType": {
+                            "name": "union",
+                            "raw": "'default' | 'success' | 'warning' | 'error' | 'disabled' | 'info'",
+                            "elements": [
+                                { "name": "literal", "value": "'default'" },
+                                { "name": "literal", "value": "'success'" },
+                                { "name": "literal", "value": "'warning'" },
+                                { "name": "literal", "value": "'error'" },
+                                { "name": "literal", "value": "'disabled'" },
+                                { "name": "literal", "value": "'info'" }
                             ]
                         },
-                        "required": false,
                         "description": { "description": "样式类型", "tags": [] },
-                        "defaultValue": { "value": "StyleType[0]", "computed": true }
+                        "defaultValue": { "value": "'default'", "computed": false }
                     },
                     "action": {
-                        "type": { "name": "node" },
                         "required": false,
+                        "tsType": { "name": "ReactNode" },
                         "description": { "description": "自定义操作", "tags": [] }
                     }
                 }

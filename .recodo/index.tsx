@@ -63,12 +63,12 @@ mod.config({
             type: 'json'
         },
         'design-token-editor': {
-            js: 'https://cdn.jsdelivr.net/npm/@ucloud-fe/design-token-editor@0.1.7/dist/design-token-editor.umd.js',
+            js: 'https://cdn.jsdelivr.net/npm/@ucloud-fe/design-token-editor@0.1.11/dist/design-token-editor.umd.js',
             type: 'amd',
             dep: ['react', 'design-token-editor/style']
         },
         'design-token-editor/style': {
-            css: 'https://cdn.jsdelivr.net/npm/@ucloud-fe/design-token-editor@0.1.7/dist/style.css',
+            css: 'https://cdn.jsdelivr.net/npm/@ucloud-fe/design-token-editor@0.1.11/dist/style.css',
             type: 'immediate'
         },
         'design-token-file': {
