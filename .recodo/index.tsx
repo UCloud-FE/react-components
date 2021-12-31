@@ -45,12 +45,12 @@ mod.config({
             dep: ['react']
         },
         'recodo-doc': {
-            js: 'https://cdn.jsdelivr.net/npm/recodo-doc@0.1.9/dist/main.min.js',
+            js: 'https://cdn.jsdelivr.net/npm/recodo-doc@0.1.11/dist/main.min.js',
             type: 'amd',
             dep: ['react', 'recodo-doc/style']
         },
         'recodo-doc/style': {
-            css: 'https://cdn.jsdelivr.net/npm/recodo-doc@0.1.9/lib/doc.css',
+            css: 'https://cdn.jsdelivr.net/npm/recodo-doc@0.1.11/lib/doc.css',
             type: 'immediate'
         },
         '@rapiop/mod': { js: [] },
