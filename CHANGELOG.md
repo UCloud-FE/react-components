@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.8](https://github.com/UCloud-FE/react-components/compare/v1.3.7...v1.3.8) (2022-01-04)
+
+### Features
+
+-   **Modal:** add return count for modal destroyAll ([ab6be60](https://github.com/UCloud-FE/react-components/commit/ab6be60f040535317a504d9cfe153d4a70f6ce19))
+
+### Bug Fixes
+
+-   **DatePicker:** fix initial display with defaultOption ([af66569](https://github.com/UCloud-FE/react-components/commit/af665696f65f6766c38b08deefc922a1ab3bc7bf))
+
 ### [1.3.7](https://github.com/UCloud-FE/react-components/compare/v1.3.6...v1.3.7) (2021-12-20)
 
 ### Features
