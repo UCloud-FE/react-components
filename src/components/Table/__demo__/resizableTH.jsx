@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Table from 'src/components/Table';
 import _ResizableTH from 'src/components/Table/ResizableTH';
 
@@ -6,22 +7,25 @@ Table.ResizableTH = _ResizableTH;
 
 // demo start
 const { ResizableTH } = Table;
-class Demo extends React.Component {
+class Demo1 extends React.Component {
     constructor(props) {
         super(props);
-        const columns = new Array(4).fill(null).map((v, i) => ({
-            title: `title - ${i}`,
-            key: `title-${i}`,
-            width: 150,
-            onHeaderCell: column => ({
-                width: column.width,
-                resizeAble: true,
-                maxWidth: 300,
-                minWidth: 50,
-                onResize: w => this.onResize(i, w)
-            }),
-            render: record => <span>content {record.index}</span>
-        }));
+        const columns = new Array(4).fill(null).map((v, i) => {
+            const onResize = w => this.handleResize(i, w);
+            return {
+                title: `title - ${i}`,
+                key: `title-${i}`,
+                width: 150,
+                onHeaderCell: column => ({
+                    width: column.width,
+                    resizeAble: true,
+                    maxWidth: 300,
+                    minWidth: 50,
+                    onResize
+                }),
+                render: record => <span>content {record.index}</span>
+            };
+        });
         columns.push({
             title: `last`,
             key: `title-last`,
@@ -36,7 +40,7 @@ class Demo extends React.Component {
             columns
         };
     }
-    onResize(i, width) {
+    handleResize(i, width) {
         const { columns } = this.state;
         columns[i].width = width;
         this.setState({
@@ -53,12 +57,9 @@ class Demo extends React.Component {
             <div>
                 <div className="demo-wrap">
                     <Table
-                        pagination={{
-                            defaultCurrent: 3,
-                            defaultPageSize: 20
-                        }}
                         scroll={{
-                            x: true
+                            x: true,
+                            y: this.props.y
                         }}
                         components={{ header: { cell: ResizableTH } }}
                         dataSource={dataSource}
@@ -70,6 +71,15 @@ class Demo extends React.Component {
         );
     }
 }
+Demo1.propTypes = { y: PropTypes.any };
+const Demo = () => {
+    return (
+        <>
+            <Demo1 />
+            <Demo1 y={300} />
+        </>
+    );
+};
 // demo end
 
 export default Demo;

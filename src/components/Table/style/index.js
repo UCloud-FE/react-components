@@ -13,6 +13,9 @@ import withProps from 'src/utils/withProps';
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-table';
 export const wrapperCls = prefixCls + '-wrapper';
+export const contentCls = prefixCls + '-content';
+export const bodyCls = prefixCls + '-body';
+export const headerCls = prefixCls + '-header';
 
 export const SortIcon = withProps()(
     styled(SvgIcon)(props => {
@@ -117,7 +120,7 @@ export const TableWrap = withProps({
                 cursor: pointer;
             }
             &-fixed,
-            &-body {
+            .${bodyCls} {
                 background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
             }
 
@@ -170,14 +173,14 @@ export const TableWrap = withProps({
                 `
             }
 
-            &-fixed-header .${prefixCls}-header {
+            &-fixed-header .${headerCls} {
                 min-width: 100%;
                 overflow: scroll;
                 padding-bottom: 20px;
                 margin-bottom: -20px;
             }
 
-            &-content {
+            .${contentCls} {
                 position: relative;
                 width: 100%;
                 clear: both;
