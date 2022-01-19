@@ -191,7 +191,7 @@ export const TableWrap = withProps({
                 border-bottom: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
                 color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
                 padding: 12px;
-                line-height: 22px;
+                line-height: 20px;
                 text-align: left;
                 font-weight: 400;
                 &.${prefixCls}-expand-icon-th,

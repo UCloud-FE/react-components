@@ -5,17 +5,15 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import withProps from 'src/utils/withProps';
-import { prefixCls, contentCls, bodyCls, headerCls } from './style';
 
 // eslint-disable-next-line no-unused-vars
-const FilteredResizable = ({ resizing, theme, contentHeight, ...rest }) => <Resizable {...rest} />;
-FilteredResizable.propTypes = { resizing: PropTypes.bool, theme: PropTypes.any, contentHeight: PropTypes.number };
+const FilteredResizable = ({ resizing, theme, ...rest }) => <Resizable {...rest} />;
+FilteredResizable.propTypes = { resizing: PropTypes.bool, theme: PropTypes.any };
 
 const ResizableTHWrap = withProps()(
     styled(FilteredResizable)(props => {
         const {
             resizing,
-            contentHeight,
             theme: { designTokens: DT }
         } = props;
 
@@ -34,28 +32,26 @@ const ResizableTHWrap = withProps()(
                     content: ' ';
                     position: absolute;
                     left: 6px;
-                    top: 16px;
-                    bottom: 16px;
-                    z-index: 10;
-                    /* transition: top, bottom 0.1s; */
+                    top: 14px;
+                    bottom: 14px;
+                    z-index: 1;
+                    will-change: width, background;
+                    transition: width 0.2s, background ease-in-out 0.2s;
                     display: block;
                     width: 1px;
                     background: ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
                 }
-                :hover {
-                    ::after {
-                        bottom: ${contentHeight ? '-' + contentHeight + 'px' : '0'};
-                        top: 0;
-                    }
+                :hover::after {
+                    width: 2px;
+                    background: ${DT.T_COLOR_LINE_DEFAULT_DARK};
                 }
             }
 
             ${resizing &&
             css`
-                .react-resizable-handle {
+                .react-resizable-handle.react-resizable-handle {
                     ::after {
-                        bottom: ${contentHeight ? '-' + contentHeight + 'px' : '0'};
-                        top: 0;
+                        width: 2px;
                         background: ${DT.T_COLOR_LINE_PRIMARY_HOVER};
                     }
                 }
@@ -93,35 +89,10 @@ export default class ResizableTH extends Component {
     onResizeStop = () => {
         this.setState({ resizing: false });
     };
-    onTableContentResize = () => {
-        this.setState({
-            contentHeight: this.targetDOM.clientHeight
-        });
-    };
-    componentDidMount() {
-        const dom = document.querySelector(`th[data-uid=${this.uid}]`);
-        const tableDoms = [...document.querySelectorAll(`.${prefixCls}`)];
-        const parentDOM = tableDoms.find(table => table.contains(dom));
-        this.contentDOM = parentDOM?.querySelector(`.${contentCls}`);
-        if (this.contentDOM) {
-            this.targetDOM = this.contentDOM.querySelector(`.${headerCls}`)
-                ? this.contentDOM.querySelector(`.${bodyCls}`)
-                : this.contentDOM.querySelector(`.${bodyCls} tbody`);
-            if (this.targetDOM) {
-                const resizeObserver = new ResizeObserver(this.onTableContentResize);
-                resizeObserver.observe(this.contentDOM);
-                this.disconnectResizeObserver = () => resizeObserver.disconnect();
-            }
-        }
-    }
-    componentWillUnmount() {
-        this.disconnectResizeObserver?.();
-    }
-
     render() {
         // eslint-disable-next-line no-unused-vars
         const { width, resizeAble, onResize, minWidth = 20, maxWidth = Infinity, children, ...rest } = this.props;
-        const { resizing, contentHeight } = this.state;
+        const { resizing } = this.state;
 
         return resizeAble ? (
             <ResizableTHWrap
@@ -133,7 +104,6 @@ export default class ResizableTH extends Component {
                 minConstraints={[minWidth, 0]}
                 maxConstraints={[maxWidth, 0]}
                 resizing={resizing}
-                contentHeight={contentHeight}
             >
                 <th {...rest} data-uid={this.uid}>
                     <Fragment>{children}</Fragment>

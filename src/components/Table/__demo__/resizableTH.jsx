@@ -10,7 +10,7 @@ const { ResizableTH } = Table;
 class Demo1 extends React.Component {
     constructor(props) {
         super(props);
-        const columns = new Array(4).fill(null).map((v, i) => {
+        const columns = new Array(5).fill(null).map((v, i) => {
             const onResize = w => this.handleResize(i, w);
             return {
                 title: `title - ${i}`,
@@ -36,6 +36,9 @@ class Demo1 extends React.Component {
             }),
             render: record => <span>content {record.index}</span>
         });
+        if (props.fixed) {
+            columns[0].fixed = true;
+        }
         this.state = {
             columns
         };
@@ -71,12 +74,12 @@ class Demo1 extends React.Component {
         );
     }
 }
-Demo1.propTypes = { y: PropTypes.any };
+Demo1.propTypes = { y: PropTypes.any, fixed: PropTypes.bool };
 const Demo = () => {
     return (
         <>
             <Demo1 />
-            <Demo1 y={300} />
+            <Demo1 y={300} fixed />
         </>
     );
 };
