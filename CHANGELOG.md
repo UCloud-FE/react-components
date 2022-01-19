@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.9](https://github.com/UCloud-FE/react-components/compare/v1.3.8...v1.3.9) (2022-01-19)
+
+### Features
+
+-   **Table:** change resizable style ([4e26d28](https://github.com/UCloud-FE/react-components/commit/4e26d2808fd1762d2f11271e52b7c26d86ebc147))
+-   **Table:** update resizableTh style ([eff7a46](https://github.com/UCloud-FE/react-components/commit/eff7a4602e0f60ba7749769a454f660a9944342c))
+
 ### [1.3.8](https://github.com/UCloud-FE/react-components/compare/v1.3.7...v1.3.8) (2022-01-04)
 
 ### Features
