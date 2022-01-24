@@ -7,7 +7,7 @@ jest.unmock('rc-trigger');
 
 describe('Table', () => {
     test('no key warn', () => {
-        const error = (global.console.error = jest.fn());
+        const error = (global.console.error = jest.fn(console.error));
         class Demo extends React.Component {
             render() {
                 const dataSource = new Array(100).fill(null).map((v, i) => ({

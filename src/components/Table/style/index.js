@@ -16,6 +16,9 @@ export const wrapperCls = prefixCls + '-wrapper';
 export const contentCls = prefixCls + '-content';
 export const bodyCls = prefixCls + '-body';
 export const headerCls = prefixCls + '-header';
+export const sortingLineCls = prefixCls + '-drag-sorting-line';
+
+export const sortingLineOffset = 30;
 
 export const SortIcon = withProps()(
     styled(SvgIcon)(props => {
@@ -49,6 +52,9 @@ export const placeholderCellCls = prefixCls + '-placeholder-cell';
 export const placeholderHeaderCls = prefixCls + '-placeholder-th';
 const expandedRowContentCls = prefixCls + '-expanded-row-content';
 export const hoverDisplayAreaCls = prefixCls + '-hover-display-area';
+export const draggerCls = prefixCls + '-dragger';
+export const draggerCellCls = prefixCls + '-dragger-cell';
+export const draggerHeaderCls = prefixCls + '-dragger-th';
 
 export const ExpandedRowContent = withProps({
     className: expandedRowContentCls
@@ -87,6 +93,41 @@ export const TableWrap = withProps({
         background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
         font-size: ${DT.T_TYPO_FONT_SIZE_1};
 
+        .${draggerCls} {
+            /* clean table padding */
+            padding: 12px;
+            margin: -12px;
+            height: 100%;
+            display: inline-block;
+            cursor: grab;
+            :active {
+                cursor: grabbing;
+            }
+        }
+        .${sortingLineCls} {
+            position: absolute;
+            left: ${sortingLineOffset}px;
+            z-index: 10;
+            width: 100%;
+            height: 2px;
+            box-sizing: border-box;
+            background:  ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
+            will-change: top, opacity;
+            opacity: 0;
+            transition: top 0.1s, opacity 0.1s;
+            ::after {
+                content: ' ';
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                left: -10px;
+                top: -4px;
+                box-sizing: border-box;
+                border: 2px solid ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
+                background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
+                border-radius: 50%;
+            }
+        }
         .${prefixCls} {
             &-pagination {
                 float: right;
@@ -122,6 +163,9 @@ export const TableWrap = withProps({
             &-fixed,
             .${bodyCls} {
                 background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
+            }
+            .${bodyCls} {
+                position: relative;
             }
 
             &-row-expand-icon {
@@ -199,6 +243,9 @@ export const TableWrap = withProps({
                     border-color: transparent;
                     padding-left: 0;
                 }
+                &.${draggerHeaderCls} {
+                    border-color: transparent;
+                }
                 &.${placeholderHeaderCls} {
                     padding: 0px;
                     font-size: 0px;
@@ -268,6 +315,9 @@ export const TableWrap = withProps({
                     border-color: transparent;
                     padding-left: 0;
                 }
+                &.${draggerCellCls} {
+                    border-color: transparent;
+                }
                 &.${placeholderCellCls} {
                     padding: 0;
                     font-size: 0;
@@ -307,7 +357,7 @@ export const TableWrap = withProps({
 
             table > tbody > .${prefixCls}-row:hover > td {
                 background: ${DT.T_TABLE_ROW_COLOR_BG_HOVER};
-                &.${prefixCls}-row-expand-icon-cell, &.${selectIconCellCls} {
+                &.${prefixCls}-row-expand-icon-cell, &.${selectIconCellCls}, &.${draggerCellCls} {
                     background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
                 }
             }
@@ -330,7 +380,7 @@ export const TableWrap = withProps({
                 css`
                     &-row:nth-child(odd) > td {
                         background: ${DT.T_TABLE_ROW_COLOR_BG_DEFAULT};
-                        &.${prefixCls}-row-expand-icon-cell, &.${selectIconCellCls} {
+                        &.${prefixCls}-row-expand-icon-cell, &.${selectIconCellCls}, &.${draggerCellCls} {
                             background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
                         }
                     }

@@ -743,6 +743,49 @@ exports[`TransferTable demo -- transferTable 1`] = `
   clear: both;
 }
 
+.emotion-855 .uc-fe-table-dragger {
+  padding: 12px;
+  margin: -12px;
+  height: 100%;
+  display: inline-block;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+}
+
+.emotion-855 .uc-fe-table-dragger:active {
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing;
+}
+
+.emotion-855 .uc-fe-table-drag-sorting-line {
+  position: absolute;
+  left: 30px;
+  z-index: 10;
+  width: 100%;
+  height: 2px;
+  box-sizing: border-box;
+  background: #3860f4;
+  will-change: top,opacity;
+  opacity: 0;
+  -webkit-transition: top 0.1s,opacity 0.1s;
+  transition: top 0.1s,opacity 0.1s;
+}
+
+.emotion-855 .uc-fe-table-drag-sorting-line::after {
+  content: ' ';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: -10px;
+  top: -4px;
+  box-sizing: border-box;
+  border: 2px solid #3860f4;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
 .emotion-855 .uc-fe-table-pagination {
   float: right;
   margin-top: 8px;
@@ -783,6 +826,10 @@ exports[`TransferTable demo -- transferTable 1`] = `
 .emotion-855 .uc-fe-table-fixed,
 .emotion-855 .uc-fe-table .uc-fe-table-body {
   background: #ffffff;
+}
+
+.emotion-855 .uc-fe-table .uc-fe-table-body {
+  position: relative;
 }
 
 .emotion-855 .uc-fe-table-row-expand-icon {
@@ -859,6 +906,10 @@ exports[`TransferTable demo -- transferTable 1`] = `
 .emotion-855 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th {
   border-color: transparent;
   padding-left: 0;
+}
+
+.emotion-855 .uc-fe-table-thead > tr > th.uc-fe-table-dragger-th {
+  border-color: transparent;
 }
 
 .emotion-855 .uc-fe-table-thead > tr > th.uc-fe-table-placeholder-th {
@@ -944,6 +995,10 @@ exports[`TransferTable demo -- transferTable 1`] = `
   padding-left: 0;
 }
 
+.emotion-855 .uc-fe-table-row > td.uc-fe-table-dragger-cell {
+  border-color: transparent;
+}
+
 .emotion-855 .uc-fe-table-row > td.uc-fe-table-placeholder-cell {
   padding: 0;
   font-size: 0;
@@ -1002,7 +1057,8 @@ exports[`TransferTable demo -- transferTable 1`] = `
 }
 
 .emotion-855 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-expand-icon-cell,
-.emotion-855 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-select-icon-cell {
+.emotion-855 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-select-icon-cell,
+.emotion-855 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-dragger-cell {
   background: #ffffff;
 }
 
@@ -1941,6 +1997,49 @@ exports[`TransferTable demo -- transferTable 1`] = `
   clear: both;
 }
 
+.emotion-855 .uc-fe-table-dragger {
+  padding: 12px;
+  margin: -12px;
+  height: 100%;
+  display: inline-block;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+}
+
+.emotion-855 .uc-fe-table-dragger:active {
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing;
+}
+
+.emotion-855 .uc-fe-table-drag-sorting-line {
+  position: absolute;
+  left: 30px;
+  z-index: 10;
+  width: 100%;
+  height: 2px;
+  box-sizing: border-box;
+  background: #3860f4;
+  will-change: top,opacity;
+  opacity: 0;
+  -webkit-transition: top 0.1s,opacity 0.1s;
+  transition: top 0.1s,opacity 0.1s;
+}
+
+.emotion-855 .uc-fe-table-drag-sorting-line::after {
+  content: ' ';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: -10px;
+  top: -4px;
+  box-sizing: border-box;
+  border: 2px solid #3860f4;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
 .emotion-855 .uc-fe-table-pagination {
   float: right;
   margin-top: 8px;
@@ -1981,6 +2080,10 @@ exports[`TransferTable demo -- transferTable 1`] = `
 .emotion-855 .uc-fe-table-fixed,
 .emotion-855 .uc-fe-table .uc-fe-table-body {
   background: #ffffff;
+}
+
+.emotion-855 .uc-fe-table .uc-fe-table-body {
+  position: relative;
 }
 
 .emotion-855 .uc-fe-table-row-expand-icon {
@@ -2057,6 +2160,10 @@ exports[`TransferTable demo -- transferTable 1`] = `
 .emotion-855 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th {
   border-color: transparent;
   padding-left: 0;
+}
+
+.emotion-855 .uc-fe-table-thead > tr > th.uc-fe-table-dragger-th {
+  border-color: transparent;
 }
 
 .emotion-855 .uc-fe-table-thead > tr > th.uc-fe-table-placeholder-th {
@@ -2142,6 +2249,10 @@ exports[`TransferTable demo -- transferTable 1`] = `
   padding-left: 0;
 }
 
+.emotion-855 .uc-fe-table-row > td.uc-fe-table-dragger-cell {
+  border-color: transparent;
+}
+
 .emotion-855 .uc-fe-table-row > td.uc-fe-table-placeholder-cell {
   padding: 0;
   font-size: 0;
@@ -2200,7 +2311,8 @@ exports[`TransferTable demo -- transferTable 1`] = `
 }
 
 .emotion-855 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-expand-icon-cell,
-.emotion-855 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-select-icon-cell {
+.emotion-855 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-select-icon-cell,
+.emotion-855 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-dragger-cell {
   background: #ffffff;
 }
 
@@ -3207,6 +3319,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
             >
               <div
                 class="uc-fe-table-wrapper emotion-855 emotion-856"
+                data-table-id="table_uid_0"
               >
                 <div
                   class="emotion-247 emotion-248"
@@ -3298,6 +3411,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                         >
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="0"
                             data-row-key="0"
                           >
                             <td
@@ -3337,6 +3451,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="1"
                             data-row-key="1"
                           >
                             <td
@@ -3376,6 +3491,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="2"
                             data-row-key="2"
                           >
                             <td
@@ -3415,6 +3531,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="3"
                             data-row-key="3"
                           >
                             <td
@@ -3454,6 +3571,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="4"
                             data-row-key="4"
                           >
                             <td
@@ -3493,6 +3611,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="5"
                             data-row-key="5"
                           >
                             <td
@@ -3532,6 +3651,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="6"
                             data-row-key="6"
                           >
                             <td
@@ -3571,6 +3691,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="7"
                             data-row-key="7"
                           >
                             <td
@@ -3610,6 +3731,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="8"
                             data-row-key="8"
                           >
                             <td
@@ -3649,6 +3771,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="9"
                             data-row-key="9"
                           >
                             <td
@@ -3688,6 +3811,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="10"
                             data-row-key="10"
                           >
                             <td
@@ -3727,6 +3851,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="11"
                             data-row-key="11"
                           >
                             <td
@@ -3766,6 +3891,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="12"
                             data-row-key="12"
                           >
                             <td
@@ -3805,6 +3931,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="13"
                             data-row-key="13"
                           >
                             <td
@@ -3844,6 +3971,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="14"
                             data-row-key="14"
                           >
                             <td
@@ -3883,6 +4011,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="15"
                             data-row-key="15"
                           >
                             <td
@@ -3922,6 +4051,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="16"
                             data-row-key="16"
                           >
                             <td
@@ -3961,6 +4091,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="17"
                             data-row-key="17"
                           >
                             <td
@@ -4000,6 +4131,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="18"
                             data-row-key="18"
                           >
                             <td
@@ -4039,6 +4171,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="19"
                             data-row-key="19"
                           >
                             <td
@@ -4078,6 +4211,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="20"
                             data-row-key="20"
                           >
                             <td
@@ -4117,6 +4251,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="21"
                             data-row-key="21"
                           >
                             <td
@@ -4156,6 +4291,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="22"
                             data-row-key="22"
                           >
                             <td
@@ -4195,6 +4331,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="23"
                             data-row-key="23"
                           >
                             <td
@@ -4234,6 +4371,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="24"
                             data-row-key="24"
                           >
                             <td
@@ -4273,6 +4411,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="25"
                             data-row-key="25"
                           >
                             <td
@@ -4312,6 +4451,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="26"
                             data-row-key="26"
                           >
                             <td
@@ -4351,6 +4491,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="27"
                             data-row-key="27"
                           >
                             <td
@@ -4390,6 +4531,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="28"
                             data-row-key="28"
                           >
                             <td
@@ -4429,6 +4571,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="29"
                             data-row-key="29"
                           >
                             <td
@@ -4468,6 +4611,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="30"
                             data-row-key="30"
                           >
                             <td
@@ -4507,6 +4651,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="31"
                             data-row-key="31"
                           >
                             <td
@@ -4546,6 +4691,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="32"
                             data-row-key="32"
                           >
                             <td
@@ -4585,6 +4731,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="33"
                             data-row-key="33"
                           >
                             <td
@@ -4624,6 +4771,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="34"
                             data-row-key="34"
                           >
                             <td
@@ -4663,6 +4811,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="35"
                             data-row-key="35"
                           >
                             <td
@@ -4702,6 +4851,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="36"
                             data-row-key="36"
                           >
                             <td
@@ -4741,6 +4891,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="37"
                             data-row-key="37"
                           >
                             <td
@@ -4780,6 +4931,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="38"
                             data-row-key="38"
                           >
                             <td
@@ -4819,6 +4971,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="39"
                             data-row-key="39"
                           >
                             <td
@@ -4858,6 +5011,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="40"
                             data-row-key="40"
                           >
                             <td
@@ -4897,6 +5051,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="41"
                             data-row-key="41"
                           >
                             <td
@@ -4936,6 +5091,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="42"
                             data-row-key="42"
                           >
                             <td
@@ -4975,6 +5131,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="43"
                             data-row-key="43"
                           >
                             <td
@@ -5014,6 +5171,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="44"
                             data-row-key="44"
                           >
                             <td
@@ -5053,6 +5211,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="45"
                             data-row-key="45"
                           >
                             <td
@@ -5092,6 +5251,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="46"
                             data-row-key="46"
                           >
                             <td
@@ -5131,6 +5291,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="47"
                             data-row-key="47"
                           >
                             <td
@@ -5170,6 +5331,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="48"
                             data-row-key="48"
                           >
                             <td
@@ -5209,6 +5371,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="49"
                             data-row-key="49"
                           >
                             <td
@@ -5248,6 +5411,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="50"
                             data-row-key="50"
                           >
                             <td
@@ -5287,6 +5451,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="51"
                             data-row-key="51"
                           >
                             <td
@@ -5326,6 +5491,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="52"
                             data-row-key="52"
                           >
                             <td
@@ -5365,6 +5531,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="53"
                             data-row-key="53"
                           >
                             <td
@@ -5404,6 +5571,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="54"
                             data-row-key="54"
                           >
                             <td
@@ -5443,6 +5611,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="55"
                             data-row-key="55"
                           >
                             <td
@@ -5482,6 +5651,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="56"
                             data-row-key="56"
                           >
                             <td
@@ -5521,6 +5691,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="57"
                             data-row-key="57"
                           >
                             <td
@@ -5560,6 +5731,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="58"
                             data-row-key="58"
                           >
                             <td
@@ -5599,6 +5771,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="59"
                             data-row-key="59"
                           >
                             <td
@@ -5638,6 +5811,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="60"
                             data-row-key="60"
                           >
                             <td
@@ -5677,6 +5851,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="61"
                             data-row-key="61"
                           >
                             <td
@@ -5716,6 +5891,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="62"
                             data-row-key="62"
                           >
                             <td
@@ -5755,6 +5931,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="63"
                             data-row-key="63"
                           >
                             <td
@@ -5794,6 +5971,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="64"
                             data-row-key="64"
                           >
                             <td
@@ -5833,6 +6011,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="65"
                             data-row-key="65"
                           >
                             <td
@@ -5872,6 +6051,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="66"
                             data-row-key="66"
                           >
                             <td
@@ -5911,6 +6091,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="67"
                             data-row-key="67"
                           >
                             <td
@@ -5950,6 +6131,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="68"
                             data-row-key="68"
                           >
                             <td
@@ -5989,6 +6171,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="69"
                             data-row-key="69"
                           >
                             <td
@@ -6028,6 +6211,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="70"
                             data-row-key="70"
                           >
                             <td
@@ -6067,6 +6251,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="71"
                             data-row-key="71"
                           >
                             <td
@@ -6106,6 +6291,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="72"
                             data-row-key="72"
                           >
                             <td
@@ -6145,6 +6331,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="73"
                             data-row-key="73"
                           >
                             <td
@@ -6184,6 +6371,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="74"
                             data-row-key="74"
                           >
                             <td
@@ -6223,6 +6411,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="75"
                             data-row-key="75"
                           >
                             <td
@@ -6262,6 +6451,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="76"
                             data-row-key="76"
                           >
                             <td
@@ -6301,6 +6491,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="77"
                             data-row-key="77"
                           >
                             <td
@@ -6340,6 +6531,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="78"
                             data-row-key="78"
                           >
                             <td
@@ -6379,6 +6571,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="79"
                             data-row-key="79"
                           >
                             <td
@@ -6418,6 +6611,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="80"
                             data-row-key="80"
                           >
                             <td
@@ -6457,6 +6651,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="81"
                             data-row-key="81"
                           >
                             <td
@@ -6496,6 +6691,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="82"
                             data-row-key="82"
                           >
                             <td
@@ -6535,6 +6731,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="83"
                             data-row-key="83"
                           >
                             <td
@@ -6574,6 +6771,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="84"
                             data-row-key="84"
                           >
                             <td
@@ -6613,6 +6811,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="85"
                             data-row-key="85"
                           >
                             <td
@@ -6652,6 +6851,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="86"
                             data-row-key="86"
                           >
                             <td
@@ -6691,6 +6891,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="87"
                             data-row-key="87"
                           >
                             <td
@@ -6730,6 +6931,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="88"
                             data-row-key="88"
                           >
                             <td
@@ -6769,6 +6971,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="89"
                             data-row-key="89"
                           >
                             <td
@@ -6808,6 +7011,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="90"
                             data-row-key="90"
                           >
                             <td
@@ -6847,6 +7051,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="91"
                             data-row-key="91"
                           >
                             <td
@@ -6886,6 +7091,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="92"
                             data-row-key="92"
                           >
                             <td
@@ -6925,6 +7131,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="93"
                             data-row-key="93"
                           >
                             <td
@@ -6964,6 +7171,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="94"
                             data-row-key="94"
                           >
                             <td
@@ -7003,6 +7211,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="95"
                             data-row-key="95"
                           >
                             <td
@@ -7042,6 +7251,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="96"
                             data-row-key="96"
                           >
                             <td
@@ -7081,6 +7291,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="97"
                             data-row-key="97"
                           >
                             <td
@@ -7120,6 +7331,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="98"
                             data-row-key="98"
                           >
                             <td
@@ -7159,6 +7371,7 @@ exports[`TransferTable demo -- transferTable 1`] = `
                           </tr>
                           <tr
                             class="uc-fe-table-row  uc-fe-table-row-level-0"
+                            data-index="99"
                             data-row-key="99"
                           >
                             <td
