@@ -5,7 +5,7 @@ import createReactContext from 'create-react-context';
 
 import RcTable from 'src/libs/rc-table';
 import deprecatedLog from 'src/utils/deprecatedLog';
-import { warning, onceWarning } from 'src/utils/warning';
+import warning, { onceWarning } from 'src/utils/warning';
 import Pagination from 'src/components/Pagination';
 import Notice from 'src/components/Notice';
 import Checkbox from 'src/components/Checkbox';
