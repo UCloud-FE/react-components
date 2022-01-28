@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.10](https://github.com/UCloud-FE/react-components/compare/v1.3.9...v1.3.10) (2022-01-28)
+
+### Features
+
+-   **Table:** add dragSorting ([344098c](https://github.com/UCloud-FE/react-components/commit/344098c97da73b992bff48a42bdf6ce37e2543a1)), closes [#345](https://github.com/UCloud-FE/react-components/issues/345)
+-   **TransferMenu:** add disabled support ([d68909e](https://github.com/UCloud-FE/react-components/commit/d68909e93b5468840ddc6134e269008202df3364))
+
+### Bug Fixes
+
+-   **Table:** fix table config button align ([86d675d](https://github.com/UCloud-FE/react-components/commit/86d675dafbfc698dd3cb64ad31fc831f3db385c2))
+
 ### [1.3.9](https://github.com/UCloud-FE/react-components/compare/v1.3.8...v1.3.9) (2022-01-19)
 
 ### Features
