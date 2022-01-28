@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.11](https://github.com/UCloud-FE/react-components/compare/v1.3.10...v1.3.11) (2022-01-28)
+
+### Bug Fixes
+
+-   **Table:** fix warning crash ([b8d9324](https://github.com/UCloud-FE/react-components/commit/b8d932426b9126050cfcf9409512dfa1e3b625ae))
+
 ### [1.3.10](https://github.com/UCloud-FE/react-components/compare/v1.3.9...v1.3.10) (2022-01-28)
 
 ### Features
