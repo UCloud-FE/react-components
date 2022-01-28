@@ -387,7 +387,7 @@ export const ColumnConfigWrap = styled('span')`
 `;
 
 export const ColumnConfigButtonWrap = styled(Button)`
-    /* empty */
+    font-size: 0;
 `;
 
 export const ColumnConfigModalNotice = styled(Notice)`

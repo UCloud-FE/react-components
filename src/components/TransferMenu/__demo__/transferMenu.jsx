@@ -18,7 +18,8 @@ const generateData = () => {
     const id = uid++;
     return {
         key: id + '',
-        label: `item-${id}`
+        label: `item-${id}`,
+        disabled: Math.random() > 0.5
     };
 };
 

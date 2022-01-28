@@ -26,7 +26,7 @@ class TransferMenu extends PureComponent {
                     selectedKeys={selectedKeys}
                 >
                     {dataSource.map(item => (
-                        <Menu.Item key={item.key} itemKey={item.key}>
+                        <Menu.Item key={item.key} itemKey={item.key} disabled={item.disabled}>
                             {renderItem ? renderItem(item) : item.label}
                         </Menu.Item>
                     ))}
