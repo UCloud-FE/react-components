@@ -41,13 +41,24 @@ const Demo1 = () => {
     );
 };
 
-const columns2 = new Array(6).fill(null).map((v, i) => ({
-    title: `title-${i}`,
-    key: `title-${i}`,
-    width: 200,
-    render: record => <span>content {record.data}</span>
-}));
-columns2[0].fixed = true;
+const columns2 = [
+    {
+        title: '序号',
+        key: 'no',
+        width: 100,
+        fixed: true,
+        render: (d, record, index) => {
+            return index;
+        }
+    }
+].concat(
+    new Array(6).fill(null).map((v, i) => ({
+        title: `title-${i}`,
+        key: `title-${i}`,
+        width: 200,
+        render: record => <span>content {record.data}</span>
+    }))
+);
 
 const Demo2 = () => {
     const [dataSource, setDataSource] = React.useState(() => [..._dataSource]);

@@ -24,42 +24,12 @@ exports[`EditableTable demo -- addition 1`] = `
   margin: -12px;
   height: 100%;
   display: inline-block;
-  cursor: -webkit-grab;
-  cursor: -moz-grab;
-  cursor: grab;
+  cursor: move;
+  color: #7a8baa;
 }
 
-.emotion-28 .uc-fe-table-dragger:active {
-  cursor: -webkit-grabbing;
-  cursor: -moz-grabbing;
-  cursor: grabbing;
-}
-
-.emotion-28 .uc-fe-table-drag-sorting-line {
-  position: absolute;
-  left: 30px;
-  z-index: 10;
-  width: 100%;
-  height: 2px;
-  box-sizing: border-box;
-  background: #3860f4;
-  will-change: top,opacity;
-  opacity: 0;
-  -webkit-transition: top 0.1s,opacity 0.1s;
-  transition: top 0.1s,opacity 0.1s;
-}
-
-.emotion-28 .uc-fe-table-drag-sorting-line::after {
-  content: ' ';
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  left: -10px;
-  top: -4px;
-  box-sizing: border-box;
-  border: 2px solid #3860f4;
-  background: #ffffff;
-  border-radius: 50%;
+.emotion-28 .uc-fe-table-dragger:hover {
+  color: #3357df;
 }
 
 .emotion-28 .uc-fe-table-pagination {
@@ -180,12 +150,13 @@ exports[`EditableTable demo -- addition 1`] = `
 
 .emotion-28 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
 .emotion-28 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th {
-  border-color: transparent;
   padding-left: 0;
 }
 
+.emotion-28 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
+.emotion-28 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th,
 .emotion-28 .uc-fe-table-thead > tr > th.uc-fe-table-dragger-th {
-  border-color: transparent;
+  border-color: transparent !important;
 }
 
 .emotion-28 .uc-fe-table-thead > tr > th.uc-fe-table-placeholder-th {
@@ -263,21 +234,33 @@ exports[`EditableTable demo -- addition 1`] = `
   line-height: 22px;
   text-align: left;
   overflow-wrap: break-word;
+  will-change: border-color;
+  -webkit-transition: border-color .2s;
+  transition: border-color .2s;
 }
 
 .emotion-28 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
 .emotion-28 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell {
-  border-color: transparent;
   padding-left: 0;
 }
 
+.emotion-28 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
+.emotion-28 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell,
 .emotion-28 .uc-fe-table-row > td.uc-fe-table-dragger-cell {
-  border-color: transparent;
+  border-color: transparent !important;
 }
 
 .emotion-28 .uc-fe-table-row > td.uc-fe-table-placeholder-cell {
   padding: 0;
   font-size: 0;
+}
+
+.emotion-28 .uc-fe-table .uc-fe-table-drag-over-up > td {
+  border-top: 2px solid #3860f4;
+}
+
+.emotion-28 .uc-fe-table .uc-fe-table-drag-over-down > td {
+  border-bottom: 2px solid #3860f4;
 }
 
 .emotion-28 .uc-fe-table-row-level-1 > td,
@@ -517,42 +500,12 @@ exports[`EditableTable demo -- addition 1`] = `
   margin: -12px;
   height: 100%;
   display: inline-block;
-  cursor: -webkit-grab;
-  cursor: -moz-grab;
-  cursor: grab;
+  cursor: move;
+  color: #7a8baa;
 }
 
-.emotion-28 .uc-fe-table-dragger:active {
-  cursor: -webkit-grabbing;
-  cursor: -moz-grabbing;
-  cursor: grabbing;
-}
-
-.emotion-28 .uc-fe-table-drag-sorting-line {
-  position: absolute;
-  left: 30px;
-  z-index: 10;
-  width: 100%;
-  height: 2px;
-  box-sizing: border-box;
-  background: #3860f4;
-  will-change: top,opacity;
-  opacity: 0;
-  -webkit-transition: top 0.1s,opacity 0.1s;
-  transition: top 0.1s,opacity 0.1s;
-}
-
-.emotion-28 .uc-fe-table-drag-sorting-line::after {
-  content: ' ';
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  left: -10px;
-  top: -4px;
-  box-sizing: border-box;
-  border: 2px solid #3860f4;
-  background: #ffffff;
-  border-radius: 50%;
+.emotion-28 .uc-fe-table-dragger:hover {
+  color: #3357df;
 }
 
 .emotion-28 .uc-fe-table-pagination {
@@ -673,12 +626,13 @@ exports[`EditableTable demo -- addition 1`] = `
 
 .emotion-28 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
 .emotion-28 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th {
-  border-color: transparent;
   padding-left: 0;
 }
 
+.emotion-28 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
+.emotion-28 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th,
 .emotion-28 .uc-fe-table-thead > tr > th.uc-fe-table-dragger-th {
-  border-color: transparent;
+  border-color: transparent !important;
 }
 
 .emotion-28 .uc-fe-table-thead > tr > th.uc-fe-table-placeholder-th {
@@ -756,21 +710,33 @@ exports[`EditableTable demo -- addition 1`] = `
   line-height: 22px;
   text-align: left;
   overflow-wrap: break-word;
+  will-change: border-color;
+  -webkit-transition: border-color .2s;
+  transition: border-color .2s;
 }
 
 .emotion-28 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
 .emotion-28 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell {
-  border-color: transparent;
   padding-left: 0;
 }
 
+.emotion-28 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
+.emotion-28 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell,
 .emotion-28 .uc-fe-table-row > td.uc-fe-table-dragger-cell {
-  border-color: transparent;
+  border-color: transparent !important;
 }
 
 .emotion-28 .uc-fe-table-row > td.uc-fe-table-placeholder-cell {
   padding: 0;
   font-size: 0;
+}
+
+.emotion-28 .uc-fe-table .uc-fe-table-drag-over-up > td {
+  border-top: 2px solid #3860f4;
+}
+
+.emotion-28 .uc-fe-table .uc-fe-table-drag-over-down > td {
+  border-bottom: 2px solid #3860f4;
 }
 
 .emotion-28 .uc-fe-table-row-level-1 > td,
@@ -997,7 +963,7 @@ exports[`EditableTable demo -- addition 1`] = `
     >
       <div
         class="uc-fe-table-wrapper emotion-28 emotion-29"
-        data-table-id="table_uid_0"
+        data-table-id="uc_table_uid_0"
       >
         <div
           class="emotion-0 emotion-1"
@@ -1096,7 +1062,7 @@ exports[`EditableTable demo -- addition 1`] = `
                 >
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="0"
+                    data-row-index="0"
                     data-row-key="0"
                   >
                     <td
@@ -1128,7 +1094,7 @@ exports[`EditableTable demo -- addition 1`] = `
                   </tr>
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="1"
+                    data-row-index="1"
                     data-row-key="1"
                   >
                     <td
@@ -1193,7 +1159,7 @@ exports[`EditableTable demo -- addition 1`] = `
     >
       <div
         class="uc-fe-table-wrapper emotion-28 emotion-29"
-        data-table-id="table_uid_1"
+        data-table-id="uc_table_uid_1"
       >
         <div
           class="emotion-0 emotion-1"
@@ -1292,7 +1258,7 @@ exports[`EditableTable demo -- addition 1`] = `
                 >
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="0"
+                    data-row-index="0"
                     data-row-key="2"
                   >
                     <td
@@ -1324,7 +1290,7 @@ exports[`EditableTable demo -- addition 1`] = `
                   </tr>
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="1"
+                    data-row-index="1"
                     data-row-key="3"
                   >
                     <td
@@ -1388,7 +1354,7 @@ exports[`EditableTable demo -- addition 1`] = `
     >
       <div
         class="uc-fe-table-wrapper emotion-28 emotion-29"
-        data-table-id="table_uid_2"
+        data-table-id="uc_table_uid_2"
       >
         <div
           class="emotion-0 emotion-1"
@@ -1487,7 +1453,7 @@ exports[`EditableTable demo -- addition 1`] = `
                 >
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="0"
+                    data-row-index="0"
                     data-row-key="4"
                   >
                     <td
@@ -1519,7 +1485,7 @@ exports[`EditableTable demo -- addition 1`] = `
                   </tr>
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="1"
+                    data-row-index="1"
                     data-row-key="5"
                   >
                     <td
@@ -1588,7 +1554,7 @@ exports[`EditableTable demo -- addition 1`] = `
     >
       <div
         class="uc-fe-table-wrapper emotion-28 emotion-29"
-        data-table-id="table_uid_3"
+        data-table-id="uc_table_uid_3"
       >
         <div
           class="emotion-0 emotion-1"
@@ -1687,7 +1653,7 @@ exports[`EditableTable demo -- addition 1`] = `
                 >
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="0"
+                    data-row-index="0"
                     data-row-key="6"
                   >
                     <td
@@ -1719,7 +1685,7 @@ exports[`EditableTable demo -- addition 1`] = `
                   </tr>
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="1"
+                    data-row-index="1"
                     data-row-key="7"
                   >
                     <td
@@ -1784,7 +1750,7 @@ exports[`EditableTable demo -- addition 1`] = `
     >
       <div
         class="uc-fe-table-wrapper emotion-28 emotion-29"
-        data-table-id="table_uid_4"
+        data-table-id="uc_table_uid_4"
       >
         <div
           class="emotion-0 emotion-1"
@@ -1883,7 +1849,7 @@ exports[`EditableTable demo -- addition 1`] = `
                 >
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="0"
+                    data-row-index="0"
                     data-row-key="8"
                   >
                     <td
@@ -1915,7 +1881,7 @@ exports[`EditableTable demo -- addition 1`] = `
                   </tr>
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="1"
+                    data-row-index="1"
                     data-row-key="9"
                   >
                     <td
@@ -1985,7 +1951,7 @@ exports[`EditableTable demo -- addition 1`] = `
     >
       <div
         class="uc-fe-table-wrapper emotion-28 emotion-29"
-        data-table-id="table_uid_5"
+        data-table-id="uc_table_uid_5"
       >
         <div
           class="emotion-0 emotion-1"
@@ -2084,7 +2050,7 @@ exports[`EditableTable demo -- addition 1`] = `
                 >
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="0"
+                    data-row-index="0"
                     data-row-key="10"
                   >
                     <td
@@ -2116,7 +2082,7 @@ exports[`EditableTable demo -- addition 1`] = `
                   </tr>
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="1"
+                    data-row-index="1"
                     data-row-key="11"
                   >
                     <td
@@ -2186,42 +2152,12 @@ exports[`EditableTable demo -- demo 1`] = `
   margin: -12px;
   height: 100%;
   display: inline-block;
-  cursor: -webkit-grab;
-  cursor: -moz-grab;
-  cursor: grab;
+  cursor: move;
+  color: #7a8baa;
 }
 
-.emotion-22 .uc-fe-table-dragger:active {
-  cursor: -webkit-grabbing;
-  cursor: -moz-grabbing;
-  cursor: grabbing;
-}
-
-.emotion-22 .uc-fe-table-drag-sorting-line {
-  position: absolute;
-  left: 30px;
-  z-index: 10;
-  width: 100%;
-  height: 2px;
-  box-sizing: border-box;
-  background: #3860f4;
-  will-change: top,opacity;
-  opacity: 0;
-  -webkit-transition: top 0.1s,opacity 0.1s;
-  transition: top 0.1s,opacity 0.1s;
-}
-
-.emotion-22 .uc-fe-table-drag-sorting-line::after {
-  content: ' ';
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  left: -10px;
-  top: -4px;
-  box-sizing: border-box;
-  border: 2px solid #3860f4;
-  background: #ffffff;
-  border-radius: 50%;
+.emotion-22 .uc-fe-table-dragger:hover {
+  color: #3357df;
 }
 
 .emotion-22 .uc-fe-table-pagination {
@@ -2342,12 +2278,13 @@ exports[`EditableTable demo -- demo 1`] = `
 
 .emotion-22 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
 .emotion-22 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th {
-  border-color: transparent;
   padding-left: 0;
 }
 
+.emotion-22 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
+.emotion-22 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th,
 .emotion-22 .uc-fe-table-thead > tr > th.uc-fe-table-dragger-th {
-  border-color: transparent;
+  border-color: transparent !important;
 }
 
 .emotion-22 .uc-fe-table-thead > tr > th.uc-fe-table-placeholder-th {
@@ -2425,21 +2362,33 @@ exports[`EditableTable demo -- demo 1`] = `
   line-height: 22px;
   text-align: left;
   overflow-wrap: break-word;
+  will-change: border-color;
+  -webkit-transition: border-color .2s;
+  transition: border-color .2s;
 }
 
 .emotion-22 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
 .emotion-22 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell {
-  border-color: transparent;
   padding-left: 0;
 }
 
+.emotion-22 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
+.emotion-22 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell,
 .emotion-22 .uc-fe-table-row > td.uc-fe-table-dragger-cell {
-  border-color: transparent;
+  border-color: transparent !important;
 }
 
 .emotion-22 .uc-fe-table-row > td.uc-fe-table-placeholder-cell {
   padding: 0;
   font-size: 0;
+}
+
+.emotion-22 .uc-fe-table .uc-fe-table-drag-over-up > td {
+  border-top: 2px solid #3860f4;
+}
+
+.emotion-22 .uc-fe-table .uc-fe-table-drag-over-down > td {
+  border-bottom: 2px solid #3860f4;
 }
 
 .emotion-22 .uc-fe-table-row-level-1 > td,
@@ -2674,42 +2623,12 @@ exports[`EditableTable demo -- demo 1`] = `
   margin: -12px;
   height: 100%;
   display: inline-block;
-  cursor: -webkit-grab;
-  cursor: -moz-grab;
-  cursor: grab;
+  cursor: move;
+  color: #7a8baa;
 }
 
-.emotion-22 .uc-fe-table-dragger:active {
-  cursor: -webkit-grabbing;
-  cursor: -moz-grabbing;
-  cursor: grabbing;
-}
-
-.emotion-22 .uc-fe-table-drag-sorting-line {
-  position: absolute;
-  left: 30px;
-  z-index: 10;
-  width: 100%;
-  height: 2px;
-  box-sizing: border-box;
-  background: #3860f4;
-  will-change: top,opacity;
-  opacity: 0;
-  -webkit-transition: top 0.1s,opacity 0.1s;
-  transition: top 0.1s,opacity 0.1s;
-}
-
-.emotion-22 .uc-fe-table-drag-sorting-line::after {
-  content: ' ';
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  left: -10px;
-  top: -4px;
-  box-sizing: border-box;
-  border: 2px solid #3860f4;
-  background: #ffffff;
-  border-radius: 50%;
+.emotion-22 .uc-fe-table-dragger:hover {
+  color: #3357df;
 }
 
 .emotion-22 .uc-fe-table-pagination {
@@ -2830,12 +2749,13 @@ exports[`EditableTable demo -- demo 1`] = `
 
 .emotion-22 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
 .emotion-22 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th {
-  border-color: transparent;
   padding-left: 0;
 }
 
+.emotion-22 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
+.emotion-22 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th,
 .emotion-22 .uc-fe-table-thead > tr > th.uc-fe-table-dragger-th {
-  border-color: transparent;
+  border-color: transparent !important;
 }
 
 .emotion-22 .uc-fe-table-thead > tr > th.uc-fe-table-placeholder-th {
@@ -2913,21 +2833,33 @@ exports[`EditableTable demo -- demo 1`] = `
   line-height: 22px;
   text-align: left;
   overflow-wrap: break-word;
+  will-change: border-color;
+  -webkit-transition: border-color .2s;
+  transition: border-color .2s;
 }
 
 .emotion-22 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
 .emotion-22 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell {
-  border-color: transparent;
   padding-left: 0;
 }
 
+.emotion-22 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
+.emotion-22 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell,
 .emotion-22 .uc-fe-table-row > td.uc-fe-table-dragger-cell {
-  border-color: transparent;
+  border-color: transparent !important;
 }
 
 .emotion-22 .uc-fe-table-row > td.uc-fe-table-placeholder-cell {
   padding: 0;
   font-size: 0;
+}
+
+.emotion-22 .uc-fe-table .uc-fe-table-drag-over-up > td {
+  border-top: 2px solid #3860f4;
+}
+
+.emotion-22 .uc-fe-table .uc-fe-table-drag-over-down > td {
+  border-bottom: 2px solid #3860f4;
 }
 
 .emotion-22 .uc-fe-table-row-level-1 > td,
@@ -3148,7 +3080,7 @@ exports[`EditableTable demo -- demo 1`] = `
   >
     <div
       class="uc-fe-table-wrapper emotion-22 emotion-23"
-      data-table-id="table_uid_6"
+      data-table-id="uc_table_uid_6"
     >
       <div
         class="emotion-0 emotion-1"
@@ -3247,7 +3179,7 @@ exports[`EditableTable demo -- demo 1`] = `
               >
                 <tr
                   class="uc-fe-table-row  uc-fe-table-row-level-0"
-                  data-index="0"
+                  data-row-index="0"
                   data-row-key="0"
                 >
                   <td
@@ -3270,7 +3202,7 @@ exports[`EditableTable demo -- demo 1`] = `
                 </tr>
                 <tr
                   class="uc-fe-table-row  uc-fe-table-row-level-0"
-                  data-index="1"
+                  data-row-index="1"
                   data-row-key="1"
                 >
                   <td
@@ -3323,7 +3255,7 @@ exports[`EditableTable demo -- demo 1`] = `
   >
     <div
       class="uc-fe-table-wrapper emotion-22 emotion-23"
-      data-table-id="table_uid_7"
+      data-table-id="uc_table_uid_7"
     >
       <div
         class="emotion-0 emotion-1"
@@ -3464,7 +3396,7 @@ exports[`EditableTable demo -- demo 1`] = `
       >
         <div
           class="uc-fe-table-wrapper emotion-22 emotion-23"
-          data-table-id="table_uid_8"
+          data-table-id="uc_table_uid_8"
         >
           <div
             class="emotion-0 emotion-1"
@@ -3594,42 +3526,12 @@ exports[`EditableTable demo -- editableTable 1`] = `
   margin: -12px;
   height: 100%;
   display: inline-block;
-  cursor: -webkit-grab;
-  cursor: -moz-grab;
-  cursor: grab;
+  cursor: move;
+  color: #7a8baa;
 }
 
-.emotion-84 .uc-fe-table-dragger:active {
-  cursor: -webkit-grabbing;
-  cursor: -moz-grabbing;
-  cursor: grabbing;
-}
-
-.emotion-84 .uc-fe-table-drag-sorting-line {
-  position: absolute;
-  left: 30px;
-  z-index: 10;
-  width: 100%;
-  height: 2px;
-  box-sizing: border-box;
-  background: #3860f4;
-  will-change: top,opacity;
-  opacity: 0;
-  -webkit-transition: top 0.1s,opacity 0.1s;
-  transition: top 0.1s,opacity 0.1s;
-}
-
-.emotion-84 .uc-fe-table-drag-sorting-line::after {
-  content: ' ';
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  left: -10px;
-  top: -4px;
-  box-sizing: border-box;
-  border: 2px solid #3860f4;
-  background: #ffffff;
-  border-radius: 50%;
+.emotion-84 .uc-fe-table-dragger:hover {
+  color: #3357df;
 }
 
 .emotion-84 .uc-fe-table-pagination {
@@ -3750,12 +3652,13 @@ exports[`EditableTable demo -- editableTable 1`] = `
 
 .emotion-84 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
 .emotion-84 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th {
-  border-color: transparent;
   padding-left: 0;
 }
 
+.emotion-84 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
+.emotion-84 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th,
 .emotion-84 .uc-fe-table-thead > tr > th.uc-fe-table-dragger-th {
-  border-color: transparent;
+  border-color: transparent !important;
 }
 
 .emotion-84 .uc-fe-table-thead > tr > th.uc-fe-table-placeholder-th {
@@ -3833,21 +3736,33 @@ exports[`EditableTable demo -- editableTable 1`] = `
   line-height: 22px;
   text-align: left;
   overflow-wrap: break-word;
+  will-change: border-color;
+  -webkit-transition: border-color .2s;
+  transition: border-color .2s;
 }
 
 .emotion-84 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
 .emotion-84 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell {
-  border-color: transparent;
   padding-left: 0;
 }
 
+.emotion-84 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
+.emotion-84 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell,
 .emotion-84 .uc-fe-table-row > td.uc-fe-table-dragger-cell {
-  border-color: transparent;
+  border-color: transparent !important;
 }
 
 .emotion-84 .uc-fe-table-row > td.uc-fe-table-placeholder-cell {
   padding: 0;
   font-size: 0;
+}
+
+.emotion-84 .uc-fe-table .uc-fe-table-drag-over-up > td {
+  border-top: 2px solid #3860f4;
+}
+
+.emotion-84 .uc-fe-table .uc-fe-table-drag-over-down > td {
+  border-bottom: 2px solid #3860f4;
 }
 
 .emotion-84 .uc-fe-table-row-level-1 > td,
@@ -4439,42 +4354,12 @@ exports[`EditableTable demo -- editableTable 1`] = `
   margin: -12px;
   height: 100%;
   display: inline-block;
-  cursor: -webkit-grab;
-  cursor: -moz-grab;
-  cursor: grab;
+  cursor: move;
+  color: #7a8baa;
 }
 
-.emotion-84 .uc-fe-table-dragger:active {
-  cursor: -webkit-grabbing;
-  cursor: -moz-grabbing;
-  cursor: grabbing;
-}
-
-.emotion-84 .uc-fe-table-drag-sorting-line {
-  position: absolute;
-  left: 30px;
-  z-index: 10;
-  width: 100%;
-  height: 2px;
-  box-sizing: border-box;
-  background: #3860f4;
-  will-change: top,opacity;
-  opacity: 0;
-  -webkit-transition: top 0.1s,opacity 0.1s;
-  transition: top 0.1s,opacity 0.1s;
-}
-
-.emotion-84 .uc-fe-table-drag-sorting-line::after {
-  content: ' ';
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  left: -10px;
-  top: -4px;
-  box-sizing: border-box;
-  border: 2px solid #3860f4;
-  background: #ffffff;
-  border-radius: 50%;
+.emotion-84 .uc-fe-table-dragger:hover {
+  color: #3357df;
 }
 
 .emotion-84 .uc-fe-table-pagination {
@@ -4595,12 +4480,13 @@ exports[`EditableTable demo -- editableTable 1`] = `
 
 .emotion-84 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
 .emotion-84 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th {
-  border-color: transparent;
   padding-left: 0;
 }
 
+.emotion-84 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
+.emotion-84 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th,
 .emotion-84 .uc-fe-table-thead > tr > th.uc-fe-table-dragger-th {
-  border-color: transparent;
+  border-color: transparent !important;
 }
 
 .emotion-84 .uc-fe-table-thead > tr > th.uc-fe-table-placeholder-th {
@@ -4678,21 +4564,33 @@ exports[`EditableTable demo -- editableTable 1`] = `
   line-height: 22px;
   text-align: left;
   overflow-wrap: break-word;
+  will-change: border-color;
+  -webkit-transition: border-color .2s;
+  transition: border-color .2s;
 }
 
 .emotion-84 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
 .emotion-84 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell {
-  border-color: transparent;
   padding-left: 0;
 }
 
+.emotion-84 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
+.emotion-84 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell,
 .emotion-84 .uc-fe-table-row > td.uc-fe-table-dragger-cell {
-  border-color: transparent;
+  border-color: transparent !important;
 }
 
 .emotion-84 .uc-fe-table-row > td.uc-fe-table-placeholder-cell {
   padding: 0;
   font-size: 0;
+}
+
+.emotion-84 .uc-fe-table .uc-fe-table-drag-over-up > td {
+  border-top: 2px solid #3860f4;
+}
+
+.emotion-84 .uc-fe-table .uc-fe-table-drag-over-down > td {
+  border-bottom: 2px solid #3860f4;
 }
 
 .emotion-84 .uc-fe-table-row-level-1 > td,
@@ -5468,7 +5366,7 @@ exports[`EditableTable demo -- editableTable 1`] = `
   >
     <div
       class="uc-fe-table-wrapper emotion-84 emotion-85"
-      data-table-id="table_uid_9"
+      data-table-id="uc_table_uid_9"
     >
       <div
         class="emotion-62 emotion-63"
@@ -5618,42 +5516,12 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
   margin: -12px;
   height: 100%;
   display: inline-block;
-  cursor: -webkit-grab;
-  cursor: -moz-grab;
-  cursor: grab;
+  cursor: move;
+  color: #7a8baa;
 }
 
-.emotion-22 .uc-fe-table-dragger:active {
-  cursor: -webkit-grabbing;
-  cursor: -moz-grabbing;
-  cursor: grabbing;
-}
-
-.emotion-22 .uc-fe-table-drag-sorting-line {
-  position: absolute;
-  left: 30px;
-  z-index: 10;
-  width: 100%;
-  height: 2px;
-  box-sizing: border-box;
-  background: #3860f4;
-  will-change: top,opacity;
-  opacity: 0;
-  -webkit-transition: top 0.1s,opacity 0.1s;
-  transition: top 0.1s,opacity 0.1s;
-}
-
-.emotion-22 .uc-fe-table-drag-sorting-line::after {
-  content: ' ';
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  left: -10px;
-  top: -4px;
-  box-sizing: border-box;
-  border: 2px solid #3860f4;
-  background: #ffffff;
-  border-radius: 50%;
+.emotion-22 .uc-fe-table-dragger:hover {
+  color: #3357df;
 }
 
 .emotion-22 .uc-fe-table-pagination {
@@ -5774,12 +5642,13 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
 
 .emotion-22 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
 .emotion-22 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th {
-  border-color: transparent;
   padding-left: 0;
 }
 
+.emotion-22 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
+.emotion-22 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th,
 .emotion-22 .uc-fe-table-thead > tr > th.uc-fe-table-dragger-th {
-  border-color: transparent;
+  border-color: transparent !important;
 }
 
 .emotion-22 .uc-fe-table-thead > tr > th.uc-fe-table-placeholder-th {
@@ -5857,21 +5726,33 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
   line-height: 22px;
   text-align: left;
   overflow-wrap: break-word;
+  will-change: border-color;
+  -webkit-transition: border-color .2s;
+  transition: border-color .2s;
 }
 
 .emotion-22 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
 .emotion-22 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell {
-  border-color: transparent;
   padding-left: 0;
 }
 
+.emotion-22 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
+.emotion-22 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell,
 .emotion-22 .uc-fe-table-row > td.uc-fe-table-dragger-cell {
-  border-color: transparent;
+  border-color: transparent !important;
 }
 
 .emotion-22 .uc-fe-table-row > td.uc-fe-table-placeholder-cell {
   padding: 0;
   font-size: 0;
+}
+
+.emotion-22 .uc-fe-table .uc-fe-table-drag-over-up > td {
+  border-top: 2px solid #3860f4;
+}
+
+.emotion-22 .uc-fe-table .uc-fe-table-drag-over-down > td {
+  border-bottom: 2px solid #3860f4;
 }
 
 .emotion-22 .uc-fe-table-row-level-1 > td,
@@ -6056,42 +5937,12 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
   margin: -12px;
   height: 100%;
   display: inline-block;
-  cursor: -webkit-grab;
-  cursor: -moz-grab;
-  cursor: grab;
+  cursor: move;
+  color: #7a8baa;
 }
 
-.emotion-22 .uc-fe-table-dragger:active {
-  cursor: -webkit-grabbing;
-  cursor: -moz-grabbing;
-  cursor: grabbing;
-}
-
-.emotion-22 .uc-fe-table-drag-sorting-line {
-  position: absolute;
-  left: 30px;
-  z-index: 10;
-  width: 100%;
-  height: 2px;
-  box-sizing: border-box;
-  background: #3860f4;
-  will-change: top,opacity;
-  opacity: 0;
-  -webkit-transition: top 0.1s,opacity 0.1s;
-  transition: top 0.1s,opacity 0.1s;
-}
-
-.emotion-22 .uc-fe-table-drag-sorting-line::after {
-  content: ' ';
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  left: -10px;
-  top: -4px;
-  box-sizing: border-box;
-  border: 2px solid #3860f4;
-  background: #ffffff;
-  border-radius: 50%;
+.emotion-22 .uc-fe-table-dragger:hover {
+  color: #3357df;
 }
 
 .emotion-22 .uc-fe-table-pagination {
@@ -6212,12 +6063,13 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
 
 .emotion-22 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
 .emotion-22 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th {
-  border-color: transparent;
   padding-left: 0;
 }
 
+.emotion-22 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
+.emotion-22 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th,
 .emotion-22 .uc-fe-table-thead > tr > th.uc-fe-table-dragger-th {
-  border-color: transparent;
+  border-color: transparent !important;
 }
 
 .emotion-22 .uc-fe-table-thead > tr > th.uc-fe-table-placeholder-th {
@@ -6295,21 +6147,33 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
   line-height: 22px;
   text-align: left;
   overflow-wrap: break-word;
+  will-change: border-color;
+  -webkit-transition: border-color .2s;
+  transition: border-color .2s;
 }
 
 .emotion-22 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
 .emotion-22 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell {
-  border-color: transparent;
   padding-left: 0;
 }
 
+.emotion-22 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
+.emotion-22 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell,
 .emotion-22 .uc-fe-table-row > td.uc-fe-table-dragger-cell {
-  border-color: transparent;
+  border-color: transparent !important;
 }
 
 .emotion-22 .uc-fe-table-row > td.uc-fe-table-placeholder-cell {
   padding: 0;
   font-size: 0;
+}
+
+.emotion-22 .uc-fe-table .uc-fe-table-drag-over-up > td {
+  border-top: 2px solid #3860f4;
+}
+
+.emotion-22 .uc-fe-table .uc-fe-table-drag-over-down > td {
+  border-bottom: 2px solid #3860f4;
 }
 
 .emotion-22 .uc-fe-table-row-level-1 > td,
@@ -6481,7 +6345,7 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
     >
       <div
         class="uc-fe-table-wrapper emotion-22 emotion-23"
-        data-table-id="table_uid_10"
+        data-table-id="uc_table_uid_10"
       >
         <div
           class="emotion-0 emotion-1"
@@ -6572,7 +6436,7 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
                 >
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="0"
+                    data-row-index="0"
                     data-row-key="0"
                   >
                     <td
@@ -6592,7 +6456,7 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
                   </tr>
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="1"
+                    data-row-index="1"
                     data-row-key="1"
                   >
                     <td
@@ -6612,7 +6476,7 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
                   </tr>
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="2"
+                    data-row-index="2"
                     data-row-key="2"
                   >
                     <td
@@ -6632,7 +6496,7 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
                   </tr>
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="3"
+                    data-row-index="3"
                     data-row-key="3"
                   >
                     <td
@@ -6652,7 +6516,7 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
                   </tr>
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="4"
+                    data-row-index="4"
                     data-row-key="4"
                   >
                     <td
@@ -6672,7 +6536,7 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
                   </tr>
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="5"
+                    data-row-index="5"
                     data-row-key="5"
                   >
                     <td
@@ -6692,7 +6556,7 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
                   </tr>
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="6"
+                    data-row-index="6"
                     data-row-key="6"
                   >
                     <td
@@ -6712,7 +6576,7 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
                   </tr>
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="7"
+                    data-row-index="7"
                     data-row-key="7"
                   >
                     <td
@@ -6732,7 +6596,7 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
                   </tr>
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="8"
+                    data-row-index="8"
                     data-row-key="8"
                   >
                     <td
@@ -6752,7 +6616,7 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
                   </tr>
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="9"
+                    data-row-index="9"
                     data-row-key="9"
                   >
                     <td
@@ -6804,7 +6668,7 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
     >
       <div
         class="uc-fe-table-wrapper emotion-22 emotion-23"
-        data-table-id="table_uid_11"
+        data-table-id="uc_table_uid_11"
       >
         <div
           class="emotion-0 emotion-1"
@@ -6903,7 +6767,7 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
                 >
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="0"
+                    data-row-index="0"
                     data-row-key="10"
                   >
                     <td
@@ -6935,7 +6799,7 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
                   </tr>
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="1"
+                    data-row-index="1"
                     data-row-key="11"
                   >
                     <td
@@ -6967,7 +6831,7 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
                   </tr>
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="2"
+                    data-row-index="2"
                     data-row-key="12"
                   >
                     <td
@@ -6999,7 +6863,7 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
                   </tr>
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="3"
+                    data-row-index="3"
                     data-row-key="13"
                   >
                     <td
@@ -7031,7 +6895,7 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
                   </tr>
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="4"
+                    data-row-index="4"
                     data-row-key="14"
                   >
                     <td
@@ -7063,7 +6927,7 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
                   </tr>
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="5"
+                    data-row-index="5"
                     data-row-key="15"
                   >
                     <td
@@ -7095,7 +6959,7 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
                   </tr>
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="6"
+                    data-row-index="6"
                     data-row-key="16"
                   >
                     <td
@@ -7127,7 +6991,7 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
                   </tr>
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="7"
+                    data-row-index="7"
                     data-row-key="17"
                   >
                     <td
@@ -7159,7 +7023,7 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
                   </tr>
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="8"
+                    data-row-index="8"
                     data-row-key="18"
                   >
                     <td
@@ -7191,7 +7055,7 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
                   </tr>
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="9"
+                    data-row-index="9"
                     data-row-key="19"
                   >
                     <td
@@ -7255,7 +7119,7 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
     >
       <div
         class="uc-fe-table-wrapper emotion-22 emotion-23"
-        data-table-id="table_uid_12"
+        data-table-id="uc_table_uid_12"
       >
         <div
           class="emotion-0 emotion-1"
@@ -7354,7 +7218,7 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
                 >
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="0"
+                    data-row-index="0"
                     data-row-key="20"
                   >
                     <td
@@ -7386,7 +7250,7 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
                   </tr>
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="1"
+                    data-row-index="1"
                     data-row-key="21"
                   >
                     <td
@@ -7418,7 +7282,7 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
                   </tr>
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="2"
+                    data-row-index="2"
                     data-row-key="22"
                   >
                     <td
@@ -7450,7 +7314,7 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
                   </tr>
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="3"
+                    data-row-index="3"
                     data-row-key="23"
                   >
                     <td
@@ -7482,7 +7346,7 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
                   </tr>
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="4"
+                    data-row-index="4"
                     data-row-key="24"
                   >
                     <td
@@ -7514,7 +7378,7 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
                   </tr>
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="5"
+                    data-row-index="5"
                     data-row-key="25"
                   >
                     <td
@@ -7546,7 +7410,7 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
                   </tr>
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="6"
+                    data-row-index="6"
                     data-row-key="26"
                   >
                     <td
@@ -7578,7 +7442,7 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
                   </tr>
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="7"
+                    data-row-index="7"
                     data-row-key="27"
                   >
                     <td
@@ -7610,7 +7474,7 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
                   </tr>
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="8"
+                    data-row-index="8"
                     data-row-key="28"
                   >
                     <td
@@ -7642,7 +7506,7 @@ exports[`EditableTable demo -- rowDeletion 1`] = `
                   </tr>
                   <tr
                     class="uc-fe-table-row  uc-fe-table-row-level-0"
-                    data-index="9"
+                    data-row-index="9"
                     data-row-key="29"
                   >
                     <td

@@ -30,10 +30,10 @@ import {
     draggerCls,
     draggerCellCls,
     draggerHeaderCls,
-    sortingLineOffset,
-    sortingLineCls,
     contentCls,
-    bodyCls
+    bodyCls,
+    dragOverDownCls,
+    dragOverUpCls
 } from './style';
 import LOCALE from './locale/zh_CN';
 import DragWrap from './DragWrap';
@@ -64,7 +64,7 @@ class Table extends Component {
             columnConfig: props.defaultColumnConfig,
             searchValue: ''
         };
-        this.tableId = `table_uid_${uid++}`;
+        this.tableId = `uc_table_uid_${uid++}`;
         // init pagination
         const { pagination } = props;
         if (_.isObject(pagination)) {
@@ -837,9 +837,9 @@ class Table extends Component {
                     const rowKey = this.getRowKey(record, index);
                     return (
                         <span
-                            data-key={rowKey}
+                            data-row-key={rowKey}
                             onMouseEnter={this.setDraggable}
-                            onMouseLeave={this.cancelDraggable}
+                            onMouseLeave={this.unsetDraggable}
                             className={draggerCls}
                         >
                             <SvgIcon type="dragger" size="16px" />
@@ -865,97 +865,63 @@ class Table extends Component {
     getContentDom = () => this.getTableDom().querySelector(`.${contentCls}`);
     getBodyDom = () => this.getTableDom().querySelector(`.${bodyCls}`);
     getRowDom = rowKey => this.getTableDom().querySelector(`tr[data-row-key="${rowKey}"]`);
+    getRowDomByIndex = rowIndex => this.getTableDom().querySelector(`tr[data-row-index="${rowIndex}"]`);
     __dragEnterCounter = null;
-    __dragSource = null;
-    __dragTarget = null;
-    __dragSortingLine = null;
-    __dragOverLine = null;
-    initDrag = () => {
-        if (this.__dragSortingLine) {
-            const line = this.__dragSortingLine;
-            line.removeEventListener('dragover', this.onLineDragOver);
-            line.removeEventListener('dragleave', this.onLineDragLeave);
-            line.removeEventListener('drop', this.onLineDrop);
-            this.getBodyDom().removeChild(line);
-        }
+    initDrag = source => {
         this.__dragEnterCounter = 0;
-        this._dragSource = this.__dragTarget = this.__dragSortingLine = this.__dragOverLine = null;
+        this.unsetDragOver(source, source);
     };
     setDraggable = e => {
-        const rowKey = e.currentTarget.dataset['key'];
+        const rowKey = e.currentTarget.dataset['rowKey'];
         this.getRowDom(rowKey).setAttribute('draggable', true);
     };
-    cancelDraggable = e => {
-        const rowKey = e.currentTarget.dataset['key'];
+    unsetDraggable = e => {
+        const rowKey = e.currentTarget.dataset['rowKey'];
         this.getRowDom(rowKey).setAttribute('draggable', false);
     };
-    onLineDragOver = e => {
-        e.preventDefault();
-        this.__dragEnterCounter++;
-    };
-    onLineDragLeave = () => {
-        this.__dragEnterCounter--;
-    };
-    onLineDrop = () => {
-        this.onDrop();
-    };
-    placeLine = () => {
-        const [source, target] = [this.__dragSource, this.__dragTarget];
-        const [sourceIndex, targetIndex] = this.transformDomIndex(source, target);
-        const bodyDom = this.getBodyDom();
-        const targetRect = target.getBoundingClientRect();
-        const contentRect = bodyDom.getBoundingClientRect();
-        this.__dragSortingLine.style.top =
-            targetRect.top - contentRect.top - 1 + (sourceIndex > targetIndex ? 0 : targetRect.height) + 'px';
-    };
-    onDragStart = source => {
-        console.log('drag start');
-        this.initDrag();
-
-        // create drag tip line
-        const bodyDom = this.getBodyDom();
-        const line = document.createElement('div');
-        line.className = sortingLineCls;
-        const tableRect = bodyDom.getBoundingClientRect();
-        line.style.width = tableRect.width - sortingLineOffset + 'px';
-        line.style.opacity = 1;
-        line.addEventListener('dragover', this.onLineDragOver);
-        line.addEventListener('dragleave', this.onLineDragLeave);
-        line.addEventListener('drop', this.onLineDrop);
-        this.__dragSortingLine = line;
-        bodyDom.appendChild(line);
-
-        this.__dragSource = source;
-        this.__dragTarget = source;
-    };
-    onDragEnd = () => {
-        console.log('drag end');
-        this.initDrag();
-    };
-    onDragEnter = (source, target) => {
-        console.log('drag enter', target);
-        this.__dragTarget = target;
-        this.__dragEnterCounter++;
-        this.placeLine();
-    };
-    onDragLeave = () => {
-        console.log('drag leave');
-        this.__dragEnterCounter--;
-        if (!this.__dragEnterCounter) {
-            this.__dragTarget = this.__dragSource;
-            this.placeLine();
+    setDragOver = (source, target) => {
+        let [sourceIndex, targetIndex] = this.transformDomIndex(source, target);
+        if (sourceIndex > targetIndex) targetIndex--;
+        if (targetIndex >= 0) {
+            this.getRowDomByIndex(targetIndex)?.classList.add(dragOverDownCls);
+        } else {
+            this.getRowDomByIndex(0).classList.add(dragOverUpCls);
         }
     };
-    onDrop = () => {
-        const [source, target] = [this.__dragSource, this.__dragTarget];
-        console.log('drop', source, target);
+    unsetDragOver = (source, target) => {
+        let [sourceIndex, targetIndex] = this.transformDomIndex(source, target);
+        if (sourceIndex > targetIndex) targetIndex--;
+        if (targetIndex >= 0) {
+            this.getRowDomByIndex(targetIndex)?.classList.remove(dragOverDownCls);
+        } else {
+            this.getRowDomByIndex(0).classList.remove(dragOverUpCls);
+        }
+    };
+    onDragStart = source => {
+        this.initDrag(source);
+    };
+    onDragEnd = source => {
+        this.initDrag(source);
+    };
+    onDragEnter = (source, target) => {
+        this.__dragEnterCounter++;
+        this.unsetDragOver(source, source);
+        this.setDragOver(source, target);
+    };
+    onDragLeave = (source, target) => {
+        this.__dragEnterCounter--;
+        this.unsetDragOver(source, target);
+        // drag out the table
+        if (!this.__dragEnterCounter) this.setDragOver(source, source);
+    };
+    onDrop = (source, target) => {
         if (source === target) return;
         const [sourceIndex, targetIndex] = this.transformDomIndex(source, target);
         const dragSorting = this.getDragSorting();
         dragSorting?.onChange(sourceIndex, targetIndex);
-        this.initDrag();
+        this.initDrag(source);
     };
-    transformDomIndex = (source, target) => [+source.dataset['index'], +target.dataset['index']];
+    transformDomIndex = (source, target) => [+source.dataset['rowIndex'], +target.dataset['rowIndex']];
 
     getPagination = () => {
         const { pagination: paginationS } = this.state,

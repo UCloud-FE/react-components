@@ -186,7 +186,7 @@ class TableRow extends React.Component {
         style = { ...style, ...customStyle };
 
         return (
-            <BodyRow className={rowClassName} {...rowProps} style={style} data-row-key={rowKey} data-index={index}>
+            <BodyRow className={rowClassName} {...rowProps} style={style} data-row-key={rowKey} data-row-index={index}>
                 {cells}
             </BodyRow>
         );

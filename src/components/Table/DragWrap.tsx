@@ -16,8 +16,7 @@ const DragWrap = ({
         ...events,
         ignoreChildEnterLeave: true,
         // ignoreSelf: true,
-        effectAllowed: 'copyMove',
-        dropEffect: 'copy'
+        dropEffect: 'move'
     });
     return <DragContext.Provider value={{ dragProps, dropProps, draggable }}>{children}</DragContext.Provider>;
 };
