@@ -5,9 +5,11 @@ import createReactContext from 'create-react-context';
 
 import RcTable from 'src/libs/rc-table';
 import deprecatedLog from 'src/utils/deprecatedLog';
+import { warning, onceWarning } from 'src/utils/warning';
 import Pagination from 'src/components/Pagination';
 import Notice from 'src/components/Notice';
 import Checkbox from 'src/components/Checkbox';
+import SvgIcon from 'src/components/SvgIcon';
 import Radio from 'src/components/Radio';
 import Select from 'src/components/Select';
 import Tooltip from 'src/components/Tooltip';
@@ -24,9 +26,17 @@ import {
     selectIconCellCls,
     selectIconHeaderCls,
     placeholderCellCls,
-    placeholderHeaderCls
+    placeholderHeaderCls,
+    draggerCls,
+    draggerCellCls,
+    draggerHeaderCls,
+    contentCls,
+    bodyCls,
+    dragOverDownCls,
+    dragOverUpCls
 } from './style';
 import LOCALE from './locale/zh_CN';
+import DragWrap from './DragWrap';
 import TableRow from './TableRow';
 
 const noop = () => {};
@@ -36,7 +46,11 @@ export const placeholderKey = 'table_column_width_placeholder';
 
 export const TableContext = createReactContext();
 
-const missingColumnKeyWarn = () => console.error('Warning: Table column need a unique key');
+const missingColumnKeyWarn = () => warning('Table column need a unique key');
+
+const dragSortingWarning = onceWarning(`Can't use dragSorting with expandedRowRender or column.children`);
+
+let uid = 0;
 
 @localeConsumerDecorator({ defaultLocale: LOCALE, localeName: 'Table' })
 class Table extends Component {
@@ -50,6 +64,7 @@ class Table extends Component {
             columnConfig: props.defaultColumnConfig,
             searchValue: ''
         };
+        this.tableId = `uc_table_uid_${uid++}`;
         // init pagination
         const { pagination } = props;
         if (_.isObject(pagination)) {
@@ -158,6 +173,15 @@ class Table extends Component {
                 disabled: PropTypes.bool
             }),
             PropTypes.oneOf([true])
+        ]),
+        /** 拖拽排序 */
+        dragSorting: PropTypes.oneOfType([
+            PropTypes.oneOf([true]),
+            PropTypes.shape({
+                fixed: PropTypes.bool,
+                // (record, fromIndex, toIndex) => void
+                onChange: PropTypes.func
+            })
         ]),
         /**
          * 列表选项变化回调
@@ -655,6 +679,15 @@ class Table extends Component {
         const { key } = column;
         return (key === undefined ? index : key) + '';
     };
+    getDragSorting = () => {
+        const { dragSorting, expandedRowRender, columns } = this.props;
+        if (!dragSorting) return false;
+        if (expandedRowRender || (columns && columns.findIndex(column => !!column.children) >= 0)) {
+            dragSortingWarning();
+            return false;
+        }
+        return dragSorting;
+    };
     getColumns = (dataSourceOfCurrentPage, filters) => {
         const { columns, rowSelection, columnPlaceholder, locale, dataSource } = this.props;
         const { order: currentOrder = {}, selectedRowKeyMap, columnConfig } = this.state;
@@ -791,6 +824,30 @@ class Table extends Component {
                 }
             });
         }
+        const dragSorting = this.getDragSorting();
+        if (dragSorting) {
+            newColumns.unshift({
+                title: null,
+                key: 'table_row_drag_sorting',
+                width: 40,
+                fixed: dragSorting?.fixed,
+                onHeaderCell: () => ({ className: draggerHeaderCls }),
+                onCell: () => ({ className: draggerCellCls }),
+                render: (value, record, index) => {
+                    const rowKey = this.getRowKey(record, index);
+                    return (
+                        <span
+                            data-row-key={rowKey}
+                            onMouseEnter={this.setDraggable}
+                            onMouseLeave={this.unsetDraggable}
+                            className={draggerCls}
+                        >
+                            <SvgIcon type="dragger" size="16px" />
+                        </span>
+                    );
+                }
+            });
+        }
 
         if (columnPlaceholder) {
             const lastUnFixedIndex = _.findLastIndex(newColumns, columnConfig => !columnConfig.fixed);
@@ -804,6 +861,68 @@ class Table extends Component {
         }
         return newColumns;
     };
+    getTableDom = () => document.querySelector(`[data-table-id="${this.tableId}"]`);
+    getContentDom = () => this.getTableDom().querySelector(`.${contentCls}`);
+    getBodyDom = () => this.getTableDom().querySelector(`.${bodyCls}`);
+    getRowDom = rowKey => this.getTableDom().querySelector(`tr[data-row-key="${rowKey}"]`);
+    getRowDomByIndex = rowIndex => this.getTableDom().querySelector(`tr[data-row-index="${rowIndex}"]`);
+    __dragEnterCounter = null;
+    initDrag = source => {
+        this.__dragEnterCounter = 0;
+        this.unsetDragOver(source, source);
+    };
+    setDraggable = e => {
+        const rowKey = e.currentTarget.dataset['rowKey'];
+        this.getRowDom(rowKey).setAttribute('draggable', true);
+    };
+    unsetDraggable = e => {
+        const rowKey = e.currentTarget.dataset['rowKey'];
+        this.getRowDom(rowKey).setAttribute('draggable', false);
+    };
+    setDragOver = (source, target) => {
+        let [sourceIndex, targetIndex] = this.transformDomIndex(source, target);
+        if (sourceIndex > targetIndex) targetIndex--;
+        if (targetIndex >= 0) {
+            this.getRowDomByIndex(targetIndex)?.classList.add(dragOverDownCls);
+        } else {
+            this.getRowDomByIndex(0).classList.add(dragOverUpCls);
+        }
+    };
+    unsetDragOver = (source, target) => {
+        let [sourceIndex, targetIndex] = this.transformDomIndex(source, target);
+        if (sourceIndex > targetIndex) targetIndex--;
+        if (targetIndex >= 0) {
+            this.getRowDomByIndex(targetIndex)?.classList.remove(dragOverDownCls);
+        } else {
+            this.getRowDomByIndex(0).classList.remove(dragOverUpCls);
+        }
+    };
+    onDragStart = source => {
+        this.initDrag(source);
+    };
+    onDragEnd = source => {
+        this.initDrag(source);
+    };
+    onDragEnter = (source, target) => {
+        this.__dragEnterCounter++;
+        this.unsetDragOver(source, source);
+        this.setDragOver(source, target);
+    };
+    onDragLeave = (source, target) => {
+        this.__dragEnterCounter--;
+        this.unsetDragOver(source, target);
+        // drag out the table
+        if (!this.__dragEnterCounter) this.setDragOver(source, source);
+    };
+    onDrop = (source, target) => {
+        if (source === target) return;
+        const [sourceIndex, targetIndex] = this.transformDomIndex(source, target);
+        const dragSorting = this.getDragSorting();
+        dragSorting?.onChange(sourceIndex, targetIndex);
+        this.initDrag(source);
+    };
+    transformDomIndex = (source, target) => [+source.dataset['rowIndex'], +target.dataset['rowIndex']];
+
     getPagination = () => {
         const { pagination: paginationS } = this.state,
             { pagination: paginationP } = this.props;
@@ -966,6 +1085,7 @@ class Table extends Component {
             tableLayout,
             scroll,
             customStyle,
+            dragSorting: _dragSorting,
             ...rest
         } = this.props;
         if (emptyContent === undefined) {
@@ -992,88 +1112,100 @@ class Table extends Component {
                   };
               })();
 
+        const dragSorting = this.getDragSorting();
+
         return (
-            <InheritProvider value={{ getPopupContainer: this.getPopupContainer }}>
-                <TableContext.Provider
-                    value={{
-                        columns: _c,
-                        columnConfig: columnConfig,
-                        onColumnConfigChange: this.onColumnConfigChange,
-                        handleSearch: this.handleSearch,
-                        locale
-                    }}
-                >
-                    <TableWrap
-                        className={className}
-                        style={style}
-                        hideExpandIcon={hideExpandIcon}
-                        zebraCrossing={zebraCrossing}
-                        customStyle={customStyle}
+            <DragWrap
+                draggable={!!dragSorting}
+                onDragStart={this.onDragStart}
+                onDragEnd={this.onDragEnd}
+                onDrop={this.onDrop}
+                onDragEnter={this.onDragEnter}
+                onDragLeave={this.onDragLeave}
+            >
+                <InheritProvider value={{ getPopupContainer: this.getPopupContainer }}>
+                    <TableContext.Provider
+                        value={{
+                            columns: _c,
+                            columnConfig: columnConfig,
+                            onColumnConfigChange: this.onColumnConfigChange,
+                            handleSearch: this.handleSearch,
+                            locale
+                        }}
                     >
-                        <PopupContainer ref={this.savePopupContainer} />
-                        <RcTable
-                            {...defaultExpandAllRowsProps}
-                            onExpand={this.onExpandHandler}
-                            {...rest}
-                            scroll={scroll}
-                            tableLayout={tableLayout ? tableLayout : scroll && scroll.x ? 'fixed' : undefined}
-                            prefixCls={prefixCls}
-                            data={dataSource}
-                            columns={columns}
-                            onRow={this.onRow}
-                            components={_.extend({}, components, {
-                                body: {
-                                    row: TableRow
+                        <TableWrap
+                            className={className}
+                            style={style}
+                            hideExpandIcon={hideExpandIcon}
+                            zebraCrossing={zebraCrossing}
+                            customStyle={customStyle}
+                            data-table-id={this.tableId}
+                        >
+                            <PopupContainer ref={this.savePopupContainer} />
+                            <RcTable
+                                {...defaultExpandAllRowsProps}
+                                onExpand={this.onExpandHandler}
+                                {...rest}
+                                scroll={scroll}
+                                tableLayout={tableLayout ? tableLayout : scroll && scroll.x ? 'fixed' : undefined}
+                                prefixCls={prefixCls}
+                                data={dataSource}
+                                columns={columns}
+                                onRow={this.onRow}
+                                components={_.extend({}, components, {
+                                    body: {
+                                        row: TableRow
+                                    }
+                                })}
+                                emptyText={null}
+                                expandIconAsCell={!!expandedRowRender || expandIconAsCell}
+                                expandedRowRender={expandedRowRender}
+                                expandIconColumnIndex={
+                                    expandIconColumnIndex === undefined
+                                        ? columns[0] && columns[0].key === 'table_row_selection'
+                                            ? 1
+                                            : 0
+                                        : expandIconColumnIndex
                                 }
-                            })}
-                            emptyText={null}
-                            expandIconAsCell={!!expandedRowRender || expandIconAsCell}
-                            expandedRowRender={expandedRowRender}
-                            expandIconColumnIndex={
-                                expandIconColumnIndex === undefined
-                                    ? columns[0] && columns[0].key === 'table_row_selection'
-                                        ? 1
-                                        : 0
-                                    : expandIconColumnIndex
-                            }
-                            title={() => this.renderTitle({ filters: finalFilters, searchValue, total, locale })}
-                            footer={() => this.renderFooter({ dataSource: _d, emptyContent, errorContent })}
-                        />
-                        {footer()}
-                        {pagination === null ? null : (
-                            <Pagination
-                                size="sm"
-                                total={total}
-                                {...{
-                                    hideOnSinglePage: false,
-                                    showQuickJumper: true,
-                                    showSizeChanger: true
-                                }}
-                                {...pagination}
-                                className={`${prefixCls}-pagination`}
-                                onChange={(current, pageSize) => {
-                                    this.setState({
-                                        pagination: { current, pageSize }
-                                    });
-                                    pagination.onChange && pagination.onChange(current, pageSize);
-                                }}
-                                onPageSizeChange={(current, pageSize) => {
-                                    this.setState({
-                                        pagination: { current, pageSize }
-                                    });
-                                    pagination.onPageSizeChange && pagination.onPageSizeChange(current, pageSize);
-                                }}
-                                onAdvise={(current, pageSize) => {
-                                    this.setState({
-                                        pagination: { current, pageSize }
-                                    });
-                                    pagination.onAdvise && pagination.onAdvise(current, pageSize);
-                                }}
+                                title={() => this.renderTitle({ filters: finalFilters, searchValue, total, locale })}
+                                footer={() => this.renderFooter({ dataSource: _d, emptyContent, errorContent })}
                             />
-                        )}
-                    </TableWrap>
-                </TableContext.Provider>
-            </InheritProvider>
+                            {footer()}
+                            {pagination === null ? null : (
+                                <Pagination
+                                    size="sm"
+                                    total={total}
+                                    {...{
+                                        hideOnSinglePage: false,
+                                        showQuickJumper: true,
+                                        showSizeChanger: true
+                                    }}
+                                    {...pagination}
+                                    className={`${prefixCls}-pagination`}
+                                    onChange={(current, pageSize) => {
+                                        this.setState({
+                                            pagination: { current, pageSize }
+                                        });
+                                        pagination.onChange && pagination.onChange(current, pageSize);
+                                    }}
+                                    onPageSizeChange={(current, pageSize) => {
+                                        this.setState({
+                                            pagination: { current, pageSize }
+                                        });
+                                        pagination.onPageSizeChange && pagination.onPageSizeChange(current, pageSize);
+                                    }}
+                                    onAdvise={(current, pageSize) => {
+                                        this.setState({
+                                            pagination: { current, pageSize }
+                                        });
+                                        pagination.onAdvise && pagination.onAdvise(current, pageSize);
+                                    }}
+                                />
+                            )}
+                        </TableWrap>
+                    </TableContext.Provider>
+                </InheritProvider>
+            </DragWrap>
         );
     }
 }

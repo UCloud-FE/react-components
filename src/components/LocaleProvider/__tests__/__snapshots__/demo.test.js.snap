@@ -2754,6 +2754,19 @@ exports[`LocaleProvider demo -- list 1`] = `
   clear: both;
 }
 
+.emotion-215 .uc-fe-table-dragger {
+  padding: 12px;
+  margin: -12px;
+  height: 100%;
+  display: inline-block;
+  cursor: move;
+  color: #7a8baa;
+}
+
+.emotion-215 .uc-fe-table-dragger:hover {
+  color: #3357df;
+}
+
 .emotion-215 .uc-fe-table-pagination {
   float: right;
   margin-top: 8px;
@@ -2794,6 +2807,10 @@ exports[`LocaleProvider demo -- list 1`] = `
 .emotion-215 .uc-fe-table-fixed,
 .emotion-215 .uc-fe-table .uc-fe-table-body {
   background: #ffffff;
+}
+
+.emotion-215 .uc-fe-table .uc-fe-table-body {
+  position: relative;
 }
 
 .emotion-215 .uc-fe-table-row-expand-icon {
@@ -2868,8 +2885,13 @@ exports[`LocaleProvider demo -- list 1`] = `
 
 .emotion-215 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
 .emotion-215 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th {
-  border-color: transparent;
   padding-left: 0;
+}
+
+.emotion-215 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
+.emotion-215 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th,
+.emotion-215 .uc-fe-table-thead > tr > th.uc-fe-table-dragger-th {
+  border-color: transparent !important;
 }
 
 .emotion-215 .uc-fe-table-thead > tr > th.uc-fe-table-placeholder-th {
@@ -2947,17 +2969,33 @@ exports[`LocaleProvider demo -- list 1`] = `
   line-height: 22px;
   text-align: left;
   overflow-wrap: break-word;
+  will-change: border-color;
+  -webkit-transition: border-color .2s;
+  transition: border-color .2s;
 }
 
 .emotion-215 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
 .emotion-215 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell {
-  border-color: transparent;
   padding-left: 0;
+}
+
+.emotion-215 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
+.emotion-215 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell,
+.emotion-215 .uc-fe-table-row > td.uc-fe-table-dragger-cell {
+  border-color: transparent !important;
 }
 
 .emotion-215 .uc-fe-table-row > td.uc-fe-table-placeholder-cell {
   padding: 0;
   font-size: 0;
+}
+
+.emotion-215 .uc-fe-table .uc-fe-table-drag-over-up > td {
+  border-top: 2px solid #3860f4;
+}
+
+.emotion-215 .uc-fe-table .uc-fe-table-drag-over-down > td {
+  border-bottom: 2px solid #3860f4;
 }
 
 .emotion-215 .uc-fe-table-row-level-1 > td,
@@ -3013,7 +3051,8 @@ exports[`LocaleProvider demo -- list 1`] = `
 }
 
 .emotion-215 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-expand-icon-cell,
-.emotion-215 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-select-icon-cell {
+.emotion-215 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-select-icon-cell,
+.emotion-215 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-dragger-cell {
   background: #ffffff;
 }
 
@@ -6207,6 +6246,19 @@ exports[`LocaleProvider demo -- list 1`] = `
   clear: both;
 }
 
+.emotion-215 .uc-fe-table-dragger {
+  padding: 12px;
+  margin: -12px;
+  height: 100%;
+  display: inline-block;
+  cursor: move;
+  color: #7a8baa;
+}
+
+.emotion-215 .uc-fe-table-dragger:hover {
+  color: #3357df;
+}
+
 .emotion-215 .uc-fe-table-pagination {
   float: right;
   margin-top: 8px;
@@ -6247,6 +6299,10 @@ exports[`LocaleProvider demo -- list 1`] = `
 .emotion-215 .uc-fe-table-fixed,
 .emotion-215 .uc-fe-table .uc-fe-table-body {
   background: #ffffff;
+}
+
+.emotion-215 .uc-fe-table .uc-fe-table-body {
+  position: relative;
 }
 
 .emotion-215 .uc-fe-table-row-expand-icon {
@@ -6321,8 +6377,13 @@ exports[`LocaleProvider demo -- list 1`] = `
 
 .emotion-215 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
 .emotion-215 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th {
-  border-color: transparent;
   padding-left: 0;
+}
+
+.emotion-215 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
+.emotion-215 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th,
+.emotion-215 .uc-fe-table-thead > tr > th.uc-fe-table-dragger-th {
+  border-color: transparent !important;
 }
 
 .emotion-215 .uc-fe-table-thead > tr > th.uc-fe-table-placeholder-th {
@@ -6400,17 +6461,33 @@ exports[`LocaleProvider demo -- list 1`] = `
   line-height: 22px;
   text-align: left;
   overflow-wrap: break-word;
+  will-change: border-color;
+  -webkit-transition: border-color .2s;
+  transition: border-color .2s;
 }
 
 .emotion-215 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
 .emotion-215 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell {
-  border-color: transparent;
   padding-left: 0;
+}
+
+.emotion-215 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
+.emotion-215 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell,
+.emotion-215 .uc-fe-table-row > td.uc-fe-table-dragger-cell {
+  border-color: transparent !important;
 }
 
 .emotion-215 .uc-fe-table-row > td.uc-fe-table-placeholder-cell {
   padding: 0;
   font-size: 0;
+}
+
+.emotion-215 .uc-fe-table .uc-fe-table-drag-over-up > td {
+  border-top: 2px solid #3860f4;
+}
+
+.emotion-215 .uc-fe-table .uc-fe-table-drag-over-down > td {
+  border-bottom: 2px solid #3860f4;
 }
 
 .emotion-215 .uc-fe-table-row-level-1 > td,
@@ -6466,7 +6543,8 @@ exports[`LocaleProvider demo -- list 1`] = `
 }
 
 .emotion-215 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-expand-icon-cell,
-.emotion-215 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-select-icon-cell {
+.emotion-215 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-select-icon-cell,
+.emotion-215 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-dragger-cell {
   background: #ffffff;
 }
 
@@ -8908,6 +8986,7 @@ exports[`LocaleProvider demo -- list 1`] = `
       >
         <div
           class="uc-fe-table-wrapper test-table emotion-215 emotion-216"
+          data-table-id="uc_table_uid_0"
         >
           <div
             class="emotion-156 emotion-157"
@@ -9254,6 +9333,7 @@ exports[`LocaleProvider demo -- list 1`] = `
       >
         <div
           class="uc-fe-table-wrapper emotion-215 emotion-216"
+          data-table-id="uc_table_uid_1"
         >
           <div
             class="emotion-156 emotion-157"
@@ -9458,6 +9538,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                   >
                     <tr
                       class="uc-fe-table-row  uc-fe-table-row-level-0"
+                      data-row-index="0"
                       data-row-key="0"
                     >
                       <td
@@ -9522,6 +9603,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                     </tr>
                     <tr
                       class="uc-fe-table-row  uc-fe-table-row-level-0"
+                      data-row-index="1"
                       data-row-key="1"
                     >
                       <td
@@ -9588,6 +9670,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                     </tr>
                     <tr
                       class="uc-fe-table-row  uc-fe-table-row-level-0"
+                      data-row-index="2"
                       data-row-key="2"
                     >
                       <td
@@ -9654,6 +9737,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                     </tr>
                     <tr
                       class="uc-fe-table-row  uc-fe-table-row-level-0"
+                      data-row-index="3"
                       data-row-key="3"
                     >
                       <td
@@ -9718,6 +9802,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                     </tr>
                     <tr
                       class="uc-fe-table-row  uc-fe-table-row-level-0"
+                      data-row-index="4"
                       data-row-key="4"
                     >
                       <td
@@ -9782,6 +9867,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                     </tr>
                     <tr
                       class="uc-fe-table-row  uc-fe-table-row-level-0"
+                      data-row-index="5"
                       data-row-key="5"
                     >
                       <td
@@ -9848,6 +9934,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                     </tr>
                     <tr
                       class="uc-fe-table-row  uc-fe-table-row-level-0"
+                      data-row-index="6"
                       data-row-key="6"
                     >
                       <td
@@ -9912,6 +9999,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                     </tr>
                     <tr
                       class="uc-fe-table-row  uc-fe-table-row-level-0"
+                      data-row-index="7"
                       data-row-key="7"
                     >
                       <td
@@ -9976,6 +10064,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                     </tr>
                     <tr
                       class="uc-fe-table-row  uc-fe-table-row-level-0"
+                      data-row-index="8"
                       data-row-key="8"
                     >
                       <td
@@ -10040,6 +10129,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                     </tr>
                     <tr
                       class="uc-fe-table-row  uc-fe-table-row-level-0"
+                      data-row-index="9"
                       data-row-key="9"
                     >
                       <td

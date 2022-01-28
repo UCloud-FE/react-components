@@ -1,3 +1,4 @@
+/* stylelint-disable no-duplicate-selectors */
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
@@ -49,6 +50,11 @@ export const placeholderCellCls = prefixCls + '-placeholder-cell';
 export const placeholderHeaderCls = prefixCls + '-placeholder-th';
 const expandedRowContentCls = prefixCls + '-expanded-row-content';
 export const hoverDisplayAreaCls = prefixCls + '-hover-display-area';
+export const draggerCls = prefixCls + '-dragger';
+export const draggerCellCls = prefixCls + '-dragger-cell';
+export const draggerHeaderCls = prefixCls + '-dragger-th';
+export const dragOverUpCls = prefixCls + '-drag-over-up';
+export const dragOverDownCls = prefixCls + '-drag-over-down';
 
 export const ExpandedRowContent = withProps({
     className: expandedRowContentCls
@@ -87,6 +93,18 @@ export const TableWrap = withProps({
         background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
         font-size: ${DT.T_TYPO_FONT_SIZE_1};
 
+        .${draggerCls} {
+            /* clean table padding */
+            padding: 12px;
+            margin: -12px;
+            height: 100%;
+            display: inline-block;
+            cursor: move;
+            color: ${DT.T_COLOR_TEXT_REMARK_DARK};
+            :hover {
+                color: ${DT.T_COLOR_TEXT_PRIMARY_HOVER};
+            }
+        }
         .${prefixCls} {
             &-pagination {
                 float: right;
@@ -122,6 +140,9 @@ export const TableWrap = withProps({
             &-fixed,
             .${bodyCls} {
                 background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
+            }
+            .${bodyCls} {
+                position: relative;
             }
 
             &-row-expand-icon {
@@ -196,8 +217,12 @@ export const TableWrap = withProps({
                 font-weight: 400;
                 &.${prefixCls}-expand-icon-th,
                 &.${selectIconHeaderCls} {
-                    border-color: transparent;
                     padding-left: 0;
+                }
+                &.${prefixCls}-expand-icon-th,
+                &.${selectIconHeaderCls},
+                &.${draggerHeaderCls} {
+                    border-color: transparent !important;
                 }
                 &.${placeholderHeaderCls} {
                     padding: 0px;
@@ -263,15 +288,27 @@ export const TableWrap = withProps({
                 line-height: 22px;
                 text-align: left;
                 overflow-wrap: break-word;
+                will-change: border-color;
+                transition: border-color .2s;
                 &.${prefixCls}-row-expand-icon-cell,
                 &.${selectIconCellCls} {
-                    border-color: transparent;
                     padding-left: 0;
+                }
+                &.${prefixCls}-row-expand-icon-cell,
+                &.${selectIconCellCls},
+                &.${draggerCellCls} {
+                    border-color: transparent !important;
                 }
                 &.${placeholderCellCls} {
                     padding: 0;
                     font-size: 0;
                 }
+            }
+            .${dragOverUpCls} > td {
+                border-top: 2px solid ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
+            }
+            .${dragOverDownCls} > td {
+                border-bottom: 2px solid ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
             }
             &-row-level-1 > td,
             &-row-level-2 > td,
@@ -307,7 +344,7 @@ export const TableWrap = withProps({
 
             table > tbody > .${prefixCls}-row:hover > td {
                 background: ${DT.T_TABLE_ROW_COLOR_BG_HOVER};
-                &.${prefixCls}-row-expand-icon-cell, &.${selectIconCellCls} {
+                &.${prefixCls}-row-expand-icon-cell, &.${selectIconCellCls}, &.${draggerCellCls} {
                     background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
                 }
             }
@@ -330,7 +367,7 @@ export const TableWrap = withProps({
                 css`
                     &-row:nth-child(odd) > td {
                         background: ${DT.T_TABLE_ROW_COLOR_BG_DEFAULT};
-                        &.${prefixCls}-row-expand-icon-cell, &.${selectIconCellCls} {
+                        &.${prefixCls}-row-expand-icon-cell, &.${selectIconCellCls}, &.${draggerCellCls} {
                             background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
                         }
                     }

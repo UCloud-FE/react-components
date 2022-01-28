@@ -108,6 +108,11 @@
 ```js {"codepath": "rowSelection.jsx"}
 ```
 
+#### dragSorting - 列选择配置
+
+```js {"codepath": "dragSorting.jsx"}
+```
+
 #### fixed - 固定表头、列
 
 ```js {"codepath": "fixed.jsx"}

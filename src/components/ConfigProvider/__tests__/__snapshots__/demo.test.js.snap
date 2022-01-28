@@ -11898,6 +11898,19 @@ exports[`ConfigProvider demo -- theme 1`] = `
   clear: both;
 }
 
+.emotion-195 .uc-fe-table-dragger {
+  padding: 12px;
+  margin: -12px;
+  height: 100%;
+  display: inline-block;
+  cursor: move;
+  color: #7a8baa;
+}
+
+.emotion-195 .uc-fe-table-dragger:hover {
+  color: #3357df;
+}
+
 .emotion-195 .uc-fe-table-pagination {
   float: right;
   margin-top: 8px;
@@ -11938,6 +11951,10 @@ exports[`ConfigProvider demo -- theme 1`] = `
 .emotion-195 .uc-fe-table-fixed,
 .emotion-195 .uc-fe-table .uc-fe-table-body {
   background: #ffffff;
+}
+
+.emotion-195 .uc-fe-table .uc-fe-table-body {
+  position: relative;
 }
 
 .emotion-195 .uc-fe-table-row-expand-icon {
@@ -12012,8 +12029,13 @@ exports[`ConfigProvider demo -- theme 1`] = `
 
 .emotion-195 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
 .emotion-195 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th {
-  border-color: transparent;
   padding-left: 0;
+}
+
+.emotion-195 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
+.emotion-195 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th,
+.emotion-195 .uc-fe-table-thead > tr > th.uc-fe-table-dragger-th {
+  border-color: transparent !important;
 }
 
 .emotion-195 .uc-fe-table-thead > tr > th.uc-fe-table-placeholder-th {
@@ -12091,17 +12113,33 @@ exports[`ConfigProvider demo -- theme 1`] = `
   line-height: 22px;
   text-align: left;
   overflow-wrap: break-word;
+  will-change: border-color;
+  -webkit-transition: border-color .2s;
+  transition: border-color .2s;
 }
 
 .emotion-195 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
 .emotion-195 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell {
-  border-color: transparent;
   padding-left: 0;
+}
+
+.emotion-195 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
+.emotion-195 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell,
+.emotion-195 .uc-fe-table-row > td.uc-fe-table-dragger-cell {
+  border-color: transparent !important;
 }
 
 .emotion-195 .uc-fe-table-row > td.uc-fe-table-placeholder-cell {
   padding: 0;
   font-size: 0;
+}
+
+.emotion-195 .uc-fe-table .uc-fe-table-drag-over-up > td {
+  border-top: 2px solid #3860f4;
+}
+
+.emotion-195 .uc-fe-table .uc-fe-table-drag-over-down > td {
+  border-bottom: 2px solid #3860f4;
 }
 
 .emotion-195 .uc-fe-table-row-level-1 > td,
@@ -12157,7 +12195,8 @@ exports[`ConfigProvider demo -- theme 1`] = `
 }
 
 .emotion-195 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-expand-icon-cell,
-.emotion-195 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-select-icon-cell {
+.emotion-195 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-select-icon-cell,
+.emotion-195 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-dragger-cell {
   background: #ffffff;
 }
 
@@ -14117,6 +14156,19 @@ exports[`ConfigProvider demo -- theme 1`] = `
   clear: both;
 }
 
+.emotion-412 .uc-fe-table-dragger {
+  padding: 12px;
+  margin: -12px;
+  height: 100%;
+  display: inline-block;
+  cursor: move;
+  color: #5C6586;
+}
+
+.emotion-412 .uc-fe-table-dragger:hover {
+  color: #738BFF;
+}
+
 .emotion-412 .uc-fe-table-pagination {
   float: right;
   margin-top: 8px;
@@ -14157,6 +14209,10 @@ exports[`ConfigProvider demo -- theme 1`] = `
 .emotion-412 .uc-fe-table-fixed,
 .emotion-412 .uc-fe-table .uc-fe-table-body {
   background: #141A2B;
+}
+
+.emotion-412 .uc-fe-table .uc-fe-table-body {
+  position: relative;
 }
 
 .emotion-412 .uc-fe-table-row-expand-icon {
@@ -14231,8 +14287,13 @@ exports[`ConfigProvider demo -- theme 1`] = `
 
 .emotion-412 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
 .emotion-412 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th {
-  border-color: transparent;
   padding-left: 0;
+}
+
+.emotion-412 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
+.emotion-412 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th,
+.emotion-412 .uc-fe-table-thead > tr > th.uc-fe-table-dragger-th {
+  border-color: transparent !important;
 }
 
 .emotion-412 .uc-fe-table-thead > tr > th.uc-fe-table-placeholder-th {
@@ -14310,17 +14371,33 @@ exports[`ConfigProvider demo -- theme 1`] = `
   line-height: 22px;
   text-align: left;
   overflow-wrap: break-word;
+  will-change: border-color;
+  -webkit-transition: border-color .2s;
+  transition: border-color .2s;
 }
 
 .emotion-412 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
 .emotion-412 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell {
-  border-color: transparent;
   padding-left: 0;
+}
+
+.emotion-412 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
+.emotion-412 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell,
+.emotion-412 .uc-fe-table-row > td.uc-fe-table-dragger-cell {
+  border-color: transparent !important;
 }
 
 .emotion-412 .uc-fe-table-row > td.uc-fe-table-placeholder-cell {
   padding: 0;
   font-size: 0;
+}
+
+.emotion-412 .uc-fe-table .uc-fe-table-drag-over-up > td {
+  border-top: 2px solid #5A76FF;
+}
+
+.emotion-412 .uc-fe-table .uc-fe-table-drag-over-down > td {
+  border-bottom: 2px solid #5A76FF;
 }
 
 .emotion-412 .uc-fe-table-row-level-1 > td,
@@ -14376,7 +14453,8 @@ exports[`ConfigProvider demo -- theme 1`] = `
 }
 
 .emotion-412 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-expand-icon-cell,
-.emotion-412 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-select-icon-cell {
+.emotion-412 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-select-icon-cell,
+.emotion-412 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-dragger-cell {
   background: #141A2B;
 }
 
@@ -16626,6 +16704,19 @@ exports[`ConfigProvider demo -- theme 1`] = `
   clear: both;
 }
 
+.emotion-195 .uc-fe-table-dragger {
+  padding: 12px;
+  margin: -12px;
+  height: 100%;
+  display: inline-block;
+  cursor: move;
+  color: #7a8baa;
+}
+
+.emotion-195 .uc-fe-table-dragger:hover {
+  color: #3357df;
+}
+
 .emotion-195 .uc-fe-table-pagination {
   float: right;
   margin-top: 8px;
@@ -16666,6 +16757,10 @@ exports[`ConfigProvider demo -- theme 1`] = `
 .emotion-195 .uc-fe-table-fixed,
 .emotion-195 .uc-fe-table .uc-fe-table-body {
   background: #ffffff;
+}
+
+.emotion-195 .uc-fe-table .uc-fe-table-body {
+  position: relative;
 }
 
 .emotion-195 .uc-fe-table-row-expand-icon {
@@ -16740,8 +16835,13 @@ exports[`ConfigProvider demo -- theme 1`] = `
 
 .emotion-195 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
 .emotion-195 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th {
-  border-color: transparent;
   padding-left: 0;
+}
+
+.emotion-195 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
+.emotion-195 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th,
+.emotion-195 .uc-fe-table-thead > tr > th.uc-fe-table-dragger-th {
+  border-color: transparent !important;
 }
 
 .emotion-195 .uc-fe-table-thead > tr > th.uc-fe-table-placeholder-th {
@@ -16819,17 +16919,33 @@ exports[`ConfigProvider demo -- theme 1`] = `
   line-height: 22px;
   text-align: left;
   overflow-wrap: break-word;
+  will-change: border-color;
+  -webkit-transition: border-color .2s;
+  transition: border-color .2s;
 }
 
 .emotion-195 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
 .emotion-195 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell {
-  border-color: transparent;
   padding-left: 0;
+}
+
+.emotion-195 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
+.emotion-195 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell,
+.emotion-195 .uc-fe-table-row > td.uc-fe-table-dragger-cell {
+  border-color: transparent !important;
 }
 
 .emotion-195 .uc-fe-table-row > td.uc-fe-table-placeholder-cell {
   padding: 0;
   font-size: 0;
+}
+
+.emotion-195 .uc-fe-table .uc-fe-table-drag-over-up > td {
+  border-top: 2px solid #3860f4;
+}
+
+.emotion-195 .uc-fe-table .uc-fe-table-drag-over-down > td {
+  border-bottom: 2px solid #3860f4;
 }
 
 .emotion-195 .uc-fe-table-row-level-1 > td,
@@ -16885,7 +17001,8 @@ exports[`ConfigProvider demo -- theme 1`] = `
 }
 
 .emotion-195 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-expand-icon-cell,
-.emotion-195 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-select-icon-cell {
+.emotion-195 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-select-icon-cell,
+.emotion-195 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-dragger-cell {
   background: #ffffff;
 }
 
@@ -18845,6 +18962,19 @@ exports[`ConfigProvider demo -- theme 1`] = `
   clear: both;
 }
 
+.emotion-412 .uc-fe-table-dragger {
+  padding: 12px;
+  margin: -12px;
+  height: 100%;
+  display: inline-block;
+  cursor: move;
+  color: #5C6586;
+}
+
+.emotion-412 .uc-fe-table-dragger:hover {
+  color: #738BFF;
+}
+
 .emotion-412 .uc-fe-table-pagination {
   float: right;
   margin-top: 8px;
@@ -18885,6 +19015,10 @@ exports[`ConfigProvider demo -- theme 1`] = `
 .emotion-412 .uc-fe-table-fixed,
 .emotion-412 .uc-fe-table .uc-fe-table-body {
   background: #141A2B;
+}
+
+.emotion-412 .uc-fe-table .uc-fe-table-body {
+  position: relative;
 }
 
 .emotion-412 .uc-fe-table-row-expand-icon {
@@ -18959,8 +19093,13 @@ exports[`ConfigProvider demo -- theme 1`] = `
 
 .emotion-412 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
 .emotion-412 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th {
-  border-color: transparent;
   padding-left: 0;
+}
+
+.emotion-412 .uc-fe-table-thead > tr > th.uc-fe-table-expand-icon-th,
+.emotion-412 .uc-fe-table-thead > tr > th.uc-fe-table-select-icon-th,
+.emotion-412 .uc-fe-table-thead > tr > th.uc-fe-table-dragger-th {
+  border-color: transparent !important;
 }
 
 .emotion-412 .uc-fe-table-thead > tr > th.uc-fe-table-placeholder-th {
@@ -19038,17 +19177,33 @@ exports[`ConfigProvider demo -- theme 1`] = `
   line-height: 22px;
   text-align: left;
   overflow-wrap: break-word;
+  will-change: border-color;
+  -webkit-transition: border-color .2s;
+  transition: border-color .2s;
 }
 
 .emotion-412 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
 .emotion-412 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell {
-  border-color: transparent;
   padding-left: 0;
+}
+
+.emotion-412 .uc-fe-table-row > td.uc-fe-table-row-expand-icon-cell,
+.emotion-412 .uc-fe-table-row > td.uc-fe-table-row-select-icon-cell,
+.emotion-412 .uc-fe-table-row > td.uc-fe-table-dragger-cell {
+  border-color: transparent !important;
 }
 
 .emotion-412 .uc-fe-table-row > td.uc-fe-table-placeholder-cell {
   padding: 0;
   font-size: 0;
+}
+
+.emotion-412 .uc-fe-table .uc-fe-table-drag-over-up > td {
+  border-top: 2px solid #5A76FF;
+}
+
+.emotion-412 .uc-fe-table .uc-fe-table-drag-over-down > td {
+  border-bottom: 2px solid #5A76FF;
 }
 
 .emotion-412 .uc-fe-table-row-level-1 > td,
@@ -19104,7 +19259,8 @@ exports[`ConfigProvider demo -- theme 1`] = `
 }
 
 .emotion-412 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-expand-icon-cell,
-.emotion-412 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-select-icon-cell {
+.emotion-412 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-row-select-icon-cell,
+.emotion-412 .uc-fe-table table > tbody > .uc-fe-table-row:hover > td.uc-fe-table-dragger-cell {
   background: #141A2B;
 }
 
@@ -21015,6 +21171,7 @@ exports[`ConfigProvider demo -- theme 1`] = `
     >
       <div
         class="uc-fe-table-wrapper test-table emotion-195 emotion-196"
+        data-table-id="uc_table_uid_0"
       >
         <div
           class="emotion-136 emotion-137"
@@ -22541,6 +22698,7 @@ exports[`ConfigProvider demo -- theme 1`] = `
     >
       <div
         class="uc-fe-table-wrapper test-table emotion-412 emotion-196"
+        data-table-id="uc_table_uid_1"
       >
         <div
           class="emotion-136 emotion-137"
