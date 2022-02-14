@@ -170,6 +170,7 @@ class ExpandableTable extends React.Component {
                 prefixCls={`${prefixCls}-expanded-row`}
                 indentSize={indentSize}
                 indent={indent}
+                index={index}
                 fixed={fixed}
                 components={components}
                 expandedRow

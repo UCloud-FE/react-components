@@ -11,7 +11,11 @@ interface TableRowProps {
     'data-row-key'?: string | number;
 }
 
-const TableRowWithContextMenu = ({ record, contextMenu, ...rest }: Omit<TableRowProps, 'dragAble'>) => {
+const TableRowWithContextMenu = React.memo(function TableRowWithContextMenu({
+    record,
+    contextMenu,
+    ...rest
+}: Omit<TableRowProps, 'dragAble'>) {
     const [contextMenuVisible, setContextMenuVisible] = useState(false);
     const hideContextMenu = useCallback(() => {
         setContextMenuVisible(false);
@@ -33,12 +37,12 @@ const TableRowWithContextMenu = ({ record, contextMenu, ...rest }: Omit<TableRow
         );
     }
     return <tr {...rest} />;
-};
+});
 
-const TableRowWithDrag = (props: Omit<TableRowProps, 'dragAble'>) => {
+const TableRowWithDrag = React.memo(function TableRowWithDrag(props: Omit<TableRowProps, 'dragAble'>) {
     const { dragProps, dropProps } = useContext(DragContext);
     return <TableRowWithContextMenu {...props} {...dragProps} {...dropProps} draggable={false} />;
-};
+});
 
 const TableRow = ({ ...restProps }: TableRowProps) => {
     const { draggable } = useContext(DragContext);

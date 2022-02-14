@@ -24,7 +24,7 @@ class Demo extends React.Component {
                         title={() => (
                             <Combine>
                                 <Button styleType="primary">Add</Button>
-                                <Button>Rmove</Button>
+                                <Button>Remove</Button>
                             </Combine>
                         )}
                         dataSource={dataSource}

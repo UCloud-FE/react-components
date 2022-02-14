@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Provider, create } from 'mini-store';
-import merge from 'lodash/merge';
 import classes from 'component-classes';
 import { polyfill } from 'react-lifecycles-compat';
 
@@ -82,27 +81,25 @@ class Table extends React.Component {
     state = {};
 
     getChildContext() {
+        const components = this.props.components || {};
         return {
             table: {
                 props: this.props,
                 columnManager: this.columnManager,
                 saveRef: this.saveRef,
-                components: merge(
-                    {
-                        table: 'table',
-                        header: {
-                            wrapper: 'thead',
-                            row: 'tr',
-                            cell: 'th'
-                        },
-                        body: {
-                            wrapper: 'tbody',
-                            row: 'tr',
-                            cell: 'td'
-                        }
+                components: {
+                    table: components.table || 'table',
+                    header: {
+                        wrapper: components.header?.wrapper || 'thead',
+                        row: components.header?.row || 'tr',
+                        cell: components.header?.cell || 'th'
                     },
-                    this.props.components
-                )
+                    body: {
+                        wrapper: components.body?.wrapper || 'tbody',
+                        row: components.body?.row || 'tr',
+                        cell: components.body?.cell || 'td'
+                    }
+                }
             }
         };
     }
