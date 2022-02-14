@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.13](https://github.com/UCloud-FE/react-components/compare/v1.3.12...v1.3.13) (2022-02-14)
+
+### Bug Fixes
+
+-   **Table:** fix table row re instance bug ([ed1c9ba](https://github.com/UCloud-FE/react-components/commit/ed1c9ba430f659ff05821db6fe723b8f8489fd79))
+
 ### [1.3.12](https://github.com/UCloud-FE/react-components/compare/v1.3.11...v1.3.12) (2022-02-14)
 
 ### Features
