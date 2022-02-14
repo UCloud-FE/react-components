@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.12](https://github.com/UCloud-FE/react-components/compare/v1.3.11...v1.3.12) (2022-02-14)
+
+### Features
+
+-   **Table:** change DragWrap to memo ([07641a4](https://github.com/UCloud-FE/react-components/commit/07641a4415c2274e443f04973f401b081af3e25c))
+
 ### [1.3.11](https://github.com/UCloud-FE/react-components/compare/v1.3.10...v1.3.11) (2022-01-28)
 
 ### Bug Fixes
