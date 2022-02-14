@@ -7,19 +7,21 @@ const DragContext = createContext<{
     dropProps?: ReturnType<typeof useDrag>[1];
 }>({});
 
-const DragWrap = ({
-    children,
-    draggable,
-    ...events
-}: Parameters<typeof useDrag>[0] & { children: ReactNode; draggable: boolean }) => {
-    const [dragProps, dropProps] = useDrag({
-        ...events,
-        ignoreChildEnterLeave: true,
-        // ignoreSelf: true,
-        dropEffect: 'move'
-    });
-    return <DragContext.Provider value={{ dragProps, dropProps, draggable }}>{children}</DragContext.Provider>;
-};
+const DragWrap = React.memo(
+    ({
+        children,
+        draggable,
+        ...events
+    }: Parameters<typeof useDrag>[0] & { children: ReactNode; draggable: boolean }) => {
+        const [dragProps, dropProps] = useDrag({
+            ...events,
+            ignoreChildEnterLeave: true,
+            // ignoreSelf: true,
+            dropEffect: 'move'
+        });
+        return <DragContext.Provider value={{ dragProps, dropProps, draggable }}>{children}</DragContext.Provider>;
+    }
+);
 
 export { DragContext };
 
