@@ -41,6 +41,8 @@ const Pane = ({
     children,
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     tabKey,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    tab,
     ...rest
 }: TabPaneProps) => {
     const alreadyActiveRef = useRef(false);
