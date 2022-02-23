@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.14](https://github.com/UCloud-FE/react-components/compare/v1.3.13...v1.3.14) (2022-02-23)
+
+### Features
+
+-   **gitalk:** remove gitalk ([43746d0](https://github.com/UCloud-FE/react-components/commit/43746d073a91da456be0d98aab03300926e758db))
+
+### Bug Fixes
+
+-   **Tabs:** fix render unused html attr ([d42a5a5](https://github.com/UCloud-FE/react-components/commit/d42a5a5cc5e9ac4558749a8ee1cac5e05853005a))
+
 ### [1.3.13](https://github.com/UCloud-FE/react-components/compare/v1.3.12...v1.3.13) (2022-02-14)
 
 ### Bug Fixes
