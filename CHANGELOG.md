@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.15](https://github.com/UCloud-FE/react-components/compare/v1.3.14...v1.3.15) (2022-02-23)
+
+### Bug Fixes
+
+-   **yarn:** add lock file back for fix ci build ([71930f2](https://github.com/UCloud-FE/react-components/commit/71930f28882cd3eedc06814cb086328b34fa76a3))
+
 ### [1.3.14](https://github.com/UCloud-FE/react-components/compare/v1.3.13...v1.3.14) (2022-02-23)
 
 ### Features
