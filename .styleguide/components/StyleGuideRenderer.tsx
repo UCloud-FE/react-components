@@ -7,9 +7,6 @@ import cx from 'classnames';
 import Ribbon from 'rsg-components/Ribbon';
 import _ from 'lodash';
 
-import '!style-loader!css-loader!gitalk/dist/gitalk.css';
-import Gitalk from 'gitalk/dist/gitalk-component';
-
 import { toggleDarkTheme, isDarkTheme, toggleLocale, isEN } from './ReactExample';
 import Switch from 'src/components/Switch';
 import Combine from 'src/components/Combine';
@@ -134,20 +131,10 @@ const styles = ({
     }
 });
 
-const gitalkSec =
-    location.hostname === 'localhost'
-        ? {
-              clientID: 'e4203234ccca794c7ca3',
-              clientSecret: '11d1ded3c2b185180dcfea8efcf602bd67382908'
-          }
-        : {
-              clientID: '5c478803320de7626b0b',
-              clientSecret: '6dd542196b541f5bb79593fa7e341756d38bb86b'
-          };
 const createIssueManually = location.hostname === 'localhost';
 export function StyleGuideRenderer({ classes, title, homepageUrl, children, toc, hasSidebar }) {
     const [darkTheme, setDarkTheme] = useState(isDarkTheme);
-    const [enLocale, setEnLocale] = useState(isEN)
+    const [enLocale, setEnLocale] = useState(isEN);
     const ComponentName =
         location.hash.indexOf('%E2%9D%96%20%20') >= 0
             ? location.hash
@@ -214,18 +201,6 @@ export function StyleGuideRenderer({ classes, title, homepageUrl, children, toc,
                     <main className={classes.content} id="main-container">
                         <div className={classes.center}>
                             {children}
-                            <Gitalk
-                                key={componentId}
-                                options={{
-                                    ...gitalkSec,
-                                    createIssueManually,
-                                    repo: 'react-components',
-                                    owner: 'UCloud-FE',
-                                    admin: ['ZxBing0066'],
-                                    id: componentId,
-                                    distractionFreeMode: false
-                                }}
-                            />
                             <footer className={classes.footer}>
                                 <Markdown text={`Generated with [React Styleguidist](${homepageUrl})`} />
                             </footer>
