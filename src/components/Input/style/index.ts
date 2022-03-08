@@ -72,7 +72,7 @@ export const SWrap = sWrap<
             :hover {
                 color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
                 border-color: ${DT.T_COLOR_LINE_DEFAULT_DARK};
-                background: ${DT.T_INPUT_COLOR_BG_DEFAULT};
+                background: ${DT.T_INPUT_COLOR_BG_ACTIVE};
             }
 
             .${clearCls} {
@@ -101,6 +101,7 @@ export const SWrap = sWrap<
                 display: flex;
                 height: 100%;
                 align-items: center;
+                flex: 0 0 auto;
             }
 
             input {

@@ -64,6 +64,23 @@ class SearchDemo extends React.Component {
                 <div style={{ width: '40px', border: '1px solid red' }}>
                     <Input.Search />
                 </div>
+                <h2>前后不该被挤压</h2>
+                <div style={{ width: '400px', border: '1px solid red' }}>
+                    <Input
+                        suffix={
+                            <span>
+                                <span>测试文本挤压</span>
+                                <span>测试文本挤压</span>
+                            </span>
+                        }
+                        prefix={
+                            <span>
+                                <span>测试文本挤压</span>
+                                <span>测试文本挤压</span>
+                            </span>
+                        }
+                    />
+                </div>
                 <h2 style={{ color: 'red' }}>findDOMNode 测试 - 请勿使用</h2>
                 <div className="demo-wrap">
                     <Input.Search ref={_ref => (this.input = _ref)} />
