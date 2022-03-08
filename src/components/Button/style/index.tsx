@@ -231,7 +231,9 @@ const buttonStyleMixin = <T extends SButtonProps & { theme: Theme }>(props: T) =
         outline: none;
         font-size: ${DT.T_TYPO_FONT_SIZE_1};
         white-space: nowrap;
-        ${inlineBlockWithVerticalMixin};
+        display: inline-flex;
+        align-items: center;
+        vertical-align: middle;
 
         ${sizeMixin(props)};
         ${styleTypeMixin(props)};
@@ -246,7 +248,16 @@ const buttonStyleMixin = <T extends SButtonProps & { theme: Theme }>(props: T) =
 };
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
-const Button = ({ loading, styleType, disabled, fakeDisabled, onClick, checkAble, block, ...rest }: SButtonPropsWithTag) => (
+const Button = ({
+    loading,
+    styleType,
+    disabled,
+    fakeDisabled,
+    onClick,
+    checkAble,
+    block,
+    ...rest
+}: SButtonPropsWithTag) => (
     <button disabled={disabled && !fakeDisabled} onClick={!disabled ? onClick : undefined} {...rest} />
 );
 /* eslint-enable @typescript-eslint/no-unused-vars */
