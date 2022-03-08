@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.16](https://github.com/UCloud-FE/react-components/compare/v1.3.15...v1.3.16) (2022-03-08)
+
+### Features
+
+-   **Button:** change button to inline-flex ([ca563fa](https://github.com/UCloud-FE/react-components/commit/ca563fa58df27c79c45778c8ca969d5aba67c001))
+-   **Input:** fix input suffix & prefix shrinks ([e4bdb80](https://github.com/UCloud-FE/react-components/commit/e4bdb807ed0ef2683b534244f1d49481824ca5f2))
+
 ### [1.3.15](https://github.com/UCloud-FE/react-components/compare/v1.3.14...v1.3.15) (2022-02-23)
 
 ### Bug Fixes
