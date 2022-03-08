@@ -233,6 +233,7 @@ const buttonStyleMixin = <T extends SButtonProps & { theme: Theme }>(props: T) =
         white-space: nowrap;
         display: inline-flex;
         align-items: center;
+        justify-content: center;
         vertical-align: middle;
 
         ${sizeMixin(props)};
