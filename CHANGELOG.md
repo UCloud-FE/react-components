@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.17](https://github.com/UCloud-FE/react-components/compare/v1.3.16...v1.3.17) (2022-03-08)
+
+### Bug Fixes
+
+-   **Button:** fix button square align ([5c63258](https://github.com/UCloud-FE/react-components/commit/5c63258e51c88a1892a9dd2d5d869d926ba40f90))
+
 ### [1.3.16](https://github.com/UCloud-FE/react-components/compare/v1.3.15...v1.3.16) (2022-03-08)
 
 ### Features
