@@ -16,8 +16,8 @@ import { Group, SelectedMap, Key, TreeData, LoadData } from './interface';
 
 const groupDataSource = (dataSource: TreeData[]): [Group, Key[], Key[]] => {
     const group: Group = {};
-    const allKeys: Key[] = [];
-    const allDisabledKeys: Key[] = [];
+    const validKeys: Key[] = [];
+    const disabledKeys: Key[] = [];
     if (!dataSource) dataSource = [];
     const _groupData = (children: TreeData[], disabled?: boolean): [Key[], Key[]] => {
         let keys: Key[] = [];
@@ -36,17 +36,17 @@ const groupDataSource = (dataSource: TreeData[]): [Group, Key[], Key[]] => {
             } else {
                 if (finalDisabled) {
                     disabledKeys.push(key);
-                    allDisabledKeys.push(key);
+                    disabledKeys.push(key);
                 } else {
                     keys.push(key);
-                    allKeys.push(key);
+                    validKeys.push(key);
                 }
             }
         });
         return [keys, disabledKeys];
     };
     _groupData(dataSource);
-    return [group, allKeys, allDisabledKeys];
+    return [group, validKeys, disabledKeys];
 };
 
 const keysToMap = (keys: Key[] = []): SelectedMap => {
@@ -173,7 +173,7 @@ const CommonTree = forwardRef(
         },
         ref: Ref<TreeRef>
     ) => {
-        const [[group, allKeys, allDisabledKeys], setGroup] = useState(() => groupDataSource(dataSource));
+        const [[group, validKeys, disabledKeys], setGroup] = useState(() => groupDataSource(dataSource));
         const [selectedKeys, onChange] = useUncontrolled(_selectedKeys, defaultSelectedKeys || [], _onChange);
         const [selectedMap, setSelectedMap] = useState(() => keysToMap(selectedKeys));
         const stateRef = useRef({ selectedMap, selectedKeys });
@@ -184,17 +184,17 @@ const CommonTree = forwardRef(
                 const selectKeys = [];
                 const unselectKeys = [];
                 const newSelectedMap = keysToMap(newSelectedKeys);
-                const allMap = keysToMap(allKeys);
+                const validMap = keysToMap(validKeys);
                 for (const newKey in newSelectedMap) {
                     // don't in dataSource, ignore
-                    if (!(newKey in allMap)) continue;
+                    if (!(newKey in validMap)) continue;
                     if (!(newKey in selectedMap)) {
                         selectKeys.push(newKey);
                     }
                 }
                 for (const oldKey in selectedMap) {
                     // don't in dataSource, ignore
-                    if (!(oldKey in allMap)) continue;
+                    if (!(oldKey in validMap)) continue;
                     if (!(oldKey in newSelectedMap)) {
                         unselectKeys.push(oldKey);
                     }
@@ -205,7 +205,7 @@ const CommonTree = forwardRef(
                     unselect: unselectKeys
                 });
             },
-            [allKeys, onDiff, selectedMap]
+            [validKeys, onDiff, selectedMap]
         );
 
         const finalOnChange = useCallback(
@@ -236,15 +236,15 @@ const CommonTree = forwardRef(
                             return;
                         }
                         const disabledSelectedKeys: Key[] = [];
-                        allDisabledKeys.forEach(v => {
+                        disabledKeys.forEach(v => {
                             if (selectedMap[v]) disabledSelectedKeys.push(v);
                         });
-                        const selectedKeys = [...allKeys, ...disabledSelectedKeys];
+                        const selectedKeys = [...validKeys, ...disabledSelectedKeys];
                         finalOnChange(selectedKeys);
                     },
                     unSelectAll: () => {
                         const disabledSelectedKeys: Key[] = [];
-                        allDisabledKeys.forEach(v => {
+                        disabledKeys.forEach(v => {
                             if (selectedMap[v]) disabledSelectedKeys.push(v);
                         });
                         finalOnChange([...disabledSelectedKeys]);
@@ -255,11 +255,11 @@ const CommonTree = forwardRef(
                             return;
                         }
                         const disabledSelectedKeys: Key[] = [];
-                        allDisabledKeys.forEach(v => {
+                        disabledKeys.forEach(v => {
                             if (selectedMap[v]) disabledSelectedKeys.push(v);
                         });
                         const selectedKeys: Key[] = [...disabledSelectedKeys];
-                        allKeys.forEach(v => {
+                        validKeys.forEach(v => {
                             if (!selectedMap[v]) {
                                 selectedKeys.push(v);
                             }
@@ -268,7 +268,7 @@ const CommonTree = forwardRef(
                     }
                 };
             },
-            [multiple, allDisabledKeys, allKeys, finalOnChange, selectedMap]
+            [multiple, disabledKeys, validKeys, finalOnChange, selectedMap]
         );
 
         const onSelect = useCallback(
