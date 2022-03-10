@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.18](https://github.com/UCloud-FE/react-components/compare/v1.3.17...v1.3.18) (2022-03-10)
+
+### Bug Fixes
+
+-   **Button:** fix button usage in select ([a7865a7](https://github.com/UCloud-FE/react-components/commit/a7865a702c3847b9790938fb54a95f8ab8e54c63))
+
 ### [1.3.17](https://github.com/UCloud-FE/react-components/compare/v1.3.16...v1.3.17) (2022-03-08)
 
 ### Bug Fixes
