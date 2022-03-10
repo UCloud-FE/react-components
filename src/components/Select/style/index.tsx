@@ -24,7 +24,7 @@ export const SSelector = styled(Button)`
     padding-right: 28px;
     width: 100%;
     min-width: 78px;
-    text-align: left;
+    justify-content: space-between;
     overflow: hidden;
     .${selectorContentCls} {
         overflow: hidden;
