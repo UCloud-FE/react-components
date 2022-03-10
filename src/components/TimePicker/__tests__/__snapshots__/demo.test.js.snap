@@ -1,14 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TimePicker demo -- disabled 1`] = `
-.emotion-4 {
+.emotion-7 {
   display: inline-block;
   width: 140px;
 }
 
-.emotion-2 {
+.emotion-5 {
   position: relative;
   box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -18,19 +26,87 @@ exports[`TimePicker demo -- disabled 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
 }
 
-.emotion-2:hover {
+.emotion-5,
+.emotion-5 input,
+.emotion-5 .emotion-3 {
+  padding: 0 4px;
+}
+
+.emotion-5:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-2 .uc-fe-input-clear {
+.emotion-5 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-5 input,
+.emotion-5 input:hover,
+.emotion-5 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-5 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input::-ms-clear {
+  display: none;
+}
+
+.emotion-5 .emotion-3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-5 .emotion-3:empty {
+  display: none;
+}
+
+.emotion-5 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -45,90 +121,6 @@ exports[`TimePicker demo -- disabled 1`] = `
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
-}
-
-.emotion-2 .uc-fe-input-wrap,
-.emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix,
-.emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
-  padding: 0 4px;
-}
-
-.emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-2 input {
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
-  -webkit-flex: 1 1 130px;
-  -ms-flex: 1 1 130px;
-  flex: 1 1 130px;
-  min-width: 0px;
-}
-
-.emotion-2 input,
-.emotion-2 input:hover,
-.emotion-2 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-2 input::-webkit-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input::-moz-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input:-ms-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input::placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input::-ms-clear {
-  display: none;
 }
 
 .emotion-0 {
@@ -141,9 +133,17 @@ exports[`TimePicker demo -- disabled 1`] = `
   height: 12px;
 }
 
-.emotion-8 {
+.emotion-14 {
   position: relative;
   box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -153,158 +153,97 @@ exports[`TimePicker demo -- disabled 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
   box-shadow: none;
+  cursor: default;
 }
 
-.emotion-8:hover {
+.emotion-14,
+.emotion-14 input,
+.emotion-14 .emotion-3 {
+  padding: 0 4px;
+}
+
+.emotion-14:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-8 .uc-fe-input-clear {
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #7a8baa;
-  fill: #7a8baa;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
-.emotion-8 .uc-fe-input-wrap,
-.emotion-8 .uc-fe-input-prefix,
-.emotion-8 .uc-fe-input-suffix,
-.emotion-8 .uc-fe-input-clear,
-.emotion-8 input {
-  padding: 0 4px;
-}
-
-.emotion-8.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-8 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-8 .uc-fe-input-prefix,
-.emotion-8 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-8 input {
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
-  -webkit-flex: 1 1 130px;
-  -ms-flex: 1 1 130px;
-  flex: 1 1 130px;
-  min-width: 0px;
-}
-
-.emotion-8 input,
-.emotion-8 input:hover,
-.emotion-8 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-8 input::-webkit-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-8 input::-moz-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-8 input:-ms-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-8 input::placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-8 input::-ms-clear {
-  display: none;
-}
-
-.emotion-8,
-.emotion-8:hover {
+.emotion-14,
+.emotion-14:hover {
   color: #cccccc;
   -webkit-text-fill-color: #cccccc;
   border-color: #d9d9d9;
   background: #f7f7f7;
 }
 
-.emotion-4 {
-  display: inline-block;
-  width: 140px;
-}
-
-.emotion-2 {
-  position: relative;
+.emotion-14 input {
   box-sizing: border-box;
-  height: 28px;
-  max-width: 100%;
-  font-size: 12px;
-  border-radius: 2px;
-  color: #526075;
-  fill: currentColor;
-  border: 1px solid #c3cad9;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
-  vertical-align: middle;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
 }
 
-.emotion-2:hover {
-  color: #0a1633;
-  border-color: #c3cad9;
-  background: #f6f6fb;
+.emotion-14 input,
+.emotion-14 input:hover,
+.emotion-14 input:focus {
+  border: none;
+  outline: none;
+  background: none;
 }
 
-.emotion-2 .uc-fe-input-clear {
+.emotion-14 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-14 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-14 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-14 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-14 input::-ms-clear {
+  display: none;
+}
+
+.emotion-14 .emotion-3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-14 .emotion-3:empty {
+  display: none;
+}
+
+.emotion-14 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -321,47 +260,49 @@ exports[`TimePicker demo -- disabled 1`] = `
   transition: opacity 0.3s;
 }
 
-.emotion-2 .uc-fe-input-wrap,
-.emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix,
-.emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-7 {
+  display: inline-block;
+  width: 140px;
+}
+
+.emotion-5 {
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 28px;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  vertical-align: middle;
+}
+
+.emotion-5,
+.emotion-5 input,
+.emotion-5 .emotion-3 {
   padding: 0 4px;
 }
 
-.emotion-2.uc-fe-input-block {
-  display: block;
+.emotion-5:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
 }
 
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-2 input {
+.emotion-5 input {
   box-sizing: border-box;
   height: 100%;
   margin: 0;
@@ -373,36 +314,72 @@ exports[`TimePicker demo -- disabled 1`] = `
   min-width: 0px;
 }
 
-.emotion-2 input,
-.emotion-2 input:hover,
-.emotion-2 input:focus {
+.emotion-5 input,
+.emotion-5 input:hover,
+.emotion-5 input:focus {
   border: none;
   outline: none;
   background: none;
 }
 
-.emotion-2 input::-webkit-input-placeholder {
+.emotion-5 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input::-moz-placeholder {
+.emotion-5 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input:-ms-input-placeholder {
+.emotion-5 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input::placeholder {
+.emotion-5 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-2 input::-ms-clear {
+.emotion-5 input::-ms-clear {
   display: none;
+}
+
+.emotion-5 .emotion-3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-5 .emotion-3:empty {
+  display: none;
+}
+
+.emotion-5 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 
 .emotion-0 {
@@ -415,9 +392,17 @@ exports[`TimePicker demo -- disabled 1`] = `
   height: 12px;
 }
 
-.emotion-8 {
+.emotion-14 {
   position: relative;
   box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -427,20 +412,97 @@ exports[`TimePicker demo -- disabled 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
   box-shadow: none;
+  cursor: default;
 }
 
-.emotion-8:hover {
+.emotion-14,
+.emotion-14 input,
+.emotion-14 .emotion-3 {
+  padding: 0 4px;
+}
+
+.emotion-14:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-8 .uc-fe-input-clear {
+.emotion-14,
+.emotion-14:hover {
+  color: #cccccc;
+  -webkit-text-fill-color: #cccccc;
+  border-color: #d9d9d9;
+  background: #f7f7f7;
+}
+
+.emotion-14 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-14 input,
+.emotion-14 input:hover,
+.emotion-14 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-14 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-14 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-14 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-14 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-14 input::-ms-clear {
+  display: none;
+}
+
+.emotion-14 .emotion-3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-14 .emotion-3:empty {
+  display: none;
+}
+
+.emotion-14 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -455,98 +517,6 @@ exports[`TimePicker demo -- disabled 1`] = `
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
-}
-
-.emotion-8 .uc-fe-input-wrap,
-.emotion-8 .uc-fe-input-prefix,
-.emotion-8 .uc-fe-input-suffix,
-.emotion-8 .uc-fe-input-clear,
-.emotion-8 input {
-  padding: 0 4px;
-}
-
-.emotion-8.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-8 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-8 .uc-fe-input-prefix,
-.emotion-8 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-8 input {
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
-  -webkit-flex: 1 1 130px;
-  -ms-flex: 1 1 130px;
-  flex: 1 1 130px;
-  min-width: 0px;
-}
-
-.emotion-8 input,
-.emotion-8 input:hover,
-.emotion-8 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-8 input::-webkit-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-8 input::-moz-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-8 input:-ms-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-8 input::placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-8 input::-ms-clear {
-  display: none;
-}
-
-.emotion-8,
-.emotion-8:hover {
-  color: #cccccc;
-  -webkit-text-fill-color: #cccccc;
-  border-color: #d9d9d9;
-  background: #f7f7f7;
 }
 
 <div>
@@ -554,30 +524,26 @@ exports[`TimePicker demo -- disabled 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-timepicker emotion-4 emotion-5"
+      class="uc-fe-timepicker emotion-7 emotion-8"
     >
       <span
-        class="uc-fe-input emotion-2 emotion-3"
+        class="uc-fe-input emotion-4 emotion-5 emotion-6"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-prefix emotion-2 emotion-3"
         >
-          <span
-            class="uc-fe-input-prefix"
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
           >
-            <svg
-              class=" emotion-0 emotion-1"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12,2.00000001 C17.5228474,2.00000001 22,6.4771525 22,12 C22,17.5228474 17.5228474,22 12,22 C6.4771525,22 2.00000001,17.5228474 2.00000001,12 C2.00000001,6.4771525 6.4771525,2.00000001 12,2.00000001 Z M12,3.99999999 C7.58172201,3.99999999 3.99999999,7.58172201 3.99999999,12 C3.99999999,16.418278 7.58172201,20 12,20 C16.418278,20 20,16.418278 20,12 C20,7.58172201 16.418278,3.99999999 12,3.99999999 Z M12,5.00000001 C12.5522847,5.00000001 13,5.44771526 13,6.00000001 L12.9988571,11.564 L16.4331669,14.6049863 C16.8222873,14.9493998 16.8585295,15.5440465 16.514116,15.9331669 C16.5014615,15.9474641 16.4883746,15.9613728 16.4748737,15.9748737 C16.0775779,16.3721696 15.4396827,16.3915906 15.0189533,16.0191999 L11.3346,12.7581506 C11.2048932,12.6433461 11.1143951,12.5007379 11.0641345,12.347206 L11.0509807,12.3160773 C11.0179086,12.2167311 11,12.1104569 11,12 L11,6.00000001 C11,5.44771526 11.4477153,5.00000001 12,5.00000001 Z"
-              />
-            </svg>
-          </span>
-          <input
-            value=""
-          />
+            <path
+              d="M12,2.00000001 C17.5228474,2.00000001 22,6.4771525 22,12 C22,17.5228474 17.5228474,22 12,22 C6.4771525,22 2.00000001,17.5228474 2.00000001,12 C2.00000001,6.4771525 6.4771525,2.00000001 12,2.00000001 Z M12,3.99999999 C7.58172201,3.99999999 3.99999999,7.58172201 3.99999999,12 C3.99999999,16.418278 7.58172201,20 12,20 C16.418278,20 20,16.418278 20,12 C20,7.58172201 16.418278,3.99999999 12,3.99999999 Z M12,5.00000001 C12.5522847,5.00000001 13,5.44771526 13,6.00000001 L12.9988571,11.564 L16.4331669,14.6049863 C16.8222873,14.9493998 16.8585295,15.5440465 16.514116,15.9331669 C16.5014615,15.9474641 16.4883746,15.9613728 16.4748737,15.9748737 C16.0775779,16.3721696 15.4396827,16.3915906 15.0189533,16.0191999 L11.3346,12.7581506 C11.2048932,12.6433461 11.1143951,12.5007379 11.0641345,12.347206 L11.0509807,12.3160773 C11.0179086,12.2167311 11,12.1104569 11,12 L11,6.00000001 C11,5.44771526 11.4477153,5.00000001 12,5.00000001 Z"
+            />
+          </svg>
         </span>
+        <input
+          value=""
+        />
       </span>
     </div>
   </div>
@@ -585,32 +551,28 @@ exports[`TimePicker demo -- disabled 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-timepicker emotion-4 emotion-5"
+      class="uc-fe-timepicker emotion-7 emotion-8"
     >
       <span
-        class="uc-fe-input uc-fe-input-disabled emotion-8 emotion-3"
+        class="uc-fe-input uc-fe-input-disabled emotion-4 emotion-14 emotion-6"
         disabled=""
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-prefix emotion-2 emotion-3"
         >
-          <span
-            class="uc-fe-input-prefix"
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
           >
-            <svg
-              class=" emotion-0 emotion-1"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12,2.00000001 C17.5228474,2.00000001 22,6.4771525 22,12 C22,17.5228474 17.5228474,22 12,22 C6.4771525,22 2.00000001,17.5228474 2.00000001,12 C2.00000001,6.4771525 6.4771525,2.00000001 12,2.00000001 Z M12,3.99999999 C7.58172201,3.99999999 3.99999999,7.58172201 3.99999999,12 C3.99999999,16.418278 7.58172201,20 12,20 C16.418278,20 20,16.418278 20,12 C20,7.58172201 16.418278,3.99999999 12,3.99999999 Z M12,5.00000001 C12.5522847,5.00000001 13,5.44771526 13,6.00000001 L12.9988571,11.564 L16.4331669,14.6049863 C16.8222873,14.9493998 16.8585295,15.5440465 16.514116,15.9331669 C16.5014615,15.9474641 16.4883746,15.9613728 16.4748737,15.9748737 C16.0775779,16.3721696 15.4396827,16.3915906 15.0189533,16.0191999 L11.3346,12.7581506 C11.2048932,12.6433461 11.1143951,12.5007379 11.0641345,12.347206 L11.0509807,12.3160773 C11.0179086,12.2167311 11,12.1104569 11,12 L11,6.00000001 C11,5.44771526 11.4477153,5.00000001 12,5.00000001 Z"
-              />
-            </svg>
-          </span>
-          <input
-            disabled=""
-            value=""
-          />
+            <path
+              d="M12,2.00000001 C17.5228474,2.00000001 22,6.4771525 22,12 C22,17.5228474 17.5228474,22 12,22 C6.4771525,22 2.00000001,17.5228474 2.00000001,12 C2.00000001,6.4771525 6.4771525,2.00000001 12,2.00000001 Z M12,3.99999999 C7.58172201,3.99999999 3.99999999,7.58172201 3.99999999,12 C3.99999999,16.418278 7.58172201,20 12,20 C16.418278,20 20,16.418278 20,12 C20,7.58172201 16.418278,3.99999999 12,3.99999999 Z M12,5.00000001 C12.5522847,5.00000001 13,5.44771526 13,6.00000001 L12.9988571,11.564 L16.4331669,14.6049863 C16.8222873,14.9493998 16.8585295,15.5440465 16.514116,15.9331669 C16.5014615,15.9474641 16.4883746,15.9613728 16.4748737,15.9748737 C16.0775779,16.3721696 15.4396827,16.3915906 15.0189533,16.0191999 L11.3346,12.7581506 C11.2048932,12.6433461 11.1143951,12.5007379 11.0641345,12.347206 L11.0509807,12.3160773 C11.0179086,12.2167311 11,12.1104569 11,12 L11,6.00000001 C11,5.44771526 11.4477153,5.00000001 12,5.00000001 Z"
+            />
+          </svg>
         </span>
+        <input
+          disabled=""
+          value=""
+        />
       </span>
     </div>
   </div>
@@ -618,14 +580,22 @@ exports[`TimePicker demo -- disabled 1`] = `
 `;
 
 exports[`TimePicker demo -- format 1`] = `
-.emotion-4 {
+.emotion-7 {
   display: inline-block;
   width: 140px;
 }
 
-.emotion-2 {
+.emotion-5 {
   position: relative;
   box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -635,19 +605,87 @@ exports[`TimePicker demo -- format 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
 }
 
-.emotion-2:hover {
+.emotion-5,
+.emotion-5 input,
+.emotion-5 .emotion-3 {
+  padding: 0 4px;
+}
+
+.emotion-5:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-2 .uc-fe-input-clear {
+.emotion-5 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-5 input,
+.emotion-5 input:hover,
+.emotion-5 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-5 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input::-ms-clear {
+  display: none;
+}
+
+.emotion-5 .emotion-3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-5 .emotion-3:empty {
+  display: none;
+}
+
+.emotion-5 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -662,90 +700,6 @@ exports[`TimePicker demo -- format 1`] = `
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
-}
-
-.emotion-2 .uc-fe-input-wrap,
-.emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix,
-.emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
-  padding: 0 4px;
-}
-
-.emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-2 input {
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
-  -webkit-flex: 1 1 130px;
-  -ms-flex: 1 1 130px;
-  flex: 1 1 130px;
-  min-width: 0px;
-}
-
-.emotion-2 input,
-.emotion-2 input:hover,
-.emotion-2 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-2 input::-webkit-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input::-moz-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input:-ms-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input::placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input::-ms-clear {
-  display: none;
 }
 
 .emotion-0 {
@@ -758,14 +712,22 @@ exports[`TimePicker demo -- format 1`] = `
   height: 12px;
 }
 
-.emotion-4 {
+.emotion-7 {
   display: inline-block;
   width: 140px;
 }
 
-.emotion-2 {
+.emotion-5 {
   position: relative;
   box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -775,19 +737,87 @@ exports[`TimePicker demo -- format 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
 }
 
-.emotion-2:hover {
+.emotion-5,
+.emotion-5 input,
+.emotion-5 .emotion-3 {
+  padding: 0 4px;
+}
+
+.emotion-5:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-2 .uc-fe-input-clear {
+.emotion-5 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-5 input,
+.emotion-5 input:hover,
+.emotion-5 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-5 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input::-ms-clear {
+  display: none;
+}
+
+.emotion-5 .emotion-3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-5 .emotion-3:empty {
+  display: none;
+}
+
+.emotion-5 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -802,90 +832,6 @@ exports[`TimePicker demo -- format 1`] = `
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
-}
-
-.emotion-2 .uc-fe-input-wrap,
-.emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix,
-.emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
-  padding: 0 4px;
-}
-
-.emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-2 input {
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
-  -webkit-flex: 1 1 130px;
-  -ms-flex: 1 1 130px;
-  flex: 1 1 130px;
-  min-width: 0px;
-}
-
-.emotion-2 input,
-.emotion-2 input:hover,
-.emotion-2 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-2 input::-webkit-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input::-moz-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input:-ms-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input::placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input::-ms-clear {
-  display: none;
 }
 
 .emotion-0 {
@@ -903,30 +849,26 @@ exports[`TimePicker demo -- format 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-timepicker emotion-4 emotion-5"
+      class="uc-fe-timepicker emotion-7 emotion-8"
     >
       <span
-        class="uc-fe-input emotion-2 emotion-3"
+        class="uc-fe-input emotion-4 emotion-5 emotion-6"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-prefix emotion-2 emotion-3"
         >
-          <span
-            class="uc-fe-input-prefix"
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
           >
-            <svg
-              class=" emotion-0 emotion-1"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12,2.00000001 C17.5228474,2.00000001 22,6.4771525 22,12 C22,17.5228474 17.5228474,22 12,22 C6.4771525,22 2.00000001,17.5228474 2.00000001,12 C2.00000001,6.4771525 6.4771525,2.00000001 12,2.00000001 Z M12,3.99999999 C7.58172201,3.99999999 3.99999999,7.58172201 3.99999999,12 C3.99999999,16.418278 7.58172201,20 12,20 C16.418278,20 20,16.418278 20,12 C20,7.58172201 16.418278,3.99999999 12,3.99999999 Z M12,5.00000001 C12.5522847,5.00000001 13,5.44771526 13,6.00000001 L12.9988571,11.564 L16.4331669,14.6049863 C16.8222873,14.9493998 16.8585295,15.5440465 16.514116,15.9331669 C16.5014615,15.9474641 16.4883746,15.9613728 16.4748737,15.9748737 C16.0775779,16.3721696 15.4396827,16.3915906 15.0189533,16.0191999 L11.3346,12.7581506 C11.2048932,12.6433461 11.1143951,12.5007379 11.0641345,12.347206 L11.0509807,12.3160773 C11.0179086,12.2167311 11,12.1104569 11,12 L11,6.00000001 C11,5.44771526 11.4477153,5.00000001 12,5.00000001 Z"
-              />
-            </svg>
-          </span>
-          <input
-            value=""
-          />
+            <path
+              d="M12,2.00000001 C17.5228474,2.00000001 22,6.4771525 22,12 C22,17.5228474 17.5228474,22 12,22 C6.4771525,22 2.00000001,17.5228474 2.00000001,12 C2.00000001,6.4771525 6.4771525,2.00000001 12,2.00000001 Z M12,3.99999999 C7.58172201,3.99999999 3.99999999,7.58172201 3.99999999,12 C3.99999999,16.418278 7.58172201,20 12,20 C16.418278,20 20,16.418278 20,12 C20,7.58172201 16.418278,3.99999999 12,3.99999999 Z M12,5.00000001 C12.5522847,5.00000001 13,5.44771526 13,6.00000001 L12.9988571,11.564 L16.4331669,14.6049863 C16.8222873,14.9493998 16.8585295,15.5440465 16.514116,15.9331669 C16.5014615,15.9474641 16.4883746,15.9613728 16.4748737,15.9748737 C16.0775779,16.3721696 15.4396827,16.3915906 15.0189533,16.0191999 L11.3346,12.7581506 C11.2048932,12.6433461 11.1143951,12.5007379 11.0641345,12.347206 L11.0509807,12.3160773 C11.0179086,12.2167311 11,12.1104569 11,12 L11,6.00000001 C11,5.44771526 11.4477153,5.00000001 12,5.00000001 Z"
+            />
+          </svg>
         </span>
+        <input
+          value=""
+        />
       </span>
     </div>
   </div>
@@ -934,30 +876,26 @@ exports[`TimePicker demo -- format 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-timepicker emotion-4 emotion-5"
+      class="uc-fe-timepicker emotion-7 emotion-8"
     >
       <span
-        class="uc-fe-input emotion-2 emotion-3"
+        class="uc-fe-input emotion-4 emotion-5 emotion-6"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-prefix emotion-2 emotion-3"
         >
-          <span
-            class="uc-fe-input-prefix"
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
           >
-            <svg
-              class=" emotion-0 emotion-1"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12,2.00000001 C17.5228474,2.00000001 22,6.4771525 22,12 C22,17.5228474 17.5228474,22 12,22 C6.4771525,22 2.00000001,17.5228474 2.00000001,12 C2.00000001,6.4771525 6.4771525,2.00000001 12,2.00000001 Z M12,3.99999999 C7.58172201,3.99999999 3.99999999,7.58172201 3.99999999,12 C3.99999999,16.418278 7.58172201,20 12,20 C16.418278,20 20,16.418278 20,12 C20,7.58172201 16.418278,3.99999999 12,3.99999999 Z M12,5.00000001 C12.5522847,5.00000001 13,5.44771526 13,6.00000001 L12.9988571,11.564 L16.4331669,14.6049863 C16.8222873,14.9493998 16.8585295,15.5440465 16.514116,15.9331669 C16.5014615,15.9474641 16.4883746,15.9613728 16.4748737,15.9748737 C16.0775779,16.3721696 15.4396827,16.3915906 15.0189533,16.0191999 L11.3346,12.7581506 C11.2048932,12.6433461 11.1143951,12.5007379 11.0641345,12.347206 L11.0509807,12.3160773 C11.0179086,12.2167311 11,12.1104569 11,12 L11,6.00000001 C11,5.44771526 11.4477153,5.00000001 12,5.00000001 Z"
-              />
-            </svg>
-          </span>
-          <input
-            value=""
-          />
+            <path
+              d="M12,2.00000001 C17.5228474,2.00000001 22,6.4771525 22,12 C22,17.5228474 17.5228474,22 12,22 C6.4771525,22 2.00000001,17.5228474 2.00000001,12 C2.00000001,6.4771525 6.4771525,2.00000001 12,2.00000001 Z M12,3.99999999 C7.58172201,3.99999999 3.99999999,7.58172201 3.99999999,12 C3.99999999,16.418278 7.58172201,20 12,20 C16.418278,20 20,16.418278 20,12 C20,7.58172201 16.418278,3.99999999 12,3.99999999 Z M12,5.00000001 C12.5522847,5.00000001 13,5.44771526 13,6.00000001 L12.9988571,11.564 L16.4331669,14.6049863 C16.8222873,14.9493998 16.8585295,15.5440465 16.514116,15.9331669 C16.5014615,15.9474641 16.4883746,15.9613728 16.4748737,15.9748737 C16.0775779,16.3721696 15.4396827,16.3915906 15.0189533,16.0191999 L11.3346,12.7581506 C11.2048932,12.6433461 11.1143951,12.5007379 11.0641345,12.347206 L11.0509807,12.3160773 C11.0179086,12.2167311 11,12.1104569 11,12 L11,6.00000001 C11,5.44771526 11.4477153,5.00000001 12,5.00000001 Z"
+            />
+          </svg>
         </span>
+        <input
+          value=""
+        />
       </span>
     </div>
   </div>
@@ -965,30 +903,26 @@ exports[`TimePicker demo -- format 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-timepicker emotion-4 emotion-5"
+      class="uc-fe-timepicker emotion-7 emotion-8"
     >
       <span
-        class="uc-fe-input emotion-2 emotion-3"
+        class="uc-fe-input emotion-4 emotion-5 emotion-6"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-prefix emotion-2 emotion-3"
         >
-          <span
-            class="uc-fe-input-prefix"
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
           >
-            <svg
-              class=" emotion-0 emotion-1"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12,2.00000001 C17.5228474,2.00000001 22,6.4771525 22,12 C22,17.5228474 17.5228474,22 12,22 C6.4771525,22 2.00000001,17.5228474 2.00000001,12 C2.00000001,6.4771525 6.4771525,2.00000001 12,2.00000001 Z M12,3.99999999 C7.58172201,3.99999999 3.99999999,7.58172201 3.99999999,12 C3.99999999,16.418278 7.58172201,20 12,20 C16.418278,20 20,16.418278 20,12 C20,7.58172201 16.418278,3.99999999 12,3.99999999 Z M12,5.00000001 C12.5522847,5.00000001 13,5.44771526 13,6.00000001 L12.9988571,11.564 L16.4331669,14.6049863 C16.8222873,14.9493998 16.8585295,15.5440465 16.514116,15.9331669 C16.5014615,15.9474641 16.4883746,15.9613728 16.4748737,15.9748737 C16.0775779,16.3721696 15.4396827,16.3915906 15.0189533,16.0191999 L11.3346,12.7581506 C11.2048932,12.6433461 11.1143951,12.5007379 11.0641345,12.347206 L11.0509807,12.3160773 C11.0179086,12.2167311 11,12.1104569 11,12 L11,6.00000001 C11,5.44771526 11.4477153,5.00000001 12,5.00000001 Z"
-              />
-            </svg>
-          </span>
-          <input
-            value=""
-          />
+            <path
+              d="M12,2.00000001 C17.5228474,2.00000001 22,6.4771525 22,12 C22,17.5228474 17.5228474,22 12,22 C6.4771525,22 2.00000001,17.5228474 2.00000001,12 C2.00000001,6.4771525 6.4771525,2.00000001 12,2.00000001 Z M12,3.99999999 C7.58172201,3.99999999 3.99999999,7.58172201 3.99999999,12 C3.99999999,16.418278 7.58172201,20 12,20 C16.418278,20 20,16.418278 20,12 C20,7.58172201 16.418278,3.99999999 12,3.99999999 Z M12,5.00000001 C12.5522847,5.00000001 13,5.44771526 13,6.00000001 L12.9988571,11.564 L16.4331669,14.6049863 C16.8222873,14.9493998 16.8585295,15.5440465 16.514116,15.9331669 C16.5014615,15.9474641 16.4883746,15.9613728 16.4748737,15.9748737 C16.0775779,16.3721696 15.4396827,16.3915906 15.0189533,16.0191999 L11.3346,12.7581506 C11.2048932,12.6433461 11.1143951,12.5007379 11.0641345,12.347206 L11.0509807,12.3160773 C11.0179086,12.2167311 11,12.1104569 11,12 L11,6.00000001 C11,5.44771526 11.4477153,5.00000001 12,5.00000001 Z"
+            />
+          </svg>
         </span>
+        <input
+          value=""
+        />
       </span>
     </div>
   </div>
@@ -996,30 +930,26 @@ exports[`TimePicker demo -- format 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-timepicker emotion-4 emotion-5"
+      class="uc-fe-timepicker emotion-7 emotion-8"
     >
       <span
-        class="uc-fe-input emotion-2 emotion-3"
+        class="uc-fe-input emotion-4 emotion-5 emotion-6"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-prefix emotion-2 emotion-3"
         >
-          <span
-            class="uc-fe-input-prefix"
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
           >
-            <svg
-              class=" emotion-0 emotion-1"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12,2.00000001 C17.5228474,2.00000001 22,6.4771525 22,12 C22,17.5228474 17.5228474,22 12,22 C6.4771525,22 2.00000001,17.5228474 2.00000001,12 C2.00000001,6.4771525 6.4771525,2.00000001 12,2.00000001 Z M12,3.99999999 C7.58172201,3.99999999 3.99999999,7.58172201 3.99999999,12 C3.99999999,16.418278 7.58172201,20 12,20 C16.418278,20 20,16.418278 20,12 C20,7.58172201 16.418278,3.99999999 12,3.99999999 Z M12,5.00000001 C12.5522847,5.00000001 13,5.44771526 13,6.00000001 L12.9988571,11.564 L16.4331669,14.6049863 C16.8222873,14.9493998 16.8585295,15.5440465 16.514116,15.9331669 C16.5014615,15.9474641 16.4883746,15.9613728 16.4748737,15.9748737 C16.0775779,16.3721696 15.4396827,16.3915906 15.0189533,16.0191999 L11.3346,12.7581506 C11.2048932,12.6433461 11.1143951,12.5007379 11.0641345,12.347206 L11.0509807,12.3160773 C11.0179086,12.2167311 11,12.1104569 11,12 L11,6.00000001 C11,5.44771526 11.4477153,5.00000001 12,5.00000001 Z"
-              />
-            </svg>
-          </span>
-          <input
-            value=""
-          />
+            <path
+              d="M12,2.00000001 C17.5228474,2.00000001 22,6.4771525 22,12 C22,17.5228474 17.5228474,22 12,22 C6.4771525,22 2.00000001,17.5228474 2.00000001,12 C2.00000001,6.4771525 6.4771525,2.00000001 12,2.00000001 Z M12,3.99999999 C7.58172201,3.99999999 3.99999999,7.58172201 3.99999999,12 C3.99999999,16.418278 7.58172201,20 12,20 C16.418278,20 20,16.418278 20,12 C20,7.58172201 16.418278,3.99999999 12,3.99999999 Z M12,5.00000001 C12.5522847,5.00000001 13,5.44771526 13,6.00000001 L12.9988571,11.564 L16.4331669,14.6049863 C16.8222873,14.9493998 16.8585295,15.5440465 16.514116,15.9331669 C16.5014615,15.9474641 16.4883746,15.9613728 16.4748737,15.9748737 C16.0775779,16.3721696 15.4396827,16.3915906 15.0189533,16.0191999 L11.3346,12.7581506 C11.2048932,12.6433461 11.1143951,12.5007379 11.0641345,12.347206 L11.0509807,12.3160773 C11.0179086,12.2167311 11,12.1104569 11,12 L11,6.00000001 C11,5.44771526 11.4477153,5.00000001 12,5.00000001 Z"
+            />
+          </svg>
         </span>
+        <input
+          value=""
+        />
       </span>
     </div>
   </div>
@@ -1027,30 +957,26 @@ exports[`TimePicker demo -- format 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-timepicker emotion-4 emotion-5"
+      class="uc-fe-timepicker emotion-7 emotion-8"
     >
       <span
-        class="uc-fe-input emotion-2 emotion-3"
+        class="uc-fe-input emotion-4 emotion-5 emotion-6"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-prefix emotion-2 emotion-3"
         >
-          <span
-            class="uc-fe-input-prefix"
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
           >
-            <svg
-              class=" emotion-0 emotion-1"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12,2.00000001 C17.5228474,2.00000001 22,6.4771525 22,12 C22,17.5228474 17.5228474,22 12,22 C6.4771525,22 2.00000001,17.5228474 2.00000001,12 C2.00000001,6.4771525 6.4771525,2.00000001 12,2.00000001 Z M12,3.99999999 C7.58172201,3.99999999 3.99999999,7.58172201 3.99999999,12 C3.99999999,16.418278 7.58172201,20 12,20 C16.418278,20 20,16.418278 20,12 C20,7.58172201 16.418278,3.99999999 12,3.99999999 Z M12,5.00000001 C12.5522847,5.00000001 13,5.44771526 13,6.00000001 L12.9988571,11.564 L16.4331669,14.6049863 C16.8222873,14.9493998 16.8585295,15.5440465 16.514116,15.9331669 C16.5014615,15.9474641 16.4883746,15.9613728 16.4748737,15.9748737 C16.0775779,16.3721696 15.4396827,16.3915906 15.0189533,16.0191999 L11.3346,12.7581506 C11.2048932,12.6433461 11.1143951,12.5007379 11.0641345,12.347206 L11.0509807,12.3160773 C11.0179086,12.2167311 11,12.1104569 11,12 L11,6.00000001 C11,5.44771526 11.4477153,5.00000001 12,5.00000001 Z"
-              />
-            </svg>
-          </span>
-          <input
-            value=""
-          />
+            <path
+              d="M12,2.00000001 C17.5228474,2.00000001 22,6.4771525 22,12 C22,17.5228474 17.5228474,22 12,22 C6.4771525,22 2.00000001,17.5228474 2.00000001,12 C2.00000001,6.4771525 6.4771525,2.00000001 12,2.00000001 Z M12,3.99999999 C7.58172201,3.99999999 3.99999999,7.58172201 3.99999999,12 C3.99999999,16.418278 7.58172201,20 12,20 C16.418278,20 20,16.418278 20,12 C20,7.58172201 16.418278,3.99999999 12,3.99999999 Z M12,5.00000001 C12.5522847,5.00000001 13,5.44771526 13,6.00000001 L12.9988571,11.564 L16.4331669,14.6049863 C16.8222873,14.9493998 16.8585295,15.5440465 16.514116,15.9331669 C16.5014615,15.9474641 16.4883746,15.9613728 16.4748737,15.9748737 C16.0775779,16.3721696 15.4396827,16.3915906 15.0189533,16.0191999 L11.3346,12.7581506 C11.2048932,12.6433461 11.1143951,12.5007379 11.0641345,12.347206 L11.0509807,12.3160773 C11.0179086,12.2167311 11,12.1104569 11,12 L11,6.00000001 C11,5.44771526 11.4477153,5.00000001 12,5.00000001 Z"
+            />
+          </svg>
         </span>
+        <input
+          value=""
+        />
       </span>
     </div>
   </div>
@@ -1058,14 +984,22 @@ exports[`TimePicker demo -- format 1`] = `
 `;
 
 exports[`TimePicker demo -- nullable 1`] = `
-.emotion-4 {
+.emotion-7 {
   display: inline-block;
   width: 140px;
 }
 
-.emotion-2 {
+.emotion-5 {
   position: relative;
   box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -1075,19 +1009,87 @@ exports[`TimePicker demo -- nullable 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
 }
 
-.emotion-2:hover {
+.emotion-5,
+.emotion-5 input,
+.emotion-5 .emotion-3 {
+  padding: 0 4px;
+}
+
+.emotion-5:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-2 .uc-fe-input-clear {
+.emotion-5 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-5 input,
+.emotion-5 input:hover,
+.emotion-5 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-5 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input::-ms-clear {
+  display: none;
+}
+
+.emotion-5 .emotion-3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-5 .emotion-3:empty {
+  display: none;
+}
+
+.emotion-5 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1102,90 +1104,6 @@ exports[`TimePicker demo -- nullable 1`] = `
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
-}
-
-.emotion-2 .uc-fe-input-wrap,
-.emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix,
-.emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
-  padding: 0 4px;
-}
-
-.emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-2 input {
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
-  -webkit-flex: 1 1 130px;
-  -ms-flex: 1 1 130px;
-  flex: 1 1 130px;
-  min-width: 0px;
-}
-
-.emotion-2 input,
-.emotion-2 input:hover,
-.emotion-2 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-2 input::-webkit-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input::-moz-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input:-ms-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input::placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input::-ms-clear {
-  display: none;
 }
 
 .emotion-0 {
@@ -1198,14 +1116,22 @@ exports[`TimePicker demo -- nullable 1`] = `
   height: 12px;
 }
 
-.emotion-4 {
+.emotion-7 {
   display: inline-block;
   width: 140px;
 }
 
-.emotion-2 {
+.emotion-5 {
   position: relative;
   box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -1215,19 +1141,87 @@ exports[`TimePicker demo -- nullable 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
 }
 
-.emotion-2:hover {
+.emotion-5,
+.emotion-5 input,
+.emotion-5 .emotion-3 {
+  padding: 0 4px;
+}
+
+.emotion-5:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-2 .uc-fe-input-clear {
+.emotion-5 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-5 input,
+.emotion-5 input:hover,
+.emotion-5 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-5 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input::-ms-clear {
+  display: none;
+}
+
+.emotion-5 .emotion-3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-5 .emotion-3:empty {
+  display: none;
+}
+
+.emotion-5 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1242,90 +1236,6 @@ exports[`TimePicker demo -- nullable 1`] = `
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
-}
-
-.emotion-2 .uc-fe-input-wrap,
-.emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix,
-.emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
-  padding: 0 4px;
-}
-
-.emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-2 input {
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
-  -webkit-flex: 1 1 130px;
-  -ms-flex: 1 1 130px;
-  flex: 1 1 130px;
-  min-width: 0px;
-}
-
-.emotion-2 input,
-.emotion-2 input:hover,
-.emotion-2 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-2 input::-webkit-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input::-moz-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input:-ms-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input::placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input::-ms-clear {
-  display: none;
 }
 
 .emotion-0 {
@@ -1343,30 +1253,26 @@ exports[`TimePicker demo -- nullable 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-timepicker emotion-4 emotion-5"
+      class="uc-fe-timepicker emotion-7 emotion-8"
     >
       <span
-        class="uc-fe-input emotion-2 emotion-3"
+        class="uc-fe-input emotion-4 emotion-5 emotion-6"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-prefix emotion-2 emotion-3"
         >
-          <span
-            class="uc-fe-input-prefix"
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
           >
-            <svg
-              class=" emotion-0 emotion-1"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12,2.00000001 C17.5228474,2.00000001 22,6.4771525 22,12 C22,17.5228474 17.5228474,22 12,22 C6.4771525,22 2.00000001,17.5228474 2.00000001,12 C2.00000001,6.4771525 6.4771525,2.00000001 12,2.00000001 Z M12,3.99999999 C7.58172201,3.99999999 3.99999999,7.58172201 3.99999999,12 C3.99999999,16.418278 7.58172201,20 12,20 C16.418278,20 20,16.418278 20,12 C20,7.58172201 16.418278,3.99999999 12,3.99999999 Z M12,5.00000001 C12.5522847,5.00000001 13,5.44771526 13,6.00000001 L12.9988571,11.564 L16.4331669,14.6049863 C16.8222873,14.9493998 16.8585295,15.5440465 16.514116,15.9331669 C16.5014615,15.9474641 16.4883746,15.9613728 16.4748737,15.9748737 C16.0775779,16.3721696 15.4396827,16.3915906 15.0189533,16.0191999 L11.3346,12.7581506 C11.2048932,12.6433461 11.1143951,12.5007379 11.0641345,12.347206 L11.0509807,12.3160773 C11.0179086,12.2167311 11,12.1104569 11,12 L11,6.00000001 C11,5.44771526 11.4477153,5.00000001 12,5.00000001 Z"
-              />
-            </svg>
-          </span>
-          <input
-            value=""
-          />
+            <path
+              d="M12,2.00000001 C17.5228474,2.00000001 22,6.4771525 22,12 C22,17.5228474 17.5228474,22 12,22 C6.4771525,22 2.00000001,17.5228474 2.00000001,12 C2.00000001,6.4771525 6.4771525,2.00000001 12,2.00000001 Z M12,3.99999999 C7.58172201,3.99999999 3.99999999,7.58172201 3.99999999,12 C3.99999999,16.418278 7.58172201,20 12,20 C16.418278,20 20,16.418278 20,12 C20,7.58172201 16.418278,3.99999999 12,3.99999999 Z M12,5.00000001 C12.5522847,5.00000001 13,5.44771526 13,6.00000001 L12.9988571,11.564 L16.4331669,14.6049863 C16.8222873,14.9493998 16.8585295,15.5440465 16.514116,15.9331669 C16.5014615,15.9474641 16.4883746,15.9613728 16.4748737,15.9748737 C16.0775779,16.3721696 15.4396827,16.3915906 15.0189533,16.0191999 L11.3346,12.7581506 C11.2048932,12.6433461 11.1143951,12.5007379 11.0641345,12.347206 L11.0509807,12.3160773 C11.0179086,12.2167311 11,12.1104569 11,12 L11,6.00000001 C11,5.44771526 11.4477153,5.00000001 12,5.00000001 Z"
+            />
+          </svg>
         </span>
+        <input
+          value=""
+        />
       </span>
     </div>
   </div>
@@ -1374,30 +1280,26 @@ exports[`TimePicker demo -- nullable 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-timepicker emotion-4 emotion-5"
+      class="uc-fe-timepicker emotion-7 emotion-8"
     >
       <span
-        class="uc-fe-input emotion-2 emotion-3"
+        class="uc-fe-input emotion-4 emotion-5 emotion-6"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-prefix emotion-2 emotion-3"
         >
-          <span
-            class="uc-fe-input-prefix"
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
           >
-            <svg
-              class=" emotion-0 emotion-1"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12,2.00000001 C17.5228474,2.00000001 22,6.4771525 22,12 C22,17.5228474 17.5228474,22 12,22 C6.4771525,22 2.00000001,17.5228474 2.00000001,12 C2.00000001,6.4771525 6.4771525,2.00000001 12,2.00000001 Z M12,3.99999999 C7.58172201,3.99999999 3.99999999,7.58172201 3.99999999,12 C3.99999999,16.418278 7.58172201,20 12,20 C16.418278,20 20,16.418278 20,12 C20,7.58172201 16.418278,3.99999999 12,3.99999999 Z M12,5.00000001 C12.5522847,5.00000001 13,5.44771526 13,6.00000001 L12.9988571,11.564 L16.4331669,14.6049863 C16.8222873,14.9493998 16.8585295,15.5440465 16.514116,15.9331669 C16.5014615,15.9474641 16.4883746,15.9613728 16.4748737,15.9748737 C16.0775779,16.3721696 15.4396827,16.3915906 15.0189533,16.0191999 L11.3346,12.7581506 C11.2048932,12.6433461 11.1143951,12.5007379 11.0641345,12.347206 L11.0509807,12.3160773 C11.0179086,12.2167311 11,12.1104569 11,12 L11,6.00000001 C11,5.44771526 11.4477153,5.00000001 12,5.00000001 Z"
-              />
-            </svg>
-          </span>
-          <input
-            value=""
-          />
+            <path
+              d="M12,2.00000001 C17.5228474,2.00000001 22,6.4771525 22,12 C22,17.5228474 17.5228474,22 12,22 C6.4771525,22 2.00000001,17.5228474 2.00000001,12 C2.00000001,6.4771525 6.4771525,2.00000001 12,2.00000001 Z M12,3.99999999 C7.58172201,3.99999999 3.99999999,7.58172201 3.99999999,12 C3.99999999,16.418278 7.58172201,20 12,20 C16.418278,20 20,16.418278 20,12 C20,7.58172201 16.418278,3.99999999 12,3.99999999 Z M12,5.00000001 C12.5522847,5.00000001 13,5.44771526 13,6.00000001 L12.9988571,11.564 L16.4331669,14.6049863 C16.8222873,14.9493998 16.8585295,15.5440465 16.514116,15.9331669 C16.5014615,15.9474641 16.4883746,15.9613728 16.4748737,15.9748737 C16.0775779,16.3721696 15.4396827,16.3915906 15.0189533,16.0191999 L11.3346,12.7581506 C11.2048932,12.6433461 11.1143951,12.5007379 11.0641345,12.347206 L11.0509807,12.3160773 C11.0179086,12.2167311 11,12.1104569 11,12 L11,6.00000001 C11,5.44771526 11.4477153,5.00000001 12,5.00000001 Z"
+            />
+          </svg>
         </span>
+        <input
+          value=""
+        />
       </span>
     </div>
   </div>
@@ -1405,14 +1307,22 @@ exports[`TimePicker demo -- nullable 1`] = `
 `;
 
 exports[`TimePicker demo -- size 1`] = `
-.emotion-4 {
+.emotion-7 {
   display: inline-block;
   width: 140px;
 }
 
-.emotion-8 {
+.emotion-14 {
   position: relative;
   box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -1422,333 +1332,21 @@ exports[`TimePicker demo -- size 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
 }
 
-.emotion-8:hover {
-  color: #0a1633;
-  border-color: #c3cad9;
-  background: #f6f6fb;
-}
-
-.emotion-8 .uc-fe-input-clear {
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #7a8baa;
-  fill: #7a8baa;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
-.emotion-8 .uc-fe-input-wrap,
-.emotion-8 .uc-fe-input-prefix,
-.emotion-8 .uc-fe-input-suffix,
-.emotion-8 .uc-fe-input-clear,
-.emotion-8 input {
+.emotion-14,
+.emotion-14 input,
+.emotion-14 .emotion-3 {
   padding: 0 4px;
-}
-
-.emotion-8.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-8 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-8 .uc-fe-input-prefix,
-.emotion-8 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-8 input {
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
-  -webkit-flex: 1 1 130px;
-  -ms-flex: 1 1 130px;
-  flex: 1 1 130px;
-  min-width: 0px;
-}
-
-.emotion-8 input,
-.emotion-8 input:hover,
-.emotion-8 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-8 input::-webkit-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-8 input::-moz-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-8 input:-ms-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-8 input::placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-8 input::-ms-clear {
-  display: none;
-}
-
-.emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  display: inline-block;
-  vertical-align: middle;
-  fill: currentcolor;
-  width: 12px;
-  height: 12px;
-}
-
-.emotion-2 {
-  position: relative;
-  box-sizing: border-box;
-  height: 24px;
-  max-width: 100%;
-  font-size: 12px;
-  border-radius: 2px;
-  color: #526075;
-  fill: currentColor;
-  border: 1px solid #c3cad9;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.emotion-2:hover {
-  color: #0a1633;
-  border-color: #c3cad9;
-  background: #f6f6fb;
-}
-
-.emotion-2 .uc-fe-input-clear {
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #7a8baa;
-  fill: #7a8baa;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
-.emotion-2 .uc-fe-input-wrap,
-.emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix,
-.emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
-  padding: 0 4px;
-}
-
-.emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-2 input {
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
-  -webkit-flex: 1 1 130px;
-  -ms-flex: 1 1 130px;
-  flex: 1 1 130px;
-  min-width: 0px;
-}
-
-.emotion-2 input,
-.emotion-2 input:hover,
-.emotion-2 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-2 input::-webkit-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input::-moz-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input:-ms-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input::placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input::-ms-clear {
-  display: none;
-}
-
-.emotion-14 {
-  position: relative;
-  box-sizing: border-box;
-  height: 32px;
-  max-width: 100%;
-  font-size: 12px;
-  border-radius: 2px;
-  color: #526075;
-  fill: currentColor;
-  border: 1px solid #c3cad9;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
-  vertical-align: middle;
 }
 
 .emotion-14:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
-}
-
-.emotion-14 .uc-fe-input-clear {
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #7a8baa;
-  fill: #7a8baa;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
-.emotion-14 .uc-fe-input-wrap,
-.emotion-14 .uc-fe-input-prefix,
-.emotion-14 .uc-fe-input-suffix,
-.emotion-14 .uc-fe-input-clear,
-.emotion-14 input {
-  padding: 0 4px;
-}
-
-.emotion-14.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-14 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-14 .uc-fe-input-prefix,
-.emotion-14 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
 }
 
 .emotion-14 input {
@@ -1795,82 +1393,11 @@ exports[`TimePicker demo -- size 1`] = `
   display: none;
 }
 
-.emotion-4 {
-  display: inline-block;
-  width: 140px;
-}
-
-.emotion-8 {
-  position: relative;
-  box-sizing: border-box;
-  height: 28px;
-  max-width: 100%;
-  font-size: 12px;
-  border-radius: 2px;
-  color: #526075;
-  fill: currentColor;
-  border: 1px solid #c3cad9;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.emotion-8:hover {
-  color: #0a1633;
-  border-color: #c3cad9;
-  background: #f6f6fb;
-}
-
-.emotion-8 .uc-fe-input-clear {
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #7a8baa;
-  fill: #7a8baa;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
-.emotion-8 .uc-fe-input-wrap,
-.emotion-8 .uc-fe-input-prefix,
-.emotion-8 .uc-fe-input-suffix,
-.emotion-8 .uc-fe-input-clear,
-.emotion-8 input {
-  padding: 0 4px;
-}
-
-.emotion-8.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-8 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-8 .uc-fe-input-prefix,
-.emotion-8 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-14 .emotion-3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1881,207 +1408,8 @@ exports[`TimePicker demo -- size 1`] = `
   flex: 0 0 auto;
 }
 
-.emotion-8 input {
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
-  -webkit-flex: 1 1 130px;
-  -ms-flex: 1 1 130px;
-  flex: 1 1 130px;
-  min-width: 0px;
-}
-
-.emotion-8 input,
-.emotion-8 input:hover,
-.emotion-8 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-8 input::-webkit-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-8 input::-moz-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-8 input:-ms-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-8 input::placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-8 input::-ms-clear {
+.emotion-14 .emotion-3:empty {
   display: none;
-}
-
-.emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  display: inline-block;
-  vertical-align: middle;
-  fill: currentcolor;
-  width: 12px;
-  height: 12px;
-}
-
-.emotion-2 {
-  position: relative;
-  box-sizing: border-box;
-  height: 24px;
-  max-width: 100%;
-  font-size: 12px;
-  border-radius: 2px;
-  color: #526075;
-  fill: currentColor;
-  border: 1px solid #c3cad9;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.emotion-2:hover {
-  color: #0a1633;
-  border-color: #c3cad9;
-  background: #f6f6fb;
-}
-
-.emotion-2 .uc-fe-input-clear {
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #7a8baa;
-  fill: #7a8baa;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
-.emotion-2 .uc-fe-input-wrap,
-.emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix,
-.emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
-  padding: 0 4px;
-}
-
-.emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-2 input {
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
-  -webkit-flex: 1 1 130px;
-  -ms-flex: 1 1 130px;
-  flex: 1 1 130px;
-  min-width: 0px;
-}
-
-.emotion-2 input,
-.emotion-2 input:hover,
-.emotion-2 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-2 input::-webkit-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input::-moz-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input:-ms-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input::placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input::-ms-clear {
-  display: none;
-}
-
-.emotion-14 {
-  position: relative;
-  box-sizing: border-box;
-  height: 32px;
-  max-width: 100%;
-  font-size: 12px;
-  border-radius: 2px;
-  color: #526075;
-  fill: currentColor;
-  border: 1px solid #c3cad9;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.emotion-14:hover {
-  color: #0a1633;
-  border-color: #c3cad9;
-  background: #f6f6fb;
 }
 
 .emotion-14 .uc-fe-input-clear {
@@ -2101,36 +1429,102 @@ exports[`TimePicker demo -- size 1`] = `
   transition: opacity 0.3s;
 }
 
-.emotion-14 .uc-fe-input-wrap,
-.emotion-14 .uc-fe-input-prefix,
-.emotion-14 .uc-fe-input-suffix,
-.emotion-14 .uc-fe-input-clear,
-.emotion-14 input {
-  padding: 0 4px;
+.emotion-0 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentcolor;
+  width: 12px;
+  height: 12px;
 }
 
-.emotion-14.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-14 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-5 {
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: 24px;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  vertical-align: middle;
 }
 
-.emotion-14 .uc-fe-input-prefix,
-.emotion-14 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-5,
+.emotion-5 input,
+.emotion-5 .emotion-3 {
+  padding: 0 4px;
+}
+
+.emotion-5:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
+}
+
+.emotion-5 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-5 input,
+.emotion-5 input:hover,
+.emotion-5 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-5 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input::-ms-clear {
+  display: none;
+}
+
+.emotion-5 .emotion-3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -2139,6 +1533,186 @@ exports[`TimePicker demo -- size 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-5 .emotion-3:empty {
+  display: none;
+}
+
+.emotion-5 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-23 {
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 32px;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  vertical-align: middle;
+}
+
+.emotion-23,
+.emotion-23 input,
+.emotion-23 .emotion-3 {
+  padding: 0 4px;
+}
+
+.emotion-23:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
+}
+
+.emotion-23 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-23 input,
+.emotion-23 input:hover,
+.emotion-23 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-23 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-23 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-23 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-23 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-23 input::-ms-clear {
+  display: none;
+}
+
+.emotion-23 .emotion-3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-23 .emotion-3:empty {
+  display: none;
+}
+
+.emotion-23 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-7 {
+  display: inline-block;
+  width: 140px;
+}
+
+.emotion-14 {
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 28px;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  vertical-align: middle;
+}
+
+.emotion-14,
+.emotion-14 input,
+.emotion-14 .emotion-3 {
+  padding: 0 4px;
+}
+
+.emotion-14:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
 }
 
 .emotion-14 input {
@@ -2183,6 +1757,286 @@ exports[`TimePicker demo -- size 1`] = `
 
 .emotion-14 input::-ms-clear {
   display: none;
+}
+
+.emotion-14 .emotion-3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-14 .emotion-3:empty {
+  display: none;
+}
+
+.emotion-14 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-0 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentcolor;
+  width: 12px;
+  height: 12px;
+}
+
+.emotion-5 {
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 24px;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  vertical-align: middle;
+}
+
+.emotion-5,
+.emotion-5 input,
+.emotion-5 .emotion-3 {
+  padding: 0 4px;
+}
+
+.emotion-5:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
+}
+
+.emotion-5 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-5 input,
+.emotion-5 input:hover,
+.emotion-5 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-5 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input::-ms-clear {
+  display: none;
+}
+
+.emotion-5 .emotion-3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-5 .emotion-3:empty {
+  display: none;
+}
+
+.emotion-5 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-23 {
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 32px;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  vertical-align: middle;
+}
+
+.emotion-23,
+.emotion-23 input,
+.emotion-23 .emotion-3 {
+  padding: 0 4px;
+}
+
+.emotion-23:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
+}
+
+.emotion-23 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-23 input,
+.emotion-23 input:hover,
+.emotion-23 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-23 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-23 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-23 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-23 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-23 input::-ms-clear {
+  display: none;
+}
+
+.emotion-23 .emotion-3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-23 .emotion-3:empty {
+  display: none;
+}
+
+.emotion-23 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 
 <div>
@@ -2190,30 +2044,26 @@ exports[`TimePicker demo -- size 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-timepicker emotion-4 emotion-5"
+      class="uc-fe-timepicker emotion-7 emotion-8"
     >
       <span
-        class="uc-fe-input emotion-2 emotion-3"
+        class="uc-fe-input emotion-4 emotion-5 emotion-6"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-prefix emotion-2 emotion-3"
         >
-          <span
-            class="uc-fe-input-prefix"
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
           >
-            <svg
-              class=" emotion-0 emotion-1"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12,2.00000001 C17.5228474,2.00000001 22,6.4771525 22,12 C22,17.5228474 17.5228474,22 12,22 C6.4771525,22 2.00000001,17.5228474 2.00000001,12 C2.00000001,6.4771525 6.4771525,2.00000001 12,2.00000001 Z M12,3.99999999 C7.58172201,3.99999999 3.99999999,7.58172201 3.99999999,12 C3.99999999,16.418278 7.58172201,20 12,20 C16.418278,20 20,16.418278 20,12 C20,7.58172201 16.418278,3.99999999 12,3.99999999 Z M12,5.00000001 C12.5522847,5.00000001 13,5.44771526 13,6.00000001 L12.9988571,11.564 L16.4331669,14.6049863 C16.8222873,14.9493998 16.8585295,15.5440465 16.514116,15.9331669 C16.5014615,15.9474641 16.4883746,15.9613728 16.4748737,15.9748737 C16.0775779,16.3721696 15.4396827,16.3915906 15.0189533,16.0191999 L11.3346,12.7581506 C11.2048932,12.6433461 11.1143951,12.5007379 11.0641345,12.347206 L11.0509807,12.3160773 C11.0179086,12.2167311 11,12.1104569 11,12 L11,6.00000001 C11,5.44771526 11.4477153,5.00000001 12,5.00000001 Z"
-              />
-            </svg>
-          </span>
-          <input
-            value=""
-          />
+            <path
+              d="M12,2.00000001 C17.5228474,2.00000001 22,6.4771525 22,12 C22,17.5228474 17.5228474,22 12,22 C6.4771525,22 2.00000001,17.5228474 2.00000001,12 C2.00000001,6.4771525 6.4771525,2.00000001 12,2.00000001 Z M12,3.99999999 C7.58172201,3.99999999 3.99999999,7.58172201 3.99999999,12 C3.99999999,16.418278 7.58172201,20 12,20 C16.418278,20 20,16.418278 20,12 C20,7.58172201 16.418278,3.99999999 12,3.99999999 Z M12,5.00000001 C12.5522847,5.00000001 13,5.44771526 13,6.00000001 L12.9988571,11.564 L16.4331669,14.6049863 C16.8222873,14.9493998 16.8585295,15.5440465 16.514116,15.9331669 C16.5014615,15.9474641 16.4883746,15.9613728 16.4748737,15.9748737 C16.0775779,16.3721696 15.4396827,16.3915906 15.0189533,16.0191999 L11.3346,12.7581506 C11.2048932,12.6433461 11.1143951,12.5007379 11.0641345,12.347206 L11.0509807,12.3160773 C11.0179086,12.2167311 11,12.1104569 11,12 L11,6.00000001 C11,5.44771526 11.4477153,5.00000001 12,5.00000001 Z"
+            />
+          </svg>
         </span>
+        <input
+          value=""
+        />
       </span>
     </div>
   </div>
@@ -2221,30 +2071,26 @@ exports[`TimePicker demo -- size 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-timepicker emotion-4 emotion-5"
+      class="uc-fe-timepicker emotion-7 emotion-8"
     >
       <span
-        class="uc-fe-input emotion-8 emotion-3"
+        class="uc-fe-input emotion-4 emotion-14 emotion-6"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-prefix emotion-2 emotion-3"
         >
-          <span
-            class="uc-fe-input-prefix"
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
           >
-            <svg
-              class=" emotion-0 emotion-1"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12,2.00000001 C17.5228474,2.00000001 22,6.4771525 22,12 C22,17.5228474 17.5228474,22 12,22 C6.4771525,22 2.00000001,17.5228474 2.00000001,12 C2.00000001,6.4771525 6.4771525,2.00000001 12,2.00000001 Z M12,3.99999999 C7.58172201,3.99999999 3.99999999,7.58172201 3.99999999,12 C3.99999999,16.418278 7.58172201,20 12,20 C16.418278,20 20,16.418278 20,12 C20,7.58172201 16.418278,3.99999999 12,3.99999999 Z M12,5.00000001 C12.5522847,5.00000001 13,5.44771526 13,6.00000001 L12.9988571,11.564 L16.4331669,14.6049863 C16.8222873,14.9493998 16.8585295,15.5440465 16.514116,15.9331669 C16.5014615,15.9474641 16.4883746,15.9613728 16.4748737,15.9748737 C16.0775779,16.3721696 15.4396827,16.3915906 15.0189533,16.0191999 L11.3346,12.7581506 C11.2048932,12.6433461 11.1143951,12.5007379 11.0641345,12.347206 L11.0509807,12.3160773 C11.0179086,12.2167311 11,12.1104569 11,12 L11,6.00000001 C11,5.44771526 11.4477153,5.00000001 12,5.00000001 Z"
-              />
-            </svg>
-          </span>
-          <input
-            value=""
-          />
+            <path
+              d="M12,2.00000001 C17.5228474,2.00000001 22,6.4771525 22,12 C22,17.5228474 17.5228474,22 12,22 C6.4771525,22 2.00000001,17.5228474 2.00000001,12 C2.00000001,6.4771525 6.4771525,2.00000001 12,2.00000001 Z M12,3.99999999 C7.58172201,3.99999999 3.99999999,7.58172201 3.99999999,12 C3.99999999,16.418278 7.58172201,20 12,20 C16.418278,20 20,16.418278 20,12 C20,7.58172201 16.418278,3.99999999 12,3.99999999 Z M12,5.00000001 C12.5522847,5.00000001 13,5.44771526 13,6.00000001 L12.9988571,11.564 L16.4331669,14.6049863 C16.8222873,14.9493998 16.8585295,15.5440465 16.514116,15.9331669 C16.5014615,15.9474641 16.4883746,15.9613728 16.4748737,15.9748737 C16.0775779,16.3721696 15.4396827,16.3915906 15.0189533,16.0191999 L11.3346,12.7581506 C11.2048932,12.6433461 11.1143951,12.5007379 11.0641345,12.347206 L11.0509807,12.3160773 C11.0179086,12.2167311 11,12.1104569 11,12 L11,6.00000001 C11,5.44771526 11.4477153,5.00000001 12,5.00000001 Z"
+            />
+          </svg>
         </span>
+        <input
+          value=""
+        />
       </span>
     </div>
   </div>
@@ -2252,30 +2098,26 @@ exports[`TimePicker demo -- size 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-timepicker emotion-4 emotion-5"
+      class="uc-fe-timepicker emotion-7 emotion-8"
     >
       <span
-        class="uc-fe-input emotion-14 emotion-3"
+        class="uc-fe-input emotion-4 emotion-23 emotion-6"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-prefix emotion-2 emotion-3"
         >
-          <span
-            class="uc-fe-input-prefix"
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
           >
-            <svg
-              class=" emotion-0 emotion-1"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12,2.00000001 C17.5228474,2.00000001 22,6.4771525 22,12 C22,17.5228474 17.5228474,22 12,22 C6.4771525,22 2.00000001,17.5228474 2.00000001,12 C2.00000001,6.4771525 6.4771525,2.00000001 12,2.00000001 Z M12,3.99999999 C7.58172201,3.99999999 3.99999999,7.58172201 3.99999999,12 C3.99999999,16.418278 7.58172201,20 12,20 C16.418278,20 20,16.418278 20,12 C20,7.58172201 16.418278,3.99999999 12,3.99999999 Z M12,5.00000001 C12.5522847,5.00000001 13,5.44771526 13,6.00000001 L12.9988571,11.564 L16.4331669,14.6049863 C16.8222873,14.9493998 16.8585295,15.5440465 16.514116,15.9331669 C16.5014615,15.9474641 16.4883746,15.9613728 16.4748737,15.9748737 C16.0775779,16.3721696 15.4396827,16.3915906 15.0189533,16.0191999 L11.3346,12.7581506 C11.2048932,12.6433461 11.1143951,12.5007379 11.0641345,12.347206 L11.0509807,12.3160773 C11.0179086,12.2167311 11,12.1104569 11,12 L11,6.00000001 C11,5.44771526 11.4477153,5.00000001 12,5.00000001 Z"
-              />
-            </svg>
-          </span>
-          <input
-            value=""
-          />
+            <path
+              d="M12,2.00000001 C17.5228474,2.00000001 22,6.4771525 22,12 C22,17.5228474 17.5228474,22 12,22 C6.4771525,22 2.00000001,17.5228474 2.00000001,12 C2.00000001,6.4771525 6.4771525,2.00000001 12,2.00000001 Z M12,3.99999999 C7.58172201,3.99999999 3.99999999,7.58172201 3.99999999,12 C3.99999999,16.418278 7.58172201,20 12,20 C16.418278,20 20,16.418278 20,12 C20,7.58172201 16.418278,3.99999999 12,3.99999999 Z M12,5.00000001 C12.5522847,5.00000001 13,5.44771526 13,6.00000001 L12.9988571,11.564 L16.4331669,14.6049863 C16.8222873,14.9493998 16.8585295,15.5440465 16.514116,15.9331669 C16.5014615,15.9474641 16.4883746,15.9613728 16.4748737,15.9748737 C16.0775779,16.3721696 15.4396827,16.3915906 15.0189533,16.0191999 L11.3346,12.7581506 C11.2048932,12.6433461 11.1143951,12.5007379 11.0641345,12.347206 L11.0509807,12.3160773 C11.0179086,12.2167311 11,12.1104569 11,12 L11,6.00000001 C11,5.44771526 11.4477153,5.00000001 12,5.00000001 Z"
+            />
+          </svg>
         </span>
+        <input
+          value=""
+        />
       </span>
     </div>
   </div>
@@ -2284,15 +2126,15 @@ exports[`TimePicker demo -- size 1`] = `
 
 exports[`TimePicker demo -- timePicker 1`] = `
 Array [
-  .emotion-66 {
+  .emotion-67 {
   font-size: 12px;
 }
 
-.emotion-66 .uc-fe-form-item {
+.emotion-67 .uc-fe-form-item {
   margin-bottom: 16px;
 }
 
-.emotion-66 .uc-fe-form-item:last-child {
+.emotion-67 .uc-fe-form-item:last-child {
   margin-bottom: 0;
 }
 
@@ -2458,9 +2300,17 @@ Array [
   display: none;
 }
 
-.emotion-15 {
+.emotion-16 {
   position: relative;
   box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -2470,19 +2320,87 @@ Array [
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
 }
 
-.emotion-15:hover {
+.emotion-16,
+.emotion-16 input,
+.emotion-16 .e1bl81de0 {
+  padding: 0 4px;
+}
+
+.emotion-16:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-15 .uc-fe-input-clear {
+.emotion-16 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-16 input,
+.emotion-16 input:hover,
+.emotion-16 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-16 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-16 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-16 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-16 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-16 input::-ms-clear {
+  display: none;
+}
+
+.emotion-16 .e1bl81de0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-16 .e1bl81de0:empty {
+  display: none;
+}
+
+.emotion-16 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -2499,144 +2417,60 @@ Array [
   transition: opacity 0.3s;
 }
 
-.emotion-15 .uc-fe-input-wrap,
-.emotion-15 .uc-fe-input-prefix,
-.emotion-15 .uc-fe-input-suffix,
-.emotion-15 .uc-fe-input-clear,
-.emotion-15 input {
-  padding: 0 4px;
-}
-
-.emotion-15.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-15 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-15 .uc-fe-input-prefix,
-.emotion-15 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-15 input {
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
-  -webkit-flex: 1 1 130px;
-  -ms-flex: 1 1 130px;
-  flex: 1 1 130px;
-  min-width: 0px;
-}
-
-.emotion-15 input,
-.emotion-15 input:hover,
-.emotion-15 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-15 input::-webkit-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-15 input::-moz-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-15 input:-ms-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-15 input::placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-15 input::-ms-clear {
-  display: none;
-}
-
-.emotion-15:hover .uc-fe-input-clear,
-.emotion-15.uc-fe-input-focused .uc-fe-input-clear {
+.emotion-16:hover .uc-fe-input-clear,
+.emotion-16.uc-fe-input-focused .uc-fe-input-clear {
   opacity: 1;
   cursor: pointer;
 }
 
-.emotion-57 {
+.emotion-58 {
   position: relative;
   margin-bottom: -8px;
 }
 
-.emotion-57 .uc-fe-radio-styletype-default,
-.emotion-57 .uc-fe-radio-styletype-tag {
+.emotion-58 .uc-fe-radio-styletype-default,
+.emotion-58 .uc-fe-radio-styletype-tag {
   margin-right: 8px;
   margin-bottom: 8px;
 }
 
-.emotion-57 .uc-fe-radio-styletype-default:last-child,
-.emotion-57 .uc-fe-radio-styletype-tag:last-child {
+.emotion-58 .uc-fe-radio-styletype-default:last-child,
+.emotion-58 .uc-fe-radio-styletype-tag:last-child {
   margin-right: 0;
 }
 
-.emotion-57 .uc-fe-radio-styletype-card {
+.emotion-58 .uc-fe-radio-styletype-card {
   margin-right: 12px;
   margin-bottom: 8px;
 }
 
-.emotion-57 .uc-fe-radio-styletype-card:last-child {
+.emotion-58 .uc-fe-radio-styletype-card:last-child {
   margin-right: 0;
 }
 
-.emotion-57 .uc-fe-radio-styletype-text+.uc-fe-radio-styletype-text {
+.emotion-58 .uc-fe-radio-styletype-text+.uc-fe-radio-styletype-text {
   margin-left: -1px;
 }
 
-.emotion-57 .uc-fe-radio-styletype-button {
+.emotion-58 .uc-fe-radio-styletype-button {
   margin-right: -1px;
   margin-bottom: 8px;
 }
 
-.emotion-57 .uc-fe-radio-styletype-button:first-of-type {
+.emotion-58 .uc-fe-radio-styletype-button:first-of-type {
   border-radius: 2px 0 0 2px;
 }
 
-.emotion-57 .uc-fe-radio-styletype-button:last-of-type {
+.emotion-58 .uc-fe-radio-styletype-button:last-of-type {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
 }
 
-.emotion-57 .uc-fe-radio-styletype-list:last-of-type {
+.emotion-58 .uc-fe-radio-styletype-list:last-of-type {
   margin-bottom: 8px;
 }
 
-.emotion-43 {
+.emotion-44 {
   color: #526075;
   font-size: 12px;
   position: relative;
@@ -2649,27 +2483,27 @@ Array [
   color: #0a1633;
 }
 
-.emotion-43 > * {
+.emotion-44 > * {
   font-size: 12px;
 }
 
-.emotion-43 .uc-fe-radio-content {
+.emotion-44 .uc-fe-radio-content {
   display: inline-block;
   vertical-align: middle;
   max-height: 100%;
   margin-left: 8px;
 }
 
-.emotion-43.uc-fe-radio-disabled {
+.emotion-44.uc-fe-radio-disabled {
   cursor: default;
   color: #cccccc;
 }
 
-.emotion-43:hover .uc-fe-radio-icon-wrap {
+.emotion-44:hover .uc-fe-radio-icon-wrap {
   border-color: #3860f4;
 }
 
-.emotion-41.uc-fe-radio-icon-wrap {
+.emotion-42.uc-fe-radio-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -2681,7 +2515,7 @@ Array [
   vertical-align: middle;
 }
 
-.emotion-41 .uc-fe-radio-icon {
+.emotion-42 .uc-fe-radio-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -2689,7 +2523,7 @@ Array [
   left: -1px;
 }
 
-.emotion-39 {
+.emotion-40 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -2699,7 +2533,7 @@ Array [
   height: 14px;
 }
 
-.emotion-49 {
+.emotion-50 {
   color: #526075;
   font-size: 12px;
   position: relative;
@@ -2712,23 +2546,23 @@ Array [
   color: #0a1633;
 }
 
-.emotion-49 > * {
+.emotion-50 > * {
   font-size: 12px;
 }
 
-.emotion-49 .uc-fe-radio-content {
+.emotion-50 .uc-fe-radio-content {
   display: inline-block;
   vertical-align: middle;
   max-height: 100%;
   margin-left: 8px;
 }
 
-.emotion-49.uc-fe-radio-disabled {
+.emotion-50.uc-fe-radio-disabled {
   cursor: default;
   color: #cccccc;
 }
 
-.emotion-47.uc-fe-radio-icon-wrap {
+.emotion-48.uc-fe-radio-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -2740,7 +2574,7 @@ Array [
   vertical-align: middle;
 }
 
-.emotion-47 .uc-fe-radio-icon {
+.emotion-48 .uc-fe-radio-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -2748,25 +2582,25 @@ Array [
   left: -1px;
 }
 
-.emotion-47.uc-fe-radio-icon-wrap {
+.emotion-48.uc-fe-radio-icon-wrap {
   border-color: #3860f4;
 }
 
-.emotion-47 .uc-fe-radio-icon {
+.emotion-48 .uc-fe-radio-icon {
   visibility: visible;
   opacity: 1;
   fill: #3860f4;
 }
 
-.emotion-66 {
+.emotion-67 {
   font-size: 12px;
 }
 
-.emotion-66 .uc-fe-form-item {
+.emotion-67 .uc-fe-form-item {
   margin-bottom: 16px;
 }
 
-.emotion-66 .uc-fe-form-item:last-child {
+.emotion-67 .uc-fe-form-item:last-child {
   margin-bottom: 0;
 }
 
@@ -2932,9 +2766,17 @@ Array [
   display: none;
 }
 
-.emotion-15 {
+.emotion-16 {
   position: relative;
   box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -2944,19 +2786,87 @@ Array [
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
 }
 
-.emotion-15:hover {
+.emotion-16,
+.emotion-16 input,
+.emotion-16 .e1bl81de0 {
+  padding: 0 4px;
+}
+
+.emotion-16:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-15 .uc-fe-input-clear {
+.emotion-16 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-16 input,
+.emotion-16 input:hover,
+.emotion-16 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-16 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-16 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-16 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-16 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-16 input::-ms-clear {
+  display: none;
+}
+
+.emotion-16 .e1bl81de0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-16 .e1bl81de0:empty {
+  display: none;
+}
+
+.emotion-16 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -2973,144 +2883,60 @@ Array [
   transition: opacity 0.3s;
 }
 
-.emotion-15 .uc-fe-input-wrap,
-.emotion-15 .uc-fe-input-prefix,
-.emotion-15 .uc-fe-input-suffix,
-.emotion-15 .uc-fe-input-clear,
-.emotion-15 input {
-  padding: 0 4px;
-}
-
-.emotion-15.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-15 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-15 .uc-fe-input-prefix,
-.emotion-15 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-15 input {
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
-  -webkit-flex: 1 1 130px;
-  -ms-flex: 1 1 130px;
-  flex: 1 1 130px;
-  min-width: 0px;
-}
-
-.emotion-15 input,
-.emotion-15 input:hover,
-.emotion-15 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-15 input::-webkit-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-15 input::-moz-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-15 input:-ms-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-15 input::placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-15 input::-ms-clear {
-  display: none;
-}
-
-.emotion-15:hover .uc-fe-input-clear,
-.emotion-15.uc-fe-input-focused .uc-fe-input-clear {
+.emotion-16:hover .uc-fe-input-clear,
+.emotion-16.uc-fe-input-focused .uc-fe-input-clear {
   opacity: 1;
   cursor: pointer;
 }
 
-.emotion-57 {
+.emotion-58 {
   position: relative;
   margin-bottom: -8px;
 }
 
-.emotion-57 .uc-fe-radio-styletype-default,
-.emotion-57 .uc-fe-radio-styletype-tag {
+.emotion-58 .uc-fe-radio-styletype-default,
+.emotion-58 .uc-fe-radio-styletype-tag {
   margin-right: 8px;
   margin-bottom: 8px;
 }
 
-.emotion-57 .uc-fe-radio-styletype-default:last-child,
-.emotion-57 .uc-fe-radio-styletype-tag:last-child {
+.emotion-58 .uc-fe-radio-styletype-default:last-child,
+.emotion-58 .uc-fe-radio-styletype-tag:last-child {
   margin-right: 0;
 }
 
-.emotion-57 .uc-fe-radio-styletype-card {
+.emotion-58 .uc-fe-radio-styletype-card {
   margin-right: 12px;
   margin-bottom: 8px;
 }
 
-.emotion-57 .uc-fe-radio-styletype-card:last-child {
+.emotion-58 .uc-fe-radio-styletype-card:last-child {
   margin-right: 0;
 }
 
-.emotion-57 .uc-fe-radio-styletype-text+.uc-fe-radio-styletype-text {
+.emotion-58 .uc-fe-radio-styletype-text+.uc-fe-radio-styletype-text {
   margin-left: -1px;
 }
 
-.emotion-57 .uc-fe-radio-styletype-button {
+.emotion-58 .uc-fe-radio-styletype-button {
   margin-right: -1px;
   margin-bottom: 8px;
 }
 
-.emotion-57 .uc-fe-radio-styletype-button:first-of-type {
+.emotion-58 .uc-fe-radio-styletype-button:first-of-type {
   border-radius: 2px 0 0 2px;
 }
 
-.emotion-57 .uc-fe-radio-styletype-button:last-of-type {
+.emotion-58 .uc-fe-radio-styletype-button:last-of-type {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
 }
 
-.emotion-57 .uc-fe-radio-styletype-list:last-of-type {
+.emotion-58 .uc-fe-radio-styletype-list:last-of-type {
   margin-bottom: 8px;
 }
 
-.emotion-43 {
+.emotion-44 {
   color: #526075;
   font-size: 12px;
   position: relative;
@@ -3123,27 +2949,27 @@ Array [
   color: #0a1633;
 }
 
-.emotion-43 > * {
+.emotion-44 > * {
   font-size: 12px;
 }
 
-.emotion-43 .uc-fe-radio-content {
+.emotion-44 .uc-fe-radio-content {
   display: inline-block;
   vertical-align: middle;
   max-height: 100%;
   margin-left: 8px;
 }
 
-.emotion-43.uc-fe-radio-disabled {
+.emotion-44.uc-fe-radio-disabled {
   cursor: default;
   color: #cccccc;
 }
 
-.emotion-43:hover .uc-fe-radio-icon-wrap {
+.emotion-44:hover .uc-fe-radio-icon-wrap {
   border-color: #3860f4;
 }
 
-.emotion-41.uc-fe-radio-icon-wrap {
+.emotion-42.uc-fe-radio-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -3155,7 +2981,7 @@ Array [
   vertical-align: middle;
 }
 
-.emotion-41 .uc-fe-radio-icon {
+.emotion-42 .uc-fe-radio-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -3163,7 +2989,7 @@ Array [
   left: -1px;
 }
 
-.emotion-39 {
+.emotion-40 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -3173,7 +2999,7 @@ Array [
   height: 14px;
 }
 
-.emotion-49 {
+.emotion-50 {
   color: #526075;
   font-size: 12px;
   position: relative;
@@ -3186,23 +3012,23 @@ Array [
   color: #0a1633;
 }
 
-.emotion-49 > * {
+.emotion-50 > * {
   font-size: 12px;
 }
 
-.emotion-49 .uc-fe-radio-content {
+.emotion-50 .uc-fe-radio-content {
   display: inline-block;
   vertical-align: middle;
   max-height: 100%;
   margin-left: 8px;
 }
 
-.emotion-49.uc-fe-radio-disabled {
+.emotion-50.uc-fe-radio-disabled {
   cursor: default;
   color: #cccccc;
 }
 
-.emotion-47.uc-fe-radio-icon-wrap {
+.emotion-48.uc-fe-radio-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -3214,7 +3040,7 @@ Array [
   vertical-align: middle;
 }
 
-.emotion-47 .uc-fe-radio-icon {
+.emotion-48 .uc-fe-radio-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -3222,18 +3048,18 @@ Array [
   left: -1px;
 }
 
-.emotion-47.uc-fe-radio-icon-wrap {
+.emotion-48.uc-fe-radio-icon-wrap {
   border-color: #3860f4;
 }
 
-.emotion-47 .uc-fe-radio-icon {
+.emotion-48 .uc-fe-radio-icon {
   visibility: visible;
   opacity: 1;
   fill: #3860f4;
 }
 
 <form
-    class="uc-fe-form demo-form emotion-66 emotion-90"
+    class="uc-fe-form demo-form emotion-67 emotion-90"
   >
     <div
       class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10 emotion-11"
@@ -3291,15 +3117,11 @@ Array [
         span="9"
       >
         <span
-          class="uc-fe-input emotion-15 emotion-16"
+          class="uc-fe-input emotion-15 emotion-16 emotion-17"
         >
-          <span
-            class="uc-fe-input-wrap"
-          >
-            <input
-              value="HH:mm:ss"
-            />
-          </span>
+          <input
+            value="HH:mm:ss"
+          />
         </span>
       </div>
     </div>
@@ -3359,16 +3181,16 @@ Array [
         span="9"
       >
         <div
-          class="emotion-57 emotion-58"
+          class="emotion-58 emotion-59"
         >
           <span
-            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-43 emotion-44"
+            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-44 emotion-45"
           >
             <span
-              class="uc-fe-radio-icon-wrap emotion-41 emotion-42"
+              class="uc-fe-radio-icon-wrap emotion-42 emotion-43"
             >
               <svg
-                class="uc-fe-radio-icon emotion-39 emotion-40"
+                class="uc-fe-radio-icon emotion-40 emotion-41"
                 viewBox="0 0 24 24"
               >
                 <circle
@@ -3386,14 +3208,14 @@ Array [
           </span>
           <span
             checked=""
-            class="uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-49 emotion-44"
+            class="uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-50 emotion-45"
           >
             <span
               checked=""
-              class="uc-fe-radio-icon-wrap emotion-47 emotion-42"
+              class="uc-fe-radio-icon-wrap emotion-48 emotion-43"
             >
               <svg
-                class="uc-fe-radio-icon emotion-39 emotion-40"
+                class="uc-fe-radio-icon emotion-40 emotion-41"
                 viewBox="0 0 24 24"
               >
                 <circle
@@ -3410,13 +3232,13 @@ Array [
             </span>
           </span>
           <span
-            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-43 emotion-44"
+            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-44 emotion-45"
           >
             <span
-              class="uc-fe-radio-icon-wrap emotion-41 emotion-42"
+              class="uc-fe-radio-icon-wrap emotion-42 emotion-43"
             >
               <svg
-                class="uc-fe-radio-icon emotion-39 emotion-40"
+                class="uc-fe-radio-icon emotion-40 emotion-41"
                 viewBox="0 0 24 24"
               >
                 <circle
@@ -3436,14 +3258,22 @@ Array [
       </div>
     </div>
   </form>,
-  .emotion-4 {
+  .emotion-7 {
   display: inline-block;
   width: 140px;
 }
 
-.emotion-2 {
+.emotion-5 {
   position: relative;
   box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -3453,19 +3283,87 @@ Array [
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
 }
 
-.emotion-2:hover {
+.emotion-5,
+.emotion-5 input,
+.emotion-5 .emotion-3 {
+  padding: 0 4px;
+}
+
+.emotion-5:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-2 .uc-fe-input-clear {
+.emotion-5 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-5 input,
+.emotion-5 input:hover,
+.emotion-5 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-5 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input::-ms-clear {
+  display: none;
+}
+
+.emotion-5 .emotion-3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-5 .emotion-3:empty {
+  display: none;
+}
+
+.emotion-5 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -3480,90 +3378,6 @@ Array [
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
-}
-
-.emotion-2 .uc-fe-input-wrap,
-.emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix,
-.emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
-  padding: 0 4px;
-}
-
-.emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-2 input {
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
-  -webkit-flex: 1 1 130px;
-  -ms-flex: 1 1 130px;
-  flex: 1 1 130px;
-  min-width: 0px;
-}
-
-.emotion-2 input,
-.emotion-2 input:hover,
-.emotion-2 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-2 input::-webkit-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input::-moz-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input:-ms-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input::placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input::-ms-clear {
-  display: none;
 }
 
 .emotion-0 {
@@ -3576,14 +3390,22 @@ Array [
   height: 12px;
 }
 
-.emotion-4 {
+.emotion-7 {
   display: inline-block;
   width: 140px;
 }
 
-.emotion-2 {
+.emotion-5 {
   position: relative;
   box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -3593,19 +3415,87 @@ Array [
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
 }
 
-.emotion-2:hover {
+.emotion-5,
+.emotion-5 input,
+.emotion-5 .emotion-3 {
+  padding: 0 4px;
+}
+
+.emotion-5:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-2 .uc-fe-input-clear {
+.emotion-5 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-5 input,
+.emotion-5 input:hover,
+.emotion-5 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-5 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-5 input::-ms-clear {
+  display: none;
+}
+
+.emotion-5 .emotion-3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-5 .emotion-3:empty {
+  display: none;
+}
+
+.emotion-5 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -3620,90 +3510,6 @@ Array [
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
-}
-
-.emotion-2 .uc-fe-input-wrap,
-.emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix,
-.emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
-  padding: 0 4px;
-}
-
-.emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-2 input {
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
-  -webkit-flex: 1 1 130px;
-  -ms-flex: 1 1 130px;
-  flex: 1 1 130px;
-  min-width: 0px;
-}
-
-.emotion-2 input,
-.emotion-2 input:hover,
-.emotion-2 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-2 input::-webkit-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input::-moz-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input:-ms-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input::placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-2 input::-ms-clear {
-  display: none;
 }
 
 .emotion-0 {
@@ -3720,30 +3526,26 @@ Array [
     class="demo-wrap"
   >
     <div
-      class="uc-fe-timepicker emotion-4 emotion-5"
+      class="uc-fe-timepicker emotion-7 emotion-8"
     >
       <span
-        class="uc-fe-input emotion-2 emotion-3"
+        class="uc-fe-input emotion-4 emotion-5 emotion-6"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-prefix emotion-2 emotion-3"
         >
-          <span
-            class="uc-fe-input-prefix"
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
           >
-            <svg
-              class=" emotion-0 emotion-1"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12,2.00000001 C17.5228474,2.00000001 22,6.4771525 22,12 C22,17.5228474 17.5228474,22 12,22 C6.4771525,22 2.00000001,17.5228474 2.00000001,12 C2.00000001,6.4771525 6.4771525,2.00000001 12,2.00000001 Z M12,3.99999999 C7.58172201,3.99999999 3.99999999,7.58172201 3.99999999,12 C3.99999999,16.418278 7.58172201,20 12,20 C16.418278,20 20,16.418278 20,12 C20,7.58172201 16.418278,3.99999999 12,3.99999999 Z M12,5.00000001 C12.5522847,5.00000001 13,5.44771526 13,6.00000001 L12.9988571,11.564 L16.4331669,14.6049863 C16.8222873,14.9493998 16.8585295,15.5440465 16.514116,15.9331669 C16.5014615,15.9474641 16.4883746,15.9613728 16.4748737,15.9748737 C16.0775779,16.3721696 15.4396827,16.3915906 15.0189533,16.0191999 L11.3346,12.7581506 C11.2048932,12.6433461 11.1143951,12.5007379 11.0641345,12.347206 L11.0509807,12.3160773 C11.0179086,12.2167311 11,12.1104569 11,12 L11,6.00000001 C11,5.44771526 11.4477153,5.00000001 12,5.00000001 Z"
-              />
-            </svg>
-          </span>
-          <input
-            value=""
-          />
+            <path
+              d="M12,2.00000001 C17.5228474,2.00000001 22,6.4771525 22,12 C22,17.5228474 17.5228474,22 12,22 C6.4771525,22 2.00000001,17.5228474 2.00000001,12 C2.00000001,6.4771525 6.4771525,2.00000001 12,2.00000001 Z M12,3.99999999 C7.58172201,3.99999999 3.99999999,7.58172201 3.99999999,12 C3.99999999,16.418278 7.58172201,20 12,20 C16.418278,20 20,16.418278 20,12 C20,7.58172201 16.418278,3.99999999 12,3.99999999 Z M12,5.00000001 C12.5522847,5.00000001 13,5.44771526 13,6.00000001 L12.9988571,11.564 L16.4331669,14.6049863 C16.8222873,14.9493998 16.8585295,15.5440465 16.514116,15.9331669 C16.5014615,15.9474641 16.4883746,15.9613728 16.4748737,15.9748737 C16.0775779,16.3721696 15.4396827,16.3915906 15.0189533,16.0191999 L11.3346,12.7581506 C11.2048932,12.6433461 11.1143951,12.5007379 11.0641345,12.347206 L11.0509807,12.3160773 C11.0179086,12.2167311 11,12.1104569 11,12 L11,6.00000001 C11,5.44771526 11.4477153,5.00000001 12,5.00000001 Z"
+            />
+          </svg>
         </span>
+        <input
+          value=""
+        />
       </span>
     </div>
   </div>,

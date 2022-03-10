@@ -5655,15 +5655,15 @@ exports[`Switch demo -- switch 1`] = `
   display: none;
 }
 
-.emotion-78 {
+.emotion-80 {
   font-size: 12px;
 }
 
-.emotion-78 .uc-fe-form-item {
+.emotion-80 .uc-fe-form-item {
   margin-bottom: 16px;
 }
 
-.emotion-78 .uc-fe-form-item:last-child {
+.emotion-80 .uc-fe-form-item:last-child {
   margin-bottom: 0;
 }
 
@@ -5887,9 +5887,17 @@ exports[`Switch demo -- switch 1`] = `
   fill: #3860f4;
 }
 
-.emotion-57 {
+.emotion-58 {
   position: relative;
   box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -5899,19 +5907,87 @@ exports[`Switch demo -- switch 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
 }
 
-.emotion-57:hover {
+.emotion-58,
+.emotion-58 input,
+.emotion-58 .e1bl81de0 {
+  padding: 0 4px;
+}
+
+.emotion-58:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-57 .uc-fe-input-clear {
+.emotion-58 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-58 input,
+.emotion-58 input:hover,
+.emotion-58 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-58 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-58 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-58 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-58 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-58 input::-ms-clear {
+  display: none;
+}
+
+.emotion-58 .e1bl81de0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-58 .e1bl81de0:empty {
+  display: none;
+}
+
+.emotion-58 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -5928,92 +6004,8 @@ exports[`Switch demo -- switch 1`] = `
   transition: opacity 0.3s;
 }
 
-.emotion-57 .uc-fe-input-wrap,
-.emotion-57 .uc-fe-input-prefix,
-.emotion-57 .uc-fe-input-suffix,
-.emotion-57 .uc-fe-input-clear,
-.emotion-57 input {
-  padding: 0 4px;
-}
-
-.emotion-57.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-57 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-57 .uc-fe-input-prefix,
-.emotion-57 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-57 input {
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
-  -webkit-flex: 1 1 130px;
-  -ms-flex: 1 1 130px;
-  flex: 1 1 130px;
-  min-width: 0px;
-}
-
-.emotion-57 input,
-.emotion-57 input:hover,
-.emotion-57 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-57 input::-webkit-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-57 input::-moz-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-57 input:-ms-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-57 input::placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-57 input::-ms-clear {
-  display: none;
-}
-
-.emotion-57:hover .uc-fe-input-clear,
-.emotion-57.uc-fe-input-focused .uc-fe-input-clear {
+.emotion-58:hover .uc-fe-input-clear,
+.emotion-58.uc-fe-input-focused .uc-fe-input-clear {
   opacity: 1;
   cursor: pointer;
 }
@@ -6256,15 +6248,15 @@ exports[`Switch demo -- switch 1`] = `
   display: none;
 }
 
-.emotion-78 {
+.emotion-80 {
   font-size: 12px;
 }
 
-.emotion-78 .uc-fe-form-item {
+.emotion-80 .uc-fe-form-item {
   margin-bottom: 16px;
 }
 
-.emotion-78 .uc-fe-form-item:last-child {
+.emotion-80 .uc-fe-form-item:last-child {
   margin-bottom: 0;
 }
 
@@ -6488,9 +6480,17 @@ exports[`Switch demo -- switch 1`] = `
   fill: #3860f4;
 }
 
-.emotion-57 {
+.emotion-58 {
   position: relative;
   box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -6500,19 +6500,87 @@ exports[`Switch demo -- switch 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
 }
 
-.emotion-57:hover {
+.emotion-58,
+.emotion-58 input,
+.emotion-58 .e1bl81de0 {
+  padding: 0 4px;
+}
+
+.emotion-58:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-57 .uc-fe-input-clear {
+.emotion-58 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-58 input,
+.emotion-58 input:hover,
+.emotion-58 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-58 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-58 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-58 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-58 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-58 input::-ms-clear {
+  display: none;
+}
+
+.emotion-58 .e1bl81de0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-58 .e1bl81de0:empty {
+  display: none;
+}
+
+.emotion-58 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -6529,99 +6597,15 @@ exports[`Switch demo -- switch 1`] = `
   transition: opacity 0.3s;
 }
 
-.emotion-57 .uc-fe-input-wrap,
-.emotion-57 .uc-fe-input-prefix,
-.emotion-57 .uc-fe-input-suffix,
-.emotion-57 .uc-fe-input-clear,
-.emotion-57 input {
-  padding: 0 4px;
-}
-
-.emotion-57.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-57 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-57 .uc-fe-input-prefix,
-.emotion-57 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-57 input {
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
-  -webkit-flex: 1 1 130px;
-  -ms-flex: 1 1 130px;
-  flex: 1 1 130px;
-  min-width: 0px;
-}
-
-.emotion-57 input,
-.emotion-57 input:hover,
-.emotion-57 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-57 input::-webkit-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-57 input::-moz-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-57 input:-ms-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-57 input::placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-57 input::-ms-clear {
-  display: none;
-}
-
-.emotion-57:hover .uc-fe-input-clear,
-.emotion-57.uc-fe-input-focused .uc-fe-input-clear {
+.emotion-58:hover .uc-fe-input-clear,
+.emotion-58.uc-fe-input-focused .uc-fe-input-clear {
   opacity: 1;
   cursor: pointer;
 }
 
 <div>
   <form
-    class="uc-fe-form demo-form emotion-78 emotion-270"
+    class="uc-fe-form demo-form emotion-80 emotion-270"
   >
     <div
       class="uc-fe-row uc-fe-form-item emotion-26 emotion-27 emotion-28 emotion-29"
@@ -6812,15 +6796,11 @@ exports[`Switch demo -- switch 1`] = `
         span="9"
       >
         <span
-          class="uc-fe-input emotion-57 emotion-58"
+          class="uc-fe-input emotion-57 emotion-58 emotion-59"
         >
-          <span
-            class="uc-fe-input-wrap"
-          >
-            <input
-              value="ON"
-            />
-          </span>
+          <input
+            value="ON"
+          />
         </span>
       </div>
     </div>
@@ -6838,15 +6818,11 @@ exports[`Switch demo -- switch 1`] = `
         span="9"
       >
         <span
-          class="uc-fe-input emotion-57 emotion-58"
+          class="uc-fe-input emotion-57 emotion-58 emotion-59"
         >
-          <span
-            class="uc-fe-input-wrap"
-          >
-            <input
-              value="OFF"
-            />
-          </span>
+          <input
+            value="OFF"
+          />
         </span>
       </div>
     </div>

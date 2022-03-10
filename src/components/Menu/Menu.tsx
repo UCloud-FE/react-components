@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, ReactNode, useCallback, useMemo, useRef } from 'react';
+import React, { HTMLAttributes, ReactNode, Ref, useCallback, useImperativeHandle, useMemo, useRef } from 'react';
 import classnames from 'classnames';
 
 import Checkbox from 'src/components/Checkbox';
@@ -163,114 +163,140 @@ export const strictGroupChildrenAsDataSource = (
     return [...group(children, false, 'group-root'), subGroupMap, childrenMap];
 };
 
-const Menu = ({
-    selectedKeys: _selectedKeys,
-    defaultSelectedKeys = [],
-    onChange: _onChange,
-    selectable = true,
-    multiple = false,
-    showSelectAll,
-    disabled,
-    block,
-    locale: _locale,
-    className,
-    children,
-    dataSource,
-    collapseProps,
-    virtualList,
-    ...rest
-}: MenuProps & Override<HTMLAttributes<HTMLDivElement>, MenuProps>) => {
-    let [selectedKeys, onSelectedKeysChange] = useUncontrolled(_selectedKeys, defaultSelectedKeys, _onChange);
-    // clean selectedStatus here
-    let onChange = useCallback((keys: Key[]) => onSelectedKeysChange(keys), [onSelectedKeysChange]);
-    if (!selectable) {
-        // when unselectable clean selectedKeys and onChange handle
-        selectedKeys = [];
-        onChange = noop;
-    }
-    const locale = useLocale(LOCALE, 'Menu', _locale);
-    const [validKeys, disabledKeys, renderChildren, subGroupMap] = useMemo(
-        () =>
-            dataSource
-                ? dataSource
-                : (virtualList ? strictGroupChildrenAsDataSource : groupChildrenAsDataSource)(children, disabled, {
-                      itemTag: 'isMenuItem',
-                      subGroupTag: 'isMenuSubMenu',
-                      itemKeyName: 'itemKey',
-                      subGroupKeyName: 'subMenuKey'
-                  }),
-        [children, dataSource, disabled, virtualList]
-    );
-    const [collapseContext] = useCollapse(collapseProps || {});
+export interface MenuRef {
+    selectAll: () => void;
+}
 
-    const [groupContext, selectedStatus, toggleAllItems] = useGroup(
-        selectedKeys,
-        onChange,
-        multiple,
-        validKeys,
-        disabledKeys,
-        subGroupMap
-    );
-    const selectAllCheckbox = useMemo(
-        () =>
-            selectable &&
-            multiple &&
-            showSelectAll && (
-                <div className={classnames(selectallWrapCls, disabled && disabledCls)} key="menu-select-all">
-                    <Checkbox
-                        className={checkboxCls}
-                        checked={selectedStatus === 'ALL'}
-                        indeterminate={selectedStatus === 'PART'}
-                        onChange={toggleAllItems}
-                        size="lg"
-                        disabled={disabled}
-                    >
-                        {locale.selectAll}
-                    </Checkbox>
-                </div>
-            ),
-        [disabled, locale.selectAll, multiple, selectable, selectedStatus, showSelectAll, toggleAllItems]
-    );
-
-    const renderList = useMemo(() => {
-        if (virtualList) {
-            const virtualRenderChildren: ReactNode[] = (selectAllCheckbox
-                ? [selectAllCheckbox as ReactNode]
-                : []
-            ).concat(renderChildren as ReactNode[]);
-            const virtualInfo = typeof virtualList === 'object' ? virtualList : { simple: false, height: 200 };
-            return virtualInfo.simple ? (
-                <SimpleVirtualScrollList height={virtualInfo.height ?? 200} width="100%">
-                    {virtualRenderChildren}
-                </SimpleVirtualScrollList>
-            ) : (
-                <VirtualScrollList height={virtualInfo.height ?? 200} width="100%">
-                    {virtualRenderChildren}
-                </VirtualScrollList>
-            );
-        } else {
-            return (
-                <div>
-                    {selectAllCheckbox}
-                    {renderChildren}
-                </div>
-            );
+const Menu = React.forwardRef(
+    (
+        {
+            selectedKeys: _selectedKeys,
+            defaultSelectedKeys = [],
+            onChange: _onChange,
+            selectable = true,
+            multiple = false,
+            showSelectAll,
+            disabled,
+            block,
+            locale: _locale,
+            className,
+            children,
+            dataSource,
+            collapseProps,
+            virtualList,
+            ...rest
+        }: MenuProps & Override<HTMLAttributes<HTMLDivElement>, MenuProps>,
+        ref: Ref<MenuRef>
+    ) => {
+        let [selectedKeys, onSelectedKeysChange] = useUncontrolled(_selectedKeys, defaultSelectedKeys, _onChange);
+        // clean selectedStatus here
+        let onChange = useCallback((keys: Key[]) => onSelectedKeysChange(keys), [onSelectedKeysChange]);
+        if (!selectable) {
+            // when unselectable clean selectedKeys and onChange handle
+            selectedKeys = [];
+            onChange = noop;
         }
-    }, [renderChildren, selectAllCheckbox, virtualList]);
+        const locale = useLocale(LOCALE, 'Menu', _locale);
+        const [validKeys, disabledKeys, renderChildren, subGroupMap] = useMemo(
+            () =>
+                dataSource
+                    ? dataSource
+                    : (virtualList ? strictGroupChildrenAsDataSource : groupChildrenAsDataSource)(children, disabled, {
+                          itemTag: 'isMenuItem',
+                          subGroupTag: 'isMenuSubMenu',
+                          itemKeyName: 'itemKey',
+                          subGroupKeyName: 'subMenuKey'
+                      }),
+            [children, dataSource, disabled, virtualList]
+        );
+        const [collapseContext] = useCollapse(collapseProps || {});
 
-    return (
-        <CollapseContext.Provider value={collapseContext}>
-            <MenuContext.Provider value={{ ...groupContext, locale }}>
-                <MenuWrap
-                    className={classnames(className, prefixCls, multiple ? multipleCls : singleCls, block && blockCls)}
-                    {...rest}
-                >
-                    {renderList}
-                </MenuWrap>
-            </MenuContext.Provider>
-        </CollapseContext.Provider>
-    );
-};
+        const [groupContext, selectedStatus, toggleAllItems] = useGroup(
+            selectedKeys,
+            onChange,
+            multiple,
+            validKeys,
+            disabledKeys,
+            subGroupMap
+        );
+        const selectAllCheckbox = useMemo(
+            () =>
+                selectable &&
+                multiple &&
+                showSelectAll && (
+                    <div className={classnames(selectallWrapCls, disabled && disabledCls)} key="menu-select-all">
+                        <Checkbox
+                            className={checkboxCls}
+                            checked={selectedStatus === 'ALL'}
+                            indeterminate={selectedStatus === 'PART'}
+                            onChange={toggleAllItems}
+                            size="lg"
+                            disabled={disabled}
+                        >
+                            {locale.selectAll}
+                        </Checkbox>
+                    </div>
+                ),
+            [disabled, locale.selectAll, multiple, selectable, selectedStatus, showSelectAll, toggleAllItems]
+        );
+
+        const renderList = useMemo(() => {
+            if (virtualList) {
+                const virtualRenderChildren: ReactNode[] = (selectAllCheckbox
+                    ? [selectAllCheckbox as ReactNode]
+                    : []
+                ).concat(renderChildren as ReactNode[]);
+                const virtualInfo = typeof virtualList === 'object' ? virtualList : { simple: false, height: 200 };
+                return virtualInfo.simple ? (
+                    <SimpleVirtualScrollList height={virtualInfo.height ?? 200} width="100%">
+                        {virtualRenderChildren}
+                    </SimpleVirtualScrollList>
+                ) : (
+                    <VirtualScrollList height={virtualInfo.height ?? 200} width="100%">
+                        {virtualRenderChildren}
+                    </VirtualScrollList>
+                );
+            } else {
+                return (
+                    <div>
+                        {selectAllCheckbox}
+                        {renderChildren}
+                    </div>
+                );
+            }
+        }, [renderChildren, selectAllCheckbox, virtualList]);
+
+        useImperativeHandle(
+            ref,
+            () => {
+                return {
+                    selectAll: () => {
+                        toggleAllItems(true);
+                    }
+                };
+            },
+            [toggleAllItems]
+        );
+
+        return (
+            <CollapseContext.Provider value={collapseContext}>
+                <MenuContext.Provider value={{ ...groupContext, locale }}>
+                    <MenuWrap
+                        className={classnames(
+                            className,
+                            prefixCls,
+                            multiple ? multipleCls : singleCls,
+                            block && blockCls
+                        )}
+                        {...rest}
+                    >
+                        {renderList}
+                    </MenuWrap>
+                </MenuContext.Provider>
+            </CollapseContext.Provider>
+        );
+    }
+);
 
 const VirtualScrollList = ({
     children,

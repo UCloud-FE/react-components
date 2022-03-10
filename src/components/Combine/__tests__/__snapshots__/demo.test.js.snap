@@ -344,47 +344,41 @@ exports[`Combine demo -- combine 1`] = `
   display: none;
 }
 
-.emotion-126 > .uc-fe-combine-item,
-.emotion-126 > .uc-fe-combine-separator {
+.emotion-131 > .uc-fe-combine-item,
+.emotion-131 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-126 > .uc-fe-combine-item:focus {
+.emotion-131 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-126 > .uc-fe-combine-item:hover {
+.emotion-131 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-126 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-126 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-126 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-131 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-131 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-131 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
-.emotion-122 {
+.emotion-126 {
   box-sizing: border-box;
   position: relative;
   max-width: 100%;
+  min-width: 80px;
+  width: 180px;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
   color: #0a1633;
 }
 
-.emotion-120 {
-  margin: 0;
+.emotion-124 {
+  position: relative;
   box-sizing: border-box;
-  border-radius: 2px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  font-size: 12px;
-  white-space: nowrap;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -393,72 +387,6 @@ exports[`Combine demo -- combine 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
-  padding: 0 8px;
-  color: #0a1633;
-  fill: #0a1633;
-  background: #ffffff;
-  border: 1px solid #c3cad9;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  border-width: 1px;
-  border-style: solid;
-  padding: 0 7px;
-  line-height: 26px;
-  padding-right: 28px;
-  width: 100%;
-  min-width: 78px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  overflow: hidden;
-}
-
-.emotion-120:link,
-.emotion-120:visited {
-  color: #0a1633;
-}
-
-.emotion-120:hover,
-.emotion-120:active {
-  color: #3860f4;
-  fill: #3860f4;
-  border: 1px solid #d2d6ea;
-  background: #ffffff;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
-}
-
-.emotion-120 .uc-fe-select-content {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.emotion-117 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  display: inline-block;
-  vertical-align: middle;
-  fill: currentcolor;
-  width: 12px;
-  height: 12px;
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  margin-top: -6px;
-}
-
-.emotion-124 {
-  position: relative;
-  box-sizing: border-box;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -468,73 +396,26 @@ exports[`Combine demo -- combine 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.emotion-124,
+.emotion-124 input,
+.emotion-124 .emotion-117 {
+  padding: 0 4px;
 }
 
 .emotion-124:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
-}
-
-.emotion-124 .uc-fe-input-clear {
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #7a8baa;
-  fill: #7a8baa;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
-.emotion-124 .uc-fe-input-wrap,
-.emotion-124 .uc-fe-input-prefix,
-.emotion-124 .uc-fe-input-suffix,
-.emotion-124 .uc-fe-input-clear,
-.emotion-124 input {
-  padding: 0 4px;
-}
-
-.emotion-124.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-124 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-124 .uc-fe-input-prefix,
-.emotion-124 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
 }
 
 .emotion-124 input {
@@ -579,6 +460,178 @@ exports[`Combine demo -- combine 1`] = `
 
 .emotion-124 input::-ms-clear {
   display: none;
+}
+
+.emotion-124 .emotion-117 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-124 .emotion-117:empty {
+  display: none;
+}
+
+.emotion-124 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-124 input {
+  cursor: pointer;
+}
+
+.emotion-124 uc-fe-select-placeholder {
+  width: 0;
+  overflow: visible;
+}
+
+.emotion-118 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentcolor;
+  width: 12px;
+  height: 12px;
+}
+
+.emotion-129 {
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 28px;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  vertical-align: middle;
+}
+
+.emotion-129,
+.emotion-129 input,
+.emotion-129 .emotion-117 {
+  padding: 0 4px;
+}
+
+.emotion-129:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
+}
+
+.emotion-129 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-129 input,
+.emotion-129 input:hover,
+.emotion-129 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-129 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-129 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-129 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-129 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-129 input::-ms-clear {
+  display: none;
+}
+
+.emotion-129 .emotion-117 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-129 .emotion-117:empty {
+  display: none;
+}
+
+.emotion-129 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 
 .emotion-114 {
@@ -924,47 +977,41 @@ exports[`Combine demo -- combine 1`] = `
   display: none;
 }
 
-.emotion-126 > .uc-fe-combine-item,
-.emotion-126 > .uc-fe-combine-separator {
+.emotion-131 > .uc-fe-combine-item,
+.emotion-131 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-126 > .uc-fe-combine-item:focus {
+.emotion-131 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-126 > .uc-fe-combine-item:hover {
+.emotion-131 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-126 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-126 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-126 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-131 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-131 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-131 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
-.emotion-122 {
+.emotion-126 {
   box-sizing: border-box;
   position: relative;
   max-width: 100%;
+  min-width: 80px;
+  width: 180px;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
   color: #0a1633;
 }
 
-.emotion-120 {
-  margin: 0;
+.emotion-124 {
+  position: relative;
   box-sizing: border-box;
-  border-radius: 2px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  font-size: 12px;
-  white-space: nowrap;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -973,72 +1020,6 @@ exports[`Combine demo -- combine 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
-  padding: 0 8px;
-  color: #0a1633;
-  fill: #0a1633;
-  background: #ffffff;
-  border: 1px solid #c3cad9;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  border-width: 1px;
-  border-style: solid;
-  padding: 0 7px;
-  line-height: 26px;
-  padding-right: 28px;
-  width: 100%;
-  min-width: 78px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  overflow: hidden;
-}
-
-.emotion-120:link,
-.emotion-120:visited {
-  color: #0a1633;
-}
-
-.emotion-120:hover,
-.emotion-120:active {
-  color: #3860f4;
-  fill: #3860f4;
-  border: 1px solid #d2d6ea;
-  background: #ffffff;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
-}
-
-.emotion-120 .uc-fe-select-content {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.emotion-117 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  display: inline-block;
-  vertical-align: middle;
-  fill: currentcolor;
-  width: 12px;
-  height: 12px;
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  margin-top: -6px;
-}
-
-.emotion-124 {
-  position: relative;
-  box-sizing: border-box;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -1048,73 +1029,26 @@ exports[`Combine demo -- combine 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.emotion-124,
+.emotion-124 input,
+.emotion-124 .emotion-117 {
+  padding: 0 4px;
 }
 
 .emotion-124:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
-}
-
-.emotion-124 .uc-fe-input-clear {
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #7a8baa;
-  fill: #7a8baa;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
-.emotion-124 .uc-fe-input-wrap,
-.emotion-124 .uc-fe-input-prefix,
-.emotion-124 .uc-fe-input-suffix,
-.emotion-124 .uc-fe-input-clear,
-.emotion-124 input {
-  padding: 0 4px;
-}
-
-.emotion-124.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-124 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-124 .uc-fe-input-prefix,
-.emotion-124 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
 }
 
 .emotion-124 input {
@@ -1159,6 +1093,178 @@ exports[`Combine demo -- combine 1`] = `
 
 .emotion-124 input::-ms-clear {
   display: none;
+}
+
+.emotion-124 .emotion-117 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-124 .emotion-117:empty {
+  display: none;
+}
+
+.emotion-124 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-124 input {
+  cursor: pointer;
+}
+
+.emotion-124 uc-fe-select-placeholder {
+  width: 0;
+  overflow: visible;
+}
+
+.emotion-118 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentcolor;
+  width: 12px;
+  height: 12px;
+}
+
+.emotion-129 {
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 28px;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  vertical-align: middle;
+}
+
+.emotion-129,
+.emotion-129 input,
+.emotion-129 .emotion-117 {
+  padding: 0 4px;
+}
+
+.emotion-129:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
+}
+
+.emotion-129 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-129 input,
+.emotion-129 input:hover,
+.emotion-129 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-129 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-129 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-129 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-129 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-129 input::-ms-clear {
+  display: none;
+}
+
+.emotion-129 .emotion-117 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-129 .emotion-117:empty {
+  display: none;
+}
+
+.emotion-129 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 
 <div>
@@ -1528,50 +1634,55 @@ exports[`Combine demo -- combine 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-combine emotion-126 emotion-127"
+      class="uc-fe-combine emotion-131 emotion-132"
       spacing="md"
     >
       <div
         class="uc-fe-combine-item"
       >
         <div
-          class=" emotion-122 emotion-123"
+          class=" emotion-126 emotion-127"
         >
-          <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-119 emotion-120 emotion-121"
-            title="请选择"
-            type="button"
+          <span
+            class="uc-fe-input uc-fe-select-input emotion-122 emotion-123 emotion-124 emotion-125"
           >
-            <div
-              class="uc-fe-select-content"
+            <span
+              class="uc-fe-input-prefix emotion-116 emotion-117"
             >
-              请选择
-            </div>
-            <svg
-              class="emotion-116 emotion-117 emotion-4"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-                transform="matrix(-1 0 0 1 24 0)"
+              <span
+                class="uc-fe-select-placeholder"
               />
-            </svg>
-          </button>
+            </span>
+            <input
+              cursor="pointer"
+              readonly=""
+              value=""
+            />
+            <span
+              class="uc-fe-input-suffix emotion-116 emotion-117"
+            >
+              <svg
+                class=" emotion-118 emotion-4"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+                  transform="matrix(-1 0 0 1 24 0)"
+                />
+              </svg>
+            </span>
+          </span>
         </div>
       </div>
       <div
         class="uc-fe-combine-item"
       >
         <span
-          class="uc-fe-input emotion-124 emotion-125"
+          class="uc-fe-input emotion-123 emotion-129 emotion-125"
         >
-          <span
-            class="uc-fe-input-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </div>
     </div>
@@ -1580,47 +1691,41 @@ exports[`Combine demo -- combine 1`] = `
 `;
 
 exports[`Combine demo -- demo 1`] = `
-.emotion-14 > .uc-fe-combine-item,
-.emotion-14 > .uc-fe-combine-separator {
+.emotion-19 > .uc-fe-combine-item,
+.emotion-19 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-14 > .uc-fe-combine-item:focus {
+.emotion-19 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-14 > .uc-fe-combine-item:hover {
+.emotion-19 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-14 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-14 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-14 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-19 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-19 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-19 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
-.emotion-6 {
+.emotion-10 {
   box-sizing: border-box;
   position: relative;
   max-width: 100%;
+  min-width: 80px;
+  width: 180px;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
   color: #0a1633;
 }
 
-.emotion-4 {
-  margin: 0;
+.emotion-8 {
+  position: relative;
   box-sizing: border-box;
-  border-radius: 2px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  font-size: 12px;
-  white-space: nowrap;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1629,72 +1734,6 @@ exports[`Combine demo -- demo 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
-  padding: 0 8px;
-  color: #0a1633;
-  fill: #0a1633;
-  background: #ffffff;
-  border: 1px solid #c3cad9;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  border-width: 1px;
-  border-style: solid;
-  padding: 0 7px;
-  line-height: 26px;
-  padding-right: 28px;
-  width: 100%;
-  min-width: 78px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  overflow: hidden;
-}
-
-.emotion-4:link,
-.emotion-4:visited {
-  color: #0a1633;
-}
-
-.emotion-4:hover,
-.emotion-4:active {
-  color: #3860f4;
-  fill: #3860f4;
-  border: 1px solid #d2d6ea;
-  background: #ffffff;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
-}
-
-.emotion-4 .uc-fe-select-content {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.emotion-1 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  display: inline-block;
-  vertical-align: middle;
-  fill: currentcolor;
-  width: 12px;
-  height: 12px;
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  margin-top: -6px;
-}
-
-.emotion-8 {
-  position: relative;
-  box-sizing: border-box;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -1704,73 +1743,26 @@ exports[`Combine demo -- demo 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.emotion-8,
+.emotion-8 input,
+.emotion-8 .emotion-1 {
+  padding: 0 4px;
 }
 
 .emotion-8:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
-}
-
-.emotion-8 .uc-fe-input-clear {
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #7a8baa;
-  fill: #7a8baa;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
-.emotion-8 .uc-fe-input-wrap,
-.emotion-8 .uc-fe-input-prefix,
-.emotion-8 .uc-fe-input-suffix,
-.emotion-8 .uc-fe-input-clear,
-.emotion-8 input {
-  padding: 0 4px;
-}
-
-.emotion-8.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-8 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-8 .uc-fe-input-prefix,
-.emotion-8 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
 }
 
 .emotion-8 input {
@@ -1817,27 +1809,199 @@ exports[`Combine demo -- demo 1`] = `
   display: none;
 }
 
-.emotion-10 > .uc-fe-combine-item,
-.emotion-10 > .uc-fe-combine-separator {
+.emotion-8 .emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-8 .emotion-1:empty {
+  display: none;
+}
+
+.emotion-8 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-8 input {
+  cursor: pointer;
+}
+
+.emotion-8 uc-fe-select-placeholder {
+  width: 0;
+  overflow: visible;
+}
+
+.emotion-2 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentcolor;
+  width: 12px;
+  height: 12px;
+}
+
+.emotion-13 {
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 28px;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  vertical-align: middle;
+}
+
+.emotion-13,
+.emotion-13 input,
+.emotion-13 .emotion-1 {
+  padding: 0 4px;
+}
+
+.emotion-13:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
+}
+
+.emotion-13 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-13 input,
+.emotion-13 input:hover,
+.emotion-13 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-13 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-13 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-13 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-13 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-13 input::-ms-clear {
+  display: none;
+}
+
+.emotion-13 .emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-13 .emotion-1:empty {
+  display: none;
+}
+
+.emotion-13 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-15 > .uc-fe-combine-item,
+.emotion-15 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-10 > .uc-fe-combine-item:focus {
+.emotion-15 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-10 > .uc-fe-combine-item:hover {
+.emotion-15 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-10 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-10 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-10 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-15 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-15 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-15 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: -1px;
 }
 
-.emotion-12 {
+.emotion-17 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -1873,18 +2037,18 @@ exports[`Combine demo -- demo 1`] = `
   transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
 }
 
-.emotion-12:link,
-.emotion-12:visited {
+.emotion-17:link,
+.emotion-17:visited {
   color: #ffffff;
 }
 
-.emotion-12:hover,
-.emotion-12:active {
+.emotion-17:hover,
+.emotion-17:active {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
 
-.emotion-18 {
+.emotion-23 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -1924,13 +2088,13 @@ exports[`Combine demo -- demo 1`] = `
   line-height: 26px;
 }
 
-.emotion-18:link,
-.emotion-18:visited {
+.emotion-23:link,
+.emotion-23:visited {
   color: #0a1633;
 }
 
-.emotion-18:hover,
-.emotion-18:active {
+.emotion-23:hover,
+.emotion-23:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -1938,7 +2102,7 @@ exports[`Combine demo -- demo 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-22 {
+.emotion-27 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -1979,7 +2143,7 @@ exports[`Combine demo -- demo 1`] = `
   line-height: 26px;
 }
 
-.emotion-27 {
+.emotion-32 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -1990,51 +2154,45 @@ exports[`Combine demo -- demo 1`] = `
   cursor: pointer;
 }
 
-.emotion-31 {
+.emotion-39 {
   vertical-align: baseline;
 }
 
-.emotion-14 > .uc-fe-combine-item,
-.emotion-14 > .uc-fe-combine-separator {
+.emotion-19 > .uc-fe-combine-item,
+.emotion-19 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-14 > .uc-fe-combine-item:focus {
+.emotion-19 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-14 > .uc-fe-combine-item:hover {
+.emotion-19 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-14 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-14 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-14 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-19 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-19 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-19 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
-.emotion-6 {
+.emotion-10 {
   box-sizing: border-box;
   position: relative;
   max-width: 100%;
+  min-width: 80px;
+  width: 180px;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
   color: #0a1633;
 }
 
-.emotion-4 {
-  margin: 0;
+.emotion-8 {
+  position: relative;
   box-sizing: border-box;
-  border-radius: 2px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  font-size: 12px;
-  white-space: nowrap;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -2043,72 +2201,6 @@ exports[`Combine demo -- demo 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
-  padding: 0 8px;
-  color: #0a1633;
-  fill: #0a1633;
-  background: #ffffff;
-  border: 1px solid #c3cad9;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  border-width: 1px;
-  border-style: solid;
-  padding: 0 7px;
-  line-height: 26px;
-  padding-right: 28px;
-  width: 100%;
-  min-width: 78px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  overflow: hidden;
-}
-
-.emotion-4:link,
-.emotion-4:visited {
-  color: #0a1633;
-}
-
-.emotion-4:hover,
-.emotion-4:active {
-  color: #3860f4;
-  fill: #3860f4;
-  border: 1px solid #d2d6ea;
-  background: #ffffff;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
-}
-
-.emotion-4 .uc-fe-select-content {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.emotion-1 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  display: inline-block;
-  vertical-align: middle;
-  fill: currentcolor;
-  width: 12px;
-  height: 12px;
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  margin-top: -6px;
-}
-
-.emotion-8 {
-  position: relative;
-  box-sizing: border-box;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -2118,73 +2210,26 @@ exports[`Combine demo -- demo 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.emotion-8,
+.emotion-8 input,
+.emotion-8 .emotion-1 {
+  padding: 0 4px;
 }
 
 .emotion-8:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
-}
-
-.emotion-8 .uc-fe-input-clear {
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #7a8baa;
-  fill: #7a8baa;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
-.emotion-8 .uc-fe-input-wrap,
-.emotion-8 .uc-fe-input-prefix,
-.emotion-8 .uc-fe-input-suffix,
-.emotion-8 .uc-fe-input-clear,
-.emotion-8 input {
-  padding: 0 4px;
-}
-
-.emotion-8.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-8 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-8 .uc-fe-input-prefix,
-.emotion-8 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
 }
 
 .emotion-8 input {
@@ -2231,27 +2276,199 @@ exports[`Combine demo -- demo 1`] = `
   display: none;
 }
 
-.emotion-10 > .uc-fe-combine-item,
-.emotion-10 > .uc-fe-combine-separator {
+.emotion-8 .emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-8 .emotion-1:empty {
+  display: none;
+}
+
+.emotion-8 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-8 input {
+  cursor: pointer;
+}
+
+.emotion-8 uc-fe-select-placeholder {
+  width: 0;
+  overflow: visible;
+}
+
+.emotion-2 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentcolor;
+  width: 12px;
+  height: 12px;
+}
+
+.emotion-13 {
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 28px;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  vertical-align: middle;
+}
+
+.emotion-13,
+.emotion-13 input,
+.emotion-13 .emotion-1 {
+  padding: 0 4px;
+}
+
+.emotion-13:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
+}
+
+.emotion-13 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-13 input,
+.emotion-13 input:hover,
+.emotion-13 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-13 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-13 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-13 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-13 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-13 input::-ms-clear {
+  display: none;
+}
+
+.emotion-13 .emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-13 .emotion-1:empty {
+  display: none;
+}
+
+.emotion-13 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-15 > .uc-fe-combine-item,
+.emotion-15 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-10 > .uc-fe-combine-item:focus {
+.emotion-15 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-10 > .uc-fe-combine-item:hover {
+.emotion-15 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-10 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-10 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-10 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-15 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-15 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-15 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: -1px;
 }
 
-.emotion-12 {
+.emotion-17 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -2287,18 +2504,18 @@ exports[`Combine demo -- demo 1`] = `
   transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
 }
 
-.emotion-12:link,
-.emotion-12:visited {
+.emotion-17:link,
+.emotion-17:visited {
   color: #ffffff;
 }
 
-.emotion-12:hover,
-.emotion-12:active {
+.emotion-17:hover,
+.emotion-17:active {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
 
-.emotion-18 {
+.emotion-23 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -2338,13 +2555,13 @@ exports[`Combine demo -- demo 1`] = `
   line-height: 26px;
 }
 
-.emotion-18:link,
-.emotion-18:visited {
+.emotion-23:link,
+.emotion-23:visited {
   color: #0a1633;
 }
 
-.emotion-18:hover,
-.emotion-18:active {
+.emotion-23:hover,
+.emotion-23:active {
   color: #3860f4;
   fill: #3860f4;
   border: 1px solid #d2d6ea;
@@ -2352,7 +2569,7 @@ exports[`Combine demo -- demo 1`] = `
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-22 {
+.emotion-27 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -2393,7 +2610,7 @@ exports[`Combine demo -- demo 1`] = `
   line-height: 26px;
 }
 
-.emotion-27 {
+.emotion-32 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -2404,7 +2621,7 @@ exports[`Combine demo -- demo 1`] = `
   cursor: pointer;
 }
 
-.emotion-31 {
+.emotion-39 {
   vertical-align: baseline;
 }
 
@@ -2416,57 +2633,62 @@ exports[`Combine demo -- demo 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-combine emotion-14 emotion-11"
+      class="uc-fe-combine emotion-19 emotion-16"
       spacing="md"
     >
       <div
         class="uc-fe-combine-item"
       >
         <div
-          class="uc-fe-combine emotion-10 emotion-11"
+          class="uc-fe-combine emotion-15 emotion-16"
           spacing="compact"
         >
           <div
             class="uc-fe-combine-item"
           >
             <div
-              class=" emotion-6 emotion-7"
+              class=" emotion-10 emotion-11"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-                title="请选择"
-                type="button"
+              <span
+                class="uc-fe-input uc-fe-select-input emotion-6 emotion-7 emotion-8 emotion-9"
               >
-                <div
-                  class="uc-fe-select-content"
+                <span
+                  class="uc-fe-input-prefix emotion-0 emotion-1"
                 >
-                  请选择
-                </div>
-                <svg
-                  class="emotion-0 emotion-1 emotion-2"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-                    transform="matrix(-1 0 0 1 24 0)"
+                  <span
+                    class="uc-fe-select-placeholder"
                   />
-                </svg>
-              </button>
+                </span>
+                <input
+                  cursor="pointer"
+                  readonly=""
+                  value=""
+                />
+                <span
+                  class="uc-fe-input-suffix emotion-0 emotion-1"
+                >
+                  <svg
+                    class=" emotion-2 emotion-3"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+                      transform="matrix(-1 0 0 1 24 0)"
+                    />
+                  </svg>
+                </span>
+              </span>
             </div>
           </div>
           <div
             class="uc-fe-combine-item"
           >
             <span
-              class="uc-fe-input emotion-8 emotion-9"
+              class="uc-fe-input emotion-7 emotion-13 emotion-9"
             >
-              <span
-                class="uc-fe-input-wrap"
-              >
-                <input
-                  value=""
-                />
-              </span>
+              <input
+                value=""
+              />
             </span>
           </div>
         </div>
@@ -2475,7 +2697,7 @@ exports[`Combine demo -- demo 1`] = `
         class="uc-fe-combine-item"
       >
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-12 emotion-5"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-17 emotion-18"
           type="button"
         >
           按钮
@@ -2490,14 +2712,14 @@ exports[`Combine demo -- demo 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-combine emotion-14 emotion-11"
+      class="uc-fe-combine emotion-19 emotion-16"
       spacing="md"
     >
       <div
         class="uc-fe-combine-item"
       >
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-12 emotion-5"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-17 emotion-18"
           type="button"
         >
           按钮组展示
@@ -2507,7 +2729,7 @@ exports[`Combine demo -- demo 1`] = `
         class="uc-fe-combine-item"
       >
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-18 emotion-5"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-23 emotion-18"
           type="button"
         >
           按钮组展示
@@ -2517,7 +2739,7 @@ exports[`Combine demo -- demo 1`] = `
         class="uc-fe-combine-item"
       >
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-18 emotion-5"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-23 emotion-18"
           type="button"
         >
           按钮组展示
@@ -2527,7 +2749,7 @@ exports[`Combine demo -- demo 1`] = `
         class="uc-fe-combine-item"
       >
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-disabled emotion-22 emotion-5"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border uc-fe-button-disabled emotion-27 emotion-18"
           disabled=""
           type="button"
         >
@@ -2543,33 +2765,29 @@ exports[`Combine demo -- demo 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-combine emotion-14 emotion-11"
+      class="uc-fe-combine emotion-19 emotion-16"
       spacing="md"
     >
       <div
         class="uc-fe-combine-item"
       >
         <span
-          class="uc-fe-input emotion-8 emotion-9"
+          class="uc-fe-input emotion-7 emotion-13 emotion-9"
         >
+          <input
+            value=""
+          />
           <span
-            class="uc-fe-input-wrap"
+            class="uc-fe-input-suffix emotion-0 emotion-1"
           >
-            <input
-              value=""
-            />
-            <span
-              class="uc-fe-input-suffix"
+            <svg
+              class="emotion-31 emotion-32 emotion-3"
+              viewBox="0 0 24 24"
             >
-              <svg
-                class="emotion-26 emotion-27 emotion-2"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M11,3 C15.418278,3 19,6.581722 19,11 C19,12.8491176 18.3726428,14.5517081 17.3191633,15.9065366 L20.981429,19.5692608 L19.5692608,20.981429 L15.9065366,17.3191633 C14.5517081,18.3726428 12.8491176,19 11,19 C6.581722,19 3,15.418278 3,11 C3,6.581722 6.581722,3 11,3 Z M11,5 C7.6862915,5 5,7.6862915 5,11 C5,14.3137085 7.6862915,17 11,17 C14.3137085,17 17,14.3137085 17,11 C17,7.6862915 14.3137085,5 11,5 Z"
-                />
-              </svg>
-            </span>
+              <path
+                d="M11,3 C15.418278,3 19,6.581722 19,11 C19,12.8491176 18.3726428,14.5517081 17.3191633,15.9065366 L20.981429,19.5692608 L19.5692608,20.981429 L15.9065366,17.3191633 C14.5517081,18.3726428 12.8491176,19 11,19 C6.581722,19 3,15.418278 3,11 C3,6.581722 6.581722,3 11,3 Z M11,5 C7.6862915,5 5,7.6862915 5,11 C5,14.3137085 7.6862915,17 11,17 C14.3137085,17 17,14.3137085 17,11 C17,7.6862915 14.3137085,5 11,5 Z"
+              />
+            </svg>
           </span>
         </span>
       </div>
@@ -2577,11 +2795,11 @@ exports[`Combine demo -- demo 1`] = `
         class="uc-fe-combine-item"
       >
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-18 emotion-5"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-23 emotion-18"
           type="button"
         >
           <i
-            class="uc-fe-icon icon__repeat uc-fe-button-icon emotion-31 emotion-32"
+            class="uc-fe-icon icon__repeat uc-fe-button-icon emotion-39 emotion-40"
           />
         </button>
       </div>
@@ -2589,11 +2807,11 @@ exports[`Combine demo -- demo 1`] = `
         class="uc-fe-combine-item"
       >
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-18 emotion-5"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-23 emotion-18"
           type="button"
         >
           <i
-            class="uc-fe-icon icon__cog uc-fe-button-icon emotion-31 emotion-32"
+            class="uc-fe-icon icon__cog uc-fe-button-icon emotion-39 emotion-40"
           />
         </button>
       </div>
@@ -2601,11 +2819,11 @@ exports[`Combine demo -- demo 1`] = `
         class="uc-fe-combine-item"
       >
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-18 emotion-5"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-23 emotion-18"
           type="button"
         >
           <i
-            class="uc-fe-icon icon__cloud-download uc-fe-button-icon emotion-31 emotion-32"
+            class="uc-fe-icon icon__cloud-download uc-fe-button-icon emotion-39 emotion-40"
           />
         </button>
       </div>
@@ -2613,7 +2831,7 @@ exports[`Combine demo -- demo 1`] = `
         class="uc-fe-combine-item"
       >
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-18 emotion-5"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-23 emotion-18"
           type="button"
         >
           按钮
@@ -2625,29 +2843,37 @@ exports[`Combine demo -- demo 1`] = `
 `;
 
 exports[`Combine demo -- null 1`] = `
-.emotion-2 > .uc-fe-combine-item,
-.emotion-2 > .uc-fe-combine-separator {
+.emotion-3 > .uc-fe-combine-item,
+.emotion-3 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-2 > .uc-fe-combine-item:focus {
+.emotion-3 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-2 > .uc-fe-combine-item:hover {
+.emotion-3 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-2 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-2 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-2 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-3 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-3 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-3 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
-.emotion-0 {
+.emotion-1 {
   position: relative;
   box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -2657,19 +2883,87 @@ exports[`Combine demo -- null 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
 }
 
-.emotion-0:hover {
+.emotion-1,
+.emotion-1 input,
+.emotion-1 .e1bl81de0 {
+  padding: 0 4px;
+}
+
+.emotion-1:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-0 .uc-fe-input-clear {
+.emotion-1 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-1 input,
+.emotion-1 input:hover,
+.emotion-1 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-1 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-1 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-1 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-1 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-1 input::-ms-clear {
+  display: none;
+}
+
+.emotion-1 .e1bl81de0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-1 .e1bl81de0:empty {
+  display: none;
+}
+
+.emotion-1 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -2686,47 +2980,64 @@ exports[`Combine demo -- null 1`] = `
   transition: opacity 0.3s;
 }
 
-.emotion-0 .uc-fe-input-wrap,
-.emotion-0 .uc-fe-input-prefix,
-.emotion-0 .uc-fe-input-suffix,
-.emotion-0 .uc-fe-input-clear,
-.emotion-0 input {
+.emotion-3 > .uc-fe-combine-item,
+.emotion-3 > .uc-fe-combine-separator {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.emotion-3 > .uc-fe-combine-item:focus {
+  z-index: 2;
+}
+
+.emotion-3 > .uc-fe-combine-item:hover {
+  z-index: 3;
+}
+
+.emotion-3 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-3 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-3 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
+}
+
+.emotion-1 {
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 28px;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  vertical-align: middle;
+}
+
+.emotion-1,
+.emotion-1 input,
+.emotion-1 .e1bl81de0 {
   padding: 0 4px;
 }
 
-.emotion-0.uc-fe-input-block {
-  display: block;
+.emotion-1:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
 }
 
-.emotion-0 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0 .uc-fe-input-prefix,
-.emotion-0 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-0 input {
+.emotion-1 input {
   box-sizing: border-box;
   height: 100%;
   margin: 0;
@@ -2738,83 +3049,58 @@ exports[`Combine demo -- null 1`] = `
   min-width: 0px;
 }
 
-.emotion-0 input,
-.emotion-0 input:hover,
-.emotion-0 input:focus {
+.emotion-1 input,
+.emotion-1 input:hover,
+.emotion-1 input:focus {
   border: none;
   outline: none;
   background: none;
 }
 
-.emotion-0 input::-webkit-input-placeholder {
+.emotion-1 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-0 input::-moz-placeholder {
+.emotion-1 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-0 input:-ms-input-placeholder {
+.emotion-1 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-0 input::placeholder {
+.emotion-1 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-0 input::-ms-clear {
+.emotion-1 input::-ms-clear {
   display: none;
 }
 
-.emotion-2 > .uc-fe-combine-item,
-.emotion-2 > .uc-fe-combine-separator {
-  vertical-align: middle;
-  display: inline-block;
+.emotion-1 .e1bl81de0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
-.emotion-2 > .uc-fe-combine-item:focus {
-  z-index: 2;
+.emotion-1 .e1bl81de0:empty {
+  display: none;
 }
 
-.emotion-2 > .uc-fe-combine-item:hover {
-  z-index: 3;
-}
-
-.emotion-2 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-2 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-2 > .uc-fe-combine-item+.uc-fe-combine-separator {
-  margin-left: 8px;
-}
-
-.emotion-0 {
-  position: relative;
-  box-sizing: border-box;
-  height: 28px;
-  max-width: 100%;
-  font-size: 12px;
-  border-radius: 2px;
-  color: #526075;
-  fill: currentColor;
-  border: 1px solid #c3cad9;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.emotion-0:hover {
-  color: #0a1633;
-  border-color: #c3cad9;
-  background: #f6f6fb;
-}
-
-.emotion-0 .uc-fe-input-clear {
+.emotion-1 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -2829,90 +3115,6 @@ exports[`Combine demo -- null 1`] = `
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
-}
-
-.emotion-0 .uc-fe-input-wrap,
-.emotion-0 .uc-fe-input-prefix,
-.emotion-0 .uc-fe-input-suffix,
-.emotion-0 .uc-fe-input-clear,
-.emotion-0 input {
-  padding: 0 4px;
-}
-
-.emotion-0.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-0 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0 .uc-fe-input-prefix,
-.emotion-0 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-0 input {
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
-  -webkit-flex: 1 1 130px;
-  -ms-flex: 1 1 130px;
-  flex: 1 1 130px;
-  min-width: 0px;
-}
-
-.emotion-0 input,
-.emotion-0 input:hover,
-.emotion-0 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-0 input::-webkit-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-0 input::-moz-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-0 input:-ms-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-0 input::placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-0 input::-ms-clear {
-  display: none;
 }
 
 <div>
@@ -2920,22 +3122,18 @@ exports[`Combine demo -- null 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-combine emotion-2 emotion-3"
+      class="uc-fe-combine emotion-3 emotion-4"
       spacing="md"
     >
       <div
         class="uc-fe-combine-item"
       >
         <span
-          class="uc-fe-input emotion-0 emotion-1"
+          class="uc-fe-input emotion-0 emotion-1 emotion-2"
         >
-          <span
-            class="uc-fe-input-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </div>
       <span
@@ -2952,47 +3150,41 @@ exports[`Combine demo -- null 1`] = `
 `;
 
 exports[`Combine demo -- separator 1`] = `
-.emotion-24 > .uc-fe-combine-item,
-.emotion-24 > .uc-fe-combine-separator {
+.emotion-36 > .uc-fe-combine-item,
+.emotion-36 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-24 > .uc-fe-combine-item:focus {
+.emotion-36 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-24 > .uc-fe-combine-item:hover {
+.emotion-36 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-24 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-24 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-24 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-36 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-36 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-36 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
-.emotion-6 {
+.emotion-10 {
   box-sizing: border-box;
   position: relative;
   max-width: 100%;
+  min-width: 80px;
+  width: 180px;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
   color: #0a1633;
 }
 
-.emotion-4 {
-  margin: 0;
+.emotion-8 {
+  position: relative;
   box-sizing: border-box;
-  border-radius: 2px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  font-size: 12px;
-  white-space: nowrap;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3001,56 +3193,127 @@ exports[`Combine demo -- separator 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  vertical-align: middle;
   height: 28px;
-  line-height: 28px;
-  padding: 0 8px;
-  color: #0a1633;
-  fill: #0a1633;
-  background: #ffffff;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
   border: 1px solid #c3cad9;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  border-width: 1px;
-  border-style: solid;
-  padding: 0 7px;
-  line-height: 26px;
-  padding-right: 28px;
-  width: 100%;
-  min-width: 78px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  overflow: hidden;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  vertical-align: middle;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
 }
 
-.emotion-4:link,
-.emotion-4:visited {
+.emotion-8,
+.emotion-8 input,
+.emotion-8 .emotion-1 {
+  padding: 0 4px;
+}
+
+.emotion-8:hover {
   color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
 }
 
-.emotion-4:hover,
-.emotion-4:active {
-  color: #3860f4;
-  fill: #3860f4;
-  border: 1px solid #d2d6ea;
-  background: #ffffff;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+.emotion-8 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
 }
 
-.emotion-4 .uc-fe-select-content {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.emotion-8 input,
+.emotion-8 input:hover,
+.emotion-8 input:focus {
+  border: none;
+  outline: none;
+  background: none;
 }
 
-.emotion-1 {
+.emotion-8 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-8 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-8 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-8 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-8 input::-ms-clear {
+  display: none;
+}
+
+.emotion-8 .emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-8 .emotion-1:empty {
+  display: none;
+}
+
+.emotion-8 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-8 input {
+  cursor: pointer;
+}
+
+.emotion-8 uc-fe-select-placeholder {
+  width: 0;
+  overflow: visible;
+}
+
+.emotion-2 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -3058,57 +3321,47 @@ exports[`Combine demo -- separator 1`] = `
   fill: currentcolor;
   width: 12px;
   height: 12px;
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  margin-top: -6px;
 }
 
-.emotion-34 {
+.emotion-50 {
   vertical-align: baseline;
 }
 
-.emotion-24 > .uc-fe-combine-item,
-.emotion-24 > .uc-fe-combine-separator {
+.emotion-36 > .uc-fe-combine-item,
+.emotion-36 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-24 > .uc-fe-combine-item:focus {
+.emotion-36 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-24 > .uc-fe-combine-item:hover {
+.emotion-36 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-24 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-24 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-24 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-36 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-36 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-36 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
-.emotion-6 {
+.emotion-10 {
   box-sizing: border-box;
   position: relative;
   max-width: 100%;
+  min-width: 80px;
+  width: 180px;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
   color: #0a1633;
 }
 
-.emotion-4 {
-  margin: 0;
+.emotion-8 {
+  position: relative;
   box-sizing: border-box;
-  border-radius: 2px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  font-size: 12px;
-  white-space: nowrap;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3117,56 +3370,127 @@ exports[`Combine demo -- separator 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  vertical-align: middle;
   height: 28px;
-  line-height: 28px;
-  padding: 0 8px;
-  color: #0a1633;
-  fill: #0a1633;
-  background: #ffffff;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
   border: 1px solid #c3cad9;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  border-width: 1px;
-  border-style: solid;
-  padding: 0 7px;
-  line-height: 26px;
-  padding-right: 28px;
-  width: 100%;
-  min-width: 78px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  overflow: hidden;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  vertical-align: middle;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
 }
 
-.emotion-4:link,
-.emotion-4:visited {
+.emotion-8,
+.emotion-8 input,
+.emotion-8 .emotion-1 {
+  padding: 0 4px;
+}
+
+.emotion-8:hover {
   color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
 }
 
-.emotion-4:hover,
-.emotion-4:active {
-  color: #3860f4;
-  fill: #3860f4;
-  border: 1px solid #d2d6ea;
-  background: #ffffff;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+.emotion-8 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
 }
 
-.emotion-4 .uc-fe-select-content {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.emotion-8 input,
+.emotion-8 input:hover,
+.emotion-8 input:focus {
+  border: none;
+  outline: none;
+  background: none;
 }
 
-.emotion-1 {
+.emotion-8 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-8 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-8 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-8 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-8 input::-ms-clear {
+  display: none;
+}
+
+.emotion-8 .emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-8 .emotion-1:empty {
+  display: none;
+}
+
+.emotion-8 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-8 input {
+  cursor: pointer;
+}
+
+.emotion-8 uc-fe-select-placeholder {
+  width: 0;
+  overflow: visible;
+}
+
+.emotion-2 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -3174,13 +3498,9 @@ exports[`Combine demo -- separator 1`] = `
   fill: currentcolor;
   width: 12px;
   height: 12px;
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  margin-top: -6px;
 }
 
-.emotion-34 {
+.emotion-50 {
   vertical-align: baseline;
 }
 
@@ -3189,35 +3509,44 @@ exports[`Combine demo -- separator 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-combine emotion-24 emotion-25"
+      class="uc-fe-combine emotion-36 emotion-37"
       spacing="md"
     >
       <div
         class="uc-fe-combine-item"
       >
         <div
-          class=" emotion-6 emotion-7"
+          class=" emotion-10 emotion-11"
         >
-          <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-            title="请选择"
-            type="button"
+          <span
+            class="uc-fe-input uc-fe-select-input emotion-6 emotion-7 emotion-8 emotion-9"
           >
-            <div
-              class="uc-fe-select-content"
+            <span
+              class="uc-fe-input-prefix emotion-0 emotion-1"
             >
-              请选择
-            </div>
-            <svg
-              class="emotion-0 emotion-1 emotion-2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-                transform="matrix(-1 0 0 1 24 0)"
+              <span
+                class="uc-fe-select-placeholder"
               />
-            </svg>
-          </button>
+            </span>
+            <input
+              cursor="pointer"
+              readonly=""
+              value=""
+            />
+            <span
+              class="uc-fe-input-suffix emotion-0 emotion-1"
+            >
+              <svg
+                class=" emotion-2 emotion-3"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+                  transform="matrix(-1 0 0 1 24 0)"
+                />
+              </svg>
+            </span>
+          </span>
         </div>
       </div>
       <span
@@ -3229,28 +3558,37 @@ exports[`Combine demo -- separator 1`] = `
         class="uc-fe-combine-item"
       >
         <div
-          class=" emotion-6 emotion-7"
+          class=" emotion-10 emotion-11"
         >
-          <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-            title="请选择"
-            type="button"
+          <span
+            class="uc-fe-input uc-fe-select-input emotion-6 emotion-7 emotion-8 emotion-9"
           >
-            <div
-              class="uc-fe-select-content"
+            <span
+              class="uc-fe-input-prefix emotion-0 emotion-1"
             >
-              请选择
-            </div>
-            <svg
-              class="emotion-0 emotion-1 emotion-2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-                transform="matrix(-1 0 0 1 24 0)"
+              <span
+                class="uc-fe-select-placeholder"
               />
-            </svg>
-          </button>
+            </span>
+            <input
+              cursor="pointer"
+              readonly=""
+              value=""
+            />
+            <span
+              class="uc-fe-input-suffix emotion-0 emotion-1"
+            >
+              <svg
+                class=" emotion-2 emotion-3"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+                  transform="matrix(-1 0 0 1 24 0)"
+                />
+              </svg>
+            </span>
+          </span>
         </div>
       </div>
       <span
@@ -3262,28 +3600,37 @@ exports[`Combine demo -- separator 1`] = `
         class="uc-fe-combine-item"
       >
         <div
-          class=" emotion-6 emotion-7"
+          class=" emotion-10 emotion-11"
         >
-          <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-            title="请选择"
-            type="button"
+          <span
+            class="uc-fe-input uc-fe-select-input emotion-6 emotion-7 emotion-8 emotion-9"
           >
-            <div
-              class="uc-fe-select-content"
+            <span
+              class="uc-fe-input-prefix emotion-0 emotion-1"
             >
-              请选择
-            </div>
-            <svg
-              class="emotion-0 emotion-1 emotion-2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-                transform="matrix(-1 0 0 1 24 0)"
+              <span
+                class="uc-fe-select-placeholder"
               />
-            </svg>
-          </button>
+            </span>
+            <input
+              cursor="pointer"
+              readonly=""
+              value=""
+            />
+            <span
+              class="uc-fe-input-suffix emotion-0 emotion-1"
+            >
+              <svg
+                class=" emotion-2 emotion-3"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+                  transform="matrix(-1 0 0 1 24 0)"
+                />
+              </svg>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -3292,105 +3639,132 @@ exports[`Combine demo -- separator 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-combine emotion-24 emotion-25"
+      class="uc-fe-combine emotion-36 emotion-37"
       spacing="md"
     >
       <div
         class="uc-fe-combine-item"
       >
         <div
-          class=" emotion-6 emotion-7"
+          class=" emotion-10 emotion-11"
         >
-          <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-            title="请选择"
-            type="button"
+          <span
+            class="uc-fe-input uc-fe-select-input emotion-6 emotion-7 emotion-8 emotion-9"
           >
-            <div
-              class="uc-fe-select-content"
+            <span
+              class="uc-fe-input-prefix emotion-0 emotion-1"
             >
-              请选择
-            </div>
-            <svg
-              class="emotion-0 emotion-1 emotion-2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-                transform="matrix(-1 0 0 1 24 0)"
+              <span
+                class="uc-fe-select-placeholder"
               />
-            </svg>
-          </button>
+            </span>
+            <input
+              cursor="pointer"
+              readonly=""
+              value=""
+            />
+            <span
+              class="uc-fe-input-suffix emotion-0 emotion-1"
+            >
+              <svg
+                class=" emotion-2 emotion-3"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+                  transform="matrix(-1 0 0 1 24 0)"
+                />
+              </svg>
+            </span>
+          </span>
         </div>
       </div>
       <span
         class="uc-fe-combine-separator"
       >
         <i
-          class="uc-fe-icon icon__arrow-right emotion-34 emotion-35"
+          class="uc-fe-icon icon__arrow-right emotion-50 emotion-51"
         />
       </span>
       <div
         class="uc-fe-combine-item"
       >
         <div
-          class=" emotion-6 emotion-7"
+          class=" emotion-10 emotion-11"
         >
-          <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-            title="请选择"
-            type="button"
+          <span
+            class="uc-fe-input uc-fe-select-input emotion-6 emotion-7 emotion-8 emotion-9"
           >
-            <div
-              class="uc-fe-select-content"
+            <span
+              class="uc-fe-input-prefix emotion-0 emotion-1"
             >
-              请选择
-            </div>
-            <svg
-              class="emotion-0 emotion-1 emotion-2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-                transform="matrix(-1 0 0 1 24 0)"
+              <span
+                class="uc-fe-select-placeholder"
               />
-            </svg>
-          </button>
+            </span>
+            <input
+              cursor="pointer"
+              readonly=""
+              value=""
+            />
+            <span
+              class="uc-fe-input-suffix emotion-0 emotion-1"
+            >
+              <svg
+                class=" emotion-2 emotion-3"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+                  transform="matrix(-1 0 0 1 24 0)"
+                />
+              </svg>
+            </span>
+          </span>
         </div>
       </div>
       <span
         class="uc-fe-combine-separator"
       >
         <i
-          class="uc-fe-icon icon__arrow-right emotion-34 emotion-35"
+          class="uc-fe-icon icon__arrow-right emotion-50 emotion-51"
         />
       </span>
       <div
         class="uc-fe-combine-item"
       >
         <div
-          class=" emotion-6 emotion-7"
+          class=" emotion-10 emotion-11"
         >
-          <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-            title="请选择"
-            type="button"
+          <span
+            class="uc-fe-input uc-fe-select-input emotion-6 emotion-7 emotion-8 emotion-9"
           >
-            <div
-              class="uc-fe-select-content"
+            <span
+              class="uc-fe-input-prefix emotion-0 emotion-1"
             >
-              请选择
-            </div>
-            <svg
-              class="emotion-0 emotion-1 emotion-2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-                transform="matrix(-1 0 0 1 24 0)"
+              <span
+                class="uc-fe-select-placeholder"
               />
-            </svg>
-          </button>
+            </span>
+            <input
+              cursor="pointer"
+              readonly=""
+              value=""
+            />
+            <span
+              class="uc-fe-input-suffix emotion-0 emotion-1"
+            >
+              <svg
+                class=" emotion-2 emotion-3"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+                  transform="matrix(-1 0 0 1 24 0)"
+                />
+              </svg>
+            </span>
+          </span>
         </div>
       </div>
     </div>
@@ -3399,47 +3773,41 @@ exports[`Combine demo -- separator 1`] = `
 `;
 
 exports[`Combine demo -- sharedProps 1`] = `
-.emotion-22 > .uc-fe-combine-item,
-.emotion-22 > .uc-fe-combine-separator {
+.emotion-32 > .uc-fe-combine-item,
+.emotion-32 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-22 > .uc-fe-combine-item:focus {
+.emotion-32 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-22 > .uc-fe-combine-item:hover {
+.emotion-32 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-22 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-22 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-22 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-32 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-32 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-32 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
-.emotion-6 {
+.emotion-10 {
   box-sizing: border-box;
   position: relative;
   max-width: 100%;
+  min-width: 80px;
+  width: 180px;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
   color: #0a1633;
 }
 
-.emotion-16 {
-  margin: 0;
+.emotion-25 {
+  position: relative;
   box-sizing: border-box;
-  border-radius: 2px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  font-size: 12px;
-  white-space: nowrap;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3448,72 +3816,6 @@ exports[`Combine demo -- sharedProps 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
-  padding: 0 8px;
-  color: #0a1633;
-  fill: #0a1633;
-  background: #ffffff;
-  border: 1px solid #c3cad9;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  border-width: 1px;
-  border-style: solid;
-  padding: 0 7px;
-  line-height: 26px;
-  padding-right: 28px;
-  width: 100%;
-  min-width: 78px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  overflow: hidden;
-}
-
-.emotion-16:link,
-.emotion-16:visited {
-  color: #0a1633;
-}
-
-.emotion-16:hover,
-.emotion-16:active {
-  color: #3860f4;
-  fill: #3860f4;
-  border: 1px solid #d2d6ea;
-  background: #ffffff;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
-}
-
-.emotion-16 .uc-fe-select-content {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.emotion-1 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  display: inline-block;
-  vertical-align: middle;
-  fill: currentcolor;
-  width: 12px;
-  height: 12px;
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  margin-top: -6px;
-}
-
-.emotion-20 {
-  position: relative;
-  box-sizing: border-box;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -3523,76 +3825,29 @@ exports[`Combine demo -- sharedProps 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
 }
 
-.emotion-20:hover {
+.emotion-25,
+.emotion-25 input,
+.emotion-25 .emotion-1 {
+  padding: 0 4px;
+}
+
+.emotion-25:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-20 .uc-fe-input-clear {
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #7a8baa;
-  fill: #7a8baa;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
-.emotion-20 .uc-fe-input-wrap,
-.emotion-20 .uc-fe-input-prefix,
-.emotion-20 .uc-fe-input-suffix,
-.emotion-20 .uc-fe-input-clear,
-.emotion-20 input {
-  padding: 0 4px;
-}
-
-.emotion-20.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-20 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-20 .uc-fe-input-prefix,
-.emotion-20 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-20 input {
+.emotion-25 input {
   box-sizing: border-box;
   height: 100%;
   margin: 0;
@@ -3604,151 +3859,58 @@ exports[`Combine demo -- sharedProps 1`] = `
   min-width: 0px;
 }
 
-.emotion-20 input,
-.emotion-20 input:hover,
-.emotion-20 input:focus {
+.emotion-25 input,
+.emotion-25 input:hover,
+.emotion-25 input:focus {
   border: none;
   outline: none;
   background: none;
 }
 
-.emotion-20 input::-webkit-input-placeholder {
+.emotion-25 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-20 input::-moz-placeholder {
+.emotion-25 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-20 input:-ms-input-placeholder {
+.emotion-25 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-20 input::placeholder {
+.emotion-25 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-20 input::-ms-clear {
+.emotion-25 input::-ms-clear {
   display: none;
 }
 
-.emotion-10 > .uc-fe-combine-item,
-.emotion-10 > .uc-fe-combine-separator {
-  vertical-align: middle;
-  display: inline-block;
-}
-
-.emotion-10 > .uc-fe-combine-item:focus {
-  z-index: 2;
-}
-
-.emotion-10 > .uc-fe-combine-item:hover {
-  z-index: 3;
-}
-
-.emotion-10 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-10 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-10 > .uc-fe-combine-item+.uc-fe-combine-separator {
-  margin-left: 4px;
-}
-
-.emotion-4 {
-  margin: 0;
-  box-sizing: border-box;
-  border-radius: 2px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  font-size: 12px;
-  white-space: nowrap;
+.emotion-25 .emotion-1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  vertical-align: middle;
-  height: 24px;
-  line-height: 24px;
-  padding: 0 8px;
-  color: #0a1633;
-  fill: #0a1633;
-  background: #ffffff;
-  border: 1px solid #c3cad9;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  border-width: 1px;
-  border-style: solid;
-  padding: 0 7px;
-  line-height: 22px;
-  padding-right: 28px;
-  width: 100%;
-  min-width: 78px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  overflow: hidden;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
-.emotion-4:link,
-.emotion-4:visited {
-  color: #0a1633;
+.emotion-25 .emotion-1:empty {
+  display: none;
 }
 
-.emotion-4:hover,
-.emotion-4:active {
-  color: #3860f4;
-  fill: #3860f4;
-  border: 1px solid #d2d6ea;
-  background: #ffffff;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
-}
-
-.emotion-4 .uc-fe-select-content {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.emotion-8 {
-  position: relative;
-  box-sizing: border-box;
-  height: 24px;
-  max-width: 100%;
-  font-size: 12px;
-  border-radius: 2px;
-  color: #526075;
-  fill: currentColor;
-  border: 1px solid #c3cad9;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.emotion-8:hover {
-  color: #0a1633;
-  border-color: #c3cad9;
-  background: #f6f6fb;
-}
-
-.emotion-8 .uc-fe-input-clear {
+.emotion-25 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -3765,36 +3927,111 @@ exports[`Combine demo -- sharedProps 1`] = `
   transition: opacity 0.3s;
 }
 
-.emotion-8 .uc-fe-input-wrap,
-.emotion-8 .uc-fe-input-prefix,
-.emotion-8 .uc-fe-input-suffix,
-.emotion-8 .uc-fe-input-clear,
-.emotion-8 input {
-  padding: 0 4px;
+.emotion-25 input {
+  cursor: pointer;
 }
 
-.emotion-8.uc-fe-input-block {
-  display: block;
+.emotion-25 uc-fe-select-placeholder {
+  width: 0;
+  overflow: visible;
 }
 
-.emotion-8 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentcolor;
+  width: 12px;
+  height: 12px;
+}
+
+.emotion-30 {
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: 28px;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  vertical-align: middle;
 }
 
-.emotion-8 .uc-fe-input-prefix,
-.emotion-8 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-30,
+.emotion-30 input,
+.emotion-30 .emotion-1 {
+  padding: 0 4px;
+}
+
+.emotion-30:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
+}
+
+.emotion-30 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-30 input,
+.emotion-30 input:hover,
+.emotion-30 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-30 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-30 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-30 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-30 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-30 input::-ms-clear {
+  display: none;
+}
+
+.emotion-30 .emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -3803,6 +4040,89 @@ exports[`Combine demo -- sharedProps 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-30 .emotion-1:empty {
+  display: none;
+}
+
+.emotion-30 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-15 > .uc-fe-combine-item,
+.emotion-15 > .uc-fe-combine-separator {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.emotion-15 > .uc-fe-combine-item:focus {
+  z-index: 2;
+}
+
+.emotion-15 > .uc-fe-combine-item:hover {
+  z-index: 3;
+}
+
+.emotion-15 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-15 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-15 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 4px;
+}
+
+.emotion-8 {
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 24px;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  vertical-align: middle;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.emotion-8,
+.emotion-8 input,
+.emotion-8 .emotion-1 {
+  padding: 0 4px;
+}
+
+.emotion-8:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
 }
 
 .emotion-8 input {
@@ -3849,189 +4169,11 @@ exports[`Combine demo -- sharedProps 1`] = `
   display: none;
 }
 
-.emotion-22 > .uc-fe-combine-item,
-.emotion-22 > .uc-fe-combine-separator {
-  vertical-align: middle;
-  display: inline-block;
-}
-
-.emotion-22 > .uc-fe-combine-item:focus {
-  z-index: 2;
-}
-
-.emotion-22 > .uc-fe-combine-item:hover {
-  z-index: 3;
-}
-
-.emotion-22 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-22 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-22 > .uc-fe-combine-item+.uc-fe-combine-separator {
-  margin-left: 8px;
-}
-
-.emotion-6 {
-  box-sizing: border-box;
-  position: relative;
-  max-width: 100%;
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 12px;
-  color: #0a1633;
-}
-
-.emotion-16 {
-  margin: 0;
-  box-sizing: border-box;
-  border-radius: 2px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  font-size: 12px;
-  white-space: nowrap;
+.emotion-8 .emotion-1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
-  padding: 0 8px;
-  color: #0a1633;
-  fill: #0a1633;
-  background: #ffffff;
-  border: 1px solid #c3cad9;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  border-width: 1px;
-  border-style: solid;
-  padding: 0 7px;
-  line-height: 26px;
-  padding-right: 28px;
-  width: 100%;
-  min-width: 78px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  overflow: hidden;
-}
-
-.emotion-16:link,
-.emotion-16:visited {
-  color: #0a1633;
-}
-
-.emotion-16:hover,
-.emotion-16:active {
-  color: #3860f4;
-  fill: #3860f4;
-  border: 1px solid #d2d6ea;
-  background: #ffffff;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
-}
-
-.emotion-16 .uc-fe-select-content {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.emotion-1 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  display: inline-block;
-  vertical-align: middle;
-  fill: currentcolor;
-  width: 12px;
-  height: 12px;
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  margin-top: -6px;
-}
-
-.emotion-20 {
-  position: relative;
-  box-sizing: border-box;
-  height: 28px;
-  max-width: 100%;
-  font-size: 12px;
-  border-radius: 2px;
-  color: #526075;
-  fill: currentColor;
-  border: 1px solid #c3cad9;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.emotion-20:hover {
-  color: #0a1633;
-  border-color: #c3cad9;
-  background: #f6f6fb;
-}
-
-.emotion-20 .uc-fe-input-clear {
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #7a8baa;
-  fill: #7a8baa;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
-.emotion-20 .uc-fe-input-wrap,
-.emotion-20 .uc-fe-input-prefix,
-.emotion-20 .uc-fe-input-suffix,
-.emotion-20 .uc-fe-input-clear,
-.emotion-20 input {
-  padding: 0 4px;
-}
-
-.emotion-20.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-20 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-20 .uc-fe-input-prefix,
-.emotion-20 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -4042,160 +4184,8 @@ exports[`Combine demo -- sharedProps 1`] = `
   flex: 0 0 auto;
 }
 
-.emotion-20 input {
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
-  -webkit-flex: 1 1 130px;
-  -ms-flex: 1 1 130px;
-  flex: 1 1 130px;
-  min-width: 0px;
-}
-
-.emotion-20 input,
-.emotion-20 input:hover,
-.emotion-20 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-20 input::-webkit-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-20 input::-moz-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-20 input:-ms-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-20 input::placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-20 input::-ms-clear {
+.emotion-8 .emotion-1:empty {
   display: none;
-}
-
-.emotion-10 > .uc-fe-combine-item,
-.emotion-10 > .uc-fe-combine-separator {
-  vertical-align: middle;
-  display: inline-block;
-}
-
-.emotion-10 > .uc-fe-combine-item:focus {
-  z-index: 2;
-}
-
-.emotion-10 > .uc-fe-combine-item:hover {
-  z-index: 3;
-}
-
-.emotion-10 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-10 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-10 > .uc-fe-combine-item+.uc-fe-combine-separator {
-  margin-left: 4px;
-}
-
-.emotion-4 {
-  margin: 0;
-  box-sizing: border-box;
-  border-radius: 2px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  font-size: 12px;
-  white-space: nowrap;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  vertical-align: middle;
-  height: 24px;
-  line-height: 24px;
-  padding: 0 8px;
-  color: #0a1633;
-  fill: #0a1633;
-  background: #ffffff;
-  border: 1px solid #c3cad9;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  border-width: 1px;
-  border-style: solid;
-  padding: 0 7px;
-  line-height: 22px;
-  padding-right: 28px;
-  width: 100%;
-  min-width: 78px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  overflow: hidden;
-}
-
-.emotion-4:link,
-.emotion-4:visited {
-  color: #0a1633;
-}
-
-.emotion-4:hover,
-.emotion-4:active {
-  color: #3860f4;
-  fill: #3860f4;
-  border: 1px solid #d2d6ea;
-  background: #ffffff;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
-}
-
-.emotion-4 .uc-fe-select-content {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.emotion-8 {
-  position: relative;
-  box-sizing: border-box;
-  height: 24px;
-  max-width: 100%;
-  font-size: 12px;
-  border-radius: 2px;
-  color: #526075;
-  fill: currentColor;
-  border: 1px solid #c3cad9;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.emotion-8:hover {
-  color: #0a1633;
-  border-color: #c3cad9;
-  background: #f6f6fb;
 }
 
 .emotion-8 .uc-fe-input-clear {
@@ -4215,36 +4205,101 @@ exports[`Combine demo -- sharedProps 1`] = `
   transition: opacity 0.3s;
 }
 
-.emotion-8 .uc-fe-input-wrap,
-.emotion-8 .uc-fe-input-prefix,
-.emotion-8 .uc-fe-input-suffix,
-.emotion-8 .uc-fe-input-clear,
 .emotion-8 input {
-  padding: 0 4px;
+  cursor: pointer;
 }
 
-.emotion-8.uc-fe-input-block {
-  display: block;
+.emotion-8 uc-fe-select-placeholder {
+  width: 0;
+  overflow: visible;
 }
 
-.emotion-8 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-13 {
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: 24px;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  vertical-align: middle;
 }
 
-.emotion-8 .uc-fe-input-prefix,
-.emotion-8 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-13,
+.emotion-13 input,
+.emotion-13 .emotion-1 {
+  padding: 0 4px;
+}
+
+.emotion-13:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
+}
+
+.emotion-13 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-13 input,
+.emotion-13 input:hover,
+.emotion-13 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-13 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-13 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-13 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-13 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-13 input::-ms-clear {
+  display: none;
+}
+
+.emotion-13 .emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -4253,6 +4308,379 @@ exports[`Combine demo -- sharedProps 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-13 .emotion-1:empty {
+  display: none;
+}
+
+.emotion-13 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-32 > .uc-fe-combine-item,
+.emotion-32 > .uc-fe-combine-separator {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.emotion-32 > .uc-fe-combine-item:focus {
+  z-index: 2;
+}
+
+.emotion-32 > .uc-fe-combine-item:hover {
+  z-index: 3;
+}
+
+.emotion-32 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-32 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-32 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 8px;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  position: relative;
+  max-width: 100%;
+  min-width: 80px;
+  width: 180px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  color: #0a1633;
+}
+
+.emotion-25 {
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 28px;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  vertical-align: middle;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.emotion-25,
+.emotion-25 input,
+.emotion-25 .emotion-1 {
+  padding: 0 4px;
+}
+
+.emotion-25:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
+}
+
+.emotion-25 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-25 input,
+.emotion-25 input:hover,
+.emotion-25 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-25 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-25 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-25 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-25 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-25 input::-ms-clear {
+  display: none;
+}
+
+.emotion-25 .emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-25 .emotion-1:empty {
+  display: none;
+}
+
+.emotion-25 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-25 input {
+  cursor: pointer;
+}
+
+.emotion-25 uc-fe-select-placeholder {
+  width: 0;
+  overflow: visible;
+}
+
+.emotion-2 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentcolor;
+  width: 12px;
+  height: 12px;
+}
+
+.emotion-30 {
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 28px;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  vertical-align: middle;
+}
+
+.emotion-30,
+.emotion-30 input,
+.emotion-30 .emotion-1 {
+  padding: 0 4px;
+}
+
+.emotion-30:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
+}
+
+.emotion-30 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-30 input,
+.emotion-30 input:hover,
+.emotion-30 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-30 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-30 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-30 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-30 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-30 input::-ms-clear {
+  display: none;
+}
+
+.emotion-30 .emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-30 .emotion-1:empty {
+  display: none;
+}
+
+.emotion-30 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-15 > .uc-fe-combine-item,
+.emotion-15 > .uc-fe-combine-separator {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.emotion-15 > .uc-fe-combine-item:focus {
+  z-index: 2;
+}
+
+.emotion-15 > .uc-fe-combine-item:hover {
+  z-index: 3;
+}
+
+.emotion-15 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-15 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-15 > .uc-fe-combine-item+.uc-fe-combine-separator {
+  margin-left: 4px;
+}
+
+.emotion-8 {
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 24px;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  vertical-align: middle;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.emotion-8,
+.emotion-8 input,
+.emotion-8 .emotion-1 {
+  padding: 0 4px;
+}
+
+.emotion-8:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
 }
 
 .emotion-8 input {
@@ -4297,6 +4725,168 @@ exports[`Combine demo -- sharedProps 1`] = `
 
 .emotion-8 input::-ms-clear {
   display: none;
+}
+
+.emotion-8 .emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-8 .emotion-1:empty {
+  display: none;
+}
+
+.emotion-8 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-8 input {
+  cursor: pointer;
+}
+
+.emotion-8 uc-fe-select-placeholder {
+  width: 0;
+  overflow: visible;
+}
+
+.emotion-13 {
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 24px;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  vertical-align: middle;
+}
+
+.emotion-13,
+.emotion-13 input,
+.emotion-13 .emotion-1 {
+  padding: 0 4px;
+}
+
+.emotion-13:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
+}
+
+.emotion-13 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-13 input,
+.emotion-13 input:hover,
+.emotion-13 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-13 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-13 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-13 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-13 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-13 input::-ms-clear {
+  display: none;
+}
+
+.emotion-13 .emotion-1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-13 .emotion-1:empty {
+  display: none;
+}
+
+.emotion-13 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 
 <div>
@@ -4304,50 +4894,55 @@ exports[`Combine demo -- sharedProps 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-combine emotion-10 emotion-11"
+      class="uc-fe-combine emotion-15 emotion-16"
       spacing="sm"
     >
       <div
         class="uc-fe-combine-item"
       >
         <div
-          class=" emotion-6 emotion-7"
+          class=" emotion-10 emotion-11"
         >
-          <button
-            class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-border emotion-3 emotion-4 emotion-5"
-            title="请选择"
-            type="button"
+          <span
+            class="uc-fe-input uc-fe-select-input emotion-6 emotion-7 emotion-8 emotion-9"
           >
-            <div
-              class="uc-fe-select-content"
+            <span
+              class="uc-fe-input-prefix emotion-0 emotion-1"
             >
-              请选择
-            </div>
-            <svg
-              class="emotion-0 emotion-1 emotion-2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-                transform="matrix(-1 0 0 1 24 0)"
+              <span
+                class="uc-fe-select-placeholder"
               />
-            </svg>
-          </button>
+            </span>
+            <input
+              cursor="pointer"
+              readonly=""
+              value=""
+            />
+            <span
+              class="uc-fe-input-suffix emotion-0 emotion-1"
+            >
+              <svg
+                class=" emotion-2 emotion-3"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+                  transform="matrix(-1 0 0 1 24 0)"
+                />
+              </svg>
+            </span>
+          </span>
         </div>
       </div>
       <div
         class="uc-fe-combine-item"
       >
         <span
-          class="uc-fe-input emotion-8 emotion-9"
+          class="uc-fe-input emotion-7 emotion-13 emotion-9"
         >
-          <span
-            class="uc-fe-input-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </div>
     </div>
@@ -4356,50 +4951,55 @@ exports[`Combine demo -- sharedProps 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-combine emotion-22 emotion-11"
+      class="uc-fe-combine emotion-32 emotion-16"
       spacing="md"
     >
       <div
         class="uc-fe-combine-item"
       >
         <div
-          class="test_cls emotion-6 emotion-7"
+          class="test_cls emotion-10 emotion-11"
         >
-          <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-3 emotion-16 emotion-5"
-            title="请选择"
-            type="button"
+          <span
+            class="uc-fe-input uc-fe-select-input emotion-6 emotion-7 emotion-25 emotion-9"
           >
-            <div
-              class="uc-fe-select-content"
+            <span
+              class="uc-fe-input-prefix emotion-0 emotion-1"
             >
-              请选择
-            </div>
-            <svg
-              class="emotion-0 emotion-1 emotion-2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-                transform="matrix(-1 0 0 1 24 0)"
+              <span
+                class="uc-fe-select-placeholder"
               />
-            </svg>
-          </button>
+            </span>
+            <input
+              cursor="pointer"
+              readonly=""
+              value=""
+            />
+            <span
+              class="uc-fe-input-suffix emotion-0 emotion-1"
+            >
+              <svg
+                class=" emotion-2 emotion-3"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+                  transform="matrix(-1 0 0 1 24 0)"
+                />
+              </svg>
+            </span>
+          </span>
         </div>
       </div>
       <div
         class="uc-fe-combine-item"
       >
         <span
-          class="uc-fe-input test_cls emotion-20 emotion-9"
+          class="uc-fe-input test_cls emotion-7 emotion-30 emotion-9"
         >
-          <span
-            class="uc-fe-input-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </div>
     </div>
@@ -4408,47 +5008,41 @@ exports[`Combine demo -- sharedProps 1`] = `
 `;
 
 exports[`Combine demo -- spacing 1`] = `
-.emotion-4 > .uc-fe-combine-item,
-.emotion-4 > .uc-fe-combine-separator {
+.emotion-5 > .uc-fe-combine-item,
+.emotion-5 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-4 > .uc-fe-combine-item:focus {
+.emotion-5 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-4 > .uc-fe-combine-item:hover {
+.emotion-5 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-4 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-5 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-5 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-5 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
-.emotion-48 {
+.emotion-59 {
   box-sizing: border-box;
   position: relative;
   max-width: 100%;
+  min-width: 80px;
+  width: 180px;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
   color: #0a1633;
 }
 
-.emotion-46 {
-  margin: 0;
+.emotion-57 {
+  position: relative;
   box-sizing: border-box;
-  border-radius: 2px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  font-size: 12px;
-  white-space: nowrap;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -4457,72 +5051,6 @@ exports[`Combine demo -- spacing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
-  padding: 0 8px;
-  color: #0a1633;
-  fill: #0a1633;
-  background: #ffffff;
-  border: 1px solid #c3cad9;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  border-width: 1px;
-  border-style: solid;
-  padding: 0 7px;
-  line-height: 26px;
-  padding-right: 28px;
-  width: 100%;
-  min-width: 78px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  overflow: hidden;
-}
-
-.emotion-46:link,
-.emotion-46:visited {
-  color: #0a1633;
-}
-
-.emotion-46:hover,
-.emotion-46:active {
-  color: #3860f4;
-  fill: #3860f4;
-  border: 1px solid #d2d6ea;
-  background: #ffffff;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
-}
-
-.emotion-46 .uc-fe-select-content {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.emotion-43 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  display: inline-block;
-  vertical-align: middle;
-  fill: currentcolor;
-  width: 12px;
-  height: 12px;
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  margin-top: -6px;
-}
-
-.emotion-0 {
-  position: relative;
-  box-sizing: border-box;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -4532,19 +5060,92 @@ exports[`Combine demo -- spacing 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
 }
 
-.emotion-0:hover {
+.emotion-57,
+.emotion-57 input,
+.emotion-57 .emotion-50 {
+  padding: 0 4px;
+}
+
+.emotion-57:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-0 .uc-fe-input-clear {
+.emotion-57 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-57 input,
+.emotion-57 input:hover,
+.emotion-57 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-57 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-57 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-57 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-57 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-57 input::-ms-clear {
+  display: none;
+}
+
+.emotion-57 .emotion-50 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-57 .emotion-50:empty {
+  display: none;
+}
+
+.emotion-57 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -4561,47 +5162,63 @@ exports[`Combine demo -- spacing 1`] = `
   transition: opacity 0.3s;
 }
 
-.emotion-0 .uc-fe-input-wrap,
-.emotion-0 .uc-fe-input-prefix,
-.emotion-0 .uc-fe-input-suffix,
-.emotion-0 .uc-fe-input-clear,
-.emotion-0 input {
+.emotion-57 input {
+  cursor: pointer;
+}
+
+.emotion-57 uc-fe-select-placeholder {
+  width: 0;
+  overflow: visible;
+}
+
+.emotion-51 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentcolor;
+  width: 12px;
+  height: 12px;
+}
+
+.emotion-1 {
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 28px;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  vertical-align: middle;
+}
+
+.emotion-1,
+.emotion-1 input,
+.emotion-1 .emotion-50 {
   padding: 0 4px;
 }
 
-.emotion-0.uc-fe-input-block {
-  display: block;
+.emotion-1:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
 }
 
-.emotion-0 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0 .uc-fe-input-prefix,
-.emotion-0 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-0 input {
+.emotion-1 input {
   box-sizing: border-box;
   height: 100%;
   margin: 0;
@@ -4613,59 +5230,95 @@ exports[`Combine demo -- spacing 1`] = `
   min-width: 0px;
 }
 
-.emotion-0 input,
-.emotion-0 input:hover,
-.emotion-0 input:focus {
+.emotion-1 input,
+.emotion-1 input:hover,
+.emotion-1 input:focus {
   border: none;
   outline: none;
   background: none;
 }
 
-.emotion-0 input::-webkit-input-placeholder {
+.emotion-1 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-0 input::-moz-placeholder {
+.emotion-1 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-0 input:-ms-input-placeholder {
+.emotion-1 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-0 input::placeholder {
+.emotion-1 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-0 input::-ms-clear {
+.emotion-1 input::-ms-clear {
   display: none;
 }
 
-.emotion-52 > .uc-fe-combine-item,
-.emotion-52 > .uc-fe-combine-separator {
+.emotion-1 .emotion-50 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-1 .emotion-50:empty {
+  display: none;
+}
+
+.emotion-1 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-64 > .uc-fe-combine-item,
+.emotion-64 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-52 > .uc-fe-combine-item:focus {
+.emotion-64 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-52 > .uc-fe-combine-item:hover {
+.emotion-64 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-52 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-52 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-52 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-64 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-64 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-64 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: -1px;
 }
 
-.emotion-2 {
+.emotion-3 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -4701,40 +5354,48 @@ exports[`Combine demo -- spacing 1`] = `
   transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
 }
 
-.emotion-2:link,
-.emotion-2:visited {
+.emotion-3:link,
+.emotion-3:visited {
   color: #ffffff;
 }
 
-.emotion-2:hover,
-.emotion-2:active {
+.emotion-3:hover,
+.emotion-3:active {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
 
-.emotion-10 > .uc-fe-combine-item,
-.emotion-10 > .uc-fe-combine-separator {
+.emotion-12 > .uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-10 > .uc-fe-combine-item:focus {
+.emotion-12 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-10 > .uc-fe-combine-item:hover {
+.emotion-12 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-10 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-10 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-10 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 4px;
 }
 
-.emotion-6 {
+.emotion-8 {
   position: relative;
   box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 24px;
   max-width: 100%;
   font-size: 12px;
@@ -4744,19 +5405,87 @@ exports[`Combine demo -- spacing 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
 }
 
-.emotion-6:hover {
+.emotion-8,
+.emotion-8 input,
+.emotion-8 .emotion-50 {
+  padding: 0 4px;
+}
+
+.emotion-8:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-6 .uc-fe-input-clear {
+.emotion-8 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-8 input,
+.emotion-8 input:hover,
+.emotion-8 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-8 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-8 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-8 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-8 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-8 input::-ms-clear {
+  display: none;
+}
+
+.emotion-8 .emotion-50 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-8 .emotion-50:empty {
+  display: none;
+}
+
+.emotion-8 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -4773,91 +5502,7 @@ exports[`Combine demo -- spacing 1`] = `
   transition: opacity 0.3s;
 }
 
-.emotion-6 .uc-fe-input-wrap,
-.emotion-6 .uc-fe-input-prefix,
-.emotion-6 .uc-fe-input-suffix,
-.emotion-6 .uc-fe-input-clear,
-.emotion-6 input {
-  padding: 0 4px;
-}
-
-.emotion-6.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-6 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-6 .uc-fe-input-prefix,
-.emotion-6 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-6 input {
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
-  -webkit-flex: 1 1 130px;
-  -ms-flex: 1 1 130px;
-  flex: 1 1 130px;
-  min-width: 0px;
-}
-
-.emotion-6 input,
-.emotion-6 input:hover,
-.emotion-6 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-6 input::-webkit-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-6 input::-moz-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-6 input:-ms-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-6 input::placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-6 input::-ms-clear {
-  display: none;
-}
-
-.emotion-8 {
+.emotion-10 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -4893,40 +5538,48 @@ exports[`Combine demo -- spacing 1`] = `
   transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
 }
 
-.emotion-8:link,
-.emotion-8:visited {
+.emotion-10:link,
+.emotion-10:visited {
   color: #ffffff;
 }
 
-.emotion-8:hover,
-.emotion-8:active {
+.emotion-10:hover,
+.emotion-10:active {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
 
-.emotion-22 > .uc-fe-combine-item,
-.emotion-22 > .uc-fe-combine-separator {
+.emotion-26 > .uc-fe-combine-item,
+.emotion-26 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-22 > .uc-fe-combine-item:focus {
+.emotion-26 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-22 > .uc-fe-combine-item:hover {
+.emotion-26 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-22 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-22 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-22 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-26 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-26 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-26 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 12px;
 }
 
-.emotion-18 {
+.emotion-22 {
   position: relative;
   box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 32px;
   max-width: 100%;
   font-size: 12px;
@@ -4936,19 +5589,87 @@ exports[`Combine demo -- spacing 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
 }
 
-.emotion-18:hover {
+.emotion-22,
+.emotion-22 input,
+.emotion-22 .emotion-50 {
+  padding: 0 4px;
+}
+
+.emotion-22:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-18 .uc-fe-input-clear {
+.emotion-22 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-22 input,
+.emotion-22 input:hover,
+.emotion-22 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-22 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-22 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-22 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-22 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-22 input::-ms-clear {
+  display: none;
+}
+
+.emotion-22 .emotion-50 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-22 .emotion-50:empty {
+  display: none;
+}
+
+.emotion-22 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -4965,91 +5686,7 @@ exports[`Combine demo -- spacing 1`] = `
   transition: opacity 0.3s;
 }
 
-.emotion-18 .uc-fe-input-wrap,
-.emotion-18 .uc-fe-input-prefix,
-.emotion-18 .uc-fe-input-suffix,
-.emotion-18 .uc-fe-input-clear,
-.emotion-18 input {
-  padding: 0 4px;
-}
-
-.emotion-18.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-18 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-18 .uc-fe-input-prefix,
-.emotion-18 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-18 input {
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
-  -webkit-flex: 1 1 130px;
-  -ms-flex: 1 1 130px;
-  flex: 1 1 130px;
-  min-width: 0px;
-}
-
-.emotion-18 input,
-.emotion-18 input:hover,
-.emotion-18 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-18 input::-webkit-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-18 input::-moz-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-18 input:-ms-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-18 input::placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-18 input::-ms-clear {
-  display: none;
-}
-
-.emotion-20 {
+.emotion-24 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -5085,78 +5722,72 @@ exports[`Combine demo -- spacing 1`] = `
   transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
 }
 
-.emotion-20:link,
-.emotion-20:visited {
+.emotion-24:link,
+.emotion-24:visited {
   color: #ffffff;
 }
 
-.emotion-20:hover,
-.emotion-20:active {
+.emotion-24:hover,
+.emotion-24:active {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
 
-.emotion-58 > .uc-fe-combine-item,
-.emotion-58 > .uc-fe-combine-separator {
+.emotion-71 > .uc-fe-combine-item,
+.emotion-71 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-58 > .uc-fe-combine-item:focus {
+.emotion-71 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-58 > .uc-fe-combine-item:hover {
+.emotion-71 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-58 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-58 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-58 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-71 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-71 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-71 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 40px;
 }
 
-.emotion-4 > .uc-fe-combine-item,
-.emotion-4 > .uc-fe-combine-separator {
+.emotion-5 > .uc-fe-combine-item,
+.emotion-5 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-4 > .uc-fe-combine-item:focus {
+.emotion-5 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-4 > .uc-fe-combine-item:hover {
+.emotion-5 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-4 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-4 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-5 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-5 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-5 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
-.emotion-48 {
+.emotion-59 {
   box-sizing: border-box;
   position: relative;
   max-width: 100%;
+  min-width: 80px;
+  width: 180px;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
   color: #0a1633;
 }
 
-.emotion-46 {
-  margin: 0;
+.emotion-57 {
+  position: relative;
   box-sizing: border-box;
-  border-radius: 2px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  font-size: 12px;
-  white-space: nowrap;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -5165,72 +5796,6 @@ exports[`Combine demo -- spacing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
-  padding: 0 8px;
-  color: #0a1633;
-  fill: #0a1633;
-  background: #ffffff;
-  border: 1px solid #c3cad9;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  border-width: 1px;
-  border-style: solid;
-  padding: 0 7px;
-  line-height: 26px;
-  padding-right: 28px;
-  width: 100%;
-  min-width: 78px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  overflow: hidden;
-}
-
-.emotion-46:link,
-.emotion-46:visited {
-  color: #0a1633;
-}
-
-.emotion-46:hover,
-.emotion-46:active {
-  color: #3860f4;
-  fill: #3860f4;
-  border: 1px solid #d2d6ea;
-  background: #ffffff;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
-}
-
-.emotion-46 .uc-fe-select-content {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.emotion-43 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  display: inline-block;
-  vertical-align: middle;
-  fill: currentcolor;
-  width: 12px;
-  height: 12px;
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  margin-top: -6px;
-}
-
-.emotion-0 {
-  position: relative;
-  box-sizing: border-box;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -5240,19 +5805,92 @@ exports[`Combine demo -- spacing 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
 }
 
-.emotion-0:hover {
+.emotion-57,
+.emotion-57 input,
+.emotion-57 .emotion-50 {
+  padding: 0 4px;
+}
+
+.emotion-57:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-0 .uc-fe-input-clear {
+.emotion-57 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-57 input,
+.emotion-57 input:hover,
+.emotion-57 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-57 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-57 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-57 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-57 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-57 input::-ms-clear {
+  display: none;
+}
+
+.emotion-57 .emotion-50 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-57 .emotion-50:empty {
+  display: none;
+}
+
+.emotion-57 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -5269,47 +5907,63 @@ exports[`Combine demo -- spacing 1`] = `
   transition: opacity 0.3s;
 }
 
-.emotion-0 .uc-fe-input-wrap,
-.emotion-0 .uc-fe-input-prefix,
-.emotion-0 .uc-fe-input-suffix,
-.emotion-0 .uc-fe-input-clear,
-.emotion-0 input {
+.emotion-57 input {
+  cursor: pointer;
+}
+
+.emotion-57 uc-fe-select-placeholder {
+  width: 0;
+  overflow: visible;
+}
+
+.emotion-51 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentcolor;
+  width: 12px;
+  height: 12px;
+}
+
+.emotion-1 {
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 28px;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  vertical-align: middle;
+}
+
+.emotion-1,
+.emotion-1 input,
+.emotion-1 .emotion-50 {
   padding: 0 4px;
 }
 
-.emotion-0.uc-fe-input-block {
-  display: block;
+.emotion-1:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
 }
 
-.emotion-0 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-0 .uc-fe-input-prefix,
-.emotion-0 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-0 input {
+.emotion-1 input {
   box-sizing: border-box;
   height: 100%;
   margin: 0;
@@ -5321,59 +5975,95 @@ exports[`Combine demo -- spacing 1`] = `
   min-width: 0px;
 }
 
-.emotion-0 input,
-.emotion-0 input:hover,
-.emotion-0 input:focus {
+.emotion-1 input,
+.emotion-1 input:hover,
+.emotion-1 input:focus {
   border: none;
   outline: none;
   background: none;
 }
 
-.emotion-0 input::-webkit-input-placeholder {
+.emotion-1 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-0 input::-moz-placeholder {
+.emotion-1 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-0 input:-ms-input-placeholder {
+.emotion-1 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-0 input::placeholder {
+.emotion-1 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-0 input::-ms-clear {
+.emotion-1 input::-ms-clear {
   display: none;
 }
 
-.emotion-52 > .uc-fe-combine-item,
-.emotion-52 > .uc-fe-combine-separator {
+.emotion-1 .emotion-50 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-1 .emotion-50:empty {
+  display: none;
+}
+
+.emotion-1 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-64 > .uc-fe-combine-item,
+.emotion-64 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-52 > .uc-fe-combine-item:focus {
+.emotion-64 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-52 > .uc-fe-combine-item:hover {
+.emotion-64 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-52 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-52 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-52 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-64 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-64 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-64 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: -1px;
 }
 
-.emotion-2 {
+.emotion-3 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -5409,40 +6099,48 @@ exports[`Combine demo -- spacing 1`] = `
   transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
 }
 
-.emotion-2:link,
-.emotion-2:visited {
+.emotion-3:link,
+.emotion-3:visited {
   color: #ffffff;
 }
 
-.emotion-2:hover,
-.emotion-2:active {
+.emotion-3:hover,
+.emotion-3:active {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
 
-.emotion-10 > .uc-fe-combine-item,
-.emotion-10 > .uc-fe-combine-separator {
+.emotion-12 > .uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-10 > .uc-fe-combine-item:focus {
+.emotion-12 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-10 > .uc-fe-combine-item:hover {
+.emotion-12 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-10 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-10 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-10 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-12 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 4px;
 }
 
-.emotion-6 {
+.emotion-8 {
   position: relative;
   box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 24px;
   max-width: 100%;
   font-size: 12px;
@@ -5452,19 +6150,87 @@ exports[`Combine demo -- spacing 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
 }
 
-.emotion-6:hover {
+.emotion-8,
+.emotion-8 input,
+.emotion-8 .emotion-50 {
+  padding: 0 4px;
+}
+
+.emotion-8:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-6 .uc-fe-input-clear {
+.emotion-8 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-8 input,
+.emotion-8 input:hover,
+.emotion-8 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-8 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-8 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-8 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-8 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-8 input::-ms-clear {
+  display: none;
+}
+
+.emotion-8 .emotion-50 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-8 .emotion-50:empty {
+  display: none;
+}
+
+.emotion-8 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -5481,91 +6247,7 @@ exports[`Combine demo -- spacing 1`] = `
   transition: opacity 0.3s;
 }
 
-.emotion-6 .uc-fe-input-wrap,
-.emotion-6 .uc-fe-input-prefix,
-.emotion-6 .uc-fe-input-suffix,
-.emotion-6 .uc-fe-input-clear,
-.emotion-6 input {
-  padding: 0 4px;
-}
-
-.emotion-6.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-6 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-6 .uc-fe-input-prefix,
-.emotion-6 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-6 input {
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
-  -webkit-flex: 1 1 130px;
-  -ms-flex: 1 1 130px;
-  flex: 1 1 130px;
-  min-width: 0px;
-}
-
-.emotion-6 input,
-.emotion-6 input:hover,
-.emotion-6 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-6 input::-webkit-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-6 input::-moz-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-6 input:-ms-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-6 input::placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-6 input::-ms-clear {
-  display: none;
-}
-
-.emotion-8 {
+.emotion-10 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -5601,40 +6283,48 @@ exports[`Combine demo -- spacing 1`] = `
   transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
 }
 
-.emotion-8:link,
-.emotion-8:visited {
+.emotion-10:link,
+.emotion-10:visited {
   color: #ffffff;
 }
 
-.emotion-8:hover,
-.emotion-8:active {
+.emotion-10:hover,
+.emotion-10:active {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
 
-.emotion-22 > .uc-fe-combine-item,
-.emotion-22 > .uc-fe-combine-separator {
+.emotion-26 > .uc-fe-combine-item,
+.emotion-26 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-22 > .uc-fe-combine-item:focus {
+.emotion-26 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-22 > .uc-fe-combine-item:hover {
+.emotion-26 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-22 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-22 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-22 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-26 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-26 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-26 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 12px;
 }
 
-.emotion-18 {
+.emotion-22 {
   position: relative;
   box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 32px;
   max-width: 100%;
   font-size: 12px;
@@ -5644,19 +6334,87 @@ exports[`Combine demo -- spacing 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
 }
 
-.emotion-18:hover {
+.emotion-22,
+.emotion-22 input,
+.emotion-22 .emotion-50 {
+  padding: 0 4px;
+}
+
+.emotion-22:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-18 .uc-fe-input-clear {
+.emotion-22 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-22 input,
+.emotion-22 input:hover,
+.emotion-22 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-22 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-22 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-22 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-22 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-22 input::-ms-clear {
+  display: none;
+}
+
+.emotion-22 .emotion-50 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-22 .emotion-50:empty {
+  display: none;
+}
+
+.emotion-22 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -5673,91 +6431,7 @@ exports[`Combine demo -- spacing 1`] = `
   transition: opacity 0.3s;
 }
 
-.emotion-18 .uc-fe-input-wrap,
-.emotion-18 .uc-fe-input-prefix,
-.emotion-18 .uc-fe-input-suffix,
-.emotion-18 .uc-fe-input-clear,
-.emotion-18 input {
-  padding: 0 4px;
-}
-
-.emotion-18.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-18 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-18 .uc-fe-input-prefix,
-.emotion-18 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-18 input {
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
-  -webkit-flex: 1 1 130px;
-  -ms-flex: 1 1 130px;
-  flex: 1 1 130px;
-  min-width: 0px;
-}
-
-.emotion-18 input,
-.emotion-18 input:hover,
-.emotion-18 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-18 input::-webkit-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-18 input::-moz-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-18 input:-ms-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-18 input::placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-18 input::-ms-clear {
-  display: none;
-}
-
-.emotion-20 {
+.emotion-24 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -5793,34 +6467,34 @@ exports[`Combine demo -- spacing 1`] = `
   transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
 }
 
-.emotion-20:link,
-.emotion-20:visited {
+.emotion-24:link,
+.emotion-24:visited {
   color: #ffffff;
 }
 
-.emotion-20:hover,
-.emotion-20:active {
+.emotion-24:hover,
+.emotion-24:active {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
 
-.emotion-58 > .uc-fe-combine-item,
-.emotion-58 > .uc-fe-combine-separator {
+.emotion-71 > .uc-fe-combine-item,
+.emotion-71 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-58 > .uc-fe-combine-item:focus {
+.emotion-71 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-58 > .uc-fe-combine-item:hover {
+.emotion-71 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-58 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-58 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-58 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-71 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-71 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-71 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 40px;
 }
 
@@ -5833,29 +6507,25 @@ exports[`Combine demo -- spacing 1`] = `
       class="demo-wrap"
     >
       <div
-        class="uc-fe-combine emotion-4 emotion-5"
+        class="uc-fe-combine emotion-5 emotion-6"
         spacing="md"
       >
         <div
           class="uc-fe-combine-item"
         >
           <span
-            class="uc-fe-input emotion-0 emotion-1"
+            class="uc-fe-input emotion-0 emotion-1 emotion-2"
           >
-            <span
-              class="uc-fe-input-wrap"
-            >
-              <input
-                value=""
-              />
-            </span>
+            <input
+              value=""
+            />
           </span>
         </div>
         <div
           class="uc-fe-combine-item"
         >
           <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-2 emotion-3"
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-3 emotion-4"
             type="button"
           >
             按钮
@@ -5872,29 +6542,25 @@ exports[`Combine demo -- spacing 1`] = `
       class="demo-wrap"
     >
       <div
-        class="uc-fe-combine emotion-10 emotion-5"
+        class="uc-fe-combine emotion-12 emotion-6"
         spacing="sm"
       >
         <div
           class="uc-fe-combine-item"
         >
           <span
-            class="uc-fe-input emotion-6 emotion-1"
+            class="uc-fe-input emotion-0 emotion-8 emotion-2"
           >
-            <span
-              class="uc-fe-input-wrap"
-            >
-              <input
-                value=""
-              />
-            </span>
+            <input
+              value=""
+            />
           </span>
         </div>
         <div
           class="uc-fe-combine-item"
         >
           <button
-            class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-primary emotion-8 emotion-3"
+            class="uc-fe-button uc-fe-button-size-sm uc-fe-button-styletype-primary emotion-10 emotion-4"
             type="button"
           >
             按钮
@@ -5911,29 +6577,25 @@ exports[`Combine demo -- spacing 1`] = `
       class="demo-wrap"
     >
       <div
-        class="uc-fe-combine emotion-4 emotion-5"
+        class="uc-fe-combine emotion-5 emotion-6"
         spacing="md"
       >
         <div
           class="uc-fe-combine-item"
         >
           <span
-            class="uc-fe-input emotion-0 emotion-1"
+            class="uc-fe-input emotion-0 emotion-1 emotion-2"
           >
-            <span
-              class="uc-fe-input-wrap"
-            >
-              <input
-                value=""
-              />
-            </span>
+            <input
+              value=""
+            />
           </span>
         </div>
         <div
           class="uc-fe-combine-item"
         >
           <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-2 emotion-3"
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-3 emotion-4"
             type="button"
           >
             按钮
@@ -5950,29 +6612,25 @@ exports[`Combine demo -- spacing 1`] = `
       class="demo-wrap"
     >
       <div
-        class="uc-fe-combine emotion-22 emotion-5"
+        class="uc-fe-combine emotion-26 emotion-6"
         spacing="lg"
       >
         <div
           class="uc-fe-combine-item"
         >
           <span
-            class="uc-fe-input emotion-18 emotion-1"
+            class="uc-fe-input emotion-0 emotion-22 emotion-2"
           >
-            <span
-              class="uc-fe-input-wrap"
-            >
-              <input
-                value=""
-              />
-            </span>
+            <input
+              value=""
+            />
           </span>
         </div>
         <div
           class="uc-fe-combine-item"
         >
           <button
-            class="uc-fe-button uc-fe-button-size-lg uc-fe-button-styletype-primary emotion-20 emotion-3"
+            class="uc-fe-button uc-fe-button-size-lg uc-fe-button-styletype-primary emotion-24 emotion-4"
             type="button"
           >
             按钮
@@ -5989,29 +6647,25 @@ exports[`Combine demo -- spacing 1`] = `
       class="demo-wrap"
     >
       <div
-        class="uc-fe-combine emotion-10 emotion-5"
+        class="uc-fe-combine emotion-12 emotion-6"
         spacing="sm"
       >
         <div
           class="uc-fe-combine-item"
         >
           <span
-            class="uc-fe-input emotion-0 emotion-1"
+            class="uc-fe-input emotion-0 emotion-1 emotion-2"
           >
-            <span
-              class="uc-fe-input-wrap"
-            >
-              <input
-                value=""
-              />
-            </span>
+            <input
+              value=""
+            />
           </span>
         </div>
         <div
           class="uc-fe-combine-item"
         >
           <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-2 emotion-3"
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-3 emotion-4"
             type="button"
           >
             按钮
@@ -6028,29 +6682,25 @@ exports[`Combine demo -- spacing 1`] = `
       class="demo-wrap"
     >
       <div
-        class="uc-fe-combine emotion-4 emotion-5"
+        class="uc-fe-combine emotion-5 emotion-6"
         spacing="md"
       >
         <div
           class="uc-fe-combine-item"
         >
           <span
-            class="uc-fe-input emotion-0 emotion-1"
+            class="uc-fe-input emotion-0 emotion-1 emotion-2"
           >
-            <span
-              class="uc-fe-input-wrap"
-            >
-              <input
-                value=""
-              />
-            </span>
+            <input
+              value=""
+            />
           </span>
         </div>
         <div
           class="uc-fe-combine-item"
         >
           <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-2 emotion-3"
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-3 emotion-4"
             type="button"
           >
             按钮
@@ -6067,29 +6717,25 @@ exports[`Combine demo -- spacing 1`] = `
       class="demo-wrap"
     >
       <div
-        class="uc-fe-combine emotion-22 emotion-5"
+        class="uc-fe-combine emotion-26 emotion-6"
         spacing="lg"
       >
         <div
           class="uc-fe-combine-item"
         >
           <span
-            class="uc-fe-input emotion-0 emotion-1"
+            class="uc-fe-input emotion-0 emotion-1 emotion-2"
           >
-            <span
-              class="uc-fe-input-wrap"
-            >
-              <input
-                value=""
-              />
-            </span>
+            <input
+              value=""
+            />
           </span>
         </div>
         <div
           class="uc-fe-combine-item"
         >
           <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-2 emotion-3"
+            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-3 emotion-4"
             type="button"
           >
             按钮
@@ -6105,50 +6751,55 @@ exports[`Combine demo -- spacing 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-combine emotion-52 emotion-5"
+      class="uc-fe-combine emotion-64 emotion-6"
       spacing="compact"
     >
       <div
         class="uc-fe-combine-item"
       >
         <div
-          class=" emotion-48 emotion-49"
+          class=" emotion-59 emotion-60"
         >
-          <button
-            class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-45 emotion-46 emotion-3"
-            title="请选择"
-            type="button"
+          <span
+            class="uc-fe-input uc-fe-select-input emotion-55 emotion-0 emotion-57 emotion-2"
           >
-            <div
-              class="uc-fe-select-content"
+            <span
+              class="uc-fe-input-prefix emotion-49 emotion-50"
             >
-              请选择
-            </div>
-            <svg
-              class="emotion-42 emotion-43 emotion-44"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-                transform="matrix(-1 0 0 1 24 0)"
+              <span
+                class="uc-fe-select-placeholder"
               />
-            </svg>
-          </button>
+            </span>
+            <input
+              cursor="pointer"
+              readonly=""
+              value=""
+            />
+            <span
+              class="uc-fe-input-suffix emotion-49 emotion-50"
+            >
+              <svg
+                class=" emotion-51 emotion-52"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+                  transform="matrix(-1 0 0 1 24 0)"
+                />
+              </svg>
+            </span>
+          </span>
         </div>
       </div>
       <div
         class="uc-fe-combine-item"
       >
         <span
-          class="uc-fe-input emotion-0 emotion-1"
+          class="uc-fe-input emotion-0 emotion-1 emotion-2"
         >
-          <span
-            class="uc-fe-input-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </div>
     </div>
@@ -6160,29 +6811,25 @@ exports[`Combine demo -- spacing 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-combine emotion-58 emotion-5"
+      class="uc-fe-combine emotion-71 emotion-6"
       spacing="40px"
     >
       <div
         class="uc-fe-combine-item"
       >
         <span
-          class="uc-fe-input emotion-0 emotion-1"
+          class="uc-fe-input emotion-0 emotion-1 emotion-2"
         >
-          <span
-            class="uc-fe-input-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </div>
       <div
         class="uc-fe-combine-item"
       >
         <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-2 emotion-3"
+          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-3 emotion-4"
           type="button"
         >
           按钮

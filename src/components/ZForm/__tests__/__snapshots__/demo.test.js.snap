@@ -534,19 +534,19 @@ exports[`ZForm demo -- name 1`] = `
 `;
 
 exports[`ZForm demo -- rule 1`] = `
-.emotion-143 {
+.emotion-158 {
   font-size: 12px;
 }
 
-.emotion-143 .uc-fe-form-item {
+.emotion-158 .uc-fe-form-item {
   margin-bottom: 16px;
 }
 
-.emotion-143 .uc-fe-form-item:last-child {
+.emotion-158 .uc-fe-form-item:last-child {
   margin-bottom: 0;
 }
 
-.emotion-10 {
+.emotion-11 {
   position: relative;
   display: block;
   height: auto;
@@ -554,22 +554,22 @@ exports[`ZForm demo -- rule 1`] = `
   margin-right: -8px;
 }
 
-.emotion-10:before,
-.emotion-10:after {
+.emotion-11:before,
+.emotion-11:after {
   content: ' ';
   display: table;
 }
 
-.emotion-10:after {
+.emotion-11:after {
   clear: both;
 }
 
-.emotion-10 > .uc-fe-col {
+.emotion-11 > .uc-fe-col {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.emotion-6 {
+.emotion-7 {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -597,9 +597,17 @@ exports[`ZForm demo -- rule 1`] = `
   color: #526075;
 }
 
-.emotion-3 {
+.emotion-4 {
   position: relative;
   box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -609,19 +617,87 @@ exports[`ZForm demo -- rule 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
 }
 
-.emotion-3:hover {
+.emotion-4,
+.emotion-4 input,
+.emotion-4 .emotion-64 {
+  padding: 0 4px;
+}
+
+.emotion-4:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-3 .uc-fe-input-clear {
+.emotion-4 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-4 input,
+.emotion-4 input:hover,
+.emotion-4 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-4 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input::-ms-clear {
+  display: none;
+}
+
+.emotion-4 .emotion-64 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-4 .emotion-64:empty {
+  display: none;
+}
+
+.emotion-4 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -638,124 +714,40 @@ exports[`ZForm demo -- rule 1`] = `
   transition: opacity 0.3s;
 }
 
-.emotion-3 .uc-fe-input-wrap,
-.emotion-3 .uc-fe-input-prefix,
-.emotion-3 .uc-fe-input-suffix,
-.emotion-3 .uc-fe-input-clear,
-.emotion-3 input {
-  padding: 0 4px;
-}
-
-.emotion-3.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-3 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-3 .uc-fe-input-prefix,
-.emotion-3 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-3 input {
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
-  -webkit-flex: 1 1 130px;
-  -ms-flex: 1 1 130px;
-  flex: 1 1 130px;
-  min-width: 0px;
-}
-
-.emotion-3 input,
-.emotion-3 input:hover,
-.emotion-3 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-3 input::-webkit-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-3 input::-moz-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-3 input:-ms-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-3 input::placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-3 input::-ms-clear {
-  display: none;
-}
-
-.emotion-32 {
+.emotion-35 {
   margin-top: 4px;
   color: #526075;
 }
 
-.emotion-32 > .uc-fe-combine-item,
-.emotion-32 > .uc-fe-combine-separator {
+.emotion-35 > .uc-fe-combine-item,
+.emotion-35 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-32 > .uc-fe-combine-item:focus {
+.emotion-35 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-32 > .uc-fe-combine-item:hover {
+.emotion-35 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-32 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-32 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-32 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-35 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-35 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-35 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 4px;
 }
 
-.emotion-32 .uc-fe-form-tip-content {
+.emotion-35 .uc-fe-form-tip-content {
   line-height: 20px;
 }
 
-.emotion-32 .uc-fe-form-tip-icon {
+.emotion-35 .uc-fe-form-tip-icon {
   fill: #3860f4;
 }
 
-.emotion-29 {
+.emotion-32 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -765,7 +757,7 @@ exports[`ZForm demo -- rule 1`] = `
   height: 12px;
 }
 
-.emotion-48 {
+.emotion-51 {
   cursor: pointer;
   position: relative;
   white-space: nowrap;
@@ -777,27 +769,27 @@ exports[`ZForm demo -- rule 1`] = `
   color: #0a1633;
 }
 
-.emotion-48 > * {
+.emotion-51 > * {
   font-size: 12px;
 }
 
-.emotion-48 .uc-fe-checkbox-content {
+.emotion-51 .uc-fe-checkbox-content {
   display: inline-block;
   vertical-align: middle;
   max-height: 100%;
   margin-left: 8px;
 }
 
-.emotion-48.uc-fe-checkbox-disabled {
+.emotion-51.uc-fe-checkbox-disabled {
   cursor: default;
   color: #cccccc;
 }
 
-.emotion-48:hover .uc-fe-checkbox-icon-wrap {
+.emotion-51:hover .uc-fe-checkbox-icon-wrap {
   border-color: #3860f4;
 }
 
-.emotion-46.uc-fe-checkbox-icon-wrap {
+.emotion-49.uc-fe-checkbox-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -809,7 +801,7 @@ exports[`ZForm demo -- rule 1`] = `
   vertical-align: middle;
 }
 
-.emotion-46 .uc-fe-checkbox-icon {
+.emotion-49 .uc-fe-checkbox-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -817,18 +809,18 @@ exports[`ZForm demo -- rule 1`] = `
   left: -1px;
 }
 
-.emotion-46.uc-fe-checkbox-icon-wrap {
+.emotion-49.uc-fe-checkbox-icon-wrap {
   border-color: #3860f4;
   background: #3860f4;
 }
 
-.emotion-46 .uc-fe-checkbox-icon {
+.emotion-49 .uc-fe-checkbox-icon {
   visibility: visible;
   opacity: 1;
   fill: #ffffff;
 }
 
-.emotion-44 {
+.emotion-47 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -838,27 +830,21 @@ exports[`ZForm demo -- rule 1`] = `
   height: 14px;
 }
 
-.emotion-66 {
+.emotion-73 {
   box-sizing: border-box;
   position: relative;
   max-width: 100%;
+  min-width: 80px;
+  width: 180px;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
   color: #0a1633;
 }
 
-.emotion-64 {
-  margin: 0;
+.emotion-71 {
+  position: relative;
   box-sizing: border-box;
-  border-radius: 2px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  font-size: 12px;
-  white-space: nowrap;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -867,84 +853,278 @@ exports[`ZForm demo -- rule 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  vertical-align: middle;
   height: 28px;
-  line-height: 28px;
-  padding: 0 8px;
-  color: #0a1633;
-  fill: #0a1633;
-  background: #ffffff;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
   border: 1px solid #c3cad9;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  border-width: 1px;
-  border-style: solid;
-  padding: 0 7px;
-  line-height: 26px;
-  padding-right: 28px;
-  width: 100%;
-  min-width: 78px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  overflow: hidden;
-}
-
-.emotion-64:link,
-.emotion-64:visited {
-  color: #0a1633;
-}
-
-.emotion-64:hover,
-.emotion-64:active {
-  color: #3860f4;
-  fill: #3860f4;
-  border: 1px solid #d2d6ea;
-  background: #ffffff;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
-}
-
-.emotion-64 .uc-fe-select-content {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.emotion-61 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  display: inline-block;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
-  fill: currentcolor;
-  width: 12px;
-  height: 12px;
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  margin-top: -6px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
 }
 
-.emotion-132 {
+.emotion-71,
+.emotion-71 input,
+.emotion-71 .emotion-64 {
+  padding: 0 4px;
+}
+
+.emotion-71:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
+}
+
+.emotion-71 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-71 input,
+.emotion-71 input:hover,
+.emotion-71 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-71 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-71 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-71 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-71 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-71 input::-ms-clear {
+  display: none;
+}
+
+.emotion-71 .emotion-64 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-71 .emotion-64:empty {
+  display: none;
+}
+
+.emotion-71 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-71 input {
+  cursor: pointer;
+}
+
+.emotion-71 uc-fe-select-placeholder {
+  width: 0;
+  overflow: visible;
+}
+
+.emotion-91 {
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 28px;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  vertical-align: middle;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.emotion-91,
+.emotion-91 input,
+.emotion-91 .emotion-64 {
+  padding: 0 4px;
+}
+
+.emotion-91:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
+}
+
+.emotion-91 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-91 input,
+.emotion-91 input:hover,
+.emotion-91 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-91 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-91 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-91 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-91 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-91 input::-ms-clear {
+  display: none;
+}
+
+.emotion-91 .emotion-64 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-91 .emotion-64:empty {
+  display: none;
+}
+
+.emotion-91 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-91:hover .uc-fe-input-clear,
+.emotion-91.uc-fe-input-focused .uc-fe-input-clear {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.emotion-91 input {
+  cursor: pointer;
+}
+
+.emotion-91 uc-fe-select-placeholder {
+  width: 0;
+  overflow: visible;
+}
+
+.emotion-147 {
   padding: 16px;
   border: 1px solid #d2d6ea;
   background: #f6f6fb;
 }
 
-* + .emotion-132 {
+* + .emotion-147 {
   margin-top: 12px;
 }
 
-.emotion-132 .uc-fe-form-item {
+.emotion-147 .uc-fe-form-item {
   margin-bottom: 16px;
 }
 
-.emotion-141 {
+.emotion-156 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -980,30 +1160,30 @@ exports[`ZForm demo -- rule 1`] = `
   transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
 }
 
-.emotion-141:link,
-.emotion-141:visited {
+.emotion-156:link,
+.emotion-156:visited {
   color: #ffffff;
 }
 
-.emotion-141:hover,
-.emotion-141:active {
+.emotion-156:hover,
+.emotion-156:active {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
 
-.emotion-143 {
+.emotion-158 {
   font-size: 12px;
 }
 
-.emotion-143 .uc-fe-form-item {
+.emotion-158 .uc-fe-form-item {
   margin-bottom: 16px;
 }
 
-.emotion-143 .uc-fe-form-item:last-child {
+.emotion-158 .uc-fe-form-item:last-child {
   margin-bottom: 0;
 }
 
-.emotion-10 {
+.emotion-11 {
   position: relative;
   display: block;
   height: auto;
@@ -1011,22 +1191,22 @@ exports[`ZForm demo -- rule 1`] = `
   margin-right: -8px;
 }
 
-.emotion-10:before,
-.emotion-10:after {
+.emotion-11:before,
+.emotion-11:after {
   content: ' ';
   display: table;
 }
 
-.emotion-10:after {
+.emotion-11:after {
   clear: both;
 }
 
-.emotion-10 > .uc-fe-col {
+.emotion-11 > .uc-fe-col {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.emotion-6 {
+.emotion-7 {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -1054,9 +1234,17 @@ exports[`ZForm demo -- rule 1`] = `
   color: #526075;
 }
 
-.emotion-3 {
+.emotion-4 {
   position: relative;
   box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -1066,19 +1254,87 @@ exports[`ZForm demo -- rule 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
 }
 
-.emotion-3:hover {
+.emotion-4,
+.emotion-4 input,
+.emotion-4 .emotion-64 {
+  padding: 0 4px;
+}
+
+.emotion-4:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-3 .uc-fe-input-clear {
+.emotion-4 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-4 input,
+.emotion-4 input:hover,
+.emotion-4 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-4 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input::-ms-clear {
+  display: none;
+}
+
+.emotion-4 .emotion-64 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-4 .emotion-64:empty {
+  display: none;
+}
+
+.emotion-4 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1095,124 +1351,40 @@ exports[`ZForm demo -- rule 1`] = `
   transition: opacity 0.3s;
 }
 
-.emotion-3 .uc-fe-input-wrap,
-.emotion-3 .uc-fe-input-prefix,
-.emotion-3 .uc-fe-input-suffix,
-.emotion-3 .uc-fe-input-clear,
-.emotion-3 input {
-  padding: 0 4px;
-}
-
-.emotion-3.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-3 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-3 .uc-fe-input-prefix,
-.emotion-3 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-3 input {
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
-  -webkit-flex: 1 1 130px;
-  -ms-flex: 1 1 130px;
-  flex: 1 1 130px;
-  min-width: 0px;
-}
-
-.emotion-3 input,
-.emotion-3 input:hover,
-.emotion-3 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-3 input::-webkit-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-3 input::-moz-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-3 input:-ms-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-3 input::placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-3 input::-ms-clear {
-  display: none;
-}
-
-.emotion-32 {
+.emotion-35 {
   margin-top: 4px;
   color: #526075;
 }
 
-.emotion-32 > .uc-fe-combine-item,
-.emotion-32 > .uc-fe-combine-separator {
+.emotion-35 > .uc-fe-combine-item,
+.emotion-35 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-32 > .uc-fe-combine-item:focus {
+.emotion-35 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-32 > .uc-fe-combine-item:hover {
+.emotion-35 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-32 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-32 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-32 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-35 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-35 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-35 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 4px;
 }
 
-.emotion-32 .uc-fe-form-tip-content {
+.emotion-35 .uc-fe-form-tip-content {
   line-height: 20px;
 }
 
-.emotion-32 .uc-fe-form-tip-icon {
+.emotion-35 .uc-fe-form-tip-icon {
   fill: #3860f4;
 }
 
-.emotion-29 {
+.emotion-32 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -1222,7 +1394,7 @@ exports[`ZForm demo -- rule 1`] = `
   height: 12px;
 }
 
-.emotion-48 {
+.emotion-51 {
   cursor: pointer;
   position: relative;
   white-space: nowrap;
@@ -1234,27 +1406,27 @@ exports[`ZForm demo -- rule 1`] = `
   color: #0a1633;
 }
 
-.emotion-48 > * {
+.emotion-51 > * {
   font-size: 12px;
 }
 
-.emotion-48 .uc-fe-checkbox-content {
+.emotion-51 .uc-fe-checkbox-content {
   display: inline-block;
   vertical-align: middle;
   max-height: 100%;
   margin-left: 8px;
 }
 
-.emotion-48.uc-fe-checkbox-disabled {
+.emotion-51.uc-fe-checkbox-disabled {
   cursor: default;
   color: #cccccc;
 }
 
-.emotion-48:hover .uc-fe-checkbox-icon-wrap {
+.emotion-51:hover .uc-fe-checkbox-icon-wrap {
   border-color: #3860f4;
 }
 
-.emotion-46.uc-fe-checkbox-icon-wrap {
+.emotion-49.uc-fe-checkbox-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -1266,7 +1438,7 @@ exports[`ZForm demo -- rule 1`] = `
   vertical-align: middle;
 }
 
-.emotion-46 .uc-fe-checkbox-icon {
+.emotion-49 .uc-fe-checkbox-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -1274,18 +1446,18 @@ exports[`ZForm demo -- rule 1`] = `
   left: -1px;
 }
 
-.emotion-46.uc-fe-checkbox-icon-wrap {
+.emotion-49.uc-fe-checkbox-icon-wrap {
   border-color: #3860f4;
   background: #3860f4;
 }
 
-.emotion-46 .uc-fe-checkbox-icon {
+.emotion-49 .uc-fe-checkbox-icon {
   visibility: visible;
   opacity: 1;
   fill: #ffffff;
 }
 
-.emotion-44 {
+.emotion-47 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -1295,27 +1467,21 @@ exports[`ZForm demo -- rule 1`] = `
   height: 14px;
 }
 
-.emotion-66 {
+.emotion-73 {
   box-sizing: border-box;
   position: relative;
   max-width: 100%;
+  min-width: 80px;
+  width: 180px;
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
   color: #0a1633;
 }
 
-.emotion-64 {
-  margin: 0;
+.emotion-71 {
+  position: relative;
   box-sizing: border-box;
-  border-radius: 2px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  font-size: 12px;
-  white-space: nowrap;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1324,84 +1490,278 @@ exports[`ZForm demo -- rule 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  vertical-align: middle;
   height: 28px;
-  line-height: 28px;
-  padding: 0 8px;
-  color: #0a1633;
-  fill: #0a1633;
-  background: #ffffff;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
   border: 1px solid #c3cad9;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  border-width: 1px;
-  border-style: solid;
-  padding: 0 7px;
-  line-height: 26px;
-  padding-right: 28px;
-  width: 100%;
-  min-width: 78px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  overflow: hidden;
-}
-
-.emotion-64:link,
-.emotion-64:visited {
-  color: #0a1633;
-}
-
-.emotion-64:hover,
-.emotion-64:active {
-  color: #3860f4;
-  fill: #3860f4;
-  border: 1px solid #d2d6ea;
-  background: #ffffff;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
-}
-
-.emotion-64 .uc-fe-select-content {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.emotion-61 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  display: inline-block;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
-  fill: currentcolor;
-  width: 12px;
-  height: 12px;
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  margin-top: -6px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
 }
 
-.emotion-132 {
+.emotion-71,
+.emotion-71 input,
+.emotion-71 .emotion-64 {
+  padding: 0 4px;
+}
+
+.emotion-71:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
+}
+
+.emotion-71 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-71 input,
+.emotion-71 input:hover,
+.emotion-71 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-71 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-71 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-71 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-71 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-71 input::-ms-clear {
+  display: none;
+}
+
+.emotion-71 .emotion-64 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-71 .emotion-64:empty {
+  display: none;
+}
+
+.emotion-71 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-71 input {
+  cursor: pointer;
+}
+
+.emotion-71 uc-fe-select-placeholder {
+  width: 0;
+  overflow: visible;
+}
+
+.emotion-91 {
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 28px;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  vertical-align: middle;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.emotion-91,
+.emotion-91 input,
+.emotion-91 .emotion-64 {
+  padding: 0 4px;
+}
+
+.emotion-91:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
+}
+
+.emotion-91 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-91 input,
+.emotion-91 input:hover,
+.emotion-91 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-91 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-91 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-91 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-91 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-91 input::-ms-clear {
+  display: none;
+}
+
+.emotion-91 .emotion-64 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-91 .emotion-64:empty {
+  display: none;
+}
+
+.emotion-91 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-91:hover .uc-fe-input-clear,
+.emotion-91.uc-fe-input-focused .uc-fe-input-clear {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.emotion-91 input {
+  cursor: pointer;
+}
+
+.emotion-91 uc-fe-select-placeholder {
+  width: 0;
+  overflow: visible;
+}
+
+.emotion-147 {
   padding: 16px;
   border: 1px solid #d2d6ea;
   background: #f6f6fb;
 }
 
-* + .emotion-132 {
+* + .emotion-147 {
   margin-top: 12px;
 }
 
-.emotion-132 .uc-fe-form-item {
+.emotion-147 .uc-fe-form-item {
   margin-bottom: 16px;
 }
 
-.emotion-141 {
+.emotion-156 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -1437,22 +1797,22 @@ exports[`ZForm demo -- rule 1`] = `
   transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
 }
 
-.emotion-141:link,
-.emotion-141:visited {
+.emotion-156:link,
+.emotion-156:visited {
   color: #ffffff;
 }
 
-.emotion-141:hover,
-.emotion-141:active {
+.emotion-156:hover,
+.emotion-156:active {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
 
 <form
-  class="uc-fe-form emotion-143 emotion-90"
+  class="uc-fe-form emotion-158 emotion-100"
 >
   <div
-    class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10 emotion-11"
+    class="uc-fe-row uc-fe-form-item emotion-9 emotion-10 emotion-11 emotion-12"
   >
     <div
       class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
@@ -1461,24 +1821,20 @@ exports[`ZForm demo -- rule 1`] = `
       input_1
     </div>
     <div
-      class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
+      class="uc-fe-col uc-fe-form-controller emotion-6 emotion-7 emotion-2"
       span="5"
     >
       <span
-        class="uc-fe-input emotion-3 emotion-4"
+        class="uc-fe-input emotion-3 emotion-4 emotion-5"
       >
-        <span
-          class="uc-fe-input-wrap"
-        >
-          <input
-            value=""
-          />
-        </span>
+        <input
+          value=""
+        />
       </span>
     </div>
   </div>
   <div
-    class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10 emotion-11"
+    class="uc-fe-row uc-fe-form-item emotion-9 emotion-10 emotion-11 emotion-12"
   >
     <div
       class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
@@ -1487,24 +1843,20 @@ exports[`ZForm demo -- rule 1`] = `
       input_2
     </div>
     <div
-      class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
+      class="uc-fe-col uc-fe-form-controller emotion-6 emotion-7 emotion-2"
       span="5"
     >
       <span
-        class="uc-fe-input emotion-3 emotion-4"
+        class="uc-fe-input emotion-3 emotion-4 emotion-5"
       >
-        <span
-          class="uc-fe-input-wrap"
-        >
-          <input
-            value=""
-          />
-        </span>
+        <input
+          value=""
+        />
       </span>
     </div>
   </div>
   <div
-    class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10 emotion-11"
+    class="uc-fe-row uc-fe-form-item emotion-9 emotion-10 emotion-11 emotion-12"
   >
     <div
       class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
@@ -1513,22 +1865,18 @@ exports[`ZForm demo -- rule 1`] = `
       input_3
     </div>
     <div
-      class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
+      class="uc-fe-col uc-fe-form-controller emotion-6 emotion-7 emotion-2"
       span="5"
     >
       <span
-        class="uc-fe-input emotion-3 emotion-4"
+        class="uc-fe-input emotion-3 emotion-4 emotion-5"
       >
-        <span
-          class="uc-fe-input-wrap"
-        >
-          <input
-            value=""
-          />
-        </span>
+        <input
+          value=""
+        />
       </span>
       <div
-        class="uc-fe-combine uc-fe-form-tip emotion-91 emotion-32 emotion-33"
+        class="uc-fe-combine uc-fe-form-tip emotion-101 emotion-35 emotion-36"
         spacing="sm"
       >
         <div
@@ -1538,7 +1886,7 @@ exports[`ZForm demo -- rule 1`] = `
             class="uc-fe-form-tip-icon"
           >
             <svg
-              class="uc-fe-form-tip-icon emotion-29 emotion-30"
+              class="uc-fe-form-tip-icon emotion-32 emotion-33"
               viewBox="0 0 24 24"
             >
               <path
@@ -1561,7 +1909,7 @@ exports[`ZForm demo -- rule 1`] = `
     </div>
   </div>
   <div
-    class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10 emotion-11"
+    class="uc-fe-row uc-fe-form-item emotion-9 emotion-10 emotion-11 emotion-12"
   >
     <div
       class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
@@ -1570,19 +1918,19 @@ exports[`ZForm demo -- rule 1`] = `
       checkbox_1
     </div>
     <div
-      class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
+      class="uc-fe-col uc-fe-form-controller emotion-6 emotion-7 emotion-2"
       span="5"
     >
       <span
         checked=""
-        class="uc-fe-checkbox uc-fe-checkbox-checked emotion-48 emotion-49"
+        class="uc-fe-checkbox uc-fe-checkbox-checked emotion-51 emotion-52"
       >
         <span
           checked=""
-          class="uc-fe-checkbox-icon-wrap emotion-46 emotion-47"
+          class="uc-fe-checkbox-icon-wrap emotion-49 emotion-50"
         >
           <svg
-            class="uc-fe-checkbox-icon emotion-44 emotion-30"
+            class="uc-fe-checkbox-icon emotion-47 emotion-33"
             viewBox="0 0 24 24"
           >
             <path
@@ -1594,7 +1942,7 @@ exports[`ZForm demo -- rule 1`] = `
     </div>
   </div>
   <div
-    class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10 emotion-11"
+    class="uc-fe-row uc-fe-form-item emotion-9 emotion-10 emotion-11 emotion-12"
   >
     <div
       class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
@@ -1603,37 +1951,46 @@ exports[`ZForm demo -- rule 1`] = `
       select_1
     </div>
     <div
-      class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
+      class="uc-fe-col uc-fe-form-controller emotion-6 emotion-7 emotion-2"
       span="5"
     >
       <div
-        class="emotion-66 emotion-67"
+        class="emotion-73 emotion-74"
       >
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-63 emotion-64 emotion-65"
-          title="请选择"
-          type="button"
+        <span
+          class="uc-fe-input uc-fe-select-input emotion-69 emotion-3 emotion-71 emotion-5"
         >
-          <div
-            class="uc-fe-select-content"
+          <span
+            class="uc-fe-input-prefix emotion-63 emotion-64"
           >
-            请选择
-          </div>
-          <svg
-            class="emotion-60 emotion-61 emotion-30"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-              transform="matrix(-1 0 0 1 24 0)"
+            <span
+              class="uc-fe-select-placeholder"
             />
-          </svg>
-        </button>
+          </span>
+          <input
+            cursor="pointer"
+            readonly=""
+            value=""
+          />
+          <span
+            class="uc-fe-input-suffix emotion-63 emotion-64"
+          >
+            <svg
+              class=" emotion-32 emotion-33"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+                transform="matrix(-1 0 0 1 24 0)"
+              />
+            </svg>
+          </span>
+        </span>
       </div>
     </div>
   </div>
   <div
-    class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10 emotion-11"
+    class="uc-fe-row uc-fe-form-item emotion-9 emotion-10 emotion-11 emotion-12"
   >
     <div
       class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
@@ -1642,37 +1999,39 @@ exports[`ZForm demo -- rule 1`] = `
       select_2
     </div>
     <div
-      class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
+      class="uc-fe-col uc-fe-form-controller emotion-6 emotion-7 emotion-2"
       span="5"
     >
       <div
-        class="emotion-66 emotion-67"
+        class="emotion-73 emotion-74"
       >
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-63 emotion-64 emotion-65"
-          title="label-1"
-          type="button"
+        <span
+          class="uc-fe-input uc-fe-select-input emotion-69 emotion-3 emotion-91 emotion-5"
         >
-          <div
-            class="uc-fe-select-content"
+          <input
+            cursor="pointer"
+            readonly=""
+            value="label-1"
+          />
+          <span
+            class="uc-fe-input-suffix emotion-63 emotion-64"
           >
-            label-1
-          </div>
-          <svg
-            class="emotion-60 emotion-61 emotion-30"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-              transform="matrix(-1 0 0 1 24 0)"
-            />
-          </svg>
-        </button>
+            <svg
+              class=" emotion-32 emotion-33"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+                transform="matrix(-1 0 0 1 24 0)"
+              />
+            </svg>
+          </span>
+        </span>
       </div>
     </div>
   </div>
   <div
-    class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10 emotion-11"
+    class="uc-fe-row uc-fe-form-item emotion-9 emotion-10 emotion-11 emotion-12"
   >
     <div
       class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
@@ -1681,14 +2040,14 @@ exports[`ZForm demo -- rule 1`] = `
       区域
     </div>
     <div
-      class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
+      class="uc-fe-col uc-fe-form-controller emotion-6 emotion-7 emotion-2"
       span="5"
     >
       <div
-        class="uc-fe-form-sub-area emotion-132 emotion-94"
+        class="uc-fe-form-sub-area emotion-147 emotion-104"
       >
         <div
-          class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10 emotion-11"
+          class="uc-fe-row uc-fe-form-item emotion-9 emotion-10 emotion-11 emotion-12"
         >
           <div
             class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
@@ -1697,37 +2056,46 @@ exports[`ZForm demo -- rule 1`] = `
             sub_item_1
           </div>
           <div
-            class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
+            class="uc-fe-col uc-fe-form-controller emotion-6 emotion-7 emotion-2"
             span="5"
           >
             <div
-              class="emotion-66 emotion-67"
+              class="emotion-73 emotion-74"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-63 emotion-64 emotion-65"
-                title="请选择"
-                type="button"
+              <span
+                class="uc-fe-input uc-fe-select-input emotion-69 emotion-3 emotion-71 emotion-5"
               >
-                <div
-                  class="uc-fe-select-content"
+                <span
+                  class="uc-fe-input-prefix emotion-63 emotion-64"
                 >
-                  请选择
-                </div>
-                <svg
-                  class="emotion-60 emotion-61 emotion-30"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-                    transform="matrix(-1 0 0 1 24 0)"
+                  <span
+                    class="uc-fe-select-placeholder"
                   />
-                </svg>
-              </button>
+                </span>
+                <input
+                  cursor="pointer"
+                  readonly=""
+                  value=""
+                />
+                <span
+                  class="uc-fe-input-suffix emotion-63 emotion-64"
+                >
+                  <svg
+                    class=" emotion-32 emotion-33"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+                      transform="matrix(-1 0 0 1 24 0)"
+                    />
+                  </svg>
+                </span>
+              </span>
             </div>
           </div>
         </div>
         <div
-          class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10 emotion-11"
+          class="uc-fe-row uc-fe-form-item emotion-9 emotion-10 emotion-11 emotion-12"
         >
           <div
             class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
@@ -1736,32 +2104,34 @@ exports[`ZForm demo -- rule 1`] = `
             sub_item_2
           </div>
           <div
-            class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
+            class="uc-fe-col uc-fe-form-controller emotion-6 emotion-7 emotion-2"
             span="5"
           >
             <div
-              class="emotion-66 emotion-67"
+              class="emotion-73 emotion-74"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-63 emotion-64 emotion-65"
-                title="label-1"
-                type="button"
+              <span
+                class="uc-fe-input uc-fe-select-input emotion-69 emotion-3 emotion-91 emotion-5"
               >
-                <div
-                  class="uc-fe-select-content"
+                <input
+                  cursor="pointer"
+                  readonly=""
+                  value="label-1"
+                />
+                <span
+                  class="uc-fe-input-suffix emotion-63 emotion-64"
                 >
-                  label-1
-                </div>
-                <svg
-                  class="emotion-60 emotion-61 emotion-30"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-                    transform="matrix(-1 0 0 1 24 0)"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-32 emotion-33"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+                      transform="matrix(-1 0 0 1 24 0)"
+                    />
+                  </svg>
+                </span>
+              </span>
             </div>
           </div>
         </div>
@@ -1769,7 +2139,7 @@ exports[`ZForm demo -- rule 1`] = `
     </div>
   </div>
   <button
-    class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-141 emotion-65"
+    class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-156 emotion-157"
     type="button"
   >
     submit
@@ -1778,15 +2148,15 @@ exports[`ZForm demo -- rule 1`] = `
 `;
 
 exports[`ZForm demo -- uhost 1`] = `
-.emotion-142 {
+.emotion-146 {
   font-size: 12px;
 }
 
-.emotion-142 .uc-fe-form-item {
+.emotion-146 .uc-fe-form-item {
   margin-bottom: 16px;
 }
 
-.emotion-142 .uc-fe-form-item:last-child {
+.emotion-146 .uc-fe-form-item:last-child {
   margin-bottom: 0;
 }
 
@@ -1829,85 +2199,7 @@ exports[`ZForm demo -- uhost 1`] = `
   color: #526075;
 }
 
-.emotion-131 {
-  box-sizing: border-box;
-  position: relative;
-  max-width: 100%;
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 12px;
-  color: #0a1633;
-}
-
-.emotion-129 {
-  margin: 0;
-  box-sizing: border-box;
-  border-radius: 2px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  font-size: 12px;
-  white-space: nowrap;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
-  padding: 0 8px;
-  color: #0a1633;
-  fill: #0a1633;
-  background: #ffffff;
-  border: 1px solid #c3cad9;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  border-width: 1px;
-  border-style: solid;
-  padding: 0 7px;
-  line-height: 26px;
-  padding-right: 28px;
-  width: 100%;
-  min-width: 78px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  overflow: hidden;
-}
-
-.emotion-129:link,
-.emotion-129:visited {
-  color: #0a1633;
-}
-
-.emotion-129:hover,
-.emotion-129:active {
-  color: #3860f4;
-  fill: #3860f4;
-  border: 1px solid #d2d6ea;
-  background: #ffffff;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
-}
-
-.emotion-129 .uc-fe-select-content {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.emotion-126 {
+.emotion-127 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -1915,13 +2207,21 @@ exports[`ZForm demo -- uhost 1`] = `
   fill: currentcolor;
   width: 12px;
   height: 12px;
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  margin-top: -6px;
 }
 
-.emotion-140 {
+.emotion-135 {
+  box-sizing: border-box;
+  position: relative;
+  max-width: 100%;
+  min-width: 80px;
+  width: 180px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  color: #0a1633;
+}
+
+.emotion-144 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -1957,13 +2257,13 @@ exports[`ZForm demo -- uhost 1`] = `
   transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
 }
 
-.emotion-140:link,
-.emotion-140:visited {
+.emotion-144:link,
+.emotion-144:visited {
   color: #ffffff;
 }
 
-.emotion-140:hover,
-.emotion-140:active {
+.emotion-144:hover,
+.emotion-144:active {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
@@ -2276,15 +2576,146 @@ exports[`ZForm demo -- uhost 1`] = `
   display: none;
 }
 
-.emotion-142 {
+.emotion-133 {
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 28px;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  vertical-align: middle;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+}
+
+.emotion-133,
+.emotion-133 input,
+.emotion-133 .emotion-126 {
+  padding: 0 4px;
+}
+
+.emotion-133:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
+}
+
+.emotion-133 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-133 input,
+.emotion-133 input:hover,
+.emotion-133 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-133 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-133 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-133 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-133 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-133 input::-ms-clear {
+  display: none;
+}
+
+.emotion-133 .emotion-126 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-133 .emotion-126:empty {
+  display: none;
+}
+
+.emotion-133 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-133 input {
+  cursor: text;
+}
+
+.emotion-133 uc-fe-select-placeholder {
+  width: 0;
+  overflow: visible;
+}
+
+.emotion-146 {
   font-size: 12px;
 }
 
-.emotion-142 .uc-fe-form-item {
+.emotion-146 .uc-fe-form-item {
   margin-bottom: 16px;
 }
 
-.emotion-142 .uc-fe-form-item:last-child {
+.emotion-146 .uc-fe-form-item:last-child {
   margin-bottom: 0;
 }
 
@@ -2327,85 +2758,7 @@ exports[`ZForm demo -- uhost 1`] = `
   color: #526075;
 }
 
-.emotion-131 {
-  box-sizing: border-box;
-  position: relative;
-  max-width: 100%;
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 12px;
-  color: #0a1633;
-}
-
-.emotion-129 {
-  margin: 0;
-  box-sizing: border-box;
-  border-radius: 2px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  font-size: 12px;
-  white-space: nowrap;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
-  padding: 0 8px;
-  color: #0a1633;
-  fill: #0a1633;
-  background: #ffffff;
-  border: 1px solid #c3cad9;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  border-width: 1px;
-  border-style: solid;
-  padding: 0 7px;
-  line-height: 26px;
-  padding-right: 28px;
-  width: 100%;
-  min-width: 78px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  overflow: hidden;
-}
-
-.emotion-129:link,
-.emotion-129:visited {
-  color: #0a1633;
-}
-
-.emotion-129:hover,
-.emotion-129:active {
-  color: #3860f4;
-  fill: #3860f4;
-  border: 1px solid #d2d6ea;
-  background: #ffffff;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
-}
-
-.emotion-129 .uc-fe-select-content {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.emotion-126 {
+.emotion-127 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -2413,13 +2766,21 @@ exports[`ZForm demo -- uhost 1`] = `
   fill: currentcolor;
   width: 12px;
   height: 12px;
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  margin-top: -6px;
 }
 
-.emotion-140 {
+.emotion-135 {
+  box-sizing: border-box;
+  position: relative;
+  max-width: 100%;
+  min-width: 80px;
+  width: 180px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  color: #0a1633;
+}
+
+.emotion-144 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -2455,13 +2816,13 @@ exports[`ZForm demo -- uhost 1`] = `
   transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
 }
 
-.emotion-140:link,
-.emotion-140:visited {
+.emotion-144:link,
+.emotion-144:visited {
   color: #ffffff;
 }
 
-.emotion-140:hover,
-.emotion-140:active {
+.emotion-144:hover,
+.emotion-144:active {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
@@ -2772,10 +3133,141 @@ exports[`ZForm demo -- uhost 1`] = `
 
 .emotion-105 .uc-fe-switch-tip-on {
   display: none;
+}
+
+.emotion-133 {
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 28px;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  vertical-align: middle;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+}
+
+.emotion-133,
+.emotion-133 input,
+.emotion-133 .emotion-126 {
+  padding: 0 4px;
+}
+
+.emotion-133:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
+}
+
+.emotion-133 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-133 input,
+.emotion-133 input:hover,
+.emotion-133 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-133 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-133 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-133 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-133 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-133 input::-ms-clear {
+  display: none;
+}
+
+.emotion-133 .emotion-126 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-133 .emotion-126:empty {
+  display: none;
+}
+
+.emotion-133 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-133 input {
+  cursor: text;
+}
+
+.emotion-133 uc-fe-select-placeholder {
+  width: 0;
+  overflow: visible;
 }
 
 <form
-  class="uc-fe-form emotion-142 emotion-660"
+  class="uc-fe-form emotion-146 emotion-660"
 >
   <div
     class="uc-fe-row uc-fe-form-item emotion-65 emotion-66 emotion-67 emotion-68"
@@ -3042,28 +3534,36 @@ exports[`ZForm demo -- uhost 1`] = `
         </button>
       </div>
       <div
-        class="emotion-131 emotion-132"
+        class="emotion-135 emotion-136"
       >
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-128 emotion-129 emotion-5"
-          title="请选择"
-          type="button"
+        <span
+          class="uc-fe-input uc-fe-select-input emotion-131 emotion-132 emotion-133 emotion-134"
         >
-          <div
-            class="uc-fe-select-content"
+          <span
+            class="uc-fe-input-prefix emotion-125 emotion-126"
           >
-            请选择
-          </div>
-          <svg
-            class="emotion-125 emotion-126 emotion-127"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-              transform="matrix(-1 0 0 1 24 0)"
+            <span
+              class="uc-fe-select-placeholder"
             />
-          </svg>
-        </button>
+          </span>
+          <input
+            cursor="text"
+            value=""
+          />
+          <span
+            class="uc-fe-input-suffix emotion-125 emotion-126"
+          >
+            <svg
+              class=" emotion-127 emotion-128"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+                transform="matrix(-1 0 0 1 24 0)"
+              />
+            </svg>
+          </span>
+        </span>
       </div>
     </div>
   </div>
@@ -3071,7 +3571,7 @@ exports[`ZForm demo -- uhost 1`] = `
     class="u-red"
   />
   <button
-    class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-140 emotion-5"
+    class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-144 emotion-5"
     type="button"
   >
     submit

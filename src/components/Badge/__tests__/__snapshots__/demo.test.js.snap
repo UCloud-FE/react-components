@@ -1,19 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Badge demo -- badge 1`] = `
-.emotion-180 {
+.emotion-181 {
   font-size: 12px;
 }
 
-.emotion-180 .uc-fe-form-item {
+.emotion-181 .uc-fe-form-item {
   margin-bottom: 16px;
 }
 
-.emotion-180 .uc-fe-form-item:last-child {
+.emotion-181 .uc-fe-form-item:last-child {
   margin-bottom: 0;
 }
 
-.emotion-10 {
+.emotion-11 {
   position: relative;
   display: block;
   height: auto;
@@ -21,17 +21,17 @@ exports[`Badge demo -- badge 1`] = `
   margin-right: -8px;
 }
 
-.emotion-10:before,
-.emotion-10:after {
+.emotion-11:before,
+.emotion-11:after {
   content: ' ';
   display: table;
 }
 
-.emotion-10:after {
+.emotion-11:after {
   clear: both;
 }
 
-.emotion-10 > .uc-fe-col {
+.emotion-11 > .uc-fe-col {
   padding-left: 8px;
   padding-right: 8px;
 }
@@ -52,7 +52,7 @@ exports[`Badge demo -- badge 1`] = `
   color: #526075;
 }
 
-.emotion-6 {
+.emotion-7 {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -64,9 +64,17 @@ exports[`Badge demo -- badge 1`] = `
   width: 75%;
 }
 
-.emotion-3 {
+.emotion-4 {
   position: relative;
   box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -76,19 +84,87 @@ exports[`Badge demo -- badge 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
 }
 
-.emotion-3:hover {
+.emotion-4,
+.emotion-4 input,
+.emotion-4 .e1bl81de0 {
+  padding: 0 4px;
+}
+
+.emotion-4:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-3 .uc-fe-input-clear {
+.emotion-4 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-4 input,
+.emotion-4 input:hover,
+.emotion-4 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-4 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input::-ms-clear {
+  display: none;
+}
+
+.emotion-4 .e1bl81de0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-4 .e1bl81de0:empty {
+  display: none;
+}
+
+.emotion-4 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -105,97 +181,13 @@ exports[`Badge demo -- badge 1`] = `
   transition: opacity 0.3s;
 }
 
-.emotion-3 .uc-fe-input-wrap,
-.emotion-3 .uc-fe-input-prefix,
-.emotion-3 .uc-fe-input-suffix,
-.emotion-3 .uc-fe-input-clear,
-.emotion-3 input {
-  padding: 0 4px;
-}
-
-.emotion-3.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-3 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-3 .uc-fe-input-prefix,
-.emotion-3 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-3 input {
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
-  -webkit-flex: 1 1 130px;
-  -ms-flex: 1 1 130px;
-  flex: 1 1 130px;
-  min-width: 0px;
-}
-
-.emotion-3 input,
-.emotion-3 input:hover,
-.emotion-3 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-3 input::-webkit-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-3 input::-moz-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-3 input:-ms-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-3 input::placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-3 input::-ms-clear {
-  display: none;
-}
-
-.emotion-3:hover .uc-fe-input-clear,
-.emotion-3.uc-fe-input-focused .uc-fe-input-clear {
+.emotion-4:hover .uc-fe-input-clear,
+.emotion-4.uc-fe-input-focused .uc-fe-input-clear {
   opacity: 1;
   cursor: pointer;
 }
 
-.emotion-19 {
+.emotion-20 {
   position: relative;
   box-sizing: border-box;
   border-radius: 2px;
@@ -208,11 +200,11 @@ exports[`Badge demo -- badge 1`] = `
   border-right-width: 0;
 }
 
-.emotion-19 .uc-fe-numberinput-input-wrap {
+.emotion-20 .uc-fe-numberinput-input-wrap {
   position: relative;
 }
 
-.emotion-19 .uc-fe-numberinput-input {
+.emotion-20 .uc-fe-numberinput-input {
   border: none;
   outline: none;
   padding: 0;
@@ -220,15 +212,15 @@ exports[`Badge demo -- badge 1`] = `
   color: inherit;
 }
 
-.emotion-19 .uc-fe-numberinput-suffix {
+.emotion-20 .uc-fe-numberinput-suffix {
   color: #7a8baa;
   margin: 0 4px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.emotion-19 .uc-fe-numberinput-handler-up,
-.emotion-19 .uc-fe-numberinput-handler-down {
+.emotion-20 .uc-fe-numberinput-handler-up,
+.emotion-20 .uc-fe-numberinput-handler-down {
   position: absolute;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -253,14 +245,14 @@ exports[`Badge demo -- badge 1`] = `
   vertical-align: middle;
 }
 
-.emotion-19 .uc-fe-numberinput-handler-up:hover,
-.emotion-19 .uc-fe-numberinput-handler-down:hover {
+.emotion-20 .uc-fe-numberinput-handler-up:hover,
+.emotion-20 .uc-fe-numberinput-handler-down:hover {
   color: #3860f4;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-19 .uc-fe-numberinput-handler-up.uc-fe-numberinput-handler-disabled,
-.emotion-19 .uc-fe-numberinput-handler-down.uc-fe-numberinput-handler-disabled {
+.emotion-20 .uc-fe-numberinput-handler-up.uc-fe-numberinput-handler-disabled,
+.emotion-20 .uc-fe-numberinput-handler-down.uc-fe-numberinput-handler-disabled {
   cursor: default;
   pointer-events: none;
   color: #cccccc;
@@ -268,47 +260,47 @@ exports[`Badge demo -- badge 1`] = `
   border-color: #c3cad9;
 }
 
-.emotion-19 .uc-fe-numberinput-input {
+.emotion-20 .uc-fe-numberinput-input {
   line-height: 26px;
   height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.emotion-19 .uc-fe-numberinput-input::-webkit-input-placeholder {
+.emotion-20 .uc-fe-numberinput-input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-19 .uc-fe-numberinput-input::-moz-placeholder {
+.emotion-20 .uc-fe-numberinput-input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-19 .uc-fe-numberinput-input:-ms-input-placeholder {
+.emotion-20 .uc-fe-numberinput-input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-19 .uc-fe-numberinput-input::placeholder {
+.emotion-20 .uc-fe-numberinput-input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-19:hover {
+.emotion-20:hover {
   border-color: #c3cad9;
 }
 
-.emotion-19 .uc-fe-numberinput-input-wrap {
+.emotion-20 .uc-fe-numberinput-input-wrap {
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
 }
 
-.emotion-19 .uc-fe-numberinput-input-wrap:hover {
+.emotion-20 .uc-fe-numberinput-input-wrap:hover {
   background: #f6f6fb;
 }
 
-.emotion-19 .uc-fe-numberinput-input {
+.emotion-20 .uc-fe-numberinput-input {
   padding: 0 0 0 8px;
   text-align: left;
   box-shadow: none;
@@ -316,8 +308,8 @@ exports[`Badge demo -- badge 1`] = `
   width: 34px;
 }
 
-.emotion-19 .uc-fe-numberinput-handler-up,
-.emotion-19 .uc-fe-numberinput-handler-down {
+.emotion-20 .uc-fe-numberinput-handler-up,
+.emotion-20 .uc-fe-numberinput-handler-down {
   height: 13px;
   width: 22px;
   right: 0;
@@ -325,24 +317,24 @@ exports[`Badge demo -- badge 1`] = `
   border-radius: 0;
 }
 
-.emotion-19 .uc-fe-numberinput-handler-up:hover,
-.emotion-19 .uc-fe-numberinput-handler-down:hover {
+.emotion-20 .uc-fe-numberinput-handler-up:hover,
+.emotion-20 .uc-fe-numberinput-handler-down:hover {
   color: #3860f4;
 }
 
-.emotion-19 .uc-fe-numberinput-handler-up {
+.emotion-20 .uc-fe-numberinput-handler-up {
   border-width: 0 0 0 1px;
   top: -1px;
   padding-top: 1px;
 }
 
-.emotion-19 .uc-fe-numberinput-handler-down {
+.emotion-20 .uc-fe-numberinput-handler-down {
   border-width: 1px 0 0 1px;
   bottom: 0;
   border-top-color: #c3cad9;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -352,7 +344,7 @@ exports[`Badge demo -- badge 1`] = `
   height: 12px;
 }
 
-.emotion-31 {
+.emotion-32 {
   position: relative;
   cursor: pointer;
   font-size: 12px;
@@ -362,7 +354,7 @@ exports[`Badge demo -- badge 1`] = `
   width: 73px;
 }
 
-.emotion-31 .uc-fe-switch-inner {
+.emotion-32 .uc-fe-switch-inner {
   border-radius: 2px;
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -383,7 +375,7 @@ exports[`Badge demo -- badge 1`] = `
   transition: color 0.3s;
 }
 
-.emotion-31 .uc-fe-switch-dot {
+.emotion-32 .uc-fe-switch-dot {
   position: absolute;
   display: block;
   right: 6px;
@@ -396,7 +388,7 @@ exports[`Badge demo -- badge 1`] = `
   transition: background 0.3s;
 }
 
-.emotion-31 .uc-fe-switch-button {
+.emotion-32 .uc-fe-switch-button {
   position: absolute;
   display: block;
   box-sizing: border-box;
@@ -406,7 +398,7 @@ exports[`Badge demo -- badge 1`] = `
   transition: all 0.3s;
 }
 
-.emotion-31 .uc-fe-switch-button > span {
+.emotion-32 .uc-fe-switch-button > span {
   display: block;
   width: 100%;
   height: 100%;
@@ -414,15 +406,15 @@ exports[`Badge demo -- badge 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-31 .uc-fe-switch-tip-on,
-.emotion-31 .uc-fe-switch-tip-off {
+.emotion-32 .uc-fe-switch-tip-on,
+.emotion-32 .uc-fe-switch-tip-off {
   width: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
-.emotion-31 .uc-fe-switch-inner {
+.emotion-32 .uc-fe-switch-inner {
   background: #f6f6fb;
   border-color: #d2d6ea;
   border-width: 1px;
@@ -431,86 +423,86 @@ exports[`Badge demo -- badge 1`] = `
   color: #526075;
 }
 
-.emotion-31 .uc-fe-switch-button {
+.emotion-32 .uc-fe-switch-button {
   width: 28px;
   height: 28px;
   padding: 2px;
 }
 
-.emotion-31 .uc-fe-switch-button > span {
+.emotion-32 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
 }
 
-.emotion-31 .uc-fe-switch-dot {
+.emotion-32 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-31:hover .uc-fe-switch-inner {
+.emotion-32:hover .uc-fe-switch-inner {
   border-color: #c3cad9;
 }
 
-.emotion-31 .uc-fe-switch-tip-on {
+.emotion-32 .uc-fe-switch-tip-on {
   padding-right: 28px;
 }
 
-.emotion-31 .uc-fe-switch-tip-off {
+.emotion-32 .uc-fe-switch-tip-off {
   padding-left: 28px;
 }
 
-.emotion-31 .uc-fe-switch-tip-on {
+.emotion-32 .uc-fe-switch-tip-on {
   display: none;
 }
 
-.emotion-115 {
+.emotion-116 {
   position: relative;
   margin-bottom: -8px;
 }
 
-.emotion-115 .uc-fe-radio-styletype-default,
-.emotion-115 .uc-fe-radio-styletype-tag {
+.emotion-116 .uc-fe-radio-styletype-default,
+.emotion-116 .uc-fe-radio-styletype-tag {
   margin-right: 8px;
   margin-bottom: 8px;
 }
 
-.emotion-115 .uc-fe-radio-styletype-default:last-child,
-.emotion-115 .uc-fe-radio-styletype-tag:last-child {
+.emotion-116 .uc-fe-radio-styletype-default:last-child,
+.emotion-116 .uc-fe-radio-styletype-tag:last-child {
   margin-right: 0;
 }
 
-.emotion-115 .uc-fe-radio-styletype-card {
+.emotion-116 .uc-fe-radio-styletype-card {
   margin-right: 12px;
   margin-bottom: 8px;
 }
 
-.emotion-115 .uc-fe-radio-styletype-card:last-child {
+.emotion-116 .uc-fe-radio-styletype-card:last-child {
   margin-right: 0;
 }
 
-.emotion-115 .uc-fe-radio-styletype-text+.uc-fe-radio-styletype-text {
+.emotion-116 .uc-fe-radio-styletype-text+.uc-fe-radio-styletype-text {
   margin-left: -1px;
 }
 
-.emotion-115 .uc-fe-radio-styletype-button {
+.emotion-116 .uc-fe-radio-styletype-button {
   margin-right: -1px;
   margin-bottom: 8px;
 }
 
-.emotion-115 .uc-fe-radio-styletype-button:first-of-type {
+.emotion-116 .uc-fe-radio-styletype-button:first-of-type {
   border-radius: 2px 0 0 2px;
 }
 
-.emotion-115 .uc-fe-radio-styletype-button:last-of-type {
+.emotion-116 .uc-fe-radio-styletype-button:last-of-type {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
 }
 
-.emotion-115 .uc-fe-radio-styletype-list:last-of-type {
+.emotion-116 .uc-fe-radio-styletype-list:last-of-type {
   margin-bottom: 8px;
 }
 
-.emotion-71 {
+.emotion-72 {
   color: #526075;
   font-size: 12px;
   position: relative;
@@ -523,23 +515,23 @@ exports[`Badge demo -- badge 1`] = `
   color: #0a1633;
 }
 
-.emotion-71 > * {
+.emotion-72 > * {
   font-size: 12px;
 }
 
-.emotion-71 .uc-fe-radio-content {
+.emotion-72 .uc-fe-radio-content {
   display: inline-block;
   vertical-align: middle;
   max-height: 100%;
   margin-left: 8px;
 }
 
-.emotion-71.uc-fe-radio-disabled {
+.emotion-72.uc-fe-radio-disabled {
   cursor: default;
   color: #cccccc;
 }
 
-.emotion-69.uc-fe-radio-icon-wrap {
+.emotion-70.uc-fe-radio-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -551,7 +543,7 @@ exports[`Badge demo -- badge 1`] = `
   vertical-align: middle;
 }
 
-.emotion-69 .uc-fe-radio-icon {
+.emotion-70 .uc-fe-radio-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -559,17 +551,17 @@ exports[`Badge demo -- badge 1`] = `
   left: -1px;
 }
 
-.emotion-69.uc-fe-radio-icon-wrap {
+.emotion-70.uc-fe-radio-icon-wrap {
   border-color: #3860f4;
 }
 
-.emotion-69 .uc-fe-radio-icon {
+.emotion-70 .uc-fe-radio-icon {
   visibility: visible;
   opacity: 1;
   fill: #3860f4;
 }
 
-.emotion-67 {
+.emotion-68 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -579,7 +571,7 @@ exports[`Badge demo -- badge 1`] = `
   height: 14px;
 }
 
-.emotion-77 {
+.emotion-78 {
   color: #526075;
   font-size: 12px;
   position: relative;
@@ -592,27 +584,27 @@ exports[`Badge demo -- badge 1`] = `
   color: #0a1633;
 }
 
-.emotion-77 > * {
+.emotion-78 > * {
   font-size: 12px;
 }
 
-.emotion-77 .uc-fe-radio-content {
+.emotion-78 .uc-fe-radio-content {
   display: inline-block;
   vertical-align: middle;
   max-height: 100%;
   margin-left: 8px;
 }
 
-.emotion-77.uc-fe-radio-disabled {
+.emotion-78.uc-fe-radio-disabled {
   cursor: default;
   color: #cccccc;
 }
 
-.emotion-77:hover .uc-fe-radio-icon-wrap {
+.emotion-78:hover .uc-fe-radio-icon-wrap {
   border-color: #3860f4;
 }
 
-.emotion-75.uc-fe-radio-icon-wrap {
+.emotion-76.uc-fe-radio-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -624,7 +616,7 @@ exports[`Badge demo -- badge 1`] = `
   vertical-align: middle;
 }
 
-.emotion-75 .uc-fe-radio-icon {
+.emotion-76 .uc-fe-radio-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -632,17 +624,17 @@ exports[`Badge demo -- badge 1`] = `
   left: -1px;
 }
 
-.emotion-186 {
+.emotion-187 {
   position: relative;
   display: inline-block;
 }
 
-.emotion-184 {
+.emotion-185 {
   position: absolute;
   z-index: 9;
 }
 
-.emotion-182 {
+.emotion-183 {
   display: inline-block;
   min-height: 20px;
   line-height: 20px;
@@ -655,7 +647,7 @@ exports[`Badge demo -- badge 1`] = `
   color: #ffffff;
 }
 
-.emotion-182.uc-fe-badge-badge-dot {
+.emotion-183.uc-fe-badge-badge-dot {
   width: 8px;
   height: 8px;
   padding: 0;
@@ -664,19 +656,19 @@ exports[`Badge demo -- badge 1`] = `
   min-height: 0;
 }
 
-.emotion-180 {
+.emotion-181 {
   font-size: 12px;
 }
 
-.emotion-180 .uc-fe-form-item {
+.emotion-181 .uc-fe-form-item {
   margin-bottom: 16px;
 }
 
-.emotion-180 .uc-fe-form-item:last-child {
+.emotion-181 .uc-fe-form-item:last-child {
   margin-bottom: 0;
 }
 
-.emotion-10 {
+.emotion-11 {
   position: relative;
   display: block;
   height: auto;
@@ -684,17 +676,17 @@ exports[`Badge demo -- badge 1`] = `
   margin-right: -8px;
 }
 
-.emotion-10:before,
-.emotion-10:after {
+.emotion-11:before,
+.emotion-11:after {
   content: ' ';
   display: table;
 }
 
-.emotion-10:after {
+.emotion-11:after {
   clear: both;
 }
 
-.emotion-10 > .uc-fe-col {
+.emotion-11 > .uc-fe-col {
   padding-left: 8px;
   padding-right: 8px;
 }
@@ -715,7 +707,7 @@ exports[`Badge demo -- badge 1`] = `
   color: #526075;
 }
 
-.emotion-6 {
+.emotion-7 {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -727,9 +719,17 @@ exports[`Badge demo -- badge 1`] = `
   width: 75%;
 }
 
-.emotion-3 {
+.emotion-4 {
   position: relative;
   box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -739,19 +739,87 @@ exports[`Badge demo -- badge 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
 }
 
-.emotion-3:hover {
+.emotion-4,
+.emotion-4 input,
+.emotion-4 .e1bl81de0 {
+  padding: 0 4px;
+}
+
+.emotion-4:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-3 .uc-fe-input-clear {
+.emotion-4 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-4 input,
+.emotion-4 input:hover,
+.emotion-4 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-4 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input::-ms-clear {
+  display: none;
+}
+
+.emotion-4 .e1bl81de0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-4 .e1bl81de0:empty {
+  display: none;
+}
+
+.emotion-4 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -768,97 +836,13 @@ exports[`Badge demo -- badge 1`] = `
   transition: opacity 0.3s;
 }
 
-.emotion-3 .uc-fe-input-wrap,
-.emotion-3 .uc-fe-input-prefix,
-.emotion-3 .uc-fe-input-suffix,
-.emotion-3 .uc-fe-input-clear,
-.emotion-3 input {
-  padding: 0 4px;
-}
-
-.emotion-3.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-3 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-3 .uc-fe-input-prefix,
-.emotion-3 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-3 input {
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
-  -webkit-flex: 1 1 130px;
-  -ms-flex: 1 1 130px;
-  flex: 1 1 130px;
-  min-width: 0px;
-}
-
-.emotion-3 input,
-.emotion-3 input:hover,
-.emotion-3 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-3 input::-webkit-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-3 input::-moz-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-3 input:-ms-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-3 input::placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-3 input::-ms-clear {
-  display: none;
-}
-
-.emotion-3:hover .uc-fe-input-clear,
-.emotion-3.uc-fe-input-focused .uc-fe-input-clear {
+.emotion-4:hover .uc-fe-input-clear,
+.emotion-4.uc-fe-input-focused .uc-fe-input-clear {
   opacity: 1;
   cursor: pointer;
 }
 
-.emotion-19 {
+.emotion-20 {
   position: relative;
   box-sizing: border-box;
   border-radius: 2px;
@@ -871,11 +855,11 @@ exports[`Badge demo -- badge 1`] = `
   border-right-width: 0;
 }
 
-.emotion-19 .uc-fe-numberinput-input-wrap {
+.emotion-20 .uc-fe-numberinput-input-wrap {
   position: relative;
 }
 
-.emotion-19 .uc-fe-numberinput-input {
+.emotion-20 .uc-fe-numberinput-input {
   border: none;
   outline: none;
   padding: 0;
@@ -883,15 +867,15 @@ exports[`Badge demo -- badge 1`] = `
   color: inherit;
 }
 
-.emotion-19 .uc-fe-numberinput-suffix {
+.emotion-20 .uc-fe-numberinput-suffix {
   color: #7a8baa;
   margin: 0 4px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.emotion-19 .uc-fe-numberinput-handler-up,
-.emotion-19 .uc-fe-numberinput-handler-down {
+.emotion-20 .uc-fe-numberinput-handler-up,
+.emotion-20 .uc-fe-numberinput-handler-down {
   position: absolute;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -916,14 +900,14 @@ exports[`Badge demo -- badge 1`] = `
   vertical-align: middle;
 }
 
-.emotion-19 .uc-fe-numberinput-handler-up:hover,
-.emotion-19 .uc-fe-numberinput-handler-down:hover {
+.emotion-20 .uc-fe-numberinput-handler-up:hover,
+.emotion-20 .uc-fe-numberinput-handler-down:hover {
   color: #3860f4;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-19 .uc-fe-numberinput-handler-up.uc-fe-numberinput-handler-disabled,
-.emotion-19 .uc-fe-numberinput-handler-down.uc-fe-numberinput-handler-disabled {
+.emotion-20 .uc-fe-numberinput-handler-up.uc-fe-numberinput-handler-disabled,
+.emotion-20 .uc-fe-numberinput-handler-down.uc-fe-numberinput-handler-disabled {
   cursor: default;
   pointer-events: none;
   color: #cccccc;
@@ -931,47 +915,47 @@ exports[`Badge demo -- badge 1`] = `
   border-color: #c3cad9;
 }
 
-.emotion-19 .uc-fe-numberinput-input {
+.emotion-20 .uc-fe-numberinput-input {
   line-height: 26px;
   height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.emotion-19 .uc-fe-numberinput-input::-webkit-input-placeholder {
+.emotion-20 .uc-fe-numberinput-input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-19 .uc-fe-numberinput-input::-moz-placeholder {
+.emotion-20 .uc-fe-numberinput-input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-19 .uc-fe-numberinput-input:-ms-input-placeholder {
+.emotion-20 .uc-fe-numberinput-input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-19 .uc-fe-numberinput-input::placeholder {
+.emotion-20 .uc-fe-numberinput-input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-19:hover {
+.emotion-20:hover {
   border-color: #c3cad9;
 }
 
-.emotion-19 .uc-fe-numberinput-input-wrap {
+.emotion-20 .uc-fe-numberinput-input-wrap {
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
 }
 
-.emotion-19 .uc-fe-numberinput-input-wrap:hover {
+.emotion-20 .uc-fe-numberinput-input-wrap:hover {
   background: #f6f6fb;
 }
 
-.emotion-19 .uc-fe-numberinput-input {
+.emotion-20 .uc-fe-numberinput-input {
   padding: 0 0 0 8px;
   text-align: left;
   box-shadow: none;
@@ -979,8 +963,8 @@ exports[`Badge demo -- badge 1`] = `
   width: 34px;
 }
 
-.emotion-19 .uc-fe-numberinput-handler-up,
-.emotion-19 .uc-fe-numberinput-handler-down {
+.emotion-20 .uc-fe-numberinput-handler-up,
+.emotion-20 .uc-fe-numberinput-handler-down {
   height: 13px;
   width: 22px;
   right: 0;
@@ -988,24 +972,24 @@ exports[`Badge demo -- badge 1`] = `
   border-radius: 0;
 }
 
-.emotion-19 .uc-fe-numberinput-handler-up:hover,
-.emotion-19 .uc-fe-numberinput-handler-down:hover {
+.emotion-20 .uc-fe-numberinput-handler-up:hover,
+.emotion-20 .uc-fe-numberinput-handler-down:hover {
   color: #3860f4;
 }
 
-.emotion-19 .uc-fe-numberinput-handler-up {
+.emotion-20 .uc-fe-numberinput-handler-up {
   border-width: 0 0 0 1px;
   top: -1px;
   padding-top: 1px;
 }
 
-.emotion-19 .uc-fe-numberinput-handler-down {
+.emotion-20 .uc-fe-numberinput-handler-down {
   border-width: 1px 0 0 1px;
   bottom: 0;
   border-top-color: #c3cad9;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -1015,7 +999,7 @@ exports[`Badge demo -- badge 1`] = `
   height: 12px;
 }
 
-.emotion-31 {
+.emotion-32 {
   position: relative;
   cursor: pointer;
   font-size: 12px;
@@ -1025,7 +1009,7 @@ exports[`Badge demo -- badge 1`] = `
   width: 73px;
 }
 
-.emotion-31 .uc-fe-switch-inner {
+.emotion-32 .uc-fe-switch-inner {
   border-radius: 2px;
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -1046,7 +1030,7 @@ exports[`Badge demo -- badge 1`] = `
   transition: color 0.3s;
 }
 
-.emotion-31 .uc-fe-switch-dot {
+.emotion-32 .uc-fe-switch-dot {
   position: absolute;
   display: block;
   right: 6px;
@@ -1059,7 +1043,7 @@ exports[`Badge demo -- badge 1`] = `
   transition: background 0.3s;
 }
 
-.emotion-31 .uc-fe-switch-button {
+.emotion-32 .uc-fe-switch-button {
   position: absolute;
   display: block;
   box-sizing: border-box;
@@ -1069,7 +1053,7 @@ exports[`Badge demo -- badge 1`] = `
   transition: all 0.3s;
 }
 
-.emotion-31 .uc-fe-switch-button > span {
+.emotion-32 .uc-fe-switch-button > span {
   display: block;
   width: 100%;
   height: 100%;
@@ -1077,15 +1061,15 @@ exports[`Badge demo -- badge 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-31 .uc-fe-switch-tip-on,
-.emotion-31 .uc-fe-switch-tip-off {
+.emotion-32 .uc-fe-switch-tip-on,
+.emotion-32 .uc-fe-switch-tip-off {
   width: 100%;
   text-align: center;
   box-sizing: border-box;
   display: block;
 }
 
-.emotion-31 .uc-fe-switch-inner {
+.emotion-32 .uc-fe-switch-inner {
   background: #f6f6fb;
   border-color: #d2d6ea;
   border-width: 1px;
@@ -1094,86 +1078,86 @@ exports[`Badge demo -- badge 1`] = `
   color: #526075;
 }
 
-.emotion-31 .uc-fe-switch-button {
+.emotion-32 .uc-fe-switch-button {
   width: 28px;
   height: 28px;
   padding: 2px;
 }
 
-.emotion-31 .uc-fe-switch-button > span {
+.emotion-32 .uc-fe-switch-button > span {
   background: #ffffff;
   box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
   border: 1px solid #d2d6ea;
 }
 
-.emotion-31 .uc-fe-switch-dot {
+.emotion-32 .uc-fe-switch-dot {
   background: #f44336;
 }
 
-.emotion-31:hover .uc-fe-switch-inner {
+.emotion-32:hover .uc-fe-switch-inner {
   border-color: #c3cad9;
 }
 
-.emotion-31 .uc-fe-switch-tip-on {
+.emotion-32 .uc-fe-switch-tip-on {
   padding-right: 28px;
 }
 
-.emotion-31 .uc-fe-switch-tip-off {
+.emotion-32 .uc-fe-switch-tip-off {
   padding-left: 28px;
 }
 
-.emotion-31 .uc-fe-switch-tip-on {
+.emotion-32 .uc-fe-switch-tip-on {
   display: none;
 }
 
-.emotion-115 {
+.emotion-116 {
   position: relative;
   margin-bottom: -8px;
 }
 
-.emotion-115 .uc-fe-radio-styletype-default,
-.emotion-115 .uc-fe-radio-styletype-tag {
+.emotion-116 .uc-fe-radio-styletype-default,
+.emotion-116 .uc-fe-radio-styletype-tag {
   margin-right: 8px;
   margin-bottom: 8px;
 }
 
-.emotion-115 .uc-fe-radio-styletype-default:last-child,
-.emotion-115 .uc-fe-radio-styletype-tag:last-child {
+.emotion-116 .uc-fe-radio-styletype-default:last-child,
+.emotion-116 .uc-fe-radio-styletype-tag:last-child {
   margin-right: 0;
 }
 
-.emotion-115 .uc-fe-radio-styletype-card {
+.emotion-116 .uc-fe-radio-styletype-card {
   margin-right: 12px;
   margin-bottom: 8px;
 }
 
-.emotion-115 .uc-fe-radio-styletype-card:last-child {
+.emotion-116 .uc-fe-radio-styletype-card:last-child {
   margin-right: 0;
 }
 
-.emotion-115 .uc-fe-radio-styletype-text+.uc-fe-radio-styletype-text {
+.emotion-116 .uc-fe-radio-styletype-text+.uc-fe-radio-styletype-text {
   margin-left: -1px;
 }
 
-.emotion-115 .uc-fe-radio-styletype-button {
+.emotion-116 .uc-fe-radio-styletype-button {
   margin-right: -1px;
   margin-bottom: 8px;
 }
 
-.emotion-115 .uc-fe-radio-styletype-button:first-of-type {
+.emotion-116 .uc-fe-radio-styletype-button:first-of-type {
   border-radius: 2px 0 0 2px;
 }
 
-.emotion-115 .uc-fe-radio-styletype-button:last-of-type {
+.emotion-116 .uc-fe-radio-styletype-button:last-of-type {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
 }
 
-.emotion-115 .uc-fe-radio-styletype-list:last-of-type {
+.emotion-116 .uc-fe-radio-styletype-list:last-of-type {
   margin-bottom: 8px;
 }
 
-.emotion-71 {
+.emotion-72 {
   color: #526075;
   font-size: 12px;
   position: relative;
@@ -1186,23 +1170,23 @@ exports[`Badge demo -- badge 1`] = `
   color: #0a1633;
 }
 
-.emotion-71 > * {
+.emotion-72 > * {
   font-size: 12px;
 }
 
-.emotion-71 .uc-fe-radio-content {
+.emotion-72 .uc-fe-radio-content {
   display: inline-block;
   vertical-align: middle;
   max-height: 100%;
   margin-left: 8px;
 }
 
-.emotion-71.uc-fe-radio-disabled {
+.emotion-72.uc-fe-radio-disabled {
   cursor: default;
   color: #cccccc;
 }
 
-.emotion-69.uc-fe-radio-icon-wrap {
+.emotion-70.uc-fe-radio-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -1214,7 +1198,7 @@ exports[`Badge demo -- badge 1`] = `
   vertical-align: middle;
 }
 
-.emotion-69 .uc-fe-radio-icon {
+.emotion-70 .uc-fe-radio-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -1222,17 +1206,17 @@ exports[`Badge demo -- badge 1`] = `
   left: -1px;
 }
 
-.emotion-69.uc-fe-radio-icon-wrap {
+.emotion-70.uc-fe-radio-icon-wrap {
   border-color: #3860f4;
 }
 
-.emotion-69 .uc-fe-radio-icon {
+.emotion-70 .uc-fe-radio-icon {
   visibility: visible;
   opacity: 1;
   fill: #3860f4;
 }
 
-.emotion-67 {
+.emotion-68 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -1242,7 +1226,7 @@ exports[`Badge demo -- badge 1`] = `
   height: 14px;
 }
 
-.emotion-77 {
+.emotion-78 {
   color: #526075;
   font-size: 12px;
   position: relative;
@@ -1255,27 +1239,27 @@ exports[`Badge demo -- badge 1`] = `
   color: #0a1633;
 }
 
-.emotion-77 > * {
+.emotion-78 > * {
   font-size: 12px;
 }
 
-.emotion-77 .uc-fe-radio-content {
+.emotion-78 .uc-fe-radio-content {
   display: inline-block;
   vertical-align: middle;
   max-height: 100%;
   margin-left: 8px;
 }
 
-.emotion-77.uc-fe-radio-disabled {
+.emotion-78.uc-fe-radio-disabled {
   cursor: default;
   color: #cccccc;
 }
 
-.emotion-77:hover .uc-fe-radio-icon-wrap {
+.emotion-78:hover .uc-fe-radio-icon-wrap {
   border-color: #3860f4;
 }
 
-.emotion-75.uc-fe-radio-icon-wrap {
+.emotion-76.uc-fe-radio-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -1287,7 +1271,7 @@ exports[`Badge demo -- badge 1`] = `
   vertical-align: middle;
 }
 
-.emotion-75 .uc-fe-radio-icon {
+.emotion-76 .uc-fe-radio-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -1295,17 +1279,17 @@ exports[`Badge demo -- badge 1`] = `
   left: -1px;
 }
 
-.emotion-186 {
+.emotion-187 {
   position: relative;
   display: inline-block;
 }
 
-.emotion-184 {
+.emotion-185 {
   position: absolute;
   z-index: 9;
 }
 
-.emotion-182 {
+.emotion-183 {
   display: inline-block;
   min-height: 20px;
   line-height: 20px;
@@ -1318,7 +1302,7 @@ exports[`Badge demo -- badge 1`] = `
   color: #ffffff;
 }
 
-.emotion-182.uc-fe-badge-badge-dot {
+.emotion-183.uc-fe-badge-badge-dot {
   width: 8px;
   height: 8px;
   padding: 0;
@@ -1329,10 +1313,10 @@ exports[`Badge demo -- badge 1`] = `
 
 <div>
   <form
-    class="uc-fe-form demo-form emotion-180 emotion-90"
+    class="uc-fe-form demo-form emotion-181 emotion-100"
   >
     <div
-      class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10 emotion-11"
+      class="uc-fe-row uc-fe-form-item emotion-9 emotion-10 emotion-11 emotion-12"
     >
       <div
         class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
@@ -1341,24 +1325,20 @@ exports[`Badge demo -- badge 1`] = `
         value
       </div>
       <div
-        class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
+        class="uc-fe-col uc-fe-form-controller emotion-6 emotion-7 emotion-2"
         span="9"
       >
         <span
-          class="uc-fe-input emotion-3 emotion-4"
+          class="uc-fe-input emotion-3 emotion-4 emotion-5"
         >
-          <span
-            class="uc-fe-input-wrap"
-          >
-            <input
-              value="1"
-            />
-          </span>
+          <input
+            value="1"
+          />
         </span>
       </div>
     </div>
     <div
-      class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10 emotion-11"
+      class="uc-fe-row uc-fe-form-item emotion-9 emotion-10 emotion-11 emotion-12"
     >
       <div
         class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
@@ -1367,11 +1347,11 @@ exports[`Badge demo -- badge 1`] = `
         maxValue
       </div>
       <div
-        class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
+        class="uc-fe-col uc-fe-form-controller emotion-6 emotion-7 emotion-2"
         span="9"
       >
         <div
-          class="uc-fe-numberinput uc-fe-numberinput-styletype-default emotion-19 emotion-20"
+          class="uc-fe-numberinput uc-fe-numberinput-styletype-default emotion-20 emotion-21"
         >
           <div>
             <span
@@ -1379,7 +1359,7 @@ exports[`Badge demo -- badge 1`] = `
               unselectable="unselectable"
             >
               <svg
-                class=" emotion-15 emotion-16"
+                class=" emotion-16 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -1392,7 +1372,7 @@ exports[`Badge demo -- badge 1`] = `
               unselectable="unselectable"
             >
               <svg
-                class=" emotion-15 emotion-16"
+                class=" emotion-16 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -1416,7 +1396,7 @@ exports[`Badge demo -- badge 1`] = `
       </div>
     </div>
     <div
-      class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10 emotion-11"
+      class="uc-fe-row uc-fe-form-item emotion-9 emotion-10 emotion-11 emotion-12"
     >
       <div
         class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
@@ -1425,11 +1405,11 @@ exports[`Badge demo -- badge 1`] = `
         dot
       </div>
       <div
-        class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
+        class="uc-fe-col uc-fe-form-controller emotion-6 emotion-7 emotion-2"
         span="9"
       >
         <div
-          class="emotion-31 emotion-32"
+          class="emotion-32 emotion-33"
         >
           <span
             class="uc-fe-switch-inner"
@@ -1458,7 +1438,7 @@ exports[`Badge demo -- badge 1`] = `
       </div>
     </div>
     <div
-      class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10 emotion-11"
+      class="uc-fe-row uc-fe-form-item emotion-9 emotion-10 emotion-11 emotion-12"
     >
       <div
         class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
@@ -1467,11 +1447,11 @@ exports[`Badge demo -- badge 1`] = `
         hideWhenZero
       </div>
       <div
-        class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
+        class="uc-fe-col uc-fe-form-controller emotion-6 emotion-7 emotion-2"
         span="9"
       >
         <div
-          class="emotion-31 emotion-32"
+          class="emotion-32 emotion-33"
         >
           <span
             class="uc-fe-switch-inner"
@@ -1500,7 +1480,7 @@ exports[`Badge demo -- badge 1`] = `
       </div>
     </div>
     <div
-      class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10 emotion-11"
+      class="uc-fe-row uc-fe-form-item emotion-9 emotion-10 emotion-11 emotion-12"
     >
       <div
         class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
@@ -1509,11 +1489,11 @@ exports[`Badge demo -- badge 1`] = `
         noneContent
       </div>
       <div
-        class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
+        class="uc-fe-col uc-fe-form-controller emotion-6 emotion-7 emotion-2"
         span="9"
       >
         <div
-          class="emotion-31 emotion-32"
+          class="emotion-32 emotion-33"
         >
           <span
             class="uc-fe-switch-inner"
@@ -1542,7 +1522,7 @@ exports[`Badge demo -- badge 1`] = `
       </div>
     </div>
     <div
-      class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10 emotion-11"
+      class="uc-fe-row uc-fe-form-item emotion-9 emotion-10 emotion-11 emotion-12"
     >
       <div
         class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
@@ -1551,22 +1531,22 @@ exports[`Badge demo -- badge 1`] = `
         placement
       </div>
       <div
-        class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
+        class="uc-fe-col uc-fe-form-controller emotion-6 emotion-7 emotion-2"
         span="9"
       >
         <div
-          class="emotion-115 emotion-116"
+          class="emotion-116 emotion-117"
         >
           <span
             checked=""
-            class="uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-71 emotion-72"
+            class="uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-72 emotion-73"
           >
             <span
               checked=""
-              class="uc-fe-radio-icon-wrap emotion-69 emotion-70"
+              class="uc-fe-radio-icon-wrap emotion-70 emotion-71"
             >
               <svg
-                class="uc-fe-radio-icon emotion-67 emotion-16"
+                class="uc-fe-radio-icon emotion-68 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <circle
@@ -1583,13 +1563,13 @@ exports[`Badge demo -- badge 1`] = `
             </span>
           </span>
           <span
-            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-77 emotion-72"
+            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-78 emotion-73"
           >
             <span
-              class="uc-fe-radio-icon-wrap emotion-75 emotion-70"
+              class="uc-fe-radio-icon-wrap emotion-76 emotion-71"
             >
               <svg
-                class="uc-fe-radio-icon emotion-67 emotion-16"
+                class="uc-fe-radio-icon emotion-68 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <circle
@@ -1606,13 +1586,13 @@ exports[`Badge demo -- badge 1`] = `
             </span>
           </span>
           <span
-            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-77 emotion-72"
+            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-78 emotion-73"
           >
             <span
-              class="uc-fe-radio-icon-wrap emotion-75 emotion-70"
+              class="uc-fe-radio-icon-wrap emotion-76 emotion-71"
             >
               <svg
-                class="uc-fe-radio-icon emotion-67 emotion-16"
+                class="uc-fe-radio-icon emotion-68 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <circle
@@ -1629,13 +1609,13 @@ exports[`Badge demo -- badge 1`] = `
             </span>
           </span>
           <span
-            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-77 emotion-72"
+            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-78 emotion-73"
           >
             <span
-              class="uc-fe-radio-icon-wrap emotion-75 emotion-70"
+              class="uc-fe-radio-icon-wrap emotion-76 emotion-71"
             >
               <svg
-                class="uc-fe-radio-icon emotion-67 emotion-16"
+                class="uc-fe-radio-icon emotion-68 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <circle
@@ -1652,13 +1632,13 @@ exports[`Badge demo -- badge 1`] = `
             </span>
           </span>
           <span
-            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-77 emotion-72"
+            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-78 emotion-73"
           >
             <span
-              class="uc-fe-radio-icon-wrap emotion-75 emotion-70"
+              class="uc-fe-radio-icon-wrap emotion-76 emotion-71"
             >
               <svg
-                class="uc-fe-radio-icon emotion-67 emotion-16"
+                class="uc-fe-radio-icon emotion-68 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <circle
@@ -1675,13 +1655,13 @@ exports[`Badge demo -- badge 1`] = `
             </span>
           </span>
           <span
-            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-77 emotion-72"
+            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-78 emotion-73"
           >
             <span
-              class="uc-fe-radio-icon-wrap emotion-75 emotion-70"
+              class="uc-fe-radio-icon-wrap emotion-76 emotion-71"
             >
               <svg
-                class="uc-fe-radio-icon emotion-67 emotion-16"
+                class="uc-fe-radio-icon emotion-68 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <circle
@@ -1698,13 +1678,13 @@ exports[`Badge demo -- badge 1`] = `
             </span>
           </span>
           <span
-            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-77 emotion-72"
+            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-78 emotion-73"
           >
             <span
-              class="uc-fe-radio-icon-wrap emotion-75 emotion-70"
+              class="uc-fe-radio-icon-wrap emotion-76 emotion-71"
             >
               <svg
-                class="uc-fe-radio-icon emotion-67 emotion-16"
+                class="uc-fe-radio-icon emotion-68 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <circle
@@ -1721,13 +1701,13 @@ exports[`Badge demo -- badge 1`] = `
             </span>
           </span>
           <span
-            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-77 emotion-72"
+            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-78 emotion-73"
           >
             <span
-              class="uc-fe-radio-icon-wrap emotion-75 emotion-70"
+              class="uc-fe-radio-icon-wrap emotion-76 emotion-71"
             >
               <svg
-                class="uc-fe-radio-icon emotion-67 emotion-16"
+                class="uc-fe-radio-icon emotion-68 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <circle
@@ -1747,7 +1727,7 @@ exports[`Badge demo -- badge 1`] = `
       </div>
     </div>
     <div
-      class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10 emotion-11"
+      class="uc-fe-row uc-fe-form-item emotion-9 emotion-10 emotion-11 emotion-12"
     >
       <div
         class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
@@ -1756,22 +1736,22 @@ exports[`Badge demo -- badge 1`] = `
         color
       </div>
       <div
-        class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
+        class="uc-fe-col uc-fe-form-controller emotion-6 emotion-7 emotion-2"
         span="9"
       >
         <div
-          class="emotion-115 emotion-116"
+          class="emotion-116 emotion-117"
         >
           <span
             checked=""
-            class="uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-71 emotion-72"
+            class="uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-72 emotion-73"
           >
             <span
               checked=""
-              class="uc-fe-radio-icon-wrap emotion-69 emotion-70"
+              class="uc-fe-radio-icon-wrap emotion-70 emotion-71"
             >
               <svg
-                class="uc-fe-radio-icon emotion-67 emotion-16"
+                class="uc-fe-radio-icon emotion-68 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <circle
@@ -1788,13 +1768,13 @@ exports[`Badge demo -- badge 1`] = `
             </span>
           </span>
           <span
-            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-77 emotion-72"
+            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-78 emotion-73"
           >
             <span
-              class="uc-fe-radio-icon-wrap emotion-75 emotion-70"
+              class="uc-fe-radio-icon-wrap emotion-76 emotion-71"
             >
               <svg
-                class="uc-fe-radio-icon emotion-67 emotion-16"
+                class="uc-fe-radio-icon emotion-68 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <circle
@@ -1811,13 +1791,13 @@ exports[`Badge demo -- badge 1`] = `
             </span>
           </span>
           <span
-            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-77 emotion-72"
+            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-78 emotion-73"
           >
             <span
-              class="uc-fe-radio-icon-wrap emotion-75 emotion-70"
+              class="uc-fe-radio-icon-wrap emotion-76 emotion-71"
             >
               <svg
-                class="uc-fe-radio-icon emotion-67 emotion-16"
+                class="uc-fe-radio-icon emotion-68 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <circle
@@ -1834,13 +1814,13 @@ exports[`Badge demo -- badge 1`] = `
             </span>
           </span>
           <span
-            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-77 emotion-72"
+            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-78 emotion-73"
           >
             <span
-              class="uc-fe-radio-icon-wrap emotion-75 emotion-70"
+              class="uc-fe-radio-icon-wrap emotion-76 emotion-71"
             >
               <svg
-                class="uc-fe-radio-icon emotion-67 emotion-16"
+                class="uc-fe-radio-icon emotion-68 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <circle
@@ -1860,7 +1840,7 @@ exports[`Badge demo -- badge 1`] = `
       </div>
     </div>
     <div
-      class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10 emotion-11"
+      class="uc-fe-row uc-fe-form-item emotion-9 emotion-10 emotion-11 emotion-12"
     >
       <div
         class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
@@ -1869,7 +1849,7 @@ exports[`Badge demo -- badge 1`] = `
         badgeStyle.color
       </div>
       <div
-        class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
+        class="uc-fe-col uc-fe-form-controller emotion-6 emotion-7 emotion-2"
         span="9"
       >
         <input
@@ -1878,7 +1858,7 @@ exports[`Badge demo -- badge 1`] = `
       </div>
     </div>
     <div
-      class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10 emotion-11"
+      class="uc-fe-row uc-fe-form-item emotion-9 emotion-10 emotion-11 emotion-12"
     >
       <div
         class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
@@ -1887,7 +1867,7 @@ exports[`Badge demo -- badge 1`] = `
         badgeStyle.background
       </div>
       <div
-        class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
+        class="uc-fe-col uc-fe-form-controller emotion-6 emotion-7 emotion-2"
         span="9"
       >
         <input
@@ -1900,16 +1880,16 @@ exports[`Badge demo -- badge 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-badge emotion-186 emotion-187"
+      class="uc-fe-badge emotion-187 emotion-188"
     >
       <div
         style="width:50px;height:50px;background:#ddd"
       />
       <div
-        class="uc-fe-badge-badge-wrap emotion-184 emotion-185"
+        class="uc-fe-badge-badge-wrap emotion-185 emotion-186"
       >
         <span
-          class="uc-fe-badge-badge emotion-182 emotion-183"
+          class="uc-fe-badge-badge emotion-183 emotion-184"
           color="red"
         >
           1
@@ -2034,19 +2014,19 @@ exports[`Badge demo -- badgeStyle 1`] = `
 `;
 
 exports[`Badge demo -- bubble 1`] = `
-.emotion-132 {
+.emotion-133 {
   font-size: 12px;
 }
 
-.emotion-132 .uc-fe-form-item {
+.emotion-133 .uc-fe-form-item {
   margin-bottom: 16px;
 }
 
-.emotion-132 .uc-fe-form-item:last-child {
+.emotion-133 .uc-fe-form-item:last-child {
   margin-bottom: 0;
 }
 
-.emotion-10 {
+.emotion-11 {
   position: relative;
   display: block;
   height: auto;
@@ -2054,17 +2034,17 @@ exports[`Badge demo -- bubble 1`] = `
   margin-right: -8px;
 }
 
-.emotion-10:before,
-.emotion-10:after {
+.emotion-11:before,
+.emotion-11:after {
   content: ' ';
   display: table;
 }
 
-.emotion-10:after {
+.emotion-11:after {
   clear: both;
 }
 
-.emotion-10 > .uc-fe-col {
+.emotion-11 > .uc-fe-col {
   padding-left: 8px;
   padding-right: 8px;
 }
@@ -2085,7 +2065,7 @@ exports[`Badge demo -- bubble 1`] = `
   color: #526075;
 }
 
-.emotion-6 {
+.emotion-7 {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -2097,9 +2077,17 @@ exports[`Badge demo -- bubble 1`] = `
   width: 75%;
 }
 
-.emotion-3 {
+.emotion-4 {
   position: relative;
   box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -2109,19 +2097,87 @@ exports[`Badge demo -- bubble 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
 }
 
-.emotion-3:hover {
+.emotion-4,
+.emotion-4 input,
+.emotion-4 .e1bl81de0 {
+  padding: 0 4px;
+}
+
+.emotion-4:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-3 .uc-fe-input-clear {
+.emotion-4 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-4 input,
+.emotion-4 input:hover,
+.emotion-4 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-4 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input::-ms-clear {
+  display: none;
+}
+
+.emotion-4 .e1bl81de0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-4 .e1bl81de0:empty {
+  display: none;
+}
+
+.emotion-4 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -2138,97 +2194,13 @@ exports[`Badge demo -- bubble 1`] = `
   transition: opacity 0.3s;
 }
 
-.emotion-3 .uc-fe-input-wrap,
-.emotion-3 .uc-fe-input-prefix,
-.emotion-3 .uc-fe-input-suffix,
-.emotion-3 .uc-fe-input-clear,
-.emotion-3 input {
-  padding: 0 4px;
-}
-
-.emotion-3.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-3 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-3 .uc-fe-input-prefix,
-.emotion-3 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-3 input {
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
-  -webkit-flex: 1 1 130px;
-  -ms-flex: 1 1 130px;
-  flex: 1 1 130px;
-  min-width: 0px;
-}
-
-.emotion-3 input,
-.emotion-3 input:hover,
-.emotion-3 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-3 input::-webkit-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-3 input::-moz-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-3 input:-ms-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-3 input::placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-3 input::-ms-clear {
-  display: none;
-}
-
-.emotion-3:hover .uc-fe-input-clear,
-.emotion-3.uc-fe-input-focused .uc-fe-input-clear {
+.emotion-4:hover .uc-fe-input-clear,
+.emotion-4.uc-fe-input-focused .uc-fe-input-clear {
   opacity: 1;
   cursor: pointer;
 }
 
-.emotion-79 {
+.emotion-80 {
   position: relative;
   box-sizing: border-box;
   border-radius: 2px;
@@ -2241,11 +2213,11 @@ exports[`Badge demo -- bubble 1`] = `
   border-right-width: 0;
 }
 
-.emotion-79 .uc-fe-numberinput-input-wrap {
+.emotion-80 .uc-fe-numberinput-input-wrap {
   position: relative;
 }
 
-.emotion-79 .uc-fe-numberinput-input {
+.emotion-80 .uc-fe-numberinput-input {
   border: none;
   outline: none;
   padding: 0;
@@ -2253,15 +2225,15 @@ exports[`Badge demo -- bubble 1`] = `
   color: inherit;
 }
 
-.emotion-79 .uc-fe-numberinput-suffix {
+.emotion-80 .uc-fe-numberinput-suffix {
   color: #7a8baa;
   margin: 0 4px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.emotion-79 .uc-fe-numberinput-handler-up,
-.emotion-79 .uc-fe-numberinput-handler-down {
+.emotion-80 .uc-fe-numberinput-handler-up,
+.emotion-80 .uc-fe-numberinput-handler-down {
   position: absolute;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2286,14 +2258,14 @@ exports[`Badge demo -- bubble 1`] = `
   vertical-align: middle;
 }
 
-.emotion-79 .uc-fe-numberinput-handler-up:hover,
-.emotion-79 .uc-fe-numberinput-handler-down:hover {
+.emotion-80 .uc-fe-numberinput-handler-up:hover,
+.emotion-80 .uc-fe-numberinput-handler-down:hover {
   color: #3860f4;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-79 .uc-fe-numberinput-handler-up.uc-fe-numberinput-handler-disabled,
-.emotion-79 .uc-fe-numberinput-handler-down.uc-fe-numberinput-handler-disabled {
+.emotion-80 .uc-fe-numberinput-handler-up.uc-fe-numberinput-handler-disabled,
+.emotion-80 .uc-fe-numberinput-handler-down.uc-fe-numberinput-handler-disabled {
   cursor: default;
   pointer-events: none;
   color: #cccccc;
@@ -2301,47 +2273,47 @@ exports[`Badge demo -- bubble 1`] = `
   border-color: #c3cad9;
 }
 
-.emotion-79 .uc-fe-numberinput-input {
+.emotion-80 .uc-fe-numberinput-input {
   line-height: 26px;
   height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.emotion-79 .uc-fe-numberinput-input::-webkit-input-placeholder {
+.emotion-80 .uc-fe-numberinput-input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-79 .uc-fe-numberinput-input::-moz-placeholder {
+.emotion-80 .uc-fe-numberinput-input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-79 .uc-fe-numberinput-input:-ms-input-placeholder {
+.emotion-80 .uc-fe-numberinput-input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-79 .uc-fe-numberinput-input::placeholder {
+.emotion-80 .uc-fe-numberinput-input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-79:hover {
+.emotion-80:hover {
   border-color: #c3cad9;
 }
 
-.emotion-79 .uc-fe-numberinput-input-wrap {
+.emotion-80 .uc-fe-numberinput-input-wrap {
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
 }
 
-.emotion-79 .uc-fe-numberinput-input-wrap:hover {
+.emotion-80 .uc-fe-numberinput-input-wrap:hover {
   background: #f6f6fb;
 }
 
-.emotion-79 .uc-fe-numberinput-input {
+.emotion-80 .uc-fe-numberinput-input {
   padding: 0 0 0 8px;
   text-align: left;
   box-shadow: none;
@@ -2349,8 +2321,8 @@ exports[`Badge demo -- bubble 1`] = `
   width: 34px;
 }
 
-.emotion-79 .uc-fe-numberinput-handler-up,
-.emotion-79 .uc-fe-numberinput-handler-down {
+.emotion-80 .uc-fe-numberinput-handler-up,
+.emotion-80 .uc-fe-numberinput-handler-down {
   height: 13px;
   width: 22px;
   right: 0;
@@ -2358,24 +2330,24 @@ exports[`Badge demo -- bubble 1`] = `
   border-radius: 0;
 }
 
-.emotion-79 .uc-fe-numberinput-handler-up:hover,
-.emotion-79 .uc-fe-numberinput-handler-down:hover {
+.emotion-80 .uc-fe-numberinput-handler-up:hover,
+.emotion-80 .uc-fe-numberinput-handler-down:hover {
   color: #3860f4;
 }
 
-.emotion-79 .uc-fe-numberinput-handler-up {
+.emotion-80 .uc-fe-numberinput-handler-up {
   border-width: 0 0 0 1px;
   top: -1px;
   padding-top: 1px;
 }
 
-.emotion-79 .uc-fe-numberinput-handler-down {
+.emotion-80 .uc-fe-numberinput-handler-down {
   border-width: 1px 0 0 1px;
   bottom: 0;
   border-top-color: #c3cad9;
 }
 
-.emotion-75 {
+.emotion-76 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -2385,54 +2357,54 @@ exports[`Badge demo -- bubble 1`] = `
   height: 12px;
 }
 
-.emotion-39 {
+.emotion-40 {
   position: relative;
   margin-bottom: -8px;
 }
 
-.emotion-39 .uc-fe-radio-styletype-default,
-.emotion-39 .uc-fe-radio-styletype-tag {
+.emotion-40 .uc-fe-radio-styletype-default,
+.emotion-40 .uc-fe-radio-styletype-tag {
   margin-right: 8px;
   margin-bottom: 8px;
 }
 
-.emotion-39 .uc-fe-radio-styletype-default:last-child,
-.emotion-39 .uc-fe-radio-styletype-tag:last-child {
+.emotion-40 .uc-fe-radio-styletype-default:last-child,
+.emotion-40 .uc-fe-radio-styletype-tag:last-child {
   margin-right: 0;
 }
 
-.emotion-39 .uc-fe-radio-styletype-card {
+.emotion-40 .uc-fe-radio-styletype-card {
   margin-right: 12px;
   margin-bottom: 8px;
 }
 
-.emotion-39 .uc-fe-radio-styletype-card:last-child {
+.emotion-40 .uc-fe-radio-styletype-card:last-child {
   margin-right: 0;
 }
 
-.emotion-39 .uc-fe-radio-styletype-text+.uc-fe-radio-styletype-text {
+.emotion-40 .uc-fe-radio-styletype-text+.uc-fe-radio-styletype-text {
   margin-left: -1px;
 }
 
-.emotion-39 .uc-fe-radio-styletype-button {
+.emotion-40 .uc-fe-radio-styletype-button {
   margin-right: -1px;
   margin-bottom: 8px;
 }
 
-.emotion-39 .uc-fe-radio-styletype-button:first-of-type {
+.emotion-40 .uc-fe-radio-styletype-button:first-of-type {
   border-radius: 2px 0 0 2px;
 }
 
-.emotion-39 .uc-fe-radio-styletype-button:last-of-type {
+.emotion-40 .uc-fe-radio-styletype-button:last-of-type {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
 }
 
-.emotion-39 .uc-fe-radio-styletype-list:last-of-type {
+.emotion-40 .uc-fe-radio-styletype-list:last-of-type {
   margin-bottom: 8px;
 }
 
-.emotion-19 {
+.emotion-20 {
   color: #526075;
   font-size: 12px;
   position: relative;
@@ -2445,23 +2417,23 @@ exports[`Badge demo -- bubble 1`] = `
   color: #0a1633;
 }
 
-.emotion-19 > * {
+.emotion-20 > * {
   font-size: 12px;
 }
 
-.emotion-19 .uc-fe-radio-content {
+.emotion-20 .uc-fe-radio-content {
   display: inline-block;
   vertical-align: middle;
   max-height: 100%;
   margin-left: 8px;
 }
 
-.emotion-19.uc-fe-radio-disabled {
+.emotion-20.uc-fe-radio-disabled {
   cursor: default;
   color: #cccccc;
 }
 
-.emotion-17.uc-fe-radio-icon-wrap {
+.emotion-18.uc-fe-radio-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -2473,7 +2445,7 @@ exports[`Badge demo -- bubble 1`] = `
   vertical-align: middle;
 }
 
-.emotion-17 .uc-fe-radio-icon {
+.emotion-18 .uc-fe-radio-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -2481,17 +2453,17 @@ exports[`Badge demo -- bubble 1`] = `
   left: -1px;
 }
 
-.emotion-17.uc-fe-radio-icon-wrap {
+.emotion-18.uc-fe-radio-icon-wrap {
   border-color: #3860f4;
 }
 
-.emotion-17 .uc-fe-radio-icon {
+.emotion-18 .uc-fe-radio-icon {
   visibility: visible;
   opacity: 1;
   fill: #3860f4;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -2501,7 +2473,7 @@ exports[`Badge demo -- bubble 1`] = `
   height: 14px;
 }
 
-.emotion-25 {
+.emotion-26 {
   color: #526075;
   font-size: 12px;
   position: relative;
@@ -2514,27 +2486,27 @@ exports[`Badge demo -- bubble 1`] = `
   color: #0a1633;
 }
 
-.emotion-25 > * {
+.emotion-26 > * {
   font-size: 12px;
 }
 
-.emotion-25 .uc-fe-radio-content {
+.emotion-26 .uc-fe-radio-content {
   display: inline-block;
   vertical-align: middle;
   max-height: 100%;
   margin-left: 8px;
 }
 
-.emotion-25.uc-fe-radio-disabled {
+.emotion-26.uc-fe-radio-disabled {
   cursor: default;
   color: #cccccc;
 }
 
-.emotion-25:hover .uc-fe-radio-icon-wrap {
+.emotion-26:hover .uc-fe-radio-icon-wrap {
   border-color: #3860f4;
 }
 
-.emotion-23.uc-fe-radio-icon-wrap {
+.emotion-24.uc-fe-radio-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -2546,7 +2518,7 @@ exports[`Badge demo -- bubble 1`] = `
   vertical-align: middle;
 }
 
-.emotion-23 .uc-fe-radio-icon {
+.emotion-24 .uc-fe-radio-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -2554,32 +2526,32 @@ exports[`Badge demo -- bubble 1`] = `
   left: -1px;
 }
 
-.emotion-136 {
+.emotion-137 {
   position: relative;
   display: inline-block;
 }
 
-.emotion-109 > .uc-fe-combine-item,
-.emotion-109 > .uc-fe-combine-separator {
+.emotion-110 > .uc-fe-combine-item,
+.emotion-110 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-109 > .uc-fe-combine-item:focus {
+.emotion-110 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-109 > .uc-fe-combine-item:hover {
+.emotion-110 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-109 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-109 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-109 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-110 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-110 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-110 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
-.emotion-107 {
+.emotion-108 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -2615,18 +2587,18 @@ exports[`Badge demo -- bubble 1`] = `
   transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
 }
 
-.emotion-107:link,
-.emotion-107:visited {
+.emotion-108:link,
+.emotion-108:visited {
   color: #ffffff;
 }
 
-.emotion-107:hover,
-.emotion-107:active {
+.emotion-108:hover,
+.emotion-108:active {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
 
-.emotion-134 {
+.emotion-135 {
   position: absolute;
   line-height: 20px;
   padding: 0 4px;
@@ -2636,7 +2608,7 @@ exports[`Badge demo -- bubble 1`] = `
   background: #ffc42e;
 }
 
-.emotion-134::after {
+.emotion-135::after {
   content: '';
   width: 0;
   height: 0;
@@ -2648,19 +2620,19 @@ exports[`Badge demo -- bubble 1`] = `
   border-color: #ffc42e transparent transparent transparent;
 }
 
-.emotion-132 {
+.emotion-133 {
   font-size: 12px;
 }
 
-.emotion-132 .uc-fe-form-item {
+.emotion-133 .uc-fe-form-item {
   margin-bottom: 16px;
 }
 
-.emotion-132 .uc-fe-form-item:last-child {
+.emotion-133 .uc-fe-form-item:last-child {
   margin-bottom: 0;
 }
 
-.emotion-10 {
+.emotion-11 {
   position: relative;
   display: block;
   height: auto;
@@ -2668,17 +2640,17 @@ exports[`Badge demo -- bubble 1`] = `
   margin-right: -8px;
 }
 
-.emotion-10:before,
-.emotion-10:after {
+.emotion-11:before,
+.emotion-11:after {
   content: ' ';
   display: table;
 }
 
-.emotion-10:after {
+.emotion-11:after {
   clear: both;
 }
 
-.emotion-10 > .uc-fe-col {
+.emotion-11 > .uc-fe-col {
   padding-left: 8px;
   padding-right: 8px;
 }
@@ -2699,7 +2671,7 @@ exports[`Badge demo -- bubble 1`] = `
   color: #526075;
 }
 
-.emotion-6 {
+.emotion-7 {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -2711,9 +2683,17 @@ exports[`Badge demo -- bubble 1`] = `
   width: 75%;
 }
 
-.emotion-3 {
+.emotion-4 {
   position: relative;
   box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -2723,19 +2703,87 @@ exports[`Badge demo -- bubble 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
-  transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
 }
 
-.emotion-3:hover {
+.emotion-4,
+.emotion-4 input,
+.emotion-4 .e1bl81de0 {
+  padding: 0 4px;
+}
+
+.emotion-4:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-3 .uc-fe-input-clear {
+.emotion-4 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-4 input,
+.emotion-4 input:hover,
+.emotion-4 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-4 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.20);
+}
+
+.emotion-4 input::-ms-clear {
+  display: none;
+}
+
+.emotion-4 .e1bl81de0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-4 .e1bl81de0:empty {
+  display: none;
+}
+
+.emotion-4 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -2752,97 +2800,13 @@ exports[`Badge demo -- bubble 1`] = `
   transition: opacity 0.3s;
 }
 
-.emotion-3 .uc-fe-input-wrap,
-.emotion-3 .uc-fe-input-prefix,
-.emotion-3 .uc-fe-input-suffix,
-.emotion-3 .uc-fe-input-clear,
-.emotion-3 input {
-  padding: 0 4px;
-}
-
-.emotion-3.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-3 .uc-fe-input-wrap {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-3 .uc-fe-input-prefix,
-.emotion-3 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-3 input {
-  box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  font-size: inherit;
-  color: inherit;
-  -webkit-flex: 1 1 130px;
-  -ms-flex: 1 1 130px;
-  flex: 1 1 130px;
-  min-width: 0px;
-}
-
-.emotion-3 input,
-.emotion-3 input:hover,
-.emotion-3 input:focus {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.emotion-3 input::-webkit-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-3 input::-moz-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-3 input:-ms-input-placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-3 input::placeholder {
-  opacity: 1;
-  color: rgba(10,22,51,0.20);
-}
-
-.emotion-3 input::-ms-clear {
-  display: none;
-}
-
-.emotion-3:hover .uc-fe-input-clear,
-.emotion-3.uc-fe-input-focused .uc-fe-input-clear {
+.emotion-4:hover .uc-fe-input-clear,
+.emotion-4.uc-fe-input-focused .uc-fe-input-clear {
   opacity: 1;
   cursor: pointer;
 }
 
-.emotion-79 {
+.emotion-80 {
   position: relative;
   box-sizing: border-box;
   border-radius: 2px;
@@ -2855,11 +2819,11 @@ exports[`Badge demo -- bubble 1`] = `
   border-right-width: 0;
 }
 
-.emotion-79 .uc-fe-numberinput-input-wrap {
+.emotion-80 .uc-fe-numberinput-input-wrap {
   position: relative;
 }
 
-.emotion-79 .uc-fe-numberinput-input {
+.emotion-80 .uc-fe-numberinput-input {
   border: none;
   outline: none;
   padding: 0;
@@ -2867,15 +2831,15 @@ exports[`Badge demo -- bubble 1`] = `
   color: inherit;
 }
 
-.emotion-79 .uc-fe-numberinput-suffix {
+.emotion-80 .uc-fe-numberinput-suffix {
   color: #7a8baa;
   margin: 0 4px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.emotion-79 .uc-fe-numberinput-handler-up,
-.emotion-79 .uc-fe-numberinput-handler-down {
+.emotion-80 .uc-fe-numberinput-handler-up,
+.emotion-80 .uc-fe-numberinput-handler-down {
   position: absolute;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2900,14 +2864,14 @@ exports[`Badge demo -- bubble 1`] = `
   vertical-align: middle;
 }
 
-.emotion-79 .uc-fe-numberinput-handler-up:hover,
-.emotion-79 .uc-fe-numberinput-handler-down:hover {
+.emotion-80 .uc-fe-numberinput-handler-up:hover,
+.emotion-80 .uc-fe-numberinput-handler-down:hover {
   color: #3860f4;
   box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
 }
 
-.emotion-79 .uc-fe-numberinput-handler-up.uc-fe-numberinput-handler-disabled,
-.emotion-79 .uc-fe-numberinput-handler-down.uc-fe-numberinput-handler-disabled {
+.emotion-80 .uc-fe-numberinput-handler-up.uc-fe-numberinput-handler-disabled,
+.emotion-80 .uc-fe-numberinput-handler-down.uc-fe-numberinput-handler-disabled {
   cursor: default;
   pointer-events: none;
   color: #cccccc;
@@ -2915,47 +2879,47 @@ exports[`Badge demo -- bubble 1`] = `
   border-color: #c3cad9;
 }
 
-.emotion-79 .uc-fe-numberinput-input {
+.emotion-80 .uc-fe-numberinput-input {
   line-height: 26px;
   height: 26px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.emotion-79 .uc-fe-numberinput-input::-webkit-input-placeholder {
+.emotion-80 .uc-fe-numberinput-input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-79 .uc-fe-numberinput-input::-moz-placeholder {
+.emotion-80 .uc-fe-numberinput-input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-79 .uc-fe-numberinput-input:-ms-input-placeholder {
+.emotion-80 .uc-fe-numberinput-input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-79 .uc-fe-numberinput-input::placeholder {
+.emotion-80 .uc-fe-numberinput-input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-79:hover {
+.emotion-80:hover {
   border-color: #c3cad9;
 }
 
-.emotion-79 .uc-fe-numberinput-input-wrap {
+.emotion-80 .uc-fe-numberinput-input-wrap {
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
 }
 
-.emotion-79 .uc-fe-numberinput-input-wrap:hover {
+.emotion-80 .uc-fe-numberinput-input-wrap:hover {
   background: #f6f6fb;
 }
 
-.emotion-79 .uc-fe-numberinput-input {
+.emotion-80 .uc-fe-numberinput-input {
   padding: 0 0 0 8px;
   text-align: left;
   box-shadow: none;
@@ -2963,8 +2927,8 @@ exports[`Badge demo -- bubble 1`] = `
   width: 34px;
 }
 
-.emotion-79 .uc-fe-numberinput-handler-up,
-.emotion-79 .uc-fe-numberinput-handler-down {
+.emotion-80 .uc-fe-numberinput-handler-up,
+.emotion-80 .uc-fe-numberinput-handler-down {
   height: 13px;
   width: 22px;
   right: 0;
@@ -2972,24 +2936,24 @@ exports[`Badge demo -- bubble 1`] = `
   border-radius: 0;
 }
 
-.emotion-79 .uc-fe-numberinput-handler-up:hover,
-.emotion-79 .uc-fe-numberinput-handler-down:hover {
+.emotion-80 .uc-fe-numberinput-handler-up:hover,
+.emotion-80 .uc-fe-numberinput-handler-down:hover {
   color: #3860f4;
 }
 
-.emotion-79 .uc-fe-numberinput-handler-up {
+.emotion-80 .uc-fe-numberinput-handler-up {
   border-width: 0 0 0 1px;
   top: -1px;
   padding-top: 1px;
 }
 
-.emotion-79 .uc-fe-numberinput-handler-down {
+.emotion-80 .uc-fe-numberinput-handler-down {
   border-width: 1px 0 0 1px;
   bottom: 0;
   border-top-color: #c3cad9;
 }
 
-.emotion-75 {
+.emotion-76 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -2999,54 +2963,54 @@ exports[`Badge demo -- bubble 1`] = `
   height: 12px;
 }
 
-.emotion-39 {
+.emotion-40 {
   position: relative;
   margin-bottom: -8px;
 }
 
-.emotion-39 .uc-fe-radio-styletype-default,
-.emotion-39 .uc-fe-radio-styletype-tag {
+.emotion-40 .uc-fe-radio-styletype-default,
+.emotion-40 .uc-fe-radio-styletype-tag {
   margin-right: 8px;
   margin-bottom: 8px;
 }
 
-.emotion-39 .uc-fe-radio-styletype-default:last-child,
-.emotion-39 .uc-fe-radio-styletype-tag:last-child {
+.emotion-40 .uc-fe-radio-styletype-default:last-child,
+.emotion-40 .uc-fe-radio-styletype-tag:last-child {
   margin-right: 0;
 }
 
-.emotion-39 .uc-fe-radio-styletype-card {
+.emotion-40 .uc-fe-radio-styletype-card {
   margin-right: 12px;
   margin-bottom: 8px;
 }
 
-.emotion-39 .uc-fe-radio-styletype-card:last-child {
+.emotion-40 .uc-fe-radio-styletype-card:last-child {
   margin-right: 0;
 }
 
-.emotion-39 .uc-fe-radio-styletype-text+.uc-fe-radio-styletype-text {
+.emotion-40 .uc-fe-radio-styletype-text+.uc-fe-radio-styletype-text {
   margin-left: -1px;
 }
 
-.emotion-39 .uc-fe-radio-styletype-button {
+.emotion-40 .uc-fe-radio-styletype-button {
   margin-right: -1px;
   margin-bottom: 8px;
 }
 
-.emotion-39 .uc-fe-radio-styletype-button:first-of-type {
+.emotion-40 .uc-fe-radio-styletype-button:first-of-type {
   border-radius: 2px 0 0 2px;
 }
 
-.emotion-39 .uc-fe-radio-styletype-button:last-of-type {
+.emotion-40 .uc-fe-radio-styletype-button:last-of-type {
   border-radius: 0 2px 2px 0;
   margin-right: 0;
 }
 
-.emotion-39 .uc-fe-radio-styletype-list:last-of-type {
+.emotion-40 .uc-fe-radio-styletype-list:last-of-type {
   margin-bottom: 8px;
 }
 
-.emotion-19 {
+.emotion-20 {
   color: #526075;
   font-size: 12px;
   position: relative;
@@ -3059,23 +3023,23 @@ exports[`Badge demo -- bubble 1`] = `
   color: #0a1633;
 }
 
-.emotion-19 > * {
+.emotion-20 > * {
   font-size: 12px;
 }
 
-.emotion-19 .uc-fe-radio-content {
+.emotion-20 .uc-fe-radio-content {
   display: inline-block;
   vertical-align: middle;
   max-height: 100%;
   margin-left: 8px;
 }
 
-.emotion-19.uc-fe-radio-disabled {
+.emotion-20.uc-fe-radio-disabled {
   cursor: default;
   color: #cccccc;
 }
 
-.emotion-17.uc-fe-radio-icon-wrap {
+.emotion-18.uc-fe-radio-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -3087,7 +3051,7 @@ exports[`Badge demo -- bubble 1`] = `
   vertical-align: middle;
 }
 
-.emotion-17 .uc-fe-radio-icon {
+.emotion-18 .uc-fe-radio-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -3095,17 +3059,17 @@ exports[`Badge demo -- bubble 1`] = `
   left: -1px;
 }
 
-.emotion-17.uc-fe-radio-icon-wrap {
+.emotion-18.uc-fe-radio-icon-wrap {
   border-color: #3860f4;
 }
 
-.emotion-17 .uc-fe-radio-icon {
+.emotion-18 .uc-fe-radio-icon {
   visibility: visible;
   opacity: 1;
   fill: #3860f4;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
@@ -3115,7 +3079,7 @@ exports[`Badge demo -- bubble 1`] = `
   height: 14px;
 }
 
-.emotion-25 {
+.emotion-26 {
   color: #526075;
   font-size: 12px;
   position: relative;
@@ -3128,27 +3092,27 @@ exports[`Badge demo -- bubble 1`] = `
   color: #0a1633;
 }
 
-.emotion-25 > * {
+.emotion-26 > * {
   font-size: 12px;
 }
 
-.emotion-25 .uc-fe-radio-content {
+.emotion-26 .uc-fe-radio-content {
   display: inline-block;
   vertical-align: middle;
   max-height: 100%;
   margin-left: 8px;
 }
 
-.emotion-25.uc-fe-radio-disabled {
+.emotion-26.uc-fe-radio-disabled {
   cursor: default;
   color: #cccccc;
 }
 
-.emotion-25:hover .uc-fe-radio-icon-wrap {
+.emotion-26:hover .uc-fe-radio-icon-wrap {
   border-color: #3860f4;
 }
 
-.emotion-23.uc-fe-radio-icon-wrap {
+.emotion-24.uc-fe-radio-icon-wrap {
   display: inline-block;
   box-sizing: border-box;
   overflow: hidden;
@@ -3160,7 +3124,7 @@ exports[`Badge demo -- bubble 1`] = `
   vertical-align: middle;
 }
 
-.emotion-23 .uc-fe-radio-icon {
+.emotion-24 .uc-fe-radio-icon {
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -3168,32 +3132,32 @@ exports[`Badge demo -- bubble 1`] = `
   left: -1px;
 }
 
-.emotion-136 {
+.emotion-137 {
   position: relative;
   display: inline-block;
 }
 
-.emotion-109 > .uc-fe-combine-item,
-.emotion-109 > .uc-fe-combine-separator {
+.emotion-110 > .uc-fe-combine-item,
+.emotion-110 > .uc-fe-combine-separator {
   vertical-align: middle;
   display: inline-block;
 }
 
-.emotion-109 > .uc-fe-combine-item:focus {
+.emotion-110 > .uc-fe-combine-item:focus {
   z-index: 2;
 }
 
-.emotion-109 > .uc-fe-combine-item:hover {
+.emotion-110 > .uc-fe-combine-item:hover {
   z-index: 3;
 }
 
-.emotion-109 > .uc-fe-combine-item+.uc-fe-combine-item,
-.emotion-109 > .uc-fe-combine-separator+.uc-fe-combine-item,
-.emotion-109 > .uc-fe-combine-item+.uc-fe-combine-separator {
+.emotion-110 > .uc-fe-combine-item+.uc-fe-combine-item,
+.emotion-110 > .uc-fe-combine-separator+.uc-fe-combine-item,
+.emotion-110 > .uc-fe-combine-item+.uc-fe-combine-separator {
   margin-left: 8px;
 }
 
-.emotion-107 {
+.emotion-108 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -3229,18 +3193,18 @@ exports[`Badge demo -- bubble 1`] = `
   transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
 }
 
-.emotion-107:link,
-.emotion-107:visited {
+.emotion-108:link,
+.emotion-108:visited {
   color: #ffffff;
 }
 
-.emotion-107:hover,
-.emotion-107:active {
+.emotion-108:hover,
+.emotion-108:active {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
 
-.emotion-134 {
+.emotion-135 {
   position: absolute;
   line-height: 20px;
   padding: 0 4px;
@@ -3250,7 +3214,7 @@ exports[`Badge demo -- bubble 1`] = `
   background: #ffc42e;
 }
 
-.emotion-134::after {
+.emotion-135::after {
   content: '';
   width: 0;
   height: 0;
@@ -3264,10 +3228,10 @@ exports[`Badge demo -- bubble 1`] = `
 
 <div>
   <form
-    class="uc-fe-form demo-form emotion-132 emotion-90"
+    class="uc-fe-form demo-form emotion-133 emotion-100"
   >
     <div
-      class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10 emotion-11"
+      class="uc-fe-row uc-fe-form-item emotion-9 emotion-10 emotion-11 emotion-12"
     >
       <div
         class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
@@ -3276,24 +3240,20 @@ exports[`Badge demo -- bubble 1`] = `
         bubble
       </div>
       <div
-        class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
+        class="uc-fe-col uc-fe-form-controller emotion-6 emotion-7 emotion-2"
         span="9"
       >
         <span
-          class="uc-fe-input emotion-3 emotion-4"
+          class="uc-fe-input emotion-3 emotion-4 emotion-5"
         >
-          <span
-            class="uc-fe-input-wrap"
-          >
-            <input
-              value="bubble"
-            />
-          </span>
+          <input
+            value="bubble"
+          />
         </span>
       </div>
     </div>
     <div
-      class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10 emotion-11"
+      class="uc-fe-row uc-fe-form-item emotion-9 emotion-10 emotion-11 emotion-12"
     >
       <div
         class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
@@ -3302,22 +3262,22 @@ exports[`Badge demo -- bubble 1`] = `
         styleType
       </div>
       <div
-        class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
+        class="uc-fe-col uc-fe-form-controller emotion-6 emotion-7 emotion-2"
         span="9"
       >
         <div
-          class="emotion-39 emotion-40"
+          class="emotion-40 emotion-41"
         >
           <span
             checked=""
-            class="uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-19 emotion-20"
+            class="uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-20 emotion-21"
           >
             <span
               checked=""
-              class="uc-fe-radio-icon-wrap emotion-17 emotion-18"
+              class="uc-fe-radio-icon-wrap emotion-18 emotion-19"
             >
               <svg
-                class="uc-fe-radio-icon emotion-15 emotion-16"
+                class="uc-fe-radio-icon emotion-16 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <circle
@@ -3334,13 +3294,13 @@ exports[`Badge demo -- bubble 1`] = `
             </span>
           </span>
           <span
-            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-25 emotion-20"
+            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-26 emotion-21"
           >
             <span
-              class="uc-fe-radio-icon-wrap emotion-23 emotion-18"
+              class="uc-fe-radio-icon-wrap emotion-24 emotion-19"
             >
               <svg
-                class="uc-fe-radio-icon emotion-15 emotion-16"
+                class="uc-fe-radio-icon emotion-16 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <circle
@@ -3357,13 +3317,13 @@ exports[`Badge demo -- bubble 1`] = `
             </span>
           </span>
           <span
-            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-25 emotion-20"
+            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-26 emotion-21"
           >
             <span
-              class="uc-fe-radio-icon-wrap emotion-23 emotion-18"
+              class="uc-fe-radio-icon-wrap emotion-24 emotion-19"
             >
               <svg
-                class="uc-fe-radio-icon emotion-15 emotion-16"
+                class="uc-fe-radio-icon emotion-16 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <circle
@@ -3380,13 +3340,13 @@ exports[`Badge demo -- bubble 1`] = `
             </span>
           </span>
           <span
-            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-25 emotion-20"
+            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-26 emotion-21"
           >
             <span
-              class="uc-fe-radio-icon-wrap emotion-23 emotion-18"
+              class="uc-fe-radio-icon-wrap emotion-24 emotion-19"
             >
               <svg
-                class="uc-fe-radio-icon emotion-15 emotion-16"
+                class="uc-fe-radio-icon emotion-16 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <circle
@@ -3406,7 +3366,7 @@ exports[`Badge demo -- bubble 1`] = `
       </div>
     </div>
     <div
-      class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10 emotion-11"
+      class="uc-fe-row uc-fe-form-item emotion-9 emotion-10 emotion-11 emotion-12"
     >
       <div
         class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
@@ -3415,20 +3375,20 @@ exports[`Badge demo -- bubble 1`] = `
         size
       </div>
       <div
-        class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
+        class="uc-fe-col uc-fe-form-controller emotion-6 emotion-7 emotion-2"
         span="9"
       >
         <div
-          class="emotion-39 emotion-40"
+          class="emotion-40 emotion-41"
         >
           <span
-            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-25 emotion-20"
+            class="uc-fe-radio uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-26 emotion-21"
           >
             <span
-              class="uc-fe-radio-icon-wrap emotion-23 emotion-18"
+              class="uc-fe-radio-icon-wrap emotion-24 emotion-19"
             >
               <svg
-                class="uc-fe-radio-icon emotion-15 emotion-16"
+                class="uc-fe-radio-icon emotion-16 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <circle
@@ -3446,14 +3406,14 @@ exports[`Badge demo -- bubble 1`] = `
           </span>
           <span
             checked=""
-            class="uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-19 emotion-20"
+            class="uc-fe-radio uc-fe-radio-checked uc-fe-radio-size-md uc-fe-radio-styletype-default emotion-20 emotion-21"
           >
             <span
               checked=""
-              class="uc-fe-radio-icon-wrap emotion-17 emotion-18"
+              class="uc-fe-radio-icon-wrap emotion-18 emotion-19"
             >
               <svg
-                class="uc-fe-radio-icon emotion-15 emotion-16"
+                class="uc-fe-radio-icon emotion-16 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <circle
@@ -3473,7 +3433,7 @@ exports[`Badge demo -- bubble 1`] = `
       </div>
     </div>
     <div
-      class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10 emotion-11"
+      class="uc-fe-row uc-fe-form-item emotion-9 emotion-10 emotion-11 emotion-12"
     >
       <div
         class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
@@ -3482,11 +3442,11 @@ exports[`Badge demo -- bubble 1`] = `
         offset[0]
       </div>
       <div
-        class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
+        class="uc-fe-col uc-fe-form-controller emotion-6 emotion-7 emotion-2"
         span="9"
       >
         <div
-          class="uc-fe-numberinput uc-fe-numberinput-styletype-default emotion-79 emotion-80"
+          class="uc-fe-numberinput uc-fe-numberinput-styletype-default emotion-80 emotion-81"
         >
           <div>
             <span
@@ -3494,7 +3454,7 @@ exports[`Badge demo -- bubble 1`] = `
               unselectable="unselectable"
             >
               <svg
-                class=" emotion-75 emotion-16"
+                class=" emotion-76 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -3507,7 +3467,7 @@ exports[`Badge demo -- bubble 1`] = `
               unselectable="unselectable"
             >
               <svg
-                class=" emotion-75 emotion-16"
+                class=" emotion-76 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -3531,7 +3491,7 @@ exports[`Badge demo -- bubble 1`] = `
       </div>
     </div>
     <div
-      class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10 emotion-11"
+      class="uc-fe-row uc-fe-form-item emotion-9 emotion-10 emotion-11 emotion-12"
     >
       <div
         class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
@@ -3540,11 +3500,11 @@ exports[`Badge demo -- bubble 1`] = `
         offset[1]
       </div>
       <div
-        class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
+        class="uc-fe-col uc-fe-form-controller emotion-6 emotion-7 emotion-2"
         span="9"
       >
         <div
-          class="uc-fe-numberinput uc-fe-numberinput-styletype-default emotion-79 emotion-80"
+          class="uc-fe-numberinput uc-fe-numberinput-styletype-default emotion-80 emotion-81"
         >
           <div>
             <span
@@ -3552,7 +3512,7 @@ exports[`Badge demo -- bubble 1`] = `
               unselectable="unselectable"
             >
               <svg
-                class=" emotion-75 emotion-16"
+                class=" emotion-76 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -3565,7 +3525,7 @@ exports[`Badge demo -- bubble 1`] = `
               unselectable="unselectable"
             >
               <svg
-                class=" emotion-75 emotion-16"
+                class=" emotion-76 emotion-17"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -3589,7 +3549,7 @@ exports[`Badge demo -- bubble 1`] = `
       </div>
     </div>
     <div
-      class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10 emotion-11"
+      class="uc-fe-row uc-fe-form-item emotion-9 emotion-10 emotion-11 emotion-12"
     >
       <div
         class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
@@ -3598,11 +3558,11 @@ exports[`Badge demo -- bubble 1`] = `
         customStyle.bubbleColor
       </div>
       <div
-        class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
+        class="uc-fe-col uc-fe-form-controller emotion-6 emotion-7 emotion-2"
         span="9"
       >
         <div
-          class="uc-fe-combine emotion-109 emotion-110"
+          class="uc-fe-combine emotion-110 emotion-111"
           spacing="md"
         >
           <div
@@ -3617,7 +3577,7 @@ exports[`Badge demo -- bubble 1`] = `
             class="uc-fe-combine-item"
           >
             <button
-              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-107 emotion-108"
+              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-108 emotion-109"
               type="button"
             >
               Remove Color
@@ -3627,7 +3587,7 @@ exports[`Badge demo -- bubble 1`] = `
       </div>
     </div>
     <div
-      class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10 emotion-11"
+      class="uc-fe-row uc-fe-form-item emotion-9 emotion-10 emotion-11 emotion-12"
     >
       <div
         class="uc-fe-col uc-fe-form-label emotion-0 emotion-1 emotion-2"
@@ -3636,11 +3596,11 @@ exports[`Badge demo -- bubble 1`] = `
         customStyle.bubbleBackground
       </div>
       <div
-        class="uc-fe-col uc-fe-form-controller emotion-5 emotion-6 emotion-2"
+        class="uc-fe-col uc-fe-form-controller emotion-6 emotion-7 emotion-2"
         span="9"
       >
         <div
-          class="uc-fe-combine emotion-109 emotion-110"
+          class="uc-fe-combine emotion-110 emotion-111"
           spacing="md"
         >
           <div
@@ -3655,7 +3615,7 @@ exports[`Badge demo -- bubble 1`] = `
             class="uc-fe-combine-item"
           >
             <button
-              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-107 emotion-108"
+              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-108 emotion-109"
               type="button"
             >
               Remove Background
@@ -3669,14 +3629,14 @@ exports[`Badge demo -- bubble 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-badge emotion-136 emotion-137"
+      class="uc-fe-badge emotion-137 emotion-138"
       style="margin:10px"
     >
       <div
         style="width:50px;height:50px;background:#ddd"
       />
       <div
-        class="uc-fe-badge-bubble-wrap emotion-134 emotion-135"
+        class="uc-fe-badge-bubble-wrap emotion-135 emotion-136"
       >
         bubble
       </div>

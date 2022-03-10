@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Select from 'src/components/Select';
 import Radio from 'src/components/Radio';
 import Switch from 'src/components/Switch';
@@ -8,19 +9,45 @@ import Form from 'src/components/Form';
 // demo start
 const { Option, Size } = Select;
 
+const simpleOptions = new Array(100).fill(null).map((v, i) => ({ key: i, value: `option-${i}` }));
+const labelOptions = new Array(100).fill(null).map((v, i) => ({ key: i, value: `option-${i}`, label: `label ${i}` }));
+const spanLabelOptions = new Array(100)
+    .fill(null)
+    .map((v, i) => ({ key: i, value: `option-${i}`, label: <span>{`label ${i}`}</span> }));
+const childrenOptions = new Array(100).fill(null).map((v, i) => (
+    <Option value={i} key={i}>
+        The option {i}
+    </Option>
+));
+
 class Demo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             size: 'md',
             placeholder: 'placeholder',
-            multiple: false,
+            multiple: true,
+            showSelectAll: true,
             disabled: false,
-            search: false
+            search: false,
+            optionType: 'simple',
+            stretch: true,
+            width: 'default'
         };
     }
     render() {
-        const { value, size, placeholder, multiple, showSelectAll, disabled, search } = this.state;
+        const {
+            value,
+            size,
+            placeholder,
+            multiple,
+            showSelectAll,
+            disabled,
+            search,
+            stretch,
+            optionType,
+            width
+        } = this.state;
         const itemLayout = {
             labelCol: {
                 span: 3
@@ -29,6 +56,18 @@ class Demo extends React.Component {
                 span: 9
             }
         };
+        const optionProps =
+            optionType === 'simple'
+                ? { options: simpleOptions }
+                : optionType === 'label'
+                ? { options: labelOptions }
+                : optionType === 'spanLabel'
+                ? { options: spanLabelOptions }
+                : optionType === 'empty'
+                ? {}
+                : { children: childrenOptions };
+
+        const widthProps = width === 'width: 500px' ? { style: { width: '500px' } } : {};
         return (
             <div>
                 <Form className="demo-form">
@@ -39,49 +78,58 @@ class Demo extends React.Component {
                             options={Size.map(size => ({ value: size }))}
                         />
                     </Form.Item>
+                    <Form.Item label="option type" {...itemLayout}>
+                        <Radio.Group
+                            value={optionType}
+                            onChange={optionType => this.setState({ optionType })}
+                            options={['simple', 'label', 'spanLabel', 'children', 'empty'].map(type => ({
+                                value: type
+                            }))}
+                        />
+                    </Form.Item>
+                    <Form.Item label="width" {...itemLayout}>
+                        <Radio.Group
+                            value={width}
+                            onChange={width => this.setState({ width })}
+                            options={['default', 'width: 500px'].map(v => ({ value: v }))}
+                        />
+                    </Form.Item>
                     <Form.Item label="placeholder" {...itemLayout}>
                         <Input value={placeholder} onChange={e => this.setState({ placeholder: e.target.value })} />
                     </Form.Item>
                     <Form.Item label="multiple" {...itemLayout}>
                         <Switch
-                            value={multiple}
+                            checked={multiple}
                             onChange={multiple => this.setState({ multiple, value: multiple ? [] : undefined })}
                         />
                     </Form.Item>
                     <Form.Item label="showSelectAll" {...itemLayout}>
-                        <Switch value={showSelectAll} onChange={showSelectAll => this.setState({ showSelectAll })} />
+                        <Switch checked={showSelectAll} onChange={showSelectAll => this.setState({ showSelectAll })} />
                     </Form.Item>
                     <Form.Item label="disabled" {...itemLayout}>
-                        <Switch value={disabled} onChange={disabled => this.setState({ disabled })} />
+                        <Switch checked={disabled} onChange={disabled => this.setState({ disabled })} />
                     </Form.Item>
                     <Form.Item label="search" {...itemLayout}>
-                        <Switch value={search} onChange={search => this.setState({ search })} />
+                        <Switch checked={search} onChange={search => this.setState({ search })} />
+                    </Form.Item>
+                    <Form.Item label="stretch" {...itemLayout}>
+                        <Switch checked={stretch} onChange={stretch => this.setState({ stretch })} />
                     </Form.Item>
                 </Form>
                 <div className="demo-wrap">
                     <Select
                         value={value}
+                        onChange={v => this.setState({ value: v })}
                         size={size}
                         placeholder={placeholder}
                         multiple={multiple}
                         showSelectAll={showSelectAll}
                         disabled={disabled}
+                        {...widthProps}
+                        {...optionProps}
                         {...(search ? { search } : {})}
-                        onChange={v => this.setState({ value: v })}
-                    >
-                        <Option value={1}>
-                            <span>option 1</span>
-                        </Option>
-                        <Option value={'disable'} disabled>
-                            disable
-                        </Option>
-                        <Option value={2}>
-                            <span>option 2</span>
-                        </Option>
-                        <Option value={3}>
-                            <span>option 3</span>
-                        </Option>
-                    </Select>
+                        {...(stretch ? { popoverProps: { stretch: ['minWidth'] } } : {})}
+                    />
                 </div>
             </div>
         );

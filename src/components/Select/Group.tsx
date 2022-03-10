@@ -19,4 +19,7 @@ const Group = ({ groupKey, ...rest }: GroupProps) => {
 };
 
 Group.isMenuSubMenu = true;
+/**
+ * @deprecated
+ */
 export default Group;
