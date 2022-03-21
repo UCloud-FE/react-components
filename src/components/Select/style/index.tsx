@@ -1,8 +1,8 @@
-import React, { CSSProperties } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import Input, { InputProps } from 'src/components/Input';
+import Input from 'src/components/Input';
 import SvgIcon from 'src/components/SvgIcon';
 import Menu from 'src/components/Menu';
 import Button from 'src/components/Button';
@@ -20,6 +20,8 @@ export const suffixCls = prefixCls + '-suffix';
 export const measureCls = prefixCls + '-measure';
 export const measureContentCls = prefixCls + '-measure-content';
 export const placeholderCls = prefixCls + '-placeholder';
+export const inputCls = prefixCls + '-input';
+export const inputWrapCls = inputCls + '-wrap';
 export const clearCls = prefixCls + '-clear';
 
 export const SelectSearchInput = styled(Input.Search)`
@@ -57,6 +59,7 @@ export const SSelectorMultiple = sWrap<InputWrapProps & { empty?: boolean }>({})
                 overflow: visible;
                 color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
                 text-indent: 0.3em;
+                white-space: nowrap;
                 ${
                     focused &&
                     css`
@@ -150,19 +153,64 @@ export const SSelectorMultiple = sWrap<InputWrapProps & { empty?: boolean }>({})
     })
 );
 
-export const SSingleSelector = sWrap<InputProps & { cursor?: CSSProperties['cursor'] }>({})(
-    styled(Input)(props => {
-        let { cursor, disabled } = props;
+export const SSelectorSingle = sWrap<InputWrapProps & { empty?: boolean }>({})(
+    styled(InputWrap)(props => {
+        let {
+            theme: { designTokens: DT },
+            cursor,
+            disabled,
+            empty,
+            focused
+        } = props;
         if (disabled) cursor = 'default';
         return css`
             cursor: ${cursor};
-            input {
+            .${inputWrapCls} {
+                position: relative;
+                overflow: hidden;
+                :empty {
+                    display: initial;
+                }
+            }
+            .${inputCls} {
                 cursor: ${cursor};
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
             }
-            ${placeholderCls} {
-                width: 0;
-                overflow: visible;
+            .${placeholderCls} {
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
+
+            .${clearCls} {
+                display: flex;
+                color: ${DT.T_COLOR_TEXT_REMARK_DARK};
+                fill: ${DT.T_COLOR_TEXT_REMARK_DARK};
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+
+            ${!empty &&
+            !disabled &&
+            css`
+                :hover .${clearCls} {
+                    opacity: 1;
+                    cursor: pointer;
+                }
+            `}
+
+            ${!empty &&
+            !disabled &&
+            focused &&
+            css`
+                .${clearCls} {
+                    opacity: 1;
+                    cursor: pointer;
+                }
+            `}
         `;
     })
 );
@@ -250,11 +298,12 @@ export const BlockMenu = styled(CustomMenu)(props => {
     `;
 });
 
-export const SelectWrap = sWrap<{ disabled?: boolean }>({})(
+export const SelectWrap = sWrap<{ disabled?: boolean; multiple?: boolean }>({})(
     styled('div')(props => {
         const {
             theme: { designTokens: DT },
-            disabled
+            disabled,
+            multiple
         } = props;
 
         return css`
@@ -262,11 +311,13 @@ export const SelectWrap = sWrap<{ disabled?: boolean }>({})(
             position: relative;
             max-width: 100%;
             min-width: 80px;
-            width: 180px;
-
-            ${inlineBlockWithVerticalMixin};
             font-size: ${DT.T_TYPO_FONT_SIZE_1};
             color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+            ${inlineBlockWithVerticalMixin};
+            ${multiple &&
+            css`
+                width: 180px;
+            `}
             ${disabled &&
             css`
                 color: ${DT.T_COLOR_TEXT_DISABLED};

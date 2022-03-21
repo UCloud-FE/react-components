@@ -5,6 +5,7 @@ import React, {
     ReactNode,
     RefObject,
     useCallback,
+    useEffect,
     useLayoutEffect,
     useMemo,
     useRef,
@@ -48,16 +49,19 @@ import {
     selectInputCls,
     SSelectorMultiple,
     suffixCls,
-    SSingleSelector,
+    SSelectorSingle,
     overflowCls,
     measureCls,
     measureContentCls,
     placeholderCls,
     clearCls,
-    SRestList
+    SRestList,
+    inputCls,
+    inputWrapCls
 } from './style';
 import SelectContext from './SelectContext';
 import LOCALE from './locale/zh_CN';
+import { InputPart } from 'src/sharedComponents/InputWrap';
 
 export const deprecatedLogForPopover = deprecatedLog('Select popover', 'popoverProps');
 const warnLogForVirtualList = onceWarning('Select virtualList only valid when use options');
@@ -192,8 +196,8 @@ export interface SelectProps {
     defaultValue?: Key | Key[];
     /** 无选项时显示内容 */
     placeholder?: ReactNode;
-    /** 修改时的回调 */
-    onChange?: (value: Key | Key[]) => void;
+    /** 修改、清空时的回调，清空时回调值单选为 undefined、du px aun */
+    onChange?: (value: Key | Key[] | undefined) => void;
     /** 快速设置选项 */
     options?: {
         /** 选项展示 */
@@ -259,6 +263,8 @@ export interface SelectProps {
           };
     /** 尺寸 */
     size?: Size;
+    /** 是否可清空，仅单选可用 */
+    clearable?: boolean;
     /**
      * 弹出层的popover props
      * @deprecated 请使用popoverProps替换
@@ -530,6 +536,7 @@ type SelectorProps = Pick<
     | 'value'
     | 'onChange'
     | 'search'
+    | 'clearable'
 > & {
     visible: boolean;
     locale: typeof LOCALE;
@@ -558,6 +565,7 @@ const Selector = React.memo(function Selector({
     searchValue,
     setSearchValue,
     wrapRef,
+    clearable,
     ..._popupProps
 }: Omit<SelectorProps, '_popupProps'> & { v1: boolean }) {
     const props = {
@@ -577,6 +585,7 @@ const Selector = React.memo(function Selector({
         searchValue,
         setSearchValue,
         wrapRef,
+        clearable,
         _popupProps
     };
     const SelectorComponent = renderSelector
@@ -894,13 +903,16 @@ const SingleSelector = React.memo(function SingleSelector({
     renderContent,
     renderPopup,
     value,
+    onChange,
     visible,
     dataSource,
     search,
     searchValue = '',
     setSearchValue,
+    clearable,
     _popupProps
 }: SelectorProps) {
+    const inputRef = useRef<HTMLInputElement>(null);
     const getContent = useCallback(() => {
         const [, , , , childrenMap = new Map()] = dataSource;
         const getValueChild = (v?: Key) => {
@@ -929,38 +941,56 @@ const SingleSelector = React.memo(function SingleSelector({
         size,
         disabled,
         block: true,
-        readOnly: !search,
-        suffix: <SvgIcon type={visible ? 'arrow-up' : 'arrow-down'} />,
         cursor: search ? 'text' : 'pointer',
+        focused: visible,
+        empty: value === undefined,
         ..._popupProps
     };
 
-    if (typeof content === 'string') {
-        if (visible) {
-            return (
-                <SSingleSelector value={searchValue} onChange={handleInput} placeholder={content} {...sharedProps} />
-            );
+    useEffect(() => {
+        if (visible) inputRef.current?.focus();
+    }, [visible]);
+
+    const handleClear = useCallback(() => {
+        if (!disabled) {
+            onChange?.(undefined);
+            inputRef.current?.focus();
         }
-        return <SSingleSelector value={content} {...sharedProps} />;
-    }
-    if (visible) {
+    }, [disabled, onChange]);
+
+    const clearBtn = useMemo(() => {
         return (
-            <SSingleSelector
-                value={searchValue}
-                onChange={handleInput}
-                prefix={
+            <InputPart className={clearCls} onClick={handleClear}>
+                <SvgIcon type="cross-circle-filled" />
+            </InputPart>
+        );
+    }, [handleClear]);
+
+    return (
+        <SSelectorSingle {...sharedProps}>
+            <InputPart stretch className={inputWrapCls}>
+                {content && (
                     <span
                         className={placeholderCls}
-                        style={{ visibility: searchValue ? 'hidden' : 'visible', opacity: '.5' }}
+                        style={{ visibility: searchValue ? 'hidden' : 'visible', opacity: visible ? '.5' : '1' }}
                     >
                         {content}
                     </span>
-                }
-                {...sharedProps}
-            />
-        );
-    }
-    return <SSingleSelector value="" prefix={<span className={placeholderCls}>{content}</span>} {...sharedProps} />;
+                )}
+                {search && (
+                    <input
+                        className={inputCls}
+                        value={searchValue}
+                        onChange={handleInput}
+                        disabled={disabled}
+                        ref={inputRef}
+                    />
+                )}
+            </InputPart>
+            {clearable && clearBtn}
+            <InputPart>{<SvgIcon type={'arrow-down'} style={{ visibility: visible ? 'hidden' : 'visible' }} />}</InputPart>
+        </SSelectorSingle>
+    );
 });
 
 const Select = ({
@@ -981,6 +1011,7 @@ const Select = ({
     emptyContent,
     showSelectAll,
     extra,
+    clearable,
     customStyle,
     popover,
     popoverProps,
@@ -1064,11 +1095,12 @@ const Select = ({
 
     const handleVisibleChange = useCallback(
         (open: boolean) => {
+            if (disabled) return;
             setVisible(open);
             onVisibleChange(open);
             if (!open) setSearchValue('');
         },
-        [onVisibleChange, setSearchValue]
+        [disabled, onVisibleChange, setSearchValue]
     );
     const hidePopup = useCallback(() => handleVisibleChange(false), [handleVisibleChange]);
 
@@ -1109,7 +1141,7 @@ const Select = ({
         size,
         disabled,
         multiple,
-        placeholder,
+        placeholder: placeholder ?? locale.placeholder,
         renderContent,
         renderSelector,
         renderPopup,
@@ -1118,6 +1150,7 @@ const Select = ({
         visible,
         locale,
         dataSource,
+        clearable,
         search,
         searchValue,
         setSearchValue,
@@ -1137,7 +1170,7 @@ const Select = ({
                 searchValue
             }}
         >
-            <SelectWrap ref={wrapRef} {...htmlProps}>
+            <SelectWrap ref={wrapRef} disabled={disabled} multiple={multiple} {...htmlProps}>
                 <Popover
                     visible={visible}
                     onVisibleChange={handleVisibleChange}

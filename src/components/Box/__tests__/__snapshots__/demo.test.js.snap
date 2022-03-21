@@ -1370,8 +1370,8 @@ exports[`Box demo -- box 1`] = `
 }
 
 .emotion-5 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -1629,8 +1629,8 @@ exports[`Box demo -- box 1`] = `
 }
 
 .emotion-5 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -7024,7 +7024,7 @@ exports[`Box demo -- span 1`] = `
 `;
 
 exports[`Box demo -- usage 1`] = `
-.emotion-30 {
+.emotion-29 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -7118,7 +7118,7 @@ exports[`Box demo -- usage 1`] = `
   vertical-align: baseline;
 }
 
-.emotion-58 {
+.emotion-57 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -7132,13 +7132,13 @@ exports[`Box demo -- usage 1`] = `
   margin-bottom: -12px;
 }
 
-.emotion-58.emotion-58.emotion-58>* {
+.emotion-57.emotion-57.emotion-57>* {
   margin-right: 6px;
   margin-left: 6px;
   margin-bottom: 12px;
 }
 
-.emotion-58.emotion-58.emotion-58>*.uc-fe-box {
+.emotion-57.emotion-57.emotion-57>*.uc-fe-box {
   padding-right: 6px;
   padding-left: 6px;
   margin-right: 0;
@@ -7147,28 +7147,27 @@ exports[`Box demo -- usage 1`] = `
   margin-bottom: 0;
 }
 
-.emotion-38 {
+.emotion-37 {
   box-sizing: border-box;
   width: 50%;
 }
 
-.emotion-60 {
+.emotion-59 {
   box-sizing: border-box;
 }
 
-.emotion-16 {
+.emotion-15 {
   box-sizing: border-box;
   position: relative;
   max-width: 100%;
   min-width: 80px;
-  width: 180px;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 12px;
   color: #0a1633;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.emotion-14 {
+.emotion-13 {
   position: relative;
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -7191,6 +7190,7 @@ exports[`Box demo -- usage 1`] = `
   -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
+  cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7198,19 +7198,19 @@ exports[`Box demo -- usage 1`] = `
   cursor: pointer;
 }
 
-.emotion-14,
-.emotion-14 input,
-.emotion-14 .emotion-7 {
+.emotion-13,
+.emotion-13 input,
+.emotion-13 .emotion-7 {
   padding: 0 4px;
 }
 
-.emotion-14:hover {
+.emotion-13:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-14 input {
+.emotion-13 input {
   box-sizing: border-box;
   height: 100%;
   margin: 0;
@@ -7222,39 +7222,93 @@ exports[`Box demo -- usage 1`] = `
   min-width: 0px;
 }
 
-.emotion-14 input,
-.emotion-14 input:hover,
-.emotion-14 input:focus {
+.emotion-13 input,
+.emotion-13 input:hover,
+.emotion-13 input:focus {
   border: none;
   outline: none;
   background: none;
 }
 
-.emotion-14 input::-webkit-input-placeholder {
+.emotion-13 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-14 input::-moz-placeholder {
+.emotion-13 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-14 input:-ms-input-placeholder {
+.emotion-13 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-14 input::placeholder {
+.emotion-13 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-14 input::-ms-clear {
+.emotion-13 input::-ms-clear {
   display: none;
 }
 
-.emotion-14 .emotion-7 {
+.emotion-13 .uc-fe-select-input-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.emotion-13 .uc-fe-select-input-wrap:empty {
+  display: initial;
+}
+
+.emotion-13 .uc-fe-select-input {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.emotion-13 .uc-fe-select-placeholder {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-13 .uc-fe-select-clear {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-6 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.emotion-6:empty {
+  display: none;
+}
+
+.emotion-10 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -7269,39 +7323,13 @@ exports[`Box demo -- usage 1`] = `
   flex: 0 0 auto;
 }
 
-.emotion-14 .emotion-7:empty {
+.emotion-10:empty {
   display: none;
-}
-
-.emotion-14 .uc-fe-input-clear {
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #7a8baa;
-  fill: #7a8baa;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
-.emotion-14 input {
-  cursor: pointer;
-}
-
-.emotion-14 uc-fe-select-placeholder {
-  width: 0;
-  overflow: visible;
 }
 
 .emotion-8 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -7309,7 +7337,7 @@ exports[`Box demo -- usage 1`] = `
   height: 12px;
 }
 
-.emotion-24 {
+.emotion-23 {
   position: relative;
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -7334,19 +7362,19 @@ exports[`Box demo -- usage 1`] = `
   vertical-align: middle;
 }
 
-.emotion-24,
-.emotion-24 input,
-.emotion-24 .emotion-7 {
+.emotion-23,
+.emotion-23 input,
+.emotion-23 .emotion-7 {
   padding: 0 4px;
 }
 
-.emotion-24:hover {
+.emotion-23:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-24 input {
+.emotion-23 input {
   box-sizing: border-box;
   height: 100%;
   margin: 0;
@@ -7358,58 +7386,39 @@ exports[`Box demo -- usage 1`] = `
   min-width: 0px;
 }
 
-.emotion-24 input,
-.emotion-24 input:hover,
-.emotion-24 input:focus {
+.emotion-23 input,
+.emotion-23 input:hover,
+.emotion-23 input:focus {
   border: none;
   outline: none;
   background: none;
 }
 
-.emotion-24 input::-webkit-input-placeholder {
+.emotion-23 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-24 input::-moz-placeholder {
+.emotion-23 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-24 input:-ms-input-placeholder {
+.emotion-23 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-24 input::placeholder {
+.emotion-23 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-24 input::-ms-clear {
+.emotion-23 input::-ms-clear {
   display: none;
 }
 
-.emotion-24 .emotion-7 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-24 .emotion-7:empty {
-  display: none;
-}
-
-.emotion-24 .uc-fe-input-clear {
+.emotion-23 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -7426,9 +7435,9 @@ exports[`Box demo -- usage 1`] = `
   transition: opacity 0.3s;
 }
 
-.emotion-19 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+.emotion-18 {
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -7437,7 +7446,7 @@ exports[`Box demo -- usage 1`] = `
   cursor: pointer;
 }
 
-.emotion-36 {
+.emotion-35 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -7448,7 +7457,7 @@ exports[`Box demo -- usage 1`] = `
   flex-direction: column;
 }
 
-.emotion-34 {
+.emotion-33 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -7459,14 +7468,14 @@ exports[`Box demo -- usage 1`] = `
   flex: 1 1 auto;
 }
 
-.emotion-32 {
+.emotion-31 {
   box-sizing: border-box;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 
-.emotion-30 {
+.emotion-29 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -7560,7 +7569,7 @@ exports[`Box demo -- usage 1`] = `
   vertical-align: baseline;
 }
 
-.emotion-58 {
+.emotion-57 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -7574,13 +7583,13 @@ exports[`Box demo -- usage 1`] = `
   margin-bottom: -12px;
 }
 
-.emotion-58.emotion-58.emotion-58>* {
+.emotion-57.emotion-57.emotion-57>* {
   margin-right: 6px;
   margin-left: 6px;
   margin-bottom: 12px;
 }
 
-.emotion-58.emotion-58.emotion-58>*.uc-fe-box {
+.emotion-57.emotion-57.emotion-57>*.uc-fe-box {
   padding-right: 6px;
   padding-left: 6px;
   margin-right: 0;
@@ -7589,28 +7598,27 @@ exports[`Box demo -- usage 1`] = `
   margin-bottom: 0;
 }
 
-.emotion-38 {
+.emotion-37 {
   box-sizing: border-box;
   width: 50%;
 }
 
-.emotion-60 {
+.emotion-59 {
   box-sizing: border-box;
 }
 
-.emotion-16 {
+.emotion-15 {
   box-sizing: border-box;
   position: relative;
   max-width: 100%;
   min-width: 80px;
-  width: 180px;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 12px;
   color: #0a1633;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.emotion-14 {
+.emotion-13 {
   position: relative;
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -7633,6 +7641,7 @@ exports[`Box demo -- usage 1`] = `
   -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
+  cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7640,19 +7649,19 @@ exports[`Box demo -- usage 1`] = `
   cursor: pointer;
 }
 
-.emotion-14,
-.emotion-14 input,
-.emotion-14 .emotion-7 {
+.emotion-13,
+.emotion-13 input,
+.emotion-13 .emotion-7 {
   padding: 0 4px;
 }
 
-.emotion-14:hover {
+.emotion-13:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-14 input {
+.emotion-13 input {
   box-sizing: border-box;
   height: 100%;
   margin: 0;
@@ -7664,39 +7673,93 @@ exports[`Box demo -- usage 1`] = `
   min-width: 0px;
 }
 
-.emotion-14 input,
-.emotion-14 input:hover,
-.emotion-14 input:focus {
+.emotion-13 input,
+.emotion-13 input:hover,
+.emotion-13 input:focus {
   border: none;
   outline: none;
   background: none;
 }
 
-.emotion-14 input::-webkit-input-placeholder {
+.emotion-13 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-14 input::-moz-placeholder {
+.emotion-13 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-14 input:-ms-input-placeholder {
+.emotion-13 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-14 input::placeholder {
+.emotion-13 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-14 input::-ms-clear {
+.emotion-13 input::-ms-clear {
   display: none;
 }
 
-.emotion-14 .emotion-7 {
+.emotion-13 .uc-fe-select-input-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.emotion-13 .uc-fe-select-input-wrap:empty {
+  display: initial;
+}
+
+.emotion-13 .uc-fe-select-input {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.emotion-13 .uc-fe-select-placeholder {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-13 .uc-fe-select-clear {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-6 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.emotion-6:empty {
+  display: none;
+}
+
+.emotion-10 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -7711,39 +7774,13 @@ exports[`Box demo -- usage 1`] = `
   flex: 0 0 auto;
 }
 
-.emotion-14 .emotion-7:empty {
+.emotion-10:empty {
   display: none;
-}
-
-.emotion-14 .uc-fe-input-clear {
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #7a8baa;
-  fill: #7a8baa;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
-.emotion-14 input {
-  cursor: pointer;
-}
-
-.emotion-14 uc-fe-select-placeholder {
-  width: 0;
-  overflow: visible;
 }
 
 .emotion-8 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -7751,7 +7788,7 @@ exports[`Box demo -- usage 1`] = `
   height: 12px;
 }
 
-.emotion-24 {
+.emotion-23 {
   position: relative;
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -7776,19 +7813,19 @@ exports[`Box demo -- usage 1`] = `
   vertical-align: middle;
 }
 
-.emotion-24,
-.emotion-24 input,
-.emotion-24 .emotion-7 {
+.emotion-23,
+.emotion-23 input,
+.emotion-23 .emotion-7 {
   padding: 0 4px;
 }
 
-.emotion-24:hover {
+.emotion-23:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-24 input {
+.emotion-23 input {
   box-sizing: border-box;
   height: 100%;
   margin: 0;
@@ -7800,58 +7837,39 @@ exports[`Box demo -- usage 1`] = `
   min-width: 0px;
 }
 
-.emotion-24 input,
-.emotion-24 input:hover,
-.emotion-24 input:focus {
+.emotion-23 input,
+.emotion-23 input:hover,
+.emotion-23 input:focus {
   border: none;
   outline: none;
   background: none;
 }
 
-.emotion-24 input::-webkit-input-placeholder {
+.emotion-23 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-24 input::-moz-placeholder {
+.emotion-23 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-24 input:-ms-input-placeholder {
+.emotion-23 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-24 input::placeholder {
+.emotion-23 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-24 input::-ms-clear {
+.emotion-23 input::-ms-clear {
   display: none;
 }
 
-.emotion-24 .emotion-7 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-24 .emotion-7:empty {
-  display: none;
-}
-
-.emotion-24 .uc-fe-input-clear {
+.emotion-23 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -7868,9 +7886,9 @@ exports[`Box demo -- usage 1`] = `
   transition: opacity 0.3s;
 }
 
-.emotion-19 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+.emotion-18 {
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -7879,7 +7897,7 @@ exports[`Box demo -- usage 1`] = `
   cursor: pointer;
 }
 
-.emotion-36 {
+.emotion-35 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -7890,7 +7908,7 @@ exports[`Box demo -- usage 1`] = `
   flex-direction: column;
 }
 
-.emotion-34 {
+.emotion-33 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -7901,7 +7919,7 @@ exports[`Box demo -- usage 1`] = `
   flex: 1 1 auto;
 }
 
-.emotion-32 {
+.emotion-31 {
   box-sizing: border-box;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
@@ -7909,7 +7927,7 @@ exports[`Box demo -- usage 1`] = `
 }
 
 <div
-  class="uc-fe-box emotion-60 emotion-31"
+  class="uc-fe-box emotion-59 emotion-30"
 >
   <h2>
     工具栏
@@ -7918,7 +7936,7 @@ exports[`Box demo -- usage 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-box emotion-30 emotion-31"
+      class="uc-fe-box emotion-29 emotion-30"
     >
       <div
         class="uc-fe-combine emotion-4 emotion-5"
@@ -7959,28 +7977,27 @@ exports[`Box demo -- usage 1`] = `
           class="uc-fe-combine-item"
         >
           <div
-            class=" emotion-16 emotion-17"
+            class=" emotion-15 emotion-16"
           >
             <span
-              class="uc-fe-input uc-fe-select-input emotion-12 emotion-13 emotion-14 emotion-15"
+              class="uc-fe-select-input emotion-12 emotion-13 emotion-14"
             >
               <span
-                class="uc-fe-input-prefix emotion-6 emotion-7"
+                class="uc-fe-select-input-wrap emotion-6 emotion-7"
               >
                 <span
                   class="uc-fe-select-placeholder"
-                />
+                  style="visibility:visible;opacity:1"
+                >
+                  请选择
+                </span>
               </span>
-              <input
-                cursor="pointer"
-                readonly=""
-                value=""
-              />
               <span
-                class="uc-fe-input-suffix emotion-6 emotion-7"
+                class="emotion-10 emotion-7"
               >
                 <svg
                   class=" emotion-8 emotion-9"
+                  style="visibility:visible"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -7996,16 +8013,16 @@ exports[`Box demo -- usage 1`] = `
           class="uc-fe-combine-item"
         >
           <span
-            class="uc-fe-input emotion-13 emotion-24 emotion-15"
+            class="uc-fe-input emotion-22 emotion-23 emotion-14"
           >
             <input
               value=""
             />
             <span
-              class="uc-fe-input-suffix emotion-6 emotion-7"
+              class="uc-fe-input-suffix emotion-10 emotion-7"
             >
               <svg
-                class="emotion-18 emotion-19 emotion-9"
+                class="emotion-17 emotion-18 emotion-9"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -8035,7 +8052,7 @@ exports[`Box demo -- usage 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-box emotion-36 emotion-31"
+      class="uc-fe-box emotion-35 emotion-30"
       direction="column"
       style="height:300px"
     >
@@ -8043,14 +8060,14 @@ exports[`Box demo -- usage 1`] = `
         style="height:20px;background:black"
       />
       <div
-        class="uc-fe-box emotion-34 emotion-31"
+        class="uc-fe-box emotion-33 emotion-30"
         style="height:100%"
       >
         <div
           style="background:#999;width:100px;height:100%"
         />
         <div
-          class="uc-fe-box emotion-32 emotion-31"
+          class="uc-fe-box emotion-31 emotion-30"
         />
       </div>
     </div>
@@ -8062,12 +8079,12 @@ exports[`Box demo -- usage 1`] = `
     class="demo-wrap"
   >
     <div
-      class="uc-fe-box emotion-58 emotion-31"
+      class="uc-fe-box emotion-57 emotion-30"
       spacing="md,md"
       wrap="wrap"
     >
       <div
-        class="uc-fe-box emotion-38 emotion-31"
+        class="uc-fe-box emotion-37 emotion-30"
         span="6"
       >
         <div
@@ -8075,7 +8092,7 @@ exports[`Box demo -- usage 1`] = `
         />
       </div>
       <div
-        class="uc-fe-box emotion-38 emotion-31"
+        class="uc-fe-box emotion-37 emotion-30"
         span="6"
       >
         <div
@@ -8083,7 +8100,7 @@ exports[`Box demo -- usage 1`] = `
         />
       </div>
       <div
-        class="uc-fe-box emotion-38 emotion-31"
+        class="uc-fe-box emotion-37 emotion-30"
         span="6"
       >
         <div
@@ -8091,7 +8108,7 @@ exports[`Box demo -- usage 1`] = `
         />
       </div>
       <div
-        class="uc-fe-box emotion-38 emotion-31"
+        class="uc-fe-box emotion-37 emotion-30"
         span="6"
       >
         <div
@@ -8099,7 +8116,7 @@ exports[`Box demo -- usage 1`] = `
         />
       </div>
       <div
-        class="uc-fe-box emotion-38 emotion-31"
+        class="uc-fe-box emotion-37 emotion-30"
         span="6"
       >
         <div
@@ -8107,7 +8124,7 @@ exports[`Box demo -- usage 1`] = `
         />
       </div>
       <div
-        class="uc-fe-box emotion-38 emotion-31"
+        class="uc-fe-box emotion-37 emotion-30"
         span="6"
       >
         <div
@@ -8115,7 +8132,7 @@ exports[`Box demo -- usage 1`] = `
         />
       </div>
       <div
-        class="uc-fe-box emotion-38 emotion-31"
+        class="uc-fe-box emotion-37 emotion-30"
         span="6"
       >
         <div
@@ -8123,7 +8140,7 @@ exports[`Box demo -- usage 1`] = `
         />
       </div>
       <div
-        class="uc-fe-box emotion-38 emotion-31"
+        class="uc-fe-box emotion-37 emotion-30"
         span="6"
       >
         <div
@@ -8131,7 +8148,7 @@ exports[`Box demo -- usage 1`] = `
         />
       </div>
       <div
-        class="uc-fe-box emotion-38 emotion-31"
+        class="uc-fe-box emotion-37 emotion-30"
         span="6"
       >
         <div
@@ -8139,7 +8156,7 @@ exports[`Box demo -- usage 1`] = `
         />
       </div>
       <div
-        class="uc-fe-box emotion-38 emotion-31"
+        class="uc-fe-box emotion-37 emotion-30"
         span="6"
       >
         <div

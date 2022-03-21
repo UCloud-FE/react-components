@@ -1446,19 +1446,18 @@ exports[`Card demo -- popupContainer 1`] = `
   margin-top: 16px;
 }
 
-.emotion-14 {
+.emotion-13 {
   box-sizing: border-box;
   position: relative;
   max-width: 100%;
   min-width: 80px;
-  width: 180px;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 12px;
   color: #0a1633;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.emotion-12 {
+.emotion-11 {
   position: relative;
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -1481,6 +1480,7 @@ exports[`Card demo -- popupContainer 1`] = `
   -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
+  cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1488,19 +1488,19 @@ exports[`Card demo -- popupContainer 1`] = `
   cursor: pointer;
 }
 
-.emotion-12,
-.emotion-12 input,
-.emotion-12 .emotion-5 {
+.emotion-11,
+.emotion-11 input,
+.emotion-11 .emotion-5 {
   padding: 0 4px;
 }
 
-.emotion-12:hover {
+.emotion-11:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-12 input {
+.emotion-11 input {
   box-sizing: border-box;
   height: 100%;
   margin: 0;
@@ -1512,39 +1512,93 @@ exports[`Card demo -- popupContainer 1`] = `
   min-width: 0px;
 }
 
-.emotion-12 input,
-.emotion-12 input:hover,
-.emotion-12 input:focus {
+.emotion-11 input,
+.emotion-11 input:hover,
+.emotion-11 input:focus {
   border: none;
   outline: none;
   background: none;
 }
 
-.emotion-12 input::-webkit-input-placeholder {
+.emotion-11 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-12 input::-moz-placeholder {
+.emotion-11 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-12 input:-ms-input-placeholder {
+.emotion-11 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-12 input::placeholder {
+.emotion-11 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-12 input::-ms-clear {
+.emotion-11 input::-ms-clear {
   display: none;
 }
 
-.emotion-12 .emotion-5 {
+.emotion-11 .uc-fe-select-input-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.emotion-11 .uc-fe-select-input-wrap:empty {
+  display: initial;
+}
+
+.emotion-11 .uc-fe-select-input {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.emotion-11 .uc-fe-select-placeholder {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-11 .uc-fe-select-clear {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.emotion-4:empty {
+  display: none;
+}
+
+.emotion-8 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1559,39 +1613,13 @@ exports[`Card demo -- popupContainer 1`] = `
   flex: 0 0 auto;
 }
 
-.emotion-12 .emotion-5:empty {
+.emotion-8:empty {
   display: none;
 }
 
-.emotion-12 .uc-fe-input-clear {
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #7a8baa;
-  fill: #7a8baa;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
-.emotion-12 input {
-  cursor: pointer;
-}
-
-.emotion-12 uc-fe-select-placeholder {
-  width: 0;
-  overflow: visible;
-}
-
 .emotion-6 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -1599,13 +1627,13 @@ exports[`Card demo -- popupContainer 1`] = `
   height: 12px;
 }
 
-.emotion-27 {
+.emotion-26 {
   display: inline-block;
   vertical-align: middle;
   width: 180px;
 }
 
-.emotion-25 {
+.emotion-24 {
   position: relative;
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -1634,19 +1662,19 @@ exports[`Card demo -- popupContainer 1`] = `
   display: flex;
 }
 
-.emotion-25,
-.emotion-25 input,
-.emotion-25 .emotion-5 {
+.emotion-24,
+.emotion-24 input,
+.emotion-24 .emotion-5 {
   padding: 0 4px;
 }
 
-.emotion-25:hover {
+.emotion-24:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-25 input {
+.emotion-24 input {
   box-sizing: border-box;
   height: 100%;
   margin: 0;
@@ -1658,58 +1686,39 @@ exports[`Card demo -- popupContainer 1`] = `
   min-width: 0px;
 }
 
-.emotion-25 input,
-.emotion-25 input:hover,
-.emotion-25 input:focus {
+.emotion-24 input,
+.emotion-24 input:hover,
+.emotion-24 input:focus {
   border: none;
   outline: none;
   background: none;
 }
 
-.emotion-25 input::-webkit-input-placeholder {
+.emotion-24 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-25 input::-moz-placeholder {
+.emotion-24 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-25 input:-ms-input-placeholder {
+.emotion-24 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-25 input::placeholder {
+.emotion-24 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-25 input::-ms-clear {
+.emotion-24 input::-ms-clear {
   display: none;
 }
 
-.emotion-25 .emotion-5 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-25 .emotion-5:empty {
-  display: none;
-}
-
-.emotion-25 .uc-fe-input-clear {
+.emotion-24 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1726,13 +1735,13 @@ exports[`Card demo -- popupContainer 1`] = `
   transition: opacity 0.3s;
 }
 
-.emotion-25:hover .uc-fe-input-clear,
-.emotion-25.uc-fe-input-focused .uc-fe-input-clear {
+.emotion-24:hover .uc-fe-input-clear,
+.emotion-24.uc-fe-input-focused .uc-fe-input-clear {
   opacity: 1;
   cursor: pointer;
 }
 
-.emotion-40 {
+.emotion-39 {
   display: inline-block;
   vertical-align: middle;
   width: 140px;
@@ -1781,19 +1790,18 @@ exports[`Card demo -- popupContainer 1`] = `
   margin-top: 16px;
 }
 
-.emotion-14 {
+.emotion-13 {
   box-sizing: border-box;
   position: relative;
   max-width: 100%;
   min-width: 80px;
-  width: 180px;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 12px;
   color: #0a1633;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.emotion-12 {
+.emotion-11 {
   position: relative;
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -1816,6 +1824,7 @@ exports[`Card demo -- popupContainer 1`] = `
   -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
+  cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1823,19 +1832,19 @@ exports[`Card demo -- popupContainer 1`] = `
   cursor: pointer;
 }
 
-.emotion-12,
-.emotion-12 input,
-.emotion-12 .emotion-5 {
+.emotion-11,
+.emotion-11 input,
+.emotion-11 .emotion-5 {
   padding: 0 4px;
 }
 
-.emotion-12:hover {
+.emotion-11:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-12 input {
+.emotion-11 input {
   box-sizing: border-box;
   height: 100%;
   margin: 0;
@@ -1847,39 +1856,93 @@ exports[`Card demo -- popupContainer 1`] = `
   min-width: 0px;
 }
 
-.emotion-12 input,
-.emotion-12 input:hover,
-.emotion-12 input:focus {
+.emotion-11 input,
+.emotion-11 input:hover,
+.emotion-11 input:focus {
   border: none;
   outline: none;
   background: none;
 }
 
-.emotion-12 input::-webkit-input-placeholder {
+.emotion-11 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-12 input::-moz-placeholder {
+.emotion-11 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-12 input:-ms-input-placeholder {
+.emotion-11 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-12 input::placeholder {
+.emotion-11 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-12 input::-ms-clear {
+.emotion-11 input::-ms-clear {
   display: none;
 }
 
-.emotion-12 .emotion-5 {
+.emotion-11 .uc-fe-select-input-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.emotion-11 .uc-fe-select-input-wrap:empty {
+  display: initial;
+}
+
+.emotion-11 .uc-fe-select-input {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.emotion-11 .uc-fe-select-placeholder {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-11 .uc-fe-select-clear {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.emotion-4:empty {
+  display: none;
+}
+
+.emotion-8 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1894,39 +1957,13 @@ exports[`Card demo -- popupContainer 1`] = `
   flex: 0 0 auto;
 }
 
-.emotion-12 .emotion-5:empty {
+.emotion-8:empty {
   display: none;
 }
 
-.emotion-12 .uc-fe-input-clear {
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #7a8baa;
-  fill: #7a8baa;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
-.emotion-12 input {
-  cursor: pointer;
-}
-
-.emotion-12 uc-fe-select-placeholder {
-  width: 0;
-  overflow: visible;
-}
-
 .emotion-6 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -1934,13 +1971,13 @@ exports[`Card demo -- popupContainer 1`] = `
   height: 12px;
 }
 
-.emotion-27 {
+.emotion-26 {
   display: inline-block;
   vertical-align: middle;
   width: 180px;
 }
 
-.emotion-25 {
+.emotion-24 {
   position: relative;
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -1969,19 +2006,19 @@ exports[`Card demo -- popupContainer 1`] = `
   display: flex;
 }
 
-.emotion-25,
-.emotion-25 input,
-.emotion-25 .emotion-5 {
+.emotion-24,
+.emotion-24 input,
+.emotion-24 .emotion-5 {
   padding: 0 4px;
 }
 
-.emotion-25:hover {
+.emotion-24:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-25 input {
+.emotion-24 input {
   box-sizing: border-box;
   height: 100%;
   margin: 0;
@@ -1993,58 +2030,39 @@ exports[`Card demo -- popupContainer 1`] = `
   min-width: 0px;
 }
 
-.emotion-25 input,
-.emotion-25 input:hover,
-.emotion-25 input:focus {
+.emotion-24 input,
+.emotion-24 input:hover,
+.emotion-24 input:focus {
   border: none;
   outline: none;
   background: none;
 }
 
-.emotion-25 input::-webkit-input-placeholder {
+.emotion-24 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-25 input::-moz-placeholder {
+.emotion-24 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-25 input:-ms-input-placeholder {
+.emotion-24 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-25 input::placeholder {
+.emotion-24 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-25 input::-ms-clear {
+.emotion-24 input::-ms-clear {
   display: none;
 }
 
-.emotion-25 .emotion-5 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-25 .emotion-5:empty {
-  display: none;
-}
-
-.emotion-25 .uc-fe-input-clear {
+.emotion-24 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -2061,13 +2079,13 @@ exports[`Card demo -- popupContainer 1`] = `
   transition: opacity 0.3s;
 }
 
-.emotion-25:hover .uc-fe-input-clear,
-.emotion-25.uc-fe-input-focused .uc-fe-input-clear {
+.emotion-24:hover .uc-fe-input-clear,
+.emotion-24.uc-fe-input-focused .uc-fe-input-clear {
   opacity: 1;
   cursor: pointer;
 }
 
-.emotion-40 {
+.emotion-39 {
   display: inline-block;
   vertical-align: middle;
   width: 140px;
@@ -2113,28 +2131,27 @@ exports[`Card demo -- popupContainer 1`] = `
           style="position:relative"
         >
           <div
-            class="emotion-14 emotion-15"
+            class="emotion-13 emotion-14"
           >
             <span
-              class="uc-fe-input uc-fe-select-input emotion-10 emotion-11 emotion-12 emotion-13"
+              class="uc-fe-select-input emotion-10 emotion-11 emotion-12"
             >
               <span
-                class="uc-fe-input-prefix emotion-4 emotion-5"
+                class="uc-fe-select-input-wrap emotion-4 emotion-5"
               >
                 <span
                   class="uc-fe-select-placeholder"
-                />
+                  style="visibility:visible;opacity:1"
+                >
+                  请选择
+                </span>
               </span>
-              <input
-                cursor="pointer"
-                readonly=""
-                value=""
-              />
               <span
-                class="uc-fe-input-suffix emotion-4 emotion-5"
+                class="emotion-8 emotion-5"
               >
                 <svg
                   class=" emotion-6 emotion-7"
+                  style="visibility:visible"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -2163,13 +2180,13 @@ exports[`Card demo -- popupContainer 1`] = `
           style="position:relative"
         >
           <div
-            class="uc-fe-datepicker emotion-27 emotion-28"
+            class="uc-fe-datepicker emotion-26 emotion-27"
           >
             <span
-              class="uc-fe-input emotion-11 emotion-25 emotion-13"
+              class="uc-fe-input emotion-23 emotion-24 emotion-12"
             >
               <span
-                class="uc-fe-input-prefix emotion-4 emotion-5"
+                class="uc-fe-input-prefix emotion-8 emotion-5"
               >
                 <svg
                   class=" emotion-6 emotion-7"
@@ -2204,13 +2221,13 @@ exports[`Card demo -- popupContainer 1`] = `
           style="position:relative"
         >
           <div
-            class="uc-fe-datepicker uc-fe-datepicker-month emotion-40 emotion-28"
+            class="uc-fe-datepicker uc-fe-datepicker-month emotion-39 emotion-27"
           >
             <span
-              class="uc-fe-input emotion-11 emotion-25 emotion-13"
+              class="uc-fe-input emotion-23 emotion-24 emotion-12"
             >
               <span
-                class="uc-fe-input-prefix emotion-4 emotion-5"
+                class="uc-fe-input-prefix emotion-8 emotion-5"
               >
                 <svg
                   class=" emotion-6 emotion-7"

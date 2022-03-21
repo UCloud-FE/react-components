@@ -20,7 +20,18 @@ export interface InputWrapProps {
     block?: boolean;
 }
 
-export const InputPart = styled.span``;
+export const InputPart = styled.span<{ stretch?: boolean }>(props => {
+    const { stretch } = props;
+    return css`
+        display: inline-flex;
+        height: 100%;
+        align-items: center;
+        :empty {
+            display: none;
+        }
+        flex: ${stretch ? '1 1 auto' : '0 0 auto'};
+    `;
+});
 
 const InputWrap = sWrap<InputWrapProps, HTMLSpanElement>({})(
     styled('span', { shouldForwardProp: prop => isPropValid(prop) && prop !== 'cursor' })(props => {
@@ -54,6 +65,7 @@ const InputWrap = sWrap<InputWrapProps, HTMLSpanElement>({})(
             transition: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
             vertical-align: middle;
             cursor: ${cursor};
+
             &,
             input,
             ${InputPart} {
@@ -124,16 +136,6 @@ const InputWrap = sWrap<InputWrapProps, HTMLSpanElement>({})(
                     color: ${DT.T_COLOR_TEXT_REMARK_LIGHT};
                 }
                 &::-ms-clear {
-                    display: none;
-                }
-            }
-
-            ${InputPart} {
-                display: inline-flex;
-                height: 100%;
-                align-items: center;
-                flex: 0 0 auto;
-                :empty {
                     display: none;
                 }
             }

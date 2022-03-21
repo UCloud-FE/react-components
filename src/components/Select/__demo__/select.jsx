@@ -13,7 +13,7 @@ const simpleOptions = new Array(100).fill(null).map((v, i) => ({ key: i, value: 
 const labelOptions = new Array(100).fill(null).map((v, i) => ({ key: i, value: `option-${i}`, label: `label ${i}` }));
 const spanLabelOptions = new Array(100)
     .fill(null)
-    .map((v, i) => ({ key: i, value: `option-${i}`, label: <span>{`label ${i}`}</span> }));
+    .map((v, i) => ({ key: i, value: `option-${i}`, label: <span style={{ color: 'red' }}>{`label ${i}`}</span> }));
 const childrenOptions = new Array(100).fill(null).map((v, i) => (
     <Option value={i} key={i}>
         The option {i}
@@ -46,7 +46,8 @@ class Demo extends React.Component {
             search,
             stretch,
             optionType,
-            width
+            width,
+            clearable
         } = this.state;
         const itemLayout = {
             labelCol: {
@@ -111,6 +112,9 @@ class Demo extends React.Component {
                     </Form.Item>
                     <Form.Item label="search" {...itemLayout}>
                         <Switch checked={search} onChange={search => this.setState({ search })} />
+                    </Form.Item>
+                    <Form.Item label="clearable" {...itemLayout}>
+                        <Switch checked={clearable} onChange={clearable => this.setState({ clearable })} />
                     </Form.Item>
                     <Form.Item label="stretch" {...itemLayout}>
                         <Switch checked={stretch} onChange={stretch => this.setState({ stretch })} />

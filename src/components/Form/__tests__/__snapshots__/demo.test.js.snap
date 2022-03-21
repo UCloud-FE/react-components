@@ -176,8 +176,8 @@ exports[`Form demo -- form 1`] = `
 }
 
 .emotion-49 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -263,25 +263,6 @@ exports[`Form demo -- form 1`] = `
 }
 
 .emotion-47 input::-ms-clear {
-  display: none;
-}
-
-.emotion-47 .emotion-77 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-47 .emotion-77:empty {
   display: none;
 }
 
@@ -409,8 +390,8 @@ exports[`Form demo -- form 1`] = `
 }
 
 .emotion-3 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -604,8 +585,8 @@ exports[`Form demo -- form 1`] = `
 }
 
 .emotion-41 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -649,19 +630,18 @@ exports[`Form demo -- form 1`] = `
   fill: #3860f4;
 }
 
-.emotion-86 {
+.emotion-85 {
   box-sizing: border-box;
   position: relative;
   max-width: 100%;
   min-width: 80px;
-  width: 180px;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 12px;
   color: #0a1633;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.emotion-84 {
+.emotion-83 {
   position: relative;
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -684,6 +664,7 @@ exports[`Form demo -- form 1`] = `
   -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
+  cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -691,19 +672,19 @@ exports[`Form demo -- form 1`] = `
   cursor: pointer;
 }
 
-.emotion-84,
-.emotion-84 input,
-.emotion-84 .emotion-77 {
+.emotion-83,
+.emotion-83 input,
+.emotion-83 .emotion-77 {
   padding: 0 4px;
 }
 
-.emotion-84:hover {
+.emotion-83:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-84 input {
+.emotion-83 input {
   box-sizing: border-box;
   height: 100%;
   margin: 0;
@@ -715,39 +696,93 @@ exports[`Form demo -- form 1`] = `
   min-width: 0px;
 }
 
-.emotion-84 input,
-.emotion-84 input:hover,
-.emotion-84 input:focus {
+.emotion-83 input,
+.emotion-83 input:hover,
+.emotion-83 input:focus {
   border: none;
   outline: none;
   background: none;
 }
 
-.emotion-84 input::-webkit-input-placeholder {
+.emotion-83 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-84 input::-moz-placeholder {
+.emotion-83 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-84 input:-ms-input-placeholder {
+.emotion-83 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-84 input::placeholder {
+.emotion-83 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-84 input::-ms-clear {
+.emotion-83 input::-ms-clear {
   display: none;
 }
 
-.emotion-84 .emotion-77 {
+.emotion-83 .uc-fe-select-input-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.emotion-83 .uc-fe-select-input-wrap:empty {
+  display: initial;
+}
+
+.emotion-83 .uc-fe-select-input {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.emotion-83 .uc-fe-select-placeholder {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-83 .uc-fe-select-clear {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-76 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.emotion-76:empty {
+  display: none;
+}
+
+.emotion-80 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -762,34 +797,8 @@ exports[`Form demo -- form 1`] = `
   flex: 0 0 auto;
 }
 
-.emotion-84 .emotion-77:empty {
+.emotion-80:empty {
   display: none;
-}
-
-.emotion-84 .uc-fe-input-clear {
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #7a8baa;
-  fill: #7a8baa;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
-.emotion-84 input {
-  cursor: pointer;
-}
-
-.emotion-84 uc-fe-select-placeholder {
-  width: 0;
-  overflow: visible;
 }
 
 .emotion-36 {
@@ -967,8 +976,8 @@ exports[`Form demo -- form 1`] = `
 }
 
 .emotion-49 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -1054,25 +1063,6 @@ exports[`Form demo -- form 1`] = `
 }
 
 .emotion-47 input::-ms-clear {
-  display: none;
-}
-
-.emotion-47 .emotion-77 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-47 .emotion-77:empty {
   display: none;
 }
 
@@ -1200,8 +1190,8 @@ exports[`Form demo -- form 1`] = `
 }
 
 .emotion-3 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -1395,8 +1385,8 @@ exports[`Form demo -- form 1`] = `
 }
 
 .emotion-41 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -1440,19 +1430,18 @@ exports[`Form demo -- form 1`] = `
   fill: #3860f4;
 }
 
-.emotion-86 {
+.emotion-85 {
   box-sizing: border-box;
   position: relative;
   max-width: 100%;
   min-width: 80px;
-  width: 180px;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 12px;
   color: #0a1633;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.emotion-84 {
+.emotion-83 {
   position: relative;
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -1475,6 +1464,7 @@ exports[`Form demo -- form 1`] = `
   -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
+  cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1482,19 +1472,19 @@ exports[`Form demo -- form 1`] = `
   cursor: pointer;
 }
 
-.emotion-84,
-.emotion-84 input,
-.emotion-84 .emotion-77 {
+.emotion-83,
+.emotion-83 input,
+.emotion-83 .emotion-77 {
   padding: 0 4px;
 }
 
-.emotion-84:hover {
+.emotion-83:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
 }
 
-.emotion-84 input {
+.emotion-83 input {
   box-sizing: border-box;
   height: 100%;
   margin: 0;
@@ -1506,39 +1496,93 @@ exports[`Form demo -- form 1`] = `
   min-width: 0px;
 }
 
-.emotion-84 input,
-.emotion-84 input:hover,
-.emotion-84 input:focus {
+.emotion-83 input,
+.emotion-83 input:hover,
+.emotion-83 input:focus {
   border: none;
   outline: none;
   background: none;
 }
 
-.emotion-84 input::-webkit-input-placeholder {
+.emotion-83 input::-webkit-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-84 input::-moz-placeholder {
+.emotion-83 input::-moz-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-84 input:-ms-input-placeholder {
+.emotion-83 input:-ms-input-placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-84 input::placeholder {
+.emotion-83 input::placeholder {
   opacity: 1;
   color: rgba(10,22,51,0.20);
 }
 
-.emotion-84 input::-ms-clear {
+.emotion-83 input::-ms-clear {
   display: none;
 }
 
-.emotion-84 .emotion-77 {
+.emotion-83 .uc-fe-select-input-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.emotion-83 .uc-fe-select-input-wrap:empty {
+  display: initial;
+}
+
+.emotion-83 .uc-fe-select-input {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.emotion-83 .uc-fe-select-placeholder {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-83 .uc-fe-select-clear {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-76 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.emotion-76:empty {
+  display: none;
+}
+
+.emotion-80 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1553,34 +1597,8 @@ exports[`Form demo -- form 1`] = `
   flex: 0 0 auto;
 }
 
-.emotion-84 .emotion-77:empty {
+.emotion-80:empty {
   display: none;
-}
-
-.emotion-84 .uc-fe-input-clear {
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #7a8baa;
-  fill: #7a8baa;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
-.emotion-84 input {
-  cursor: pointer;
-}
-
-.emotion-84 uc-fe-select-placeholder {
-  width: 0;
-  overflow: visible;
 }
 
 <div>
@@ -1827,28 +1845,27 @@ exports[`Form demo -- form 1`] = `
           span="9"
         >
           <div
-            class="emotion-86 emotion-87"
+            class="emotion-85 emotion-86"
           >
             <span
-              class="uc-fe-input uc-fe-select-input emotion-82 emotion-46 emotion-84 emotion-48"
+              class="uc-fe-select-input emotion-82 emotion-83 emotion-48"
             >
               <span
-                class="uc-fe-input-prefix emotion-76 emotion-77"
+                class="uc-fe-select-input-wrap emotion-76 emotion-77"
               >
                 <span
                   class="uc-fe-select-placeholder"
-                />
+                  style="visibility:visible;opacity:1"
+                >
+                  请选择
+                </span>
               </span>
-              <input
-                cursor="pointer"
-                readonly=""
-                value=""
-              />
               <span
-                class="uc-fe-input-suffix emotion-76 emotion-77"
+                class="emotion-80 emotion-77"
               >
                 <svg
                   class=" emotion-49 emotion-4"
+                  style="visibility:visible"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -2430,8 +2447,8 @@ exports[`Form demo -- form-itemProps 1`] = `
 }
 
 .emotion-33 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -2517,25 +2534,6 @@ exports[`Form demo -- form-itemProps 1`] = `
 }
 
 .emotion-52 input::-ms-clear {
-  display: none;
-}
-
-.emotion-52 .e1bl81de0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-52 .e1bl81de0:empty {
   display: none;
 }
 
@@ -3119,8 +3117,8 @@ exports[`Form demo -- form-itemProps 1`] = `
 }
 
 .emotion-33 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -3206,25 +3204,6 @@ exports[`Form demo -- form-itemProps 1`] = `
 }
 
 .emotion-52 input::-ms-clear {
-  display: none;
-}
-
-.emotion-52 .e1bl81de0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-52 .e1bl81de0:empty {
   display: none;
 }
 
@@ -4011,8 +3990,8 @@ exports[`Form demo -- group 1`] = `
 }
 
 .emotion-39 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -4098,25 +4077,6 @@ exports[`Form demo -- group 1`] = `
 }
 
 .emotion-58 input::-ms-clear {
-  display: none;
-}
-
-.emotion-58 .e1bl81de0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-58 .e1bl81de0:empty {
   display: none;
 }
 
@@ -4714,8 +4674,8 @@ exports[`Form demo -- group 1`] = `
 }
 
 .emotion-39 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -4801,25 +4761,6 @@ exports[`Form demo -- group 1`] = `
 }
 
 .emotion-58 input::-ms-clear {
-  display: none;
-}
-
-.emotion-58 .e1bl81de0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-58 .e1bl81de0:empty {
   display: none;
 }
 
@@ -5219,8 +5160,8 @@ exports[`Form demo -- item 1`] = `
 }
 
 .emotion-46 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -5306,25 +5247,6 @@ exports[`Form demo -- item 1`] = `
 }
 
 .emotion-44 input::-ms-clear {
-  display: none;
-}
-
-.emotion-44 .e1bl81de0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-44 .e1bl81de0:empty {
   display: none;
 }
 
@@ -5489,8 +5411,8 @@ exports[`Form demo -- item 1`] = `
 }
 
 .emotion-118 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -5640,8 +5562,8 @@ exports[`Form demo -- item 1`] = `
 }
 
 .emotion-46 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -5727,25 +5649,6 @@ exports[`Form demo -- item 1`] = `
 }
 
 .emotion-44 input::-ms-clear {
-  display: none;
-}
-
-.emotion-44 .e1bl81de0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-44 .e1bl81de0:empty {
   display: none;
 }
 
@@ -5910,8 +5813,8 @@ exports[`Form demo -- item 1`] = `
 }
 
 .emotion-118 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -6503,25 +6406,6 @@ exports[`Form demo -- item-help 1`] = `
   display: none;
 }
 
-.emotion-7 .e1bl81de0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-7 .e1bl81de0:empty {
-  display: none;
-}
-
 .emotion-7 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
@@ -6540,8 +6424,8 @@ exports[`Form demo -- item-help 1`] = `
 }
 
 .emotion-1 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -6696,25 +6580,6 @@ exports[`Form demo -- item-help 1`] = `
   display: none;
 }
 
-.emotion-7 .e1bl81de0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-7 .e1bl81de0:empty {
-  display: none;
-}
-
 .emotion-7 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
@@ -6733,8 +6598,8 @@ exports[`Form demo -- item-help 1`] = `
 }
 
 .emotion-1 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -6847,8 +6712,8 @@ exports[`Form demo -- item-itemProps 1`] = `
 }
 
 .emotion-6 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -6934,25 +6799,6 @@ exports[`Form demo -- item-itemProps 1`] = `
 }
 
 .emotion-4 input::-ms-clear {
-  display: none;
-}
-
-.emotion-4 .e1bl81de0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-4 .e1bl81de0:empty {
   display: none;
 }
 
@@ -7191,8 +7037,8 @@ exports[`Form demo -- item-itemProps 1`] = `
 }
 
 .emotion-6 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -7278,25 +7124,6 @@ exports[`Form demo -- item-itemProps 1`] = `
 }
 
 .emotion-4 input::-ms-clear {
-  display: none;
-}
-
-.emotion-4 .e1bl81de0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-4 .e1bl81de0:empty {
   display: none;
 }
 
@@ -7905,8 +7732,8 @@ exports[`Form demo -- item-layout 1`] = `
 }
 
 .emotion-3 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -8027,25 +7854,6 @@ exports[`Form demo -- item-layout 1`] = `
 }
 
 .emotion-9 input::-ms-clear {
-  display: none;
-}
-
-.emotion-9 .e1bl81de0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-9 .e1bl81de0:empty {
   display: none;
 }
 
@@ -8149,8 +7957,8 @@ exports[`Form demo -- item-layout 1`] = `
 }
 
 .emotion-3 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -8271,25 +8079,6 @@ exports[`Form demo -- item-layout 1`] = `
 }
 
 .emotion-9 input::-ms-clear {
-  display: none;
-}
-
-.emotion-9 .e1bl81de0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-9 .e1bl81de0:empty {
   display: none;
 }
 
@@ -8577,25 +8366,6 @@ exports[`Form demo -- item-required 1`] = `
   display: none;
 }
 
-.emotion-9 .e1bl81de0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-9 .e1bl81de0:empty {
-  display: none;
-}
-
 .emotion-9 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
@@ -8619,8 +8389,8 @@ exports[`Form demo -- item-required 1`] = `
 }
 
 .emotion-3 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -8775,25 +8545,6 @@ exports[`Form demo -- item-required 1`] = `
   display: none;
 }
 
-.emotion-9 .e1bl81de0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-9 .e1bl81de0:empty {
-  display: none;
-}
-
 .emotion-9 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
@@ -8817,8 +8568,8 @@ exports[`Form demo -- item-required 1`] = `
 }
 
 .emotion-3 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -8950,8 +8701,8 @@ exports[`Form demo -- item-shareStatus 1`] = `
 }
 
 .emotion-6 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -9037,25 +8788,6 @@ exports[`Form demo -- item-shareStatus 1`] = `
 }
 
 .emotion-4 input::-ms-clear {
-  display: none;
-}
-
-.emotion-4 .e1bl81de0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-4 .e1bl81de0:empty {
   display: none;
 }
 
@@ -9209,8 +8941,8 @@ exports[`Form demo -- item-shareStatus 1`] = `
 }
 
 .emotion-78 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -9298,8 +9030,8 @@ exports[`Form demo -- item-shareStatus 1`] = `
 }
 
 .emotion-6 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -9385,25 +9117,6 @@ exports[`Form demo -- item-shareStatus 1`] = `
 }
 
 .emotion-4 input::-ms-clear {
-  display: none;
-}
-
-.emotion-4 .e1bl81de0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-4 .e1bl81de0:empty {
   display: none;
 }
 
@@ -9557,8 +9270,8 @@ exports[`Form demo -- item-shareStatus 1`] = `
 }
 
 .emotion-78 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -9915,8 +9628,8 @@ exports[`Form demo -- item-status 1`] = `
 }
 
 .emotion-6 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -10002,25 +9715,6 @@ exports[`Form demo -- item-status 1`] = `
 }
 
 .emotion-4 input::-ms-clear {
-  display: none;
-}
-
-.emotion-4 .e1bl81de0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-4 .e1bl81de0:empty {
   display: none;
 }
 
@@ -10174,8 +9868,8 @@ exports[`Form demo -- item-status 1`] = `
 }
 
 .emotion-78 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -10263,8 +9957,8 @@ exports[`Form demo -- item-status 1`] = `
 }
 
 .emotion-6 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -10350,25 +10044,6 @@ exports[`Form demo -- item-status 1`] = `
 }
 
 .emotion-4 input::-ms-clear {
-  display: none;
-}
-
-.emotion-4 .e1bl81de0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-4 .e1bl81de0:empty {
   display: none;
 }
 
@@ -10522,8 +10197,8 @@ exports[`Form demo -- item-status 1`] = `
 }
 
 .emotion-78 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -10880,8 +10555,8 @@ exports[`Form demo -- item-tip 1`] = `
 }
 
 .emotion-6 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -10967,25 +10642,6 @@ exports[`Form demo -- item-tip 1`] = `
 }
 
 .emotion-4 input::-ms-clear {
-  display: none;
-}
-
-.emotion-4 .e1bl81de0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-4 .e1bl81de0:empty {
   display: none;
 }
 
@@ -11143,8 +10799,8 @@ exports[`Form demo -- item-tip 1`] = `
 }
 
 .emotion-78 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -11232,8 +10888,8 @@ exports[`Form demo -- item-tip 1`] = `
 }
 
 .emotion-6 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -11319,25 +10975,6 @@ exports[`Form demo -- item-tip 1`] = `
 }
 
 .emotion-4 input::-ms-clear {
-  display: none;
-}
-
-.emotion-4 .e1bl81de0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-4 .e1bl81de0:empty {
   display: none;
 }
 
@@ -11495,8 +11132,8 @@ exports[`Form demo -- item-tip 1`] = `
 }
 
 .emotion-78 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -12385,8 +12022,8 @@ exports[`Form demo -- subArea 1`] = `
 }
 
 .emotion-26 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -12472,25 +12109,6 @@ exports[`Form demo -- subArea 1`] = `
 }
 
 .emotion-45 input::-ms-clear {
-  display: none;
-}
-
-.emotion-45 .e1bl81de0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-45 .e1bl81de0:empty {
   display: none;
 }
 
@@ -13088,8 +12706,8 @@ exports[`Form demo -- subArea 1`] = `
 }
 
 .emotion-26 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -13175,25 +12793,6 @@ exports[`Form demo -- subArea 1`] = `
 }
 
 .emotion-45 input::-ms-clear {
-  display: none;
-}
-
-.emotion-45 .e1bl81de0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-}
-
-.emotion-45 .e1bl81de0:empty {
   display: none;
 }
 
