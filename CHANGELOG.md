@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.19](https://github.com/UCloud-FE/react-components/compare/v1.3.18...v1.3.19) (2022-03-28)
+
+### Bug Fixes
+
+-   **Modal:** fix modal mask mouse leave close ([2b90ea3](https://github.com/UCloud-FE/react-components/commit/2b90ea3c9bedbb2119d6e0f70e9b5f95f8dfea10))
+
 ### [1.3.18](https://github.com/UCloud-FE/react-components/compare/v1.3.17...v1.3.18) (2022-03-10)
 
 ### Bug Fixes
