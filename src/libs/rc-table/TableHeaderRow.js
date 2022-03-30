@@ -44,6 +44,7 @@ function TableHeaderRow({ row, index, height, components, onHeaderRow, prefixCls
                     <HeaderCell
                         {...cellProps}
                         {...customProps}
+                        {...(typeof HeaderCell === 'string' ? {} : { column })}
                         style={style}
                         className={className}
                         key={column.key || column.dataIndex || i}

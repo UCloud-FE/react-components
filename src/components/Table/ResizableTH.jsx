@@ -70,17 +70,23 @@ export default class ResizableTH extends Component {
         minWidth: PropTypes.number,
         /** 最大宽度 */
         maxWidth: PropTypes.number,
-        /** 是否可调整大小 */
+        /**
+         * @deprecated
+         * 是否可调整大小
+         */
         resizeAble: PropTypes.bool,
+        /** 是否可调整大小 */
+        resizable: PropTypes.bool,
         /** 调整时的回调 */
         onResize: PropTypes.func,
         /** @ignore */
-        children: PropTypes.node
+        children: PropTypes.node,
+        column: PropTypes.any
     };
     uid = 'rc-resizable-th-' + _uid++;
     state = {};
     onResize = (e, { size }) => {
-        const { onResize = () => {} } = this.props;
+        const { onResize = () => {} } = this.splitProps().resizableProps;
         onResize(size.width);
     };
     onResizeStart = () => {
@@ -89,12 +95,34 @@ export default class ResizableTH extends Component {
     onResizeStop = () => {
         this.setState({ resizing: false });
     };
+    splitProps = () => {
+        const {
+            column,
+            width,
+            resizeAble,
+            resizable,
+            // eslint-disable-next-line no-unused-vars
+            onResize,
+            minWidth = 20,
+            maxWidth = Infinity,
+            children,
+            ...htmlProps
+        } = this.props;
+        return {
+            resizableProps: {
+                ...column,
+                ...this.props
+            },
+            htmlProps,
+            children
+        };
+    };
     render() {
-        // eslint-disable-next-line no-unused-vars
-        const { width, resizeAble, onResize, minWidth = 20, maxWidth = Infinity, children, ...rest } = this.props;
+        const { children, resizableProps, htmlProps } = this.splitProps();
+        const { width, resizable, resizeAble, minWidth, maxWidth } = resizableProps;
         const { resizing } = this.state;
 
-        return resizeAble ? (
+        return resizeAble || resizable ? (
             <ResizableTHWrap
                 width={width}
                 height={0}
@@ -105,12 +133,12 @@ export default class ResizableTH extends Component {
                 maxConstraints={[maxWidth, 0]}
                 resizing={resizing}
             >
-                <th {...rest} data-uid={this.uid}>
+                <th {...htmlProps} data-uid={this.uid}>
                     <Fragment>{children}</Fragment>
                 </th>
             </ResizableTHWrap>
         ) : (
-            <th {...rest}>{children}</th>
+            <th {...htmlProps}>{children}</th>
         );
     }
 }

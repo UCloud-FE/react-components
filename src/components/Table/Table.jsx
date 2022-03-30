@@ -38,6 +38,7 @@ import {
 import LOCALE from './locale/zh_CN';
 import DragWrap from './DragWrap';
 import TableRow from './TableRow';
+import ResizableTH from './ResizableTH';
 
 const noop = () => {};
 export const deprecatedLogForOnRowSelect = deprecatedLog('Table onRowSelect', 'rowSelection.onChange');
@@ -190,6 +191,8 @@ class Table extends Component {
         onRowSelect: PropTypes.func,
         /** 是否显示表头 */
         showHeader: PropTypes.bool,
+        /** 是否可拖拽调节表格列大小 */
+        columnResizable: PropTypes.bool,
         /** 头部内容 */
         title: PropTypes.func,
         /** 底部内容 */
@@ -689,7 +692,7 @@ class Table extends Component {
         return dragSorting;
     };
     getColumns = (dataSourceOfCurrentPage, filters) => {
-        const { columns, rowSelection, columnPlaceholder, locale, dataSource } = this.props;
+        const { columns, rowSelection, columnPlaceholder, locale, dataSource, columnResizable } = this.props;
         const { order: currentOrder = {}, selectedRowKeyMap, columnConfig } = this.state;
         const cloneColumns = columns.map((column, index) => ({
             ...column,
@@ -727,6 +730,12 @@ class Table extends Component {
             }
         };
         newColumns = newColumns.map(generateColumnTitle);
+
+        if (columnResizable) {
+            newColumns.forEach(column => {
+                column.resizable = true;
+            });
+        }
 
         if (rowSelection) {
             const flatDataSourceOfCurrentPage = this.flatDataSource(dataSourceOfCurrentPage);
@@ -1075,6 +1084,7 @@ class Table extends Component {
             defaultExpandAllRows,
             title = noop,
             footer = noop,
+            columnResizable,
             locale,
             hideExpandIcon,
             onRow = noop,
@@ -1155,7 +1165,8 @@ class Table extends Component {
                                 components={_.extend({}, components, {
                                     body: {
                                         row: TableRow
-                                    }
+                                    },
+                                    ...(columnResizable ? { header: { cell: ResizableTH } } : {})
                                 })}
                                 emptyText={null}
                                 expandIconAsCell={!!expandedRowRender || expandIconAsCell}
