@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.20](https://github.com/UCloud-FE/react-components/compare/v1.3.19...v1.3.20) (2022-03-30)
+
+### Features
+
+-   **Table:** add columnResizable & remove ResizableTH ([542d82f](https://github.com/UCloud-FE/react-components/commit/542d82fd42c10785e11bc533830feb1f49f481d5))
+
 ### [1.3.19](https://github.com/UCloud-FE/react-components/compare/v1.3.18...v1.3.19) (2022-03-28)
 
 ### Bug Fixes
