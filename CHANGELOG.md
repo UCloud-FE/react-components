@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.22](https://github.com/UCloud-FE/react-components/compare/v1.3.21...v1.3.22) (2022-04-01)
+
+### Bug Fixes
+
+-   **Modal:** fix modal snap ([9abd101](https://github.com/UCloud-FE/react-components/commit/9abd1019c8529d41dd393b4dafa43ec0a97933e9))
+
 ### [1.3.21](https://github.com/UCloud-FE/react-components/compare/v1.3.20...v1.3.21) (2022-04-01)
 
 ### Bug Fixes
