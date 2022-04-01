@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.21](https://github.com/UCloud-FE/react-components/compare/v1.3.20...v1.3.21) (2022-04-01)
+
+### Bug Fixes
+
+-   **Modal:** downgrade version for fix illegal invocation ([6e980ba](https://github.com/UCloud-FE/react-components/commit/6e980babd40f3895967dcd3e1af98fda47568888))
+
 ### [1.3.20](https://github.com/UCloud-FE/react-components/compare/v1.3.19...v1.3.20) (2022-03-30)
 
 ### Features
