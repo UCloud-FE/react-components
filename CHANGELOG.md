@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.23](https://github.com/UCloud-FE/react-components/compare/v1.3.22...v1.3.23) (2022-04-08)
+
+### Bug Fixes
+
+-   **Popover:** fix safari flash when height change ([11c4718](https://github.com/UCloud-FE/react-components/commit/11c471835523b3538f0ba4db6732ed07bec550e2))
+
 ### [1.3.22](https://github.com/UCloud-FE/react-components/compare/v1.3.21...v1.3.22) (2022-04-01)
 
 ### Bug Fixes
