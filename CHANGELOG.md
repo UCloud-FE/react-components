@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.24](https://github.com/UCloud-FE/react-components/compare/v1.3.23...v1.3.24) (2022-04-12)
+
+### Bug Fixes
+
+-   **Table:** fix table resizableTH min-max default ([60ffa42](https://github.com/UCloud-FE/react-components/commit/60ffa42da13ab309201ac43459ad5a8c28e01001))
+
 ### [1.3.23](https://github.com/UCloud-FE/react-components/compare/v1.3.22...v1.3.23) (2022-04-08)
 
 ### Bug Fixes
