@@ -103,8 +103,8 @@ export default class ResizableTH extends Component {
             resizable,
             // eslint-disable-next-line no-unused-vars
             onResize,
-            minWidth = 20,
-            maxWidth = Infinity,
+            minWidth,
+            maxWidth,
             children,
             ...htmlProps
         } = this.props;
@@ -119,7 +119,7 @@ export default class ResizableTH extends Component {
     };
     render() {
         const { children, resizableProps, htmlProps } = this.splitProps();
-        const { width, resizable, resizeAble, minWidth, maxWidth } = resizableProps;
+        const { width, resizable, resizeAble, minWidth = 20, maxWidth = Infinity } = resizableProps;
         const { resizing } = this.state;
 
         return resizeAble || resizable ? (
