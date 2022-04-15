@@ -293,7 +293,8 @@ const Range = ({
         readonly,
         tip: rangeTip,
         error: rangeErrorTip,
-        rules
+        rules,
+        status
     };
     const [valueS, valueE] = cacheValue;
     const [placeholderS = locale.placeholderRangeStart, placeholderE = locale.placeholderRangeEnd] = isArray(
@@ -336,8 +337,8 @@ const Range = ({
                         shortcuts={shortcutsS}
                         footerTip={locale.chooseTipRangeStart}
                         {...sharedPickerProps}
+                        suffix={<RangeDateSeparator />}
                     />
-                    <RangeDateSeparator />
                     <Picker
                         value={valueE}
                         onChange={handleEndChange}

@@ -26,6 +26,7 @@ const RangePickerWithoutMemo = forwardRef(
             tip,
             error,
             footerTip,
+            suffix,
             ...pickProps
         }: DatePickerProps & {
             prefix?: boolean;
@@ -35,6 +36,7 @@ const RangePickerWithoutMemo = forwardRef(
             tip?: ReactNode;
             error?: ReactNode;
             footerTip?: ReactNode;
+            suffix?: ReactNode;
         },
         ref: Ref<RangePickerRef>
     ) => {
@@ -79,7 +81,14 @@ const RangePickerWithoutMemo = forwardRef(
         return readonly ? (
             <span className={readonlyInputCls}>{inputProps.value}</span>
         ) : (
-            <RangeInputWrap isMonth={isMonth} hasTime={hasTime} hasPrefix={prefix}>
+            <RangeInputWrap
+                isMonth={isMonth}
+                hasTime={hasTime}
+                hasPrefix={prefix}
+                hasSuffix={!!suffix}
+                disabled={inputProps.disabled}
+                status={inputProps.status}
+            >
                 <Popover
                     popup={
                         <SPopup {...popupProps}>
@@ -110,6 +119,7 @@ const RangePickerWithoutMemo = forwardRef(
                         ref={inputRef}
                         block
                         prefix={prefix ? <SvgIcon type="calendar" /> : null}
+                        suffix={suffix}
                     />
                 </Popover>
             </RangeInputWrap>

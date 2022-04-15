@@ -10,6 +10,7 @@ import usePopoverConfig from 'src/hooks/usePopoverConfig';
 import LOCALE from './locale/zh_CN';
 import { isDateDisabled, getValidDate, isDateValid } from './utils';
 import { DatePickerProps } from './DatePicker';
+import KeyCode from 'src/utils/KeyCode';
 
 const formatInput = (v: string, allFormat: string[]): Moment | null | false => {
     if (v == '') return null;
@@ -103,6 +104,7 @@ const usePicker = <D,>(
 
     const d = useMemo(() => new Date(), []);
 
+    const footerConfirm = !!timeMode?.length;
     let [value, onChange] = useUncontrolled<TDate | null | undefined, Moment | null>(_value, defaultValue, _onChange);
     const [calCurrentValue, setCalCurrentValue] = useState(() => getValidCurrentDate(value, d));
     if (!nullable && value == null) value = d;
@@ -171,24 +173,6 @@ const usePicker = <D,>(
         },
         [allFormat, calValue, visible]
     );
-    const handleCalendarChange = useCallback(
-        (v: Moment | TDate) => {
-            v = getValidDate(v, rules);
-            setCalValue(moment(+v));
-            setInputValue(formatDate(moment(+v), format));
-            setUseInputValue(false);
-        },
-        [format, rules]
-    );
-
-    const handleInputFocus = useCallback(() => {
-        setCalValue(value == null ? null : value);
-        setCalCurrentValue(currentValue => getValidCurrentDate(value, d, currentValue));
-        setUseInputValue(true);
-        setActive(true);
-    }, [d, value]);
-    const handleInputBlur = useCallback(() => setActive(false), []);
-
     const handleConfirm = useCallback(
         (v?: TDate) => {
             const currentValue = v != null ? v : calValue;
@@ -201,6 +185,37 @@ const usePicker = <D,>(
             setVisible(false);
         },
         [calValue, nullable, onChange, rules, value]
+    );
+    const handleCalendarChange = useCallback(
+        (v: Moment | TDate) => {
+            v = getValidDate(v, rules);
+            setCalValue(moment(+v));
+            setInputValue(formatDate(moment(+v), format));
+            setUseInputValue(false);
+            if (!footerConfirm) {
+                onChange && onChange(moment(+v));
+                setVisible(false);
+            }
+        },
+        [footerConfirm, format, onChange, rules]
+    );
+
+    const handleInputFocus = useCallback(() => {
+        setCalValue(value == null ? null : value);
+        setCalCurrentValue(currentValue => getValidCurrentDate(value, d, currentValue));
+        setUseInputValue(true);
+        setActive(true);
+    }, [d, value]);
+    const handleInputBlur = useCallback(() => setActive(false), []);
+    const handleInputDown = useCallback(
+        (e: KeyboardEvent) => {
+            if (e.keyCode === KeyCode.ENTER) {
+                handleConfirm();
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        },
+        [handleConfirm]
     );
 
     const handleShortcut = useCallback(
@@ -219,12 +234,13 @@ const usePicker = <D,>(
         onChange: handleInputChange,
         onBlur: handleInputBlur,
         onFocus: handleInputFocus,
+        onKeyDown: handleInputDown,
         disabled,
         size,
         status,
         placeholder: placeholder === undefined ? locale.placeholder : placeholder
     };
-    const containerProps = rest;
+    const containerProps = { ...rest, disabled, status };
     const _popoverProps = {
         zIndex,
         transitionName: `${animationPrefixCls}-fade`,
@@ -259,7 +275,8 @@ const usePicker = <D,>(
         confirmAble: error === true,
         onConfirm: handleConfirm,
         locale: _locale,
-        shortcuts
+        shortcuts,
+        showConfirm: footerConfirm
     };
 
     return [

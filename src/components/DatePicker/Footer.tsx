@@ -48,8 +48,9 @@ interface FooterProps {
     onShortcut: (d: TDate) => void;
     tip?: ReactNode;
     locale?: typeof LOCALE;
+    showConfirm?: boolean;
 }
-const Footer = ({ confirmAble, onConfirm, shortcuts, onShortcut, tip, locale: _locale }: FooterProps) => {
+const Footer = ({ confirmAble, onConfirm, shortcuts, onShortcut, tip, showConfirm, locale: _locale }: FooterProps) => {
     if (shortcuts == null) shortcuts = [];
     const handleShortcutClick = useCallback(
         i => {
@@ -72,9 +73,11 @@ const Footer = ({ confirmAble, onConfirm, shortcuts, onShortcut, tip, locale: _l
             </Combine>
             <Combine>
                 {tip ? <span className={tipCls}>{tip}</span> : null}
-                <Button styleType="primary" disabled={!confirmAble} onClick={handleConfirm}>
-                    {locale.confirm}
-                </Button>
+                {showConfirm && (
+                    <Button styleType="primary" size='sm' disabled={!confirmAble} onClick={handleConfirm}>
+                        {locale.confirm}
+                    </Button>
+                )}
             </Combine>
         </Box>
     );

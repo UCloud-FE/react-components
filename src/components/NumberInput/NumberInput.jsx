@@ -9,7 +9,7 @@ import classnames from 'classnames';
 
 import SvgIcon from 'src/components/SvgIcon';
 import Tooltip from 'src/components/Tooltip';
-import KEYCODE from 'src/interfaces/KeyCode';
+import KEYCODE from 'src/utils/KeyCode';
 import {
     NumberInputWrap,
     prefixCls,

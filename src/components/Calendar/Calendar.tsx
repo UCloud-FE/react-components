@@ -10,6 +10,7 @@ import { SCalendar, prefixCls } from './style';
 import HeaderSwitcher from './HeaderSwitcher';
 import LOCALE from './locale/zh_CN';
 import Month from './Month';
+import Cell from './Cell';
 
 export interface CalendarProps {
     /** 当前值，受控 */
@@ -68,7 +69,8 @@ const DateCalendar = React.memo(function DateCalendar({
             disabledRule={disabledRule}
             onChange={handleChange}
             locale={calendarLocale}
-            components={{ HeaderSwitcher: renderHeaderSwitcher }}
+            monthBeforeYear={locale.monthBeforeYear}
+            components={{ HeaderSwitcher: renderHeaderSwitcher, Cell: Cell }}
             {...rest}
         />
     );

@@ -9,6 +9,7 @@ import { SMonthCalendar, prefixCls } from './style';
 import HeaderSwitcher from './HeaderSwitcher';
 import LOCALE from './locale/zh_CN';
 import { CalendarProps } from './Calendar';
+import Cell from './Cell';
 
 /**
  * @deprecated 请使用 ```<Calendar type='month' />``` 替换
@@ -44,7 +45,7 @@ const Month = ({
             disabledRule={disabledRule}
             onChange={handleChange}
             locale={calendarLocale}
-            components={{ HeaderSwitcher: renderHeaderSwitcher }}
+            components={{ HeaderSwitcher: renderHeaderSwitcher, Cell: Cell }}
             {...rest}
         />
     );

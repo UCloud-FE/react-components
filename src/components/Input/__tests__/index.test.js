@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import KEYCODE from 'src/interfaces/KeyCode';
+import KEYCODE from 'src/utils/KeyCode';
 import Input from 'src/components/Input';
 
 describe('Input Search', () => {

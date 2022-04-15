@@ -5,7 +5,8 @@ import { css } from '@emotion/core';
 import Select from 'src/components/Select';
 import { tableCls } from 'src/components/Calendar/style';
 import { timePrefixCls } from 'src/components/TimePicker/style';
-import { prefixCls as inputPrefixCls } from 'src/components/Input/style';
+import { prefixCls as inputPrefixCls, focusedCls as inputFocusedCls } from 'src/components/Input/style';
+import { InputProps } from 'src/components/Input';
 import { inlineBlockWithVerticalMixin, Theme, sWrap, getHeightBySize, Size } from 'src/style';
 import config from 'src/config';
 
@@ -17,14 +18,40 @@ export const footerCls = prefixCls + '-footer';
 export const tipCls = prefixCls + '-tip';
 export const readonlyInputCls = prefixCls + '-input-readonly';
 
-export const PickerContainer = sWrap<{ disabled?: boolean; isMonth?: boolean; hasTime?: boolean }, HTMLDivElement>({
+export const PickerContainer = sWrap<
+    { disabled?: boolean; isMonth?: boolean; hasTime?: boolean; status?: InputProps['status'] },
+    HTMLDivElement
+>({
     className: ({ disabled, isMonth }) =>
         classnames(prefixCls, isMonth && `${prefixCls}-month`, disabled && `${prefixCls}-disabled`)
 })(
-    styled('div')(({ hasTime }) => {
+    styled('div')(({ hasTime, disabled, status }) => {
         return css`
             ${inlineBlockWithVerticalMixin};
             width: ${hasTime ? 180 : 140}px;
+            .${inputPrefixCls} {
+                input {
+                    height: 20px;
+                    margin: 0 4px;
+                    will-change: background;
+                    transition: background 0.2s;
+                }
+            }
+            ${!disabled &&
+            css`
+                :hover {
+                    .${inputPrefixCls} {
+                        input {
+                            background: ${status === 'error' ? '#FED4D4' : '#e3e9ff'};
+                        }
+                    }
+                }
+                .${inputPrefixCls}.${inputFocusedCls} {
+                    input {
+                        background: ${status === 'error' ? '#FED4D4' : '#e3e9ff'};
+                    }
+                }
+            `}
         `;
     })
 );
@@ -49,8 +76,8 @@ export const SPopup = sWrap({})(
                 }
             }
             .${tableCls} {
-                width: 296px;
-                min-height: 236px;
+                width: 282px;
+                min-height: 232px;
             }
             .${timePrefixCls} {
                 background: ${DT.T_COLOR_BG_DEFAULT_LIGHT};
@@ -140,10 +167,40 @@ export const RangeContainer = sWrap<{ disabled?: boolean }>({
     `
 );
 
-export const RangeInputWrap = sWrap<{ isMonth?: boolean; hasTime?: boolean; hasPrefix?: boolean }>()(
-    styled.div(({ isMonth, hasTime, hasPrefix }) => {
+export const RangeInputWrap = sWrap<{
+    isMonth?: boolean;
+    hasTime?: boolean;
+    hasPrefix?: boolean;
+    hasSuffix?: boolean;
+    disabled?: boolean;
+    status?: InputProps['status'];
+}>()(
+    styled.div(({ isMonth, hasTime, hasPrefix, hasSuffix, disabled, status }) => {
         return css`
-            width: ${(isMonth ? 69 : hasTime ? 145 : 106) + (hasPrefix ? 20 : 0)}px;
+            width: ${(isMonth ? 69 : hasTime ? 145 : 106) + (hasPrefix ? 20 : 0) + (hasSuffix ? 28 : 0)}px;
+            .${inputPrefixCls} {
+                input {
+                    height: 20px;
+                    margin: 0 4px;
+                    will-change: background;
+                    transition: background 0.2s;
+                }
+            }
+            ${!disabled &&
+            css`
+                :hover {
+                    .${inputPrefixCls} {
+                        input {
+                            background: ${status === 'error' ? '#FED4D4' : '#e3e9ff'};
+                        }
+                    }
+                }
+                .${inputPrefixCls}.${inputFocusedCls} {
+                    input {
+                        background: ${status === 'error' ? '#FED4D4' : '#e3e9ff'};
+                    }
+                }
+            `}
         `;
     })
 );
