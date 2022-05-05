@@ -1,13 +1,12 @@
 import React, { memo, ReactNode, useCallback } from 'react';
-import { TDate } from '@z-r/calendar/types/interface';
+import { TDate } from '@z-r/calendar';
 
-import Button from 'src/components/Button';
 import Box from 'src/components/Box';
 import Combine from 'src/components/Combine';
 import useLocale from 'src/components/LocaleProvider/useLocale';
 
 import LOCALE from './locale/zh_CN';
-import { shortcutCls, footerCls, tipCls } from './style';
+import { shortcutCls, footerCls } from './style';
 
 export interface TShortcut {
     handle: () => TDate;
@@ -46,11 +45,10 @@ interface FooterProps {
     onConfirm: () => void;
     shortcuts?: TShortcut[] | null;
     onShortcut: (d: TDate) => void;
-    tip?: ReactNode;
     locale?: typeof LOCALE;
     showConfirm?: boolean;
 }
-const Footer = ({ confirmAble, onConfirm, shortcuts, onShortcut, tip, showConfirm, locale: _locale }: FooterProps) => {
+const Footer = ({ shortcuts, onShortcut }: FooterProps) => {
     if (shortcuts == null) shortcuts = [];
     const handleShortcutClick = useCallback(
         i => {
@@ -61,24 +59,16 @@ const Footer = ({ confirmAble, onConfirm, shortcuts, onShortcut, tip, showConfir
         },
         [onShortcut, shortcuts]
     );
-    const handleConfirm = useCallback(() => onConfirm(), [onConfirm]);
-    const locale = useLocale(LOCALE, 'DatePicker', _locale);
 
     return (
         <Box className={footerCls} container justifyContent="space-between" alignItems="center">
-            <Combine>
-                {shortcuts.map((shortcut, i) => (
-                    <Shortcut index={i} key={i} shortcut={shortcut} onShortcutClick={handleShortcutClick} />
-                ))}
-            </Combine>
-            <Combine>
-                {tip ? <span className={tipCls}>{tip}</span> : null}
-                {showConfirm && (
-                    <Button styleType="primary" size='sm' disabled={!confirmAble} onClick={handleConfirm}>
-                        {locale.confirm}
-                    </Button>
-                )}
-            </Combine>
+            {shortcuts.length ? (
+                <Combine>
+                    {shortcuts.map((shortcut, i) => (
+                        <Shortcut index={i} key={i} shortcut={shortcut} onShortcutClick={handleShortcutClick} />
+                    ))}
+                </Combine>
+            ) : null}
         </Box>
     );
 };
