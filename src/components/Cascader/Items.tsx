@@ -40,7 +40,7 @@ const Items = ({
                     await loadData([...parents?.map(item => item.key)]);
                 } catch (error) {
                     if (exited) return;
-                    setError(error);
+                    setError(error as Error);
                 }
                 if (exited) return;
                 setLoading(false);
