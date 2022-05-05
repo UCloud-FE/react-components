@@ -136,7 +136,7 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
                 &.${prefixCls}-cell-empty {
                     cursor: default;
                 }
-                &.${prefixCls}-cell.${prefixCls}-prev, &.${prefixCls}-cell.${prefixCls}-next {
+                &.${prefixCls}-prev, &.${prefixCls}-next {
                     color: ${DT.T_COLOR_TEXT_DISABLED};
                     :hover {
                         .${cellContentCls} {
@@ -181,10 +181,37 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
                 &.${prefixCls}-now {
                     color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
                 }
-                &.${prefixCls}-cell.${prefixCls}-active {
+                &.${prefixCls}-cell.${prefixCls}-range-middle {
+                    .${cellContentCls}, .${cellContentPrevSpaceCls}, .${cellContentNextSpaceCls} {
+                        background: #E3E9FF;
+                    }
+                }
+                &.${prefixCls}-cell.${prefixCls}-range-middle:first-of-type {
+                    .${cellContentPrevSpaceCls} {
+                        background: none;
+                    }
+                }
+                &.${prefixCls}-cell.${prefixCls}-range-middle:last-of-type {
+                    .${cellContentNextSpaceCls} {
+                        background: none;
+                    }
+                }
+                &.${prefixCls}-cell.${prefixCls}-range-middle + .${prefixCls}-cell.${prefixCls}-range-last {
+                    .${cellContentPrevSpaceCls} {
+                        background: #E3E9FF;
+                    }
+                }
+                &.${prefixCls}-cell.${prefixCls}-active,
+                &.${prefixCls}-cell.${prefixCls}-range-first,
+                &.${prefixCls}-cell.${prefixCls}-range-last {
                     .${cellContentCls} {
                         background: ${DT.T_COLOR_BG_PRIMARY_1};
                         color: ${DT.T_COLOR_TEXT_WHITE};
+                    }
+                }
+                &.${prefixCls}-cell.${prefixCls}-range-first:not(.${prefixCls}-range-unclosed) {
+                    .${cellContentNextSpaceCls} {
+                        background: #E3E9FF;
                     }
                 }
             }

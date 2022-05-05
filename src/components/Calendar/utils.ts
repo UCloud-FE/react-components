@@ -1,4 +1,4 @@
-import { DisabledFunc, TDate } from '@z-r/calendar/types/interface';
+import { DisabledFunc, TDate } from '@z-r/calendar';
 import moment, { Moment } from 'moment';
 
 export interface Rules {
@@ -42,14 +42,14 @@ export const isDateDisabled = (date: TDate, value?: TDate | null, rules?: Rules)
     if (range) {
         const [start, end] = range;
         if (
-            (start != null && moment(date).endOf('date') < start) ||
-            (end != null && moment(date).startOf('date') > end)
+            (start != null && moment(+date).endOf('date') < start) ||
+            (end != null && moment(+date).startOf('date') > end)
         ) {
             return true;
         }
     }
     if (custom) {
-        return custom(date, value == null ? value : moment(+value));
+        return custom(moment(+date), value == null ? value : moment(+value));
     }
 };
 
@@ -60,8 +60,8 @@ const isMonthDisabled = (date: TDate, rules?: Rules) => {
     if (range) {
         const [start, end] = range;
         if (
-            (start != null && moment(date).endOf('month') < start) ||
-            (end != null && moment(date).startOf('month') > end)
+            (start != null && moment(+date).endOf('month') < start) ||
+            (end != null && moment(+date).startOf('month') > end)
         ) {
             return true;
         }
@@ -75,8 +75,8 @@ const isYearDisabled = (date: TDate, rules?: Rules) => {
     if (range) {
         const [start, end] = range;
         if (
-            (start != null && moment(date).endOf('year') < start) ||
-            (end != null && moment(date).startOf('year') > end)
+            (start != null && moment(+date).endOf('year') < start) ||
+            (end != null && moment(+date).startOf('year') > end)
         ) {
             return true;
         }
@@ -92,10 +92,13 @@ const isDecadeDisabled = (date: TDate, rules?: Rules) => {
         const baseYear = (((date as Moment).year() / 10) | 0) * 10;
         if (
             (start != null &&
-                moment(date)
+                moment(+date)
                     .set('year', baseYear + 10)
                     .endOf('year') < start) ||
-            (end != null && moment(date).set('year', baseYear).startOf('year') > end)
+            (end != null &&
+                moment(+date)
+                    .set('year', baseYear)
+                    .startOf('year') > end)
         ) {
             return true;
         }

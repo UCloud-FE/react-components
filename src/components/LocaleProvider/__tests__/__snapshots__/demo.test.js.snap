@@ -2174,13 +2174,13 @@ exports[`LocaleProvider demo -- list 1`] = `
   cursor: default;
 }
 
-.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-cell.uc-fe-calendar-prev,
-.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-cell.uc-fe-calendar-next {
+.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-prev,
+.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-next {
   color: #cccccc;
 }
 
-.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-cell.uc-fe-calendar-prev:hover .uc-fe-calendar-cell-content,
-.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-cell.uc-fe-calendar-next:hover .uc-fe-calendar-cell-content {
+.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-prev:hover .uc-fe-calendar-cell-content,
+.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-next:hover .uc-fe-calendar-cell-content {
   background: #F4F6FF;
 }
 
@@ -2216,9 +2216,33 @@ exports[`LocaleProvider demo -- list 1`] = `
   color: #3860f4;
 }
 
-.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-cell.uc-fe-calendar-active .uc-fe-calendar-cell-content {
+.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-cell.uc-fe-calendar-range-middle .uc-fe-calendar-cell-content,
+.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-cell.uc-fe-calendar-range-middle .uc-fe-calendar-cell-content-prev-space,
+.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-cell.uc-fe-calendar-range-middle .uc-fe-calendar-cell-content-next-space {
+  background: #E3E9FF;
+}
+
+.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-cell.uc-fe-calendar-range-middle:first-of-type .uc-fe-calendar-cell-content-prev-space {
+  background: none;
+}
+
+.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-cell.uc-fe-calendar-range-middle:last-of-type .uc-fe-calendar-cell-content-next-space {
+  background: none;
+}
+
+.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-cell.uc-fe-calendar-range-middle + .uc-fe-calendar-cell.uc-fe-calendar-range-last .uc-fe-calendar-cell-content-prev-space {
+  background: #E3E9FF;
+}
+
+.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-cell.uc-fe-calendar-active .uc-fe-calendar-cell-content,
+.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-cell.uc-fe-calendar-range-first .uc-fe-calendar-cell-content,
+.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-cell.uc-fe-calendar-range-last .uc-fe-calendar-cell-content {
   background: #3860f4;
   color: #ffffff;
+}
+
+.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-cell.uc-fe-calendar-range-first:not(.uc-fe-calendar-range-unclosed) .uc-fe-calendar-cell-content-next-space {
+  background: #E3E9FF;
 }
 
 .emotion-40 .uc-fe-calendar-prev,
@@ -5876,13 +5900,13 @@ exports[`LocaleProvider demo -- list 1`] = `
   cursor: default;
 }
 
-.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-cell.uc-fe-calendar-prev,
-.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-cell.uc-fe-calendar-next {
+.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-prev,
+.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-next {
   color: #cccccc;
 }
 
-.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-cell.uc-fe-calendar-prev:hover .uc-fe-calendar-cell-content,
-.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-cell.uc-fe-calendar-next:hover .uc-fe-calendar-cell-content {
+.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-prev:hover .uc-fe-calendar-cell-content,
+.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-next:hover .uc-fe-calendar-cell-content {
   background: #F4F6FF;
 }
 
@@ -5918,9 +5942,33 @@ exports[`LocaleProvider demo -- list 1`] = `
   color: #3860f4;
 }
 
-.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-cell.uc-fe-calendar-active .uc-fe-calendar-cell-content {
+.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-cell.uc-fe-calendar-range-middle .uc-fe-calendar-cell-content,
+.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-cell.uc-fe-calendar-range-middle .uc-fe-calendar-cell-content-prev-space,
+.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-cell.uc-fe-calendar-range-middle .uc-fe-calendar-cell-content-next-space {
+  background: #E3E9FF;
+}
+
+.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-cell.uc-fe-calendar-range-middle:first-of-type .uc-fe-calendar-cell-content-prev-space {
+  background: none;
+}
+
+.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-cell.uc-fe-calendar-range-middle:last-of-type .uc-fe-calendar-cell-content-next-space {
+  background: none;
+}
+
+.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-cell.uc-fe-calendar-range-middle + .uc-fe-calendar-cell.uc-fe-calendar-range-last .uc-fe-calendar-cell-content-prev-space {
+  background: #E3E9FF;
+}
+
+.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-cell.uc-fe-calendar-active .uc-fe-calendar-cell-content,
+.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-cell.uc-fe-calendar-range-first .uc-fe-calendar-cell-content,
+.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-cell.uc-fe-calendar-range-last .uc-fe-calendar-cell-content {
   background: #3860f4;
   color: #ffffff;
+}
+
+.emotion-40 .uc-fe-calendar-tbody .uc-fe-calendar-cell.uc-fe-calendar-cell.uc-fe-calendar-range-first:not(.uc-fe-calendar-range-unclosed) .uc-fe-calendar-cell-content-next-space {
+  background: #E3E9FF;
 }
 
 .emotion-40 .uc-fe-calendar-prev,
@@ -8620,7 +8668,7 @@ exports[`LocaleProvider demo -- list 1`] = `
         class="demo-wrap"
       >
         <div
-          class="uc-fe-calendar uc-fe-calendar-date emotion-40 emotion-41 "
+          class="uc-fe-calendar uc-fe-calendar-date emotion-40 emotion-41"
         >
           <div
             class="uc-fe-calendar-date-wrap"
@@ -8721,7 +8769,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                     class="uc-fe-calendar-row"
                   >
                     <div
-                      class="uc-fe-calendar-cell  uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -8736,7 +8784,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell  uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -8751,7 +8799,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell  uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -8766,7 +8814,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell  uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -8781,7 +8829,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell  uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -8796,7 +8844,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell  uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -8811,7 +8859,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell  uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -8830,7 +8878,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                     class="uc-fe-calendar-row"
                   >
                     <div
-                      class="uc-fe-calendar-cell  uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -8845,7 +8893,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell  uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -8860,7 +8908,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell  uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -8875,7 +8923,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell  uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -8890,7 +8938,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell  uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -8905,7 +8953,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell  uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -8920,7 +8968,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell  uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -8939,7 +8987,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                     class="uc-fe-calendar-row"
                   >
                     <div
-                      class="uc-fe-calendar-cell  uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -8954,7 +9002,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell  uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -8969,7 +9017,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell  uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -8984,7 +9032,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell  uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -8999,7 +9047,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell  uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -9014,7 +9062,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell  uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -9029,7 +9077,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell uc-fe-calendar-active uc-fe-calendar-now   uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-active uc-fe-calendar-now uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -9048,7 +9096,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                     class="uc-fe-calendar-row"
                   >
                     <div
-                      class="uc-fe-calendar-cell  uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -9063,7 +9111,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell  uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -9078,7 +9126,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell  uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -9093,7 +9141,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell  uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -9108,7 +9156,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell  uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -9123,7 +9171,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell  uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -9138,7 +9186,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell  uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -9157,7 +9205,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                     class="uc-fe-calendar-row"
                   >
                     <div
-                      class="uc-fe-calendar-cell  uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -9172,7 +9220,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell  uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -9187,7 +9235,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell  uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -9202,7 +9250,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell uc-fe-calendar-next   uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-next uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -9217,7 +9265,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell uc-fe-calendar-next   uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-next uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -9232,7 +9280,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell uc-fe-calendar-next   uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-next uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -9247,7 +9295,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell uc-fe-calendar-next   uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-next uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -9266,7 +9314,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                     class="uc-fe-calendar-row"
                   >
                     <div
-                      class="uc-fe-calendar-cell uc-fe-calendar-next   uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-next uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -9281,7 +9329,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell uc-fe-calendar-next   uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-next uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -9296,7 +9344,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell uc-fe-calendar-next   uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-next uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -9311,7 +9359,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell uc-fe-calendar-next   uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-next uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -9326,7 +9374,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell uc-fe-calendar-next   uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-next uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -9341,7 +9389,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell uc-fe-calendar-next   uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-next uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"
@@ -9356,7 +9404,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                       />
                     </div>
                     <div
-                      class="uc-fe-calendar-cell uc-fe-calendar-next   uc-fe-calendar-cell-date"
+                      class="uc-fe-calendar-cell uc-fe-calendar-next uc-fe-calendar-cell-date"
                     >
                       <span
                         class="uc-fe-calendar-cell-content-prev-space"

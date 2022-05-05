@@ -15,7 +15,6 @@ export const prefixCls = _prefixCls + '-datepicker';
 export const dateSeparatorCls = prefixCls + '-date-separator';
 export const shortcutCls = prefixCls + '-shortcut';
 export const footerCls = prefixCls + '-footer';
-export const tipCls = prefixCls + '-tip';
 export const readonlyInputCls = prefixCls + '-input-readonly';
 
 export const PickerContainer = sWrap<
@@ -66,13 +65,13 @@ export const SPopup = sWrap({})(
             background: ${DT.T_COLOR_BG_DEFAULT_DARK};
             border-radius: 2px;
             .${footerCls} {
+                &:empty {
+                    display: none;
+                }
                 padding: 12px;
                 .${shortcutCls} {
                     cursor: pointer;
                     color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
-                }
-                .${tipCls} {
-                    color: ${DT.T_COLOR_TEXT_REMARK_DARK};
                 }
             }
             .${tableCls} {

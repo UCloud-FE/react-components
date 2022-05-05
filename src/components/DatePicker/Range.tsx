@@ -10,7 +10,7 @@ import React, {
     useContext
 } from 'react';
 import moment, { Moment } from 'moment';
-import { TDate } from '@z-r/calendar/types/interface';
+import { TDate } from '@z-r/calendar';
 
 import useUncontrolled from 'src/hooks/useUncontrolled';
 import useLocale from 'src/components/LocaleProvider/useLocale';
@@ -335,7 +335,6 @@ const Range = ({
                         onActiveChange={handleStartActiveChange}
                         placeholder={placeholderS}
                         shortcuts={shortcutsS}
-                        footerTip={locale.chooseTipRangeStart}
                         {...sharedPickerProps}
                         suffix={<RangeDateSeparator />}
                     />
@@ -347,7 +346,6 @@ const Range = ({
                         onActiveChange={handleEndActiveChange}
                         placeholder={placeholderE}
                         shortcuts={shortcutsE}
-                        footerTip={locale.chooseTipRangeEnd}
                         {...sharedPickerProps}
                     />
                 </SRangeInputWrap>

@@ -1,5 +1,5 @@
 import React, { HTMLAttributes, memo, useCallback, useMemo } from 'react';
-import { TDate } from '@z-r/calendar/types/interface';
+import { TDate } from '@z-r/calendar';
 
 import { Override } from 'src/type';
 import useLocale from 'src/components/LocaleProvider/useLocale';
@@ -26,9 +26,9 @@ const Month = ({
     }, [rules]);
     const handleChange = useCallback(
         (v: TDate) => {
-            v = getValidDate(v, rules);
-            onChange && onChange(v);
-            onSelect && onSelect(v);
+            const validDate = getValidDate(v, rules);
+            onChange && onChange(validDate);
+            onSelect && onSelect(validDate);
         },
         [onChange, onSelect, rules]
     );
