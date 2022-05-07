@@ -24,7 +24,7 @@ export const PickerContainer = sWrap<
     className: ({ disabled, isMonth }) =>
         classnames(prefixCls, isMonth && `${prefixCls}-month`, disabled && `${prefixCls}-disabled`)
 })(
-    styled('div')(({ hasTime, disabled, status }) => {
+    styled('div')(({ hasTime, disabled, status, theme: { designTokens: DT } }) => {
         return css`
             ${inlineBlockWithVerticalMixin};
             width: ${hasTime ? 180 : 140}px;
@@ -41,13 +41,17 @@ export const PickerContainer = sWrap<
                 :hover {
                     .${inputPrefixCls} {
                         input {
-                            background: ${status === 'error' ? '#FED4D4' : '#e3e9ff'};
+                            background: ${status === 'error'
+                                ? DT.T_INPUT_COLOR_BG_HL_ERROR
+                                : DT.T_INPUT_COLOR_BG_HL_DEFAULT};
                         }
                     }
                 }
                 .${inputPrefixCls}.${inputFocusedCls} {
                     input {
-                        background: ${status === 'error' ? '#FED4D4' : '#e3e9ff'};
+                        background: ${status === 'error'
+                            ? DT.T_INPUT_COLOR_BG_HL_ERROR
+                            : DT.T_INPUT_COLOR_BG_HL_DEFAULT};
                     }
                 }
             `}
@@ -174,7 +178,7 @@ export const RangeInputWrap = sWrap<{
     disabled?: boolean;
     status?: InputProps['status'];
 }>()(
-    styled.div(({ isMonth, hasTime, hasPrefix, hasSuffix, disabled, status }) => {
+    styled.div(({ isMonth, hasTime, hasPrefix, hasSuffix, disabled, status, theme: { designTokens: DT } }) => {
         return css`
             width: ${(isMonth ? 69 : hasTime ? 145 : 106) + (hasPrefix ? 20 : 0) + (hasSuffix ? 28 : 0)}px;
             .${inputPrefixCls} {
@@ -190,13 +194,17 @@ export const RangeInputWrap = sWrap<{
                 :hover {
                     .${inputPrefixCls} {
                         input {
-                            background: ${status === 'error' ? '#FED4D4' : '#e3e9ff'};
+                            background: ${status === 'error'
+                                ? DT.T_INPUT_COLOR_BG_HL_ERROR
+                                : DT.T_INPUT_COLOR_BG_HL_DEFAULT};
                         }
                     }
                 }
                 .${inputPrefixCls}.${inputFocusedCls} {
                     input {
-                        background: ${status === 'error' ? '#FED4D4' : '#e3e9ff'};
+                        background: ${status === 'error'
+                            ? DT.T_INPUT_COLOR_BG_HL_ERROR
+                            : DT.T_INPUT_COLOR_BG_HL_DEFAULT};
                     }
                 }
             `}

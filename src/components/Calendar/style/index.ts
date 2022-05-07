@@ -183,7 +183,7 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
                 }
                 &.${prefixCls}-cell.${prefixCls}-range-middle {
                     .${cellContentCls}, .${cellContentPrevSpaceCls}, .${cellContentNextSpaceCls} {
-                        background: #E3E9FF;
+                        background: ${DT.T_INPUT_COLOR_BG_HL_DEFAULT};
                     }
                 }
                 &.${prefixCls}-cell.${prefixCls}-range-middle:first-of-type {
@@ -198,7 +198,7 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
                 }
                 &.${prefixCls}-cell.${prefixCls}-range-middle + .${prefixCls}-cell.${prefixCls}-range-last {
                     .${cellContentPrevSpaceCls} {
-                        background: #E3E9FF;
+                        background: ${DT.T_INPUT_COLOR_BG_HL_DEFAULT};
                     }
                 }
                 &.${prefixCls}-cell.${prefixCls}-active,
@@ -209,9 +209,9 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
                         color: ${DT.T_COLOR_TEXT_WHITE};
                     }
                 }
-                &.${prefixCls}-cell.${prefixCls}-range-first:not(.${prefixCls}-range-unclosed) {
+                &.${prefixCls}-cell.${prefixCls}-range-first:not(.${prefixCls}-range-unclosed):not(.${prefixCls}-range-last) {
                     .${cellContentNextSpaceCls} {
-                        background: #E3E9FF;
+                        background: ${DT.T_INPUT_COLOR_BG_HL_DEFAULT};
                     }
                 }
             }
