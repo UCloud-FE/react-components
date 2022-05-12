@@ -1,5 +1,5 @@
 // Do not edit directly
-// Generated with design-token-editor on 5/5/2022, 5:50:24 PM
+// Generated with design-token-editor on 5/12/2022, 2:41:28 PM
 
 const designTokens = {
     // 按钮加载遮罩
@@ -25,7 +25,7 @@ const designTokens = {
     // 背景/常规/深色
     T_COLOR_BG_DEFAULT_DARK: '#f6f6fb',
     // 背景/常规/hover
-    T_COLOR_BG_DEFAULT_HOVER: '#EAEEFD',
+    T_COLOR_BG_DEFAULT_HOVER: '#e3e9ff',
     // 背景/常规/浅色
     T_COLOR_BG_DEFAULT_LIGHT: '#fafafc',
     // 背景/常规/默认色，替换为T_COLOR_BG_DEFAULT_BRIGHT

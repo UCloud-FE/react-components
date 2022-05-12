@@ -192,7 +192,7 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
                 }
                 &.${prefixCls}-cell.${prefixCls}-range-middle {
                     .${cellContentCls}, .${cellContentPrevSpaceCls}, .${cellContentNextSpaceCls} {
-                        background: ${DT.T_INPUT_COLOR_BG_HL_DEFAULT};
+                        background: ${DT.T_COLOR_BG_DEFAULT_HOVER};
                     }
                 }
                 &.${prefixCls}-cell.${prefixCls}-range-middle:first-of-type {
@@ -216,7 +216,7 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
                 &.${prefixCls}-cell.${prefixCls}-range-middle + .${prefixCls}-cell.${prefixCls}-range-last,
                 &.${prefixCls}-cell.${prefixCls}-range-first + .${prefixCls}-cell.${prefixCls}-range-last {
                     .${cellContentPrevSpaceCls} {
-                        background: ${DT.T_INPUT_COLOR_BG_HL_DEFAULT};
+                        background: ${DT.T_COLOR_BG_DEFAULT_HOVER};
                     }
                     .${cellContentCls} {
                         border-top-left-radius: 0px;
@@ -228,7 +228,7 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
                 &.${prefixCls}-cell.${prefixCls}-range-last {
                     .${cellContentCls} {
                         border-radius: 2px;
-                        background: ${DT.T_INPUT_COLOR_BG_HL_DEFAULT};
+                        background: ${DT.T_COLOR_BG_DEFAULT_HOVER};
                         .${cellContentSquareCls} {
                             border-radius: 2px;
                             background: ${DT.T_COLOR_BG_PRIMARY_1};
@@ -238,7 +238,7 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
                 }
                 &.${prefixCls}-cell.${prefixCls}-range-first:not(.${prefixCls}-range-unclosed):not(.${prefixCls}-range-last) {
                     .${cellContentNextSpaceCls} {
-                        background: ${DT.T_INPUT_COLOR_BG_HL_DEFAULT};
+                        background: ${DT.T_COLOR_BG_DEFAULT_HOVER};
                     }
                     .${cellContentCls} {
                         border-top-right-radius: 0px;
@@ -298,6 +298,19 @@ export const STwoSide = sWrap<{ customStyle?: { boxShadow: boolean } }>()(
             &:not(.${twoSideSingleCls}) .${prefixCls}:nth-of-type(1) {
                 .${prefixCls}-body {
                     border-right: 1px solid ${DT.T_COLOR_BG_DEFAULT_DARK};
+                }
+            }
+            &:not(.${twoSideSingleCls}) {
+                .${prefixCls}:nth-of-type(1)
+                    .${prefixCls}-header-button-nextYear,
+                    .${prefixCls}:nth-of-type(1)
+                    .${prefixCls}-header-button-nextMonth,
+                    .${prefixCls}:nth-of-type(2)
+                    .${prefixCls}-header-button-prevYear,
+                    .${prefixCls}:nth-of-type(2)
+                    .${prefixCls}-header-button-prevMonth {
+                    visibility: hidden;
+                    pointer-events: none;
                 }
             }
         `
