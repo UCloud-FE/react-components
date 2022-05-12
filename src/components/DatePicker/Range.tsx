@@ -235,8 +235,12 @@ const Range = ({
             const newValue: CallbackRangeValue = [value, valueE];
             const rangeDateValidResult = isRangeDateValid(newValue, rules, precision);
             if (rangeDateValidResult !== true) {
-                setRangeError(rangeDateValidResult);
-                inputRefE.current && inputRefE.current.focus();
+                // setRangeError(rangeDateValidResult);
+                if (inputRefE.current) {
+                    inputRefE.current.focus();
+                    inputRefE.current.clear();
+                    newValue[1] = null;
+                }
             } else {
                 setRangeError(undefined);
                 onChange(newValue);
@@ -251,8 +255,12 @@ const Range = ({
             const newValue: CallbackRangeValue = [valueS, value];
             const rangeDateValidResult = isRangeDateValid(newValue, rules, precision);
             if (rangeDateValidResult !== true) {
-                setRangeError(rangeDateValidResult);
-                inputRefS.current && inputRefS.current.focus();
+                // setRangeError(rangeDateValidResult);
+                if (inputRefS.current) {
+                    inputRefS.current.focus();
+                    inputRefS.current.clear();
+                    newValue[0] = null;
+                }
             } else {
                 setRangeError(undefined);
                 onChange(newValue);
@@ -328,18 +336,21 @@ const Range = ({
                 >
                     <Picker
                         value={valueS}
+                        rangeValue={cacheValue}
                         onChange={handleStartChange}
                         nullable={nullableS}
-                        prefix
                         ref={inputRefS}
                         onActiveChange={handleStartActiveChange}
                         placeholder={placeholderS}
                         shortcuts={shortcutsS}
                         {...sharedPickerProps}
+                        prefix
+                        isFirst
                         suffix={<RangeDateSeparator />}
                     />
                     <Picker
                         value={valueE}
+                        rangeValue={cacheValue}
                         onChange={handleEndChange}
                         nullable={nullableE}
                         ref={inputRefE}

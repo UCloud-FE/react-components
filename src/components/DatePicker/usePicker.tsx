@@ -173,9 +173,16 @@ const usePicker = <D,>(
         },
         [allFormat, calValue, visible]
     );
+    const clear = useCallback(() => {
+        setInputValue('');
+        setCalValue(null);
+    }, []);
+
     const handleConfirm = useCallback(
         (v?: TDate | null) => {
             const currentValue = v !== undefined ? v : calValue;
+            console.log(currentValue);
+
             if (!currentValue) {
                 if (!nullable) return;
             } else if (isDateDisabled(+currentValue, value, rules)) {
@@ -304,7 +311,8 @@ const usePicker = <D,>(
         {
             error: typeof error === 'string' ? error : null,
             active: visible
-        }
+        },
+        { clear }
     ];
 };
 

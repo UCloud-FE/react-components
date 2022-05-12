@@ -16,6 +16,9 @@ export const dateSeparatorCls = prefixCls + '-date-separator';
 export const shortcutCls = prefixCls + '-shortcut';
 export const footerCls = prefixCls + '-footer';
 export const readonlyInputCls = prefixCls + '-input-readonly';
+export const tipCls = prefixCls + '-tip';
+export const errorTipCls = tipCls + '-error';
+export const tipIconCls = tipCls + '-icon';
 
 export const PickerContainer = sWrap<
     { disabled?: boolean; isMonth?: boolean; hasTime?: boolean; status?: InputProps['status'] },
@@ -86,6 +89,30 @@ export const SPopup = sWrap({})(
                 background: ${DT.T_COLOR_BG_DEFAULT_LIGHT};
                 padding: 0 0 0 16px;
                 border-left: 1px solid ${DT.T_COLOR_BG_DEFAULT_DARK};
+            }
+            .${tipCls}, .${errorTipCls} {
+                line-height: 20px;
+                background: ${DT.T_COLOR_BG_DEFAULT_DARK};
+                padding: 12px 16px;
+                display: flex;
+                align-items: center;
+                .${tipIconCls} {
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 8px;
+                }
+            }
+            .${tipCls} {
+                color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+                .${tipIconCls} {
+                    fill: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+                }
+            }
+            .${errorTipCls} {
+                color: ${DT.T_COLOR_TEXT_ERROR};
+                .${tipIconCls} {
+                    fill: ${DT.T_COLOR_TEXT_ERROR};
+                }
             }
         `;
     })

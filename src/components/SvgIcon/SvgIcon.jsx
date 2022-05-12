@@ -37,6 +37,8 @@ import Sort from './icons/Sort';
 import Filter from './icons/Filter';
 import Cog from './icons/Cog';
 import Dragger from './icons/Dragger';
+import DoubleArrowRight from './icons/DoubleArrowRight';
+import DoubleArrowLeft from './icons/DoubleArrowLeft';
 
 // circle
 import QuestionCircle from './icons/QuestionCircle';
@@ -63,6 +65,8 @@ const IconMap = {
     'arrow-down': ArrowDown,
     'arrow-left': ArrowLeft,
     'arrow-right': ArrowRight,
+    'double-arrow-left': DoubleArrowLeft,
+    'double-arrow-right': DoubleArrowRight,
     'triangle-up': TriangleUp,
     'triangle-down': TriangleDown,
     'triangle-left': TriangleLeft,

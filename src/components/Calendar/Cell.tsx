@@ -2,7 +2,13 @@ import React, { HTMLAttributes } from 'react';
 import { CellValue, Mode } from '@z-r/calendar';
 import classNames from 'classnames';
 
-import { cellContentCls, cellContentNextSpaceCls, cellContentPrevSpaceCls, prefixCls } from './style';
+import {
+    cellContentCls,
+    cellContentNextSpaceCls,
+    cellContentPrevSpaceCls,
+    cellContentSquareCls,
+    prefixCls
+} from './style';
 
 const Cell = ({
     children,
@@ -14,7 +20,9 @@ const Cell = ({
     return (
         <div {...rest} className={classNames(className, prefixCls + `-cell-${mode}`)}>
             <span className={cellContentPrevSpaceCls} />
-            <span className={cellContentCls}>{children}</span>
+            <span className={cellContentCls}>
+                <div className={cellContentSquareCls}>{children}</div>
+            </span>
             <span className={cellContentNextSpaceCls} />
         </div>
     );

@@ -9,8 +9,11 @@ const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-calendar';
 export const tableCls = prefixCls + '-table';
 export const cellContentCls = prefixCls + '-cell-content';
+export const cellContentSquareCls = cellContentCls + '-square';
 export const cellContentPrevSpaceCls = cellContentCls + '-prev-space';
 export const cellContentNextSpaceCls = cellContentCls + '-next-space';
+export const twoSideSingleCls = prefixCls + '-tow-side-single';
+export const iconCls = prefixCls + '-icon';
 
 /* stylelint-disable no-duplicate-selectors */
 export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?: boolean } }) => {
@@ -47,13 +50,16 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
         }
         .${prefixCls}-header-button {
             display: block;
-            width: 28px;
-            font-size: 16px;
             text-align: center;
-            color: ${DT.T_COLOR_TEXT_REMARK_DARK};
             cursor: pointer;
-            :hover {
-                color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+            margin: 0 8px;
+            .${iconCls} {
+                width: 16px;
+                height: 16px;
+                fill: ${DT.T_COLOR_TEXT_REMARK_DARK};
+            }
+            :hover .${iconCls}  {
+                fill: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
             }
         }
         .${prefixCls}-header-switcher-wrap {
@@ -109,11 +115,13 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
                 }
                 .${cellContentCls} {
                     display: block;
-                    border-radius: 2px;
                     text-align: center;
                     height: 20px;
                     width: 20px;
                     line-height: 20px;
+                    .${cellContentSquareCls} {
+                        border-radius: 2px;
+                    }
                 }
 
                 &.${prefixCls}-cell-month, &.${prefixCls}-cell-year, &.${prefixCls}-cell-decade {
@@ -129,7 +137,7 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
                 }
 
                 :not(.${prefixCls}-cell-empty):hover {
-                    .${cellContentCls} {
+                    .${cellContentCls} .${cellContentSquareCls} {
                         background: ${DT.T_COLOR_BG_DEFAULT_HOVER};
                     }
                 }
@@ -139,7 +147,7 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
                 &.${prefixCls}-prev, &.${prefixCls}-next {
                     color: ${DT.T_COLOR_TEXT_DISABLED};
                     :hover {
-                        .${cellContentCls} {
+                        .${cellContentCls} .${cellContentSquareCls} {
                             background: ${DT.T_COLOR_BG_DEFAULT_HOVER};
                         }
                     }
@@ -149,7 +157,8 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
                     /* &.${prefixCls}-prev, &.${prefixCls}-next {
                         background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
                     } */
-                    .${cellContentCls} {
+                    .${cellContentCls},
+                    .${cellContentCls} .${cellContentSquareCls} {
                         background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
                         color: ${DT.T_COLOR_TEXT_DISABLED};
                         border-radius: 0;
@@ -187,31 +196,53 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
                     }
                 }
                 &.${prefixCls}-cell.${prefixCls}-range-middle:first-of-type {
+                    .${cellContentCls} {
+                        border-top-left-radius: 2px;
+                        border-bottom-left-radius: 2px;
+                    }
                     .${cellContentPrevSpaceCls} {
                         background: none;
                     }
                 }
                 &.${prefixCls}-cell.${prefixCls}-range-middle:last-of-type {
+                    .${cellContentCls} {
+                        border-top-right-radius: 2px;
+                        border-bottom-right-radius: 2px;
+                    }
                     .${cellContentNextSpaceCls} {
                         background: none;
                     }
                 }
-                &.${prefixCls}-cell.${prefixCls}-range-middle + .${prefixCls}-cell.${prefixCls}-range-last {
+                &.${prefixCls}-cell.${prefixCls}-range-middle + .${prefixCls}-cell.${prefixCls}-range-last,
+                &.${prefixCls}-cell.${prefixCls}-range-first + .${prefixCls}-cell.${prefixCls}-range-last {
                     .${cellContentPrevSpaceCls} {
                         background: ${DT.T_INPUT_COLOR_BG_HL_DEFAULT};
+                    }
+                    .${cellContentCls} {
+                        border-top-left-radius: 0px;
+                        border-bottom-left-radius: 0px;
                     }
                 }
                 &.${prefixCls}-cell.${prefixCls}-active,
                 &.${prefixCls}-cell.${prefixCls}-range-first,
                 &.${prefixCls}-cell.${prefixCls}-range-last {
                     .${cellContentCls} {
-                        background: ${DT.T_COLOR_BG_PRIMARY_1};
-                        color: ${DT.T_COLOR_TEXT_WHITE};
+                        border-radius: 2px;
+                        background: ${DT.T_INPUT_COLOR_BG_HL_DEFAULT};
+                        .${cellContentSquareCls} {
+                            border-radius: 2px;
+                            background: ${DT.T_COLOR_BG_PRIMARY_1};
+                            color: ${DT.T_COLOR_TEXT_WHITE};
+                        }
                     }
                 }
                 &.${prefixCls}-cell.${prefixCls}-range-first:not(.${prefixCls}-range-unclosed):not(.${prefixCls}-range-last) {
                     .${cellContentNextSpaceCls} {
                         background: ${DT.T_INPUT_COLOR_BG_HL_DEFAULT};
+                    }
+                    .${cellContentCls} {
+                        border-top-right-radius: 0px;
+                        border-bottom-right-radius: 0px;
                     }
                 }
             }
@@ -251,6 +282,27 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
 const shouldForwardProp = (propName: string): boolean => {
     return !({ customStyle: 1, theme: 1 } as { [key: string]: 1 })[propName];
 };
+
+export const STwoSide = sWrap<{ customStyle?: { boxShadow: boolean } }>()(
+    styled('div')(
+        ({ theme: { designTokens: DT }, customStyle }) => css`
+            ${customStyle?.boxShadow === false
+                ? null
+                : css`
+                      box-shadow: ${DT.T_SHADOW_BLOCK_DEFAULT_LG};
+                  `}
+            display: flex;
+            .${prefixCls} {
+                flex: 1;
+            }
+            &:not(.${twoSideSingleCls}) .${prefixCls}:nth-of-type(1) {
+                .${prefixCls}-body {
+                    border-right: 1px solid ${DT.T_COLOR_BG_DEFAULT_DARK};
+                }
+            }
+        `
+    )
+);
 
 export const SCalendar = sWrap<any>({})(
     styled(Calendar, { shouldForwardProp })`

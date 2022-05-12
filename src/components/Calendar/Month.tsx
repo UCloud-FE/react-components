@@ -10,6 +10,7 @@ import HeaderSwitcher from './HeaderSwitcher';
 import LOCALE from './locale/zh_CN';
 import { CalendarProps } from './Calendar';
 import Cell from './Cell';
+import HeaderButton from './HeaderButton';
 
 /**
  * @deprecated 请使用 ```<Calendar type='month' />``` 替换
@@ -45,7 +46,7 @@ const Month = ({
             disabledRule={disabledRule}
             onChange={handleChange}
             locale={calendarLocale}
-            components={{ HeaderSwitcher: renderHeaderSwitcher, Cell: Cell }}
+            components={{ HeaderSwitcher: renderHeaderSwitcher, Cell: Cell, HeaderButton }}
             {...rest}
         />
     );

@@ -1,20 +1,24 @@
 import React, { createRef, forwardRef, memo, useEffect, useImperativeHandle, Ref, ReactNode } from 'react';
+import { TDate } from '@z-r/calendar';
 
 import Popover from 'src/components/Popover';
 import Input from 'src/components/Input';
-import Calendar from 'src/components/Calendar';
-import Notice from 'src/components/Notice';
+import Calendar, { TwoSide } from 'src/components/Calendar';
 import Time from 'src/components/TimePicker/Time';
 import SvgIcon from 'src/components/SvgIcon';
 import usePopoverConfig from 'src/hooks/usePopoverConfig';
 
 import { DatePickerProps, displayToFormatAndTimeMode } from './DatePicker';
 import { displayToFormatAndTimeMode as displayToFormatAndTimeModeM } from './Month';
-import { SPopup, readonlyInputCls, RangeInputWrap } from './style';
+import { SPopup, readonlyInputCls, RangeInputWrap, errorTipCls, tipCls, tipIconCls } from './style';
 import usePicker from './usePicker';
 import Footer from './Footer';
 
-export type RangePickerRef = { focus: () => void } | undefined;
+export type RangePickerRef = { focus: () => void; clear: () => void } | undefined;
+
+const TipIcon = React.memo(function TipIcon() {
+    return <SvgIcon type="exclamation-circle-filled" className={tipIconCls} />;
+});
 
 const RangePickerWithoutMemo = forwardRef(
     (
@@ -27,6 +31,8 @@ const RangePickerWithoutMemo = forwardRef(
             error,
             footerTip,
             suffix,
+            rangeValue,
+            isFirst,
             ...pickProps
         }: DatePickerProps & {
             prefix?: boolean;
@@ -37,6 +43,8 @@ const RangePickerWithoutMemo = forwardRef(
             error?: ReactNode;
             footerTip?: ReactNode;
             suffix?: ReactNode;
+            rangeValue?: [TDate | null, TDate | null];
+            isFirst?: boolean;
         },
         ref: Ref<RangePickerRef>
     ) => {
@@ -49,7 +57,8 @@ const RangePickerWithoutMemo = forwardRef(
             calendarProps,
             timeProps,
             footerProps,
-            { error: pickerError, active }
+            { error: pickerError, active },
+            { clear }
         ] = usePicker(
             {
                 ...pickProps
@@ -64,10 +73,11 @@ const RangePickerWithoutMemo = forwardRef(
             ref,
             () => {
                 return {
-                    focus: () => inputRef?.current?.focus()
+                    focus: () => inputRef?.current?.focus(),
+                    clear: clear
                 };
             },
-            [inputRef]
+            [clear, inputRef]
         );
         useEffect(() => {
             onActiveChange(active);
@@ -76,7 +86,7 @@ const RangePickerWithoutMemo = forwardRef(
 
         const hasTime = !!timeProps.mode?.length;
 
-        const CalendarComp = isMonth ? Calendar.Month : Calendar;
+        const CalendarComp = isMonth ? Calendar.Month : hasTime ? Calendar : TwoSide;
 
         return readonly ? (
             <span className={readonlyInputCls}>{inputProps.value}</span>
@@ -94,19 +104,32 @@ const RangePickerWithoutMemo = forwardRef(
                         <SPopup {...popupProps}>
                             <CalendarComp
                                 {...calendarProps}
+                                rangeValue={
+                                    isFirst
+                                        ? [calendarProps.value, rangeValue?.[1]]
+                                        : [rangeValue?.[0], calendarProps.value]
+                                }
+                                value={null}
                                 sidebar={isMonth ? null : hasTime ? <Time {...timeProps} /> : null}
                             />
                             {pickerError && (
-                                <Notice styleType="error" closable={false}>
+                                <div className={errorTipCls}>
+                                    <TipIcon />
                                     {pickerError}
-                                </Notice>
+                                </div>
                             )}
                             {error && (
-                                <Notice styleType="error" closable={false}>
+                                <div className={errorTipCls}>
+                                    <TipIcon />
                                     {error}
-                                </Notice>
+                                </div>
                             )}
-                            {tip && <Notice closable={false}>{tip}</Notice>}
+                            {tip && (
+                                <div className={tipCls}>
+                                    <TipIcon />
+                                    {tip}
+                                </div>
+                            )}
                             <Footer {...footerProps} tip={footerTip} />
                         </SPopup>
                     }
