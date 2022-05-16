@@ -6,7 +6,6 @@ import Input from 'src/components/Input';
 import Calendar, { TwoSide } from 'src/components/Calendar';
 import Time from 'src/components/TimePicker/Time';
 import SvgIcon from 'src/components/SvgIcon';
-import usePopoverConfig from 'src/hooks/usePopoverConfig';
 
 import { DatePickerProps, displayToFormatAndTimeMode } from './DatePicker';
 import { displayToFormatAndTimeMode as displayToFormatAndTimeModeM } from './Month';
@@ -16,7 +15,7 @@ import Footer from './Footer';
 
 export type RangePickerRef = { focus: () => void; clear: () => void } | undefined;
 
-const TipIcon = React.memo(function TipIcon() {
+export const TipIcon = React.memo(function TipIcon() {
     return <SvgIcon type="exclamation-circle-filled" className={tipIconCls} />;
 });
 
@@ -82,7 +81,6 @@ const RangePickerWithoutMemo = forwardRef(
         useEffect(() => {
             onActiveChange(active);
         }, [active, onActiveChange]);
-        const popoverConfigProps = usePopoverConfig();
 
         const hasTime = !!timeProps.mode?.length;
 
@@ -133,7 +131,6 @@ const RangePickerWithoutMemo = forwardRef(
                             <Footer {...footerProps} tip={footerTip} />
                         </SPopup>
                     }
-                    {...popoverConfigProps}
                     {...popoverProps}
                 >
                     <Input

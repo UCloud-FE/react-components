@@ -181,8 +181,6 @@ const usePicker = <D,>(
     const handleConfirm = useCallback(
         (v?: TDate | null) => {
             const currentValue = v !== undefined ? v : calValue;
-            console.log(currentValue);
-
             if (!currentValue) {
                 if (!nullable) return;
             } else if (isDateDisabled(+currentValue, value, rules)) {
@@ -217,7 +215,17 @@ const usePicker = <D,>(
         setCalValue(value == null ? null : value);
         setCalCurrentValue(currentValue => getValidCurrentDate(value, d, currentValue));
         setUseInputValue(true);
+        setVisible(true);
     }, [d, value]);
+    const handleInputBlur = useCallback(() => {
+        setVisible(false);
+        handleConfirm();
+    }, [handleConfirm]);
+    const handleInputClick = useCallback(() => {
+        setVisible(true);
+    }, []);
+    const handleInputMouseDown = handleInputClick;
+
     const handleInputDown = useCallback(
         (e: KeyboardEvent) => {
             if (e.keyCode === KeyCode.ENTER) {
@@ -240,21 +248,14 @@ const usePicker = <D,>(
     const popoverConfigProps = usePopoverConfig();
     const avoidBlur = useCallback(e => e.preventDefault(), []);
 
-    const onPopoverVisibleChange = useCallback(
-        (visible: boolean) => {
-            setVisible(visible);
-            if (!visible) {
-                handleConfirm();
-            }
-        },
-        [handleConfirm]
-    );
-
     const inputProps = {
         value: inputValue,
         onChange: handleInputChange,
         onFocus: handleInputFocus,
+        onBlur: handleInputBlur,
         onKeyDown: handleInputDown,
+        onClick: handleInputClick,
+        onMouseDown: handleInputMouseDown,
         disabled,
         size,
         status,
@@ -270,10 +271,7 @@ const usePicker = <D,>(
         ...popoverProps,
         ...(getCalendarContainer ? { getPopupContainer: getCalendarContainer } : {}),
         trigger: [],
-        showAction: ['click', 'focus'],
-        hideAction: ['blur'],
-        visible,
-        onVisibleChange: onPopoverVisibleChange
+        visible
     };
     const popupProps = {
         onMouseDown: avoidBlur
