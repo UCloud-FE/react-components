@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.26](https://github.com/UCloud-FE/react-components/compare/v1.3.25...v1.3.26) (2022-05-16)
+
+### Bug Fixes
+
+-   **All:** fix isSafari in chrome ([aa2b1f0](https://github.com/UCloud-FE/react-components/commit/aa2b1f0eda7d07b5a71b7f8fe0a57fbecf2fa1fb))
+
 ### [1.3.25](https://github.com/UCloud-FE/react-components/compare/v1.3.24...v1.3.25) (2022-04-22)
 
 ### Bug Fixes
