@@ -1,6 +1,7 @@
 MIT LICENSE
 
 Copyright (c) 2015-present Alipay.com, https://www.alipay.com/
+Copyright (c) 2020-present UCloud.cn, https://www.ucloud.cn
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

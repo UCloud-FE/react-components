@@ -64,7 +64,9 @@ const config = {
         alias: {
             src: path.join(__dirname, 'src'),
             tests: path.join(__dirname, 'tests'),
-            shared: path.join(__dirname, 'shared')
+            shared: path.join(__dirname, 'shared'),
+            'rc-trigger': path.join(__dirname, 'src/libs/rc-trigger'),
+            'dom-align': path.join(__dirname, 'src/libs/dom-align')
         }
     },
     externals: {

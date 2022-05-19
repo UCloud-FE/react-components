@@ -5,6 +5,8 @@ import { alignElement, alignPoint } from 'dom-align';
 import addEventListener from 'rc-util/lib/Dom/addEventListener';
 import shallowequal from 'shallowequal';
 
+import isSafari from 'src/utils/isSafari';
+
 import { isWindow, buffer, isSamePoint, isSimilarValue, restoreFocus } from './util';
 
 function getElement(func) {
@@ -147,9 +149,9 @@ class Align extends Component {
             const activeElement = document.activeElement;
 
             if (element) {
-                result = alignElement(source, element, align);
+                result = alignElement(source, element, isSafari ? { ...align, useCssTransform: true } : align);
             } else if (point) {
-                result = alignPoint(source, point, align);
+                result = alignPoint(source, point, isSafari ? { ...align, useCssTransform: true } : align);
             }
 
             restoreFocus(activeElement, source);

@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { polyfill } from 'react-lifecycles-compat';
 
-import isSafari from 'src/utils/isSafari';
-
 import placements from './placements';
 import { prefixCls, animationPrefixCls, PopoverWrap } from './style';
 import { Consumer } from './ContainerContext';
@@ -154,7 +152,7 @@ class Popover extends Component {
         }
     };
     updateScroll = () => {
-        if (this.props.forceAlignWhenScroll && !isSafari) {
+        if (this.props.forceAlignWhenScroll) {
             this.bindScroll();
         } else {
             this.unbindScroll();
