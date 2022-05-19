@@ -60,6 +60,7 @@ export const SwitchWrap = sWrap<{ disabled?: boolean; checked?: boolean; size: S
             display: inline-block;
             vertical-align: middle;
             height: ${DT[SizeMap[size]]};
+            line-height: ${DT[SizeMap[size]]};
             width: ${Width[size]};
 
             .${innerCls} {
