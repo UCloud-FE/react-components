@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.27](https://github.com/UCloud-FE/react-components/compare/v1.3.26...v1.3.27) (2022-05-19)
+
+### Bug Fixes
+
+-   **Popover:** use transform to fix safari flash bug ([aadaab1](https://github.com/UCloud-FE/react-components/commit/aadaab184f238da0f1780696965be55f88fb0d46))
+-   **Switch:** add default line-height to fix inherit style bug ([e8364c6](https://github.com/UCloud-FE/react-components/commit/e8364c63e02f2eec60188ddb2eb8f1de766fd671))
+
 ### [1.3.26](https://github.com/UCloud-FE/react-components/compare/v1.3.25...v1.3.26) (2022-05-16)
 
 ### Bug Fixes
