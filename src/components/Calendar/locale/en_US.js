@@ -8,5 +8,6 @@ export default {
     year: '',
     monthBeforeYear: true,
     months,
-    weekdays
+    weekdays,
+    disabledTip: 'Invalid date'
 };

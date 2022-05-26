@@ -14,5 +14,6 @@ export default {
     placeholderRangeStart: 'Start date',
     placeholderRangeEnd: 'End date',
     chooseTipRangeStart: 'Choose start date',
-    chooseTipRangeEnd: 'Choose end date'
+    chooseTipRangeEnd: 'Choose end date',
+    to: 'to'
 };

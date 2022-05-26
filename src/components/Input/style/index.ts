@@ -24,6 +24,7 @@ export const inputWrapCls = prefixCls + '-wrap';
 export const inputPrefixCls = prefixCls + '-prefix';
 export const inputSuffixCls = prefixCls + '-suffix';
 export const clearCls = prefixCls + '-clear';
+export const inputBlockWrapCls = prefixCls + '-block-wrap';
 
 export const SearchIcon = styled(SvgIcon)`
     cursor: pointer;
@@ -79,10 +80,14 @@ export const SWrap = sWrap<
                 height: 100%;
                 align-items: center;
                 display: flex;
-                color: ${DT.T_COLOR_TEXT_REMARK_DARK};
-                fill: ${DT.T_COLOR_TEXT_REMARK_DARK};
+                color: ${DT.T_COLOR_TEXT_REMARK_LIGHT};
+                fill: ${DT.T_COLOR_TEXT_REMARK_LIGHT};
                 opacity: 0;
                 transition: opacity 0.3s;
+                &:hover {
+                    color: ${DT.T_COLOR_TEXT_REMARK_DARK};
+                    fill: ${DT.T_COLOR_TEXT_REMARK_DARK};
+                }
             }
             .${inputWrapCls}, .${inputPrefixCls}, .${inputSuffixCls}, .${clearCls}, input {
                 padding: 0 ${halfSpacing};
@@ -102,6 +107,13 @@ export const SWrap = sWrap<
                 height: 100%;
                 align-items: center;
                 flex: 0 0 auto;
+            }
+            .${inputBlockWrapCls} {
+                height: 20px;
+                display: flex;
+                align-items: center;
+                flex: 1;
+                min-width: 0px;
             }
 
             input {

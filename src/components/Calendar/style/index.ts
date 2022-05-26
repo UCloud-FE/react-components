@@ -154,33 +154,21 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
                 }
                 &.${prefixCls}-cell.${prefixCls}-disabled {
                     cursor: default;
-                    /* &.${prefixCls}-prev, &.${prefixCls}-next {
-                        background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
-                    } */
-                    .${cellContentCls},
-                    .${cellContentCls} .${cellContentSquareCls} {
+                    .${cellContentCls} .${cellContentSquareCls},
+                    .${cellContentPrevSpaceCls},
+                    .${cellContentNextSpaceCls} {
                         background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
                         color: ${DT.T_COLOR_TEXT_DISABLED};
                         border-radius: 0;
                     }
-                    &:not(.${prefixCls}-cell-disabled-first) {
-                        .${cellContentPrevSpaceCls} {
-                            background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
-                        }
-                    }
-                    &:not(.${prefixCls}-cell-disabled-last) {
-                        .${cellContentNextSpaceCls} {
-                            background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
-                        }
-                    }
                     &.${prefixCls}-cell-disabled-first {
-                        .${cellContentCls} {
+                        .${cellContentPrevSpaceCls} {
                             border-top-left-radius: 2px;
                             border-bottom-left-radius: 2px;
                         }
                     }
                     &.${prefixCls}-cell-disabled-last {
-                        .${cellContentCls} {
+                        .${cellContentNextSpaceCls} {
                             border-top-right-radius: 2px;
                             border-bottom-right-radius: 2px;
                         }
@@ -190,12 +178,12 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
                 &.${prefixCls}-now {
                     color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
                 }
-                &.${prefixCls}-cell.${prefixCls}-range-middle {
+                &.${prefixCls}-cell.${prefixCls}-range-middle:not(.${prefixCls}-next):not(.${prefixCls}-prev) {
                     .${cellContentCls}, .${cellContentPrevSpaceCls}, .${cellContentNextSpaceCls} {
                         background: ${DT.T_COLOR_BG_DEFAULT_HOVER};
                     }
                 }
-                &.${prefixCls}-cell.${prefixCls}-range-middle:first-of-type {
+                &.${prefixCls}-cell.${prefixCls}-range-middle:first-of-type:not(.${prefixCls}-next):not(.${prefixCls}-prev) {
                     .${cellContentCls} {
                         border-top-left-radius: 2px;
                         border-bottom-left-radius: 2px;
@@ -204,7 +192,7 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
                         background: none;
                     }
                 }
-                &.${prefixCls}-cell.${prefixCls}-range-middle:last-of-type {
+                &.${prefixCls}-cell.${prefixCls}-range-middle:last-of-type:not(.${prefixCls}-next):not(.${prefixCls}-prev) {
                     .${cellContentCls} {
                         border-top-right-radius: 2px;
                         border-bottom-right-radius: 2px;
@@ -213,8 +201,7 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
                         background: none;
                     }
                 }
-                &.${prefixCls}-cell.${prefixCls}-range-middle + .${prefixCls}-cell.${prefixCls}-range-last,
-                &.${prefixCls}-cell.${prefixCls}-range-first + .${prefixCls}-cell.${prefixCls}-range-last {
+                &.${prefixCls}-cell.${prefixCls}-range-last:not(.${prefixCls}-next):not(.${prefixCls}-prev):not(.${prefixCls}-range-unclosed):not(.${prefixCls}-range-first) {
                     .${cellContentPrevSpaceCls} {
                         background: ${DT.T_COLOR_BG_DEFAULT_HOVER};
                     }
@@ -224,8 +211,8 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
                     }
                 }
                 &.${prefixCls}-cell.${prefixCls}-active,
-                &.${prefixCls}-cell.${prefixCls}-range-first,
-                &.${prefixCls}-cell.${prefixCls}-range-last {
+                &.${prefixCls}-cell.${prefixCls}-range-first:not(.${prefixCls}-next):not(.${prefixCls}-prev),
+                &.${prefixCls}-cell.${prefixCls}-range-last:not(.${prefixCls}-next):not(.${prefixCls}-prev) {
                     .${cellContentCls} {
                         border-radius: 2px;
                         background: ${DT.T_COLOR_BG_DEFAULT_HOVER};
@@ -236,7 +223,7 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
                         }
                     }
                 }
-                &.${prefixCls}-cell.${prefixCls}-range-first:not(.${prefixCls}-range-unclosed):not(.${prefixCls}-range-last) {
+                &.${prefixCls}-cell.${prefixCls}-range-first:not(.${prefixCls}-next):not(.${prefixCls}-prev):not(.${prefixCls}-range-unclosed):not(.${prefixCls}-range-last) {
                     .${cellContentNextSpaceCls} {
                         background: ${DT.T_COLOR_BG_DEFAULT_HOVER};
                     }

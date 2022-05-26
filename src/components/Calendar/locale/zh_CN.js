@@ -6,5 +6,6 @@ export default {
     year: '年',
     monthBeforeYear: false,
     months,
-    weekdays
+    weekdays,
+    disabledTip: '当前日期不可选'
 };

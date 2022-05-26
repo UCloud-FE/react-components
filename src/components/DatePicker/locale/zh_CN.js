@@ -14,5 +14,6 @@ export default {
     placeholderRangeStart: '开始时间',
     placeholderRangeEnd: '结束时间',
     chooseTipRangeStart: '选择开始时间',
-    chooseTipRangeEnd: '选择结束时间'
+    chooseTipRangeEnd: '选择结束时间',
+    to: '至'
 };

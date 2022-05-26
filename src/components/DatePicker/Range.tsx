@@ -7,10 +7,7 @@ import React, {
     useState,
     MouseEvent,
     useEffect,
-    useContext,
-    Ref,
-    MutableRefObject,
-    useImperativeHandle
+    useContext
 } from 'react';
 import moment, { Moment } from 'moment';
 import { TDate } from '@z-r/calendar';
@@ -22,15 +19,9 @@ import useDidMount from 'src/hooks/useDidMount';
 import isArray from 'src/utils/isArray';
 import isNumber from 'src/utils/isNumber';
 import Calendar, { TwoSide } from 'src/components/Calendar';
-import Time from 'src/components/TimePicker/Time';
 import pick from 'src/utils/pick';
 import Popover from 'src/components/Popover';
 import Input from 'src/components/Input';
-import SvgIcon from 'src/components/SvgIcon';
-
-import { DatePickerProps, displayToFormatAndTimeMode } from './DatePicker';
-import { displayToFormatAndTimeMode as displayToFormatAndTimeModeM } from './Month';
-import { RangePickerRef, TipIcon } from './RangePicker';
 import LOCALE from './locale/zh_CN';
 import { isRangeDateValid } from './utils';
 import {
@@ -41,14 +32,11 @@ import {
     readonlyInputCls,
     RangeInputWrap,
     SPopup,
-    errorTipCls,
-    tipCls
+    Arrow,
+    RangeCalendarWrap
 } from './style';
-import usePicker from './usePicker';
 import Footer, { TShortcut } from './Footer';
-import usePopoverConfig from 'src/hooks/usePopoverConfig';
-
-export type RangeActionRef = { clear: () => void };
+import useRangePicker, { RangeActionRef, RangePickerRef } from './useRangePicker';
 
 interface RangeProps {
     /** 当前值，受控 */
@@ -179,76 +167,6 @@ const getValueFromOption = (options: RangeProps['options'] = [], optionValue: st
     return [s, e];
 };
 
-const useRangePicker = ({
-    prefix,
-    type = 'date',
-    suffix,
-    actionRef,
-    ...pickProps
-}: DatePickerProps & {
-    prefix?: boolean;
-    type?: 'date' | 'month';
-    suffix?: ReactNode;
-    actionRef: MutableRefObject<RangeActionRef | undefined>;
-}) => {
-    const isMonth = type === 'month';
-    const [inputProps, , popoverProps, popupProps, calendarProps, timeProps, footerProps, status, actions] = usePicker(
-        {
-            ...pickProps
-        },
-        isMonth ? displayToFormatAndTimeModeM : displayToFormatAndTimeMode,
-        type
-    );
-    const popoverConfigProps = usePopoverConfig();
-
-    const hasTime = !!timeProps.mode?.length;
-    useImperativeHandle(
-        actionRef,
-        () => {
-            return {
-                clear: actions.clear
-            };
-        },
-        [actions.clear]
-    );
-
-    return [
-        // inputProps
-        {
-            ...inputProps,
-            customStyle: { border: 'none', boxShadow: 'none', background: 'none' },
-            block: true,
-            prefix: prefix ? <SvgIcon type="calendar" /> : null,
-            suffix
-        },
-        // inputWrapProps
-        {
-            isMonth,
-            hasTime,
-            hasPrefix: prefix,
-            hasSuffix: !!suffix,
-            disabled: inputProps.disabled,
-            status: inputProps.status
-        },
-        // calendarProps
-        {
-            ...calendarProps,
-            sidebar: isMonth ? null : hasTime ? <Time {...timeProps} /> : null
-        },
-        timeProps,
-        footerProps,
-        status,
-        // popoverProps
-        {
-            ...popoverConfigProps,
-            ...popoverProps
-        },
-        // popupProps
-        popupProps,
-        { hasTime, isMonth }
-    ];
-};
-
 const Range = ({
     options: _options,
     option: _option,
@@ -297,6 +215,7 @@ const Range = ({
         _onChange
     );
     const [cacheValue, setCacheValue] = useState(() => formatRangeValue(value, nullable, d));
+    const [rangeError, setRangeError] = useState<string>();
     const inputRefS = useRef<RangePickerRef>();
     const inputRefE = useRef<RangePickerRef>();
     const actionRefS = useRef<RangeActionRef>();
@@ -329,9 +248,14 @@ const Range = ({
             const [, valueE] = cacheValue;
             const newValue: CallbackRangeValue = [value, valueE];
             const rangeDateValidResult = isRangeDateValid(newValue, rules, precision);
+            setRangeError(undefined);
             if (rangeDateValidResult !== true) {
                 inputRefE.current?.focus();
-                actionRefE.current?.clear();
+                if (rangeDateValidResult === 'startGreaterThanEnd') {
+                    actionRefE.current?.clear();
+                } else {
+                    setRangeError(locale[(rangeDateValidResult + 'Tip') as keyof typeof locale]);
+                }
                 newValue[1] = null;
             } else if (isFirstEditing === 1) {
                 inputRefE.current?.focus();
@@ -340,16 +264,21 @@ const Range = ({
             }
             setCacheValue(newValue);
         },
-        [cacheValue, rules, precision, isFirstEditing, onChange]
+        [cacheValue, rules, precision, isFirstEditing, locale, onChange]
     );
     const handleEndChange = useCallback(
         (value: Moment | null) => {
             const [valueS] = cacheValue;
             const newValue: CallbackRangeValue = [valueS, value];
             const rangeDateValidResult = isRangeDateValid(newValue, rules, precision);
+            setRangeError(undefined);
             if (rangeDateValidResult !== true) {
                 inputRefS.current?.focus();
-                actionRefS.current?.clear();
+                if (rangeDateValidResult === 'startGreaterThanEnd') {
+                    actionRefS.current?.clear();
+                } else {
+                    setRangeError(locale[(rangeDateValidResult + 'Tip') as keyof typeof locale]);
+                }
                 newValue[0] = null;
             } else if (isFirstEditing === 1) {
                 inputRefS.current?.focus();
@@ -358,7 +287,7 @@ const Range = ({
             }
             setCacheValue(newValue);
         },
-        [cacheValue, rules, precision, isFirstEditing, onChange]
+        [cacheValue, rules, precision, isFirstEditing, locale, onChange]
     );
 
     const handleOptionChange = useCallback(
@@ -395,7 +324,6 @@ const Range = ({
         inputPropsS,
         inputWrapPropsS,
         calendarPropsS,
-        timePropsS,
         footerPropsS,
         { active: activeS, error: errorS },
         popoverProps,
@@ -411,14 +339,13 @@ const Range = ({
         ...sharedPickerProps,
         rules: isFirstEditing === 2 ? { ...rules, range: [rules.range?.[0], cacheValue[1]] } : rules,
         prefix: true,
-        suffix: <RangeDateSeparator />
+        suffix: locale.to
     });
 
     const [
         inputPropsE,
         inputWrapPropsE,
         calendarPropsE,
-        timePropsE,
         footerPropsE,
         { active: activeE, error: errorE }
     ] = useRangePicker({
@@ -446,7 +373,6 @@ const Range = ({
     }, [activeE, activeS]);
 
     const CalendarComp = isMonth ? Calendar.Month : hasTime ? Calendar : TwoSide;
-    console.log(isFirstEditing);
 
     return (
         <RangeContainer {...rest} disabled={disabled}>
@@ -467,50 +393,47 @@ const Range = ({
                     {...popoverProps}
                     visible={activeS || activeE}
                     popup={
-                        <>
-                            <SPopup {...popupProps} hidden={!activeS}>
+                        <SPopup {...popupProps} endInputHighlight={activeE} {...inputWrapPropsS}>
+                            <Arrow />
+                            <RangeCalendarWrap visible={activeS}>
                                 <CalendarComp
                                     {...calendarPropsS}
                                     rangeValue={[calendarPropsS.value, cacheValue?.[1]]}
                                     value={null}
-                                    sidebar={isMonth ? null : hasTime ? <Time {...timePropsS} /> : null}
                                 />
-                                {errorS && (
-                                    <div className={errorTipCls}>
-                                        <TipIcon />
-                                        {errorS}
-                                    </div>
-                                )}
-                                {rangeTip && (
-                                    <div className={tipCls}>
-                                        <TipIcon />
-                                        {rangeTip}
-                                    </div>
-                                )}
-                                <Footer {...footerPropsS} />
-                            </SPopup>
-                            <SPopup {...popupProps} hidden={!activeE}>
+                                <Footer
+                                    {...footerPropsS}
+                                    tip={
+                                        rangeError
+                                            ? { type: 'error', content: rangeError }
+                                            : errorS
+                                            ? { type: 'error', content: errorS }
+                                            : rangeTip
+                                            ? { type: 'tip', content: rangeTip }
+                                            : null
+                                    }
+                                />
+                            </RangeCalendarWrap>
+                            <RangeCalendarWrap visible={activeE}>
                                 <CalendarComp
                                     {...calendarPropsE}
                                     rangeValue={[cacheValue?.[0], calendarPropsE.value]}
                                     value={null}
-                                    sidebar={isMonth ? null : hasTime ? <Time {...timePropsE} /> : null}
                                 />
-                                {errorE && (
-                                    <div className={errorTipCls}>
-                                        <TipIcon />
-                                        {errorE}
-                                    </div>
-                                )}
-                                {rangeTip && (
-                                    <div className={tipCls}>
-                                        <TipIcon />
-                                        {rangeTip}
-                                    </div>
-                                )}
-                                <Footer {...footerPropsE} />
-                            </SPopup>
-                        </>
+                                <Footer
+                                    {...footerPropsE}
+                                    tip={
+                                        rangeError
+                                            ? { type: 'error', content: rangeError }
+                                            : errorE
+                                            ? { type: 'error', content: errorE }
+                                            : rangeTip
+                                            ? { type: 'tip', content: rangeTip }
+                                            : null
+                                    }
+                                />
+                            </RangeCalendarWrap>
+                        </SPopup>
                     }
                 >
                     <SRangeInputWrap
@@ -531,7 +454,7 @@ const Range = ({
                         {readonly ? (
                             <span className={readonlyInputCls}>{inputPropsE.value}</span>
                         ) : (
-                            <RangeInputWrap {...inputWrapPropsE}>
+                            <RangeInputWrap {...inputWrapPropsE} isEnd>
                                 <Input {...inputPropsE} ref={inputRefE} />
                             </RangeInputWrap>
                         )}
@@ -543,6 +466,3 @@ const Range = ({
 };
 
 export default memo(Range);
-function setisFirstEditing(arg0: number) {
-    throw new Error('Function not implemented.');
-}

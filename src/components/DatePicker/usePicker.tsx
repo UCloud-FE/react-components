@@ -11,6 +11,7 @@ import KeyCode from 'src/utils/KeyCode';
 import LOCALE from './locale/zh_CN';
 import { isDateDisabled, getValidDate, isDateValid } from './utils';
 import { DatePickerProps } from './DatePicker';
+import { datePickerPopupCls } from './style';
 
 const formatInput = (v: string, allFormat: string[]): Moment | null | false => {
     if (v == '') return null;
@@ -61,7 +62,13 @@ const getValidCurrentDate = (value: TDate | null | undefined, d: Date, currentVa
         : currentValue != null
         ? currentValue
         : moment(d).set({ hour: 0, minute: 0, second: 0, millisecond: 0 });
-
+const trigger: string[] = [];
+const align = {
+    points: ['tl', 'bl'],
+    overflow: { adjustX: 0, adjustY: 1 },
+    offset: [0, 10],
+    targetOffset: [0, 0]
+};
 const usePicker = <D,>(
     props: TProps<D>,
     displayToFormatAndTimeMode: DisplayToFormatAndTimeMode<D>,
@@ -219,8 +226,7 @@ const usePicker = <D,>(
     }, [d, value]);
     const handleInputBlur = useCallback(() => {
         setVisible(false);
-        handleConfirm();
-    }, [handleConfirm]);
+    }, []);
     const handleInputClick = useCallback(() => {
         setVisible(true);
     }, []);
@@ -270,8 +276,10 @@ const usePicker = <D,>(
         ...popoverConfigProps,
         ...popoverProps,
         ...(getCalendarContainer ? { getPopupContainer: getCalendarContainer } : {}),
-        trigger: [],
-        visible
+        popupClassName: datePickerPopupCls,
+        trigger,
+        visible,
+        align
     };
     const popupProps = {
         onMouseDown: avoidBlur
@@ -295,7 +303,8 @@ const usePicker = <D,>(
         confirmAble: error === true,
         onConfirm: handleConfirm,
         locale: _locale,
-        shortcuts
+        shortcuts,
+        showConfirm: !clickConfirm
     };
 
     return [
