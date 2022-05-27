@@ -27,7 +27,7 @@ export const errorTipCls = tipCls + '-error';
 export const tipIconCls = tipCls + '-icon';
 export const datePickerPopupCls = prefixCls + '-popup';
 
-const inputMixin = ({ disabled, status, theme: { designTokens: DT } }: any) => css`
+export const inputMixin = ({ disabled, status, theme: { designTokens: DT } }: any) => css`
     .${inputPrefixCls} {
         .${inputBlockWrapCls} {
             padding: 0 4px;
