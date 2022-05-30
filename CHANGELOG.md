@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/UCloud-FE/react-components/compare/v1.3.27...v1.4.0) (2022-05-30)
+
+### Features
+
+-   **DatePicker:** refactor style & UX ([a5301e2](https://github.com/UCloud-FE/react-components/commit/a5301e2d96e33983a9127bf7e4fedaffe9cfea47)), closes [#357](https://github.com/UCloud-FE/react-components/issues/357)
+
 ### [1.3.27](https://github.com/UCloud-FE/react-components/compare/v1.3.26...v1.3.27) (2022-05-19)
 
 ### Bug Fixes
