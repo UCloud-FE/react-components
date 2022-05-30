@@ -7,7 +7,6 @@ const Demo = () => (
     <div>
         <Calendar
             value={null}
-            onSelect={v => console.log('select', v)}
             onChange={v => console.log('change', v)}
             rangeValue={[
                 new Date(Date.now() - 30 * 24 * 60 * 60 * 1000),

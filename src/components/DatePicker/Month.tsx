@@ -39,7 +39,7 @@ const Month = (props: DatePickerProps) => {
                     <SPopup {...popupProps}>
                         <Arrow />
                         <Calendar.Month {...calendarProps} />
-                        <Footer {...footerProps} tip={error ? { type: 'error', content: error } : null} />
+                        <Footer {...footerProps} tip={error} isError={!!error} />
                     </SPopup>
                 }
                 {...popoverConfigProps}

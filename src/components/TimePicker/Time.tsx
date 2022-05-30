@@ -1,4 +1,4 @@
-import React, { memo, useEffect } from 'react';
+import React, { memo } from 'react';
 
 import { Override } from 'src/type';
 
@@ -17,13 +17,6 @@ type TimeProps = Override<
 >;
 
 const Time = (props: TimeProps) => {
-    useEffect(() => {
-        console.log('xxx');
-        return () => {
-            console.log('yyy');
-        };
-    }, []);
-
     return <STime scrollTo={scrollTo} {...props} prefixCls={timePrefixCls} />;
 };
 

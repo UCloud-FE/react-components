@@ -4,12 +4,12 @@ import TwoSide from './TwoSide';
 
 type TExportCalendar = typeof Calendar & {
     Month: typeof Month;
-    TwoSideCalendar: typeof TwoSide;
+    TwoSide: typeof TwoSide;
 };
 
 const ExportCalendar: TExportCalendar = Calendar as TExportCalendar;
 ExportCalendar.Month = Month;
-ExportCalendar.TwoSideCalendar = TwoSide;
+ExportCalendar.TwoSide = TwoSide;
 
 export default ExportCalendar;
 

@@ -22,11 +22,11 @@ import Calendar, { TwoSide } from 'src/components/Calendar';
 import pick from 'src/utils/pick';
 import Popover from 'src/components/Popover';
 import Input from 'src/components/Input';
+
 import LOCALE from './locale/zh_CN';
 import { isRangeDateValid } from './utils';
 import {
     RangeSelect,
-    RangeDateSeparator,
     RangeContainer,
     SRangeInputWrap,
     readonlyInputCls,
@@ -403,15 +403,8 @@ const Range = ({
                                 />
                                 <Footer
                                     {...footerPropsS}
-                                    tip={
-                                        rangeError
-                                            ? { type: 'error', content: rangeError }
-                                            : errorS
-                                            ? { type: 'error', content: errorS }
-                                            : rangeTip
-                                            ? { type: 'tip', content: rangeTip }
-                                            : null
-                                    }
+                                    tip={rangeError || errorS || rangeTip}
+                                    isError={!!rangeError || !!errorS}
                                 />
                             </RangeCalendarWrap>
                             <RangeCalendarWrap visible={activeE}>
@@ -422,15 +415,8 @@ const Range = ({
                                 />
                                 <Footer
                                     {...footerPropsE}
-                                    tip={
-                                        rangeError
-                                            ? { type: 'error', content: rangeError }
-                                            : errorE
-                                            ? { type: 'error', content: errorE }
-                                            : rangeTip
-                                            ? { type: 'tip', content: rangeTip }
-                                            : null
-                                    }
+                                    tip={rangeError || errorE || rangeTip}
+                                    isError={!!rangeError || !!errorE}
                                 />
                             </RangeCalendarWrap>
                         </SPopup>

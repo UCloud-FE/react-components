@@ -4,6 +4,7 @@ import { Mode, TDate } from '@z-r/calendar';
 
 import { Override } from 'src/type';
 import useLocale from 'src/components/LocaleProvider/useLocale';
+import useUncontrolled from 'src/hooks/useUncontrolled';
 
 import { getValidDate, getDisabledRule } from './utils';
 import { prefixCls, SCalendar, STwoSide, twoSideSingleCls } from './style';
@@ -11,10 +12,11 @@ import HeaderSwitcher from './HeaderSwitcher';
 import LOCALE from './locale/zh_CN';
 import Cell from './Cell';
 import { CalendarProps } from './Calendar';
-import useUncontrolled from 'src/hooks/useUncontrolled';
 import HeaderButton from './HeaderButton';
 
-const TwoSideCalendar = React.memo(function DateCalendar({
+const TwoSide = React.memo(function TwoSide({
+    // ignore onSelect
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     onSelect,
     onChange,
     rules,
@@ -95,4 +97,4 @@ const TwoSideCalendar = React.memo(function DateCalendar({
     );
 });
 
-export default memo(TwoSideCalendar);
+export default memo(TwoSide);

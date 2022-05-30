@@ -275,26 +275,6 @@ export const RangeSelect = styled(Select)`
     margin-right: 8px;
 `;
 
-export const RangeDateSeparator = sWrap({
-    className: dateSeparatorCls
-})(
-    styled('span')(props => {
-        const {
-            theme: { designTokens: DT }
-        } = props;
-
-        return css`
-            margin: 0 4px;
-            width: 12px;
-            height: 1px;
-            background: ${DT.T_COLOR_LINE_DEFAULT_DARK};
-            pointer-events: none;
-
-            ${inlineBlockWithVerticalMixin};
-        `;
-    })
-);
-
 export const Arrow = styled('span')`
     display: inline-block;
     /* transition: all 0.5s; */

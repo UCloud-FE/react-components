@@ -6,6 +6,7 @@ import { sWrap } from 'src/style';
 import config from 'src/config';
 import isFirefox from 'src/utils/isFirefox';
 import isIE from 'src/utils/isIE';
+import { inputMixin } from 'src/components/DatePicker/style';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-timepicker';
@@ -17,11 +18,12 @@ const shouldForwardProp = (propName: string): boolean => {
     return !({ customStyle: 1, theme: 1 } as { [key: string]: 1 })[propName];
 };
 
-export const SWrap = sWrap({ className: prefixCls })(
-    styled.div(() => {
+export const SWrap = sWrap<{ disabled?: boolean }>({ className: prefixCls })(
+    styled.div(props => {
         return css`
             display: inline-block;
             width: 140px;
+            ${inputMixin(props)};
         `;
     })
 );

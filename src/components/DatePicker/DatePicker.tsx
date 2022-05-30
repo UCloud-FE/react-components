@@ -122,7 +122,7 @@ const DatePickerForDate = (props: DatePickerProps) => {
                     <SPopup {...popupProps}>
                         <Arrow />
                         <Calendar {...calendarProps} sidebar={hasTime ? <Time {...timeProps} /> : null} />
-                        <Footer {...footerProps} tip={error ? { type: 'error', content: error } : null} />
+                        <Footer {...footerProps} tip={error} isError={!!error} />
                     </SPopup>
                 }
             >

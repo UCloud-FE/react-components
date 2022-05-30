@@ -51,13 +51,8 @@ const FooterWithoutMemo = ({
     const locale = useLocale(LOCALE, 'DatePicker', _locale);
     return (
         <Box className={footerCls} container justifyContent="space-between" alignItems="center">
-            {/* <Combine>
-                {shortcuts.map((shortcut, i) => (
-                    <Shortcut index={i} key={i} shortcut={shortcut} onShortcutClick={handleShortcutClick} />
-                ))}
-            </Combine> */}
             <span></span>
-            <Button styleType="primary" onClick={onConfirm} disabled={disabled}>
+            <Button styleType="primary" size="sm" onClick={onConfirm} disabled={disabled}>
                 {locale.confirm}
             </Button>
         </Box>
@@ -102,13 +97,12 @@ const TimePicker = ({
     const [inputValue, setInputValue] = useState('');
     const [timeValue, setTimeValue] = useState(value);
     const [useInputValue, setUseInputValue] = useState(true);
-    const [visible, setVisible] = useState(false);
     const [active, setActive] = useState(false);
     const defaultTime = useMemo(() => moment().startOf('date'), []);
     const avoidBlur = useCallback(e => e.preventDefault(), []);
     const format = _format || DefaultFormat;
     const handleConfirm = useCallback(() => {
-        setVisible(false);
+        setActive(false);
         let finalValue = timeValue;
         if (useInputValue) {
             const inputTime = inputToTime(inputValue, format);
@@ -174,10 +168,8 @@ const TimePicker = ({
             {...popoverConfigProps}
             {...popoverProps}
             trigger={[]}
-            showAction={['click', 'focus']}
-            hideAction={['blur']}
-            visible={visible}
-            onVisibleChange={setVisible}
+            visible={active}
+            onVisibleChange={setActive}
             popup={
                 <SPopup onMouseDown={avoidBlur}>
                     <Time value={formatTimeValue} onChange={handleTimeChange} mode={timeMode} />
@@ -185,14 +177,16 @@ const TimePicker = ({
                 </SPopup>
             }
         >
-            <SWrap>
+            <SWrap disabled={disabled}>
                 <Input
                     value={inputValue}
                     onChange={handleInputChange}
                     onBlur={handleInputBlur}
                     onFocus={handleInputFocus}
+                    onClick={handleInputFocus}
                     size={size}
                     disabled={disabled}
+                    clearable={nullable}
                     prefix={<SvgIcon type="clock" />}
                 />
             </SWrap>

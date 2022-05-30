@@ -2,8 +2,8 @@ import React, { HTMLAttributes, memo, useMemo } from 'react';
 import { HeaderButtonType, Mode } from '@z-r/calendar';
 
 import { Override } from 'src/type';
+import SvgIcon from 'src/components/SvgIcon';
 
-import SvgIcon from '../SvgIcon';
 import { iconCls } from './style';
 
 const HeaderButton = ({

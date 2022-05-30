@@ -22,38 +22,33 @@ export const TipIcon = React.memo(function TipIcon() {
 
 interface FooterProps {
     mode: Mode;
-    confirmAble: boolean;
+    // confirmAble: boolean;
     onConfirm: () => void;
     shortcuts?: TShortcut[] | null;
     onShortcut: (d: TDate) => void;
-    tip?: {
-        type?: 'error' | 'tip';
-        content: ReactNode;
-    };
+    isError?: boolean;
+    tip?: ReactNode;
     locale?: typeof LOCALE;
     showConfirm?: boolean;
 }
 
 // deprecated shortcuts for UX
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const Footer = ({ confirmAble, onConfirm, shortcuts, onShortcut, tip, showConfirm, locale: _locale }: FooterProps) => {
+const Footer = ({ isError, onConfirm, shortcuts, onShortcut, tip, showConfirm, locale: _locale }: FooterProps) => {
     const handleConfirm = useCallback(() => onConfirm(), [onConfirm]);
     const locale = useLocale(LOCALE, 'DatePicker', _locale);
     return !tip && !showConfirm ? null : (
         <Box className={footerCls} container justifyContent="space-between" alignItems="center">
             {tip ? (
-                <span
-                    className={tip.type === 'error' ? errorTipCls : tipCls}
-                    title={typeof tip.content === 'string' ? tip.content : ''}
-                >
+                <span className={isError ? errorTipCls : tipCls} title={typeof tip === 'string' ? tip : ''}>
                     <TipIcon />
-                    <span>{tip.content}</span>
+                    <span>{tip}</span>
                 </span>
             ) : (
                 <span></span>
             )}
             {showConfirm && (
-                <Button styleType="primary" size="sm" disabled={!confirmAble} onClick={handleConfirm}>
+                <Button styleType="primary" size="sm" disabled={isError} onClick={handleConfirm}>
                     {locale.confirm}
                 </Button>
             )}
