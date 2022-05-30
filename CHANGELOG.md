@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.2](https://github.com/UCloud-FE/react-components/compare/v1.4.1...v1.4.2) (2022-05-30)
+
+### Bug Fixes
+
+-   **Calendar:** fix range display ([e7e2f1a](https://github.com/UCloud-FE/react-components/commit/e7e2f1a3b049f3681cf57d75e255b9369c782710))
+
 ### [1.4.1](https://github.com/UCloud-FE/react-components/compare/v1.4.0...v1.4.1) (2022-05-30)
 
 ### Bug Fixes
