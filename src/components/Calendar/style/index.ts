@@ -184,21 +184,15 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
                     }
                 }
                 &.${prefixCls}-cell.${prefixCls}-range-middle:first-of-type:not(.${prefixCls}-next):not(.${prefixCls}-prev) {
-                    .${cellContentCls} {
+                    .${cellContentPrevSpaceCls} {
                         border-top-left-radius: 2px;
                         border-bottom-left-radius: 2px;
                     }
-                    .${cellContentPrevSpaceCls} {
-                        background: none;
-                    }
                 }
                 &.${prefixCls}-cell.${prefixCls}-range-middle:last-of-type:not(.${prefixCls}-next):not(.${prefixCls}-prev) {
-                    .${cellContentCls} {
+                    .${cellContentNextSpaceCls} {
                         border-top-right-radius: 2px;
                         border-bottom-right-radius: 2px;
-                    }
-                    .${cellContentNextSpaceCls} {
-                        background: none;
                     }
                 }
                 &.${prefixCls}-cell.${prefixCls}-range-last:not(.${prefixCls}-next):not(.${prefixCls}-prev):not(.${prefixCls}-range-unclosed):not(.${prefixCls}-range-first) {
