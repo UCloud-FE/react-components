@@ -1,6 +1,6 @@
 import React, { Ref, forwardRef, useCallback, useImperativeHandle, useRef } from 'react';
 
-import KEYCODE from 'src/interfaces/KeyCode';
+import KEYCODE from 'src/utils/KeyCode';
 import noop from 'src/utils/noop';
 
 import Input, { InputProps, InputRef } from './Input';

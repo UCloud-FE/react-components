@@ -7,7 +7,7 @@ exports[`Card demo -- card 1`] = `
   overflow: auto;
   background: #ffffff;
   font-size: 12px;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 4px 4px -2px rgba(0,0,0,0.05),inset 0 -2px 0px 0px #f8f8ff;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 4px 4px -2px rgba(0,0,0,0.05),inset 0 -2px 0px 0px rgba(0,0,0,0.08);
   border-radius: 4px;
 }
 
@@ -178,7 +178,7 @@ exports[`Card demo -- card 1`] = `
   overflow: auto;
   background: #ffffff;
   font-size: 12px;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 4px 4px -2px rgba(0,0,0,0.05),inset 0 -2px 0px 0px #f8f8ff;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 4px 4px -2px rgba(0,0,0,0.05),inset 0 -2px 0px 0px rgba(0,0,0,0.08);
   border-radius: 4px;
 }
 
@@ -438,7 +438,7 @@ exports[`Card demo -- custom 1`] = `
   overflow: auto;
   background: #ffffff;
   font-size: 12px;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 4px 4px -2px rgba(0,0,0,0.05),inset 0 -2px 0px 0px #f8f8ff;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 4px 4px -2px rgba(0,0,0,0.05),inset 0 -2px 0px 0px rgba(0,0,0,0.08);
   border-radius: 4px;
 }
 
@@ -593,7 +593,7 @@ exports[`Card demo -- custom 1`] = `
   overflow: auto;
   background: #ffffff;
   font-size: 12px;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 4px 4px -2px rgba(0,0,0,0.05),inset 0 -2px 0px 0px #f8f8ff;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 4px 4px -2px rgba(0,0,0,0.05),inset 0 -2px 0px 0px rgba(0,0,0,0.08);
   border-radius: 4px;
 }
 
@@ -806,7 +806,7 @@ exports[`Card demo -- list 1`] = `
   overflow: auto;
   background: #ffffff;
   font-size: 12px;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 4px 4px -2px rgba(0,0,0,0.05),inset 0 -2px 0px 0px #f8f8ff;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 4px 4px -2px rgba(0,0,0,0.05),inset 0 -2px 0px 0px rgba(0,0,0,0.08);
   border-radius: 4px;
 }
 
@@ -989,7 +989,7 @@ exports[`Card demo -- list 1`] = `
   overflow: auto;
   background: #ffffff;
   font-size: 12px;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 4px 4px -2px rgba(0,0,0,0.05),inset 0 -2px 0px 0px #f8f8ff;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 4px 4px -2px rgba(0,0,0,0.05),inset 0 -2px 0px 0px rgba(0,0,0,0.08);
   border-radius: 4px;
 }
 
@@ -1409,7 +1409,7 @@ exports[`Card demo -- popupContainer 1`] = `
   overflow: auto;
   background: #ffffff;
   font-size: 12px;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 4px 4px -2px rgba(0,0,0,0.05),inset 0 -2px 0px 0px #f8f8ff;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 4px 4px -2px rgba(0,0,0,0.05),inset 0 -2px 0px 0px rgba(0,0,0,0.08);
   border-radius: 4px;
 }
 
@@ -1544,6 +1544,22 @@ exports[`Card demo -- popupContainer 1`] = `
   width: 180px;
 }
 
+.emotion-20 .uc-fe-input .uc-fe-input-block-wrap {
+  padding: 0 4px;
+  background-clip: content-box;
+  will-change: background;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
+.emotion-20:hover .uc-fe-input .uc-fe-input-block-wrap {
+  background-color: #e3e9ff;
+}
+
+.emotion-20 .uc-fe-input.uc-fe-input-focused .uc-fe-input-block-wrap {
+  background-color: #e3e9ff;
+}
+
 .emotion-18 {
   position: relative;
   box-sizing: border-box;
@@ -1578,11 +1594,16 @@ exports[`Card demo -- popupContainer 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  color: #7a8baa;
-  fill: #7a8baa;
+  color: rgba(10,22,51,0.2);
+  fill: rgba(10,22,51,0.2);
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+}
+
+.emotion-18 .uc-fe-input-clear:hover {
+  color: #7a8baa;
+  fill: #7a8baa;
 }
 
 .emotion-18 .uc-fe-input-wrap,
@@ -1625,6 +1646,22 @@ exports[`Card demo -- popupContainer 1`] = `
   flex: 0 0 auto;
 }
 
+.emotion-18 .uc-fe-input-block-wrap {
+  height: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 0px;
+}
+
 .emotion-18 input {
   box-sizing: border-box;
   height: 100%;
@@ -1647,22 +1684,22 @@ exports[`Card demo -- popupContainer 1`] = `
 
 .emotion-18 input::-webkit-input-placeholder {
   opacity: 1;
-  color: rgba(10,22,51,0.20);
+  color: rgba(10,22,51,0.2);
 }
 
 .emotion-18 input::-moz-placeholder {
   opacity: 1;
-  color: rgba(10,22,51,0.20);
+  color: rgba(10,22,51,0.2);
 }
 
 .emotion-18 input:-ms-input-placeholder {
   opacity: 1;
-  color: rgba(10,22,51,0.20);
+  color: rgba(10,22,51,0.2);
 }
 
 .emotion-18 input::placeholder {
   opacity: 1;
-  color: rgba(10,22,51,0.20);
+  color: rgba(10,22,51,0.2);
 }
 
 .emotion-18 input::-ms-clear {
@@ -1689,6 +1726,22 @@ exports[`Card demo -- popupContainer 1`] = `
   display: inline-block;
   vertical-align: middle;
   width: 140px;
+}
+
+.emotion-30 .uc-fe-input .uc-fe-input-block-wrap {
+  padding: 0 4px;
+  background-clip: content-box;
+  will-change: background;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
+.emotion-30:hover .uc-fe-input .uc-fe-input-block-wrap {
+  background-color: #e3e9ff;
+}
+
+.emotion-30 .uc-fe-input.uc-fe-input-focused .uc-fe-input-block-wrap {
+  background-color: #e3e9ff;
 }
 
 .emotion-2 {
@@ -1697,7 +1750,7 @@ exports[`Card demo -- popupContainer 1`] = `
   overflow: auto;
   background: #ffffff;
   font-size: 12px;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 4px 4px -2px rgba(0,0,0,0.05),inset 0 -2px 0px 0px #f8f8ff;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 4px 4px -2px rgba(0,0,0,0.05),inset 0 -2px 0px 0px rgba(0,0,0,0.08);
   border-radius: 4px;
 }
 
@@ -1832,6 +1885,22 @@ exports[`Card demo -- popupContainer 1`] = `
   width: 180px;
 }
 
+.emotion-20 .uc-fe-input .uc-fe-input-block-wrap {
+  padding: 0 4px;
+  background-clip: content-box;
+  will-change: background;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
+.emotion-20:hover .uc-fe-input .uc-fe-input-block-wrap {
+  background-color: #e3e9ff;
+}
+
+.emotion-20 .uc-fe-input.uc-fe-input-focused .uc-fe-input-block-wrap {
+  background-color: #e3e9ff;
+}
+
 .emotion-18 {
   position: relative;
   box-sizing: border-box;
@@ -1866,11 +1935,16 @@ exports[`Card demo -- popupContainer 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  color: #7a8baa;
-  fill: #7a8baa;
+  color: rgba(10,22,51,0.2);
+  fill: rgba(10,22,51,0.2);
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+}
+
+.emotion-18 .uc-fe-input-clear:hover {
+  color: #7a8baa;
+  fill: #7a8baa;
 }
 
 .emotion-18 .uc-fe-input-wrap,
@@ -1913,6 +1987,22 @@ exports[`Card demo -- popupContainer 1`] = `
   flex: 0 0 auto;
 }
 
+.emotion-18 .uc-fe-input-block-wrap {
+  height: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 0px;
+}
+
 .emotion-18 input {
   box-sizing: border-box;
   height: 100%;
@@ -1935,22 +2025,22 @@ exports[`Card demo -- popupContainer 1`] = `
 
 .emotion-18 input::-webkit-input-placeholder {
   opacity: 1;
-  color: rgba(10,22,51,0.20);
+  color: rgba(10,22,51,0.2);
 }
 
 .emotion-18 input::-moz-placeholder {
   opacity: 1;
-  color: rgba(10,22,51,0.20);
+  color: rgba(10,22,51,0.2);
 }
 
 .emotion-18 input:-ms-input-placeholder {
   opacity: 1;
-  color: rgba(10,22,51,0.20);
+  color: rgba(10,22,51,0.2);
 }
 
 .emotion-18 input::placeholder {
   opacity: 1;
-  color: rgba(10,22,51,0.20);
+  color: rgba(10,22,51,0.2);
 }
 
 .emotion-18 input::-ms-clear {
@@ -1977,6 +2067,22 @@ exports[`Card demo -- popupContainer 1`] = `
   display: inline-block;
   vertical-align: middle;
   width: 140px;
+}
+
+.emotion-30 .uc-fe-input .uc-fe-input-block-wrap {
+  padding: 0 4px;
+  background-clip: content-box;
+  will-change: background;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
+.emotion-30:hover .uc-fe-input .uc-fe-input-block-wrap {
+  background-color: #e3e9ff;
+}
+
+.emotion-30 .uc-fe-input.uc-fe-input-focused .uc-fe-input-block-wrap {
+  background-color: #e3e9ff;
 }
 
 <div>
@@ -2080,10 +2186,14 @@ exports[`Card demo -- popupContainer 1`] = `
                     />
                   </svg>
                 </span>
-                <input
-                  placeholder="选择日期"
-                  value="2018-07-21 19:55:21"
-                />
+                <span
+                  class="uc-fe-input-block-wrap"
+                >
+                  <input
+                    placeholder="选择日期"
+                    value="2018-07-21 19:55:21"
+                  />
+                </span>
               </span>
             </span>
           </div>
@@ -2125,10 +2235,14 @@ exports[`Card demo -- popupContainer 1`] = `
                     />
                   </svg>
                 </span>
-                <input
-                  placeholder="选择日期"
-                  value="2018-07"
-                />
+                <span
+                  class="uc-fe-input-block-wrap"
+                >
+                  <input
+                    placeholder="选择日期"
+                    value="2018-07"
+                  />
+                </span>
               </span>
             </span>
           </div>
@@ -2146,7 +2260,7 @@ exports[`Card demo -- single 1`] = `
   overflow: auto;
   background: #ffffff;
   font-size: 12px;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 4px 4px -2px rgba(0,0,0,0.05),inset 0 -2px 0px 0px #f8f8ff;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 4px 4px -2px rgba(0,0,0,0.05),inset 0 -2px 0px 0px rgba(0,0,0,0.08);
   border-radius: 4px;
 }
 
@@ -2300,7 +2414,7 @@ exports[`Card demo -- single 1`] = `
   overflow: auto;
   background: #ffffff;
   font-size: 12px;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 4px 4px -2px rgba(0,0,0,0.05),inset 0 -2px 0px 0px #f8f8ff;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 4px 4px -2px rgba(0,0,0,0.05),inset 0 -2px 0px 0px rgba(0,0,0,0.08);
   border-radius: 4px;
 }
 

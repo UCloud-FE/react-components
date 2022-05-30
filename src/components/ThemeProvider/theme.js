@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-import { designTokens } from './designTokens';
+import designTokens from './designTokens';
 
 const defaultSizeTheme = {
     // default font-size

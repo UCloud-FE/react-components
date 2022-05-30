@@ -79,9 +79,13 @@ module.exports = [
             {
                 name: 'Upload'
             },
-            {
-                name: 'Calendar'
-            },
+            ...(isProd
+                ? []
+                : [
+                      {
+                          name: 'Calendar'
+                      }
+                  ]),
             {
                 name: 'DatePicker',
                 components: ['DatePicker', 'Month', 'Range']

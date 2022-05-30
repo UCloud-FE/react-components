@@ -1,6 +1,6 @@
 import React, { HTMLAttributes, memo, useCallback, useMemo } from 'react';
 import { Moment } from 'moment';
-import { TDate } from '@z-r/calendar/types/interface';
+import { TDate } from '@z-r/calendar';
 
 import { Override } from 'src/type';
 import useLocale from 'src/components/LocaleProvider/useLocale';
@@ -10,10 +10,14 @@ import { SCalendar, prefixCls } from './style';
 import HeaderSwitcher from './HeaderSwitcher';
 import LOCALE from './locale/zh_CN';
 import Month from './Month';
+import Cell from './Cell';
+import HeaderButton from './HeaderButton';
 
 export interface CalendarProps {
     /** 当前值，受控 */
     value?: TDate | null;
+    /** 范围值 */
+    rangeValue?: [TDate | null, TDate | null];
     /** 默认值，非受控 */
     defaultValue?: TDate | null;
     /**
@@ -22,6 +26,9 @@ export interface CalendarProps {
     onSelect?: (t: Moment) => void;
     /** 选中变化回调 */
     onChange?: (t: Moment) => void;
+    current?: TDate;
+    defaultCurrent?: TDate;
+    onCurrentChange?: (v: TDate) => void;
     /** 自定义规则 */
     rules?: Rules;
     /** 自定义样式 */
@@ -49,9 +56,9 @@ const DateCalendar = React.memo(function DateCalendar({
     }, [rules]);
     const handleChange = useCallback(
         (v: TDate) => {
-            v = getValidDate(v, rules);
-            onChange && onChange(v);
-            onSelect && onSelect(v);
+            const validDate = getValidDate(v, rules);
+            onChange && onChange(validDate);
+            onSelect && onSelect(validDate);
         },
         [onChange, onSelect, rules]
     );
@@ -68,7 +75,8 @@ const DateCalendar = React.memo(function DateCalendar({
             disabledRule={disabledRule}
             onChange={handleChange}
             locale={calendarLocale}
-            components={{ HeaderSwitcher: renderHeaderSwitcher }}
+            monthBeforeYear={locale.monthBeforeYear}
+            components={{ HeaderSwitcher: renderHeaderSwitcher, Cell: Cell, HeaderButton }}
             {...rest}
         />
     );

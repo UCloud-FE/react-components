@@ -146,11 +146,11 @@ const useSearch = <T extends { title: ReactNode | string; key: string; children?
                 cacheRef.current.onSearchEnd?.(result);
             } catch (error) {
                 // ignore cancel error
-                if (isCancelError(error)) return;
+                if (isCancelError(error as Error | CancelError)) return;
                 console.error(error);
                 if (cancelToken.cancel) return;
                 setLoading(false);
-                setError(error);
+                setError(error as Error);
             }
         })();
         return () => {

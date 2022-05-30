@@ -1,17 +1,16 @@
 import React from 'react';
 import { Moment } from 'moment';
-import { TDate } from '@z-r/calendar/types/interface';
+import { TDate } from '@z-r/calendar';
 
 import Input from 'src/components/Input';
 import Calendar from 'src/components/Calendar';
 import Popover from 'src/components/Popover';
-import Notice from 'src/components/Notice';
 import Time from 'src/components/TimePicker/Time';
 import SvgIcon from 'src/components/SvgIcon';
 import { Size } from 'src/type';
 
 import LOCALE from './locale/zh_CN';
-import { PickerContainer, SPopup } from './style';
+import { Arrow, PickerContainer, SPopup } from './style';
 import Footer, { TShortcut } from './Footer';
 import usePicker from './usePicker';
 import { formatToShort } from './utils';
@@ -121,13 +120,9 @@ const DatePickerForDate = (props: DatePickerProps) => {
                 {...popoverProps}
                 popup={
                     <SPopup {...popupProps}>
+                        <Arrow />
                         <Calendar {...calendarProps} sidebar={hasTime ? <Time {...timeProps} /> : null} />
-                        {error && (
-                            <Notice styleType="error" closable={false}>
-                                {error}
-                            </Notice>
-                        )}
-                        <Footer {...footerProps} />
+                        <Footer {...footerProps} tip={error} isError={!!error} />
                     </SPopup>
                 }
             >

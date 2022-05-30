@@ -1,19 +1,11 @@
-import React, {
-    ChangeEvent,
-    KeyboardEvent,
-    ReactNode,
-    memo,
-    useCallback,
-    useRef,
-    useState
-} from 'react';
+import React, { ChangeEvent, KeyboardEvent, ReactNode, memo, useCallback, useRef, useState } from 'react';
 
 import Input, { InputProps } from 'src/components/Input';
 import Popover from 'src/components/Popover';
 import SvgIcon from 'src/components/SvgIcon';
 import useUncontrolled from 'src/hooks/useUncontrolled';
 import usePopoverConfig from 'src/hooks/usePopoverConfig';
-import KeyCode from 'src/interfaces/KeyCode';
+import KeyCode from 'src/utils/KeyCode';
 import { Override } from 'src/type';
 
 import Popup, { ListRef } from './Popup';
@@ -84,14 +76,16 @@ const AutoComplete = ({
         },
         [onChange]
     );
-    const onKeyPress = useCallback((e: KeyboardEvent) => {
+    const onKeyDown = useCallback((e: KeyboardEvent) => {
         let intercept = true;
         switch (e.keyCode) {
             case KeyCode.ARROW_UP:
                 list && list.current && list.current.moveUp();
+                setVisible(true);
                 break;
             case KeyCode.ARROW_DOWN:
                 list && list.current && list.current.moveDown();
+                setVisible(true);
                 break;
             case KeyCode.ENTER:
                 list && list.current && list.current.select();
@@ -127,6 +121,7 @@ const AutoComplete = ({
                         handleSearch={handleSearch}
                         onChange={onSelect}
                         loading={loading}
+                        // ref={list}
                     />
                 }
                 trigger={[]}
@@ -141,7 +136,7 @@ const AutoComplete = ({
                     onChange={onInputChange}
                     onFocus={onFocus}
                     onBlur={onBlur}
-                    onKeyPress={onKeyPress}
+                    onKeyDown={onKeyDown}
                     disabled={disabled}
                     prefix={prefix}
                     suffix={loading && <SvgIcon className={loadingIconCls} type="ring-loading" spin />}

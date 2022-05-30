@@ -1,15 +1,17 @@
 import { ChangeEvent, useCallback, useEffect, useMemo, useState } from 'react';
 import moment, { Moment } from 'moment';
-import { TDate } from '@z-r/calendar/types/interface';
+import type { TDate } from '@z-r/calendar';
 
 import { animationPrefixCls } from 'src/style/globalAnimation';
 import useLocale from 'src/components/LocaleProvider/useLocale';
 import useUncontrolled from 'src/hooks/useUncontrolled';
 import usePopoverConfig from 'src/hooks/usePopoverConfig';
+import KeyCode from 'src/utils/KeyCode';
 
 import LOCALE from './locale/zh_CN';
 import { isDateDisabled, getValidDate, isDateValid } from './utils';
 import { DatePickerProps } from './DatePicker';
+import { datePickerPopupCls } from './style';
 
 const formatInput = (v: string, allFormat: string[]): Moment | null | false => {
     if (v == '') return null;
@@ -49,17 +51,24 @@ type TProps<D> = {
     onInitialChange?: (v: Moment | null) => void;
     display?: D;
 } & DatePickerProps;
+
 interface DisplayToFormatAndTimeMode<D> {
     (display?: D): [string[]] | [string[], string[]];
 }
 
-const getValidCurrentDate = (value: TDate | null | undefined, d: Date, currentValue?: TDate) =>
+const getValidCurrentDate = (value: TDate | null | undefined, d: Date, currentValue?: TDate): TDate =>
     value != null && moment(+value).isValid()
         ? value
         : currentValue != null
         ? currentValue
         : moment(d).set({ hour: 0, minute: 0, second: 0, millisecond: 0 });
-
+const trigger: string[] = [];
+const align = {
+    points: ['tl', 'bl'],
+    overflow: { adjustX: 0, adjustY: 1 },
+    offset: [0, 10],
+    targetOffset: [0, 0]
+};
 const usePicker = <D,>(
     props: TProps<D>,
     displayToFormatAndTimeMode: DisplayToFormatAndTimeMode<D>,
@@ -103,6 +112,7 @@ const usePicker = <D,>(
 
     const d = useMemo(() => new Date(), []);
 
+    const clickConfirm = !timeMode?.length;
     let [value, onChange] = useUncontrolled<TDate | null | undefined, Moment | null>(_value, defaultValue, _onChange);
     const [calCurrentValue, setCalCurrentValue] = useState(() => getValidCurrentDate(value, d));
     if (!nullable && value == null) value = d;
@@ -111,11 +121,10 @@ const usePicker = <D,>(
     const [lastValidValue, setLastValidValue] = useState(calValue);
     const [useInputValue, setUseInputValue] = useState(true);
     const [visible, setVisible] = useState(false);
-    const [active, setActive] = useState(false);
     const locale = useLocale(LOCALE, 'DatePicker', _locale);
 
     useEffect(() => {
-        if (active) return;
+        if (visible) return;
         if (!value) {
             if (nullable) {
                 setInputValue('');
@@ -125,7 +134,7 @@ const usePicker = <D,>(
         } else {
             setInputValue(formatDate(moment(+value), format));
         }
-    }, [active, d, format, nullable, value]);
+    }, [visible, d, format, nullable, value]);
 
     const error = useMemo(() => {
         let currentValue: TDate | null | undefined;
@@ -171,27 +180,14 @@ const usePicker = <D,>(
         },
         [allFormat, calValue, visible]
     );
-    const handleCalendarChange = useCallback(
-        (v: Moment | TDate) => {
-            v = getValidDate(v, rules);
-            setCalValue(moment(+v));
-            setInputValue(formatDate(moment(+v), format));
-            setUseInputValue(false);
-        },
-        [format, rules]
-    );
-
-    const handleInputFocus = useCallback(() => {
-        setCalValue(value == null ? null : value);
-        setCalCurrentValue(currentValue => getValidCurrentDate(value, d, currentValue));
-        setUseInputValue(true);
-        setActive(true);
-    }, [d, value]);
-    const handleInputBlur = useCallback(() => setActive(false), []);
+    const clear = useCallback(() => {
+        setInputValue('');
+        setCalValue(null);
+    }, []);
 
     const handleConfirm = useCallback(
-        (v?: TDate) => {
-            const currentValue = v != null ? v : calValue;
+        (v?: TDate | null) => {
+            const currentValue = v !== undefined ? v : calValue;
             if (!currentValue) {
                 if (!nullable) return;
             } else if (isDateDisabled(+currentValue, value, rules)) {
@@ -201,6 +197,50 @@ const usePicker = <D,>(
             setVisible(false);
         },
         [calValue, nullable, onChange, rules, value]
+    );
+    const handleInputClear = useCallback(() => {
+        setTimeout(() => {
+            handleInputChange({ target: { value: '' } } as ChangeEvent<HTMLInputElement>);
+        }, 0);
+    }, [handleInputChange]);
+
+    const handleCalendarChange = useCallback(
+        (v: Moment | TDate) => {
+            v = getValidDate(v, rules);
+            setCalValue(moment(+v));
+            setInputValue(formatDate(moment(+v), format));
+            setUseInputValue(false);
+            if (clickConfirm) {
+                onChange && onChange(moment(+v));
+                setVisible(false);
+            }
+        },
+        [clickConfirm, format, onChange, rules]
+    );
+
+    const handleInputFocus = useCallback(() => {
+        setCalValue(value == null ? null : value);
+        setCalCurrentValue(currentValue => getValidCurrentDate(value, d, currentValue));
+        setUseInputValue(true);
+        setVisible(true);
+    }, [d, value]);
+    const handleInputBlur = useCallback(() => {
+        setVisible(false);
+    }, []);
+    const handleInputClick = useCallback(() => {
+        setVisible(true);
+    }, []);
+    const handleInputMouseDown = handleInputClick;
+
+    const handleInputDown = useCallback(
+        (e: KeyboardEvent) => {
+            if (e.keyCode === KeyCode.ENTER) {
+                handleConfirm();
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        },
+        [handleConfirm]
     );
 
     const handleShortcut = useCallback(
@@ -217,25 +257,29 @@ const usePicker = <D,>(
     const inputProps = {
         value: inputValue,
         onChange: handleInputChange,
-        onBlur: handleInputBlur,
         onFocus: handleInputFocus,
+        onBlur: handleInputBlur,
+        onKeyDown: handleInputDown,
+        onClick: handleInputClick,
+        onMouseDown: handleInputMouseDown,
         disabled,
         size,
         status,
-        placeholder: placeholder === undefined ? locale.placeholder : placeholder
+        placeholder: placeholder === undefined ? locale.placeholder : placeholder,
+        clearable: nullable,
+        onClear: handleInputClear
     };
-    const containerProps = rest;
+    const containerProps = { ...rest, disabled, status };
     const _popoverProps = {
         zIndex,
         transitionName: `${animationPrefixCls}-fade`,
         ...popoverConfigProps,
         ...popoverProps,
         ...(getCalendarContainer ? { getPopupContainer: getCalendarContainer } : {}),
-        trigger: [],
-        showAction: ['click', 'focus'],
-        hideAction: ['blur'],
+        popupClassName: datePickerPopupCls,
+        trigger,
         visible,
-        onVisibleChange: setVisible
+        align
     };
     const popupProps = {
         onMouseDown: avoidBlur
@@ -259,7 +303,8 @@ const usePicker = <D,>(
         confirmAble: error === true,
         onConfirm: handleConfirm,
         locale: _locale,
-        shortcuts
+        shortcuts,
+        showConfirm: !clickConfirm
     };
 
     return [
@@ -272,8 +317,9 @@ const usePicker = <D,>(
         footerProps,
         {
             error: typeof error === 'string' ? error : null,
-            active
-        }
+            active: visible
+        },
+        { clear }
     ];
 };
 

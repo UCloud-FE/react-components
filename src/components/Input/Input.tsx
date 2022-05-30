@@ -23,7 +23,7 @@ import noop from 'src/utils/noop';
 import useUncontrolled from 'src/hooks/useUncontrolled';
 import { Size } from 'src/type';
 
-import { SWrap, inputWrapCls, blockCls, inputPrefixCls, inputSuffixCls, clearCls } from './style';
+import { SWrap, inputWrapCls, blockCls, inputPrefixCls, inputSuffixCls, clearCls, inputBlockWrapCls } from './style';
 
 const deprecatedLogForIcon = deprecatedLog('Input icon', 'suffix');
 
@@ -190,16 +190,18 @@ const Input = forwardRef(
             >
                 <span className={inputWrapCls}>
                     {renderPrefix}
-                    <input
-                        {...rest}
-                        value={value}
-                        onChange={onChange}
-                        ref={inputRef}
-                        onFocus={handleFocus}
-                        onBlur={handleBlur}
-                        disabled={disabled}
-                    />
-                    {renderClear}
+                    <span className={inputBlockWrapCls}>
+                        <input
+                            {...rest}
+                            value={value}
+                            onChange={onChange}
+                            ref={inputRef}
+                            onFocus={handleFocus}
+                            onBlur={handleBlur}
+                            disabled={disabled}
+                        />
+                        {renderClear}
+                    </span>
                     {renderSuffix}
                 </span>
             </SWrap>

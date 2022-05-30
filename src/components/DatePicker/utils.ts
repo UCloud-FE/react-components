@@ -1,5 +1,7 @@
+/* stylelint-disable */
+
 import moment, { Moment } from 'moment';
-import { TDate } from '@z-r/calendar/types/interface';
+import { TDate } from '@z-r/calendar';
 
 import { isDateDisabled, getValidDate } from 'src/components/Calendar/utils';
 
@@ -34,8 +36,8 @@ const isRangeDateValid = (
     start = start == null ? null : moment(+start);
     end = end == null ? null : moment(+end);
     if (precision) {
-        start && start.startOf(precision);
-        end && end.startOf(precision);
+        start && (<Moment>start).startOf(precision);
+        end && (<Moment>end).startOf(precision);
     }
     const { range, maxRange, minRange } = rules;
     if (range) {
@@ -43,8 +45,8 @@ const isRangeDateValid = (
         s = s == null ? null : moment(+s);
         e = e == null ? null : moment(+e);
         if (precision) {
-            s && s.startOf(precision);
-            e && e.startOf(precision);
+            s && (<Moment>s).startOf(precision);
+            e && (<Moment>e).startOf(precision);
         }
         if (s != null && start != null && start < s) {
             return 'rangeError';
@@ -60,10 +62,10 @@ const isRangeDateValid = (
     if (start > end) {
         return 'startGreaterThanEnd';
     }
-    if (maxRange && moment(start).add(maxRange) < end) {
+    if (maxRange && moment(<Moment>start).add(maxRange) < end) {
         return 'maxRangeError';
     }
-    if (minRange && moment(end).subtract(minRange) < start) {
+    if (minRange && moment(<Moment>end).subtract(minRange) < start) {
         return 'minRangeError';
     }
     return true;
@@ -79,14 +81,14 @@ const isDateValid = (date: TDate, value?: TDate | null, rules?: Rules) => {
         let [start, end] = range;
         if (start != null) start = moment(+start).startOf('second');
         if (end != null) end = moment(+end).startOf('second');
-        const v = date.startOf('second');
+        const v = (<Moment>date).startOf('second');
 
         if ((start != null && v < start) || (end != null && v > end)) {
             return true;
         }
     }
     if (custom) {
-        return custom(date, value == null ? value : moment(+value));
+        return custom(<Moment>date, value == null ? value : moment(+value));
     }
 };
 

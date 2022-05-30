@@ -7,7 +7,7 @@ import Notice from 'src/components/Notice';
 import SvgIcon from 'src/components/SvgIcon';
 import usePopoverConfig from 'src/hooks/usePopoverConfig';
 
-import { PickerContainer, SPopup } from './style';
+import { Arrow, PickerContainer, SPopup } from './style';
 import Footer from './Footer';
 import usePicker from './usePicker';
 import { formatToShort } from './utils';
@@ -37,13 +37,9 @@ const Month = (props: DatePickerProps) => {
             <Popover
                 popup={
                     <SPopup {...popupProps}>
+                        <Arrow />
                         <Calendar.Month {...calendarProps} />
-                        {error && (
-                            <Notice styleType="error" closable={false}>
-                                {error}
-                            </Notice>
-                        )}
-                        <Footer {...footerProps} />
+                        <Footer {...footerProps} tip={error} isError={!!error} />
                     </SPopup>
                 }
                 {...popoverConfigProps}

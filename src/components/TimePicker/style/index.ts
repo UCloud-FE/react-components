@@ -6,6 +6,7 @@ import { sWrap } from 'src/style';
 import config from 'src/config';
 import isFirefox from 'src/utils/isFirefox';
 import isIE from 'src/utils/isIE';
+import { inputMixin } from 'src/components/DatePicker/style';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-timepicker';
@@ -17,11 +18,12 @@ const shouldForwardProp = (propName: string): boolean => {
     return !({ customStyle: 1, theme: 1 } as { [key: string]: 1 })[propName];
 };
 
-export const SWrap = sWrap({ className: prefixCls })(
-    styled.div(() => {
+export const SWrap = sWrap<{ disabled?: boolean }>({ className: prefixCls })(
+    styled.div(props => {
         return css`
             display: inline-block;
             width: 140px;
+            ${inputMixin(props)};
         `;
     })
 );
@@ -52,8 +54,8 @@ export const SPopup = sWrap({})(
 );
 
 const StepperHeight = 32;
-const SpacingHeight = 104;
-const StepperVisibleHeight = 28;
+const SpacingHeight = 100;
+const StepperVisibleHeight = 20;
 const ActiveOffset = (SpacingHeight * 2 + StepperHeight - StepperVisibleHeight) / 2;
 const StepperActiveOffset = (StepperHeight - StepperVisibleHeight) / 2;
 
@@ -74,7 +76,7 @@ export const STime = sWrap<any>({})(
                     overflow-x: hidden;
                     overflow-y: hidden;
                     z-index: 1;
-                    width: 56px;
+                    width: 42px;
                     :hover {
                         overflow-y: scroll;
                     }
@@ -92,7 +94,7 @@ export const STime = sWrap<any>({})(
                     }
 
                     .${timePrefixCls}-stepper {
-                        width: 40px;
+                        width: 20px;
                         text-align: center;
                         line-height: ${StepperHeight}px;
                         color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
@@ -111,7 +113,7 @@ export const STime = sWrap<any>({})(
                         position: absolute;
                         display: block;
                         height: ${StepperVisibleHeight}px;
-                        width: 40px;
+                        width: 20px;
                         box-sizing: border-box;
                         pointer-events: none;
                         background: ${DT.T_COLOR_BG_DEFAULT_HOVER};

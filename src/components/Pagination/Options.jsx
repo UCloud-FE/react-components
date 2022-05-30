@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Select from 'src/components/Select';
 import Button from 'src/components/Button';
 import NumberInput from 'src/components/NumberInput';
-import KEYCODE from 'src/interfaces/KeyCode';
+import KEYCODE from 'src/utils/KeyCode';
 
 class Options extends React.Component {
     static propTypes = {

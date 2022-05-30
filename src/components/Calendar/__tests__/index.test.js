@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import moment from 'moment';
 
-import KEYCODE from 'src/interfaces/KeyCode';
+import KEYCODE from 'src/utils/KeyCode';
 import Calendar from 'src/components/Calendar';
 import { isDateDisabled, getValidDate } from 'src/components/Calendar/utils';
 

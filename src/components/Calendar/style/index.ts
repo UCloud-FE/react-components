@@ -8,6 +8,12 @@ import { sWrap, Theme } from 'src/style';
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-calendar';
 export const tableCls = prefixCls + '-table';
+export const cellContentCls = prefixCls + '-cell-content';
+export const cellContentSquareCls = cellContentCls + '-square';
+export const cellContentPrevSpaceCls = cellContentCls + '-prev-space';
+export const cellContentNextSpaceCls = cellContentCls + '-next-space';
+export const twoSideSingleCls = prefixCls + '-tow-side-single';
+export const iconCls = prefixCls + '-icon';
 
 /* stylelint-disable no-duplicate-selectors */
 export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?: boolean } }) => {
@@ -22,11 +28,13 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
             position: relative;
             color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
             background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
-            ${customStyle?.boxShadow === false
-                ? null
-                : css`
-                      box-shadow: ${DT.T_SHADOW_BLOCK_DEFAULT_LG};
-                  `}
+            ${
+                customStyle?.boxShadow === false
+                    ? null
+                    : css`
+                          box-shadow: ${DT.T_SHADOW_BLOCK_DEFAULT_LG};
+                      `
+            }
         }
 
         .${prefixCls}-header {
@@ -42,13 +50,16 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
         }
         .${prefixCls}-header-button {
             display: block;
-            width: 28px;
-            font-size: 16px;
             text-align: center;
-            color: ${DT.T_COLOR_TEXT_REMARK_DARK};
             cursor: pointer;
-            :hover {
-                color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+            margin: 0 8px;
+            .${iconCls} {
+                width: 16px;
+                height: 16px;
+                fill: ${DT.T_COLOR_TEXT_REMARK_DARK};
+            }
+            :hover .${iconCls}  {
+                fill: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
             }
         }
         .${prefixCls}-header-switcher-wrap {
@@ -72,71 +83,154 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
             }
         }
         .${prefixCls}-thead {
-            padding: 0 8px;
-            font-size: 14px;
+            padding: 0 10px;
+            font-size: 12px;
             font-weight: 600;
             background: ${DT.T_COLOR_BG_DEFAULT_LIGHT};
             .${prefixCls}-cell {
-                line-height: 32px;
+                line-height: 28px;
                 text-align: center;
                 vertical-align: middle;
             }
         }
         .${prefixCls}-tbody {
-            padding: 0 8px 8px;
+            padding: 0 10px 12px;
             font-size: 12px;
             display: flex;
             flex-direction: column;
             .${prefixCls}-row {
-                margin-top: 4px;
+                margin-top: 12px;
             }
             .${prefixCls}-cell {
-                display: inline-block;
-                height: 28px;
+                display: inline-flex;
                 margin: 0 auto;
-                line-height: 28px;
-                text-align: center;
-                border-radius: 2px;
                 cursor: pointer;
                 user-select: none;
+                justify-content: center;
+
+                .${cellContentPrevSpaceCls}, .${cellContentNextSpaceCls} {
+                    content: ' ';
+                    display: flex;
+                    flex: 1;
+                }
+                .${cellContentCls} {
+                    display: block;
+                    text-align: center;
+                    height: 20px;
+                    width: 20px;
+                    line-height: 20px;
+                    .${cellContentSquareCls} {
+                        border-radius: 2px;
+                    }
+                }
+
+                &.${prefixCls}-cell-month, &.${prefixCls}-cell-year, &.${prefixCls}-cell-decade {
+                    .${cellContentCls} {
+                        border-radius: 2px;
+                        height: 32px;
+                        width: 40px;
+                        line-height: 32px;
+                    }
+                }
+                &.${prefixCls}-cell-decade .${cellContentCls} {
+                    width: 82px;
+                }
 
                 :not(.${prefixCls}-cell-empty):hover {
-                    background: ${DT.T_COLOR_BG_DEFAULT_HOVER};
+                    .${cellContentCls} .${cellContentSquareCls} {
+                        background: ${DT.T_COLOR_BG_DEFAULT_HOVER};
+                    }
                 }
                 &.${prefixCls}-cell-empty {
                     cursor: default;
                 }
-                &.${prefixCls}-cell.${prefixCls}-prev, &.${prefixCls}-cell.${prefixCls}-next {
+                &.${prefixCls}-prev, &.${prefixCls}-next {
                     color: ${DT.T_COLOR_TEXT_DISABLED};
                     :hover {
-                        background: ${DT.T_COLOR_BG_DEFAULT_HOVER};
+                        .${cellContentCls} .${cellContentSquareCls} {
+                            background: ${DT.T_COLOR_BG_DEFAULT_HOVER};
+                        }
                     }
                 }
                 &.${prefixCls}-cell.${prefixCls}-disabled {
-                    background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
-                    color: ${DT.T_COLOR_TEXT_DISABLED};
                     cursor: default;
-                    border-radius: 0;
-                    &.${prefixCls}-prev, &.${prefixCls}-next {
+                    .${cellContentCls} .${cellContentSquareCls},
+                    .${cellContentPrevSpaceCls},
+                    .${cellContentNextSpaceCls} {
                         background: ${DT.T_COLOR_BG_DISABLED_LIGHT};
+                        color: ${DT.T_COLOR_TEXT_DISABLED};
+                        border-radius: 0;
                     }
                     &.${prefixCls}-cell-disabled-first {
-                        border-top-left-radius: 2px;
-                        border-bottom-left-radius: 2px;
+                        .${cellContentPrevSpaceCls} {
+                            border-top-left-radius: 2px;
+                            border-bottom-left-radius: 2px;
+                        }
                     }
                     &.${prefixCls}-cell-disabled-last {
-                        border-top-right-radius: 2px;
-                        border-bottom-right-radius: 2px;
+                        .${cellContentNextSpaceCls} {
+                            border-top-right-radius: 2px;
+                            border-bottom-right-radius: 2px;
+                        }
                     }
                 }
 
                 &.${prefixCls}-now {
                     color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
                 }
-                &.${prefixCls}-cell.${prefixCls}-active {
-                    background: ${DT.T_COLOR_BG_PRIMARY_1};
-                    color: ${DT.T_COLOR_TEXT_WHITE};
-                    font-weight: bold;
+                &.${prefixCls}-cell.${prefixCls}-range-middle:not(.${prefixCls}-next):not(.${prefixCls}-prev) {
+                    .${cellContentCls}, .${cellContentPrevSpaceCls}, .${cellContentNextSpaceCls} {
+                        background: ${DT.T_COLOR_BG_DEFAULT_HOVER};
+                    }
+                }
+                &.${prefixCls}-cell.${prefixCls}-range-middle:first-of-type:not(.${prefixCls}-next):not(.${prefixCls}-prev) {
+                    .${cellContentCls} {
+                        border-top-left-radius: 2px;
+                        border-bottom-left-radius: 2px;
+                    }
+                    .${cellContentPrevSpaceCls} {
+                        background: none;
+                    }
+                }
+                &.${prefixCls}-cell.${prefixCls}-range-middle:last-of-type:not(.${prefixCls}-next):not(.${prefixCls}-prev) {
+                    .${cellContentCls} {
+                        border-top-right-radius: 2px;
+                        border-bottom-right-radius: 2px;
+                    }
+                    .${cellContentNextSpaceCls} {
+                        background: none;
+                    }
+                }
+                &.${prefixCls}-cell.${prefixCls}-range-last:not(.${prefixCls}-next):not(.${prefixCls}-prev):not(.${prefixCls}-range-unclosed):not(.${prefixCls}-range-first) {
+                    .${cellContentPrevSpaceCls} {
+                        background: ${DT.T_COLOR_BG_DEFAULT_HOVER};
+                    }
+                    .${cellContentCls} {
+                        border-top-left-radius: 0px;
+                        border-bottom-left-radius: 0px;
+                    }
+                }
+                &.${prefixCls}-cell.${prefixCls}-active,
+                &.${prefixCls}-cell.${prefixCls}-range-first:not(.${prefixCls}-next):not(.${prefixCls}-prev),
+                &.${prefixCls}-cell.${prefixCls}-range-last:not(.${prefixCls}-next):not(.${prefixCls}-prev) {
+                    .${cellContentCls} {
+                        border-radius: 2px;
+                        background: ${DT.T_COLOR_BG_DEFAULT_HOVER};
+                        .${cellContentSquareCls} {
+                            border-radius: 2px;
+                            background: ${DT.T_COLOR_BG_PRIMARY_1};
+                            color: ${DT.T_COLOR_TEXT_WHITE};
+                        }
+                    }
+                }
+                &.${prefixCls}-cell.${prefixCls}-range-first:not(.${prefixCls}-next):not(.${prefixCls}-prev):not(.${prefixCls}-range-unclosed):not(.${prefixCls}-range-last) {
+                    .${cellContentNextSpaceCls} {
+                        background: ${DT.T_COLOR_BG_DEFAULT_HOVER};
+                    }
+                    .${cellContentCls} {
+                        border-top-right-radius: 0px;
+                        border-bottom-right-radius: 0px;
+                    }
                 }
             }
         }
@@ -175,6 +269,40 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
 const shouldForwardProp = (propName: string): boolean => {
     return !({ customStyle: 1, theme: 1 } as { [key: string]: 1 })[propName];
 };
+
+export const STwoSide = sWrap<{ customStyle?: { boxShadow: boolean } }>()(
+    styled('div')(
+        ({ theme: { designTokens: DT }, customStyle }) => css`
+            ${customStyle?.boxShadow === false
+                ? null
+                : css`
+                      box-shadow: ${DT.T_SHADOW_BLOCK_DEFAULT_LG};
+                  `}
+            display: flex;
+            .${prefixCls} {
+                flex: 1;
+            }
+            &:not(.${twoSideSingleCls}) .${prefixCls}:nth-of-type(1) {
+                .${prefixCls}-body {
+                    border-right: 1px solid ${DT.T_COLOR_BG_DEFAULT_DARK};
+                }
+            }
+            &:not(.${twoSideSingleCls}) {
+                .${prefixCls}:nth-of-type(1)
+                    .${prefixCls}-header-button-nextYear,
+                    .${prefixCls}:nth-of-type(1)
+                    .${prefixCls}-header-button-nextMonth,
+                    .${prefixCls}:nth-of-type(2)
+                    .${prefixCls}-header-button-prevYear,
+                    .${prefixCls}:nth-of-type(2)
+                    .${prefixCls}-header-button-prevMonth {
+                    visibility: hidden;
+                    pointer-events: none;
+                }
+            }
+        `
+    )
+);
 
 export const SCalendar = sWrap<any>({})(
     styled(Calendar, { shouldForwardProp })`

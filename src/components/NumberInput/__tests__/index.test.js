@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 
 import NumberInput from 'src/components/NumberInput';
-import KeyCode from 'src/interfaces/KeyCode';
+import KeyCode from 'src/utils/KeyCode';
 
 describe('NumberInput', () => {
     test('action', () => {
@@ -25,10 +25,7 @@ describe('NumberInput', () => {
             />
         );
 
-        const upHandler = wrapper
-            .find('div.test-wrapper>div')
-            .at(0)
-            .childAt(0);
+        const upHandler = wrapper.find('div.test-wrapper>div').at(0).childAt(0);
         upHandler.simulate('mousedown');
         upHandler.simulate('mouseup');
 
@@ -36,10 +33,7 @@ describe('NumberInput', () => {
         expect(onChange).toHaveBeenLastCalledWith(1);
         expect(onNumberChange).toHaveBeenCalledTimes(++onNumberChangeCallTimes);
 
-        const downHandler = wrapper
-            .find('div.test-wrapper>div')
-            .at(0)
-            .childAt(1);
+        const downHandler = wrapper.find('div.test-wrapper>div').at(0).childAt(1);
         downHandler.simulate('mousedown');
         downHandler.simulate('mouseup');
 

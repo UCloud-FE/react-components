@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 import { renderToJson } from 'enzyme-to-json';
 
 import Slider from 'src/components/Slider';
-import KeyCode from 'src/interfaces/KeyCode';
+import KeyCode from 'src/utils/KeyCode';
 import sleep from 'shared/sleep';
 
 jest.unmock('rc-trigger');

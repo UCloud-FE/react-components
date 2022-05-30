@@ -10,7 +10,7 @@ import React, {
     useContext
 } from 'react';
 import moment, { Moment } from 'moment';
-import { TDate } from '@z-r/calendar/types/interface';
+import { TDate } from '@z-r/calendar';
 
 import useUncontrolled from 'src/hooks/useUncontrolled';
 import useLocale from 'src/components/LocaleProvider/useLocale';
@@ -18,13 +18,25 @@ import ControllerContext from 'src/components/Form/ControllerContext';
 import useDidMount from 'src/hooks/useDidMount';
 import isArray from 'src/utils/isArray';
 import isNumber from 'src/utils/isNumber';
+import Calendar, { TwoSide } from 'src/components/Calendar';
 import pick from 'src/utils/pick';
+import Popover from 'src/components/Popover';
+import Input from 'src/components/Input';
 
-import Picker, { RangePickerRef } from './RangePicker';
 import LOCALE from './locale/zh_CN';
 import { isRangeDateValid } from './utils';
-import { RangeSelect, RangeDateSeparator, RangeContainer, SRangeInputWrap } from './style';
-import { TShortcut } from './Footer';
+import {
+    RangeSelect,
+    RangeContainer,
+    SRangeInputWrap,
+    readonlyInputCls,
+    RangeInputWrap,
+    SPopup,
+    Arrow,
+    RangeCalendarWrap
+} from './style';
+import Footer, { TShortcut } from './Footer';
+import useRangePicker, { RangeActionRef, RangePickerRef } from './useRangePicker';
 
 interface RangeProps {
     /** 当前值，受控 */
@@ -171,12 +183,12 @@ const Range = ({
     display = {},
     format,
     rules = {},
-    type,
+    type = 'date',
     disabled,
     zIndex,
     locale: _locale,
     selectProps,
-    popoverProps,
+    popoverProps: _popoverProps,
     rangeTip,
     status,
     placeholder,
@@ -185,8 +197,6 @@ const Range = ({
     ...rest
 }: RangeProps) => {
     const d = useMemo(() => new Date(), []);
-    const [activeS, setActiveS] = useState(false);
-    const [activeE, setActiveE] = useState(false);
     const locale = useLocale(LOCALE, 'DatePicker', _locale);
     const [option, onOptionChange] = useUncontrolled(_option, defaultOption || 'custom', _onOptionChange);
     const options = useMemo(
@@ -208,6 +218,10 @@ const Range = ({
     const [rangeError, setRangeError] = useState<string>();
     const inputRefS = useRef<RangePickerRef>();
     const inputRefE = useRef<RangePickerRef>();
+    const actionRefS = useRef<RangeActionRef>();
+    const actionRefE = useRef<RangeActionRef>();
+    // 0 没有编辑中 1 第一个编辑中 2 非第一个编辑中
+    const [isFirstEditing, setIsFirstEditing] = useState<0 | 1 | 2>(0);
     const { status: contextStatus } = useContext(ControllerContext);
 
     const readonly = option !== 'custom';
@@ -234,32 +248,46 @@ const Range = ({
             const [, valueE] = cacheValue;
             const newValue: CallbackRangeValue = [value, valueE];
             const rangeDateValidResult = isRangeDateValid(newValue, rules, precision);
+            setRangeError(undefined);
             if (rangeDateValidResult !== true) {
-                setRangeError(rangeDateValidResult);
-                inputRefE.current && inputRefE.current.focus();
+                inputRefE.current?.focus();
+                if (rangeDateValidResult === 'startGreaterThanEnd') {
+                    actionRefE.current?.clear();
+                } else {
+                    setRangeError(locale[(rangeDateValidResult + 'Tip') as keyof typeof locale]);
+                }
+                newValue[1] = null;
+            } else if (isFirstEditing === 1) {
+                inputRefE.current?.focus();
             } else {
-                setRangeError(undefined);
                 onChange(newValue);
             }
             setCacheValue(newValue);
         },
-        [onChange, precision, rules, cacheValue]
+        [cacheValue, rules, precision, isFirstEditing, locale, onChange]
     );
     const handleEndChange = useCallback(
         (value: Moment | null) => {
             const [valueS] = cacheValue;
             const newValue: CallbackRangeValue = [valueS, value];
             const rangeDateValidResult = isRangeDateValid(newValue, rules, precision);
+            setRangeError(undefined);
             if (rangeDateValidResult !== true) {
-                setRangeError(rangeDateValidResult);
-                inputRefS.current && inputRefS.current.focus();
+                inputRefS.current?.focus();
+                if (rangeDateValidResult === 'startGreaterThanEnd') {
+                    actionRefS.current?.clear();
+                } else {
+                    setRangeError(locale[(rangeDateValidResult + 'Tip') as keyof typeof locale]);
+                }
+                newValue[0] = null;
+            } else if (isFirstEditing === 1) {
+                inputRefS.current?.focus();
             } else {
-                setRangeError(undefined);
                 onChange(newValue);
             }
             setCacheValue(newValue);
         },
-        [onChange, precision, rules, cacheValue]
+        [cacheValue, rules, precision, isFirstEditing, locale, onChange]
     );
 
     const handleOptionChange = useCallback(
@@ -270,30 +298,20 @@ const Range = ({
         [onChange, onOptionChange, options]
     );
 
-    const handleStartActiveChange = useCallback((active: boolean) => setActiveS(active), []);
-    const handleEndActiveChange = useCallback((active: boolean) => setActiveE(active), []);
     const handleInputMouseDown = useCallback((e: MouseEvent) => {
         if (e.target === e.currentTarget) e.preventDefault();
     }, []);
 
-    useEffect(() => {
-        if (activeS || activeE) return;
-        setCacheValue(formatRangeValue(value, nullable, d));
-    }, [activeE, activeS, d, nullable, value]);
-
-    const rangeErrorTip = locale[`${rangeError}Tip` as keyof typeof LOCALE];
     const sharedPickerProps = {
         size,
         format,
         display: pickerDisplay,
         disabled,
-        popoverProps,
+        popoverProps: _popoverProps,
         zIndex,
         type,
-        readonly,
-        tip: rangeTip,
-        error: rangeErrorTip,
-        rules
+        rules,
+        status
     };
     const [valueS, valueE] = cacheValue;
     const [placeholderS = locale.placeholderRangeStart, placeholderE = locale.placeholderRangeEnd] = isArray(
@@ -301,6 +319,60 @@ const Range = ({
     )
         ? placeholder
         : [];
+
+    const [
+        inputPropsS,
+        inputWrapPropsS,
+        calendarPropsS,
+        footerPropsS,
+        { active: activeS, error: errorS },
+        popoverProps,
+        popupProps,
+        { hasTime, isMonth }
+    ] = useRangePicker({
+        value: valueS,
+        onChange: handleStartChange,
+        nullable: nullableS,
+        placeholder: placeholderS,
+        shortcuts: shortcutsS,
+        actionRef: actionRefS,
+        ...sharedPickerProps,
+        rules: isFirstEditing === 2 ? { ...rules, range: [rules.range?.[0], cacheValue[1]] } : rules,
+        prefix: true,
+        suffix: locale.to
+    });
+
+    const [
+        inputPropsE,
+        inputWrapPropsE,
+        calendarPropsE,
+        footerPropsE,
+        { active: activeE, error: errorE }
+    ] = useRangePicker({
+        value: valueE,
+        onChange: handleEndChange,
+        nullable: nullableE,
+        placeholder: placeholderE,
+        shortcuts: shortcutsE,
+        actionRef: actionRefE,
+        ...sharedPickerProps,
+        rules: isFirstEditing === 2 ? { ...rules, range: [cacheValue[0], rules.range?.[1]] } : rules
+    });
+
+    useEffect(() => {
+        if (activeS || activeE) return;
+        setCacheValue(formatRangeValue(value, nullable, d));
+    }, [activeE, activeS, d, nullable, value]);
+
+    useEffect(() => {
+        if (!activeS && !activeE) {
+            setIsFirstEditing(0);
+        } else {
+            setIsFirstEditing(v => (v === 0 ? 1 : 2));
+        }
+    }, [activeE, activeS]);
+
+    const CalendarComp = isMonth ? Calendar.Month : hasTime ? Calendar : TwoSide;
 
     return (
         <RangeContainer {...rest} disabled={disabled}>
@@ -317,39 +389,63 @@ const Range = ({
             {readonly && customRender?.readonlyDisplay ? (
                 customRender.readonlyDisplay(cacheValue)
             ) : (
-                <SRangeInputWrap
-                    size={size}
-                    disabled={disabled}
-                    focused={activeS || activeE}
-                    readonly={readonly}
-                    onMouseDown={handleInputMouseDown}
-                    status={status || contextStatus}
+                <Popover
+                    {...popoverProps}
+                    visible={activeS || activeE}
+                    popup={
+                        <SPopup {...popupProps} endInputHighlight={activeE} {...inputWrapPropsS}>
+                            <Arrow />
+                            <RangeCalendarWrap visible={activeS}>
+                                <CalendarComp
+                                    {...calendarPropsS}
+                                    rangeValue={[calendarPropsS.value, cacheValue?.[1]]}
+                                    value={null}
+                                />
+                                <Footer
+                                    {...footerPropsS}
+                                    tip={rangeError || errorS || rangeTip}
+                                    isError={!!rangeError || !!errorS}
+                                />
+                            </RangeCalendarWrap>
+                            <RangeCalendarWrap visible={activeE}>
+                                <CalendarComp
+                                    {...calendarPropsE}
+                                    rangeValue={[cacheValue?.[0], calendarPropsE.value]}
+                                    value={null}
+                                />
+                                <Footer
+                                    {...footerPropsE}
+                                    tip={rangeError || errorE || rangeTip}
+                                    isError={!!rangeError || !!errorE}
+                                />
+                            </RangeCalendarWrap>
+                        </SPopup>
+                    }
                 >
-                    <Picker
-                        value={valueS}
-                        onChange={handleStartChange}
-                        nullable={nullableS}
-                        prefix
-                        ref={inputRefS}
-                        onActiveChange={handleStartActiveChange}
-                        placeholder={placeholderS}
-                        shortcuts={shortcutsS}
-                        footerTip={locale.chooseTipRangeStart}
-                        {...sharedPickerProps}
-                    />
-                    <RangeDateSeparator />
-                    <Picker
-                        value={valueE}
-                        onChange={handleEndChange}
-                        nullable={nullableE}
-                        ref={inputRefE}
-                        onActiveChange={handleEndActiveChange}
-                        placeholder={placeholderE}
-                        shortcuts={shortcutsE}
-                        footerTip={locale.chooseTipRangeEnd}
-                        {...sharedPickerProps}
-                    />
-                </SRangeInputWrap>
+                    <SRangeInputWrap
+                        size={size}
+                        disabled={disabled}
+                        focused={activeS || activeE}
+                        readonly={readonly}
+                        onMouseDown={handleInputMouseDown}
+                        status={status || contextStatus}
+                    >
+                        {readonly ? (
+                            <span className={readonlyInputCls}>{inputPropsS.value}</span>
+                        ) : (
+                            <RangeInputWrap {...inputWrapPropsS}>
+                                <Input {...inputPropsS} ref={inputRefS} />
+                            </RangeInputWrap>
+                        )}
+                        {readonly ? (
+                            <span className={readonlyInputCls}>{inputPropsE.value}</span>
+                        ) : (
+                            <RangeInputWrap {...inputWrapPropsE} isEnd>
+                                <Input {...inputPropsE} ref={inputRefE} />
+                            </RangeInputWrap>
+                        )}
+                    </SRangeInputWrap>
+                </Popover>
             )}
         </RangeContainer>
     );

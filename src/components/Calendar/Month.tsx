@@ -1,5 +1,5 @@
 import React, { HTMLAttributes, memo, useCallback, useMemo } from 'react';
-import { TDate } from '@z-r/calendar/types/interface';
+import { TDate } from '@z-r/calendar';
 
 import { Override } from 'src/type';
 import useLocale from 'src/components/LocaleProvider/useLocale';
@@ -9,6 +9,8 @@ import { SMonthCalendar, prefixCls } from './style';
 import HeaderSwitcher from './HeaderSwitcher';
 import LOCALE from './locale/zh_CN';
 import { CalendarProps } from './Calendar';
+import Cell from './Cell';
+import HeaderButton from './HeaderButton';
 
 /**
  * @deprecated 请使用 ```<Calendar type='month' />``` 替换
@@ -25,9 +27,9 @@ const Month = ({
     }, [rules]);
     const handleChange = useCallback(
         (v: TDate) => {
-            v = getValidDate(v, rules);
-            onChange && onChange(v);
-            onSelect && onSelect(v);
+            const validDate = getValidDate(v, rules);
+            onChange && onChange(validDate);
+            onSelect && onSelect(validDate);
         },
         [onChange, onSelect, rules]
     );
@@ -44,7 +46,7 @@ const Month = ({
             disabledRule={disabledRule}
             onChange={handleChange}
             locale={calendarLocale}
-            components={{ HeaderSwitcher: renderHeaderSwitcher }}
+            components={{ HeaderSwitcher: renderHeaderSwitcher, Cell: Cell, HeaderButton }}
             {...rest}
         />
     );

@@ -2,7 +2,7 @@ import React, { Key, ReactElement, ReactNode, UIEvent, KeyboardEvent, useCallbac
 import classnames from 'classnames';
 
 import SvgIcon from 'src/components/SvgIcon';
-import KeyCode from 'src/interfaces/KeyCode';
+import KeyCode from 'src/utils/KeyCode';
 import useUncontrolled from 'src/hooks/useUncontrolled';
 
 import TabBar from './TabBar';
