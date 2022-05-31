@@ -17,12 +17,14 @@ const useRangePicker = ({
     type = 'date',
     suffix,
     actionRef,
+    onClear,
     ...pickProps
 }: DatePickerProps & {
     prefix?: boolean;
     type?: 'date' | 'month';
     suffix?: ReactNode;
     actionRef: MutableRefObject<RangeActionRef | undefined>;
+    onClear?: () => void;
 }) => {
     const isMonth = type === 'month';
     const [inputProps, , popoverProps, popupProps, calendarProps, timeProps, footerProps, status, actions] = usePicker(
@@ -30,7 +32,8 @@ const useRangePicker = ({
             ...pickProps
         },
         isMonth ? displayToFormatAndTimeModeM : displayToFormatAndTimeMode,
-        type
+        type,
+        onClear
     );
 
     const hasTime = !!timeProps.mode?.length;

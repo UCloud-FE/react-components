@@ -246,12 +246,14 @@ const Range = ({
     });
 
     const handleStartChange = useCallback(
-        (value: Moment | null) => {
+        (value: Moment | null, isClear?: boolean) => {
             const [, valueE] = cacheValue;
             const newValue: CallbackRangeValue = [value, valueE];
             const rangeDateValidResult = isRangeDateValid(newValue, rules, precision);
             setRangeError(undefined);
-            if (rangeDateValidResult !== true) {
+            if (isClear) {
+                // noop
+            } else if (rangeDateValidResult !== true) {
                 inputRefE.current?.focus();
                 if (rangeDateValidResult === 'startGreaterThanEnd') {
                     actionRefE.current?.clear();
@@ -269,12 +271,14 @@ const Range = ({
         [cacheValue, rules, precision, isFirstEditing, locale, onChange]
     );
     const handleEndChange = useCallback(
-        (value: Moment | null) => {
+        (value: Moment | null, isClear?: boolean) => {
             const [valueS] = cacheValue;
             const newValue: CallbackRangeValue = [valueS, value];
             const rangeDateValidResult = isRangeDateValid(newValue, rules, precision);
             setRangeError(undefined);
-            if (rangeDateValidResult !== true) {
+            if (isClear) {
+                // noop
+            } else if (rangeDateValidResult !== true) {
                 inputRefS.current?.focus();
                 if (rangeDateValidResult === 'startGreaterThanEnd') {
                     actionRefS.current?.clear();
@@ -291,6 +295,14 @@ const Range = ({
         },
         [cacheValue, rules, precision, isFirstEditing, locale, onChange]
     );
+
+    const onClearS = useCallback(() => {
+        handleStartChange(null, true);
+    }, [handleStartChange]);
+
+    const onClearE = useCallback(() => {
+        handleEndChange(null, true);
+    }, [handleEndChange]);
 
     const handleOptionChange = useCallback(
         (value: string) => {
@@ -338,6 +350,7 @@ const Range = ({
         placeholder: placeholderS,
         shortcuts: shortcutsS,
         actionRef: actionRefS,
+        onClear: onClearS,
         ...sharedPickerProps,
         rules: isFirstEditing === 2 ? { ...rules, range: [rules.range?.[0], cacheValue[1]] } : rules,
         prefix: true,
@@ -357,6 +370,7 @@ const Range = ({
         placeholder: placeholderE,
         shortcuts: shortcutsE,
         actionRef: actionRefE,
+        onClear: onClearE,
         ...sharedPickerProps,
         rules: isFirstEditing === 2 ? { ...rules, range: [cacheValue[0], rules.range?.[1]] } : rules
     });

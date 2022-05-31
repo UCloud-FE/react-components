@@ -72,7 +72,8 @@ const align = {
 const usePicker = <D,>(
     props: TProps<D>,
     displayToFormatAndTimeMode: DisplayToFormatAndTimeMode<D>,
-    mode: 'date' | 'month'
+    mode: 'date' | 'month',
+    onClear?: () => void
 ) => {
     const {
         value: _value,
@@ -186,7 +187,7 @@ const usePicker = <D,>(
     }, []);
 
     const handleConfirm = useCallback(
-        (v?: TDate | null) => {
+        (v?: TDate | null, dontChangeVisible?: boolean) => {
             const currentValue = v !== undefined ? v : calValue;
             if (!currentValue) {
                 if (!nullable) return;
@@ -194,14 +195,17 @@ const usePicker = <D,>(
                 return;
             }
             onChange && onChange(currentValue ? moment(+currentValue) : null);
-            setVisible(false);
+            if (!dontChangeVisible) {
+                setVisible(false);
+            }
         },
         [calValue, nullable, onChange, rules, value]
     );
     const handleInputClear = useCallback(() => {
         clear();
-        handleConfirm(null);
-    }, [clear, handleConfirm]);
+        // 不走 onChange，区分两种操作
+        onClear?.();
+    }, [clear, onClear]);
 
     const handleCalendarChange = useCallback(
         (v: Moment | TDate) => {
