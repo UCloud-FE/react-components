@@ -230,6 +230,8 @@ const Range = ({
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { range: rangeDisplay, ...pickerDisplay } = display;
     const [shortcutsS, shortcutsE] = isArray(shortcuts) ? shortcuts : [];
+    const startRangeInputRef = useRef<HTMLDivElement>(null);
+    const [startRangeInputWidth, setStartRangeInputWidth] = useState(200);
 
     useDidMount(() => {
         const [valueS, valueE] = isArray(value) ? value : [null, null];
@@ -372,6 +374,12 @@ const Range = ({
         }
     }, [activeE, activeS]);
 
+    useEffect(() => {
+        if (activeE) {
+            setStartRangeInputWidth(startRangeInputRef.current?.offsetWidth || 200);
+        }
+    }, [activeE]);
+
     const CalendarComp = isMonth ? Calendar.Month : hasTime ? Calendar : TwoSide;
 
     return (
@@ -393,8 +401,8 @@ const Range = ({
                     {...popoverProps}
                     visible={activeS || activeE}
                     popup={
-                        <SPopup {...popupProps} endInputHighlight={activeE} {...inputWrapPropsS}>
-                            <Arrow />
+                        <SPopup {...popupProps} endInputHighlight={activeE}>
+                            <Arrow style={{ left: activeE ? startRangeInputWidth + 'px' : '20px' }} />
                             <RangeCalendarWrap visible={activeS}>
                                 <CalendarComp
                                     {...calendarPropsS}
@@ -433,7 +441,7 @@ const Range = ({
                         {readonly ? (
                             <span className={readonlyInputCls}>{inputPropsS.value}</span>
                         ) : (
-                            <RangeInputWrap {...inputWrapPropsS}>
+                            <RangeInputWrap {...inputWrapPropsS} ref={startRangeInputRef}>
                                 <Input {...inputPropsS} ref={inputRefS} />
                             </RangeInputWrap>
                         )}

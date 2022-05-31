@@ -11,7 +11,7 @@ import {
     inputBlockWrapCls
 } from 'src/components/Input/style';
 import { InputProps } from 'src/components/Input';
-import { inlineBlockWithVerticalMixin, Theme, sWrap, getHeightBySize, Size } from 'src/style';
+import { inlineBlockWithVerticalMixin, sWrap, getHeightBySize, Size } from 'src/style';
 import config from 'src/config';
 import { prefixCls as popoverPrefixCls } from 'src/components/Popover/style';
 import { injectGlobal } from 'emotion';
@@ -66,8 +66,10 @@ export const PickerContainer = sWrap<
         const { hasTime } = props;
         return css`
             ${inlineBlockWithVerticalMixin};
-            width: ${hasTime ? 180 : 140}px;
             ${inputMixin(props)};
+            input {
+                width: ${hasTime ? 140 : 100}px;
+            }
         `;
     })
 );
@@ -82,12 +84,6 @@ export const SPopup = sWrap<{
 }>({})(
     styled('div')(props => {
         const {
-            endInputHighlight,
-            isMonth,
-            hasTime,
-            hasPrefix,
-            hasSuffix,
-            clearable,
             theme: { designTokens: DT }
         } = props;
         return css`
@@ -108,9 +104,7 @@ export const SPopup = sWrap<{
                 }
             }
             ${Arrow} {
-                left: ${endInputHighlight
-                    ? -6 + rangeInputWidth(isMonth, hasTime, hasPrefix, hasSuffix, clearable)
-                    : 20}px;
+                left: 20px;
                 position: absolute;
                 background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
                 box-shadow: ${DT.T_SHADOW_BLOCK_DEFAULT_LG};
@@ -240,14 +234,6 @@ export const RangeContainer = sWrap<{ disabled?: boolean }>({
     `
 );
 
-const rangeInputWidth = (
-    isMonth?: boolean,
-    hasTime?: boolean,
-    hasPrefix?: boolean,
-    hasSuffix?: boolean,
-    clearable?: boolean
-) => (isMonth ? 69 : hasTime ? 145 : 106) + (hasPrefix ? 20 : 0) + (hasSuffix ? 28 : 0) + (clearable ? 20 : 0);
-
 export const RangeInputWrap = sWrap<{
     isMonth?: boolean;
     hasTime?: boolean;
@@ -259,10 +245,12 @@ export const RangeInputWrap = sWrap<{
     isEnd?: boolean;
 }>()(
     styled.div(props => {
-        const { isMonth, hasTime, hasPrefix, hasSuffix, clearable, isEnd } = props;
+        const { hasTime, isEnd } = props;
         return css`
-            width: ${rangeInputWidth(isMonth, hasTime, hasPrefix, hasSuffix, clearable)}px;
             ${inputMixin(props)};
+            input {
+                width: ${hasTime ? 140 : 100}px;
+            }
             ${isEnd &&
             css`
                 margin-left: -8px;

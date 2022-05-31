@@ -109,7 +109,7 @@ export const SWrap = sWrap<
                 flex: 0 0 auto;
             }
             .${inputBlockWrapCls} {
-                height: 20px;
+                height: ${{ sm: 16, md: 18, lg: 20 }[size]}px;
                 display: flex;
                 align-items: center;
                 flex: 1;

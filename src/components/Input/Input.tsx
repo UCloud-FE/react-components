@@ -38,7 +38,7 @@ export interface DefinedInputProps {
     /** 后缀 */
     suffix?: ReactNode;
     /** 是否可清空 */
-    clearable?: boolean;
+    clearable?: boolean | { autoFocus?: boolean; callOnChange?: boolean };
     /** 尺寸 */
     size?: Size;
     /** 状态 */
@@ -137,12 +137,16 @@ const Input = forwardRef(
                 e.target = input;
                 e.currentTarget = input;
                 const cacheV = input.value;
-                input.value = '';
-                onChange(e as any);
-                input.value = cacheV;
-                input.focus();
+                if ((clearable as any)?.callOnChange !== false) {
+                    input.value = '';
+                    onChange(e as any);
+                    input.value = cacheV;
+                }
+                if ((clearable as any)?.autoFocus !== false) {
+                    input.focus();
+                }
             },
-            [disabled, onChange, onClear]
+            [clearable, disabled, onChange, onClear]
         );
         const handleWrapMouseDown = useCallback((e: MouseEvent) => {
             // 避免影响输入框的选中、移动光标等操作

@@ -199,10 +199,9 @@ const usePicker = <D,>(
         [calValue, nullable, onChange, rules, value]
     );
     const handleInputClear = useCallback(() => {
-        setTimeout(() => {
-            handleInputChange({ target: { value: '' } } as ChangeEvent<HTMLInputElement>);
-        }, 0);
-    }, [handleInputChange]);
+        clear();
+        handleConfirm(null);
+    }, [clear, handleConfirm]);
 
     const handleCalendarChange = useCallback(
         (v: Moment | TDate) => {
@@ -266,7 +265,7 @@ const usePicker = <D,>(
         size,
         status,
         placeholder: placeholder === undefined ? locale.placeholder : placeholder,
-        clearable: nullable,
+        clearable: nullable ? { autoFocus: false, callOnChange: false } : false,
         onClear: handleInputClear
     };
     const containerProps = { ...rest, disabled, status };
