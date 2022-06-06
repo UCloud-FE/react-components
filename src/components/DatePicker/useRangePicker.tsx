@@ -7,7 +7,7 @@ import { DatePickerProps, displayToFormatAndTimeMode } from './DatePicker';
 import { displayToFormatAndTimeMode as displayToFormatAndTimeModeM } from './Month';
 import usePicker from './usePicker';
 
-export type RangeActionRef = { clear: () => void };
+export type RangeActionRef = { clear: () => void; hide: () => void };
 export type RangePickerRef = { focus: () => void; clear: () => void } | undefined;
 
 const inputCustomStyle = { border: 'none', boxShadow: 'none', background: 'none' };
@@ -41,10 +41,11 @@ const useRangePicker = ({
         actionRef,
         () => {
             return {
-                clear: actions.clear
+                clear: actions.clear,
+                hide: actions.hide
             };
         },
-        [actions.clear]
+        [actions.clear, actions.hide]
     );
 
     return [

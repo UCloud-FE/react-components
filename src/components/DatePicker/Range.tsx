@@ -252,7 +252,9 @@ const Range = ({
             const rangeDateValidResult = isRangeDateValid(newValue, rules, precision);
             setRangeError(undefined);
             if (isClear) {
-                // noop
+                onChange(newValue);
+                actionRefS.current?.hide();
+                actionRefE.current?.hide();
             } else if (rangeDateValidResult !== true) {
                 inputRefE.current?.focus();
                 if (rangeDateValidResult === 'startGreaterThanEnd') {
@@ -277,7 +279,9 @@ const Range = ({
             const rangeDateValidResult = isRangeDateValid(newValue, rules, precision);
             setRangeError(undefined);
             if (isClear) {
-                // noop
+                onChange(newValue);
+                actionRefS.current?.hide();
+                actionRefE.current?.hide();
             } else if (rangeDateValidResult !== true) {
                 inputRefS.current?.focus();
                 if (rangeDateValidResult === 'startGreaterThanEnd') {

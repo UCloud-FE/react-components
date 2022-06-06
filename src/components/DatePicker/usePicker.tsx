@@ -185,9 +185,12 @@ const usePicker = <D,>(
         setInputValue('');
         setCalValue(null);
     }, []);
+    const hide = useCallback(() => {
+        setVisible(false);
+    }, []);
 
     const handleConfirm = useCallback(
-        (v?: TDate | null, dontChangeVisible?: boolean) => {
+        (v?: TDate | null) => {
             const currentValue = v !== undefined ? v : calValue;
             if (!currentValue) {
                 if (!nullable) return;
@@ -195,17 +198,19 @@ const usePicker = <D,>(
                 return;
             }
             onChange && onChange(currentValue ? moment(+currentValue) : null);
-            if (!dontChangeVisible) {
-                setVisible(false);
-            }
+            setVisible(false);
         },
         [calValue, nullable, onChange, rules, value]
     );
     const handleInputClear = useCallback(() => {
         clear();
         // 不走 onChange，区分两种操作
-        onClear?.();
-    }, [clear, onClear]);
+        if (onClear) {
+            onClear();
+        } else {
+            handleConfirm(null);
+        }
+    }, [clear, handleConfirm, onClear]);
 
     const handleCalendarChange = useCallback(
         (v: Moment | TDate) => {
@@ -322,7 +327,7 @@ const usePicker = <D,>(
             error: typeof error === 'string' ? error : null,
             active: visible
         },
-        { clear }
+        { clear, hide }
     ];
 };
 
