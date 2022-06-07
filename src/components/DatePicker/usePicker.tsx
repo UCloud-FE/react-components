@@ -9,11 +9,11 @@ import usePopoverConfig from 'src/hooks/usePopoverConfig';
 import KeyCode from 'src/utils/KeyCode';
 
 import LOCALE from './locale/zh_CN';
-import { isDateDisabled, getValidDate, isDateValid } from './utils';
+import { isDateDisabled, getValidDate, isDateValid, Precision, setPrecision } from './utils';
 import { DatePickerProps } from './DatePicker';
 import { datePickerPopupCls } from './style';
 
-const formatInput = (v: string, allFormat: string[]): Moment | null | false => {
+const formatInput = (v: string, allFormat: string[], precision?: Precision): Moment | null | false => {
     if (v == '') return null;
     const l = allFormat.length;
     v = v
@@ -28,7 +28,7 @@ const formatInput = (v: string, allFormat: string[]): Moment | null | false => {
         format = format.trim();
         const d = moment(v, format, true);
         if (d.isValid()) {
-            return d;
+            return precision ? d.startOf(precision) : d;
         }
     }
     return false;
@@ -111,6 +111,15 @@ const usePicker = <D,>(
         return [allFormat[0], allFormat, timeMode];
     }, [_format, displayFormat, displayTimeMode]);
 
+    const precision: Precision = useMemo(() => {
+        if (mode === 'month') return 'month';
+        if (!timeMode?.length) return 'date';
+        if (timeMode.indexOf('ss') >= 0) return 'second';
+        if (timeMode.indexOf('mm') >= 0) return 'minute';
+        if (timeMode.indexOf('HH') >= 0) return 'hour';
+        return 'date';
+    }, [mode, timeMode]);
+
     const d = useMemo(() => new Date(), []);
 
     const clickConfirm = !timeMode?.length;
@@ -140,7 +149,7 @@ const usePicker = <D,>(
     const error = useMemo(() => {
         let currentValue: TDate | null | undefined;
         if (useInputValue) {
-            const inputDValue = formatInput(inputValue, allFormat);
+            const inputDValue = formatInput(inputValue, allFormat, precision);
             if (inputDValue === false) return locale.inputErrorTip;
             currentValue = inputDValue;
         } else {
@@ -160,6 +169,7 @@ const usePicker = <D,>(
         locale.inputErrorTip,
         locale.nullableErrorTip,
         nullable,
+        precision,
         rules,
         useInputValue,
         value
@@ -170,7 +180,7 @@ const usePicker = <D,>(
             if (!visible) setVisible(true);
             const v = e.target.value;
             setInputValue(v);
-            const d = formatInput(v, allFormat);
+            const d = formatInput(v, allFormat, precision);
             if (d) {
                 setCalValue(d);
             } else {
@@ -179,7 +189,7 @@ const usePicker = <D,>(
             }
             setUseInputValue(true);
         },
-        [allFormat, calValue, visible]
+        [allFormat, calValue, precision, visible]
     );
     const clear = useCallback(() => {
         setInputValue('');
@@ -215,6 +225,7 @@ const usePicker = <D,>(
     const handleCalendarChange = useCallback(
         (v: Moment | TDate) => {
             v = getValidDate(v, rules);
+            v = setPrecision(v, precision);
             setCalValue(moment(+v));
             setInputValue(formatDate(moment(+v), format));
             setUseInputValue(false);
@@ -223,7 +234,7 @@ const usePicker = <D,>(
                 setVisible(false);
             }
         },
-        [clickConfirm, format, onChange, rules]
+        [clickConfirm, format, onChange, precision, rules]
     );
 
     const handleInputFocus = useCallback(() => {

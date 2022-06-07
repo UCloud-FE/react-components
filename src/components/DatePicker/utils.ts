@@ -6,7 +6,7 @@ import { TDate } from '@z-r/calendar';
 import { isDateDisabled, getValidDate } from 'src/components/Calendar/utils';
 
 type Range = [TDate | void | null, TDate | void | null];
-type Precision = 'second' | 'minute' | 'hour' | 'date' | 'month' | 'year';
+export type Precision = 'second' | 'minute' | 'hour' | 'date' | 'month' | 'year';
 
 export interface Rules {
     range?: Range;
@@ -21,6 +21,13 @@ export const formatToShort = (format: string): string => {
         .replace('HH', 'H')
         .replace('mm', 'm')
         .replace('ss', 's');
+};
+
+export const setPrecision = (v: TDate, precision?: Precision) => {
+    if (precision) {
+        v = moment(+v).startOf(precision);
+    }
+    return v;
 };
 
 const isRangeDateValid = (

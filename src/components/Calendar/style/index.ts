@@ -178,6 +178,9 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
                 &.${prefixCls}-now {
                     color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
                 }
+                &.${prefixCls}-prev, &.${prefixCls}-next, &.${prefixCls}-disable {
+                    color: ${DT.T_COLOR_TEXT_DISABLED};
+                }
                 &.${prefixCls}-cell.${prefixCls}-range-middle:not(.${prefixCls}-next):not(.${prefixCls}-prev) {
                     .${cellContentCls}, .${cellContentPrevSpaceCls}, .${cellContentNextSpaceCls} {
                         background: ${DT.T_COLOR_BG_DEFAULT_HOVER};
@@ -227,9 +230,6 @@ export const calendarMixin = (props: { theme: Theme; customStyle?: { boxShadow?:
                     }
                 }
             }
-        }
-        .${prefixCls}-prev, .${prefixCls}-next, .${prefixCls}-disable {
-            color: ${DT.T_COLOR_TEXT_DISABLED};
         }
         .${prefixCls}-date-wrap, .${prefixCls}-month-wrap, .${prefixCls}-year-wrap, .${prefixCls}-decade-wrap {
             display: flex;
