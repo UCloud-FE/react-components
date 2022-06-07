@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.6](https://github.com/UCloud-FE/react-components/compare/v1.4.5...v1.4.6) (2022-06-07)
+
+### Bug Fixes
+
+-   **DatePicker:** fix range picker precision ([2a5153a](https://github.com/UCloud-FE/react-components/commit/2a5153a660f77a68f0c3e091e5fc80a383b044f2))
+
 ### [1.4.5](https://github.com/UCloud-FE/react-components/compare/v1.4.4...v1.4.5) (2022-06-06)
 
 ### Features
