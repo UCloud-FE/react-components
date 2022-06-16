@@ -18,6 +18,37 @@
         }
     },
     "Upload": {
+        "CardItem": {
+            "path": "Upload/CardItem.jsx",
+            "name": "CardItem",
+            "info": {
+                "description": "",
+                "displayName": "CardItem",
+                "methods": [
+                    { "name": "onPreview", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                    { "name": "onReupload", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                    { "name": "onRemove", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                    {
+                        "name": "renderThumbnail",
+                        "docblock": null,
+                        "modifiers": [],
+                        "params": [{ "name": "isFullThumbnail", "type": null }],
+                        "returns": null
+                    },
+                    { "name": "renderName", "docblock": null, "modifiers": [], "params": [], "returns": null }
+                ],
+                "props": {
+                    "onRemove": { "type": { "name": "func" }, "required": false, "description": "" },
+                    "onPreview": { "type": { "name": "func" }, "required": false, "description": "" },
+                    "onReupload": { "type": { "name": "func" }, "required": false, "description": "" },
+                    "locale": { "type": { "name": "object" }, "required": true, "description": "" },
+                    "disabled": { "type": { "name": "bool" }, "required": false, "description": "" },
+                    "file": { "type": { "name": "object" }, "required": false, "description": "" },
+                    "index": { "type": { "name": "number" }, "required": false, "description": "" },
+                    "removable": { "defaultValue": { "value": "true", "computed": false }, "required": false }
+                }
+            }
+        },
         "DropZone": {
             "path": "Upload/Dropzone.jsx",
             "name": "DropZone",
@@ -62,6 +93,32 @@
                     "locale": { "type": { "name": "object" }, "required": false, "description": "" },
                     "onSelect": { "type": { "name": "func" }, "required": false, "description": "" },
                     "disabled": { "type": { "name": "bool" }, "required": false, "description": "" }
+                }
+            }
+        },
+        "Item": {
+            "path": "Upload/Item.jsx",
+            "name": "Item",
+            "info": {
+                "description": "",
+                "displayName": "Item",
+                "methods": [
+                    { "name": "onPreview", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                    { "name": "onReupload", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                    { "name": "onRemove", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                    { "name": "renderThumbnail", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                    { "name": "renderName", "docblock": null, "modifiers": [], "params": [], "returns": null }
+                ],
+                "props": {
+                    "onRemove": { "type": { "name": "func" }, "required": false, "description": "" },
+                    "onPreview": { "type": { "name": "func" }, "required": false, "description": "" },
+                    "onReupload": { "type": { "name": "func" }, "required": false, "description": "" },
+                    "locale": { "type": { "name": "object" }, "required": true, "description": "" },
+                    "thumbnail": { "type": { "name": "bool" }, "required": false, "description": "" },
+                    "disabled": { "type": { "name": "bool" }, "required": false, "description": "" },
+                    "file": { "type": { "name": "object" }, "required": false, "description": "" },
+                    "index": { "type": { "name": "number" }, "required": false, "description": "" },
+                    "removable": { "defaultValue": { "value": "true", "computed": false }, "required": false }
                 }
             }
         },
@@ -148,6 +205,21 @@
                         "required": false,
                         "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
                     }
+                }
+            }
+        },
+        "Progress": {
+            "path": "Upload/Progress.jsx",
+            "name": "Progress",
+            "info": {
+                "description": "",
+                "displayName": "Progress",
+                "methods": [
+                    { "name": "simulatePercent", "docblock": null, "modifiers": [], "params": [], "returns": null }
+                ],
+                "props": {
+                    "file": { "type": { "name": "object" }, "required": false, "description": "" },
+                    "percent": { "type": { "name": "number" }, "required": false, "description": "" }
                 }
             }
         },
@@ -620,6 +692,95 @@
         }
     },
     "Tree": {
+        "ChildItem": {
+            "path": "Tree/Item.tsx",
+            "name": "ChildItem",
+            "info": {
+                "description": "",
+                "displayName": "ChildItem",
+                "methods": [],
+                "props": {
+                    "value": { "required": true, "tsType": { "name": "Key" }, "description": "" },
+                    "onSelect": {
+                        "required": true,
+                        "tsType": {
+                            "name": "signature",
+                            "type": "function",
+                            "raw": "(keyMap: ChangeKeyMap) => void",
+                            "signature": {
+                                "arguments": [{ "name": "keyMap", "type": { "name": "ChangeKeyMap" } }],
+                                "return": { "name": "void" }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "ignoreIndent": {
+                        "required": true,
+                        "tsType": { "name": "Array", "elements": [{ "name": "number" }], "raw": "number[]" },
+                        "description": ""
+                    },
+                    "selectedMap": { "required": true, "tsType": { "name": "SelectedMap" }, "description": "" },
+                    "title": { "required": true, "tsType": { "name": "ReactNode" }, "description": "" },
+                    "disabled": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                    "depth": { "required": true, "tsType": { "name": "number" }, "description": "" },
+                    "isLatest": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                    "multiple": { "required": false, "tsType": { "name": "boolean" }, "description": "" }
+                }
+            }
+        },
+        "TitleItem": {
+            "path": "Tree/Item.tsx",
+            "name": "TitleItem",
+            "info": {
+                "description": "",
+                "displayName": "TitleItem",
+                "methods": [],
+                "props": {
+                    "value": { "required": true, "tsType": { "name": "Key" }, "description": "" },
+                    "onSelect": {
+                        "required": true,
+                        "tsType": {
+                            "name": "signature",
+                            "type": "function",
+                            "raw": "(keyMap: ChangeKeyMap) => void",
+                            "signature": {
+                                "arguments": [{ "name": "keyMap", "type": { "name": "ChangeKeyMap" } }],
+                                "return": { "name": "void" }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "expanded": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                    "onExpandChange": {
+                        "required": false,
+                        "tsType": {
+                            "name": "signature",
+                            "type": "function",
+                            "raw": "(expanded: boolean) => void",
+                            "signature": {
+                                "arguments": [{ "name": "expanded", "type": { "name": "boolean" } }],
+                                "return": { "name": "void" }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "ignoreIndent": {
+                        "required": true,
+                        "tsType": { "name": "Array", "elements": [{ "name": "number" }], "raw": "number[]" },
+                        "description": ""
+                    },
+                    "selectedMap": { "required": true, "tsType": { "name": "SelectedMap" }, "description": "" },
+                    "group": { "required": true, "tsType": { "name": "Group" }, "description": "" },
+                    "loadData": { "required": false, "tsType": { "name": "LoadData" }, "description": "" },
+                    "loaded": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                    "title": { "required": true, "tsType": { "name": "ReactNode" }, "description": "" },
+                    "disabled": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                    "depth": { "required": true, "tsType": { "name": "number" }, "description": "" },
+                    "isLatest": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                    "multiple": { "required": false, "tsType": { "name": "boolean" }, "description": "" }
+                }
+            }
+        },
         "Items": {
             "path": "Tree/Items.tsx",
             "name": "Items",
@@ -1699,6 +1860,24 @@
                 }
             }
         },
+        "DragWrap": {
+            "path": "Table/DragWrap.tsx",
+            "name": "DragWrap",
+            "info": {
+                "description": "",
+                "displayName": "DragWrap",
+                "methods": [],
+                "props": {
+                    "children": { "required": true, "tsType": { "name": "ReactNode" }, "description": "" },
+                    "draggable": { "required": true, "tsType": { "name": "boolean" }, "description": "" }
+                }
+            }
+        },
+        "ExpandedRow": {
+            "path": "Table/ExpandedRowContent.jsx",
+            "name": "ExpandedRow",
+            "info": { "description": "", "displayName": "ExpandedRow", "methods": [] }
+        },
         "HoverDisplayArea": {
             "path": "Table/HoverDisplayArea.jsx",
             "name": "HoverDisplayArea",
@@ -1736,7 +1915,10 @@
                             { "name": "{ size }", "type": null }
                         ],
                         "returns": null
-                    }
+                    },
+                    { "name": "onResizeStart", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                    { "name": "onResizeStop", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                    { "name": "splitProps", "docblock": null, "modifiers": [], "params": [], "returns": null }
                 ],
                 "props": {
                     "width": {
@@ -1757,6 +1939,14 @@
                     "resizeAble": {
                         "type": { "name": "bool" },
                         "required": false,
+                        "description": {
+                            "description": "",
+                            "tags": [{ "title": "deprecated", "description": "是否可调整大小" }]
+                        }
+                    },
+                    "resizable": {
+                        "type": { "name": "bool" },
+                        "required": false,
                         "description": { "description": "是否可调整大小", "tags": [] }
                     },
                     "onResize": {
@@ -1768,7 +1958,8 @@
                         "type": { "name": "node" },
                         "required": false,
                         "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
-                    }
+                    },
+                    "column": { "type": { "name": "any" }, "required": false, "description": "" }
                 }
             }
         },
@@ -1983,6 +2174,7 @@
                         ],
                         "returns": null
                     },
+                    { "name": "getDragSorting", "docblock": null, "modifiers": [], "params": [], "returns": null },
                     {
                         "name": "getColumns",
                         "docblock": null,
@@ -1990,6 +2182,118 @@
                         "params": [
                             { "name": "dataSourceOfCurrentPage", "type": null },
                             { "name": "filters", "type": null }
+                        ],
+                        "returns": null
+                    },
+                    { "name": "getTableDom", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                    { "name": "getContentDom", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                    { "name": "getBodyDom", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                    {
+                        "name": "getRowDom",
+                        "docblock": null,
+                        "modifiers": [],
+                        "params": [{ "name": "rowKey", "type": null }],
+                        "returns": null
+                    },
+                    {
+                        "name": "getRowDomByIndex",
+                        "docblock": null,
+                        "modifiers": [],
+                        "params": [{ "name": "rowIndex", "type": null }],
+                        "returns": null
+                    },
+                    {
+                        "name": "initDrag",
+                        "docblock": null,
+                        "modifiers": [],
+                        "params": [{ "name": "source", "type": null }],
+                        "returns": null
+                    },
+                    {
+                        "name": "setDraggable",
+                        "docblock": null,
+                        "modifiers": [],
+                        "params": [{ "name": "e", "type": null }],
+                        "returns": null
+                    },
+                    {
+                        "name": "unsetDraggable",
+                        "docblock": null,
+                        "modifiers": [],
+                        "params": [{ "name": "e", "type": null }],
+                        "returns": null
+                    },
+                    {
+                        "name": "setDragOver",
+                        "docblock": null,
+                        "modifiers": [],
+                        "params": [
+                            { "name": "source", "type": null },
+                            { "name": "target", "type": null }
+                        ],
+                        "returns": null
+                    },
+                    {
+                        "name": "unsetDragOver",
+                        "docblock": null,
+                        "modifiers": [],
+                        "params": [
+                            { "name": "source", "type": null },
+                            { "name": "target", "type": null }
+                        ],
+                        "returns": null
+                    },
+                    {
+                        "name": "onDragStart",
+                        "docblock": null,
+                        "modifiers": [],
+                        "params": [{ "name": "source", "type": null }],
+                        "returns": null
+                    },
+                    {
+                        "name": "onDragEnd",
+                        "docblock": null,
+                        "modifiers": [],
+                        "params": [{ "name": "source", "type": null }],
+                        "returns": null
+                    },
+                    {
+                        "name": "onDragEnter",
+                        "docblock": null,
+                        "modifiers": [],
+                        "params": [
+                            { "name": "source", "type": null },
+                            { "name": "target", "type": null }
+                        ],
+                        "returns": null
+                    },
+                    {
+                        "name": "onDragLeave",
+                        "docblock": null,
+                        "modifiers": [],
+                        "params": [
+                            { "name": "source", "type": null },
+                            { "name": "target", "type": null }
+                        ],
+                        "returns": null
+                    },
+                    {
+                        "name": "onDrop",
+                        "docblock": null,
+                        "modifiers": [],
+                        "params": [
+                            { "name": "source", "type": null },
+                            { "name": "target", "type": null }
+                        ],
+                        "returns": null
+                    },
+                    {
+                        "name": "transformDomIndex",
+                        "docblock": null,
+                        "modifiers": [],
+                        "params": [
+                            { "name": "source", "type": null },
+                            { "name": "target", "type": null }
                         ],
                         "returns": null
                     },
@@ -2232,6 +2536,23 @@
                             "tags": []
                         }
                     },
+                    "dragSorting": {
+                        "type": {
+                            "name": "union",
+                            "value": [
+                                { "name": "enum", "value": [{ "value": "true", "computed": false }] },
+                                {
+                                    "name": "shape",
+                                    "value": {
+                                        "fixed": { "name": "bool", "required": false },
+                                        "onChange": { "name": "func", "required": false }
+                                    }
+                                }
+                            ]
+                        },
+                        "required": false,
+                        "description": { "description": "拖拽排序", "tags": [] }
+                    },
                     "onRowSelect": {
                         "type": { "name": "func" },
                         "required": false,
@@ -2244,6 +2565,11 @@
                         "type": { "name": "bool" },
                         "required": false,
                         "description": { "description": "是否显示表头", "tags": [] }
+                    },
+                    "columnResizable": {
+                        "type": { "name": "bool" },
+                        "required": false,
+                        "description": { "description": "是否可拖拽调节表格列大小", "tags": [] }
                     },
                     "title": {
                         "type": { "name": "func" },
@@ -2445,17 +2771,48 @@
             }
         },
         "TableRow": {
-            "path": "Table/TableRow.jsx",
+            "path": "Table/TableRow.tsx",
             "name": "TableRow",
             "info": {
                 "description": "",
                 "displayName": "TableRow",
-                "methods": [
-                    { "name": "hideContextMenu", "docblock": null, "modifiers": [], "params": [], "returns": null }
-                ],
+                "methods": [],
                 "props": {
-                    "record": { "type": { "name": "object" }, "required": false, "description": "" },
-                    "contextMenu": { "type": { "name": "func" }, "required": false, "description": "" }
+                    "record": { "required": true, "tsType": { "name": "any" }, "description": "" },
+                    "contextMenu": {
+                        "required": false,
+                        "tsType": {
+                            "name": "signature",
+                            "type": "function",
+                            "raw": "(record: any, hideContextMenu: () => void) => ReactNode",
+                            "signature": {
+                                "arguments": [
+                                    { "name": "record", "type": { "name": "any" } },
+                                    {
+                                        "name": "hideContextMenu",
+                                        "type": {
+                                            "name": "signature",
+                                            "type": "function",
+                                            "raw": "() => void",
+                                            "signature": { "arguments": [], "return": { "name": "void" } }
+                                        }
+                                    }
+                                ],
+                                "return": { "name": "ReactNode" }
+                            }
+                        },
+                        "description": ""
+                    },
+                    "draggable": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                    "data-row-key": {
+                        "required": false,
+                        "tsType": {
+                            "name": "union",
+                            "raw": "string | number",
+                            "elements": [{ "name": "string" }, { "name": "number" }]
+                        },
+                        "description": ""
+                    }
                 }
             }
         }
@@ -3033,6 +3390,104 @@
                         "required": false,
                         "tsType": { "name": "boolean" },
                         "description": { "description": "禁用", "tags": [] }
+                    }
+                }
+            }
+        },
+        "PureOption": {
+            "path": "Select/Option.tsx",
+            "name": "PureOption",
+            "info": {
+                "description": "",
+                "displayName": "PureOption",
+                "methods": [],
+                "props": {
+                    "value": {
+                        "required": false,
+                        "tsType": { "name": "Key" },
+                        "description": { "description": "值，会被用作 key", "tags": [] }
+                    },
+                    "disabled": {
+                        "required": false,
+                        "tsType": { "name": "boolean" },
+                        "description": { "description": "是否禁用", "tags": [] }
+                    },
+                    "tooltip": {
+                        "required": false,
+                        "tsType": {
+                            "name": "union",
+                            "raw": "ReactNode | any",
+                            "elements": [{ "name": "ReactNode" }, { "name": "any" }]
+                        },
+                        "description": {
+                            "description": "tooltip 提示，可以为文本或 node，也可以是 tooltip 的 props object",
+                            "tags": []
+                        }
+                    },
+                    "children": {
+                        "required": false,
+                        "tsType": { "name": "ReactNode" },
+                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                    },
+                    "label": {
+                        "required": false,
+                        "tsType": { "name": "ReactNode" },
+                        "description": {
+                            "description": "",
+                            "tags": [
+                                { "title": "ignore", "description": null },
+                                { "title": "description", "description": "内部使用，请勿使用" }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Option": {
+            "path": "Select/Option.tsx",
+            "name": "Option",
+            "info": {
+                "description": "",
+                "displayName": "Option",
+                "methods": [],
+                "props": {
+                    "value": {
+                        "required": false,
+                        "tsType": { "name": "Key" },
+                        "description": { "description": "值，会被用作 key", "tags": [] }
+                    },
+                    "disabled": {
+                        "required": false,
+                        "tsType": { "name": "boolean" },
+                        "description": { "description": "是否禁用", "tags": [] }
+                    },
+                    "tooltip": {
+                        "required": false,
+                        "tsType": {
+                            "name": "union",
+                            "raw": "ReactNode | any",
+                            "elements": [{ "name": "ReactNode" }, { "name": "any" }]
+                        },
+                        "description": {
+                            "description": "tooltip 提示，可以为文本或 node，也可以是 tooltip 的 props object",
+                            "tags": []
+                        }
+                    },
+                    "children": {
+                        "required": false,
+                        "tsType": { "name": "ReactNode" },
+                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                    },
+                    "label": {
+                        "required": false,
+                        "tsType": { "name": "ReactNode" },
+                        "description": {
+                            "description": "",
+                            "tags": [
+                                { "title": "ignore", "description": null },
+                                { "title": "description", "description": "内部使用，请勿使用" }
+                            ]
+                        }
                     }
                 }
             }
@@ -5673,7 +6128,24 @@
                     },
                     "clearable": {
                         "required": false,
-                        "tsType": { "name": "boolean" },
+                        "tsType": {
+                            "name": "union",
+                            "raw": "boolean | { autoFocus?: boolean; callOnChange?: boolean }",
+                            "elements": [
+                                { "name": "boolean" },
+                                {
+                                    "name": "signature",
+                                    "type": "object",
+                                    "raw": "{ autoFocus?: boolean; callOnChange?: boolean }",
+                                    "signature": {
+                                        "properties": [
+                                            { "key": "autoFocus", "value": { "name": "boolean", "required": false } },
+                                            { "key": "callOnChange", "value": { "name": "boolean", "required": false } }
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
                         "description": { "description": "是否可清空", "tags": [] }
                     },
                     "size": {
@@ -6710,6 +7182,11 @@
                 }
             }
         },
+        "TipIcon": {
+            "path": "DatePicker/Footer.tsx",
+            "name": "TipIcon",
+            "info": { "description": "", "displayName": "TipIcon", "methods": [] }
+        },
         "Footer": {
             "path": "DatePicker/Footer.tsx",
             "name": "Footer",
@@ -6766,8 +7243,10 @@
                         },
                         "description": ""
                     },
+                    "isError": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
                     "tip": { "required": false, "tsType": { "name": "ReactNode" }, "description": "" },
-                    "locale": { "required": false, "tsType": { "name": "LOCALE" }, "description": "" }
+                    "locale": { "required": false, "tsType": { "name": "LOCALE" }, "description": "" },
+                    "showConfirm": { "required": false, "tsType": { "name": "boolean" }, "description": "" }
                 }
             }
         },
@@ -7180,7 +7659,8 @@
                                 { "name": "literal", "value": "'month'" }
                             ]
                         },
-                        "description": { "description": "picker 类型", "tags": [] }
+                        "description": { "description": "picker 类型", "tags": [] },
+                        "defaultValue": { "value": "'date'", "computed": false }
                     },
                     "shortcuts": {
                         "required": false,
@@ -7338,8 +7818,7 @@
                     }
                 }
             }
-        },
-        "undefined": { "path": "DatePicker/RangePicker.tsx", "info": { "description": "", "methods": [] } }
+        }
     },
     "ConfigProvider": {
         "ConfigProvider": {
@@ -7838,6 +8317,57 @@
         }
     },
     "Cascader": {
+        "Cascade": {
+            "path": "Cascader/Cascade.tsx",
+            "name": "Cascade",
+            "info": {
+                "description": "",
+                "displayName": "Cascade",
+                "methods": [],
+                "props": {
+                    "dataSource": {
+                        "required": false,
+                        "tsType": { "name": "Array", "elements": [{ "name": "CascadeData" }], "raw": "CascadeData[]" },
+                        "description": ""
+                    },
+                    "value": {
+                        "required": false,
+                        "tsType": { "name": "Array", "elements": [{ "name": "Key" }], "raw": "Key[]" },
+                        "description": ""
+                    },
+                    "expandedValue": {
+                        "required": true,
+                        "tsType": { "name": "Array", "elements": [{ "name": "Key" }], "raw": "Key[]" },
+                        "description": ""
+                    },
+                    "loadData": { "required": false, "tsType": { "name": "LoadData" }, "description": "" }
+                }
+            }
+        },
+        "CascadeSearchResult": {
+            "path": "Cascader/Cascade.tsx",
+            "name": "CascadeSearchResult",
+            "info": {
+                "description": "",
+                "displayName": "CascadeSearchResult",
+                "methods": [],
+                "props": {
+                    "dataSource": {
+                        "required": false,
+                        "tsType": { "name": "Array", "elements": [{ "name": "CascadeData" }], "raw": "CascadeData[]" },
+                        "description": ""
+                    },
+                    "value": {
+                        "required": false,
+                        "tsType": { "name": "Array", "elements": [{ "name": "string" }], "raw": "string[]" },
+                        "description": ""
+                    },
+                    "loading": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                    "empty": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                    "error": { "required": false, "tsType": { "name": "Error" }, "description": "" }
+                }
+            }
+        },
         "Cascader": {
             "path": "Cascader/Cascader.tsx",
             "name": "Cascader",
@@ -8155,6 +8685,26 @@
                         },
                         "description": { "description": "当前值，受控", "tags": [] }
                     },
+                    "rangeValue": {
+                        "required": false,
+                        "tsType": {
+                            "name": "tuple",
+                            "raw": "[TDate | null, TDate | null]",
+                            "elements": [
+                                {
+                                    "name": "union",
+                                    "raw": "TDate | null",
+                                    "elements": [{ "name": "TDate" }, { "name": "null" }]
+                                },
+                                {
+                                    "name": "union",
+                                    "raw": "TDate | null",
+                                    "elements": [{ "name": "TDate" }, { "name": "null" }]
+                                }
+                            ]
+                        },
+                        "description": { "description": "范围值", "tags": [] }
+                    },
                     "defaultValue": {
                         "required": false,
                         "tsType": {
@@ -8192,6 +8742,21 @@
                             }
                         },
                         "description": { "description": "选中变化回调", "tags": [] }
+                    },
+                    "current": { "required": false, "tsType": { "name": "TDate" }, "description": "" },
+                    "defaultCurrent": { "required": false, "tsType": { "name": "TDate" }, "description": "" },
+                    "onCurrentChange": {
+                        "required": false,
+                        "tsType": {
+                            "name": "signature",
+                            "type": "function",
+                            "raw": "(v: TDate) => void",
+                            "signature": {
+                                "arguments": [{ "name": "v", "type": { "name": "TDate" } }],
+                                "return": { "name": "void" }
+                            }
+                        },
+                        "description": ""
                     },
                     "rules": {
                         "required": false,
@@ -8232,6 +8797,29 @@
                 }
             }
         },
+        "Cell": {
+            "path": "Calendar/Cell.tsx",
+            "name": "Cell",
+            "info": {
+                "description": "",
+                "displayName": "Cell",
+                "methods": [],
+                "props": {
+                    "mode": { "required": true, "tsType": { "name": "Mode" }, "description": "" },
+                    "disabled": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                    "value": {
+                        "required": false,
+                        "tsType": { "name": "CellValue", "elements": [{ "name": "Mode" }], "raw": "CellValue<Mode>" },
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "HeaderButton": {
+            "path": "Calendar/HeaderButton.tsx",
+            "name": "HeaderButton",
+            "info": { "description": "", "displayName": "HeaderButton", "methods": [] }
+        },
         "HeaderSwitcherWithoutMemo": {
             "path": "Calendar/HeaderSwitcher.tsx",
             "name": "HeaderSwitcherWithoutMemo",
@@ -8248,6 +8836,11 @@
                 "displayName": "Month",
                 "methods": []
             }
+        },
+        "TwoSide": {
+            "path": "Calendar/TwoSide.tsx",
+            "name": "TwoSide",
+            "info": { "description": "", "displayName": "TwoSide", "methods": [] }
         }
     },
     "Button": {
@@ -8678,6 +9271,76 @@
                         "tsType": { "name": "number" },
                         "description": { "description": "badge 的 zIndex", "tags": [] },
                         "defaultValue": { "value": "9", "computed": false }
+                    }
+                }
+            }
+        },
+        "Bubble": {
+            "path": "Badge/Bubble.jsx",
+            "name": "Bubble",
+            "info": {
+                "description": {
+                    "description": "",
+                    "tags": [{ "title": "deprecated", "description": "后续会移除，请使用 Badge 替代" }]
+                },
+                "displayName": "Bubble",
+                "methods": [],
+                "props": {
+                    "children": {
+                        "type": { "name": "node" },
+                        "required": false,
+                        "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                    },
+                    "bubble": {
+                        "type": { "name": "node" },
+                        "required": false,
+                        "description": { "description": "泡泡内容", "tags": [] }
+                    },
+                    "styleType": {
+                        "type": { "name": "enum", "computed": true, "value": "StyleType" },
+                        "required": true,
+                        "description": { "description": "内置样式风格", "tags": [] }
+                    },
+                    "size": {
+                        "type": {
+                            "name": "enum",
+                            "value": [
+                                { "value": "'sm'", "computed": false },
+                                { "value": "'md'", "computed": false }
+                            ]
+                        },
+                        "required": false,
+                        "description": { "description": "尺寸", "tags": [] },
+                        "defaultValue": { "value": "'md'", "computed": false }
+                    },
+                    "customStyle": {
+                        "type": {
+                            "name": "shape",
+                            "value": {
+                                "bubbleColor": { "name": "string", "description": "泡泡字色", "required": false },
+                                "bubbleBackground": {
+                                    "name": "string",
+                                    "description": "泡泡的背景色",
+                                    "required": false
+                                }
+                            }
+                        },
+                        "required": false,
+                        "description": { "description": "自定义样式", "tags": [] }
+                    },
+                    "getBubbleTarget": {
+                        "type": { "name": "func" },
+                        "required": false,
+                        "description": {
+                            "description": "",
+                            "tags": [{ "title": "ignore", "description": "自定义冒泡层定位的目标元素" }]
+                        }
+                    },
+                    "offset": {
+                        "type": { "name": "array" },
+                        "required": false,
+                        "description": { "description": "自定义偏移量", "tags": [] },
+                        "defaultValue": { "value": "[12, -4]", "computed": false }
                     }
                 }
             }
