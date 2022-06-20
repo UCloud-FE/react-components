@@ -63,14 +63,12 @@ const getSelectedKeysAfterSelectAll = (
     allSelectedStatus: SelectedStatus,
     selectedKeys: Key[],
     validKeys: Key[],
-    disabledKeys: Key[]
+    disabledKeys: Key[],
+    selected?: boolean
 ) => {
     const disabledSelectedKeys = union(selectedKeys, disabledKeys);
-    if (allSelectedStatus === 'ALL') {
-        return disabledSelectedKeys;
-    } else {
-        return validKeys.concat(disabledSelectedKeys);
-    }
+    if (selected || allSelectedStatus !== 'ALL') return validKeys.concat(disabledSelectedKeys);
+    return disabledSelectedKeys;
 };
 
 /**
@@ -84,7 +82,7 @@ const useGroup = (
     validKeys?: Key[],
     disabledKeys?: Key[],
     subGroupMap?: SubGroupMap
-): [GroupContext, SelectedStatus, () => void] => {
+): [GroupContext, SelectedStatus, (v?: boolean) => void] => {
     // avoid unknown type of keys
     selectedKeys = formatKeys(selectedKeys);
     const selectedStatus: SelectedStatus = useMemo(
@@ -155,13 +153,22 @@ const useGroup = (
         multiple,
         subGroupMap
     };
-    const toggleAllItems = useCallback(() => {
-        const cache = cacheRef.current;
-        const { selectedKeys, validKeys, disabledKeys, selectedStatus, multiple } = cache;
-        if (!multiple || !validKeys || !disabledKeys) return;
-        const newSelectedKeys = getSelectedKeysAfterSelectAll(selectedStatus, selectedKeys, validKeys, disabledKeys);
-        onChange(newSelectedKeys, selectedStatus === 'ALL' ? 'NONE' : 'ALL');
-    }, [onChange]);
+    const toggleAllItems = useCallback(
+        (selected?: boolean) => {
+            const cache = cacheRef.current;
+            const { selectedKeys, validKeys, disabledKeys, selectedStatus, multiple } = cache;
+            if (!multiple || !validKeys || !disabledKeys) return;
+            const newSelectedKeys = getSelectedKeysAfterSelectAll(
+                selectedStatus,
+                selectedKeys,
+                validKeys,
+                disabledKeys,
+                selected
+            );
+            onChange(newSelectedKeys, selectedStatus === 'ALL' ? 'NONE' : 'ALL');
+        },
+        [onChange]
+    );
     return [groupContext, selectedStatus, toggleAllItems];
 };
 

@@ -534,15 +534,15 @@ exports[`ZForm demo -- name 1`] = `
 `;
 
 exports[`ZForm demo -- rule 1`] = `
-.emotion-143 {
+.emotion-155 {
   font-size: 12px;
 }
 
-.emotion-143 .uc-fe-form-item {
+.emotion-155 .uc-fe-form-item {
   margin-bottom: 16px;
 }
 
-.emotion-143 .uc-fe-form-item:last-child {
+.emotion-155 .uc-fe-form-item:last-child {
   margin-bottom: 0;
 }
 
@@ -777,8 +777,8 @@ exports[`ZForm demo -- rule 1`] = `
 }
 
 .emotion-29 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -850,8 +850,8 @@ exports[`ZForm demo -- rule 1`] = `
 }
 
 .emotion-44 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -859,27 +859,20 @@ exports[`ZForm demo -- rule 1`] = `
   height: 14px;
 }
 
-.emotion-66 {
+.emotion-69 {
   box-sizing: border-box;
   position: relative;
   max-width: 100%;
-  display: inline-block;
-  vertical-align: middle;
+  min-width: 80px;
   font-size: 12px;
   color: #0a1633;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.emotion-64 {
-  margin: 0;
+.emotion-67 {
+  position: relative;
   box-sizing: border-box;
-  border-radius: 2px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  font-size: 12px;
-  white-space: nowrap;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -888,84 +881,297 @@ exports[`ZForm demo -- rule 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  vertical-align: middle;
   height: 28px;
-  line-height: 28px;
-  padding: 0 8px;
-  color: #0a1633;
-  fill: #0a1633;
-  background: #ffffff;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
   border: 1px solid #c3cad9;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  border-width: 1px;
-  border-style: solid;
-  padding: 0 7px;
-  line-height: 26px;
-  padding-right: 28px;
-  width: 100%;
-  min-width: 78px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  vertical-align: middle;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.emotion-67,
+.emotion-67 input,
+.emotion-67 .emotion-61 {
+  padding: 0 4px;
+}
+
+.emotion-67:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
+}
+
+.emotion-67 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-67 input,
+.emotion-67 input:hover,
+.emotion-67 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-67 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.2);
+}
+
+.emotion-67 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.2);
+}
+
+.emotion-67 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.2);
+}
+
+.emotion-67 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.2);
+}
+
+.emotion-67 input::-ms-clear {
+  display: none;
+}
+
+.emotion-67 .uc-fe-select-input-wrap {
+  position: relative;
   overflow: hidden;
 }
 
-.emotion-64:link,
-.emotion-64:visited {
-  color: #0a1633;
+.emotion-67 .uc-fe-select-input-wrap:empty {
+  display: initial;
 }
 
-.emotion-64:hover,
-.emotion-64:active {
-  color: #3860f4;
-  fill: #3860f4;
-  border: 1px solid #d2d6ea;
-  background: #ffffff;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+.emotion-67 .uc-fe-select-input {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
-.emotion-64 .uc-fe-select-content {
+.emotion-67 .uc-fe-select-placeholder {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
-.emotion-61 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  display: inline-block;
+.emotion-67 .uc-fe-select-clear {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-60 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.emotion-60:empty {
+  display: none;
+}
+
+.emotion-64 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-64:empty {
+  display: none;
+}
+
+.emotion-88 {
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 28px;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
-  fill: currentcolor;
-  width: 12px;
-  height: 12px;
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  margin-top: -6px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
 }
 
-.emotion-132 {
+.emotion-88,
+.emotion-88 input,
+.emotion-88 .emotion-61 {
+  padding: 0 4px;
+}
+
+.emotion-88:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
+}
+
+.emotion-88 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-88 input,
+.emotion-88 input:hover,
+.emotion-88 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-88 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.2);
+}
+
+.emotion-88 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.2);
+}
+
+.emotion-88 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.2);
+}
+
+.emotion-88 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.2);
+}
+
+.emotion-88 input::-ms-clear {
+  display: none;
+}
+
+.emotion-88 .uc-fe-select-input-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.emotion-88 .uc-fe-select-input-wrap:empty {
+  display: initial;
+}
+
+.emotion-88 .uc-fe-select-input {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.emotion-88 .uc-fe-select-placeholder {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-88 .uc-fe-select-clear {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-88:hover .uc-fe-select-clear {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.emotion-144 {
   padding: 16px;
   border: 1px solid #d2d6ea;
   background: #f6f6fb;
 }
 
-* + .emotion-132 {
+* + .emotion-144 {
   margin-top: 12px;
 }
 
-.emotion-132 .uc-fe-form-item {
+.emotion-144 .uc-fe-form-item {
   margin-bottom: 16px;
 }
 
-.emotion-141 {
+.emotion-153 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -1001,26 +1207,26 @@ exports[`ZForm demo -- rule 1`] = `
   transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
 }
 
-.emotion-141:link,
-.emotion-141:visited {
+.emotion-153:link,
+.emotion-153:visited {
   color: #ffffff;
 }
 
-.emotion-141:hover,
-.emotion-141:active {
+.emotion-153:hover,
+.emotion-153:active {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
 
-.emotion-143 {
+.emotion-155 {
   font-size: 12px;
 }
 
-.emotion-143 .uc-fe-form-item {
+.emotion-155 .uc-fe-form-item {
   margin-bottom: 16px;
 }
 
-.emotion-143 .uc-fe-form-item:last-child {
+.emotion-155 .uc-fe-form-item:last-child {
   margin-bottom: 0;
 }
 
@@ -1255,8 +1461,8 @@ exports[`ZForm demo -- rule 1`] = `
 }
 
 .emotion-29 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -1328,8 +1534,8 @@ exports[`ZForm demo -- rule 1`] = `
 }
 
 .emotion-44 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -1337,27 +1543,20 @@ exports[`ZForm demo -- rule 1`] = `
   height: 14px;
 }
 
-.emotion-66 {
+.emotion-69 {
   box-sizing: border-box;
   position: relative;
   max-width: 100%;
-  display: inline-block;
-  vertical-align: middle;
+  min-width: 80px;
   font-size: 12px;
   color: #0a1633;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.emotion-64 {
-  margin: 0;
+.emotion-67 {
+  position: relative;
   box-sizing: border-box;
-  border-radius: 2px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  font-size: 12px;
-  white-space: nowrap;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1366,84 +1565,297 @@ exports[`ZForm demo -- rule 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  vertical-align: middle;
   height: 28px;
-  line-height: 28px;
-  padding: 0 8px;
-  color: #0a1633;
-  fill: #0a1633;
-  background: #ffffff;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
   border: 1px solid #c3cad9;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  border-width: 1px;
-  border-style: solid;
-  padding: 0 7px;
-  line-height: 26px;
-  padding-right: 28px;
-  width: 100%;
-  min-width: 78px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  vertical-align: middle;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.emotion-67,
+.emotion-67 input,
+.emotion-67 .emotion-61 {
+  padding: 0 4px;
+}
+
+.emotion-67:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
+}
+
+.emotion-67 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-67 input,
+.emotion-67 input:hover,
+.emotion-67 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-67 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.2);
+}
+
+.emotion-67 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.2);
+}
+
+.emotion-67 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.2);
+}
+
+.emotion-67 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.2);
+}
+
+.emotion-67 input::-ms-clear {
+  display: none;
+}
+
+.emotion-67 .uc-fe-select-input-wrap {
+  position: relative;
   overflow: hidden;
 }
 
-.emotion-64:link,
-.emotion-64:visited {
-  color: #0a1633;
+.emotion-67 .uc-fe-select-input-wrap:empty {
+  display: initial;
 }
 
-.emotion-64:hover,
-.emotion-64:active {
-  color: #3860f4;
-  fill: #3860f4;
-  border: 1px solid #d2d6ea;
-  background: #ffffff;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+.emotion-67 .uc-fe-select-input {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
-.emotion-64 .uc-fe-select-content {
+.emotion-67 .uc-fe-select-placeholder {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
-.emotion-61 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  display: inline-block;
+.emotion-67 .uc-fe-select-clear {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-60 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.emotion-60:empty {
+  display: none;
+}
+
+.emotion-64 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-64:empty {
+  display: none;
+}
+
+.emotion-88 {
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 28px;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
   vertical-align: middle;
-  fill: currentcolor;
-  width: 12px;
-  height: 12px;
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  margin-top: -6px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
 }
 
-.emotion-132 {
+.emotion-88,
+.emotion-88 input,
+.emotion-88 .emotion-61 {
+  padding: 0 4px;
+}
+
+.emotion-88:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
+}
+
+.emotion-88 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-88 input,
+.emotion-88 input:hover,
+.emotion-88 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-88 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.2);
+}
+
+.emotion-88 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.2);
+}
+
+.emotion-88 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.2);
+}
+
+.emotion-88 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.2);
+}
+
+.emotion-88 input::-ms-clear {
+  display: none;
+}
+
+.emotion-88 .uc-fe-select-input-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.emotion-88 .uc-fe-select-input-wrap:empty {
+  display: initial;
+}
+
+.emotion-88 .uc-fe-select-input {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.emotion-88 .uc-fe-select-placeholder {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-88 .uc-fe-select-clear {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-88:hover .uc-fe-select-clear {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.emotion-144 {
   padding: 16px;
   border: 1px solid #d2d6ea;
   background: #f6f6fb;
 }
 
-* + .emotion-132 {
+* + .emotion-144 {
   margin-top: 12px;
 }
 
-.emotion-132 .uc-fe-form-item {
+.emotion-144 .uc-fe-form-item {
   margin-bottom: 16px;
 }
 
-.emotion-141 {
+.emotion-153 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -1479,19 +1891,19 @@ exports[`ZForm demo -- rule 1`] = `
   transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
 }
 
-.emotion-141:link,
-.emotion-141:visited {
+.emotion-153:link,
+.emotion-153:visited {
   color: #ffffff;
 }
 
-.emotion-141:hover,
-.emotion-141:active {
+.emotion-153:hover,
+.emotion-153:active {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
 
 <form
-  class="uc-fe-form emotion-143 emotion-90"
+  class="uc-fe-form emotion-155 emotion-90"
 >
   <div
     class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10 emotion-11"
@@ -1661,28 +2073,36 @@ exports[`ZForm demo -- rule 1`] = `
       span="5"
     >
       <div
-        class="emotion-66 emotion-67"
+        class="emotion-69 emotion-70"
       >
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-63 emotion-64 emotion-65"
-          title="请选择"
-          type="button"
+        <span
+          class="uc-fe-select-input emotion-66 emotion-67 emotion-68"
         >
-          <div
-            class="uc-fe-select-content"
+          <span
+            class="uc-fe-select-input-wrap emotion-60 emotion-61"
           >
-            请选择
-          </div>
-          <svg
-            class="emotion-60 emotion-61 emotion-30"
-            viewBox="0 0 24 24"
+            <span
+              class="uc-fe-select-placeholder"
+              style="visibility:visible;opacity:1"
+            >
+              请选择
+            </span>
+          </span>
+          <span
+            class="emotion-64 emotion-61"
           >
-            <path
-              d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-              transform="matrix(-1 0 0 1 24 0)"
-            />
-          </svg>
-        </button>
+            <svg
+              class=" emotion-29 emotion-30"
+              style="visibility:visible"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+                transform="matrix(-1 0 0 1 24 0)"
+              />
+            </svg>
+          </span>
+        </span>
       </div>
     </div>
   </div>
@@ -1700,28 +2120,36 @@ exports[`ZForm demo -- rule 1`] = `
       span="5"
     >
       <div
-        class="emotion-66 emotion-67"
+        class="emotion-69 emotion-70"
       >
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-63 emotion-64 emotion-65"
-          title="label-1"
-          type="button"
+        <span
+          class="uc-fe-select-input emotion-66 emotion-88 emotion-68"
         >
-          <div
-            class="uc-fe-select-content"
+          <span
+            class="uc-fe-select-input-wrap emotion-60 emotion-61"
           >
-            label-1
-          </div>
-          <svg
-            class="emotion-60 emotion-61 emotion-30"
-            viewBox="0 0 24 24"
+            <span
+              class="uc-fe-select-placeholder"
+              style="visibility:visible;opacity:1"
+            >
+              label-1
+            </span>
+          </span>
+          <span
+            class="emotion-64 emotion-61"
           >
-            <path
-              d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-              transform="matrix(-1 0 0 1 24 0)"
-            />
-          </svg>
-        </button>
+            <svg
+              class=" emotion-29 emotion-30"
+              style="visibility:visible"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+                transform="matrix(-1 0 0 1 24 0)"
+              />
+            </svg>
+          </span>
+        </span>
       </div>
     </div>
   </div>
@@ -1739,7 +2167,7 @@ exports[`ZForm demo -- rule 1`] = `
       span="5"
     >
       <div
-        class="uc-fe-form-sub-area emotion-132 emotion-94"
+        class="uc-fe-form-sub-area emotion-144 emotion-94"
       >
         <div
           class="uc-fe-row uc-fe-form-item emotion-8 emotion-9 emotion-10 emotion-11"
@@ -1755,28 +2183,36 @@ exports[`ZForm demo -- rule 1`] = `
             span="5"
           >
             <div
-              class="emotion-66 emotion-67"
+              class="emotion-69 emotion-70"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-63 emotion-64 emotion-65"
-                title="请选择"
-                type="button"
+              <span
+                class="uc-fe-select-input emotion-66 emotion-67 emotion-68"
               >
-                <div
-                  class="uc-fe-select-content"
+                <span
+                  class="uc-fe-select-input-wrap emotion-60 emotion-61"
                 >
-                  请选择
-                </div>
-                <svg
-                  class="emotion-60 emotion-61 emotion-30"
-                  viewBox="0 0 24 24"
+                  <span
+                    class="uc-fe-select-placeholder"
+                    style="visibility:visible;opacity:1"
+                  >
+                    请选择
+                  </span>
+                </span>
+                <span
+                  class="emotion-64 emotion-61"
                 >
-                  <path
-                    d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-                    transform="matrix(-1 0 0 1 24 0)"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-29 emotion-30"
+                    style="visibility:visible"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+                      transform="matrix(-1 0 0 1 24 0)"
+                    />
+                  </svg>
+                </span>
+              </span>
             </div>
           </div>
         </div>
@@ -1794,28 +2230,36 @@ exports[`ZForm demo -- rule 1`] = `
             span="5"
           >
             <div
-              class="emotion-66 emotion-67"
+              class="emotion-69 emotion-70"
             >
-              <button
-                class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-63 emotion-64 emotion-65"
-                title="label-1"
-                type="button"
+              <span
+                class="uc-fe-select-input emotion-66 emotion-88 emotion-68"
               >
-                <div
-                  class="uc-fe-select-content"
+                <span
+                  class="uc-fe-select-input-wrap emotion-60 emotion-61"
                 >
-                  label-1
-                </div>
-                <svg
-                  class="emotion-60 emotion-61 emotion-30"
-                  viewBox="0 0 24 24"
+                  <span
+                    class="uc-fe-select-placeholder"
+                    style="visibility:visible;opacity:1"
+                  >
+                    label-1
+                  </span>
+                </span>
+                <span
+                  class="emotion-64 emotion-61"
                 >
-                  <path
-                    d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-                    transform="matrix(-1 0 0 1 24 0)"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    class=" emotion-29 emotion-30"
+                    style="visibility:visible"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+                      transform="matrix(-1 0 0 1 24 0)"
+                    />
+                  </svg>
+                </span>
+              </span>
             </div>
           </div>
         </div>
@@ -1823,7 +2267,7 @@ exports[`ZForm demo -- rule 1`] = `
     </div>
   </div>
   <button
-    class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-141 emotion-65"
+    class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-153 emotion-154"
     type="button"
   >
     submit
@@ -1832,15 +2276,15 @@ exports[`ZForm demo -- rule 1`] = `
 `;
 
 exports[`ZForm demo -- uhost 1`] = `
-.emotion-142 {
+.emotion-145 {
   font-size: 12px;
 }
 
-.emotion-142 .uc-fe-form-item {
+.emotion-145 .uc-fe-form-item {
   margin-bottom: 16px;
 }
 
-.emotion-142 .uc-fe-form-item:last-child {
+.emotion-145 .uc-fe-form-item:last-child {
   margin-bottom: 0;
 }
 
@@ -1883,99 +2327,66 @@ exports[`ZForm demo -- uhost 1`] = `
   color: #526075;
 }
 
-.emotion-131 {
-  box-sizing: border-box;
-  position: relative;
-  max-width: 100%;
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 12px;
-  color: #0a1633;
-}
-
-.emotion-129 {
-  margin: 0;
-  box-sizing: border-box;
-  border-radius: 2px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  font-size: 12px;
-  white-space: nowrap;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
-  padding: 0 8px;
-  color: #0a1633;
-  fill: #0a1633;
-  background: #ffffff;
-  border: 1px solid #c3cad9;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  border-width: 1px;
-  border-style: solid;
-  padding: 0 7px;
-  line-height: 26px;
-  padding-right: 28px;
-  width: 100%;
-  min-width: 78px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  overflow: hidden;
-}
-
-.emotion-129:link,
-.emotion-129:visited {
-  color: #0a1633;
-}
-
-.emotion-129:hover,
-.emotion-129:active {
-  color: #3860f4;
-  fill: #3860f4;
-  border: 1px solid #d2d6ea;
-  background: #ffffff;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
-}
-
-.emotion-129 .uc-fe-select-content {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.emotion-126 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+.emotion-127 {
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
   width: 12px;
   height: 12px;
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  margin-top: -6px;
 }
 
-.emotion-140 {
+.emotion-134 {
+  box-sizing: border-box;
+  position: relative;
+  max-width: 100%;
+  min-width: 80px;
+  font-size: 12px;
+  color: #0a1633;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-125 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.emotion-125:empty {
+  display: none;
+}
+
+.emotion-129 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-129:empty {
+  display: none;
+}
+
+.emotion-143 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -2011,13 +2422,13 @@ exports[`ZForm demo -- uhost 1`] = `
   transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
 }
 
-.emotion-140:link,
-.emotion-140:visited {
+.emotion-143:link,
+.emotion-143:visited {
   color: #ffffff;
 }
 
-.emotion-140:hover,
-.emotion-140:active {
+.emotion-143:hover,
+.emotion-143:active {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
@@ -2331,15 +2742,137 @@ exports[`ZForm demo -- uhost 1`] = `
   display: none;
 }
 
-.emotion-142 {
+.emotion-132 {
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 28px;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  vertical-align: middle;
+  cursor: text;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+}
+
+.emotion-132,
+.emotion-132 input,
+.emotion-132 .emotion-126 {
+  padding: 0 4px;
+}
+
+.emotion-132:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
+}
+
+.emotion-132 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-132 input,
+.emotion-132 input:hover,
+.emotion-132 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-132 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.2);
+}
+
+.emotion-132 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.2);
+}
+
+.emotion-132 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.2);
+}
+
+.emotion-132 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.2);
+}
+
+.emotion-132 input::-ms-clear {
+  display: none;
+}
+
+.emotion-132 .uc-fe-select-input-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.emotion-132 .uc-fe-select-input-wrap:empty {
+  display: initial;
+}
+
+.emotion-132 .uc-fe-select-input {
+  cursor: text;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.emotion-132 .uc-fe-select-placeholder {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-132 .uc-fe-select-clear {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-145 {
   font-size: 12px;
 }
 
-.emotion-142 .uc-fe-form-item {
+.emotion-145 .uc-fe-form-item {
   margin-bottom: 16px;
 }
 
-.emotion-142 .uc-fe-form-item:last-child {
+.emotion-145 .uc-fe-form-item:last-child {
   margin-bottom: 0;
 }
 
@@ -2382,99 +2915,66 @@ exports[`ZForm demo -- uhost 1`] = `
   color: #526075;
 }
 
-.emotion-131 {
-  box-sizing: border-box;
-  position: relative;
-  max-width: 100%;
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 12px;
-  color: #0a1633;
-}
-
-.emotion-129 {
-  margin: 0;
-  box-sizing: border-box;
-  border-radius: 2px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
-  font-size: 12px;
-  white-space: nowrap;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
-  padding: 0 8px;
-  color: #0a1633;
-  fill: #0a1633;
-  background: #ffffff;
-  border: 1px solid #c3cad9;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  border-width: 1px;
-  border-style: solid;
-  padding: 0 7px;
-  line-height: 26px;
-  padding-right: 28px;
-  width: 100%;
-  min-width: 78px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  overflow: hidden;
-}
-
-.emotion-129:link,
-.emotion-129:visited {
-  color: #0a1633;
-}
-
-.emotion-129:hover,
-.emotion-129:active {
-  color: #3860f4;
-  fill: #3860f4;
-  border: 1px solid #d2d6ea;
-  background: #ffffff;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
-}
-
-.emotion-129 .uc-fe-select-content {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.emotion-126 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+.emotion-127 {
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
   width: 12px;
   height: 12px;
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  margin-top: -6px;
 }
 
-.emotion-140 {
+.emotion-134 {
+  box-sizing: border-box;
+  position: relative;
+  max-width: 100%;
+  min-width: 80px;
+  font-size: 12px;
+  color: #0a1633;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emotion-125 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.emotion-125:empty {
+  display: none;
+}
+
+.emotion-129 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-129:empty {
+  display: none;
+}
+
+.emotion-143 {
   margin: 0;
   box-sizing: border-box;
   border-radius: 2px;
@@ -2510,13 +3010,13 @@ exports[`ZForm demo -- uhost 1`] = `
   transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
 }
 
-.emotion-140:link,
-.emotion-140:visited {
+.emotion-143:link,
+.emotion-143:visited {
   color: #ffffff;
 }
 
-.emotion-140:hover,
-.emotion-140:active {
+.emotion-143:hover,
+.emotion-143:active {
   background: linear-gradient(135deg,#5c76e8 0%,#3357df 100%);
   box-shadow: 0 5px 8px -4px #5c76e8,inset 0 -3px 0 0 rgba(0,0,0,0.12),inset 0 1px 0 0 rgba(0,0,0,0.12);
 }
@@ -2828,10 +3328,132 @@ exports[`ZForm demo -- uhost 1`] = `
 
 .emotion-105 .uc-fe-switch-tip-on {
   display: none;
+}
+
+.emotion-132 {
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 28px;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  vertical-align: middle;
+  cursor: text;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: text;
+}
+
+.emotion-132,
+.emotion-132 input,
+.emotion-132 .emotion-126 {
+  padding: 0 4px;
+}
+
+.emotion-132:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
+}
+
+.emotion-132 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-132 input,
+.emotion-132 input:hover,
+.emotion-132 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-132 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.2);
+}
+
+.emotion-132 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.2);
+}
+
+.emotion-132 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.2);
+}
+
+.emotion-132 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.2);
+}
+
+.emotion-132 input::-ms-clear {
+  display: none;
+}
+
+.emotion-132 .uc-fe-select-input-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.emotion-132 .uc-fe-select-input-wrap:empty {
+  display: initial;
+}
+
+.emotion-132 .uc-fe-select-input {
+  cursor: text;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.emotion-132 .uc-fe-select-placeholder {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-132 .uc-fe-select-clear {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 
 <form
-  class="uc-fe-form emotion-142 emotion-660"
+  class="uc-fe-form emotion-145 emotion-660"
 >
   <div
     class="uc-fe-row uc-fe-form-item emotion-65 emotion-66 emotion-67 emotion-68"
@@ -3098,28 +3720,40 @@ exports[`ZForm demo -- uhost 1`] = `
         </button>
       </div>
       <div
-        class="emotion-131 emotion-132"
+        class="emotion-134 emotion-135"
       >
-        <button
-          class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-128 emotion-129 emotion-5"
-          title="请选择"
-          type="button"
+        <span
+          class="uc-fe-select-input emotion-131 emotion-132 emotion-133"
         >
-          <div
-            class="uc-fe-select-content"
+          <span
+            class="uc-fe-select-input-wrap emotion-125 emotion-126"
           >
-            请选择
-          </div>
-          <svg
-            class="emotion-125 emotion-126 emotion-127"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-              transform="matrix(-1 0 0 1 24 0)"
+            <span
+              class="uc-fe-select-placeholder"
+              style="visibility:visible;opacity:1"
+            >
+              请选择
+            </span>
+            <input
+              class="uc-fe-select-input"
+              value=""
             />
-          </svg>
-        </button>
+          </span>
+          <span
+            class="emotion-129 emotion-126"
+          >
+            <svg
+              class=" emotion-127 emotion-128"
+              style="visibility:visible"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+                transform="matrix(-1 0 0 1 24 0)"
+              />
+            </svg>
+          </span>
+        </span>
       </div>
     </div>
   </div>
@@ -3127,7 +3761,7 @@ exports[`ZForm demo -- uhost 1`] = `
     class="u-red"
   />
   <button
-    class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-140 emotion-5"
+    class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-primary emotion-143 emotion-5"
     type="button"
   >
     submit
