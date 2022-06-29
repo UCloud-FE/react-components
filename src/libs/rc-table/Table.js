@@ -125,9 +125,7 @@ class Table extends React.Component {
     }
 
     componentWillUnmount() {
-        if (this.resizeEvent) {
-            this.resizeEvent.remove();
-        }
+        window.removeEventListener('resize', this.debouncedWindowResize);
         if (this.debouncedWindowResize) {
             this.debouncedWindowResize.cancel();
         }
@@ -135,6 +133,7 @@ class Table extends React.Component {
 
     componentDidMount() {
         this.setScrollPositionClassName();
+        window.addEventListener('resize', this.debouncedWindowResize);
     }
 
     getRowKey = (record, index) => {
