@@ -36,9 +36,6 @@ module.exports = [
             },
             {
                 name: 'Combine'
-            },
-            {
-                name: 'Compact'
             }
         ]
     },
