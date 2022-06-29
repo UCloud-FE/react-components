@@ -125,24 +125,24 @@ exports[`Pagination demo -- pageSize 1`] = `
   box-sizing: border-box;
   position: relative;
   max-width: 100%;
-  min-width: 80px;
   font-size: 12px;
   color: #0a1633;
   display: inline-block;
   vertical-align: middle;
 }
 
+.emotion-13 .uc-fe-select-list {
+  display: block;
+  width: 400px;
+  max-height: 60px;
+  overflow: auto;
+  margin-top: 8px;
+  cursor: default;
+}
+
 .emotion-11 {
   position: relative;
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -152,27 +152,103 @@ exports[`Pagination demo -- pageSize 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
-  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-}
-
-.emotion-11,
-.emotion-11 input,
-.emotion-11 .emotion-5 {
-  padding: 0 4px;
+  color: #526075;
+  min-width: 80px;
+  overflow: hidden;
 }
 
 .emotion-11:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
+}
+
+.emotion-11 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: rgba(10,22,51,0.2);
+  fill: rgba(10,22,51,0.2);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
+}
+
+.emotion-11 .uc-fe-input-clear:hover {
+  color: #7a8baa;
+  fill: #7a8baa;
+}
+
+.emotion-11,
+.emotion-11 .uc-fe-input-prefix,
+.emotion-11 .uc-fe-input-suffix,
+.emotion-11 .uc-fe-input-clear,
+.emotion-11 input,
+.emotion-11 .emotion-5 {
+  padding: 0 4px;
+}
+
+.emotion-11.uc-fe-input-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-11 .uc-fe-input-prefix,
+.emotion-11 .uc-fe-input-suffix,
+.emotion-11 .emotion-5 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-11 .emotion-5[hidden] {
+  display: none;
+}
+
+.emotion-11 .uc-fe-input-block-wrap {
+  height: 18px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 0px;
 }
 
 .emotion-11 input {
@@ -219,6 +295,16 @@ exports[`Pagination demo -- pageSize 1`] = `
   display: none;
 }
 
+.emotion-11:hover .uc-fe-input-clear,
+.emotion-11.uc-fe-input-focused .uc-fe-input-clear {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.emotion-11:hover {
+  color: #0a1633;
+}
+
 .emotion-11 .uc-fe-select-input-wrap {
   position: relative;
   overflow: hidden;
@@ -229,7 +315,6 @@ exports[`Pagination demo -- pageSize 1`] = `
 }
 
 .emotion-11 .uc-fe-select-input {
-  cursor: pointer;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -259,42 +344,18 @@ exports[`Pagination demo -- pageSize 1`] = `
   cursor: pointer;
 }
 
-.emotion-4 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.emotion-4.emotion-4.emotion-4 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  visibility: visible;
 }
 
-.emotion-4:empty {
-  display: none;
-}
-
-.emotion-8 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.emotion-8.emotion-8.emotion-8 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-}
-
-.emotion-8:empty {
-  display: none;
+  visibility: visible;
 }
 
 .emotion-15 {
@@ -421,24 +482,24 @@ exports[`Pagination demo -- pageSize 1`] = `
   box-sizing: border-box;
   position: relative;
   max-width: 100%;
-  min-width: 80px;
   font-size: 12px;
   color: #0a1633;
   display: inline-block;
   vertical-align: middle;
 }
 
+.emotion-13 .uc-fe-select-list {
+  display: block;
+  width: 400px;
+  max-height: 60px;
+  overflow: auto;
+  margin-top: 8px;
+  cursor: default;
+}
+
 .emotion-11 {
   position: relative;
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -448,27 +509,103 @@ exports[`Pagination demo -- pageSize 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
-  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-}
-
-.emotion-11,
-.emotion-11 input,
-.emotion-11 .emotion-5 {
-  padding: 0 4px;
+  color: #526075;
+  min-width: 80px;
+  overflow: hidden;
 }
 
 .emotion-11:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
+}
+
+.emotion-11 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: rgba(10,22,51,0.2);
+  fill: rgba(10,22,51,0.2);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
+}
+
+.emotion-11 .uc-fe-input-clear:hover {
+  color: #7a8baa;
+  fill: #7a8baa;
+}
+
+.emotion-11,
+.emotion-11 .uc-fe-input-prefix,
+.emotion-11 .uc-fe-input-suffix,
+.emotion-11 .uc-fe-input-clear,
+.emotion-11 input,
+.emotion-11 .emotion-5 {
+  padding: 0 4px;
+}
+
+.emotion-11.uc-fe-input-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-11 .uc-fe-input-prefix,
+.emotion-11 .uc-fe-input-suffix,
+.emotion-11 .emotion-5 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-11 .emotion-5[hidden] {
+  display: none;
+}
+
+.emotion-11 .uc-fe-input-block-wrap {
+  height: 18px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 0px;
 }
 
 .emotion-11 input {
@@ -515,6 +652,16 @@ exports[`Pagination demo -- pageSize 1`] = `
   display: none;
 }
 
+.emotion-11:hover .uc-fe-input-clear,
+.emotion-11.uc-fe-input-focused .uc-fe-input-clear {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.emotion-11:hover {
+  color: #0a1633;
+}
+
 .emotion-11 .uc-fe-select-input-wrap {
   position: relative;
   overflow: hidden;
@@ -525,7 +672,6 @@ exports[`Pagination demo -- pageSize 1`] = `
 }
 
 .emotion-11 .uc-fe-select-input {
-  cursor: pointer;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -555,42 +701,18 @@ exports[`Pagination demo -- pageSize 1`] = `
   cursor: pointer;
 }
 
-.emotion-4 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.emotion-4.emotion-4.emotion-4 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  visibility: visible;
 }
 
-.emotion-4:empty {
-  display: none;
-}
-
-.emotion-8 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.emotion-8.emotion-8.emotion-8 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-}
-
-.emotion-8:empty {
-  display: none;
+  visibility: visible;
 }
 
 <div>
@@ -684,7 +806,8 @@ exports[`Pagination demo -- pageSize 1`] = `
           class="uc-fe-pagination-options-size-changer emotion-13 emotion-14"
         >
           <span
-            class="uc-fe-select-input emotion-10 emotion-11 emotion-12"
+            class="uc-fe-input uc-fe-input-block uc-fe-select-input emotion-10 emotion-11 emotion-12"
+            cursor="pointer"
           >
             <span
               class="uc-fe-select-input-wrap emotion-4 emotion-5"
@@ -701,7 +824,6 @@ exports[`Pagination demo -- pageSize 1`] = `
             >
               <svg
                 class=" emotion-0 emotion-1"
-                style="visibility:visible"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -805,7 +927,8 @@ exports[`Pagination demo -- pageSize 1`] = `
           class="uc-fe-pagination-options-size-changer emotion-13 emotion-14"
         >
           <span
-            class="uc-fe-select-input emotion-10 emotion-11 emotion-12"
+            class="uc-fe-input uc-fe-input-block uc-fe-select-input emotion-10 emotion-11 emotion-12"
+            cursor="pointer"
           >
             <span
               class="uc-fe-select-input-wrap emotion-4 emotion-5"
@@ -822,7 +945,6 @@ exports[`Pagination demo -- pageSize 1`] = `
             >
               <svg
                 class=" emotion-0 emotion-1"
-                style="visibility:visible"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -964,24 +1086,24 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
   box-sizing: border-box;
   position: relative;
   max-width: 100%;
-  min-width: 80px;
   font-size: 12px;
   color: #0a1633;
   display: inline-block;
   vertical-align: middle;
 }
 
+.emotion-15 .uc-fe-select-list {
+  display: block;
+  width: 400px;
+  max-height: 60px;
+  overflow: auto;
+  margin-top: 8px;
+  cursor: default;
+}
+
 .emotion-13 {
   position: relative;
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -991,27 +1113,103 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
-  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-}
-
-.emotion-13,
-.emotion-13 input,
-.emotion-13 .emotion-7 {
-  padding: 0 4px;
+  color: #526075;
+  min-width: 80px;
+  overflow: hidden;
 }
 
 .emotion-13:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
+}
+
+.emotion-13 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: rgba(10,22,51,0.2);
+  fill: rgba(10,22,51,0.2);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
+}
+
+.emotion-13 .uc-fe-input-clear:hover {
+  color: #7a8baa;
+  fill: #7a8baa;
+}
+
+.emotion-13,
+.emotion-13 .uc-fe-input-prefix,
+.emotion-13 .uc-fe-input-suffix,
+.emotion-13 .uc-fe-input-clear,
+.emotion-13 input,
+.emotion-13 .emotion-7 {
+  padding: 0 4px;
+}
+
+.emotion-13.uc-fe-input-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-13 .uc-fe-input-prefix,
+.emotion-13 .uc-fe-input-suffix,
+.emotion-13 .emotion-7 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-13 .emotion-7[hidden] {
+  display: none;
+}
+
+.emotion-13 .uc-fe-input-block-wrap {
+  height: 18px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 0px;
 }
 
 .emotion-13 input {
@@ -1058,6 +1256,16 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
   display: none;
 }
 
+.emotion-13:hover .uc-fe-input-clear,
+.emotion-13.uc-fe-input-focused .uc-fe-input-clear {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.emotion-13:hover {
+  color: #0a1633;
+}
+
 .emotion-13 .uc-fe-select-input-wrap {
   position: relative;
   overflow: hidden;
@@ -1068,7 +1276,6 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
 }
 
 .emotion-13 .uc-fe-select-input {
-  cursor: pointer;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1098,42 +1305,18 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
   cursor: pointer;
 }
 
-.emotion-6 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.emotion-6.emotion-6.emotion-6 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  visibility: visible;
 }
 
-.emotion-6:empty {
-  display: none;
-}
-
-.emotion-10 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.emotion-10.emotion-10.emotion-10 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-}
-
-.emotion-10:empty {
-  display: none;
+  visibility: visible;
 }
 
 .emotion-17 {
@@ -1260,24 +1443,24 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
   box-sizing: border-box;
   position: relative;
   max-width: 100%;
-  min-width: 80px;
   font-size: 12px;
   color: #0a1633;
   display: inline-block;
   vertical-align: middle;
 }
 
+.emotion-15 .uc-fe-select-list {
+  display: block;
+  width: 400px;
+  max-height: 60px;
+  overflow: auto;
+  margin-top: 8px;
+  cursor: default;
+}
+
 .emotion-13 {
   position: relative;
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -1287,27 +1470,103 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
-  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-}
-
-.emotion-13,
-.emotion-13 input,
-.emotion-13 .emotion-7 {
-  padding: 0 4px;
+  color: #526075;
+  min-width: 80px;
+  overflow: hidden;
 }
 
 .emotion-13:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
+}
+
+.emotion-13 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: rgba(10,22,51,0.2);
+  fill: rgba(10,22,51,0.2);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
+}
+
+.emotion-13 .uc-fe-input-clear:hover {
+  color: #7a8baa;
+  fill: #7a8baa;
+}
+
+.emotion-13,
+.emotion-13 .uc-fe-input-prefix,
+.emotion-13 .uc-fe-input-suffix,
+.emotion-13 .uc-fe-input-clear,
+.emotion-13 input,
+.emotion-13 .emotion-7 {
+  padding: 0 4px;
+}
+
+.emotion-13.uc-fe-input-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-13 .uc-fe-input-prefix,
+.emotion-13 .uc-fe-input-suffix,
+.emotion-13 .emotion-7 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-13 .emotion-7[hidden] {
+  display: none;
+}
+
+.emotion-13 .uc-fe-input-block-wrap {
+  height: 18px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 0px;
 }
 
 .emotion-13 input {
@@ -1354,6 +1613,16 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
   display: none;
 }
 
+.emotion-13:hover .uc-fe-input-clear,
+.emotion-13.uc-fe-input-focused .uc-fe-input-clear {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.emotion-13:hover {
+  color: #0a1633;
+}
+
 .emotion-13 .uc-fe-select-input-wrap {
   position: relative;
   overflow: hidden;
@@ -1364,7 +1633,6 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
 }
 
 .emotion-13 .uc-fe-select-input {
-  cursor: pointer;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1394,42 +1662,18 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
   cursor: pointer;
 }
 
-.emotion-6 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.emotion-6.emotion-6.emotion-6 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  visibility: visible;
 }
 
-.emotion-6:empty {
-  display: none;
-}
-
-.emotion-10 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.emotion-10.emotion-10.emotion-10 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-}
-
-.emotion-10:empty {
-  display: none;
+  visibility: visible;
 }
 
 <div>
@@ -1546,7 +1790,8 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
           class="uc-fe-pagination-options-size-changer emotion-15 emotion-16"
         >
           <span
-            class="uc-fe-select-input emotion-12 emotion-13 emotion-14"
+            class="uc-fe-input uc-fe-input-block uc-fe-select-input emotion-12 emotion-13 emotion-14"
+            cursor="pointer"
           >
             <span
               class="uc-fe-select-input-wrap emotion-6 emotion-7"
@@ -1563,7 +1808,6 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
             >
               <svg
                 class=" emotion-0 emotion-1"
-                style="visibility:visible"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -1690,7 +1934,8 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
           class="uc-fe-pagination-options-size-changer emotion-15 emotion-16"
         >
           <span
-            class="uc-fe-select-input emotion-12 emotion-13 emotion-14"
+            class="uc-fe-input uc-fe-input-block uc-fe-select-input emotion-12 emotion-13 emotion-14"
+            cursor="pointer"
           >
             <span
               class="uc-fe-select-input-wrap emotion-6 emotion-7"
@@ -1707,7 +1952,6 @@ exports[`Pagination demo -- pageSizeOptions 1`] = `
             >
               <svg
                 class=" emotion-0 emotion-1"
-                style="visibility:visible"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -5520,24 +5764,24 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
   box-sizing: border-box;
   position: relative;
   max-width: 100%;
-  min-width: 80px;
   font-size: 12px;
   color: #0a1633;
   display: inline-block;
   vertical-align: middle;
 }
 
+.emotion-23 .uc-fe-select-list {
+  display: block;
+  width: 400px;
+  max-height: 60px;
+  overflow: auto;
+  margin-top: 8px;
+  cursor: default;
+}
+
 .emotion-21 {
   position: relative;
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -5547,27 +5791,103 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
-  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-}
-
-.emotion-21,
-.emotion-21 input,
-.emotion-21 .emotion-15 {
-  padding: 0 4px;
+  color: #526075;
+  min-width: 80px;
+  overflow: hidden;
 }
 
 .emotion-21:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
+}
+
+.emotion-21 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: rgba(10,22,51,0.2);
+  fill: rgba(10,22,51,0.2);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
+}
+
+.emotion-21 .uc-fe-input-clear:hover {
+  color: #7a8baa;
+  fill: #7a8baa;
+}
+
+.emotion-21,
+.emotion-21 .uc-fe-input-prefix,
+.emotion-21 .uc-fe-input-suffix,
+.emotion-21 .uc-fe-input-clear,
+.emotion-21 input,
+.emotion-21 .emotion-15 {
+  padding: 0 4px;
+}
+
+.emotion-21.uc-fe-input-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-21 .uc-fe-input-prefix,
+.emotion-21 .uc-fe-input-suffix,
+.emotion-21 .emotion-15 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-21 .emotion-15[hidden] {
+  display: none;
+}
+
+.emotion-21 .uc-fe-input-block-wrap {
+  height: 18px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 0px;
 }
 
 .emotion-21 input {
@@ -5614,6 +5934,16 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
   display: none;
 }
 
+.emotion-21:hover .uc-fe-input-clear,
+.emotion-21.uc-fe-input-focused .uc-fe-input-clear {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.emotion-21:hover {
+  color: #0a1633;
+}
+
 .emotion-21 .uc-fe-select-input-wrap {
   position: relative;
   overflow: hidden;
@@ -5624,7 +5954,6 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
 }
 
 .emotion-21 .uc-fe-select-input {
-  cursor: pointer;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -5654,42 +5983,18 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
   cursor: pointer;
 }
 
-.emotion-14 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.emotion-14.emotion-14.emotion-14 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  visibility: visible;
 }
 
-.emotion-14:empty {
-  display: none;
-}
-
-.emotion-18 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.emotion-18.emotion-18.emotion-18 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-}
-
-.emotion-18:empty {
-  display: none;
+  visibility: visible;
 }
 
 .emotion-6 {
@@ -5816,24 +6121,24 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
   box-sizing: border-box;
   position: relative;
   max-width: 100%;
-  min-width: 80px;
   font-size: 12px;
   color: #0a1633;
   display: inline-block;
   vertical-align: middle;
 }
 
+.emotion-23 .uc-fe-select-list {
+  display: block;
+  width: 400px;
+  max-height: 60px;
+  overflow: auto;
+  margin-top: 8px;
+  cursor: default;
+}
+
 .emotion-21 {
   position: relative;
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -5843,27 +6148,103 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
-  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-}
-
-.emotion-21,
-.emotion-21 input,
-.emotion-21 .emotion-15 {
-  padding: 0 4px;
+  color: #526075;
+  min-width: 80px;
+  overflow: hidden;
 }
 
 .emotion-21:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
+}
+
+.emotion-21 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: rgba(10,22,51,0.2);
+  fill: rgba(10,22,51,0.2);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
+}
+
+.emotion-21 .uc-fe-input-clear:hover {
+  color: #7a8baa;
+  fill: #7a8baa;
+}
+
+.emotion-21,
+.emotion-21 .uc-fe-input-prefix,
+.emotion-21 .uc-fe-input-suffix,
+.emotion-21 .uc-fe-input-clear,
+.emotion-21 input,
+.emotion-21 .emotion-15 {
+  padding: 0 4px;
+}
+
+.emotion-21.uc-fe-input-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-21 .uc-fe-input-prefix,
+.emotion-21 .uc-fe-input-suffix,
+.emotion-21 .emotion-15 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-21 .emotion-15[hidden] {
+  display: none;
+}
+
+.emotion-21 .uc-fe-input-block-wrap {
+  height: 18px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 0px;
 }
 
 .emotion-21 input {
@@ -5910,6 +6291,16 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
   display: none;
 }
 
+.emotion-21:hover .uc-fe-input-clear,
+.emotion-21.uc-fe-input-focused .uc-fe-input-clear {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.emotion-21:hover {
+  color: #0a1633;
+}
+
 .emotion-21 .uc-fe-select-input-wrap {
   position: relative;
   overflow: hidden;
@@ -5920,7 +6311,6 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
 }
 
 .emotion-21 .uc-fe-select-input {
-  cursor: pointer;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -5950,42 +6340,18 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
   cursor: pointer;
 }
 
-.emotion-14 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.emotion-14.emotion-14.emotion-14 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  visibility: visible;
 }
 
-.emotion-14:empty {
-  display: none;
-}
-
-.emotion-18 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.emotion-18.emotion-18.emotion-18 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-}
-
-.emotion-18:empty {
-  display: none;
+  visibility: visible;
 }
 
 <div>
@@ -6210,7 +6576,8 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
           class="uc-fe-pagination-options-size-changer emotion-23 emotion-24"
         >
           <span
-            class="uc-fe-select-input emotion-20 emotion-21 emotion-22"
+            class="uc-fe-input uc-fe-input-block uc-fe-select-input emotion-20 emotion-21 emotion-22"
+            cursor="pointer"
           >
             <span
               class="uc-fe-select-input-wrap emotion-14 emotion-15"
@@ -6227,7 +6594,6 @@ exports[`Pagination demo -- showSizeChanger 1`] = `
             >
               <svg
                 class=" emotion-0 emotion-1"
-                style="visibility:visible"
                 viewBox="0 0 24 24"
               >
                 <path

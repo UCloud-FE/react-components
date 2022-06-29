@@ -1,4 +1,13 @@
-import React, { HTMLAttributes, ReactNode, Ref, useCallback, useImperativeHandle, useMemo, useRef } from 'react';
+import React, {
+    HTMLAttributes,
+    isValidElement,
+    ReactNode,
+    Ref,
+    useCallback,
+    useImperativeHandle,
+    useMemo,
+    useRef
+} from 'react';
 import classnames from 'classnames';
 
 import Checkbox from 'src/components/Checkbox';
@@ -38,7 +47,7 @@ export interface MenuProps {
     /** 是否可选 */
     selectable?: boolean;
     /** 是否显示全选，多选时有效 */
-    showSelectAll?: boolean;
+    showSelectAll?: boolean | Element;
     /** 是否使用块元素显示模式，去除宽高限制，撑满容器，去除外阴影、border，方便放置在自定义容器中 */
     block?: boolean;
     /** 是否禁用 */
@@ -65,9 +74,14 @@ export interface MenuProps {
     locale?: typeof LOCALE;
     /**
      * @ignore
-     * use for inner usage
+     * for inner usage
      */
     dataSource?: ReturnType<typeof groupChildrenAsDataSource>;
+    /**
+     * @ignore
+     * for inner usage
+     */
+    _selectStyle?: boolean;
 }
 
 const warn = once(() => console.warn(`Virtual menu only support popover type of SubMenu`));
@@ -184,6 +198,7 @@ const Menu = React.forwardRef(
             dataSource,
             collapseProps,
             virtualList,
+            _selectStyle,
             ...rest
         }: MenuProps & Override<HTMLAttributes<HTMLDivElement>, MenuProps>,
         ref: Ref<MenuRef>
@@ -223,8 +238,11 @@ const Menu = React.forwardRef(
             () =>
                 selectable &&
                 multiple &&
-                showSelectAll && (
-                    <div className={classnames(selectallWrapCls, disabled && disabledCls)} key="menu-select-all">
+                showSelectAll &&
+                (isValidElement(showSelectAll) ? (
+                    showSelectAll
+                ) : (
+                    <div className={classnames(selectallWrapCls, disabled && disabledCls)} key="__menu-select-all">
                         <Checkbox
                             className={checkboxCls}
                             checked={selectedStatus === 'ALL'}
@@ -236,7 +254,7 @@ const Menu = React.forwardRef(
                             {locale.selectAll}
                         </Checkbox>
                     </div>
-                ),
+                )),
             [disabled, locale.selectAll, multiple, selectable, selectedStatus, showSelectAll, toggleAllItems]
         );
 
@@ -280,7 +298,7 @@ const Menu = React.forwardRef(
 
         return (
             <CollapseContext.Provider value={collapseContext}>
-                <MenuContext.Provider value={{ ...groupContext, locale }}>
+                <MenuContext.Provider value={{ ...groupContext, locale, selectStyle: _selectStyle }}>
                     <MenuWrap
                         className={classnames(
                             className,

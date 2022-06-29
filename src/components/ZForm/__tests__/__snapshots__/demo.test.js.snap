@@ -611,8 +611,15 @@ exports[`ZForm demo -- rule 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-3:hover {
@@ -634,8 +641,8 @@ exports[`ZForm demo -- rule 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-3 .uc-fe-input-clear:hover {
@@ -643,36 +650,29 @@ exports[`ZForm demo -- rule 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-3 .uc-fe-input-wrap,
+.emotion-3,
 .emotion-3 .uc-fe-input-prefix,
 .emotion-3 .uc-fe-input-suffix,
 .emotion-3 .uc-fe-input-clear,
-.emotion-3 input {
+.emotion-3 input,
+.emotion-3 .emotion-61 {
   padding: 0 4px;
 }
 
 .emotion-3.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-3 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-3 .uc-fe-input-prefix,
-.emotion-3 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-3 .uc-fe-input-suffix,
+.emotion-3 .emotion-61 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -681,6 +681,10 @@ exports[`ZForm demo -- rule 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-3 .emotion-61[hidden] {
+  display: none;
 }
 
 .emotion-3 .uc-fe-input-block-wrap {
@@ -863,24 +867,24 @@ exports[`ZForm demo -- rule 1`] = `
   box-sizing: border-box;
   position: relative;
   max-width: 100%;
-  min-width: 80px;
   font-size: 12px;
   color: #0a1633;
   display: inline-block;
   vertical-align: middle;
 }
 
+.emotion-69 .uc-fe-select-list {
+  display: block;
+  width: 400px;
+  max-height: 60px;
+  overflow: auto;
+  margin-top: 8px;
+  cursor: default;
+}
+
 .emotion-67 {
   position: relative;
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -890,27 +894,103 @@ exports[`ZForm demo -- rule 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
-  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-}
-
-.emotion-67,
-.emotion-67 input,
-.emotion-67 .emotion-61 {
-  padding: 0 4px;
+  color: #526075;
+  min-width: 80px;
+  overflow: hidden;
 }
 
 .emotion-67:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
+}
+
+.emotion-67 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: rgba(10,22,51,0.2);
+  fill: rgba(10,22,51,0.2);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
+}
+
+.emotion-67 .uc-fe-input-clear:hover {
+  color: #7a8baa;
+  fill: #7a8baa;
+}
+
+.emotion-67,
+.emotion-67 .uc-fe-input-prefix,
+.emotion-67 .uc-fe-input-suffix,
+.emotion-67 .uc-fe-input-clear,
+.emotion-67 input,
+.emotion-67 .emotion-61 {
+  padding: 0 4px;
+}
+
+.emotion-67.uc-fe-input-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-67 .uc-fe-input-prefix,
+.emotion-67 .uc-fe-input-suffix,
+.emotion-67 .emotion-61 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-67 .emotion-61[hidden] {
+  display: none;
+}
+
+.emotion-67 .uc-fe-input-block-wrap {
+  height: 18px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 0px;
 }
 
 .emotion-67 input {
@@ -957,6 +1037,10 @@ exports[`ZForm demo -- rule 1`] = `
   display: none;
 }
 
+.emotion-67:hover {
+  color: #0a1633;
+}
+
 .emotion-67 .uc-fe-select-input-wrap {
   position: relative;
   overflow: hidden;
@@ -967,7 +1051,6 @@ exports[`ZForm demo -- rule 1`] = `
 }
 
 .emotion-67 .uc-fe-select-input {
-  cursor: pointer;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -992,26 +1075,97 @@ exports[`ZForm demo -- rule 1`] = `
   transition: opacity 0.3s;
 }
 
-.emotion-60 {
+.emotion-60.emotion-60.emotion-60 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  visibility: visible;
+}
+
+.emotion-64.emotion-64.emotion-64 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  visibility: visible;
+}
+
+.emotion-88 {
+  position: relative;
+  box-sizing: border-box;
+  height: 28px;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+  cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  color: #526075;
+  min-width: 80px;
+  overflow: hidden;
+}
+
+.emotion-88:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
+}
+
+.emotion-88 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: rgba(10,22,51,0.2);
+  fill: rgba(10,22,51,0.2);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
-.emotion-60:empty {
-  display: none;
+.emotion-88 .uc-fe-input-clear:hover {
+  color: #7a8baa;
+  fill: #7a8baa;
 }
 
-.emotion-64 {
+.emotion-88,
+.emotion-88 .uc-fe-input-prefix,
+.emotion-88 .uc-fe-input-suffix,
+.emotion-88 .uc-fe-input-clear,
+.emotion-88 input,
+.emotion-88 .emotion-61 {
+  padding: 0 4px;
+}
+
+.emotion-88.uc-fe-input-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-88 .uc-fe-input-prefix,
+.emotion-88 .uc-fe-input-suffix,
+.emotion-88 .emotion-61 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1026,51 +1180,24 @@ exports[`ZForm demo -- rule 1`] = `
   flex: 0 0 auto;
 }
 
-.emotion-64:empty {
+.emotion-88 .emotion-61[hidden] {
   display: none;
 }
 
-.emotion-88 {
-  position: relative;
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 28px;
-  max-width: 100%;
-  font-size: 12px;
-  border-radius: 2px;
-  color: #526075;
-  fill: currentColor;
-  border: 1px solid #c3cad9;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #fafafc;
-  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
-  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
-  vertical-align: middle;
-  cursor: pointer;
+.emotion-88 .uc-fe-input-block-wrap {
+  height: 18px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  cursor: pointer;
-}
-
-.emotion-88,
-.emotion-88 input,
-.emotion-88 .emotion-61 {
-  padding: 0 4px;
-}
-
-.emotion-88:hover {
-  color: #0a1633;
-  border-color: #c3cad9;
-  background: #f6f6fb;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 0px;
 }
 
 .emotion-88 input {
@@ -1117,6 +1244,16 @@ exports[`ZForm demo -- rule 1`] = `
   display: none;
 }
 
+.emotion-88:hover .uc-fe-input-clear,
+.emotion-88.uc-fe-input-focused .uc-fe-input-clear {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.emotion-88:hover {
+  color: #0a1633;
+}
+
 .emotion-88 .uc-fe-select-input-wrap {
   position: relative;
   overflow: hidden;
@@ -1127,7 +1264,6 @@ exports[`ZForm demo -- rule 1`] = `
 }
 
 .emotion-88 .uc-fe-select-input {
-  cursor: pointer;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1295,8 +1431,15 @@ exports[`ZForm demo -- rule 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-3:hover {
@@ -1318,8 +1461,8 @@ exports[`ZForm demo -- rule 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-3 .uc-fe-input-clear:hover {
@@ -1327,36 +1470,29 @@ exports[`ZForm demo -- rule 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-3 .uc-fe-input-wrap,
+.emotion-3,
 .emotion-3 .uc-fe-input-prefix,
 .emotion-3 .uc-fe-input-suffix,
 .emotion-3 .uc-fe-input-clear,
-.emotion-3 input {
+.emotion-3 input,
+.emotion-3 .emotion-61 {
   padding: 0 4px;
 }
 
 .emotion-3.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-3 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-3 .uc-fe-input-prefix,
-.emotion-3 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-3 .uc-fe-input-suffix,
+.emotion-3 .emotion-61 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1365,6 +1501,10 @@ exports[`ZForm demo -- rule 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-3 .emotion-61[hidden] {
+  display: none;
 }
 
 .emotion-3 .uc-fe-input-block-wrap {
@@ -1547,24 +1687,24 @@ exports[`ZForm demo -- rule 1`] = `
   box-sizing: border-box;
   position: relative;
   max-width: 100%;
-  min-width: 80px;
   font-size: 12px;
   color: #0a1633;
   display: inline-block;
   vertical-align: middle;
 }
 
+.emotion-69 .uc-fe-select-list {
+  display: block;
+  width: 400px;
+  max-height: 60px;
+  overflow: auto;
+  margin-top: 8px;
+  cursor: default;
+}
+
 .emotion-67 {
   position: relative;
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -1574,27 +1714,103 @@ exports[`ZForm demo -- rule 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
-  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-}
-
-.emotion-67,
-.emotion-67 input,
-.emotion-67 .emotion-61 {
-  padding: 0 4px;
+  color: #526075;
+  min-width: 80px;
+  overflow: hidden;
 }
 
 .emotion-67:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
+}
+
+.emotion-67 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: rgba(10,22,51,0.2);
+  fill: rgba(10,22,51,0.2);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
+}
+
+.emotion-67 .uc-fe-input-clear:hover {
+  color: #7a8baa;
+  fill: #7a8baa;
+}
+
+.emotion-67,
+.emotion-67 .uc-fe-input-prefix,
+.emotion-67 .uc-fe-input-suffix,
+.emotion-67 .uc-fe-input-clear,
+.emotion-67 input,
+.emotion-67 .emotion-61 {
+  padding: 0 4px;
+}
+
+.emotion-67.uc-fe-input-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-67 .uc-fe-input-prefix,
+.emotion-67 .uc-fe-input-suffix,
+.emotion-67 .emotion-61 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-67 .emotion-61[hidden] {
+  display: none;
+}
+
+.emotion-67 .uc-fe-input-block-wrap {
+  height: 18px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 0px;
 }
 
 .emotion-67 input {
@@ -1641,6 +1857,10 @@ exports[`ZForm demo -- rule 1`] = `
   display: none;
 }
 
+.emotion-67:hover {
+  color: #0a1633;
+}
+
 .emotion-67 .uc-fe-select-input-wrap {
   position: relative;
   overflow: hidden;
@@ -1651,7 +1871,6 @@ exports[`ZForm demo -- rule 1`] = `
 }
 
 .emotion-67 .uc-fe-select-input {
-  cursor: pointer;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1676,26 +1895,97 @@ exports[`ZForm demo -- rule 1`] = `
   transition: opacity 0.3s;
 }
 
-.emotion-60 {
+.emotion-60.emotion-60.emotion-60 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  visibility: visible;
+}
+
+.emotion-64.emotion-64.emotion-64 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  visibility: visible;
+}
+
+.emotion-88 {
+  position: relative;
+  box-sizing: border-box;
+  height: 28px;
+  max-width: 100%;
+  font-size: 12px;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+  cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  color: #526075;
+  min-width: 80px;
+  overflow: hidden;
+}
+
+.emotion-88:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
+}
+
+.emotion-88 .uc-fe-input-clear {
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: rgba(10,22,51,0.2);
+  fill: rgba(10,22,51,0.2);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
-.emotion-60:empty {
-  display: none;
+.emotion-88 .uc-fe-input-clear:hover {
+  color: #7a8baa;
+  fill: #7a8baa;
 }
 
-.emotion-64 {
+.emotion-88,
+.emotion-88 .uc-fe-input-prefix,
+.emotion-88 .uc-fe-input-suffix,
+.emotion-88 .uc-fe-input-clear,
+.emotion-88 input,
+.emotion-88 .emotion-61 {
+  padding: 0 4px;
+}
+
+.emotion-88.uc-fe-input-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-88 .uc-fe-input-prefix,
+.emotion-88 .uc-fe-input-suffix,
+.emotion-88 .emotion-61 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1710,51 +2000,24 @@ exports[`ZForm demo -- rule 1`] = `
   flex: 0 0 auto;
 }
 
-.emotion-64:empty {
+.emotion-88 .emotion-61[hidden] {
   display: none;
 }
 
-.emotion-88 {
-  position: relative;
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 28px;
-  max-width: 100%;
-  font-size: 12px;
-  border-radius: 2px;
-  color: #526075;
-  fill: currentColor;
-  border: 1px solid #c3cad9;
-  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
-  background: #fafafc;
-  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
-  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
-  vertical-align: middle;
-  cursor: pointer;
+.emotion-88 .uc-fe-input-block-wrap {
+  height: 18px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  cursor: pointer;
-}
-
-.emotion-88,
-.emotion-88 input,
-.emotion-88 .emotion-61 {
-  padding: 0 4px;
-}
-
-.emotion-88:hover {
-  color: #0a1633;
-  border-color: #c3cad9;
-  background: #f6f6fb;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 0px;
 }
 
 .emotion-88 input {
@@ -1801,6 +2064,16 @@ exports[`ZForm demo -- rule 1`] = `
   display: none;
 }
 
+.emotion-88:hover .uc-fe-input-clear,
+.emotion-88.uc-fe-input-focused .uc-fe-input-clear {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.emotion-88:hover {
+  color: #0a1633;
+}
+
 .emotion-88 .uc-fe-select-input-wrap {
   position: relative;
   overflow: hidden;
@@ -1811,7 +2084,6 @@ exports[`ZForm demo -- rule 1`] = `
 }
 
 .emotion-88 .uc-fe-select-input {
-  cursor: pointer;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1922,15 +2194,11 @@ exports[`ZForm demo -- rule 1`] = `
         class="uc-fe-input emotion-3 emotion-4"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </span>
     </div>
@@ -1952,15 +2220,11 @@ exports[`ZForm demo -- rule 1`] = `
         class="uc-fe-input emotion-3 emotion-4"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </span>
     </div>
@@ -1982,15 +2246,11 @@ exports[`ZForm demo -- rule 1`] = `
         class="uc-fe-input emotion-3 emotion-4"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </span>
       <div
@@ -2076,7 +2336,8 @@ exports[`ZForm demo -- rule 1`] = `
         class="emotion-69 emotion-70"
       >
         <span
-          class="uc-fe-select-input emotion-66 emotion-67 emotion-68"
+          class="uc-fe-input uc-fe-input-block uc-fe-select-input emotion-66 emotion-67 emotion-4"
+          cursor="pointer"
         >
           <span
             class="uc-fe-select-input-wrap emotion-60 emotion-61"
@@ -2093,7 +2354,6 @@ exports[`ZForm demo -- rule 1`] = `
           >
             <svg
               class=" emotion-29 emotion-30"
-              style="visibility:visible"
               viewBox="0 0 24 24"
             >
               <path
@@ -2123,7 +2383,8 @@ exports[`ZForm demo -- rule 1`] = `
         class="emotion-69 emotion-70"
       >
         <span
-          class="uc-fe-select-input emotion-66 emotion-88 emotion-68"
+          class="uc-fe-input uc-fe-input-block uc-fe-select-input emotion-66 emotion-88 emotion-4"
+          cursor="pointer"
         >
           <span
             class="uc-fe-select-input-wrap emotion-60 emotion-61"
@@ -2140,7 +2401,6 @@ exports[`ZForm demo -- rule 1`] = `
           >
             <svg
               class=" emotion-29 emotion-30"
-              style="visibility:visible"
               viewBox="0 0 24 24"
             >
               <path
@@ -2186,7 +2446,8 @@ exports[`ZForm demo -- rule 1`] = `
               class="emotion-69 emotion-70"
             >
               <span
-                class="uc-fe-select-input emotion-66 emotion-67 emotion-68"
+                class="uc-fe-input uc-fe-input-block uc-fe-select-input emotion-66 emotion-67 emotion-4"
+                cursor="pointer"
               >
                 <span
                   class="uc-fe-select-input-wrap emotion-60 emotion-61"
@@ -2203,7 +2464,6 @@ exports[`ZForm demo -- rule 1`] = `
                 >
                   <svg
                     class=" emotion-29 emotion-30"
-                    style="visibility:visible"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -2233,7 +2493,8 @@ exports[`ZForm demo -- rule 1`] = `
               class="emotion-69 emotion-70"
             >
               <span
-                class="uc-fe-select-input emotion-66 emotion-88 emotion-68"
+                class="uc-fe-input uc-fe-input-block uc-fe-select-input emotion-66 emotion-88 emotion-4"
+                cursor="pointer"
               >
                 <span
                   class="uc-fe-select-input-wrap emotion-60 emotion-61"
@@ -2250,7 +2511,6 @@ exports[`ZForm demo -- rule 1`] = `
                 >
                   <svg
                     class=" emotion-29 emotion-30"
-                    style="visibility:visible"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -2341,49 +2601,33 @@ exports[`ZForm demo -- uhost 1`] = `
   box-sizing: border-box;
   position: relative;
   max-width: 100%;
-  min-width: 80px;
   font-size: 12px;
   color: #0a1633;
   display: inline-block;
   vertical-align: middle;
 }
 
-.emotion-125 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.emotion-134 .uc-fe-select-list {
+  display: block;
+  width: 400px;
+  max-height: 60px;
+  overflow: auto;
+  margin-top: 8px;
+  cursor: default;
+}
+
+.emotion-125.emotion-125.emotion-125 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  visibility: visible;
 }
 
-.emotion-125:empty {
-  display: none;
-}
-
-.emotion-129 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.emotion-129.emotion-129.emotion-129 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-}
-
-.emotion-129:empty {
-  display: none;
+  visibility: visible;
 }
 
 .emotion-143 {
@@ -2745,14 +2989,6 @@ exports[`ZForm demo -- uhost 1`] = `
 .emotion-132 {
   position: relative;
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -2762,27 +2998,103 @@ exports[`ZForm demo -- uhost 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
-  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+  cursor: text;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
-  cursor: text;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: text;
-}
-
-.emotion-132,
-.emotion-132 input,
-.emotion-132 .emotion-126 {
-  padding: 0 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  color: #526075;
+  min-width: 80px;
+  overflow: hidden;
 }
 
 .emotion-132:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
+}
+
+.emotion-132 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: rgba(10,22,51,0.2);
+  fill: rgba(10,22,51,0.2);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
+}
+
+.emotion-132 .uc-fe-input-clear:hover {
+  color: #7a8baa;
+  fill: #7a8baa;
+}
+
+.emotion-132,
+.emotion-132 .uc-fe-input-prefix,
+.emotion-132 .uc-fe-input-suffix,
+.emotion-132 .uc-fe-input-clear,
+.emotion-132 input,
+.emotion-132 .emotion-126 {
+  padding: 0 4px;
+}
+
+.emotion-132.uc-fe-input-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-132 .uc-fe-input-prefix,
+.emotion-132 .uc-fe-input-suffix,
+.emotion-132 .emotion-126 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-132 .emotion-126[hidden] {
+  display: none;
+}
+
+.emotion-132 .uc-fe-input-block-wrap {
+  height: 18px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 0px;
 }
 
 .emotion-132 input {
@@ -2829,6 +3141,10 @@ exports[`ZForm demo -- uhost 1`] = `
   display: none;
 }
 
+.emotion-132:hover {
+  color: #0a1633;
+}
+
 .emotion-132 .uc-fe-select-input-wrap {
   position: relative;
   overflow: hidden;
@@ -2839,7 +3155,6 @@ exports[`ZForm demo -- uhost 1`] = `
 }
 
 .emotion-132 .uc-fe-select-input {
-  cursor: text;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -2929,49 +3244,33 @@ exports[`ZForm demo -- uhost 1`] = `
   box-sizing: border-box;
   position: relative;
   max-width: 100%;
-  min-width: 80px;
   font-size: 12px;
   color: #0a1633;
   display: inline-block;
   vertical-align: middle;
 }
 
-.emotion-125 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.emotion-134 .uc-fe-select-list {
+  display: block;
+  width: 400px;
+  max-height: 60px;
+  overflow: auto;
+  margin-top: 8px;
+  cursor: default;
+}
+
+.emotion-125.emotion-125.emotion-125 {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  visibility: visible;
 }
 
-.emotion-125:empty {
-  display: none;
-}
-
-.emotion-129 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.emotion-129.emotion-129.emotion-129 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-}
-
-.emotion-129:empty {
-  display: none;
+  visibility: visible;
 }
 
 .emotion-143 {
@@ -3333,14 +3632,6 @@ exports[`ZForm demo -- uhost 1`] = `
 .emotion-132 {
   position: relative;
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   height: 28px;
   max-width: 100%;
   font-size: 12px;
@@ -3350,27 +3641,103 @@ exports[`ZForm demo -- uhost 1`] = `
   border: 1px solid #c3cad9;
   box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
   background: #fafafc;
-  -webkit-transition: 0.18s cubic-bezier(0.4,0,0.2,1);
-  transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+  cursor: text;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
-  cursor: text;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: text;
-}
-
-.emotion-132,
-.emotion-132 input,
-.emotion-132 .emotion-126 {
-  padding: 0 4px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  color: #526075;
+  min-width: 80px;
+  overflow: hidden;
 }
 
 .emotion-132:hover {
   color: #0a1633;
   border-color: #c3cad9;
   background: #f6f6fb;
+}
+
+.emotion-132 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: rgba(10,22,51,0.2);
+  fill: rgba(10,22,51,0.2);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
+}
+
+.emotion-132 .uc-fe-input-clear:hover {
+  color: #7a8baa;
+  fill: #7a8baa;
+}
+
+.emotion-132,
+.emotion-132 .uc-fe-input-prefix,
+.emotion-132 .uc-fe-input-suffix,
+.emotion-132 .uc-fe-input-clear,
+.emotion-132 input,
+.emotion-132 .emotion-126 {
+  padding: 0 4px;
+}
+
+.emotion-132.uc-fe-input-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-132 .uc-fe-input-prefix,
+.emotion-132 .uc-fe-input-suffix,
+.emotion-132 .emotion-126 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-132 .emotion-126[hidden] {
+  display: none;
+}
+
+.emotion-132 .uc-fe-input-block-wrap {
+  height: 18px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 0px;
 }
 
 .emotion-132 input {
@@ -3417,6 +3784,10 @@ exports[`ZForm demo -- uhost 1`] = `
   display: none;
 }
 
+.emotion-132:hover {
+  color: #0a1633;
+}
+
 .emotion-132 .uc-fe-select-input-wrap {
   position: relative;
   overflow: hidden;
@@ -3427,7 +3798,6 @@ exports[`ZForm demo -- uhost 1`] = `
 }
 
 .emotion-132 .uc-fe-select-input {
-  cursor: text;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -3723,7 +4093,8 @@ exports[`ZForm demo -- uhost 1`] = `
         class="emotion-134 emotion-135"
       >
         <span
-          class="uc-fe-select-input emotion-131 emotion-132 emotion-133"
+          class="uc-fe-input uc-fe-input-block uc-fe-select-input emotion-131 emotion-132 emotion-133"
+          cursor="text"
         >
           <span
             class="uc-fe-select-input-wrap emotion-125 emotion-126"
@@ -3744,7 +4115,6 @@ exports[`ZForm demo -- uhost 1`] = `
           >
             <svg
               class=" emotion-127 emotion-128"
-              style="visibility:visible"
               viewBox="0 0 24 24"
             >
               <path

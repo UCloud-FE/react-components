@@ -6,26 +6,19 @@ import React, {
     ReactNode,
     Ref,
     useCallback,
-    useMemo,
     useRef,
     useState,
     useImperativeHandle,
     useContext,
     forwardRef
 } from 'react';
-import classnames from 'classnames';
 
-import Icon from 'src/components/Icon';
-import SvgIcon from 'src/components/SvgIcon';
 import ControllerContext from 'src/components/Form/ControllerContext';
-import deprecatedLog from 'src/utils/deprecatedLog';
 import noop from 'src/utils/noop';
 import useUncontrolled from 'src/hooks/useUncontrolled';
 import { Size } from 'src/type';
 
-import { SWrap, inputWrapCls, blockCls, inputPrefixCls, inputSuffixCls, clearCls, inputBlockWrapCls } from './style';
-
-const deprecatedLogForIcon = deprecatedLog('Input icon', 'suffix');
+import { InputWrap, inputBlockWrapCls, Suffix, Clear, Prefix } from './style';
 
 export interface DefinedInputProps {
     /**
@@ -93,7 +86,7 @@ const Input = forwardRef(
         ref: Ref<InputRef>
     ) => {
         const valueGetter = useCallback((e: ChangeEvent<HTMLInputElement>) => e.target.value, []);
-        const [value, onChange] = useUncontrolled(_value, defaultValue || '', _onChange, { setter: valueGetter });
+        const [value, onChange] = useUncontrolled(_value, defaultValue || '', _onChange, { getter: valueGetter });
         const [focused, setFocused] = useState(false);
         const inputRef = useRef<HTMLInputElement>(null);
         const focus = useCallback((options?: FocusOptions) => {
@@ -154,61 +147,30 @@ const Input = forwardRef(
             e.preventDefault();
             inputRef.current?.focus();
         }, []);
-        const renderClear = useMemo(() => {
-            if (clearable) {
-                return (
-                    <span className={clearCls} onClick={handleClear} onMouseDown={handleClearMouseDown}>
-                        <SvgIcon type="cross-circle-filled" />
-                    </span>
-                );
-            }
-        }, [clearable, handleClear, handleClearMouseDown]);
-        const renderPrefix = useMemo(() => {
-            return prefix && <span className={inputPrefixCls}>{prefix}</span>;
-        }, [prefix]);
-        const renderSuffix = useMemo(() => {
-            if (icon) {
-                deprecatedLogForIcon();
-            }
-            let renderSuffix = null;
-            if (suffix) {
-                renderSuffix = suffix;
-            } else if (typeof icon === 'string') {
-                renderSuffix = <Icon type={icon} />;
-            } else if (React.isValidElement(icon)) {
-                renderSuffix = icon;
-            }
-            if (renderSuffix) {
-                return <span className={inputSuffixCls}>{renderSuffix}</span>;
-            }
-        }, [icon, suffix]);
 
         const { status } = useContext(ControllerContext);
 
         return (
-            <SWrap
-                className={classnames(block && blockCls, className)}
-                {...{ size, focused, style, disabled, status: _status || status, customStyle }}
+            <InputWrap
+                {...{ size, focused, style, disabled, status: _status || status, customStyle, block, className }}
                 empty={!value}
                 onMouseDown={handleWrapMouseDown}
             >
-                <span className={inputWrapCls}>
-                    {renderPrefix}
-                    <span className={inputBlockWrapCls}>
-                        <input
-                            {...rest}
-                            value={value}
-                            onChange={onChange}
-                            ref={inputRef}
-                            onFocus={handleFocus}
-                            onBlur={handleBlur}
-                            disabled={disabled}
-                        />
-                        {renderClear}
-                    </span>
-                    {renderSuffix}
+                <Prefix>{prefix}</Prefix>
+                <span className={inputBlockWrapCls}>
+                    <input
+                        {...rest}
+                        value={value}
+                        onChange={onChange}
+                        ref={inputRef}
+                        onFocus={handleFocus}
+                        onBlur={handleBlur}
+                        disabled={disabled}
+                    />
+                    <Clear clearable={clearable} onMouseDown={handleClearMouseDown} onClick={handleClear} />
                 </span>
-            </SWrap>
+                <Suffix icon={icon}>{suffix}</Suffix>
+            </InputWrap>
         );
     }
 );

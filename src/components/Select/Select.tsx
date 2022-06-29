@@ -6,15 +6,12 @@ import React, {
     RefObject,
     useCallback,
     useEffect,
-    useLayoutEffect,
     useMemo,
     useRef,
     useState
 } from 'react';
-import Overflow from 'rc-overflow';
 
 import Popover from 'src/components/Popover';
-import Button from 'src/components/Button';
 import Tag from 'src/components/Tag';
 import Tooltip from 'src/components/Tooltip';
 import { MenuRef } from 'src/components/Menu/Menu';
@@ -22,7 +19,7 @@ import { Highlight } from 'src/sharedComponents/Search';
 import useLocale from 'src/components/LocaleProvider/useLocale';
 import SvgIcon from 'src/components/SvgIcon';
 import { Override, Size } from 'src/type';
-import { ChildrenMap, groupChildrenAsDataSource, Key, SubGroupMap } from 'src/hooks/group';
+import { ChildrenMap, Key, SubGroupMap } from 'src/hooks/group';
 import usePopoverConfig from 'src/hooks/usePopoverConfig';
 import useUncontrolled from 'src/hooks/useUncontrolled';
 import useInitial from 'src/hooks/useInitial';
@@ -31,6 +28,8 @@ import deprecatedLog from 'src/utils/deprecatedLog';
 import { onceWarning } from 'src/utils/warning';
 import isObject from 'src/utils/isObject';
 import isEmpty from 'src/utils/isEmpty';
+import { Clear, InputPart } from 'src/components/Input/style';
+import VirtualScrollList from 'src/sharedComponents/VirtualScrollList';
 
 import { PureOption } from './Option';
 import Group from './Group';
@@ -48,20 +47,20 @@ import {
     selectAllBtnWrapCls,
     selectInputCls,
     SSelectorMultiple,
-    suffixCls,
     SSelectorSingle,
-    overflowCls,
-    measureCls,
     measureContentCls,
     placeholderCls,
-    clearCls,
     SRestList,
     inputCls,
-    inputWrapCls
+    inputWrapCls,
+    restItemCls,
+    measureCls,
+    measureWrapCls,
+    listCls
 } from './style';
 import SelectContext from './SelectContext';
 import LOCALE from './locale/zh_CN';
-import { InputPart } from 'src/sharedComponents/InputWrap';
+import Overflow, { Static } from './Overflow';
 
 export const deprecatedLogForPopover = deprecatedLog('Select popover', 'popoverProps');
 const warnLogForVirtualList = onceWarning('Select virtualList only valid when use options');
@@ -70,6 +69,9 @@ const warnLogForCustomHeight = onceWarning(
 );
 const warnLogForSearchProps = onceWarning(`Don't use item.props in custom search, just use item as props.`);
 const warnLogForSubGroup = deprecatedLog('Select.Group', 'Cascader');
+
+const popoverStretch = ['minWidth'];
+const blockPopoverStretch = ['width'];
 
 const groupOptions = {
     itemTag: 'isMenuItem',
@@ -80,6 +82,111 @@ const groupOptions = {
     subGroupName: 'children',
     ItemComponent: PureOption,
     SubGroupComponent: Group
+};
+
+const groupChildrenAsDataSource = (
+    children: ReactNode,
+    globalDisabled = false,
+    {
+        itemTag,
+        subGroupTag,
+        itemKeyName,
+        subGroupKeyName
+    }: {
+        itemTag: string;
+        subGroupTag?: string;
+        itemKeyName: string;
+        subGroupKeyName?: string;
+    } = {
+        itemTag: 'isItem',
+        subGroupTag: 'isSubGroup',
+        itemKeyName: 'itemKey',
+        subGroupKeyName: 'subGroupKey'
+    },
+    searchValue: string,
+    handleSearch: (value: Key, props: any) => boolean | [string, string, string]
+): [Key[], Key[], ReactNode, SubGroupMap, ChildrenMap] => {
+    const subGroupMap: SubGroupMap = new Map();
+    const childrenMap: ChildrenMap = new Map();
+    const group = (children: ReactNode, disabled: boolean, prefix: string): [Key[], Key[], ReactNode] => {
+        const validKeys: Key[] = [];
+        const disabledKeys: Key[] = [];
+        const l = React.Children.count(children);
+        const renderChildren: ReactNode[] = [];
+        React.Children.forEach(children, (child, i) => {
+            const isFirst = i === 0;
+            const isLast = i === l - 1;
+            if (React.isValidElement(child)) {
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                if ((child.type as any)?.[itemTag]) {
+                    const props = child.props;
+                    const key = props[itemKeyName] === undefined ? child.key : props[itemKeyName];
+                    const visible = searchValue ? handleSearch(key, child.props) : true;
+                    if (visible) {
+                        const isDisabled = disabled || props.disabled;
+                        if (isDisabled) {
+                            disabledKeys.push(key);
+                        } else {
+                            validKeys.push(key);
+                        }
+                        const display = Array.isArray(visible) ? (
+                            <>
+                                {visible[0]}
+                                {<Highlight>{visible[1]}</Highlight>}
+                                {visible[2]}
+                            </>
+                        ) : (
+                            (props.children as ReactNode) ?? key
+                        );
+                        renderChildren.push(
+                            React.cloneElement(child, {
+                                [itemKeyName]: key,
+                                disabled: globalDisabled || isDisabled,
+                                isFirst,
+                                isLast,
+                                key,
+                                children: display
+                            })
+                        );
+                        childrenMap.set(key, display);
+                    } else {
+                        childrenMap.set(key, props.children);
+                    }
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                } else if (subGroupTag && subGroupKeyName && (child.type as any)?.[subGroupTag]) {
+                    const props = child.props;
+                    const key = props[subGroupKeyName] || child.key || `${prefix}-${i}`;
+                    const isDisabled = disabled || props.disabled;
+                    const [subValidKeys, subDisabledKeys, subRenderChildren] = group(
+                        child.props.children,
+                        isDisabled,
+                        key
+                    );
+                    subGroupMap.set(key, { validKeys: subValidKeys, disabledKeys: subDisabledKeys });
+                    validKeys.push(...subValidKeys);
+                    disabledKeys.push(...subDisabledKeys);
+                    renderChildren.push(
+                        React.cloneElement(
+                            child,
+                            {
+                                disabled: globalDisabled || isDisabled,
+                                [subGroupKeyName]: key,
+                                isFirst,
+                                isLast,
+                                key
+                            },
+                            subRenderChildren
+                        )
+                    );
+                } else {
+                    renderChildren.push(child);
+                }
+            }
+        });
+        return [validKeys, disabledKeys, renderChildren];
+    };
+
+    return [...group(children, false, 'group-root'), subGroupMap, childrenMap];
 };
 
 const groupOptionsAsDataSource = <
@@ -152,22 +259,22 @@ const groupOptionsAsDataSource = <
                 const key = (child[itemKeyName] === undefined ? child.key : child[itemKeyName]) as Key;
                 const reactKey = child.key || isValidKey(child[itemKeyName]) ? child[itemKeyName] : `${prefixKey}-${i}`;
                 const isDisabled = disabled || child.disabled;
-                if (isDisabled) {
-                    disabledKeys.push(key);
-                } else {
-                    validKeys.push(key);
-                }
                 const visible = searchValue ? handleSearch(key, child) : true;
-                const display = Array.isArray(visible) ? (
-                    <>
-                        {visible[0]}
-                        {<Highlight>{visible[1]}</Highlight>}
-                        {visible[2]}
-                    </>
-                ) : (
-                    (child[displayName] as ReactNode) ?? key
-                );
                 if (visible) {
+                    if (isDisabled) {
+                        disabledKeys.push(key);
+                    } else {
+                        validKeys.push(key);
+                    }
+                    const display = Array.isArray(visible) ? (
+                        <>
+                            {visible[0]}
+                            {<Highlight>{visible[1]}</Highlight>}
+                            {visible[2]}
+                        </>
+                    ) : (
+                        (child[displayName] as ReactNode) ?? key
+                    );
                     renderChildren.push(
                         <ItemComponent
                             key={reactKey}
@@ -177,8 +284,10 @@ const groupOptionsAsDataSource = <
                             {display}
                         </ItemComponent>
                     );
+                    childrenMap.set(key, display);
+                } else {
+                    childrenMap.set(key, (child[displayName] as ReactNode) ?? (child[itemKeyName] as string));
                 }
-                childrenMap.set(key, display);
             }
         });
         return [validKeys, disabledKeys, renderChildren];
@@ -198,7 +307,7 @@ export interface SelectProps {
     placeholder?: ReactNode;
     /** 修改、清空时的回调，清空时回调值单选为 undefined、du px aun */
     onChange?: (value: Key | Key[] | undefined) => void;
-    /** 快速设置选项 */
+    /** 快速设置选项，推荐使用以获得更好的性能 */
     options?: {
         /** 选项展示 */
         label?: ReactNode;
@@ -213,6 +322,8 @@ export interface SelectProps {
     showSelectAll?: boolean;
     /** 是否禁用 */
     disabled?: boolean;
+    /** 样式风格 */
+    styleType?: 'list';
     /**
      * 如何渲染选中项的展示
      * @param value - 当前 select 的值
@@ -263,6 +374,8 @@ export interface SelectProps {
           };
     /** 尺寸 */
     size?: Size;
+    /** 展示变更为块占位 */
+    block?: boolean;
     /** 是否可清空，仅单选可用 */
     clearable?: boolean;
     /**
@@ -323,7 +436,7 @@ type PopupProps = Pick<
         locale: typeof LOCALE;
         handleVisibleChange: (visible: boolean) => void;
         hidePopup: () => void;
-        dataSource: ReturnType<typeof groupChildrenAsDataSource>;
+        dataSource: ReturnType<typeof groupChildrenAsDataSource | typeof groupOptionsAsDataSource>;
         searchValue: string;
         setSearchValue: (searchValue: string) => void;
     };
@@ -409,8 +522,10 @@ const PopupV1 = React.memo(function PopupV1({
     const maxWidth = customStyle.popupMaxWidth ? customStyle.popupMaxWidth : 'none';
     const newCustomStyle = { ...customStyle };
     if (virtualList) {
+        if ('optionListMaxHeight' in newCustomStyle) {
+            warnLogForCustomHeight();
+        }
         newCustomStyle.optionListMaxHeight = 'none';
-        if ('optionListMaxHeight' in newCustomStyle) warnLogForCustomHeight();
     }
 
     const emptyContent = useMemo(() => _emptyContent || <EmptyContentWrapper>{locale.emptyTip}</EmptyContentWrapper>, [
@@ -419,13 +534,13 @@ const PopupV1 = React.memo(function PopupV1({
     ]);
 
     return (
-        <MenuWrap>
+        <MenuWrap maxWidth={maxWidth}>
             {search && <SelectSearchInput onChange={handleSearchInput} value={searchValue} status="default" />}
             {children || options?.length ? (
                 <BlockMenu
                     onChange={handleChange}
                     customStyle={newCustomStyle}
-                    menuCustomStyle={{ maxWidth }}
+                    menuCustomStyle={{ maxWidth: 'none' }}
                     dataSource={dataSource}
                     multiple={multiple}
                     showSelectAll={showSelectAll}
@@ -433,7 +548,9 @@ const PopupV1 = React.memo(function PopupV1({
                     virtualList={options ? virtualList : false}
                 />
             ) : (
-                <BlockMenu>{emptyContent}</BlockMenu>
+                <BlockMenu customStyle={newCustomStyle} menuCustomStyle={{ maxWidth: 'none' }}>
+                    {emptyContent}
+                </BlockMenu>
             )}
             {finalExtra ? <FooterWrap>{finalExtra}</FooterWrap> : null}
         </MenuWrap>
@@ -454,7 +571,8 @@ const PopupV2 = React.memo(function PopupV2({
     handleVisibleChange,
     hidePopup,
     dataSource,
-    virtualList
+    virtualList,
+    searchValue
 }: PopupProps) {
     const menuRef = useRef<MenuRef>(null);
     const handleChange = useCallback(
@@ -469,8 +587,10 @@ const PopupV2 = React.memo(function PopupV2({
         [multiple, onChange, handleVisibleChange]
     );
     const handleSelectAll = useCallback(() => {
-        menuRef.current?.selectAll();
-    }, []);
+        const validKeys = dataSource[0];
+        const newValue = Array.from(new Set([...((value as Key[]) || []), ...validKeys]));
+        onChange(newValue);
+    }, [dataSource, onChange, value]);
 
     const emptyContent = useMemo(() => _emptyContent || <EmptyContentWrapper>{locale.emptyTip}</EmptyContentWrapper>, [
         _emptyContent,
@@ -493,32 +613,43 @@ const PopupV2 = React.memo(function PopupV2({
     const maxWidth = customStyle.popupMaxWidth ? customStyle.popupMaxWidth : 'none';
     const newCustomStyle = { ...customStyle };
     if (virtualList) {
+        if ('optionListMaxHeight' in newCustomStyle) {
+            warnLogForCustomHeight();
+        }
         newCustomStyle.optionListMaxHeight = 'none';
-        if ('optionListMaxHeight' in newCustomStyle) warnLogForCustomHeight();
     }
 
+    const hasContent =
+        (children || options?.length) &&
+        (Array.isArray(dataSource[2]) ? (dataSource[2] as any)?.length : dataSource[2]);
+
     return (
-        <MenuWrap>
-            {multiple && showSelectAll && (
-                <div className={selectAllBtnWrapCls}>
-                    <Button block styleType="border-gray" size="sm" onClick={handleSelectAll}>
-                        {locale.selectAll}
-                    </Button>
-                </div>
-            )}
-            {children || options?.length ? (
+        <MenuWrap maxWidth={maxWidth}>
+            {hasContent ? (
                 <BlockMenu
+                    showSelectAll={
+                        showSelectAll &&
+                        multiple && (
+                            <div className={selectAllBtnWrapCls} key="__select_select_all" onClick={handleSelectAll}>
+                                {locale.selectAll}
+                                {searchValue ? ` (${searchValue})` : ''}
+                            </div>
+                        )
+                    }
                     onChange={handleChange}
                     customStyle={newCustomStyle}
-                    menuCustomStyle={{ maxWidth }}
+                    menuCustomStyle={{ maxWidth: 'none' }}
                     dataSource={dataSource}
                     multiple={multiple}
                     selectedKeys={multiple ? value : [value]}
                     virtualList={options ? virtualList : false}
                     ref={menuRef}
+                    _selectStyle={multiple}
                 />
             ) : (
-                <BlockMenu>{emptyContent}</BlockMenu>
+                <BlockMenu customStyle={newCustomStyle} menuCustomStyle={{ maxWidth: 'none' }}>
+                    {emptyContent}
+                </BlockMenu>
             )}
             {finalExtra ? <FooterWrap>{finalExtra}</FooterWrap> : null}
         </MenuWrap>
@@ -537,6 +668,8 @@ type SelectorProps = Pick<
     | 'onChange'
     | 'search'
     | 'clearable'
+    | 'styleType'
+    | 'block'
 > & {
     visible: boolean;
     locale: typeof LOCALE;
@@ -566,6 +699,8 @@ const Selector = React.memo(function Selector({
     setSearchValue,
     wrapRef,
     clearable,
+    styleType,
+    block,
     ..._popupProps
 }: Omit<SelectorProps, '_popupProps'> & { v1: boolean }) {
     const props = {
@@ -586,6 +721,7 @@ const Selector = React.memo(function Selector({
         setSearchValue,
         wrapRef,
         clearable,
+        block,
         _popupProps
     };
     const SelectorComponent = renderSelector
@@ -593,7 +729,9 @@ const Selector = React.memo(function Selector({
         : v1
         ? SelectorV1
         : multiple
-        ? MultipleSelector
+        ? styleType === 'list'
+            ? MultipleListSelector
+            : MultipleSelector
         : SingleSelector;
     return React.createElement(SelectorComponent, props);
 });
@@ -694,7 +832,7 @@ const RestListItem = React.memo(function RestListItem({
         onClose(item.key);
     }, [item.key, onClose]);
     return (
-        <div key={item.key}>
+        <div key={item.key} className={restItemCls}>
             <span data-role="label">{item.children}</span>
             {!disabled && (
                 <span data-role="close" onClick={handleClose}>
@@ -711,11 +849,18 @@ const RestList = React.memo(function RestList({
     disabled,
     ...rest
 }: { items: InternalItem[]; disabled?: boolean; onClose: (itemKey: Key) => void } & HTMLAttributes<HTMLDivElement>) {
+    const prevent = useCallback(e => {
+        e.preventDefault();
+        e.stopPropagation();
+    }, []);
+
     return (
-        <SRestList {...rest}>
-            {items.map(item => {
-                return <RestListItem item={item} key={item.key} onClose={onClose} disabled={disabled} />;
-            })}
+        <SRestList {...rest} onClick={prevent} onContextMenu={prevent}>
+            <VirtualScrollList width={160} height={180}>
+                {items.map(item => {
+                    return <RestListItem item={item} key={item.key} onClose={onClose} disabled={disabled} />;
+                })}
+            </VirtualScrollList>
         </SRestList>
     );
 });
@@ -744,6 +889,123 @@ const TagItem = React.memo(function TagItem({
     );
 });
 
+const restAlign = {
+    points: ['tl', 'br'],
+    overflow: { adjustX: 1, adjustY: 1 },
+    offset: [10, 10],
+    targetOffset: [0, 0]
+};
+
+const MultipleListSelector = React.memo(function MultipleSelector(props: SelectorProps) {
+    const {
+        size,
+        disabled,
+        visible,
+        dataSource,
+        value,
+        onChange,
+        placeholder,
+        search,
+        searchValue = '',
+        setSearchValue,
+        clearable,
+        locale,
+        block,
+        _popupProps
+    } = props;
+    const [, , , , childrenMap = new Map()] = dataSource;
+    const inputRef = useRef<HTMLInputElement>(null);
+
+    const items = useMemo(
+        () =>
+            ((value as Key[]) || []).map(v => {
+                return {
+                    key: v,
+                    children: childrenMap.has(v) ? childrenMap.get(v) : v
+                };
+            }),
+        [childrenMap, value]
+    );
+
+    const handleClose = useCallback(
+        (key: Key) => {
+            onChange?.((value as Key[]).filter(v => v !== key));
+        },
+        [onChange, value]
+    );
+
+    const renderItem = useCallback(
+        (item: InternalItem) => {
+            return <TagItem key={item.key} disabled={disabled} onClose={handleClose} item={item} />;
+        },
+        [disabled, handleClose]
+    );
+
+    const handleInput = useCallback(
+        (e: ChangeEvent<HTMLInputElement>) => {
+            setSearchValue(e.target.value);
+        },
+        [setSearchValue]
+    );
+
+    useEffect(() => {
+        if (visible) inputRef.current?.focus();
+    }, [visible]);
+    const handleClear = useCallback(
+        e => {
+            e.stopPropagation();
+            e.preventDefault();
+            if (!disabled) {
+                onChange?.([]);
+                inputRef.current?.focus();
+            }
+        },
+        [disabled, onChange]
+    );
+
+    const empty = useMemo(() => !(value as Key[])?.length, [value]);
+    const handleSelectorClick = useCallback(
+        (e: MouseEvent) => {
+            inputRef.current?.focus();
+            _popupProps.onClick?.(e);
+        },
+        [_popupProps]
+    );
+
+    return (
+        <>
+            <SSelectorMultiple
+                focused={visible}
+                empty={empty}
+                {..._popupProps}
+                onClick={handleSelectorClick}
+                block={block}
+                size={size}
+                disabled={disabled}
+            >
+                {placeholder && empty && !searchValue && <div className={placeholderCls}>{placeholder}</div>}
+                {!searchValue && !empty && (
+                    <div className={placeholderCls}>
+                        {locale.selected}
+                        {items.length}
+                        {locale.items}
+                    </div>
+                )}
+                <input value={searchValue} ref={inputRef} onChange={handleInput} disabled={disabled} />
+                <Clear clearable={clearable && !empty} onClick={handleClear} />
+                <InputPart>
+                    <SvgIcon type={visible ? (search ? 'search' : 'arrow-up') : 'arrow-down'} />
+                </InputPart>
+            </SSelectorMultiple>
+            {items.length ? (
+                <div className={listCls}>
+                    <Tag.Group>{items.map(renderItem)}</Tag.Group>
+                </div>
+            ) : null}
+        </>
+    );
+});
+
 const MultipleSelector = React.memo(function MultipleSelector(props: SelectorProps) {
     const {
         size,
@@ -757,15 +1019,12 @@ const MultipleSelector = React.memo(function MultipleSelector(props: SelectorPro
         searchValue = '',
         setSearchValue,
         wrapRef,
+        clearable,
+        block,
         _popupProps
     } = props;
     const [, , , , childrenMap = new Map()] = dataSource;
-    const [inputWidth, setInputWidth] = useState(40);
-    const measureRef = useRef<HTMLSpanElement>(null);
     const inputRef = useRef<HTMLInputElement>(null);
-    useLayoutEffect(() => {
-        setInputWidth(Math.max((measureRef.current?.scrollWidth || 0) + 10, 40));
-    }, [searchValue]);
 
     const items = useMemo(
         () =>
@@ -805,12 +1064,7 @@ const MultipleSelector = React.memo(function MultipleSelector(props: SelectorPro
                     arrow={false}
                     getPopupContainer={getRestPopupContainer}
                     customStyle={{ popupWrapperPadding: '0' }}
-                    align={{
-                        points: ['tl', 'br'],
-                        overflow: { adjustX: 1, adjustY: 1 },
-                        offset: [10, 10],
-                        targetOffset: [0, 0]
-                    }}
+                    align={restAlign}
                     {...popoverConfigProps}
                 >
                     <Tag disabled={disabled}>+{items.length}</Tag>
@@ -827,22 +1081,20 @@ const MultipleSelector = React.memo(function MultipleSelector(props: SelectorPro
         [setSearchValue]
     );
 
-    const hasInput = search;
-
-    const handleClear = useCallback(() => {
-        if (!disabled) {
-            onChange?.([]);
-            inputRef.current?.focus();
-        }
-    }, [disabled, onChange]);
-
-    const clearBtn = useMemo(() => {
-        return (
-            <span className={clearCls} onClick={handleClear}>
-                <SvgIcon type="cross-circle-filled" />
-            </span>
-        );
-    }, [handleClear]);
+    useEffect(() => {
+        if (visible) inputRef.current?.focus();
+    }, [visible]);
+    const handleClear = useCallback(
+        e => {
+            e.stopPropagation();
+            e.preventDefault();
+            if (!disabled) {
+                onChange?.([]);
+                inputRef.current?.focus();
+            }
+        },
+        [disabled, onChange]
+    );
 
     const empty = useMemo(() => !(value as Key[])?.length, [value]);
     const handleSelectorClick = useCallback(
@@ -853,45 +1105,54 @@ const MultipleSelector = React.memo(function MultipleSelector(props: SelectorPro
         [_popupProps]
     );
 
+    const [count, setCount] = useState(0);
+
     return (
-        <SSelectorMultiple
-            size={size}
-            disabled={disabled}
-            focused={visible}
-            cursor={hasInput ? 'text' : 'pointer'}
-            empty={empty}
-            block
-            {..._popupProps}
-            onClick={handleSelectorClick}
-        >
-            {placeholder && empty && !searchValue && <div className={placeholderCls}>{placeholder}</div>}
-            <Overflow
-                prefixCls={overflowCls}
-                data={items}
-                renderItem={renderItem}
-                renderRest={renderRest}
-                suffix={
-                    hasInput ? (
-                        <div key="input" className={measureCls} style={{ width: inputWidth }}>
-                            <input
-                                className={suffixCls}
-                                value={searchValue}
-                                onChange={handleInput}
-                                disabled={disabled}
-                                ref={inputRef}
+        <>
+            <SSelectorMultiple
+                focused={visible}
+                // cursor={hasInput ? 'text' : 'pointer'}
+                empty={empty}
+                {..._popupProps}
+                onClick={handleSelectorClick}
+                block={block}
+                size={size}
+                disabled={disabled}
+            >
+                {placeholder && empty && !searchValue && <div className={placeholderCls}>{placeholder}</div>}
+                <InputPart stretch className={measureWrapCls}>
+                    {items.length ? (
+                        <Static
+                            items={items}
+                            renderItem={renderItem}
+                            renderRest={renderRest}
+                            static
+                            count={count}
+                            {..._popupProps}
+                        />
+                    ) : null}
+                    {search ? (
+                        <input value={searchValue} ref={inputRef} onChange={handleInput} disabled={disabled} />
+                    ) : null}
+                    <div className={measureCls}>
+                        {items.length ? (
+                            <Overflow
+                                items={items}
+                                renderItem={renderItem}
+                                renderRest={renderRest}
+                                onMeasure={setCount}
+                                changeContent={searchValue}
                             />
-                            <span className={measureContentCls} ref={measureRef} aria-hidden>
-                                {searchValue}
-                            </span>
-                        </div>
-                    ) : null
-                }
-                itemKey="key"
-                maxCount="responsive"
-            />
-            {clearBtn}
-            {!visible && <SvgIcon type={'arrow-down'} />}
-        </SSelectorMultiple>
+                        ) : null}
+                        {search ? <span className={measureContentCls}>{searchValue}</span> : null}
+                    </div>
+                </InputPart>
+                <Clear clearable={clearable && !empty} onClick={handleClear} />
+                <InputPart>
+                    <SvgIcon type={visible ? (search ? 'search' : 'arrow-up') : 'arrow-down'} />
+                </InputPart>
+            </SSelectorMultiple>
+        </>
     );
 });
 
@@ -936,6 +1197,7 @@ const SingleSelector = React.memo(function SingleSelector({
         [setSearchValue]
     );
 
+    const empty = value === undefined;
     const sharedProps = {
         className: selectInputCls,
         size,
@@ -943,7 +1205,7 @@ const SingleSelector = React.memo(function SingleSelector({
         block: true,
         cursor: search ? 'text' : 'pointer',
         focused: visible,
-        empty: value === undefined,
+        empty,
         ..._popupProps
     };
 
@@ -951,20 +1213,17 @@ const SingleSelector = React.memo(function SingleSelector({
         if (visible) inputRef.current?.focus();
     }, [visible]);
 
-    const handleClear = useCallback(() => {
-        if (!disabled) {
-            onChange?.(undefined);
-            inputRef.current?.focus();
-        }
-    }, [disabled, onChange]);
-
-    const clearBtn = useMemo(() => {
-        return (
-            <InputPart className={clearCls} onClick={handleClear}>
-                <SvgIcon type="cross-circle-filled" />
-            </InputPart>
-        );
-    }, [handleClear]);
+    const handleClear = useCallback(
+        e => {
+            e.preventDefault();
+            e.stopPropagation();
+            if (!disabled) {
+                onChange?.(undefined);
+                inputRef.current?.focus();
+            }
+        },
+        [disabled, onChange]
+    );
 
     return (
         <SSelectorSingle {...sharedProps}>
@@ -987,8 +1246,10 @@ const SingleSelector = React.memo(function SingleSelector({
                     />
                 )}
             </InputPart>
-            {clearable && clearBtn}
-            <InputPart>{<SvgIcon type={'arrow-down'} style={{ visibility: visible ? 'hidden' : 'visible' }} />}</InputPart>
+            <Clear clearable={clearable && !empty} onClick={handleClear} />
+            <InputPart>
+                <SvgIcon type={visible ? (search ? 'search' : 'arrow-up') : 'arrow-down'} />
+            </InputPart>
         </SSelectorSingle>
     );
 });
@@ -1017,8 +1278,11 @@ const Select = ({
     popoverProps,
     renderPopup,
     virtualList,
+    block,
+    styleType,
     ...htmlProps
 }: SelectProps & Override<HTMLAttributes<HTMLDivElement>, SelectProps>) => {
+    if (multiple) clearable = true;
     const [value, onChange] = useUncontrolled(_value, defaultValue, _onChange);
     const [visible, setVisible] = useState(false);
     const locale = useLocale(LOCALE, 'Select', _locale);
@@ -1075,21 +1339,20 @@ const Select = ({
     );
 
     const childrenDataSource = useMemo(
-        () => (options ? [] : groupChildrenAsDataSource(children, disabled, groupOptions)),
-        [children, disabled, options]
+        () => (options ? [] : groupChildrenAsDataSource(children, disabled, groupOptions, searchValue, handleSearch)),
+        [children, disabled, handleSearch, options, searchValue]
     );
     const optionsDataSource = useMemo(
         () => (options ? groupOptionsAsDataSource(options, disabled, groupOptions, searchValue, handleSearch) : []),
         [disabled, handleSearch, options, searchValue]
     );
 
-    const dataSource = useMemo(
-        () =>
-            (options ? optionsDataSource : childrenDataSource) as
-                | ReturnType<typeof groupOptionsAsDataSource>
-                | ReturnType<typeof groupChildrenAsDataSource>,
-        [options, childrenDataSource, optionsDataSource]
-    );
+    const dataSource = useMemo(() => {
+        if (options) {
+            return optionsDataSource as ReturnType<typeof groupOptionsAsDataSource>;
+        }
+        return childrenDataSource as ReturnType<typeof groupChildrenAsDataSource>;
+    }, [options, childrenDataSource, optionsDataSource]);
 
     virtualList = useMemo(() => (options ? virtualList : false), [options, virtualList]);
 
@@ -1154,10 +1417,12 @@ const Select = ({
         search,
         searchValue,
         setSearchValue,
-        wrapRef
+        styleType,
+        wrapRef,
+        block
     });
     const popoverTriggerAttrs = useMemo(
-        () => (v1 ? { trigger: ['click'] } : { trigger: [], showAction: ['click', 'contextMenu'] }),
+        () => (v1 ? { trigger: ['click'] } : { trigger: [], showAction: ['click', 'contextMenu', 'focus'] }),
         [v1]
     );
     const popoverConfigProps = usePopoverConfig();
@@ -1170,11 +1435,12 @@ const Select = ({
                 searchValue
             }}
         >
-            <SelectWrap ref={wrapRef} disabled={disabled} multiple={multiple} {...htmlProps}>
+            <SelectWrap ref={wrapRef} disabled={disabled} multiple={multiple} block={block} {...htmlProps}>
                 <Popover
                     visible={visible}
                     onVisibleChange={handleVisibleChange}
                     placement="bottomLeft"
+                    stretch={block ? blockPopoverStretch : popoverStretch}
                     {...popoverTriggerAttrs}
                     {...popoverConfigProps}
                     {...popover}

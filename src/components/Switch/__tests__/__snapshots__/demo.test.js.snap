@@ -5943,8 +5943,15 @@ exports[`Switch demo -- switch 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-57:hover {
@@ -5966,8 +5973,8 @@ exports[`Switch demo -- switch 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-57 .uc-fe-input-clear:hover {
@@ -5975,36 +5982,29 @@ exports[`Switch demo -- switch 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-57 .uc-fe-input-wrap,
+.emotion-57,
 .emotion-57 .uc-fe-input-prefix,
 .emotion-57 .uc-fe-input-suffix,
 .emotion-57 .uc-fe-input-clear,
-.emotion-57 input {
+.emotion-57 input,
+.emotion-57 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-57.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-57 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-57 .uc-fe-input-prefix,
-.emotion-57 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-57 .uc-fe-input-suffix,
+.emotion-57 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -6013,6 +6013,10 @@ exports[`Switch demo -- switch 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-57 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-57 .uc-fe-input-block-wrap {
@@ -6567,8 +6571,15 @@ exports[`Switch demo -- switch 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-57:hover {
@@ -6590,8 +6601,8 @@ exports[`Switch demo -- switch 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-57 .uc-fe-input-clear:hover {
@@ -6599,36 +6610,29 @@ exports[`Switch demo -- switch 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-57 .uc-fe-input-wrap,
+.emotion-57,
 .emotion-57 .uc-fe-input-prefix,
 .emotion-57 .uc-fe-input-suffix,
 .emotion-57 .uc-fe-input-clear,
-.emotion-57 input {
+.emotion-57 input,
+.emotion-57 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-57.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-57 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-57 .uc-fe-input-prefix,
-.emotion-57 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-57 .uc-fe-input-suffix,
+.emotion-57 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -6637,6 +6641,10 @@ exports[`Switch demo -- switch 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-57 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-57 .uc-fe-input-block-wrap {
@@ -6901,15 +6909,11 @@ exports[`Switch demo -- switch 1`] = `
           class="uc-fe-input emotion-57 emotion-58"
         >
           <span
-            class="uc-fe-input-wrap"
+            class="uc-fe-input-block-wrap"
           >
-            <span
-              class="uc-fe-input-block-wrap"
-            >
-              <input
-                value="ON"
-              />
-            </span>
+            <input
+              value="ON"
+            />
           </span>
         </span>
       </div>
@@ -6931,15 +6935,11 @@ exports[`Switch demo -- switch 1`] = `
           class="uc-fe-input emotion-57 emotion-58"
         >
           <span
-            class="uc-fe-input-wrap"
+            class="uc-fe-input-block-wrap"
           >
-            <span
-              class="uc-fe-input-block-wrap"
-            >
-              <input
-                value="OFF"
-              />
-            </span>
+            <input
+              value="OFF"
+            />
           </span>
         </span>
       </div>

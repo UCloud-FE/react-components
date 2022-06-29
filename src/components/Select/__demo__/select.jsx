@@ -30,9 +30,11 @@ class Demo extends React.Component {
             showSelectAll: true,
             disabled: false,
             search: false,
+            block: false,
             optionType: 'simple',
             stretch: true,
-            width: 'default'
+            width: 'default',
+            styleType: 'default'
         };
     }
     render() {
@@ -47,7 +49,9 @@ class Demo extends React.Component {
             stretch,
             optionType,
             width,
-            clearable
+            clearable,
+            block,
+            styleType
         } = this.state;
         const itemLayout = {
             labelCol: {
@@ -69,6 +73,10 @@ class Demo extends React.Component {
                 : { children: childrenOptions };
 
         const widthProps = width === 'width: 500px' ? { style: { width: '500px' } } : {};
+        const props = {};
+        if (styleType !== 'default') {
+            props.styleType = styleType;
+        }
         return (
             <div>
                 <Form className="demo-form">
@@ -95,6 +103,13 @@ class Demo extends React.Component {
                             options={['default', 'width: 500px'].map(v => ({ value: v }))}
                         />
                     </Form.Item>
+                    <Form.Item label="styleType" {...itemLayout}>
+                        <Radio.Group
+                            value={styleType}
+                            onChange={styleType => this.setState({ styleType })}
+                            options={['default', 'list'].map(v => ({ value: v }))}
+                        />
+                    </Form.Item>
                     <Form.Item label="placeholder" {...itemLayout}>
                         <Input value={placeholder} onChange={e => this.setState({ placeholder: e.target.value })} />
                     </Form.Item>
@@ -106,6 +121,9 @@ class Demo extends React.Component {
                     </Form.Item>
                     <Form.Item label="showSelectAll" {...itemLayout}>
                         <Switch checked={showSelectAll} onChange={showSelectAll => this.setState({ showSelectAll })} />
+                    </Form.Item>
+                    <Form.Item label="block" {...itemLayout}>
+                        <Switch checked={block} onChange={block => this.setState({ block })} />
                     </Form.Item>
                     <Form.Item label="disabled" {...itemLayout}>
                         <Switch checked={disabled} onChange={disabled => this.setState({ disabled })} />
@@ -129,10 +147,13 @@ class Demo extends React.Component {
                         multiple={multiple}
                         showSelectAll={showSelectAll}
                         disabled={disabled}
+                        clearable={clearable}
+                        block={block}
                         {...widthProps}
                         {...optionProps}
                         {...(search ? { search } : {})}
                         {...(stretch ? { popoverProps: { stretch: ['minWidth'] } } : {})}
+                        {...props}
                     />
                 </div>
             </div>
