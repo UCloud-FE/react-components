@@ -74,8 +74,15 @@ exports[`EditableList demo -- addition 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-4:hover {
@@ -97,8 +104,8 @@ exports[`EditableList demo -- addition 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-4 .uc-fe-input-clear:hover {
@@ -106,36 +113,29 @@ exports[`EditableList demo -- addition 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-4 .uc-fe-input-wrap,
+.emotion-4,
 .emotion-4 .uc-fe-input-prefix,
 .emotion-4 .uc-fe-input-suffix,
 .emotion-4 .uc-fe-input-clear,
-.emotion-4 input {
+.emotion-4 input,
+.emotion-4 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-4.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-4 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-4 .uc-fe-input-prefix,
-.emotion-4 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-4 .uc-fe-input-suffix,
+.emotion-4 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -144,6 +144,10 @@ exports[`EditableList demo -- addition 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-4 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-4 .uc-fe-input-block-wrap {
@@ -290,8 +294,8 @@ exports[`EditableList demo -- addition 1`] = `
 }
 
 .emotion-6 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -426,8 +430,15 @@ exports[`EditableList demo -- addition 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-4:hover {
@@ -449,8 +460,8 @@ exports[`EditableList demo -- addition 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-4 .uc-fe-input-clear:hover {
@@ -458,36 +469,29 @@ exports[`EditableList demo -- addition 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-4 .uc-fe-input-wrap,
+.emotion-4,
 .emotion-4 .uc-fe-input-prefix,
 .emotion-4 .uc-fe-input-suffix,
 .emotion-4 .uc-fe-input-clear,
-.emotion-4 input {
+.emotion-4 input,
+.emotion-4 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-4.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-4 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-4 .uc-fe-input-prefix,
-.emotion-4 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-4 .uc-fe-input-suffix,
+.emotion-4 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -496,6 +500,10 @@ exports[`EditableList demo -- addition 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-4 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-4 .uc-fe-input-block-wrap {
@@ -642,8 +650,8 @@ exports[`EditableList demo -- addition 1`] = `
 }
 
 .emotion-6 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -741,15 +749,11 @@ exports[`EditableList demo -- addition 1`] = `
               class="uc-fe-input emotion-4 emotion-5"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-0"
-                  />
-                </span>
+                <input
+                  value="name-0"
+                />
               </span>
             </span>
           </div>
@@ -792,15 +796,11 @@ exports[`EditableList demo -- addition 1`] = `
               class="uc-fe-input emotion-4 emotion-5"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-1"
-                  />
-                </span>
+                <input
+                  value="name-1"
+                />
               </span>
             </span>
           </div>
@@ -870,15 +870,11 @@ exports[`EditableList demo -- addition 1`] = `
               class="uc-fe-input emotion-4 emotion-5"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-0"
-                  />
-                </span>
+                <input
+                  value="name-0"
+                />
               </span>
             </span>
           </div>
@@ -921,15 +917,11 @@ exports[`EditableList demo -- addition 1`] = `
               class="uc-fe-input emotion-4 emotion-5"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-1"
-                  />
-                </span>
+                <input
+                  value="name-1"
+                />
               </span>
             </span>
           </div>
@@ -1018,15 +1010,11 @@ exports[`EditableList demo -- addition 1`] = `
               class="uc-fe-input emotion-4 emotion-5"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-0"
-                  />
-                </span>
+                <input
+                  value="name-0"
+                />
               </span>
             </span>
           </div>
@@ -1069,15 +1057,11 @@ exports[`EditableList demo -- addition 1`] = `
               class="uc-fe-input emotion-4 emotion-5"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-1"
-                  />
-                </span>
+                <input
+                  value="name-1"
+                />
               </span>
             </span>
           </div>
@@ -1149,8 +1133,15 @@ exports[`EditableList demo -- demo 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-0:hover {
@@ -1172,8 +1163,8 @@ exports[`EditableList demo -- demo 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-0 .uc-fe-input-clear:hover {
@@ -1181,36 +1172,29 @@ exports[`EditableList demo -- demo 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-0 .uc-fe-input-wrap,
+.emotion-0,
 .emotion-0 .uc-fe-input-prefix,
 .emotion-0 .uc-fe-input-suffix,
 .emotion-0 .uc-fe-input-clear,
-.emotion-0 input {
+.emotion-0 input,
+.emotion-0 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-0.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-0 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-0 .uc-fe-input-prefix,
-.emotion-0 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-0 .uc-fe-input-suffix,
+.emotion-0 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1219,6 +1203,10 @@ exports[`EditableList demo -- demo 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-0 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-0 .uc-fe-input-block-wrap {
@@ -1365,8 +1353,8 @@ exports[`EditableList demo -- demo 1`] = `
 }
 
 .emotion-6 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -1519,8 +1507,15 @@ exports[`EditableList demo -- demo 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-0:hover {
@@ -1542,8 +1537,8 @@ exports[`EditableList demo -- demo 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-0 .uc-fe-input-clear:hover {
@@ -1551,36 +1546,29 @@ exports[`EditableList demo -- demo 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-0 .uc-fe-input-wrap,
+.emotion-0,
 .emotion-0 .uc-fe-input-prefix,
 .emotion-0 .uc-fe-input-suffix,
 .emotion-0 .uc-fe-input-clear,
-.emotion-0 input {
+.emotion-0 input,
+.emotion-0 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-0.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-0 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-0 .uc-fe-input-prefix,
-.emotion-0 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-0 .uc-fe-input-suffix,
+.emotion-0 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1589,6 +1577,10 @@ exports[`EditableList demo -- demo 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-0 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-0 .uc-fe-input-block-wrap {
@@ -1735,8 +1727,8 @@ exports[`EditableList demo -- demo 1`] = `
 }
 
 .emotion-6 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -1877,15 +1869,11 @@ exports[`EditableList demo -- demo 1`] = `
             class="uc-fe-input emotion-0 emotion-1"
           >
             <span
-              class="uc-fe-input-wrap"
+              class="uc-fe-input-block-wrap"
             >
-              <span
-                class="uc-fe-input-block-wrap"
-              >
-                <input
-                  value="默认数据，不能删除"
-                />
-              </span>
+              <input
+                value="默认数据，不能删除"
+              />
             </span>
           </span>
         </div>
@@ -1908,15 +1896,11 @@ exports[`EditableList demo -- demo 1`] = `
             class="uc-fe-input emotion-0 emotion-1"
           >
             <span
-              class="uc-fe-input-wrap"
+              class="uc-fe-input-block-wrap"
             >
-              <span
-                class="uc-fe-input-block-wrap"
-              >
-                <input
-                  value="默认数据，不能删除"
-                />
-              </span>
+              <input
+                value="默认数据，不能删除"
+              />
             </span>
           </span>
         </div>
@@ -2480,8 +2464,8 @@ exports[`EditableList demo -- editableList 1`] = `
 }
 
 .emotion-51 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -3024,8 +3008,8 @@ exports[`EditableList demo -- editableList 1`] = `
 }
 
 .emotion-51 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -3407,8 +3391,15 @@ exports[`EditableList demo -- grid 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-0:hover {
@@ -3430,8 +3421,8 @@ exports[`EditableList demo -- grid 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-0 .uc-fe-input-clear:hover {
@@ -3439,36 +3430,29 @@ exports[`EditableList demo -- grid 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-0 .uc-fe-input-wrap,
+.emotion-0,
 .emotion-0 .uc-fe-input-prefix,
 .emotion-0 .uc-fe-input-suffix,
 .emotion-0 .uc-fe-input-clear,
-.emotion-0 input {
+.emotion-0 input,
+.emotion-0 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-0.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-0 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-0 .uc-fe-input-prefix,
-.emotion-0 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-0 .uc-fe-input-suffix,
+.emotion-0 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -3477,6 +3461,10 @@ exports[`EditableList demo -- grid 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-0 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-0 .uc-fe-input-block-wrap {
@@ -3623,8 +3611,8 @@ exports[`EditableList demo -- grid 1`] = `
 }
 
 .emotion-2 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -3736,8 +3724,15 @@ exports[`EditableList demo -- grid 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-0:hover {
@@ -3759,8 +3754,8 @@ exports[`EditableList demo -- grid 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-0 .uc-fe-input-clear:hover {
@@ -3768,36 +3763,29 @@ exports[`EditableList demo -- grid 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-0 .uc-fe-input-wrap,
+.emotion-0,
 .emotion-0 .uc-fe-input-prefix,
 .emotion-0 .uc-fe-input-suffix,
 .emotion-0 .uc-fe-input-clear,
-.emotion-0 input {
+.emotion-0 input,
+.emotion-0 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-0.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-0 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-0 .uc-fe-input-prefix,
-.emotion-0 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-0 .uc-fe-input-suffix,
+.emotion-0 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -3806,6 +3794,10 @@ exports[`EditableList demo -- grid 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-0 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-0 .uc-fe-input-block-wrap {
@@ -3952,8 +3944,8 @@ exports[`EditableList demo -- grid 1`] = `
 }
 
 .emotion-2 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -4054,15 +4046,11 @@ exports[`EditableList demo -- grid 1`] = `
               class="uc-fe-input emotion-0 emotion-1"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-0"
-                  />
-                </span>
+                <input
+                  value="name-0"
+                />
               </span>
             </span>
           </div>
@@ -4105,15 +4093,11 @@ exports[`EditableList demo -- grid 1`] = `
               class="uc-fe-input emotion-0 emotion-1"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-1"
-                  />
-                </span>
+                <input
+                  value="name-1"
+                />
               </span>
             </span>
           </div>
@@ -4156,15 +4140,11 @@ exports[`EditableList demo -- grid 1`] = `
               class="uc-fe-input emotion-0 emotion-1"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-2"
-                  />
-                </span>
+                <input
+                  value="name-2"
+                />
               </span>
             </span>
           </div>
@@ -4207,15 +4187,11 @@ exports[`EditableList demo -- grid 1`] = `
               class="uc-fe-input emotion-0 emotion-1"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-3"
-                  />
-                </span>
+                <input
+                  value="name-3"
+                />
               </span>
             </span>
           </div>
@@ -4258,15 +4234,11 @@ exports[`EditableList demo -- grid 1`] = `
               class="uc-fe-input emotion-0 emotion-1"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-4"
-                  />
-                </span>
+                <input
+                  value="name-4"
+                />
               </span>
             </span>
           </div>
@@ -4341,15 +4313,11 @@ exports[`EditableList demo -- grid 1`] = `
               class="uc-fe-input emotion-0 emotion-1"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-0"
-                  />
-                </span>
+                <input
+                  value="name-0"
+                />
               </span>
             </span>
           </div>
@@ -4394,15 +4362,11 @@ exports[`EditableList demo -- grid 1`] = `
               class="uc-fe-input emotion-0 emotion-1"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-1"
-                  />
-                </span>
+                <input
+                  value="name-1"
+                />
               </span>
             </span>
           </div>
@@ -4447,15 +4411,11 @@ exports[`EditableList demo -- grid 1`] = `
               class="uc-fe-input emotion-0 emotion-1"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-2"
-                  />
-                </span>
+                <input
+                  value="name-2"
+                />
               </span>
             </span>
           </div>
@@ -4500,15 +4460,11 @@ exports[`EditableList demo -- grid 1`] = `
               class="uc-fe-input emotion-0 emotion-1"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-3"
-                  />
-                </span>
+                <input
+                  value="name-3"
+                />
               </span>
             </span>
           </div>
@@ -4553,15 +4509,11 @@ exports[`EditableList demo -- grid 1`] = `
               class="uc-fe-input emotion-0 emotion-1"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-4"
-                  />
-                </span>
+                <input
+                  value="name-4"
+                />
               </span>
             </span>
           </div>
@@ -4638,15 +4590,11 @@ exports[`EditableList demo -- grid 1`] = `
               class="uc-fe-input emotion-0 emotion-1"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-0"
-                  />
-                </span>
+                <input
+                  value="name-0"
+                />
               </span>
             </span>
           </div>
@@ -4692,15 +4640,11 @@ exports[`EditableList demo -- grid 1`] = `
               class="uc-fe-input emotion-0 emotion-1"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-1"
-                  />
-                </span>
+                <input
+                  value="name-1"
+                />
               </span>
             </span>
           </div>
@@ -4746,15 +4690,11 @@ exports[`EditableList demo -- grid 1`] = `
               class="uc-fe-input emotion-0 emotion-1"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-2"
-                  />
-                </span>
+                <input
+                  value="name-2"
+                />
               </span>
             </span>
           </div>
@@ -4800,15 +4740,11 @@ exports[`EditableList demo -- grid 1`] = `
               class="uc-fe-input emotion-0 emotion-1"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-3"
-                  />
-                </span>
+                <input
+                  value="name-3"
+                />
               </span>
             </span>
           </div>
@@ -4854,15 +4790,11 @@ exports[`EditableList demo -- grid 1`] = `
               class="uc-fe-input emotion-0 emotion-1"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-4"
-                  />
-                </span>
+                <input
+                  value="name-4"
+                />
               </span>
             </span>
           </div>
@@ -4953,8 +4885,15 @@ exports[`EditableList demo -- itemDeletion 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-0:hover {
@@ -4976,8 +4915,8 @@ exports[`EditableList demo -- itemDeletion 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-0 .uc-fe-input-clear:hover {
@@ -4985,36 +4924,29 @@ exports[`EditableList demo -- itemDeletion 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-0 .uc-fe-input-wrap,
+.emotion-0,
 .emotion-0 .uc-fe-input-prefix,
 .emotion-0 .uc-fe-input-suffix,
 .emotion-0 .uc-fe-input-clear,
-.emotion-0 input {
+.emotion-0 input,
+.emotion-0 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-0.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-0 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-0 .uc-fe-input-prefix,
-.emotion-0 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-0 .uc-fe-input-suffix,
+.emotion-0 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -5023,6 +4955,10 @@ exports[`EditableList demo -- itemDeletion 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-0 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-0 .uc-fe-input-block-wrap {
@@ -5169,8 +5105,8 @@ exports[`EditableList demo -- itemDeletion 1`] = `
 }
 
 .emotion-18 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -5210,8 +5146,15 @@ exports[`EditableList demo -- itemDeletion 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-0:hover {
@@ -5233,8 +5176,8 @@ exports[`EditableList demo -- itemDeletion 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-0 .uc-fe-input-clear:hover {
@@ -5242,36 +5185,29 @@ exports[`EditableList demo -- itemDeletion 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-0 .uc-fe-input-wrap,
+.emotion-0,
 .emotion-0 .uc-fe-input-prefix,
 .emotion-0 .uc-fe-input-suffix,
 .emotion-0 .uc-fe-input-clear,
-.emotion-0 input {
+.emotion-0 input,
+.emotion-0 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-0.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-0 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-0 .uc-fe-input-prefix,
-.emotion-0 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-0 .uc-fe-input-suffix,
+.emotion-0 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -5280,6 +5216,10 @@ exports[`EditableList demo -- itemDeletion 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-0 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-0 .uc-fe-input-block-wrap {
@@ -5426,8 +5366,8 @@ exports[`EditableList demo -- itemDeletion 1`] = `
 }
 
 .emotion-18 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -5456,15 +5396,11 @@ exports[`EditableList demo -- itemDeletion 1`] = `
               class="uc-fe-input emotion-0 emotion-1"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-0"
-                  />
-                </span>
+                <input
+                  value="name-0"
+                />
               </span>
             </span>
           </div>
@@ -5487,15 +5423,11 @@ exports[`EditableList demo -- itemDeletion 1`] = `
               class="uc-fe-input emotion-0 emotion-1"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-1"
-                  />
-                </span>
+                <input
+                  value="name-1"
+                />
               </span>
             </span>
           </div>
@@ -5518,15 +5450,11 @@ exports[`EditableList demo -- itemDeletion 1`] = `
               class="uc-fe-input emotion-0 emotion-1"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-2"
-                  />
-                </span>
+                <input
+                  value="name-2"
+                />
               </span>
             </span>
           </div>
@@ -5549,15 +5477,11 @@ exports[`EditableList demo -- itemDeletion 1`] = `
               class="uc-fe-input emotion-0 emotion-1"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-3"
-                  />
-                </span>
+                <input
+                  value="name-3"
+                />
               </span>
             </span>
           </div>
@@ -5580,15 +5504,11 @@ exports[`EditableList demo -- itemDeletion 1`] = `
               class="uc-fe-input emotion-0 emotion-1"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-4"
-                  />
-                </span>
+                <input
+                  value="name-4"
+                />
               </span>
             </span>
           </div>
@@ -5643,15 +5563,11 @@ exports[`EditableList demo -- itemDeletion 1`] = `
               class="uc-fe-input emotion-0 emotion-1"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-0"
-                  />
-                </span>
+                <input
+                  value="name-0"
+                />
               </span>
             </span>
           </div>
@@ -5694,15 +5610,11 @@ exports[`EditableList demo -- itemDeletion 1`] = `
               class="uc-fe-input emotion-0 emotion-1"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-1"
-                  />
-                </span>
+                <input
+                  value="name-1"
+                />
               </span>
             </span>
           </div>
@@ -5745,15 +5657,11 @@ exports[`EditableList demo -- itemDeletion 1`] = `
               class="uc-fe-input emotion-0 emotion-1"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-2"
-                  />
-                </span>
+                <input
+                  value="name-2"
+                />
               </span>
             </span>
           </div>
@@ -5796,15 +5704,11 @@ exports[`EditableList demo -- itemDeletion 1`] = `
               class="uc-fe-input emotion-0 emotion-1"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-3"
-                  />
-                </span>
+                <input
+                  value="name-3"
+                />
               </span>
             </span>
           </div>
@@ -5847,15 +5751,11 @@ exports[`EditableList demo -- itemDeletion 1`] = `
               class="uc-fe-input emotion-0 emotion-1"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-4"
-                  />
-                </span>
+                <input
+                  value="name-4"
+                />
               </span>
             </span>
           </div>
@@ -5929,15 +5829,11 @@ exports[`EditableList demo -- itemDeletion 1`] = `
               class="uc-fe-input emotion-0 emotion-1"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-0"
-                  />
-                </span>
+                <input
+                  value="name-0"
+                />
               </span>
             </span>
           </div>
@@ -5980,15 +5876,11 @@ exports[`EditableList demo -- itemDeletion 1`] = `
               class="uc-fe-input emotion-0 emotion-1"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-1"
-                  />
-                </span>
+                <input
+                  value="name-1"
+                />
               </span>
             </span>
           </div>
@@ -6011,15 +5903,11 @@ exports[`EditableList demo -- itemDeletion 1`] = `
               class="uc-fe-input emotion-0 emotion-1"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-2"
-                  />
-                </span>
+                <input
+                  value="name-2"
+                />
               </span>
             </span>
           </div>
@@ -6062,15 +5950,11 @@ exports[`EditableList demo -- itemDeletion 1`] = `
               class="uc-fe-input emotion-0 emotion-1"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-3"
-                  />
-                </span>
+                <input
+                  value="name-3"
+                />
               </span>
             </span>
           </div>
@@ -6093,15 +5977,11 @@ exports[`EditableList demo -- itemDeletion 1`] = `
               class="uc-fe-input emotion-0 emotion-1"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-4"
-                  />
-                </span>
+                <input
+                  value="name-4"
+                />
               </span>
             </span>
           </div>
@@ -6191,8 +6071,15 @@ exports[`EditableList demo -- size 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-30:hover {
@@ -6214,8 +6101,8 @@ exports[`EditableList demo -- size 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-30 .uc-fe-input-clear:hover {
@@ -6223,36 +6110,29 @@ exports[`EditableList demo -- size 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-30 .uc-fe-input-wrap,
+.emotion-30,
 .emotion-30 .uc-fe-input-prefix,
 .emotion-30 .uc-fe-input-suffix,
 .emotion-30 .uc-fe-input-clear,
-.emotion-30 input {
+.emotion-30 input,
+.emotion-30 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-30.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-30 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-30 .uc-fe-input-prefix,
-.emotion-30 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-30 .uc-fe-input-suffix,
+.emotion-30 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -6261,6 +6141,10 @@ exports[`EditableList demo -- size 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-30 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-30 .uc-fe-input-block-wrap {
@@ -6407,8 +6291,8 @@ exports[`EditableList demo -- size 1`] = `
 }
 
 .emotion-6 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -6538,8 +6422,15 @@ exports[`EditableList demo -- size 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-4:hover {
@@ -6561,8 +6452,8 @@ exports[`EditableList demo -- size 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-4 .uc-fe-input-clear:hover {
@@ -6570,36 +6461,29 @@ exports[`EditableList demo -- size 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-4 .uc-fe-input-wrap,
+.emotion-4,
 .emotion-4 .uc-fe-input-prefix,
 .emotion-4 .uc-fe-input-suffix,
 .emotion-4 .uc-fe-input-clear,
-.emotion-4 input {
+.emotion-4 input,
+.emotion-4 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-4.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-4 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-4 .uc-fe-input-prefix,
-.emotion-4 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-4 .uc-fe-input-suffix,
+.emotion-4 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -6608,6 +6492,10 @@ exports[`EditableList demo -- size 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-4 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-4 .uc-fe-input-block-wrap {
@@ -6821,8 +6709,15 @@ exports[`EditableList demo -- size 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-56:hover {
@@ -6844,8 +6739,8 @@ exports[`EditableList demo -- size 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-56 .uc-fe-input-clear:hover {
@@ -6853,36 +6748,29 @@ exports[`EditableList demo -- size 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-56 .uc-fe-input-wrap,
+.emotion-56,
 .emotion-56 .uc-fe-input-prefix,
 .emotion-56 .uc-fe-input-suffix,
 .emotion-56 .uc-fe-input-clear,
-.emotion-56 input {
+.emotion-56 input,
+.emotion-56 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-56.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-56 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-56 .uc-fe-input-prefix,
-.emotion-56 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-56 .uc-fe-input-suffix,
+.emotion-56 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -6891,6 +6779,10 @@ exports[`EditableList demo -- size 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-56 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-56 .uc-fe-input-block-wrap {
@@ -7068,8 +6960,15 @@ exports[`EditableList demo -- size 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-30:hover {
@@ -7091,8 +6990,8 @@ exports[`EditableList demo -- size 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-30 .uc-fe-input-clear:hover {
@@ -7100,36 +6999,29 @@ exports[`EditableList demo -- size 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-30 .uc-fe-input-wrap,
+.emotion-30,
 .emotion-30 .uc-fe-input-prefix,
 .emotion-30 .uc-fe-input-suffix,
 .emotion-30 .uc-fe-input-clear,
-.emotion-30 input {
+.emotion-30 input,
+.emotion-30 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-30.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-30 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-30 .uc-fe-input-prefix,
-.emotion-30 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-30 .uc-fe-input-suffix,
+.emotion-30 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -7138,6 +7030,10 @@ exports[`EditableList demo -- size 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-30 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-30 .uc-fe-input-block-wrap {
@@ -7284,8 +7180,8 @@ exports[`EditableList demo -- size 1`] = `
 }
 
 .emotion-6 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -7415,8 +7311,15 @@ exports[`EditableList demo -- size 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-4:hover {
@@ -7438,8 +7341,8 @@ exports[`EditableList demo -- size 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-4 .uc-fe-input-clear:hover {
@@ -7447,36 +7350,29 @@ exports[`EditableList demo -- size 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-4 .uc-fe-input-wrap,
+.emotion-4,
 .emotion-4 .uc-fe-input-prefix,
 .emotion-4 .uc-fe-input-suffix,
 .emotion-4 .uc-fe-input-clear,
-.emotion-4 input {
+.emotion-4 input,
+.emotion-4 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-4.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-4 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-4 .uc-fe-input-prefix,
-.emotion-4 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-4 .uc-fe-input-suffix,
+.emotion-4 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -7485,6 +7381,10 @@ exports[`EditableList demo -- size 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-4 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-4 .uc-fe-input-block-wrap {
@@ -7698,8 +7598,15 @@ exports[`EditableList demo -- size 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-56:hover {
@@ -7721,8 +7628,8 @@ exports[`EditableList demo -- size 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-56 .uc-fe-input-clear:hover {
@@ -7730,36 +7637,29 @@ exports[`EditableList demo -- size 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-56 .uc-fe-input-wrap,
+.emotion-56,
 .emotion-56 .uc-fe-input-prefix,
 .emotion-56 .uc-fe-input-suffix,
 .emotion-56 .uc-fe-input-clear,
-.emotion-56 input {
+.emotion-56 input,
+.emotion-56 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-56.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-56 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-56 .uc-fe-input-prefix,
-.emotion-56 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-56 .uc-fe-input-suffix,
+.emotion-56 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -7768,6 +7668,10 @@ exports[`EditableList demo -- size 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-56 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-56 .uc-fe-input-block-wrap {
@@ -7948,15 +7852,11 @@ exports[`EditableList demo -- size 1`] = `
               class="uc-fe-input emotion-4 emotion-5"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-0"
-                  />
-                </span>
+                <input
+                  value="name-0"
+                />
               </span>
             </span>
           </div>
@@ -7999,15 +7899,11 @@ exports[`EditableList demo -- size 1`] = `
               class="uc-fe-input emotion-4 emotion-5"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-1"
-                  />
-                </span>
+                <input
+                  value="name-1"
+                />
               </span>
             </span>
           </div>
@@ -8095,15 +7991,11 @@ exports[`EditableList demo -- size 1`] = `
               class="uc-fe-input emotion-30 emotion-5"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-0"
-                  />
-                </span>
+                <input
+                  value="name-0"
+                />
               </span>
             </span>
           </div>
@@ -8146,15 +8038,11 @@ exports[`EditableList demo -- size 1`] = `
               class="uc-fe-input emotion-30 emotion-5"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-1"
-                  />
-                </span>
+                <input
+                  value="name-1"
+                />
               </span>
             </span>
           </div>
@@ -8242,15 +8130,11 @@ exports[`EditableList demo -- size 1`] = `
               class="uc-fe-input emotion-56 emotion-5"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-0"
-                  />
-                </span>
+                <input
+                  value="name-0"
+                />
               </span>
             </span>
           </div>
@@ -8293,15 +8177,11 @@ exports[`EditableList demo -- size 1`] = `
               class="uc-fe-input emotion-56 emotion-5"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value="name-1"
-                  />
-                </span>
+                <input
+                  value="name-1"
+                />
               </span>
             </span>
           </div>

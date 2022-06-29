@@ -6,7 +6,7 @@ const useUncontrolled = <V, P = V, VT = V | undefined, U = never>(
     value: VT,
     defaultValue: V,
     onChange?: (v: P, ...rest: U[]) => void,
-    options?: { setter?: (e: P) => V }
+    options?: { getter?: (e: P) => V }
 ): [V, (v: P) => void, (v: P) => void] => {
     const _isControlled = useMemo(() => value !== undefined, [value]);
     const isControlledRef = useRef(_isControlled);
@@ -35,7 +35,7 @@ const useUncontrolled = <V, P = V, VT = V | undefined, U = never>(
 
     const updateValueWithoutCallOnChange = useCallback(
         (v: P) => {
-            const r = options?.setter ? options?.setter(v) : v;
+            const r = options?.getter ? options?.getter(v) : v;
             // save value for controlled change to be uncontrolled
             // don't use state for reduce necessary update
             // still keep state for uncontrolled update

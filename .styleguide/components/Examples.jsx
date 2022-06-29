@@ -28,7 +28,10 @@ function Examples({ examples, name, filepath, exampleMode }) {
                                 filepath = filepath.replace(/\\/g, '/');
                             }
                             codepath = codepath.replace(/\.(j|t)sx$/, '');
-                            const parentComponentName = filepath.match(new RegExp(`.*\/(\\w*)\/${name}\.(j|t)sx?`))[1];
+                            const parentComponentName = filepath.match(
+                                new RegExp(`.*\/(\\w*)\/${name}\.(j|t)sx?`)
+                            )?.[1];
+                            if (!parentComponentName) return null;
                             code = require(`!raw-loader!../../src/components/${parentComponentName}/${demoPath}/${codepath}.jsx`);
                             let demoStartIndex = code.match(/\/\/\s*demo\s*start\s*/);
                             demoStartIndex = demoStartIndex

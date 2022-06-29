@@ -411,8 +411,8 @@ exports[`TransferTable demo -- transferTable 1`] = `
 }
 
 .emotion-39 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -600,8 +600,15 @@ exports[`TransferTable demo -- transferTable 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-245:hover {
@@ -623,8 +630,8 @@ exports[`TransferTable demo -- transferTable 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-245 .uc-fe-input-clear:hover {
@@ -632,36 +639,29 @@ exports[`TransferTable demo -- transferTable 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-245 .uc-fe-input-wrap,
+.emotion-245,
 .emotion-245 .uc-fe-input-prefix,
 .emotion-245 .uc-fe-input-suffix,
 .emotion-245 .uc-fe-input-clear,
-.emotion-245 input {
+.emotion-245 input,
+.emotion-245 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-245.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-245 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-245 .uc-fe-input-prefix,
-.emotion-245 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-245 .uc-fe-input-suffix,
+.emotion-245 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -670,6 +670,10 @@ exports[`TransferTable demo -- transferTable 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-245 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-245 .uc-fe-input-block-wrap {
@@ -733,8 +737,8 @@ exports[`TransferTable demo -- transferTable 1`] = `
 }
 
 .emotion-243 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -1186,8 +1190,8 @@ exports[`TransferTable demo -- transferTable 1`] = `
 }
 
 .emotion-859 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -1266,8 +1270,8 @@ exports[`TransferTable demo -- transferTable 1`] = `
 }
 
 .emotion-872 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -1685,8 +1689,8 @@ exports[`TransferTable demo -- transferTable 1`] = `
 }
 
 .emotion-39 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -1874,8 +1878,15 @@ exports[`TransferTable demo -- transferTable 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-245:hover {
@@ -1897,8 +1908,8 @@ exports[`TransferTable demo -- transferTable 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-245 .uc-fe-input-clear:hover {
@@ -1906,36 +1917,29 @@ exports[`TransferTable demo -- transferTable 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-245 .uc-fe-input-wrap,
+.emotion-245,
 .emotion-245 .uc-fe-input-prefix,
 .emotion-245 .uc-fe-input-suffix,
 .emotion-245 .uc-fe-input-clear,
-.emotion-245 input {
+.emotion-245 input,
+.emotion-245 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-245.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-245 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-245 .uc-fe-input-prefix,
-.emotion-245 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-245 .uc-fe-input-suffix,
+.emotion-245 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1944,6 +1948,10 @@ exports[`TransferTable demo -- transferTable 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-245 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-245 .uc-fe-input-block-wrap {
@@ -2007,8 +2015,8 @@ exports[`TransferTable demo -- transferTable 1`] = `
 }
 
 .emotion-243 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -2460,8 +2468,8 @@ exports[`TransferTable demo -- transferTable 1`] = `
 }
 
 .emotion-859 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -2540,8 +2548,8 @@ exports[`TransferTable demo -- transferTable 1`] = `
 }
 
 .emotion-872 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -3331,27 +3339,23 @@ exports[`TransferTable demo -- transferTable 1`] = `
               class="uc-fe-input uc-fe-input-block emotion-245 emotion-246"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
+                <input
+                  value=""
+                />
+              </span>
+              <span
+                class="uc-fe-input-suffix"
+              >
+                <svg
+                  class="emotion-242 emotion-243 emotion-40"
+                  viewBox="0 0 24 24"
                 >
-                  <input
-                    value=""
+                  <path
+                    d="M11,3 C15.418278,3 19,6.581722 19,11 C19,12.8491176 18.3726428,14.5517081 17.3191633,15.9065366 L20.981429,19.5692608 L19.5692608,20.981429 L15.9065366,17.3191633 C14.5517081,18.3726428 12.8491176,19 11,19 C6.581722,19 3,15.418278 3,11 C3,6.581722 6.581722,3 11,3 Z M11,5 C7.6862915,5 5,7.6862915 5,11 C5,14.3137085 7.6862915,17 11,17 C14.3137085,17 17,14.3137085 17,11 C17,7.6862915 14.3137085,5 11,5 Z"
                   />
-                </span>
-                <span
-                  class="uc-fe-input-suffix"
-                >
-                  <svg
-                    class="emotion-242 emotion-243 emotion-40"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M11,3 C15.418278,3 19,6.581722 19,11 C19,12.8491176 18.3726428,14.5517081 17.3191633,15.9065366 L20.981429,19.5692608 L19.5692608,20.981429 L15.9065366,17.3191633 C14.5517081,18.3726428 12.8491176,19 11,19 C6.581722,19 3,15.418278 3,11 C3,6.581722 6.581722,3 11,3 Z M11,5 C7.6862915,5 5,7.6862915 5,11 C5,14.3137085 7.6862915,17 11,17 C14.3137085,17 17,14.3137085 17,11 C17,7.6862915 14.3137085,5 11,5 Z"
-                    />
-                  </svg>
-                </span>
+                </svg>
               </span>
             </span>
           </div>
@@ -7530,27 +7534,23 @@ exports[`TransferTable demo -- transferTable 1`] = `
               class="uc-fe-input uc-fe-input-block emotion-245 emotion-246"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
+                <input
+                  value=""
+                />
+              </span>
+              <span
+                class="uc-fe-input-suffix"
+              >
+                <svg
+                  class="emotion-242 emotion-243 emotion-40"
+                  viewBox="0 0 24 24"
                 >
-                  <input
-                    value=""
+                  <path
+                    d="M11,3 C15.418278,3 19,6.581722 19,11 C19,12.8491176 18.3726428,14.5517081 17.3191633,15.9065366 L20.981429,19.5692608 L19.5692608,20.981429 L15.9065366,17.3191633 C14.5517081,18.3726428 12.8491176,19 11,19 C6.581722,19 3,15.418278 3,11 C3,6.581722 6.581722,3 11,3 Z M11,5 C7.6862915,5 5,7.6862915 5,11 C5,14.3137085 7.6862915,17 11,17 C14.3137085,17 17,14.3137085 17,11 C17,7.6862915 14.3137085,5 11,5 Z"
                   />
-                </span>
-                <span
-                  class="uc-fe-input-suffix"
-                >
-                  <svg
-                    class="emotion-242 emotion-243 emotion-40"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M11,3 C15.418278,3 19,6.581722 19,11 C19,12.8491176 18.3726428,14.5517081 17.3191633,15.9065366 L20.981429,19.5692608 L19.5692608,20.981429 L15.9065366,17.3191633 C14.5517081,18.3726428 12.8491176,19 11,19 C6.581722,19 3,15.418278 3,11 C3,6.581722 6.581722,3 11,3 Z M11,5 C7.6862915,5 5,7.6862915 5,11 C5,14.3137085 7.6862915,17 11,17 C14.3137085,17 17,14.3137085 17,11 C17,7.6862915 14.3137085,5 11,5 Z"
-                    />
-                  </svg>
-                </span>
+                </svg>
               </span>
             </span>
           </div>

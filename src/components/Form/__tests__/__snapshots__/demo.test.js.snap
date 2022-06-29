@@ -177,8 +177,8 @@ exports[`Form demo -- form 1`] = `
 }
 
 .emotion-48 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -200,8 +200,15 @@ exports[`Form demo -- form 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-46:hover {
@@ -223,8 +230,8 @@ exports[`Form demo -- form 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-46 .uc-fe-input-clear:hover {
@@ -232,36 +239,29 @@ exports[`Form demo -- form 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-46 .uc-fe-input-wrap,
+.emotion-46,
 .emotion-46 .uc-fe-input-prefix,
 .emotion-46 .uc-fe-input-suffix,
 .emotion-46 .uc-fe-input-clear,
-.emotion-46 input {
+.emotion-46 input,
+.emotion-46 .emotion-76 {
   padding: 0 4px;
 }
 
 .emotion-46.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-46 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-46 .uc-fe-input-prefix,
-.emotion-46 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-46 .uc-fe-input-suffix,
+.emotion-46 .emotion-76 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -270,6 +270,10 @@ exports[`Form demo -- form 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-46 .emotion-76[hidden] {
+  display: none;
 }
 
 .emotion-46 .uc-fe-input-block-wrap {
@@ -439,8 +443,8 @@ exports[`Form demo -- form 1`] = `
 }
 
 .emotion-3 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -635,8 +639,8 @@ exports[`Form demo -- form 1`] = `
 }
 
 .emotion-41 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -680,96 +684,230 @@ exports[`Form demo -- form 1`] = `
   fill: #3860f4;
 }
 
-.emotion-81 {
+.emotion-84 {
   box-sizing: border-box;
   position: relative;
   max-width: 100%;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 12px;
   color: #0a1633;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.emotion-79 {
-  margin: 0;
+.emotion-84 .uc-fe-select-list {
+  display: block;
+  width: 400px;
+  max-height: 60px;
+  overflow: auto;
+  margin-top: 8px;
+  cursor: default;
+}
+
+.emotion-82 {
+  position: relative;
   box-sizing: border-box;
-  border-radius: 2px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
+  height: 28px;
+  max-width: 100%;
   font-size: 12px;
-  white-space: nowrap;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+  cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  vertical-align: middle;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
-  padding: 0 8px;
-  color: #0a1633;
-  fill: #0a1633;
-  background: #ffffff;
-  border: 1px solid #c3cad9;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  border-width: 1px;
-  border-style: solid;
-  padding: 0 7px;
-  line-height: 26px;
-  padding-right: 28px;
-  width: 100%;
-  min-width: 78px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  cursor: pointer;
+  color: #526075;
+  min-width: 80px;
   overflow: hidden;
 }
 
-.emotion-79:link,
-.emotion-79:visited {
+.emotion-82:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
+}
+
+.emotion-82 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: rgba(10,22,51,0.2);
+  fill: rgba(10,22,51,0.2);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
+}
+
+.emotion-82 .uc-fe-input-clear:hover {
+  color: #7a8baa;
+  fill: #7a8baa;
+}
+
+.emotion-82,
+.emotion-82 .uc-fe-input-prefix,
+.emotion-82 .uc-fe-input-suffix,
+.emotion-82 .uc-fe-input-clear,
+.emotion-82 input,
+.emotion-82 .emotion-76 {
+  padding: 0 4px;
+}
+
+.emotion-82.uc-fe-input-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-82 .uc-fe-input-prefix,
+.emotion-82 .uc-fe-input-suffix,
+.emotion-82 .emotion-76 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-82 .emotion-76[hidden] {
+  display: none;
+}
+
+.emotion-82 .uc-fe-input-block-wrap {
+  height: 18px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 0px;
+}
+
+.emotion-82 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-82 input,
+.emotion-82 input:hover,
+.emotion-82 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-82 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.2);
+}
+
+.emotion-82 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.2);
+}
+
+.emotion-82 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.2);
+}
+
+.emotion-82 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.2);
+}
+
+.emotion-82 input::-ms-clear {
+  display: none;
+}
+
+.emotion-82:hover {
   color: #0a1633;
 }
 
-.emotion-79:hover,
-.emotion-79:active {
-  color: #3860f4;
-  fill: #3860f4;
-  border: 1px solid #d2d6ea;
-  background: #ffffff;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+.emotion-82 .uc-fe-select-input-wrap {
+  position: relative;
+  overflow: hidden;
 }
 
-.emotion-79 .uc-fe-select-content {
+.emotion-82 .uc-fe-select-input-wrap:empty {
+  display: initial;
+}
+
+.emotion-82 .uc-fe-select-input {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.emotion-82 .uc-fe-select-placeholder {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
-.emotion-76 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  display: inline-block;
-  vertical-align: middle;
-  fill: currentcolor;
-  width: 12px;
-  height: 12px;
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  margin-top: -6px;
+.emotion-82 .uc-fe-select-clear {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-75.emotion-75.emotion-75 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  visibility: visible;
+}
+
+.emotion-79.emotion-79.emotion-79 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  visibility: visible;
 }
 
 .emotion-36 {
@@ -948,8 +1086,8 @@ exports[`Form demo -- form 1`] = `
 }
 
 .emotion-48 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -971,8 +1109,15 @@ exports[`Form demo -- form 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-46:hover {
@@ -994,8 +1139,8 @@ exports[`Form demo -- form 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-46 .uc-fe-input-clear:hover {
@@ -1003,36 +1148,29 @@ exports[`Form demo -- form 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-46 .uc-fe-input-wrap,
+.emotion-46,
 .emotion-46 .uc-fe-input-prefix,
 .emotion-46 .uc-fe-input-suffix,
 .emotion-46 .uc-fe-input-clear,
-.emotion-46 input {
+.emotion-46 input,
+.emotion-46 .emotion-76 {
   padding: 0 4px;
 }
 
 .emotion-46.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-46 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-46 .uc-fe-input-prefix,
-.emotion-46 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-46 .uc-fe-input-suffix,
+.emotion-46 .emotion-76 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1041,6 +1179,10 @@ exports[`Form demo -- form 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-46 .emotion-76[hidden] {
+  display: none;
 }
 
 .emotion-46 .uc-fe-input-block-wrap {
@@ -1210,8 +1352,8 @@ exports[`Form demo -- form 1`] = `
 }
 
 .emotion-3 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -1406,8 +1548,8 @@ exports[`Form demo -- form 1`] = `
 }
 
 .emotion-41 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -1451,96 +1593,230 @@ exports[`Form demo -- form 1`] = `
   fill: #3860f4;
 }
 
-.emotion-81 {
+.emotion-84 {
   box-sizing: border-box;
   position: relative;
   max-width: 100%;
-  display: inline-block;
-  vertical-align: middle;
   font-size: 12px;
   color: #0a1633;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.emotion-79 {
-  margin: 0;
+.emotion-84 .uc-fe-select-list {
+  display: block;
+  width: 400px;
+  max-height: 60px;
+  overflow: auto;
+  margin-top: 8px;
+  cursor: default;
+}
+
+.emotion-82 {
+  position: relative;
   box-sizing: border-box;
-  border-radius: 2px;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  cursor: pointer;
-  outline: none;
+  height: 28px;
+  max-width: 100%;
   font-size: 12px;
-  white-space: nowrap;
+  border-radius: 2px;
+  color: #526075;
+  fill: currentColor;
+  border: 1px solid #c3cad9;
+  box-shadow: inset 0 3px 0 0 rgba(0,0,0,0.05);
+  background: #fafafc;
+  -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
+  transition: .18s cubic-bezier(.4,0,.2,1);
+  cursor: pointer;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  vertical-align: middle;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  vertical-align: middle;
-  height: 28px;
-  line-height: 28px;
-  padding: 0 8px;
-  color: #0a1633;
-  fill: #0a1633;
-  background: #ffffff;
-  border: 1px solid #c3cad9;
-  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff;
-  -webkit-transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  transition: width,height,border,background,color,fill,box-shadow .16s ease-out;
-  border-width: 1px;
-  border-style: solid;
-  padding: 0 7px;
-  line-height: 26px;
-  padding-right: 28px;
-  width: 100%;
-  min-width: 78px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  cursor: pointer;
+  color: #526075;
+  min-width: 80px;
   overflow: hidden;
 }
 
-.emotion-79:link,
-.emotion-79:visited {
+.emotion-82:hover {
+  color: #0a1633;
+  border-color: #c3cad9;
+  background: #f6f6fb;
+}
+
+.emotion-82 .uc-fe-input-clear {
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: rgba(10,22,51,0.2);
+  fill: rgba(10,22,51,0.2);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
+}
+
+.emotion-82 .uc-fe-input-clear:hover {
+  color: #7a8baa;
+  fill: #7a8baa;
+}
+
+.emotion-82,
+.emotion-82 .uc-fe-input-prefix,
+.emotion-82 .uc-fe-input-suffix,
+.emotion-82 .uc-fe-input-clear,
+.emotion-82 input,
+.emotion-82 .emotion-76 {
+  padding: 0 4px;
+}
+
+.emotion-82.uc-fe-input-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-82 .uc-fe-input-prefix,
+.emotion-82 .uc-fe-input-suffix,
+.emotion-82 .emotion-76 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.emotion-82 .emotion-76[hidden] {
+  display: none;
+}
+
+.emotion-82 .uc-fe-input-block-wrap {
+  height: 18px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 0px;
+}
+
+.emotion-82 input {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  -webkit-flex: 1 1 130px;
+  -ms-flex: 1 1 130px;
+  flex: 1 1 130px;
+  min-width: 0px;
+}
+
+.emotion-82 input,
+.emotion-82 input:hover,
+.emotion-82 input:focus {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.emotion-82 input::-webkit-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.2);
+}
+
+.emotion-82 input::-moz-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.2);
+}
+
+.emotion-82 input:-ms-input-placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.2);
+}
+
+.emotion-82 input::placeholder {
+  opacity: 1;
+  color: rgba(10,22,51,0.2);
+}
+
+.emotion-82 input::-ms-clear {
+  display: none;
+}
+
+.emotion-82:hover {
   color: #0a1633;
 }
 
-.emotion-79:hover,
-.emotion-79:active {
-  color: #3860f4;
-  fill: #3860f4;
-  border: 1px solid #d2d6ea;
-  background: #ffffff;
-  box-shadow: 0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05),inset 0 -2px 0 0 #e3e9ff;
+.emotion-82 .uc-fe-select-input-wrap {
+  position: relative;
+  overflow: hidden;
 }
 
-.emotion-79 .uc-fe-select-content {
+.emotion-82 .uc-fe-select-input-wrap:empty {
+  display: initial;
+}
+
+.emotion-82 .uc-fe-select-input {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.emotion-82 .uc-fe-select-placeholder {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
-.emotion-76 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  display: inline-block;
-  vertical-align: middle;
-  fill: currentcolor;
-  width: 12px;
-  height: 12px;
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  margin-top: -6px;
+.emotion-82 .uc-fe-select-clear {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #7a8baa;
+  fill: #7a8baa;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.emotion-75.emotion-75.emotion-75 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  visibility: visible;
+}
+
+.emotion-79.emotion-79.emotion-79 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  visibility: visible;
 }
 
 <div>
@@ -1695,15 +1971,11 @@ exports[`Form demo -- form 1`] = `
             class="uc-fe-input emotion-46 emotion-47"
           >
             <span
-              class="uc-fe-input-wrap"
+              class="uc-fe-input-block-wrap"
             >
-              <span
-                class="uc-fe-input-block-wrap"
-              >
-                <input
-                  value=""
-                />
-              </span>
+              <input
+                value=""
+              />
             </span>
           </span>
           <div
@@ -1795,28 +2067,36 @@ exports[`Form demo -- form 1`] = `
           span="9"
         >
           <div
-            class="emotion-81 emotion-82"
+            class="emotion-84 emotion-85"
           >
-            <button
-              class="uc-fe-button uc-fe-button-size-md uc-fe-button-styletype-border emotion-78 emotion-79 emotion-80"
-              title="请选择"
-              type="button"
+            <span
+              class="uc-fe-input uc-fe-input-block uc-fe-select-input emotion-81 emotion-82 emotion-47"
+              cursor="pointer"
             >
-              <div
-                class="uc-fe-select-content"
+              <span
+                class="uc-fe-select-input-wrap emotion-75 emotion-76"
               >
-                请选择
-              </div>
-              <svg
-                class="emotion-75 emotion-76 emotion-4"
-                viewBox="0 0 24 24"
+                <span
+                  class="uc-fe-select-placeholder"
+                  style="visibility:visible;opacity:1"
+                >
+                  请选择
+                </span>
+              </span>
+              <span
+                class="emotion-79 emotion-76"
               >
-                <path
-                  d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-                  transform="matrix(-1 0 0 1 24 0)"
-                />
-              </svg>
-            </button>
+                <svg
+                  class=" emotion-48 emotion-4"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+                    transform="matrix(-1 0 0 1 24 0)"
+                  />
+                </svg>
+              </span>
+            </span>
           </div>
         </div>
       </div>
@@ -2390,8 +2670,8 @@ exports[`Form demo -- form-itemProps 1`] = `
 }
 
 .emotion-33 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -2413,8 +2693,15 @@ exports[`Form demo -- form-itemProps 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-51:hover {
@@ -2436,8 +2723,8 @@ exports[`Form demo -- form-itemProps 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-51 .uc-fe-input-clear:hover {
@@ -2445,36 +2732,29 @@ exports[`Form demo -- form-itemProps 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-51 .uc-fe-input-wrap,
+.emotion-51,
 .emotion-51 .uc-fe-input-prefix,
 .emotion-51 .uc-fe-input-suffix,
 .emotion-51 .uc-fe-input-clear,
-.emotion-51 input {
+.emotion-51 input,
+.emotion-51 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-51.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-51 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-51 .uc-fe-input-prefix,
-.emotion-51 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-51 .uc-fe-input-suffix,
+.emotion-51 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -2483,6 +2763,10 @@ exports[`Form demo -- form-itemProps 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-51 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-51 .uc-fe-input-block-wrap {
@@ -3109,8 +3393,8 @@ exports[`Form demo -- form-itemProps 1`] = `
 }
 
 .emotion-33 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -3132,8 +3416,15 @@ exports[`Form demo -- form-itemProps 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-51:hover {
@@ -3155,8 +3446,8 @@ exports[`Form demo -- form-itemProps 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-51 .uc-fe-input-clear:hover {
@@ -3164,36 +3455,29 @@ exports[`Form demo -- form-itemProps 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-51 .uc-fe-input-wrap,
+.emotion-51,
 .emotion-51 .uc-fe-input-prefix,
 .emotion-51 .uc-fe-input-suffix,
 .emotion-51 .uc-fe-input-clear,
-.emotion-51 input {
+.emotion-51 input,
+.emotion-51 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-51.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-51 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-51 .uc-fe-input-prefix,
-.emotion-51 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-51 .uc-fe-input-suffix,
+.emotion-51 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -3202,6 +3486,10 @@ exports[`Form demo -- form-itemProps 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-51 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-51 .uc-fe-input-block-wrap {
@@ -3458,15 +3746,11 @@ exports[`Form demo -- form-itemProps 1`] = `
         class="uc-fe-input emotion-51 emotion-52"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </span>
     </div>
@@ -4039,8 +4323,8 @@ exports[`Form demo -- group 1`] = `
 }
 
 .emotion-39 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -4062,8 +4346,15 @@ exports[`Form demo -- group 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-57:hover {
@@ -4085,8 +4376,8 @@ exports[`Form demo -- group 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-57 .uc-fe-input-clear:hover {
@@ -4094,36 +4385,29 @@ exports[`Form demo -- group 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-57 .uc-fe-input-wrap,
+.emotion-57,
 .emotion-57 .uc-fe-input-prefix,
 .emotion-57 .uc-fe-input-suffix,
 .emotion-57 .uc-fe-input-clear,
-.emotion-57 input {
+.emotion-57 input,
+.emotion-57 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-57.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-57 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-57 .uc-fe-input-prefix,
-.emotion-57 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-57 .uc-fe-input-suffix,
+.emotion-57 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -4132,6 +4416,10 @@ exports[`Form demo -- group 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-57 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-57 .uc-fe-input-block-wrap {
@@ -4772,8 +5060,8 @@ exports[`Form demo -- group 1`] = `
 }
 
 .emotion-39 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -4795,8 +5083,15 @@ exports[`Form demo -- group 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-57:hover {
@@ -4818,8 +5113,8 @@ exports[`Form demo -- group 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-57 .uc-fe-input-clear:hover {
@@ -4827,36 +5122,29 @@ exports[`Form demo -- group 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-57 .uc-fe-input-wrap,
+.emotion-57,
 .emotion-57 .uc-fe-input-prefix,
 .emotion-57 .uc-fe-input-suffix,
 .emotion-57 .uc-fe-input-clear,
-.emotion-57 input {
+.emotion-57 input,
+.emotion-57 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-57.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-57 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-57 .uc-fe-input-prefix,
-.emotion-57 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-57 .uc-fe-input-suffix,
+.emotion-57 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -4865,6 +5153,10 @@ exports[`Form demo -- group 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-57 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-57 .uc-fe-input-block-wrap {
@@ -5155,15 +5447,11 @@ exports[`Form demo -- group 1`] = `
             class="uc-fe-input emotion-57 emotion-58"
           >
             <span
-              class="uc-fe-input-wrap"
+              class="uc-fe-input-block-wrap"
             >
-              <span
-                class="uc-fe-input-block-wrap"
-              >
-                <input
-                  value=""
-                />
-              </span>
+              <input
+                value=""
+              />
             </span>
           </span>
         </div>
@@ -5314,8 +5602,8 @@ exports[`Form demo -- item 1`] = `
 }
 
 .emotion-45 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -5337,8 +5625,15 @@ exports[`Form demo -- item 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-43:hover {
@@ -5360,8 +5655,8 @@ exports[`Form demo -- item 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-43 .uc-fe-input-clear:hover {
@@ -5369,36 +5664,29 @@ exports[`Form demo -- item 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-43 .uc-fe-input-wrap,
+.emotion-43,
 .emotion-43 .uc-fe-input-prefix,
 .emotion-43 .uc-fe-input-suffix,
 .emotion-43 .uc-fe-input-clear,
-.emotion-43 input {
+.emotion-43 input,
+.emotion-43 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-43.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-43 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-43 .uc-fe-input-prefix,
-.emotion-43 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-43 .uc-fe-input-suffix,
+.emotion-43 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -5407,6 +5695,10 @@ exports[`Form demo -- item 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-43 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-43 .uc-fe-input-block-wrap {
@@ -5613,8 +5905,8 @@ exports[`Form demo -- item 1`] = `
 }
 
 .emotion-113 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -5764,8 +6056,8 @@ exports[`Form demo -- item 1`] = `
 }
 
 .emotion-45 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -5787,8 +6079,15 @@ exports[`Form demo -- item 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-43:hover {
@@ -5810,8 +6109,8 @@ exports[`Form demo -- item 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-43 .uc-fe-input-clear:hover {
@@ -5819,36 +6118,29 @@ exports[`Form demo -- item 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-43 .uc-fe-input-wrap,
+.emotion-43,
 .emotion-43 .uc-fe-input-prefix,
 .emotion-43 .uc-fe-input-suffix,
 .emotion-43 .uc-fe-input-clear,
-.emotion-43 input {
+.emotion-43 input,
+.emotion-43 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-43.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-43 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-43 .uc-fe-input-prefix,
-.emotion-43 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-43 .uc-fe-input-suffix,
+.emotion-43 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -5857,6 +6149,10 @@ exports[`Form demo -- item 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-43 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-43 .uc-fe-input-block-wrap {
@@ -6063,8 +6359,8 @@ exports[`Form demo -- item 1`] = `
 }
 
 .emotion-113 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -6216,15 +6512,11 @@ exports[`Form demo -- item 1`] = `
         class="uc-fe-input emotion-43 emotion-44"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </span>
       <div
@@ -6277,15 +6569,11 @@ exports[`Form demo -- item 1`] = `
         class="uc-fe-input emotion-43 emotion-44"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </span>
       <div
@@ -6337,15 +6625,11 @@ exports[`Form demo -- item 1`] = `
         class="uc-fe-input emotion-43 emotion-44"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </span>
       <div
@@ -6398,15 +6682,11 @@ exports[`Form demo -- item 1`] = `
         class="uc-fe-input emotion-43 emotion-44"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </span>
       <div
@@ -6458,15 +6738,11 @@ exports[`Form demo -- item 1`] = `
         class="uc-fe-input emotion-43 emotion-44"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </span>
       <div
@@ -6518,15 +6794,11 @@ exports[`Form demo -- item 1`] = `
         class="uc-fe-input emotion-43 emotion-44"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </span>
       <div
@@ -6637,8 +6909,15 @@ exports[`Form demo -- item-help 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-6:hover {
@@ -6660,8 +6939,8 @@ exports[`Form demo -- item-help 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-6 .uc-fe-input-clear:hover {
@@ -6669,36 +6948,29 @@ exports[`Form demo -- item-help 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-6 .uc-fe-input-wrap,
+.emotion-6,
 .emotion-6 .uc-fe-input-prefix,
 .emotion-6 .uc-fe-input-suffix,
 .emotion-6 .uc-fe-input-clear,
-.emotion-6 input {
+.emotion-6 input,
+.emotion-6 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-6.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-6 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-6 .uc-fe-input-prefix,
-.emotion-6 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-6 .uc-fe-input-suffix,
+.emotion-6 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -6707,6 +6979,10 @@ exports[`Form demo -- item-help 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-6 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-6 .uc-fe-input-block-wrap {
@@ -6770,8 +7046,8 @@ exports[`Form demo -- item-help 1`] = `
 }
 
 .emotion-1 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -6859,8 +7135,15 @@ exports[`Form demo -- item-help 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-6:hover {
@@ -6882,8 +7165,8 @@ exports[`Form demo -- item-help 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-6 .uc-fe-input-clear:hover {
@@ -6891,36 +7174,29 @@ exports[`Form demo -- item-help 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-6 .uc-fe-input-wrap,
+.emotion-6,
 .emotion-6 .uc-fe-input-prefix,
 .emotion-6 .uc-fe-input-suffix,
 .emotion-6 .uc-fe-input-clear,
-.emotion-6 input {
+.emotion-6 input,
+.emotion-6 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-6.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-6 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-6 .uc-fe-input-prefix,
-.emotion-6 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-6 .uc-fe-input-suffix,
+.emotion-6 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -6929,6 +7205,10 @@ exports[`Form demo -- item-help 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-6 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-6 .uc-fe-input-block-wrap {
@@ -6992,8 +7272,8 @@ exports[`Form demo -- item-help 1`] = `
 }
 
 .emotion-1 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -7033,15 +7313,11 @@ exports[`Form demo -- item-help 1`] = `
         class="uc-fe-input emotion-6 emotion-7"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </span>
     </div>
@@ -7114,8 +7390,8 @@ exports[`Form demo -- item-itemProps 1`] = `
 }
 
 .emotion-5 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -7137,8 +7413,15 @@ exports[`Form demo -- item-itemProps 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-40:hover {
@@ -7160,8 +7443,8 @@ exports[`Form demo -- item-itemProps 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-40 .uc-fe-input-clear:hover {
@@ -7169,36 +7452,29 @@ exports[`Form demo -- item-itemProps 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-40 .uc-fe-input-wrap,
+.emotion-40,
 .emotion-40 .uc-fe-input-prefix,
 .emotion-40 .uc-fe-input-suffix,
 .emotion-40 .uc-fe-input-clear,
-.emotion-40 input {
+.emotion-40 input,
+.emotion-40 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-40.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-40 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-40 .uc-fe-input-prefix,
-.emotion-40 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-40 .uc-fe-input-suffix,
+.emotion-40 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -7207,6 +7483,10 @@ exports[`Form demo -- item-itemProps 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-40 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-40 .uc-fe-input-block-wrap {
@@ -7330,8 +7610,15 @@ exports[`Form demo -- item-itemProps 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-3:hover {
@@ -7353,8 +7640,8 @@ exports[`Form demo -- item-itemProps 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-3 .uc-fe-input-clear:hover {
@@ -7362,36 +7649,29 @@ exports[`Form demo -- item-itemProps 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-3 .uc-fe-input-wrap,
+.emotion-3,
 .emotion-3 .uc-fe-input-prefix,
 .emotion-3 .uc-fe-input-suffix,
 .emotion-3 .uc-fe-input-clear,
-.emotion-3 input {
+.emotion-3 input,
+.emotion-3 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-3.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-3 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-3 .uc-fe-input-prefix,
-.emotion-3 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-3 .uc-fe-input-suffix,
+.emotion-3 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -7400,6 +7680,10 @@ exports[`Form demo -- item-itemProps 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-3 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-3 .uc-fe-input-block-wrap {
@@ -7639,8 +7923,8 @@ exports[`Form demo -- item-itemProps 1`] = `
 }
 
 .emotion-5 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -7662,8 +7946,15 @@ exports[`Form demo -- item-itemProps 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-40:hover {
@@ -7685,8 +7976,8 @@ exports[`Form demo -- item-itemProps 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-40 .uc-fe-input-clear:hover {
@@ -7694,36 +7985,29 @@ exports[`Form demo -- item-itemProps 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-40 .uc-fe-input-wrap,
+.emotion-40,
 .emotion-40 .uc-fe-input-prefix,
 .emotion-40 .uc-fe-input-suffix,
 .emotion-40 .uc-fe-input-clear,
-.emotion-40 input {
+.emotion-40 input,
+.emotion-40 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-40.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-40 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-40 .uc-fe-input-prefix,
-.emotion-40 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-40 .uc-fe-input-suffix,
+.emotion-40 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -7732,6 +8016,10 @@ exports[`Form demo -- item-itemProps 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-40 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-40 .uc-fe-input-block-wrap {
@@ -7855,8 +8143,15 @@ exports[`Form demo -- item-itemProps 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-3:hover {
@@ -7878,8 +8173,8 @@ exports[`Form demo -- item-itemProps 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-3 .uc-fe-input-clear:hover {
@@ -7887,36 +8182,29 @@ exports[`Form demo -- item-itemProps 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-3 .uc-fe-input-wrap,
+.emotion-3,
 .emotion-3 .uc-fe-input-prefix,
 .emotion-3 .uc-fe-input-suffix,
 .emotion-3 .uc-fe-input-clear,
-.emotion-3 input {
+.emotion-3 input,
+.emotion-3 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-3.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-3 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-3 .uc-fe-input-prefix,
-.emotion-3 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-3 .uc-fe-input-suffix,
+.emotion-3 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -7925,6 +8213,10 @@ exports[`Form demo -- item-itemProps 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-3 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-3 .uc-fe-input-block-wrap {
@@ -8120,15 +8412,11 @@ exports[`Form demo -- item-itemProps 1`] = `
         class="uc-fe-input emotion-3 emotion-4"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </span>
       <div
@@ -8196,15 +8484,11 @@ exports[`Form demo -- item-itemProps 1`] = `
               class="uc-fe-input emotion-3 emotion-4"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value=""
-                  />
-                </span>
+                <input
+                  value=""
+                />
               </span>
             </span>
             <div
@@ -8256,15 +8540,11 @@ exports[`Form demo -- item-itemProps 1`] = `
               class="uc-fe-input emotion-40 emotion-4"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value=""
-                  />
-                </span>
+                <input
+                  value=""
+                />
               </span>
             </span>
           </div>
@@ -8329,15 +8609,11 @@ exports[`Form demo -- item-itemProps 1`] = `
             class="uc-fe-input emotion-40 emotion-4"
           >
             <span
-              class="uc-fe-input-wrap"
+              class="uc-fe-input-block-wrap"
             >
-              <span
-                class="uc-fe-input-block-wrap"
-              >
-                <input
-                  value=""
-                />
-              </span>
+              <input
+                value=""
+              />
             </span>
           </span>
           <div
@@ -8400,15 +8676,11 @@ exports[`Form demo -- item-itemProps 1`] = `
                   class="uc-fe-input emotion-40 emotion-4"
                 >
                   <span
-                    class="uc-fe-input-wrap"
+                    class="uc-fe-input-block-wrap"
                   >
-                    <span
-                      class="uc-fe-input-block-wrap"
-                    >
-                      <input
-                        value=""
-                      />
-                    </span>
+                    <input
+                      value=""
+                    />
                   </span>
                 </span>
                 <div
@@ -8460,15 +8732,11 @@ exports[`Form demo -- item-itemProps 1`] = `
                   class="uc-fe-input emotion-40 emotion-4"
                 >
                   <span
-                    class="uc-fe-input-wrap"
+                    class="uc-fe-input-block-wrap"
                   >
-                    <span
-                      class="uc-fe-input-block-wrap"
-                    >
-                      <input
-                        value=""
-                      />
-                    </span>
+                    <input
+                      value=""
+                    />
                   </span>
                 </span>
               </div>
@@ -8590,8 +8858,15 @@ exports[`Form demo -- item-layout 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-8:hover {
@@ -8613,8 +8888,8 @@ exports[`Form demo -- item-layout 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-8 .uc-fe-input-clear:hover {
@@ -8622,36 +8897,29 @@ exports[`Form demo -- item-layout 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-8 .uc-fe-input-wrap,
+.emotion-8,
 .emotion-8 .uc-fe-input-prefix,
 .emotion-8 .uc-fe-input-suffix,
 .emotion-8 .uc-fe-input-clear,
-.emotion-8 input {
+.emotion-8 input,
+.emotion-8 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-8.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-8 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-8 .uc-fe-input-prefix,
-.emotion-8 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-8 .uc-fe-input-suffix,
+.emotion-8 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -8660,6 +8928,10 @@ exports[`Form demo -- item-layout 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-8 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-8 .uc-fe-input-block-wrap {
@@ -8728,8 +9000,8 @@ exports[`Form demo -- item-layout 1`] = `
 }
 
 .emotion-3 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -8859,8 +9131,15 @@ exports[`Form demo -- item-layout 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-8:hover {
@@ -8882,8 +9161,8 @@ exports[`Form demo -- item-layout 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-8 .uc-fe-input-clear:hover {
@@ -8891,36 +9170,29 @@ exports[`Form demo -- item-layout 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-8 .uc-fe-input-wrap,
+.emotion-8,
 .emotion-8 .uc-fe-input-prefix,
 .emotion-8 .uc-fe-input-suffix,
 .emotion-8 .uc-fe-input-clear,
-.emotion-8 input {
+.emotion-8 input,
+.emotion-8 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-8.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-8 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-8 .uc-fe-input-prefix,
-.emotion-8 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-8 .uc-fe-input-suffix,
+.emotion-8 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -8929,6 +9201,10 @@ exports[`Form demo -- item-layout 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-8 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-8 .uc-fe-input-block-wrap {
@@ -8997,8 +9273,8 @@ exports[`Form demo -- item-layout 1`] = `
 }
 
 .emotion-3 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -9085,15 +9361,11 @@ exports[`Form demo -- item-layout 1`] = `
         class="uc-fe-input uc-fe-input-block emotion-8 emotion-9"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </span>
     </div>
@@ -9129,15 +9401,11 @@ exports[`Form demo -- item-layout 1`] = `
         class="uc-fe-input uc-fe-input-block emotion-8 emotion-9"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </span>
     </div>
@@ -9167,15 +9435,11 @@ exports[`Form demo -- item-layout 1`] = `
         class="uc-fe-input uc-fe-input-block emotion-8 emotion-9"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </span>
     </div>
@@ -9261,8 +9525,15 @@ exports[`Form demo -- item-required 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-8:hover {
@@ -9284,8 +9555,8 @@ exports[`Form demo -- item-required 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-8 .uc-fe-input-clear:hover {
@@ -9293,36 +9564,29 @@ exports[`Form demo -- item-required 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-8 .uc-fe-input-wrap,
+.emotion-8,
 .emotion-8 .uc-fe-input-prefix,
 .emotion-8 .uc-fe-input-suffix,
 .emotion-8 .uc-fe-input-clear,
-.emotion-8 input {
+.emotion-8 input,
+.emotion-8 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-8.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-8 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-8 .uc-fe-input-prefix,
-.emotion-8 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-8 .uc-fe-input-suffix,
+.emotion-8 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -9331,6 +9595,10 @@ exports[`Form demo -- item-required 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-8 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-8 .uc-fe-input-block-wrap {
@@ -9399,8 +9667,8 @@ exports[`Form demo -- item-required 1`] = `
 }
 
 .emotion-3 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -9488,8 +9756,15 @@ exports[`Form demo -- item-required 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-8:hover {
@@ -9511,8 +9786,8 @@ exports[`Form demo -- item-required 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-8 .uc-fe-input-clear:hover {
@@ -9520,36 +9795,29 @@ exports[`Form demo -- item-required 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-8 .uc-fe-input-wrap,
+.emotion-8,
 .emotion-8 .uc-fe-input-prefix,
 .emotion-8 .uc-fe-input-suffix,
 .emotion-8 .uc-fe-input-clear,
-.emotion-8 input {
+.emotion-8 input,
+.emotion-8 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-8.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-8 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-8 .uc-fe-input-prefix,
-.emotion-8 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-8 .uc-fe-input-suffix,
+.emotion-8 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -9558,6 +9826,10 @@ exports[`Form demo -- item-required 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-8 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-8 .uc-fe-input-block-wrap {
@@ -9626,8 +9898,8 @@ exports[`Form demo -- item-required 1`] = `
 }
 
 .emotion-3 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -9672,15 +9944,11 @@ exports[`Form demo -- item-required 1`] = `
         class="uc-fe-input emotion-8 emotion-9"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </span>
     </div>
@@ -9767,8 +10035,8 @@ exports[`Form demo -- item-shareStatus 1`] = `
 }
 
 .emotion-5 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -9790,8 +10058,15 @@ exports[`Form demo -- item-shareStatus 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-3:hover {
@@ -9813,8 +10088,8 @@ exports[`Form demo -- item-shareStatus 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-3 .uc-fe-input-clear:hover {
@@ -9822,36 +10097,29 @@ exports[`Form demo -- item-shareStatus 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-3 .uc-fe-input-wrap,
+.emotion-3,
 .emotion-3 .uc-fe-input-prefix,
 .emotion-3 .uc-fe-input-suffix,
 .emotion-3 .uc-fe-input-clear,
-.emotion-3 input {
+.emotion-3 input,
+.emotion-3 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-3.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-3 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-3 .uc-fe-input-prefix,
-.emotion-3 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-3 .uc-fe-input-suffix,
+.emotion-3 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -9860,6 +10128,10 @@ exports[`Form demo -- item-shareStatus 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-3 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-3 .uc-fe-input-block-wrap {
@@ -9969,8 +10241,15 @@ exports[`Form demo -- item-shareStatus 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-54:hover {
@@ -9992,8 +10271,8 @@ exports[`Form demo -- item-shareStatus 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-54 .uc-fe-input-clear:hover {
@@ -10001,36 +10280,29 @@ exports[`Form demo -- item-shareStatus 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-54 .uc-fe-input-wrap,
+.emotion-54,
 .emotion-54 .uc-fe-input-prefix,
 .emotion-54 .uc-fe-input-suffix,
 .emotion-54 .uc-fe-input-clear,
-.emotion-54 input {
+.emotion-54 input,
+.emotion-54 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-54.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-54 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-54 .uc-fe-input-prefix,
-.emotion-54 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-54 .uc-fe-input-suffix,
+.emotion-54 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -10039,6 +10311,10 @@ exports[`Form demo -- item-shareStatus 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-54 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-54 .uc-fe-input-block-wrap {
@@ -10207,8 +10483,8 @@ exports[`Form demo -- item-shareStatus 1`] = `
 }
 
 .emotion-73 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -10296,8 +10572,8 @@ exports[`Form demo -- item-shareStatus 1`] = `
 }
 
 .emotion-5 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -10319,8 +10595,15 @@ exports[`Form demo -- item-shareStatus 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-3:hover {
@@ -10342,8 +10625,8 @@ exports[`Form demo -- item-shareStatus 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-3 .uc-fe-input-clear:hover {
@@ -10351,36 +10634,29 @@ exports[`Form demo -- item-shareStatus 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-3 .uc-fe-input-wrap,
+.emotion-3,
 .emotion-3 .uc-fe-input-prefix,
 .emotion-3 .uc-fe-input-suffix,
 .emotion-3 .uc-fe-input-clear,
-.emotion-3 input {
+.emotion-3 input,
+.emotion-3 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-3.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-3 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-3 .uc-fe-input-prefix,
-.emotion-3 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-3 .uc-fe-input-suffix,
+.emotion-3 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -10389,6 +10665,10 @@ exports[`Form demo -- item-shareStatus 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-3 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-3 .uc-fe-input-block-wrap {
@@ -10498,8 +10778,15 @@ exports[`Form demo -- item-shareStatus 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-54:hover {
@@ -10521,8 +10808,8 @@ exports[`Form demo -- item-shareStatus 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-54 .uc-fe-input-clear:hover {
@@ -10530,36 +10817,29 @@ exports[`Form demo -- item-shareStatus 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-54 .uc-fe-input-wrap,
+.emotion-54,
 .emotion-54 .uc-fe-input-prefix,
 .emotion-54 .uc-fe-input-suffix,
 .emotion-54 .uc-fe-input-clear,
-.emotion-54 input {
+.emotion-54 input,
+.emotion-54 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-54.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-54 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-54 .uc-fe-input-prefix,
-.emotion-54 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-54 .uc-fe-input-suffix,
+.emotion-54 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -10568,6 +10848,10 @@ exports[`Form demo -- item-shareStatus 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-54 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-54 .uc-fe-input-block-wrap {
@@ -10736,8 +11020,8 @@ exports[`Form demo -- item-shareStatus 1`] = `
 }
 
 .emotion-73 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -10767,15 +11051,11 @@ exports[`Form demo -- item-shareStatus 1`] = `
         class="uc-fe-input emotion-3 emotion-4"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </span>
       <div
@@ -10828,15 +11108,11 @@ exports[`Form demo -- item-shareStatus 1`] = `
         class="uc-fe-input emotion-3 emotion-4"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </span>
       <div
@@ -10888,15 +11164,11 @@ exports[`Form demo -- item-shareStatus 1`] = `
         class="uc-fe-input emotion-3 emotion-4"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </span>
       <div
@@ -10949,15 +11221,11 @@ exports[`Form demo -- item-shareStatus 1`] = `
         class="uc-fe-input emotion-54 emotion-4"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </span>
       <div
@@ -11009,15 +11277,11 @@ exports[`Form demo -- item-shareStatus 1`] = `
         class="uc-fe-input emotion-3 emotion-4"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </span>
       <div
@@ -11134,8 +11398,8 @@ exports[`Form demo -- item-status 1`] = `
 }
 
 .emotion-5 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -11157,8 +11421,15 @@ exports[`Form demo -- item-status 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-3:hover {
@@ -11180,8 +11451,8 @@ exports[`Form demo -- item-status 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-3 .uc-fe-input-clear:hover {
@@ -11189,36 +11460,29 @@ exports[`Form demo -- item-status 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-3 .uc-fe-input-wrap,
+.emotion-3,
 .emotion-3 .uc-fe-input-prefix,
 .emotion-3 .uc-fe-input-suffix,
 .emotion-3 .uc-fe-input-clear,
-.emotion-3 input {
+.emotion-3 input,
+.emotion-3 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-3.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-3 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-3 .uc-fe-input-prefix,
-.emotion-3 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-3 .uc-fe-input-suffix,
+.emotion-3 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -11227,6 +11491,10 @@ exports[`Form demo -- item-status 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-3 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-3 .uc-fe-input-block-wrap {
@@ -11422,8 +11690,8 @@ exports[`Form demo -- item-status 1`] = `
 }
 
 .emotion-73 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -11511,8 +11779,8 @@ exports[`Form demo -- item-status 1`] = `
 }
 
 .emotion-5 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -11534,8 +11802,15 @@ exports[`Form demo -- item-status 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-3:hover {
@@ -11557,8 +11832,8 @@ exports[`Form demo -- item-status 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-3 .uc-fe-input-clear:hover {
@@ -11566,36 +11841,29 @@ exports[`Form demo -- item-status 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-3 .uc-fe-input-wrap,
+.emotion-3,
 .emotion-3 .uc-fe-input-prefix,
 .emotion-3 .uc-fe-input-suffix,
 .emotion-3 .uc-fe-input-clear,
-.emotion-3 input {
+.emotion-3 input,
+.emotion-3 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-3.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-3 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-3 .uc-fe-input-prefix,
-.emotion-3 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-3 .uc-fe-input-suffix,
+.emotion-3 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -11604,6 +11872,10 @@ exports[`Form demo -- item-status 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-3 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-3 .uc-fe-input-block-wrap {
@@ -11799,8 +12071,8 @@ exports[`Form demo -- item-status 1`] = `
 }
 
 .emotion-73 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -11830,15 +12102,11 @@ exports[`Form demo -- item-status 1`] = `
         class="uc-fe-input emotion-3 emotion-4"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </span>
       <div
@@ -11891,15 +12159,11 @@ exports[`Form demo -- item-status 1`] = `
         class="uc-fe-input emotion-3 emotion-4"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </span>
       <div
@@ -11951,15 +12215,11 @@ exports[`Form demo -- item-status 1`] = `
         class="uc-fe-input emotion-3 emotion-4"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </span>
       <div
@@ -12012,15 +12272,11 @@ exports[`Form demo -- item-status 1`] = `
         class="uc-fe-input emotion-3 emotion-4"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </span>
       <div
@@ -12072,15 +12328,11 @@ exports[`Form demo -- item-status 1`] = `
         class="uc-fe-input emotion-3 emotion-4"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </span>
       <div
@@ -12197,8 +12449,8 @@ exports[`Form demo -- item-tip 1`] = `
 }
 
 .emotion-5 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -12220,8 +12472,15 @@ exports[`Form demo -- item-tip 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-3:hover {
@@ -12243,8 +12502,8 @@ exports[`Form demo -- item-tip 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-3 .uc-fe-input-clear:hover {
@@ -12252,36 +12511,29 @@ exports[`Form demo -- item-tip 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-3 .uc-fe-input-wrap,
+.emotion-3,
 .emotion-3 .uc-fe-input-prefix,
 .emotion-3 .uc-fe-input-suffix,
 .emotion-3 .uc-fe-input-clear,
-.emotion-3 input {
+.emotion-3 input,
+.emotion-3 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-3.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-3 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-3 .uc-fe-input-prefix,
-.emotion-3 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-3 .uc-fe-input-suffix,
+.emotion-3 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -12290,6 +12542,10 @@ exports[`Form demo -- item-tip 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-3 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-3 .uc-fe-input-block-wrap {
@@ -12489,8 +12745,8 @@ exports[`Form demo -- item-tip 1`] = `
 }
 
 .emotion-73 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -12578,8 +12834,8 @@ exports[`Form demo -- item-tip 1`] = `
 }
 
 .emotion-5 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -12601,8 +12857,15 @@ exports[`Form demo -- item-tip 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-3:hover {
@@ -12624,8 +12887,8 @@ exports[`Form demo -- item-tip 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-3 .uc-fe-input-clear:hover {
@@ -12633,36 +12896,29 @@ exports[`Form demo -- item-tip 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-3 .uc-fe-input-wrap,
+.emotion-3,
 .emotion-3 .uc-fe-input-prefix,
 .emotion-3 .uc-fe-input-suffix,
 .emotion-3 .uc-fe-input-clear,
-.emotion-3 input {
+.emotion-3 input,
+.emotion-3 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-3.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-3 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-3 .uc-fe-input-prefix,
-.emotion-3 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-3 .uc-fe-input-suffix,
+.emotion-3 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -12671,6 +12927,10 @@ exports[`Form demo -- item-tip 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-3 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-3 .uc-fe-input-block-wrap {
@@ -12870,8 +13130,8 @@ exports[`Form demo -- item-tip 1`] = `
 }
 
 .emotion-73 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -12901,15 +13161,11 @@ exports[`Form demo -- item-tip 1`] = `
         class="uc-fe-input emotion-3 emotion-4"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </span>
       <div
@@ -12962,15 +13218,11 @@ exports[`Form demo -- item-tip 1`] = `
         class="uc-fe-input emotion-3 emotion-4"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </span>
       <div
@@ -13022,15 +13274,11 @@ exports[`Form demo -- item-tip 1`] = `
         class="uc-fe-input emotion-3 emotion-4"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </span>
       <div
@@ -13083,15 +13331,11 @@ exports[`Form demo -- item-tip 1`] = `
         class="uc-fe-input emotion-3 emotion-4"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </span>
       <div
@@ -13143,15 +13387,11 @@ exports[`Form demo -- item-tip 1`] = `
         class="uc-fe-input emotion-3 emotion-4"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </span>
       <div
@@ -13203,15 +13443,11 @@ exports[`Form demo -- item-tip 1`] = `
         class="uc-fe-input emotion-3 emotion-4"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
-          >
-            <input
-              value=""
-            />
-          </span>
+          <input
+            value=""
+          />
         </span>
       </span>
       <div
@@ -13809,8 +14045,8 @@ exports[`Form demo -- subArea 1`] = `
 }
 
 .emotion-26 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -13832,8 +14068,15 @@ exports[`Form demo -- subArea 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-44:hover {
@@ -13855,8 +14098,8 @@ exports[`Form demo -- subArea 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-44 .uc-fe-input-clear:hover {
@@ -13864,36 +14107,29 @@ exports[`Form demo -- subArea 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-44 .uc-fe-input-wrap,
+.emotion-44,
 .emotion-44 .uc-fe-input-prefix,
 .emotion-44 .uc-fe-input-suffix,
 .emotion-44 .uc-fe-input-clear,
-.emotion-44 input {
+.emotion-44 input,
+.emotion-44 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-44.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-44 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-44 .uc-fe-input-prefix,
-.emotion-44 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-44 .uc-fe-input-suffix,
+.emotion-44 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -13902,6 +14138,10 @@ exports[`Form demo -- subArea 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-44 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-44 .uc-fe-input-block-wrap {
@@ -14542,8 +14782,8 @@ exports[`Form demo -- subArea 1`] = `
 }
 
 .emotion-26 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -14565,8 +14805,15 @@ exports[`Form demo -- subArea 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-44:hover {
@@ -14588,8 +14835,8 @@ exports[`Form demo -- subArea 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-44 .uc-fe-input-clear:hover {
@@ -14597,36 +14844,29 @@ exports[`Form demo -- subArea 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-44 .uc-fe-input-wrap,
+.emotion-44,
 .emotion-44 .uc-fe-input-prefix,
 .emotion-44 .uc-fe-input-suffix,
 .emotion-44 .uc-fe-input-clear,
-.emotion-44 input {
+.emotion-44 input,
+.emotion-44 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-44.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-44 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-44 .uc-fe-input-prefix,
-.emotion-44 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-44 .uc-fe-input-suffix,
+.emotion-44 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -14635,6 +14875,10 @@ exports[`Form demo -- subArea 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-44 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-44 .uc-fe-input-block-wrap {
@@ -14906,15 +15150,11 @@ exports[`Form demo -- subArea 1`] = `
               class="uc-fe-input emotion-44 emotion-45"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value=""
-                  />
-                </span>
+                <input
+                  value=""
+                />
               </span>
             </span>
           </div>
@@ -15049,15 +15289,11 @@ exports[`Form demo -- subArea 1`] = `
               class="uc-fe-input emotion-44 emotion-45"
             >
               <span
-                class="uc-fe-input-wrap"
+                class="uc-fe-input-block-wrap"
               >
-                <span
-                  class="uc-fe-input-block-wrap"
-                >
-                  <input
-                    value=""
-                  />
-                </span>
+                <input
+                  value=""
+                />
               </span>
             </span>
           </div>

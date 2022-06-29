@@ -23,6 +23,9 @@ export const popupTitleCls = prefixCls + '-popup-title';
 export const popupWrapCls = prefixCls + '-popup-wrap';
 export const popupContentCls = prefixCls + '-popup-content';
 export const checkboxCls = prefixCls + '-checkbox';
+export const contentCls = prefixCls + '-content';
+export const iconCls = prefixCls + '-icon';
+export const selectStyleCls = prefixCls + '-select-style';
 
 export const SubMenuIcon = styled(SvgIcon)`
     position: absolute;
@@ -70,7 +73,26 @@ const menuStyle = ({
                 }
             `
         }
-        
+        .${itemCls}.${selectStyleCls} {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .${contentCls} {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                flex: 1;
+            }
+            &.${selectedCls} .${contentCls} {
+                color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+            }
+            .${iconCls} {
+                fill: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+                width: 16px;
+                height: 16px;
+                flex: 0 0 16px;
+                margin-left: 8px;
+            }
+        }
         .${itemCls}, .${selectallWrapCls}, .${popupTitleCls},.${collapseTitleCls} {
             cursor: pointer;
             white-space: nowrap;

@@ -35,7 +35,7 @@ const Search = forwardRef(
                 }}
                 disabled={disabled}
                 ref={inputRef}
-                suffix={<SearchIcon type="search" onClick={onSearch} />}
+                suffix={<SearchIcon type="search" disabled={disabled} onClick={onSearch} />}
             />
         );
     }

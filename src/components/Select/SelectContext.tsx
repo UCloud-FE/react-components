@@ -5,7 +5,7 @@ import noop from 'src/utils/noop';
 
 const SelectContext = createContext<{
     hidePopup: () => void;
-    handleSearch: (value: Key, props: any) => boolean;
+    handleSearch: (value: Key, props: any) => boolean | [string, string, string];
     searchValue: string;
 }>({
     hidePopup: noop,

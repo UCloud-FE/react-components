@@ -15,8 +15,15 @@ exports[`Input demo -- input 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-104:hover {
@@ -38,8 +45,8 @@ exports[`Input demo -- input 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-104 .uc-fe-input-clear:hover {
@@ -47,36 +54,29 @@ exports[`Input demo -- input 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-104 .uc-fe-input-wrap,
+.emotion-104,
 .emotion-104 .uc-fe-input-prefix,
 .emotion-104 .uc-fe-input-suffix,
 .emotion-104 .uc-fe-input-clear,
-.emotion-104 input {
+.emotion-104 input,
+.emotion-104 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-104.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-104 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-104 .uc-fe-input-prefix,
-.emotion-104 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-104 .uc-fe-input-suffix,
+.emotion-104 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -85,6 +85,10 @@ exports[`Input demo -- input 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-104 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-104 .uc-fe-input-block-wrap {
@@ -311,8 +315,8 @@ exports[`Input demo -- input 1`] = `
 }
 
 .emotion-3 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -505,8 +509,15 @@ exports[`Input demo -- input 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-104:hover {
@@ -528,8 +539,8 @@ exports[`Input demo -- input 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-104 .uc-fe-input-clear:hover {
@@ -537,36 +548,29 @@ exports[`Input demo -- input 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-104 .uc-fe-input-wrap,
+.emotion-104,
 .emotion-104 .uc-fe-input-prefix,
 .emotion-104 .uc-fe-input-suffix,
 .emotion-104 .uc-fe-input-clear,
-.emotion-104 input {
+.emotion-104 input,
+.emotion-104 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-104.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-104 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-104 .uc-fe-input-prefix,
-.emotion-104 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-104 .uc-fe-input-suffix,
+.emotion-104 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -575,6 +579,10 @@ exports[`Input demo -- input 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-104 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-104 .uc-fe-input-block-wrap {
@@ -801,8 +809,8 @@ exports[`Input demo -- input 1`] = `
 }
 
 .emotion-3 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -1335,15 +1343,11 @@ exports[`Input demo -- input 1`] = `
       class="uc-fe-input emotion-104 emotion-105"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-block-wrap"
       >
-        <span
-          class="uc-fe-input-block-wrap"
-        >
-          <input
-            value=""
-          />
-        </span>
+        <input
+          value=""
+        />
       </span>
     </span>
   </div>
@@ -1365,8 +1369,15 @@ exports[`Input demo -- input-clearable 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-0:hover {
@@ -1388,8 +1399,8 @@ exports[`Input demo -- input-clearable 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-0 .uc-fe-input-clear:hover {
@@ -1397,36 +1408,29 @@ exports[`Input demo -- input-clearable 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-0 .uc-fe-input-wrap,
+.emotion-0,
 .emotion-0 .uc-fe-input-prefix,
 .emotion-0 .uc-fe-input-suffix,
 .emotion-0 .uc-fe-input-clear,
-.emotion-0 input {
+.emotion-0 input,
+.emotion-0 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-0.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-0 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-0 .uc-fe-input-prefix,
-.emotion-0 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-0 .uc-fe-input-suffix,
+.emotion-0 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1435,6 +1439,10 @@ exports[`Input demo -- input-clearable 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-0 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-0 .uc-fe-input-block-wrap {
@@ -1498,8 +1506,8 @@ exports[`Input demo -- input-clearable 1`] = `
 }
 
 .emotion-2 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -1521,8 +1529,15 @@ exports[`Input demo -- input-clearable 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-0:hover {
@@ -1544,8 +1559,8 @@ exports[`Input demo -- input-clearable 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-0 .uc-fe-input-clear:hover {
@@ -1553,36 +1568,29 @@ exports[`Input demo -- input-clearable 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-0 .uc-fe-input-wrap,
+.emotion-0,
 .emotion-0 .uc-fe-input-prefix,
 .emotion-0 .uc-fe-input-suffix,
 .emotion-0 .uc-fe-input-clear,
-.emotion-0 input {
+.emotion-0 input,
+.emotion-0 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-0.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-0 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-0 .uc-fe-input-prefix,
-.emotion-0 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-0 .uc-fe-input-suffix,
+.emotion-0 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1591,6 +1599,10 @@ exports[`Input demo -- input-clearable 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-0 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-0 .uc-fe-input-block-wrap {
@@ -1654,8 +1666,8 @@ exports[`Input demo -- input-clearable 1`] = `
 }
 
 .emotion-2 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -1671,15 +1683,11 @@ exports[`Input demo -- input-clearable 1`] = `
       class="uc-fe-input emotion-0 emotion-1"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-block-wrap"
       >
-        <span
-          class="uc-fe-input-block-wrap"
-        >
-          <input
-            value=""
-          />
-        </span>
+        <input
+          value=""
+        />
       </span>
     </span>
   </div>
@@ -1690,26 +1698,22 @@ exports[`Input demo -- input-clearable 1`] = `
       class="uc-fe-input emotion-0 emotion-1"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-block-wrap"
       >
+        <input
+          value=""
+        />
         <span
-          class="uc-fe-input-block-wrap"
+          class="uc-fe-input-clear"
         >
-          <input
-            value=""
-          />
-          <span
-            class="uc-fe-input-clear"
+          <svg
+            class=" emotion-2 emotion-3"
+            viewBox="0 0 24 24"
           >
-            <svg
-              class=" emotion-2 emotion-3"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19.0796033,4.93039665 C22.9806039,8.83139725 22.9806039,15.1786027 19.0796033,19.0796033 C15.1786027,22.9806039 8.83139725,22.9806039 4.93039665,19.0796033 C1.02939605,15.1786027 1.02939605,8.83139725 4.93039665,4.93039665 C8.83139725,1.02939605 15.1786027,1.02939605 19.0796033,4.93039665 Z M15.8638746,8.14612545 C15.5086973,7.7909482 14.9327603,7.7909482 14.577583,8.14612545 L12.005,10.7187085 L9.43241697,8.14612545 C9.07723972,7.7909482 8.50130269,7.7909482 8.14612545,8.14612545 C7.7909482,8.50130269 7.7909482,9.07723972 8.14612545,9.43241697 L10.7187085,12.005 L8.14612545,14.577583 C7.7909482,14.9327603 7.7909482,15.5086973 8.14612545,15.8638746 C8.50130269,16.2190518 9.07723972,16.2190518 9.43241697,15.8638746 L12.005,13.2912915 L14.577583,15.8638746 C14.9327603,16.2190518 15.5086973,16.2190518 15.8638746,15.8638746 C16.2190518,15.5086973 16.2190518,14.9327603 15.8638746,14.577583 L13.2912915,12.005 L15.8638746,9.43241697 C16.2190518,9.07723972 16.2190518,8.50130269 15.8638746,8.14612545 Z"
-              />
-            </svg>
-          </span>
+            <path
+              d="M19.0796033,4.93039665 C22.9806039,8.83139725 22.9806039,15.1786027 19.0796033,19.0796033 C15.1786027,22.9806039 8.83139725,22.9806039 4.93039665,19.0796033 C1.02939605,15.1786027 1.02939605,8.83139725 4.93039665,4.93039665 C8.83139725,1.02939605 15.1786027,1.02939605 19.0796033,4.93039665 Z M15.8638746,8.14612545 C15.5086973,7.7909482 14.9327603,7.7909482 14.577583,8.14612545 L12.005,10.7187085 L9.43241697,8.14612545 C9.07723972,7.7909482 8.50130269,7.7909482 8.14612545,8.14612545 C7.7909482,8.50130269 7.7909482,9.07723972 8.14612545,9.43241697 L10.7187085,12.005 L8.14612545,14.577583 C7.7909482,14.9327603 7.7909482,15.5086973 8.14612545,15.8638746 C8.50130269,16.2190518 9.07723972,16.2190518 9.43241697,15.8638746 L12.005,13.2912915 L14.577583,15.8638746 C14.9327603,16.2190518 15.5086973,16.2190518 15.8638746,15.8638746 C16.2190518,15.5086973 16.2190518,14.9327603 15.8638746,14.577583 L13.2912915,12.005 L15.8638746,9.43241697 C16.2190518,9.07723972 16.2190518,8.50130269 15.8638746,8.14612545 Z"
+            />
+          </svg>
         </span>
       </span>
     </span>
@@ -1732,8 +1736,15 @@ exports[`Input demo -- input-disabled 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -1755,8 +1766,8 @@ exports[`Input demo -- input-disabled 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -1764,36 +1775,29 @@ exports[`Input demo -- input-disabled 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1802,6 +1806,10 @@ exports[`Input demo -- input-disabled 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -1888,8 +1896,15 @@ exports[`Input demo -- input-disabled 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   box-shadow: none;
 }
 
@@ -1912,8 +1927,8 @@ exports[`Input demo -- input-disabled 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-6 .uc-fe-input-clear:hover {
@@ -1921,36 +1936,29 @@ exports[`Input demo -- input-disabled 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-6 .uc-fe-input-wrap,
+.emotion-6,
 .emotion-6 .uc-fe-input-prefix,
 .emotion-6 .uc-fe-input-suffix,
 .emotion-6 .uc-fe-input-clear,
-.emotion-6 input {
+.emotion-6 input,
+.emotion-6 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-6.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-6 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-6 .uc-fe-input-prefix,
-.emotion-6 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-6 .uc-fe-input-suffix,
+.emotion-6 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1959,6 +1967,10 @@ exports[`Input demo -- input-disabled 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-6 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-6 .uc-fe-input-block-wrap {
@@ -2043,8 +2055,15 @@ exports[`Input demo -- input-disabled 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -2066,8 +2085,8 @@ exports[`Input demo -- input-disabled 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -2075,36 +2094,29 @@ exports[`Input demo -- input-disabled 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -2113,6 +2125,10 @@ exports[`Input demo -- input-disabled 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -2199,8 +2215,15 @@ exports[`Input demo -- input-disabled 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   box-shadow: none;
 }
 
@@ -2223,8 +2246,8 @@ exports[`Input demo -- input-disabled 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-6 .uc-fe-input-clear:hover {
@@ -2232,36 +2255,29 @@ exports[`Input demo -- input-disabled 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-6 .uc-fe-input-wrap,
+.emotion-6,
 .emotion-6 .uc-fe-input-prefix,
 .emotion-6 .uc-fe-input-suffix,
 .emotion-6 .uc-fe-input-clear,
-.emotion-6 input {
+.emotion-6 input,
+.emotion-6 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-6.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-6 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-6 .uc-fe-input-prefix,
-.emotion-6 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-6 .uc-fe-input-suffix,
+.emotion-6 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -2270,6 +2286,10 @@ exports[`Input demo -- input-disabled 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-6 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-6 .uc-fe-input-block-wrap {
@@ -2348,27 +2368,23 @@ exports[`Input demo -- input-disabled 1`] = `
       class="uc-fe-input emotion-2 emotion-3"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-prefix"
       >
-        <span
-          class="uc-fe-input-prefix"
-        >
-          search
-        </span>
-        <span
-          class="uc-fe-input-block-wrap"
-        >
-          <input
-            value="default value"
-          />
-        </span>
-        <span
-          class="uc-fe-input-suffix"
-        >
-          <i
-            class="uc-fe-icon icon__search emotion-0 emotion-1"
-          />
-        </span>
+        search
+      </span>
+      <span
+        class="uc-fe-input-block-wrap"
+      >
+        <input
+          value="default value"
+        />
+      </span>
+      <span
+        class="uc-fe-input-suffix"
+      >
+        <i
+          class="uc-fe-icon icon__search emotion-0 emotion-1"
+        />
       </span>
     </span>
   </div>
@@ -2380,28 +2396,24 @@ exports[`Input demo -- input-disabled 1`] = `
       disabled=""
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-prefix"
       >
-        <span
-          class="uc-fe-input-prefix"
-        >
-          search
-        </span>
-        <span
-          class="uc-fe-input-block-wrap"
-        >
-          <input
-            disabled=""
-            value="default value"
-          />
-        </span>
-        <span
-          class="uc-fe-input-suffix"
-        >
-          <i
-            class="uc-fe-icon icon__search emotion-0 emotion-1"
-          />
-        </span>
+        search
+      </span>
+      <span
+        class="uc-fe-input-block-wrap"
+      >
+        <input
+          disabled=""
+          value="default value"
+        />
+      </span>
+      <span
+        class="uc-fe-input-suffix"
+      >
+        <i
+          class="uc-fe-icon icon__search emotion-0 emotion-1"
+        />
       </span>
     </span>
   </div>
@@ -2413,28 +2425,24 @@ exports[`Input demo -- input-disabled 1`] = `
       disabled=""
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-prefix"
       >
-        <span
-          class="uc-fe-input-prefix"
-        >
-          <i
-            class="uc-fe-icon icon__search emotion-0 emotion-1"
-          />
-        </span>
-        <span
-          class="uc-fe-input-block-wrap"
-        >
-          <input
-            disabled=""
-            value="default value"
-          />
-        </span>
-        <span
-          class="uc-fe-input-suffix"
-        >
-          search
-        </span>
+        <i
+          class="uc-fe-icon icon__search emotion-0 emotion-1"
+        />
+      </span>
+      <span
+        class="uc-fe-input-block-wrap"
+      >
+        <input
+          disabled=""
+          value="default value"
+        />
+      </span>
+      <span
+        class="uc-fe-input-suffix"
+      >
+        search
       </span>
     </span>
   </div>
@@ -2456,8 +2464,15 @@ exports[`Input demo -- input-icon 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -2479,8 +2494,8 @@ exports[`Input demo -- input-icon 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -2488,36 +2503,29 @@ exports[`Input demo -- input-icon 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -2526,6 +2534,10 @@ exports[`Input demo -- input-icon 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -2606,8 +2618,15 @@ exports[`Input demo -- input-icon 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -2629,8 +2648,8 @@ exports[`Input demo -- input-icon 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -2638,36 +2657,29 @@ exports[`Input demo -- input-icon 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -2676,6 +2688,10 @@ exports[`Input demo -- input-icon 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -2750,22 +2766,18 @@ exports[`Input demo -- input-icon 1`] = `
       class="uc-fe-input emotion-2 emotion-3"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-block-wrap"
       >
-        <span
-          class="uc-fe-input-block-wrap"
-        >
-          <input
-            value=""
-          />
-        </span>
-        <span
-          class="uc-fe-input-suffix"
-        >
-          <i
-            class="uc-fe-icon icon__circle-fill emotion-0 emotion-1"
-          />
-        </span>
+        <input
+          value=""
+        />
+      </span>
+      <span
+        class="uc-fe-input-suffix"
+      >
+        <i
+          class="uc-fe-icon icon__circle-fill emotion-0 emotion-1"
+        />
       </span>
     </span>
   </div>
@@ -2776,22 +2788,18 @@ exports[`Input demo -- input-icon 1`] = `
       class="uc-fe-input emotion-2 emotion-3"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-block-wrap"
       >
-        <span
-          class="uc-fe-input-block-wrap"
-        >
-          <input
-            value=""
-          />
-        </span>
-        <span
-          class="uc-fe-input-suffix"
-        >
-          <i
-            class="uc-fe-icon icon__circle emotion-0 emotion-1"
-          />
-        </span>
+        <input
+          value=""
+        />
+      </span>
+      <span
+        class="uc-fe-input-suffix"
+      >
+        <i
+          class="uc-fe-icon icon__circle emotion-0 emotion-1"
+        />
       </span>
     </span>
   </div>
@@ -2802,22 +2810,18 @@ exports[`Input demo -- input-icon 1`] = `
       class="uc-fe-input emotion-2 emotion-3"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-block-wrap"
       >
-        <span
-          class="uc-fe-input-block-wrap"
-        >
-          <input
-            value=""
-          />
-        </span>
-        <span
-          class="uc-fe-input-suffix"
-        >
-          <i
-            class="uc-fe-icon icon__loading emotion-0 emotion-1"
-          />
-        </span>
+        <input
+          value=""
+        />
+      </span>
+      <span
+        class="uc-fe-input-suffix"
+      >
+        <i
+          class="uc-fe-icon icon__loading emotion-0 emotion-1"
+        />
       </span>
     </span>
   </div>
@@ -2839,8 +2843,15 @@ exports[`Input demo -- input-prefix 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-0:hover {
@@ -2862,8 +2873,8 @@ exports[`Input demo -- input-prefix 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-0 .uc-fe-input-clear:hover {
@@ -2871,36 +2882,29 @@ exports[`Input demo -- input-prefix 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-0 .uc-fe-input-wrap,
+.emotion-0,
 .emotion-0 .uc-fe-input-prefix,
 .emotion-0 .uc-fe-input-suffix,
 .emotion-0 .uc-fe-input-clear,
-.emotion-0 input {
+.emotion-0 input,
+.emotion-0 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-0.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-0 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-0 .uc-fe-input-prefix,
-.emotion-0 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-0 .uc-fe-input-suffix,
+.emotion-0 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -2909,6 +2913,10 @@ exports[`Input demo -- input-prefix 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-0 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-0 .uc-fe-input-block-wrap {
@@ -2989,8 +2997,15 @@ exports[`Input demo -- input-prefix 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-0:hover {
@@ -3012,8 +3027,8 @@ exports[`Input demo -- input-prefix 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-0 .uc-fe-input-clear:hover {
@@ -3021,36 +3036,29 @@ exports[`Input demo -- input-prefix 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-0 .uc-fe-input-wrap,
+.emotion-0,
 .emotion-0 .uc-fe-input-prefix,
 .emotion-0 .uc-fe-input-suffix,
 .emotion-0 .uc-fe-input-clear,
-.emotion-0 input {
+.emotion-0 input,
+.emotion-0 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-0.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-0 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-0 .uc-fe-input-prefix,
-.emotion-0 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-0 .uc-fe-input-suffix,
+.emotion-0 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -3059,6 +3067,10 @@ exports[`Input demo -- input-prefix 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-0 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-0 .uc-fe-input-block-wrap {
@@ -3133,20 +3145,16 @@ exports[`Input demo -- input-prefix 1`] = `
       class="uc-fe-input emotion-0 emotion-1"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-prefix"
       >
-        <span
-          class="uc-fe-input-prefix"
-        >
-          prefix
-        </span>
-        <span
-          class="uc-fe-input-block-wrap"
-        >
-          <input
-            value=""
-          />
-        </span>
+        prefix
+      </span>
+      <span
+        class="uc-fe-input-block-wrap"
+      >
+        <input
+          value=""
+        />
       </span>
     </span>
   </div>
@@ -3157,47 +3165,18 @@ exports[`Input demo -- input-prefix 1`] = `
       class="uc-fe-input emotion-0 emotion-1"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-prefix"
       >
-        <span
-          class="uc-fe-input-prefix"
-        >
-          <i
-            class="uc-fe-icon icon__search emotion-2 emotion-3"
-          />
-        </span>
-        <span
-          class="uc-fe-input-block-wrap"
-        >
-          <input
-            value=""
-          />
-        </span>
+        <i
+          class="uc-fe-icon icon__search emotion-2 emotion-3"
+        />
       </span>
-    </span>
-  </div>
-  <div
-    class="demo-wrap"
-  >
-    <span
-      class="uc-fe-input emotion-0 emotion-1"
-      style="width:300px"
-    >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-block-wrap"
       >
-        <span
-          class="uc-fe-input-prefix"
-        >
-          prefix
-        </span>
-        <span
-          class="uc-fe-input-block-wrap"
-        >
-          <input
-            value=""
-          />
-        </span>
+        <input
+          value=""
+        />
       </span>
     </span>
   </div>
@@ -3209,24 +3188,41 @@ exports[`Input demo -- input-prefix 1`] = `
       style="width:300px"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-prefix"
       >
-        <span
-          class="uc-fe-input-prefix"
+        prefix
+      </span>
+      <span
+        class="uc-fe-input-block-wrap"
+      >
+        <input
+          value=""
+        />
+      </span>
+    </span>
+  </div>
+  <div
+    class="demo-wrap"
+  >
+    <span
+      class="uc-fe-input emotion-0 emotion-1"
+      style="width:300px"
+    >
+      <span
+        class="uc-fe-input-prefix"
+      >
+        <div
+          style="width:50px"
         >
-          <div
-            style="width:50px"
-          >
-            prefix
-          </div>
-        </span>
-        <span
-          class="uc-fe-input-block-wrap"
-        >
-          <input
-            value=""
-          />
-        </span>
+          prefix
+        </div>
+      </span>
+      <span
+        class="uc-fe-input-block-wrap"
+      >
+        <input
+          value=""
+        />
       </span>
     </span>
   </div>
@@ -3248,8 +3244,15 @@ exports[`Input demo -- input-size 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -3271,8 +3274,8 @@ exports[`Input demo -- input-size 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -3280,36 +3283,29 @@ exports[`Input demo -- input-size 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -3318,6 +3314,10 @@ exports[`Input demo -- input-size 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -3394,8 +3394,15 @@ exports[`Input demo -- input-size 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-0:hover {
@@ -3417,8 +3424,8 @@ exports[`Input demo -- input-size 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-0 .uc-fe-input-clear:hover {
@@ -3426,36 +3433,29 @@ exports[`Input demo -- input-size 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-0 .uc-fe-input-wrap,
+.emotion-0,
 .emotion-0 .uc-fe-input-prefix,
 .emotion-0 .uc-fe-input-suffix,
 .emotion-0 .uc-fe-input-clear,
-.emotion-0 input {
+.emotion-0 input,
+.emotion-0 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-0.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-0 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-0 .uc-fe-input-prefix,
-.emotion-0 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-0 .uc-fe-input-suffix,
+.emotion-0 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -3464,6 +3464,10 @@ exports[`Input demo -- input-size 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-0 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-0 .uc-fe-input-block-wrap {
@@ -3540,8 +3544,15 @@ exports[`Input demo -- input-size 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-4:hover {
@@ -3563,8 +3574,8 @@ exports[`Input demo -- input-size 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-4 .uc-fe-input-clear:hover {
@@ -3572,36 +3583,29 @@ exports[`Input demo -- input-size 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-4 .uc-fe-input-wrap,
+.emotion-4,
 .emotion-4 .uc-fe-input-prefix,
 .emotion-4 .uc-fe-input-suffix,
 .emotion-4 .uc-fe-input-clear,
-.emotion-4 input {
+.emotion-4 input,
+.emotion-4 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-4.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-4 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-4 .uc-fe-input-prefix,
-.emotion-4 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-4 .uc-fe-input-suffix,
+.emotion-4 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -3610,6 +3614,10 @@ exports[`Input demo -- input-size 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-4 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-4 .uc-fe-input-block-wrap {
@@ -3686,8 +3694,15 @@ exports[`Input demo -- input-size 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -3709,8 +3724,8 @@ exports[`Input demo -- input-size 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -3718,36 +3733,29 @@ exports[`Input demo -- input-size 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -3756,6 +3764,10 @@ exports[`Input demo -- input-size 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -3832,8 +3844,15 @@ exports[`Input demo -- input-size 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-0:hover {
@@ -3855,8 +3874,8 @@ exports[`Input demo -- input-size 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-0 .uc-fe-input-clear:hover {
@@ -3864,36 +3883,29 @@ exports[`Input demo -- input-size 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-0 .uc-fe-input-wrap,
+.emotion-0,
 .emotion-0 .uc-fe-input-prefix,
 .emotion-0 .uc-fe-input-suffix,
 .emotion-0 .uc-fe-input-clear,
-.emotion-0 input {
+.emotion-0 input,
+.emotion-0 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-0.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-0 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-0 .uc-fe-input-prefix,
-.emotion-0 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-0 .uc-fe-input-suffix,
+.emotion-0 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -3902,6 +3914,10 @@ exports[`Input demo -- input-size 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-0 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-0 .uc-fe-input-block-wrap {
@@ -3978,8 +3994,15 @@ exports[`Input demo -- input-size 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-4:hover {
@@ -4001,8 +4024,8 @@ exports[`Input demo -- input-size 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-4 .uc-fe-input-clear:hover {
@@ -4010,36 +4033,29 @@ exports[`Input demo -- input-size 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-4 .uc-fe-input-wrap,
+.emotion-4,
 .emotion-4 .uc-fe-input-prefix,
 .emotion-4 .uc-fe-input-suffix,
 .emotion-4 .uc-fe-input-clear,
-.emotion-4 input {
+.emotion-4 input,
+.emotion-4 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-4.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-4 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-4 .uc-fe-input-prefix,
-.emotion-4 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-4 .uc-fe-input-suffix,
+.emotion-4 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -4048,6 +4064,10 @@ exports[`Input demo -- input-size 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-4 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-4 .uc-fe-input-block-wrap {
@@ -4118,15 +4138,11 @@ exports[`Input demo -- input-size 1`] = `
       class="uc-fe-input emotion-0 emotion-1"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-block-wrap"
       >
-        <span
-          class="uc-fe-input-block-wrap"
-        >
-          <input
-            value=""
-          />
-        </span>
+        <input
+          value=""
+        />
       </span>
     </span>
   </div>
@@ -4137,15 +4153,11 @@ exports[`Input demo -- input-size 1`] = `
       class="uc-fe-input emotion-2 emotion-1"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-block-wrap"
       >
-        <span
-          class="uc-fe-input-block-wrap"
-        >
-          <input
-            value=""
-          />
-        </span>
+        <input
+          value=""
+        />
       </span>
     </span>
   </div>
@@ -4156,15 +4168,11 @@ exports[`Input demo -- input-size 1`] = `
       class="uc-fe-input emotion-4 emotion-1"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-block-wrap"
       >
-        <span
-          class="uc-fe-input-block-wrap"
-        >
-          <input
-            value=""
-          />
-        </span>
+        <input
+          value=""
+        />
       </span>
     </span>
   </div>
@@ -4186,8 +4194,15 @@ exports[`Input demo -- input-status 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-0:hover {
@@ -4209,8 +4224,8 @@ exports[`Input demo -- input-status 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-0 .uc-fe-input-clear:hover {
@@ -4218,36 +4233,29 @@ exports[`Input demo -- input-status 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-0 .uc-fe-input-wrap,
+.emotion-0,
 .emotion-0 .uc-fe-input-prefix,
 .emotion-0 .uc-fe-input-suffix,
 .emotion-0 .uc-fe-input-clear,
-.emotion-0 input {
+.emotion-0 input,
+.emotion-0 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-0.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-0 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-0 .uc-fe-input-prefix,
-.emotion-0 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-0 .uc-fe-input-suffix,
+.emotion-0 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -4256,6 +4264,10 @@ exports[`Input demo -- input-status 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-0 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-0 .uc-fe-input-block-wrap {
@@ -4332,8 +4344,15 @@ exports[`Input demo -- input-status 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -4355,8 +4374,8 @@ exports[`Input demo -- input-status 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -4364,36 +4383,29 @@ exports[`Input demo -- input-status 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -4402,6 +4414,10 @@ exports[`Input demo -- input-status 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -4484,8 +4500,15 @@ exports[`Input demo -- input-status 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-0:hover {
@@ -4507,8 +4530,8 @@ exports[`Input demo -- input-status 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-0 .uc-fe-input-clear:hover {
@@ -4516,36 +4539,29 @@ exports[`Input demo -- input-status 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-0 .uc-fe-input-wrap,
+.emotion-0,
 .emotion-0 .uc-fe-input-prefix,
 .emotion-0 .uc-fe-input-suffix,
 .emotion-0 .uc-fe-input-clear,
-.emotion-0 input {
+.emotion-0 input,
+.emotion-0 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-0.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-0 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-0 .uc-fe-input-prefix,
-.emotion-0 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-0 .uc-fe-input-suffix,
+.emotion-0 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -4554,6 +4570,10 @@ exports[`Input demo -- input-status 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-0 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-0 .uc-fe-input-block-wrap {
@@ -4630,8 +4650,15 @@ exports[`Input demo -- input-status 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -4653,8 +4680,8 @@ exports[`Input demo -- input-status 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -4662,36 +4689,29 @@ exports[`Input demo -- input-status 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -4700,6 +4720,10 @@ exports[`Input demo -- input-status 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -4776,15 +4800,11 @@ exports[`Input demo -- input-status 1`] = `
       class="uc-fe-input emotion-0 emotion-1"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-block-wrap"
       >
-        <span
-          class="uc-fe-input-block-wrap"
-        >
-          <input
-            value=""
-          />
-        </span>
+        <input
+          value=""
+        />
       </span>
     </span>
   </div>
@@ -4795,15 +4815,11 @@ exports[`Input demo -- input-status 1`] = `
       class="uc-fe-input emotion-2 emotion-1"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-block-wrap"
       >
-        <span
-          class="uc-fe-input-block-wrap"
-        >
-          <input
-            value=""
-          />
-        </span>
+        <input
+          value=""
+        />
       </span>
     </span>
   </div>
@@ -4825,8 +4841,15 @@ exports[`Input demo -- input-suffix 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-0:hover {
@@ -4848,8 +4871,8 @@ exports[`Input demo -- input-suffix 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-0 .uc-fe-input-clear:hover {
@@ -4857,36 +4880,29 @@ exports[`Input demo -- input-suffix 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-0 .uc-fe-input-wrap,
+.emotion-0,
 .emotion-0 .uc-fe-input-prefix,
 .emotion-0 .uc-fe-input-suffix,
 .emotion-0 .uc-fe-input-clear,
-.emotion-0 input {
+.emotion-0 input,
+.emotion-0 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-0.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-0 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-0 .uc-fe-input-prefix,
-.emotion-0 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-0 .uc-fe-input-suffix,
+.emotion-0 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -4895,6 +4911,10 @@ exports[`Input demo -- input-suffix 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-0 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-0 .uc-fe-input-block-wrap {
@@ -4975,8 +4995,15 @@ exports[`Input demo -- input-suffix 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-0:hover {
@@ -4998,8 +5025,8 @@ exports[`Input demo -- input-suffix 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-0 .uc-fe-input-clear:hover {
@@ -5007,36 +5034,29 @@ exports[`Input demo -- input-suffix 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-0 .uc-fe-input-wrap,
+.emotion-0,
 .emotion-0 .uc-fe-input-prefix,
 .emotion-0 .uc-fe-input-suffix,
 .emotion-0 .uc-fe-input-clear,
-.emotion-0 input {
+.emotion-0 input,
+.emotion-0 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-0.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-0 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-0 .uc-fe-input-prefix,
-.emotion-0 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-0 .uc-fe-input-suffix,
+.emotion-0 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -5045,6 +5065,10 @@ exports[`Input demo -- input-suffix 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-0 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-0 .uc-fe-input-block-wrap {
@@ -5119,20 +5143,16 @@ exports[`Input demo -- input-suffix 1`] = `
       class="uc-fe-input emotion-0 emotion-1"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-block-wrap"
       >
-        <span
-          class="uc-fe-input-block-wrap"
-        >
-          <input
-            value=""
-          />
-        </span>
-        <span
-          class="uc-fe-input-suffix"
-        >
-          suffix
-        </span>
+        <input
+          value=""
+        />
+      </span>
+      <span
+        class="uc-fe-input-suffix"
+      >
+        suffix
       </span>
     </span>
   </div>
@@ -5143,22 +5163,18 @@ exports[`Input demo -- input-suffix 1`] = `
       class="uc-fe-input emotion-0 emotion-1"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-block-wrap"
       >
-        <span
-          class="uc-fe-input-block-wrap"
-        >
-          <input
-            value=""
-          />
-        </span>
-        <span
-          class="uc-fe-input-suffix"
-        >
-          <i
-            class="uc-fe-icon icon__search emotion-2 emotion-3"
-          />
-        </span>
+        <input
+          value=""
+        />
+      </span>
+      <span
+        class="uc-fe-input-suffix"
+      >
+        <i
+          class="uc-fe-icon icon__search emotion-2 emotion-3"
+        />
       </span>
     </span>
   </div>
@@ -5180,8 +5196,15 @@ exports[`Input demo -- search 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-47:hover {
@@ -5203,8 +5226,8 @@ exports[`Input demo -- search 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-47 .uc-fe-input-clear:hover {
@@ -5212,36 +5235,29 @@ exports[`Input demo -- search 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-47 .uc-fe-input-wrap,
+.emotion-47,
 .emotion-47 .uc-fe-input-prefix,
 .emotion-47 .uc-fe-input-suffix,
 .emotion-47 .uc-fe-input-clear,
-.emotion-47 input {
+.emotion-47 input,
+.emotion-47 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-47.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-47 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-47 .uc-fe-input-prefix,
-.emotion-47 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-47 .uc-fe-input-suffix,
+.emotion-47 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -5250,6 +5266,10 @@ exports[`Input demo -- search 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-47 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-47 .uc-fe-input-block-wrap {
@@ -5476,8 +5496,8 @@ exports[`Input demo -- search 1`] = `
 }
 
 .emotion-3 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -5657,8 +5677,8 @@ exports[`Input demo -- search 1`] = `
 }
 
 .emotion-45 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -5681,8 +5701,15 @@ exports[`Input demo -- search 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-47:hover {
@@ -5704,8 +5731,8 @@ exports[`Input demo -- search 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-47 .uc-fe-input-clear:hover {
@@ -5713,36 +5740,29 @@ exports[`Input demo -- search 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-47 .uc-fe-input-wrap,
+.emotion-47,
 .emotion-47 .uc-fe-input-prefix,
 .emotion-47 .uc-fe-input-suffix,
 .emotion-47 .uc-fe-input-clear,
-.emotion-47 input {
+.emotion-47 input,
+.emotion-47 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-47.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-47 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-47 .uc-fe-input-prefix,
-.emotion-47 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-47 .uc-fe-input-suffix,
+.emotion-47 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -5751,6 +5771,10 @@ exports[`Input demo -- search 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-47 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-47 .uc-fe-input-block-wrap {
@@ -5977,8 +6001,8 @@ exports[`Input demo -- search 1`] = `
 }
 
 .emotion-3 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -6158,8 +6182,8 @@ exports[`Input demo -- search 1`] = `
 }
 
 .emotion-45 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -6312,27 +6336,23 @@ exports[`Input demo -- search 1`] = `
       class="uc-fe-input emotion-47 emotion-48"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-block-wrap"
       >
-        <span
-          class="uc-fe-input-block-wrap"
+        <input
+          value=""
+        />
+      </span>
+      <span
+        class="uc-fe-input-suffix"
+      >
+        <svg
+          class="emotion-44 emotion-45 emotion-4"
+          viewBox="0 0 24 24"
         >
-          <input
-            value=""
+          <path
+            d="M11,3 C15.418278,3 19,6.581722 19,11 C19,12.8491176 18.3726428,14.5517081 17.3191633,15.9065366 L20.981429,19.5692608 L19.5692608,20.981429 L15.9065366,17.3191633 C14.5517081,18.3726428 12.8491176,19 11,19 C6.581722,19 3,15.418278 3,11 C3,6.581722 6.581722,3 11,3 Z M11,5 C7.6862915,5 5,7.6862915 5,11 C5,14.3137085 7.6862915,17 11,17 C14.3137085,17 17,14.3137085 17,11 C17,7.6862915 14.3137085,5 11,5 Z"
           />
-        </span>
-        <span
-          class="uc-fe-input-suffix"
-        >
-          <svg
-            class="emotion-44 emotion-45 emotion-4"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M11,3 C15.418278,3 19,6.581722 19,11 C19,12.8491176 18.3726428,14.5517081 17.3191633,15.9065366 L20.981429,19.5692608 L19.5692608,20.981429 L15.9065366,17.3191633 C14.5517081,18.3726428 12.8491176,19 11,19 C6.581722,19 3,15.418278 3,11 C3,6.581722 6.581722,3 11,3 Z M11,5 C7.6862915,5 5,7.6862915 5,11 C5,14.3137085 7.6862915,17 11,17 C14.3137085,17 17,14.3137085 17,11 C17,7.6862915 14.3137085,5 11,5 Z"
-            />
-          </svg>
-        </span>
+        </svg>
       </span>
     </span>
   </div>
@@ -6354,8 +6374,15 @@ exports[`Input demo -- search-disabled 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-8:hover {
@@ -6377,8 +6404,8 @@ exports[`Input demo -- search-disabled 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-8 .uc-fe-input-clear:hover {
@@ -6386,36 +6413,29 @@ exports[`Input demo -- search-disabled 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-8 .uc-fe-input-wrap,
+.emotion-8,
 .emotion-8 .uc-fe-input-prefix,
 .emotion-8 .uc-fe-input-suffix,
 .emotion-8 .uc-fe-input-clear,
-.emotion-8 input {
+.emotion-8 input,
+.emotion-8 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-8.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-8 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-8 .uc-fe-input-prefix,
-.emotion-8 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-8 .uc-fe-input-suffix,
+.emotion-8 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -6424,6 +6444,10 @@ exports[`Input demo -- search-disabled 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-8 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-8 .uc-fe-input-block-wrap {
@@ -6500,8 +6524,15 @@ exports[`Input demo -- search-disabled 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   box-shadow: none;
 }
 
@@ -6524,8 +6555,8 @@ exports[`Input demo -- search-disabled 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-3 .uc-fe-input-clear:hover {
@@ -6533,36 +6564,29 @@ exports[`Input demo -- search-disabled 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-3 .uc-fe-input-wrap,
+.emotion-3,
 .emotion-3 .uc-fe-input-prefix,
 .emotion-3 .uc-fe-input-suffix,
 .emotion-3 .uc-fe-input-clear,
-.emotion-3 input {
+.emotion-3 input,
+.emotion-3 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-3.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-3 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-3 .uc-fe-input-prefix,
-.emotion-3 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-3 .uc-fe-input-suffix,
+.emotion-3 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -6571,6 +6595,10 @@ exports[`Input demo -- search-disabled 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-3 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-3 .uc-fe-input-block-wrap {
@@ -6642,8 +6670,8 @@ exports[`Input demo -- search-disabled 1`] = `
 }
 
 .emotion-1 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -6666,8 +6694,15 @@ exports[`Input demo -- search-disabled 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-8:hover {
@@ -6689,8 +6724,8 @@ exports[`Input demo -- search-disabled 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-8 .uc-fe-input-clear:hover {
@@ -6698,36 +6733,29 @@ exports[`Input demo -- search-disabled 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-8 .uc-fe-input-wrap,
+.emotion-8,
 .emotion-8 .uc-fe-input-prefix,
 .emotion-8 .uc-fe-input-suffix,
 .emotion-8 .uc-fe-input-clear,
-.emotion-8 input {
+.emotion-8 input,
+.emotion-8 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-8.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-8 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-8 .uc-fe-input-prefix,
-.emotion-8 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-8 .uc-fe-input-suffix,
+.emotion-8 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -6736,6 +6764,10 @@ exports[`Input demo -- search-disabled 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-8 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-8 .uc-fe-input-block-wrap {
@@ -6812,8 +6844,15 @@ exports[`Input demo -- search-disabled 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   box-shadow: none;
 }
 
@@ -6836,8 +6875,8 @@ exports[`Input demo -- search-disabled 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-3 .uc-fe-input-clear:hover {
@@ -6845,36 +6884,29 @@ exports[`Input demo -- search-disabled 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-3 .uc-fe-input-wrap,
+.emotion-3,
 .emotion-3 .uc-fe-input-prefix,
 .emotion-3 .uc-fe-input-suffix,
 .emotion-3 .uc-fe-input-clear,
-.emotion-3 input {
+.emotion-3 input,
+.emotion-3 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-3.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-3 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-3 .uc-fe-input-prefix,
-.emotion-3 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-3 .uc-fe-input-suffix,
+.emotion-3 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -6883,6 +6915,10 @@ exports[`Input demo -- search-disabled 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-3 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-3 .uc-fe-input-block-wrap {
@@ -6954,8 +6990,8 @@ exports[`Input demo -- search-disabled 1`] = `
 }
 
 .emotion-1 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -6973,28 +7009,25 @@ exports[`Input demo -- search-disabled 1`] = `
       disabled=""
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-block-wrap"
       >
-        <span
-          class="uc-fe-input-block-wrap"
+        <input
+          disabled=""
+          value=""
+        />
+      </span>
+      <span
+        class="uc-fe-input-suffix"
+      >
+        <svg
+          class="emotion-0 emotion-1 emotion-2"
+          disabled=""
+          viewBox="0 0 24 24"
         >
-          <input
-            disabled=""
-            value=""
+          <path
+            d="M11,3 C15.418278,3 19,6.581722 19,11 C19,12.8491176 18.3726428,14.5517081 17.3191633,15.9065366 L20.981429,19.5692608 L19.5692608,20.981429 L15.9065366,17.3191633 C14.5517081,18.3726428 12.8491176,19 11,19 C6.581722,19 3,15.418278 3,11 C3,6.581722 6.581722,3 11,3 Z M11,5 C7.6862915,5 5,7.6862915 5,11 C5,14.3137085 7.6862915,17 11,17 C14.3137085,17 17,14.3137085 17,11 C17,7.6862915 14.3137085,5 11,5 Z"
           />
-        </span>
-        <span
-          class="uc-fe-input-suffix"
-        >
-          <svg
-            class="emotion-0 emotion-1 emotion-2"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M11,3 C15.418278,3 19,6.581722 19,11 C19,12.8491176 18.3726428,14.5517081 17.3191633,15.9065366 L20.981429,19.5692608 L19.5692608,20.981429 L15.9065366,17.3191633 C14.5517081,18.3726428 12.8491176,19 11,19 C6.581722,19 3,15.418278 3,11 C3,6.581722 6.581722,3 11,3 Z M11,5 C7.6862915,5 5,7.6862915 5,11 C5,14.3137085 7.6862915,17 11,17 C14.3137085,17 17,14.3137085 17,11 C17,7.6862915 14.3137085,5 11,5 Z"
-            />
-          </svg>
-        </span>
+        </svg>
       </span>
     </span>
   </div>
@@ -7005,27 +7038,23 @@ exports[`Input demo -- search-disabled 1`] = `
       class="uc-fe-input emotion-8 emotion-4"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-block-wrap"
       >
-        <span
-          class="uc-fe-input-block-wrap"
+        <input
+          value=""
+        />
+      </span>
+      <span
+        class="uc-fe-input-suffix"
+      >
+        <svg
+          class="emotion-0 emotion-1 emotion-2"
+          viewBox="0 0 24 24"
         >
-          <input
-            value=""
+          <path
+            d="M11,3 C15.418278,3 19,6.581722 19,11 C19,12.8491176 18.3726428,14.5517081 17.3191633,15.9065366 L20.981429,19.5692608 L19.5692608,20.981429 L15.9065366,17.3191633 C14.5517081,18.3726428 12.8491176,19 11,19 C6.581722,19 3,15.418278 3,11 C3,6.581722 6.581722,3 11,3 Z M11,5 C7.6862915,5 5,7.6862915 5,11 C5,14.3137085 7.6862915,17 11,17 C14.3137085,17 17,14.3137085 17,11 C17,7.6862915 14.3137085,5 11,5 Z"
           />
-        </span>
-        <span
-          class="uc-fe-input-suffix"
-        >
-          <svg
-            class="emotion-0 emotion-1 emotion-2"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M11,3 C15.418278,3 19,6.581722 19,11 C19,12.8491176 18.3726428,14.5517081 17.3191633,15.9065366 L20.981429,19.5692608 L19.5692608,20.981429 L15.9065366,17.3191633 C14.5517081,18.3726428 12.8491176,19 11,19 C6.581722,19 3,15.418278 3,11 C3,6.581722 6.581722,3 11,3 Z M11,5 C7.6862915,5 5,7.6862915 5,11 C5,14.3137085 7.6862915,17 11,17 C14.3137085,17 17,14.3137085 17,11 C17,7.6862915 14.3137085,5 11,5 Z"
-            />
-          </svg>
-        </span>
+        </svg>
       </span>
     </span>
   </div>
@@ -7047,8 +7076,15 @@ exports[`Input demo -- search-size 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-8:hover {
@@ -7070,8 +7106,8 @@ exports[`Input demo -- search-size 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-8 .uc-fe-input-clear:hover {
@@ -7079,36 +7115,29 @@ exports[`Input demo -- search-size 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-8 .uc-fe-input-wrap,
+.emotion-8,
 .emotion-8 .uc-fe-input-prefix,
 .emotion-8 .uc-fe-input-suffix,
 .emotion-8 .uc-fe-input-clear,
-.emotion-8 input {
+.emotion-8 input,
+.emotion-8 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-8.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-8 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-8 .uc-fe-input-prefix,
-.emotion-8 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-8 .uc-fe-input-suffix,
+.emotion-8 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -7117,6 +7146,10 @@ exports[`Input demo -- search-size 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-8 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-8 .uc-fe-input-block-wrap {
@@ -7193,8 +7226,15 @@ exports[`Input demo -- search-size 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-3:hover {
@@ -7216,8 +7256,8 @@ exports[`Input demo -- search-size 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-3 .uc-fe-input-clear:hover {
@@ -7225,36 +7265,29 @@ exports[`Input demo -- search-size 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-3 .uc-fe-input-wrap,
+.emotion-3,
 .emotion-3 .uc-fe-input-prefix,
 .emotion-3 .uc-fe-input-suffix,
 .emotion-3 .uc-fe-input-clear,
-.emotion-3 input {
+.emotion-3 input,
+.emotion-3 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-3.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-3 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-3 .uc-fe-input-prefix,
-.emotion-3 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-3 .uc-fe-input-suffix,
+.emotion-3 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -7263,6 +7296,10 @@ exports[`Input demo -- search-size 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-3 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-3 .uc-fe-input-block-wrap {
@@ -7339,8 +7376,15 @@ exports[`Input demo -- search-size 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-13:hover {
@@ -7362,8 +7406,8 @@ exports[`Input demo -- search-size 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-13 .uc-fe-input-clear:hover {
@@ -7371,36 +7415,29 @@ exports[`Input demo -- search-size 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-13 .uc-fe-input-wrap,
+.emotion-13,
 .emotion-13 .uc-fe-input-prefix,
 .emotion-13 .uc-fe-input-suffix,
 .emotion-13 .uc-fe-input-clear,
-.emotion-13 input {
+.emotion-13 input,
+.emotion-13 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-13.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-13 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-13 .uc-fe-input-prefix,
-.emotion-13 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-13 .uc-fe-input-suffix,
+.emotion-13 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -7409,6 +7446,10 @@ exports[`Input demo -- search-size 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-13 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-13 .uc-fe-input-block-wrap {
@@ -7472,8 +7513,8 @@ exports[`Input demo -- search-size 1`] = `
 }
 
 .emotion-1 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -7496,8 +7537,15 @@ exports[`Input demo -- search-size 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-8:hover {
@@ -7519,8 +7567,8 @@ exports[`Input demo -- search-size 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-8 .uc-fe-input-clear:hover {
@@ -7528,36 +7576,29 @@ exports[`Input demo -- search-size 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-8 .uc-fe-input-wrap,
+.emotion-8,
 .emotion-8 .uc-fe-input-prefix,
 .emotion-8 .uc-fe-input-suffix,
 .emotion-8 .uc-fe-input-clear,
-.emotion-8 input {
+.emotion-8 input,
+.emotion-8 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-8.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-8 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-8 .uc-fe-input-prefix,
-.emotion-8 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-8 .uc-fe-input-suffix,
+.emotion-8 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -7566,6 +7607,10 @@ exports[`Input demo -- search-size 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-8 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-8 .uc-fe-input-block-wrap {
@@ -7642,8 +7687,15 @@ exports[`Input demo -- search-size 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-3:hover {
@@ -7665,8 +7717,8 @@ exports[`Input demo -- search-size 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-3 .uc-fe-input-clear:hover {
@@ -7674,36 +7726,29 @@ exports[`Input demo -- search-size 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-3 .uc-fe-input-wrap,
+.emotion-3,
 .emotion-3 .uc-fe-input-prefix,
 .emotion-3 .uc-fe-input-suffix,
 .emotion-3 .uc-fe-input-clear,
-.emotion-3 input {
+.emotion-3 input,
+.emotion-3 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-3.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-3 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-3 .uc-fe-input-prefix,
-.emotion-3 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-3 .uc-fe-input-suffix,
+.emotion-3 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -7712,6 +7757,10 @@ exports[`Input demo -- search-size 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-3 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-3 .uc-fe-input-block-wrap {
@@ -7788,8 +7837,15 @@ exports[`Input demo -- search-size 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-13:hover {
@@ -7811,8 +7867,8 @@ exports[`Input demo -- search-size 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-13 .uc-fe-input-clear:hover {
@@ -7820,36 +7876,29 @@ exports[`Input demo -- search-size 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-13 .uc-fe-input-wrap,
+.emotion-13,
 .emotion-13 .uc-fe-input-prefix,
 .emotion-13 .uc-fe-input-suffix,
 .emotion-13 .uc-fe-input-clear,
-.emotion-13 input {
+.emotion-13 input,
+.emotion-13 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-13.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-13 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-13 .uc-fe-input-prefix,
-.emotion-13 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-13 .uc-fe-input-suffix,
+.emotion-13 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -7858,6 +7907,10 @@ exports[`Input demo -- search-size 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-13 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-13 .uc-fe-input-block-wrap {
@@ -7921,8 +7974,8 @@ exports[`Input demo -- search-size 1`] = `
 }
 
 .emotion-1 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -7939,27 +7992,23 @@ exports[`Input demo -- search-size 1`] = `
       class="uc-fe-input emotion-3 emotion-4"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-block-wrap"
       >
-        <span
-          class="uc-fe-input-block-wrap"
+        <input
+          value=""
+        />
+      </span>
+      <span
+        class="uc-fe-input-suffix"
+      >
+        <svg
+          class="emotion-0 emotion-1 emotion-2"
+          viewBox="0 0 24 24"
         >
-          <input
-            value=""
+          <path
+            d="M11,3 C15.418278,3 19,6.581722 19,11 C19,12.8491176 18.3726428,14.5517081 17.3191633,15.9065366 L20.981429,19.5692608 L19.5692608,20.981429 L15.9065366,17.3191633 C14.5517081,18.3726428 12.8491176,19 11,19 C6.581722,19 3,15.418278 3,11 C3,6.581722 6.581722,3 11,3 Z M11,5 C7.6862915,5 5,7.6862915 5,11 C5,14.3137085 7.6862915,17 11,17 C14.3137085,17 17,14.3137085 17,11 C17,7.6862915 14.3137085,5 11,5 Z"
           />
-        </span>
-        <span
-          class="uc-fe-input-suffix"
-        >
-          <svg
-            class="emotion-0 emotion-1 emotion-2"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M11,3 C15.418278,3 19,6.581722 19,11 C19,12.8491176 18.3726428,14.5517081 17.3191633,15.9065366 L20.981429,19.5692608 L19.5692608,20.981429 L15.9065366,17.3191633 C14.5517081,18.3726428 12.8491176,19 11,19 C6.581722,19 3,15.418278 3,11 C3,6.581722 6.581722,3 11,3 Z M11,5 C7.6862915,5 5,7.6862915 5,11 C5,14.3137085 7.6862915,17 11,17 C14.3137085,17 17,14.3137085 17,11 C17,7.6862915 14.3137085,5 11,5 Z"
-            />
-          </svg>
-        </span>
+        </svg>
       </span>
     </span>
   </div>
@@ -7970,27 +8019,23 @@ exports[`Input demo -- search-size 1`] = `
       class="uc-fe-input emotion-8 emotion-4"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-block-wrap"
       >
-        <span
-          class="uc-fe-input-block-wrap"
+        <input
+          value=""
+        />
+      </span>
+      <span
+        class="uc-fe-input-suffix"
+      >
+        <svg
+          class="emotion-0 emotion-1 emotion-2"
+          viewBox="0 0 24 24"
         >
-          <input
-            value=""
+          <path
+            d="M11,3 C15.418278,3 19,6.581722 19,11 C19,12.8491176 18.3726428,14.5517081 17.3191633,15.9065366 L20.981429,19.5692608 L19.5692608,20.981429 L15.9065366,17.3191633 C14.5517081,18.3726428 12.8491176,19 11,19 C6.581722,19 3,15.418278 3,11 C3,6.581722 6.581722,3 11,3 Z M11,5 C7.6862915,5 5,7.6862915 5,11 C5,14.3137085 7.6862915,17 11,17 C14.3137085,17 17,14.3137085 17,11 C17,7.6862915 14.3137085,5 11,5 Z"
           />
-        </span>
-        <span
-          class="uc-fe-input-suffix"
-        >
-          <svg
-            class="emotion-0 emotion-1 emotion-2"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M11,3 C15.418278,3 19,6.581722 19,11 C19,12.8491176 18.3726428,14.5517081 17.3191633,15.9065366 L20.981429,19.5692608 L19.5692608,20.981429 L15.9065366,17.3191633 C14.5517081,18.3726428 12.8491176,19 11,19 C6.581722,19 3,15.418278 3,11 C3,6.581722 6.581722,3 11,3 Z M11,5 C7.6862915,5 5,7.6862915 5,11 C5,14.3137085 7.6862915,17 11,17 C14.3137085,17 17,14.3137085 17,11 C17,7.6862915 14.3137085,5 11,5 Z"
-            />
-          </svg>
-        </span>
+        </svg>
       </span>
     </span>
   </div>
@@ -8001,27 +8046,23 @@ exports[`Input demo -- search-size 1`] = `
       class="uc-fe-input emotion-13 emotion-4"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-block-wrap"
       >
-        <span
-          class="uc-fe-input-block-wrap"
+        <input
+          value=""
+        />
+      </span>
+      <span
+        class="uc-fe-input-suffix"
+      >
+        <svg
+          class="emotion-0 emotion-1 emotion-2"
+          viewBox="0 0 24 24"
         >
-          <input
-            value=""
+          <path
+            d="M11,3 C15.418278,3 19,6.581722 19,11 C19,12.8491176 18.3726428,14.5517081 17.3191633,15.9065366 L20.981429,19.5692608 L19.5692608,20.981429 L15.9065366,17.3191633 C14.5517081,18.3726428 12.8491176,19 11,19 C6.581722,19 3,15.418278 3,11 C3,6.581722 6.581722,3 11,3 Z M11,5 C7.6862915,5 5,7.6862915 5,11 C5,14.3137085 7.6862915,17 11,17 C14.3137085,17 17,14.3137085 17,11 C17,7.6862915 14.3137085,5 11,5 Z"
           />
-        </span>
-        <span
-          class="uc-fe-input-suffix"
-        >
-          <svg
-            class="emotion-0 emotion-1 emotion-2"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M11,3 C15.418278,3 19,6.581722 19,11 C19,12.8491176 18.3726428,14.5517081 17.3191633,15.9065366 L20.981429,19.5692608 L19.5692608,20.981429 L15.9065366,17.3191633 C14.5517081,18.3726428 12.8491176,19 11,19 C6.581722,19 3,15.418278 3,11 C3,6.581722 6.581722,3 11,3 Z M11,5 C7.6862915,5 5,7.6862915 5,11 C5,14.3137085 7.6862915,17 11,17 C14.3137085,17 17,14.3137085 17,11 C17,7.6862915 14.3137085,5 11,5 Z"
-            />
-          </svg>
-        </span>
+        </svg>
       </span>
     </span>
   </div>

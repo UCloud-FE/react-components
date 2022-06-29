@@ -3,12 +3,23 @@ import classnames from 'classnames';
 
 import Checkbox from 'src/components/Checkbox';
 import Tooltip from 'src/components/Tooltip';
+import SvgIcon from 'src/components/SvgIcon';
 import { useItem, Key } from 'src/hooks/group';
 import { Override } from 'src/type';
 import noop from 'src/utils/noop';
 
 import MenuContext from './MenuContext';
-import { itemCls, selectedCls, checkboxCls, disabledCls, firstCls, lastCls } from './style';
+import {
+    itemCls,
+    selectedCls,
+    checkboxCls,
+    disabledCls,
+    firstCls,
+    lastCls,
+    contentCls,
+    iconCls,
+    selectStyleCls
+} from './style';
 
 export interface ItemProps {
     /** item的唯一键，不传使用 key 作为键值 */
@@ -46,15 +57,23 @@ const Item = ({
                 disabled && disabledCls,
                 className,
                 isFirst && firstCls,
-                isLast && lastCls
+                isLast && lastCls,
+                groupContext.selectStyle && selectStyleCls
             )}
             onClick={disabled ? noop : toggle}
             {...rest}
         >
             {groupContext.multiple ? (
-                <Checkbox className={checkboxCls} checked={selected} disabled={disabled} size="lg">
-                    {children}
-                </Checkbox>
+                groupContext.selectStyle ? (
+                    <>
+                        <span className={contentCls}>{children}</span>
+                        {selected && <SvgIcon type="tick-small" className={iconCls} />}
+                    </>
+                ) : (
+                    <Checkbox className={checkboxCls} checked={selected} disabled={disabled} size="lg">
+                        {children}
+                    </Checkbox>
+                )
             ) : (
                 children
             )}

@@ -1,3 +1,4 @@
+import React, { CSSProperties, ReactNode, HTMLAttributes } from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import classnames from 'classnames';
@@ -8,10 +9,11 @@ import {
     getControlFontSizeBySize,
     getControlHeightBySize,
     getControlSpacingBySize,
-    inlineBlockWithVerticalMixin,
     sWrap
 } from 'src/style';
 import config from 'src/config';
+import Icon from 'src/components/Icon';
+import deprecatedLog from 'src/utils/deprecatedLog';
 
 import { InputProps } from '../Input';
 
@@ -20,7 +22,6 @@ export const prefixCls = _prefixCls + '-input';
 export const focusedCls = prefixCls + '-focused';
 export const disabledCls = prefixCls + '-disabled';
 export const blockCls = prefixCls + '-block';
-export const inputWrapCls = prefixCls + '-wrap';
 export const inputPrefixCls = prefixCls + '-prefix';
 export const inputSuffixCls = prefixCls + '-suffix';
 export const clearCls = prefixCls + '-clear';
@@ -30,15 +31,67 @@ export const SearchIcon = styled(SvgIcon)`
     cursor: pointer;
 `;
 
-export const SWrap = sWrap<
-    Pick<InputProps, 'disabled' | 'status' | 'customStyle'> &
-        Required<Pick<InputProps, 'size'>> & {
-            focused: boolean;
-            empty: boolean;
-        },
-    HTMLSpanElement
->({
-    className: ({ focused, disabled }) => classnames(prefixCls, focused && focusedCls, disabled && disabledCls)
+const deprecatedLogForIcon = deprecatedLog('Input icon', 'suffix');
+export const Prefix = React.memo(function Prefix({ children }: { children?: ReactNode }) {
+    return children ? <span className={inputPrefixCls}>{children}</span> : null;
+});
+export const Suffix = React.memo(function Suffix({
+    icon,
+    children
+}: {
+    icon?: string | ReactNode;
+    children?: ReactNode;
+}) {
+    if (icon) {
+        deprecatedLogForIcon();
+    }
+    let suffix = null;
+    if (children) {
+        suffix = children;
+    } else if (typeof icon === 'string') {
+        suffix = <Icon type={icon} />;
+    } else if (React.isValidElement(icon)) {
+        suffix = icon;
+    }
+    if (suffix) {
+        return <span className={inputSuffixCls}>{suffix}</span>;
+    }
+    return null;
+});
+export const Clear = React.memo(function Clear({
+    clearable,
+    ...rest
+}: Pick<InputProps, 'clearable'> & HTMLAttributes<HTMLSpanElement>) {
+    if (clearable) {
+        return (
+            <span {...rest} className={clearCls}>
+                <SvgIcon type="cross-circle-filled" />
+            </span>
+        );
+    }
+    return null;
+});
+
+export const InputPart = styled.span<{ stretch?: boolean; visible?: boolean }>(props => {
+    const { stretch, visible } = props;
+    return css`
+        &&& {
+            flex: ${stretch ? '1 1 auto' : '0 0 auto'};
+            visibility: ${visible === false ? 'hidden' : 'visible'};
+        }
+    `;
+});
+
+export type InputWrapProps = Pick<InputProps, 'block' | 'disabled' | 'status' | 'customStyle'> &
+    Required<Pick<InputProps, 'size'>> & {
+        focused?: boolean;
+        empty?: boolean;
+        cursor?: CSSProperties['cursor'];
+    };
+
+export const InputWrap = sWrap<InputWrapProps, HTMLSpanElement>({
+    className: ({ focused, disabled, block }) =>
+        classnames(prefixCls, focused && focusedCls, disabled && disabledCls, block && blockCls)
 })(
     styled.span(props => {
         const {
@@ -48,7 +101,8 @@ export const SWrap = sWrap<
             focused,
             status,
             customStyle,
-            empty
+            empty,
+            cursor
         } = props;
         const height = getControlHeightBySize(DT, size);
         const fontSize = getControlFontSizeBySize(DT, size);
@@ -68,7 +122,10 @@ export const SWrap = sWrap<
             box-shadow: ${DT.T_SHADOW_INSET_DEFAULT};
             background: ${DT.T_INPUT_COLOR_BG_DEFAULT};
             transition: .18s cubic-bezier(.4,0,.2,1);
-            ${inlineBlockWithVerticalMixin};
+            cursor: ${cursor};
+            display:  inline-flex;
+            vertical-align: middle;
+            align-items: center;
 
             :hover {
                 color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
@@ -83,30 +140,28 @@ export const SWrap = sWrap<
                 color: ${DT.T_COLOR_TEXT_REMARK_LIGHT};
                 fill: ${DT.T_COLOR_TEXT_REMARK_LIGHT};
                 opacity: 0;
-                transition: opacity 0.3s;
+                transition: opacity 0.3s, color 0.1s, fill 0.1s;
                 &:hover {
                     color: ${DT.T_COLOR_TEXT_REMARK_DARK};
                     fill: ${DT.T_COLOR_TEXT_REMARK_DARK};
                 }
             }
-            .${inputWrapCls}, .${inputPrefixCls}, .${inputSuffixCls}, .${clearCls}, input {
+            &, .${inputPrefixCls}, .${inputSuffixCls}, .${clearCls}, input, ${InputPart} {
                 padding: 0 ${halfSpacing};
             }
 
             &.${blockCls} {
-                display: block;
+                display: flex;
             }
 
-            .${inputWrapCls} {
-                height: 100%;
-                display: flex;
-                align-items: center;
-            }
-            .${inputPrefixCls}, .${inputSuffixCls} {
-                display: flex;
+            .${inputPrefixCls}, .${inputSuffixCls}, ${InputPart} {
+                display: inline-flex;
                 height: 100%;
                 align-items: center;
                 flex: 0 0 auto;
+            }
+            ${InputPart}[hidden] {
+                display: none;
             }
             .${inputBlockWrapCls} {
                 height: ${{ sm: 16, md: 18, lg: 20 }[size]}px;

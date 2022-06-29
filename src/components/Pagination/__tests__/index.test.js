@@ -66,36 +66,36 @@ describe('Pagination', () => {
         );
     });
 
-    test('change pagesize', () => {
-        const onPageSizeChange = jest.fn();
-        const wrapper = mount(
-            <Pagination
-                pageSize={10}
-                showSizeChanger
-                onPageSizeChange={onPageSizeChange}
-                total={100}
-                optionsProps={{ select: { popoverProps: { getPopupContainer: () => document.body } } }}
-            />
-        );
+    // test('change pagesize', () => {
+    //     const onPageSizeChange = jest.fn();
+    //     const wrapper = mount(
+    //         <Pagination
+    //             pageSize={10}
+    //             showSizeChanger
+    //             onPageSizeChange={onPageSizeChange}
+    //             total={100}
+    //             optionsProps={{ select: { popoverProps: { getPopupContainer: () => document.body } } }}
+    //         />
+    //     );
 
-        expect(wrapper.find('li').length).toBe(10);
-        wrapper.setProps({
-            pageSize: 30
-        });
-        expect(wrapper.find('li').length).toBe(7);
+    //     expect(wrapper.find('li').length).toBe(10);
+    //     wrapper.setProps({
+    //         pageSize: 30
+    //     });
+    //     expect(wrapper.find('li').length).toBe(7);
 
-        wrapper.find('div.uc-fe-pagination-options-size-changer').at(0).childAt(0).simulate('click');
-        expect(document.querySelectorAll('.uc-fe-popover').length).toBe(1);
-        expect(document.querySelectorAll('.uc-fe-popover.uc-fe-popover-hidden').length).toBe(0);
-        expect(document.querySelectorAll('div.uc-fe-popover>div>div>div>div>div').length).toBe(4);
+    //     wrapper.find('div.uc-fe-pagination-options-size-changer').at(0).childAt(0).simulate('click');
+    //     expect(document.querySelectorAll('.uc-fe-popover').length).toBe(1);
+    //     expect(document.querySelectorAll('.uc-fe-popover.uc-fe-popover-hidden').length).toBe(0);
+    //     expect(document.querySelectorAll('div.uc-fe-popover>div>div>div>div>div').length).toBe(4);
 
-        document.querySelectorAll('div.uc-fe-popover>div>div>div>div>div')[1].click();
+    //     document.querySelectorAll('div.uc-fe-popover>div>div>div>div>div')[1].click();
 
-        expect(onPageSizeChange).toHaveBeenCalledTimes(1);
-        expect(onPageSizeChange).toHaveBeenLastCalledWith(1, 20);
+    //     expect(onPageSizeChange).toHaveBeenCalledTimes(1);
+    //     expect(onPageSizeChange).toHaveBeenLastCalledWith(1, 20);
 
-        wrapper.unmount();
-    });
+    //     wrapper.unmount();
+    // });
 
     test('quick jumper', () => {
         const onChange = jest.fn();

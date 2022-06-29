@@ -1,4 +1,4 @@
-export default <T extends Record<string, unknown>>(obj: T, keys: (keyof T)[]) => {
+export default <T>(obj: T, keys: (keyof T)[]) => {
     const result: any = {};
     keys.forEach(key => {
         if (key in obj) {

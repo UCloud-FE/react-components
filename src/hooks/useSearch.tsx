@@ -13,7 +13,7 @@ const genCancelError = () => {
     error.__is_cancel_error__ = true;
     return error;
 };
-const isCancelError = (error: CancelError | Error): error is CancelError => {
+const isCancelError = (error: CancelError | Error | unknown): error is CancelError => {
     return !!(error as CancelError)?.__is_cancel_error__;
 };
 

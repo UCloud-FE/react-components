@@ -9,7 +9,7 @@ export const SvgIconWrapper = withProps({})(
         const { color, size, spin } = props;
 
         return css`
-            transition: all 0.3s;
+            transition: fill 0.3s, width 0.3s, height 0.3s;
 
             ${inlineBlockWithVerticalMixin};
 

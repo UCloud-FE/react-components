@@ -38,8 +38,15 @@ exports[`Cascader demo -- base 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -61,8 +68,8 @@ exports[`Cascader demo -- base 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -70,36 +77,29 @@ exports[`Cascader demo -- base 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -108,6 +108,10 @@ exports[`Cascader demo -- base 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -171,8 +175,8 @@ exports[`Cascader demo -- base 1`] = `
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -217,8 +221,15 @@ exports[`Cascader demo -- base 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -240,8 +251,8 @@ exports[`Cascader demo -- base 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -249,36 +260,29 @@ exports[`Cascader demo -- base 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -287,6 +291,10 @@ exports[`Cascader demo -- base 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -350,8 +358,8 @@ exports[`Cascader demo -- base 1`] = `
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -366,30 +374,26 @@ exports[`Cascader demo -- base 1`] = `
     class="uc-fe-input uc-fe-input-block uc-fe-cascader-input emotion-2 emotion-3"
   >
     <span
-      class="uc-fe-input-wrap"
+      class="uc-fe-input-block-wrap"
     >
-      <span
-        class="uc-fe-input-block-wrap"
+      <input
+        placeholder="请选择"
+        readonly=""
+        value=""
+      />
+    </span>
+    <span
+      class="uc-fe-input-suffix"
+    >
+      <svg
+        class=" emotion-0 emotion-1"
+        viewBox="0 0 24 24"
       >
-        <input
-          placeholder="请选择"
-          readonly=""
-          value=""
+        <path
+          d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+          transform="matrix(-1 0 0 1 24 0)"
         />
-      </span>
-      <span
-        class="uc-fe-input-suffix"
-      >
-        <svg
-          class=" emotion-0 emotion-1"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-            transform="matrix(-1 0 0 1 24 0)"
-          />
-        </svg>
-      </span>
+      </svg>
     </span>
   </span>
 </div>
@@ -437,8 +441,15 @@ Array [
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -460,8 +471,8 @@ Array [
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -469,36 +480,29 @@ Array [
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -507,6 +511,10 @@ Array [
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -570,8 +578,8 @@ Array [
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -616,8 +624,15 @@ Array [
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -639,8 +654,8 @@ Array [
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -648,36 +663,29 @@ Array [
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -686,6 +694,10 @@ Array [
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -749,8 +761,8 @@ Array [
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -765,30 +777,26 @@ Array [
       class="uc-fe-input uc-fe-input-block uc-fe-cascader-input emotion-2 emotion-3"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-block-wrap"
       >
-        <span
-          class="uc-fe-input-block-wrap"
+        <input
+          placeholder="请选择"
+          readonly=""
+          value=""
+        />
+      </span>
+      <span
+        class="uc-fe-input-suffix"
+      >
+        <svg
+          class=" emotion-0 emotion-1"
+          viewBox="0 0 24 24"
         >
-          <input
-            placeholder="请选择"
-            readonly=""
-            value=""
+          <path
+            d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+            transform="matrix(-1 0 0 1 24 0)"
           />
-        </span>
-        <span
-          class="uc-fe-input-suffix"
-        >
-          <svg
-            class=" emotion-0 emotion-1"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-              transform="matrix(-1 0 0 1 24 0)"
-            />
-          </svg>
-        </span>
+        </svg>
       </span>
     </span>
   </div>,
@@ -832,8 +840,15 @@ Array [
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -855,8 +870,8 @@ Array [
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -864,36 +879,29 @@ Array [
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -902,6 +910,10 @@ Array [
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -965,8 +977,8 @@ Array [
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -1011,8 +1023,15 @@ Array [
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -1034,8 +1053,8 @@ Array [
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -1043,36 +1062,29 @@ Array [
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1081,6 +1093,10 @@ Array [
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -1144,8 +1160,8 @@ Array [
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -1160,30 +1176,26 @@ Array [
       class="uc-fe-input uc-fe-input-block uc-fe-cascader-input emotion-2 emotion-3"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-block-wrap"
       >
-        <span
-          class="uc-fe-input-block-wrap"
+        <input
+          placeholder="请选择"
+          readonly=""
+          value=""
+        />
+      </span>
+      <span
+        class="uc-fe-input-suffix"
+      >
+        <svg
+          class=" emotion-0 emotion-1"
+          viewBox="0 0 24 24"
         >
-          <input
-            placeholder="请选择"
-            readonly=""
-            value=""
+          <path
+            d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+            transform="matrix(-1 0 0 1 24 0)"
           />
-        </span>
-        <span
-          class="uc-fe-input-suffix"
-        >
-          <svg
-            class=" emotion-0 emotion-1"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-              transform="matrix(-1 0 0 1 24 0)"
-            />
-          </svg>
-        </span>
+        </svg>
       </span>
     </span>
   </div>,
@@ -1227,8 +1239,15 @@ Array [
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -1250,8 +1269,8 @@ Array [
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -1259,36 +1278,29 @@ Array [
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1297,6 +1309,10 @@ Array [
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -1360,8 +1376,8 @@ Array [
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -1406,8 +1422,15 @@ Array [
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -1429,8 +1452,8 @@ Array [
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -1438,36 +1461,29 @@ Array [
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1476,6 +1492,10 @@ Array [
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -1539,8 +1559,8 @@ Array [
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -1555,30 +1575,26 @@ Array [
       class="uc-fe-input uc-fe-input-block uc-fe-cascader-input emotion-2 emotion-3"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-block-wrap"
       >
-        <span
-          class="uc-fe-input-block-wrap"
+        <input
+          placeholder="请选择"
+          readonly=""
+          value=""
+        />
+      </span>
+      <span
+        class="uc-fe-input-suffix"
+      >
+        <svg
+          class=" emotion-0 emotion-1"
+          viewBox="0 0 24 24"
         >
-          <input
-            placeholder="请选择"
-            readonly=""
-            value=""
+          <path
+            d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+            transform="matrix(-1 0 0 1 24 0)"
           />
-        </span>
-        <span
-          class="uc-fe-input-suffix"
-        >
-          <svg
-            class=" emotion-0 emotion-1"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-              transform="matrix(-1 0 0 1 24 0)"
-            />
-          </svg>
-        </span>
+        </svg>
       </span>
     </span>
   </div>,
@@ -1622,8 +1638,15 @@ Array [
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -1645,8 +1668,8 @@ Array [
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -1654,36 +1677,29 @@ Array [
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1692,6 +1708,10 @@ Array [
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -1755,8 +1775,8 @@ Array [
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -1801,8 +1821,15 @@ Array [
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -1824,8 +1851,8 @@ Array [
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -1833,36 +1860,29 @@ Array [
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -1871,6 +1891,10 @@ Array [
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -1934,8 +1958,8 @@ Array [
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -1950,30 +1974,26 @@ Array [
       class="uc-fe-input uc-fe-input-block uc-fe-cascader-input emotion-2 emotion-3"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-block-wrap"
       >
-        <span
-          class="uc-fe-input-block-wrap"
+        <input
+          placeholder="请选择"
+          readonly=""
+          value=""
+        />
+      </span>
+      <span
+        class="uc-fe-input-suffix"
+      >
+        <svg
+          class=" emotion-0 emotion-1"
+          viewBox="0 0 24 24"
         >
-          <input
-            placeholder="请选择"
-            readonly=""
-            value=""
+          <path
+            d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+            transform="matrix(-1 0 0 1 24 0)"
           />
-        </span>
-        <span
-          class="uc-fe-input-suffix"
-        >
-          <svg
-            class=" emotion-0 emotion-1"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-              transform="matrix(-1 0 0 1 24 0)"
-            />
-          </svg>
-        </span>
+        </svg>
       </span>
     </span>
   </div>,
@@ -2017,8 +2037,15 @@ Array [
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -2040,8 +2067,8 @@ Array [
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -2049,36 +2076,29 @@ Array [
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -2087,6 +2107,10 @@ Array [
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -2150,8 +2174,8 @@ Array [
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -2196,8 +2220,15 @@ Array [
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -2219,8 +2250,8 @@ Array [
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -2228,36 +2259,29 @@ Array [
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -2266,6 +2290,10 @@ Array [
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -2329,8 +2357,8 @@ Array [
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -2345,30 +2373,26 @@ Array [
       class="uc-fe-input uc-fe-input-block uc-fe-cascader-input emotion-2 emotion-3"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-block-wrap"
       >
-        <span
-          class="uc-fe-input-block-wrap"
+        <input
+          placeholder="请选择"
+          readonly=""
+          value=""
+        />
+      </span>
+      <span
+        class="uc-fe-input-suffix"
+      >
+        <svg
+          class=" emotion-0 emotion-1"
+          viewBox="0 0 24 24"
         >
-          <input
-            placeholder="请选择"
-            readonly=""
-            value=""
+          <path
+            d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+            transform="matrix(-1 0 0 1 24 0)"
           />
-        </span>
-        <span
-          class="uc-fe-input-suffix"
-        >
-          <svg
-            class=" emotion-0 emotion-1"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-              transform="matrix(-1 0 0 1 24 0)"
-            />
-          </svg>
-        </span>
+        </svg>
       </span>
     </span>
   </div>,
@@ -2399,8 +2423,8 @@ Array [
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -2422,8 +2446,15 @@ Array [
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -2445,8 +2476,8 @@ Array [
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -2454,36 +2485,29 @@ Array [
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -2492,6 +2516,10 @@ Array [
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -2584,8 +2612,8 @@ Array [
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -2607,8 +2635,15 @@ Array [
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -2630,8 +2665,8 @@ Array [
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -2639,36 +2674,29 @@ Array [
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -2677,6 +2705,10 @@ Array [
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -2752,30 +2784,26 @@ Array [
       class="uc-fe-input uc-fe-input-block uc-fe-cascader-input emotion-2 emotion-3"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-block-wrap"
       >
-        <span
-          class="uc-fe-input-block-wrap"
+        <input
+          placeholder="请选择"
+          readonly=""
+          value="root-xxxxxxx"
+        />
+      </span>
+      <span
+        class="uc-fe-input-suffix"
+      >
+        <svg
+          class=" emotion-0 emotion-1"
+          viewBox="0 0 24 24"
         >
-          <input
-            placeholder="请选择"
-            readonly=""
-            value="root-xxxxxxx"
+          <path
+            d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+            transform="matrix(-1 0 0 1 24 0)"
           />
-        </span>
-        <span
-          class="uc-fe-input-suffix"
-        >
-          <svg
-            class=" emotion-0 emotion-1"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-              transform="matrix(-1 0 0 1 24 0)"
-            />
-          </svg>
-        </span>
+        </svg>
       </span>
     </span>
   </div>,
@@ -2819,8 +2847,15 @@ Array [
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -2842,8 +2877,8 @@ Array [
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -2851,36 +2886,29 @@ Array [
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -2889,6 +2917,10 @@ Array [
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -2952,8 +2984,8 @@ Array [
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -2998,8 +3030,15 @@ Array [
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -3021,8 +3060,8 @@ Array [
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -3030,36 +3069,29 @@ Array [
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -3068,6 +3100,10 @@ Array [
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -3131,8 +3167,8 @@ Array [
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -3147,29 +3183,25 @@ Array [
       class="uc-fe-input uc-fe-input-block uc-fe-cascader-input emotion-2 emotion-3"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-block-wrap"
       >
-        <span
-          class="uc-fe-input-block-wrap"
+        <input
+          placeholder="请选择"
+          value=""
+        />
+      </span>
+      <span
+        class="uc-fe-input-suffix"
+      >
+        <svg
+          class=" emotion-0 emotion-1"
+          viewBox="0 0 24 24"
         >
-          <input
-            placeholder="请选择"
-            value=""
+          <path
+            d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+            transform="matrix(-1 0 0 1 24 0)"
           />
-        </span>
-        <span
-          class="uc-fe-input-suffix"
-        >
-          <svg
-            class=" emotion-0 emotion-1"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-              transform="matrix(-1 0 0 1 24 0)"
-            />
-          </svg>
-        </span>
+        </svg>
       </span>
     </span>
   </div>,
@@ -3213,8 +3245,15 @@ Array [
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -3236,8 +3275,8 @@ Array [
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -3245,36 +3284,29 @@ Array [
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -3283,6 +3315,10 @@ Array [
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -3346,8 +3382,8 @@ Array [
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -3392,8 +3428,15 @@ Array [
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -3415,8 +3458,8 @@ Array [
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -3424,36 +3467,29 @@ Array [
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -3462,6 +3498,10 @@ Array [
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -3525,8 +3565,8 @@ Array [
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -3541,30 +3581,26 @@ Array [
       class="uc-fe-input uc-fe-input-block uc-fe-cascader-input emotion-2 emotion-3"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-block-wrap"
       >
-        <span
-          class="uc-fe-input-block-wrap"
+        <input
+          placeholder="请选择"
+          readonly=""
+          value=""
+        />
+      </span>
+      <span
+        class="uc-fe-input-suffix"
+      >
+        <svg
+          class=" emotion-0 emotion-1"
+          viewBox="0 0 24 24"
         >
-          <input
-            placeholder="请选择"
-            readonly=""
-            value=""
+          <path
+            d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+            transform="matrix(-1 0 0 1 24 0)"
           />
-        </span>
-        <span
-          class="uc-fe-input-suffix"
-        >
-          <svg
-            class=" emotion-0 emotion-1"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-              transform="matrix(-1 0 0 1 24 0)"
-            />
-          </svg>
-        </span>
+        </svg>
       </span>
     </span>
   </div>,
@@ -3608,8 +3644,15 @@ Array [
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -3631,8 +3674,8 @@ Array [
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -3640,36 +3683,29 @@ Array [
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -3678,6 +3714,10 @@ Array [
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -3741,8 +3781,8 @@ Array [
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -3787,8 +3827,15 @@ Array [
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -3810,8 +3857,8 @@ Array [
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -3819,36 +3866,29 @@ Array [
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -3857,6 +3897,10 @@ Array [
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -3920,8 +3964,8 @@ Array [
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -3936,30 +3980,26 @@ Array [
       class="uc-fe-input uc-fe-input-block uc-fe-cascader-input emotion-2 emotion-3"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-block-wrap"
       >
-        <span
-          class="uc-fe-input-block-wrap"
+        <input
+          placeholder="请选择"
+          readonly=""
+          value=""
+        />
+      </span>
+      <span
+        class="uc-fe-input-suffix"
+      >
+        <svg
+          class=" emotion-0 emotion-1"
+          viewBox="0 0 24 24"
         >
-          <input
-            placeholder="请选择"
-            readonly=""
-            value=""
+          <path
+            d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+            transform="matrix(-1 0 0 1 24 0)"
           />
-        </span>
-        <span
-          class="uc-fe-input-suffix"
-        >
-          <svg
-            class=" emotion-0 emotion-1"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-              transform="matrix(-1 0 0 1 24 0)"
-            />
-          </svg>
-        </span>
+        </svg>
       </span>
     </span>
   </div>,
@@ -4004,8 +4044,15 @@ exports[`Cascader demo -- cascader 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-82:hover {
@@ -4027,8 +4074,8 @@ exports[`Cascader demo -- cascader 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-82 .uc-fe-input-clear:hover {
@@ -4036,36 +4083,29 @@ exports[`Cascader demo -- cascader 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-82 .uc-fe-input-wrap,
+.emotion-82,
 .emotion-82 .uc-fe-input-prefix,
 .emotion-82 .uc-fe-input-suffix,
 .emotion-82 .uc-fe-input-clear,
-.emotion-82 input {
+.emotion-82 input,
+.emotion-82 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-82.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-82 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-82 .uc-fe-input-prefix,
-.emotion-82 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-82 .uc-fe-input-suffix,
+.emotion-82 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -4074,6 +4114,10 @@ exports[`Cascader demo -- cascader 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-82 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-82 .uc-fe-input-block-wrap {
@@ -4137,8 +4181,8 @@ exports[`Cascader demo -- cascader 1`] = `
 }
 
 .emotion-80 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -4422,8 +4466,8 @@ exports[`Cascader demo -- cascader 1`] = `
 }
 
 .emotion-39 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -4581,8 +4625,15 @@ exports[`Cascader demo -- cascader 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-82:hover {
@@ -4604,8 +4655,8 @@ exports[`Cascader demo -- cascader 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-82 .uc-fe-input-clear:hover {
@@ -4613,36 +4664,29 @@ exports[`Cascader demo -- cascader 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-82 .uc-fe-input-wrap,
+.emotion-82,
 .emotion-82 .uc-fe-input-prefix,
 .emotion-82 .uc-fe-input-suffix,
 .emotion-82 .uc-fe-input-clear,
-.emotion-82 input {
+.emotion-82 input,
+.emotion-82 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-82.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-82 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-82 .uc-fe-input-prefix,
-.emotion-82 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-82 .uc-fe-input-suffix,
+.emotion-82 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -4651,6 +4695,10 @@ exports[`Cascader demo -- cascader 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-82 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-82 .uc-fe-input-block-wrap {
@@ -4714,8 +4762,8 @@ exports[`Cascader demo -- cascader 1`] = `
 }
 
 .emotion-80 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -4999,8 +5047,8 @@ exports[`Cascader demo -- cascader 1`] = `
 }
 
 .emotion-39 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -5373,30 +5421,26 @@ exports[`Cascader demo -- cascader 1`] = `
         class="uc-fe-input uc-fe-input-block uc-fe-cascader-input emotion-82 emotion-83"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
+          <input
+            placeholder="请选择"
+            readonly=""
+            value=""
+          />
+        </span>
+        <span
+          class="uc-fe-input-suffix"
+        >
+          <svg
+            class=" emotion-80 emotion-40"
+            viewBox="0 0 24 24"
           >
-            <input
-              placeholder="请选择"
-              readonly=""
-              value=""
+            <path
+              d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+              transform="matrix(-1 0 0 1 24 0)"
             />
-          </span>
-          <span
-            class="uc-fe-input-suffix"
-          >
-            <svg
-              class=" emotion-80 emotion-40"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-                transform="matrix(-1 0 0 1 24 0)"
-              />
-            </svg>
-          </span>
+          </svg>
         </span>
       </span>
     </div>
@@ -5429,8 +5473,8 @@ exports[`Cascader demo -- clearable 1`] = `
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -5452,8 +5496,15 @@ exports[`Cascader demo -- clearable 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-4:hover {
@@ -5475,8 +5526,8 @@ exports[`Cascader demo -- clearable 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-4 .uc-fe-input-clear:hover {
@@ -5484,36 +5535,29 @@ exports[`Cascader demo -- clearable 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-4 .uc-fe-input-wrap,
+.emotion-4,
 .emotion-4 .uc-fe-input-prefix,
 .emotion-4 .uc-fe-input-suffix,
 .emotion-4 .uc-fe-input-clear,
-.emotion-4 input {
+.emotion-4 input,
+.emotion-4 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-4.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-4 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-4 .uc-fe-input-prefix,
-.emotion-4 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-4 .uc-fe-input-suffix,
+.emotion-4 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -5522,6 +5566,10 @@ exports[`Cascader demo -- clearable 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-4 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-4 .uc-fe-input-block-wrap {
@@ -5614,8 +5662,8 @@ exports[`Cascader demo -- clearable 1`] = `
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -5637,8 +5685,15 @@ exports[`Cascader demo -- clearable 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-4:hover {
@@ -5660,8 +5715,8 @@ exports[`Cascader demo -- clearable 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-4 .uc-fe-input-clear:hover {
@@ -5669,36 +5724,29 @@ exports[`Cascader demo -- clearable 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-4 .uc-fe-input-wrap,
+.emotion-4,
 .emotion-4 .uc-fe-input-prefix,
 .emotion-4 .uc-fe-input-suffix,
 .emotion-4 .uc-fe-input-clear,
-.emotion-4 input {
+.emotion-4 input,
+.emotion-4 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-4.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-4 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-4 .uc-fe-input-prefix,
-.emotion-4 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-4 .uc-fe-input-suffix,
+.emotion-4 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -5707,6 +5755,10 @@ exports[`Cascader demo -- clearable 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-4 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-4 .uc-fe-input-block-wrap {
@@ -5786,42 +5838,38 @@ exports[`Cascader demo -- clearable 1`] = `
         class="uc-fe-input uc-fe-input-block uc-fe-cascader-input emotion-4 emotion-5"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
+          <input
+            placeholder="请选择"
+            readonly=""
+            value="parent title/children title"
+          />
           <span
-            class="uc-fe-input-block-wrap"
-          >
-            <input
-              placeholder="请选择"
-              readonly=""
-              value="parent title/children title"
-            />
-            <span
-              class="uc-fe-input-clear"
-            >
-              <svg
-                class=" emotion-0 emotion-1"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19.0796033,4.93039665 C22.9806039,8.83139725 22.9806039,15.1786027 19.0796033,19.0796033 C15.1786027,22.9806039 8.83139725,22.9806039 4.93039665,19.0796033 C1.02939605,15.1786027 1.02939605,8.83139725 4.93039665,4.93039665 C8.83139725,1.02939605 15.1786027,1.02939605 19.0796033,4.93039665 Z M15.8638746,8.14612545 C15.5086973,7.7909482 14.9327603,7.7909482 14.577583,8.14612545 L12.005,10.7187085 L9.43241697,8.14612545 C9.07723972,7.7909482 8.50130269,7.7909482 8.14612545,8.14612545 C7.7909482,8.50130269 7.7909482,9.07723972 8.14612545,9.43241697 L10.7187085,12.005 L8.14612545,14.577583 C7.7909482,14.9327603 7.7909482,15.5086973 8.14612545,15.8638746 C8.50130269,16.2190518 9.07723972,16.2190518 9.43241697,15.8638746 L12.005,13.2912915 L14.577583,15.8638746 C14.9327603,16.2190518 15.5086973,16.2190518 15.8638746,15.8638746 C16.2190518,15.5086973 16.2190518,14.9327603 15.8638746,14.577583 L13.2912915,12.005 L15.8638746,9.43241697 C16.2190518,9.07723972 16.2190518,8.50130269 15.8638746,8.14612545 Z"
-                />
-              </svg>
-            </span>
-          </span>
-          <span
-            class="uc-fe-input-suffix"
+            class="uc-fe-input-clear"
           >
             <svg
               class=" emotion-0 emotion-1"
               viewBox="0 0 24 24"
             >
               <path
-                d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-                transform="matrix(-1 0 0 1 24 0)"
+                d="M19.0796033,4.93039665 C22.9806039,8.83139725 22.9806039,15.1786027 19.0796033,19.0796033 C15.1786027,22.9806039 8.83139725,22.9806039 4.93039665,19.0796033 C1.02939605,15.1786027 1.02939605,8.83139725 4.93039665,4.93039665 C8.83139725,1.02939605 15.1786027,1.02939605 19.0796033,4.93039665 Z M15.8638746,8.14612545 C15.5086973,7.7909482 14.9327603,7.7909482 14.577583,8.14612545 L12.005,10.7187085 L9.43241697,8.14612545 C9.07723972,7.7909482 8.50130269,7.7909482 8.14612545,8.14612545 C7.7909482,8.50130269 7.7909482,9.07723972 8.14612545,9.43241697 L10.7187085,12.005 L8.14612545,14.577583 C7.7909482,14.9327603 7.7909482,15.5086973 8.14612545,15.8638746 C8.50130269,16.2190518 9.07723972,16.2190518 9.43241697,15.8638746 L12.005,13.2912915 L14.577583,15.8638746 C14.9327603,16.2190518 15.5086973,16.2190518 15.8638746,15.8638746 C16.2190518,15.5086973 16.2190518,14.9327603 15.8638746,14.577583 L13.2912915,12.005 L15.8638746,9.43241697 C16.2190518,9.07723972 16.2190518,8.50130269 15.8638746,8.14612545 Z"
               />
             </svg>
           </span>
+        </span>
+        <span
+          class="uc-fe-input-suffix"
+        >
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+              transform="matrix(-1 0 0 1 24 0)"
+            />
+          </svg>
         </span>
       </span>
     </div>
@@ -5836,30 +5884,26 @@ exports[`Cascader demo -- clearable 1`] = `
         class="uc-fe-input uc-fe-input-block uc-fe-cascader-input emotion-4 emotion-5"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
+          <input
+            placeholder="请选择"
+            readonly=""
+            value="parent title/children title"
+          />
+        </span>
+        <span
+          class="uc-fe-input-suffix"
+        >
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
           >
-            <input
-              placeholder="请选择"
-              readonly=""
-              value="parent title/children title"
+            <path
+              d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+              transform="matrix(-1 0 0 1 24 0)"
             />
-          </span>
-          <span
-            class="uc-fe-input-suffix"
-          >
-            <svg
-              class=" emotion-0 emotion-1"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-                transform="matrix(-1 0 0 1 24 0)"
-              />
-            </svg>
-          </span>
+          </svg>
         </span>
       </span>
     </div>
@@ -5905,8 +5949,15 @@ exports[`Cascader demo -- disabled 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-8:hover {
@@ -5928,8 +5979,8 @@ exports[`Cascader demo -- disabled 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-8 .uc-fe-input-clear:hover {
@@ -5937,36 +5988,29 @@ exports[`Cascader demo -- disabled 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-8 .uc-fe-input-wrap,
+.emotion-8,
 .emotion-8 .uc-fe-input-prefix,
 .emotion-8 .uc-fe-input-suffix,
 .emotion-8 .uc-fe-input-clear,
-.emotion-8 input {
+.emotion-8 input,
+.emotion-8 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-8.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-8 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-8 .uc-fe-input-prefix,
-.emotion-8 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-8 .uc-fe-input-suffix,
+.emotion-8 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -5975,6 +6019,10 @@ exports[`Cascader demo -- disabled 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-8 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-8 .uc-fe-input-block-wrap {
@@ -6038,8 +6086,8 @@ exports[`Cascader demo -- disabled 1`] = `
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -6061,8 +6109,15 @@ exports[`Cascader demo -- disabled 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   box-shadow: none;
 }
 
@@ -6085,8 +6140,8 @@ exports[`Cascader demo -- disabled 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -6094,36 +6149,29 @@ exports[`Cascader demo -- disabled 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -6132,6 +6180,10 @@ exports[`Cascader demo -- disabled 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -6239,8 +6291,15 @@ exports[`Cascader demo -- disabled 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-8:hover {
@@ -6262,8 +6321,8 @@ exports[`Cascader demo -- disabled 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-8 .uc-fe-input-clear:hover {
@@ -6271,36 +6330,29 @@ exports[`Cascader demo -- disabled 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-8 .uc-fe-input-wrap,
+.emotion-8,
 .emotion-8 .uc-fe-input-prefix,
 .emotion-8 .uc-fe-input-suffix,
 .emotion-8 .uc-fe-input-clear,
-.emotion-8 input {
+.emotion-8 input,
+.emotion-8 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-8.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-8 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-8 .uc-fe-input-prefix,
-.emotion-8 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-8 .uc-fe-input-suffix,
+.emotion-8 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -6309,6 +6361,10 @@ exports[`Cascader demo -- disabled 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-8 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-8 .uc-fe-input-block-wrap {
@@ -6372,8 +6428,8 @@ exports[`Cascader demo -- disabled 1`] = `
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -6395,8 +6451,15 @@ exports[`Cascader demo -- disabled 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   box-shadow: none;
 }
 
@@ -6419,8 +6482,8 @@ exports[`Cascader demo -- disabled 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -6428,36 +6491,29 @@ exports[`Cascader demo -- disabled 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -6466,6 +6522,10 @@ exports[`Cascader demo -- disabled 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -6549,31 +6609,27 @@ exports[`Cascader demo -- disabled 1`] = `
         disabled=""
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
+          <input
+            disabled=""
+            placeholder="请选择"
+            readonly=""
+            value=""
+          />
+        </span>
+        <span
+          class="uc-fe-input-suffix"
+        >
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
           >
-            <input
-              disabled=""
-              placeholder="请选择"
-              readonly=""
-              value=""
+            <path
+              d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+              transform="matrix(-1 0 0 1 24 0)"
             />
-          </span>
-          <span
-            class="uc-fe-input-suffix"
-          >
-            <svg
-              class=" emotion-0 emotion-1"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-                transform="matrix(-1 0 0 1 24 0)"
-              />
-            </svg>
-          </span>
+          </svg>
         </span>
       </span>
     </div>
@@ -6588,30 +6644,26 @@ exports[`Cascader demo -- disabled 1`] = `
         class="uc-fe-input uc-fe-input-block uc-fe-cascader-input emotion-8 emotion-3"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
+          <input
+            placeholder="请选择"
+            readonly=""
+            value=""
+          />
+        </span>
+        <span
+          class="uc-fe-input-suffix"
+        >
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
           >
-            <input
-              placeholder="请选择"
-              readonly=""
-              value=""
+            <path
+              d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+              transform="matrix(-1 0 0 1 24 0)"
             />
-          </span>
-          <span
-            class="uc-fe-input-suffix"
-          >
-            <svg
-              class=" emotion-0 emotion-1"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-                transform="matrix(-1 0 0 1 24 0)"
-              />
-            </svg>
-          </span>
+          </svg>
         </span>
       </span>
     </div>
@@ -6657,8 +6709,15 @@ exports[`Cascader demo -- loadData 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -6680,8 +6739,8 @@ exports[`Cascader demo -- loadData 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -6689,36 +6748,29 @@ exports[`Cascader demo -- loadData 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -6727,6 +6779,10 @@ exports[`Cascader demo -- loadData 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -6790,8 +6846,8 @@ exports[`Cascader demo -- loadData 1`] = `
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -6836,8 +6892,15 @@ exports[`Cascader demo -- loadData 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -6859,8 +6922,8 @@ exports[`Cascader demo -- loadData 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -6868,36 +6931,29 @@ exports[`Cascader demo -- loadData 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -6906,6 +6962,10 @@ exports[`Cascader demo -- loadData 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -6969,8 +7029,8 @@ exports[`Cascader demo -- loadData 1`] = `
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -6985,30 +7045,26 @@ exports[`Cascader demo -- loadData 1`] = `
     class="uc-fe-input uc-fe-input-block uc-fe-cascader-input emotion-2 emotion-3"
   >
     <span
-      class="uc-fe-input-wrap"
+      class="uc-fe-input-block-wrap"
     >
-      <span
-        class="uc-fe-input-block-wrap"
+      <input
+        placeholder="请选择"
+        readonly=""
+        value=""
+      />
+    </span>
+    <span
+      class="uc-fe-input-suffix"
+    >
+      <svg
+        class=" emotion-0 emotion-1"
+        viewBox="0 0 24 24"
       >
-        <input
-          placeholder="请选择"
-          readonly=""
-          value=""
+        <path
+          d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+          transform="matrix(-1 0 0 1 24 0)"
         />
-      </span>
-      <span
-        class="uc-fe-input-suffix"
-      >
-        <svg
-          class=" emotion-0 emotion-1"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-            transform="matrix(-1 0 0 1 24 0)"
-          />
-        </svg>
-      </span>
+      </svg>
     </span>
   </span>
 </div>
@@ -7052,8 +7108,15 @@ exports[`Cascader demo -- performance 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -7075,8 +7138,8 @@ exports[`Cascader demo -- performance 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -7084,36 +7147,29 @@ exports[`Cascader demo -- performance 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -7122,6 +7178,10 @@ exports[`Cascader demo -- performance 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -7185,8 +7245,8 @@ exports[`Cascader demo -- performance 1`] = `
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -7231,8 +7291,15 @@ exports[`Cascader demo -- performance 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -7254,8 +7321,8 @@ exports[`Cascader demo -- performance 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -7263,36 +7330,29 @@ exports[`Cascader demo -- performance 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -7301,6 +7361,10 @@ exports[`Cascader demo -- performance 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -7364,8 +7428,8 @@ exports[`Cascader demo -- performance 1`] = `
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -7380,29 +7444,25 @@ exports[`Cascader demo -- performance 1`] = `
     class="uc-fe-input uc-fe-input-block uc-fe-cascader-input emotion-2 emotion-3"
   >
     <span
-      class="uc-fe-input-wrap"
+      class="uc-fe-input-block-wrap"
     >
-      <span
-        class="uc-fe-input-block-wrap"
+      <input
+        placeholder="请选择"
+        value=""
+      />
+    </span>
+    <span
+      class="uc-fe-input-suffix"
+    >
+      <svg
+        class=" emotion-0 emotion-1"
+        viewBox="0 0 24 24"
       >
-        <input
-          placeholder="请选择"
-          value=""
+        <path
+          d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+          transform="matrix(-1 0 0 1 24 0)"
         />
-      </span>
-      <span
-        class="uc-fe-input-suffix"
-      >
-        <svg
-          class=" emotion-0 emotion-1"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-            transform="matrix(-1 0 0 1 24 0)"
-          />
-        </svg>
-      </span>
+      </svg>
     </span>
   </span>
 </div>
@@ -7447,8 +7507,15 @@ Array [
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -7470,8 +7537,8 @@ Array [
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -7479,36 +7546,29 @@ Array [
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -7517,6 +7577,10 @@ Array [
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -7580,8 +7644,8 @@ Array [
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -7626,8 +7690,15 @@ Array [
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -7649,8 +7720,8 @@ Array [
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -7658,36 +7729,29 @@ Array [
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -7696,6 +7760,10 @@ Array [
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -7759,8 +7827,8 @@ Array [
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -7781,29 +7849,25 @@ Array [
         class="uc-fe-input uc-fe-input-block uc-fe-cascader-input emotion-2 emotion-3"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
+          <input
+            placeholder="请选择"
+            value=""
+          />
+        </span>
+        <span
+          class="uc-fe-input-suffix"
+        >
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
           >
-            <input
-              placeholder="请选择"
-              value=""
+            <path
+              d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+              transform="matrix(-1 0 0 1 24 0)"
             />
-          </span>
-          <span
-            class="uc-fe-input-suffix"
-          >
-            <svg
-              class=" emotion-0 emotion-1"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-                transform="matrix(-1 0 0 1 24 0)"
-              />
-            </svg>
-          </span>
+          </svg>
         </span>
       </span>
     </div>
@@ -7845,8 +7909,15 @@ Array [
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -7868,8 +7939,8 @@ Array [
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -7877,36 +7948,29 @@ Array [
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -7915,6 +7979,10 @@ Array [
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -7978,8 +8046,8 @@ Array [
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -8024,8 +8092,15 @@ Array [
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -8047,8 +8122,8 @@ Array [
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -8056,36 +8131,29 @@ Array [
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -8094,6 +8162,10 @@ Array [
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -8157,8 +8229,8 @@ Array [
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -8179,29 +8251,25 @@ Array [
         class="uc-fe-input uc-fe-input-block uc-fe-cascader-input emotion-2 emotion-3"
       >
         <span
-          class="uc-fe-input-wrap"
+          class="uc-fe-input-block-wrap"
         >
-          <span
-            class="uc-fe-input-block-wrap"
+          <input
+            placeholder="请选择"
+            value=""
+          />
+        </span>
+        <span
+          class="uc-fe-input-suffix"
+        >
+          <svg
+            class=" emotion-0 emotion-1"
+            viewBox="0 0 24 24"
           >
-            <input
-              placeholder="请选择"
-              value=""
+            <path
+              d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+              transform="matrix(-1 0 0 1 24 0)"
             />
-          </span>
-          <span
-            class="uc-fe-input-suffix"
-          >
-            <svg
-              class=" emotion-0 emotion-1"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-                transform="matrix(-1 0 0 1 24 0)"
-              />
-            </svg>
-          </span>
+          </svg>
         </span>
       </span>
     </div>
@@ -8247,8 +8315,15 @@ exports[`Cascader demo -- size 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-8:hover {
@@ -8270,8 +8345,8 @@ exports[`Cascader demo -- size 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-8 .uc-fe-input-clear:hover {
@@ -8279,36 +8354,29 @@ exports[`Cascader demo -- size 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-8 .uc-fe-input-wrap,
+.emotion-8,
 .emotion-8 .uc-fe-input-prefix,
 .emotion-8 .uc-fe-input-suffix,
 .emotion-8 .uc-fe-input-clear,
-.emotion-8 input {
+.emotion-8 input,
+.emotion-8 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-8.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-8 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-8 .uc-fe-input-prefix,
-.emotion-8 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-8 .uc-fe-input-suffix,
+.emotion-8 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -8317,6 +8385,10 @@ exports[`Cascader demo -- size 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-8 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-8 .uc-fe-input-block-wrap {
@@ -8380,8 +8452,8 @@ exports[`Cascader demo -- size 1`] = `
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -8403,8 +8475,15 @@ exports[`Cascader demo -- size 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -8426,8 +8505,8 @@ exports[`Cascader demo -- size 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -8435,36 +8514,29 @@ exports[`Cascader demo -- size 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -8473,6 +8545,10 @@ exports[`Cascader demo -- size 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -8549,8 +8625,15 @@ exports[`Cascader demo -- size 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-14:hover {
@@ -8572,8 +8655,8 @@ exports[`Cascader demo -- size 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-14 .uc-fe-input-clear:hover {
@@ -8581,36 +8664,29 @@ exports[`Cascader demo -- size 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-14 .uc-fe-input-wrap,
+.emotion-14,
 .emotion-14 .uc-fe-input-prefix,
 .emotion-14 .uc-fe-input-suffix,
 .emotion-14 .uc-fe-input-clear,
-.emotion-14 input {
+.emotion-14 input,
+.emotion-14 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-14.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-14 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-14 .uc-fe-input-prefix,
-.emotion-14 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-14 .uc-fe-input-suffix,
+.emotion-14 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -8619,6 +8695,10 @@ exports[`Cascader demo -- size 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-14 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-14 .uc-fe-input-block-wrap {
@@ -8718,8 +8798,15 @@ exports[`Cascader demo -- size 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-8:hover {
@@ -8741,8 +8828,8 @@ exports[`Cascader demo -- size 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-8 .uc-fe-input-clear:hover {
@@ -8750,36 +8837,29 @@ exports[`Cascader demo -- size 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-8 .uc-fe-input-wrap,
+.emotion-8,
 .emotion-8 .uc-fe-input-prefix,
 .emotion-8 .uc-fe-input-suffix,
 .emotion-8 .uc-fe-input-clear,
-.emotion-8 input {
+.emotion-8 input,
+.emotion-8 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-8.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-8 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-8 .uc-fe-input-prefix,
-.emotion-8 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-8 .uc-fe-input-suffix,
+.emotion-8 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -8788,6 +8868,10 @@ exports[`Cascader demo -- size 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-8 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-8 .uc-fe-input-block-wrap {
@@ -8851,8 +8935,8 @@ exports[`Cascader demo -- size 1`] = `
 }
 
 .emotion-0 {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: fill 0.3s,width 0.3s,height 0.3s;
+  transition: fill 0.3s,width 0.3s,height 0.3s;
   display: inline-block;
   vertical-align: middle;
   fill: currentcolor;
@@ -8874,8 +8958,15 @@ exports[`Cascader demo -- size 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-2:hover {
@@ -8897,8 +8988,8 @@ exports[`Cascader demo -- size 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-2 .uc-fe-input-clear:hover {
@@ -8906,36 +8997,29 @@ exports[`Cascader demo -- size 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-2 .uc-fe-input-wrap,
+.emotion-2,
 .emotion-2 .uc-fe-input-prefix,
 .emotion-2 .uc-fe-input-suffix,
 .emotion-2 .uc-fe-input-clear,
-.emotion-2 input {
+.emotion-2 input,
+.emotion-2 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-2.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-2 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2 .uc-fe-input-prefix,
-.emotion-2 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-2 .uc-fe-input-suffix,
+.emotion-2 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -8944,6 +9028,10 @@ exports[`Cascader demo -- size 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-2 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-2 .uc-fe-input-block-wrap {
@@ -9020,8 +9108,15 @@ exports[`Cascader demo -- size 1`] = `
   background: #fafafc;
   -webkit-transition: .18s cubic-bezier(.4,0,.2,1);
   transition: .18s cubic-bezier(.4,0,.2,1);
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   vertical-align: middle;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-14:hover {
@@ -9043,8 +9138,8 @@ exports[`Cascader demo -- size 1`] = `
   color: rgba(10,22,51,0.2);
   fill: rgba(10,22,51,0.2);
   opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s,color 0.1s,fill 0.1s;
+  transition: opacity 0.3s,color 0.1s,fill 0.1s;
 }
 
 .emotion-14 .uc-fe-input-clear:hover {
@@ -9052,36 +9147,29 @@ exports[`Cascader demo -- size 1`] = `
   fill: #7a8baa;
 }
 
-.emotion-14 .uc-fe-input-wrap,
+.emotion-14,
 .emotion-14 .uc-fe-input-prefix,
 .emotion-14 .uc-fe-input-suffix,
 .emotion-14 .uc-fe-input-clear,
-.emotion-14 input {
+.emotion-14 input,
+.emotion-14 .e1du0tm81 {
   padding: 0 4px;
 }
 
 .emotion-14.uc-fe-input-block {
-  display: block;
-}
-
-.emotion-14 .uc-fe-input-wrap {
-  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-14 .uc-fe-input-prefix,
-.emotion-14 .uc-fe-input-suffix {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.emotion-14 .uc-fe-input-suffix,
+.emotion-14 .e1du0tm81 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 100%;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -9090,6 +9178,10 @@ exports[`Cascader demo -- size 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.emotion-14 .e1du0tm81[hidden] {
+  display: none;
 }
 
 .emotion-14 .uc-fe-input-block-wrap {
@@ -9160,30 +9252,26 @@ exports[`Cascader demo -- size 1`] = `
       class="uc-fe-input uc-fe-input-block uc-fe-cascader-input emotion-2 emotion-3"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-block-wrap"
       >
-        <span
-          class="uc-fe-input-block-wrap"
+        <input
+          placeholder="请选择"
+          readonly=""
+          value=""
+        />
+      </span>
+      <span
+        class="uc-fe-input-suffix"
+      >
+        <svg
+          class=" emotion-0 emotion-1"
+          viewBox="0 0 24 24"
         >
-          <input
-            placeholder="请选择"
-            readonly=""
-            value=""
+          <path
+            d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+            transform="matrix(-1 0 0 1 24 0)"
           />
-        </span>
-        <span
-          class="uc-fe-input-suffix"
-        >
-          <svg
-            class=" emotion-0 emotion-1"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-              transform="matrix(-1 0 0 1 24 0)"
-            />
-          </svg>
-        </span>
+        </svg>
       </span>
     </span>
   </div>
@@ -9194,30 +9282,26 @@ exports[`Cascader demo -- size 1`] = `
       class="uc-fe-input uc-fe-input-block uc-fe-cascader-input emotion-8 emotion-3"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-block-wrap"
       >
-        <span
-          class="uc-fe-input-block-wrap"
+        <input
+          placeholder="请选择"
+          readonly=""
+          value=""
+        />
+      </span>
+      <span
+        class="uc-fe-input-suffix"
+      >
+        <svg
+          class=" emotion-0 emotion-1"
+          viewBox="0 0 24 24"
         >
-          <input
-            placeholder="请选择"
-            readonly=""
-            value=""
+          <path
+            d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+            transform="matrix(-1 0 0 1 24 0)"
           />
-        </span>
-        <span
-          class="uc-fe-input-suffix"
-        >
-          <svg
-            class=" emotion-0 emotion-1"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-              transform="matrix(-1 0 0 1 24 0)"
-            />
-          </svg>
-        </span>
+        </svg>
       </span>
     </span>
   </div>
@@ -9228,30 +9312,26 @@ exports[`Cascader demo -- size 1`] = `
       class="uc-fe-input uc-fe-input-block uc-fe-cascader-input emotion-14 emotion-3"
     >
       <span
-        class="uc-fe-input-wrap"
+        class="uc-fe-input-block-wrap"
       >
-        <span
-          class="uc-fe-input-block-wrap"
+        <input
+          placeholder="请选择"
+          readonly=""
+          value=""
+        />
+      </span>
+      <span
+        class="uc-fe-input-suffix"
+      >
+        <svg
+          class=" emotion-0 emotion-1"
+          viewBox="0 0 24 24"
         >
-          <input
-            placeholder="请选择"
-            readonly=""
-            value=""
+          <path
+            d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
+            transform="matrix(-1 0 0 1 24 0)"
           />
-        </span>
-        <span
-          class="uc-fe-input-suffix"
-        >
-          <svg
-            class=" emotion-0 emotion-1"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M18.3986407,8.65510743 L12,14.8300075 L5.60135725,8.65510548 C5.14150935,8.21129878 4.43778366,8.2575662 4.03031254,8.75528212 C3.62357936,9.25209665 3.66385814,10.0131726 4.12257613,10.4558888 L11.2606084,17.34492 C11.6820987,17.7517071 12.3179013,17.7517071 12.7393916,17.34492 L19.8774239,10.4558888 C20.3361419,10.0131726 20.3764206,9.25209665 19.9696875,8.75528212 C19.5622163,8.25756621 18.8584907,8.21129878 18.3986407,8.65510743 Z"
-              transform="matrix(-1 0 0 1 24 0)"
-            />
-          </svg>
-        </span>
+        </svg>
       </span>
     </span>
   </div>
