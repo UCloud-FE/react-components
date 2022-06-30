@@ -21,6 +21,7 @@ export const measureWrapCls = prefixCls + '-measure-wrap';
 export const measureCls = prefixCls + '-measure';
 export const measureContentCls = prefixCls + '-measure-content';
 export const placeholderCls = prefixCls + '-placeholder';
+export const contentCls = prefixCls + '-content';
 export const inputCls = prefixCls + '-input';
 export const inputWrapCls = inputCls + '-wrap';
 export const clearCls = prefixCls + '-clear';
@@ -73,17 +74,28 @@ export const SSelectorMultiple = sWrap<InputWrapProps>({})(
                 `
             }
             .${placeholderCls} {
-                width: 0;
-                overflow: visible;
-                color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
+                color: ${DT.T_COLOR_TEXT_REMARK_LIGHT};
                 text-indent: ${halfSpacing};
                 white-space: nowrap;
-                ${
-                    focused &&
-                    css`
-                        opacity: 0.5;
-                    `
-                }
+                overflow: hidden;
+                text-overflow: ellipsis;
+                position: absolute;
+                left: 0;
+                right: 0;
+                pointer-events: none;
+            }
+            .${contentCls} {
+                color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
+            }
+            ${
+                !focused &&
+                css`
+                    :hover {
+                        .${contentCls} {
+                            color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+                        }
+                    }
+                `
             }
             .${clearCls} {
                 display: flex;
@@ -109,6 +121,9 @@ export const SSelectorMultiple = sWrap<InputWrapProps>({})(
                 !disabled &&
                 focused &&
                 css`
+                    .${contentCls} {
+                        color: ${DT.T_COLOR_TEXT_REMARK_LIGHT};
+                    }
                     .${clearCls} {
                         opacity: 1;
                         cursor: pointer;
@@ -168,13 +183,14 @@ export const SSelectorMultiple = sWrap<InputWrapProps>({})(
     })
 );
 
-export const SSelectorSingle = sWrap<InputWrapProps>({})(
+export const SSelectorSingle = sWrap<InputWrapProps & { search?: any }>({})(
     styled(InputWrap)(props => {
         const {
             theme: { designTokens: DT },
             disabled,
             empty,
-            focused
+            focused,
+            search
         } = props;
         let cursor = 'pointer';
         if (disabled) cursor = 'default';
@@ -206,8 +222,24 @@ export const SSelectorSingle = sWrap<InputWrapProps>({})(
                 right: 0;
             }
             .${placeholderCls} {
+                color: ${DT.T_COLOR_TEXT_REMARK_LIGHT};
                 overflow: hidden;
                 text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            .${contentCls} {
+                color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
+            }
+            ${
+                !focused &&
+                css`
+                    :hover {
+                        .${contentCls} {
+                            color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+                        }
+                    }
+                `
             }
 
             .${clearCls} {
@@ -237,6 +269,17 @@ export const SSelectorSingle = sWrap<InputWrapProps>({})(
                     .${clearCls} {
                         opacity: 1;
                         cursor: pointer;
+                    }
+                `
+            }
+            ${
+                !empty &&
+                !disabled &&
+                focused &&
+                search &&
+                css`
+                    .${contentCls} {
+                        color: ${DT.T_COLOR_TEXT_REMARK_LIGHT};
                     }
                 `
             }

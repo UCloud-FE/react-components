@@ -10,6 +10,7 @@ import React, {
     useRef,
     useState
 } from 'react';
+import classnames from 'classnames';
 
 import Popover from 'src/components/Popover';
 import Tag from 'src/components/Tag';
@@ -56,7 +57,8 @@ import {
     restItemCls,
     measureCls,
     measureWrapCls,
-    listCls
+    listCls,
+    contentCls
 } from './style';
 import SelectContext from './SelectContext';
 import LOCALE from './locale/zh_CN';
@@ -983,15 +985,19 @@ const MultipleListSelector = React.memo(function MultipleSelector(props: Selecto
                 size={size}
                 disabled={disabled}
             >
-                {placeholder && empty && !searchValue && <div className={placeholderCls}>{placeholder}</div>}
-                {!searchValue && !empty && (
-                    <div className={placeholderCls}>
-                        {locale.selected}
-                        {items.length}
-                        {locale.items}
-                    </div>
-                )}
-                <input value={searchValue} ref={inputRef} onChange={handleInput} disabled={disabled} />
+                <InputPart stretch className={measureWrapCls}>
+                    {placeholder && empty && !searchValue && <div className={placeholderCls}>{placeholder}</div>}
+                    {!searchValue && !empty && (
+                        <div className={classnames(placeholderCls, contentCls)}>
+                            {locale.selected}
+                            {items.length}
+                            {locale.items}
+                        </div>
+                    )}
+                    {search ? (
+                        <input value={searchValue} ref={inputRef} onChange={handleInput} disabled={disabled} />
+                    ) : null}
+                </InputPart>
                 <Clear clearable={clearable && !empty} onClick={handleClear} />
                 <InputPart>
                     <SvgIcon type={visible ? (search ? 'search' : 'arrow-up') : 'arrow-down'} />
@@ -1111,7 +1117,6 @@ const MultipleSelector = React.memo(function MultipleSelector(props: SelectorPro
         <>
             <SSelectorMultiple
                 focused={visible}
-                // cursor={hasInput ? 'text' : 'pointer'}
                 empty={empty}
                 {..._popupProps}
                 onClick={handleSelectorClick}
@@ -1119,8 +1124,8 @@ const MultipleSelector = React.memo(function MultipleSelector(props: SelectorPro
                 size={size}
                 disabled={disabled}
             >
-                {placeholder && empty && !searchValue && <div className={placeholderCls}>{placeholder}</div>}
                 <InputPart stretch className={measureWrapCls}>
+                    {placeholder && empty && !searchValue && <div className={placeholderCls}>{placeholder}</div>}
                     {items.length ? (
                         <Static
                             items={items}
@@ -1183,8 +1188,8 @@ const SingleSelector = React.memo(function SingleSelector({
         if (renderContent) {
             return renderContent(value, valueChild);
         }
-        return value === undefined ? placeholder : valueChild;
-    }, [dataSource, placeholder, renderContent, value]);
+        return value === undefined ? undefined : valueChild;
+    }, [dataSource, renderContent, value]);
 
     let content = useMemo(getContent, [getContent]);
     // 自定义渲染弹层时，开发者可能不传入 options 和 children，导致 content memo deps 不触发变更，故强制更新
@@ -1206,6 +1211,7 @@ const SingleSelector = React.memo(function SingleSelector({
         cursor: search ? 'text' : 'pointer',
         focused: visible,
         empty,
+        search,
         ..._popupProps
     };
 
@@ -1228,12 +1234,16 @@ const SingleSelector = React.memo(function SingleSelector({
     return (
         <SSelectorSingle {...sharedProps}>
             <InputPart stretch className={inputWrapCls}>
-                {content && (
+                {content ? (
                     <span
-                        className={placeholderCls}
-                        style={{ visibility: searchValue ? 'hidden' : 'visible', opacity: visible ? '.5' : '1' }}
+                        className={classnames(placeholderCls, contentCls)}
+                        style={{ visibility: searchValue ? 'hidden' : 'visible' }}
                     >
                         {content}
+                    </span>
+                ) : (
+                    <span className={placeholderCls} style={{ visibility: searchValue ? 'hidden' : 'visible' }}>
+                        {placeholder}
                     </span>
                 )}
                 {search && (
