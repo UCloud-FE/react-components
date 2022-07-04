@@ -1,0 +1,91 @@
+{
+    "Action": {
+        "path": "Card/Action.jsx",
+        "name": "Action",
+        "info": { "description": "", "displayName": "Action", "methods": [] }
+    },
+    "Card": {
+        "path": "Card/Card.jsx",
+        "name": "Card",
+        "info": {
+            "description": { "description": "卡片布局控件", "tags": [] },
+            "displayName": "Card",
+            "methods": [
+                {
+                    "name": "savePopupContainer",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "ref", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "getPopupContainer",
+                    "docblock": "由于 react 渲染和 ref 的时机，子组件渲染时无法获取到外部的 ref，故使用上层组件做路引",
+                    "modifiers": [],
+                    "params": [],
+                    "returns": null,
+                    "description": {
+                        "description": "由于 react 渲染和 ref 的时机，子组件渲染时无法获取到外部的 ref，故使用上层组件做路引",
+                        "tags": []
+                    }
+                }
+            ],
+            "props": {
+                "children": {
+                    "type": { "name": "node" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "className": {
+                    "type": { "name": "string" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                }
+            }
+        }
+    },
+    "Content": {
+        "path": "Card/Content.jsx",
+        "name": "Content",
+        "info": { "description": "", "displayName": "Content", "methods": [] }
+    },
+    "Footer": {
+        "path": "Card/Footer.jsx",
+        "name": "Footer",
+        "info": { "description": "", "displayName": "Footer", "methods": [] }
+    },
+    "Header": {
+        "path": "Card/Header.jsx",
+        "name": "Header",
+        "info": {
+            "description": "",
+            "displayName": "Header",
+            "methods": [],
+            "props": {
+                "comment": {
+                    "type": { "name": "node" },
+                    "required": false,
+                    "description": { "description": "小标题，注解", "tags": [] }
+                },
+                "children": {
+                    "type": { "name": "node" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                }
+            }
+        }
+    },
+    "SubArea": {
+        "path": "Card/SubArea.jsx",
+        "name": "SubArea",
+        "info": {
+            "description": "",
+            "displayName": "SubArea",
+            "methods": [],
+            "props": {
+                "title": { "type": { "name": "node" }, "required": false, "description": "" },
+                "children": { "type": { "name": "node" }, "required": false, "description": "" }
+            }
+        }
+    }
+}

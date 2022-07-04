@@ -1,0 +1,323 @@
+{
+    "Options": {
+        "path": "Pagination/Options.jsx",
+        "name": "Options",
+        "info": {
+            "description": "",
+            "displayName": "Options",
+            "methods": [
+                {
+                    "name": "buildOptionText",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "value", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "changeSize",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "value", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "handleChange",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "v", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "go",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "e", "type": null }],
+                    "returns": null
+                }
+            ],
+            "props": {
+                "changeSize": { "type": { "name": "func" }, "required": false, "description": "" },
+                "quickGo": { "type": { "name": "func" }, "required": false, "description": "" },
+                "current": { "type": { "name": "number" }, "required": false, "description": "" },
+                "pageSizeOptions": {
+                    "type": {
+                        "name": "arrayOf",
+                        "value": { "name": "union", "value": [{ "name": "string" }, { "name": "number" }] }
+                    },
+                    "required": false,
+                    "description": "",
+                    "defaultValue": { "value": "['10', '20', '30', '40']", "computed": false }
+                },
+                "pageSize": { "type": { "name": "number" }, "required": false, "description": "" },
+                "buildOptionText": { "type": { "name": "func" }, "required": false, "description": "" },
+                "locale": { "type": { "name": "object" }, "required": false, "description": "" },
+                "size": { "type": { "name": "string" }, "required": false, "description": "" },
+                "allPages": { "type": { "name": "number" }, "required": false, "description": "" },
+                "select": { "type": { "name": "object" }, "required": false, "description": "" },
+                "rootPrefixCls": { "type": { "name": "string" }, "required": false, "description": "" },
+                "goButton": {
+                    "type": { "name": "union", "value": [{ "name": "bool" }, { "name": "node" }] },
+                    "required": false,
+                    "description": ""
+                }
+            }
+        }
+    },
+    "Pager": {
+        "path": "Pagination/Pager.jsx",
+        "name": "Pager",
+        "info": {
+            "description": "",
+            "displayName": "Pager",
+            "methods": [],
+            "props": {
+                "page": { "type": { "name": "number" }, "required": false, "description": "" },
+                "active": { "type": { "name": "bool" }, "required": false, "description": "" },
+                "last": { "type": { "name": "bool" }, "required": false, "description": "" },
+                "locale": { "type": { "name": "object" }, "required": false, "description": "" },
+                "className": { "type": { "name": "string" }, "required": false, "description": "" },
+                "showTitle": { "type": { "name": "bool" }, "required": false, "description": "" },
+                "rootPrefixCls": { "type": { "name": "string" }, "required": false, "description": "" },
+                "onClick": { "type": { "name": "func" }, "required": false, "description": "" },
+                "onKeyPress": { "type": { "name": "func" }, "required": false, "description": "" },
+                "itemRender": { "type": { "name": "func" }, "required": false, "description": "" }
+            }
+        }
+    },
+    "Pagination": {
+        "path": "Pagination/Pagination.jsx",
+        "name": "Pagination",
+        "info": {
+            "description": "",
+            "displayName": "Pagination",
+            "methods": [
+                {
+                    "name": "savePaginationNode",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "node", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "calculatePage",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "p", "type": null },
+                        { "name": "total", "type": null }
+                    ],
+                    "returns": null
+                },
+                {
+                    "name": "isValid",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "page", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "changePageSize",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "size", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "handleChange",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "p", "type": null }],
+                    "returns": null
+                },
+                { "name": "prev", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                { "name": "next", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                { "name": "getJumpPrevPage", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                { "name": "getJumpNextPage", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                { "name": "jumpPrev", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                { "name": "jumpNext", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                { "name": "hasPrev", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                { "name": "hasNext", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                {
+                    "name": "runIfEnter",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "event", "type": null },
+                        { "name": "callback", "type": null },
+                        { "name": "...restParams", "type": null }
+                    ],
+                    "returns": null
+                },
+                {
+                    "name": "runIfEnterPrev",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "e", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "runIfEnterNext",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "e", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "runIfEnterJumpPrev",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "e", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "runIfEnterJumpNext",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "e", "type": null }],
+                    "returns": null
+                }
+            ],
+            "props": {
+                "current": {
+                    "type": { "name": "number" },
+                    "required": false,
+                    "description": { "description": "当前页，受控", "tags": [] }
+                },
+                "defaultCurrent": {
+                    "type": { "name": "number" },
+                    "required": false,
+                    "description": { "description": "默认当前页，非受控", "tags": [] },
+                    "defaultValue": { "value": "1", "computed": false }
+                },
+                "total": {
+                    "type": { "name": "number" },
+                    "required": false,
+                    "description": { "description": "总数", "tags": [] },
+                    "defaultValue": { "value": "0", "computed": false }
+                },
+                "showTotal": {
+                    "type": { "name": "union", "value": [{ "name": "bool" }, { "name": "func" }] },
+                    "required": false,
+                    "description": { "description": "自定义展示 total 值", "tags": [] }
+                },
+                "pageSize": {
+                    "type": { "name": "number" },
+                    "required": false,
+                    "description": { "description": "每页数量，受控", "tags": [] }
+                },
+                "defaultPageSize": {
+                    "type": { "name": "number" },
+                    "required": false,
+                    "description": { "description": "默认每页数量，非受控", "tags": [] },
+                    "defaultValue": { "value": "10", "computed": false }
+                },
+                "onChange": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": { "description": "修改回调", "tags": [] },
+                    "defaultValue": { "value": "function noop() {}", "computed": false }
+                },
+                "onAdvise": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": {
+                        "description": "修改建议回调，如传入的total为10，当前pageSize为10，当前current却为2时会触发",
+                        "tags": []
+                    }
+                },
+                "hideOnSinglePage": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] },
+                    "defaultValue": { "value": "false", "computed": false }
+                },
+                "showSizeChanger": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "显示分页数量调节", "tags": [] },
+                    "defaultValue": { "value": "false", "computed": false }
+                },
+                "showLessItems": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "是否显示3个", "tags": [] },
+                    "defaultValue": { "value": "false", "computed": false }
+                },
+                "onPageSizeChange": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": { "description": "分页数量变化回调", "tags": [] },
+                    "defaultValue": { "value": "function noop() {}", "computed": false }
+                },
+                "showPrevNextJumpers": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "显示更多页面跳转按钮", "tags": [] },
+                    "defaultValue": { "value": "true", "computed": false }
+                },
+                "showQuickJumper": {
+                    "type": { "name": "union", "value": [{ "name": "bool" }, { "name": "object" }] },
+                    "required": false,
+                    "description": { "description": "显示快速跳转，传入goButton显示跳转按钮", "tags": [] },
+                    "defaultValue": { "value": "false", "computed": false }
+                },
+                "showTitle": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "显示按钮的title", "tags": [] },
+                    "defaultValue": { "value": "true", "computed": false }
+                },
+                "pageSizeOptions": {
+                    "type": {
+                        "name": "arrayOf",
+                        "value": { "name": "union", "value": [{ "name": "string" }, { "name": "number" }] }
+                    },
+                    "required": false,
+                    "description": { "description": "分页配置", "tags": [] }
+                },
+                "simple": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "简易分页", "tags": [] }
+                },
+                "locale": {
+                    "type": { "name": "object" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "className": {
+                    "type": { "name": "string" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "itemRender": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] },
+                    "defaultValue": {
+                        "value": "function defaultItemRender(page, type, element) {\n    if (type === 'prev') {\n        return <SvgIcon type=\"arrow-left\" className={`${prefixCls}-prev-icon`} />;\n    }\n    if (type === 'next') {\n        return <SvgIcon type=\"arrow-right\" className={`${prefixCls}-next-icon`} />;\n    }\n    if (type === 'jump-prev' || type === 'jump-next') {\n        return <SvgIcon type=\"ellipsis\" className={`${prefixCls}-jump-icon`} />;\n    }\n    return element;\n}",
+                        "computed": false
+                    }
+                },
+                "size": {
+                    "type": {
+                        "name": "enum",
+                        "value": [
+                            { "value": "'sm'", "computed": false },
+                            { "value": "'md'", "computed": false },
+                            { "value": "'lg'", "computed": false }
+                        ]
+                    },
+                    "required": false,
+                    "description": { "description": "尺寸", "tags": [] },
+                    "defaultValue": { "value": "'md'", "computed": false }
+                },
+                "optionsProps": {
+                    "type": { "name": "object" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,67 @@
+{
+    "Switch": {
+        "path": "Switch/Switch.tsx",
+        "name": "Switch",
+        "info": {
+            "description": "",
+            "displayName": "Switch",
+            "methods": [],
+            "props": {
+                "checked": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "是否选中", "tags": [] }
+                },
+                "defaultChecked": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "默认选中状态", "tags": [] }
+                },
+                "onChange": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(checked: boolean) => void",
+                        "signature": {
+                            "arguments": [{ "name": "checked", "type": { "name": "boolean" } }],
+                            "return": { "name": "void" }
+                        }
+                    },
+                    "description": { "description": "选中状态改变时的回调", "tags": [] }
+                },
+                "disabled": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "是否禁用", "tags": [] }
+                },
+                "size": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "'sm' | 'md' | 'lg'",
+                        "elements": [
+                            { "name": "literal", "value": "'sm'" },
+                            { "name": "literal", "value": "'md'" },
+                            { "name": "literal", "value": "'lg'" }
+                        ]
+                    },
+                    "description": { "description": "尺寸", "tags": [] },
+                    "defaultValue": { "value": "'md'", "computed": false }
+                },
+                "onText": {
+                    "required": false,
+                    "tsType": { "name": "ReactNode" },
+                    "description": { "description": "打开的文字", "tags": [] },
+                    "defaultValue": { "value": "'ON'", "computed": false }
+                },
+                "offText": {
+                    "required": false,
+                    "tsType": { "name": "ReactNode" },
+                    "description": { "description": "关闭的文字", "tags": [] },
+                    "defaultValue": { "value": "'OFF'", "computed": false }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "Loading": {
+        "path": "Loading/Loading.jsx",
+        "name": "Loading",
+        "info": {
+            "description": "",
+            "displayName": "Loading",
+            "methods": [],
+            "props": {
+                "loading": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "是否加载", "tags": [] },
+                    "defaultValue": { "value": "false", "computed": false }
+                },
+                "indicator": {
+                    "type": { "name": "node" },
+                    "required": false,
+                    "description": { "description": "加载指示符", "tags": [] },
+                    "defaultValue": {
+                        "value": "<LoadingIcon size=\"14px\" type=\"ring-loading\" spin />",
+                        "computed": false
+                    }
+                },
+                "tip": {
+                    "type": { "name": "node" },
+                    "required": false,
+                    "description": { "description": "文字提示", "tags": [] }
+                },
+                "maskStyle": {
+                    "type": { "name": "object" },
+                    "required": false,
+                    "description": { "description": "遮罩层样式", "tags": [] }
+                },
+                "maskClassName": {
+                    "type": { "name": "string" },
+                    "required": false,
+                    "description": { "description": "遮罩层类名", "tags": [] }
+                },
+                "children": {
+                    "type": { "name": "node" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                }
+            }
+        }
+    }
+}

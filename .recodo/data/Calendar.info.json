@@ -1,0 +1,174 @@
+{
+    "Calendar": {
+        "path": "Calendar/Calendar.tsx",
+        "name": "Calendar",
+        "info": {
+            "description": "",
+            "displayName": "Calendar",
+            "methods": [],
+            "props": {
+                "value": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "TDate | null",
+                        "elements": [{ "name": "TDate" }, { "name": "null" }]
+                    },
+                    "description": { "description": "当前值，受控", "tags": [] }
+                },
+                "rangeValue": {
+                    "required": false,
+                    "tsType": {
+                        "name": "tuple",
+                        "raw": "[TDate | null, TDate | null]",
+                        "elements": [
+                            {
+                                "name": "union",
+                                "raw": "TDate | null",
+                                "elements": [{ "name": "TDate" }, { "name": "null" }]
+                            },
+                            {
+                                "name": "union",
+                                "raw": "TDate | null",
+                                "elements": [{ "name": "TDate" }, { "name": "null" }]
+                            }
+                        ]
+                    },
+                    "description": { "description": "范围值", "tags": [] }
+                },
+                "defaultValue": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "TDate | null",
+                        "elements": [{ "name": "TDate" }, { "name": "null" }]
+                    },
+                    "description": { "description": "默认值，非受控", "tags": [] }
+                },
+                "onSelect": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(t: Moment) => void",
+                        "signature": {
+                            "arguments": [{ "name": "t", "type": { "name": "Moment" } }],
+                            "return": { "name": "void" }
+                        }
+                    },
+                    "description": {
+                        "description": "",
+                        "tags": [{ "title": "deprecated", "description": "使用 onChange 来替换" }]
+                    }
+                },
+                "onChange": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(t: Moment) => void",
+                        "signature": {
+                            "arguments": [{ "name": "t", "type": { "name": "Moment" } }],
+                            "return": { "name": "void" }
+                        }
+                    },
+                    "description": { "description": "选中变化回调", "tags": [] }
+                },
+                "current": { "required": false, "tsType": { "name": "TDate" }, "description": "" },
+                "defaultCurrent": { "required": false, "tsType": { "name": "TDate" }, "description": "" },
+                "onCurrentChange": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(v: TDate) => void",
+                        "signature": {
+                            "arguments": [{ "name": "v", "type": { "name": "TDate" } }],
+                            "return": { "name": "void" }
+                        }
+                    },
+                    "description": ""
+                },
+                "rules": {
+                    "required": false,
+                    "tsType": { "name": "Rules" },
+                    "description": { "description": "自定义规则", "tags": [] }
+                },
+                "customStyle": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "object",
+                        "raw": "{\n    /**\n     * 外层阴影，为 false 时隐藏\n     */\n    boxShadow?: boolean;\n}",
+                        "signature": {
+                            "properties": [{ "key": "boxShadow", "value": { "name": "boolean", "required": false } }]
+                        }
+                    },
+                    "description": { "description": "自定义样式", "tags": [] }
+                },
+                "type": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "'date' | 'month'",
+                        "elements": [
+                            { "name": "literal", "value": "'date'" },
+                            { "name": "literal", "value": "'month'" }
+                        ]
+                    },
+                    "description": { "description": "类型", "tags": [] }
+                },
+                "locale": {
+                    "required": false,
+                    "tsType": { "name": "LOCALE" },
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                }
+            }
+        }
+    },
+    "Cell": {
+        "path": "Calendar/Cell.tsx",
+        "name": "Cell",
+        "info": {
+            "description": "",
+            "displayName": "Cell",
+            "methods": [],
+            "props": {
+                "mode": { "required": true, "tsType": { "name": "Mode" }, "description": "" },
+                "disabled": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                "value": {
+                    "required": false,
+                    "tsType": { "name": "CellValue", "elements": [{ "name": "Mode" }], "raw": "CellValue<Mode>" },
+                    "description": ""
+                }
+            }
+        }
+    },
+    "HeaderButton": {
+        "path": "Calendar/HeaderButton.tsx",
+        "name": "HeaderButton",
+        "info": { "description": "", "displayName": "HeaderButton", "methods": [] }
+    },
+    "HeaderSwitcherWithoutMemo": {
+        "path": "Calendar/HeaderSwitcher.tsx",
+        "name": "HeaderSwitcherWithoutMemo",
+        "info": { "description": "", "displayName": "HeaderSwitcherWithoutMemo", "methods": [] }
+    },
+    "Month": {
+        "path": "Calendar/Month.tsx",
+        "name": "Month",
+        "info": {
+            "description": {
+                "description": "",
+                "tags": [{ "title": "deprecated", "description": "请使用 ```<Calendar type='month' />``` 替换" }]
+            },
+            "displayName": "Month",
+            "methods": []
+        }
+    },
+    "TwoSide": {
+        "path": "Calendar/TwoSide.tsx",
+        "name": "TwoSide",
+        "info": { "description": "", "displayName": "TwoSide", "methods": [] }
+    }
+}

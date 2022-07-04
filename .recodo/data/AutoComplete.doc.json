@@ -1,0 +1,7 @@
+{
+    "AutoComplete": {
+        "path": "AutoComplete/AutoComplete.md",
+        "name": "AutoComplete",
+        "info": "### 说明\n\n-   AutoComplete 能够尝试猜测⽤户输⼊的⽂字，并且动态的搜索出适配的结果并推荐给⽤户，辅助完成输⼊。⽬的是避免⽤户出错，起到提示作⽤，智能预测⽤户⼼理期望，从⽽确保他们的输⼊更有效率。\n-   默认的弹出层容器为 forwardPopupContainer={triggerNode => triggerNode.parentNode}，默认会查找上层的建议容器\n\n### 数据结构\n\n#### Item\n\n```ts {\"static\": true}\ninterface Item {\n    // 项的值\n    value: string;\n    // 项的展示，为空时展示 value\n    label?: ReactNode;\n}\n```\n\n### 演示\n\n#### 普通使用\n\n```js {\"codepath\": \"autoComplete.jsx\"}\n```\n\n#### disabled - 禁用\n\n```js {\"codepath\": \"disabled.jsx\"}\n```\n\n#### options - 选项展示\n\n```js {\"codepath\": \"options.jsx\"}\n```\n\n#### handleSearch - 自定义搜索\n\n```js {\"codepath\": \"handleSearch.jsx\"}\n```\n\n#### controlled - 受控\n\n```js {\"codepath\": \"controlled.jsx\"}\n```\n\n#### 动态加载数据\n\n```js {\"codepath\": \"loading.jsx\"}\n```\n\n#### 如何实现输入为空时隐藏选项\n\n```js {\"codepath\": \"hideOptionsWhenEmpty.jsx\"}\n```\n\n#### 输入建议\n\n```js {\"codepath\": \"suggest.jsx\"}\n```\n\n#### popupContainer - 容器测试\n\n```js {\"codepath\": \"popupContainer.jsx\"}\n```\n\n#### 边界测试\n\n```js {\"codepath\": \"boundary.jsx\"}\n```\n"
+    }
+}

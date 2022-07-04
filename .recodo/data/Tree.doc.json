@@ -1,0 +1,7 @@
+{
+    "Tree": {
+        "path": "Tree/Tree.md",
+        "name": "Tree",
+        "info": "### 说明\n\n-   这是 Tree - 树组件\n-   与程序树概念不同，按照目前的交互这里的树父节点、子节点有着本质的区别，选中只包括子节点，父节点只做展示，故数据结构中的称谓也有所差异\n\n### 数据结构\n\n#### Key\n\n```ts {\"static\": true}\n// 值需为 string\ntype Key = string;\n```\n\n#### LoadData\n\n```ts {\"static\": true}\ninterface LoadData {\n    (key: Key): Promise<void>;\n}\n```\n\n#### TreeData\n\n```ts {\"static\": true}\ninterface TreeData {\n    // 唯一键，所有值的字符串不得重复，会用作 key 和选中判定，如果为其它值会转为 string 再应用\n    key: Key;\n    // 选项标题内容\n    title: ReactNode;\n    // 子数据，存在即为父节点，不存在即为叶子结点，与程序树有差异，原因详见说明\n    children?: TreeData[];\n    // 是否禁用，父节点禁用会禁用所有子孙节点\n    disabled?: boolean;\n    // 是否强制为父节点\n    isParent?: boolean;\n}\n```\n\n### 交互逻辑\n\n1. 全选、反选、取消选择 等内置方法不会影响禁用项目的勾选状态\n2. 全选状态的展示与禁用项目无关\n3. 存在禁用选中项时会展示部分选中\n\n### 演示\n\n#### 功能演示\n\n```js {\"codepath\": \"tree.jsx\"}\n```\n\n#### method - 内置方法\n\n注意全选和反选只有多选模式下生效\n\n```js {\"codepath\": \"method.jsx\"}\n```\n\n#### controlled / uncontrolled - 受控 / 非受控\n\n```js {\"codepath\": \"controlled.jsx\"}\n```\n\n#### loadData - 异步加载数据\n\n1. 异步加载数据需要在待加载的父级数据中添加 isParent，来告知组件展示展开按钮，通过 loadData 来加载数据后需要更新 DataSource\n2. 由于 Tree 为 Memo Component，更新时需要更新引用\n3. 异步加载需注意无法使用多选场景，多选时数据未加载无法获取选中数据\n\n```js {\"codepath\": \"loadData.jsx\"}\n```\n\n#### search - 搜索\n\n使用 Promise search.handleSearch，来控制搜索 loading 状态，后触发的搜索搜索结果会覆盖之前的，内部已处理\n\n```js {\"codepath\": \"search.jsx\"}\n```\n\n#### 大数据性能测试\n\n```js {\"codepath\": \"bigData.jsx\"}\n```\n"
+    }
+}

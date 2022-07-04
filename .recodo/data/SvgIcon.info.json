@@ -1,0 +1,75 @@
+{
+    "SvgIcon": {
+        "path": "SvgIcon/SvgIcon.jsx",
+        "name": "SvgIcon",
+        "info": {
+            "description": {
+                "description": "",
+                "tags": [
+                    {
+                        "title": "private",
+                        "description": "内部使用的一些图标，后续可能会变更，不建议直接使用",
+                        "type": null
+                    }
+                ]
+            },
+            "displayName": "SvgIcon",
+            "methods": [],
+            "props": {
+                "type": {
+                    "type": { "name": "enum", "computed": true, "value": "IconType" },
+                    "required": true,
+                    "description": { "description": "图标类型", "tags": [] }
+                },
+                "color": {
+                    "type": { "name": "string" },
+                    "required": false,
+                    "description": { "description": "图标颜色，值为 css color 支持属性值", "tags": [] }
+                },
+                "spin": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "是否旋转", "tags": [] }
+                },
+                "size": {
+                    "type": { "name": "string" },
+                    "required": false,
+                    "description": { "description": "图标的尺寸大小", "tags": [] },
+                    "defaultValue": { "value": "'12px'", "computed": false }
+                }
+            }
+        }
+    },
+    "SvgIconWrap": {
+        "path": "SvgIcon/SvgIconWrap.jsx",
+        "name": "SvgIconWrap",
+        "info": {
+            "description": "",
+            "displayName": "SvgIconWrap",
+            "methods": [],
+            "props": {
+                "color": {
+                    "type": { "name": "string" },
+                    "required": false,
+                    "description": { "description": "图标颜色，值为 css color 支持属性值", "tags": [] }
+                },
+                "spin": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "是否旋转", "tags": [] }
+                },
+                "size": {
+                    "type": { "name": "string" },
+                    "required": false,
+                    "description": { "description": "图标的尺寸大小", "tags": [] },
+                    "defaultValue": { "value": "'12px'", "computed": false }
+                },
+                "children": {
+                    "type": { "name": "node" },
+                    "required": false,
+                    "description": { "description": "icon", "tags": [] }
+                }
+            }
+        }
+    }
+}

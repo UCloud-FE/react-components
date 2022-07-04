@@ -1,0 +1,48 @@
+{
+    "Progress": {
+        "path": "Progress/Progress.jsx",
+        "name": "Progress",
+        "info": {
+            "description": "",
+            "displayName": "Progress",
+            "methods": [],
+            "props": {
+                "percent": {
+                    "type": { "name": "number" },
+                    "required": false,
+                    "description": { "description": "当前百分比", "tags": [] },
+                    "defaultValue": { "value": "0", "computed": false }
+                },
+                "color": {
+                    "type": {
+                        "name": "union",
+                        "value": [
+                            {
+                                "name": "enum",
+                                "value": [
+                                    { "value": "'success'", "computed": false },
+                                    { "value": "'warn'", "computed": false },
+                                    { "value": "'error'", "computed": false }
+                                ]
+                            },
+                            { "name": "string" }
+                        ]
+                    },
+                    "required": false,
+                    "description": { "description": "进度条颜色，内置 success、warn、error", "tags": [] }
+                },
+                "format": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": {
+                        "description": "展示文字的格式化，为 null 时隐藏文字",
+                        "tags": [
+                            { "title": "argument", "description": "格式化的百分比", "type": null, "name": "percent" }
+                        ]
+                    },
+                    "defaultValue": { "value": "percent => `${percent}%`", "computed": false }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,165 @@
+{
+    "Badge": {
+        "path": "Badge/Badge.tsx",
+        "name": "Badge",
+        "info": {
+            "description": "",
+            "displayName": "Badge",
+            "methods": [
+                { "name": "renderBadge", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                { "name": "getTarget", "docblock": null, "modifiers": [], "params": [], "returns": null }
+            ],
+            "props": {
+                "value": {
+                    "required": false,
+                    "tsType": { "name": "ReactNode" },
+                    "description": { "description": "显示内容", "tags": [] }
+                },
+                "maxValue": {
+                    "required": false,
+                    "tsType": { "name": "number" },
+                    "description": { "description": "为数字时能显示的最大值，超过将显示最大值+", "tags": [] },
+                    "defaultValue": { "value": "99", "computed": false }
+                },
+                "dot": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "显示为点状", "tags": [] }
+                },
+                "placement": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "'topRight' | 'topLeft' | 'bottomRight' | 'bottomLeft' | 'top' | 'bottom' | 'left' | 'right'",
+                        "elements": [
+                            { "name": "literal", "value": "'topRight'" },
+                            { "name": "literal", "value": "'topLeft'" },
+                            { "name": "literal", "value": "'bottomRight'" },
+                            { "name": "literal", "value": "'bottomLeft'" },
+                            { "name": "literal", "value": "'top'" },
+                            { "name": "literal", "value": "'bottom'" },
+                            { "name": "literal", "value": "'left'" },
+                            { "name": "literal", "value": "'right'" }
+                        ]
+                    },
+                    "description": { "description": "badge 的位置", "tags": [] },
+                    "defaultValue": { "value": "'topRight'", "computed": false }
+                },
+                "hideWhenZero": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "为 0 时是否隐藏", "tags": [] }
+                },
+                "badgeStyle": {
+                    "required": false,
+                    "tsType": { "name": "CSSProperties" },
+                    "description": { "description": "badge的样式", "tags": [] }
+                },
+                "offset": {
+                    "required": false,
+                    "tsType": {
+                        "name": "tuple",
+                        "raw": "[number, number]",
+                        "elements": [{ "name": "number" }, { "name": "number" }]
+                    },
+                    "description": {
+                        "description": "定义 badge 的偏移，第一个参数 x 轴偏移量，第二个值为 y 轴偏移量",
+                        "tags": []
+                    }
+                },
+                "children": {
+                    "required": false,
+                    "tsType": { "name": "ReactNode" },
+                    "description": { "description": "定位的内容，为空时仅展示 Badge，定位等属性不生效", "tags": [] }
+                },
+                "color": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "'red' | 'green' | 'yellow' | 'primary'",
+                        "elements": [
+                            { "name": "literal", "value": "'red'" },
+                            { "name": "literal", "value": "'green'" },
+                            { "name": "literal", "value": "'yellow'" },
+                            { "name": "literal", "value": "'primary'" }
+                        ]
+                    },
+                    "description": { "description": "选择预设的颜色", "tags": [] },
+                    "defaultValue": { "value": "'red'", "computed": false }
+                },
+                "zIndex": {
+                    "required": false,
+                    "tsType": { "name": "number" },
+                    "description": { "description": "badge 的 zIndex", "tags": [] },
+                    "defaultValue": { "value": "9", "computed": false }
+                }
+            }
+        }
+    },
+    "Bubble": {
+        "path": "Badge/Bubble.jsx",
+        "name": "Bubble",
+        "info": {
+            "description": {
+                "description": "",
+                "tags": [{ "title": "deprecated", "description": "后续会移除，请使用 Badge 替代" }]
+            },
+            "displayName": "Bubble",
+            "methods": [],
+            "props": {
+                "children": {
+                    "type": { "name": "node" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "bubble": {
+                    "type": { "name": "node" },
+                    "required": false,
+                    "description": { "description": "泡泡内容", "tags": [] }
+                },
+                "styleType": {
+                    "type": { "name": "enum", "computed": true, "value": "StyleType" },
+                    "required": true,
+                    "description": { "description": "内置样式风格", "tags": [] }
+                },
+                "size": {
+                    "type": {
+                        "name": "enum",
+                        "value": [
+                            { "value": "'sm'", "computed": false },
+                            { "value": "'md'", "computed": false }
+                        ]
+                    },
+                    "required": false,
+                    "description": { "description": "尺寸", "tags": [] },
+                    "defaultValue": { "value": "'md'", "computed": false }
+                },
+                "customStyle": {
+                    "type": {
+                        "name": "shape",
+                        "value": {
+                            "bubbleColor": { "name": "string", "description": "泡泡字色", "required": false },
+                            "bubbleBackground": { "name": "string", "description": "泡泡的背景色", "required": false }
+                        }
+                    },
+                    "required": false,
+                    "description": { "description": "自定义样式", "tags": [] }
+                },
+                "getBubbleTarget": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": {
+                        "description": "",
+                        "tags": [{ "title": "ignore", "description": "自定义冒泡层定位的目标元素" }]
+                    }
+                },
+                "offset": {
+                    "type": { "name": "array" },
+                    "required": false,
+                    "description": { "description": "自定义偏移量", "tags": [] },
+                    "defaultValue": { "value": "[12, -4]", "computed": false }
+                }
+            }
+        }
+    }
+}

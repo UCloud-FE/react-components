@@ -1,0 +1,163 @@
+{
+    "Checkbox": {
+        "path": "Checkbox/Checkbox.tsx",
+        "name": "Checkbox",
+        "info": {
+            "description": "",
+            "displayName": "Checkbox",
+            "methods": [],
+            "props": {
+                "checked": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "是否选中", "tags": [] }
+                },
+                "defaultChecked": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "默认是否选中", "tags": [] },
+                    "defaultValue": { "value": "false", "computed": false }
+                },
+                "disabled": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "是否禁用", "tags": [] }
+                },
+                "onChange": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(value: boolean) => void",
+                        "signature": {
+                            "arguments": [{ "name": "value", "type": { "name": "boolean" } }],
+                            "return": { "name": "void" }
+                        }
+                    },
+                    "description": { "description": "点选时的回调", "tags": [] }
+                },
+                "indeterminate": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "一般用于全选，部分选中的状态", "tags": [] }
+                },
+                "value": {
+                    "required": false,
+                    "tsType": { "name": "Value" },
+                    "description": { "description": "checkbox的值", "tags": [] },
+                    "defaultValue": { "value": "''", "computed": false }
+                },
+                "size": {
+                    "required": false,
+                    "tsType": { "name": "Size" },
+                    "description": { "description": "尺寸，styleType 为 card 时无效", "tags": [] }
+                },
+                "styleType": {
+                    "required": false,
+                    "tsType": { "name": "StyleType" },
+                    "description": { "description": "样式风格", "tags": [] }
+                },
+                "title": {
+                    "required": false,
+                    "tsType": { "name": "ReactNode" },
+                    "description": { "description": "标题，styleType 为 card 时使用", "tags": [] }
+                },
+                "disabledLabel": {
+                    "required": false,
+                    "tsType": { "name": "ReactNode" },
+                    "description": {
+                        "description": "",
+                        "tags": [
+                            { "title": "ignore", "description": null },
+                            { "title": "deprecated", "description": "弃用" }
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "CheckboxIcon": {
+        "path": "Checkbox/CheckboxIcon.tsx",
+        "name": "CheckboxIcon",
+        "info": {
+            "description": "",
+            "displayName": "CheckboxIcon",
+            "methods": [],
+            "props": {
+                "indeterminate": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                "checked": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                "disabled": { "required": false, "tsType": { "name": "boolean" }, "description": "" }
+            }
+        }
+    },
+    "Group": {
+        "path": "Checkbox/Group.tsx",
+        "name": "Group",
+        "info": {
+            "description": "",
+            "displayName": "Group",
+            "methods": [],
+            "props": {
+                "value": {
+                    "required": false,
+                    "tsType": { "name": "Array", "elements": [{ "name": "Value" }], "raw": "Value[]" },
+                    "description": { "description": "当前值，controlled", "tags": [] }
+                },
+                "defaultValue": {
+                    "required": false,
+                    "tsType": { "name": "Array", "elements": [{ "name": "Value" }], "raw": "Value[]" },
+                    "description": { "description": "默认值，uncontrolled", "tags": [] },
+                    "defaultValue": { "value": "[]", "computed": false }
+                },
+                "onChange": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(value: Value[], selectedStatus: SelectedStatus) => void",
+                        "signature": {
+                            "arguments": [
+                                {
+                                    "name": "value",
+                                    "type": { "name": "Array", "elements": [{ "name": "Value" }], "raw": "Value[]" }
+                                },
+                                { "name": "selectedStatus", "type": { "name": "SelectedStatus" } }
+                            ],
+                            "return": { "name": "void" }
+                        }
+                    },
+                    "description": { "description": "修改时的回调", "tags": [] }
+                },
+                "options": {
+                    "required": false,
+                    "tsType": {
+                        "name": "Array",
+                        "elements": [{ "name": "unknown" }],
+                        "raw": "({ label: ReactNode } & CheckboxProps)[]"
+                    },
+                    "description": { "description": "快速定义选项", "tags": [] }
+                },
+                "disabled": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "禁用", "tags": [] }
+                },
+                "size": {
+                    "required": false,
+                    "tsType": { "name": "Size" },
+                    "description": { "description": "尺寸", "tags": [] }
+                },
+                "styleType": {
+                    "required": false,
+                    "tsType": { "name": "StyleType" },
+                    "description": { "description": "样式风格", "tags": [] }
+                },
+                "children": {
+                    "required": false,
+                    "tsType": { "name": "ReactNode" },
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                }
+            }
+        }
+    }
+}

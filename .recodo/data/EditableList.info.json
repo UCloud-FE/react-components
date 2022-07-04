@@ -1,0 +1,155 @@
+{
+    "EditableList": {
+        "path": "EditableList/EditableList.jsx",
+        "name": "EditableList",
+        "info": {
+            "description": "",
+            "displayName": "EditableList",
+            "methods": [
+                { "name": "onAdd", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                {
+                    "name": "onDelete",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "item", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "renderItem",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "item", "type": null },
+                        { "name": "latest", "type": null }
+                    ],
+                    "returns": null
+                },
+                { "name": "renderList", "docblock": null, "modifiers": [], "params": [], "returns": null }
+            ],
+            "props": {
+                "dataSource": {
+                    "type": { "name": "array" },
+                    "required": false,
+                    "description": { "description": "数据列表", "tags": [] }
+                },
+                "renderItem": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": {
+                        "description": "数据渲染",
+                        "tags": [{ "title": "param", "description": "数据", "type": null, "name": "item" }]
+                    }
+                },
+                "grid": {
+                    "type": {
+                        "name": "shape",
+                        "value": {
+                            "itemCol": {
+                                "name": "shape",
+                                "value": {
+                                    "span": { "name": "number", "description": "栅格占位格数", "required": false },
+                                    "offset": {
+                                        "name": "number",
+                                        "description": "栅格向右偏移格数，偏移占位",
+                                        "required": false
+                                    },
+                                    "pull": {
+                                        "name": "number",
+                                        "description": "栅格向左偏移格数，偏移不占位",
+                                        "required": false
+                                    },
+                                    "push": {
+                                        "name": "number",
+                                        "description": "栅格向右偏移格数，偏移不占位",
+                                        "required": false
+                                    }
+                                },
+                                "description": "item 的 col 配置",
+                                "required": false
+                            },
+                            "actionCol": {
+                                "name": "shape",
+                                "value": {
+                                    "span": { "name": "number", "description": "栅格占位格数", "required": false },
+                                    "offset": {
+                                        "name": "number",
+                                        "description": "栅格向右偏移格数，偏移占位",
+                                        "required": false
+                                    },
+                                    "pull": {
+                                        "name": "number",
+                                        "description": "栅格向左偏移格数，偏移不占位",
+                                        "required": false
+                                    },
+                                    "push": {
+                                        "name": "number",
+                                        "description": "栅格向右偏移格数，偏移不占位",
+                                        "required": false
+                                    }
+                                },
+                                "required": false
+                            }
+                        }
+                    },
+                    "required": false,
+                    "description": { "description": "使用 grid 布局", "tags": [] }
+                },
+                "size": {
+                    "type": { "name": "enum", "computed": true, "value": "Size" },
+                    "required": false,
+                    "description": { "description": "自带控件尺寸", "tags": [] },
+                    "defaultValue": { "value": "'md'", "computed": false }
+                },
+                "addition": {
+                    "type": {
+                        "name": "union",
+                        "value": [
+                            { "name": "bool" },
+                            {
+                                "name": "shape",
+                                "value": {
+                                    "onAdd": { "name": "func", "description": "添加回调", "required": false },
+                                    "disabled": { "name": "bool", "description": "是否禁用", "required": false }
+                                }
+                            }
+                        ]
+                    },
+                    "required": false,
+                    "description": { "description": "是否可添加（false 时禁用添加栏）", "tags": [] },
+                    "defaultValue": { "value": "true", "computed": false }
+                },
+                "itemDeletion": {
+                    "type": {
+                        "name": "union",
+                        "value": [
+                            { "name": "bool" },
+                            {
+                                "name": "shape",
+                                "value": {
+                                    "onDelete": {
+                                        "name": "func",
+                                        "description": "列删除回调\n@param record 删除列数据",
+                                        "required": false
+                                    },
+                                    "getDisabledOfItem": {
+                                        "name": "func",
+                                        "description": "获取当前列的是否禁用删除\n@param record 当前列数据",
+                                        "required": false
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    "required": false,
+                    "description": { "description": "是否可删除（false 隐藏删除按钮）", "tags": [] },
+                    "defaultValue": { "value": "true", "computed": false }
+                },
+                "locale": {
+                    "type": { "name": "object" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                }
+            }
+        }
+    }
+}

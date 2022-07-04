@@ -1,0 +1,269 @@
+{
+    "ChildItem": {
+        "path": "Tree/Item.tsx",
+        "name": "ChildItem",
+        "info": {
+            "description": "",
+            "displayName": "ChildItem",
+            "methods": [],
+            "props": {
+                "value": { "required": true, "tsType": { "name": "Key" }, "description": "" },
+                "onSelect": {
+                    "required": true,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(keyMap: ChangeKeyMap) => void",
+                        "signature": {
+                            "arguments": [{ "name": "keyMap", "type": { "name": "ChangeKeyMap" } }],
+                            "return": { "name": "void" }
+                        }
+                    },
+                    "description": ""
+                },
+                "ignoreIndent": {
+                    "required": true,
+                    "tsType": { "name": "Array", "elements": [{ "name": "number" }], "raw": "number[]" },
+                    "description": ""
+                },
+                "selectedMap": { "required": true, "tsType": { "name": "SelectedMap" }, "description": "" },
+                "title": { "required": true, "tsType": { "name": "ReactNode" }, "description": "" },
+                "disabled": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                "depth": { "required": true, "tsType": { "name": "number" }, "description": "" },
+                "isLatest": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                "multiple": { "required": false, "tsType": { "name": "boolean" }, "description": "" }
+            }
+        }
+    },
+    "TitleItem": {
+        "path": "Tree/Item.tsx",
+        "name": "TitleItem",
+        "info": {
+            "description": "",
+            "displayName": "TitleItem",
+            "methods": [],
+            "props": {
+                "value": { "required": true, "tsType": { "name": "Key" }, "description": "" },
+                "onSelect": {
+                    "required": true,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(keyMap: ChangeKeyMap) => void",
+                        "signature": {
+                            "arguments": [{ "name": "keyMap", "type": { "name": "ChangeKeyMap" } }],
+                            "return": { "name": "void" }
+                        }
+                    },
+                    "description": ""
+                },
+                "expanded": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                "onExpandChange": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(expanded: boolean) => void",
+                        "signature": {
+                            "arguments": [{ "name": "expanded", "type": { "name": "boolean" } }],
+                            "return": { "name": "void" }
+                        }
+                    },
+                    "description": ""
+                },
+                "ignoreIndent": {
+                    "required": true,
+                    "tsType": { "name": "Array", "elements": [{ "name": "number" }], "raw": "number[]" },
+                    "description": ""
+                },
+                "selectedMap": { "required": true, "tsType": { "name": "SelectedMap" }, "description": "" },
+                "group": { "required": true, "tsType": { "name": "Group" }, "description": "" },
+                "loadData": { "required": false, "tsType": { "name": "LoadData" }, "description": "" },
+                "loaded": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                "title": { "required": true, "tsType": { "name": "ReactNode" }, "description": "" },
+                "disabled": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                "depth": { "required": true, "tsType": { "name": "number" }, "description": "" },
+                "isLatest": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                "multiple": { "required": false, "tsType": { "name": "boolean" }, "description": "" }
+            }
+        }
+    },
+    "Items": {
+        "path": "Tree/Items.tsx",
+        "name": "Items",
+        "info": {
+            "description": { "description": "项", "tags": [] },
+            "displayName": "Items",
+            "methods": [],
+            "props": {
+                "children": {
+                    "required": false,
+                    "tsType": { "name": "Array", "elements": [{ "name": "TreeData" }], "raw": "TreeData[]" },
+                    "description": ""
+                },
+                "depth": { "required": true, "tsType": { "name": "number" }, "description": "" },
+                "ignoreIndent": {
+                    "required": false,
+                    "tsType": { "name": "Array", "elements": [{ "name": "number" }], "raw": "number[]" },
+                    "description": "",
+                    "defaultValue": { "value": "[]", "computed": false }
+                },
+                "disabled": { "required": true, "tsType": { "name": "boolean" }, "description": "" },
+                "multiple": { "required": true, "tsType": { "name": "boolean" }, "description": "" },
+                "onSelect": {
+                    "required": true,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(keyMap: ChangeKeyMap) => void",
+                        "signature": {
+                            "arguments": [{ "name": "keyMap", "type": { "name": "ChangeKeyMap" } }],
+                            "return": { "name": "void" }
+                        }
+                    },
+                    "description": ""
+                },
+                "selectedMap": { "required": true, "tsType": { "name": "SelectedMap" }, "description": "" },
+                "group": { "required": true, "tsType": { "name": "Group" }, "description": "" },
+                "loadData": { "required": false, "tsType": { "name": "LoadData" }, "description": "" }
+            }
+        }
+    },
+    "Tree": {
+        "path": "Tree/Tree.tsx",
+        "name": "Tree",
+        "info": {
+            "description": "",
+            "displayName": "Tree",
+            "methods": [],
+            "props": {
+                "dataSource": {
+                    "required": true,
+                    "tsType": { "name": "Array", "elements": [{ "name": "TreeData" }], "raw": "TreeData[]" },
+                    "description": { "description": "数据源", "tags": [] }
+                },
+                "disabled": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "是否禁用", "tags": [] }
+                },
+                "multiple": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "是否支持多选", "tags": [] }
+                },
+                "selectedKeys": {
+                    "required": false,
+                    "tsType": { "name": "Array", "elements": [{ "name": "Key" }], "raw": "Key[]" },
+                    "description": { "description": "选中的数据 controlled", "tags": [] }
+                },
+                "defaultSelectedKeys": {
+                    "required": false,
+                    "tsType": { "name": "Array", "elements": [{ "name": "Key" }], "raw": "Key[]" },
+                    "description": { "description": "默认选中的数据 uncontrolled", "tags": [] }
+                },
+                "onChange": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(v: Key[]) => void",
+                        "signature": {
+                            "arguments": [
+                                {
+                                    "name": "v",
+                                    "type": { "name": "Array", "elements": [{ "name": "Key" }], "raw": "Key[]" }
+                                }
+                            ],
+                            "return": { "name": "void" }
+                        }
+                    },
+                    "description": { "description": "选中变化回调", "tags": [] }
+                },
+                "loadData": {
+                    "required": false,
+                    "tsType": { "name": "LoadData" },
+                    "description": { "description": "异步加载数据操作", "tags": [] }
+                },
+                "collapseProps": {
+                    "required": false,
+                    "tsType": { "name": "CollapseProps" },
+                    "description": { "description": "collapse 的配置，参考 collapse 组件", "tags": [] }
+                },
+                "search": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "| true\n| {\n      /** 自定义搜索函数 */\n      handleSearch?: (\n          searchValue: string,\n          dataSource: TreeData[]\n      ) => {\n          dataSource: TreeData[];\n          count: number;\n          openKeys: Key[];\n      };\n  }",
+                        "elements": [
+                            { "name": "literal", "value": "true" },
+                            {
+                                "name": "signature",
+                                "type": "object",
+                                "raw": "{\n    /** 自定义搜索函数 */\n    handleSearch?: (\n        searchValue: string,\n        dataSource: TreeData[]\n    ) => {\n        dataSource: TreeData[];\n        count: number;\n        openKeys: Key[];\n    };\n}",
+                                "signature": {
+                                    "properties": [
+                                        {
+                                            "key": "handleSearch",
+                                            "value": {
+                                                "name": "signature",
+                                                "type": "function",
+                                                "raw": "(\n    searchValue: string,\n    dataSource: TreeData[]\n) => {\n    dataSource: TreeData[];\n    count: number;\n    openKeys: Key[];\n}",
+                                                "signature": {
+                                                    "arguments": [
+                                                        { "name": "searchValue", "type": { "name": "string" } },
+                                                        {
+                                                            "name": "dataSource",
+                                                            "type": {
+                                                                "name": "Array",
+                                                                "elements": [{ "name": "TreeData" }],
+                                                                "raw": "TreeData[]"
+                                                            }
+                                                        }
+                                                    ],
+                                                    "return": {
+                                                        "name": "signature",
+                                                        "type": "object",
+                                                        "raw": "{\n    dataSource: TreeData[];\n    count: number;\n    openKeys: Key[];\n}",
+                                                        "signature": {
+                                                            "properties": [
+                                                                {
+                                                                    "key": "dataSource",
+                                                                    "value": {
+                                                                        "name": "Array",
+                                                                        "elements": [{ "name": "TreeData" }],
+                                                                        "raw": "TreeData[]",
+                                                                        "required": true
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "key": "count",
+                                                                    "value": { "name": "number", "required": true }
+                                                                },
+                                                                {
+                                                                    "key": "openKeys",
+                                                                    "value": {
+                                                                        "name": "Array",
+                                                                        "elements": [{ "name": "Key" }],
+                                                                        "raw": "Key[]",
+                                                                        "required": true
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                },
+                                                "required": false
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "description": { "description": "使用搜索", "tags": [] }
+                }
+            }
+        }
+    }
+}

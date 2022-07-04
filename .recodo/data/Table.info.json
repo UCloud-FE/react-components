@@ -1,0 +1,952 @@
+{
+    "ColumnConfigButton": {
+        "path": "Table/ColumnConfigButton.jsx",
+        "name": "ColumnConfigButton",
+        "info": {
+            "description": "",
+            "displayName": "ColumnConfigButton",
+            "methods": [
+                { "name": "showModal", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                { "name": "closeModal", "docblock": null, "modifiers": [], "params": [], "returns": null }
+            ],
+            "props": {
+                "modalProps": {
+                    "type": { "name": "object" },
+                    "required": false,
+                    "description": { "description": "弹窗的props", "tags": [] }
+                }
+            }
+        }
+    },
+    "DragWrap": {
+        "path": "Table/DragWrap.tsx",
+        "name": "DragWrap",
+        "info": {
+            "description": "",
+            "displayName": "DragWrap",
+            "methods": [],
+            "props": {
+                "children": { "required": true, "tsType": { "name": "ReactNode" }, "description": "" },
+                "draggable": { "required": true, "tsType": { "name": "boolean" }, "description": "" }
+            }
+        }
+    },
+    "ExpandedRow": {
+        "path": "Table/ExpandedRowContent.jsx",
+        "name": "ExpandedRow",
+        "info": { "description": "", "displayName": "ExpandedRow", "methods": [] }
+    },
+    "HoverDisplayArea": {
+        "path": "Table/HoverDisplayArea.jsx",
+        "name": "HoverDisplayArea",
+        "info": {
+            "description": "",
+            "displayName": "HoverDisplayArea",
+            "methods": [],
+            "props": {
+                "children": {
+                    "type": { "name": "node" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "className": {
+                    "type": { "name": "string" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                }
+            }
+        }
+    },
+    "ResizableTH": {
+        "path": "Table/ResizableTH.jsx",
+        "name": "ResizableTH",
+        "info": {
+            "description": "",
+            "displayName": "ResizableTH",
+            "methods": [
+                {
+                    "name": "onResize",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "e", "type": null },
+                        { "name": "{ size }", "type": null }
+                    ],
+                    "returns": null
+                },
+                { "name": "onResizeStart", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                { "name": "onResizeStop", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                { "name": "splitProps", "docblock": null, "modifiers": [], "params": [], "returns": null }
+            ],
+            "props": {
+                "width": {
+                    "type": { "name": "number" },
+                    "required": false,
+                    "description": { "description": "当前宽度", "tags": [] }
+                },
+                "minWidth": {
+                    "type": { "name": "number" },
+                    "required": false,
+                    "description": { "description": "最小宽度", "tags": [] }
+                },
+                "maxWidth": {
+                    "type": { "name": "number" },
+                    "required": false,
+                    "description": { "description": "最大宽度", "tags": [] }
+                },
+                "resizeAble": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": {
+                        "description": "",
+                        "tags": [{ "title": "deprecated", "description": "是否可调整大小" }]
+                    }
+                },
+                "resizable": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "是否可调整大小", "tags": [] }
+                },
+                "onResize": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": { "description": "调整时的回调", "tags": [] }
+                },
+                "children": {
+                    "type": { "name": "node" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "column": { "type": { "name": "any" }, "required": false, "description": "" }
+            }
+        }
+    },
+    "SearchInput": {
+        "path": "Table/SearchInput.jsx",
+        "name": "SearchInput",
+        "info": { "description": "", "displayName": "SearchInput", "methods": [] }
+    },
+    "Table": {
+        "path": "Table/Table.jsx",
+        "name": "Table",
+        "info": {
+            "description": "",
+            "displayName": "Table",
+            "methods": [
+                {
+                    "name": "check",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "props", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "componentWillReceiveProps",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "nextProps", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "getOrder",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "order", "type": null },
+                        { "name": "columns", "type": null }
+                    ],
+                    "returns": null
+                },
+                {
+                    "name": "calFiltersFromProps",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "{ columns = [] }", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "calDefaultFilters",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "{ columns = [] }", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "mergeFilters",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "stateFilters", "type": null },
+                        { "name": "propsFilters", "type": null },
+                        { "name": "columns", "type": null }
+                    ],
+                    "returns": null
+                },
+                {
+                    "name": "getExpandedRowKeys",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "dataSource", "type": null },
+                        { "name": "changedUnExpandedRowKeys", "type": null }
+                    ],
+                    "returns": null
+                },
+                {
+                    "name": "deprecatedOnRowSelect",
+                    "docblock": "@deprecated",
+                    "modifiers": [],
+                    "params": [{ "name": "selectedRowKeys" }],
+                    "returns": null,
+                    "description": null
+                },
+                {
+                    "name": "onSelectedRowKeysChange",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "selectedRowKeyMap", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "onColumnConfigChange",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "config", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "handleSearch",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "v", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "handleConditionChange",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "stateCondition", "type": null },
+                        { "name": "callbackCondition", "type": null }
+                    ],
+                    "returns": null
+                },
+                {
+                    "name": "renderFilter",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "column", "type": null },
+                        { "name": "filterInfo", "type": null },
+                        { "name": "index", "type": null }
+                    ],
+                    "returns": null
+                },
+                {
+                    "name": "handleFilter",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "key", "type": null },
+                        { "name": "value", "type": null }
+                    ],
+                    "returns": null
+                },
+                { "name": "clearFilter", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                {
+                    "name": "renderOrder",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "order", "type": null },
+                        { "name": "key", "type": null },
+                        { "name": "dataIndex", "type": null },
+                        { "name": "state", "type": null }
+                    ],
+                    "returns": null
+                },
+                {
+                    "name": "handleOrder",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "key", "type": null },
+                        { "name": "{ dataIndex, handleOrder, state }", "type": null }
+                    ],
+                    "returns": null
+                },
+                {
+                    "name": "flatDataSource",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "dataSource", "type": null },
+                        { "name": "childrenName", "type": null }
+                    ],
+                    "returns": null
+                },
+                {
+                    "name": "getDataSource",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "filters", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "handleToggleCurrentPage",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "enableKeysOfCurrentPage", "type": null },
+                        { "name": "checked", "type": null }
+                    ],
+                    "returns": null
+                },
+                {
+                    "name": "handleSelectRecord",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "key", "type": null },
+                        { "name": "checked", "type": null }
+                    ],
+                    "returns": null
+                },
+                {
+                    "name": "getRowKey",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "record", "type": null },
+                        { "name": "index", "type": null }
+                    ],
+                    "returns": null
+                },
+                {
+                    "name": "getColumnKey",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "column", "type": null },
+                        { "name": "index", "type": null }
+                    ],
+                    "returns": null
+                },
+                { "name": "getDragSorting", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                {
+                    "name": "getColumns",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "dataSourceOfCurrentPage", "type": null },
+                        { "name": "filters", "type": null }
+                    ],
+                    "returns": null
+                },
+                { "name": "getTableDom", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                { "name": "getContentDom", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                { "name": "getBodyDom", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                {
+                    "name": "getRowDom",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "rowKey", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "getRowDomByIndex",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "rowIndex", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "initDrag",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "source", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "setDraggable",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "e", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "unsetDraggable",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "e", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "setDragOver",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "source", "type": null },
+                        { "name": "target", "type": null }
+                    ],
+                    "returns": null
+                },
+                {
+                    "name": "unsetDragOver",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "source", "type": null },
+                        { "name": "target", "type": null }
+                    ],
+                    "returns": null
+                },
+                {
+                    "name": "onDragStart",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "source", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "onDragEnd",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "source", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "onDragEnter",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "source", "type": null },
+                        { "name": "target", "type": null }
+                    ],
+                    "returns": null
+                },
+                {
+                    "name": "onDragLeave",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "source", "type": null },
+                        { "name": "target", "type": null }
+                    ],
+                    "returns": null
+                },
+                {
+                    "name": "onDrop",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "source", "type": null },
+                        { "name": "target", "type": null }
+                    ],
+                    "returns": null
+                },
+                {
+                    "name": "transformDomIndex",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "source", "type": null },
+                        { "name": "target", "type": null }
+                    ],
+                    "returns": null
+                },
+                { "name": "getPagination", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                {
+                    "name": "renderSearchInfo",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "option", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "renderEmptyAndErrorInfo",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "option", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "renderTitle",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "option", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "renderFooter",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "option", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "onExpandHandler",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "expanded", "type": null },
+                        { "name": "record", "type": null }
+                    ],
+                    "returns": null
+                },
+                {
+                    "name": "onRow",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "record", "type": null },
+                        { "name": "index", "type": null }
+                    ],
+                    "returns": null
+                },
+                {
+                    "name": "savePopupContainer",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "_ref", "type": null }],
+                    "returns": null
+                },
+                { "name": "getPopupContainer", "docblock": null, "modifiers": [], "params": [], "returns": null }
+            ],
+            "props": {
+                "pagination": {
+                    "type": { "name": "object" },
+                    "required": false,
+                    "description": { "description": "分页组件的配置，传入null为隐藏分页", "tags": [] },
+                    "defaultValue": { "value": "{}", "computed": false }
+                },
+                "dataSource": {
+                    "type": { "name": "array" },
+                    "required": false,
+                    "description": { "description": "数据源", "tags": [] },
+                    "defaultValue": { "value": "[]", "computed": false }
+                },
+                "columns": {
+                    "type": { "name": "array" },
+                    "required": false,
+                    "description": { "description": "表列信息，具体属性参考 columns 事例", "tags": [] },
+                    "defaultValue": { "value": "[]", "computed": false }
+                },
+                "columnPlaceholder": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": {
+                        "description": "启用后会创建一个无宽度的空列，用作宽度占位，占位后宽度溢出便不会导致表格列被压缩，多出的宽度会被空列占用。\n占位列 column.key 为 table\\_column\\_width\\_placeholder，使用中需注意避免重复 key",
+                        "tags": []
+                    }
+                },
+                "defaultColumnConfig": {
+                    "type": { "name": "object" },
+                    "required": false,
+                    "description": { "description": "表列配置项，非受控", "tags": [] },
+                    "defaultValue": { "value": "{}", "computed": false }
+                },
+                "onColumnConfigChange": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": { "description": "表列配置修改回调", "tags": [] },
+                    "defaultValue": { "value": "() => {}", "computed": false }
+                },
+                "expandedRowRender": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": { "description": "额外表信息渲染", "tags": [] }
+                },
+                "expandIconAsCell": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "额外表展开按钮是否独立占据一格，data有children时有效", "tags": [] }
+                },
+                "expandIconColumnIndex": {
+                    "type": { "name": "number" },
+                    "required": false,
+                    "description": {
+                        "description": "展开按钮的塞入的column index，expandIconAsCell为false时生效",
+                        "tags": []
+                    }
+                },
+                "hideExpandIcon": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "隐藏扩展列按钮", "tags": [] }
+                },
+                "defaultExpandedRowKeys": {
+                    "type": { "name": "array" },
+                    "required": false,
+                    "description": { "description": "默认展开项，非受控", "tags": [] }
+                },
+                "expandedRowKeys": {
+                    "type": { "name": "array" },
+                    "required": false,
+                    "description": { "description": "展开项，受控", "tags": [] }
+                },
+                "defaultExpandAllRows": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "是否默认展开所有列", "tags": [] }
+                },
+                "onExpandedRowsChange": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": { "description": "展开事件", "tags": [] }
+                },
+                "onExpand": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": { "description": "展开按钮点击事件", "tags": [] }
+                },
+                "onRow": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": {
+                        "description": "设置行props",
+                        "tags": [
+                            { "title": "argument", "description": "行数据", "type": null, "name": "record" },
+                            {
+                                "title": "argument",
+                                "description": "行当前翻页中的index 不可作为key使用 不建议使用",
+                                "type": null,
+                                "name": "index"
+                            }
+                        ]
+                    }
+                },
+                "onHeaderRow": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": {
+                        "description": "设置表头props",
+                        "tags": [
+                            { "title": "argument", "description": "行数据", "type": null, "name": "record" },
+                            {
+                                "title": "argument",
+                                "description": "表头行的index 表示存在分组时(column.children)的表头层级",
+                                "type": null,
+                                "name": "index"
+                            }
+                        ]
+                    }
+                },
+                "rowSelection": {
+                    "type": {
+                        "name": "union",
+                        "value": [
+                            {
+                                "name": "shape",
+                                "value": {
+                                    "fixed": { "name": "bool", "description": "选框是否为 fixed", "required": false },
+                                    "onChange": { "name": "func", "description": "选中项变化回调", "required": false },
+                                    "defaultSelectedRowKeys": {
+                                        "name": "array",
+                                        "description": "默认当前选中项，uncontrolled",
+                                        "required": false
+                                    },
+                                    "selectedRowKeys": {
+                                        "name": "array",
+                                        "description": "当前选中项，controlled",
+                                        "required": false
+                                    },
+                                    "getDisabledOfRow": {
+                                        "name": "func",
+                                        "description": "获取当前行选中禁用状态",
+                                        "required": false
+                                    },
+                                    "multiple": {
+                                        "name": "bool",
+                                        "description": "是否多选\n@default true",
+                                        "required": false
+                                    },
+                                    "selectedTip": {
+                                        "name": "enum",
+                                        "value": [
+                                            { "value": "true", "computed": false },
+                                            { "value": "false", "computed": false },
+                                            { "value": "'bottom'", "computed": false }
+                                        ],
+                                        "description": "多选选中时的提示，bottom 为显示在下方\n@default true",
+                                        "required": false
+                                    },
+                                    "disabled": { "name": "bool", "description": "是否禁用", "required": false }
+                                }
+                            },
+                            { "name": "enum", "value": [{ "value": "true", "computed": false }] }
+                        ]
+                    },
+                    "required": false,
+                    "description": {
+                        "description": "列表可选选项配置.\ncolumn.key 为 table\\_row\\_selection，使用中需注意避免重复 key",
+                        "tags": []
+                    }
+                },
+                "dragSorting": {
+                    "type": {
+                        "name": "union",
+                        "value": [
+                            { "name": "enum", "value": [{ "value": "true", "computed": false }] },
+                            {
+                                "name": "shape",
+                                "value": {
+                                    "fixed": { "name": "bool", "required": false },
+                                    "onChange": { "name": "func", "required": false }
+                                }
+                            }
+                        ]
+                    },
+                    "required": false,
+                    "description": { "description": "拖拽排序", "tags": [] }
+                },
+                "onRowSelect": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": {
+                        "description": "列表选项变化回调",
+                        "tags": [{ "title": "deprecated", "description": "请使用rowSelection.onChange来替换" }]
+                    }
+                },
+                "showHeader": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "是否显示表头", "tags": [] }
+                },
+                "columnResizable": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "是否可拖拽调节表格列大小", "tags": [] }
+                },
+                "title": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": { "description": "头部内容", "tags": [] }
+                },
+                "footer": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": { "description": "底部内容", "tags": [] }
+                },
+                "emptyContent": {
+                    "type": { "name": "node" },
+                    "required": false,
+                    "description": { "description": "无数据时的展示内容", "tags": [] }
+                },
+                "errorContent": {
+                    "type": { "name": "node" },
+                    "required": false,
+                    "description": { "description": "报错信息", "tags": [] }
+                },
+                "handleSearch": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": { "description": "如何搜索", "tags": [] },
+                    "defaultValue": {
+                        "value": "(record, searchValue) => {\n    return _.map(record).join('').indexOf(searchValue) >= 0;\n}",
+                        "computed": false
+                    }
+                },
+                "customStyle": {
+                    "type": { "name": "shape", "value": { "outerPadding": { "name": "string", "required": false } } },
+                    "required": false,
+                    "description": { "description": "自定义样式", "tags": [] },
+                    "defaultValue": { "value": "{}", "computed": false }
+                },
+                "scroll": {
+                    "type": {
+                        "name": "shape",
+                        "value": {
+                            "x": {
+                                "name": "union",
+                                "value": [{ "name": "bool" }, { "name": "number" }],
+                                "description": "x轴滚动配置，为true自动展开并滚动，为数字时设定表单的宽度",
+                                "required": false
+                            },
+                            "y": {
+                                "name": "union",
+                                "value": [{ "name": "bool" }, { "name": "number" }],
+                                "description": "y轴滚动配置，为数字时设定表单的高度",
+                                "required": false
+                            },
+                            "onScroll": { "name": "func", "description": "table body 滚动时的回调", "required": false }
+                        }
+                    },
+                    "required": false,
+                    "description": { "description": "滚动配置", "tags": [] }
+                },
+                "tableLayout": {
+                    "type": {
+                        "name": "enum",
+                        "value": [
+                            { "value": "'auto'", "computed": false },
+                            { "value": "'fixed'", "computed": false }
+                        ]
+                    },
+                    "required": false,
+                    "description": {
+                        "description": "表格布局，当 scroll.x 有值时为 fixed，其它时候默认为 auto，可自行覆盖",
+                        "tags": []
+                    }
+                },
+                "rowKey": {
+                    "type": { "name": "union", "value": [{ "name": "func" }, { "name": "string" }] },
+                    "required": false,
+                    "description": { "description": "定义如何获取每行的键值", "tags": [] },
+                    "defaultValue": { "value": "'key'", "computed": false }
+                },
+                "zebraCrossing": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "是否有斑马线，存在子表格时，斑马线样式可能会错乱", "tags": [] }
+                },
+                "components": {
+                    "type": {
+                        "name": "shape",
+                        "value": {
+                            "header": {
+                                "name": "shape",
+                                "value": { "cell": { "name": "any", "required": false } },
+                                "required": false
+                            }
+                        }
+                    },
+                    "required": false,
+                    "description": { "description": "自定义表格组件，慎用", "tags": [] }
+                },
+                "defaultOrder": {
+                    "type": {
+                        "name": "shape",
+                        "value": {
+                            "key": { "name": "string", "required": false },
+                            "state": {
+                                "name": "enum",
+                                "value": [
+                                    { "value": "'desc'", "computed": false },
+                                    { "value": "'asc'", "computed": false }
+                                ],
+                                "required": false
+                            }
+                        }
+                    },
+                    "required": false,
+                    "description": {
+                        "description": "默认排序设置，key 为 column key，state 为升序(asc)或降序(desc)",
+                        "tags": []
+                    }
+                },
+                "order": {
+                    "type": {
+                        "name": "shape",
+                        "value": {
+                            "key": { "name": "string", "required": false },
+                            "state": {
+                                "name": "enum",
+                                "value": [
+                                    { "value": "'desc'", "computed": false },
+                                    { "value": "'asc'", "computed": false }
+                                ],
+                                "required": false
+                            }
+                        }
+                    },
+                    "required": false,
+                    "description": {
+                        "description": "受控排序设置，key 为 column key，state 为升序(asc)或降序(desc)",
+                        "tags": []
+                    }
+                },
+                "onConditionChange": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": {
+                        "description": "表格的筛选等条件变更时的回调",
+                        "tags": [
+                            { "title": "param", "description": "变更的数据", "type": null, "name": "condition" },
+                            { "title": "param", "description": "排序", "type": null, "name": "condition.order" },
+                            { "title": "param", "description": "筛选", "type": null, "name": "condition.filter" },
+                            { "title": "param", "description": "搜索", "type": null, "name": "condition.searchValue" }
+                        ]
+                    }
+                },
+                "doNotHandleCondition": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": {
+                        "description": "order、filter、searchValue、pagination变化时表格内部不处理",
+                        "tags": []
+                    }
+                },
+                "contextMenu": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": {
+                        "description": "右键菜单",
+                        "tags": [{ "title": "param", "description": "该行的记录值", "type": null, "name": "record" }]
+                    }
+                },
+                "className": {
+                    "type": { "name": "string" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "style": {
+                    "type": { "name": "object" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "locale": {
+                    "type": { "name": "object" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                }
+            }
+        }
+    },
+    "TableRow": {
+        "path": "Table/TableRow.tsx",
+        "name": "TableRow",
+        "info": {
+            "description": "",
+            "displayName": "TableRow",
+            "methods": [],
+            "props": {
+                "record": { "required": true, "tsType": { "name": "any" }, "description": "" },
+                "contextMenu": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(record: any, hideContextMenu: () => void) => ReactNode",
+                        "signature": {
+                            "arguments": [
+                                { "name": "record", "type": { "name": "any" } },
+                                {
+                                    "name": "hideContextMenu",
+                                    "type": {
+                                        "name": "signature",
+                                        "type": "function",
+                                        "raw": "() => void",
+                                        "signature": { "arguments": [], "return": { "name": "void" } }
+                                    }
+                                }
+                            ],
+                            "return": { "name": "ReactNode" }
+                        }
+                    },
+                    "description": ""
+                },
+                "draggable": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                "data-row-key": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "string | number",
+                        "elements": [{ "name": "string" }, { "name": "number" }]
+                    },
+                    "description": ""
+                }
+            }
+        }
+    }
+}

@@ -7,21 +7,24 @@ const getRemoteUrl = (codePath: string, componentName: string) => {
 };
 
 const Doc = ({
-    name,
     scope,
-    examples,
-    docs,
+    info,
+    doc,
     reportAnchorList
 }: {
     name: string;
     scope: any;
-    examples: any;
-    docs: any;
+    info: any;
+    doc: any;
     reportAnchorList: (anchorList: any) => void;
 }) => {
     return (
-        <Provider content={{ examples, docs }} getRemoteUrl={getRemoteUrl} scope={scope}>
-            <Page name={name} reportAnchorList={reportAnchorList} />
+        <Provider
+            content={{ infoMap: { name: info }, docMap: { name: doc } }}
+            getRemoteUrl={getRemoteUrl}
+            scope={scope}
+        >
+            <Page name={'name'} reportAnchorList={reportAnchorList} />
         </Provider>
     );
 };

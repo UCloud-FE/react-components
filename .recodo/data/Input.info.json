@@ -1,0 +1,155 @@
+{
+    "Input": {
+        "path": "Input/Input.tsx",
+        "name": "Input",
+        "info": {
+            "description": "",
+            "displayName": "Input",
+            "methods": [],
+            "props": {
+                "icon": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "string | ReactNode",
+                        "elements": [{ "name": "string" }, { "name": "ReactNode" }]
+                    },
+                    "description": {
+                        "description": "",
+                        "tags": [
+                            {
+                                "title": "deprecated",
+                                "description": "使用 suffix 替换\n图标，传入 string 时为图标类型，也可直接传入图标组件"
+                            }
+                        ]
+                    }
+                },
+                "prefix": {
+                    "required": false,
+                    "tsType": { "name": "ReactNode" },
+                    "description": { "description": "前缀", "tags": [] }
+                },
+                "suffix": {
+                    "required": false,
+                    "tsType": { "name": "ReactNode" },
+                    "description": { "description": "后缀", "tags": [] }
+                },
+                "clearable": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "boolean | { autoFocus?: boolean; callOnChange?: boolean }",
+                        "elements": [
+                            { "name": "boolean" },
+                            {
+                                "name": "signature",
+                                "type": "object",
+                                "raw": "{ autoFocus?: boolean; callOnChange?: boolean }",
+                                "signature": {
+                                    "properties": [
+                                        { "key": "autoFocus", "value": { "name": "boolean", "required": false } },
+                                        { "key": "callOnChange", "value": { "name": "boolean", "required": false } }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "description": { "description": "是否可清空", "tags": [] }
+                },
+                "size": {
+                    "required": false,
+                    "tsType": { "name": "Size" },
+                    "description": { "description": "尺寸", "tags": [] },
+                    "defaultValue": { "value": "'md'", "computed": false }
+                },
+                "status": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "'default' | 'error' | string",
+                        "elements": [
+                            { "name": "literal", "value": "'default'" },
+                            { "name": "literal", "value": "'error'" },
+                            { "name": "string" }
+                        ]
+                    },
+                    "description": { "description": "状态", "tags": [] }
+                },
+                "block": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "展示变更为块占位", "tags": [] }
+                },
+                "onClear": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "() => void",
+                        "signature": { "arguments": [], "return": { "name": "void" } }
+                    },
+                    "description": { "description": "点击 clear 按钮回调", "tags": [] },
+                    "defaultValue": { "value": "noop", "computed": true }
+                },
+                "customStyle": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "object",
+                        "raw": "{\n    border?: string;\n    boxShadow?: string;\n    background?: string;\n}",
+                        "signature": {
+                            "properties": [
+                                { "key": "border", "value": { "name": "string", "required": false } },
+                                { "key": "boxShadow", "value": { "name": "string", "required": false } },
+                                { "key": "background", "value": { "name": "string", "required": false } }
+                            ]
+                        }
+                    },
+                    "description": { "description": "自定义样式", "tags": [] }
+                },
+                "onFocus": {
+                    "required": false,
+                    "tsType": {
+                        "name": "InputHTMLAttributes['onFocus']",
+                        "raw": "InputHTMLAttributes<HTMLInputElement>['onFocus']"
+                    },
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] },
+                    "defaultValue": { "value": "noop", "computed": true }
+                },
+                "onBlur": {
+                    "required": false,
+                    "tsType": {
+                        "name": "InputHTMLAttributes['onBlur']",
+                        "raw": "InputHTMLAttributes<HTMLInputElement>['onBlur']"
+                    },
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] },
+                    "defaultValue": { "value": "noop", "computed": true }
+                }
+            }
+        }
+    },
+    "Search": {
+        "path": "Input/Search.tsx",
+        "name": "Search",
+        "info": {
+            "description": "",
+            "displayName": "Search",
+            "methods": [],
+            "props": {
+                "onSearch": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(value: string) => void",
+                        "signature": {
+                            "arguments": [{ "name": "value", "type": { "name": "string" } }],
+                            "return": { "name": "void" }
+                        }
+                    },
+                    "description": { "description": "搜索回调，回车/点击搜索按钮触发", "tags": [] }
+                }
+            }
+        }
+    }
+}

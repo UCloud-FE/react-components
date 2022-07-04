@@ -1,0 +1,47 @@
+{
+    "TransferTable": {
+        "path": "TransferTable/TransferTable.jsx",
+        "name": "TransferTable",
+        "info": {
+            "description": "",
+            "displayName": "TransferTable",
+            "methods": [
+                {
+                    "name": "onRow",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "record", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "renderList",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "{ dataSource, selectedKeys, onChange, disabled }", "type": null }],
+                    "returns": null
+                }
+            ],
+            "props": {
+                "getDisabledOfRow": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": { "description": "禁用列选择", "tags": [] }
+                },
+                "columns": {
+                    "type": { "name": "array" },
+                    "required": false,
+                    "description": { "description": "表单的 columns", "tags": [] }
+                },
+                "tableProps": {
+                    "type": { "name": "object" },
+                    "required": false,
+                    "description": {
+                        "description": "自定义 table 的 props，如 tableLayout 等，两个 table 共享，部分参数写死无法自定义",
+                        "tags": []
+                    }
+                }
+            },
+            "composes": ["src/components/Transfer"]
+        }
+    }
+}

@@ -1,0 +1,117 @@
+{
+    "Col": {
+        "path": "Grid/Col.jsx",
+        "name": "Col",
+        "info": {
+            "description": "",
+            "displayName": "Col",
+            "methods": [],
+            "props": {
+                "span": {
+                    "type": { "name": "number" },
+                    "required": false,
+                    "description": { "description": "栅格占位格数", "tags": [] }
+                },
+                "offset": {
+                    "type": { "name": "number" },
+                    "required": false,
+                    "description": { "description": "栅格向右偏移格数，偏移占位", "tags": [] }
+                },
+                "pull": {
+                    "type": { "name": "number" },
+                    "required": false,
+                    "description": { "description": "栅格向左偏移格数，偏移不占位", "tags": [] }
+                },
+                "push": {
+                    "type": { "name": "number" },
+                    "required": false,
+                    "description": { "description": "栅格向右偏移格数，偏移不占位", "tags": [] }
+                },
+                "order": {
+                    "type": { "name": "number" },
+                    "required": false,
+                    "description": { "description": "flex布局下的order", "tags": [] }
+                },
+                "gutter": {
+                    "type": { "name": "number" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "className": {
+                    "type": { "name": "string" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                }
+            }
+        }
+    },
+    "Row": {
+        "path": "Grid/Row.jsx",
+        "name": "Row",
+        "info": {
+            "description": "",
+            "displayName": "Row",
+            "methods": [],
+            "props": {
+                "type": {
+                    "type": { "name": "enum", "value": [{ "value": "'flex'", "computed": false }] },
+                    "required": false,
+                    "description": { "description": "是否为flex类型，flex类型时定位属性才能生效", "tags": [] }
+                },
+                "align": {
+                    "type": {
+                        "name": "enum",
+                        "value": [
+                            { "value": "'top'", "computed": false },
+                            { "value": "'middle'", "computed": false },
+                            { "value": "'bottom'", "computed": false }
+                        ]
+                    },
+                    "required": false,
+                    "description": { "description": "垂直定位", "tags": [] }
+                },
+                "justify": {
+                    "type": {
+                        "name": "enum",
+                        "value": [
+                            { "value": "'start'", "computed": false },
+                            { "value": "'end'", "computed": false },
+                            { "value": "'center'", "computed": false },
+                            { "value": "'space-around'", "computed": false },
+                            { "value": "'space-between'", "computed": false }
+                        ]
+                    },
+                    "required": false,
+                    "description": { "description": "水平定位", "tags": [] }
+                },
+                "gutter": {
+                    "type": {
+                        "name": "union",
+                        "value": [{ "name": "number" }, { "name": "arrayOf", "value": { "name": "number" } }]
+                    },
+                    "required": false,
+                    "description": {
+                        "description": "栅格间距，单个值为横行间隔，数组为[横向间距, 纵向间距]",
+                        "tags": []
+                    },
+                    "defaultValue": { "value": "16", "computed": false }
+                },
+                "className": {
+                    "type": { "name": "string" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "style": {
+                    "type": { "name": "object" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "children": {
+                    "type": { "name": "node" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                }
+            }
+        }
+    }
+}

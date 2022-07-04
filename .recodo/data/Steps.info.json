@@ -1,0 +1,123 @@
+{
+    "Step": {
+        "path": "Steps/Step.jsx",
+        "name": "Step",
+        "info": {
+            "description": "",
+            "displayName": "Step",
+            "methods": [],
+            "props": {
+                "status": { "type": { "name": "string" }, "required": false, "description": "" },
+                "step": { "type": { "name": "node" }, "required": false, "description": "" },
+                "remark": { "type": { "name": "node" }, "required": false, "description": "" },
+                "title": { "type": { "name": "node" }, "required": false, "description": "" }
+            }
+        }
+    },
+    "StepIcon": {
+        "path": "Steps/StepIcon.jsx",
+        "name": "StepIcon",
+        "info": {
+            "description": "",
+            "displayName": "StepIcon",
+            "methods": [
+                {
+                    "name": "renderContent",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "status", "type": null },
+                        { "name": "content", "type": null }
+                    ],
+                    "returns": null
+                }
+            ],
+            "props": {
+                "step": {
+                    "type": { "name": "node" },
+                    "required": false,
+                    "description": { "description": "指定步骤数", "tags": [] }
+                },
+                "status": {
+                    "type": {
+                        "name": "enum",
+                        "value": [
+                            { "value": "'current'", "computed": false },
+                            { "value": "'before'", "computed": false },
+                            { "value": "'after'", "computed": false },
+                            { "value": "'loading'", "computed": false },
+                            { "value": "'error'", "computed": false }
+                        ]
+                    },
+                    "required": false,
+                    "description": { "description": "状态", "tags": [] }
+                }
+            }
+        }
+    },
+    "Steps": {
+        "path": "Steps/Steps.jsx",
+        "name": "Steps",
+        "info": {
+            "description": "",
+            "displayName": "Steps",
+            "methods": [
+                {
+                    "name": "renderSteps",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "steps", "type": null },
+                        { "name": "current", "type": null },
+                        { "name": "status", "type": null }
+                    ],
+                    "returns": null
+                }
+            ],
+            "props": {
+                "steps": {
+                    "type": {
+                        "name": "arrayOf",
+                        "value": {
+                            "name": "shape",
+                            "value": {
+                                "key": {
+                                    "name": "string",
+                                    "description": "步骤的 key，不传为数组索引",
+                                    "required": false
+                                },
+                                "step": {
+                                    "name": "node",
+                                    "description": "步骤的显示文字，默认为索引 + 1",
+                                    "required": false
+                                },
+                                "title": { "name": "node", "description": "步骤的标题内容", "required": false },
+                                "remark": { "name": "node", "description": "步骤的备注", "required": false }
+                            }
+                        }
+                    },
+                    "required": true,
+                    "description": { "description": "步骤列表", "tags": [] }
+                },
+                "current": {
+                    "type": { "name": "union", "value": [{ "name": "string" }, { "name": "number" }] },
+                    "required": false,
+                    "description": { "description": "当前步骤的 key，不传或传 null 时为全部完成", "tags": [] }
+                },
+                "status": {
+                    "type": {
+                        "name": "enum",
+                        "value": [
+                            { "value": "'current'", "computed": false },
+                            { "value": "'loading'", "computed": false },
+                            { "value": "'error'", "computed": false }
+                        ]
+                    },
+                    "required": false,
+                    "description": { "description": "当前步骤的状态", "tags": [] },
+                    "defaultValue": { "value": "'current'", "computed": false }
+                }
+            }
+        }
+    }
+}

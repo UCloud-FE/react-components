@@ -1,0 +1,61 @@
+{
+    "BackButton": {
+        "path": "Breadcrumb/BackButton.tsx",
+        "name": "BackButton",
+        "info": { "description": "", "displayName": "BackButton", "methods": [] }
+    },
+    "Breadcrumb": {
+        "path": "Breadcrumb/Breadcrumb.tsx",
+        "name": "Breadcrumb",
+        "info": {
+            "description": "",
+            "displayName": "Breadcrumb",
+            "methods": [],
+            "props": {
+                "separator": {
+                    "required": false,
+                    "tsType": { "name": "ReactNode" },
+                    "description": { "description": "自定义分隔符", "tags": [] },
+                    "defaultValue": { "value": "'/'", "computed": false }
+                },
+                "styleType": {
+                    "required": false,
+                    "tsType": { "name": "StyleType" },
+                    "description": { "description": "展示项激活样式的方式", "tags": [] },
+                    "defaultValue": { "value": "'block-hover'", "computed": false }
+                }
+            }
+        }
+    },
+    "Item": {
+        "path": "Breadcrumb/Item.tsx",
+        "name": "Item",
+        "info": {
+            "description": "",
+            "displayName": "Item",
+            "methods": [],
+            "props": {
+                "disabled": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "禁用", "tags": [] }
+                },
+                "current": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "标明当前路由", "tags": [] }
+                },
+                "noAction": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "标明节点无点击跳转事件", "tags": [] }
+                },
+                "href": {
+                    "required": false,
+                    "tsType": { "name": "string" },
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                }
+            }
+        }
+    }
+}

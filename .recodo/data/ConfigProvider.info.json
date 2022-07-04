@@ -1,0 +1,94 @@
+{
+    "ConfigProvider": {
+        "path": "ConfigProvider/ConfigProvider.tsx",
+        "name": "ConfigProvider",
+        "info": {
+            "description": "",
+            "displayName": "ConfigProvider",
+            "methods": [],
+            "props": {
+                "children": {
+                    "required": true,
+                    "tsType": { "name": "ReactNode" },
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "forwardPopupContainer": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": {
+                        "description": "",
+                        "tags": [
+                            {
+                                "title": "deprecated",
+                                "description": "使用 popover 替换\n默认为 true。\n控制全局的 forwardPopupContainer 属性，默认为 true，为 false 时默认关闭 datepicker、select、actionList 等内部的 forwardPopupContainer"
+                            }
+                        ]
+                    }
+                },
+                "popover": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "object",
+                        "raw": "{\n    /** 控制弹出层默认容器 */\n    getPopupContainer?: (triggerNode: Element) => Element;\n    /** 滚动时是否重新定位 */\n    forceAlignWhenScroll?: boolean;\n    /** 控制默认的 forwardPopupContainer */\n    forwardPopupContainer?: boolean | ((triggerNode: Element) => Element);\n    /** 配置不影响 Popover 组件 */\n    ignorePopover?: boolean;\n}",
+                        "signature": {
+                            "properties": [
+                                {
+                                    "key": "getPopupContainer",
+                                    "value": {
+                                        "name": "signature",
+                                        "type": "function",
+                                        "raw": "(triggerNode: Element) => Element",
+                                        "signature": {
+                                            "arguments": [{ "name": "triggerNode", "type": { "name": "Element" } }],
+                                            "return": { "name": "Element" }
+                                        },
+                                        "required": false
+                                    }
+                                },
+                                { "key": "forceAlignWhenScroll", "value": { "name": "boolean", "required": false } },
+                                {
+                                    "key": "forwardPopupContainer",
+                                    "value": {
+                                        "name": "union",
+                                        "raw": "boolean | ((triggerNode: Element) => Element)",
+                                        "elements": [{ "name": "boolean" }, { "name": "unknown" }],
+                                        "required": false
+                                    }
+                                },
+                                { "key": "ignorePopover", "value": { "name": "boolean", "required": false } }
+                            ]
+                        }
+                    },
+                    "description": {
+                        "description": "全局控制 popover 类组件行为，datepicker、select、actionList",
+                        "tags": []
+                    }
+                },
+                "preventFormDefaultAction": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": {
+                        "description": "默认为 true。\n阻止 Form 组件的默认事件，避免在回车时触发页面提交，原生 form 在某些情况下会触发原生的提交，由于现在基本 SPA，页面提交概率不大，故默认屏蔽 Form 组件该行文，如需开启，可设置为 false",
+                        "tags": []
+                    }
+                },
+                "iconDefaultPrefix": {
+                    "required": false,
+                    "tsType": { "name": "string" },
+                    "description": { "description": "设置 Icon 组件的默认 prefix，默认为 icon__，", "tags": [] }
+                },
+                "theme": {
+                    "required": false,
+                    "tsType": { "name": "any" },
+                    "description": { "description": "提供时会使用 ThemeProvider 包裹", "tags": [] }
+                },
+                "locale": {
+                    "required": false,
+                    "tsType": { "name": "AllLocaleMap" },
+                    "description": { "description": "提供时会使用 LocaleProvider 包裹", "tags": [] }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,72 @@
+{
+    "Notice": {
+        "path": "Notice/Notice.tsx",
+        "name": "Notice",
+        "info": {
+            "description": "",
+            "displayName": "Notice",
+            "methods": [],
+            "props": {
+                "closable": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "是否显示关闭按钮", "tags": [] },
+                    "defaultValue": { "value": "true", "computed": false }
+                },
+                "icon": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "null | false | string | ReactNode",
+                        "elements": [
+                            { "name": "null" },
+                            { "name": "literal", "value": "false" },
+                            { "name": "string" },
+                            { "name": "ReactNode" }
+                        ]
+                    },
+                    "description": {
+                        "description": "自定义前置icon，可传入Icon type或者自定义Icon，传入null、false隐藏，默认显示感叹号icon",
+                        "tags": []
+                    }
+                },
+                "onClose": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(e: MouseEvent) => void",
+                        "signature": {
+                            "arguments": [{ "name": "e", "type": { "name": "MouseEvent" } }],
+                            "return": { "name": "void" }
+                        }
+                    },
+                    "description": { "description": "关闭的回调", "tags": [] },
+                    "defaultValue": { "value": "noop", "computed": true }
+                },
+                "styleType": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "'default' | 'success' | 'warning' | 'error' | 'disabled' | 'info'",
+                        "elements": [
+                            { "name": "literal", "value": "'default'" },
+                            { "name": "literal", "value": "'success'" },
+                            { "name": "literal", "value": "'warning'" },
+                            { "name": "literal", "value": "'error'" },
+                            { "name": "literal", "value": "'disabled'" },
+                            { "name": "literal", "value": "'info'" }
+                        ]
+                    },
+                    "description": { "description": "样式类型", "tags": [] },
+                    "defaultValue": { "value": "'default'", "computed": false }
+                },
+                "action": {
+                    "required": false,
+                    "tsType": { "name": "ReactNode" },
+                    "description": { "description": "自定义操作", "tags": [] }
+                }
+            }
+        }
+    }
+}

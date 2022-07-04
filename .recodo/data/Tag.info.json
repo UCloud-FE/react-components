@@ -1,0 +1,125 @@
+{
+    "Group": {
+        "path": "Tag/Group.jsx",
+        "name": "Group",
+        "info": {
+            "description": "",
+            "displayName": "Group",
+            "methods": [],
+            "props": {
+                "children": {
+                    "type": { "name": "node" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "compact": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "紧凑型布局", "tags": [] }
+                }
+            }
+        }
+    },
+    "Icon": {
+        "path": "Tag/Icon.jsx",
+        "name": "Icon",
+        "info": {
+            "description": "",
+            "displayName": "Icon",
+            "methods": [],
+            "props": {
+                "children": {
+                    "type": { "name": "node" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "icon": {
+                    "type": { "name": "union", "value": [{ "name": "string" }, { "name": "node" }] },
+                    "required": false,
+                    "description": { "description": "自定义 icon", "tags": [] }
+                },
+                "prefix": {
+                    "type": { "name": "string" },
+                    "required": false,
+                    "description": { "description": "同 Icon 组件 prefix", "tags": [] }
+                },
+                "styleType": {
+                    "type": { "name": "enum", "computed": true, "value": "StyleType" },
+                    "required": false,
+                    "description": { "description": "样式风格", "tags": [] }
+                },
+                "customStyle": {
+                    "type": {
+                        "name": "shape",
+                        "value": {
+                            "color": { "name": "string", "description": "字色/图标色", "required": false },
+                            "borderColor": { "name": "string", "description": "边框色", "required": false },
+                            "background": { "name": "string", "description": "背景色", "required": false }
+                        }
+                    },
+                    "required": false,
+                    "description": { "description": "自定义样式", "tags": [] }
+                }
+            }
+        }
+    },
+    "Tag": {
+        "path": "Tag/Tag.jsx",
+        "name": "Tag",
+        "info": {
+            "description": "",
+            "displayName": "Tag",
+            "methods": [],
+            "props": {
+                "children": {
+                    "type": { "name": "node" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "styleType": {
+                    "type": { "name": "enum", "computed": true, "value": "StyleType" },
+                    "required": false,
+                    "description": { "description": "样式风格", "tags": [] },
+                    "defaultValue": { "value": "'default'", "computed": false }
+                },
+                "closable": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "是否显示关闭按钮", "tags": [] }
+                },
+                "onClose": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": { "description": "关闭回调", "tags": [] }
+                },
+                "icon": {
+                    "type": { "name": "union", "value": [{ "name": "string" }, { "name": "node" }] },
+                    "required": false,
+                    "description": { "description": "自定义前置 icon", "tags": [] }
+                },
+                "disabled": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "是否禁用", "tags": [] }
+                },
+                "customStyle": {
+                    "type": {
+                        "name": "shape",
+                        "value": {
+                            "color": { "name": "string", "description": "字色/图标色", "required": false },
+                            "borderColor": { "name": "string", "description": "边框色", "required": false },
+                            "background": { "name": "string", "description": "背景色", "required": false },
+                            "closeIconHoverBackground": {
+                                "name": "string",
+                                "description": "关闭按钮 hover 背景色",
+                                "required": false
+                            }
+                        }
+                    },
+                    "required": false,
+                    "description": { "description": "自定义样式", "tags": [] }
+                }
+            }
+        }
+    }
+}

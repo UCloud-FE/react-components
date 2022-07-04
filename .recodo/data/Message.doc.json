@@ -1,0 +1,7 @@
+{
+    "Message": {
+        "path": "Message/Message.md",
+        "name": "Message",
+        "info": "### 说明\n\n-   Message 用来弹出提示框。\n-   普遍会使用 method 调用的方式\n-   有 message, success, warning, error, loading 几种不同的方法。\n-   由于命令式调用，同样存在与命令式调用 Modal 同样的风险（具体查看 Modal 页面），但是由于 Message 一般用于展示文本信息，且定时关闭，占位较小，顾风险性相对较小，但是<b style=\"color:red;\">如果在 Message 中传入的内容依赖上下文或添加了操作按钮记得要自行添加依赖和卸载销毁</b>\n\n### 演示\n\n#### method - Message 类的方法\n\n接收四个参数，\n\n-   message：显示的消息内容 ｜ 传入 message 的 props\n-   duration: 显示时长，undefined 为默认时长，null 为不自动关闭\n-   callback: 关闭时的回调\n-   option: 自定义属性，目前仅支持 zIndex\n\n```js {\"codepath\": \"method.jsx\"}\n```\n\n#### Message - 或者当组件使用\n\n```js {\"codepath\": \"message.jsx\"}\n```\n\n#### title - 标题\n\n```js {\"codepath\": \"title.jsx\"}\n```\n\n#### footer - 底栏\n\n```js {\"codepath\": \"footer.jsx\"}\n```\n\n#### custom - 自定义弹出 message 内容\n\n想弹出自定义的 Message 展示框时可使用，接收三个参数，\n\n-   message：显示的消息内容\n-   duration: 显示时长，undefined 为默认时长，null 为不自动关闭，同上\n-   callback: 关闭时的回调\n\n```js {\"codepath\": \"custom.jsx\"}\n```\n\n#### config - 自定义 message 配置\n\n可配置全局 message 的配置，会影响后续所有的 message。务必慎用\n\n-   duration: 显示时长，null 为不自动关闭\n-   top: Message 容器距离顶部的距离\n\n```js {\"codepath\": \"config.jsx\"}\n```\n\n#### demo - 样例展示\n\n```js {\"codepath\": \"demo.jsx\"}\n```\n"
+    }
+}

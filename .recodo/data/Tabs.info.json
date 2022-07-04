@@ -1,0 +1,227 @@
+{
+    "Pane": {
+        "path": "Tabs/Pane.tsx",
+        "name": "Pane",
+        "info": {
+            "description": "",
+            "displayName": "Pane",
+            "methods": [],
+            "props": {
+                "className": {
+                    "required": false,
+                    "tsType": { "name": "string" },
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "active": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": "内部属性" }] }
+                },
+                "destroyInactiveTabPane": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": "内部属性" }] }
+                },
+                "forceRender": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "是否强制渲染", "tags": [] }
+                },
+                "placeholder": {
+                    "required": false,
+                    "tsType": { "name": "ReactNode" },
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "children": {
+                    "required": false,
+                    "tsType": { "name": "ReactNode" },
+                    "description": { "description": "面板内容", "tags": [] }
+                },
+                "disabled": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "是否禁用", "tags": [] }
+                },
+                "tab": {
+                    "required": true,
+                    "tsType": { "name": "ReactNode" },
+                    "description": { "description": "tab 的 title", "tags": [] }
+                },
+                "tabKey": {
+                    "required": false,
+                    "tsType": { "name": "string" },
+                    "description": {
+                        "description": "tab 的 key，由于 react 会在某些情况下改变传递的 key，顾直接使用 key 是不安全的，如发现 key 被修改，可使用 tabKey 来替换",
+                        "tags": []
+                    }
+                }
+            }
+        }
+    },
+    "TabBar": {
+        "path": "Tabs/TabBar.tsx",
+        "name": "TabBar",
+        "info": {
+            "description": "",
+            "displayName": "TabBar",
+            "methods": [],
+            "props": {
+                "onKeyDown": {
+                    "required": true,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(e: KeyboardEvent) => void",
+                        "signature": {
+                            "arguments": [{ "name": "e", "type": { "name": "KeyboardEvent" } }],
+                            "return": { "name": "void" }
+                        }
+                    },
+                    "description": ""
+                },
+                "tabBarPosition": { "required": true, "tsType": { "name": "TabBarPosition" }, "description": "" },
+                "onTabClick": {
+                    "required": true,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(activeKey: Key) => void",
+                        "signature": {
+                            "arguments": [{ "name": "activeKey", "type": { "name": "Key" } }],
+                            "return": { "name": "void" }
+                        }
+                    },
+                    "description": ""
+                },
+                "panes": { "required": true, "tsType": { "name": "Panes" }, "description": "" },
+                "activeKey": {
+                    "required": true,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "Key | null",
+                        "elements": [{ "name": "Key" }, { "name": "null" }]
+                    },
+                    "description": ""
+                },
+                "direction": { "required": true, "tsType": { "name": "string" }, "description": "" },
+                "styleType": { "required": true, "tsType": { "name": "string" }, "description": "" }
+            }
+        }
+    },
+    "TabContent": {
+        "path": "Tabs/TabContent.tsx",
+        "name": "TabContent",
+        "info": {
+            "description": "",
+            "displayName": "TabContent",
+            "methods": [],
+            "props": {
+                "panes": { "required": true, "tsType": { "name": "Panes" }, "description": "" },
+                "activeKey": {
+                    "required": true,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "Key | null",
+                        "elements": [{ "name": "Key" }, { "name": "null" }]
+                    },
+                    "description": ""
+                },
+                "tabBarPosition": { "required": true, "tsType": { "name": "TabBarPosition" }, "description": "" },
+                "destroyInactiveTabPane": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                "styleType": { "required": true, "tsType": { "name": "string" }, "description": "" },
+                "className": { "required": false, "tsType": { "name": "string" }, "description": "" }
+            }
+        }
+    },
+    "Tabs": {
+        "path": "Tabs/Tabs.tsx",
+        "name": "Tabs",
+        "info": {
+            "description": "",
+            "displayName": "Tabs",
+            "methods": [],
+            "props": {
+                "activeKey": {
+                    "required": false,
+                    "tsType": { "name": "string" },
+                    "description": { "description": "当前激活的 tab key，受控", "tags": [] }
+                },
+                "defaultActiveKey": {
+                    "required": false,
+                    "tsType": { "name": "string" },
+                    "description": { "description": "默认激活的 tab key，非受控", "tags": [] }
+                },
+                "onChange": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(activeKey: string) => void",
+                        "signature": {
+                            "arguments": [{ "name": "activeKey", "type": { "name": "string" } }],
+                            "return": { "name": "void" }
+                        }
+                    },
+                    "description": { "description": "tab 修改时的回调", "tags": [] }
+                },
+                "destroyInactiveTabPane": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "是否销毁不展示的 tab 内容", "tags": [] },
+                    "defaultValue": { "value": "false", "computed": false }
+                },
+                "children": {
+                    "required": true,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "ReactElement<TabPaneProps>[] | ReactNode",
+                        "elements": [
+                            {
+                                "name": "Array",
+                                "elements": [
+                                    {
+                                        "name": "ReactElement",
+                                        "elements": [{ "name": "TabPaneProps" }],
+                                        "raw": "ReactElement<TabPaneProps>"
+                                    }
+                                ],
+                                "raw": "ReactElement<TabPaneProps>[]"
+                            },
+                            { "name": "ReactNode" }
+                        ]
+                    },
+                    "description": { "description": "panes", "tags": [] }
+                },
+                "className": {
+                    "required": false,
+                    "tsType": { "name": "string" },
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "tabBarPosition": {
+                    "required": false,
+                    "tsType": { "name": "TabBarPosition" },
+                    "description": { "description": "bar 的定位", "tags": [] },
+                    "defaultValue": { "value": "'top'", "computed": false }
+                },
+                "direction": {
+                    "required": false,
+                    "tsType": { "name": "string" },
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] },
+                    "defaultValue": { "value": "'ltr'", "computed": false }
+                },
+                "styleType": {
+                    "required": false,
+                    "tsType": { "name": "StyleType" },
+                    "description": { "description": "样式风格", "tags": [] },
+                    "defaultValue": { "value": "'default'", "computed": false }
+                },
+                "size": {
+                    "required": false,
+                    "tsType": { "name": "Size" },
+                    "description": { "description": "尺寸", "tags": [] },
+                    "defaultValue": { "value": "'sm'", "computed": false }
+                }
+            }
+        }
+    }
+}

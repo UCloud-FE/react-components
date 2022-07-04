@@ -1,0 +1,31 @@
+{
+    "Icon": {
+        "path": "Icon/Icon.tsx",
+        "name": "Icon",
+        "info": {
+            "description": { "description": "图标控件", "tags": [] },
+            "displayName": "Icon",
+            "methods": [],
+            "props": {
+                "type": {
+                    "required": true,
+                    "tsType": { "name": "string" },
+                    "description": { "description": "图标类型", "tags": [] }
+                },
+                "spin": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "是否旋转", "tags": [] }
+                },
+                "prefix": {
+                    "required": false,
+                    "tsType": { "name": "string" },
+                    "description": {
+                        "description": "自定义 icon 类名前缀，使用自定义图标库时使用，默认为 icon\\_\\_",
+                        "tags": []
+                    }
+                }
+            }
+        }
+    }
+}

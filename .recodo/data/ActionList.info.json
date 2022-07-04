@@ -1,0 +1,60 @@
+{
+    "ActionList": {
+        "path": "ActionList/ActionList.tsx",
+        "name": "ActionList",
+        "info": {
+            "description": "",
+            "displayName": "ActionList",
+            "methods": [],
+            "props": {
+                "actionList": {
+                    "required": false,
+                    "tsType": { "name": "Array", "elements": [{ "name": "ActionInfo" }], "raw": "ActionInfo[]" },
+                    "description": { "description": "操作列表", "tags": [] },
+                    "defaultValue": { "value": "[]", "computed": false }
+                },
+                "exposeCount": {
+                    "required": false,
+                    "tsType": { "name": "number" },
+                    "description": { "description": "暴露的操作数量", "tags": [] },
+                    "defaultValue": { "value": "3", "computed": false }
+                },
+                "size": {
+                    "required": false,
+                    "tsType": { "name": "Size" },
+                    "description": { "description": "控件尺寸", "tags": [] },
+                    "defaultValue": { "value": "'md'", "computed": false }
+                },
+                "smart": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": {
+                        "description": "操作数量等于 exposeCount+1 时是否直接显示按钮而不是显示下拉菜单",
+                        "tags": []
+                    },
+                    "defaultValue": { "value": "true", "computed": false }
+                },
+                "buttonStyleType": {
+                    "required": false,
+                    "tsType": { "name": "ButtonProps['styleType']", "raw": "ButtonProps['styleType']" },
+                    "description": { "description": "按钮的默认样式类别，参考 Button 的 styleType", "tags": [] },
+                    "defaultValue": { "value": "'border'", "computed": false }
+                },
+                "dropdownButton": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "ReactNode | ButtonProps",
+                        "elements": [{ "name": "ReactNode" }, { "name": "ButtonProps" }]
+                    },
+                    "description": { "description": "自定义更多按钮内容，也可通过传入 object 来定义 props", "tags": [] }
+                },
+                "popoverProps": {
+                    "required": false,
+                    "tsType": { "name": "any" },
+                    "description": { "description": "弹出层的 popover props", "tags": [] }
+                }
+            }
+        }
+    }
+}

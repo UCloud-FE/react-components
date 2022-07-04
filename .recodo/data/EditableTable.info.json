@@ -1,0 +1,86 @@
+{
+    "EditableTable": {
+        "path": "EditableTable/EditableTable.jsx",
+        "name": "EditableTable",
+        "info": {
+            "description": "",
+            "displayName": "EditableTable",
+            "methods": [
+                {
+                    "name": "onRemove",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "record", "type": null }],
+                    "returns": null
+                },
+                { "name": "onAdd", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                { "name": "renderFooter", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                { "name": "getColumns", "docblock": null, "modifiers": [], "params": [], "returns": null }
+            ],
+            "props": {
+                "footer": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] },
+                    "defaultValue": { "value": "() => {}", "computed": false }
+                },
+                "columns": {
+                    "type": { "name": "array" },
+                    "required": true,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "addition": {
+                    "type": {
+                        "name": "union",
+                        "value": [
+                            { "name": "bool" },
+                            {
+                                "name": "shape",
+                                "value": {
+                                    "onAdd": { "name": "func", "description": "添加回调", "required": false },
+                                    "tip": {
+                                        "name": "node",
+                                        "description": "添加区域的自定义提示信息",
+                                        "required": false
+                                    },
+                                    "disabled": { "name": "bool", "description": "是否禁用", "required": false },
+                                    "hidden": { "name": "bool", "description": "是否隐藏", "required": false }
+                                }
+                            }
+                        ]
+                    },
+                    "required": false,
+                    "description": { "description": "是否可添加（false 时禁用添加栏）", "tags": [] },
+                    "defaultValue": { "value": "true", "computed": false }
+                },
+                "rowDeletion": {
+                    "type": {
+                        "name": "union",
+                        "value": [
+                            { "name": "bool" },
+                            {
+                                "name": "shape",
+                                "value": {
+                                    "onDelete": {
+                                        "name": "func",
+                                        "description": "列删除回调\n@param record 删除列数据",
+                                        "required": false
+                                    },
+                                    "getDisabledOfRow": {
+                                        "name": "func",
+                                        "description": "获取当前列的是否禁用删除\n@param record 当前列数据",
+                                        "required": false
+                                    },
+                                    "fixed": { "name": "bool", "description": "是否固定列", "required": false }
+                                }
+                            }
+                        ]
+                    },
+                    "required": false,
+                    "description": { "description": "是否可删除（false 隐藏删除按钮）", "tags": [] },
+                    "defaultValue": { "value": "true", "computed": false }
+                }
+            }
+        }
+    }
+}

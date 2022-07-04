@@ -1,0 +1,100 @@
+{
+    "Message": {
+        "path": "Message/Message.jsx",
+        "name": "Message",
+        "info": {
+            "description": "",
+            "displayName": "Message",
+            "methods": [
+                { "name": "componentWillMount", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                { "name": "close", "docblock": null, "modifiers": [], "params": [], "returns": null }
+            ],
+            "props": {
+                "closable": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "是否可关闭", "tags": [] },
+                    "defaultValue": { "value": "true", "computed": false }
+                },
+                "title": {
+                    "type": { "name": "node" },
+                    "required": false,
+                    "description": { "description": "标题", "tags": [] }
+                },
+                "footer": {
+                    "type": { "name": "node" },
+                    "required": false,
+                    "description": { "description": "底栏", "tags": [] }
+                },
+                "onClose": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": { "description": "关闭回调", "tags": [] }
+                },
+                "className": {
+                    "type": { "name": "string" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "children": {
+                    "type": { "name": "node" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "styleType": {
+                    "type": {
+                        "name": "enum",
+                        "value": [
+                            { "value": "'default'", "computed": false },
+                            { "value": "'success'", "computed": false },
+                            { "value": "'loading'", "computed": false },
+                            { "value": "'warning'", "computed": false },
+                            { "value": "'error'", "computed": false }
+                        ]
+                    },
+                    "required": false,
+                    "description": { "description": "样式风格，目前只影响 Icon", "tags": [] },
+                    "defaultValue": { "value": "'default'", "computed": false }
+                }
+            }
+        }
+    },
+    "MessageContainer": {
+        "path": "Message/MessageContainer.jsx",
+        "name": "MessageContainer",
+        "info": {
+            "description": "",
+            "displayName": "MessageContainer",
+            "methods": [
+                {
+                    "name": "appendMessage",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "message", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "removeMessage",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "uid", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "setTop",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "top", "type": null }],
+                    "returns": null
+                }
+            ],
+            "props": {
+                "top": {
+                    "type": { "name": "number" },
+                    "required": false,
+                    "description": { "description": "顶部的间距", "tags": [] }
+                }
+            }
+        }
+    }
+}

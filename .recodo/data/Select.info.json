@@ -1,0 +1,797 @@
+{
+    "Extra": {
+        "path": "Select/Extra.tsx",
+        "name": "Extra",
+        "info": {
+            "description": "",
+            "displayName": "Extra",
+            "methods": [],
+            "props": {
+                "autoHidePopup": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "扩展区域被点击后是否自动关闭弹出层", "tags": [] }
+                }
+            }
+        }
+    },
+    "Group": {
+        "path": "Select/Group.tsx",
+        "name": "Group",
+        "info": {
+            "description": "",
+            "displayName": "Group",
+            "methods": [],
+            "props": {
+                "title": {
+                    "required": true,
+                    "tsType": { "name": "ReactNode" },
+                    "description": { "description": "标题内容", "tags": [] }
+                },
+                "styleType": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "'collapse' | 'popover'",
+                        "elements": [
+                            { "name": "literal", "value": "'collapse'" },
+                            { "name": "literal", "value": "'popover'" }
+                        ]
+                    },
+                    "description": { "description": "为弹出菜单、或是折叠层", "tags": [] }
+                },
+                "groupKey": {
+                    "required": false,
+                    "tsType": { "name": "Key" },
+                    "description": {
+                        "description": "子菜单的唯一 key，也用作 collapse 的 panel 的 key，不存在时使用 key 代替",
+                        "tags": []
+                    }
+                },
+                "disabled": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "禁用", "tags": [] }
+                }
+            }
+        }
+    },
+    "PureOption": {
+        "path": "Select/Option.tsx",
+        "name": "PureOption",
+        "info": {
+            "description": "",
+            "displayName": "PureOption",
+            "methods": [],
+            "props": {
+                "value": {
+                    "required": false,
+                    "tsType": { "name": "Key" },
+                    "description": { "description": "值，会被用作 key", "tags": [] }
+                },
+                "disabled": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "是否禁用", "tags": [] }
+                },
+                "tooltip": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "ReactNode | any",
+                        "elements": [{ "name": "ReactNode" }, { "name": "any" }]
+                    },
+                    "description": {
+                        "description": "tooltip 提示，可以为文本或 node，也可以是 tooltip 的 props object",
+                        "tags": []
+                    }
+                },
+                "children": {
+                    "required": false,
+                    "tsType": { "name": "ReactNode" },
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "label": {
+                    "required": false,
+                    "tsType": { "name": "ReactNode" },
+                    "description": {
+                        "description": "",
+                        "tags": [
+                            { "title": "ignore", "description": null },
+                            { "title": "description", "description": "内部使用，请勿使用" }
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "Option": {
+        "path": "Select/Option.tsx",
+        "name": "Option",
+        "info": {
+            "description": "",
+            "displayName": "Option",
+            "methods": [],
+            "props": {
+                "value": {
+                    "required": false,
+                    "tsType": { "name": "Key" },
+                    "description": { "description": "值，会被用作 key", "tags": [] }
+                },
+                "disabled": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "是否禁用", "tags": [] }
+                },
+                "tooltip": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "ReactNode | any",
+                        "elements": [{ "name": "ReactNode" }, { "name": "any" }]
+                    },
+                    "description": {
+                        "description": "tooltip 提示，可以为文本或 node，也可以是 tooltip 的 props object",
+                        "tags": []
+                    }
+                },
+                "children": {
+                    "required": false,
+                    "tsType": { "name": "ReactNode" },
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "label": {
+                    "required": false,
+                    "tsType": { "name": "ReactNode" },
+                    "description": {
+                        "description": "",
+                        "tags": [
+                            { "title": "ignore", "description": null },
+                            { "title": "description", "description": "内部使用，请勿使用" }
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "Static": {
+        "path": "Select/Overflow.tsx",
+        "name": "Static",
+        "info": {
+            "description": "",
+            "displayName": "Static",
+            "methods": [],
+            "props": {
+                "items": {
+                    "required": true,
+                    "tsType": { "name": "Array", "elements": [{ "name": "T" }], "raw": "T[]" },
+                    "description": ""
+                },
+                "renderItem": {
+                    "required": true,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(item: T) => ReactElement",
+                        "signature": {
+                            "arguments": [{ "name": "item", "type": { "name": "T" } }],
+                            "return": { "name": "ReactElement" }
+                        }
+                    },
+                    "description": ""
+                },
+                "renderRest": {
+                    "required": true,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(items: T[]) => ReactElement | null",
+                        "signature": {
+                            "arguments": [
+                                {
+                                    "name": "items",
+                                    "type": { "name": "Array", "elements": [{ "name": "T" }], "raw": "T[]" }
+                                }
+                            ],
+                            "return": {
+                                "name": "union",
+                                "raw": "ReactElement | null",
+                                "elements": [{ "name": "ReactElement" }, { "name": "null" }]
+                            }
+                        }
+                    },
+                    "description": ""
+                },
+                "count": { "required": true, "tsType": { "name": "number" }, "description": "" }
+            }
+        }
+    },
+    "Overflow": {
+        "path": "Select/Overflow.tsx",
+        "name": "Overflow",
+        "info": {
+            "description": "",
+            "displayName": "Overflow",
+            "methods": [],
+            "props": {
+                "items": {
+                    "required": true,
+                    "tsType": { "name": "Array", "elements": [{ "name": "T" }], "raw": "T[]" },
+                    "description": ""
+                },
+                "renderItem": {
+                    "required": true,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(item: T) => ReactElement",
+                        "signature": {
+                            "arguments": [{ "name": "item", "type": { "name": "T" } }],
+                            "return": { "name": "ReactElement" }
+                        }
+                    },
+                    "description": ""
+                },
+                "renderRest": {
+                    "required": true,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(items: T[]) => ReactElement | null",
+                        "signature": {
+                            "arguments": [
+                                {
+                                    "name": "items",
+                                    "type": { "name": "Array", "elements": [{ "name": "T" }], "raw": "T[]" }
+                                }
+                            ],
+                            "return": {
+                                "name": "union",
+                                "raw": "ReactElement | null",
+                                "elements": [{ "name": "ReactElement" }, { "name": "null" }]
+                            }
+                        }
+                    },
+                    "description": ""
+                },
+                "onMeasure": {
+                    "required": true,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(count: number) => void",
+                        "signature": {
+                            "arguments": [{ "name": "count", "type": { "name": "number" } }],
+                            "return": { "name": "void" }
+                        }
+                    },
+                    "description": ""
+                },
+                "changeContent": { "required": true, "tsType": { "name": "string" }, "description": "" }
+            }
+        }
+    },
+    "Select": {
+        "path": "Select/Select.tsx",
+        "name": "Select",
+        "info": {
+            "description": "",
+            "displayName": "Select",
+            "methods": [],
+            "props": {
+                "value": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "Key | Key[]",
+                        "elements": [
+                            { "name": "Key" },
+                            { "name": "Array", "elements": [{ "name": "Key" }], "raw": "Key[]" }
+                        ]
+                    },
+                    "description": { "description": "当前值，controlled", "tags": [] }
+                },
+                "defaultValue": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "Key | Key[]",
+                        "elements": [
+                            { "name": "Key" },
+                            { "name": "Array", "elements": [{ "name": "Key" }], "raw": "Key[]" }
+                        ]
+                    },
+                    "description": { "description": "默认值，uncontrolled", "tags": [] }
+                },
+                "placeholder": {
+                    "required": false,
+                    "tsType": { "name": "ReactNode" },
+                    "description": { "description": "无选项时显示内容", "tags": [] }
+                },
+                "onChange": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(value: Key | Key[] | undefined) => void",
+                        "signature": {
+                            "arguments": [
+                                {
+                                    "name": "value",
+                                    "type": {
+                                        "name": "union",
+                                        "raw": "Key | Key[] | undefined",
+                                        "elements": [
+                                            { "name": "Key" },
+                                            { "name": "Array", "elements": [{ "name": "Key" }], "raw": "Key[]" },
+                                            { "name": "undefined" }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "return": { "name": "void" }
+                        }
+                    },
+                    "description": {
+                        "description": "修改、清空时的回调，清空时回调值单选为 undefined、du px aun",
+                        "tags": []
+                    }
+                },
+                "options": {
+                    "required": false,
+                    "tsType": {
+                        "name": "Array",
+                        "elements": [
+                            {
+                                "name": "signature",
+                                "type": "object",
+                                "raw": "{\n    /** 选项展示 */\n    label?: ReactNode;\n    /** 选项 value，不可重复 */\n    value: Key;\n}",
+                                "signature": {
+                                    "properties": [
+                                        { "key": "label", "value": { "name": "ReactNode", "required": false } },
+                                        { "key": "value", "value": { "name": "Key", "required": true } }
+                                    ]
+                                }
+                            }
+                        ],
+                        "raw": "{\n    /** 选项展示 */\n    label?: ReactNode;\n    /** 选项 value，不可重复 */\n    value: Key;\n}[]"
+                    },
+                    "description": { "description": "快速设置选项，推荐使用以获得更好的性能", "tags": [] }
+                },
+                "extra": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "{ content: ReactNode } | ReactNode | ((hidePopup: () => void) => ReactNode)",
+                        "elements": [
+                            {
+                                "name": "signature",
+                                "type": "object",
+                                "raw": "{ content: ReactNode }",
+                                "signature": {
+                                    "properties": [
+                                        { "key": "content", "value": { "name": "ReactNode", "required": true } }
+                                    ]
+                                }
+                            },
+                            { "name": "ReactNode" },
+                            { "name": "unknown" }
+                        ]
+                    },
+                    "description": {
+                        "description": "在尾部增加附加内容，会脱离选项流容器，超高度时不会一起滚动，如需在选项中嵌入附加内容，可使用 Select.Extra",
+                        "tags": []
+                    }
+                },
+                "multiple": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "是否多选", "tags": [] }
+                },
+                "showSelectAll": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "是否显示全选", "tags": [] }
+                },
+                "disabled": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "是否禁用", "tags": [] }
+                },
+                "styleType": {
+                    "required": false,
+                    "tsType": { "name": "literal", "value": "'list'" },
+                    "description": { "description": "样式风格", "tags": [] }
+                },
+                "renderContent": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(value?: Key | Key[], valueChild?: ReactNode[]) => ReactNode",
+                        "signature": {
+                            "arguments": [
+                                {
+                                    "name": "value",
+                                    "type": {
+                                        "name": "union",
+                                        "raw": "Key | Key[]",
+                                        "elements": [
+                                            { "name": "Key" },
+                                            { "name": "Array", "elements": [{ "name": "Key" }], "raw": "Key[]" }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "name": "valueChild",
+                                    "type": {
+                                        "name": "Array",
+                                        "elements": [{ "name": "ReactNode" }],
+                                        "raw": "ReactNode[]"
+                                    }
+                                }
+                            ],
+                            "return": { "name": "ReactNode" }
+                        }
+                    },
+                    "description": {
+                        "description": "如何渲染选中项的展示",
+                        "tags": [
+                            { "title": "param", "description": "当前 select 的值", "type": null, "name": "value" },
+                            {
+                                "title": "param",
+                                "description": "当前值对应的展示内容（为性能考虑，只提供前 20 个选项，如果需要获取所有，请自行拿 value 获取）",
+                                "type": null,
+                                "name": "valueChild"
+                            }
+                        ]
+                    }
+                },
+                "renderSelector": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(content: ReactNode, visible: boolean) => ReactNode",
+                        "signature": {
+                            "arguments": [
+                                { "name": "content", "type": { "name": "ReactNode" } },
+                                { "name": "visible", "type": { "name": "boolean" } }
+                            ],
+                            "return": { "name": "ReactNode" }
+                        }
+                    },
+                    "description": {
+                        "description": "自定义渲染选择器",
+                        "tags": [
+                            {
+                                "title": "param",
+                                "description": "渲染的内容",
+                                "type": { "type": "NameExpression", "name": "node" },
+                                "name": "content"
+                            },
+                            {
+                                "title": "param",
+                                "description": "当前的select下拉是否展示",
+                                "type": { "type": "NameExpression", "name": "bool" },
+                                "name": "visible"
+                            }
+                        ]
+                    }
+                },
+                "renderPopup": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(\n    options: {\n        handleVisible: (visible: boolean) => void;\n        onChange: (v: Key | Key[]) => void;\n        value?: Key | Key[];\n        /** @ignore */\n        children?: ReactNode;\n    } & Pick<SelectProps, 'multiple' | 'extra' | 'search' | 'options'>\n) => ReactNode",
+                        "signature": {
+                            "arguments": [
+                                {
+                                    "name": "options",
+                                    "type": {
+                                        "name": "intersection",
+                                        "raw": "{\n    handleVisible: (visible: boolean) => void;\n    onChange: (v: Key | Key[]) => void;\n    value?: Key | Key[];\n    /** @ignore */\n    children?: ReactNode;\n} & Pick<SelectProps, 'multiple' | 'extra' | 'search' | 'options'>",
+                                        "elements": [
+                                            {
+                                                "name": "signature",
+                                                "type": "object",
+                                                "raw": "{\n    handleVisible: (visible: boolean) => void;\n    onChange: (v: Key | Key[]) => void;\n    value?: Key | Key[];\n    /** @ignore */\n    children?: ReactNode;\n}",
+                                                "signature": {
+                                                    "properties": [
+                                                        {
+                                                            "key": "handleVisible",
+                                                            "value": {
+                                                                "name": "signature",
+                                                                "type": "function",
+                                                                "raw": "(visible: boolean) => void",
+                                                                "signature": {
+                                                                    "arguments": [
+                                                                        {
+                                                                            "name": "visible",
+                                                                            "type": { "name": "boolean" }
+                                                                        }
+                                                                    ],
+                                                                    "return": { "name": "void" }
+                                                                },
+                                                                "required": true
+                                                            }
+                                                        },
+                                                        {
+                                                            "key": "onChange",
+                                                            "value": {
+                                                                "name": "signature",
+                                                                "type": "function",
+                                                                "raw": "(v: Key | Key[]) => void",
+                                                                "signature": {
+                                                                    "arguments": [
+                                                                        {
+                                                                            "name": "v",
+                                                                            "type": {
+                                                                                "name": "union",
+                                                                                "raw": "Key | Key[]",
+                                                                                "elements": [
+                                                                                    { "name": "Key" },
+                                                                                    {
+                                                                                        "name": "Array",
+                                                                                        "elements": [{ "name": "Key" }],
+                                                                                        "raw": "Key[]"
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        }
+                                                                    ],
+                                                                    "return": { "name": "void" }
+                                                                },
+                                                                "required": true
+                                                            }
+                                                        },
+                                                        {
+                                                            "key": "value",
+                                                            "value": {
+                                                                "name": "union",
+                                                                "raw": "Key | Key[]",
+                                                                "elements": [
+                                                                    { "name": "Key" },
+                                                                    {
+                                                                        "name": "Array",
+                                                                        "elements": [{ "name": "Key" }],
+                                                                        "raw": "Key[]"
+                                                                    }
+                                                                ],
+                                                                "required": false
+                                                            }
+                                                        },
+                                                        {
+                                                            "key": "children",
+                                                            "value": { "name": "ReactNode", "required": false }
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "name": "Pick",
+                                                "elements": [
+                                                    { "name": "SelectProps" },
+                                                    {
+                                                        "name": "union",
+                                                        "raw": "'multiple' | 'extra' | 'search' | 'options'",
+                                                        "elements": [
+                                                            { "name": "literal", "value": "'multiple'" },
+                                                            { "name": "literal", "value": "'extra'" },
+                                                            { "name": "literal", "value": "'search'" },
+                                                            { "name": "literal", "value": "'options'" }
+                                                        ]
+                                                    }
+                                                ],
+                                                "raw": "Pick<SelectProps, 'multiple' | 'extra' | 'search' | 'options'>"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "return": { "name": "ReactNode" }
+                        }
+                    },
+                    "description": {
+                        "description": "自定义渲染弹出内容",
+                        "tags": [
+                            {
+                                "title": "param",
+                                "description": "配置",
+                                "type": { "type": "NameExpression", "name": "Object" },
+                                "name": "options"
+                            },
+                            {
+                                "title": "param",
+                                "description": "处理弹出层的显示隐藏",
+                                "type": { "type": "NameExpression", "name": "function" },
+                                "name": "options.handleVisible"
+                            },
+                            {
+                                "title": "param",
+                                "description": " value 变化回调",
+                                "type": { "type": "NameExpression", "name": "function" },
+                                "name": "options.onChange"
+                            },
+                            {
+                                "title": "param",
+                                "description": "select 的当前值",
+                                "type": null,
+                                "name": "options.value"
+                            }
+                        ]
+                    }
+                },
+                "search": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "| true\n| {\n      /**\n       * 自定义搜索\n       * @argument searchValue - 搜索的值\n       * @argument value - option的值\n       */\n      handleSearch?: (searchValue: string, value: Key, s: any) => boolean;\n      /** 搜索值 受控 */\n      searchValue?: string;\n      /** 默认搜索值 非受控 */\n      defaultSearchValue?: string;\n      /** 搜索值变化回调 */\n      onSearchValueChange?: (searchValue: string) => void;\n  }",
+                        "elements": [
+                            { "name": "literal", "value": "true" },
+                            {
+                                "name": "signature",
+                                "type": "object",
+                                "raw": "{\n    /**\n     * 自定义搜索\n     * @argument searchValue - 搜索的值\n     * @argument value - option的值\n     */\n    handleSearch?: (searchValue: string, value: Key, s: any) => boolean;\n    /** 搜索值 受控 */\n    searchValue?: string;\n    /** 默认搜索值 非受控 */\n    defaultSearchValue?: string;\n    /** 搜索值变化回调 */\n    onSearchValueChange?: (searchValue: string) => void;\n}",
+                                "signature": {
+                                    "properties": [
+                                        {
+                                            "key": "handleSearch",
+                                            "value": {
+                                                "name": "signature",
+                                                "type": "function",
+                                                "raw": "(searchValue: string, value: Key, s: any) => boolean",
+                                                "signature": {
+                                                    "arguments": [
+                                                        { "name": "searchValue", "type": { "name": "string" } },
+                                                        { "name": "value", "type": { "name": "Key" } },
+                                                        { "name": "s", "type": { "name": "any" } }
+                                                    ],
+                                                    "return": { "name": "boolean" }
+                                                },
+                                                "required": false
+                                            }
+                                        },
+                                        { "key": "searchValue", "value": { "name": "string", "required": false } },
+                                        {
+                                            "key": "defaultSearchValue",
+                                            "value": { "name": "string", "required": false }
+                                        },
+                                        {
+                                            "key": "onSearchValueChange",
+                                            "value": {
+                                                "name": "signature",
+                                                "type": "function",
+                                                "raw": "(searchValue: string) => void",
+                                                "signature": {
+                                                    "arguments": [
+                                                        { "name": "searchValue", "type": { "name": "string" } }
+                                                    ],
+                                                    "return": { "name": "void" }
+                                                },
+                                                "required": false
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "description": {
+                        "description": "- 是否展示搜索框，可以为 true 或者 Object\n- 为 Object 时可传入 handleSearch 对搜索筛选进行自定义",
+                        "tags": []
+                    }
+                },
+                "size": {
+                    "required": false,
+                    "tsType": { "name": "Size" },
+                    "description": { "description": "尺寸", "tags": [] },
+                    "defaultValue": { "value": "'md'", "computed": false }
+                },
+                "block": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "展示变更为块占位", "tags": [] }
+                },
+                "clearable": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "是否可清空，仅单选可用", "tags": [] }
+                },
+                "popover": {
+                    "required": false,
+                    "tsType": { "name": "any" },
+                    "description": {
+                        "description": "弹出层的popover props",
+                        "tags": [{ "title": "deprecated", "description": "请使用popoverProps替换" }]
+                    }
+                },
+                "popoverProps": {
+                    "required": false,
+                    "tsType": { "name": "any" },
+                    "description": { "description": "弹出层的popover props", "tags": [] }
+                },
+                "onVisibleChange": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(visible?: boolean) => void",
+                        "signature": {
+                            "arguments": [{ "name": "visible", "type": { "name": "boolean" } }],
+                            "return": { "name": "void" }
+                        }
+                    },
+                    "description": {
+                        "description": "",
+                        "tags": [
+                            { "title": "deprecated", "description": "请勿使用" },
+                            { "title": "ignore", "description": null }
+                        ]
+                    },
+                    "defaultValue": { "value": "noop", "computed": true }
+                },
+                "locale": {
+                    "required": false,
+                    "tsType": { "name": "LOCALE" },
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "customStyle": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "object",
+                        "raw": "{\n    /** 列表最大高度 */\n    optionListMaxHeight?: number | string;\n    /** 弹出菜单的最大宽度  */\n    popupMaxWidth?: string;\n    /** 弹出菜单的宽度 */\n    popupWidth?: string;\n}",
+                        "signature": {
+                            "properties": [
+                                {
+                                    "key": "optionListMaxHeight",
+                                    "value": {
+                                        "name": "union",
+                                        "raw": "number | string",
+                                        "elements": [{ "name": "number" }, { "name": "string" }],
+                                        "required": false
+                                    }
+                                },
+                                { "key": "popupMaxWidth", "value": { "name": "string", "required": false } },
+                                { "key": "popupWidth", "value": { "name": "string", "required": false } }
+                            ]
+                        }
+                    },
+                    "description": { "description": "自定义样式", "tags": [] }
+                },
+                "emptyContent": {
+                    "required": false,
+                    "tsType": { "name": "ReactNode" },
+                    "description": { "description": "可选性为空时展示内容", "tags": [] }
+                },
+                "virtualList": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "| boolean\n| {\n      simple?: true;\n      height?: number;\n  }",
+                        "elements": [
+                            { "name": "boolean" },
+                            {
+                                "name": "signature",
+                                "type": "object",
+                                "raw": "{\n    simple?: true;\n    height?: number;\n}",
+                                "signature": {
+                                    "properties": [
+                                        {
+                                            "key": "simple",
+                                            "value": { "name": "literal", "value": "true", "required": false }
+                                        },
+                                        { "key": "height", "value": { "name": "number", "required": false } }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "description": { "description": "启用虚拟列表，仅使用 options 时生效", "tags": [] }
+                }
+            }
+        }
+    }
+}

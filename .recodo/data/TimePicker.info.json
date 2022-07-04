@@ -1,0 +1,89 @@
+{
+    "Time": {
+        "path": "TimePicker/Time.tsx",
+        "name": "Time",
+        "info": { "description": "", "displayName": "Time", "methods": [] }
+    },
+    "TimePicker": {
+        "path": "TimePicker/TimePicker.tsx",
+        "name": "TimePicker",
+        "info": {
+            "description": "",
+            "displayName": "TimePicker",
+            "methods": [],
+            "props": {
+                "value": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "TDate | null",
+                        "elements": [{ "name": "TDate" }, { "name": "null" }]
+                    },
+                    "description": { "description": "当前值，受控", "tags": [] }
+                },
+                "defaultValue": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "TDate | null",
+                        "elements": [{ "name": "TDate" }, { "name": "null" }]
+                    },
+                    "description": { "description": "默认值，非受控", "tags": [] }
+                },
+                "onChange": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(value: Moment | null) => void",
+                        "signature": {
+                            "arguments": [
+                                {
+                                    "name": "value",
+                                    "type": {
+                                        "name": "union",
+                                        "raw": "Moment | null",
+                                        "elements": [{ "name": "Moment" }, { "name": "null" }]
+                                    }
+                                }
+                            ],
+                            "return": { "name": "void" }
+                        }
+                    },
+                    "description": { "description": "修改回调", "tags": [] }
+                },
+                "popoverProps": {
+                    "required": false,
+                    "tsType": { "name": "any" },
+                    "description": { "description": "自定义 Popover 的 props", "tags": [] }
+                },
+                "nullable": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "是否可为空", "tags": [] }
+                },
+                "format": {
+                    "required": false,
+                    "tsType": { "name": "string" },
+                    "description": { "description": "自定义展示格式", "tags": [] },
+                    "defaultValue": { "value": "'HH:mm:ss'", "computed": false }
+                },
+                "disabled": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "是否禁用", "tags": [] }
+                },
+                "size": {
+                    "required": false,
+                    "tsType": { "name": "Size" },
+                    "description": { "description": "尺寸", "tags": [] }
+                },
+                "locale": {
+                    "required": false,
+                    "tsType": { "name": "LOCALE" },
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                }
+            }
+        }
+    }
+}

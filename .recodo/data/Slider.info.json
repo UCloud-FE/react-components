@@ -1,0 +1,242 @@
+{
+    "Slider": {
+        "path": "Slider/Slider.jsx",
+        "name": "Slider",
+        "info": {
+            "description": "",
+            "displayName": "Slider",
+            "methods": [
+                {
+                    "name": "simpleClone",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "obj", "type": null }],
+                    "returns": null
+                },
+                { "name": "resetCache", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                {
+                    "name": "computeMarks",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "_marks", "type": null },
+                        { "name": "props", "type": null }
+                    ],
+                    "returns": null
+                },
+                {
+                    "name": "computeMarksForSlider",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "_marks", "type": null },
+                        { "name": "props", "type": null }
+                    ],
+                    "returns": null
+                },
+                {
+                    "name": "handleChange",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "v", "type": null },
+                        { "name": "latest", "type": null }
+                    ],
+                    "returns": null
+                },
+                {
+                    "name": "onNumberInputNumberChange",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "v", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "onNumberInputChange",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "v", "type": null }],
+                    "returns": null
+                },
+                { "name": "onNumberInputFocus", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                { "name": "onNumberInputBlur", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                {
+                    "name": "onSliderChange",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "v", "type": null },
+                        { "name": "latest", "type": null }
+                    ],
+                    "returns": null
+                },
+                {
+                    "name": "translateSliderValueToValue",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "v", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "translateValueToSliderValue",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "v", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "translateNumberInputValueToValue",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "v", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "getValueStep",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "v", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "computeValidNumber",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "number", "type": null },
+                        { "name": "options", "type": null }
+                    ],
+                    "returns": null
+                }
+            ],
+            "props": {
+                "value": {
+                    "type": { "name": "number" },
+                    "required": false,
+                    "description": { "description": "值，受控", "tags": [] }
+                },
+                "defaultValue": {
+                    "type": { "name": "number" },
+                    "required": false,
+                    "description": { "description": "默认值，非受控", "tags": [] },
+                    "defaultValue": { "value": "0", "computed": false }
+                },
+                "onChange": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": { "description": "修改回调", "tags": [] },
+                    "defaultValue": { "value": "() => {}", "computed": false }
+                },
+                "onLastChange": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": {
+                        "description": "拖拽结束、输入回车、输入失焦、数字输入框上下按钮等时触发",
+                        "tags": []
+                    },
+                    "defaultValue": { "value": "() => {}", "computed": false }
+                },
+                "disabled": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "是否禁用", "tags": [] }
+                },
+                "min": {
+                    "type": { "name": "number" },
+                    "required": false,
+                    "description": { "description": "最小值", "tags": [] },
+                    "defaultValue": { "value": "0", "computed": false }
+                },
+                "max": {
+                    "type": { "name": "number" },
+                    "required": false,
+                    "description": { "description": "最大值", "tags": [] },
+                    "defaultValue": { "value": "100", "computed": false }
+                },
+                "step": {
+                    "type": { "name": "union", "value": [{ "name": "number" }, { "name": "string" }] },
+                    "required": false,
+                    "description": {
+                        "description": "每次变动的大小，传入的(最大值-最小值)必须为step的整数倍，大于0",
+                        "tags": []
+                    },
+                    "defaultValue": { "value": "1", "computed": false }
+                },
+                "marks": {
+                    "type": { "name": "object" },
+                    "required": false,
+                    "description": { "description": "标记", "tags": [] }
+                },
+                "className": {
+                    "type": { "name": "string" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "style": {
+                    "type": { "name": "object" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "sliderClassName": {
+                    "type": { "name": "string" },
+                    "required": false,
+                    "description": { "description": "slider 类名", "tags": [] }
+                },
+                "sliderStyle": {
+                    "type": { "name": "object" },
+                    "required": false,
+                    "description": { "description": "slider 样式", "tags": [] }
+                },
+                "numberInput": {
+                    "type": { "name": "object" },
+                    "required": false,
+                    "description": { "description": "number input 的自定义 props，为null时隐藏", "tags": [] }
+                },
+                "isSensitive": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": {
+                        "description": "是否灵敏的触发onChange，为true时当NumberInput中实时输入有效值时会触发onChange",
+                        "tags": []
+                    }
+                },
+                "numberInputTipFormatter": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": {
+                        "description": "输入框提示语格式化，传入null隐藏",
+                        "tags": [
+                            { "title": "param", "description": "包含当前值、生效值等", "type": null, "name": "option" }
+                        ]
+                    }
+                },
+                "tipFormatter": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": {
+                        "description": "提示语格式化，传入null隐藏",
+                        "tags": [{ "title": "param", "description": "当前值", "type": null, "name": "value" }]
+                    }
+                },
+                "size": {
+                    "type": {
+                        "name": "enum",
+                        "value": [
+                            { "value": "'sm'", "computed": false },
+                            { "value": "'md'", "computed": false },
+                            { "value": "'lg'", "computed": false }
+                        ]
+                    },
+                    "required": false,
+                    "description": { "description": "尺寸", "tags": [] },
+                    "defaultValue": { "value": "'md'", "computed": false }
+                },
+                "locale": {
+                    "type": { "name": "object" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                }
+            }
+        }
+    }
+}

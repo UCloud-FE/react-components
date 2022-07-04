@@ -1,0 +1,7 @@
+{
+    "ActionList": {
+        "path": "ActionList/ActionList.md",
+        "name": "ActionList",
+        "info": "### 说明\n\n-   这是 ActionList 操作列表组件\n-   外部的操作继承按钮的属性，支持配置按钮的 props，如 disabled、styleType 等，额外增加 tooltip 支持（使用时会默认开启按钮的 fakeDisabled），展开的操作支持 Menu.Item 的 props，disabled、tooltip 等\n-   默认的弹出层容器为 forwardPopupContainer={triggerNode => triggerNode.parentNode}，默认会查找上层的建议容器\n\n### 接口\n\n```ts {\"static\": true}\ninterface ActionInfo {\n    /** 展示 */\n    label?: ReactNode;\n    /** 点击回调 */\n    onClick?: (e: MouseEvent) => void;\n    /** 子菜单，仅 menu 项有效 */\n    children?: ActionInfo[];\n    /** 提示 */\n    tooltip?: ReactNode;\n    /** 禁用 */\n    disabled?: boolean;\n}\n```\n\n### 演示\n\n#### 演示\n\n```js {\"codepath\": \"actionList.jsx\"}\n```\n\n#### size - 尺寸\n\n```js {\"codepath\": \"size.jsx\"}\n```\n\n#### exposeCount - 展示数量\n\n```js {\"codepath\": \"exposeCount.jsx\"}\n```\n\n#### smart - 菜单中只剩下一个操作时自动显示\n\n```js {\"codepath\": \"smart.jsx\"}\n```\n\n#### actionChildren - 子菜单\n\n```js {\"codepath\": \"actionChildren.jsx\"}\n```\n\n#### popoverProps - 弹出层 props\n\n```js {\"codepath\": \"popoverProps.jsx\"}\n```\n\n#### dropdownButton - 自定义展开按钮\n\n```js {\"codepath\": \"dropdownButton.jsx\"}\n```\n\n#### item.tooltip - 内容提示\n\n```js {\"codepath\": \"tooltip.jsx\"}\n```\n"
+    }
+}

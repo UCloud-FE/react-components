@@ -54,14 +54,6 @@ mod.config({
             type: 'immediate'
         },
         '@rapiop/mod': { js: [] },
-        'examples-data': {
-            file: 'https://raw.githubusercontent.com/UCloud-FE/react-components/master/.recodo/data/examples.json',
-            type: 'json'
-        },
-        'docs-data': {
-            file: 'https://raw.githubusercontent.com/UCloud-FE/react-components/master/.recodo/data/docs.json',
-            type: 'json'
-        },
         'design-token-editor': {
             js: 'https://cdn.jsdelivr.net/npm/@ucloud-fe/design-token-editor@0.1.11/dist/design-token-editor.umd.js',
             type: 'amd',
@@ -100,42 +92,53 @@ const renderDoc = (
         'react',
         'react-dom',
         'prop-types',
-        'examples-data',
-        'docs-data',
         'recodo-doc'
     ]).then(dependences => {
         if (destroyed) return;
-        const [components, moment, lodash, React, ReactDOM, PropTypes, examples, docs] = dependences as any;
+        const [components, moment, lodash, React, ReactDOM, PropTypes] = dependences as any;
         const { Doc } = require('./Component');
         const demoUtil = require('shared/demoUtil').default;
         const darkTheme = require('src/components/ThemeProvider/dark').default;
         const ENLocale = require('src/components/LocaleProvider/locale/en_US').default;
         const SizeInterface = require('src/interfaces/Size').default;
-
-        ReactDOM.render(
-            <Doc
-                name={name}
-                examples={examples}
-                docs={docs}
-                scope={{
-                    ...components,
-                    components,
-                    moment,
-                    lodash,
-                    React,
-                    ReactDOM,
-                    PropTypes: PropTypes,
-                    _: lodash,
-                    demoUtil,
-                    darkTheme,
-                    SizeInterface,
-                    ENLocale
-                }}
-                reportAnchorList={options?.reportAnchorList}
-            />,
-            dom
-        );
-        destroyAction = () => ReactDOM.unmountComponentAtNode(dom);
+        return mod
+            .import([
+                {
+                    file: `https://raw.githubusercontent.com/UCloud-FE/react-components/master/.recodo/data/${name}.info.json`,
+                    type: 'json'
+                },
+                {
+                    file: `https://raw.githubusercontent.com/UCloud-FE/react-components/master/.recodo/data/${name}.doc.json`,
+                    type: 'json'
+                }
+            ])
+            .then(deps => {
+                const [info, doc] = deps as any;
+                if (destroyed) return;
+                ReactDOM.render(
+                    <Doc
+                        info={info}
+                        doc={doc}
+                        scope={{
+                            ...components,
+                            components,
+                            moment,
+                            lodash,
+                            React,
+                            ReactDOM,
+                            PropTypes: PropTypes,
+                            _: lodash,
+                            demoUtil,
+                            darkTheme,
+                            SizeInterface,
+                            ENLocale
+                        }}
+                        reportAnchorList={options?.reportAnchorList}
+                    />,
+                    dom
+                );
+                destroyAction = () => ReactDOM.unmountComponentAtNode(dom);
+            });
     });
     return destroy;
 };
@@ -156,33 +159,40 @@ const renderInteractionDemo = (name: string, dom: string) => {
         'react',
         'react-dom',
         'prop-types',
-        'examples-data',
-        'docs-data',
         'recodo-doc'
     ]).then(dependences => {
         if (destroyed) return;
-        const [components, moment, lodash, React, ReactDOM, PropTypes, examples, docs] = dependences as any;
+        const [components, moment, lodash, React, ReactDOM, PropTypes] = dependences as any;
         const { Demo } = require('./Component');
         const InteractionDemo = require('./InteractionDemo');
-
-        ReactDOM.render(
-            <InteractionDemo.Provider props={examples[name][name].info.props}>
-                <Demo
-                    name={name}
-                    modules={{
-                        '@ucloud-fe/react-components': components,
-                        moment: moment,
-                        lodash: lodash,
-                        react: React,
-                        'react-dom': ReactDOM,
-                        'prop-types': PropTypes,
-                        'interaction-demo': InteractionDemo
-                    }}
-                />
-            </InteractionDemo.Provider>,
-            dom
-        );
-        destroyAction = () => ReactDOM.unmountComponentAtNode(dom);
+        return mod
+            .import([
+                {
+                    file: `https://raw.githubusercontent.com/UCloud-FE/react-components/master/.recodo/data/${name}.info.json`,
+                    type: 'json'
+                }
+            ])
+            .then(deps => {
+                const [info] = deps as any;
+                ReactDOM.render(
+                    <InteractionDemo.Provider props={info[name].info.props}>
+                        <Demo
+                            name={name}
+                            modules={{
+                                '@ucloud-fe/react-components': components,
+                                moment: moment,
+                                lodash: lodash,
+                                react: React,
+                                'react-dom': ReactDOM,
+                                'prop-types': PropTypes,
+                                'interaction-demo': InteractionDemo
+                            }}
+                        />
+                    </InteractionDemo.Provider>,
+                    dom
+                );
+                destroyAction = () => ReactDOM.unmountComponentAtNode(dom);
+            });
     });
     return destroy;
 };

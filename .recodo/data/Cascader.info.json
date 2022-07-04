@@ -1,0 +1,260 @@
+{
+    "Cascade": {
+        "path": "Cascader/Cascade.tsx",
+        "name": "Cascade",
+        "info": {
+            "description": "",
+            "displayName": "Cascade",
+            "methods": [],
+            "props": {
+                "dataSource": {
+                    "required": false,
+                    "tsType": { "name": "Array", "elements": [{ "name": "CascadeData" }], "raw": "CascadeData[]" },
+                    "description": ""
+                },
+                "value": {
+                    "required": false,
+                    "tsType": { "name": "Array", "elements": [{ "name": "Key" }], "raw": "Key[]" },
+                    "description": ""
+                },
+                "expandedValue": {
+                    "required": true,
+                    "tsType": { "name": "Array", "elements": [{ "name": "Key" }], "raw": "Key[]" },
+                    "description": ""
+                },
+                "loadData": { "required": false, "tsType": { "name": "LoadData" }, "description": "" }
+            }
+        }
+    },
+    "CascadeSearchResult": {
+        "path": "Cascader/Cascade.tsx",
+        "name": "CascadeSearchResult",
+        "info": {
+            "description": "",
+            "displayName": "CascadeSearchResult",
+            "methods": [],
+            "props": {
+                "dataSource": {
+                    "required": false,
+                    "tsType": { "name": "Array", "elements": [{ "name": "CascadeData" }], "raw": "CascadeData[]" },
+                    "description": ""
+                },
+                "value": {
+                    "required": false,
+                    "tsType": { "name": "Array", "elements": [{ "name": "string" }], "raw": "string[]" },
+                    "description": ""
+                },
+                "loading": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                "empty": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                "error": { "required": false, "tsType": { "name": "Error" }, "description": "" }
+            }
+        }
+    },
+    "Cascader": {
+        "path": "Cascader/Cascader.tsx",
+        "name": "Cascader",
+        "info": {
+            "description": "",
+            "displayName": "Cascader",
+            "methods": [],
+            "props": {
+                "dataSource": {
+                    "required": false,
+                    "tsType": { "name": "Array", "elements": [{ "name": "CascadeData" }], "raw": "CascadeData[]" },
+                    "description": { "description": "数据源", "tags": [] }
+                },
+                "value": {
+                    "required": false,
+                    "tsType": { "name": "Array", "elements": [{ "name": "Key" }], "raw": "Key[]" },
+                    "description": { "description": "选中的值", "tags": [] }
+                },
+                "defaultValue": {
+                    "required": false,
+                    "tsType": { "name": "Array", "elements": [{ "name": "Key" }], "raw": "Key[]" },
+                    "description": { "description": "默认值，非受控", "tags": [] }
+                },
+                "onChange": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(value: Key[] | void) => void",
+                        "signature": {
+                            "arguments": [
+                                {
+                                    "name": "value",
+                                    "type": {
+                                        "name": "union",
+                                        "raw": "Key[] | void",
+                                        "elements": [
+                                            { "name": "Array", "elements": [{ "name": "Key" }], "raw": "Key[]" },
+                                            { "name": "void" }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "return": { "name": "void" }
+                        }
+                    },
+                    "description": { "description": "选中回调", "tags": [] }
+                },
+                "disabled": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "是否禁用", "tags": [] }
+                },
+                "size": {
+                    "required": false,
+                    "tsType": { "name": "Size" },
+                    "description": { "description": "尺寸", "tags": [] }
+                },
+                "search": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "| boolean\n| {\n      /** 自定义搜索函数 */\n      handleSearch?: (\n          searchValue: string,\n          dataSource: CascadeData[]\n      ) => {\n          dataSource: CascadeData[];\n          count?: number;\n      };\n  }",
+                        "elements": [
+                            { "name": "boolean" },
+                            {
+                                "name": "signature",
+                                "type": "object",
+                                "raw": "{\n    /** 自定义搜索函数 */\n    handleSearch?: (\n        searchValue: string,\n        dataSource: CascadeData[]\n    ) => {\n        dataSource: CascadeData[];\n        count?: number;\n    };\n}",
+                                "signature": {
+                                    "properties": [
+                                        {
+                                            "key": "handleSearch",
+                                            "value": {
+                                                "name": "signature",
+                                                "type": "function",
+                                                "raw": "(\n    searchValue: string,\n    dataSource: CascadeData[]\n) => {\n    dataSource: CascadeData[];\n    count?: number;\n}",
+                                                "signature": {
+                                                    "arguments": [
+                                                        { "name": "searchValue", "type": { "name": "string" } },
+                                                        {
+                                                            "name": "dataSource",
+                                                            "type": {
+                                                                "name": "Array",
+                                                                "elements": [{ "name": "CascadeData" }],
+                                                                "raw": "CascadeData[]"
+                                                            }
+                                                        }
+                                                    ],
+                                                    "return": {
+                                                        "name": "signature",
+                                                        "type": "object",
+                                                        "raw": "{\n    dataSource: CascadeData[];\n    count?: number;\n}",
+                                                        "signature": {
+                                                            "properties": [
+                                                                {
+                                                                    "key": "dataSource",
+                                                                    "value": {
+                                                                        "name": "Array",
+                                                                        "elements": [{ "name": "CascadeData" }],
+                                                                        "raw": "CascadeData[]",
+                                                                        "required": true
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "key": "count",
+                                                                    "value": { "name": "number", "required": false }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                },
+                                                "required": false
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "description": { "description": "使用搜索", "tags": [] }
+                },
+                "loadData": {
+                    "required": false,
+                    "tsType": { "name": "LoadData" },
+                    "description": { "description": "异步加载数据操作", "tags": [] }
+                },
+                "clearable": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "是否可清空", "tags": [] }
+                },
+                "status": {
+                    "required": false,
+                    "tsType": { "name": "InputProps['status']", "raw": "InputProps['status']" },
+                    "description": { "description": "状态", "tags": [] }
+                },
+                "placeholder": {
+                    "required": false,
+                    "tsType": { "name": "string" },
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "popoverProps": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "object",
+                        "raw": "{ [key: string]: any }",
+                        "signature": {
+                            "properties": [
+                                { "key": { "name": "string" }, "value": { "name": "any", "required": true } }
+                            ]
+                        }
+                    },
+                    "description": { "description": "自定义 popover 的配置", "tags": [] }
+                }
+            }
+        }
+    },
+    "Item": {
+        "path": "Cascader/Item.tsx",
+        "name": "Item",
+        "info": {
+            "description": "",
+            "displayName": "Item",
+            "methods": [],
+            "props": {
+                "expandAble": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                "expanded": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                "selected": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                "loading": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                "value": { "required": true, "tsType": { "name": "Key" }, "description": "" },
+                "title": { "required": true, "tsType": { "name": "ReactNode" }, "description": "" },
+                "disabled": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                "parents": {
+                    "required": false,
+                    "tsType": { "name": "Array", "elements": [{ "name": "CascadeData" }], "raw": "CascadeData[]" },
+                    "description": ""
+                }
+            }
+        }
+    },
+    "Items": {
+        "path": "Cascader/Items.tsx",
+        "name": "Items",
+        "info": {
+            "description": "",
+            "displayName": "Items",
+            "methods": [],
+            "props": {
+                "items": {
+                    "required": false,
+                    "tsType": { "name": "Array", "elements": [{ "name": "CascadeData" }], "raw": "CascadeData[]" },
+                    "description": ""
+                },
+                "selectedKey": { "required": false, "tsType": { "name": "Key" }, "description": "" },
+                "expandedKey": { "required": false, "tsType": { "name": "Key" }, "description": "" },
+                "disabled": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                "parents": {
+                    "required": false,
+                    "tsType": { "name": "Array", "elements": [{ "name": "CascadeData" }], "raw": "CascadeData[]" },
+                    "description": ""
+                },
+                "loadData": { "required": false, "tsType": { "name": "LoadData" }, "description": "" }
+            }
+        }
+    }
+}

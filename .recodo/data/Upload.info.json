@@ -1,0 +1,670 @@
+{
+    "CardItem": {
+        "path": "Upload/CardItem.jsx",
+        "name": "CardItem",
+        "info": {
+            "description": "",
+            "displayName": "CardItem",
+            "methods": [
+                { "name": "onPreview", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                { "name": "onReupload", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                { "name": "onRemove", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                {
+                    "name": "renderThumbnail",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "isFullThumbnail", "type": null }],
+                    "returns": null
+                },
+                { "name": "renderName", "docblock": null, "modifiers": [], "params": [], "returns": null }
+            ],
+            "props": {
+                "onRemove": { "type": { "name": "func" }, "required": false, "description": "" },
+                "onPreview": { "type": { "name": "func" }, "required": false, "description": "" },
+                "onReupload": { "type": { "name": "func" }, "required": false, "description": "" },
+                "locale": { "type": { "name": "object" }, "required": true, "description": "" },
+                "disabled": { "type": { "name": "bool" }, "required": false, "description": "" },
+                "file": { "type": { "name": "object" }, "required": false, "description": "" },
+                "index": { "type": { "name": "number" }, "required": false, "description": "" },
+                "removable": { "defaultValue": { "value": "true", "computed": false }, "required": false }
+            }
+        }
+    },
+    "DropZone": {
+        "path": "Upload/Dropzone.jsx",
+        "name": "DropZone",
+        "info": {
+            "description": "",
+            "displayName": "DropZone",
+            "methods": [
+                { "name": "renderList", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                { "name": "renderTip", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                {
+                    "name": "onDrop",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "e", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "onDragOver",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "e", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "onDragEnter",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "e", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "onDragLeave",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "e", "type": null }],
+                    "returns": null
+                },
+                { "name": "onDragEnd", "docblock": null, "modifiers": [], "params": [], "returns": null }
+            ],
+            "props": {
+                "fileList": { "type": { "name": "array" }, "required": false, "description": "" },
+                "locale": { "type": { "name": "object" }, "required": false, "description": "" },
+                "onSelect": { "type": { "name": "func" }, "required": false, "description": "" },
+                "disabled": { "type": { "name": "bool" }, "required": false, "description": "" }
+            }
+        }
+    },
+    "Item": {
+        "path": "Upload/Item.jsx",
+        "name": "Item",
+        "info": {
+            "description": "",
+            "displayName": "Item",
+            "methods": [
+                { "name": "onPreview", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                { "name": "onReupload", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                { "name": "onRemove", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                { "name": "renderThumbnail", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                { "name": "renderName", "docblock": null, "modifiers": [], "params": [], "returns": null }
+            ],
+            "props": {
+                "onRemove": { "type": { "name": "func" }, "required": false, "description": "" },
+                "onPreview": { "type": { "name": "func" }, "required": false, "description": "" },
+                "onReupload": { "type": { "name": "func" }, "required": false, "description": "" },
+                "locale": { "type": { "name": "object" }, "required": true, "description": "" },
+                "thumbnail": { "type": { "name": "bool" }, "required": false, "description": "" },
+                "disabled": { "type": { "name": "bool" }, "required": false, "description": "" },
+                "file": { "type": { "name": "object" }, "required": false, "description": "" },
+                "index": { "type": { "name": "number" }, "required": false, "description": "" },
+                "removable": { "defaultValue": { "value": "true", "computed": false }, "required": false }
+            }
+        }
+    },
+    "List": {
+        "path": "Upload/List.jsx",
+        "name": "List",
+        "info": {
+            "description": { "description": "文件列表控件", "tags": [] },
+            "displayName": "List",
+            "methods": [
+                {
+                    "name": "onPreview",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "file", "type": null },
+                        { "name": "index", "type": null }
+                    ],
+                    "returns": null
+                },
+                {
+                    "name": "renderFileItem",
+                    "docblock": "渲染列表项",
+                    "modifiers": [],
+                    "params": [{ "name": "file" }, { "name": "index" }],
+                    "returns": null,
+                    "description": { "description": "渲染列表项", "tags": [] }
+                }
+            ],
+            "props": {
+                "fileList": {
+                    "type": { "name": "array" },
+                    "required": false,
+                    "description": { "description": "文件列表", "tags": [] }
+                },
+                "renderFileItem": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": { "description": "渲染文件列表项", "tags": [] }
+                },
+                "onRemove": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": { "description": "删除文件", "tags": [] }
+                },
+                "onPreview": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": { "description": "自定义预览文件", "tags": [] }
+                },
+                "getPreviewableOfItem": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": { "description": "自定义文件是否可以预览", "tags": [] }
+                },
+                "getRemovableOfItem": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": { "description": "自定义文件是否可删除", "tags": [] },
+                    "defaultValue": { "value": "file => file?.status !== 'uploading'", "computed": false }
+                },
+                "handleReupload": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": { "description": "重新上传文件", "tags": [] }
+                },
+                "disabled": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "是否禁用", "tags": [] }
+                },
+                "thumbnail": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "是否展示缩略图", "tags": [] }
+                },
+                "card": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "卡片列表", "tags": [] }
+                },
+                "locale": {
+                    "type": { "name": "object" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                }
+            }
+        }
+    },
+    "Progress": {
+        "path": "Upload/Progress.jsx",
+        "name": "Progress",
+        "info": {
+            "description": "",
+            "displayName": "Progress",
+            "methods": [
+                { "name": "simulatePercent", "docblock": null, "modifiers": [], "params": [], "returns": null }
+            ],
+            "props": {
+                "file": { "type": { "name": "object" }, "required": false, "description": "" },
+                "percent": { "type": { "name": "number" }, "required": false, "description": "" }
+            }
+        }
+    },
+    "Selector": {
+        "path": "Upload/Selector.jsx",
+        "name": "Selector",
+        "info": {
+            "description": { "description": "文件选择控件", "tags": [] },
+            "displayName": "Selector",
+            "methods": [
+                {
+                    "name": "trigger",
+                    "docblock": "触发选择操作\n@public",
+                    "modifiers": [],
+                    "params": [],
+                    "returns": null,
+                    "description": { "description": "触发选择操作", "tags": [] }
+                },
+                {
+                    "name": "cleanTrigger",
+                    "docblock": "清空触发器",
+                    "modifiers": [],
+                    "params": [],
+                    "returns": null,
+                    "description": { "description": "清空触发器", "tags": [] }
+                },
+                {
+                    "name": "onChange",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "e", "type": null }],
+                    "returns": null
+                }
+            ],
+            "props": {
+                "onSelect": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": { "description": "选取文件回调函数", "tags": [] }
+                },
+                "selector": {
+                    "type": { "name": "node" },
+                    "required": false,
+                    "description": { "description": "自定义触发图片选择的选择控件", "tags": [] }
+                },
+                "disabled": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "是否禁用", "tags": [] }
+                },
+                "multiple": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "是否可以多选", "tags": [] }
+                },
+                "accept": {
+                    "type": { "name": "string" },
+                    "required": false,
+                    "description": { "description": "可接受的文件类型，MIME，见Upload", "tags": [] }
+                },
+                "maxSize": {
+                    "type": { "name": "number" },
+                    "required": false,
+                    "description": { "description": "文件大小限制", "tags": [] }
+                },
+                "locale": {
+                    "type": { "name": "object" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                }
+            }
+        }
+    },
+    "Thumbnail": {
+        "path": "Upload/Thumbnail.jsx",
+        "name": "Thumbnail",
+        "info": {
+            "description": "",
+            "displayName": "Thumbnail",
+            "methods": [],
+            "props": {
+                "file": { "type": { "name": "object" }, "required": false, "description": "" },
+                "className": { "type": { "name": "string" }, "required": false, "description": "" }
+            }
+        }
+    },
+    "Upload": {
+        "path": "Upload/Upload.jsx",
+        "name": "Upload",
+        "info": {
+            "description": { "description": "文件上传控件", "tags": [] },
+            "displayName": "Upload",
+            "methods": [
+                { "name": "componentDidUpdate", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                {
+                    "name": "onSingleSelect",
+                    "docblock": "单选",
+                    "modifiers": [],
+                    "params": [{ "name": "files" }],
+                    "returns": null,
+                    "description": { "description": "单选", "tags": [] }
+                },
+                {
+                    "name": "onAdd",
+                    "docblock": "处理添加文件",
+                    "modifiers": [],
+                    "params": [{ "name": "files" }],
+                    "returns": null,
+                    "description": { "description": "处理添加文件", "tags": [] }
+                },
+                {
+                    "name": "handleFilesUpload",
+                    "docblock": "处理文件上传",
+                    "modifiers": [],
+                    "params": [{ "name": "files" }],
+                    "returns": null,
+                    "description": { "description": "处理文件上传", "tags": [] }
+                },
+                {
+                    "name": "onRemove",
+                    "docblock": "处理删除文件",
+                    "modifiers": [],
+                    "params": [{ "name": "file" }, { "name": "index" }],
+                    "returns": null,
+                    "description": { "description": "处理删除文件", "tags": [] }
+                },
+                {
+                    "name": "onChange",
+                    "docblock": "处理change",
+                    "modifiers": [],
+                    "params": [{ "name": "fileList" }, { "name": "cb" }],
+                    "returns": null,
+                    "description": { "description": "处理change", "tags": [] }
+                },
+                {
+                    "name": "onUncontrolledChange",
+                    "docblock": "非受控处理change",
+                    "modifiers": [],
+                    "params": [{ "name": "fileList" }, { "name": "cb" }],
+                    "returns": null,
+                    "description": { "description": "非受控处理change", "tags": [] }
+                },
+                {
+                    "name": "onControlledChange",
+                    "docblock": "受控组件处理change",
+                    "modifiers": [],
+                    "params": [{ "name": "fileList" }],
+                    "returns": null,
+                    "description": { "description": "受控组件处理change", "tags": [] }
+                },
+                {
+                    "name": "onError",
+                    "docblock": "处理错误",
+                    "modifiers": [],
+                    "params": [{ "name": "error" }],
+                    "returns": null,
+                    "description": { "description": "处理错误", "tags": [] }
+                },
+                {
+                    "name": "onDefaultError",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "Error", "type": null }],
+                    "returns": null
+                },
+                { "name": "onMaxCountError", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                {
+                    "name": "onFileError",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "e", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "onFileSelect",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "files", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "getFileList",
+                    "docblock": "获取文件列表",
+                    "modifiers": [],
+                    "params": [],
+                    "returns": null,
+                    "description": { "description": "获取文件列表", "tags": [] }
+                },
+                { "name": "renderList", "docblock": null, "modifiers": [], "params": [], "returns": null }
+            ],
+            "props": {
+                "onChange": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": {
+                        "description": "文件列表变化时的回调，如新增、删除、上传、上传完成、进度更新等操作",
+                        "tags": [
+                            {
+                                "title": "param",
+                                "description": "文件列表",
+                                "type": {
+                                    "type": "TypeApplication",
+                                    "expression": { "type": "NameExpression", "name": "Array" },
+                                    "applications": [{ "type": "NameExpression", "name": "Object" }]
+                                },
+                                "name": "fileList"
+                            },
+                            {
+                                "title": "param",
+                                "description": "文件名称",
+                                "type": { "type": "NameExpression", "name": "string" },
+                                "name": "fileList[].name"
+                            },
+                            {
+                                "title": "param",
+                                "description": "文件 uid",
+                                "type": { "type": "NameExpression", "name": "string" },
+                                "name": "fileList[].uid"
+                            },
+                            {
+                                "title": "param",
+                                "description": "文件的大小",
+                                "type": { "type": "NameExpression", "name": "number" },
+                                "name": "fileList[].size"
+                            },
+                            {
+                                "title": "param",
+                                "description": "文件的类型，MIME",
+                                "type": { "type": "NameExpression", "name": "string" },
+                                "name": "fileList[].type"
+                            },
+                            {
+                                "title": "param",
+                                "description": "文件的上传状态，只有传入 handleUpload 时才有的属性 [uploading,success,error]",
+                                "type": { "type": "NameExpression", "name": "string" },
+                                "name": "fileList[].status"
+                            },
+                            {
+                                "title": "param",
+                                "description": "文件的上传进度，只有 handleUpload 中上报了 progress 才会有",
+                                "type": { "type": "NameExpression", "name": "number" },
+                                "name": "fileList[].progress"
+                            }
+                        ]
+                    },
+                    "defaultValue": { "value": "() => {}", "computed": false }
+                },
+                "onAdd": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": {
+                        "description": "正在添加文件时的回调，可通过返回值控制添加行为",
+                        "tags": [
+                            {
+                                "title": "param",
+                                "description": "文件列表",
+                                "type": {
+                                    "type": "TypeApplication",
+                                    "expression": { "type": "NameExpression", "name": "Array" },
+                                    "applications": [{ "type": "NameExpression", "name": "Object" }]
+                                },
+                                "name": "fileList"
+                            },
+                            {
+                                "title": "returns",
+                                "description": "是否应用添加操作，返回 false 时不触发添加",
+                                "type": null
+                            }
+                        ]
+                    },
+                    "defaultValue": { "value": "() => {}", "computed": false }
+                },
+                "onRemove": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": {
+                        "description": "正在删除文件时的回调，可通过返回值控制添加行为",
+                        "tags": [
+                            {
+                                "title": "param",
+                                "description": "删除的文件",
+                                "type": { "type": "NameExpression", "name": "Object" },
+                                "name": "file"
+                            },
+                            {
+                                "title": "param",
+                                "description": "删除文件的索引",
+                                "type": { "type": "NameExpression", "name": "number" },
+                                "name": "index"
+                            },
+                            {
+                                "title": "returns",
+                                "description": "是否应用删除操作，返回 false 时不触发删除",
+                                "type": null
+                            }
+                        ]
+                    },
+                    "defaultValue": { "value": "() => {}", "computed": false }
+                },
+                "getRemovableOfItem": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": {
+                        "description": "自定义文件是否可删除，默认为 loading 时不可删除，如果需要都可删除可直接传入 () => true",
+                        "tags": []
+                    }
+                },
+                "onError": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": {
+                        "description": "选中或读取文件错误回调，自定义错误处理，不传时默认行为会在报错时拦截文件进入列表并弹窗提示用户",
+                        "tags": [
+                            {
+                                "title": "param",
+                                "description": "错误信息",
+                                "type": { "type": "NameExpression", "name": "Object" },
+                                "name": "error"
+                            },
+                            {
+                                "title": "param",
+                                "description": "错误的具体信息",
+                                "type": { "type": "NameExpression", "name": "string" },
+                                "name": "error.message"
+                            },
+                            {
+                                "title": "param",
+                                "description": "错误的类型，包括 FileTypeError - 文件类型错误、FileSizeError - 文件大小错误、FileMaxCountError - 文件数量错误，以及其他可能出现的原生错误",
+                                "type": { "type": "NameExpression", "name": "string" },
+                                "name": "error.name"
+                            }
+                        ]
+                    }
+                },
+                "onPreview": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": {
+                        "description": "预览操作，自定义预览操作，不传时默认为对图片可进行预览，点击会在新窗口打开图片，需要关闭默认行为可使用 null",
+                        "tags": [
+                            {
+                                "title": "param",
+                                "description": "预览的文件",
+                                "type": { "type": "NameExpression", "name": "Object" },
+                                "name": "file"
+                            },
+                            {
+                                "title": "param",
+                                "description": "预览文件的索引",
+                                "type": { "type": "NameExpression", "name": "number" },
+                                "name": "index"
+                            }
+                        ]
+                    }
+                },
+                "getPreviewableOfItem": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": {
+                        "description": "自定义预览操作时每个文件都会调用预览，可以使用这个函数来过滤不想出现预览的文件",
+                        "tags": [
+                            {
+                                "title": "param",
+                                "description": "检测的文件",
+                                "type": { "type": "NameExpression", "name": "Object" },
+                                "name": "file"
+                            }
+                        ]
+                    }
+                },
+                "handleUpload": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": {
+                        "description": "定义上传操作，受控组件中不起作用请自行处理\n应交互需求，上传中某些样式下会有进度条，需要调用 handleProgress 来更新进度，如果不调用，将会出现一个假的进度条，😂",
+                        "tags": [
+                            {
+                                "title": "param",
+                                "description": "上传的文件",
+                                "type": { "type": "NameExpression", "name": "Object" },
+                                "name": "file"
+                            },
+                            {
+                                "title": "param",
+                                "description": "上报上传的进度，(progress) => void，在上传过程中调用 handleProgress(progress) 来更新文件进度",
+                                "type": { "type": "NameExpression", "name": "function" },
+                                "name": "handleProgress"
+                            }
+                        ]
+                    }
+                },
+                "disabled": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "是否禁用", "tags": [] }
+                },
+                "multiple": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "是否可以多选", "tags": [] }
+                },
+                "accept": {
+                    "type": { "name": "string" },
+                    "required": false,
+                    "description": {
+                        "description": "可接受的文件类型, MIME\n[input accept](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)",
+                        "tags": []
+                    }
+                },
+                "maxSize": {
+                    "type": { "name": "number" },
+                    "required": false,
+                    "description": { "description": "文件大小限制", "tags": [] }
+                },
+                "maxCount": {
+                    "type": { "name": "number" },
+                    "required": false,
+                    "description": { "description": "文件数量限制", "tags": [] }
+                },
+                "selector": {
+                    "type": { "name": "node" },
+                    "required": false,
+                    "description": { "description": "自定义选择控件，为 null 时隐藏", "tags": [] }
+                },
+                "listType": {
+                    "type": { "name": "union", "value": [{ "name": "string" }, { "name": "array" }] },
+                    "required": false,
+                    "description": {
+                        "description": "文件列表展示类型，格式为 'list' | ['list', 'card'] | ['dropzone', 'thumbnail']\nnone - 隐藏文件列表\ntext - 展示文件名称列表\nlist - 普通列表形式，可通过第二个参数设置 thumbnail 和 card\ndropzone - 拖拽上传区域，可通过第二个参数设置 thumbnail 和 card",
+                        "tags": []
+                    },
+                    "defaultValue": { "value": "'list'", "computed": false }
+                },
+                "defaultFileList": {
+                    "type": { "name": "arrayOf", "value": { "name": "custom", "raw": "fileShape" } },
+                    "required": false,
+                    "description": { "description": "默认文件列表，非受控组件使用，初始化时才有效", "tags": [] }
+                },
+                "fileList": {
+                    "type": { "name": "arrayOf", "value": { "name": "custom", "raw": "fileShape" } },
+                    "required": false,
+                    "description": { "description": "文件列表，传入后变为受控组件", "tags": [] }
+                },
+                "customStyle": {
+                    "type": {
+                        "name": "shape",
+                        "value": {
+                            "listMaxHeight": { "name": "string", "description": "列表的最大高度", "required": false }
+                        }
+                    },
+                    "required": false,
+                    "description": { "description": "自定义样式", "tags": [] }
+                },
+                "className": {
+                    "type": { "name": "string" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "locale": {
+                    "type": { "name": "object" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                }
+            }
+        }
+    }
+}

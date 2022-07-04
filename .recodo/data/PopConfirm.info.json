@@ -1,0 +1,41 @@
+{
+    "PopConfirm": {
+        "path": "PopConfirm/PopConfirm.tsx",
+        "name": "PopConfirm",
+        "info": {
+            "description": "",
+            "displayName": "PopConfirm",
+            "methods": [],
+            "props": {
+                "locale": {
+                    "required": false,
+                    "tsType": { "name": "LOCALE" },
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "onConfirm": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "() => void",
+                        "signature": { "arguments": [], "return": { "name": "void" } }
+                    },
+                    "description": { "description": "确认按钮回调", "tags": [] },
+                    "defaultValue": { "value": "noop", "computed": true }
+                },
+                "onCancel": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "() => void",
+                        "signature": { "arguments": [], "return": { "name": "void" } }
+                    },
+                    "description": { "description": "取消按钮回调", "tags": [] },
+                    "defaultValue": { "value": "noop", "computed": true }
+                },
+                "defaultVisible": { "defaultValue": { "value": "false", "computed": false }, "required": false }
+            }
+        }
+    }
+}

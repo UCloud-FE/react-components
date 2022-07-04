@@ -1,0 +1,22 @@
+{
+    "Form": {
+        "path": "Form/Form.md",
+        "name": "Form",
+        "info": "### 说明\n\n表单 UI 组件，只负责布局和展示，不提供任何逻辑功能，表单校验、数据收集请看 `ZForm` 组件。\n\n#### API 设计说明\n\n完整的表单不止包含视觉规范、布局等，还包含了大量的逻辑处理，为了让开发者可以自由选择表单逻辑处理的方式，将表单拆分为 UI 布局组件 - `Form` 和表单逻辑组件 - `ZForm`，开发者如果对表单用法不喜，可自行选择合适的表单逻辑进行封装而不用担心样式。\n\n### 演示\n\n#### 普通使用\n\n```js {\"codepath\": \"form.jsx\"}\n```\n\n#### itemProps - 统一设置 item 的 props\n\n```js {\"codepath\": \"form-itemProps.jsx\"}\n```\n"
+    },
+    "Group": {
+        "path": "Form/Group.md",
+        "name": "Group",
+        "info": "### 说明\n\n表单组控件，用于包裹表单项成为表单组\n\n### 演示\n\n#### 布局\n\n```js {\"codepath\": \"group.jsx\"}\n```\n"
+    },
+    "Item": {
+        "path": "Form/Item.md",
+        "name": "Item",
+        "info": "### 说明\n\n表单项，用于包裹表单控件（`Input`、`Select` 等）\n\n### 演示\n\n#### labelCol, controllerCol - 布局\n\n```js {\"codepath\": \"item-layout.jsx\"}\n```\n\n#### help - 帮助内容\n\n```js {\"codepath\": \"item-help.jsx\"}\n```\n\n#### required - 是否必填/必选\n\n```js {\"codepath\": \"item-required.jsx\"}\n```\n\n#### status - 状态\n\n```js {\"codepath\": \"item-status.jsx\"}\n```\n\n#### tip - 自定义提示/报错文案\n\n```js {\"codepath\": \"item-tip.jsx\"}\n```\n\n#### shareStatus - 状态共享给控件\n\n```js {\"codepath\": \"item-shareStatus.jsx\"}\n```\n\n#### itemProps 的使用与覆盖\n\n```js {\"codepath\": \"item-itemProps.jsx\"}\n```\n"
+    },
+    "SubArea": {
+        "path": "Form/SubArea.md",
+        "name": "SubArea",
+        "info": "### 说明\n\n表单组控件，用于包裹表单项成为一个小的组\n\n### 演示\n\n#### 布局\n\n```js {\"codepath\": \"subArea.jsx\"}\n```\n"
+    }
+}

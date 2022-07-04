@@ -1,0 +1,247 @@
+{
+    "Button": {
+        "path": "Radio/Tag.jsx",
+        "name": "Button",
+        "info": {
+            "description": { "description": "", "tags": [{ "title": "deprecated", "description": null }] },
+            "displayName": "Button",
+            "methods": []
+        }
+    },
+    "Card": {
+        "path": "Radio/Card.tsx",
+        "name": "Card",
+        "info": { "description": "", "displayName": "Card", "methods": [] }
+    },
+    "Group": {
+        "path": "Radio/Group.jsx",
+        "name": "Group",
+        "info": {
+            "description": "",
+            "displayName": "Group",
+            "methods": [{ "name": "renderOptions", "docblock": null, "modifiers": [], "params": [], "returns": null }],
+            "props": {
+                "children": {
+                    "type": { "name": "node" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "value": {
+                    "type": { "name": "any" },
+                    "required": false,
+                    "description": { "description": "当前值，controlled", "tags": [] }
+                },
+                "defaultValue": {
+                    "type": { "name": "any" },
+                    "required": false,
+                    "description": { "description": "默认值，uncontrolled", "tags": [] }
+                },
+                "onChange": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": { "description": "修改时的回调", "tags": [] },
+                    "defaultValue": { "value": "() => {}", "computed": false }
+                },
+                "options": {
+                    "type": { "name": "array" },
+                    "required": false,
+                    "description": { "description": "快速选项", "tags": [] }
+                },
+                "disabled": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "禁用", "tags": [] }
+                },
+                "size": {
+                    "type": { "name": "enum", "computed": true, "value": "Radio.Size" },
+                    "required": false,
+                    "description": { "description": "尺寸", "tags": [] }
+                },
+                "styleType": {
+                    "type": { "name": "enum", "computed": true, "value": "Radio.StyleType" },
+                    "required": false,
+                    "description": { "description": "样式风格", "tags": [] }
+                },
+                "selectable": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] },
+                    "defaultValue": { "value": "true", "computed": false }
+                },
+                "multiple": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] },
+                    "defaultValue": { "value": "false", "computed": false }
+                }
+            }
+        }
+    },
+    "Radio": {
+        "path": "Radio/Radio.jsx",
+        "name": "Radio",
+        "info": {
+            "description": "",
+            "displayName": "Radio",
+            "methods": [
+                {
+                    "name": "onClick",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "props", "type": null },
+                        { "name": "e", "type": null }
+                    ],
+                    "returns": null
+                },
+                {
+                    "name": "renderRadio",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "props", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "renderRadioList",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "props", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "renderRadioButton",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "props", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "renderRadioTag",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "props", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "renderRadioCard",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "props", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "renderRadioText",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "props", "type": null }],
+                    "returns": null
+                }
+            ],
+            "props": {
+                "children": {
+                    "type": { "name": "node" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "checked": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "是否选中", "tags": [] }
+                },
+                "defaultChecked": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "默认是否选中", "tags": [] }
+                },
+                "disabled": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "是否禁用", "tags": [] }
+                },
+                "onChange": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": { "description": "点选时的回调", "tags": [] },
+                    "defaultValue": { "value": "() => {}", "computed": false }
+                },
+                "onClick": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] },
+                    "defaultValue": { "value": "() => {}", "computed": false }
+                },
+                "value": {
+                    "type": { "name": "any" },
+                    "required": false,
+                    "description": { "description": "radio的值", "tags": [] }
+                },
+                "styleType": {
+                    "type": {
+                        "name": "enum",
+                        "value": [
+                            { "value": "'default'", "computed": false },
+                            { "value": "'button'", "computed": false },
+                            { "value": "'tag'", "computed": false },
+                            { "value": "'card'", "computed": false },
+                            { "value": "'text'", "computed": false },
+                            { "value": "'list'", "computed": false }
+                        ]
+                    },
+                    "required": false,
+                    "description": { "description": "样式风格", "tags": [] }
+                },
+                "size": {
+                    "type": {
+                        "name": "enum",
+                        "value": [
+                            { "value": "'sm'", "computed": false },
+                            { "value": "'md'", "computed": false },
+                            { "value": "'lg'", "computed": false }
+                        ]
+                    },
+                    "required": false,
+                    "description": { "description": "尺寸，styleType 为 card、list 时无效", "tags": [] }
+                },
+                "title": {
+                    "type": { "name": "node" },
+                    "required": false,
+                    "description": { "description": "标题，styleType 为 card 时使用", "tags": [] }
+                },
+                "extra": {
+                    "type": { "name": "node" },
+                    "required": false,
+                    "description": { "description": "附加内容，styleType 为 list 时使用", "tags": [] }
+                },
+                "disabledLabel": {
+                    "type": { "name": "node" },
+                    "required": false,
+                    "description": {
+                        "description": "",
+                        "tags": [
+                            { "title": "ignore", "description": null },
+                            { "title": "deprecated", "description": "弃用" }
+                        ]
+                    }
+                },
+                "multiple": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                }
+            }
+        }
+    },
+    "RadioIcon": {
+        "path": "Radio/RadioIcon.tsx",
+        "name": "RadioIcon",
+        "info": {
+            "description": "",
+            "displayName": "RadioIcon",
+            "methods": [],
+            "props": {
+                "checked": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                "disabled": { "required": false, "tsType": { "name": "boolean" }, "description": "" }
+            }
+        }
+    }
+}

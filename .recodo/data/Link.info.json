@@ -1,0 +1,86 @@
+{
+    "Button": {
+        "path": "Link/Button.tsx",
+        "name": "Button",
+        "info": {
+            "description": "",
+            "displayName": "Button",
+            "methods": [{ "name": "renderIcon", "docblock": null, "modifiers": [], "params": [], "returns": null }],
+            "props": {
+                "styleType": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "'primary' | 'border' | 'border-gray'",
+                        "elements": [
+                            { "name": "literal", "value": "'primary'" },
+                            { "name": "literal", "value": "'border'" },
+                            { "name": "literal", "value": "'border-gray'" }
+                        ]
+                    },
+                    "description": { "description": "按钮类型", "tags": [] },
+                    "defaultValue": { "value": "'border'", "computed": false }
+                },
+                "size": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "'sm' | 'md' | 'lg'",
+                        "elements": [
+                            { "name": "literal", "value": "'sm'" },
+                            { "name": "literal", "value": "'md'" },
+                            { "name": "literal", "value": "'lg'" }
+                        ]
+                    },
+                    "description": { "description": "按钮尺寸", "tags": [] },
+                    "defaultValue": { "value": "'md'", "computed": false }
+                },
+                "shape": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "'circle' | 'square'",
+                        "elements": [
+                            { "name": "literal", "value": "'circle'" },
+                            { "name": "literal", "value": "'square'" }
+                        ]
+                    },
+                    "description": { "description": "形状", "tags": [] }
+                },
+                "icon": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "string | ReactNode",
+                        "elements": [{ "name": "string" }, { "name": "ReactNode" }]
+                    },
+                    "description": {
+                        "description": "图标，传入 string 时为图标类型，也可直接传入图标组件，需要图标位置等更多自定义请直接放在 children 中",
+                        "tags": []
+                    }
+                }
+            }
+        }
+    },
+    "Link": {
+        "path": "Link/Link.tsx",
+        "name": "Link",
+        "info": {
+            "description": "",
+            "displayName": "Link",
+            "methods": [],
+            "props": {
+                "href": {
+                    "required": false,
+                    "tsType": { "name": "string" },
+                    "description": { "description": "a 标签的链接", "tags": [] }
+                },
+                "target": {
+                    "required": false,
+                    "tsType": { "name": "string" },
+                    "description": { "description": "打开方式", "tags": [] }
+                }
+            }
+        }
+    }
+}

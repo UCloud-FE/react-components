@@ -1,0 +1,239 @@
+{
+    "InheritProvider": {
+        "path": "Popover/ContainerContext.tsx",
+        "name": "InheritProvider",
+        "info": { "description": "", "displayName": "InheritProvider", "methods": [] }
+    },
+    "Popover": {
+        "path": "Popover/Popover.jsx",
+        "name": "Popover",
+        "info": {
+            "description": "",
+            "displayName": "Popover",
+            "methods": [
+                {
+                    "name": "bindPopupWrap",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "_ref", "type": null }],
+                    "returns": null
+                },
+                { "name": "onPopupWrapScroll", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                { "name": "onScroll", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                { "name": "bindScroll", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                { "name": "unbindScroll", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                { "name": "updateScroll", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                { "name": "componentDidMount", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                { "name": "componentWillUnmount", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                {
+                    "name": "componentDidUpdate",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "prevProps", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "onVisibleChange",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "visible", "type": null }],
+                    "returns": null
+                },
+                { "name": "getPopup", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                { "name": "getPopupDomNode", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                {
+                    "name": "saveTrigger",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "node", "type": null }],
+                    "returns": null
+                }
+            ],
+            "props": {
+                "visible": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "受控，控制弹出层展示", "tags": [] }
+                },
+                "defaultVisible": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "非受控，是否默认展示弹出层", "tags": [] },
+                    "defaultValue": { "value": "false", "computed": false }
+                },
+                "onVisibleChange": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": { "description": "弹出层显示隐藏时触发", "tags": [] },
+                    "defaultValue": { "value": "() {}", "computed": false }
+                },
+                "trigger": {
+                    "type": {
+                        "name": "arrayOf",
+                        "value": {
+                            "name": "enum",
+                            "value": [
+                                { "value": "'hover'", "computed": false },
+                                { "value": "'focus'", "computed": false },
+                                { "value": "'click'", "computed": false },
+                                { "value": "'contextMenu'", "computed": false }
+                            ]
+                        }
+                    },
+                    "required": false,
+                    "description": {
+                        "description": "如何触发弹出层，focus 需要注意被包裹元素必须能触发 focus 事件，如链接、按钮、input 等",
+                        "tags": []
+                    },
+                    "defaultValue": { "value": "['hover']", "computed": false }
+                },
+                "alignPoint": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "根据鼠标位置定位", "tags": [] }
+                },
+                "showAction": {
+                    "type": { "name": "array" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] },
+                    "defaultValue": { "value": "[]", "computed": false }
+                },
+                "hideAction": {
+                    "type": { "name": "array" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] },
+                    "defaultValue": { "value": "[]", "computed": false }
+                },
+                "placement": {
+                    "type": { "name": "enum", "computed": true, "value": "Placement" },
+                    "required": false,
+                    "description": { "description": "位置", "tags": [] },
+                    "defaultValue": { "value": "'bottomLeft'", "computed": false }
+                },
+                "builtinPlacements": {
+                    "type": { "name": "object" },
+                    "required": false,
+                    "description": {
+                        "description": "",
+                        "tags": [{ "title": "ignore", "description": "自定义定位配置" }]
+                    },
+                    "defaultValue": { "value": "placements", "computed": true }
+                },
+                "align": {
+                    "type": { "name": "object" },
+                    "required": false,
+                    "description": { "description": "自定义定位", "tags": [] }
+                },
+                "stretch": {
+                    "type": {
+                        "name": "arrayOf",
+                        "value": {
+                            "name": "enum",
+                            "value": [
+                                { "value": "'width'", "computed": false },
+                                { "value": "'minWidth'", "computed": false },
+                                { "value": "'height'", "computed": false },
+                                { "value": "'minHeight'", "computed": false }
+                            ]
+                        }
+                    },
+                    "required": false,
+                    "description": {
+                        "description": "尺寸自适应，'width', 'minWidth', 'height', 'minHeight' 或混合使用",
+                        "tags": []
+                    }
+                },
+                "popup": {
+                    "type": { "name": "node" },
+                    "required": false,
+                    "description": { "description": "弹出层内容", "tags": [] }
+                },
+                "popupClassName": {
+                    "type": { "name": "string" },
+                    "required": false,
+                    "description": { "description": "弹出层的类名", "tags": [] },
+                    "defaultValue": { "value": "''", "computed": false }
+                },
+                "popupStyle": {
+                    "type": { "name": "object" },
+                    "required": false,
+                    "description": { "description": "弹出层的样式", "tags": [] },
+                    "defaultValue": { "value": "{}", "computed": false }
+                },
+                "zIndex": {
+                    "type": { "name": "number" },
+                    "required": false,
+                    "description": { "description": "弹出层的 z-index", "tags": [] }
+                },
+                "getPopupContainer": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": { "description": "自定义弹出层容器", "tags": [] }
+                },
+                "forwardPopupContainer": {
+                    "type": { "name": "union", "value": [{ "name": "bool" }, { "name": "func" }] },
+                    "required": false,
+                    "description": {
+                        "description": "是否使用最上层传入的安全容器，如果为 function，在没有找到安全容器时将会使用该 function 作为 getPopupContainer 的值",
+                        "tags": []
+                    }
+                },
+                "prefixCls": {
+                    "type": { "name": "string" },
+                    "required": false,
+                    "description": {
+                        "description": "",
+                        "tags": [{ "title": "ignore", "description": "自定义类名前缀" }]
+                    },
+                    "defaultValue": { "value": "prefixCls", "computed": true }
+                },
+                "children": {
+                    "type": { "name": "element" },
+                    "required": true,
+                    "description": {
+                        "description": "需要对子元素进行定位，所以只接收一个有效 react 元素（不接收文本节点）",
+                        "tags": []
+                    }
+                },
+                "animation": {
+                    "type": {
+                        "name": "enum",
+                        "value": [
+                            { "value": "'fade'", "computed": false },
+                            { "value": "'zoom'", "computed": false },
+                            { "value": "'bounce'", "computed": false },
+                            { "value": "'slide-up'", "computed": false }
+                        ]
+                    },
+                    "required": false,
+                    "description": { "description": "动画名称，slide-up 只支持上下方向的弹窗", "tags": [] },
+                    "defaultValue": { "value": "'fade'", "computed": false }
+                },
+                "transitionName": {
+                    "type": { "name": "string" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": "自定义动画" }] }
+                },
+                "forceAlignWhenUpdate": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": {
+                        "description": "",
+                        "tags": [{ "title": "ignore", "description": "更新时强制重新定位" }]
+                    }
+                },
+                "forceAlignWhenScroll": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "滚动时强制重新定位", "tags": [] },
+                    "defaultValue": { "value": "true", "computed": false }
+                },
+                "className": {
+                    "type": { "name": "string" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                }
+            }
+        }
+    }
+}

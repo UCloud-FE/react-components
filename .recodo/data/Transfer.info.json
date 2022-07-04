@@ -1,0 +1,269 @@
+{
+    "Transfer": {
+        "path": "Transfer/Transfer.jsx",
+        "name": "Transfer",
+        "info": {
+            "description": "",
+            "displayName": "Transfer",
+            "methods": [
+                {
+                    "name": "onSelectedChange",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "type", "type": null },
+                        { "name": "keys", "type": null }
+                    ],
+                    "returns": null
+                },
+                {
+                    "name": "onSourceSelectedChange",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "keys", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "onTargetSelectedChange",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "keys", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "transfer",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "type", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "handleSearch",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "type", "type": null },
+                        { "name": "item", "type": null }
+                    ],
+                    "returns": null
+                },
+                {
+                    "name": "handleSourceSearch",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "item", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "handleTargetSearch",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "item", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "onSourceSearch",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "e", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "onTargetSearch",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "e", "type": null }],
+                    "returns": null
+                },
+                { "name": "clearSourceSearch", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                { "name": "clearTargetSearch", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                {
+                    "name": "renderPart",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "part", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "renderEmptySourceTip",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "disabled", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "renderEmptyTargetTip",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "disabled", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "renderEmptySearchTip",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "part", "type": null }],
+                    "returns": null
+                },
+                {
+                    "name": "renderContent",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "{ part, dataSource, selectedKeys, onChange, handleSearch, disabled }", "type": null }
+                    ],
+                    "returns": null
+                },
+                { "name": "renderAction", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                {
+                    "name": "groupDataSource",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "dataSource", "type": null },
+                        { "name": "selectedKeys", "type": null }
+                    ],
+                    "returns": null
+                }
+            ],
+            "props": {
+                "dataSource": {
+                    "type": { "name": "array" },
+                    "required": true,
+                    "description": { "description": "所有的数据源", "tags": [] }
+                },
+                "renderList": {
+                    "type": { "name": "func" },
+                    "required": true,
+                    "description": { "description": "自定义渲染列表", "tags": [] }
+                },
+                "selectedKeys": {
+                    "type": { "name": "array" },
+                    "required": false,
+                    "description": { "description": "已选中的数据 key，受控", "tags": [] }
+                },
+                "defaultSelectedKeys": {
+                    "type": { "name": "array" },
+                    "required": false,
+                    "description": { "description": "默认已选中的数据 key，非受控", "tags": [] },
+                    "defaultValue": { "value": "[]", "computed": false }
+                },
+                "onChange": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": { "description": "选中回调", "tags": [] },
+                    "defaultValue": { "value": "() => {}", "computed": false }
+                },
+                "disabled": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "是否禁用", "tags": [] }
+                },
+                "search": {
+                    "type": {
+                        "name": "union",
+                        "value": [
+                            { "name": "bool" },
+                            {
+                                "name": "shape",
+                                "value": {
+                                    "handleSearch": {
+                                        "name": "func",
+                                        "description": "@argument searchValue - 搜索的值\n@argument item - 当前匹配的项\n@return 匹配结果",
+                                        "required": false
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    "required": false,
+                    "description": {
+                        "description": "是否展示搜索框，可以为 boolean 或者 Object\n为 Object 时可传入 handleSearch 对搜索筛选进行自定义",
+                        "tags": []
+                    },
+                    "defaultValue": { "value": "true", "computed": false }
+                },
+                "source": {
+                    "type": {
+                        "name": "shape",
+                        "value": {
+                            "title": {
+                                "name": "node",
+                                "description": "自定义顶栏文字，null 时隐藏",
+                                "required": false
+                            },
+                            "footer": { "name": "node", "description": "自定义底栏", "required": false },
+                            "search": {
+                                "name": "union",
+                                "value": [
+                                    { "name": "bool" },
+                                    {
+                                        "name": "shape",
+                                        "value": {
+                                            "handleSearch": {
+                                                "name": "func",
+                                                "description": "@argument searchValue - 搜索的值\n@argument item - 当前匹配的项\n@return 匹配结果",
+                                                "required": false
+                                            }
+                                        }
+                                    }
+                                ],
+                                "description": "是否展示搜索框，可以为 boolean 或者 Object\n为 Object 时可传入 handleSearch 对搜索筛选进行自定义",
+                                "required": false
+                            },
+                            "disabled": { "name": "bool", "description": "禁用", "required": false }
+                        }
+                    },
+                    "required": false,
+                    "description": { "description": "源数据区域的配置", "tags": [] },
+                    "defaultValue": { "value": "{}", "computed": false }
+                },
+                "target": {
+                    "type": {
+                        "name": "shape",
+                        "value": {
+                            "title": {
+                                "name": "node",
+                                "description": "自定义顶栏文字，null 时隐藏",
+                                "required": false
+                            },
+                            "footer": { "name": "node", "description": "自定义底栏", "required": false },
+                            "search": {
+                                "name": "union",
+                                "value": [
+                                    { "name": "bool" },
+                                    {
+                                        "name": "shape",
+                                        "value": {
+                                            "handleSearch": {
+                                                "name": "func",
+                                                "description": "@argument searchValue - 搜索的值\n@argument item - 当前匹配的项\n@return 匹配结果",
+                                                "required": false
+                                            }
+                                        }
+                                    }
+                                ],
+                                "description": "是否展示搜索框，可以为 boolean 或者 Object\n为 Object 时可传入 handleSearch 对搜索筛选进行自定义",
+                                "required": false
+                            },
+                            "disabled": { "name": "bool", "description": "禁用", "required": false }
+                        }
+                    },
+                    "required": false,
+                    "description": { "description": "已选数据区域的配置", "tags": [] },
+                    "defaultValue": { "value": "{}", "computed": false }
+                },
+                "locale": {
+                    "type": { "name": "object" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "className": {
+                    "type": { "name": "string" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                }
+            }
+        }
+    }
+}

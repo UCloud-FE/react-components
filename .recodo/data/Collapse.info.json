@@ -1,0 +1,135 @@
+{
+    "Collapse": {
+        "path": "Collapse/Collapse.tsx",
+        "name": "Collapse",
+        "info": {
+            "description": "",
+            "displayName": "Collapse",
+            "methods": [],
+            "props": {
+                "openKeys": {
+                    "required": false,
+                    "tsType": { "name": "Array", "elements": [{ "name": "Key" }], "raw": "Key[]" },
+                    "description": { "description": "激活的面板，multiple 时为数组值，controlled", "tags": [] }
+                },
+                "defaultOpenKeys": {
+                    "required": false,
+                    "tsType": { "name": "Array", "elements": [{ "name": "Key" }], "raw": "Key[]" },
+                    "description": { "description": "默认激活的面板，multiple 时为数组值，uncontrolled", "tags": [] }
+                },
+                "onChange": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(keys: Key[]) => void",
+                        "signature": {
+                            "arguments": [
+                                {
+                                    "name": "keys",
+                                    "type": { "name": "Array", "elements": [{ "name": "Key" }], "raw": "Key[]" }
+                                }
+                            ],
+                            "return": { "name": "void" }
+                        }
+                    },
+                    "description": { "description": "变化回调", "tags": [] }
+                },
+                "multiple": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "是否可以多个同时打开", "tags": [] },
+                    "defaultValue": { "value": "true", "computed": false }
+                },
+                "component": {
+                    "required": false,
+                    "tsType": { "name": "ElementType" },
+                    "description": {
+                        "description": "",
+                        "tags": [{ "title": "ignore", "description": "自定义包裹容器组件" }]
+                    }
+                }
+            }
+        }
+    },
+    "Panel": {
+        "path": "Collapse/Panel.tsx",
+        "name": "Panel",
+        "info": {
+            "description": "",
+            "displayName": "Panel",
+            "methods": [],
+            "props": {
+                "title": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "ReactNode | ((options: { open: boolean; disabled?: boolean; toggle: () => void }) => ReactNode)",
+                        "elements": [{ "name": "ReactNode" }, { "name": "unknown" }]
+                    },
+                    "description": {
+                        "description": "标题项，为函数时会传入面板当前 open 和 disabled 状态，和 toggle 函数",
+                        "tags": []
+                    }
+                },
+                "onChange": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(open: boolean) => void",
+                        "signature": {
+                            "arguments": [{ "name": "open", "type": { "name": "boolean" } }],
+                            "return": { "name": "void" }
+                        }
+                    },
+                    "description": { "description": "修改回调", "tags": [] }
+                },
+                "open": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "是否展开，controlled", "tags": [] }
+                },
+                "defaultOpen": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "默认展开状态，uncontrolled", "tags": [] }
+                },
+                "forceRender": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "是否强制渲染", "tags": [] }
+                },
+                "ignoreUpdateWhenClose": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "关闭时子组件不会更新", "tags": [] }
+                },
+                "disabled": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "是否禁用", "tags": [] }
+                },
+                "panelKey": {
+                    "required": false,
+                    "tsType": { "name": "Key" },
+                    "description": { "description": "唯一键值", "tags": [] },
+                    "defaultValue": { "value": "''", "computed": false }
+                },
+                "titlePosition": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "'top' | 'bottom'",
+                        "elements": [
+                            { "name": "literal", "value": "'top'" },
+                            { "name": "literal", "value": "'bottom'" }
+                        ]
+                    },
+                    "description": { "description": "title的位置", "tags": [] },
+                    "defaultValue": { "value": "'top'", "computed": false }
+                }
+            }
+        }
+    }
+}

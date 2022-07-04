@@ -1,0 +1,129 @@
+{
+    "Drawer": {
+        "path": "Drawer/Drawer.jsx",
+        "name": "Drawer",
+        "info": {
+            "description": "",
+            "displayName": "Drawer",
+            "methods": [
+                { "name": "onMaskClick", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                {
+                    "name": "afterVisibleChange",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "visible", "type": null }],
+                    "returns": null
+                },
+                { "name": "getDestroy", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                { "name": "getShow", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                {
+                    "name": "renderCloseHandler",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [{ "name": "{ closeHandler, onClose, show, visible }", "type": null }],
+                    "returns": null
+                }
+            ],
+            "props": {
+                "children": {
+                    "type": { "name": "node" },
+                    "required": true,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "visible": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "是否显示，controlled", "tags": [] },
+                    "defaultValue": { "value": "false", "computed": false }
+                },
+                "mask": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "是否有遮罩", "tags": [] },
+                    "defaultValue": { "value": "true", "computed": false }
+                },
+                "maskClosable": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "是否可以点击遮罩关闭", "tags": [] },
+                    "defaultValue": { "value": "true", "computed": false }
+                },
+                "keyboard": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "是否可以esc关闭", "tags": [] },
+                    "defaultValue": { "value": "false", "computed": false }
+                },
+                "onClose": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": { "description": "点击关闭按钮、遮罩进行关闭时的回调", "tags": [] },
+                    "defaultValue": { "value": "() => {}", "computed": false }
+                },
+                "destroyOnClose": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "关闭后是否自动销毁", "tags": [] }
+                },
+                "placement": {
+                    "type": {
+                        "name": "enum",
+                        "value": [
+                            { "value": "'left'", "computed": false },
+                            { "value": "'right'", "computed": false },
+                            { "value": "'top'", "computed": false },
+                            { "value": "'bottom'", "computed": false }
+                        ]
+                    },
+                    "required": false,
+                    "description": { "description": "弹出位置", "tags": [] },
+                    "defaultValue": { "value": "'right'", "computed": false }
+                },
+                "width": {
+                    "type": { "name": "union", "value": [{ "name": "string" }, { "name": "number" }] },
+                    "required": false,
+                    "description": { "description": "抽屉的宽度，left right可用", "tags": [] }
+                },
+                "height": {
+                    "type": { "name": "union", "value": [{ "name": "string" }, { "name": "number" }] },
+                    "required": false,
+                    "description": { "description": "抽屉的高度，top bottom可用", "tags": [] }
+                },
+                "getContainer": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": { "description": "设置抽屉容器", "tags": [] }
+                },
+                "zIndex": {
+                    "type": { "name": "number" },
+                    "required": false,
+                    "description": { "description": "弹出层的z-index", "tags": [] },
+                    "defaultValue": { "value": "1010", "computed": false }
+                },
+                "closeHandler": {
+                    "type": {
+                        "name": "union",
+                        "value": [
+                            {
+                                "name": "enum",
+                                "value": [
+                                    { "value": "null", "computed": false },
+                                    { "value": "false", "computed": false }
+                                ]
+                            },
+                            { "name": "node" }
+                        ]
+                    },
+                    "required": false,
+                    "description": { "description": "传入 false/null 隐藏关闭控件，或自定义控件", "tags": [] }
+                },
+                "level": {
+                    "type": { "name": "any" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] },
+                    "defaultValue": { "value": "null", "computed": false }
+                }
+            }
+        }
+    }
+}

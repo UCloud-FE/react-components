@@ -1,0 +1,27 @@
+{
+    "ActionList": {
+        "path": "Table/ActionList.md",
+        "name": "ActionList",
+        "info": "### 说明\n\n-   ActionList 已经抽离为外层组件，请使用 ActionList 替换 Table.ActionList\n\n### 演示\n\n#### 演示\n\n```js {\"codepath\": \"actionList.jsx\"}\n```\n"
+    },
+    "ColumnConfigButton": {
+        "path": "Table/ColumnConfigButton.md",
+        "name": "ColumnConfigButton",
+        "info": "### 说明\n\n-   这是 ColumnConfigButton 表头配置弹窗按钮\n-   使用 context 和 table 通信，所以需要嵌入到 table 中才起作用（title，footer）\n\n### 演示\n\n#### columnConfigButton\n\n```js {\"codepath\": \"columnConfigButton.jsx\"}\n```\n\n#### modalProps - 弹窗自定义 props 设置\n\n```js {\"codepath\": \"columnConfigButton-modalProps.jsx\"}\n```\n"
+    },
+    "HoverDisplayArea": {
+        "path": "Table/HoverDisplayArea.md",
+        "name": "HoverDisplayArea",
+        "info": "### 说明\n\n-   用于表单列中 hover 时才展示的元素，为了防止 hover 时宽度变化导致抖动，使用 visibility 来控制隐藏。\n\n### 演示\n\n#### HoverDisplayArea\n\n```js {\"codepath\": \"hoverDisplayArea.jsx\"}\n```\n"
+    },
+    "SearchInput": {
+        "path": "Table/SearchInput.md",
+        "name": "SearchInput",
+        "info": "### 说明\n\n-   这是 SearchInput 表格搜索框\n-   使用 context 和 table 通信，所以需要嵌入到 table 中才起作用（title，footer）\n-   自定义搜索配合 Table.handleSearch 使用\n-   支持所有 Input 的 props\n\n### 演示\n\n#### searchInput - 演示\n\n```js {\"codepath\": \"searchInput.jsx\"}\n```\n"
+    },
+    "Table": {
+        "path": "Table/Table.md",
+        "name": "Table",
+        "info": "### 说明\n\n-   Table 表格组件，通过传入 column 和 dataSource 来快速生成表格，内置搜索、滚动、表格列固定等功能。\n-   为了确保数据的准确性请务必保证每条数据存在有效不重复的 key 或者使用 rowKey 来指定 key 的获取方式，表格中将会依照 key 来进行选择等操作。不传入将会使用数据在每一页中的 index 来作为 key，可能会造成 key 重复而导致错误，甚至造成各种奇怪的错误现象。\n-   rowKey 支持函数，第二个参数为 record 在当前页面的 index，强烈不推荐使用！！！请务必注意。\n\n### 演示\n\n#### 属性调试\n\n```js {\"codepath\": \"table.jsx\"}\n```\n\n#### 基本使用\n\n```js {\"codepath\": \"base.jsx\"}\n```\n\n#### columns - 表格列属性定义\n\n```js {\"codepath\": \"columns.jsx\"}\n```\n\n#### emptyContent - 自定义空表格提示\n\n```js {\"codepath\": \"emptyContent.jsx\"}\n```\n\n#### errorContent - 报错提示内容\n\n```js {\"codepath\": \"errorContent.jsx\"}\n```\n\n#### scroll - 滚动定义\n\n```js {\"codepath\": \"scroll.jsx\"}\n```\n\n#### title - 自定义表格顶部内容\n\n```js {\"codepath\": \"title.jsx\"}\n```\n\n#### footer - 自定义表格底部内容\n\n```js {\"codepath\": \"footer.jsx\"}\n```\n\n#### pagination - 自定义分页设置\n\n```js {\"codepath\": \"pagination.jsx\"}\n```\n\n#### rowKey - 定义 key 的获取\n\n```js {\"codepath\": \"rowKey.jsx\"}\n```\n\n#### contextMenu - 右键菜单\n\n```js {\"codepath\": \"contextMenu.jsx\"}\n```\n\n#### filter - 筛选\n\n```js {\"codepath\": \"filter.jsx\"}\n```\n\n#### order - 排序\n\n```js {\"codepath\": \"order.jsx\"}\n```\n\n#### expandedRowRender - 扩展内容渲染\n\n```js {\"codepath\": \"expandedRowRender.jsx\"}\n```\n\n#### hideExpandIcon - 隐藏扩展列展开按钮\n\n```js {\"codepath\": \"hideExpandIcon.jsx\"}\n```\n\n#### expandedRowKeys - 展开列\n\n```js {\"codepath\": \"expandedRowKeys.jsx\"}\n```\n\n#### defaultExpandAllRows - 默认展开扩展列\n\n`使用时务必注意 rowKey 的使用，使用此属性可能会影响到表格的性能`\n\n```js {\"codepath\": \"defaultExpandAllRows.jsx\"}\n```\n\n#### onRow - 设置行 props\n\n```js {\"codepath\": \"onRow.jsx\"}\n```\n\n#### onHeaderRow - 设置表头 props\n\n```js {\"codepath\": \"onHeaderRow.jsx\"}\n```\n\n#### rowSelection - 列选择配置\n\n```js {\"codepath\": \"rowSelection.jsx\"}\n```\n\n#### dragSorting - 列选择配置\n\n```js {\"codepath\": \"dragSorting.jsx\"}\n```\n\n#### fixed - 固定表头、列\n\n```js {\"codepath\": \"fixed.jsx\"}\n```\n\n#### resizable - 可调表头大小\n\n需要在回调中自行控制 column width\n\n```js {\"codepath\": \"resizable.jsx\"}\n```\n\n#### 列分组\n\n```js {\"codepath\": \"groupColumns.jsx\"}\n```\n\n#### 子表格\n\n```js {\"codepath\": \"subTable.jsx\"}\n```\n\n#### onConditionChange - 由于 pagination 的某些设计，onConditionChange 返回值中不包含 pagination 变化，要监听 pagination 请使用 pagination 参数\n\n```js {\"codepath\": \"onConditionChange.jsx\"}\n```\n\n#### doNotHandleCondition - 自行处理筛选等逻辑\n\n```js {\"codepath\": \"doNotHandleCondition.jsx\"}\n```\n\n#### 远程加载数据\n\n```js {\"codepath\": \"loadingDataFromRemote.jsx\"}\n```\n\n#### 后端分页、搜索、筛选、排序\n\n```js {\"codepath\": \"fullRemoteTable.jsx\"}\n```\n\n#### popupContainer - 弹出层容器\n\n```js {\"codepath\": \"popupContainer.jsx\"}\n```\n\n#### 单元格合并\n\n```js {\"codepath\": \"cellMerge.jsx\"}\n```\n\n#### demo - 样例演示\n\n```js {\"codepath\": \"demo.jsx\"}\n```\n"
+    }
+}

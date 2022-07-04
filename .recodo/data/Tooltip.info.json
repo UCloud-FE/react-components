@@ -1,0 +1,48 @@
+{
+    "Tooltip": {
+        "path": "Tooltip/Tooltip.tsx",
+        "name": "Tooltip",
+        "info": {
+            "description": "",
+            "displayName": "Tooltip",
+            "methods": [],
+            "props": {
+                "arrow": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "是否显示箭头", "tags": [] },
+                    "defaultValue": { "value": "true", "computed": false }
+                },
+                "theme": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "'light' | 'dark'",
+                        "elements": [
+                            { "name": "literal", "value": "'light'" },
+                            { "name": "literal", "value": "'dark'" }
+                        ]
+                    },
+                    "description": { "description": "主题风格", "tags": [] },
+                    "defaultValue": { "value": "'light'", "computed": false }
+                },
+                "customStyle": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "object",
+                        "raw": "{\n    /** 弹出层外层 padding */\n    popupWrapperPadding?: string;\n}",
+                        "signature": {
+                            "properties": [
+                                { "key": "popupWrapperPadding", "value": { "name": "string", "required": false } }
+                            ]
+                        }
+                    },
+                    "description": { "description": "自定义样式", "tags": [] },
+                    "defaultValue": { "value": "{}", "computed": false }
+                },
+                "placement": { "defaultValue": { "value": "'topLeft'", "computed": false }, "required": false }
+            }
+        }
+    }
+}

@@ -1,0 +1,156 @@
+{
+    "AutoComplete": {
+        "path": "AutoComplete/AutoComplete.tsx",
+        "name": "AutoComplete",
+        "info": {
+            "description": "",
+            "displayName": "AutoComplete",
+            "methods": [],
+            "props": {
+                "options": {
+                    "required": false,
+                    "tsType": { "name": "Array", "elements": [{ "name": "Item" }], "raw": "Item[]" },
+                    "description": { "description": "待筛选选项", "tags": [] },
+                    "defaultValue": { "value": "[]", "computed": false }
+                },
+                "value": {
+                    "required": false,
+                    "tsType": { "name": "string" },
+                    "description": { "description": "值，controlled", "tags": [] }
+                },
+                "defaultValue": {
+                    "required": false,
+                    "tsType": { "name": "string" },
+                    "description": { "description": "默认值", "tags": [] },
+                    "defaultValue": { "value": "''", "computed": false }
+                },
+                "onChange": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(v: string) => void",
+                        "signature": {
+                            "arguments": [{ "name": "v", "type": { "name": "string" } }],
+                            "return": { "name": "void" }
+                        }
+                    },
+                    "description": { "description": "选中回调", "tags": [] }
+                },
+                "disabled": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "是否禁用", "tags": [] }
+                },
+                "loading": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "options 加载中状态", "tags": [] }
+                },
+                "prefix": {
+                    "required": false,
+                    "tsType": { "name": "ReactNode" },
+                    "description": { "description": "前缀", "tags": [] }
+                },
+                "block": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "展示变更为块占位", "tags": [] }
+                },
+                "handleSearch": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "false | ((v: Item) => boolean)",
+                        "elements": [{ "name": "literal", "value": "false" }, { "name": "unknown" }]
+                    },
+                    "description": { "description": "自定义搜索，为 false 时不做搜索展示全部", "tags": [] }
+                },
+                "popoverProps": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "object",
+                        "raw": "{ [key: string]: any }",
+                        "signature": {
+                            "properties": [
+                                { "key": { "name": "string" }, "value": { "name": "any", "required": true } }
+                            ]
+                        }
+                    },
+                    "description": { "description": "自定义 popover 的配置", "tags": [] }
+                },
+                "onFocus": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "() => void",
+                        "signature": { "arguments": [], "return": { "name": "void" } }
+                    },
+                    "description": { "description": "焦点回调", "tags": [] }
+                },
+                "onBlur": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "() => void",
+                        "signature": { "arguments": [], "return": { "name": "void" } }
+                    },
+                    "description": { "description": "失焦回调", "tags": [] }
+                },
+                "status": {
+                    "required": true,
+                    "tsType": { "name": "InputProps['status']", "raw": "InputProps['status']" },
+                    "description": { "description": "状态", "tags": [] }
+                },
+                "placeholder": {
+                    "required": false,
+                    "tsType": { "name": "InputProps['placeholder']", "raw": "InputProps['placeholder']" },
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                }
+            }
+        }
+    },
+    "PopupWithOutMemo": {
+        "path": "AutoComplete/Popup.tsx",
+        "name": "PopupWithOutMemo",
+        "info": {
+            "description": "",
+            "displayName": "PopupWithOutMemo",
+            "methods": [],
+            "props": {
+                "options": {
+                    "required": true,
+                    "tsType": { "name": "Array", "elements": [{ "name": "Item" }], "raw": "Item[]" },
+                    "description": ""
+                },
+                "searchValue": { "required": true, "tsType": { "name": "string" }, "description": "" },
+                "onChange": {
+                    "required": true,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(v: string) => void",
+                        "signature": {
+                            "arguments": [{ "name": "v", "type": { "name": "string" } }],
+                            "return": { "name": "void" }
+                        }
+                    },
+                    "description": ""
+                },
+                "handleSearch": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "false | ((item: Item) => boolean)",
+                        "elements": [{ "name": "literal", "value": "false" }, { "name": "unknown" }]
+                    },
+                    "description": ""
+                },
+                "loading": { "required": false, "tsType": { "name": "boolean" }, "description": "" }
+            }
+        }
+    }
+}

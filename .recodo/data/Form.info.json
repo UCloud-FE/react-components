@@ -1,0 +1,201 @@
+{
+    "Form": {
+        "path": "Form/Form.jsx",
+        "name": "Form",
+        "info": {
+            "description": "",
+            "displayName": "Form",
+            "methods": [],
+            "props": {
+                "onSubmit": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "size": {
+                    "type": {
+                        "name": "enum",
+                        "value": [
+                            { "value": "'md'", "computed": false },
+                            { "value": "'lg'", "computed": false }
+                        ]
+                    },
+                    "required": false,
+                    "description": { "description": "配合表单控件的size使用", "tags": [] },
+                    "defaultValue": { "value": "'md'", "computed": false }
+                },
+                "itemProps": {
+                    "type": {
+                        "name": "shape",
+                        "value": {
+                            "labelCol": { "name": "object", "description": "具体见 item 文档", "required": false },
+                            "controllerCol": { "name": "object", "description": "具体见 item 文档", "required": false },
+                            "shareStatus": { "name": "bool", "description": "具体见 item 文档", "required": false }
+                        }
+                    },
+                    "required": false,
+                    "description": { "description": "如果存在会在所有包裹的 item 上附加该 props", "tags": [] }
+                }
+            }
+        }
+    },
+    "Group": {
+        "path": "Form/Group.jsx",
+        "name": "Group",
+        "info": {
+            "description": "",
+            "displayName": "Group",
+            "methods": [],
+            "props": {
+                "title": {
+                    "type": { "name": "node" },
+                    "required": false,
+                    "description": { "description": "标题项", "tags": [] }
+                },
+                "children": {
+                    "type": { "name": "node" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "itemProps": {
+                    "type": {
+                        "name": "shape",
+                        "value": {
+                            "labelCol": { "name": "object", "description": "具体见 item 文档", "required": false },
+                            "controllerCol": { "name": "object", "description": "具体见 item 文档", "required": false },
+                            "shareStatus": { "name": "bool", "description": "具体见 item 文档", "required": false }
+                        }
+                    },
+                    "required": false,
+                    "description": {
+                        "description": "如果存在会在所有包裹的 item 上附加该 props，会覆盖来自上层包裹的 itemProps",
+                        "tags": []
+                    }
+                }
+            }
+        }
+    },
+    "Item": {
+        "path": "Form/Item.tsx",
+        "name": "Item",
+        "info": {
+            "description": "",
+            "displayName": "Item",
+            "methods": [],
+            "props": {
+                "label": {
+                    "required": true,
+                    "tsType": { "name": "ReactNode" },
+                    "description": { "description": "表单项标签", "tags": [] }
+                },
+                "labelCol": {
+                    "required": false,
+                    "tsType": { "name": "ColShape" },
+                    "description": { "description": "标签的col配置", "tags": [] }
+                },
+                "controllerCol": {
+                    "required": false,
+                    "tsType": { "name": "ColShape" },
+                    "description": { "description": "控件的col配置", "tags": [] }
+                },
+                "help": {
+                    "required": false,
+                    "tsType": { "name": "ReactNode" },
+                    "description": { "description": "表单项的提示描述", "tags": [] }
+                },
+                "required": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": {
+                        "description": "表单项是否为必填/必选，仅影响 UI，逻辑必须请看 ZForm rules 的 required",
+                        "tags": []
+                    }
+                },
+                "status": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "'default' | 'success' | 'warning' | 'error' | 'loading'",
+                        "elements": [
+                            { "name": "literal", "value": "'default'" },
+                            { "name": "literal", "value": "'success'" },
+                            { "name": "literal", "value": "'warning'" },
+                            { "name": "literal", "value": "'error'" },
+                            { "name": "literal", "value": "'loading'" }
+                        ]
+                    },
+                    "description": { "description": "影响提示的状态/类型、包裹的控件的状态", "tags": [] }
+                },
+                "shareStatus": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": {
+                        "description": "是否将状态传递给 item 下的表单控件（目前仅 Input 支持部分状态）",
+                        "tags": []
+                    }
+                },
+                "tip": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "| {\n      /** 自定义提示图标 */\n      icon?: ReactNode;\n      /** 提示内容 */\n      content?: ReactNode;\n  }\n| ReactNode",
+                        "elements": [
+                            {
+                                "name": "signature",
+                                "type": "object",
+                                "raw": "{\n    /** 自定义提示图标 */\n    icon?: ReactNode;\n    /** 提示内容 */\n    content?: ReactNode;\n}",
+                                "signature": {
+                                    "properties": [
+                                        { "key": "icon", "value": { "name": "ReactNode", "required": false } },
+                                        { "key": "content", "value": { "name": "ReactNode", "required": false } }
+                                    ]
+                                }
+                            },
+                            { "name": "ReactNode" }
+                        ]
+                    },
+                    "description": { "description": "提示信息", "tags": [] }
+                }
+            }
+        }
+    },
+    "ItemPropsWrap": {
+        "path": "Form/ItemPropsWrap.jsx",
+        "name": "ItemPropsWrap",
+        "info": {
+            "description": "",
+            "displayName": "ItemPropsWrap",
+            "methods": [],
+            "props": {
+                "children": { "type": { "name": "node" }, "required": false, "description": "" },
+                "itemProps": { "type": { "name": "object" }, "required": false, "description": "" }
+            }
+        }
+    },
+    "SubArea": {
+        "path": "Form/SubArea.jsx",
+        "name": "SubArea",
+        "info": {
+            "description": "",
+            "displayName": "SubArea",
+            "methods": [],
+            "props": {
+                "itemProps": {
+                    "type": {
+                        "name": "shape",
+                        "value": {
+                            "labelCol": { "name": "object", "description": "具体见 item 文档", "required": false },
+                            "controllerCol": { "name": "object", "description": "具体见 item 文档", "required": false },
+                            "shareStatus": { "name": "bool", "description": "具体见 item 文档", "required": false }
+                        }
+                    },
+                    "required": false,
+                    "description": {
+                        "description": "如果存在会在所有包裹的 item 上附加该 props，会覆盖来自上层包裹的 itemProps",
+                        "tags": []
+                    }
+                }
+            }
+        }
+    }
+}

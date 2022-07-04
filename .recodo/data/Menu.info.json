@@ -1,0 +1,245 @@
+{
+    "Item": {
+        "path": "Menu/Item.tsx",
+        "name": "Item",
+        "info": {
+            "description": "",
+            "displayName": "Item",
+            "methods": [],
+            "props": {
+                "itemKey": {
+                    "required": false,
+                    "tsType": { "name": "Key" },
+                    "description": { "description": "item的唯一键，不传使用 key 作为键值", "tags": [] },
+                    "defaultValue": { "value": "''", "computed": false }
+                },
+                "disabled": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "是否禁用", "tags": [] }
+                },
+                "tooltip": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "ReactNode | any",
+                        "elements": [{ "name": "ReactNode" }, { "name": "any" }]
+                    },
+                    "description": {
+                        "description": "tooltip 提示，可以为文本或 node，也可以是 tooltip 的 props object",
+                        "tags": []
+                    }
+                },
+                "isFirst": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "isLast": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                }
+            }
+        }
+    },
+    "Menu": {
+        "path": "Menu/Menu.tsx",
+        "name": "Menu",
+        "info": {
+            "description": "",
+            "displayName": "Menu",
+            "methods": [],
+            "props": {
+                "selectedKeys": {
+                    "required": false,
+                    "tsType": { "name": "Array", "elements": [{ "name": "Key" }], "raw": "Key[]" },
+                    "description": { "description": "选中的菜单项的key，controlled", "tags": [] }
+                },
+                "defaultSelectedKeys": {
+                    "required": false,
+                    "tsType": { "name": "Array", "elements": [{ "name": "Key" }], "raw": "Key[]" },
+                    "description": { "description": "默认选中的菜单项的key，uncontrolled", "tags": [] },
+                    "defaultValue": { "value": "[]", "computed": false }
+                },
+                "onChange": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(keys: Key[]) => void",
+                        "signature": {
+                            "arguments": [
+                                {
+                                    "name": "keys",
+                                    "type": { "name": "Array", "elements": [{ "name": "Key" }], "raw": "Key[]" }
+                                }
+                            ],
+                            "return": { "name": "void" }
+                        }
+                    },
+                    "description": { "description": "选中变化时的回调", "tags": [] }
+                },
+                "multiple": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "是否支持多选", "tags": [] },
+                    "defaultValue": { "value": "false", "computed": false }
+                },
+                "selectable": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "是否可选", "tags": [] },
+                    "defaultValue": { "value": "true", "computed": false }
+                },
+                "showSelectAll": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "boolean | Element",
+                        "elements": [{ "name": "boolean" }, { "name": "Element" }]
+                    },
+                    "description": { "description": "是否显示全选，多选时有效", "tags": [] }
+                },
+                "block": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": {
+                        "description": "是否使用块元素显示模式，去除宽高限制，撑满容器，去除外阴影、border，方便放置在自定义容器中",
+                        "tags": []
+                    }
+                },
+                "disabled": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "是否禁用", "tags": [] }
+                },
+                "collapseProps": {
+                    "required": false,
+                    "tsType": { "name": "CollapseProps" },
+                    "description": { "description": "collapse 的配置，参考 collapse 组件", "tags": [] }
+                },
+                "virtualList": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "| boolean\n| {\n      // 简易模式，如确认每个 item 高度一致且不会变化可启用，可一定程度上优化性能\n      simple?: true;\n      // 虚拟滚动的高度，默认为 200\n      height?: number;\n  }",
+                        "elements": [
+                            { "name": "boolean" },
+                            {
+                                "name": "signature",
+                                "type": "object",
+                                "raw": "{\n    // 简易模式，如确认每个 item 高度一致且不会变化可启用，可一定程度上优化性能\n    simple?: true;\n    // 虚拟滚动的高度，默认为 200\n    height?: number;\n}",
+                                "signature": {
+                                    "properties": [
+                                        {
+                                            "key": "simple",
+                                            "value": { "name": "literal", "value": "true", "required": false }
+                                        },
+                                        { "key": "height", "value": { "name": "number", "required": false } }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "description": {
+                        "description": "启用虚拟滚动，启用后需要注意所有 item 需提供 key（可不提供 itemKey 和 subMenuKey，会使用 key 作为对应），且 Item key 和 SubMenu 不可重复，目前不支持 collapse 类 SubMenu",
+                        "tags": []
+                    }
+                },
+                "customStyle": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "object",
+                        "raw": "{\n    /** 菜单的最大高度 */\n    maxHeight?: string;\n    /** 菜单的最大宽度 */\n    maxWidth?: string;\n}",
+                        "signature": {
+                            "properties": [
+                                { "key": "maxHeight", "value": { "name": "string", "required": false } },
+                                { "key": "maxWidth", "value": { "name": "string", "required": false } }
+                            ]
+                        }
+                    },
+                    "description": { "description": "自定义样式", "tags": [] }
+                },
+                "locale": {
+                    "required": false,
+                    "tsType": { "name": "LOCALE" },
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "dataSource": {
+                    "required": false,
+                    "tsType": {
+                        "name": "ReturnType",
+                        "elements": [{ "name": "groupChildrenAsDataSource" }],
+                        "raw": "ReturnType<typeof groupChildrenAsDataSource>"
+                    },
+                    "description": {
+                        "description": "",
+                        "tags": [{ "title": "ignore", "description": "for inner usage" }]
+                    }
+                },
+                "_selectStyle": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": {
+                        "description": "",
+                        "tags": [{ "title": "ignore", "description": "for inner usage" }]
+                    }
+                }
+            }
+        }
+    },
+    "SubMenu": {
+        "path": "Menu/SubMenu.tsx",
+        "name": "SubMenu",
+        "info": {
+            "description": "",
+            "displayName": "SubMenu",
+            "methods": [],
+            "props": {
+                "title": {
+                    "required": true,
+                    "tsType": { "name": "ReactNode" },
+                    "description": { "description": "标题内容", "tags": [] }
+                },
+                "styleType": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "'collapse' | 'popover'",
+                        "elements": [
+                            { "name": "literal", "value": "'collapse'" },
+                            { "name": "literal", "value": "'popover'" }
+                        ]
+                    },
+                    "description": { "description": "为弹出菜单、或是折叠层", "tags": [] },
+                    "defaultValue": { "value": "'collapse'", "computed": false }
+                },
+                "subMenuKey": {
+                    "required": false,
+                    "tsType": { "name": "Key" },
+                    "description": {
+                        "description": "子菜单的唯一 key，也用作 collapse 的 panel 的 key，不存在时使用 key 代替",
+                        "tags": []
+                    }
+                },
+                "disabled": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "禁用", "tags": [] }
+                },
+                "isFirst": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                },
+                "isLast": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
+                }
+            }
+        }
+    }
+}
