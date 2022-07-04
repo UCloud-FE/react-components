@@ -4,8 +4,8 @@ import InteractionDemo, { Group, USE_DEFINE } from 'interaction-demo';
 import { Input, Icon } from '@ucloud-fe/react-components';
 
 const config = {
-    size: USE_DEFINE,
-    clearable: USE_DEFINE,
+    size: ['sm', 'md', 'lg'],
+    clearable: 'boolean',
     disabled: 'boolean',
     block: USE_DEFINE,
     status: USE_DEFINE,
