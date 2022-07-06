@@ -537,7 +537,7 @@ const PopupV1 = React.memo(function PopupV1({
 
     return (
         <MenuWrap maxWidth={maxWidth}>
-            {search && <SelectSearchInput onChange={handleSearchInput} value={searchValue} status="default" />}
+            {search && <SelectSearchInput block onChange={handleSearchInput} value={searchValue} status="default" />}
             {children || options?.length ? (
                 <BlockMenu
                     onChange={handleChange}

@@ -30,7 +30,6 @@ export const listCls = prefixCls + '-list';
 
 export const SelectSearchInput = styled(Input.Search)`
     min-width: 100px;
-    display: block;
     margin: 0 8px;
     margin-top: 10px;
 `;

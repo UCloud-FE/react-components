@@ -4,6 +4,7 @@ import demoUtil from 'shared/demoUtil';
 import Select from 'src/components/Select';
 import Card from 'src/components/Card';
 import Radio from 'src/components/Radio';
+import Button from 'src/components/Button';
 
 // demo start
 const { DemoWrap } = demoUtil;
@@ -121,6 +122,40 @@ class Demo extends React.Component {
                         <Option key={111}>number key</Option>
                         <Option key={'111'}>string number key</Option>
                         <Option key="string">string key</Option>
+                    </Select>
+                </DemoWrap>
+                <h2>老板本回滚 搜索+自定义selector</h2>
+                <DemoWrap>
+                    <Select
+                        multiple
+                        search
+                        onChange={console.log}
+                        options={new Array(100).fill(null).map((v, i) => ({ value: i, label: `option-${i}` }))}
+                        renderSelector={(c, v) => <Button icon={v ? 'search' : 'check'}>{c}</Button>}
+                    />
+                </DemoWrap>
+                <h2>老版本回滚 子菜单</h2>
+                <DemoWrap>
+                    <Select search>
+                        <Select.Group title="组">
+                            <Option value={1}>1</Option>
+                            <Select.Extra>
+                                <span style={{ padding: '0 8px' }}>插入一段文案</span>
+                            </Select.Extra>
+                            <Option value={'disable'} disabled>
+                                disable
+                            </Option>
+                            <Option value={2}>2</Option>
+                        </Select.Group>
+                        <Select.Extra>
+                            <span style={{ padding: '0 8px' }}>插入一段文案</span>
+                        </Select.Extra>
+                        <Option value={3}>3</Option>
+                        <Select.Extra>
+                            <Button style={{ width: '100%' }} styleType="primary" onClick={() => console.log(123)}>
+                                插入按钮
+                            </Button>
+                        </Select.Extra>
                     </Select>
                 </DemoWrap>
                 <h2>老版搜索兼容告警</h2>
