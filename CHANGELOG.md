@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/UCloud-FE/react-components/compare/v1.4.6...v1.5.0) (2022-07-06)
+
+### Features
+
+-   **Select:** change search icon ([9d3e79c](https://github.com/UCloud-FE/react-components/commit/9d3e79cfc735e0b2afd08beb54105ce7ab8d748e))
+-   **Select:** update select ([a751680](https://github.com/UCloud-FE/react-components/commit/a7516803e5c91087e08287cf5842bc91166f9687)), closes [#360](https://github.com/UCloud-FE/react-components/issues/360)
+-   **SvgIcon:** update icons ([7e3b7ce](https://github.com/UCloud-FE/react-components/commit/7e3b7ced1d2c73bc8fd365ab1072b70d87ef8570))
+
+### Bug Fixes
+
+-   **Select:** fix placeholder & display text style ([8627ce9](https://github.com/UCloud-FE/react-components/commit/8627ce9f3cb0c7d5d7b9b99aac30dcdea73c995c))
+-   **Table:** fix sticky style when resize ([66dd364](https://github.com/UCloud-FE/react-components/commit/66dd364146977922135b10e34548a24bfad26f3f)), closes [#361](https://github.com/UCloud-FE/react-components/issues/361)
+-   **TimePicker:** upgrade calendar to fix click current stepper ([836342f](https://github.com/UCloud-FE/react-components/commit/836342fa322ce59b61947e5504c191063fa26efd))
+
 ### [1.4.6](https://github.com/UCloud-FE/react-components/compare/v1.4.5...v1.4.6) (2022-06-07)
 
 ### Bug Fixes
