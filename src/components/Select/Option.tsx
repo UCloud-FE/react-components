@@ -22,19 +22,8 @@ export interface OptionProps {
 }
 
 const Option = ({ value, children, ...rest }: OptionProps) => {
-    const { handleSearch, searchValue } = useContext(SelectContext);
-    const visible = useMemo(
-        () =>
-            handleSearch(value as Key, {
-                value,
-                children
-            }),
-        // change when searchValue change
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        [children, handleSearch, value, searchValue]
-    );
     return (
-        <OptionWrap hidden={!visible} {...rest} itemKey={value}>
+        <OptionWrap {...rest} itemKey={value}>
             {children}
         </OptionWrap>
     );
