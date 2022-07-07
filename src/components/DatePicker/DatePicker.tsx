@@ -55,7 +55,11 @@ export type DatePickerProps = {
     status?: 'default' | 'error';
     /** placeholder */
     placeholder?: string;
-    /** 面板快捷内容 */
+    /**
+     * @deprecated 新版交互已移除相关展示
+     * @ignore
+     * 面板快捷内容
+     */
     shortcuts?: TShortcut[] | null;
     /** 自定义 popover，参考 popover */
     popoverProps?: any;
