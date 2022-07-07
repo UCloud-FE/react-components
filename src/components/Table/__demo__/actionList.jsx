@@ -17,11 +17,12 @@ class Demo extends React.Component {
             smart: true,
             buttonStyleType: 'border',
             exposeCount: 3,
-            actionListLength: 5
+            actionListLength: 5,
+            autoAdjustment: false
         };
     }
     render() {
-        const { size, buttonStyleType, smart, exposeCount, actionListLength } = this.state;
+        const { size, buttonStyleType, smart, exposeCount, actionListLength, autoAdjustment } = this.state;
         const itemLayout = {
             labelCol: {
                 span: 3
@@ -54,7 +55,8 @@ class Demo extends React.Component {
                         size,
                         smart,
                         exposeCount,
-                        buttonStyleType
+                        buttonStyleType,
+                        autoAdjustment
                     }}
                 />
             )
@@ -76,6 +78,12 @@ class Demo extends React.Component {
                             onChange={buttonStyleType => this.setState({ buttonStyleType })}
                         />
                     </Form.Item>
+                    <Form.Item label="autoAdjustment" {...itemLayout}>
+                        <Switch
+                            checked={autoAdjustment}
+                            onChange={autoAdjustment => this.setState({ autoAdjustment })}
+                        />
+                    </Form.Item>
                     <Form.Item label="smart" {...itemLayout}>
                         <Switch checked={smart} onChange={smart => this.setState({ smart })} />
                     </Form.Item>
@@ -93,7 +101,7 @@ class Demo extends React.Component {
                     </Form.Item>
                 </Form>
                 <div className="demo-wrap">
-                    <Table dataSource={dataSource} columns={columns} />
+                    <Table dataSource={dataSource} columns={columns} scroll={{ x: true }} />
                 </div>
             </div>
         );

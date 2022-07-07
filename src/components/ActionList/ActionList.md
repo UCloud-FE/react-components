@@ -62,3 +62,8 @@ interface ActionInfo {
 
 ```js {"codepath": "tooltip.jsx"}
 ```
+
+#### autoAdjustment
+
+```js {"codepath": "resizable.jsx"}
+```

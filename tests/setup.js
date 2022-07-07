@@ -37,3 +37,5 @@ global.localStorage = {
         return localStorageCache[key] || null;
     }
 };
+
+global.Resizable = require('react-resizable').Resizable;

@@ -16,11 +16,12 @@ class Demo extends React.Component {
             smart: true,
             buttonStyleType: 'border',
             exposeCount: 3,
-            actionListLength: 5
+            actionListLength: 5,
+            autoAdjustment: false
         };
     }
     render() {
-        const { size, buttonStyleType, smart, exposeCount, actionListLength } = this.state;
+        const { size, buttonStyleType, smart, exposeCount, actionListLength, autoAdjustment } = this.state;
         const itemLayout = {
             labelCol: {
                 span: 3
@@ -49,6 +50,12 @@ class Demo extends React.Component {
                     <Form.Item label="smart" {...itemLayout}>
                         <Switch checked={smart} onChange={smart => this.setState({ smart })} />
                     </Form.Item>
+                    <Form.Item label="autoAdjustment" {...itemLayout}>
+                        <Switch
+                            checked={autoAdjustment}
+                            onChange={autoAdjustment => this.setState({ autoAdjustment })}
+                        />
+                    </Form.Item>
                     <Form.Item label="exposeCount" {...itemLayout}>
                         <NumberInput
                             value={exposeCount}
@@ -72,7 +79,8 @@ class Demo extends React.Component {
                             size,
                             smart,
                             exposeCount,
-                            buttonStyleType
+                            buttonStyleType,
+                            autoAdjustment
                         }}
                     />
                 </div>

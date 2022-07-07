@@ -1,17 +1,26 @@
-import React, { HTMLAttributes, MouseEvent, ReactNode, useCallback, useState } from 'react';
+import React, {
+    HTMLAttributes,
+    MouseEvent,
+    ReactNode,
+    useCallback,
+    useLayoutEffect,
+    useMemo,
+    useRef,
+    useState
+} from 'react';
 import classnames from 'classnames';
 
 import Button from 'src/components/Button';
 import Menu from 'src/components/Menu';
 import Popover from 'src/components/Popover';
 import Tooltip from 'src/components/Tooltip';
-import Combine from 'src/components/Combine';
 import SvgIcon from 'src/components/SvgIcon';
 import { ButtonProps } from 'src/components/Button/Button';
 import usePopoverConfig from 'src/hooks/usePopoverConfig';
+import useOverflow from 'src/hooks/useOverflow';
 import { Override, Size } from 'src/type';
 
-import { prefixCls } from './style';
+import { prefixCls, SWrap } from './style';
 
 interface SubMenuItemProps {
     disabled?: boolean;
@@ -56,6 +65,8 @@ export interface DefinedActionListProps {
     actionList: ActionInfo[];
     /** 暴露的操作数量 */
     exposeCount?: number;
+    /** 是否自动按照宽度调整展示数量 */
+    autoAdjustment?: boolean;
     /** 控件尺寸 */
     size?: Size;
     /** 操作数量等于 exposeCount+1 时是否直接显示按钮而不是显示下拉菜单 */
@@ -157,7 +168,10 @@ const ActionMenu = ({
     );
 };
 
-const ActionList = ({
+let _uid = 0;
+const ID_KEY = 'data-urc-action_list-id';
+
+const PureActionList = ({
     actionList = [],
     exposeCount = 3,
     size = 'md',
@@ -167,7 +181,7 @@ const ActionList = ({
     dropdownButton,
     className,
     ...rest
-}: ActionListProps) => {
+}: Exclude<ActionListProps, 'autoAdjustment'>) => {
     const l = actionList.length;
     let buttonList: ActionInfo[], menuList: ActionInfo[];
     if (l > exposeCount + 1) {
@@ -187,7 +201,7 @@ const ActionList = ({
     }
     const sharedProps = { size, buttonStyleType };
     return (
-        <Combine {...rest} className={classnames(prefixCls, className)} sharedProps={{ size }} spacing="smart">
+        <SWrap {...rest} className={classnames(prefixCls, className)} sharedProps={{ size }} spacing="smart">
             {renderActionButtonList({ list: buttonList, ...sharedProps })}
             {menuList.length ? (
                 <ActionMenu
@@ -197,8 +211,49 @@ const ActionList = ({
                     popoverProps={popoverProps}
                 />
             ) : null}
-        </Combine>
+        </SWrap>
     );
+};
+
+const AutoAdjustmentActionList = ({
+    actionList = [],
+    exposeCount: _exposeCount = 3,
+    smart,
+    ...rest
+}: Exclude<ActionListProps, 'autoAdjustment'>) => {
+    const [uid] = useState(() => _uid++);
+    const l = actionList.length;
+    const containerRef = useRef<HTMLElement | null>(null);
+    useLayoutEffect(() => {
+        containerRef.current = document.querySelector(`[${ID_KEY}="${uid}"]`) as HTMLElement;
+    }, [uid]);
+    const maxCount = useMemo(() => {
+        let maxCount = Math.min(l, Math.max(_exposeCount, 0));
+        if (maxCount === l - 1 && smart) maxCount = l;
+        return maxCount;
+    }, [_exposeCount, l, smart]);
+    const [exposeCount] = useOverflow({
+        containerRef,
+        defaultCount: maxCount,
+        maxCount
+    });
+    return (
+        <PureActionList
+            {...rest}
+            actionList={actionList}
+            exposeCount={exposeCount}
+            smart={false}
+            {...{ [ID_KEY]: uid }}
+        />
+    );
+};
+
+const ActionList = ({ autoAdjustment, ...rest }: ActionListProps) => {
+    if (autoAdjustment) {
+        return <AutoAdjustmentActionList {...rest} />;
+    } else {
+        return <PureActionList {...rest} />;
+    }
 };
 
 export default React.memo(ActionList);
