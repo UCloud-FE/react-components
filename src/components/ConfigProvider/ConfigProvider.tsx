@@ -39,6 +39,8 @@ export interface ConfigProviderProps {
     theme?: any;
     /** 提供时会使用 LocaleProvider 包裹 */
     locale?: AllLocaleMap;
+    /** 是否默认启用 ActionList 的 autoAdJustment 参数 */
+    actionListAutoAdjustment: boolean;
 }
 
 const ConfigProvider = ({ children, theme, locale, ...rest }: ConfigProviderProps) => {

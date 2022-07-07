@@ -21,6 +21,7 @@ import useOverflow from 'src/hooks/useOverflow';
 import { Override, Size } from 'src/type';
 
 import { prefixCls, SWrap } from './style';
+import useConfig from 'src/hooks/useConfig';
 
 interface SubMenuItemProps {
     disabled?: boolean;
@@ -248,7 +249,9 @@ const AutoAdjustmentActionList = ({
     );
 };
 
-const ActionList = ({ autoAdjustment, ...rest }: ActionListProps) => {
+const ActionList = ({ autoAdjustment: _autoAdjustment, ...rest }: ActionListProps) => {
+    const { actionListAutoAdjustment } = useConfig();
+    const autoAdjustment = _autoAdjustment === undefined ? actionListAutoAdjustment : _autoAdjustment;
     if (autoAdjustment) {
         return <AutoAdjustmentActionList {...rest} />;
     } else {

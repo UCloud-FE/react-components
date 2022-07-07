@@ -23,3 +23,8 @@
 
 ```js {"codepath": "icon.jsx"}
 ```
+
+#### actionListAutoAdjustment
+
+```js {"codepath": "actionList.jsx"}
+```
