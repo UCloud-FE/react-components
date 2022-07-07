@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.2](https://github.com/UCloud-FE/react-components/compare/v1.5.1...v1.5.2) (2022-07-07)
+
+### Features
+
+-   **ActionList:** add autoAdjustment ([ac501da](https://github.com/UCloud-FE/react-components/commit/ac501da2a334107694b36a0b6334d4d70bce4633))
+-   **ConfigProvider:** add setConfig ([6528b08](https://github.com/UCloud-FE/react-components/commit/6528b08b4e515ac1282d77eea50377bd55022a0e))
+-   **ConfigProvider:** add support of actionListAutoAdjustment ([0ea857c](https://github.com/UCloud-FE/react-components/commit/0ea857c5d0b5b7826256b0e2f683527b2fd955a1))
+
+### Bug Fixes
+
+-   **Select:** fix fallback version option search bug ([9047197](https://github.com/UCloud-FE/react-components/commit/9047197ade53fb2140d2987552afc4c564604d04))
+
 ### [1.5.1](https://github.com/UCloud-FE/react-components/compare/v1.5.0...v1.5.1) (2022-07-06)
 
 ### Bug Fixes
