@@ -4,8 +4,7 @@ import { ConfigProviderProps } from './ConfigProvider';
 
 export const defaultConfig = {
     forwardPopupContainer: true,
-    preventFormDefaultAction: true,
-    actionListAutoAdjustment: false
+    preventFormDefaultAction: true
 };
 
 export type ConfigContextType = Pick<

@@ -22,6 +22,7 @@ import { Override, Size } from 'src/type';
 
 import { prefixCls, SWrap } from './style';
 import useConfig from 'src/hooks/useConfig';
+import config from 'src/config';
 
 interface SubMenuItemProps {
     disabled?: boolean;
@@ -251,7 +252,12 @@ const AutoAdjustmentActionList = ({
 
 const ActionList = ({ autoAdjustment: _autoAdjustment, ...rest }: ActionListProps) => {
     const { actionListAutoAdjustment } = useConfig();
-    const autoAdjustment = _autoAdjustment === undefined ? actionListAutoAdjustment : _autoAdjustment;
+    const autoAdjustment =
+        _autoAdjustment === undefined
+            ? actionListAutoAdjustment === undefined
+                ? config.actionListAutoAdjustment
+                : actionListAutoAdjustment
+            : _autoAdjustment;
     if (autoAdjustment) {
         return <AutoAdjustmentActionList {...rest} />;
     } else {
