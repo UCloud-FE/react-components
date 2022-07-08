@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.3](https://github.com/UCloud-FE/react-components/compare/v1.5.2...v1.5.3) (2022-07-08)
+
+### Bug Fixes
+
+-   **Select:** rewrite Select overflow with useOverflow for fix ([be0ec97](https://github.com/UCloud-FE/react-components/commit/be0ec973217045c48d3eecdb440c34015b2c047a))
+-   **TimePicker:** fix clear interaction ([28bcfdd](https://github.com/UCloud-FE/react-components/commit/28bcfddad9227b664d83b7494590c433b3890a0f))
+
 ### [1.5.2](https://github.com/UCloud-FE/react-components/compare/v1.5.1...v1.5.2) (2022-07-07)
 
 ### Features
