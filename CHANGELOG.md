@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.4](https://github.com/UCloud-FE/react-components/compare/v1.5.3...v1.5.4) (2022-07-08)
+
+### Bug Fixes
+
+-   **useOverflow:** add lock to start for avoid initial bug ([8d26376](https://github.com/UCloud-FE/react-components/commit/8d26376550b88dcd6de8194e68e035b8ddedbc3b))
+
 ### [1.5.3](https://github.com/UCloud-FE/react-components/compare/v1.5.2...v1.5.3) (2022-07-08)
 
 ### Bug Fixes
