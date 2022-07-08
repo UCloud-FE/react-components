@@ -49,10 +49,13 @@ const FooterWithoutMemo = ({
     locale?: typeof LOCALE;
 }) => {
     const locale = useLocale(LOCALE, 'DatePicker', _locale);
+    const handleConfirm = useCallback(() => {
+        onConfirm();
+    }, [onConfirm]);
     return (
         <Box className={footerCls} container justifyContent="space-between" alignItems="center">
             <span></span>
-            <Button styleType="primary" size="sm" onClick={onConfirm} disabled={disabled}>
+            <Button styleType="primary" size="sm" onClick={handleConfirm} disabled={disabled}>
                 {locale.confirm}
             </Button>
         </Box>
@@ -101,21 +104,28 @@ const TimePicker = ({
     const defaultTime = useMemo(() => moment().startOf('date'), []);
     const avoidBlur = useCallback(e => e.preventDefault(), []);
     const format = _format || DefaultFormat;
-    const handleConfirm = useCallback(() => {
-        setActive(false);
-        let finalValue = timeValue;
-        if (useInputValue) {
-            const inputTime = inputToTime(inputValue, format);
-            if (inputTime) {
-                finalValue = inputTime;
-                if (inputTime.isValid()) return;
-            } else {
-                finalValue = null;
+    const handleConfirm = useCallback(
+        (value?: TDate | null) => {
+            setActive(false);
+            let finalValue = timeValue;
+            if (value !== undefined) {
+                onChange(value === null ? null : moment(+value));
+                return;
             }
-        }
-        if (finalValue == null && !nullable) return;
-        onChange(finalValue == null ? null : moment(+finalValue));
-    }, [format, inputValue, nullable, onChange, timeValue, useInputValue]);
+            if (useInputValue) {
+                const inputTime = inputToTime(inputValue, format);
+                if (inputTime) {
+                    finalValue = inputTime;
+                    if (inputTime.isValid()) return;
+                } else {
+                    finalValue = null;
+                }
+            }
+            if (finalValue == null && !nullable) return;
+            onChange(finalValue == null ? null : moment(+finalValue));
+        },
+        [format, inputValue, nullable, onChange, timeValue, useInputValue]
+    );
     const handleInputChange = useCallback(
         (e: ChangeEvent<HTMLInputElement>) => {
             const s = e.target.value;
@@ -136,6 +146,9 @@ const TimePicker = ({
     );
     const handleInputFocus = useCallback(() => setActive(true), []);
     const handleInputBlur = useCallback(() => setActive(false), []);
+    const handleInputClear = useCallback(() => {
+        nullable && handleConfirm(null);
+    }, [handleConfirm, nullable]);
 
     const formatTimeValue = useMemo(() => {
         return new Date(+(timeValue == null ? defaultTime : timeValue));
@@ -184,9 +197,10 @@ const TimePicker = ({
                     onBlur={handleInputBlur}
                     onFocus={handleInputFocus}
                     onClick={handleInputFocus}
+                    onClear={handleInputClear}
                     size={size}
                     disabled={disabled}
-                    clearable={nullable}
+                    clearable={nullable ? { autoFocus: false, callOnChange: false } : false}
                     prefix={<SvgIcon type="clock" />}
                 />
             </SWrap>
