@@ -1,11 +1,12 @@
 import React, { Key, ReactElement, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
-import ResizeObserver from 'resize-observer-polyfill';
 
 import Tag from 'src/components/Tag';
+import useOverflow from 'src/hooks/useOverflow';
 
 import { overflowCls, staticCls } from './style';
 
 let _uid = 0;
+const ID_KEY = 'data-urc-select_overflow-id';
 
 export const Static = function Static<T extends { key: Key }>({
     items,
@@ -44,56 +45,29 @@ const Overflow = function Overflow<T extends { key: Key }>({
     changeContent: string;
 }) {
     const [uid] = useState(() => ++_uid);
-    const [count, setCount] = useState(0);
-    const [latestValidCount, setLatestValidCount] = useState<number | null>(null);
-
-    const compute = useCallback(() => {
-        const containerDOM = document.querySelector(`[data-urc-overflow-id="${uid}"]`) as HTMLButtonElement;
-        if (!containerDOM) return;
-        if (count === latestValidCount) {
-            onMeasure(count);
-            return;
-        }
-        if (containerDOM.offsetWidth >= containerDOM.scrollWidth) {
-            setLatestValidCount(count);
-            setCount(Math.min(items.length, count + 1));
-        } else if (containerDOM.offsetWidth < containerDOM.scrollWidth) {
-            setCount(count => Math.max(0, count - 1));
-        }
-    }, [count, items.length, latestValidCount, onMeasure, uid]);
-
-    const computeRef = useRef(compute);
-
-    useEffect(() => {
-        computeRef.current = compute;
-    }, [compute]);
-
-    useEffect(() => {
-        setLatestValidCount(null);
-    }, [changeContent]);
-
-    useEffect(() => {
-        computeRef.current();
-    }, [compute]);
-
+    const l = items.length;
+    const containerRef = useRef<HTMLElement | null>(null);
     useLayoutEffect(() => {
-        const containerDOM = document.querySelector(`[data-urc-overflow-id="${uid}"]`) as HTMLButtonElement;
-        const resizeObserver = new ResizeObserver(() => {
-            setLatestValidCount(null);
-        });
-        if (containerDOM) resizeObserver.observe(containerDOM);
-        return () => {
-            if (resizeObserver) {
-                resizeObserver.disconnect();
-            }
-        };
+        containerRef.current = document.querySelector(`[${ID_KEY}="${uid}"]`) as HTMLElement;
     }, [uid]);
+    const [count, measureCount] = useOverflow(
+        {
+            containerRef,
+            defaultCount: 1,
+            maxCount: l
+        },
+        [changeContent]
+    );
+
+    useEffect(() => {
+        onMeasure(measureCount);
+    }, [measureCount, onMeasure]);
 
     const renderItems = useMemo(() => items.slice(0, count).map(renderItem), [count, items, renderItem]);
     const restItems = useMemo(() => renderRest(items.slice(count)), [count, items, renderRest]);
 
     return (
-        <Tag.Group {...rest} data-urc-overflow-id={uid} className={overflowCls}>
+        <Tag.Group {...rest} {...{ [ID_KEY]: uid }} className={overflowCls}>
             {renderItems}
             {restItems}
         </Tag.Group>

@@ -171,7 +171,6 @@ export const SSelectorMultiple = sWrap<InputWrapProps>({})(
                 height: 0;
                 overflow: hidden;
                 display: flex;
-                padding: 0 ${halfSpacing};
                 .${measureContentCls} {
                     flex-shrink: 0;
                     padding: 0 ${halfSpacing};

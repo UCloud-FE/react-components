@@ -32,7 +32,6 @@ class Demo extends React.Component {
             search: false,
             block: false,
             optionType: 'simple',
-            stretch: true,
             width: 'default',
             styleType: 'default'
         };
@@ -46,7 +45,6 @@ class Demo extends React.Component {
             showSelectAll,
             disabled,
             search,
-            stretch,
             optionType,
             width,
             clearable,
@@ -134,9 +132,6 @@ class Demo extends React.Component {
                     <Form.Item label="clearable" {...itemLayout}>
                         <Switch checked={clearable} onChange={clearable => this.setState({ clearable })} />
                     </Form.Item>
-                    <Form.Item label="stretch" {...itemLayout}>
-                        <Switch checked={stretch} onChange={stretch => this.setState({ stretch })} />
-                    </Form.Item>
                 </Form>
                 <div className="demo-wrap">
                     <Select
@@ -152,7 +147,6 @@ class Demo extends React.Component {
                         {...widthProps}
                         {...optionProps}
                         {...(search ? { search } : {})}
-                        {...(stretch ? { popoverProps: { stretch: ['minWidth'] } } : {})}
                         {...props}
                     />
                 </div>
