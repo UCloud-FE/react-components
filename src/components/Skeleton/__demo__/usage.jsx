@@ -15,22 +15,22 @@ const Demo = () => (
 
         <h2>带动画</h2>
         <DemoWrap>
-            <Skeleton animation />
+            <Skeleton animated />
         </DemoWrap>
 
         <h2>多行</h2>
         <DemoWrap>
-            <Skeleton rows={3} animation />
+            <Skeleton rows={3} animated />
         </DemoWrap>
 
         <h2>组合</h2>
         <DemoWrap>
             <Card>
                 <Card.Header>
-                    <Skeleton animation width="60%" />
+                    <Skeleton animated width="60%" />
                 </Card.Header>
                 <Card.Content>
-                    <Skeleton animation rows={3} />
+                    <Skeleton animated rows={3} />
                 </Card.Content>
             </Card>
         </DemoWrap>

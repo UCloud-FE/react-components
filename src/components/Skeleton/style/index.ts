@@ -17,11 +17,11 @@ const skeletonAnimation = keyframes`
     }
 `;
 
-export const SWrap = sWrap<{ animation?: boolean; width?: string | number }, HTMLDivElement>({})(
+export const SWrap = sWrap<{ animated?: boolean; width?: string | number }, HTMLDivElement>({})(
     styled.div(props => {
         const {
             theme: { designTokens: DT },
-            animation,
+            animated,
             width
         } = props;
         return css`
@@ -35,7 +35,7 @@ export const SWrap = sWrap<{ animation?: boolean; width?: string | number }, HTM
                     margin-top: 12px;
                     background-clip: content-box;
                     border-radius: 2px;
-                    ${animation &&
+                    ${animated &&
                     css`
                         &::after {
                             content: '';

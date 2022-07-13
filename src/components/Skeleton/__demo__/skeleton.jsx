@@ -12,26 +12,26 @@ class Demo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            animation: false,
+            animated: false,
             rows: 1
         };
     }
     render() {
-        const { animation, rows } = this.state;
+        const { animated, rows } = this.state;
 
         return (
             <div>
                 <Form className="demo-form" itemProps={{ ...formLayout }}>
-                    <Form.Item label="animation">
-                        <Switch checked={animation} onChange={animation => this.setState({ animation })} />
+                    <Form.Item label="animated">
+                        <Switch checked={animated} onChange={animated => this.setState({ animated })} />
                     </Form.Item>
                     <Form.Item label="rows">
                         <NumberInput value={rows} onChange={rows => this.setState({ rows })} />
                     </Form.Item>
                 </Form>
                 <DemoWrap>
-                    {/* use key to reset animation */}
-                    <Skeleton key={rows} {...{ animation, rows }} />
+                    {/* use key to reset animated */}
+                    <Skeleton key={rows} {...{ animated, rows }} />
                 </DemoWrap>
             </div>
         );

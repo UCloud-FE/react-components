@@ -4,14 +4,14 @@ import { contentCls, SWrap } from './style';
 
 interface SkeletonProps {
     /** 是否开启动画 */
-    animation?: boolean;
+    animated?: boolean;
     /** 章节的行数 */
     rows?: number;
     /** 宽度 */
     width?: string | number;
 }
 
-const Skeleton = ({ animation, rows = 1, ...rest }: SkeletonProps & HTMLAttributes<HTMLDivElement>) => {
+const Skeleton = ({ animated, rows = 1, ...rest }: SkeletonProps & HTMLAttributes<HTMLDivElement>) => {
     const content = useMemo(
         () => (
             <>
@@ -23,7 +23,7 @@ const Skeleton = ({ animation, rows = 1, ...rest }: SkeletonProps & HTMLAttribut
         [rows]
     );
     return (
-        <SWrap {...rest} animation={animation}>
+        <SWrap {...rest} animated={animated}>
             <div className={contentCls}>{content}</div>
         </SWrap>
     );
