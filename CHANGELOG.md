@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.5](https://github.com/UCloud-FE/react-components/compare/v1.5.4...v1.5.5) (2022-07-13)
+
+### Features
+
+-   **Skeleton:** add skeleton ([d33d214](https://github.com/UCloud-FE/react-components/commit/d33d214f4f5b2c9a98842e410c32ab4189e1abee))
+
 ### [1.5.4](https://github.com/UCloud-FE/react-components/compare/v1.5.3...v1.5.4) (2022-07-08)
 
 ### Bug Fixes
