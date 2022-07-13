@@ -197,6 +197,9 @@ module.exports = [
             },
             {
                 name: 'Loading'
+            },
+            {
+                name: 'Skeleton'
             }
         ]
     },

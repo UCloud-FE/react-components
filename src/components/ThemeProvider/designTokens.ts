@@ -1,7 +1,7 @@
 // Do not edit directly
-// Generated with design-token-editor on 5/12/2022, 2:41:28 PM
+// Generated with design-token-editor on 7/12/2022, 3:06:32 PM
 
-const designTokens = {
+export default {
     // 按钮加载遮罩
     T_BUTTON_COMMON_COLOR_MASK: '#ffffff',
     // 按钮/主/背景色
@@ -443,6 +443,10 @@ const designTokens = {
     T_SHADOW_INSET_RIGHT: 'inset -10px 0 8px -8px rgba(0,0,0,0.12)',
     // 内阴影/上
     T_SHADOW_INSET_TOP: 'inset 0 10px 8px -8px rgba(0,0,0,0.12)',
+    // 骨架屏/背景色/深色
+    T_SKELETON_COLOR_BG_DARK: '#efeff8',
+    // 骨架屏/背景色/浅色
+    T_SKELETON_COLOR_BG_LIGHT: '#f6f6fb',
     // 滑块/背景色/激活
     T_SLIDER_COLOR_BG_ACTIVE: '#f8f8ff',
     // 滑块/背景色/未激活
@@ -542,5 +546,3 @@ const designTokens = {
     // 小号控件宽度
     T_WIDTH_SM: '144px'
 };
-
-export default designTokens;
