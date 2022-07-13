@@ -8,22 +8,24 @@
             "methods": [],
             "props": {
                 "actionList": {
-                    "required": false,
+                    "required": true,
                     "tsType": { "name": "Array", "elements": [{ "name": "ActionInfo" }], "raw": "ActionInfo[]" },
-                    "description": { "description": "操作列表", "tags": [] },
-                    "defaultValue": { "value": "[]", "computed": false }
+                    "description": { "description": "操作列表", "tags": [] }
                 },
                 "exposeCount": {
                     "required": false,
                     "tsType": { "name": "number" },
-                    "description": { "description": "暴露的操作数量", "tags": [] },
-                    "defaultValue": { "value": "3", "computed": false }
+                    "description": { "description": "暴露的操作数量", "tags": [] }
+                },
+                "autoAdjustment": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "是否自动按照宽度调整展示数量", "tags": [] }
                 },
                 "size": {
                     "required": false,
                     "tsType": { "name": "Size" },
-                    "description": { "description": "控件尺寸", "tags": [] },
-                    "defaultValue": { "value": "'md'", "computed": false }
+                    "description": { "description": "控件尺寸", "tags": [] }
                 },
                 "smart": {
                     "required": false,
@@ -31,14 +33,12 @@
                     "description": {
                         "description": "操作数量等于 exposeCount+1 时是否直接显示按钮而不是显示下拉菜单",
                         "tags": []
-                    },
-                    "defaultValue": { "value": "true", "computed": false }
+                    }
                 },
                 "buttonStyleType": {
                     "required": false,
                     "tsType": { "name": "ButtonProps['styleType']", "raw": "ButtonProps['styleType']" },
-                    "description": { "description": "按钮的默认样式类别，参考 Button 的 styleType", "tags": [] },
-                    "defaultValue": { "value": "'border'", "computed": false }
+                    "description": { "description": "按钮的默认样式类别，参考 Button 的 styleType", "tags": [] }
                 },
                 "dropdownButton": {
                     "required": false,
