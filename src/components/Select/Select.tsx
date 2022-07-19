@@ -1000,7 +1000,7 @@ const MultipleListSelector = React.memo(function MultipleSelector(props: Selecto
                 </InputPart>
                 <Clear clearable={clearable && !empty} onClick={handleClear} />
                 <InputPart>
-                    <SvgIcon type={visible ? (search ? 'search' : 'arrow-up') : 'arrow-down'} />
+                    <SvgIcon type={visible ? 'arrow-up' : 'arrow-down'} />
                 </InputPart>
             </SSelectorMultiple>
             {items.length ? (
@@ -1258,7 +1258,7 @@ const SingleSelector = React.memo(function SingleSelector({
             </InputPart>
             <Clear clearable={clearable && !empty} onClick={handleClear} />
             <InputPart>
-                <SvgIcon type={visible ? (search ? 'search' : 'arrow-up') : 'arrow-down'} />
+                <SvgIcon type={visible ? 'arrow-up' : 'arrow-down'} />
             </InputPart>
         </SSelectorSingle>
     );
