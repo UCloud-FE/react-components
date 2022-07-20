@@ -1012,9 +1012,9 @@ const MultipleListSelector = React.memo(function MultipleSelector(props: Selecto
                 </InputPart>
             </SSelectorMultiple>
             {items.length ? (
-                <div className={listCls}>
-                    <Tag.Group>{items.map(renderItem)}</Tag.Group>
-                </div>
+                <Tag.Group>
+                    <div className={listCls}>{items.map(renderItem)}</div>
+                </Tag.Group>
             ) : null}
         </>
     );

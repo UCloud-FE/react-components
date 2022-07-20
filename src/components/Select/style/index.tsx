@@ -405,7 +405,7 @@ export const SelectWrap = sWrap<{ disabled?: boolean; multiple?: boolean; block?
             .${listCls} {
                 display: block;
                 width: 400px;
-                max-height: 60px;
+                max-height: 80px;
                 overflow: auto;
                 margin-top: 8px;
                 cursor: default;
