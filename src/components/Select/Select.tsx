@@ -1,3 +1,6 @@
+/**
+ * TODO 需求时间比较紧、大部分时间用作兼容和考虑交互各种遗漏，代码未整合，有时间可以将 selector、popup 中的代码进行抽离
+ */
 import React, {
     ChangeEvent,
     ComponentType,
@@ -674,6 +677,7 @@ type SelectorProps = Pick<
     | 'block'
 > & {
     visible: boolean;
+    setVisible: (visible: boolean) => void;
     locale: typeof LOCALE;
     dataSource: ReturnType<typeof groupChildrenAsDataSource>;
     searchValue?: string;
@@ -694,6 +698,7 @@ const Selector = React.memo(function Selector({
     value,
     onChange,
     visible,
+    setVisible,
     locale,
     dataSource,
     search,
@@ -716,6 +721,7 @@ const Selector = React.memo(function Selector({
         value,
         onChange,
         visible,
+        setVisible,
         locale,
         dataSource,
         search,
@@ -903,6 +909,7 @@ const MultipleListSelector = React.memo(function MultipleSelector(props: Selecto
         size,
         disabled,
         visible,
+        setVisible,
         dataSource,
         value,
         onChange,
@@ -959,10 +966,11 @@ const MultipleListSelector = React.memo(function MultipleSelector(props: Selecto
             e.preventDefault();
             if (!disabled) {
                 onChange?.([]);
-                inputRef.current?.focus();
+                // inputRef.current?.focus();
+                setVisible(false);
             }
         },
-        [disabled, onChange]
+        [disabled, onChange, setVisible]
     );
 
     const empty = useMemo(() => !(value as Key[])?.length, [value]);
@@ -1017,6 +1025,7 @@ const MultipleSelector = React.memo(function MultipleSelector(props: SelectorPro
         size,
         disabled,
         visible,
+        setVisible,
         dataSource,
         value,
         onChange,
@@ -1096,10 +1105,11 @@ const MultipleSelector = React.memo(function MultipleSelector(props: SelectorPro
             e.preventDefault();
             if (!disabled) {
                 onChange?.([]);
-                inputRef.current?.focus();
+                // inputRef.current?.focus();
+                setVisible(false);
             }
         },
-        [disabled, onChange]
+        [disabled, onChange, setVisible]
     );
 
     const empty = useMemo(() => !(value as Key[])?.length, [value]);
@@ -1171,6 +1181,7 @@ const SingleSelector = React.memo(function SingleSelector({
     value,
     onChange,
     visible,
+    setVisible,
     dataSource,
     search,
     searchValue = '',
@@ -1225,10 +1236,11 @@ const SingleSelector = React.memo(function SingleSelector({
             e.stopPropagation();
             if (!disabled) {
                 onChange?.(undefined);
-                inputRef.current?.focus();
+                // inputRef.current?.focus();
+                setVisible(false);
             }
         },
-        [disabled, onChange]
+        [disabled, onChange, setVisible]
     );
 
     return (
@@ -1421,6 +1433,7 @@ const Select = ({
         value,
         onChange,
         visible,
+        setVisible,
         locale,
         dataSource,
         clearable,
