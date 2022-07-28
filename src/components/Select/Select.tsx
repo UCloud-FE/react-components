@@ -1396,6 +1396,13 @@ const Select = ({
     }, [dataSource]);
     // 多层数据/搜索且自定义 selector/自定义渲染内容时，无法兼容，回滚到老版本
     const [v1] = useState(() => hasSubGroup || !!(search && (renderContent || renderSelector)));
+    const handleOnChange = useCallback(
+        (v: Key | Key[] | undefined) => {
+            onChange(v);
+            setSearchValue('');
+        },
+        [onChange, setSearchValue]
+    );
 
     const popup = React.createElement(
         Popup,
@@ -1411,7 +1418,7 @@ const Select = ({
             renderPopup,
             handleVisibleChange,
             options,
-            onChange,
+            onChange: handleOnChange,
             locale,
             hidePopup,
             dataSource,
