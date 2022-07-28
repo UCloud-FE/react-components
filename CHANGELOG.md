@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.7](https://github.com/UCloud-FE/react-components/compare/v1.5.6...v1.5.7) (2022-07-28)
+
+### Features
+
+-   **Select:** clear search when select ([93b48d0](https://github.com/UCloud-FE/react-components/commit/93b48d09bf1fa37eafda30033164b176cc12514f))
+-   **Select:** hide popup when click clear ([36aa14a](https://github.com/UCloud-FE/react-components/commit/36aa14aa9c780031ebf06af4f63ed88e70bddf71))
+-   **Select:** remove search icon ([69b2361](https://github.com/UCloud-FE/react-components/commit/69b2361df397234a4fdb376ee04712754320c8d8))
+
+### Bug Fixes
+
+-   **Select:** fix multiple list overflow ([1bd5755](https://github.com/UCloud-FE/react-components/commit/1bd57554f1026f6ea95f47d9e8ea5e4c0be5438f))
+
 ### [1.5.6](https://github.com/UCloud-FE/react-components/compare/v1.5.5...v1.5.6) (2022-07-13)
 
 ### Features
