@@ -1,3 +1,7 @@
+if (/\.github\.io$/.test(location.host)) {
+    location.href = 'https://udesign.ucloud.cn/component/category/all/';
+}
+
 require('file-loader?name=[name].[ext]!./favicon.ico');
 require('!file-loader?name=[name].[ext]!./style.css');
 
