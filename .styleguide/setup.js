@@ -1,5 +1,9 @@
 if (/\.github\.io$/.test(location.host)) {
-    location.href = 'https://udesign.ucloud.cn/component/category/all/';
+    if (location.hash.indexOf('#NR') === 0) {
+        history.replaceState(null, null, '#' + location.hash.substr(3));
+    } else {
+        location.href = 'https://udesign.ucloud.cn/component/category/all/';
+    }
 }
 
 require('file-loader?name=[name].[ext]!./favicon.ico');
