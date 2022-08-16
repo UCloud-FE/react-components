@@ -1,6 +1,6 @@
 import { ChangeEvent, useCallback, useEffect, useMemo, useState } from 'react';
 import moment, { Moment } from 'moment';
-import type { TDate } from '@z-r/calendar';
+import type { TDate } from '@ucloud-fe/calendar';
 
 import { animationPrefixCls } from 'src/style/globalAnimation';
 import useLocale from 'src/components/LocaleProvider/useLocale';

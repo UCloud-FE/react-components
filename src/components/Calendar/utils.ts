@@ -1,4 +1,4 @@
-import { DisabledFunc, TDate } from '@z-r/calendar';
+import { DisabledFunc, TDate } from '@ucloud-fe/calendar';
 import moment, { Moment } from 'moment';
 
 export interface Rules {

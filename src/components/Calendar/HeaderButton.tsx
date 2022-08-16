@@ -1,5 +1,5 @@
 import React, { HTMLAttributes, memo, useMemo } from 'react';
-import { HeaderButtonType, Mode } from '@z-r/calendar';
+import { HeaderButtonType, Mode } from '@ucloud-fe/calendar';
 
 import { Override } from 'src/type';
 import SvgIcon from 'src/components/SvgIcon';

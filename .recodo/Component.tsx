@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Provider, Page, Editor, RemoteEditor } from 'recodo-doc';
+import { Provider, Page, Editor, RemoteEditor } from '@ucloud-fe/recodo-doc';
 
 const getRemoteUrl = (codePath: string, componentName: string) => {
     return `https://raw.githubusercontent.com/UCloud-FE/react-components/master/src/components/${componentName}/__demo__/${codePath}`;

@@ -1,5 +1,5 @@
 import React, { HTMLAttributes, memo, useMemo } from 'react';
-import { HeaderSwitcherType, Mode } from '@z-r/calendar';
+import { HeaderSwitcherType, Mode } from '@ucloud-fe/calendar';
 
 import { Override } from 'src/type';
 

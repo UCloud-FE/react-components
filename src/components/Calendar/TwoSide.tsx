@@ -1,6 +1,6 @@
 import React, { HTMLAttributes, memo, useCallback, useMemo, useState } from 'react';
 import moment from 'moment';
-import { Mode, TDate } from '@z-r/calendar';
+import { Mode, TDate } from '@ucloud-fe/calendar';
 
 import { Override } from 'src/type';
 import useLocale from 'src/components/LocaleProvider/useLocale';

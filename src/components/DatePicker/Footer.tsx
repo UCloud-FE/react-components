@@ -1,5 +1,5 @@
 import React, { memo, ReactNode, useCallback } from 'react';
-import { TDate } from '@z-r/calendar';
+import { TDate } from '@ucloud-fe/calendar';
 
 import Button from 'src/components/Button';
 import Box from 'src/components/Box';

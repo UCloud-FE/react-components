@@ -1,7 +1,7 @@
 /* stylelint-disable */
 
 import moment, { Moment } from 'moment';
-import { TDate } from '@z-r/calendar';
+import { TDate } from '@ucloud-fe/calendar';
 
 import { isDateDisabled, getValidDate } from 'src/components/Calendar/utils';
 

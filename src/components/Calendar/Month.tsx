@@ -1,5 +1,5 @@
 import React, { HTMLAttributes, memo, useCallback, useMemo } from 'react';
-import { TDate } from '@z-r/calendar';
+import { TDate } from '@ucloud-fe/calendar';
 
 import { Override } from 'src/type';
 import useLocale from 'src/components/LocaleProvider/useLocale';

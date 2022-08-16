@@ -1,5 +1,5 @@
 import React, { HTMLAttributes } from 'react';
-import { CellValue, Mode } from '@z-r/calendar';
+import { CellValue, Mode } from '@ucloud-fe/calendar';
 import classNames from 'classnames';
 
 import useLocale from 'src/components/LocaleProvider/useLocale';

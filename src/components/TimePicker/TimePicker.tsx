@@ -1,6 +1,6 @@
 import React, { ChangeEvent, memo, useCallback, useEffect, useMemo, useState } from 'react';
 import moment, { Moment } from 'moment';
-import { TDate } from '@z-r/calendar';
+import { TDate } from '@ucloud-fe/calendar';
 
 import Input from 'src/components/Input';
 import Popover from 'src/components/Popover';

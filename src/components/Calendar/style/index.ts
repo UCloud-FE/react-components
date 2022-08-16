@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import { Calendar, Month } from '@z-r/calendar';
+import { Calendar, Month } from '@ucloud-fe/calendar';
 
 import config from 'src/config';
 import { sWrap, Theme } from 'src/style';

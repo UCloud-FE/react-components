@@ -1,7 +1,7 @@
-import mod from '@rapiop/mod';
-import amdResolver from '@rapiop/mod/lib/resolver/amd';
-import jsonResolver from '@rapiop/mod/lib/resolver/json';
-import { moduleMap } from '@rapiop/mod/lib/module';
+import mod from '@ucloud-fe/mod';
+import amdResolver from '@ucloud-fe/mod/lib/resolver/amd';
+import jsonResolver from '@ucloud-fe/mod/lib/resolver/json';
+import { moduleMap } from '@ucloud-fe/mod/lib/module';
 
 import './index.css';
 
@@ -10,7 +10,7 @@ mod.registerModuleResolver(jsonResolver);
 
 (window as any).__recodo_module_namespace__ = moduleMap;
 
-mod.export('@rapiop/mod', mod);
+mod.export('@ucloud-fe/mod', mod);
 
 mod.config({
     modules: {
@@ -44,16 +44,7 @@ mod.config({
             type: 'amd',
             dep: ['react']
         },
-        'recodo-doc': {
-            js: 'https://cdn.jsdelivr.net/npm/recodo-doc@0.1.11/dist/main.min.js',
-            type: 'amd',
-            dep: ['react', 'recodo-doc/style']
-        },
-        'recodo-doc/style': {
-            css: 'https://cdn.jsdelivr.net/npm/recodo-doc@0.1.11/lib/doc.css',
-            type: 'immediate'
-        },
-        '@rapiop/mod': { js: [] },
+        '@ucloud-fe/mod': { js: [] },
         'design-token-editor': {
             js: 'https://cdn.jsdelivr.net/npm/@ucloud-fe/design-token-editor@0.1.11/dist/design-token-editor.umd.js',
             type: 'amd',
@@ -69,133 +60,6 @@ mod.config({
         }
     }
 });
-
-const renderDoc = (
-    name: string,
-    dom: Element,
-    options?: {
-        reportAnchorList: any;
-    }
-) => {
-    let destroyAction: () => void;
-    let destroyed = false;
-    let destroy = () => {
-        if (destroyed) return;
-        destroyed = true;
-        if (!destroyAction) return;
-        destroyAction();
-    };
-    mod.import([
-        '@ucloud-fe/react-components',
-        'moment',
-        'lodash',
-        'react',
-        'react-dom',
-        'prop-types',
-        'recodo-doc'
-    ]).then(dependences => {
-        if (destroyed) return;
-        const [components, moment, lodash, React, ReactDOM, PropTypes] = dependences as any;
-        const { Doc } = require('./Component');
-        const demoUtil = require('shared/demoUtil').default;
-        const darkTheme = require('src/components/ThemeProvider/dark').default;
-        const ENLocale = require('src/components/LocaleProvider/locale/en_US').default;
-        const SizeInterface = require('src/interfaces/Size').default;
-        return mod
-            .import([
-                {
-                    file: `https://raw.githubusercontent.com/UCloud-FE/react-components/master/.recodo/data/${name}.info.json`,
-                    type: 'json'
-                },
-                {
-                    file: `https://raw.githubusercontent.com/UCloud-FE/react-components/master/.recodo/data/${name}.doc.json`,
-                    type: 'json'
-                }
-            ])
-            .then(deps => {
-                const [info, doc] = deps as any;
-                if (destroyed) return;
-                ReactDOM.render(
-                    <Doc
-                        info={info}
-                        doc={doc}
-                        scope={{
-                            ...components,
-                            components,
-                            moment,
-                            lodash,
-                            React,
-                            ReactDOM,
-                            PropTypes: PropTypes,
-                            _: lodash,
-                            demoUtil,
-                            darkTheme,
-                            SizeInterface,
-                            ENLocale
-                        }}
-                        reportAnchorList={options?.reportAnchorList}
-                    />,
-                    dom
-                );
-                destroyAction = () => ReactDOM.unmountComponentAtNode(dom);
-            });
-    });
-    return destroy;
-};
-
-const renderInteractionDemo = (name: string, dom: string) => {
-    let destroyAction: () => void;
-    let destroyed = false;
-    let destroy = () => {
-        if (destroyed) return;
-        destroyed = true;
-        if (!destroyAction) return;
-        destroyAction();
-    };
-    mod.import([
-        '@ucloud-fe/react-components',
-        'moment',
-        'lodash',
-        'react',
-        'react-dom',
-        'prop-types',
-        'recodo-doc'
-    ]).then(dependences => {
-        if (destroyed) return;
-        const [components, moment, lodash, React, ReactDOM, PropTypes] = dependences as any;
-        const { Demo } = require('./Component');
-        const InteractionDemo = require('./InteractionDemo');
-        return mod
-            .import([
-                {
-                    file: `https://raw.githubusercontent.com/UCloud-FE/react-components/master/.recodo/data/${name}.info.json`,
-                    type: 'json'
-                }
-            ])
-            .then(deps => {
-                const [info] = deps as any;
-                ReactDOM.render(
-                    <InteractionDemo.Provider props={info[name].info.props}>
-                        <Demo
-                            name={name}
-                            modules={{
-                                '@ucloud-fe/react-components': components,
-                                moment: moment,
-                                lodash: lodash,
-                                react: React,
-                                'react-dom': ReactDOM,
-                                'prop-types': PropTypes,
-                                'interaction-demo': InteractionDemo
-                            }}
-                        />
-                    </InteractionDemo.Provider>,
-                    dom
-                );
-                destroyAction = () => ReactDOM.unmountComponentAtNode(dom);
-            });
-    });
-    return destroy;
-};
 
 const renderDesignTokenEditor = (dom: string) => {
     let destroyAction: () => void;
@@ -229,4 +93,4 @@ const renderDesignTokenEditor = (dom: string) => {
     return destroy;
 };
 
-export { renderDoc, renderInteractionDemo, renderDesignTokenEditor };
+export { renderDesignTokenEditor };

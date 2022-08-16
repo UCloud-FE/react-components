@@ -9,7 +9,7 @@ const isProd = process.env.NODE_ENV === 'production';
 const isAnalyzer = !!process.env.ANALYZER;
 
 const externals = {};
-['moment', 'react', 'react-dom', 'prop-types', 'recodo-doc', '@ucloud-fe/react-components'].forEach(dep => {
+['moment', 'react', 'react-dom', 'prop-types', '@ucloud-fe/recodo-doc', '@ucloud-fe/react-components'].forEach(dep => {
     externals[dep] = ['__recodo_module_namespace__', dep];
 });
 

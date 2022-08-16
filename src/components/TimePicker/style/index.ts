@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import { Time } from '@z-r/calendar';
+import { Time } from '@ucloud-fe/calendar';
 
 import { sWrap } from 'src/style';
 import config from 'src/config';
