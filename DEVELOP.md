@@ -1,6 +1,6 @@
-### 组件开发
+## 组件开发
 
-#### 如何创建一个新组件
+### 如何创建一个新组件
 
 -   手动创建
     -   在 src/components 中创建组件名称对应的文件夹
@@ -10,12 +10,16 @@
     -   创建`__demo__`文件夹用于存放 demo 代码
     -   创建`__tests__`文件夹用于存放测试用例
     -   创建`style`文件夹用于存放样式相关代码
-    -   在 .styleguide/components.json 中添加导出文档的配置
+    -   在 .styleguide/components.js 中添加导出文档的配置
     -   重启文档系统来看到新组件
--   或者通过脚本快速创建
-    -   执行`npm run component:add ${组件名称}`来快速创建
 
-### 文档系统
+### 本地开发
+
+yarn install 后执行 npm start，会启用 pm2 来启动本地开发服务。
+
+## 文档系统
+
+文档使用 react-styleguidist。
 
 -   文档中可使用的全局变量：
     -   所有的主要组件
@@ -23,9 +27,9 @@
 -   不完善的地方
     -   从其它文件中导入的 propType 等类型无法识别
 
-### 开发规范
+## 开发规范
 
-#### Git Commit 规范
+### Git Commit 规范
 
 -   commit 格式遵循[AngularJS Git Commit Guidelines](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#commits)
 -   Commit 信息格式：
@@ -40,7 +44,7 @@
 
 -   提交时请使用`npm run cm`来替换`git commit`，或者根据`[commitizen 文档](https://github.com/commitizen/cz-cli#conventional-commit-messages-as-a-global-utility)`添加全局命令后使用`git cz`命令
 
-#### API 风格
+### API 风格
 
 -   枚举值属性必须在 propTypes 中定义完整可枚举列表，枚举内容需要语义化，便于理解，可枚举列表绑到对应组件下，方便外部获取（参考 Grid justify）
 -   组件的组成部分在唯一且结构固定时使用 props 而不是使用 children 查找组合（参考 Card）
@@ -53,7 +57,7 @@
 -   事件触发的回调等统一命名为 onEvent，如 onChange。而处理函数等统一命名为 handleWhat，如 handleSearch
 -   表单控件类的需要适配 sm、md、lg 三种尺寸大小
 
-#### DEMO、文档编写
+### DEMO、文档编写
 
 -   每个暴露出去的组件必须编写对应的 demo，方便开发者参考
 -   文档名称为`组件名.md`
@@ -67,7 +71,7 @@
     2.  对于单个 props、功能的样式 demo，命名为`组件名-(props名称|功能名称).jsx`，主组件的组件名可不写
 -   demo 中需抛出`Demo`组件，用于文档中展示，import 和 export 等代码写在头尾，主体内容用`// demo start`和`// demo end`包裹
 
-#### 如何发布
+### 如何发布
 
--   发布使用`standard-version`，可直接快速执行`npm run publish:version`来快速生成`changelog`，并修改版本号
--   review `changelog`无误后 `git push --follow-tags` 到 github，等待执行测试编译无问题，，等待`ci`自动发布
+-   发布使用 `standard-version`，可直接快速执行`npm run publish:version`来快速生成`changelog`，并修改版本号
+-   review `changelog` 无误后 `git push --follow-tags` 到 github，等待执行测试编译无问题，等待`ci`自动发布
