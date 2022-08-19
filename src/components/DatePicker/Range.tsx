@@ -33,7 +33,8 @@ import {
     RangeInputWrap,
     SPopup,
     Arrow,
-    RangeCalendarWrap
+    RangeCalendarWrap,
+    dateSeparatorCls
 } from './style';
 import Footer, { TShortcut } from './Footer';
 import useRangePicker, { RangeActionRef, RangePickerRef } from './useRangePicker';
@@ -464,7 +465,10 @@ const Range = ({
                             </RangeInputWrap>
                         )}
                         {readonly ? (
-                            <span className={readonlyInputCls}>{inputPropsE.value}</span>
+                            <>
+                                <span className={dateSeparatorCls}>-</span>
+                                <span className={readonlyInputCls}>{inputPropsE.value}</span>
+                            </>
                         ) : (
                             <RangeInputWrap {...inputWrapPropsE} isEnd>
                                 <Input {...inputPropsE} ref={inputRefE} />
