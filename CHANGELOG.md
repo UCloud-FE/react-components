@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.11](https://github.com/UCloud-FE/react-components/compare/v1.5.10...v1.5.11) (2022-08-19)
+
+### Bug Fixes
+
+-   **DatePicker:** fix missing seprator ([3d6c1b4](https://github.com/UCloud-FE/react-components/commit/3d6c1b4741b4d95ecf9366a376ba17c0d29e080e))
+
 ### [1.5.10](https://github.com/UCloud-FE/react-components/compare/v1.5.9...v1.5.10) (2022-08-16)
 
 ### [1.5.9](https://github.com/UCloud-FE/react-components/compare/v1.5.8...v1.5.9) (2022-08-09)
