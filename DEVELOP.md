@@ -15,7 +15,7 @@
 
 ### 本地开发
 
-yarn install 后执行 npm start，会启用 pm2 来启动本地开发服务。
+yarn install 后执行 npm start，会启用 pm2 来启动本地开发服务，或直接 npm run styleguide。打开 localhost:6080 查看开发页面。
 
 ## 文档系统
 
