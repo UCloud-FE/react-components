@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.12](https://github.com/UCloud-FE/react-components/compare/v1.5.11...v1.5.12) (2022-09-01)
+
+### Bug Fixes
+
+-   **DatePicker:** update @ucloud-fe/calendar to fix date change bug ([f602e5f](https://github.com/UCloud-FE/react-components/commit/f602e5fc3a20352476a48cf93eadb1720090b284))
+
 ### [1.5.11](https://github.com/UCloud-FE/react-components/compare/v1.5.10...v1.5.11) (2022-08-19)
 
 ### Bug Fixes
