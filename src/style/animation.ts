@@ -169,6 +169,17 @@ export const slideInDown = keyframes`
     }
 `;
 
+export const slideInRight = keyframes`
+    0% {
+        transform: translate3d(100%, 0, 0);
+        visibility: hidden;
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+`;
+
 export const spinKeyframes = keyframes`
     from {
         transform: rotate(0deg);

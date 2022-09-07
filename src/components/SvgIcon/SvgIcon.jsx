@@ -39,6 +39,10 @@ import Cog from './icons/Cog';
 import Dragger from './icons/Dragger';
 import DoubleArrowRight from './icons/DoubleArrowRight';
 import DoubleArrowLeft from './icons/DoubleArrowLeft';
+import CircleMarkFill from './icons/CircleMarkFill';
+import CircleCrossFill from './icons/CircleCrossFill';
+import CircleYesMdFill from './icons/CircleYesMdFill';
+import LoadingLine from './icons/LoadingLine';
 
 // circle
 import QuestionCircle from './icons/QuestionCircle';
@@ -83,7 +87,11 @@ const IconMap = {
     sort: Sort,
     filter: Filter,
     cog: Cog,
-    dragger: Dragger
+    dragger: Dragger,
+    'circle-mark-fill': CircleMarkFill,
+    'circle-cross-fill': CircleCrossFill,
+    'circle-yes-md-fill': CircleYesMdFill,
+    'loading-line': LoadingLine
 };
 
 // circle

@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Message from 'src/components/Message';
-import Button from 'src/components/Button';
 
 // demo start
 const { StyleType } = Message;
@@ -10,14 +9,9 @@ const Demo = () => {
         <div>
             {StyleType.map(styleType => (
                 <div key={styleType} className="demo-wrap">
-                    <Message styleType={styleType}>this is a message</Message>
+                    <Message styleType={styleType} title={<div>this is a message</div>} />
                 </div>
             ))}
-            <Button
-                onClick={() => Message.message(<div>this is a message</div>, undefined, () => console.log('onClose'))}
-            >
-                show message
-            </Button>
         </div>
     );
 };

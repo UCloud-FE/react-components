@@ -5,15 +5,18 @@ import _ from 'lodash';
 import SvgIcon from 'src/components/SvgIcon';
 import deprecatedLog from 'src/utils/deprecatedLog';
 
-import { MessageWrap, TipIcon, IconWrap, CloseIconWrap, TitleWrap, FooterWrap, ContentWrap } from './style';
+import { MessageWrap, TipIcon, IconWrap, CloseIconWrap, TitleWrap, FooterWrap, ContentWrap, LeftPrefix } from './style';
 
 export const deprecatedLogForStyleTypeInfo = deprecatedLog('Message styleType "info"', '"success"');
 
 const StyleType = ['default', 'success', 'loading', 'warning', 'error'];
 
 const IconMap = {
-    success: 'tick',
-    loading: 'ring-loading'
+    default: 'circle-mark-fill',
+    error: 'circle-cross-fill',
+    success: 'circle-yes-md-fill',
+    warning: 'circle-mark-fill',
+    loading: 'loading-line'
 };
 
 class Message extends Component {
@@ -50,18 +53,19 @@ class Message extends Component {
     render() {
         const { children, styleType, closable, title, footer, ...rest } = this.props;
         return (
-            <MessageWrap {...rest}>
+            <MessageWrap {...rest} styleType={styleType}>
+                <LeftPrefix styleType={styleType} />
                 <IconWrap>
                     <TipIcon
                         styleType={styleType}
                         spin={styleType === 'loading'}
-                        size="16px"
+                        size="20px"
                         type={IconMap[styleType] || 'exclamation-circle-filled'}
                     />
                 </IconWrap>
                 {closable && (
                     <CloseIconWrap onClick={this.close}>
-                        <SvgIcon size="16px" type="cross" />
+                        <SvgIcon size="20px" type="cross" />
                     </CloseIconWrap>
                 )}
                 {title && <TitleWrap>{title}</TitleWrap>}

@@ -3,7 +3,7 @@ import { css } from '@emotion/core';
 import { TransitionGroup } from 'react-transition-group';
 
 import SvgIcon from 'src/components/SvgIcon';
-import { fadeIn, fadeOut } from 'src/style/animation';
+import { slideUpOut, slideInRight } from 'src/style/animation';
 import config from 'src/config';
 import withProps from 'src/utils/withProps';
 
@@ -12,7 +12,7 @@ export const prefixCls = _prefixCls + '-message';
 export const titleCls = prefixCls + '-title';
 export const contentCls = prefixCls + '-content';
 
-export const animationDuration = 500;
+export const animationDuration = 400;
 export const animationName = 'uc-fe-animation-fade';
 
 const colorMap = {
@@ -37,26 +37,57 @@ export const TipIcon = withProps()(
 );
 
 export const IconWrap = styled('div')`
-    font-size: 15px;
-    width: 16px;
-    height: 16px;
+    display: flex;
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
     text-align: center;
-    line-height: 16px;
+    line-height: 20px;
     position: absolute;
-    top: 16px;
+    top: 17px;
     left: 16px;
 `;
-export const CloseIconWrap = styled('div')`
-    font-size: 15px;
-    width: 16px;
-    height: 16px;
-    text-align: center;
-    line-height: 16px;
-    position: absolute;
-    top: 16px;
-    right: 12px;
-    cursor: pointer;
-`;
+export const CloseIconWrap = withProps()(
+    styled('div')(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
+
+        return css`
+            display: flex;
+            font-size: 20px;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            position: absolute;
+            top: 17px;
+            right: 16px;
+            cursor: pointer;
+            svg {
+                fill: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
+            }
+        `;
+    })
+);
+
+export const LeftPrefix = withProps()(
+    styled('div')(props => {
+        const {
+            styleType,
+            theme: { designTokens: DT }
+        } = props;
+
+        return css`
+            position: absolute;
+            top: -1px;
+            bottom: -1px;
+            left: -1px;
+            width: 4px;
+            background-color: ${DT[colorMap[styleType]]};
+        `;
+    })
+);
 
 export const TitleWrap = withProps({
     className: titleCls
@@ -91,7 +122,7 @@ export const ContentWrap = withProps({
             word-break: break-all;
             font-size: 12px;
             color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
-            line-height: 20px;
+            line-height: 18px;
         `;
     })
 );
@@ -99,7 +130,8 @@ export const ContentWrap = withProps({
 export const FooterWrap = styled('div')`
     text-align: right;
     margin-right: 16px;
-    margin-top: 16px;
+    margin-left: 44px;
+    margin-top: 12px;
 `;
 
 export const MessageWrap = withProps({
@@ -107,17 +139,20 @@ export const MessageWrap = withProps({
 })(
     styled('div')(props => {
         const {
+            styleType,
             theme: { designTokens: DT }
         } = props;
 
         return css`
             box-sizing: border-box;
             width: 340px;
-            min-height: 52px;
-            padding: 16px 0;
-            border-radius: 4px;
-            box-shadow: ${DT.T_SHADOW_BLOCK_DEFAULT_MD};
-            background: ${DT.T_CARD_COLOR_BG_DEFAULT};
+            min-height: 56px;
+            padding: 15px 0;
+            border: 1px solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            background: ${DT.T_COLOR_BG_DEFAULT_BRIGHT};
+            box-shadow: ${DT.T_SHADOW_BLOCK_DEFAULT_LG};
             position: relative;
 
             .${titleCls}+.${contentCls} {
@@ -140,10 +175,12 @@ export const MessageContentWrap = styled(TransitionGroup)`
         animation-fill-mode: both;
     }
     .${animationName}-enter, .${animationName}-appear {
-        animation-name: ${fadeIn};
+        animation-name: ${slideInRight};
+        animation-timing-function: cubic-bezier(0.3, 1.3, 0.3, 1);
     }
     .${animationName}-leave, .${animationName}-exit {
-        animation-name: ${fadeOut};
+        animation-name: ${slideUpOut};
+        animation-timing-function: cubic-bezier(0.34, 0.69, 0.1, 1);
     }
 
     .${prefixCls} {

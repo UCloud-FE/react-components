@@ -72,7 +72,7 @@ jobs:
       - run: npm run build:dist
       - run: npm run build:lib
       - run: npm run build:ts
-      - run: npm run build:gh-pages
+      # - run: npm run build:gh-pages
       - persist_to_workspace:
           root: ~/react-components
           paths:
@@ -98,14 +98,14 @@ jobs:
           name: Publish package
           command: npm publish
 
-  deploy pages:
-    <<: *container_config
-    steps:
-      - checkout
-      - *attach_workspace
-      - run:
-          name: publish to github pages
-          command: npm run deploy:gh-pages
+  # deploy pages:
+  #   <<: *container_config
+  #   steps:
+  #     - checkout
+  #     - *attach_workspace
+  #     - run:
+  #         name: publish to github pages
+  #         command: npm run deploy:gh-pages
 
 workflows:
   version: 2
@@ -155,14 +155,14 @@ workflows:
               only: /^v.*/
             branches:
               ignore: /.*/
-      - deploy pages:
-          requires:
-            - deploy npm
-          filters:
-            tags:
-              only: /^v.*/
-            branches:
-              ignore: /.*/
+      # - deploy pages:
+      #     requires:
+      #       - deploy npm
+      #     filters:
+      #       tags:
+      #         only: /^v.*/
+      #       branches:
+      #         ignore: /.*/
       - end:
           filters:
             tags:
@@ -173,4 +173,4 @@ workflows:
             - build
             - test lib
             - deploy npm
-            - deploy pages
+            # - deploy pages

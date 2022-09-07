@@ -6,8 +6,9 @@ import Button from 'src/components/Button';
 
 const methods = ['message', 'loading', 'success', 'warning', 'error'];
 const messages = [
-    'This is a message',
-    'This is a very looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong message',
+    {
+        title: 'This is a very looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong message'
+    },
     {
         title: 'Message Title'
     },
@@ -16,22 +17,11 @@ const messages = [
         children: 'This is a very looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong message'
     },
     {
-        title: 'Message Title',
-        footer: (
-            <div>
-                <Button>Button One</Button>
-                <Button>Button Two</Button>
-            </div>
-        )
+        title: 'Message Title'
     },
     {
         title: 'Message Title',
-        children: 'This is a very looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong message',
-        footer: (
-            <div>
-                <Button>Button One</Button>
-            </div>
-        )
+        children: 'This is a very looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong message'
     }
 ];
 const random = arr => {

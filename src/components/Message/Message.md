@@ -24,7 +24,7 @@
 ```js {"codepath": "message.jsx"}
 ```
 
-#### title - 标题
+#### title - 标题和内容
 
 ```js {"codepath": "title.jsx"}
 ```

@@ -41,7 +41,7 @@ const Demo = () => {
                     <Button
                         style={{ width: 150 }}
                         onClick={() =>
-                            Message[type](<div>this is a message</div>, undefined, () => console.log('onClose'))
+                            Message[type]({ title: 'this is a message' }, undefined, () => console.log('onClose'))
                         }
                     >
                         {type}
