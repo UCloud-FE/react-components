@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.14](https://github.com/UCloud-FE/react-components/compare/v1.5.13...v1.5.14) (2022-09-07)
+
+### Bug Fixes
+
+-   **Icon:** fix svg icon name typo ([60c6695](https://github.com/UCloud-FE/react-components/commit/60c669509776d6f4663a0f49d767868c8ec7399d))
+
 ### [1.5.13](https://github.com/UCloud-FE/react-components/compare/v1.5.12...v1.5.13) (2022-09-07)
 
 ### Features
