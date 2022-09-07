@@ -98,6 +98,7 @@ export const TitleWrap = withProps({
         } = props;
 
         return css`
+            margin: 0px;
             padding-right: 36px;
             padding-left: 44px;
             word-break: break-all;
