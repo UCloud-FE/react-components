@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.15](https://github.com/UCloud-FE/react-components/compare/v1.5.14...v1.5.15) (2022-09-07)
+
+### Bug Fixes
+
+-   **Message:** reset title h3 margin ([cad95c9](https://github.com/UCloud-FE/react-components/commit/cad95c95025a52ed5c871b508fc744c774a2a325))
+
 ### [1.5.14](https://github.com/UCloud-FE/react-components/compare/v1.5.13...v1.5.14) (2022-09-07)
 
 ### Bug Fixes
