@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.13](https://github.com/UCloud-FE/react-components/compare/v1.5.12...v1.5.13) (2022-09-07)
+
+### Features
+
+-   **Message:** update styles、icons、demos ([1aee9ac](https://github.com/UCloud-FE/react-components/commit/1aee9acb366566515841a7eb3051ac2c74d58636))
+
 ### [1.5.12](https://github.com/UCloud-FE/react-components/compare/v1.5.11...v1.5.12) (2022-09-01)
 
 ### Bug Fixes
