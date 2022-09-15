@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.16](https://github.com/UCloud-FE/react-components/compare/v1.5.15...v1.5.16) (2022-09-15)
+
+### Bug Fixes
+
+-   **Select:** fix get key from value ([fb6964a](https://github.com/UCloud-FE/react-components/commit/fb6964a70ad8a1f9d600458f0f85d2d21473b682))
+
 ### [1.5.15](https://github.com/UCloud-FE/react-components/compare/v1.5.14...v1.5.15) (2022-09-07)
 
 ### Bug Fixes
