@@ -89,6 +89,10 @@ const groupOptions = {
     SubGroupComponent: Group
 };
 
+const isValidKey = (v: any) => {
+    return typeof v === 'string' || typeof v === 'number';
+};
+
 const groupChildrenAsDataSource = (
     children: ReactNode,
     globalDisabled = false,
@@ -149,7 +153,7 @@ const groupChildrenAsDataSource = (
                                 disabled: globalDisabled || isDisabled,
                                 isFirst,
                                 isLast,
-                                key,
+                                key: isValidKey(key) ? key : (child.key || `${i}`),
                                 children: display
                             })
                         );
@@ -230,9 +234,6 @@ const groupOptionsAsDataSource = <
 ): [Key[], Key[], ReactNode[], SubGroupMap, ChildrenMap] => {
     const subGroupMap: SubGroupMap = new Map();
     const childrenMap: ChildrenMap = new Map();
-    const isValidKey = (v: any) => {
-        return typeof v === 'string' || typeof v === 'number';
-    };
     const group = (options: T[], disabled = false, prefixKey: Key): [Key[], Key[], ReactNode[]] => {
         const validKeys: Key[] = [];
         const disabledKeys: Key[] = [];
