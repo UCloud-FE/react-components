@@ -75,6 +75,7 @@ export const SBadge = sWrap<SBadgeProps, HTMLSpanElement>({
             min-width: 10px;
             padding: 0 5px;
             border-radius: 10px;
+            font-size: 12px;
             text-align: center;
             white-space: nowrap;
             background: ${DT[styleMap.bg]};
