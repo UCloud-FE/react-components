@@ -118,7 +118,7 @@
 ```js {"codepath": "fixed.jsx"}
 ```
 
-#### resizable - 可调表头大小
+#### columnResizable - 可调表头大小
 
 需要在回调中自行控制 column width
 
