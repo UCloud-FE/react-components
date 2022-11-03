@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.17](https://github.com/UCloud-FE/react-components/compare/v1.5.16...v1.5.17) (2022-11-03)
+
+### Bug Fixes
+
+-   **Badge:** fixed font-size ([9eb6797](https://github.com/UCloud-FE/react-components/commit/9eb6797eb6fccf4236357ceab5eac2b703dda490))
+-   **Select:** fix clear input value when clear Selector items ([22c2118](https://github.com/UCloud-FE/react-components/commit/22c2118cb6e22baeafb3c8c61dae585a436ffc95))
+
 ### [1.5.16](https://github.com/UCloud-FE/react-components/compare/v1.5.15...v1.5.16) (2022-09-15)
 
 ### Bug Fixes
