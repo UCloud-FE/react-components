@@ -967,11 +967,12 @@ const MultipleListSelector = React.memo(function MultipleSelector(props: Selecto
             e.preventDefault();
             if (!disabled) {
                 onChange?.([]);
+                setSearchValue('');
                 // inputRef.current?.focus();
                 setVisible(false);
             }
         },
-        [disabled, onChange, setVisible]
+        [disabled, onChange, setVisible, setSearchValue]
     );
 
     const empty = useMemo(() => !(value as Key[])?.length, [value]);
@@ -1106,11 +1107,12 @@ const MultipleSelector = React.memo(function MultipleSelector(props: SelectorPro
             e.preventDefault();
             if (!disabled) {
                 onChange?.([]);
+                setSearchValue('');
                 // inputRef.current?.focus();
                 setVisible(false);
             }
         },
-        [disabled, onChange, setVisible]
+        [disabled, onChange, setVisible, setSearchValue]
     );
 
     const empty = useMemo(() => !(value as Key[])?.length, [value]);
@@ -1237,11 +1239,12 @@ const SingleSelector = React.memo(function SingleSelector({
             e.stopPropagation();
             if (!disabled) {
                 onChange?.(undefined);
+                setSearchValue('');
                 // inputRef.current?.focus();
                 setVisible(false);
             }
         },
-        [disabled, onChange, setVisible]
+        [disabled, onChange, setVisible, setSearchValue]
     );
 
     return (
