@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.19](https://github.com/UCloud-FE/react-components/compare/v1.5.18...v1.5.19) (2023-04-13)
+
+### Features
+
+-   **ThemeProvider:** designTokens add T_THEME ([22972f2](https://github.com/UCloud-FE/react-components/commit/22972f2916ca3865a70b2a62ebfb5117093be591))
+
 ### [1.5.18](https://github.com/UCloud-FE/react-components/compare/v1.5.17...v1.5.18) (2022-11-03)
 
 ### [1.5.17](https://github.com/UCloud-FE/react-components/compare/v1.5.16...v1.5.17) (2022-11-03)
