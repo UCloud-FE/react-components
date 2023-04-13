@@ -2,6 +2,9 @@ import _ from 'lodash';
 
 import designTokens from './designTokens';
 
+// 主题唯一标识
+designTokens['T_THEME'] = 'default';
+
 const defaultSizeTheme = {
     // default font-size
     fontSize: '12px',
