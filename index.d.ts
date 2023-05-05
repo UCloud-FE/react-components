@@ -593,7 +593,7 @@ interface TableContextMenu {
     (row: object, hide: boolean): ReactNode;
 }
 export interface TableProps {
-    pagination?: PaginationProps;
+    pagination?: PaginationProps | null;
     dataSource?: any[];
     columns?: Column[];
     columnPlaceholder?: boolean;
