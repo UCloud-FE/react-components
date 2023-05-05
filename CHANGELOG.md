@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.20](https://github.com/UCloud-FE/react-components/compare/v1.5.19...v1.5.20) (2023-05-05)
+
+### Bug Fixes
+
+-   **Interface:** table pagination can be null ([8304af6](https://github.com/UCloud-FE/react-components/commit/8304af65328723acb27e0e1ed245dd4613ac87e9))
+
 ### [1.5.19](https://github.com/UCloud-FE/react-components/compare/v1.5.18...v1.5.19) (2023-04-13)
 
 ### Features
