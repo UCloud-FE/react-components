@@ -134,7 +134,10 @@ class Demo3 extends React.Component {
     renderItem(item, originErrors) {
         return (
             <div>
-                <ZInput zName={`data.${item.key}.name`} zOptions={{ rules: [{ required: true }] }} />
+                <ZInput
+                    zName={`data.${item.key}.name`}
+                    zOptions={{ rules: [{ required: true }], initialValue: item.name || '' }}
+                />
                 {renderError(originErrors, `data.${item.key}.name`)}
             </div>
         );
