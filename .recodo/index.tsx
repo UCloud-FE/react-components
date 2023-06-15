@@ -46,12 +46,12 @@ mod.config({
         },
         '@ucloud-fe/mod': { js: [] },
         'design-token-editor': {
-            js: 'https://cdn.jsdelivr.net/npm/@ucloud-fe/design-token-editor@0.1.11/dist/design-token-editor.umd.js',
+            js: 'https://cdn.jsdelivr.net/npm/@ucloud-fe/design-token-editor@0.3.7/dist/design-token-editor.umd.js',
             type: 'amd',
             dep: ['react', 'design-token-editor/style']
         },
         'design-token-editor/style': {
-            css: 'https://cdn.jsdelivr.net/npm/@ucloud-fe/design-token-editor@0.1.11/dist/style.css',
+            css: 'https://cdn.jsdelivr.net/npm/@ucloud-fe/design-token-editor@0.3.7/dist/style.css',
             type: 'immediate'
         },
         'design-token-file': {
@@ -81,7 +81,7 @@ const renderDesignTokenEditor = (dom: string) => {
             ReactDOM.render(
                 <Editor
                     onChange={console.log}
-                    token={token}
+                    // token={token}
                     componentDemos={editorComponentDemos}
                     renderComponentDemosWrap={ComponentDemosWrap}
                 />,
