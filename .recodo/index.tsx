@@ -55,7 +55,7 @@ mod.config({
             type: 'immediate'
         },
         'design-token-file': {
-            file: 'https://raw.githubusercontent.com/UCloud-FE/design-tokens/main/default.json',
+            file: 'https://raw.githubusercontent.com/UCloud-FE/design-tokens/main/define/default.json',
             type: 'json'
         }
     }
@@ -81,7 +81,7 @@ const renderDesignTokenEditor = (dom: string) => {
             ReactDOM.render(
                 <Editor
                     onChange={console.log}
-                    // token={token}
+                    token={token}
                     componentDemos={editorComponentDemos}
                     renderComponentDemosWrap={ComponentDemosWrap}
                 />,
