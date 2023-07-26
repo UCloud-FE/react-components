@@ -277,8 +277,11 @@ export const TableWrap = withProps({
                     }
                 }
             }
-            &-row, &-row>td, &-thead, &-thead>tr, &-thead>tr>th{
+            &-row, &-row>td, &-thead{
                 background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
+            }
+            &-thead>tr, &-thead>tr>th{
+                background: ${DT.T_TABLE_HEADER_COLOR_BG_DEFAULT};
             }
             &-row > td {
                 position: relative;
