@@ -263,7 +263,7 @@ export const RadioCardWrap = withProps({})(
                 padding: 8px 16px;
                 line-height: 22px;
                 min-height: 22px;
-                font-weight: bold;
+                font-weight: 600;
                 color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
                 font-size: ${titleFontSize};
                 border-bottom: 1px solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
@@ -285,11 +285,12 @@ export const RadioCardWrap = withProps({})(
             ${checked &&
             css`
                 border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
-                background: ${DT.T_COLOR_BG_DEFAULT_LIGHT};
+                background: ${DT.T_RADIO_CARD_COLOR_BG_ACTIVE};
                 box-shadow: ${DT.T_SHADOW_BUTTON_HOVER};
                 .${cardHeaderCls} {
+                    color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
                     border-color: ${DT.T_COLOR_LINE_PRIMARY_DEFAULT};
-                    background: ${DT.T_COLOR_BG_DEFAULT_LIGHT};
+                    background: ${DT.T_RADIO_CARD_COLOR_BG_ACTIVE};
                 }
             `};
             ${disabled &&
@@ -320,6 +321,7 @@ export const RadioCardWrap = withProps({})(
                     border: 1px solid ${DT.T_COLOR_LINE_PRIMARY_HOVER};
 
                     .${cardHeaderCls} {
+                        color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
                         border-color: ${DT.T_COLOR_LINE_PRIMARY_HOVER};
                     }
                 }

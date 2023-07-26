@@ -64,7 +64,7 @@ export const SwitchWrap = sWrap<{ disabled?: boolean; checked?: boolean; size: S
             width: ${Width[size]};
 
             .${innerCls} {
-                border-radius: 2px;
+                border-radius: ${DT.T_SWITCH_CORNER};
                 box-sizing: border-box;
                 display: inline-flex;
                 align-items: center;
@@ -95,7 +95,7 @@ export const SwitchWrap = sWrap<{ disabled?: boolean; checked?: boolean; size: S
                     display: block;
                     width: 100%;
                     height: 100%;
-                    border-radius: 2px;
+                    border-radius: ${DT.T_SWITCH_CORNER};
                     box-sizing: border-box;
                 }
             }
@@ -127,7 +127,7 @@ export const SwitchWrap = sWrap<{ disabled?: boolean; checked?: boolean; size: S
             }
 
             .${dotCls} {
-                background: ${DT.T_COLOR_TEXT_ERROR};
+                background: ${DT.T_SWITCH_COLOR_BG_DOT_OFF};
             }
 
             ${!disabled &&
@@ -180,7 +180,7 @@ export const SwitchWrap = sWrap<{ disabled?: boolean; checked?: boolean; size: S
                           margin-left: -${BtnSize[size]};
                       }
                       .${dotCls} {
-                          background: ${DT.T_COLOR_TEXT_SUCCESS};
+                          background: ${DT.T_SWITCH_COLOR_BG_DOT_ON};
                       }
 
                       .${offTipCls} {
@@ -203,7 +203,7 @@ export const SwitchWrap = sWrap<{ disabled?: boolean; checked?: boolean; size: S
                     color: ${DT.T_COLOR_TEXT_SYSTEM_WHITE};
                 }
                 .${dotCls} {
-                    background: ${DT.T_COLOR_BG_DISABLED_DARK};
+                    background: ${DT.T_SWITCH_COLOR_BG_DOT_DISABLED};
                 }
             `};
         `;
