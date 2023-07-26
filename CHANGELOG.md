@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/UCloud-FE/react-components/compare/v1.5.20...v1.6.0) (2023-07-26)
+
+### Features
+
+-   **.recodo:** update recode dt editor version ([bb40d98](https://github.com/UCloud-FE/react-components/commit/bb40d9801bb8587bc39aedbd2ca1d21716a17f8d))
+-   **designtokens:** add designtokens and update style ([c333784](https://github.com/UCloud-FE/react-components/commit/c3337845da03b269449aa2b15b792641b2e0df45))
+-   **recodo:** update design tokens reference ([dbc60e2](https://github.com/UCloud-FE/react-components/commit/dbc60e2cb762471d9fed07922404fced9efcc4d0))
+
 ### [1.5.20](https://github.com/UCloud-FE/react-components/compare/v1.5.19...v1.5.20) (2023-05-05)
 
 ### Bug Fixes
