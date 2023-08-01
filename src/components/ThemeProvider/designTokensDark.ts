@@ -1,5 +1,5 @@
 // Do not edit directly
-// Generated with design-token-editor on 2023/7/26 19:41:44
+// Generated with design-token-editor on 2023/8/1 11:19:16
 
 export default {
     // 按钮加载遮罩
@@ -486,7 +486,7 @@ export default {
     // 小正方形的宽度/高度
     T_SQUARE_SM: '24px',
     // 开关/圆点/背景色/禁用
-    T_SWITCH_COLOR_BG_DOT_DISABLED: '#FFF',
+    T_SWITCH_COLOR_BG_DOT_DISABLED: '#535763',
     // 开关/圆点/背景色/关
     T_SWITCH_COLOR_BG_DOT_OFF: '#db3f3f',
     // 开关/圆点/背景色/开
