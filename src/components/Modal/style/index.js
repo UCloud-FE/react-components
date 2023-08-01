@@ -100,11 +100,13 @@ export const ModalWrap = withProps()(
                     top: 0;
                     padding: 16px;
                     margin: 0;
+                    cursor: pointer;
+                    fill: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
+                }
+                &-close-svg {
                     width: 20px;
                     height: 20px;
                     font-size: 20px;
-                    cursor: pointer;
-                    fill: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
                 }
                 &-close-x {
                     display: none;

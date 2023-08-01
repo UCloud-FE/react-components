@@ -144,12 +144,9 @@ class Modal extends Component {
                             {title}
                         </div>,
                         closable && (
-                            <SvgIcon
-                                key="close"
-                                type="cross-circle"
-                                className={`${prefixCls}-close`}
-                                onClick={onClose}
-                            />
+                            <span className={`${prefixCls}-close`} onClick={onClose}>
+                                <SvgIcon key="close" type="cross-circle" className={`${prefixCls}-close-svg`} />
+                            </span>
                         )
                     ]}
                     footer={_.isFunction(footer) ? footer({ locale }) : footer}
