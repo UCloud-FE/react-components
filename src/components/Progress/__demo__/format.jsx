@@ -39,6 +39,13 @@ class Demo extends React.Component {
                 <div className="demo-wrap" style={{ padding: 24 }}>
                     <Progress percent={percent} format={null} />
                 </div>
+
+                <div className="demo-wrap" style={{ padding: 24, width: 100 }}>
+                    <Progress percent={percent} format={v => `${v.toFixed(2)}%`} styleType="circle" />
+                </div>
+                <div className="demo-wrap" style={{ padding: 24, width: 100 }}>
+                    <Progress percent={percent} format={null} styleType="circle" />
+                </div>
             </div>
         );
     }

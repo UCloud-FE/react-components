@@ -29,6 +29,9 @@ class Demo extends React.Component {
                         <Progress percent={40} format={null} style={{ width: 100 }} />
                     </Tooltip>
                 </div>
+                <div className="demo-wrap" style={{ padding: 24 }}>
+                    <Progress percent={40} format={null} style={{ width: 100 }} styleType="circle" />
+                </div>
             </div>
         );
     }
