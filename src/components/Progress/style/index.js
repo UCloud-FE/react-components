@@ -7,11 +7,12 @@ import withProps from 'src/utils/withProps';
 export const Outer = withProps()(
     styled('div')(props => {
         const {
-            theme: { designTokens: DT }
+            theme: { designTokens: DT },
+            strokeWidth
         } = props;
 
         return css`
-            height: 10px;
+            height: ${strokeWidth}px;
             background: ${DT.T_PROGRESS_COLOR_BG_DEFAULT};
             border-radius: 5px;
             overflow: hidden;
@@ -71,4 +72,23 @@ export const TextWrap = styled('span')`
 
 export const EndText = styled('span')`
     float: right;
+`;
+
+export const CircleWrapper = styled('div')`
+    position: relative;
+    line-height: 1;
+    background-color: transparent;
+`;
+
+export const CircleText = styled('div')`
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    white-space: normal;
+    text-align: center;
+    transform: translateY(-50%);
 `;
