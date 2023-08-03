@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/UCloud-FE/react-components/compare/v1.6.0...v1.7.0) (2023-08-03)
+
+### Features
+
+-   **designtoken:** update T_SWITCH_COLOR_BG_DOT_DISABLED ([7a23ceb](https://github.com/UCloud-FE/react-components/commit/7a23cebfce192e123d48041f1c31d2a07363bf39))
+-   **modal:** improve close icon style ([0bd3a6e](https://github.com/UCloud-FE/react-components/commit/0bd3a6e85784200383084109be91a628d0f00dd9))
+-   **progress:** add circle progress ([5afefcb](https://github.com/UCloud-FE/react-components/commit/5afefcb41697f33f1828a1e047b6e43fe61dd80e))
+-   **snapshots:** update snapshot ([c2a17aa](https://github.com/UCloud-FE/react-components/commit/c2a17aad5f27fc2741fb3cb170919cd51f9630f9))
+
 ## [1.6.0](https://github.com/UCloud-FE/react-components/compare/v1.5.20...v1.6.0) (2023-07-26)
 
 ### Features
