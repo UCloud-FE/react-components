@@ -1,4 +1,60 @@
 {
+    "CircleProgress": {
+        "path": "Progress/CircleProgress.jsx",
+        "name": "CircleProgress",
+        "info": {
+            "description": "",
+            "displayName": "CircleProgress",
+            "methods": [],
+            "props": {
+                "percent": {
+                    "type": { "name": "number" },
+                    "required": false,
+                    "description": { "description": "当前百分比", "tags": [] }
+                },
+                "color": {
+                    "type": {
+                        "name": "union",
+                        "value": [
+                            {
+                                "name": "enum",
+                                "value": [
+                                    { "value": "'success'", "computed": false },
+                                    { "value": "'warn'", "computed": false },
+                                    { "value": "'error'", "computed": false }
+                                ]
+                            },
+                            { "name": "string" }
+                        ]
+                    },
+                    "required": false,
+                    "description": { "description": "进度条颜色，内置 success、warn、error", "tags": [] }
+                },
+                "format": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": {
+                        "description": "展示文字的格式化，为 null 时隐藏文字",
+                        "tags": [
+                            { "title": "argument", "description": "格式化的百分比", "type": null, "name": "percent" }
+                        ]
+                    }
+                },
+                "strokeWidth": {
+                    "type": { "name": "number" },
+                    "required": false,
+                    "description": { "description": "进度条粗度", "tags": [] },
+                    "defaultValue": { "value": "10", "computed": false }
+                },
+                "style": {
+                    "type": { "name": "object" },
+                    "required": false,
+                    "description": { "description": "", "tags": [{ "title": "ignore", "description": "样式" }] },
+                    "defaultValue": { "value": "{}", "computed": false }
+                }
+            }
+        }
+    },
     "Progress": {
         "path": "Progress/Progress.jsx",
         "name": "Progress",
@@ -7,6 +63,18 @@
             "displayName": "Progress",
             "methods": [],
             "props": {
+                "styleType": {
+                    "type": {
+                        "name": "enum",
+                        "value": [
+                            { "value": "'line'", "computed": false },
+                            { "value": "'circle'", "computed": false }
+                        ]
+                    },
+                    "required": false,
+                    "description": { "description": "进度条类型，可选 line、circle", "tags": [] },
+                    "defaultValue": { "value": "'line'", "computed": false }
+                },
                 "percent": {
                     "type": { "name": "number" },
                     "required": false,
@@ -41,6 +109,12 @@
                         ]
                     },
                     "defaultValue": { "value": "percent => `${percent}%`", "computed": false }
+                },
+                "strokeWidth": {
+                    "type": { "name": "number" },
+                    "required": false,
+                    "description": { "description": "进度条粗度", "tags": [] },
+                    "defaultValue": { "value": "10", "computed": false }
                 }
             }
         }
