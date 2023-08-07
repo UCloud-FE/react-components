@@ -2,19 +2,18 @@ import React from 'react';
 import Slider from 'src/components/Slider';
 
 // demo start
-
 class Demo extends React.Component {
     render() {
         return (
             <div>
                 <div className="demo-wrap">
-                    <Slider min={0} max={20} defaultValue={3} step={5} />
+                    <Slider min={10} max={20} range defaultValue={[10, 12]} />
                 </div>
                 <div className="demo-wrap">
-                    <Slider min={0} max={20} defaultValue={3} />
+                    <Slider max={20} defaultValue={[2, 10]} range />
                 </div>
                 <div className="demo-wrap">
-                    <Slider min={0} max={20} range defaultValue={[3, 10]} step={5} />
+                    <Slider defaultValue={[20, 50]} range />
                 </div>
             </div>
         );

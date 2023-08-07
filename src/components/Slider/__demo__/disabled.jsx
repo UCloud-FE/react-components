@@ -13,6 +13,9 @@ class Demo extends React.Component {
                 <div className="demo-wrap">
                     <Slider min={0} max={20} defaultValue={3} />
                 </div>
+                <div className="demo-wrap">
+                    <Slider min={0} max={20} range defaultValue={[3, 10]} disabled />
+                </div>
             </div>
         );
     }

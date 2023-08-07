@@ -111,15 +111,21 @@
             ],
             "props": {
                 "value": {
-                    "type": { "name": "number" },
+                    "type": { "name": "custom", "raw": "PropTypes.number | PropTypes.arrayOf(PropTypes.number)" },
                     "required": false,
                     "description": { "description": "值，受控", "tags": [] }
                 },
                 "defaultValue": {
-                    "type": { "name": "number" },
+                    "type": { "name": "custom", "raw": "PropTypes.number | PropTypes.arrayOf(PropTypes.number)" },
                     "required": false,
                     "description": { "description": "默认值，非受控", "tags": [] },
                     "defaultValue": { "value": "0", "computed": false }
+                },
+                "range": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "是否为双滑块模式", "tags": [] },
+                    "defaultValue": { "value": "false", "computed": false }
                 },
                 "onChange": {
                     "type": { "name": "func" },
