@@ -130,4 +130,49 @@ describe('Table', () => {
         expect(onRowSelect).toHaveBeenCalledTimes(++onRowSelectTimes);
         expect(onRowSelect).toHaveBeenLastCalledWith(['5']);
     });
+    test('defaultExpandAllRows', () => {
+        const onExpand = jest.fn();
+        let onExpandTimes = 0;
+
+        class Demo extends React.Component {
+            render() {
+                const dataSource = new Array(100).fill(null).map((v, i) => ({
+                    index: `index-${i}`,
+                    i
+                }));
+                const columns = new Array(5).fill(null).map((v, i) => ({
+                    title: `title-${i}`,
+                    key: `title-${i}`,
+                    width: 200,
+                    render: record => <span>content {record.index}</span>
+                }));
+                return (
+                    <div>
+                        <div className="demo-wrap">
+                            <Table
+                                defaultExpandAllRows
+                                expandedRowRender={record => <p>this is the expandedRow of {record.key}</p>}
+                                onExpand={onExpand}
+                                dataSource={dataSource}
+                                columns={columns}
+                                {...this.props}
+                            />
+                        </div>
+                    </div>
+                );
+            }
+        }
+
+        const wrapper = mount(<Demo />);
+
+        expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-table-row-expanded').length).toBe(10);
+        expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-table-row-collapsed').length).toBe(0);
+
+        wrapper.find('.uc-fe-table-tbody span.uc-fe-table-row-expand-icon').at(5).simulate('click');
+
+        expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-table-row-expanded').length).toBe(10);
+        expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-table-row-collapsed').length).toBe(0);
+
+        expect(onExpand).toHaveBeenCalledTimes(++onExpandTimes);
+    });
 });

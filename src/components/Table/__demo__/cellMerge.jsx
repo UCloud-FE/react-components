@@ -94,8 +94,13 @@ class Demo extends React.Component {
             }
         ];
         return (
-            <div className="demo-wrap">
-                <Table dataSource={dataSource} columns={columns} />
+            <div>
+                <div className="demo-wrap">
+                    <Table dataSource={dataSource} columns={columns} />
+                </div>
+                <div className="demo-wrap">
+                    <Table dataSource={[{ key: 0, 'index-1': 1 }, undefined]} columns={columns} />
+                </div>
             </div>
         );
     }

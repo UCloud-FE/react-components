@@ -34,8 +34,8 @@ class ExpandableTable extends React.Component {
         defaultExpandedRowKeys: [],
         childrenColumnName: 'children',
         indentSize: 15,
-        onExpand() {},
-        onExpandedRowsChange() {}
+        onExpand: () => {},
+        onExpandedRowsChange: () => {}
     };
 
     constructor(props) {
@@ -88,7 +88,6 @@ class ExpandableTable extends React.Component {
 
         const { onExpandedRowsChange, onExpand } = this.props;
         let { expandedRowKeys } = this.store.getState();
-
         if (expanded) {
             // row was expanded
             expandedRowKeys = [...expandedRowKeys, rowKey];
@@ -180,7 +179,7 @@ class ExpandableTable extends React.Component {
 
     renderRows = (renderRows, rows, record, index, indent, parentKey, ancestorKeys) => {
         const { expandedRowClassName, expandedRowRender, childrenColumnName } = this.props;
-        const childrenData = record[childrenColumnName];
+        const childrenData = record && record[childrenColumnName];
         const nextAncestorKeys = [...ancestorKeys, parentKey];
         const nextIndent = indent + 1;
 
@@ -204,7 +203,7 @@ class ExpandableTable extends React.Component {
 
     render() {
         const { data, childrenColumnName, children } = this.props;
-        const needIndentSpaced = data.some(record => record[childrenColumnName]);
+        const needIndentSpaced = data.some(record => record && record[childrenColumnName]);
 
         return children({
             props: this.props,
