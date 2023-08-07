@@ -558,7 +558,7 @@ class Table extends Component {
         };
         const loop = array => {
             array.forEach(record => {
-                if (record[childrenName]) {
+                if (record && record[childrenName]) {
                     const newRecord = { ...record };
                     delete newRecord[childrenName];
                     push(newRecord);
@@ -606,7 +606,7 @@ class Table extends Component {
                 }
             } = columnInfo;
             return _.filter(dataSource, record => {
-                return handleFilter(record[dataIndex], record, value, multiple);
+                return handleFilter(record && record[dataIndex], record, value, multiple);
             });
         };
         if (!doNotHandleCondition && !_.isEmpty(filters)) {
@@ -675,7 +675,7 @@ class Table extends Component {
     };
     getRowKey = (record, index) => {
         const rowKey = this.props.rowKey;
-        const key = typeof rowKey === 'function' ? rowKey(record, index) : record[rowKey];
+        const key = typeof rowKey === 'function' ? rowKey(record, index) : record && record[rowKey];
         return key === undefined ? index : key;
     };
     getColumnKey = (column = {}, index) => {
@@ -1153,6 +1153,7 @@ class Table extends Component {
                         >
                             <PopupContainer ref={this.savePopupContainer} />
                             <RcTable
+                                defaultExpandAllRows={defaultExpandAllRows}
                                 {...defaultExpandAllRowsProps}
                                 onExpand={this.onExpandHandler}
                                 {...rest}

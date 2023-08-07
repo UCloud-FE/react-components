@@ -37,7 +37,7 @@ export default class TableCell extends React.Component {
         let colSpan;
         let rowSpan;
 
-        if (render) {
+        if (render && record) {
             text = render(text, record, index);
             if (isInvalidRenderCellText(text)) {
                 tdProps = text.props || tdProps;

@@ -57,7 +57,6 @@ class ExpandableRow extends React.Component {
 
     renderExpandIcon = () => {
         const { prefixCls, expanded, record, needIndentSpaced } = this.props;
-
         return (
             <ExpandIcon
                 expandable={this.expandable}
@@ -85,10 +84,9 @@ class ExpandableRow extends React.Component {
 
     render() {
         const { childrenColumnName, expandedRowRender, indentSize, record, fixed } = this.props;
-
         this.expandIconAsCell = fixed !== 'right' ? this.props.expandIconAsCell : false;
         this.expandIconColumnIndex = fixed !== 'right' ? this.props.expandIconColumnIndex : -1;
-        const childrenData = record[childrenColumnName];
+        const childrenData = record && record[childrenColumnName];
         this.expandable = !!(childrenData || expandedRowRender);
 
         const expandableRowProps = {
