@@ -1399,7 +1399,7 @@ const Select = ({
         return hasSubGroup;
     }, [dataSource]);
     // 多层数据/搜索且自定义 selector/自定义渲染内容时，无法兼容，回滚到老版本
-    const [v1] = useState(() => hasSubGroup || !!(search && (renderContent || renderSelector)));
+    const [v1] = useState(() => hasSubGroup || !!(search && renderSelector));
     const handleOnChange = useCallback(
         (v: Key | Key[] | undefined) => {
             onChange(v);
