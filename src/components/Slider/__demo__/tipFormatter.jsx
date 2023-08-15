@@ -16,6 +16,12 @@ class Demo extends React.Component {
                 <div className="demo-wrap">
                     <Slider min={0} max={20} defaultValue={10} tipFormatter={this.renderRedTip} />
                 </div>
+                <div className="demo-wrap">
+                    <Slider min={0} max={20} range defaultValue={[3, 10]} tipFormatter={null} />
+                </div>
+                <div className="demo-wrap">
+                    <Slider min={0} max={20} range defaultValue={[3, 10]} tipFormatter={this.renderRedTip} />
+                </div>
             </div>
         );
     }

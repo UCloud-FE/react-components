@@ -12,6 +12,7 @@ import { prefixCls, SliderWrap, RcSliderWrap } from './style';
 import LOCALE from './locale/zh_CN';
 
 const Handle = RcSlider.Handle;
+const Range = RcSlider.Range;
 
 const Size = ['sm', 'md', 'lg'];
 
@@ -57,9 +58,11 @@ const sliderSplit = 300;
 class Slider extends Component {
     static propTypes = {
         /** 值，受控 */
-        value: PropTypes.number,
+        value: PropTypes.number | PropTypes.arrayOf(PropTypes.number),
         /** 默认值，非受控 */
-        defaultValue: PropTypes.number,
+        defaultValue: PropTypes.number | PropTypes.arrayOf(PropTypes.number),
+        /** 是否为双滑块模式 */
+        range: PropTypes.bool,
         /** 修改回调 */
         onChange: PropTypes.func,
         /** 拖拽结束、输入回车、输入失焦、数字输入框上下按钮等时触发 */
@@ -105,6 +108,7 @@ class Slider extends Component {
         onChange: () => {},
         onLastChange: () => {},
         defaultValue: 0,
+        range: false,
         step: 1,
         size: 'md',
         min: 0,
@@ -207,14 +211,14 @@ class Slider extends Component {
         if (_.isEmpty(_marks)) {
             return null;
         }
-        const { max } = props;
+        const { max = 100, range } = props;
         const marks = {};
         let baseRatio = 0;
         _.each(_marks, _mark => {
             if (_mark.label == null) {
                 return;
             }
-            const value = ((baseRatio += _mark.ratio) / 100) * sliderSplit;
+            const value = ((baseRatio += _mark.ratio) / 100) * (range ? max : sliderSplit);
             const mark = {
                 label: _mark.label,
                 style: {
@@ -263,7 +267,8 @@ class Slider extends Component {
         });
     };
     onSliderChange = (v, latest) => {
-        const value = this.translateSliderValueToValue(v);
+        const { range } = this.props;
+        const value = range ? v : this.translateSliderValueToValue(v);
         this.handleChange(value, latest);
     };
     translateSliderValueToValue = v => {
@@ -428,6 +433,7 @@ class Slider extends Component {
         const {
             value,
             defaultValue,
+            range,
             onChange,
             className,
             style,
@@ -473,6 +479,32 @@ class Slider extends Component {
             computeValidNumber: this.translateNumberInputValueToValue
         };
         const isNumberInputValid = numberInputValue + '' === value + '';
+        if (range) {
+            return (
+                <SliderWrap disabled={disabled} style={style} className={className} size={size}>
+                    <RcSliderWrap>
+                        <Range
+                            min={min}
+                            max={max}
+                            defaultValue={defaultValue}
+                            value={value}
+                            step={step}
+                            prefixCls={prefixCls}
+                            marks={marksForSlider || {}}
+                            handle={handleProps =>
+                                handle({
+                                    ...handleProps,
+                                    // value,
+                                    tipFormatter
+                                })
+                            }
+                            {...sliderProps}
+                            {...sharingProps}
+                        />
+                    </RcSliderWrap>
+                </SliderWrap>
+            );
+        }
         return (
             <SliderWrap disabled={disabled} style={style} className={className} size={size}>
                 <RcSliderWrap>
