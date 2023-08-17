@@ -144,8 +144,8 @@ class Modal extends Component {
                             {title}
                         </div>,
                         closable && (
-                            <span className={`${prefixCls}-close`} onClick={onClose}>
-                                <SvgIcon key="close" type="cross-circle" className={`${prefixCls}-close-svg`} />
+                            <span key="close" className={`${prefixCls}-close`} onClick={onClose}>
+                                <SvgIcon type="cross-circle" className={`${prefixCls}-close-svg`} />
                             </span>
                         )
                     ]}
