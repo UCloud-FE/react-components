@@ -36,7 +36,8 @@ module.exports = [
             },
             {
                 name: 'Combine'
-            }
+            },
+            { name: 'Layout', components: ['Layout', 'Sider'] }
         ]
     },
     {
