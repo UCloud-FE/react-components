@@ -33,7 +33,7 @@ const footerStyle = {
 };
 
 const Demo = () => (
-    <Layout hasSider>
+    <Layout>
         <Layout.Sider style={siderStyle}>Sider</Layout.Sider>
         <Layout>
             <Layout.Header style={headerStyle}>Header</Layout.Header>

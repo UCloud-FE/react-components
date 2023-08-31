@@ -11,8 +11,41 @@ export interface LayoutProps {
     hasSider?: boolean;
 }
 
+export interface LayoutContextProps {
+    siderHook: {
+        addSider: (id: string) => void;
+        removeSider: (id: string) => void;
+    };
+}
+export const LayoutContext = React.createContext<LayoutContextProps>({
+    siderHook: {
+        addSider: () => null,
+        removeSider: () => null
+    }
+});
+
 const Layout = ({ hasSider, ...rest }: LayoutProps & Override<HTMLAttributes<HTMLDivElement>, LayoutProps>) => {
-    return <LayoutWrap {...rest} className={classnames(prefixCls, rest.className, hasSider && prefixClsHasSider)} />;
+    const [siders, setSiders] = React.useState<string[]>([]);
+
+    const contextValue = React.useMemo(
+        () => ({
+            siderHook: {
+                addSider: (id: string) => {
+                    setSiders(prev => [...prev, id]);
+                },
+                removeSider: (id: string) => {
+                    setSiders(prev => prev.filter(currentId => currentId !== id));
+                }
+            }
+        }),
+        []
+    );
+
+    return (
+        <LayoutContext.Provider value={contextValue}>
+            <LayoutWrap {...rest} className={classnames(prefixCls, rest.className, (hasSider || !!siders.length) && prefixClsHasSider)} />
+        </LayoutContext.Provider>
+    );
 };
 
 const MemoLayout = React.memo(Layout);
