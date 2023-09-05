@@ -1,0 +1,7 @@
+{
+    "Nav": {
+        "path": "Nav/Nav.md",
+        "name": "Nav",
+        "info": "### 说明\n\n这是 Nav 基础导航\n\n### 演示\n\n#### 只有一级目录\n\n```js {\"codepath\": \"one-level.jsx\"}\n```\n\n#### 一级目录 + 顶部元素 TopExtraItem\n\n```js {\"codepath\": \"one-level-with-switch.jsx\"}\n```\n\n#### 一/二级目录 + 切换应用 + 分类标题\n\n```js {\"codepath\": \"all-comp.jsx\"}\n```\n\n#### 受控模式\n\n```js {\"codepath\": \"default-open-keys.jsx\"}\n```\n\n#### 垂直展开\n\nmode 为 vertical 的垂直展开模式，labelType 为 small 的小标题还是向下展开，其余正常大小的标题垂直展开\n\n```js {\"codepath\": \"vertical.jsx\"}\n```\n\n#### 折叠目录\n\n折叠目录时，过滤一级的垂直展开模式，labelType 为 small 的小标题\n\n```js {\"codepath\": \"collapsed.jsx\"}\n```\n\n#### ItemType\n\ntype ItemType = MenuItemType | SubMenuType\n\n##### MenuItemType\n\n| 参数      | 说明     | 类型                |\n| --------- | -------- | ------------------- |\n| icon      | 菜单图标 | React.ReactNode     |\n| title     | 标题     | string              |\n| labelType | 标题类型 | 'normal' ｜ 'small' |\n| key       | 唯一标识 | string              |\n\n##### SubMenuType\n\n| 参数      | 说明     | 类型                |\n| --------- | -------- | ------------------- |\n| icon      | 菜单图标 | React.ReactNode     |\n| title     | 标题     | string              |\n| labelType | 标题类型 | 'normal' ｜ 'small' |\n| key       | 唯一标识 | string              |\n| children  | 子菜单项 | ItemType[]          |\n"
+    }
+}

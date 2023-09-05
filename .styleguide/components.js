@@ -120,6 +120,10 @@ module.exports = [
             },
             {
                 name: 'EditableList'
+            },
+            {
+                name: 'Nav',
+                components: ['Nav']
             }
         ]
     },

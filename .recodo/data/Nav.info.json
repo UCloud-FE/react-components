@@ -1,0 +1,248 @@
+{
+    "Nav": {
+        "path": "Nav/Nav.tsx",
+        "name": "Nav",
+        "info": {
+            "description": "",
+            "displayName": "Nav",
+            "methods": [],
+            "props": {
+                "mode": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "'vertical' | 'inline'",
+                        "elements": [
+                            { "name": "literal", "value": "'vertical'" },
+                            { "name": "literal", "value": "'inline'" }
+                        ]
+                    },
+                    "description": { "description": "菜单类型，垂直或内嵌，默认内嵌", "tags": [] },
+                    "defaultValue": { "value": "'inline'", "computed": false }
+                },
+                "TopExtraItem": {
+                    "required": false,
+                    "tsType": { "name": "ReactNode" },
+                    "description": { "description": "顶部展示元素", "tags": [] }
+                },
+                "items": {
+                    "required": false,
+                    "tsType": { "name": "Array", "elements": [{ "name": "ItemType" }], "raw": "ItemType[]" },
+                    "description": ""
+                },
+                "inlineCollapsed": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "inline 时菜单是否收起状态", "tags": [] }
+                },
+                "inlineIndent": {
+                    "required": false,
+                    "tsType": { "name": "number" },
+                    "description": { "description": "每一级缩进量", "tags": [] },
+                    "defaultValue": { "value": "32", "computed": false }
+                },
+                "defaultOpenKeys": {
+                    "required": false,
+                    "tsType": { "name": "Array", "elements": [{ "name": "string" }], "raw": "string[]" },
+                    "description": { "description": "初始展开的 SubMenu 菜单项 key 数组", "tags": [] }
+                },
+                "defaultSelectedKeys": {
+                    "required": false,
+                    "tsType": { "name": "Array", "elements": [{ "name": "string" }], "raw": "string[]" },
+                    "description": { "description": "初始选中的菜单项 key 数组", "tags": [] }
+                },
+                "onOpenChange": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(openKeys: string[]) => void",
+                        "signature": {
+                            "arguments": [
+                                {
+                                    "name": "openKeys",
+                                    "type": { "name": "Array", "elements": [{ "name": "string" }], "raw": "string[]" }
+                                }
+                            ],
+                            "return": { "name": "void" }
+                        }
+                    },
+                    "description": { "description": "SubMenu 展开/关闭的回调", "tags": [] }
+                }
+            },
+            "composes": ["Omit"]
+        }
+    },
+    "NavItem": {
+        "path": "Nav/NavItem.tsx",
+        "name": "NavItem",
+        "info": {
+            "description": "",
+            "displayName": "NavItem",
+            "methods": [
+                { "name": "renderItemChildren", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                {
+                    "name": "renderItem",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "contextProps", "type": { "name": "NavContextProps", "alias": "NavContextProps" } }
+                    ],
+                    "returns": null
+                },
+                {
+                    "name": "renderPopverMenu",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        {
+                            "name": "items",
+                            "type": {
+                                "name": "Array",
+                                "elements": [{ "name": "unknown" }],
+                                "raw": "(ItemType | ItemType[])[]"
+                            }
+                        }
+                    ],
+                    "returns": null
+                },
+                {
+                    "name": "renderVerticalItem",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        {
+                            "name": "{ inlineCollapsed, selectedKeys }: Partial<NavContextProps>",
+                            "type": {
+                                "name": "Partial",
+                                "elements": [{ "name": "NavContextProps" }],
+                                "raw": "Partial<NavContextProps>",
+                                "alias": "Partial"
+                            }
+                        }
+                    ],
+                    "returns": null
+                }
+            ],
+            "props": {
+                "marginLeft": { "required": true, "tsType": { "name": "number" }, "description": "" },
+                "icon": {
+                    "required": false,
+                    "tsType": { "name": "ReactReactNode", "raw": "React.ReactNode" },
+                    "description": ""
+                },
+                "danger": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                "title": {
+                    "required": false,
+                    "tsType": { "name": "ReactReactNode", "raw": "React.ReactNode" },
+                    "description": ""
+                },
+                "type": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "'normal' | 'small'",
+                        "elements": [
+                            { "name": "literal", "value": "'normal'" },
+                            { "name": "literal", "value": "'small'" }
+                        ]
+                    },
+                    "description": ""
+                },
+                "verticalChildren": {
+                    "required": false,
+                    "tsType": { "name": "Array", "elements": [{ "name": "ItemType" }], "raw": "ItemType[]" },
+                    "description": { "description": "垂直展开模式", "tags": [] }
+                }
+            },
+            "composes": ["Omit"]
+        }
+    },
+    "SubMenu": {
+        "path": "Nav/SubMenu.tsx",
+        "name": "SubMenu",
+        "info": {
+            "description": "",
+            "displayName": "SubMenu",
+            "methods": [],
+            "props": {
+                "marginLeft": { "required": true, "tsType": { "name": "number" }, "description": "" },
+                "className": { "required": false, "tsType": { "name": "string" }, "description": "" },
+                "disabled": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
+                "level": { "required": false, "tsType": { "name": "number" }, "description": "" },
+                "title": {
+                    "required": false,
+                    "tsType": { "name": "ReactReactNode", "raw": "React.ReactNode" },
+                    "description": ""
+                },
+                "icon": {
+                    "required": false,
+                    "tsType": { "name": "ReactReactNode", "raw": "React.ReactNode" },
+                    "description": ""
+                },
+                "style": {
+                    "required": false,
+                    "tsType": { "name": "ReactCSSProperties", "raw": "React.CSSProperties" },
+                    "description": ""
+                },
+                "onTitleClick": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(e: TitleEventEntity) => void",
+                        "signature": {
+                            "arguments": [{ "name": "e", "type": { "name": "TitleEventEntity" } }],
+                            "return": { "name": "void" }
+                        }
+                    },
+                    "description": ""
+                },
+                "onTitleMouseEnter": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(e: TitleEventEntity) => void",
+                        "signature": {
+                            "arguments": [{ "name": "e", "type": { "name": "TitleEventEntity" } }],
+                            "return": { "name": "void" }
+                        }
+                    },
+                    "description": ""
+                },
+                "onTitleMouseLeave": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(e: TitleEventEntity) => void",
+                        "signature": {
+                            "arguments": [{ "name": "e", "type": { "name": "TitleEventEntity" } }],
+                            "return": { "name": "void" }
+                        }
+                    },
+                    "description": ""
+                },
+                "type": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "'normal' | 'small'",
+                        "elements": [
+                            { "name": "literal", "value": "'normal'" },
+                            { "name": "literal", "value": "'small'" }
+                        ]
+                    },
+                    "description": ""
+                },
+                "popupClassName": { "required": false, "tsType": { "name": "string" }, "description": "" },
+                "children": {
+                    "required": false,
+                    "tsType": { "name": "ReactReactNode", "raw": "React.ReactNode" },
+                    "description": ""
+                }
+            }
+        }
+    }
+}
