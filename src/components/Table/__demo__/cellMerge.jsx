@@ -21,9 +21,10 @@ class Demo extends React.Component {
                 colSpan: 2,
                 align: 'center',
                 key: 'index-0',
-                render: (text, { key }) => {
+                render: (text, record) => {
                     let rowSpan = 0;
-                    if (key % 2 === 0) {
+                    const { key } = record || {};
+                    if (key && key % 2 === 0) {
                         rowSpan = 2;
                     }
                     return {
@@ -55,7 +56,8 @@ class Demo extends React.Component {
                 key: 'index-3',
                 width: 100,
                 align: 'center',
-                render: (text, { key }) => {
+                render: (text, record) => {
+                    const { key } = record || {};
                     if ((key + 1) % 5 === 0) {
                         return {
                             children: text,
@@ -73,7 +75,8 @@ class Demo extends React.Component {
                 key: 'index-4',
                 width: 100,
                 align: 'center',
-                render: (text, { key }) => {
+                render: (text, record) => {
+                    const { key } = record || {};
                     if ((key + 1) % 5 === 0) {
                         return {
                             children: text,
