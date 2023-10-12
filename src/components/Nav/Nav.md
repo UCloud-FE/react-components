@@ -24,9 +24,11 @@
 ```js {"codepath": "default-open-keys.jsx"}
 ```
 
-#### 垂直展开
+#### 垂直展开 + 路由跳转
 
 mode 为 vertical 的垂直展开模式，labelType 为 small 的小标题还是向下展开，其余正常大小的标题垂直展开
+
+结合 react-router 使用时可以用 subMenuItemRender 和 menuItemRender 方法
 
 ```js {"codepath": "vertical.jsx"}
 ```

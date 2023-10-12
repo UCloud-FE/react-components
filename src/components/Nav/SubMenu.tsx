@@ -16,7 +16,9 @@ function SubMenu(props: SubMenuProps) {
 
     if (!icon) {
         titleWarpNode = (
-            <span className={prefixClsTitleText}>{subMenuItemRender ? subMenuItemRender(props, title) : title}</span>
+            <span className={prefixClsTitleText}>
+                {subMenuItemRender ? subMenuItemRender(props, <>{title}</>) : title}
+            </span>
         );
     } else {
         const dom = (

@@ -8,7 +8,7 @@ import Menu from 'src/components/Menu';
 
 import { prefixClsMenuItem, prefixClsTitleContent, prefixClsTitleText, NavPopWrap } from './style';
 import type { NavContextProps } from './NavContext';
-import { ItemType, NavItemProps } from './type';
+import { ItemType, NavItemProps, SubMenuProps } from './type';
 import SubMenu from './SubMenu';
 import NavContext from './NavContext';
 import { getTreeAllKeys } from './util';
@@ -16,7 +16,6 @@ import { getTreeAllKeys } from './util';
 export default class NavItem extends React.Component<NavItemProps> {
     renderItemChildren() {
         const { children } = this.props;
-
         const wrapNode = <span className={prefixClsTitleText}>{children}</span>;
 
         return wrapNode;
@@ -62,28 +61,57 @@ export default class NavItem extends React.Component<NavItemProps> {
         return returnNode;
     };
 
-    renderPopverMenu = (items: (ItemType | ItemType[])[]) => {
+    renderPopverMenu = (
+        items: (ItemType | ItemType[])[],
+        subMenuItemRender?: (itemProps: SubMenuProps, dom: JSX.Element) => React.ReactNode,
+        menuItemRender?: (itemProps: NavItemProps, dom: JSX.Element) => React.ReactNode
+    ) => {
         return items.map(i => {
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            const { children, label, key } = i as any;
+            const { children, label, key } = i as ItemType;
             if (children) {
                 return (
-                    <Menu.SubMenu title={label} key={key} styleType="popover">
-                        {this.renderPopverMenu(children)}
+                    <Menu.SubMenu
+                        title={subMenuItemRender ? subMenuItemRender({ ...i, marginLeft: 0 }, <>{label}</>) : label}
+                        key={key}
+                        styleType="popover"
+                    >
+                        {this.renderPopverMenu(children, subMenuItemRender, menuItemRender)}
                     </Menu.SubMenu>
                 );
             }
-            return <Menu.Item key={key}>{label}</Menu.Item>;
+            return (
+                <Menu.Item key={key}>
+                    {menuItemRender ? menuItemRender({ ...i, marginLeft: 0 }, <>{label}</>) : label}
+                </Menu.Item>
+            );
         });
     };
 
     // 垂直菜单项
-    renderVerticalItem = ({ inlineCollapsed, selectedKeys }: Partial<NavContextProps>) => {
-        const { className, type } = this.props;
+    renderVerticalItem = ({
+        inlineCollapsed,
+        selectedKeys,
+        subMenuItemRender,
+        menuItemRender
+    }: Partial<NavContextProps>) => {
+        const { className, type, children } = this.props;
         const { title, icon, verticalChildren, marginLeft, ...rest } = this.props;
 
         const subKeys = getTreeAllKeys([], verticalChildren || []).map(item => item.toString());
         const intersectKeys = _.intersection(subKeys, selectedKeys);
+
+        const dom = (
+            <>
+                {React.isValidElement(icon) &&
+                    React.cloneElement(icon, {
+                        className: classnames(
+                            React.isValidElement(icon) ? icon.props?.className : '',
+                            `${prefixClsMenuItem}-icon`
+                        )
+                    })}
+                {this.renderItemChildren()}
+            </>
+        );
 
         return (
             <Popover
@@ -103,14 +131,11 @@ export default class NavItem extends React.Component<NavItemProps> {
                     title={typeof title === 'string' ? title : undefined}
                 >
                     <div className={prefixClsTitleContent}>
-                        {React.isValidElement(icon) &&
-                            React.cloneElement(icon, {
-                                className: classnames(
-                                    React.isValidElement(icon) ? icon.props?.className : '',
-                                    `${prefixClsMenuItem}-icon`
-                                )
-                            })}
-                        {this.renderItemChildren()}
+                        {children ? (
+                            <>{subMenuItemRender ? subMenuItemRender(this.props, dom) : dom}</>
+                        ) : (
+                            <>{menuItemRender ? menuItemRender(this.props, dom) : dom}</>
+                        )}
                     </div>
                 </Item>
             </Popover>
@@ -216,10 +241,19 @@ const PopMenu = ({
     renderPopverMenu,
     verticalChildren
 }: {
-    renderPopverMenu: (items: (ItemType | ItemType[])[]) => JSX.Element[];
+    renderPopverMenu: (
+        items: (ItemType | ItemType[])[],
+        subMenuItemRender?: (itemProps: SubMenuProps, dom: JSX.Element) => React.ReactNode,
+        menuItemRender?: (itemProps: NavItemProps, dom: JSX.Element) => React.ReactNode
+    ) => JSX.Element[];
     verticalChildren?: ItemType[];
 }) => {
-    const { SetSelectedKeys: SetNavSelectedKeys, selectedKeys: navSelectedKeys } = React.useContext(NavContext);
+    const {
+        SetSelectedKeys: SetNavSelectedKeys,
+        selectedKeys: navSelectedKeys,
+        subMenuItemRender,
+        menuItemRender
+    } = React.useContext(NavContext);
     const [menuSelectedKeys, setMenuSelectedKeys] = React.useState([] as string[]);
 
     React.useEffect(() => {
@@ -236,7 +270,7 @@ const PopMenu = ({
                     SetNavSelectedKeys?.(key as string[]);
                 }}
             >
-                {renderPopverMenu(verticalChildren || [])}
+                {renderPopverMenu(verticalChildren || [], subMenuItemRender, menuItemRender)}
             </Menu>
         </NavPopWrap>
     );

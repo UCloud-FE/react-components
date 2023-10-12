@@ -137,6 +137,38 @@
                                 "elements": [{ "name": "unknown" }],
                                 "raw": "(ItemType | ItemType[])[]"
                             }
+                        },
+                        {
+                            "name": "subMenuItemRender",
+                            "optional": true,
+                            "type": {
+                                "name": "signature",
+                                "type": "function",
+                                "raw": "(itemProps: SubMenuProps, dom: JSX.Element) => React.ReactNode",
+                                "signature": {
+                                    "arguments": [
+                                        { "name": "itemProps", "type": { "name": "SubMenuProps" } },
+                                        { "name": "dom", "type": { "name": "JSX.Element" } }
+                                    ],
+                                    "return": { "name": "ReactReactNode", "raw": "React.ReactNode" }
+                                }
+                            }
+                        },
+                        {
+                            "name": "menuItemRender",
+                            "optional": true,
+                            "type": {
+                                "name": "signature",
+                                "type": "function",
+                                "raw": "(itemProps: NavItemProps, dom: JSX.Element) => React.ReactNode",
+                                "signature": {
+                                    "arguments": [
+                                        { "name": "itemProps", "type": { "name": "NavItemProps" } },
+                                        { "name": "dom", "type": { "name": "JSX.Element" } }
+                                    ],
+                                    "return": { "name": "ReactReactNode", "raw": "React.ReactNode" }
+                                }
+                            }
                         }
                     ],
                     "returns": null
@@ -147,7 +179,7 @@
                     "modifiers": [],
                     "params": [
                         {
-                            "name": "{ inlineCollapsed, selectedKeys }: Partial<NavContextProps>",
+                            "name": "{\n    inlineCollapsed,\n    selectedKeys,\n    subMenuItemRender,\n    menuItemRender\n}: Partial<NavContextProps>",
                             "type": {
                                 "name": "Partial",
                                 "elements": [{ "name": "NavContextProps" }],

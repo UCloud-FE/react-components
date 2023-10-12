@@ -11,6 +11,28 @@ const Demo = () => (
             // inlineCollapsed={true}
             TopExtraItem={<div style={{ height: 48, lineHeight: '48px', textAlign: 'center' }}> 切换应用区域 </div>}
             defaultSelectedKeys={['4131']}
+            subMenuItemRender={(props, dom) => {
+                return (
+                    <div
+                        onClick={() => {
+                            console.log('click sub menu, props:', props);
+                        }}
+                    >
+                        {dom}
+                    </div>
+                );
+            }}
+            menuItemRender={(props, dom) => {
+                return (
+                    <div
+                        onClick={() => {
+                            console.log('click menu item, props:', props);
+                        }}
+                    >
+                        {dom}
+                    </div>
+                );
+            }}
             items={[
                 {
                     icon: <SvgIcon type="calendar" />,
