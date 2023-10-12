@@ -61,9 +61,6 @@ export const NavWarp = withProps()(
                     }
                 }
             }
-            .${prefixClsTitleText} {
-                // margin-left: 8px;
-            }
 
             .${prefixClsTitleContent} {
                 margin-left: 8px;
