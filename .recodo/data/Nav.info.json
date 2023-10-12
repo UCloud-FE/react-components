@@ -68,6 +68,41 @@
                         }
                     },
                     "description": { "description": "SubMenu 展开/关闭的回调", "tags": [] }
+                },
+                "subMenuItemRender": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(itemProps: SubMenuProps, dom: JSX.Element) => ReactNode",
+                        "signature": {
+                            "arguments": [
+                                { "name": "itemProps", "type": { "name": "SubMenuProps" } },
+                                { "name": "dom", "type": { "name": "JSX.Element" } }
+                            ],
+                            "return": { "name": "ReactNode" }
+                        }
+                    },
+                    "description": { "description": "自定义 SubMenu render，可以获取 items 参数传入的数据", "tags": [] }
+                },
+                "menuItemRender": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(itemProps: NavItemProps, dom: JSX.Element) => ReactNode",
+                        "signature": {
+                            "arguments": [
+                                { "name": "itemProps", "type": { "name": "NavItemProps" } },
+                                { "name": "dom", "type": { "name": "JSX.Element" } }
+                            ],
+                            "return": { "name": "ReactNode" }
+                        }
+                    },
+                    "description": {
+                        "description": "自定义 MenuItem render，可以获取 items 参数传入的数据",
+                        "tags": []
+                    }
                 }
             },
             "composes": ["Omit"]
@@ -123,126 +158,12 @@
                     ],
                     "returns": null
                 }
-            ],
-            "props": {
-                "marginLeft": { "required": true, "tsType": { "name": "number" }, "description": "" },
-                "icon": {
-                    "required": false,
-                    "tsType": { "name": "ReactReactNode", "raw": "React.ReactNode" },
-                    "description": ""
-                },
-                "danger": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
-                "title": {
-                    "required": false,
-                    "tsType": { "name": "ReactReactNode", "raw": "React.ReactNode" },
-                    "description": ""
-                },
-                "type": {
-                    "required": false,
-                    "tsType": {
-                        "name": "union",
-                        "raw": "'normal' | 'small'",
-                        "elements": [
-                            { "name": "literal", "value": "'normal'" },
-                            { "name": "literal", "value": "'small'" }
-                        ]
-                    },
-                    "description": ""
-                },
-                "verticalChildren": {
-                    "required": false,
-                    "tsType": { "name": "Array", "elements": [{ "name": "ItemType" }], "raw": "ItemType[]" },
-                    "description": { "description": "垂直展开模式", "tags": [] }
-                }
-            },
-            "composes": ["Omit"]
+            ]
         }
     },
     "SubMenu": {
         "path": "Nav/SubMenu.tsx",
         "name": "SubMenu",
-        "info": {
-            "description": "",
-            "displayName": "SubMenu",
-            "methods": [],
-            "props": {
-                "marginLeft": { "required": true, "tsType": { "name": "number" }, "description": "" },
-                "className": { "required": false, "tsType": { "name": "string" }, "description": "" },
-                "disabled": { "required": false, "tsType": { "name": "boolean" }, "description": "" },
-                "level": { "required": false, "tsType": { "name": "number" }, "description": "" },
-                "title": {
-                    "required": false,
-                    "tsType": { "name": "ReactReactNode", "raw": "React.ReactNode" },
-                    "description": ""
-                },
-                "icon": {
-                    "required": false,
-                    "tsType": { "name": "ReactReactNode", "raw": "React.ReactNode" },
-                    "description": ""
-                },
-                "style": {
-                    "required": false,
-                    "tsType": { "name": "ReactCSSProperties", "raw": "React.CSSProperties" },
-                    "description": ""
-                },
-                "onTitleClick": {
-                    "required": false,
-                    "tsType": {
-                        "name": "signature",
-                        "type": "function",
-                        "raw": "(e: TitleEventEntity) => void",
-                        "signature": {
-                            "arguments": [{ "name": "e", "type": { "name": "TitleEventEntity" } }],
-                            "return": { "name": "void" }
-                        }
-                    },
-                    "description": ""
-                },
-                "onTitleMouseEnter": {
-                    "required": false,
-                    "tsType": {
-                        "name": "signature",
-                        "type": "function",
-                        "raw": "(e: TitleEventEntity) => void",
-                        "signature": {
-                            "arguments": [{ "name": "e", "type": { "name": "TitleEventEntity" } }],
-                            "return": { "name": "void" }
-                        }
-                    },
-                    "description": ""
-                },
-                "onTitleMouseLeave": {
-                    "required": false,
-                    "tsType": {
-                        "name": "signature",
-                        "type": "function",
-                        "raw": "(e: TitleEventEntity) => void",
-                        "signature": {
-                            "arguments": [{ "name": "e", "type": { "name": "TitleEventEntity" } }],
-                            "return": { "name": "void" }
-                        }
-                    },
-                    "description": ""
-                },
-                "type": {
-                    "required": false,
-                    "tsType": {
-                        "name": "union",
-                        "raw": "'normal' | 'small'",
-                        "elements": [
-                            { "name": "literal", "value": "'normal'" },
-                            { "name": "literal", "value": "'small'" }
-                        ]
-                    },
-                    "description": ""
-                },
-                "popupClassName": { "required": false, "tsType": { "name": "string" }, "description": "" },
-                "children": {
-                    "required": false,
-                    "tsType": { "name": "ReactReactNode", "raw": "React.ReactNode" },
-                    "description": ""
-                }
-            }
-        }
+        "info": { "description": "", "displayName": "SubMenu", "methods": [] }
     }
 }

@@ -14,7 +14,7 @@
 ```js {"codepath": "one-level-with-switch.jsx"}
 ```
 
-#### 一/二级目录 + 切换应用 + 分类标题
+#### 一/二级目录 + 切换应用 + 分类标题 + 路由跳转
 
 ```js {"codepath": "all-comp.jsx"}
 ```

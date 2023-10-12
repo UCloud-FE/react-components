@@ -2,40 +2,25 @@ import * as React from 'react';
 import classNames from 'classnames';
 import { SubMenu as RcSubMenu } from 'rc-menu';
 import { prefixClsTitleContent, prefixClsMenuItem, prefixClsTitleText, prefixClsMenu } from './style';
-
-interface TitleEventEntity {
-    key: string;
-    domEvent: React.MouseEvent<HTMLElement> | React.KeyboardEvent<HTMLElement>;
-}
+import NavContext from './NavContext';
+import { SubMenuProps } from './type';
 
 export { RcSubMenu };
-
-export interface SubMenuProps {
-    marginLeft: number;
-    className?: string;
-    disabled?: boolean;
-    level?: number;
-    title?: React.ReactNode;
-    icon?: React.ReactNode;
-    style?: React.CSSProperties;
-    onTitleClick?: (e: TitleEventEntity) => void;
-    onTitleMouseEnter?: (e: TitleEventEntity) => void;
-    onTitleMouseLeave?: (e: TitleEventEntity) => void;
-    type?: 'normal' | 'small';
-    popupClassName?: string;
-    children?: React.ReactNode;
-}
 
 function SubMenu(props: SubMenuProps) {
     const { icon, title, marginLeft, type = 'normal', ...rest } = props;
 
-    let titleNode: React.ReactNode;
+    const { subMenuItemRender } = React.useContext(NavContext);
+
+    let titleWarpNode: React.ReactNode;
 
     if (!icon) {
-        titleNode = <div className={prefixClsTitleText}>{title}</div>;
+        titleWarpNode = (
+            <span className={prefixClsTitleText}>{subMenuItemRender ? subMenuItemRender(props, title) : title}</span>
+        );
     } else {
-        titleNode = (
-            <div className={classNames(prefixClsTitleContent)}>
+        const dom = (
+            <>
                 {React.isValidElement(icon) &&
                     React.cloneElement(icon, {
                         className: classNames(
@@ -44,13 +29,19 @@ function SubMenu(props: SubMenuProps) {
                         )
                     })}
                 <span className={prefixClsTitleText}>{title}</span>
+            </>
+        );
+
+        titleWarpNode = (
+            <div className={classNames(prefixClsTitleContent)}>
+                {subMenuItemRender ? subMenuItemRender(props, dom) : dom}
             </div>
         );
     }
 
     return (
         <div style={{ marginLeft }}>
-            <RcSubMenu {...rest} className={classNames(`${prefixClsMenu}-submenu-${type}`)} title={titleNode} />
+            <RcSubMenu {...rest} className={classNames(`${prefixClsMenu}-submenu-${type}`)} title={titleWarpNode} />
         </div>
     );
 }

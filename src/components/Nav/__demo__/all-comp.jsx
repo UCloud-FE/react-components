@@ -4,26 +4,39 @@ import SvgIcon from 'src/components/SvgIcon';
 
 // demo start
 
-const onClick = info => {
-    console.log('click ', info);
-};
-
-const onOpenChange = info => {
-    console.log('onOpenChange ', info);
-};
-
 const Demo = () => (
     <div style={{ width: 240 }}>
         <Nav
-            onClick={onClick}
-            onOpenChange={onOpenChange}
             TopExtraItem={<div style={{ height: 48, lineHeight: '48px', textAlign: 'center' }}> 切换应用区域 </div>}
+            subMenuItemRender={(props, dom) => {
+                return (
+                    <div
+                        onClick={() => {
+                            console.log('click sub menu, props:', props);
+                        }}
+                    >
+                        {dom}
+                    </div>
+                );
+            }}
+            menuItemRender={(props, dom) => {
+                return (
+                    <div
+                        onClick={() => {
+                            console.log('click menu item, props:', props);
+                        }}
+                    >
+                        {dom}
+                    </div>
+                );
+            }}
             items={[
                 {
                     icon: <SvgIcon type="calendar" />,
                     key: '410',
                     label: '分类小标题',
                     labelType: 'small',
+
                     children: [
                         {
                             hidden: false,

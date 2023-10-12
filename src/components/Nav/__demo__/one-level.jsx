@@ -21,7 +21,7 @@ const Demo = () => (
                 {
                     icon: <SvgIcon type="calendar" />,
                     key: '418',
-                    label: '一级标题'
+                    label: '一级标题一级标题一级标题一级标题一级标题一级标题一级标题'
                 },
                 {
                     icon: <SvgIcon type="calendar" />,
@@ -34,7 +34,6 @@ const Demo = () => (
                     label: '一级小标题',
                     labelType: 'small'
                 },
-
                 {
                     icon: <SvgIcon type="calendar" />,
                     key: '416',

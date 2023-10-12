@@ -1,5 +1,4 @@
 import React from 'react';
-import type { MenuItemProps as RcMenuItemProps } from 'rc-menu';
 import classnames from 'classnames';
 import { Item } from 'rc-menu';
 import _ from 'lodash';
@@ -9,22 +8,10 @@ import Menu from 'src/components/Menu';
 
 import { prefixClsMenuItem, prefixClsTitleContent, prefixClsTitleText, NavPopWrap } from './style';
 import type { NavContextProps } from './NavContext';
-import { ItemType } from './type';
+import { ItemType, NavItemProps } from './type';
 import SubMenu from './SubMenu';
 import NavContext from './NavContext';
 import { getTreeAllKeys } from './util';
-
-export interface NavItemProps extends Omit<RcMenuItemProps, 'title'> {
-    marginLeft: number;
-    icon?: React.ReactNode;
-    danger?: boolean;
-    title?: React.ReactNode;
-    type?: 'normal' | 'small';
-    /**
-     * 垂直展开模式
-     */
-    verticalChildren?: ItemType[];
-}
 
 export default class NavItem extends React.Component<NavItemProps> {
     renderItemChildren() {
@@ -38,11 +25,24 @@ export default class NavItem extends React.Component<NavItemProps> {
     renderItem = (contextProps: NavContextProps) => {
         const { className, type } = this.props;
         const { title, icon, verticalChildren, marginLeft, ...rest } = this.props;
-        const { inlineCollapsed } = contextProps;
+        const { inlineCollapsed, menuItemRender } = contextProps;
 
         if (verticalChildren?.length) {
             return this.renderVerticalItem(contextProps);
         }
+
+        const dom = (
+            <>
+                {React.isValidElement(icon) &&
+                    React.cloneElement(icon, {
+                        className: classnames(
+                            React.isValidElement(icon) ? icon.props?.className : '',
+                            `${prefixClsMenuItem}-icon`
+                        )
+                    })}
+                {this.renderItemChildren()}
+            </>
+        );
 
         const returnNode = (
             <Item
@@ -55,16 +55,7 @@ export default class NavItem extends React.Component<NavItemProps> {
                 )}
                 title={typeof title === 'string' ? title : undefined}
             >
-                <div className={prefixClsTitleContent}>
-                    {React.isValidElement(icon) &&
-                        React.cloneElement(icon, {
-                            className: classnames(
-                                React.isValidElement(icon) ? icon.props?.className : '',
-                                `${prefixClsMenuItem}-icon`
-                            )
-                        })}
-                    {this.renderItemChildren()}
-                </div>
+                <div className={prefixClsTitleContent}>{menuItemRender ? menuItemRender(this.props, dom) : dom}</div>
             </Item>
         );
 

@@ -62,7 +62,13 @@ export const NavWarp = withProps()(
                 }
             }
             .${prefixClsTitleText} {
+                // margin-left: 8px;
+            }
+
+            .${prefixClsTitleContent} {
                 margin-left: 8px;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
 
             .${prefixClsMenu}-submenu-title, .${prefixClsMenu}-menu-item {
@@ -131,7 +137,7 @@ export const NavWarp = withProps()(
             }
 
             .${prefixClsMenuItem}-icon {
-                margin: 8px 0px 8px 8px;
+                margin: 8px 8px 8px 0px;
                 width: 20px;
                 height: 20px;
             }
