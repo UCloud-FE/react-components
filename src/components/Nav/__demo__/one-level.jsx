@@ -19,14 +19,13 @@ const Demo = () => (
                     label: '一级正常标题'
                 },
                 {
-                    icon: <SvgIcon type="calendar" />,
+                    icon: <SvgIcon type="cog" />,
                     key: '418',
                     label: '一级标题一级标题一级标题一级标题一级标题一级标题一级标题'
                 },
                 {
-                    icon: <SvgIcon type="calendar" />,
                     key: '417',
-                    label: '资源管理'
+                    label: '一级正常标题无icon'
                 },
                 {
                     icon: <SvgIcon type="calendar" />,

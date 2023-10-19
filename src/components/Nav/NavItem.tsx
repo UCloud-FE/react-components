@@ -12,6 +12,7 @@ import { ItemType, NavItemProps, SubMenuProps } from './type';
 import SubMenu from './SubMenu';
 import NavContext from './NavContext';
 import { getTreeAllKeys } from './util';
+import Tooltip from '../Tooltip';
 
 export default class NavItem extends React.Component<NavItemProps> {
     renderItemChildren() {
@@ -54,7 +55,22 @@ export default class NavItem extends React.Component<NavItemProps> {
                 )}
                 title={typeof title === 'string' ? title : undefined}
             >
-                <div className={prefixClsTitleContent}>{menuItemRender ? menuItemRender(this.props, dom) : dom}</div>
+                {/* 如果是折叠目录，没有子菜单的展示tooltip */}
+                {inlineCollapsed ? (
+                    <Tooltip
+                        popup={<span className={`${prefixClsMenuItem}-tooltop-text`}>{title}</span>}
+                        arrow={false}
+                        placement="right"
+                    >
+                        <div className={prefixClsTitleContent}>
+                            {menuItemRender ? menuItemRender(this.props, dom) : dom}
+                        </div>
+                    </Tooltip>
+                ) : (
+                    <div className={prefixClsTitleContent}>
+                        {menuItemRender ? menuItemRender(this.props, dom) : dom}
+                    </div>
+                )}
             </Item>
         );
 
@@ -102,13 +118,16 @@ export default class NavItem extends React.Component<NavItemProps> {
 
         const dom = (
             <>
-                {React.isValidElement(icon) &&
+                {React.isValidElement(icon) ? (
                     React.cloneElement(icon, {
                         className: classnames(
                             React.isValidElement(icon) ? icon.props?.className : '',
                             `${prefixClsMenuItem}-icon`
                         )
-                    })}
+                    })
+                ) : (
+                    <span className={`${prefixClsMenuItem}-icon`}>{title?.charAt(0)}</span>
+                )}
                 {this.renderItemChildren()}
             </>
         );
@@ -151,28 +170,27 @@ export default class NavItem extends React.Component<NavItemProps> {
     }
 }
 
-export function useItems(
-    items?: (ItemType | ItemType[])[],
-    inlineIndent = 0,
-    inlineCollapsed = false,
-    mode?: 'inline' | 'vertical'
-) {
+export function useItems(items?: ItemType[], inlineIndent = 0, inlineCollapsed = false, mode?: 'inline' | 'vertical') {
     return React.useMemo(() => {
         if (!items) {
             return items;
         }
         if (inlineCollapsed) {
-            // 折叠状态过滤小标题
-            const newItems = items.map(item => {
-                if (item && 'labelType' in item && item?.labelType === 'small') {
-                    return 'children' in item ? item.children : item;
-                }
-                return item;
-            });
-            return convertItemsToNodes(newItems.flat(), 0, inlineIndent, inlineCollapsed, 'vertical');
+            // 处理filterSamllType为true的数据
+            const newItems = filterSmall(items);
+            return convertItemsToNodes(newItems, 0, inlineIndent, inlineCollapsed, 'vertical');
         }
         return convertItemsToNodes(items, 0, inlineIndent, inlineCollapsed, mode);
     }, [items]);
+}
+
+function filterSmall(items: ItemType[]): ItemType[] {
+    return items.reduce((filteredItems: ItemType[], item: ItemType) => {
+        if ('filterSamllType' in item && item.filterSamllType === true) {
+            return filteredItems.concat(filterSmall(item.children));
+        }
+        return filteredItems.concat(item);
+    }, []);
 }
 
 /**
@@ -198,8 +216,11 @@ function convertItemsToNodes(
                 const mergedKey = key ?? `tmp-${index}`;
                 const nextPadding = labelType === 'small' ? padding : inlineIndent;
 
-                // 垂直目录
-                if (labelType !== 'small' && mode === 'vertical' && children) {
+                console.log(collapsed);
+
+                // 垂直展开，有children的菜单 labelType为small时不是NavItem，是SubMenu
+                // 折叠目录，所有都是NavItem
+                if ((labelType !== 'small' && mode === 'vertical' && children) || collapsed) {
                     return (
                         <NavItem
                             {...restProps}
@@ -225,7 +246,14 @@ function convertItemsToNodes(
                 }
 
                 return (
-                    <NavItem {...restProps} key={mergedKey} type={labelType} style={{ ...style }} marginLeft={padding}>
+                    <NavItem
+                        {...restProps}
+                        title={label}
+                        key={mergedKey}
+                        type={labelType}
+                        style={{ ...style }}
+                        marginLeft={padding}
+                    >
                         {label}
                     </NavItem>
                 );

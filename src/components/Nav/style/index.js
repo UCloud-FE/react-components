@@ -8,8 +8,6 @@ const { prefixCls: _prefixCls } = config;
 export const prefixClsNavWarp = _prefixCls + '-nav-wrap';
 export const prefixClsMenu = _prefixCls + '-nav';
 export const prefixClsMenuItem = _prefixCls + '-nav-menu-item';
-export const prefixClsMenuOuter = _prefixCls + '-menu-outer';
-export const prefixClsSwitch = _prefixCls + '-switch-app';
 export const prefixClsTitleContent = prefixClsMenuItem + '-title-content';
 export const prefixClsTitleText = prefixClsMenuItem + '-title-text';
 
@@ -21,10 +19,6 @@ export const NavWarp = withProps()(
 
         return css`
             height: 100%;
-            overflow: hidden;
-            border: 1px solid #d9d9d9;
-            box-shadow: 0 0 4px #d9d9d9;
-            padding: 0 12px;
             font-size: 14px;
 
             @font-face {
@@ -42,7 +36,7 @@ export const NavWarp = withProps()(
                 font-style: normal;
             }
 
-            .${prefixClsMenu}-item-selected.${prefixClsMenu}-menu-item-small {
+            .${prefixClsMenu}-expand .${prefixClsMenu}-item-selected.${prefixClsMenu}-menu-item-small {
                 background-color: ${DT.T_COLOR_BG_DEFAULT_HOVER};
                 color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
                 opacity: 1;
@@ -66,6 +60,9 @@ export const NavWarp = withProps()(
                 margin-left: 8px;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                &:hover {
+                    cursor: pointer;
+                }
             }
 
             .${prefixClsMenu}-submenu-title, .${prefixClsMenu}-menu-item {
@@ -114,11 +111,19 @@ export const NavWarp = withProps()(
                 }
             }
 
+            .${prefixClsMenu}-menu-item, .${prefixClsMenu}-submenu > .${prefixClsMenu}-submenu-title {
+                height: 36px;
+                line-height: 36px;
+            }
+
             .${prefixClsMenu}-submenu-small {
                 margin-bottom: 20px;
             }
 
-            .${prefixClsMenu}-menu-item-small, .${prefixClsMenu}-submenu-small > .${prefixClsMenu}-submenu-title {
+            .${prefixClsMenu}-expand
+                .${prefixClsMenu}-menu-item-small,
+                .${prefixClsMenu}-submenu-small
+                > .${prefixClsMenu}-submenu-title {
                 height: 32px;
                 line-height: 32px;
                 font-size: 12px;
@@ -137,11 +142,16 @@ export const NavWarp = withProps()(
                 margin: 8px 8px 8px 0px;
                 width: 20px;
                 height: 20px;
+                line-height: 20px;
+                text-align: center;
             }
 
             .${prefixClsMenuItem}-collapsed > .${prefixClsTitleContent}, .${prefixClsMenuItem}-collapsed {
                 .${prefixClsTitleText} {
                     display: none;
+                }
+                .${prefixClsMenuItem}-icon {
+                    display: inline-block;
                 }
             }
 
@@ -149,8 +159,6 @@ export const NavWarp = withProps()(
                 position: relative;
                 display: block;
                 white-space: nowrap;
-                height: 32px;
-                line-height: 32px;
             }
 
             .${prefixClsMenuItem} {
@@ -270,6 +278,10 @@ export const NavWarp = withProps()(
                 height: 14px;
                 margin-right: 8px;
                 top: -1px;
+            }
+
+            .${prefixClsMenuItem}-tooltop-text {
+                color: ${DT.T_COLOR_BG_NOTICE_DARK};
             }
 
             .${prefixClsMenu}-inline .${prefixClsMenu}-submenu-arrow {
@@ -392,8 +404,6 @@ export const NavPopWrap = withProps()(
 
         return css`
             .uc-fe-menu {
-                margin-left: 8px;
-
                 .uc-fe-menu-item,
                 .uc-fe-menu-popup-title,
                 .uc-fe-menu-popup-content .uc-fe-menu-item {
@@ -426,19 +436,6 @@ export const NavPopWrap = withProps()(
                     }
                 }
             }
-        `;
-    })
-);
-
-export const SwtichAppWarp = withProps()(
-    styled('div')(props => {
-        const {
-            theme: { designTokens: DT }
-        } = props;
-
-        return css`
-            background: ${DT.T_COLOR_BG_DEFAULT_LIGHT};
-            margin-bottom: 20px;
         `;
     })
 );

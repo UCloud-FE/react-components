@@ -5,19 +5,13 @@ import SvgIcon from 'src/components/SvgIcon';
 // demo start
 
 const Demo = () => (
-    <div style={{ width: 64 }}>
+    <div style={{ width: 'fit-content' }}>
         <Nav
             inlineCollapsed={true}
-            TopExtraItem={
-                <div style={{ height: 48, lineHeight: '48px', textAlign: 'center' }}>
-                    <SvgIcon type="calendar" />
-                </div>
-            }
             items={[
                 {
-                    icon: <SvgIcon type="calendar" />,
                     key: '410',
-                    label: '小标题',
+                    label: '小标题无icon',
                     labelType: 'small',
                     children: [
                         {
@@ -41,9 +35,25 @@ const Demo = () => (
                     ]
                 },
                 {
+                    icon: <SvgIcon type="cog" />,
+                    key: '2',
+                    label: '小标题有icon',
+                    labelType: 'small',
+                    children: [
+                        {
+                            hidden: false,
+                            icon: <SvgIcon type="calendar" />,
+                            key: '21',
+                            label: '2级菜单',
+                            path: '/cloud-fe/resource/resourceset',
+                            redirect: ''
+                        }
+                    ]
+                },
+                {
                     icon: <SvgIcon type="calendar" />,
                     key: '419',
-                    label: '资源管理'
+                    label: '无子菜单菜单项'
                 },
                 {
                     icon: <SvgIcon type="calendar" />,
@@ -54,9 +64,26 @@ const Demo = () => (
                             hidden: false,
                             icon: <SvgIcon type="calendar" />,
                             key: '413',
-                            label: '资源管理',
+                            label: '资源管理small',
                             path: '/cloud-fe/resource/resourceset',
-                            redirect: ''
+                            labelType: 'small',
+                            redirect: '',
+                            children: [
+                                {
+                                    hidden: false,
+                                    key: '412df',
+                                    label: 'cahidjailj',
+                                    path: '/cloud-fe/resource/resourceset',
+                                    redirect: ''
+                                },
+                                {
+                                    hidden: false,
+                                    key: '412222df',
+                                    label: '32',
+                                    path: '/cloud-fe/resource/resourceset',
+                                    redirect: ''
+                                }
+                            ]
                         },
                         {
                             children: [
@@ -85,15 +112,14 @@ const Demo = () => (
                     ]
                 },
                 {
-                    icon: <SvgIcon type="calendar" />,
                     key: '417',
-                    label: '资源管理',
+                    label: '一级标题无icon',
                     children: [
                         {
                             hidden: false,
                             icon: <SvgIcon type="calendar" />,
                             key: '4166',
-                            label: '资源管理',
+                            label: '二级资源管理',
                             path: '/cloud-fe/resource/resourceset',
                             redirect: ''
                         }

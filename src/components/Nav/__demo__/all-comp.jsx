@@ -7,7 +7,6 @@ import SvgIcon from 'src/components/SvgIcon';
 const Demo = () => (
     <div style={{ width: 240 }}>
         <Nav
-            TopExtraItem={<div style={{ height: 48, lineHeight: '48px', textAlign: 'center' }}> 切换应用区域 </div>}
             subMenuItemRender={(props, dom) => {
                 return (
                     <div
@@ -36,7 +35,6 @@ const Demo = () => (
                     key: '410',
                     label: '分类小标题',
                     labelType: 'small',
-
                     children: [
                         {
                             hidden: false,
@@ -58,12 +56,7 @@ const Demo = () => (
                         }
                     ]
                 },
-                {
-                    icon: <SvgIcon type="calendar" />,
-                    key: '419',
-                    labelType: 'small',
-                    label: '资源管理'
-                },
+
                 {
                     icon: <SvgIcon type="calendar" />,
                     key: '418',

@@ -5,37 +5,13 @@ import SvgIcon from 'src/components/SvgIcon';
 // demo start
 
 const Demo = () => (
-    <div style={{ width: 240 }}>
+    <div style={{ width: 'fit-content' }}>
         <Nav
-            mode="vertical"
-            defaultSelectedKeys={['4131']}
-            subMenuItemRender={(props, dom) => {
-                return (
-                    <div
-                        onClick={() => {
-                            console.log('click sub menu, props:', props);
-                        }}
-                    >
-                        {dom}
-                    </div>
-                );
-            }}
-            menuItemRender={(props, dom) => {
-                return (
-                    <div
-                        onClick={() => {
-                            console.log('click menu item, props:', props);
-                        }}
-                    >
-                        {dom}
-                    </div>
-                );
-            }}
+            inlineCollapsed={true}
             items={[
                 {
-                    icon: <SvgIcon type="calendar" />,
                     key: '410',
-                    label: '小标题',
+                    label: 'small小标题',
                     labelType: 'small',
                     children: [
                         {
@@ -59,76 +35,87 @@ const Demo = () => (
                     ]
                 },
                 {
-                    icon: <SvgIcon type="calendar" />,
-                    key: '419',
-                    label: '资源管理'
-                },
-                {
-                    icon: <SvgIcon type="calendar" />,
-                    key: '418',
-                    label: '一级标题',
+                    icon: <SvgIcon type="cog" />,
+                    key: '2',
+                    label: '一级小标题，filterSamllType为true',
+                    labelType: 'small',
+                    filterSamllType: true,
                     children: [
                         {
                             hidden: false,
                             icon: <SvgIcon type="calendar" />,
-                            key: '413',
-                            label: '资源管理',
+                            key: '21',
+                            label: '2级菜单1,filterSamllType为true',
                             path: '/cloud-fe/resource/resourceset',
-                            redirect: ''
-                        },
-                        {
+                            filterSamllType: true,
                             children: [
                                 {
                                     hidden: false,
-                                    key: '4122211',
-                                    label: 'cahidjailj',
-                                    path: '/cloud-fe/resource/resourceset',
-                                    redirect: ''
+                                    icon: <SvgIcon type="cog" />,
+                                    key: '321',
+                                    label: '3级菜单1',
+                                    path: '/cloud-fe/resource/resourceset'
                                 },
                                 {
                                     hidden: false,
-                                    key: '412222222',
-                                    label: '32',
-                                    path: '/cloud-fe/resource/resourceset',
-                                    redirect: ''
+                                    icon: <SvgIcon type="cog" />,
+                                    key: '322',
+                                    label: '3级菜单2 ',
+                                    path: '/cloud-fe/resource/resourceset'
                                 }
-                            ],
+                            ]
+                        },
+                        {
                             hidden: false,
                             icon: <SvgIcon type="calendar" />,
-                            key: '41222',
-                            label: '资源管理222',
+                            key: '22',
+                            label: '2级菜单2 ',
                             path: '/cloud-fe/resource/resourceset',
-                            redirect: ''
+                            children: [
+                                {
+                                    hidden: false,
+                                    icon: <SvgIcon type="calendar" />,
+                                    key: '31',
+                                    label: '3级菜单1',
+                                    path: '/cloud-fe/resource/resourceset'
+                                },
+                                {
+                                    hidden: false,
+                                    icon: <SvgIcon type="calendar" />,
+                                    key: '32',
+                                    label: '3级菜单2 ',
+                                    path: '/cloud-fe/resource/resourceset'
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     icon: <SvgIcon type="calendar" />,
                     key: '417',
-                    label: '资源管理',
+                    label: '一级标题',
                     children: [
                         {
                             hidden: false,
                             icon: <SvgIcon type="calendar" />,
                             key: '4166',
-                            label: '资源管理',
-                            path: '/cloud-fe/resource/resourceset',
-                            redirect: ''
+                            label: '二级资源管理',
+                            path: '/cloud-fe/resource/resourceset'
                         }
                     ]
                 },
                 {
                     icon: <SvgIcon type="calendar" />,
                     key: '416',
-                    label: '资源管理1',
+                    label: '一级标题，filterSamllType为true',
+                    filterSamllType: true,
                     children: [
                         {
                             hidden: false,
                             icon: <SvgIcon type="calendar" />,
                             key: '4641',
-                            label: '资源管理2',
-                            path: '/cloud-fe/resource/resourceset',
-                            redirect: ''
+                            label: '二级资源管理',
+                            path: '/cloud-fe/resource/resourceset'
                         }
                     ]
                 }

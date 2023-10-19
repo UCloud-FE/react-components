@@ -6,7 +6,7 @@ import NavContext from './NavContext';
 
 import { Override } from 'src/type';
 import { useItems } from './NavItem';
-import { NavWarp, prefixClsNavWarp, prefixClsSwitch, SwtichAppWarp, prefixClsMenu, prefixClsMenuOuter } from './style';
+import { NavWarp, prefixClsNavWarp, prefixClsMenu } from './style';
 import { ItemType, NavItemProps, SubMenuProps } from './type';
 
 export interface NavProps extends Omit<RcMenuProps, 'items'> {
@@ -15,10 +15,6 @@ export interface NavProps extends Omit<RcMenuProps, 'items'> {
      */
     mode?: 'vertical' | 'inline';
 
-    /**
-     * 顶部展示元素
-     */
-    TopExtraItem?: ReactNode;
     items?: ItemType[];
     /**
      * inline 时菜单是否收起状态
@@ -63,7 +59,6 @@ export const VerticalContext = React.createContext<VerticalContextProps>({
 
 const Nav = ({
     className,
-    TopExtraItem,
     items,
     inlineCollapsed,
     mode = 'inline',
@@ -112,22 +107,21 @@ const Nav = ({
 
     return (
         <NavWarp className={classnames(prefixClsNavWarp, className)}>
-            {TopExtraItem && (
-                <SwtichAppWarp className={classnames(prefixClsSwitch, className)}>{TopExtraItem}</SwtichAppWarp>
-            )}
             <NavContext.Provider value={contextValue}>
-                <div className={classnames(prefixClsMenuOuter)}>
-                    <RcMenu
-                        inlineIndent={0}
-                        {...rest}
-                        mode={'inline'}
-                        prefixCls={prefixClsMenu}
-                        className={classnames(className, prefixClsMenu)}
-                        {...verticalProps}
-                    >
-                        {mergedChildren}
-                    </RcMenu>
-                </div>
+                <RcMenu
+                    inlineIndent={0}
+                    {...rest}
+                    mode={'inline'}
+                    prefixCls={prefixClsMenu}
+                    className={classnames(
+                        className,
+                        prefixClsMenu,
+                        inlineCollapsed ? `${prefixClsMenu}-collapsed` : `${prefixClsMenu}-expand`
+                    )}
+                    {...verticalProps}
+                >
+                    {mergedChildren}
+                </RcMenu>
             </NavContext.Provider>
         </NavWarp>
     );
