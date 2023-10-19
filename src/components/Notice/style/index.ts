@@ -94,6 +94,7 @@ export const NoticeWrap = sWrap<{ styleType: string }>()(
                 line-height: 18px;
             }
             .${iconWrapCls} {
+                box-sizing: content-box;
                 width: 15px;
                 padding-right: 8px;
                 font-size: 15px;
@@ -113,6 +114,7 @@ export const NoticeWrap = sWrap<{ styleType: string }>()(
                 color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
             }
             .${closeCls} {
+                box-sizing: content-box;
                 padding-left: 8px;
                 width: 12px;
                 > .${iconCls} {
