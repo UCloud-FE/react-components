@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.1](https://github.com/UCloud-FE/react-components/compare/v1.9.0...v1.9.1) (2023-10-20)
+
 ## [1.9.0](https://github.com/UCloud-FE/react-components/compare/v1.8.2...v1.9.0) (2023-09-08)
 
 ### Features
