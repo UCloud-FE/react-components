@@ -163,7 +163,7 @@ export const NavWarp = withProps()(
                         top: 0;
                         width: 1px;
                         height: 100%;
-                        background: #e2e2e2;
+                        background: ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
                         position: absolute;
                     }
                 }
@@ -210,16 +210,6 @@ export const NavWarp = withProps()(
                 overflow: hidden;
                 transition: height 0.3s ease-out;
             }
-            .${prefixClsMenu}-item-group-list {
-                margin: 0;
-                padding: 0;
-            }
-            .${prefixClsMenu}-item-group-title {
-                color: #999;
-                line-height: 1.5;
-                padding: 8px 10px;
-                border-bottom: 1px solid #dedede;
-            }
 
             .${prefixClsMenu} > li.${prefixClsMenu}-submenu {
                 padding: 0;
@@ -254,8 +244,6 @@ export const NavWarp = withProps()(
 
             .${prefixClsMenu}-inline .${prefixClsMenu}-submenu-arrow {
                 display: inline-block;
-                font: normal normal normal 14px/1 FontAwesome, Helvetica, sans-serif;
-                font-size: inherit;
                 vertical-align: baseline;
                 text-align: center;
                 text-transform: none;
@@ -264,10 +252,6 @@ export const NavWarp = withProps()(
                 right: 26px;
                 line-height: 36px;
                 transition: transform 0.3s;
-            }
-
-            .${prefixClsMenu}-inline .${prefixClsMenu}-submenu-arrow:before {
-                content: '\\F0DA';
             }
 
             .${prefixClsMenu}-inline
