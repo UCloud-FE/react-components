@@ -1,4 +1,4 @@
-import React, { Dispatch, HTMLAttributes, ReactNode, SetStateAction } from 'react';
+import React, { Dispatch, HTMLAttributes, ReactNode, SetStateAction, useMemo } from 'react';
 import type { MenuProps as RcMenuProps } from 'rc-menu';
 import classnames from 'classnames';
 import RcMenu from 'rc-menu';
@@ -67,7 +67,7 @@ const Nav = ({
     menuItemRender,
     ...rest
 }: NavProps & Override<HTMLAttributes<HTMLDivElement>, NavProps>) => {
-    const newMode = inlineCollapsed ? 'vertical' : mode;
+    const newMode = useMemo(() => (inlineCollapsed ? 'vertical' : mode), [inlineCollapsed, mode]);
     const mergedChildren = useItems(items, inlineIndent, inlineCollapsed, mode);
     const [selectedKeys, SetSelectedKeys] = React.useState(rest.defaultSelectedKeys || []);
 
@@ -95,15 +95,18 @@ const Nav = ({
     );
 
     // 有垂直菜单的时候，selectedKeys手动处理
-    const verticalProps =
-        newMode === 'vertical'
-            ? {
-                  selectedKeys,
-                  onSelect: ({ key }: { key: string }) => {
-                      SetSelectedKeys([key]);
+    const verticalProps = useMemo(
+        () =>
+            newMode === 'vertical'
+                ? {
+                      selectedKeys,
+                      onSelect: ({ key }: { key: string }) => {
+                          SetSelectedKeys([key]);
+                      }
                   }
-              }
-            : {};
+                : {},
+        [newMode, selectedKeys]
+    );
 
     return (
         <NavWarp className={classnames(prefixClsNavWarp, className)}>

@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import { Item } from 'rc-menu';
-import _ from 'lodash';
+import { intersection } from 'lodash';
 
 import Popover from 'src/components/Popover';
 import Menu from 'src/components/Menu';
@@ -22,6 +22,12 @@ export default class NavItem extends React.Component<NavItemProps> {
         return wrapNode;
     }
 
+    renderIcon = (icon: React.ReactElement) => {
+        return React.cloneElement(icon, {
+            className: classnames(icon.props?.className, `${prefixClsMenuItem}-icon`)
+        });
+    };
+
     renderItem = (contextProps: NavContextProps) => {
         const { className, type } = this.props;
         const { title, icon, verticalChildren, marginLeft, ...rest } = this.props;
@@ -33,13 +39,7 @@ export default class NavItem extends React.Component<NavItemProps> {
 
         const dom = (
             <>
-                {React.isValidElement(icon) &&
-                    React.cloneElement(icon, {
-                        className: classnames(
-                            React.isValidElement(icon) ? icon.props?.className : '',
-                            `${prefixClsMenuItem}-icon`
-                        )
-                    })}
+                {React.isValidElement(icon) && this.renderIcon(icon)}
                 {this.renderItemChildren()}
             </>
         );
@@ -114,17 +114,12 @@ export default class NavItem extends React.Component<NavItemProps> {
         const { title, icon, verticalChildren, marginLeft, ...rest } = this.props;
 
         const subKeys = getTreeAllKeys([], verticalChildren || []).map(item => item.toString());
-        const intersectKeys = _.intersection(subKeys, selectedKeys);
+        const intersectKeys = intersection(subKeys, selectedKeys);
 
         const dom = (
             <>
                 {React.isValidElement(icon) ? (
-                    React.cloneElement(icon, {
-                        className: classnames(
-                            React.isValidElement(icon) ? icon.props?.className : '',
-                            `${prefixClsMenuItem}-icon`
-                        )
-                    })
+                    this.renderIcon(icon)
                 ) : (
                     <span className={`${prefixClsMenuItem}-icon`}>{title?.charAt(0)}</span>
                 )}
@@ -176,7 +171,7 @@ export function useItems(items?: ItemType[], inlineIndent = 0, inlineCollapsed =
             return items;
         }
         if (inlineCollapsed) {
-            // 处理filterSamllType为true的数据
+            // 处理filterSmallType为true的数据
             const newItems = filterSmall(items);
             return convertItemsToNodes(newItems, 0, inlineIndent, inlineCollapsed, 'vertical');
         }
@@ -186,7 +181,7 @@ export function useItems(items?: ItemType[], inlineIndent = 0, inlineCollapsed =
 
 function filterSmall(items: ItemType[]): ItemType[] {
     return items.reduce((filteredItems: ItemType[], item: ItemType) => {
-        if ('filterSamllType' in item && item.filterSamllType === true) {
+        if ('filterSmallType' in item && item.filterSmallType === true) {
             return filteredItems.concat(filterSmall(item.children));
         }
         return filteredItems.concat(item);
@@ -215,8 +210,6 @@ function convertItemsToNodes(
                 const { label, children, key, style, labelType, ...restProps } = opt as any;
                 const mergedKey = key ?? `tmp-${index}`;
                 const nextPadding = labelType === 'small' ? padding : inlineIndent;
-
-                console.log(collapsed);
 
                 // 垂直展开，有children的菜单 labelType为small时不是NavItem，是SubMenu
                 // 折叠目录，所有都是NavItem
@@ -286,7 +279,7 @@ const PopMenu = ({
 
     React.useEffect(() => {
         const subKeys = getTreeAllKeys([], verticalChildren || []).map(item => item.toString());
-        const intersectKeys = _.intersection(subKeys, navSelectedKeys);
+        const intersectKeys = intersection(subKeys, navSelectedKeys);
         setMenuSelectedKeys(intersectKeys.length ? intersectKeys : []);
     }, [navSelectedKeys]);
 

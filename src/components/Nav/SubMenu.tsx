@@ -2,6 +2,7 @@ import * as React from 'react';
 import classNames from 'classnames';
 import { SubMenu as RcSubMenu } from 'rc-menu';
 import { prefixClsTitleContent, prefixClsMenuItem, prefixClsTitleText, prefixClsMenu } from './style';
+import SvgIcon from 'src/components/SvgIcon';
 import NavContext from './NavContext';
 import { SubMenuProps } from './type';
 
@@ -12,10 +13,10 @@ function SubMenu(props: SubMenuProps) {
 
     const { subMenuItemRender } = React.useContext(NavContext);
 
-    let titleWarpNode: React.ReactNode;
+    let titleWrapNode: React.ReactNode;
 
     if (!icon) {
-        titleWarpNode = (
+        titleWrapNode = (
             <div className={classNames(prefixClsTitleContent)}>
                 <span className={prefixClsTitleText}>
                     {subMenuItemRender ? subMenuItemRender(props, <>{title}</>) : title}
@@ -36,7 +37,7 @@ function SubMenu(props: SubMenuProps) {
             </>
         );
 
-        titleWarpNode = (
+        titleWrapNode = (
             <div className={classNames(prefixClsTitleContent)}>
                 {subMenuItemRender ? subMenuItemRender(props, dom) : dom}
             </div>
@@ -45,7 +46,9 @@ function SubMenu(props: SubMenuProps) {
 
     return (
         <div style={{ marginLeft }} title={title}>
-            <RcSubMenu {...rest} className={classNames(`${prefixClsMenu}-submenu-${type}`)} title={titleWarpNode} />
+            <RcSubMenu 
+            expandIcon={<SvgIcon className='uc-fe-nav-submenu-arrow' type='triangle-down' />}
+             {...rest}  className={classNames(`${prefixClsMenu}-submenu-${type}`)} title={titleWrapNode} />
         </div>
     );
 }

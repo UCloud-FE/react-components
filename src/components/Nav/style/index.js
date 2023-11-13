@@ -19,22 +19,7 @@ export const NavWarp = withProps()(
 
         return css`
             height: 100%;
-            font-size: 14px;
-
-            @font-face {
-                font-family: 'FontAwesome';
-                src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/fonts/fontawesome-webfont.eot');
-                src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/fonts/fontawesome-webfont.eot?#iefix')
-                        format('embedded-opentype'),
-                    url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/fonts/fontawesome-webfont.woff')
-                        format('woff'),
-                    url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/fonts/fontawesome-webfont.ttf')
-                        format('truetype'),
-                    url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/fonts/fontawesome-webfont.svg?#fontawesomeregular')
-                        format('svg');
-                font-weight: normal;
-                font-style: normal;
-            }
+            font-size: ${DT.T_TYPO_FONT_SIZE_2};
 
             .${prefixClsMenu}-expand .${prefixClsMenu}-item-selected.${prefixClsMenu}-menu-item-small {
                 background-color: ${DT.T_COLOR_BG_DEFAULT_HOVER};
@@ -69,8 +54,8 @@ export const NavWarp = withProps()(
                 padding-left: 8px;
                 margin-right: 16px;
                 display: inline-block;
-                border-radius: 2px;
-                font-size: 14px;
+                border-radius: ${DT.T_CORNER_SM};
+                font-size: ${DT.T_TYPO_FONT_SIZE_2};
 
                 &:hover {
                     background-color: ${DT.T_COLOR_BG_DEFAULT_HOVER};
@@ -126,7 +111,7 @@ export const NavWarp = withProps()(
                 > .${prefixClsMenu}-submenu-title {
                 height: 32px;
                 line-height: 32px;
-                font-size: 12px;
+                font-size: ${DT.T_TYPO_FONT_SIZE_1};
                 color: ${DT.T_IDE_DEFAULT_COLOR_BG_DEFAULT};
                 opacity: 0.65;
 
@@ -192,7 +177,6 @@ export const NavWarp = withProps()(
 
             .${prefixClsMenuItem}-submenu-arrow {
                 display: inline-block;
-                font: normal normal normal 14px/1 FontAwesome, Helvetica, sans-serif;
                 font-size: inherit;
                 vertical-align: baseline;
                 text-align: center;
@@ -201,9 +185,6 @@ export const NavWarp = withProps()(
                 position: absolute;
                 right: 16px;
                 line-height: 1.5em;
-                &:before {
-                    content: '\f0da';
-                }
             }
 
             .menu-icon,
@@ -247,24 +228,11 @@ export const NavWarp = withProps()(
             .${prefixClsMenu}-item, .${prefixClsMenu}-submenu-title {
                 margin: 0;
                 position: relative;
-                display: block;
+                display: flex;
+                align-items: center;
                 white-space: nowrap;
             }
 
-            .${prefixClsMenu}-item.${prefixClsMenu}-item-disabled,
-                .${prefixClsMenu}-submenu-title.${prefixClsMenu}-item-disabled,
-                .${prefixClsMenu}-item.${prefixClsMenu}-submenu-disabled,
-                .${prefixClsMenu}-submenu-title.${prefixClsMenu}-submenu-disabled {
-                color: #777 !important;
-            }
-            .${prefixClsMenu} > .${prefixClsMenu}-item-divider {
-                height: 1px;
-                margin: 1px 0;
-                overflow: hidden;
-                padding: 0;
-                line-height: 0;
-                background-color: #e5e5e5;
-            }
             .${prefixClsMenu}-submenu-popup {
                 position: absolute;
             }
@@ -294,9 +262,7 @@ export const NavWarp = withProps()(
                 text-rendering: auto;
                 position: absolute;
                 right: 26px;
-                top: 0;
                 line-height: 36px;
-                transform: rotate(90deg);
                 transition: transform 0.3s;
             }
 
@@ -308,7 +274,7 @@ export const NavWarp = withProps()(
                 .${prefixClsMenu}-submenu-open
                 > .${prefixClsMenu}-submenu-title
                 .${prefixClsMenu}-submenu-arrow {
-                transform: rotate(-90deg);
+                transform: rotate(-180deg);
             }
 
             .${prefixClsMenu}-sub.${prefixClsMenu}-inline {
@@ -404,10 +370,11 @@ export const NavPopWrap = withProps()(
 
         return css`
             .uc-fe-menu {
+                border-radius: ${DT.T_CORNER_LG};
                 .uc-fe-menu-item,
                 .uc-fe-menu-popup-title,
                 .uc-fe-menu-popup-content .uc-fe-menu-item {
-                    border-radius: 2px;
+                    border-radius: ${DT.T_CORNER_LG};
                     margin: 0px 4px;
                     color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
                     opacity: 0.65;

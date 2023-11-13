@@ -37,17 +37,17 @@ const Demo = () => (
                 {
                     icon: <SvgIcon type="cog" />,
                     key: '2',
-                    label: '一级小标题，filterSamllType为true',
+                    label: '一级小标题，filterSmallType为true',
                     labelType: 'small',
-                    filterSamllType: true,
+                    filterSmallType: true,
                     children: [
                         {
                             hidden: false,
                             icon: <SvgIcon type="calendar" />,
                             key: '21',
-                            label: '2级菜单1,filterSamllType为true',
+                            label: '2级菜单1,filterSmallType为true',
                             path: '/cloud-fe/resource/resourceset',
-                            filterSamllType: true,
+                            filterSmallType: true,
                             children: [
                                 {
                                     hidden: false,
@@ -107,8 +107,8 @@ const Demo = () => (
                 {
                     icon: <SvgIcon type="calendar" />,
                     key: '416',
-                    label: '一级标题，filterSamllType为true',
-                    filterSamllType: true,
+                    label: '一级标题，filterSmallType为true',
+                    filterSmallType: true,
                     children: [
                         {
                             hidden: false,

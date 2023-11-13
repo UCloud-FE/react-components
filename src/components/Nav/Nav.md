@@ -35,9 +35,9 @@ mode 为 vertical 的垂直展开模式，labelType 为 small 的小标题还是
 ```js {"codepath": "collapsed.jsx"}
 ```
 
-#### filterSamllType
+#### filterSmallType
 
-折叠目录时，某项 SubMenuType 设置了 filterSamllType 为 true，会将其 children 代替其本身
+折叠目录时，某项 SubMenuType 设置了 filterSmallType 为 true，会将其 children 代替其本身
 
 ```js {"codepath": "filter-small-type.jsx"}
 ```
@@ -64,4 +64,4 @@ type ItemType = MenuItemType | SubMenuType
 | labelType       | 标题类型                                                                                                             | 'normal' ｜ 'small' |
 | key             | 唯一标识                                                                                                             | string              |
 | children        | 子菜单项                                                                                                             | ItemType[]          |
-| filterSamllType | 折叠目录时，是否过滤 type 为 small 这一层级的标题，将其子级内容代替它本身，该属性只有 inlineCollapsed 为 true 时生效 | boolean             |
+| filterSmallType | 折叠目录时，是否过滤 type 为 small 这一层级的标题，将其子级内容代替它本身，该属性只有 inlineCollapsed 为 true 时生效 | boolean             |
