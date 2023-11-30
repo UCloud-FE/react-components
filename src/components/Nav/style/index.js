@@ -20,17 +20,88 @@ export const NavWarp = withProps()(
         return css`
             height: 100%;
             font-size: ${DT.T_TYPO_FONT_SIZE_2};
+            color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
 
-            .${prefixClsMenu}-expand .${prefixClsMenu}-item-selected.${prefixClsMenu}-menu-item-small {
-                background-color: ${DT.T_COLOR_BG_DEFAULT_HOVER};
-                color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
-                opacity: 1;
-                &:hover {
+            .${prefixClsMenu}-expand {
+                .${prefixClsMenuItem}-icon {
+                    margin-right: 13px;
+                }
+
+                /* 选中的MenuItem小标题 */
+                .${prefixClsMenu}-item-selected.${prefixClsMenu}-menu-item-small {
                     background-color: ${DT.T_COLOR_BG_DEFAULT_HOVER};
+                    color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+                    opacity: 1;
+                    &.${prefixClsMenu}-item-active .${prefixClsMenuItem}-icon {
+                        color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+                        opacity: 1;
+                    }
+                    .${prefixClsTitleText}, .${prefixClsMenuItem}-icon {
+                        opacity: 1;
+                    }
+                }
+
+                /* hover的MenuItem小标题 */
+                .${prefixClsMenu}-item-active.${prefixClsMenu}-menu-item-small {
+                    .${prefixClsMenuItem}-icon {
+                        color: ${DT.T_IDE_DEFAULT_COLOR_BG_DEFAULT};
+                        opacity: 0.65;
+                    }
+                }
+
+                /* 小标题MenuItem和SubMenu特殊处理样式 */
+                .${prefixClsMenu}-menu-item-small, .${prefixClsMenu}-submenu-small > .${prefixClsMenu}-submenu-title {
+                    height: 32px;
+                    line-height: 32px;
+                    font-size: ${DT.T_TYPO_FONT_SIZE_1};
+                    color: ${DT.T_IDE_DEFAULT_COLOR_BG_DEFAULT};
+
+                    .${prefixClsTitleText}, .${prefixClsMenuItem}-icon {
+                        opacity: 0.65;
+                    }
+
+                    .${prefixClsMenu}-submenu-arrow {
+                        line-height: 32px;
+                    }
+                }
+
+                .${prefixClsMenu}-submenu-small.${prefixClsMenu}-submenu-selected > .${prefixClsMenu}-submenu-title {
+                    .${prefixClsTitleText} {
+                        color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+                    }
+                    .${prefixClsMenuItem}-icon {
+                        color: ${DT.T_IDE_DEFAULT_COLOR_BG_DEFAULT};
+                        opacity: 0.65;
+                    }
+                }
+
+                /* 小标题SubMenu hover icon样式处理 */
+                .${prefixClsMenu}-submenu-small.${prefixClsMenu}-submenu-active > .${prefixClsMenu}-submenu-title {
+                    .${prefixClsMenuItem}-icon {
+                        color: ${DT.T_IDE_DEFAULT_COLOR_BG_DEFAULT};
+                    }
+                }
+            }
+
+            /* MenuItem hover 样式 */
+            .${prefixClsMenuItem}-active {
+                &.${prefixClsMenuItem}-small, &.${prefixClsMenuItem} {
+                    background-color: ${DT.T_COLOR_BG_DEFAULT_HOVER};
+                }
+                .${prefixClsMenuItem}-icon {
+                    color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
+                    opacity: 1;
+                }
+            }
+
+            .${prefixClsMenu}-submenu {
+                &:hover {
+                    cursor: pointer;
                 }
             }
 
             .${prefixClsMenu}-submenu-title {
+                display: flex;
                 .${prefixClsMenu}-submenu-arrow {
                     opacity: 0;
                 }
@@ -42,12 +113,19 @@ export const NavWarp = withProps()(
             }
 
             .${prefixClsTitleContent} {
-                margin-left: 8px;
+                padding: 0 8px;
+                width: calc(100% - 16px);
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                flex: 1;
+                overflow: hidden;
+            }
+
+            .${prefixClsTitleText} {
+                flex: 1;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                &:hover {
-                    cursor: pointer;
-                }
             }
 
             .${prefixClsMenu}-submenu-title, .${prefixClsMenu}-menu-item {
@@ -56,23 +134,23 @@ export const NavWarp = withProps()(
                 display: inline-block;
                 border-radius: ${DT.T_CORNER_SM};
                 font-size: ${DT.T_TYPO_FONT_SIZE_2};
+            }
 
-                &:hover {
-                    background-color: ${DT.T_COLOR_BG_DEFAULT_HOVER};
-                    .${prefixClsTitleText} {
-                        color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
-                    }
+            /* SubMenu 和 MenuItem 选中 */
+            .${prefixClsMenu}-item-active, .${prefixClsMenu}-submenu-active > .${prefixClsMenu}-submenu-title {
+                background-color: ${DT.T_COLOR_BG_DEFAULT_HOVER};
+                .${prefixClsTitleText} {
+                    color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+                }
 
-                    .${prefixClsMenuItem}-icon {
-                        color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
-                    }
+                .${prefixClsMenuItem}-icon {
+                    color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
                 }
             }
 
-            .${prefixClsMenu}-submenu-small > .${prefixClsMenu}-submenu-title {
-                &:hover {
-                    background-color: ${DT.T_COLOR_BG_DEFAULT_HOVER};
-                    color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+            .${prefixClsMenu}-item-active.${prefixClsMenu}-item-selected {
+                .${prefixClsTitleText} {
+                    color: ${DT.T_COLOR_BG_PRIMARY_1};
                 }
             }
 
@@ -82,18 +160,13 @@ export const NavWarp = withProps()(
                 }
                 .${prefixClsMenuItem}-icon {
                     color: ${DT.T_COLOR_BG_PRIMARY_1};
+                    opacity: 1;
                 }
             }
 
             .${prefixClsMenu}-item-selected {
                 background-color: ${DT.T_CHART_TIMEPICKER_BG_DEFAULT};
                 color: ${DT.T_COLOR_BG_PRIMARY_1};
-                &:hover {
-                    background-color: ${DT.T_CHART_TIMEPICKER_BG_DEFAULT};
-                    .${prefixClsTitleText} {
-                        color: ${DT.T_COLOR_BG_PRIMARY_1};
-                    }
-                }
             }
 
             .${prefixClsMenu}-menu-item, .${prefixClsMenu}-submenu > .${prefixClsMenu}-submenu-title {
@@ -105,29 +178,10 @@ export const NavWarp = withProps()(
                 margin-bottom: 20px;
             }
 
-            .${prefixClsMenu}-expand
-                .${prefixClsMenu}-menu-item-small,
-                .${prefixClsMenu}-submenu-small
-                > .${prefixClsMenu}-submenu-title {
-                height: 32px;
-                line-height: 32px;
-                font-size: ${DT.T_TYPO_FONT_SIZE_1};
-                color: ${DT.T_IDE_DEFAULT_COLOR_BG_DEFAULT};
-                opacity: 0.65;
-
-                .${prefixClsMenuItem}-icon {
-                    display: none;
-                }
-                .${prefixClsMenu}-submenu-arrow {
-                    line-height: 32px;
-                }
-            }
-
             .${prefixClsMenuItem}-icon {
-                margin: 8px 8px 8px 0px;
-                width: 20px;
-                height: 20px;
-                line-height: 20px;
+                width: 18px;
+                height: 18px;
+                line-height: 18px;
                 text-align: center;
             }
 
@@ -150,6 +204,9 @@ export const NavWarp = withProps()(
                 position: relative;
                 display: block;
                 white-space: nowrap;
+                &:hover {
+                    cursor: pointer;
+                }
             }
 
             .${prefixClsMenu}-submenu-normal {
@@ -173,18 +230,6 @@ export const NavWarp = withProps()(
                 padding-top: 20px;
                 height: 32px;
                 line-height: 32px;
-            }
-
-            .${prefixClsMenuItem}-submenu-arrow {
-                display: inline-block;
-                font-size: inherit;
-                vertical-align: baseline;
-                text-align: center;
-                text-transform: none;
-                text-rendering: auto;
-                position: absolute;
-                right: 16px;
-                line-height: 1.5em;
             }
 
             .menu-icon,
@@ -248,8 +293,7 @@ export const NavWarp = withProps()(
                 text-align: center;
                 text-transform: none;
                 text-rendering: auto;
-                position: absolute;
-                right: 26px;
+                margin-right: 8px;
                 line-height: 36px;
                 transition: transform 0.3s;
             }

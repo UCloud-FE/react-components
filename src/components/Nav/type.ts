@@ -11,10 +11,6 @@ export interface SubMenuType extends Omit<RcSubMenuType, 'children'> {
     icon?: React.ReactNode;
     children: ItemType[];
     labelType?: 'normal' | 'small';
-    /**
-     * 折叠目录时，是否过滤 type 为 small 这一层级的标题，将其子级内容代替它本身，该属性只有inlineCollapsed为true时生效
-     */
-    filterSmallType?: boolean;
 }
 
 export interface SubMenuProps {

@@ -34,10 +34,9 @@ const Demo = () => (
                     labelType: 'small'
                 },
                 {
-                    icon: <SvgIcon type="calendar" />,
                     key: '416',
                     labelType: 'small',
-                    label: '资源管理'
+                    label: '一级小标题无icon'
                 }
             ]}
         />

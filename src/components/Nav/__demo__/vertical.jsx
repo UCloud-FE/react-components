@@ -39,7 +39,6 @@ const Demo = () => (
                     labelType: 'small',
                     children: [
                         {
-                            hidden: false,
                             icon: <SvgIcon type="calendar" />,
                             key: '411',
                             label: '一级菜单',
@@ -47,7 +46,6 @@ const Demo = () => (
                             redirect: '',
                             children: [
                                 {
-                                    hidden: false,
                                     icon: <SvgIcon type="calendar" />,
                                     key: '4131',
                                     label: '资源管理',
@@ -61,7 +59,7 @@ const Demo = () => (
                 {
                     icon: <SvgIcon type="calendar" />,
                     key: '419',
-                    label: '资源管理'
+                    label: '资源管33理'
                 },
                 {
                     icon: <SvgIcon type="calendar" />,
@@ -69,7 +67,6 @@ const Demo = () => (
                     label: '一级标题',
                     children: [
                         {
-                            hidden: false,
                             icon: <SvgIcon type="calendar" />,
                             key: '413',
                             label: '资源管理',
@@ -79,21 +76,18 @@ const Demo = () => (
                         {
                             children: [
                                 {
-                                    hidden: false,
                                     key: '4122211',
                                     label: 'cahidjailj',
                                     path: '/cloud-fe/resource/resourceset',
                                     redirect: ''
                                 },
                                 {
-                                    hidden: false,
                                     key: '412222222',
                                     label: '32',
                                     path: '/cloud-fe/resource/resourceset',
                                     redirect: ''
                                 }
                             ],
-                            hidden: false,
                             icon: <SvgIcon type="calendar" />,
                             key: '41222',
                             label: '资源管理222',
@@ -108,7 +102,6 @@ const Demo = () => (
                     label: '资源管理',
                     children: [
                         {
-                            hidden: false,
                             icon: <SvgIcon type="calendar" />,
                             key: '4166',
                             label: '资源管理',
@@ -123,7 +116,6 @@ const Demo = () => (
                     label: '资源管理1',
                     children: [
                         {
-                            hidden: false,
                             icon: <SvgIcon type="calendar" />,
                             key: '4641',
                             label: '资源管理2',

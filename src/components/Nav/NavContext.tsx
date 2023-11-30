@@ -8,8 +8,8 @@ export interface NavContextProps {
     openKeys?: string[];
     selectedKeys?: string[];
     SetSelectedKeys?: Dispatch<SetStateAction<string[]>>;
-    subMenuItemRender?: (itemProps: SubMenuProps, dom: JSX.Element) => ReactNode;
-    menuItemRender?: (itemProps: NavItemProps, dom: JSX.Element) => ReactNode;
+    subMenuItemRender?: (itemProps: SubMenuProps, dom: JSX.Element) => JSX.Element;
+    menuItemRender?: (itemProps: NavItemProps, dom: JSX.Element) => JSX.Element;
 }
 
 const NavContext = createContext<NavContextProps>({

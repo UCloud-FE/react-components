@@ -13,42 +13,37 @@ function SubMenu(props: SubMenuProps) {
 
     const { subMenuItemRender } = React.useContext(NavContext);
 
-    let titleWrapNode: React.ReactNode;
+    const iconTitle = icon ? (
+        <>
+            {React.isValidElement(icon) &&
+                React.cloneElement(icon, {
+                    className: classNames(
+                        React.isValidElement(icon) ? icon.props?.className : '',
+                        `${prefixClsMenuItem}-icon`
+                    )
+                })}
+            <span className={prefixClsTitleText}>{title}</span>
+        </>
+    ) : (
+        <span className={prefixClsTitleText}>{title}</span>
+    );
 
-    if (!icon) {
-        titleWrapNode = (
-            <div className={classNames(prefixClsTitleContent)}>
-                <span className={prefixClsTitleText}>
-                    {subMenuItemRender ? subMenuItemRender(props, <>{title}</>) : title}
-                </span>
-            </div>
-        );
-    } else {
-        const dom = (
-            <>
-                {React.isValidElement(icon) &&
-                    React.cloneElement(icon, {
-                        className: classNames(
-                            React.isValidElement(icon) ? icon.props?.className : '',
-                            `${prefixClsMenuItem}-icon`
-                        )
-                    })}
-                <span className={prefixClsTitleText}>{title}</span>
-            </>
-        );
-
-        titleWrapNode = (
-            <div className={classNames(prefixClsTitleContent)}>
-                {subMenuItemRender ? subMenuItemRender(props, dom) : dom}
-            </div>
-        );
-    }
+    const titleWrapNode = subMenuItemRender ? (
+        React.cloneElement(subMenuItemRender(props, <>{iconTitle}</>), {
+            className: prefixClsTitleContent
+        })
+    ) : (
+        <div className={classNames(prefixClsTitleContent)}>{iconTitle}</div>
+    );
 
     return (
         <div style={{ marginLeft }} title={title}>
-            <RcSubMenu 
-            expandIcon={<SvgIcon className='uc-fe-nav-submenu-arrow' type='triangle-down' />}
-             {...rest}  className={classNames(`${prefixClsMenu}-submenu-${type}`)} title={titleWrapNode} />
+            <RcSubMenu
+                expandIcon={<SvgIcon className="uc-fe-nav-submenu-arrow" type="triangle-down" />}
+                {...rest}
+                className={classNames(`${prefixClsMenu}-submenu-${type}`)}
+                title={titleWrapNode}
+            />
         </div>
     );
 }

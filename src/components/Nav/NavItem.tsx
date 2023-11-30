@@ -44,6 +44,15 @@ export default class NavItem extends React.Component<NavItemProps> {
             </>
         );
 
+        const renderContent = () =>
+            menuItemRender ? (
+                React.cloneElement(menuItemRender(this.props, dom), {
+                    className: classnames(prefixClsTitleContent)
+                })
+            ) : (
+                <div className={prefixClsTitleContent}>{dom}</div>
+            );
+
         const returnNode = (
             <Item
                 {...rest}
@@ -62,14 +71,10 @@ export default class NavItem extends React.Component<NavItemProps> {
                         arrow={false}
                         placement="right"
                     >
-                        <div className={prefixClsTitleContent}>
-                            {menuItemRender ? menuItemRender(this.props, dom) : dom}
-                        </div>
+                        {renderContent()}
                     </Tooltip>
                 ) : (
-                    <div className={prefixClsTitleContent}>
-                        {menuItemRender ? menuItemRender(this.props, dom) : dom}
-                    </div>
+                    renderContent()
                 )}
             </Item>
         );
@@ -127,6 +132,15 @@ export default class NavItem extends React.Component<NavItemProps> {
             </>
         );
 
+        const getItem = (itemRender?: (itemProps: NavItemProps | SubMenuProps, dom: JSX.Element) => JSX.Element) =>
+            itemRender ? (
+                React.cloneElement(itemRender(this.props, dom), {
+                    className: classnames(prefixClsTitleContent)
+                })
+            ) : (
+                <div className={prefixClsTitleContent}>{dom}</div>
+            );
+
         return (
             <Popover
                 trigger={['hover']}
@@ -144,13 +158,7 @@ export default class NavItem extends React.Component<NavItemProps> {
                     )}
                     title={typeof title === 'string' ? title : undefined}
                 >
-                    <div className={prefixClsTitleContent}>
-                        {children ? (
-                            <>{subMenuItemRender ? subMenuItemRender(this.props, dom) : dom}</>
-                        ) : (
-                            <>{menuItemRender ? menuItemRender(this.props, dom) : dom}</>
-                        )}
-                    </div>
+                    {children ? getItem(subMenuItemRender) : getItem(menuItemRender)}
                 </Item>
             </Popover>
         );
@@ -170,22 +178,8 @@ export function useItems(items?: ItemType[], inlineIndent = 0, inlineCollapsed =
         if (!items) {
             return items;
         }
-        if (inlineCollapsed) {
-            // 处理filterSmallType为true的数据
-            const newItems = filterSmall(items);
-            return convertItemsToNodes(newItems, 0, inlineIndent, inlineCollapsed, 'vertical');
-        }
         return convertItemsToNodes(items, 0, inlineIndent, inlineCollapsed, mode);
     }, [items]);
-}
-
-function filterSmall(items: ItemType[]): ItemType[] {
-    return items.reduce((filteredItems: ItemType[], item: ItemType) => {
-        if ('filterSmallType' in item && item.filterSmallType === true) {
-            return filteredItems.concat(filterSmall(item.children));
-        }
-        return filteredItems.concat(item);
-    }, []);
 }
 
 /**

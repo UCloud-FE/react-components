@@ -15,6 +15,9 @@ export interface NavProps extends Omit<RcMenuProps, 'items'> {
      */
     mode?: 'vertical' | 'inline';
 
+    /**
+     * 菜单项
+     */
     items?: ItemType[];
     /**
      * inline 时菜单是否收起状态

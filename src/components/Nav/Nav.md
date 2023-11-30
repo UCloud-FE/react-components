@@ -35,33 +35,25 @@ mode 为 vertical 的垂直展开模式，labelType 为 small 的小标题还是
 ```js {"codepath": "collapsed.jsx"}
 ```
 
-#### filterSmallType
-
-折叠目录时，某项 SubMenuType 设置了 filterSmallType 为 true，会将其 children 代替其本身
-
-```js {"codepath": "filter-small-type.jsx"}
-```
-
 #### ItemType
 
 type ItemType = MenuItemType | SubMenuType
 
 ##### MenuItemType
 
-| 参数      | 说明     | 类型                |
-| --------- | -------- | ------------------- |
-| icon      | 菜单图标 | React.ReactNode     |
-| title     | 标题     | string              |
-| labelType | 标题类型 | 'normal' ｜ 'small' |
-| key       | 唯一标识 | string              |
+| 参数      | 说明     | 类型                | 默认值 |
+| --------- | -------- | ------------------- | ------ |
+| icon      | 菜单图标 | React.ReactNode     |        |
+| title     | 标题     | string              |        |
+| labelType | 标题类型 | 'normal' ｜ 'small' | normal |
+| key       | 唯一标识 | string              |        |
 
 ##### SubMenuType
 
-| 参数            | 说明                                                                                                                 | 类型                |
-| --------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------- |
-| icon            | 菜单图标                                                                                                             | React.ReactNode     |
-| title           | 标题                                                                                                                 | string              |
-| labelType       | 标题类型                                                                                                             | 'normal' ｜ 'small' |
-| key             | 唯一标识                                                                                                             | string              |
-| children        | 子菜单项                                                                                                             | ItemType[]          |
-| filterSmallType | 折叠目录时，是否过滤 type 为 small 这一层级的标题，将其子级内容代替它本身，该属性只有 inlineCollapsed 为 true 时生效 | boolean             |
+| 参数      | 说明     | 类型            | 默认值  |
+| --------- | -------- | --------------- | ------- |
+| icon      | 菜单图标 | React.ReactNode |         |
+| title     | 标题     | string          |         |
+| labelType | 标题类型 | 'normal'        | 'small' | normal |
+| key       | 唯一标识 | string          |         |
+| children  | 子菜单项 | ItemType[]      |         |

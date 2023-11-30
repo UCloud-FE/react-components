@@ -28,7 +28,6 @@ const Demo = () => {
                         labelType: 'small',
                         children: [
                             {
-                                hidden: false,
                                 icon: <SvgIcon type="calendar" />,
                                 key: '411',
                                 label: '二级标题',
@@ -36,7 +35,6 @@ const Demo = () => {
                                 redirect: '',
                                 children: [
                                     {
-                                        hidden: false,
                                         icon: <SvgIcon type="calendar" />,
                                         key: '4131',
                                         label: '资源管理sub',
@@ -54,7 +52,6 @@ const Demo = () => {
                         label: '一级标题',
                         children: [
                             {
-                                hidden: false,
                                 icon: <SvgIcon type="calendar" />,
                                 key: '413',
                                 label: '资源管理',
@@ -69,7 +66,6 @@ const Demo = () => {
                         label: '资源管理',
                         children: [
                             {
-                                hidden: false,
                                 icon: <SvgIcon type="calendar" />,
                                 key: '4166',
                                 label: '资源管理',
