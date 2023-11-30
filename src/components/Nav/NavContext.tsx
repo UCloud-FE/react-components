@@ -1,4 +1,4 @@
-import { Dispatch, ReactNode, SetStateAction, createContext } from 'react';
+import { Dispatch, SetStateAction, createContext } from 'react';
 import { NavItemProps, SubMenuProps } from './type';
 
 export interface NavContextProps {

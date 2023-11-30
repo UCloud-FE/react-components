@@ -1,4 +1,4 @@
-import React, { Dispatch, HTMLAttributes, ReactNode, SetStateAction, useMemo } from 'react';
+import React, { Dispatch, HTMLAttributes, SetStateAction, useMemo } from 'react';
 import type { MenuProps as RcMenuProps } from 'rc-menu';
 import classnames from 'classnames';
 import RcMenu from 'rc-menu';
@@ -42,12 +42,12 @@ export interface NavProps extends Omit<RcMenuProps, 'items'> {
     /**
      * 自定义 SubMenu render，可以获取 items 参数传入的数据
      */
-    subMenuItemRender?: (itemProps: SubMenuProps, dom: JSX.Element) => ReactNode;
+    subMenuItemRender?: (itemProps: SubMenuProps, dom: JSX.Element) => JSX.Element;
 
     /**
      * 自定义 MenuItem render，可以获取 items 参数传入的数据
      */
-    menuItemRender?: (itemProps: NavItemProps, dom: JSX.Element) => ReactNode;
+    menuItemRender?: (itemProps: NavItemProps, dom: JSX.Element) => JSX.Element;
 }
 
 export interface VerticalContextProps {
