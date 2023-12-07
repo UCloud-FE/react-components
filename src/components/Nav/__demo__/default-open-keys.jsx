@@ -32,14 +32,12 @@ const Demo = () => {
                                 key: '411',
                                 label: '二级标题',
                                 path: '/cloud-fe/resource/resourceset',
-                                redirect: '',
                                 children: [
                                     {
                                         icon: <SvgIcon type="calendar" />,
                                         key: '4131',
                                         label: '资源管理sub',
-                                        path: '/cloud-fe/resource/resourceset',
-                                        redirect: ''
+                                        path: '/cloud-fe/resource/resourceset'
                                     }
                                 ]
                             }
@@ -55,8 +53,7 @@ const Demo = () => {
                                 icon: <SvgIcon type="calendar" />,
                                 key: '413',
                                 label: '资源管理',
-                                path: '/cloud-fe/resource/resourceset',
-                                redirect: ''
+                                path: '/cloud-fe/resource/resourceset'
                             }
                         ]
                     },
@@ -69,8 +66,7 @@ const Demo = () => {
                                 icon: <SvgIcon type="calendar" />,
                                 key: '4166',
                                 label: '资源管理',
-                                path: '/cloud-fe/resource/resourceset',
-                                redirect: ''
+                                path: '/cloud-fe/resource/resourceset'
                             }
                         ]
                     }

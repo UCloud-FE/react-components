@@ -43,14 +43,12 @@ const Demo = () => (
                             key: '411',
                             label: '一级菜单',
                             path: '/cloud-fe/resource/resourceset',
-                            redirect: '',
                             children: [
                                 {
                                     icon: <SvgIcon type="calendar" />,
                                     key: '4131',
                                     label: '资源管理',
-                                    path: '/cloud-fe/resource/resourceset',
-                                    redirect: ''
+                                    path: '/cloud-fe/resource/resourceset'
                                 }
                             ]
                         }
@@ -70,29 +68,25 @@ const Demo = () => (
                             icon: <SvgIcon type="calendar" />,
                             key: '413',
                             label: '资源管理',
-                            path: '/cloud-fe/resource/resourceset',
-                            redirect: ''
+                            path: '/cloud-fe/resource/resourceset'
                         },
                         {
                             children: [
                                 {
                                     key: '4122211',
                                     label: 'cahidjailj',
-                                    path: '/cloud-fe/resource/resourceset',
-                                    redirect: ''
+                                    path: '/cloud-fe/resource/resourceset'
                                 },
                                 {
                                     key: '412222222',
                                     label: '32',
-                                    path: '/cloud-fe/resource/resourceset',
-                                    redirect: ''
+                                    path: '/cloud-fe/resource/resourceset'
                                 }
                             ],
                             icon: <SvgIcon type="calendar" />,
                             key: '41222',
                             label: '资源管理222',
-                            path: '/cloud-fe/resource/resourceset',
-                            redirect: ''
+                            path: '/cloud-fe/resource/resourceset'
                         }
                     ]
                 },
@@ -105,8 +99,7 @@ const Demo = () => (
                             icon: <SvgIcon type="calendar" />,
                             key: '4166',
                             label: '资源管理',
-                            path: '/cloud-fe/resource/resourceset',
-                            redirect: ''
+                            path: '/cloud-fe/resource/resourceset'
                         }
                     ]
                 },
@@ -119,8 +112,7 @@ const Demo = () => (
                             icon: <SvgIcon type="calendar" />,
                             key: '4641',
                             label: '资源管理2',
-                            path: '/cloud-fe/resource/resourceset',
-                            redirect: ''
+                            path: '/cloud-fe/resource/resourceset'
                         }
                     ]
                 }

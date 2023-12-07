@@ -50,10 +50,10 @@ type ItemType = MenuItemType | SubMenuType
 
 ##### SubMenuType
 
-| 参数      | 说明     | 类型            | 默认值  |
-| --------- | -------- | --------------- | ------- |
-| icon      | 菜单图标 | React.ReactNode |         |
-| title     | 标题     | string          |         |
-| labelType | 标题类型 | 'normal'        | 'small' | normal |
-| key       | 唯一标识 | string          |         |
-| children  | 子菜单项 | ItemType[]      |         |
+| 参数      | 说明     | 类型                | 默认值 |
+| --------- | -------- | ------------------- | ------ |
+| icon      | 菜单图标 | React.ReactNode     |        |
+| title     | 标题     | string              |        |
+| labelType | 标题类型 | 'normal' ｜ 'small' | normal |
+| key       | 唯一标识 | string              |        |
+| children  | 子菜单项 | ItemType[]          |        |
