@@ -1,3 +1,3 @@
 export default {
-    selectAll: 'select all'
+    selectAll: 'Select all'
 };

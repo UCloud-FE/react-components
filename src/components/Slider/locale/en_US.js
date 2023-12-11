@@ -1,12 +1,12 @@
 export default {
-    currentValueIs: 'current value is ',
-    inputValueIs: 'input value is ',
+    currentValueIs: 'Current value is ',
+    inputValueIs: 'Input value is ',
     period: '.',
     semicolon: ';',
     colon: ':',
     comma: ', ',
-    input: 'input',
+    input: 'Input',
     isValid: ' is valid',
     isInvalid: ' is invalid',
-    tip: 'please press enter or click other place to accept valid value'
+    tip: 'Please press enter or click other place to accept valid value'
 };

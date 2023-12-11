@@ -1,4 +1,4 @@
 export default {
-    confirm: 'confirm',
-    cancel: 'cancel'
+    confirm: 'Confirm',
+    cancel: 'Cancel'
 };
