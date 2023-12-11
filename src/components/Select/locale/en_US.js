@@ -1,7 +1,7 @@
 export default {
-    placeholder: 'please select',
-    selected: 'selected ',
+    placeholder: 'Please select',
+    selected: 'Selected ',
     items: ' items',
-    emptyTip: 'data is empty',
+    emptyTip: 'Data is empty',
     selectAll: 'Select All'
 };

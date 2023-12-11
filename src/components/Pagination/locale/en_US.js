@@ -1,17 +1,17 @@
 export default {
     // Options.jsx
     itemsPerPage: 'items/page',
-    jumpTo: 'jump to',
-    jumpToConfirm: 'confirm',
-    page: 'page',
+    jumpTo: 'Jump to',
+    jumpToConfirm: 'Confirm',
+    page: 'Page',
 
     // Pagination.jsx
-    prevPage: 'prev page',
-    nextPage: 'next page',
-    prev5: 'prev 5 page',
-    next5: 'next 5 page',
-    prev3: 'prev 3 page',
-    next3: 'next 3 page',
-    total: 'total',
-    items: 'items'
+    prevPage: 'Prev page',
+    nextPage: 'Next page',
+    prev5: 'Prev 5 page',
+    next5: 'Next 5 page',
+    prev3: 'Prev 3 page',
+    next3: 'Next 3 page',
+    total: 'Total',
+    items: 'Items'
 };
