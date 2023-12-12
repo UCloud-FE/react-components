@@ -1,7 +1,7 @@
 import mod from '@ucloud-fe/mod';
+import { moduleMap } from '@ucloud-fe/mod/lib/module';
 import amdResolver from '@ucloud-fe/mod/lib/resolver/amd';
 import jsonResolver from '@ucloud-fe/mod/lib/resolver/json';
-import { moduleMap } from '@ucloud-fe/mod/lib/module';
 
 import './index.css';
 
@@ -57,6 +57,10 @@ mod.config({
         'design-token-file': {
             file: 'https://raw.githubusercontent.com/UCloud-FE/design-tokens/main/define/default.json',
             type: 'json'
+        },
+        'theme-list': {
+            file: 'https://api.github.com/repos/UCloud-FE/design-tokens/contents/define',
+            type: 'json'
         }
     }
 });
@@ -70,26 +74,63 @@ const renderDesignTokenEditor = (dom: string) => {
         if (!destroyAction) return;
         destroyAction();
     };
-    mod.import(['@ucloud-fe/react-components', 'react', 'react-dom', 'design-token-editor', 'design-token-file']).then(
-        dependences => {
-            if (destroyed) return;
-            const [components, React, ReactDOM, Editor, token] = dependences as any;
-            console.log(token);
 
-            const { default: editorComponentDemos, ComponentDemosWrap } = require('./editorComponentDemos');
-
-            ReactDOM.render(
-                <Editor
-                    onChange={console.log}
-                    token={token}
-                    componentDemos={editorComponentDemos}
-                    renderComponentDemosWrap={ComponentDemosWrap}
-                />,
-                dom
+    mod.import(['theme-list', 'lodash'])
+        .then(([themeList, lodash]: any) => {
+            const themeListConfig = themeList.reduce(
+                (init: any, v: any) => {
+                    const themeName = `theme-${v.name.replace('.json', '')}`;
+                    init.modules[themeName] = { file: v.download_url, type: 'json' };
+                    init.themeListName.push(themeName);
+                    return init;
+                },
+                { modules: {}, themeListName: [] }
             );
-            destroyAction = () => ReactDOM.unmountComponentAtNode(dom);
-        }
-    );
+            mod.config({ modules: themeListConfig.modules });
+            return new Promise(resolve => {
+                mod.import(themeListConfig.themeListName).then(themeList =>
+                    resolve([themeListConfig.themeListName, themeList, lodash])
+                );
+            });
+        })
+        .then(([themeListName, themeList, lodash]: any) => {
+            const defaultThemeIndex = themeListName.findIndex((v: string) => v.includes('default'));
+            themeListName.splice(defaultThemeIndex, 1);
+            const [defaultTheme] = themeList.splice(defaultThemeIndex, 1);
+            const themeMap = themeListName.reduce((init: any, v: string, index: number) => {
+                init.set(v.replace('theme-', ''), {
+                    label: v.replace('theme-', ''),
+                    value: lodash.merge(lodash.cloneDeep(defaultTheme), themeList[index])
+                });
+                return init;
+            }, new Map([['default', { label: 'default', value: lodash.cloneDeep(defaultTheme) }]]));
+            return Promise.resolve([defaultTheme, themeMap]);
+        })
+        .then(([token, themeMap]) => {
+            console.log('token', token);
+            mod.import(['@ucloud-fe/react-components', 'react', 'react-dom', 'design-token-editor']).then(
+                dependences => {
+                    if (destroyed) return;
+                    const [components, React, ReactDOM, Editor] = dependences as any;
+                    console.log(token);
+
+                    const { default: editorComponentDemos, ComponentDemosWrap } = require('./editorComponentDemos');
+
+                    ReactDOM.render(
+                        <Editor
+                            onChange={console.log}
+                            token={token}
+                            themeMap={themeMap}
+                            componentDemos={editorComponentDemos}
+                            renderComponentDemosWrap={ComponentDemosWrap}
+                        />,
+                        dom
+                    );
+                    destroyAction = () => ReactDOM.unmountComponentAtNode(dom);
+                }
+            );
+        });
+
     return destroy;
 };
 
