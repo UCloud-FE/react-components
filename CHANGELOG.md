@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.1](https://github.com/UCloud-FE/react-components/compare/v1.9.0...v1.9.1) (2023-10-20)
+
+## [1.9.0](https://github.com/UCloud-FE/react-components/compare/v1.8.2...v1.9.0) (2023-09-08)
+
+### Features
+
+-   **add layout:** add layout ([#382](https://github.com/UCloud-FE/react-components/issues/382)) ([d9f888e](https://github.com/UCloud-FE/react-components/commit/d9f888e37e5b1fcad5851f9e3edab586cd4db814))
+
 ### [1.8.2](https://github.com/UCloud-FE/react-components/compare/v1.8.1...v1.8.2) (2023-08-17)
 
 ### Bug Fixes
