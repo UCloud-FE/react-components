@@ -1,0 +1,205 @@
+{
+    "Nav": {
+        "path": "Nav/Nav.tsx",
+        "name": "Nav",
+        "info": {
+            "description": "",
+            "displayName": "Nav",
+            "methods": [],
+            "props": {
+                "mode": {
+                    "required": false,
+                    "tsType": {
+                        "name": "union",
+                        "raw": "'vertical' | 'inline'",
+                        "elements": [
+                            { "name": "literal", "value": "'vertical'" },
+                            { "name": "literal", "value": "'inline'" }
+                        ]
+                    },
+                    "description": { "description": "菜单类型，垂直或内嵌，默认内嵌", "tags": [] },
+                    "defaultValue": { "value": "'inline'", "computed": false }
+                },
+                "items": {
+                    "required": false,
+                    "tsType": { "name": "Array", "elements": [{ "name": "ItemType" }], "raw": "ItemType[]" },
+                    "description": { "description": "菜单项", "tags": [] }
+                },
+                "inlineCollapsed": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "inline 时菜单是否收起状态", "tags": [] }
+                },
+                "inlineIndent": {
+                    "required": false,
+                    "tsType": { "name": "number" },
+                    "description": { "description": "每一级缩进量", "tags": [] },
+                    "defaultValue": { "value": "32", "computed": false }
+                },
+                "defaultOpenKeys": {
+                    "required": false,
+                    "tsType": { "name": "Array", "elements": [{ "name": "string" }], "raw": "string[]" },
+                    "description": { "description": "初始展开的 SubMenu 菜单项 key 数组", "tags": [] }
+                },
+                "defaultSelectedKeys": {
+                    "required": false,
+                    "tsType": { "name": "Array", "elements": [{ "name": "string" }], "raw": "string[]" },
+                    "description": { "description": "初始选中的菜单项 key 数组", "tags": [] }
+                },
+                "onOpenChange": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(openKeys: string[]) => void",
+                        "signature": {
+                            "arguments": [
+                                {
+                                    "name": "openKeys",
+                                    "type": { "name": "Array", "elements": [{ "name": "string" }], "raw": "string[]" }
+                                }
+                            ],
+                            "return": { "name": "void" }
+                        }
+                    },
+                    "description": { "description": "SubMenu 展开/关闭的回调", "tags": [] }
+                },
+                "subMenuItemRender": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(itemProps: SubMenuProps, dom: JSX.Element) => JSX.Element",
+                        "signature": {
+                            "arguments": [
+                                { "name": "itemProps", "type": { "name": "SubMenuProps" } },
+                                { "name": "dom", "type": { "name": "JSX.Element" } }
+                            ],
+                            "return": { "name": "JSX.Element" }
+                        }
+                    },
+                    "description": { "description": "自定义 SubMenu render，可以获取 items 参数传入的数据", "tags": [] }
+                },
+                "menuItemRender": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(itemProps: NavItemProps, dom: JSX.Element) => JSX.Element",
+                        "signature": {
+                            "arguments": [
+                                { "name": "itemProps", "type": { "name": "NavItemProps" } },
+                                { "name": "dom", "type": { "name": "JSX.Element" } }
+                            ],
+                            "return": { "name": "JSX.Element" }
+                        }
+                    },
+                    "description": {
+                        "description": "自定义 MenuItem render，可以获取 items 参数传入的数据",
+                        "tags": []
+                    }
+                }
+            },
+            "composes": ["Omit"]
+        }
+    },
+    "NavItem": {
+        "path": "Nav/NavItem.tsx",
+        "name": "NavItem",
+        "info": {
+            "description": "",
+            "displayName": "NavItem",
+            "methods": [
+                { "name": "renderItemChildren", "docblock": null, "modifiers": [], "params": [], "returns": null },
+                {
+                    "name": "renderIcon",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "icon", "type": { "name": "ReactReactElement", "raw": "React.ReactElement" } }
+                    ],
+                    "returns": null
+                },
+                {
+                    "name": "renderItem",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        { "name": "contextProps", "type": { "name": "NavContextProps", "alias": "NavContextProps" } }
+                    ],
+                    "returns": null
+                },
+                {
+                    "name": "renderPopverMenu",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        {
+                            "name": "items",
+                            "type": {
+                                "name": "Array",
+                                "elements": [{ "name": "unknown" }],
+                                "raw": "(ItemType | ItemType[])[]"
+                            }
+                        },
+                        {
+                            "name": "subMenuItemRender",
+                            "optional": true,
+                            "type": {
+                                "name": "signature",
+                                "type": "function",
+                                "raw": "(itemProps: SubMenuProps, dom: JSX.Element) => React.ReactNode",
+                                "signature": {
+                                    "arguments": [
+                                        { "name": "itemProps", "type": { "name": "SubMenuProps" } },
+                                        { "name": "dom", "type": { "name": "JSX.Element" } }
+                                    ],
+                                    "return": { "name": "ReactReactNode", "raw": "React.ReactNode" }
+                                }
+                            }
+                        },
+                        {
+                            "name": "menuItemRender",
+                            "optional": true,
+                            "type": {
+                                "name": "signature",
+                                "type": "function",
+                                "raw": "(itemProps: NavItemProps, dom: JSX.Element) => React.ReactNode",
+                                "signature": {
+                                    "arguments": [
+                                        { "name": "itemProps", "type": { "name": "NavItemProps" } },
+                                        { "name": "dom", "type": { "name": "JSX.Element" } }
+                                    ],
+                                    "return": { "name": "ReactReactNode", "raw": "React.ReactNode" }
+                                }
+                            }
+                        }
+                    ],
+                    "returns": null
+                },
+                {
+                    "name": "renderVerticalItem",
+                    "docblock": null,
+                    "modifiers": [],
+                    "params": [
+                        {
+                            "name": "{\n    inlineCollapsed,\n    selectedKeys,\n    subMenuItemRender,\n    menuItemRender\n}: Partial<NavContextProps>",
+                            "type": {
+                                "name": "Partial",
+                                "elements": [{ "name": "NavContextProps" }],
+                                "raw": "Partial<NavContextProps>",
+                                "alias": "Partial"
+                            }
+                        }
+                    ],
+                    "returns": null
+                }
+            ]
+        }
+    },
+    "SubMenu": {
+        "path": "Nav/SubMenu.tsx",
+        "name": "SubMenu",
+        "info": { "description": "", "displayName": "SubMenu", "methods": [] }
+    }
+}
