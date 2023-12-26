@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.10.0](https://github.com/UCloud-FE/react-components/compare/v1.9.1...v1.10.0) (2023-12-26)
+
+### Features
+
+-   **nav:** add nav component ([#383](https://github.com/UCloud-FE/react-components/issues/383)) ([0fa2583](https://github.com/UCloud-FE/react-components/commit/0fa258389f865cda573e4c893eaa782c9e76a959))
+
 ### [1.9.1](https://github.com/UCloud-FE/react-components/compare/v1.9.0...v1.9.1) (2023-10-20)
 
 ## [1.9.0](https://github.com/UCloud-FE/react-components/compare/v1.8.2...v1.9.0) (2023-09-08)
