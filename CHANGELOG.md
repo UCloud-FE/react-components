@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.10.1](https://github.com/UCloud-FE/react-components/compare/v1.10.0...v1.10.1) (2024-01-11)
+
+### Features
+
+-   **theme:** component theme switch ([a28a809](https://github.com/UCloud-FE/react-components/commit/a28a8095487f50ea191e2d9c856f78478d7bbe2c))
+
 ## [1.10.0](https://github.com/UCloud-FE/react-components/compare/v1.9.1...v1.10.0) (2023-12-26)
 
 ### Features
