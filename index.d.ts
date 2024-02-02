@@ -700,12 +700,14 @@ declare class CardHeader extends Component<CardHeaderProps> {}
 declare class CardContent extends Component<HTMLAttributes<HTMLDivElement>> {}
 declare class CardFooter extends Component<HTMLAttributes<HTMLDivElement>> {}
 declare class CardAction extends Component<HTMLAttributes<HTMLDivElement>> {}
+declare class CardSubArea extends Component<HTMLAttributes<HTMLDivElement>> {}
 export type CardProps = HTMLAttributes<HTMLDivElement>;
 export declare class Card extends PureComponent<CardProps> {
     static Header: typeof CardHeader;
     static Content: typeof CardContent;
     static Footer: typeof CardFooter;
     static Action: typeof CardAction;
+    static SubArea: typeof CardSubArea;
 }
 
 // Steps
@@ -816,3 +818,9 @@ interface LocaleProviderProps {
     locale?: any;
 }
 export declare class LocaleProvider extends Component<LocaleProviderProps> {}
+
+// Skeleton
+export { default as Skeleton } from './lib/components/Skeleton';
+
+// TimePicker
+export { default as TimePicker } from './lib/components/TimePicker';

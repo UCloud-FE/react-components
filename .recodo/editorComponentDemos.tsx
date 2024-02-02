@@ -5,6 +5,10 @@ const snake = (str: string) => {
     return str.replace(/^[A-Z]/, s => s.toLowerCase()).replaceAll(/[A-Z]/g, s => '_' + s.toLowerCase());
 };
 const editorComponentDemos = [
+    '操作列表 ActionList',
+    '自动填充 AutoComplete',
+    '卡片 Card',
+    '级联选择器 Cascader',
     '按钮 Button',
     '计步器 NumberInput',
     '输入框 Input',
@@ -22,7 +26,12 @@ const editorComponentDemos = [
     '自增表格  EditableTable',
     '穿梭框 Transfer',
     '开关 Switch',
+    '骨架屏 Skeleton',
+    '时间选择器 TimePicker',
+    '下拉菜单穿梭机 TransferMenu',
+    '表格穿梭机 TransferTable',
     '滑块 Slider',
+    '树控件 Tree',
     '上传 Upload',
     '冒泡 Tooltip',
     '气泡确认 PopConfirm',
