@@ -48,6 +48,8 @@ export { default as Select } from './lib/components/Select';
 
 export { default as Breadcrumb } from './lib/components/Breadcrumb';
 
+export { default as Nav } from './lib/components/Nav';
+
 // Button
 import { ButtonProps } from './lib/components/Button/Button';
 export { default as Button } from './lib/components/Button';
