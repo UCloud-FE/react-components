@@ -53,7 +53,7 @@ export interface NavProps extends Omit<RcMenuProps, 'items'> {
 export interface VerticalContextProps {
     openKeys?: string[];
     selectedKeys?: string[];
-    SetSelectedKeys?: Dispatch<SetStateAction<string[]>>;
+    setSelectedKeys?: Dispatch<SetStateAction<string[]>>;
 }
 export const VerticalContext = React.createContext<VerticalContextProps>({
     openKeys: [],
@@ -72,7 +72,7 @@ const Nav = ({
 }: NavProps & Override<HTMLAttributes<HTMLDivElement>, NavProps>) => {
     const newMode = useMemo(() => (inlineCollapsed ? 'vertical' : mode), [inlineCollapsed, mode]);
     const mergedChildren = useItems(items, inlineIndent, inlineCollapsed, mode);
-    const [selectedKeys, SetSelectedKeys] = React.useState(rest.defaultSelectedKeys || []);
+    const [selectedKeys, setSelectedKeys] = React.useState(rest.defaultSelectedKeys || []);
 
     const contextValue = React.useMemo(
         () => ({
@@ -81,14 +81,14 @@ const Nav = ({
             mode: newMode,
             openKeys: rest.defaultOpenKeys,
             selectedKeys: selectedKeys,
-            SetSelectedKeys: SetSelectedKeys,
+            setSelectedKeys: setSelectedKeys,
             subMenuItemRender: subMenuItemRender,
             menuItemRender: menuItemRender
         }),
         [
             inlineCollapsed,
             selectedKeys,
-            SetSelectedKeys,
+            setSelectedKeys,
             newMode,
             inlineIndent,
             rest.defaultOpenKeys,
@@ -97,25 +97,15 @@ const Nav = ({
         ]
     );
 
-    // 有垂直菜单的时候，selectedKeys手动处理
-    const verticalProps = useMemo(
-        () =>
-            newMode === 'vertical'
-                ? {
-                      selectedKeys,
-                      onSelect: ({ key }: { key: string }) => {
-                          SetSelectedKeys([key]);
-                      }
-                  }
-                : {},
-        [newMode, selectedKeys]
-    );
-
     return (
         <NavWarp className={classnames(prefixClsNavWarp, className)}>
             <NavContext.Provider value={contextValue}>
                 <RcMenu
                     inlineIndent={0}
+                    selectedKeys={selectedKeys}
+                    onSelect={({ key } ) => {
+                        setSelectedKeys([key]);
+                    }}
                     {...rest}
                     mode={'inline'}
                     prefixCls={prefixClsMenu}
@@ -124,7 +114,6 @@ const Nav = ({
                         prefixClsMenu,
                         inlineCollapsed ? `${prefixClsMenu}-collapsed` : `${prefixClsMenu}-expand`
                     )}
-                    {...verticalProps}
                 >
                     {mergedChildren}
                 </RcMenu>

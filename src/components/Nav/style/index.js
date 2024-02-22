@@ -233,7 +233,7 @@ export const NavWarp = withProps()(
             }
 
             .menu-icon,
-            .${prefixClsMenuItem}-title-content, .${_prefixCls}-nav-submenu-arrow {
+            .${_prefixCls}-nav-submenu-arrow {
                 transition: all 0.3s;
                 z-index: 2;
             }

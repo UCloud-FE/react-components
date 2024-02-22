@@ -7,7 +7,7 @@ export interface NavContextProps {
     mode: 'vertical' | 'inline';
     openKeys?: string[];
     selectedKeys?: string[];
-    SetSelectedKeys?: Dispatch<SetStateAction<string[]>>;
+    setSelectedKeys?: Dispatch<SetStateAction<string[]>>;
     subMenuItemRender?: (itemProps: SubMenuProps, dom: JSX.Element) => JSX.Element;
     menuItemRender?: (itemProps: NavItemProps, dom: JSX.Element) => JSX.Element;
 }
