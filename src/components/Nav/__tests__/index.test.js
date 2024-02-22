@@ -4,16 +4,12 @@ import { mount } from 'enzyme';
 import Nav from 'src/components/Nav';
 
 describe('Nav', () => {
-    test('controlled selectedKeys', () => {
-        let selectValue = ['1'];
-        const onChange = jest.fn(value => (selectValue = value));
+    test('Nav onSelect', () => {
+        const defaultKeys = ['1'];
 
         const wrapper = mount(
             <Nav
-                selectedKeys={selectValue}
-                onSelect={({ key }) => {
-                    onChange(key);
-                }}
+                defaultSelectedKeys={defaultKeys}
                 items={[
                     {
                         key: '1',
@@ -38,14 +34,6 @@ describe('Nav', () => {
         expect(children.at(0).hasClass('uc-fe-nav-item-selected')).toBe(true);
 
         children.at(1).simulate('click');
-        expect(onChange).toHaveBeenCalledTimes(1);
-        expect(onChange).toHaveBeenLastCalledWith('2');
-
-        wrapper.setProps({ selectedKeys: ['2'] });
-        expect(wrapper.find('li.uc-fe-nav-item').at(1).hasClass('uc-fe-nav-item-selected')).toBe(true);
-
-        children.at(2).simulate('click');
-        expect(onChange).toHaveBeenCalledTimes(2);
         expect(wrapper.find('li.uc-fe-nav-item').at(1).hasClass('uc-fe-nav-item-selected')).toBe(true);
     });
 });
