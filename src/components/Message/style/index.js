@@ -104,7 +104,7 @@ export const TitleWrap = withProps({
             word-break: break-all;
             font-size: 14px;
             color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
-            line-height: 22px;
+            line-height: 24px;
         `;
     })
 );
@@ -121,9 +121,9 @@ export const ContentWrap = withProps({
             padding-right: 36px;
             padding-left: 44px;
             word-break: break-all;
-            font-size: 12px;
-            color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
-            line-height: 18px;
+            font-size: 14px;
+            color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+            line-height: 24px;
         `;
     })
 );
@@ -132,7 +132,7 @@ export const FooterWrap = styled('div')`
     text-align: right;
     margin-right: 16px;
     margin-left: 44px;
-    margin-top: 12px;
+    margin-top: 8px;
 `;
 
 export const MessageWrap = withProps({
@@ -155,10 +155,6 @@ export const MessageWrap = withProps({
             background: ${DT.T_COLOR_BG_DEFAULT_BRIGHT};
             box-shadow: ${DT.T_SHADOW_BLOCK_DEFAULT_LG};
             position: relative;
-
-            .${titleCls}+.${contentCls} {
-                margin-top: 8px;
-            }
         `;
     })
 );
