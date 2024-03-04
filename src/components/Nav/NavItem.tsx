@@ -264,7 +264,7 @@ const PopMenu = ({
     verticalChildren?: ItemType[];
 }) => {
     const {
-        SetSelectedKeys: SetNavSelectedKeys,
+        setSelectedKeys: setNavSelectedKeys,
         selectedKeys: navSelectedKeys,
         subMenuItemRender,
         menuItemRender
@@ -282,7 +282,7 @@ const PopMenu = ({
             <Menu
                 selectedKeys={menuSelectedKeys}
                 onChange={key => {
-                    SetNavSelectedKeys?.(key as string[]);
+                    setNavSelectedKeys?.(key as string[]);
                 }}
             >
                 {renderPopverMenu(verticalChildren || [], subMenuItemRender, menuItemRender)}

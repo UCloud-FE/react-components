@@ -64,6 +64,14 @@
                     },
                     "description": { "description": "SubMenu 展开/关闭的回调", "tags": [] }
                 },
+                "onSelect": {
+                    "required": false,
+                    "tsType": { "name": "SelectEventHandler" },
+                    "description": {
+                        "description": "选中每一菜单项的回调, function({key:String, item:ReactComponent, domEvent:Event, selectedKeys:String[]})",
+                        "tags": []
+                    }
+                },
                 "subMenuItemRender": {
                     "required": false,
                     "tsType": {

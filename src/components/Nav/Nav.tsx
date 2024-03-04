@@ -8,6 +8,7 @@ import { Override } from 'src/type';
 import { useItems } from './NavItem';
 import { NavWarp, prefixClsNavWarp, prefixClsMenu } from './style';
 import { ItemType, NavItemProps, SubMenuProps } from './type';
+import { SelectEventHandler } from 'rc-menu/lib/interface';
 
 export interface NavProps extends Omit<RcMenuProps, 'items'> {
     /**
@@ -40,6 +41,10 @@ export interface NavProps extends Omit<RcMenuProps, 'items'> {
      */
     onOpenChange?: (openKeys: string[]) => void;
     /**
+     * 选中每一菜单项的回调, function({key:String, item:ReactComponent, domEvent:Event, selectedKeys:String[]})
+     */
+    onSelect?: SelectEventHandler;
+    /**
      * 自定义 SubMenu render，可以获取 items 参数传入的数据
      */
     subMenuItemRender?: (itemProps: SubMenuProps, dom: JSX.Element) => JSX.Element;
@@ -53,7 +58,7 @@ export interface NavProps extends Omit<RcMenuProps, 'items'> {
 export interface VerticalContextProps {
     openKeys?: string[];
     selectedKeys?: string[];
-    SetSelectedKeys?: Dispatch<SetStateAction<string[]>>;
+    setSelectedKeys?: Dispatch<SetStateAction<string[]>>;
 }
 export const VerticalContext = React.createContext<VerticalContextProps>({
     openKeys: [],
@@ -72,7 +77,7 @@ const Nav = ({
 }: NavProps & Override<HTMLAttributes<HTMLDivElement>, NavProps>) => {
     const newMode = useMemo(() => (inlineCollapsed ? 'vertical' : mode), [inlineCollapsed, mode]);
     const mergedChildren = useItems(items, inlineIndent, inlineCollapsed, mode);
-    const [selectedKeys, SetSelectedKeys] = React.useState(rest.defaultSelectedKeys || []);
+    const [selectedKeys, setSelectedKeys] = React.useState(rest.defaultSelectedKeys || []);
 
     const contextValue = React.useMemo(
         () => ({
@@ -81,14 +86,14 @@ const Nav = ({
             mode: newMode,
             openKeys: rest.defaultOpenKeys,
             selectedKeys: selectedKeys,
-            SetSelectedKeys: SetSelectedKeys,
+            setSelectedKeys: setSelectedKeys,
             subMenuItemRender: subMenuItemRender,
             menuItemRender: menuItemRender
         }),
         [
             inlineCollapsed,
             selectedKeys,
-            SetSelectedKeys,
+            setSelectedKeys,
             newMode,
             inlineIndent,
             rest.defaultOpenKeys,
@@ -97,25 +102,15 @@ const Nav = ({
         ]
     );
 
-    // 有垂直菜单的时候，selectedKeys手动处理
-    const verticalProps = useMemo(
-        () =>
-            newMode === 'vertical'
-                ? {
-                      selectedKeys,
-                      onSelect: ({ key }: { key: string }) => {
-                          SetSelectedKeys([key]);
-                      }
-                  }
-                : {},
-        [newMode, selectedKeys]
-    );
-
     return (
         <NavWarp className={classnames(prefixClsNavWarp, className)}>
             <NavContext.Provider value={contextValue}>
                 <RcMenu
                     inlineIndent={0}
+                    selectedKeys={selectedKeys}
+                    onSelect={({ key }) => {
+                        setSelectedKeys([key]);
+                    }}
                     {...rest}
                     mode={'inline'}
                     prefixCls={prefixClsMenu}
@@ -124,7 +119,6 @@ const Nav = ({
                         prefixClsMenu,
                         inlineCollapsed ? `${prefixClsMenu}-collapsed` : `${prefixClsMenu}-expand`
                     )}
-                    {...verticalProps}
                 >
                     {mergedChildren}
                 </RcMenu>
