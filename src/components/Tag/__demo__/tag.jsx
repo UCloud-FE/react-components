@@ -13,11 +13,15 @@ class Demo extends React.Component {
         super(props);
         this.state = {
             styleType: 'default',
+            iconSize: 'sm',
+            border: true,
+            borderType: 'default',
+            suffix: 'none',
             icon: null
         };
     }
     render() {
-        const { styleType, closable, icon, disabled } = this.state;
+        const { styleType, closable, icon, disabled, iconSize, border, borderType, suffix } = this.state;
         const itemLayout = {
             labelCol: {
                 span: 3
@@ -42,6 +46,17 @@ class Demo extends React.Component {
                     <Form.Item label="disabled" {...itemLayout}>
                         <Switch checked={disabled} onChange={disabled => this.setState({ disabled })} />
                     </Form.Item>
+                    <Form.Item label="border" {...itemLayout}>
+                        <Switch checked={border} onChange={border => this.setState({ border })} />
+                    </Form.Item>
+                    <Form.Item label="borderType" {...itemLayout}>
+                        <Radio.Group
+                            options={['default', 'circle'].map(borderType => ({ value: borderType }))}
+                            value={borderType}
+                            onChange={borderType => this.setState({ borderType })}
+                        />
+                    </Form.Item>
+
                     <Form.Item label="icon" {...itemLayout}>
                         <Radio.Group
                             options={['circle-fill', 'circle', 'loading', 'custom']
@@ -51,11 +66,19 @@ class Demo extends React.Component {
                             onChange={icon => this.setState({ icon })}
                         />
                     </Form.Item>
+                    <Form.Item label="suffix" {...itemLayout}>
+                        <Radio.Group
+                            options={['none', 'custom'].map(v => ({ label: v, value: v }))}
+                            value={suffix}
+                            onChange={suffix => this.setState({ suffix })}
+                        />
+                    </Form.Item>
                 </Form>
                 <div className="demo-wrap">
                     <Tag
                         {...this.state}
                         icon={icon === 'custom' ? <Icon type="loading" spin /> : icon}
+                        suffix={suffix === 'custom' ? <Icon type="loading" spin /> : undefined}
                         onClose={() => console.log('close tag')}
                     >
                         Tag Content

@@ -29,9 +29,9 @@ const switchTheme = {
         lg: '2px'
     },
     BtnSize: {
-        sm: '24px',
-        md: '28px',
-        lg: '32px'
+        sm: 'T_HEIGHT_SM',
+        md: 'T_HEIGHT_MD',
+        lg: 'T_HEIGHT_LG'
     }
 };
 
@@ -52,7 +52,8 @@ export const SwitchWrap = sWrap<{ disabled?: boolean; checked?: boolean; size: S
         } = props;
 
         const { Width, BtnPadding, BorderWidth, BtnSize } = switchTheme;
-
+        const size_token = BtnSize[size]  as keyof typeof DT;
+        const btn_size_style = DT[`${size_token}`]
         return css`
             position: relative;
             cursor: pointer;
@@ -116,8 +117,8 @@ export const SwitchWrap = sWrap<{ disabled?: boolean; checked?: boolean; size: S
             }
 
             .${buttonCls} {
-                width: ${BtnSize[size]};
-                height: ${BtnSize[size]};
+                width: ${btn_size_style};
+                height: ${btn_size_style};
                 padding: ${BtnPadding[size]};
                 > span {
                     background: ${DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT};
@@ -152,19 +153,19 @@ export const SwitchWrap = sWrap<{ disabled?: boolean; checked?: boolean; size: S
             ${size === 'md' &&
             css`
                 .${onTipCls} {
-                    padding-right: ${BtnSize[size]};
+                    padding-right: ${btn_size_style};
                 }
                 .${offTipCls} {
-                    padding-left: ${BtnSize[size]};
+                    padding-left: ${btn_size_style};
                 }
             `};
             ${size === 'lg' &&
             css`
                 .${onTipCls} {
-                    padding-right: ${BtnSize[size]};
+                    padding-right: ${btn_size_style};
                 }
                 .${offTipCls} {
-                    padding-left: ${BtnSize[size]};
+                    padding-left: ${btn_size_style};
                 }
             `};
 
@@ -177,7 +178,7 @@ export const SwitchWrap = sWrap<{ disabled?: boolean; checked?: boolean; size: S
                       }
                       .${buttonCls} {
                           left: 100%;
-                          margin-left: -${BtnSize[size]};
+                          margin-left: -${btn_size_style};
                       }
                       .${dotCls} {
                           background: ${DT.T_SWITCH_COLOR_BG_DOT_ON};

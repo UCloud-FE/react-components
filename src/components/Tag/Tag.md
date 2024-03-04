@@ -6,6 +6,8 @@
 
 #### 功能演示
 
+<strong> 当使用类型为 crisped 的 styleType , closable 将会失效，如果需要请自定义 suffix</strong>
+
 ```js {"codepath": "tag.jsx"}
 ```
 

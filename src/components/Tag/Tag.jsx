@@ -1,13 +1,15 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-
+import SvgIcon from 'src/components/SvgIcon';
 import {
     TagWrapper,
     CloseIcon,
     CloseIconWrapper,
     ContentWrapper,
     PrefixIcon,
+    SvgIconWrapper,
     PrefixIconWrapper,
+    SuffixIconWrapper,
     styleMap
 } from './style';
 
@@ -34,6 +36,23 @@ class Tag extends PureComponent {
          */
         icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
         /**
+         * icon 大小
+         */
+        iconSize: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
+        /**
+         * 是否开启border样式
+         */
+        border: PropTypes.bool,
+        /**
+         * border 类型
+         */
+        borderType: PropTypes.oneOf(['default', 'circle', 'corner']),
+
+        /**
+         * 后缀
+         */
+        suffix: PropTypes.node,
+        /**
          * 是否禁用
          */
         disabled: PropTypes.bool,
@@ -52,18 +71,52 @@ class Tag extends PureComponent {
         })
     };
     static defaultProps = {
-        styleType: 'default'
+        styleType: 'default',
+        borderType: 'default',
+        iconSize: 'sm',
+        border: true
     };
     render() {
-        const { children, styleType, closable, icon, disabled, onClose, ...rest } = this.props;
+        const {
+            children,
+            styleType,
+            closable,
+            icon,
+            disabled,
+            onClose,
+            iconSize,
+            border,
+            borderType,
+            suffix,
+
+            ...rest
+        } = this.props;
         return (
-            <TagWrapper styleType={styleType} disabled={disabled} {...rest}>
+            <TagWrapper
+                styleType={styleType}
+                disabled={disabled}
+                border={border}
+                borderType={borderType}
+                closable={closable}
+                {...rest}
+            >
                 {icon && (
                     <PrefixIconWrapper>
-                        {typeof icon === 'string' ? <PrefixIcon type={icon} /> : icon}
+                        {typeof icon === 'string' ? (
+                            icon === 'loading' ? (
+                                <SvgIconWrapper size={iconSize}>
+                                    <SvgIcon type="loading-line" spin />{' '}
+                                </SvgIconWrapper>
+                            ) : (
+                                <PrefixIcon type={icon} size={iconSize} />
+                            )
+                        ) : (
+                            icon
+                        )}
                     </PrefixIconWrapper>
                 )}
                 <ContentWrapper>{children}</ContentWrapper>
+                {suffix && <SuffixIconWrapper>{suffix}</SuffixIconWrapper>}
                 {closable && (
                     <CloseIconWrapper onClick={disabled ? undefined : onClose}>
                         <CloseIcon type="cross" />

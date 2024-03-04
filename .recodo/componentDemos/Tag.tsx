@@ -37,6 +37,30 @@ const Demo = () => {
             </Box>
             <Box spacing={['md', 'md']}>
                 {styleTypes.map(styleType => (
+                    <Tag styleType={styleType}  closable  border={false}   >
+                        标签文本
+                    </Tag>
+                ))}
+            </Box>
+            <Box spacing={['md', 'md']}>
+                {styleTypes.map(styleType => (
+                    <Tag styleType={styleType} icon="circle-fill"  iconSize={'xs'} borderType={"circle"}  >
+                        标签文本
+                    </Tag>
+                ))}
+            </Box>
+            <Box spacing={['md', 'md']}>
+                <Tag.Group exposeCount={3}>
+                    {styleTypes.map(styleType => (
+                        <Tag styleType={styleType}   iconSize={'xs'}   >
+                            标签文本
+                        </Tag>
+                    ))}
+         
+                </Tag.Group>
+            </Box>
+            <Box spacing={['md', 'md']}>
+                {styleTypes.map(styleType => (
                     <Tag.Icon styleType={styleType} icon="circle-fill" closable>
                         标签文本
                     </Tag.Icon>

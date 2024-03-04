@@ -7,15 +7,20 @@ import splitExampleCode from 'react-styleguidist/lib/client/utils/splitExampleCo
 
 import ThemeProvider from 'src/components/ThemeProvider';
 import darkTheme from 'src/components/ThemeProvider/dark';
+import privateTheme from 'src/components/ThemeProvider/private';
 import LocaleProvider from 'src/components/LocaleProvider';
 import enLocale from 'src/components/LocaleProvider/locale/en_US';
 
-export let isDarkTheme = false;
+// export let isDarkTheme = false;
+export let themeType = 'default';
 let themeListeners = [];
-export const toggleDarkTheme = isDark => {
-    isDarkTheme = isDark;
+// export const toggleDarkTheme = isDark => {
+export const toggleTheme = type => {
+    // isDarkTheme = isDark;
+    themeType = type;
     themeListeners.forEach(listener => {
-        listener(isDarkTheme);
+        // listener(isDarkTheme);
+        listener(themeType);
     });
 };
 
@@ -44,14 +49,14 @@ export default class ReactExample extends Component<ReactExampleProps> {
     };
 
     state = {
-        dark: isDarkTheme,
+        theme: themeType,
         en: isEN
     };
 
     constructor(props) {
         super(props);
-        const listener = dark => {
-            this.setState({ dark });
+        const listener = theme => {
+            this.setState({ theme });
         };
         const localeListener = en => {
             this.setState({ en });
@@ -69,7 +74,7 @@ export default class ReactExample extends Component<ReactExampleProps> {
 
     public shouldComponentUpdate(nextProps: ReactExampleProps, nextState) {
         return (
-            this.props.code !== nextProps.code || this.state.dark !== nextState.dark || this.state.en !== nextState.en
+            this.props.code !== nextProps.code || this.state.theme !== nextState.theme || this.state.en !== nextState.en
         );
     }
 
@@ -84,7 +89,7 @@ export default class ReactExample extends Component<ReactExampleProps> {
 
     public render() {
         const { code, compilerConfig = {}, onError } = this.props;
-        const { dark, en } = this.state;
+        const { theme, en } = this.state;
         const compiledCode = compileCode(code, compilerConfig, onError);
         if (!compiledCode) {
             return null;
@@ -99,8 +104,11 @@ export default class ReactExample extends Component<ReactExampleProps> {
                 </div>
             </Wrapper>
         );
-        if (dark) {
+        if (theme == 'dark') {
             wrappedComponent = <ThemeProvider theme={darkTheme}>{wrappedComponent}</ThemeProvider>;
+        }
+        if (theme == 'private') {
+            wrappedComponent = <ThemeProvider theme={privateTheme}>{wrappedComponent}</ThemeProvider>;
         }
         if (en) {
             wrappedComponent = <LocaleProvider locale={enLocale}>{wrappedComponent}</LocaleProvider>;

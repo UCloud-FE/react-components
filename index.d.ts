@@ -424,10 +424,22 @@ export interface TagProps extends HTMLAttributes<HTMLSpanElement> {
     onClose?: () => void;
     icon?: 'circle-fill' | 'circle' | 'loading' | 'custom' | ReactNode;
     disabled?: boolean;
+    iconSize?:'xs' | 'sm' | 'md' | 'lg';
+    border?: boolean;
+    borderType?: 'default' | 'circle';
+    suffix?: ReactNode;
 }
+export  interface TagGroupProps  extends HTMLAttributes<HTMLDivElement>{
+    children?: ReactNode;
+    compact?: boolean;
+    exposeCount?: number;
+    popoverProps?: PopoverProps
+} 
 export declare class TagIcon extends PureComponent<TagProps> {}
+export declare class TagGroup extends PureComponent<TagGroupProps> {}
 export declare class Tag extends PureComponent<TagProps> {
     declare static Icon: typeof TagIcon;
+    declare static Group: typeof TagGroup;
 }
 
 // Popover

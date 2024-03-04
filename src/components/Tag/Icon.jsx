@@ -19,6 +19,18 @@ class Icon extends PureComponent {
          */
         styleType: PropTypes.oneOf(StyleType),
         /**
+         * icon 大小
+         */
+        iconSize: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
+        /**
+         * 是否开启border样式
+         */
+        border: PropTypes.bool,
+        /**
+         * border 类型
+         */
+        borderType: PropTypes.oneOf(['default', 'circle']),
+        /**
          * 自定义样式
          */
         customStyle: PropTypes.shape({
@@ -30,11 +42,16 @@ class Icon extends PureComponent {
             background: PropTypes.string
         })
     };
+    static defaultProps = {
+        borderType: 'default',
+        iconSize: 'sm',
+        border: true
+    };
     render() {
         // eslint-disable-next-line no-unused-vars
-        const { children, icon, prefix, ...rest } = this.props;
+        const { children, icon, prefix, borderType, iconSize, border, ...rest } = this.props;
         return (
-            <IconTagWrapper {...rest}>
+            <IconTagWrapper borderType={borderType} iconSize={iconSize} border={border} {...rest}>
                 {typeof icon === 'string' ? <IconTag type={icon} prefix={prefix} /> : icon}
             </IconTagWrapper>
         );

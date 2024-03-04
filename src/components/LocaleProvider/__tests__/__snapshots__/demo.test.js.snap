@@ -3766,7 +3766,7 @@ exports[`LocaleProvider demo -- list 1`] = `
   box-sizing: border-box;
   height: 20px;
   padding-left: 8px;
-  border-radius: 2px;
+  padding-right: 8px;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -3778,19 +3778,42 @@ exports[`LocaleProvider demo -- list 1`] = `
   color: #526075;
   background: #fafafc;
   border: 1px solid #d2d6ea;
+  border-radius: 2px;
 }
 
-.emotion-92 .e19zfbcx3 {
+.emotion-92 .e19zfbcx4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   margin-right: 4px;
-  line-height: 18px;
+  line-height: calc(20px - 2px);
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 10px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #526075;
+}
+
+.emotion-92 .e19zfbcx4 i {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
 }
 
 .emotion-92 .emotion-91 {
-  margin-right: 8px;
-  line-height: 18px;
+  color: #526075;
+  line-height: calc(20px - 2px);
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -3799,11 +3822,32 @@ exports[`LocaleProvider demo -- list 1`] = `
   white-space: nowrap;
 }
 
+.emotion-92 .e19zfbcx5 {
+  margin-left: 4px;
+  line-height: calc(20px - 2px);
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
 .emotion-92 .emotion-102 {
   float: right;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   width: 18px;
-  height: 18px;
-  line-height: 18px;
+  margin-left: 4px;
+  height: calc(20px - 2px);
+  line-height: calc(20px - 2px);
   font-size: 0;
   text-align: center;
   border-radius: 0 2px 2px 0;
@@ -3814,6 +3858,7 @@ exports[`LocaleProvider demo -- list 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  opacity: 1;
 }
 
 .emotion-92 .emotion-102 .emotion-98 {
@@ -3822,6 +3867,7 @@ exports[`LocaleProvider demo -- list 1`] = `
 
 .emotion-92 .emotion-102:hover {
   background: #526075;
+  opacity: 1;
 }
 
 .emotion-92 .emotion-102:hover .emotion-98 {
@@ -3829,6 +3875,122 @@ exports[`LocaleProvider demo -- list 1`] = `
 }
 
 .emotion-92::after {
+  background: #d2d6ea;
+}
+
+.emotion-103 {
+  box-sizing: border-box;
+  height: 20px;
+  padding-left: 8px;
+  padding-right: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #526075;
+  background: #fafafc;
+  border: 1px solid #d2d6ea;
+  border-radius: 2px;
+}
+
+.emotion-103 .e19zfbcx4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 4px;
+  line-height: calc(20px - 2px);
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 10px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #526075;
+}
+
+.emotion-103 .e19zfbcx4 i {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+}
+
+.emotion-103 .emotion-91 {
+  color: #526075;
+  line-height: calc(20px - 2px);
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-103 .e19zfbcx5 {
+  margin-left: 4px;
+  line-height: calc(20px - 2px);
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-103 .emotion-102 {
+  float: right;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 18px;
+  margin-left: 4px;
+  height: calc(20px - 2px);
+  line-height: calc(20px - 2px);
+  font-size: 0;
+  text-align: center;
+  border-radius: 0 2px 2px 0;
+  cursor: pointer;
+  color: #526075;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  opacity: 1;
+}
+
+.emotion-103 .emotion-102 .emotion-98 {
+  fill: #526075;
+}
+
+.emotion-103 .emotion-102:hover {
+  background: #526075;
+  opacity: 1;
+}
+
+.emotion-103 .emotion-102:hover .emotion-98 {
+  fill: #ffffff;
+}
+
+.emotion-103::after {
   background: #d2d6ea;
 }
 
@@ -8497,7 +8659,7 @@ exports[`LocaleProvider demo -- list 1`] = `
   box-sizing: border-box;
   height: 20px;
   padding-left: 8px;
-  border-radius: 2px;
+  padding-right: 8px;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -8509,19 +8671,42 @@ exports[`LocaleProvider demo -- list 1`] = `
   color: #526075;
   background: #fafafc;
   border: 1px solid #d2d6ea;
+  border-radius: 2px;
 }
 
-.emotion-92 .e19zfbcx3 {
+.emotion-92 .e19zfbcx4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   margin-right: 4px;
-  line-height: 18px;
+  line-height: calc(20px - 2px);
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 10px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #526075;
+}
+
+.emotion-92 .e19zfbcx4 i {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
 }
 
 .emotion-92 .emotion-91 {
-  margin-right: 8px;
-  line-height: 18px;
+  color: #526075;
+  line-height: calc(20px - 2px);
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -8530,11 +8715,32 @@ exports[`LocaleProvider demo -- list 1`] = `
   white-space: nowrap;
 }
 
+.emotion-92 .e19zfbcx5 {
+  margin-left: 4px;
+  line-height: calc(20px - 2px);
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
 .emotion-92 .emotion-102 {
   float: right;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   width: 18px;
-  height: 18px;
-  line-height: 18px;
+  margin-left: 4px;
+  height: calc(20px - 2px);
+  line-height: calc(20px - 2px);
   font-size: 0;
   text-align: center;
   border-radius: 0 2px 2px 0;
@@ -8545,6 +8751,7 @@ exports[`LocaleProvider demo -- list 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  opacity: 1;
 }
 
 .emotion-92 .emotion-102 .emotion-98 {
@@ -8553,6 +8760,7 @@ exports[`LocaleProvider demo -- list 1`] = `
 
 .emotion-92 .emotion-102:hover {
   background: #526075;
+  opacity: 1;
 }
 
 .emotion-92 .emotion-102:hover .emotion-98 {
@@ -8560,6 +8768,122 @@ exports[`LocaleProvider demo -- list 1`] = `
 }
 
 .emotion-92::after {
+  background: #d2d6ea;
+}
+
+.emotion-103 {
+  box-sizing: border-box;
+  height: 20px;
+  padding-left: 8px;
+  padding-right: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #526075;
+  background: #fafafc;
+  border: 1px solid #d2d6ea;
+  border-radius: 2px;
+}
+
+.emotion-103 .e19zfbcx4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 4px;
+  line-height: calc(20px - 2px);
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 10px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #526075;
+}
+
+.emotion-103 .e19zfbcx4 i {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+}
+
+.emotion-103 .emotion-91 {
+  color: #526075;
+  line-height: calc(20px - 2px);
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-103 .e19zfbcx5 {
+  margin-left: 4px;
+  line-height: calc(20px - 2px);
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-103 .emotion-102 {
+  float: right;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 18px;
+  margin-left: 4px;
+  height: calc(20px - 2px);
+  line-height: calc(20px - 2px);
+  font-size: 0;
+  text-align: center;
+  border-radius: 0 2px 2px 0;
+  cursor: pointer;
+  color: #526075;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  opacity: 1;
+}
+
+.emotion-103 .emotion-102 .emotion-98 {
+  fill: #526075;
+}
+
+.emotion-103 .emotion-102:hover {
+  background: #526075;
+  opacity: 1;
+}
+
+.emotion-103 .emotion-102:hover .emotion-98 {
+  fill: #ffffff;
+}
+
+.emotion-103::after {
   background: #d2d6ea;
 }
 
@@ -12204,7 +12528,7 @@ exports[`LocaleProvider demo -- list 1`] = `
                     data-urc-select_overflow-id="1"
                   >
                     <span
-                      class="uc-fe-tag emotion-92 emotion-93"
+                      class="uc-fe-tag emotion-103 emotion-93"
                     >
                       <span
                         class="emotion-90 emotion-91"
