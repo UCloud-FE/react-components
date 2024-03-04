@@ -1,5 +1,5 @@
 import React, { Dispatch, HTMLAttributes, SetStateAction, useMemo } from 'react';
-import type { MenuProps as RcMenuProps, } from 'rc-menu';
+import type { MenuProps as RcMenuProps } from 'rc-menu';
 import classnames from 'classnames';
 import RcMenu from 'rc-menu';
 import NavContext from './NavContext';
@@ -108,7 +108,7 @@ const Nav = ({
                 <RcMenu
                     inlineIndent={0}
                     selectedKeys={selectedKeys}
-                    onSelect={({key}) => {
+                    onSelect={({ key }) => {
                         setSelectedKeys([key]);
                     }}
                     {...rest}
