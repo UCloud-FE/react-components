@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
+import { css, keyframes } from '@emotion/core';
 
 import RcDrawer from 'src/libs/rc-drawer';
 import config from 'src/config';
@@ -9,6 +9,7 @@ import withProps from 'src/utils/withProps';
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-drawer';
 export const closeCls = prefixCls + '-close';
+export const closeHandlerIconCls = _prefixCls + '-close-handler-icon';
 
 const propsMixin = props => {
     const {
@@ -25,19 +26,38 @@ const propsMixin = props => {
             position: ${getContainer ? 'absolute' : 'fixed'};
         }
 
-        &.${prefixCls}-open.${prefixCls}-left .${prefixCls}-content-wrapper {
-            box-shadow: ${DT.T_SHADOW_BLOCK_RIGHT_LG};
+        &.${prefixCls}-open.${prefixCls}-left {
+            .${prefixCls}-content-wrapper {
+                box-shadow: ${DT.T_DRAWER_SHADOW_RIGHT};
+            }
+            .${closeHandlerIconCls} {
+                transform: rotate(-90deg);
+            }
         }
-        &.${prefixCls}-open.${prefixCls}-right .${prefixCls}-content-wrapper {
-            box-shadow: ${DT.T_SHADOW_BLOCK_LEFT_LG};
+        &.${prefixCls}-open.${prefixCls}-right {
+            .${prefixCls}-content-wrapper {
+                box-shadow: ${DT.T_DRAWER_SHADOW_LEFT};
+            }
+            .${closeHandlerIconCls} {
+                transform: rotate(90deg);
+            }
         }
-        &.${prefixCls}-open.${prefixCls}-top .${prefixCls}-content-wrapper {
-            box-shadow: ${DT.T_SHADOW_BLOCK_BOTTOM_LG};
+        &.${prefixCls}-open.${prefixCls}-top {
+            .${prefixCls}-content-wrapper {
+                box-shadow: ${DT.T_DRAWER_SHADOW_BOTTOM};
+            }
+            .${closeHandlerIconCls} {
+                transform: rotate(0deg);
+            }
         }
-        &.${prefixCls}-open.${prefixCls}-bottom .${prefixCls}-content-wrapper {
-            box-shadow: ${DT.T_SHADOW_BLOCK_TOP_LG};
+        &.${prefixCls}-open.${prefixCls}-bottom {
+            .${prefixCls}-content-wrapper {
+                box-shadow: ${DT.T_DRAWER_SHADOW_TOP};
+            }
+            .${closeHandlerIconCls} {
+                transform: rotate(180deg);
+            }
         }
-
         ${show
             ? css`
                   .${prefixCls}-mask {
@@ -72,6 +92,23 @@ const closeHandlerPropsMixin = props => {
         }
     `;
 };
+
+export const CloseHandler = withProps({
+    className: closeCls
+})(
+    styled('div')(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
+
+        return css`
+            .${closeHandlerIconCls} {
+                font-size: ${DT.T_DRAWER_CLOSE_ICON_SIZE_DEFAULT};
+                color: ${DT.T_DRAWER_CLOSE_ICON_COLOR_DEFAULT};
+            }
+        `;
+    })
+);
 
 export const CloseHandlerWrapper = withProps({
     className: closeCls
@@ -122,7 +159,7 @@ export const DrawerWrap = withProps({
                 height: 100%;
                 width: 100%;
                 overflow: auto;
-                background: ${DT.T_COLOR_BG_DEFAULT_NORMAL};
+                background: ${DT.T_DRAWER_CONTENT_BG_COLOR};
             }
 
             .${prefixCls}-content-wrapper {
@@ -134,12 +171,33 @@ export const DrawerWrap = withProps({
                 transition: all 0.1s;
             }
 
-            &.${prefixCls}-left, &.${prefixCls}-right {
+            &.${prefixCls}-left, &.${prefixCls}-right, &.${prefixCls}-top, &.${prefixCls}-bottom {
                 .${closeCls} {
-                    width: 24px;
-                    height: 48px;
-                    line-height: 48px;
-                    top: 110px;
+                    position: absolute;
+                    width: ${DT.T_DRAWER_CLOSE_BG_SIZE_DEFAULT};
+                    height: ${DT.T_DRAWER_CLOSE_BG_SIZE_DEFAULT};
+                    border-radius: ${DT.T_CORNER_CIRCLE};
+                    cursor: pointer;
+                    transition: all 0.3s;
+                    top: 50%;
+                    margin-top: -24px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: ${DT.T_DRAWER_RESIZER_BG_DEFAULT};
+                    z-index: -1;
+                    &:hover {
+                        width: ${DT.T_DRAWER_CLOSE_BG_SIZE_HOVER};
+                        height: ${DT.T_DRAWER_CLOSE_BG_SIZE_HOVER};
+                        background-color: ${DT.T_DRAWER_RESIZER_BG_HOVER};
+                        .${closeHandlerIconCls} {
+                            font-size: ${DT.T_DRAWER_CLOSE_ICON_SIZE_DEFAULT};
+                            color: ${DT.T_DRAWER_CLOSE_ICON_COLOR_HOVER};
+                        }
+                    }
+                    &[hidden] {
+                        display: none;
+                    }
                 }
             }
             &.${prefixCls}-left {
@@ -149,8 +207,7 @@ export const DrawerWrap = withProps({
                     height: 100%;
                 }
                 .${closeCls} {
-                    right: -24px;
-                    border-radius: 0px 4px 4px 0px;
+                    right: -52px;
                 }
             }
             &.${prefixCls}-right {
@@ -160,17 +217,15 @@ export const DrawerWrap = withProps({
                     height: 100%;
                 }
                 .${closeCls} {
-                    left: -24px;
-                    border-radius: 4px 0px 0px 4px;
+                    left: -52px;
                 }
             }
             &.${prefixCls}-top, &.${prefixCls}-bottom {
                 .${closeCls} {
-                    width: 48px;
-                    height: 24px;
-                    line-height: 24px;
+                    top: auto;
                     left: 50%;
                     margin-left: -24px;
+                    margin-top: 0;
                 }
             }
             &.${prefixCls}-top {
@@ -180,8 +235,7 @@ export const DrawerWrap = withProps({
                     width: 100%;
                 }
                 .${closeCls} {
-                    bottom: -24px;
-                    border-radius: 0px 0px 4px 4px;
+                    bottom: -52px;
                 }
             }
             &.${prefixCls}-bottom {
@@ -191,12 +245,46 @@ export const DrawerWrap = withProps({
                     width: 100%;
                 }
                 .${closeCls} {
-                    top: -24px;
-                    border-radius: 4px 4px 0px 0px;
+                    top: -52px;
                 }
             }
 
             ${propsMixin(props)};
+        `;
+    })
+);
+
+export const DrawerHeaderWrap = withProps({
+    prefixCls: prefixCls
+})(
+    styled('div')(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
+
+        return css`
+            background: ${DT.T_DRAWER_HEADER_BG_COLOR_DEFAULT};
+            font-size: ${DT.T_DRAWER_HEADER_SIZE_DEFAULT};
+            font-weight: ${DT.T_TYPO_FONT_WEIGHT_BOLD};
+            line-height: ${DT.T_TYPO_FONT_SIZE_6};
+            color: ${DT.T_DRAWER_HEADER_TITLE_COLOR_DEFAULT};
+            padding: ${DT.T_DRAWER_HEADER_PADDING_VERTICAL} ${DT.T_DRAWER_HEADER_PADDING_HORIZONAL};
+            box-shadow: ${DT.T_DRAWER_HEADER_BG_SHADOW_DEFAULT};
+            box-sizing: border-box;
+            height: 54px;
+        `;
+    })
+);
+export const DrawerContentWrap = withProps({
+    prefixCls: prefixCls
+})(
+    styled('div')(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
+
+        return css`
+            padding: ${DT.T_DRAWER_CONTENT_PADDING};
         `;
     })
 );
