@@ -134,6 +134,11 @@ export const CardWrap = withProps()(
                 padding: 16px 24px;
                 margin-top: 24px;
             }
+
+            /* ConfigInfo组件在Card里最后一行不显示边 */
+            .pro-config-info-item-wrapper-last-line {
+                border-bottom: 0;
+            }
         `;
     })
 );
