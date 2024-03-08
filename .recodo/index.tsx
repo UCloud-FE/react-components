@@ -54,12 +54,8 @@ mod.config({
             css: 'https://cdn.jsdelivr.net/npm/@ucloud-fe/design-token-editor@0.3.8/dist/style.css',
             type: 'immediate'
         },
-        'design-token-file': {
-            file: 'https://raw.githubusercontent.com/UCloud-FE/design-tokens/main/define/default.json',
-            type: 'json'
-        },
         'theme-list': {
-            file: 'https://api.github.com/repos/UCloud-FE/design-tokens/contents/define',
+            file: 'https://raw.githubusercontent.com/UCloud-FE/design-tokens/main/theme-list.json',
             type: 'json'
         }
     }
@@ -78,14 +74,18 @@ const renderDesignTokenEditor = (dom: string) => {
     mod.import(['theme-list', 'lodash'])
         .then(([themeList, lodash]: any) => {
             const themeListConfig = themeList.reduce(
-                (init: any, v: any) => {
-                    const themeName = `theme-${v.name.replace('.json', '')}`;
-                    init.modules[themeName] = { file: v.download_url, type: 'json' };
+                (init: any, v: string) => {
+                    const themeName = `theme-${v.replace('.json', '')}`;
+                    init.modules[themeName] = {
+                        file: `https://raw.githubusercontent.com/UCloud-FE/design-tokens/main/define/${v}`,
+                        type: 'json'
+                    };
                     init.themeListName.push(themeName);
                     return init;
                 },
                 { modules: {}, themeListName: [] }
             );
+
             mod.config({ modules: themeListConfig.modules });
             return new Promise(resolve => {
                 mod.import(themeListConfig.themeListName).then(themeList =>
