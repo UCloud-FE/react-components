@@ -1,15 +1,23 @@
 // @ts-nocheck
 import React from 'react';
 
-import { Button, Checkbox, Combine, Form, Radio, Switch, Transfer } from '@ucloud-fe/react-components';
+import { Button, Combine, Form, Radio, Switch, Transfer, TransferMenu } from '@ucloud-fe/react-components';
 
 // demo start
 const { defaultProps } = Transfer;
 
-const dataSource = new Array(100).fill(null).map((v, i) => ({
-    key: i,
-    label: `item-${i}`
-}));
+let uid = 0;
+
+const generateData = () => {
+    const id = uid++;
+    return {
+        key: id + '',
+        label: `item-${id}`,
+        disabled: Math.random() > 0.5
+    };
+};
+
+const dataSource = new Array(100).fill(null).map(() => generateData());
 
 class Demo extends React.Component {
     constructor(props) {
@@ -26,6 +34,20 @@ class Demo extends React.Component {
             targetTitle: 'default',
             targetFooter: false
         };
+    }
+    onDelete(record) {
+        console.log('Delete', record);
+        const key = record.key;
+        const dataSource = this.state.dataSource.filter(item => item.key !== key);
+        this.setState({ dataSource });
+    }
+    onAdd() {
+        const dataSource = [...this.state.dataSource];
+        dataSource.push(generateData());
+        this.setState({ dataSource });
+    }
+    getDisabledOfRow(record) {
+        return record.key % 2;
     }
     render() {
         const {
@@ -172,22 +194,7 @@ class Demo extends React.Component {
                     </Form.Item>
                 </Form>
                 <div className="demo-wrap">
-                    <Transfer
-                        {...props}
-                        renderList={({ dataSource, selectedKeys, onChange, disabled }) => {
-                            return (
-                                <div style={{ padding: '12px', height: '300px', overflow: 'auto' }}>
-                                    <Checkbox.Group value={selectedKeys} onChange={onChange} disabled={disabled}>
-                                        {dataSource.map(v => (
-                                            <div key={v.key}>
-                                                <Checkbox value={v.key}>{v.label}</Checkbox>
-                                            </div>
-                                        ))}
-                                    </Checkbox.Group>
-                                </div>
-                            );
-                        }}
-                    />
+                    <TransferMenu {...props} />
                 </div>
             </div>
         );

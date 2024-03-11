@@ -1,15 +1,36 @@
 // @ts-nocheck
 import React from 'react';
 
-import { Button, Checkbox, Combine, Form, Radio, Switch, Transfer } from '@ucloud-fe/react-components';
+import { Button, Combine, Form, Radio, Switch, Transfer, TransferTable } from '@ucloud-fe/react-components';
 
 // demo start
 const { defaultProps } = Transfer;
 
-const dataSource = new Array(100).fill(null).map((v, i) => ({
-    key: i,
-    label: `item-${i}`
-}));
+const columns = [
+    {
+        title: 'name',
+        dataIndex: 'name',
+        key: 'name',
+        width: 100
+    },
+    {
+        title: 'desc',
+        dataIndex: 'desc',
+        key: 'desc'
+    }
+];
+let uid = 0;
+
+const generateData = ({ name, desc } = {}) => {
+    const id = uid++;
+    return {
+        key: id + '',
+        name: name || `name-${id}`,
+        desc: desc || `desc-${id}`
+    };
+};
+
+const dataSource = new Array(100).fill(null).map(() => generateData());
 
 class Demo extends React.Component {
     constructor(props) {
@@ -27,6 +48,9 @@ class Demo extends React.Component {
             targetFooter: false
         };
     }
+    getDisabledOfRow(record) {
+        return !!(record.key % 2);
+    }
     render() {
         const {
             search,
@@ -38,7 +62,8 @@ class Demo extends React.Component {
             targetSearch,
             targetDisabled,
             targetTitle,
-            targetFooter
+            targetFooter,
+            getDisabledOfRow
         } = this.state;
         const itemLayout = {
             labelCol: {
@@ -96,6 +121,9 @@ class Demo extends React.Component {
             search,
             dataSource
         };
+        if (getDisabledOfRow) {
+            props.getDisabledOfRow = this.getDisabledOfRow;
+        }
 
         return (
             <div>
@@ -105,6 +133,12 @@ class Demo extends React.Component {
                     </Form.Item>
                     <Form.Item label="disabled" {...itemLayout}>
                         <Switch checked={disabled} onChange={disabled => this.setState({ disabled })} />
+                    </Form.Item>
+                    <Form.Item label="getDisabledOfRow" {...itemLayout}>
+                        <Switch
+                            checked={getDisabledOfRow}
+                            onChange={getDisabledOfRow => this.setState({ getDisabledOfRow })}
+                        />
                     </Form.Item>
                     <Form.Item label="source.search" {...itemLayout}>
                         <Radio.Group
@@ -172,22 +206,7 @@ class Demo extends React.Component {
                     </Form.Item>
                 </Form>
                 <div className="demo-wrap">
-                    <Transfer
-                        {...props}
-                        renderList={({ dataSource, selectedKeys, onChange, disabled }) => {
-                            return (
-                                <div style={{ padding: '12px', height: '300px', overflow: 'auto' }}>
-                                    <Checkbox.Group value={selectedKeys} onChange={onChange} disabled={disabled}>
-                                        {dataSource.map(v => (
-                                            <div key={v.key}>
-                                                <Checkbox value={v.key}>{v.label}</Checkbox>
-                                            </div>
-                                        ))}
-                                    </Checkbox.Group>
-                                </div>
-                            );
-                        }}
-                    />
+                    <TransferTable {...props} columns={columns} />
                 </div>
             </div>
         );
