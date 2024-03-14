@@ -10,12 +10,13 @@ const themeMixin = props => {
 
     return css`
         font-size: ${fontSize};
-        color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+        color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
         border: 1px solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
         background: ${DT.T_INPUT_COLOR_BG_DEFAULT};
         box-shadow: ${DT.T_SHADOW_INSET_DEFAULT};
         &:hover,
         &:focus {
+            color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
             border-color: ${DT.T_COLOR_LINE_DEFAULT_DARK};
             background: ${DT.T_INPUT_COLOR_BG_ACTIVE};
         }
