@@ -1,6 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 
+import Button from 'src/components/Button';
 import Tabs from 'src/components/Tabs';
 import Radio from 'src/components/Radio';
 import Switch from 'src/components/Switch';
@@ -27,11 +28,12 @@ class Demo extends React.Component {
             size: Sizes[0],
             tabCount: 10,
             activeKey: '3',
-            destroyInactiveTabPane: false
+            destroyInactiveTabPane: false,
+            openExtra: false
         };
     }
     render() {
-        const { position, styleType, size, tabCount, activeKey, destroyInactiveTabPane } = this.state;
+        const { position, styleType, size, tabCount, activeKey, destroyInactiveTabPane, openExtra } = this.state;
         const tabs = [];
         tabs.length = tabCount;
         tabs.fill();
@@ -89,6 +91,16 @@ class Demo extends React.Component {
                             }
                         />
                     </Form.Item>
+                    <Form.Item label="extra" {...itemLayout}>
+                        <Switch
+                            checked={openExtra}
+                            onChange={openExtra =>
+                                this.setState({
+                                    openExtra
+                                })
+                            }
+                        />
+                    </Form.Item>
                     <Form.Item label="tabCount" {...itemLayout}>
                         <NumberInput
                             min={0}
@@ -117,6 +129,7 @@ class Demo extends React.Component {
                         styleType={styleType}
                         size={size}
                         style={{ height: 300 }}
+                        extra={openExtra ? <Button size={size}>操作</Button> : undefined}
                     >
                         {_.map(tabs, (tab, index) => (
                             <Tabs.Pane tab={`tab ${index}`} key={index}>
