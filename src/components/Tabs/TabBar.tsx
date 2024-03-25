@@ -21,6 +21,7 @@ import { setTransform, isTransform3dSupported, getStyle, isVertical } from './ut
 import RefContext, { GetRef } from './RefContext';
 import { Panes, TabBarPosition } from './shared';
 import { prefixCls } from './style';
+import Box from '../Box';
 
 const noop = () => undefined;
 const warning = (skip: boolean, msg: string) => !skip && console.warn(msg);
@@ -499,23 +500,25 @@ const ScrollableTabBarNode = ({
             }
         };
     }, [getRef, setNextPrev]);
+   
+ 
+    const prevButton = React.useMemo(() =>{
+        return  <span
+                    onClick={onPrev}
+                    unselectable="on"
+                    className={classnames({
+                        [`${prefixCls}-tab-prev`]: 1,
+                        [`${prefixCls}-tab-btn-disabled`]: !prev,
+                        [`${prefixCls}-tab-arrow-show`]: showNextPrev
+                    })}
+                    onTransitionEnd={prevTransitionEnd}
+                >
+                    {prevIcon || <span className={`${prefixCls}-tab-prev-icon`} />}
+                </span>
+    },[prevIcon,showNextPrev,prev]);
 
-    const prevButton = (
-        <span
-            onClick={onPrev}
-            unselectable="on"
-            className={classnames({
-                [`${prefixCls}-tab-prev`]: 1,
-                [`${prefixCls}-tab-btn-disabled`]: !prev,
-                [`${prefixCls}-tab-arrow-show`]: showNextPrev
-            })}
-            onTransitionEnd={prevTransitionEnd}
-        >
-            {prevIcon || <span className={`${prefixCls}-tab-prev-icon`} />}
-        </span>
-    );
-    const nextButton = (
-        <span
+    const nextButton = React.useMemo(() => {
+       return <span
             onClick={onNext}
             unselectable="on"
             className={classnames({
@@ -526,8 +529,10 @@ const ScrollableTabBarNode = ({
         >
             {nextIcon || <span className={`${prefixCls}-tab-next-icon`} />}
         </span>
-    );
+    },[nextIcon,showNextPrev,next]);
 
+         
+            
     const navClassName = `${prefixCls}-nav`;
     const navClasses = classnames(
         navClassName,
@@ -563,6 +568,7 @@ interface TabBarProps {
     activeKey: Key | null;
     direction: string;
     styleType: string;
+    extra?:ReactNode
 }
 const TabBar = (props: TabBarProps) => {
     const refs = useRef<Record<string, HTMLElement | null>>({});
@@ -578,10 +584,33 @@ const TabBar = (props: TabBarProps) => {
     return (
         <RefContext.Provider value={{ getRef, saveRef }}>
             <TabBarRootNode {...props}>
-                <ScrollableTabBarNode {...props}>
-                    <TabBarTabsNode {...props} />
-                    {styleType === 'ink' ? <InkTabBarNode {...props} /> : null}
-                </ScrollableTabBarNode>
+                <Box container 
+                     className={classnames({
+                            [`${prefixCls}-srcoll-extra-warrper`]: ['left','right'].includes(props.tabBarPosition),
+                     })}  
+                     justifyContent="space-between" 
+                     alignItems="center"
+                >
+                    <Box 
+                        flex={1} 
+                        className={classnames({
+                            [`${prefixCls}-srcoll-box`]: 1,
+                        })}
+                    >
+                        <ScrollableTabBarNode {...props}>
+                            <TabBarTabsNode {...props} />
+                            {styleType === 'ink' ? <InkTabBarNode {...props} /> : null}
+                        </ScrollableTabBarNode>
+                    </Box>
+                    <Box 
+                        justifyContent="flex-end"  
+                        className={classnames({
+                            [`${prefixCls}-extra-wapper`]: 1,
+                            [`${prefixCls}-extra-show`]: props.extra
+                        })}>
+                       {props.extra}
+                    </Box>
+                </Box>
             </TabBarRootNode>
         </RefContext.Provider>
     );
