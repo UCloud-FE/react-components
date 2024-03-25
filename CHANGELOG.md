@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.10.2](https://github.com/UCloud-FE/react-components/compare/v1.10.1...v1.10.2) (2024-03-06)
+
+### Bug Fixes
+
+-   **nav:** fix selectedKeys bug when switch inlineCollapsed ([#391](https://github.com/UCloud-FE/react-components/issues/391)) ([108ee4b](https://github.com/UCloud-FE/react-components/commit/108ee4b27b81a1c7adcecdc2e61ea4b4ecd88fd2))
+
 ### [1.10.1](https://github.com/UCloud-FE/react-components/compare/v1.10.0...v1.10.1) (2024-01-11)
 
 ### Features
