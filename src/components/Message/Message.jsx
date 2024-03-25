@@ -68,7 +68,7 @@ class Message extends Component {
                         <SvgIcon size="20px" type="cross" />
                     </CloseIconWrap>
                 )}
-                {title && <TitleWrap>{title}</TitleWrap>}
+                {title && (children ? <TitleWrap>{title}</TitleWrap> : <ContentWrap>{title}</ContentWrap>)}
                 {children && <ContentWrap>{children}</ContentWrap>}
                 {footer && <FooterWrap>{footer}</FooterWrap>}
             </MessageWrap>
