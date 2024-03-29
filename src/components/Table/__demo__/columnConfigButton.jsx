@@ -17,7 +17,7 @@ const defaultColumnConfig = {
     }
 };
 const getColumnConfig = () => {
-    if (typeof localStorage === 'undefined') {
+    if (typeof localStorage === 'undefined' || localStorage === null) {
         return defaultColumnConfig;
     }
     const localConfig = JSON.parse(localStorage.getItem(`${columnConfigKey}-1`));
@@ -28,7 +28,7 @@ const getColumnConfig = () => {
     }
 };
 const setColumnConfig = config => {
-    if (typeof localStorage === 'undefined') {
+    if (typeof localStorage === 'undefined' || localStorage === null) {
         return;
     }
     localStorage.setItem(
