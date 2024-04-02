@@ -275,7 +275,6 @@ const Range = ({
     );
     const handleEndChange = useCallback(
         (value: Moment | null, isClear?: boolean) => {
-            debugger;
             const [valueS] = cacheValue;
             const newValue: CallbackRangeValue = [valueS, value];
             const rangeDateValidResult = isRangeDateValid(newValue, rules, precision);
