@@ -269,12 +269,13 @@ const Range = ({
             } else {
                 onChange(newValue);
             }
-            setCacheValue(newValue);
+            setCacheValue(formatRangeValue(newValue, nullable, d));
         },
-        [cacheValue, rules, precision, isFirstEditing, locale, onChange]
+        [cacheValue, rules, precision, isFirstEditing, locale, onChange, nullable, d]
     );
     const handleEndChange = useCallback(
         (value: Moment | null, isClear?: boolean) => {
+            debugger;
             const [valueS] = cacheValue;
             const newValue: CallbackRangeValue = [valueS, value];
             const rangeDateValidResult = isRangeDateValid(newValue, rules, precision);
@@ -296,9 +297,9 @@ const Range = ({
             } else {
                 onChange(newValue);
             }
-            setCacheValue(newValue);
+            setCacheValue(formatRangeValue(newValue, nullable, d));
         },
-        [cacheValue, rules, precision, isFirstEditing, locale, onChange]
+        [cacheValue, rules, precision, isFirstEditing, locale, onChange, nullable, d]
     );
 
     const onClearS = useCallback(() => {
