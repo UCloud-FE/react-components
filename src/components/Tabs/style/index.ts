@@ -108,7 +108,9 @@ ${clearFixMixin};
     }
 
     &-tab-prev.${prefixCls}-tab-arrow-show, &-tab-next.${prefixCls}-tab-arrow-show {
-        display: inline-block;
+        display: flex;
+        justify-content:center;
+        align-items:center;
     }
 
     &-tab-disabled,
@@ -176,6 +178,24 @@ ${clearFixMixin};
             padding: 0;
             line-height: normal;
         }
+    }
+    &-srcoll-extra-warrper{
+        flex-direction:column;
+        height:100%;
+        overflow:hidden;
+    }
+    &-srcoll-box{
+        overflow:auto;
+    }
+    &-extra-wapper{
+        white-space: nowrap;
+        font-size: ${DT.T_TYPO_FONT_SIZE_1};
+        font-weight: ${DT.T_TYPO_FONT_WEIGHT_NORMAL};
+        display:none;
+        align-items:center;
+    }
+    &-extra-show{
+        display:flex;
     }
 }
 
