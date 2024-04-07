@@ -175,4 +175,66 @@ describe('Table', () => {
 
         expect(onExpand).toHaveBeenCalledTimes(++onExpandTimes);
     });
+    test('getColumnConfigFromLocalStorage', () => {
+        class Demo extends React.Component {
+            render() {
+                const columnConfigKey = 'this-is-the-unique-key-of-this-table';
+                const dataSource = new Array(100).fill(null).map((v, i) => ({
+                    index: `index-${i}`,
+                    i
+                }));
+                const defaultColumnConfig = {
+                    'title-1': {
+                        disabled: true,
+                        hidden: true
+                    },
+                    'title-2': {
+                        disabled: true
+                    },
+                    'title-3': {
+                        hidden: true
+                    }
+                };
+                const columns = new Array(5).fill(null).map((v, i) => ({
+                    title: `title-${i}`,
+                    key: `title-${i}`,
+                    width: 200,
+                    render: record => <span>content {record.index}</span>
+                }));
+                return (
+                    <div>
+                        <div className="demo-wrap">
+                            <Table
+                                title={() => {
+                                    return (
+                                        <>
+                                            <Table.ColumnConfigButton />
+                                        </>
+                                    );
+                                }}
+                                defaultColumnConfig={Table.getColumnConfigFromLocalStorage(
+                                    `${columnConfigKey}-2`,
+                                    defaultColumnConfig
+                                )}
+                                onColumnConfigChange={config =>
+                                    Table.setColumnConfigToLocalStorage(`${columnConfigKey}-2`, config)
+                                }
+                                dataSource={dataSource}
+                                columns={columns}
+                                {...this.props}
+                            />
+                        </div>
+                    </div>
+                );
+            }
+        }
+
+        const wrapper = mount(<Demo />);
+        wrapper.find('.uc-fe-table-title .uc-fe-table-custom-title .uc-fe-button').at(0).simulate('click');
+        expect(document.querySelectorAll('.uc-fe-modal-wrap').length).toBe(1);
+        expect(document.querySelectorAll('.uc-fe-modal-body').length).toBe(1);
+        document.querySelectorAll('.uc-fe-modal-body')[0].querySelectorAll('.uc-fe-checkbox')[4].click();
+        expect(document.querySelectorAll('.uc-fe-modal-footer').length).toBe(1);
+        document.querySelectorAll('.uc-fe-modal-footer')[0].querySelectorAll('.uc-fe-button')[1].click();
+    });
 });

@@ -1,7 +1,7 @@
 import _ from 'lodash';
 
 export const getColumnConfigFromLocalStorage = (columnConfigKey, defaultConfig) => {
-    if (typeof localStorage === 'undefined') {
+    if (typeof localStorage === 'undefined' || localStorage === null) {
         return defaultConfig;
     }
     const localConfig = JSON.parse(localStorage.getItem(columnConfigKey));
@@ -13,7 +13,7 @@ export const getColumnConfigFromLocalStorage = (columnConfigKey, defaultConfig) 
 };
 
 export const setColumnConfigToLocalStorage = (columnConfigKey, config) => {
-    if (typeof localStorage === 'undefined') {
+    if (typeof localStorage === 'undefined' || localStorage === null) {
         return;
     }
     localStorage.setItem(

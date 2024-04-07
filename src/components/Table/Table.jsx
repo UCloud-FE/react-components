@@ -358,7 +358,7 @@ class Table extends Component {
         };
         _.each(filters, (filter, key) => {
             const column = _.find(columns, (column, i) => this.getColumnKey(column, i) === key);
-            if (!column || filter.value == null || (column.filter.multiple && !filter.value.length)) {
+            if (!column || filter.value == null || !column.filter || (column.filter.multiple && !filter.value.length)) {
                 delete filters[key];
             } else {
                 filter.column = column;
