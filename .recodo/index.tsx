@@ -12,6 +12,8 @@ mod.registerModuleResolver(jsonResolver);
 
 mod.export('@ucloud-fe/mod', mod);
 
+const TOKEN_VERSION = 'd9d150ea75551131f136740a49bf93fe75357119';
+
 mod.config({
     modules: {
         '@ucloud-fe/react-components/style': {
@@ -55,7 +57,7 @@ mod.config({
             type: 'immediate'
         },
         'theme-list': {
-            file: 'https://raw.githubusercontent.com/UCloud-FE/design-tokens/main/theme-list.json',
+            file: `https://raw.githubusercontent.com/UCloud-FE/design-tokens/${TOKEN_VERSION}/theme-list.json`,
             type: 'json'
         }
     }
@@ -77,7 +79,7 @@ const renderDesignTokenEditor = (dom: string) => {
                 (init: any, v: string) => {
                     const themeName = `theme-${v.replace('.json', '')}`;
                     init.modules[themeName] = {
-                        file: `https://raw.githubusercontent.com/UCloud-FE/design-tokens/main/define/${v}`,
+                        file: `https://raw.githubusercontent.com/UCloud-FE/design-tokens/${TOKEN_VERSION}/define/${v}`,
                         type: 'json'
                     };
                     init.themeListName.push(themeName);
