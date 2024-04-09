@@ -23,6 +23,7 @@ describe('DatePicker', () => {
         }
         const RangeComp = mount(<Demo />);
         const startTimeDom = RangeComp.find('.uc-fe-datepicker-range span').at(0).childAt(0).find('input');
+        const endTimeDom = RangeComp.find('.uc-fe-datepicker-range span').at(0).childAt(1).find('input');
         const confirmBtnDom = () => RangeComp.find('.uc-fe-datepicker-footer .uc-fe-button').at(0);
         startTimeDom.simulate('click'); // click start time
 
@@ -42,6 +43,26 @@ describe('DatePicker', () => {
             .find('.uc-fe-calendar-cell')
             .at(1)
             .simulate('click'); // click April 7th
+        confirmBtnDom().simulate('click'); // click the confirm button
+        expect(RangeComp.find('.uc-fe-datepicker-footer > span').at(0).html()).toBe('<span></span>');
+
+        startTimeDom.simulate('click'); // click start time
+        RangeComp.find('.uc-fe-calendar-tbody > .uc-fe-calendar-row')
+            .at(0)
+            .find('.uc-fe-calendar-cell')
+            .at(4)
+            .simulate('click'); // click April 1st
+        confirmBtnDom().simulate('click'); // click the confirm button
+        expect(RangeComp.find('.uc-fe-datepicker-footer > .uc-fe-datepicker-tip-error > span').at(0).html()).toBe(
+            '<span>超出最大范围</span>'
+        );
+        confirmBtnDom().simulate('click'); // click the confirm button
+        endTimeDom.simulate('click'); // click end time
+        RangeComp.find('.uc-fe-calendar-tbody > .uc-fe-calendar-row')
+            .at(0)
+            .find('.uc-fe-calendar-cell')
+            .at(7)
+            .simulate('click'); // click April 2nd
         confirmBtnDom().simulate('click'); // click the confirm button
         expect(RangeComp.find('.uc-fe-datepicker-footer > span').at(0).html()).toBe('<span></span>');
     });
