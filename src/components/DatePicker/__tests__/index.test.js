@@ -54,8 +54,9 @@ describe('DatePicker', () => {
             .find('.uc-fe-calendar-cell')
             .at(1)
             .simulate('click'); // click April 7th
-        console.log(RangeComp.find('.uc-fe-datepicker-footer'));
         RangeComp.find('.uc-fe-datepicker-footer').at(9).find('.uc-fe-button').at(0).simulate('click');
+        RangeComp.find('.uc-fe-datepicker-footer').at(9).find('.uc-fe-button').at(1).simulate('click');
+        RangeComp.find('.uc-fe-datepicker-footer').at(9).find('.uc-fe-button').at(2).simulate('click');
         expect(
             RangeComp.find('.uc-fe-datepicker-footer').at(0).find('.uc-fe-datepicker-tip-error > span').at(0).html()
         ).toBe('<span>不能为空</span>');
