@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.10.3](https://github.com/UCloud-FE/react-components/compare/v1.10.2...v1.10.3) (2024-04-12)
+
+### Features
+
+-   **docs:** update recodo demo ([#398](https://github.com/UCloud-FE/react-components/issues/398)) ([a354acf](https://github.com/UCloud-FE/react-components/commit/a354acf860cd2b7af3dfb2231a8bdd2c258c9155))
+-   **message:** change the layout of the main text ([#395](https://github.com/UCloud-FE/react-components/issues/395)) ([a3baa2a](https://github.com/UCloud-FE/react-components/commit/a3baa2a45fa18fe3cf5adcf092c9408351792604))
+-   **theme:** list theme ([#387](https://github.com/UCloud-FE/react-components/issues/387)) ([9be05ce](https://github.com/UCloud-FE/react-components/commit/9be05ce8a87f5b8a90c4c093e753fd76ccde1991))
+
+### Bug Fixes
+
+-   **table:** verify localStorage ([#400](https://github.com/UCloud-FE/react-components/issues/400)) ([cedd278](https://github.com/UCloud-FE/react-components/commit/cedd278a40c01ab642e2a435196ba5576ab76d3d))
+-   **textarea:** fix font color ([f921875](https://github.com/UCloud-FE/react-components/commit/f921875e1c7f53f7889b1007158b0da4ba136fa1))
+
 ### [1.10.2](https://github.com/UCloud-FE/react-components/compare/v1.10.1...v1.10.2) (2024-03-06)
 
 ### Bug Fixes
