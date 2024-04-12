@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.11.0](https://github.com/UCloud-FE/react-components/compare/v1.10.3...v1.11.0) (2024-04-12)
+
+### Features
+
+-   **tabs:** add extra slots to the tab ([#399](https://github.com/UCloud-FE/react-components/issues/399)) ([e40ad3c](https://github.com/UCloud-FE/react-components/commit/e40ad3c83345663661dd87c96b155d910148a989))
+
 ### [1.10.3](https://github.com/UCloud-FE/react-components/compare/v1.10.2...v1.10.3) (2024-04-12)
 
 ### Features
