@@ -269,9 +269,9 @@ const Range = ({
             } else {
                 onChange(newValue);
             }
-            setCacheValue(newValue);
+            setCacheValue(formatRangeValue(newValue, nullable, d));
         },
-        [cacheValue, rules, precision, isFirstEditing, locale, onChange]
+        [cacheValue, rules, precision, isFirstEditing, locale, onChange, nullable, d]
     );
     const handleEndChange = useCallback(
         (value: Moment | null, isClear?: boolean) => {
@@ -296,9 +296,9 @@ const Range = ({
             } else {
                 onChange(newValue);
             }
-            setCacheValue(newValue);
+            setCacheValue(formatRangeValue(newValue, nullable, d));
         },
-        [cacheValue, rules, precision, isFirstEditing, locale, onChange]
+        [cacheValue, rules, precision, isFirstEditing, locale, onChange, nullable, d]
     );
 
     const onClearS = useCallback(() => {
