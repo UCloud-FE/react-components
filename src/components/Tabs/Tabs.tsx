@@ -89,6 +89,8 @@ export interface TabsProps {
     styleType?: StyleType;
     /** 尺寸 */
     size?: Size;
+    /** 头部插槽 */
+    extra?:ReactNode;
 }
 const Tabs = ({
     activeKey: _activeKey,
@@ -101,6 +103,7 @@ const Tabs = ({
     direction = 'ltr',
     styleType = 'default',
     size = 'sm',
+    extra,
     ...restProps
 }: TabsProps) => {
     const panes = useMemo(() => getPanesFromChildren(children), [children]);
@@ -147,7 +150,8 @@ const Tabs = ({
                 direction,
                 styleType,
                 prevIcon: <SvgIcon type="triangle-left" />,
-                nextIcon: <SvgIcon type="triangle-right" />
+                nextIcon: <SvgIcon type="triangle-right" />,
+                extra
             }}
         />
     );
