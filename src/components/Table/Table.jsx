@@ -850,6 +850,7 @@ class Table extends Component {
                             onMouseEnter={this.setDraggable}
                             onMouseLeave={this.unsetDraggable}
                             className={draggerCls}
+                            data-testid="draggable"
                         >
                             <SvgIcon type="dragger" size="16px" />
                         </span>
@@ -910,6 +911,12 @@ class Table extends Component {
         this.initDrag(source);
     };
     onDragEnd = source => {
+        this.getTableDom()
+            .querySelectorAll('.uc-fe-table-row')
+            .forEach(row => {
+                row.classList.remove(dragOverDownCls);
+                row.classList.remove(dragOverUpCls);
+            });
         this.initDrag(source);
     };
     onDragEnter = (source, target) => {
