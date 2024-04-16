@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-
+import { render, waitFor, fireEvent } from '@testing-library/react';
 import Table from 'src/components/Table';
 
 jest.unmock('rc-trigger');
@@ -264,5 +264,76 @@ describe('Table', () => {
         }
 
         mount(<Demo />);
+    });
+    test('dragSorting', async () => {
+        const onDragSorting = jest.fn();
+
+        class Demo extends React.Component {
+            render() {
+                const dataSource = new Array(10).fill(null).map((v, i) => ({
+                    index: `index-${i}`,
+                    i
+                }));
+                const columns = new Array(5).fill(null).map((v, i) => ({
+                    title: `title-${i}`,
+                    key: `title-${i}`,
+                    width: 200,
+                    render: record => <span>content {record.index}</span>
+                }));
+                return (
+                    <div>
+                        <div className="demo-wrap">
+                            <Table
+                                dragSorting={{
+                                    onChange: onDragSorting
+                                }}
+                                dataSource={dataSource}
+                                columns={columns}
+                                {...this.props}
+                            />
+                        </div>
+                    </div>
+                );
+            }
+        }
+        const wrapper = mount(<Demo />);
+        expect(wrapper.find('.uc-fe-table-tbody td.uc-fe-table-dragger-cell').length).toBe(10);
+
+        const { findAllByTestId } = render(<Demo />);
+        const draggableElements = await waitFor(() => findAllByTestId('draggable'));
+
+        expect(draggableElements.length).toBe(10);
+
+        const elemDrag = draggableElements[3];
+        const elemDrop2 = elemDrag.parentElement.parentElement;
+        const elemTarget = draggableElements[5].parentElement.parentElement;
+        const elemTarget2 = draggableElements[1].parentElement.parentElement;
+
+        const dataTransfer = {
+            getData: jest.fn(),
+            setData: jest.fn(),
+            dropEffect: 'move',
+            effectAllowed: 'move'
+        };
+
+        await fireEvent.mouseDown(elemDrag, { which: 1, button: 0 });
+        await fireEvent.dragStart(elemDrop2, { dataTransfer });
+        await fireEvent.dragOver(elemTarget, { dataTransfer });
+        await fireEvent.drop(elemTarget, { dataTransfer });
+        await fireEvent.dragEnd(elemTarget, { dataTransfer });
+        await fireEvent.mouseUp(elemDrag, { which: 1, button: 0 });
+
+        expect(onDragSorting).toHaveBeenCalledTimes(1);
+
+        await fireEvent.mouseDown(elemDrag, { which: 1, button: 0 });
+        await fireEvent.dragStart(elemDrop2, { dataTransfer });
+        await fireEvent.dragOver(elemTarget2, { dataTransfer });
+        await fireEvent.drop(elemTarget2, { dataTransfer });
+        await fireEvent.dragEnd(elemTarget2, { dataTransfer });
+        await fireEvent.mouseUp(elemDrag, { which: 1, button: 0 });
+
+        expect(wrapper.find('.uc-fe-table-tbody .uc-fe-table-drag-over-down').length).toBe(0);
+        expect(wrapper.find('.uc-fe-table-tbody .uc-fe-table-drag-over-up').length).toBe(0);
+        expect(onDragSorting).toHaveBeenCalledTimes(2);
     });
 });
