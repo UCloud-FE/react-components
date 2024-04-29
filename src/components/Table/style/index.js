@@ -34,12 +34,17 @@ export const SortIcon = withProps()(
 export const FilterIcon = withProps()(
     styled(SvgIcon)(props => {
         const {
+            disabled,
             active,
             theme: { designTokens: DT }
         } = props;
 
         return css`
-            fill: ${active ? DT.T_COLOR_TEXT_PRIMARY_DEFAULT : DT.T_COLOR_TEXT_DEFAULT_DARK};
+            fill: ${disabled
+                ? DT.T_COLOR_TEXT_DISABLED
+                : active
+                ? DT.T_COLOR_TEXT_PRIMARY_DEFAULT
+                : DT.T_COLOR_TEXT_DEFAULT_DARK};
         `;
     })
 );

@@ -237,4 +237,32 @@ describe('Table', () => {
         expect(document.querySelectorAll('.uc-fe-modal-footer').length).toBe(1);
         document.querySelectorAll('.uc-fe-modal-footer')[0].querySelectorAll('.uc-fe-button')[1].click();
     });
+    test('filter', () => {
+        class Demo extends React.Component {
+            render() {
+                const dataSource = new Array(100).fill(null).map((v, i) => ({
+                    index: `index-${i}`,
+                    i
+                }));
+                const columns = new Array(5).fill(null).map((v, i) => ({
+                    title: `title-${i}`,
+                    key: `title-${i}`,
+                    width: 200,
+                    filter: {
+                        disabled: true
+                    },
+                    render: record => <span>content {record.index}</span>
+                }));
+                return (
+                    <div>
+                        <div className="demo-wrap">
+                            <Table dataSource={dataSource} columns={columns} {...this.props} />
+                        </div>
+                    </div>
+                );
+            }
+        }
+
+        mount(<Demo />);
+    });
 });
