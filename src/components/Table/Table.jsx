@@ -474,7 +474,7 @@ class Table extends Component {
                 }}
                 className={`${prefixCls}-filter`}
                 renderSelector={(content, active) => {
-                    return <FilterIcon key="icon" type="filter" active={active} />;
+                    return <FilterIcon key="icon" type="filter" active={active} disabled={rest.disabled} />;
                 }}
                 multiple={multiple}
                 {...rest}
