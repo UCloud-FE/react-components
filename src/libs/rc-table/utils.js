@@ -79,3 +79,5 @@ export function remove(array, item) {
     const last = array.slice(index + 1, array.length);
     return front.concat(last);
 }
+
+export const INTERNAL_COL_DEFINE = 'RC_TABLE_INTERNAL_COL_DEFINE';

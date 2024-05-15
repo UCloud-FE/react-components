@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { INTERNAL_COL_DEFINE } from './utils';
 
 export default function ColGroup(props, { table }) {
     const { prefixCls, expandIconAsCell } = table.props;
@@ -14,7 +15,7 @@ export default function ColGroup(props, { table }) {
 
     cols = cols.concat(
         leafColumns.map(c => {
-            return <col key={c.key || c.dataIndex} style={{ width: c.width }} />;
+            return <col key={c.key || c.dataIndex} style={{ width: c.width }} {...c[INTERNAL_COL_DEFINE]} />;
         })
     );
 

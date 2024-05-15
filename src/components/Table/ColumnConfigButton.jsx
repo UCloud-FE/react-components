@@ -137,7 +137,11 @@ export default class ColumnConfigButton extends PureComponent {
 
         return (
             <ColumnConfigWrap {...rest}>
-                <ColumnConfigButtonWrap icon={<SvgIcon type="cog" size="14px" />} onClick={this.showModal} />
+                <ColumnConfigButtonWrap
+                    shape="square"
+                    icon={<SvgIcon type="cog" size="14px" />}
+                    onClick={this.showModal}
+                />
                 {modalVisible && (
                     <TableContext.Consumer>
                         {({ columns, columnConfig, onColumnConfigChange, locale }) => (
