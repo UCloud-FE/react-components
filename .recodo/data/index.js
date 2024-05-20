@@ -1,6 +1,7 @@
 const infoMap = {
     ZForm: require('./ZForm.info.json'),
     Upload: require('./Upload.info.json'),
+    Typography: require('./Typography.info.json'),
     Tree: require('./Tree.info.json'),
     TransferTable: require('./TransferTable.info.json'),
     TransferMenu: require('./TransferMenu.info.json'),
@@ -60,6 +61,7 @@ const infoMap = {
 const docMap = {
     ZForm: require('./ZForm.doc.json'),
     Upload: require('./Upload.doc.json'),
+    Typography: require('./Typography.doc.json'),
     Tree: require('./Tree.doc.json'),
     TransferTable: require('./TransferTable.doc.json'),
     TransferMenu: require('./TransferMenu.doc.json'),
