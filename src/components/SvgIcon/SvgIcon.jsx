@@ -10,6 +10,7 @@ import Tick from './icons/Tick';
 import TickSmall from './icons/TickSmall';
 import Cross from './icons/Cross';
 import CrossBold from './icons/CrossBold';
+import Copy from './icons/Copy';
 import RingLoading from './icons/RingLoading';
 import DottedLineArrowRight from './icons/DottedLineArrowRight';
 import Plus from './icons/Plus';
@@ -64,6 +65,7 @@ const IconMap = {
     plus: Plus,
     minus: Minus,
     circle: Circle,
+    copy: Copy,
     horz: Horz,
     'arrow-up': ArrowUp,
     'arrow-down': ArrowDown,
