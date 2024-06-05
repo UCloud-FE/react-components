@@ -23,6 +23,7 @@ function Examples({ examples, name, filepath, exampleMode }) {
                     case 'code':
                         let code = example.content,
                             { codepath } = example.settings;
+
                         if (codepath && filepath) {
                             if (window.navigator.userAgent.indexOf('Windows')) {
                                 filepath = filepath.replace(/\\/g, '/');
@@ -31,6 +32,7 @@ function Examples({ examples, name, filepath, exampleMode }) {
                             const parentComponentName = filepath.match(
                                 new RegExp(`.*\/(\\w*)\/${name}\.(j|t)sx?`)
                             )?.[1];
+
                             if (!parentComponentName) return null;
                             code = require(`!raw-loader!../../src/components/${parentComponentName}/${demoPath}/${codepath}.jsx`);
                             let demoStartIndex = code.match(/\/\/\s*demo\s*start\s*/);

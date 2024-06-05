@@ -6,9 +6,10 @@ import Styled from 'rsg-components/Styled';
 import cx from 'classnames';
 import Ribbon from 'rsg-components/Ribbon';
 import _ from 'lodash';
-
-import { toggleDarkTheme, isDarkTheme, toggleLocale, isEN } from './ReactExample';
+// import { toggleDarkTheme, isDarkTheme, toggleLocale, isEN } from './ReactExample';
+import { toggleTheme, themeType, toggleLocale, isEN } from './ReactExample';
 import Switch from 'src/components/Switch';
+import Select from 'src/components/Select';
 import Combine from 'src/components/Combine';
 
 export const DarkThemeContext = React.createContext();
@@ -133,7 +134,8 @@ const styles = ({
 
 const createIssueManually = location.hostname === 'localhost';
 export function StyleGuideRenderer({ classes, title, homepageUrl, children, toc, hasSidebar }) {
-    const [darkTheme, setDarkTheme] = useState(isDarkTheme);
+    // const [darkTheme, setDarkTheme] = useState(isDarkTheme);
+    const [theme, setTheme] = useState(themeType);
     const [enLocale, setEnLocale] = useState(isEN);
     const ComponentName =
         location.hash.indexOf('%E2%9D%96%20%20') >= 0
@@ -148,7 +150,7 @@ export function StyleGuideRenderer({ classes, title, homepageUrl, children, toc,
         return () => {};
     }, [ComponentName]);
     return (
-        <DarkThemeContext.Provider value={darkTheme}>
+        <DarkThemeContext.Provider value={theme  === 'dark'}>
             <div className={classes.root}>
                 <header className={classes.header}>
                     <div className={classes.bar}>
@@ -184,7 +186,7 @@ export function StyleGuideRenderer({ classes, title, homepageUrl, children, toc,
                                 offText="CN"
                                 onText="EN"
                             />
-                            <Switch
+                            {/* <Switch
                                 value={darkTheme}
                                 offText="NOR"
                                 onText="DARK"
@@ -192,7 +194,15 @@ export function StyleGuideRenderer({ classes, title, homepageUrl, children, toc,
                                     setDarkTheme(v);
                                     toggleDarkTheme(v);
                                 }}
-                            />
+                            /> */}
+                            <Select  value={themeType} onChange={v => {
+                                setTheme(v);
+                                toggleTheme(v);
+                            }}>
+                                <Select.Option value="default">default</Select.Option>
+                                <Select.Option value="dark">dark</Select.Option>
+                                <Select.Option value="private">private</Select.Option>
+                            </Select>
                         </Combine>
                     </div>
                 </header>
