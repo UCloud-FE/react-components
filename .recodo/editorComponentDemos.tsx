@@ -39,6 +39,7 @@ const editorComponentDemos = [
     '全局提示 Message',
     '徽标数 Badge',
     '标签 Tag',
+    '排版 Typography',
     '进度条 Progress',
     '提示 Notice',
     '折叠面板 Collapse',

@@ -20,6 +20,7 @@ mod.config({
         },
         '@ucloud-fe/react-components': {
             js: 'https://cdn.jsdelivr.net/npm/@ucloud-fe/react-components@latest/dist/main.min.js',
+            // js: 'http://127.0.0.1:8083/dist/main.min.js',
             type: 'amd',
             dep: ['moment', 'react', 'react-dom', '@ucloud-fe/react-components/style']
         },
@@ -56,6 +57,7 @@ mod.config({
         },
         'theme-list': {
             file: 'https://raw.githubusercontent.com/UCloud-FE/design-tokens/main/theme-list.json',
+            // file: 'http://localhost:8082/theme-list.json',
             type: 'json'
         }
     }
@@ -78,6 +80,7 @@ const renderDesignTokenEditor = (dom: string) => {
                     const themeName = `theme-${v.replace('.json', '')}`;
                     init.modules[themeName] = {
                         file: `https://raw.githubusercontent.com/UCloud-FE/design-tokens/main/define/${v}`,
+                        // file: `http://localhost:8082/define/${v}`,
                         type: 'json'
                     };
                     init.themeListName.push(themeName);
