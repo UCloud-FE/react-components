@@ -20,12 +20,18 @@ const messageContainerDom = document.createElement('div');
 
 const mainContainerDom = config.getContainer();
 let containerRef;
-ReactDOM.render(
-    <MessageContainer ref={ref => (containerRef = ref)} id="uc-fe-message-content-wrap" top={config.top} />,
-    messageContainerDom
-);
+
+function MessageRefComponent() {
+    const myRef = React.useRef(null);
+    React.useEffect(() => {
+        containerRef = myRef.current;
+    }, [myRef.current]);
+    return <MessageContainer ref={ref => (myRef.current = ref)} id="uc-fe-message-content-wrap" top={config.top} />;
+}
 
 mainContainerDom.appendChild(messageContainerDom);
+
+ReactDOM.render(<MessageRefComponent />, messageContainerDom);
 
 const ContextWrap = ({ children }) => {
     return (
@@ -37,6 +43,10 @@ const ContextWrap = ({ children }) => {
 ContextWrap.propTypes = { children: PropTypes.node };
 
 const popupMessage = (message, duration = config.duration, onClose = () => {}) => {
+    if (!containerRef) {
+        console.error(`Error: containerRef is not ready , please check`);
+        return;
+    }
     const messageUid = containerRef.appendMessage(<ContextWrap>{message}</ContextWrap>);
     const destroy = () => {
         containerRef.removeMessage(messageUid) && onClose();
