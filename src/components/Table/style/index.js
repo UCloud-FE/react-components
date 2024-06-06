@@ -113,7 +113,7 @@ export const TableWrap = withProps({
         .${prefixCls} {
             &-pagination {
                 float: right;
-                margin-top: 8px;
+                margin-top: 16px;
             }
             &-filter {
                 border: none;
