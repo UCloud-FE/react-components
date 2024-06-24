@@ -159,6 +159,9 @@ module.exports = [
                 name: 'Drawer'
             },
             {
+                name: 'List'
+            },
+            {
                 name: 'Table',
                 components: [
                     'Table',
