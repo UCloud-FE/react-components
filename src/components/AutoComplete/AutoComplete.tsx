@@ -17,7 +17,7 @@ interface Item {
     // 项的展示，为空时展示 value
     label?: ReactNode;
 }
-interface AutoCompleteProps {
+interface AutoCompleteProps extends Omit<InputProps,'value' | 'onChange' | 'onFocus'| 'onBlur' | 'disabled' | 'prefix' | 'onKeyDown' | 'suffix' | 'className' | 'block'> {
     /** 待筛选选项 */
     options?: Item[];
     /** 值，controlled */
@@ -46,6 +46,8 @@ interface AutoCompleteProps {
     status: InputProps['status'];
     /** @ignore */
     placeholder?: InputProps['placeholder'];
+    /** 尺寸 */
+    size?: InputProps['size'];
 }
 
 const AutoComplete = ({
@@ -65,7 +67,8 @@ const AutoComplete = ({
     className,
     status,
     placeholder,
-    size
+    size,
+    ...others
 }: AutoCompleteProps & Override<InputProps, AutoCompleteProps>) => {
     const [value, onChange] = useUncontrolled<string>(_value, defaultValue, _onChange);
     const [visible, setVisible] = useState(false);
@@ -146,6 +149,7 @@ const AutoComplete = ({
                     block
                     placeholder={placeholder}
                     status={status}
+                    {...others}
                 />
             </Popover>
         </SWrap>
