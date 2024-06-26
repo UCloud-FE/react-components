@@ -8,7 +8,6 @@ import {
     itemExtraCls,
     itemTitleCls,
     itemTitleIconCls,
-    itemWrapperLastLineCls,
     itemContentRemarkCls,
     itemPrefixCls,
     itemSourceCls,
@@ -28,19 +27,17 @@ const Item = ({
     remark,
     extra,
     customTitleWidth,
-    isLastLine,
     prefix,
-    noBorder = false,
     aligin = 'left'
 }: ItemType): JSX.Element => {
     const renderTitle = () => {
         if (!title) {
             return null;
         }
-
+        const defaultTitleWidth = styleType === 'vertical' ? '100%' : '33%';
         return (
-            <div className={itemTitleCls} style={customTitleWidth ? { width: customTitleWidth } : {}}>
-                {title}
+            <div className={itemTitleCls} style={customTitleWidth ? { width: customTitleWidth } : {width:defaultTitleWidth}}>
+                <span>{title}</span>
                 {titleTip && <Icontip className={itemTitleIconCls} popup={titleTip} />}
             </div>
         );
@@ -51,10 +48,8 @@ const Item = ({
     };
     return (
         <StyledItem
-            className={`${isLastLine ? '' : itemWrapperLastLineCls}`}
             styleType={styleType}
             aligin={aligin}
-            noBorder={noBorder}
             prefix={prefix}
         > 
             <ItemBody prefix={prefix}>

@@ -34,14 +34,14 @@ export type ItemType = {
    * 自定义标题的宽度
    */
   customTitleWidth?: number | string;
-  /**
-   * 是否最后一行
-   */
-  isLastLine?: boolean;
    /**
    * 对齐方式
    */
   aligin?: 'left' | 'right';
+  /**
+   * 是否补位
+   */
+  isCovering?: boolean;
   /**
    * 隐藏分割线
    */
@@ -185,9 +185,13 @@ export interface ListProps {
   /**
    * 列表数据
    */
-  dataSource: (Omit<ConfigInfoProps,'col' | 'noBorder'> | React.ReactNode)[] ;
+  items: (Omit<ConfigInfoProps,'col' | 'noBorder'> | React.ReactNode)[] ;
   /**
-   * 多列展示的列数, styleType是list时自动按dataSource.length计算
+   * 多列展示的每列宽度,会依据宽度展示列，默认300
    */
-  col?: number;
+  colWitdh?: number;
+  /**
+   * 内容对齐方式
+   */
+  aligin?: 'left' | 'right'; 
 }

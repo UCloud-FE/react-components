@@ -159,7 +159,8 @@ module.exports = [
                 name: 'Drawer'
             },
             {
-                name: 'List'
+                name: 'List',
+                components: ['ConfigInfo', 'Content', 'Hovertip', 'Icontip', 'List']
             },
             {
                 name: 'Table',

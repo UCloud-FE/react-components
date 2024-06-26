@@ -1,5 +1,5 @@
 // Do not edit directly
-// Generated with design-token-editor on 2024/6/24 10:58:31
+// Generated with design-token-editor on 2024/7/3 15:31:31
 
 export default {
     // 按钮加载遮罩
@@ -434,12 +434,12 @@ export default {
     T_LIST_ITEM_PADDING_HORIZONAL: '0',
     // 列项内间距/上下间距
     T_LIST_ITEM_PADDING_VERTICAL: '8px',
-    // 列项布局间距/左右间距
-    T_LIST_LAYOUT_PADDING_HORIZONAL: '20px',
-    // 列项布局间距/上下间距
-    T_LIST_LAYOUT_PADDING_VERTICAL: '0',
     // 列分割线/线条/提示/浅色
     T_LIST_LINE_COLOR_DEFAULT: '#2B3555',
+    // 列项布局间距/左右间距
+    T_LIST_OUTSIDE_PADDING_HORIZONAL: '20px',
+    // 列项布局间距/上下间距
+    T_LIST_OUTSIDE_PADDING_VERTICAL: '0',
     // 加载底部蒙层
     T_LOADING_COLOR_LAYER_DEFAULT: 'rgba(20,26,43,0.7)',
     // 弹窗/抽屉/通用/蒙层

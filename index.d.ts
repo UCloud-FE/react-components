@@ -818,3 +818,112 @@ interface LocaleProviderProps {
     locale?: any;
 }
 export declare class LocaleProvider extends Component<LocaleProviderProps> {}
+
+
+export interface ListProps {
+    /**
+     * 布局类型
+     */
+    styleType?:'list' | 'custom',
+    /** @ignore */
+    className?: string;
+    /**
+     * 间距 [左右，上下]
+     */
+    spacing?: [number,number],
+    /**
+     * 列表数据
+     */
+    dataSource: (Omit<ConfigInfoProps,'col' | 'noBorder'> | React.ReactNode)[] ;
+    /**
+     * 多列展示的列数, styleType是list时自动按dataSource.length计算
+     */
+    col?: number;
+  }
+  export interface ActionIconProps {
+    /**
+     * 图标
+     */
+    icon?: React.ReactNode;
+  
+    /**
+     * 点击时的回调
+     */
+    onClick?: (e: React.MouseEvent) => void;
+    /**
+     * 弹出层内容
+     */
+    popup?: React.ReactNode;
+    /**
+     * 是否禁用，如果为true，则不响应onClick
+     */
+    disabled?: boolean;
+  }
+export interface ContentProps {
+    /**
+     * 样式类型
+     */
+    styleType?: 'primary' | 'secondary';
+    /** @ignore */
+    children?: React.ReactNode;
+}
+export interface ConfigInfoProps {
+    /**
+     * 排版类型: 横向｜纵向, 默认为横向
+     */
+    styleType?: 'horizontal' | 'vertical';
+    /**
+     * 配置项数据数组
+     */
+    dataSource: ItemType[];
+    /**
+     * 多列展示的列数
+     */
+    col?: 1 | 2 | 3 | 4;
+    /**
+     * 自定义标题的宽度，字符串要带"px"，如100或100px
+     */
+    customTitleWidth?: number | string;
+    /** @ignore */
+    className?: string;
+    /** 内容区对齐方式 */
+    aligin?: 'left' | 'right'; 
+    /**
+     * 隐藏分割线
+     */
+    noBorder?: boolean;
+}
+export interface HovertipProps extends PopoverProps {
+    /**
+     * 弹出层内容
+     */
+    popup?: React.ReactNode;
+    /**
+     * 内容部分样式
+     */
+    contentStyle?: object;
+    /**
+     * 提示部分样式
+     */
+    tipStyle?: object;
+    children?: React.ReactNode;
+} 
+export interface IcontipProps extends PopoverProps {
+    /**
+     * 图标，传入string时为图标类型，也可直接传入图标组件
+     */
+    icon?: React.ReactNode;
+}
+  
+declare class BaseActionIcon extends Component<ActionIconProps> {}
+declare class BaseContent extends Component<ContentProps> {}
+declare class BaseConfigInfo extends Component<ConfigInfoProps> {}
+declare class BaseHovertip extends Component<HovertipProps> {}
+declare class BaseIcontip extends Component<IcontipProps> {}
+export declare class List extends Component<ListProps> {
+    static ActionIcon: typeof BaseActionIcon;
+    static Content: typeof BaseContent;
+    static ConfigInfo: typeof BaseConfigInfo;
+    static Hovertip:typeof BaseHovertip;
+    static Icontip: typeof BaseIcontip;
+}
