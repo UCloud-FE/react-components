@@ -17,11 +17,12 @@ export const SLink = styledWrap<unknown, HTMLAnchorElement>({ className: prefixC
             &,
             &:link,
             &:visited {
-                text-decoration: underline;
+                text-decoration: none;
                 color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
             }
             &:hover,
             &:active {
+                text-decoration: underline;
                 color: ${DT.T_COLOR_TEXT_PRIMARY_HOVER};
             }
         `;

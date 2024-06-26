@@ -1,0 +1,27 @@
+{
+    "ActionIcon": {
+        "path": "List/ActionIcon.md",
+        "name": "ActionIcon",
+        "info": "### 说明\n\n-   ActionIcon 已经抽离为外层组件，建议使用 ActionIcon 作为List组件左侧的操作图标\n\n### 演示\n\n#### 演示\n\n```js {\"codepath\": \"action_icon.jsx\"}\n```"
+    },
+    "ConfigInfo": {
+        "path": "List/ConfigInfo.md",
+        "name": "ConfigInfo",
+        "info": "### 说明\n\n-  在详情页展示数据的具体配置和参数信息\n\n### 演示\n\n#### 演示\n-   基础\n\n```js {\"codepath\": \"base.jsx\"}\n```\n\n-   两端对齐\n\n```js {\"codepath\": \"right.jsx\"}\n```\n\n-   列操作(可以自定义)\n\n```js {\"codepath\": \"tools.jsx\"}\n```\n\n-   图文列表（无分割线）\n\n```js {\"codepath\": \"image.jsx\"}"
+    },
+    "Hovertip": {
+        "path": "List/Hovertip.md",
+        "name": "Hovertip",
+        "info": "import Tooltip from 'src/components/Tooltip';\nimport React from 'react';\nimport { HovertipProps } from './typings';\n/**\n * Hovertip\n * @description 鼠标移入悬停提示\n */\nconst Hovertip = ({\n  children,\n  popup,\n  contentStyle = {},\n  tipStyle = {},\n  ...others\n}: HovertipProps): JSX.Element => {\n  return (\n    <Tooltip\n      placement=\"top\"\n      popup={\n          <>{popup}</>\n      }\n      getPopupContainer={() => document.body}\n      {...others}\n    >\n      <div\n        style={{ display: 'inline-block', cursor: 'pointer', ...contentStyle }}\n      >\n        {children}\n      </div>\n    </Tooltip>\n  );\n};\nexport default Hovertip;\n"
+    },
+    "Icontips": {
+        "path": "List/Icontips.md",
+        "name": "Icontips",
+        "info": "import React from 'react';\nimport Hovertip from './Hovertip';\nimport SvgIcon from 'src/components/SvgIcon';\nimport { iconCls, StyledSpan } from './style';\nimport { IcontipProps, PopupAlign } from './typings';\n\n/**\n * Hovertip.Icontip\n * @description 图标悬停提示\n */\nconst Icontip = ({\n  icon = <SvgIcon type=\"question-circle\" className={iconCls} />,\n  placement = 'topLeft',\n  ...others\n}: IcontipProps): JSX.Element => {\n  const alignConf: Record<string,PopupAlign> = {\n    topLeft: {\n      points: ['bl', 'tl'],\n      overflow: { adjustX: 1, adjustY: 1 },\n      offset: [-10, -10],\n      targetOffset: [0, 0],\n    },\n    bottomLeft: {\n      points: ['tl', 'bl'],\n      overflow: { adjustX: 1, adjustY: 1 },\n      offset: [-10, 10],\n      targetOffset: [0, 0],\n    },\n    topRight: {\n      points: ['br', 'tr'],\n      overflow: { adjustX: 1, adjustY: 1 },\n      offset: [10, -10],\n      targetOffset: [0, 0],\n    },\n    bottomRight: {\n      points: ['tr', 'br'],\n      overflow: { adjustX: 1, adjustY: 1 },\n      offset: [10, 10],\n      targetOffset: [0, 0],\n    },\n  };\n\n  return (\n    <Hovertip placement={placement} align={alignConf[placement]} {...others}>\n      <StyledSpan>{icon}</StyledSpan>\n    </Hovertip>\n  );\n};\n\nexport default Icontip;\n"
+    },
+    "List": {
+        "path": "List/List.md",
+        "name": "List",
+        "info": "### 说明\n\n-   这是 List 组件，主要是针对 列表样式的封装\n\n### 演示\n\n-   布局\n\n```js {\"codepath\": \"layout.jsx\"}\n```\n\n-   布局自定义内容\n\n```js {\"codepath\": \"layout_card.jsx\"}\n```\n\n-   分页器\n\n```js {\"codepath\": \"pagination.jsx\"}\n```\n\n-   分页器\n\n```js {\"codepath\": \"more.jsx\"}\n```\n"
+    }
+}

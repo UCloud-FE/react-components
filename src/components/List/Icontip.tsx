@@ -9,7 +9,13 @@ import { IcontipProps, PopupAlign } from './typings';
  * @description 图标悬停提示
  */
 const Icontip = ({
+  /**
+   * icon node
+   */
   icon = <SvgIcon type="question-circle" className={iconCls} />,
+  /**
+   * 对齐方式
+   */
   placement = 'topLeft',
   ...others
 }: IcontipProps): JSX.Element => {

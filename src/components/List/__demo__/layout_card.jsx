@@ -8,9 +8,9 @@ const Demo = () => {
         <>
             <List
                 styleType="custom"
-                col={3}
                 spacing={[12, 12]}
-                dataSource={[
+                colWitdh={400}
+                items={[
                     <Card key={1}>
                         <Card.Header>This is the title</Card.Header>
                         <Card.Content>This is the Content</Card.Content>

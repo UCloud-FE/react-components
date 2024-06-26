@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Item from './Item';
 import {
   StyledOuterWrapper,
@@ -6,6 +6,9 @@ import {
   configInfoWrapperCls,
   itemWrapperCls,
   itemWrapperInnerCls,
+  itemBorderCls,
+  StyleSingledWrapper,
+  itemWrapperLastLineCls
 } from './style';
 import { ConfigInfoProps } from './typings';
 
@@ -24,43 +27,40 @@ const ConfigInfo = ({
 }: ConfigInfoProps ) => {
   const len = dataSource.length;
 
-  useEffect(() => {
-    const style = document.createElement('style');
-    style.innerHTML = `
-      [class^='uc-fe-card'] {
-        .pro-config-info-item-wrapper-last-line {
-          border-bottom: 0;
-        }
-      }
-    `;
-    document.head.appendChild(style);
 
-    return () => {
-      document.head.removeChild(style);
-    };
-  }, []); // 传入空数组，使副作用只执行一次
   if (col > 1) {
     const groupedData = [];
     const lineNum = Math.ceil(len / col);
-    for (let i = 0; i < lineNum; i++) {
-      groupedData.push(dataSource.slice(i * col, i * col + col));
+    if(lineNum >= 1 && len >= col ){
+      for (let i = 0; i < lineNum; i++) {
+        groupedData.push(dataSource.slice(i * col, i * col + col));
+      }
+    }else{
+       const coveringLen = col - len ;
+       const covering = new Array(coveringLen).fill({
+        isCovering: true,
+       });
+       groupedData.push([
+        ...dataSource,
+        ...covering
+       ])
     }
     const groupedDataLen = groupedData.length;
     
     return (
       <StyledOuterWrapper className={configInfoWrapperCls} {...others}>
-        <StyledWrapper col={col}>
+        <StyledWrapper col={col} noBorder={noBorder}>
           {groupedData.map((items, i) => (
             <div className={itemWrapperInnerCls} key={i}>
               {items.map((item, j) => (
-                <div className={`${itemWrapperCls}`} key={j}>
+                <div className={`${itemWrapperCls} ${item.isCovering ? '':itemBorderCls} ${i + 1 === groupedDataLen ? itemWrapperLastLineCls:'' }`} key={j}>
                   <Item
                     {...item}
                     customTitleWidth={customTitleWidth}
                     styleType={styleType}
                     aligin={aligin}
-                    noBorder={noBorder}
-                    isLastLine={i + 1 === groupedDataLen ? false : true}
+                    
+                  
                   />
                 </div>
               ))}
@@ -72,19 +72,22 @@ const ConfigInfo = ({
   }
 
   return (
-    <div {...others}>
+    <StyleSingledWrapper {...others} noBorder={noBorder}>
       {dataSource.map((item, i) => (
-        <Item
-          styleType={styleType}
-          aligin={aligin}
-          noBorder={noBorder}
-          key={i}
-          {...item}
-          customTitleWidth={customTitleWidth}
-          isLastLine={i + 1 === len ? false : true}
-        />
+        <div className={`${itemBorderCls} ${i + 1 === len ? itemWrapperLastLineCls : '' }`}  key={i}>
+              <Item
+              styleType={styleType}
+              aligin={aligin}
+              
+              key={i}
+              {...item}
+              customTitleWidth={customTitleWidth}
+            
+            />
+        </div>
+        
       ))}
-    </div>
+    </StyleSingledWrapper>
   );
 };
 
