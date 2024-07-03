@@ -17,54 +17,102 @@ export const footerCls = prefixCls + '-footer';
 export const subAreaCls = prefixCls + '-sub-area';
 export const subAreaContentCls = prefixCls + '-sub-area-content';
 
-const sharedGutter = css`
-    padding: 0 24px;
-    margin-top: 16px;
-`;
-
 export const HeaderWrap = withProps({
     className: headerCls
-})(styled('div')`
-    ${sharedGutter};
-    ${clearFixMixin};
-`);
+})(
+    styled('div')(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
+        return css`
+            padding-left: ${DT.T_CARD_HEADER_PADDING_LEFT};
+            padding-right: ${DT.T_CARD_HEADER_PADDING_RIGHT};
+            margin-top: ${DT.T_CARD_HEADER_PADDING_TOP};
+            margin-bottom: ${DT.T_CARD_HEADER_PADDING_BOTTOM};
+            ${clearFixMixin};
+        `;
+    })
+);
 
 export const TitleWrap = withProps({
     className: titleCls
-})(styled('div')`
-    line-height: 28px;
-    font-weight: bold;
-`);
+})(
+    styled('div')(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
+        return css`
+            line-height: ${DT.T_CARD_HEADER_FONT_LINE_HEIGHT};
+            font-weight: ${DT.T_CARD_HEADER_FONT_FONT_WEIGHT};
+        `;
+    })
+);
 
 export const CommentWrap = withProps({
     className: commentCls
-})(styled('div')`
-    line-height: 20px;
-    font-weight: normal;
-`);
+})(
+    styled('div')(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
+        return css`
+            line-height: ${DT.T_CARD_COMMENT_FONT_LINE_HEIGHT};
+            font-weight: ${DT.T_CARD_COMMENT_FONT_FONT_WEIGHT};
+        `;
+    })
+);
 
 export const ActionWrap = withProps({
     className: actionCls
-})(styled('div')`
-    line-height: 28px;
-    ${sharedGutter};
-    ${clearFixMixin};
-`);
+})(
+    styled('div')(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
+        return css`
+            line-height: 28px;
+            padding-left: ${DT.T_CARD_ACTION_LEFT};
+            padding-right: ${DT.T_CARD_ACTION_RIGHT};
+            margin-top: ${DT.T_CARD_ACTION_TOP};
+            margin-bottom: ${DT.T_CARD_ACTION_BOTTOM};
+            ${clearFixMixin};
+        `;
+    })
+);
 
 export const ContentWrap = withProps({
     className: contentCls
-})(styled('div')`
-    ${sharedGutter};
-`);
+})(
+    styled('div')(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
+        return css`
+            padding-left: ${DT.T_CARD_CONTENT_PADDING_LEFT};
+            padding-right: ${DT.T_CARD_CONTENT_PADDING_RIGHT};
+            margin-top: ${DT.T_CARD_CONTENT_PADDING_TOP};
+            margin-bottom: ${DT.T_CARD_CONTENT_PADDING_BOTTOM};
+        `;
+    })
+);
 
 export const FooterWrap = withProps({
     className: footerCls
-})(styled('div')`
-    line-height: 1;
-    ${sharedGutter};
-    padding-top: 12px;
-    ${clearFixMixin};
-`);
+})(
+    styled('div')(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
+        return css`
+            line-height: 1;
+            padding-left: ${DT.T_CARD_FOOTER_PADDING_LEFT};
+            padding-right: ${DT.T_CARD_FOOTER_PADDING_RIGHT};
+            padding-top: ${DT.T_CARD_FOOTER_PADDING_TOP};
+            padding-bottom: ${DT.T_CARD_FOOTER_PADDING_BOTTOM};
+            ${clearFixMixin};
+        `;
+    })
+);
 
 export const SubAreaWrap = withProps({
     className: subAreaCls
@@ -75,11 +123,11 @@ export const SubAreaWrap = withProps({
         } = props;
         return css`
             .${titleCls} {
-                line-height: 22px;
-                font-size: 14px;
-                font-weight: bold;
-                margin-bottom: 16px;
-                color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
+                line-height: ${DT.T_CARD_SECONDARY_FONT_LINE_HEIGHT};
+                font-size: ${DT.T_CARD_SECONDARY_FONT_SIZE};
+                font-weight: ${DT.T_CARD_SECONDARY_FONT_FONT_WEIGHT};
+                margin-bottom: ${DT.T_CARD_SECONDARY_PADDING_BOTTOM};
+                color: ${DT.T_CARD_SECONDARY_FONT_COLOR_DEFAULT};
             }
             .${subAreaContentCls} {
                 /* empty */
@@ -89,8 +137,8 @@ export const SubAreaWrap = withProps({
                     content: ' ';
                     display: block;
                     height: 1px;
-                    background: ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
-                    margin: 16px 0;
+                    background: ${DT.T_CARD_LINE_COLOR_DEFAULT};
+                    margin: ${DT.T_CARD_LINE_PADDING_VERTICAL} 0;
                 }
             }
         `;
@@ -109,12 +157,12 @@ export const CardWrap = withProps()(
             overflow: auto;
 
             .${headerCls}:last-of-type, .${actionCls}:last-of-type, .${contentCls}:last-of-type {
-                margin-bottom: 24px;
+                margin-bottom: ${DT.T_CARD_FOOTER_MARGIN_BOTTOM};
             }
             .${headerCls}:nth-of-type(2),
             .${actionCls}:nth-of-type(2),
             .${contentCls}:nth-of-type(2) {
-                margin-top: 24px;
+                margin-top: ${DT.T_CARD_HEADER_PADDING_TOP};
             }
 
             background: ${DT.T_CARD_COLOR_BG_DEFAULT};
@@ -122,17 +170,16 @@ export const CardWrap = withProps()(
             box-shadow: ${DT.T_SHADOW_BLOCK_DEFAULT_MD};
             border-radius: ${DT.T_CORNER_LG};
             .${titleCls} {
-                color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
-                font-size: ${DT.T_TYPO_FONT_SIZE_3};
+                color: ${DT.T_CARD_HEADER_FONT_COLOR_DEFAULT};
+                font-size: ${DT.T_CARD_HEADER_FONT_SIZE};
             }
             .${commentCls} {
-                color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
-                font-size: ${DT.T_TYPO_FONT_SIZE_1};
+                color: ${DT.T_CARD_COMMENT_FONT_COLOR_DEFAULT};
+                font-size: ${DT.T_CARD_COMMENT_FONT_SIZE};
             }
             .${footerCls} {
-                border-top: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
-                padding: 16px 24px;
-                margin-top: 24px;
+                border-top: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_CARD_LINE_COLOR_DEFAULT};
+                margin-top: ${DT.T_CARD_FOOTER_MARGIN_TOP};
             }
         `;
     })
