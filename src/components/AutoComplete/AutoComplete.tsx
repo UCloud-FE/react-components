@@ -64,7 +64,8 @@ const AutoComplete = ({
     style,
     className,
     status,
-    placeholder
+    placeholder,
+    size
 }: AutoCompleteProps & Override<InputProps, AutoCompleteProps>) => {
     const [value, onChange] = useUncontrolled<string>(_value, defaultValue, _onChange);
     const [visible, setVisible] = useState(false);
@@ -132,6 +133,7 @@ const AutoComplete = ({
                 onVisibleChange={handleVisibleChange}
             >
                 <Input
+                    size={size}
                     value={value}
                     onChange={onInputChange}
                     onFocus={onFocus}

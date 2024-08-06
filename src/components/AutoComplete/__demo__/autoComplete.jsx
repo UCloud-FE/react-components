@@ -14,16 +14,18 @@ class Demo extends React.PureComponent {
     constructor(props) {
         super(props);
         this.state = {
+            size: 'md',
             handleSearch: 'default',
             disabled: false
         };
     }
     render() {
-        const { handleSearch, disabled, loading, prefix, block } = this.state;
+        const { handleSearch, disabled, loading, prefix, block, size } = this.state;
         const props = {
             disabled,
             loading,
-            block
+            block,
+            size
         };
         if (handleSearch === 'false') {
             props.handleSearch = false;
@@ -49,6 +51,13 @@ class Demo extends React.PureComponent {
                     </Form.Item>
                     <Form.Item label="prefix">
                         <Switch checked={prefix} onChange={prefix => this.setState({ prefix })} />
+                    </Form.Item>
+                    <Form.Item label="size">
+                        <Radio.Group
+                            value={size}
+                            onChange={size => this.setState({ size })}
+                            options={['sm', 'md', 'lg'].map(v => ({ value: v }))}
+                        />
                     </Form.Item>
                     <Form.Item label="handleSearch">
                         <Radio.Group
