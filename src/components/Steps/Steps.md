@@ -23,3 +23,13 @@
 
 ```js {"codepath": "steps-current.jsx"}
 ```
+
+#### vertical - 纵向 step
+
+```js {"codepath": "steps-vertical.jsx"}
+```
+
+#### onChange - 可点击 step
+
+```js {"codepath": "steps-change.jsx"}
+```
