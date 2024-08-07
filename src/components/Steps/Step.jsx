@@ -2,27 +2,34 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import StepIcon from './StepIcon';
-import { StepWrapper, ContentWrapper, TitleWrapper, RemarkWrapper } from './style';
+import { StepWrapper, ContentWrapper, TitleWrapper, RemarkWrapper, stepWrapperCls, itemTailCls } from './style';
 
 export default class Step extends PureComponent {
     static propTypes = {
         status: PropTypes.string,
         step: PropTypes.node,
         remark: PropTypes.node,
-        title: PropTypes.node
+        title: PropTypes.node,
+        isLast: PropTypes.bool,
+        disabled: PropTypes.bool
     };
 
     render() {
-        const { status, step, remark, title, ...rest } = this.props;
+        const { status, step, remark, title, isLast, ...rest } = this.props;
         return (
-            <StepWrapper status={status} {...rest}>
+            <StepWrapper
+                status={status}
+                isLast={isLast}
+                {...rest}
+                className={`${stepWrapperCls} ${rest.className ? rest.className : ''}`}
+            >
+                <div className={itemTailCls}></div>
                 <StepIcon status={status} step={step || 0} />
-                {(title || remark) && (
-                    <ContentWrapper>
-                        <TitleWrapper>{title}</TitleWrapper>
-                        {remark && <RemarkWrapper>{remark}</RemarkWrapper>}
-                    </ContentWrapper>
-                )}
+
+                <ContentWrapper>
+                    <TitleWrapper>{title}</TitleWrapper>
+                    {remark && <RemarkWrapper>{remark}</RemarkWrapper>}
+                </ContentWrapper>
             </StepWrapper>
         );
     }

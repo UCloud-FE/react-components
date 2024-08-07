@@ -22,16 +22,20 @@ class Demo extends React.Component {
             current: 0,
             status: Steps.defaultProps.status,
             hasTitle: true,
-            hasRemark: true
+            hasRemark: true,
+            direction: 'horizontal',
+            changeType: 'close'
         };
     }
     render() {
-        const { current, status, hasTitle, hasRemark } = this.state;
+        const { current, status, hasTitle, hasRemark, direction, changeType } = this.state;
 
         const steps = new Array(5).fill(null).map((v, i) => {
             const step = {};
             if (hasTitle) step.title = `第 ${i + 1} 步`;
-            if (hasRemark) step.remark = '这是一条备注';
+            if (hasRemark) step.remark = '这是一条备注这是一条备注这是一条备注';
+
+            if (i === 3) step.disabled = true;
             return step;
         });
         return (
@@ -57,10 +61,36 @@ class Demo extends React.Component {
                             onChange={current => this.setState({ current })}
                         />
                     </Form.Item>
+                    <Form.Item label="direction" {...itemLayout}>
+                        <Radio.Group
+                            options={['horizontal', 'vertical'].map((direction, i) => ({ value: direction }))}
+                            value={direction}
+                            onChange={direction => this.setState({ direction })}
+                        />
+                    </Form.Item>
+                    <Form.Item label="onChange" {...itemLayout}>
+                        <Radio.Group
+                            options={['open', 'close'].map((status, i) => ({ value: status }))}
+                            value={changeType}
+                            onChange={changeType => this.setState({ changeType })}
+                        />
+                    </Form.Item>
                 </Form>
 
                 <div className="demo-wrap">
-                    <Steps steps={steps} current={current} status={status} />
+                    <Steps
+                        steps={steps}
+                        current={current}
+                        status={status}
+                        direction={direction}
+                        onChange={
+                            changeType === 'close'
+                                ? null
+                                : e => {
+                                      this.setState({ current: e });
+                                  }
+                        }
+                    />
                 </div>
             </div>
         );
