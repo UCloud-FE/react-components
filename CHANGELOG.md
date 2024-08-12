@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.11.1](https://github.com/UCloud-FE/react-components/compare/v1.11.0...v1.11.1) (2024-08-12)
+
+### Features
+
+-   **table:** add col tag props ([49543ab](https://github.com/UCloud-FE/react-components/commit/49543abbf5a488422b80b7df5ddd9bb49cda7783))
+-   **table:** change pagination margintop ([cbb12db](https://github.com/UCloud-FE/react-components/commit/cbb12db987a149263491389bffdf5a97ae55e428))
+
+### Bug Fixes
+
+-   **AutoComplete:** add size ([291dd30](https://github.com/UCloud-FE/react-components/commit/291dd300220b89e4646dfc85e53fd3aafbe8594f))
+-   **message:** messagecontainer ref is null ([4e71520](https://github.com/UCloud-FE/react-components/commit/4e71520c4391b534d3df1ed34e971e63fa15fb74))
+-   **table:** columnConfigButton style ([5085afd](https://github.com/UCloud-FE/react-components/commit/5085afd0bb6852810382cae76b1320bb9a79dde5))
+-   **table:** remove drag classname ([478a27a](https://github.com/UCloud-FE/react-components/commit/478a27a2bd7375079a92e97c338dafb579b40bda))
+-   **table:** tabel filter disabled ([151662d](https://github.com/UCloud-FE/react-components/commit/151662d0a42df17a47d39b56a37a38ee92bf9cc9))
+
 ## [1.11.0](https://github.com/UCloud-FE/react-components/compare/v1.10.3...v1.11.0) (2024-04-12)
 
 ### Features
