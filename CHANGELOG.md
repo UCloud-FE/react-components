@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.12.1](https://github.com/UCloud-FE/react-components/compare/v1.12.0...v1.12.1) (2024-08-28)
+
+### Features
+
+-   **Steps:** add nowrap props ([f010cee](https://github.com/UCloud-FE/react-components/commit/f010ceeb0b944a17f7fa6ab1bca794668d2fc756))
+
 ## [1.12.0](https://github.com/UCloud-FE/react-components/compare/v1.11.1...v1.12.0) (2024-08-27)
 
 ### Features
