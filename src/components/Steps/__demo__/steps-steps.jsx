@@ -30,6 +30,13 @@ class Demo extends React.Component {
                         steps={new Array(5).fill(null).map((v, i) => ({ title: 'content', remark: 'This is remark' }))}
                     />
                 </div>
+                <div className="demo-wrap">
+                    <Steps
+                        current={2}
+                        nowrap={true}
+                        steps={new Array(5).fill(null).map((v, i) => ({ title: 'content', remark: 'This is remark' }))}
+                    />
+                </div>
             </div>
         );
     }

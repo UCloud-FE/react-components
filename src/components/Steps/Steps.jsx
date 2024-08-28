@@ -35,13 +35,18 @@ class Steps extends Component {
         /**
          * 指定步骤条方向 , 默认是horizontal
          */
-        direction: PropTypes.oneOf(['horizontal', 'vertical'])
+        direction: PropTypes.oneOf(['horizontal', 'vertical']),
+        /**
+         * 横向场景，不换行, 默认是false
+         */
+        nowrap: PropTypes.bool
     };
     static defaultProps = {
         status: 'current',
-        direction: 'horizontal'
+        direction: 'horizontal',
+        nowrap: false
     };
-    renderSteps = ({ steps, current, status, direction, onChange }) => {
+    renderSteps = ({ steps, current, status, direction, onChange, nowrap }) => {
         let pos = 'before';
         const l = steps.length;
         return steps.map((step, i) => {
@@ -76,6 +81,7 @@ class Steps extends Component {
                     status={finalStatus}
                     canHover={canHover}
                     showTitle={showTitle}
+                    nowrap={nowrap}
                     onClick={() => {
                         if (canHover) {
                             onChange(key, finalStatus);
@@ -87,6 +93,7 @@ class Steps extends Component {
                         key={`step-${key}`}
                         status={finalStatus}
                         step={stepContent}
+                        showTitle={showTitle}
                         isLast={i === l - 1 ? true : false}
                     />
                 </StepsItemWrapper>
@@ -94,10 +101,10 @@ class Steps extends Component {
         });
     };
     render() {
-        const { steps, current, status, onChange, direction, ...rest } = this.props;
+        const { steps, current, status, onChange, direction, nowrap, ...rest } = this.props;
         return (
-            <StepsWrapper direction={direction} {...rest}>
-                {this.renderSteps({ steps, current, status, direction, onChange })}
+            <StepsWrapper direction={direction} nowrap={nowrap} {...rest}>
+                {this.renderSteps({ steps, current, status, direction, onChange, nowrap })}
             </StepsWrapper>
         );
     }

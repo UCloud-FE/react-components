@@ -24,11 +24,12 @@ class Demo extends React.Component {
             hasTitle: true,
             hasRemark: true,
             direction: 'horizontal',
-            changeType: 'close'
+            changeType: 'close',
+            nowrap: false
         };
     }
     render() {
-        const { current, status, hasTitle, hasRemark, direction, changeType } = this.state;
+        const { current, status, hasTitle, hasRemark, direction, changeType, nowrap } = this.state;
 
         const steps = new Array(5).fill(null).map((v, i) => {
             const step = {};
@@ -75,6 +76,9 @@ class Demo extends React.Component {
                             onChange={changeType => this.setState({ changeType })}
                         />
                     </Form.Item>
+                    <Form.Item label="nowrap" {...itemLayout}>
+                        <Switch checked={nowrap} onChange={nowrap => this.setState({ nowrap })} />
+                    </Form.Item>
                 </Form>
 
                 <div className="demo-wrap">
@@ -83,6 +87,7 @@ class Demo extends React.Component {
                         current={current}
                         status={status}
                         direction={direction}
+                        nowrap={nowrap}
                         onChange={
                             changeType === 'close'
                                 ? null

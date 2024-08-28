@@ -61,6 +61,7 @@ export const IconWrapper = withProps()(
         return css`
             width: 32px;
             height: 32px;
+            min-width: 32px;
             line-height: 30px;
             text-align: center;
             box-sizing: border-box;
@@ -93,7 +94,6 @@ export const TitleWrapper = styled('span')`
     line-height: 32px;
     display: inline-block;
     transition: all 0.3s;
-    padding-inline-end: 16px;
     position: relative;
 `;
 
@@ -110,6 +110,7 @@ export const StepWrapper = withProps()(
         const {
             status,
             isLast,
+            showTitle,
             theme: { designTokens: DT }
         } = props;
 
@@ -120,6 +121,7 @@ export const StepWrapper = withProps()(
                       position: absolute;
                       width: 99999px;
                       height: 1px;
+                      margin-left: ${showTitle ? '16' : '0'}px;
                       background-color: ${status === 'before'
                           ? DT.T_COLOR_LINE_PRIMARY_DEFAULT
                           : DT.T_COLOR_LINE_DEFAULT_DARK};
@@ -216,10 +218,15 @@ export const LinkWrapper = withProps()(
 
 export const StepsWrapper = withProps()(
     styled('div')(props => {
-        const { direction, status } = props;
+        const { direction, nowrap } = props;
+
         return css`
             width: 100%;
-            display: flex;
+            ${nowrap
+                ? css`
+                      display: flex;
+                  `
+                : css``}
             text-align: initial;
             box-sizing: border-box;
             margin: 0;
@@ -256,21 +263,30 @@ export const StepsItemWrapper = withProps()(
             canHover,
             showTitle,
             status,
+            nowrap,
             theme: { designTokens: DT }
         } = props;
+
         return css`
             position: relative;
             display: inline-block;
+            min-width: 72px;
             flex: 1;
             overflow: hidden;
             vertical-align: top;
             ${direction === 'horizontal'
                 ? `
+                ${
+                    nowrap
+                        ? `
+                    margin-left: 16px;
+                    &:first-of-type {
+                        margin-left: 0;
+                    };
+                `
+                        : `margin: 0 8px;`
+                }
                 white-space: nowrap; 
-                padding-inline-start: 16px;
-                &:first-child {
-                    padding-inline-start: 0;
-                };
                 &:last-child {
                     flex: none;
                 };
@@ -278,7 +294,7 @@ export const StepsItemWrapper = withProps()(
                 : `
                 display: block;
                 flex: 1 0 auto;
-                padding-inline-start: 0;
+                margin-left: 0;
                 overflow: visible;
                 position: relative;
                 vertical-align: top;
@@ -311,7 +327,6 @@ export const StepsItemWrapper = withProps()(
             `}
             ${TitleWrapper} {
                 font-size: ${DT.T_TYPO_FONT_SIZE_2};
-                padding-inline-end: ${showTitle ? 16 : 0}px;
                 min-height: ${direction === 'horizontal' ? 32 : 0}px;
             }
             ${RemarkWrapper} {
