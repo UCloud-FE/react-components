@@ -716,11 +716,15 @@ interface Step {
     step?: ReactNode;
     title?: ReactNode;
     remark?: ReactNode;
+    status?: 'disabled' | 'error' | 'success' | 'normal';
 }
 export interface StepsProps extends HTMLAttributes<HTMLDivElement> {
     steps: Step[];
     current?: string | number;
     status?: 'current' | 'loading' | 'error';
+    direction?: 'horizontal' | 'vertical';
+    nowrap?:boolean;
+    onChange?: (current: string | number) => void;
 }
 export declare class Steps extends Component<StepsProps> {}
 

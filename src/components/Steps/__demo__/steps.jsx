@@ -31,10 +31,10 @@ class Demo extends React.Component {
     render() {
         const { current, status, hasTitle, hasRemark, direction, changeType, nowrap } = this.state;
 
-        const steps = new Array(5).fill(null).map((v, i) => {
+        const steps = new Array(3).fill(null).map((v, i) => {
             const step = {};
             if (hasTitle) step.title = `第 ${i + 1} 步`;
-            if (hasRemark) step.remark = '这是一条备注这是一条备注这是一条备注';
+            if (hasRemark) step.remark = '这是一条备注';
 
             if (i === 3) step.disabled = true;
             return step;
