@@ -111,6 +111,7 @@ export const StepWrapper = withProps()(
             status,
             isLast,
             showTitle,
+            showRemark,
             theme: { designTokens: DT }
         } = props;
 
@@ -132,6 +133,11 @@ export const StepWrapper = withProps()(
               `
             : '';
 
+        const contentWrapperCss = css`
+            ${ContentWrapper} {
+                ${showRemark || isLast ? 'padding-right:0px;' : 'padding-right:64px;'}
+            }
+        `;
         if (status === 'after') {
             return css`
                 display: flex;
@@ -142,6 +148,7 @@ export const StepWrapper = withProps()(
                     color: ${DT.T_COLOR_TEXT_DISABLED};
                     ${titleAfterCss}
                 }
+                ${contentWrapperCss}
             `;
         }
         if (status === 'error') {
@@ -154,6 +161,7 @@ export const StepWrapper = withProps()(
                     color: ${DT.T_COLOR_TEXT_ERROR};
                     ${titleAfterCss}
                 }
+                ${contentWrapperCss}
             `;
         }
         if (status === 'current') {
@@ -166,6 +174,7 @@ export const StepWrapper = withProps()(
                     color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
                     ${titleAfterCss}
                 }
+                ${contentWrapperCss}
             `;
         }
         if (status === 'before' || status === 'loading') {
@@ -178,6 +187,7 @@ export const StepWrapper = withProps()(
                     color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
                     ${titleAfterCss}
                 }
+                ${contentWrapperCss}
             `;
         }
         return css`
@@ -185,6 +195,7 @@ export const StepWrapper = withProps()(
             ${TitleWrapper} {
                 ${titleAfterCss}
             }
+            ${contentWrapperCss}
         `;
     })
 );

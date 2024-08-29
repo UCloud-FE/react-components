@@ -17,11 +17,13 @@ export default class Step extends PureComponent {
 
     render() {
         const { status, step, remark, title, isLast, showTitle, ...rest } = this.props;
+        const showRemark = remark ? true : false;
         return (
             <StepWrapper
                 status={status}
                 isLast={isLast}
                 showTitle={showTitle}
+                showRemark={showRemark}
                 {...rest}
                 className={`${stepWrapperCls} ${rest.className ? rest.className : ''}`}
             >
