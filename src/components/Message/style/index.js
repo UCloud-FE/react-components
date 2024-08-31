@@ -155,6 +155,8 @@ export const MessageWrap = withProps({
             background: ${DT.T_COLOR_BG_DEFAULT_BRIGHT};
             box-shadow: ${DT.T_SHADOW_BLOCK_DEFAULT_LG};
             position: relative;
+            transition: all 0.3s ease-in-out;
+            opacity: 1;
         `;
     })
 );
