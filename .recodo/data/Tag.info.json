@@ -1,6 +1,6 @@
 {
     "Group": {
-        "path": "Tag/Group.jsx",
+        "path": "Tag/Group.tsx",
         "name": "Group",
         "info": {
             "description": "",
@@ -8,14 +8,29 @@
             "methods": [],
             "props": {
                 "children": {
-                    "type": { "name": "node" },
                     "required": false,
+                    "tsType": { "name": "ReactReactNode", "raw": "React.ReactNode" },
                     "description": { "description": "", "tags": [{ "title": "ignore", "description": null }] }
                 },
                 "compact": {
-                    "type": { "name": "bool" },
                     "required": false,
+                    "tsType": { "name": "boolean" },
                     "description": { "description": "紧凑型布局", "tags": [] }
+                },
+                "exposeCount": {
+                    "required": false,
+                    "tsType": { "name": "number" },
+                    "description": { "description": "暴露的Tag数量", "tags": [] }
+                },
+                "autoAdjustment": {
+                    "required": false,
+                    "tsType": { "name": "boolean" },
+                    "description": { "description": "是否自动按照宽度调整展示数量", "tags": [] }
+                },
+                "popoverProps": {
+                    "required": false,
+                    "tsType": { "name": "any" },
+                    "description": { "description": "弹出层的 popover props", "tags": [] }
                 }
             }
         }
@@ -47,6 +62,38 @@
                     "type": { "name": "enum", "computed": true, "value": "StyleType" },
                     "required": false,
                     "description": { "description": "样式风格", "tags": [] }
+                },
+                "iconSize": {
+                    "type": {
+                        "name": "enum",
+                        "value": [
+                            { "value": "'xs'", "computed": false },
+                            { "value": "'sm'", "computed": false },
+                            { "value": "'md'", "computed": false },
+                            { "value": "'lg'", "computed": false }
+                        ]
+                    },
+                    "required": false,
+                    "description": { "description": "icon 大小", "tags": [] },
+                    "defaultValue": { "value": "'sm'", "computed": false }
+                },
+                "border": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "是否开启border样式", "tags": [] },
+                    "defaultValue": { "value": "true", "computed": false }
+                },
+                "borderType": {
+                    "type": {
+                        "name": "enum",
+                        "value": [
+                            { "value": "'default'", "computed": false },
+                            { "value": "'circle'", "computed": false }
+                        ]
+                    },
+                    "required": false,
+                    "description": { "description": "border 类型", "tags": [] },
+                    "defaultValue": { "value": "'default'", "computed": false }
                 },
                 "customStyle": {
                     "type": {
@@ -96,6 +143,44 @@
                     "type": { "name": "union", "value": [{ "name": "string" }, { "name": "node" }] },
                     "required": false,
                     "description": { "description": "自定义前置 icon", "tags": [] }
+                },
+                "iconSize": {
+                    "type": {
+                        "name": "enum",
+                        "value": [
+                            { "value": "'xs'", "computed": false },
+                            { "value": "'sm'", "computed": false },
+                            { "value": "'md'", "computed": false },
+                            { "value": "'lg'", "computed": false }
+                        ]
+                    },
+                    "required": false,
+                    "description": { "description": "icon 大小", "tags": [] },
+                    "defaultValue": { "value": "'sm'", "computed": false }
+                },
+                "border": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "是否开启border样式", "tags": [] },
+                    "defaultValue": { "value": "true", "computed": false }
+                },
+                "borderType": {
+                    "type": {
+                        "name": "enum",
+                        "value": [
+                            { "value": "'default'", "computed": false },
+                            { "value": "'circle'", "computed": false },
+                            { "value": "'corner'", "computed": false }
+                        ]
+                    },
+                    "required": false,
+                    "description": { "description": "border 类型", "tags": [] },
+                    "defaultValue": { "value": "'default'", "computed": false }
+                },
+                "suffix": {
+                    "type": { "name": "node" },
+                    "required": false,
+                    "description": { "description": "后缀", "tags": [] }
                 },
                 "disabled": {
                     "type": { "name": "bool" },
