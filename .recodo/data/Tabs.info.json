@@ -104,7 +104,8 @@
                     "description": ""
                 },
                 "direction": { "required": true, "tsType": { "name": "string" }, "description": "" },
-                "styleType": { "required": true, "tsType": { "name": "string" }, "description": "" }
+                "styleType": { "required": true, "tsType": { "name": "string" }, "description": "" },
+                "extra": { "required": false, "tsType": { "name": "ReactNode" }, "description": "" }
             }
         }
     },
@@ -220,6 +221,11 @@
                     "tsType": { "name": "Size" },
                     "description": { "description": "尺寸", "tags": [] },
                     "defaultValue": { "value": "'sm'", "computed": false }
+                },
+                "extra": {
+                    "required": false,
+                    "tsType": { "name": "ReactNode" },
+                    "description": { "description": "头部插槽", "tags": [] }
                 }
             }
         }
