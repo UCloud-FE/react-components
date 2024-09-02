@@ -1,8 +1,8 @@
-import styled from '@emotion/styled';
 import { css } from '@emotion/core';
+import styled from '@emotion/styled';
 
-import { clearFixMixin } from 'src/style';
 import config from 'src/config';
+import { clearFixMixin } from 'src/style';
 
 import withProps from 'src/utils/withProps';
 
@@ -17,17 +17,26 @@ export const footerCls = prefixCls + '-footer';
 export const subAreaCls = prefixCls + '-sub-area';
 export const subAreaContentCls = prefixCls + '-sub-area-content';
 
-const sharedGutter = css`
-    padding: 0 24px;
-    margin-top: 16px;
-`;
+const sharedGutter = T_CARD_OUTSIDE_PADDING => {
+    return css`
+        padding: 0 ${T_CARD_OUTSIDE_PADDING};
+        margin-top: 16px;
+    `;
+};
 
 export const HeaderWrap = withProps({
     className: headerCls
-})(styled('div')`
-    ${sharedGutter};
-    ${clearFixMixin};
-`);
+})(
+    styled('div')(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
+        return css`
+            ${sharedGutter(DT.T_CARD_OUTSIDE_PADDING)};
+            ${clearFixMixin};
+        `;
+    })
+);
 
 export const TitleWrap = withProps({
     className: titleCls
@@ -45,26 +54,47 @@ export const CommentWrap = withProps({
 
 export const ActionWrap = withProps({
     className: actionCls
-})(styled('div')`
-    line-height: 28px;
-    ${sharedGutter};
-    ${clearFixMixin};
-`);
+})(
+    styled('div')(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
+        return css`
+            line-height: 28px;
+            ${sharedGutter(DT.T_CARD_OUTSIDE_PADDING)};
+            ${clearFixMixin};
+        `;
+    })
+);
 
 export const ContentWrap = withProps({
     className: contentCls
-})(styled('div')`
-    ${sharedGutter};
-`);
+})(
+    styled('div')(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
+        return css`
+            ${sharedGutter(DT.T_CARD_OUTSIDE_PADDING)};
+        `;
+    })
+);
 
 export const FooterWrap = withProps({
     className: footerCls
-})(styled('div')`
-    line-height: 1;
-    ${sharedGutter};
-    padding-top: 12px;
-    ${clearFixMixin};
-`);
+})(
+    styled('div')(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
+        return css`
+            line-height: 1;
+            ${sharedGutter(DT.T_CARD_OUTSIDE_PADDING)};
+            padding-top: 12px;
+            ${clearFixMixin};
+        `;
+    })
+);
 
 export const SubAreaWrap = withProps({
     className: subAreaCls
@@ -109,12 +139,12 @@ export const CardWrap = withProps()(
             overflow: auto;
 
             .${headerCls}:last-of-type, .${actionCls}:last-of-type, .${contentCls}:last-of-type {
-                margin-bottom: 24px;
+                margin-bottom: ${DT.T_CARD_OUTSIDE_PADDING};
             }
             .${headerCls}:nth-of-type(2),
             .${actionCls}:nth-of-type(2),
             .${contentCls}:nth-of-type(2) {
-                margin-top: 24px;
+                margin-top: ${DT.T_CARD_OUTSIDE_PADDING};
             }
 
             background: ${DT.T_CARD_COLOR_BG_DEFAULT};
@@ -131,8 +161,8 @@ export const CardWrap = withProps()(
             }
             .${footerCls} {
                 border-top: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT};
-                padding: 16px 24px;
-                margin-top: 24px;
+                padding: 16px ${DT.T_CARD_OUTSIDE_PADDING};
+                margin-top: ${DT.T_CARD_OUTSIDE_PADDING};
             }
         `;
     })

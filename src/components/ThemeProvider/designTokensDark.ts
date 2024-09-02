@@ -1,5 +1,5 @@
 // Do not edit directly
-// Generated with design-token-editor on 2023/8/1 11:19:16
+// Generated with design-token-editor on 2024/3/11 14:56:51
 
 export default {
     // 按钮加载遮罩
@@ -14,6 +14,8 @@ export default {
     T_BUTTON_SECONDARY_COLOR_BG_DEFAULT: '#242B40',
     // 卡片/背景色
     T_CARD_COLOR_BG_DEFAULT: '#141A2B',
+    // 卡片/外边距
+    T_CARD_OUTSIDE_PADDING: '24px',
     // 图表/时间范围选择器/背景色
     T_CHART_TIMEPICKER_BG_DEFAULT: '#2F3852',
     // 图表/时间范围选择器/icon
@@ -339,7 +341,7 @@ export default {
     // 代码编辑器/读写/背景色/默认
     T_IDE_DEFAULT_COLOR_BG_DEFAULT: '#F7F9FF',
     // 代码编辑器/只读/背景色/操作
-    T_IDE_READONLY_COLOR_BG_ACTION: 'rgba(247,249,255,0.12)',
+    T_IDE_READONLY_COLOR_BG_ACTION: 'rgba(0,0,0,0.05)',
     // 代码编辑器/只读/背景色/默认
     T_IDE_READONLY_COLOR_BG_DEFAULT: '#161C2E',
     // 输入框/背景色/激活
