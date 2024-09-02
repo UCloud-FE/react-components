@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.12.2](https://github.com/UCloud-FE/react-components/compare/v1.12.1...v1.12.2) (2024-09-02)
+
+### Features
+
+-   **Steps:** hidden remark ([6620422](https://github.com/UCloud-FE/react-components/commit/662042282665851c7cf7b2ea432ee7e95509a1b9))
+
+### Bug Fixes
+
+-   **Steps:** add doc ([fd881f9](https://github.com/UCloud-FE/react-components/commit/fd881f9d4aa968ab1655c5437172d1fc316bd981))
+
 ### [1.12.1](https://github.com/UCloud-FE/react-components/compare/v1.12.0...v1.12.1) (2024-08-28)
 
 ### Features
