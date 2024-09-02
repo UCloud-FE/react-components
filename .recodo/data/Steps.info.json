@@ -10,7 +10,10 @@
                 "status": { "type": { "name": "string" }, "required": false, "description": "" },
                 "step": { "type": { "name": "node" }, "required": false, "description": "" },
                 "remark": { "type": { "name": "node" }, "required": false, "description": "" },
-                "title": { "type": { "name": "node" }, "required": false, "description": "" }
+                "title": { "type": { "name": "node" }, "required": false, "description": "" },
+                "isLast": { "type": { "name": "bool" }, "required": false, "description": "" },
+                "disabled": { "type": { "name": "bool" }, "required": false, "description": "" },
+                "showTitle": { "type": { "name": "bool" }, "required": false, "description": "" }
             }
         }
     },
@@ -66,11 +69,7 @@
                     "name": "renderSteps",
                     "docblock": null,
                     "modifiers": [],
-                    "params": [
-                        { "name": "steps", "type": null },
-                        { "name": "current", "type": null },
-                        { "name": "status", "type": null }
-                    ],
+                    "params": [{ "name": "{ steps, current, status, direction, onChange, nowrap }", "type": null }],
                     "returns": null
                 }
             ],
@@ -92,7 +91,18 @@
                                     "required": false
                                 },
                                 "title": { "name": "node", "description": "步骤的标题内容", "required": false },
-                                "remark": { "name": "node", "description": "步骤的备注", "required": false }
+                                "remark": { "name": "node", "description": "步骤的备注", "required": false },
+                                "status": {
+                                    "name": "enum",
+                                    "value": [
+                                        { "value": "'disabled'", "computed": false },
+                                        { "value": "'error'", "computed": false },
+                                        { "value": "'success'", "computed": false },
+                                        { "value": "'normal'", "computed": false }
+                                    ],
+                                    "description": "步骤的状态",
+                                    "required": false
+                                }
                             }
                         }
                     },
@@ -116,6 +126,39 @@
                     "required": false,
                     "description": { "description": "当前步骤的状态", "tags": [] },
                     "defaultValue": { "value": "'current'", "computed": false }
+                },
+                "onChange": {
+                    "type": { "name": "func" },
+                    "required": false,
+                    "description": {
+                        "description": "步骤状态改变时的回调函数",
+                        "tags": [
+                            {
+                                "title": "param",
+                                "description": "当前步骤的key",
+                                "type": { "type": "NameExpression", "name": "number" },
+                                "name": "current"
+                            }
+                        ]
+                    }
+                },
+                "direction": {
+                    "type": {
+                        "name": "enum",
+                        "value": [
+                            { "value": "'horizontal'", "computed": false },
+                            { "value": "'vertical'", "computed": false }
+                        ]
+                    },
+                    "required": false,
+                    "description": { "description": "指定步骤条方向 , 默认是horizontal", "tags": [] },
+                    "defaultValue": { "value": "'horizontal'", "computed": false }
+                },
+                "nowrap": {
+                    "type": { "name": "bool" },
+                    "required": false,
+                    "description": { "description": "横向场景，不换行, 默认是false", "tags": [] },
+                    "defaultValue": { "value": "false", "computed": false }
                 }
             }
         }
