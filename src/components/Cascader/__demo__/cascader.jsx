@@ -5,6 +5,7 @@ import Switch from 'src/components/Switch';
 import Form from 'src/components/Form';
 import Button from 'src/components/Button';
 import Radio from 'src/components/Radio';
+import Icon from 'src/components/Icon';
 import demoUtil from 'shared/demoUtil';
 
 // demo start
@@ -49,14 +50,32 @@ class Demo extends React.PureComponent {
             disabled: false,
             clearable: false,
             dataSource: _dataSource,
-            size: defaultSize
+            size: defaultSize,
+            separator: 'default'
         };
     }
     refresh() {
         this.setState({ dataSource: generateGroupData(generateNumber(2, 6), 'root') });
     }
     render() {
-        const { disabled, search, clearable, size } = this.state;
+        const { disabled, search, clearable, size, separator, dataSource } = this.state;
+        const props = {
+            disabled,
+            search,
+            clearable,
+            size,
+            dataSource
+        };
+        switch (separator) {
+            case '-':
+                props.separator = '-';
+                break;
+            case ':':
+                props.separator = ':';
+                break;
+            case 'default':
+                props.separator = null;
+        }
         return (
             <div>
                 <Form className="demo-form" itemProps={{ ...formLayout }}>
@@ -81,9 +100,18 @@ class Demo extends React.PureComponent {
                     <Form.Item label="random">
                         <Button onClick={() => this.refresh()}>Refresh</Button>
                     </Form.Item>
+                    <Form.Item label="separator">
+                        <Radio.Group
+                            value={separator}
+                            onChange={separator => this.setState({ separator })}
+                            options={['default', '-', ':'].map(separator => ({
+                                value: separator
+                            }))}
+                        />
+                    </Form.Item>
                 </Form>
                 <DemoWrap>
-                    <Cascader {...this.state} onChange={console.log} />
+                    <Cascader {...props} onChange={console.log} />
                 </DemoWrap>
             </div>
         );

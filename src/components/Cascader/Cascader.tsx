@@ -64,6 +64,8 @@ export interface DefinedCascaderProps {
     placeholder?: string;
     /** 自定义 popover 的配置 */
     popoverProps?: { [key: string]: any };
+    /** 分隔符 */
+    separator?: string;
 }
 
 export type CascaderProps = DefinedCascaderProps;
@@ -129,9 +131,9 @@ const StaticInputWithoutMemo = React.forwardRef(function StaticInput(
 });
 const StaticInput = React.memo(StaticInputWithoutMemo);
 
-const getValueStringFromDataSource = (value?: Key[], dataSource?: CascadeData[]) => {
+const getValueStringFromDataSource = ({ value, dataSource, separator: userSeparator }: { value?: Key[], dataSource?: CascadeData[],separator?:string }) => {
     if (!value?.length) return '';
-    const separator = '/';
+    const separator = userSeparator ? userSeparator : '/';
     if (!dataSource) return value.join(separator);
     let tmpItems: CascadeData[] | void = dataSource;
     return value
@@ -169,7 +171,8 @@ const Cascader = ({
     placeholder,
     loadData,
     status,
-    popoverProps
+    popoverProps,
+    separator,
 }: CascaderProps) => {
     const [value, onChange] = useUncontrolled(_value, defaultValue, _onChange);
     const [searchValue, setSearchValue] = useState('');
@@ -202,7 +205,11 @@ const Cascader = ({
         setFocusing(false);
         setSearchValue('');
     }, []);
-    const valueString = useMemo(() => getValueStringFromDataSource(value, dataSource), [dataSource, value]);
+    const valueString = useMemo(() => getValueStringFromDataSource({
+        value, 
+        dataSource,
+        separator
+    }), [dataSource, value,separator]);
     const inputFocused = useMemo(() => searchAble && focusing, [focusing, searchAble]);
     const inputValue = useMemo(() => (inputFocused ? searchValue : valueString), [
         inputFocused,
