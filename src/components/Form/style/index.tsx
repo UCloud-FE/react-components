@@ -179,6 +179,8 @@ export const Tip = sWrap<{ status: string } & CombineProps>({ className: tipCls 
         return css`
             margin-top: 4px;
             color: ${DT[colorDt]};
+            display: flex;
+            align-items: baseline;
             .${tipContentCls} {
                 line-height: 20px;
             }
