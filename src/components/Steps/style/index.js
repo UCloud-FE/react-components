@@ -232,7 +232,6 @@ export const StepsWrapper = withProps()(
         const { direction, nowrap } = props;
 
         return css`
-            width: 100%;
             ${nowrap
                 ? css`
                       display: flex;
