@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
+import _ from 'lodash';
 
 import ThemeProvider from 'src/components/ThemeProvider';
 import LocaleProvider from 'src/components/LocaleProvider';
@@ -42,14 +43,14 @@ const ContextWrap = ({ children }) => {
 };
 ContextWrap.propTypes = { children: PropTypes.node };
 
-const popupMessage = (message, duration = config.duration, onClose = () => {}) => {
+const popupMessage = (message, duration = config.duration, onClose = () => {}, option, messageDomId) => {
     if (!containerRef) {
         console.error(`Error: containerRef is not ready , please check`);
         return;
     }
     const messageUid = containerRef.appendMessage(<ContextWrap>{message}</ContextWrap>);
     const destroy = () => {
-        containerRef.removeMessage(messageUid) && onClose();
+        containerRef.removeMessage(messageUid, messageDomId) && onClose();
     };
     if (duration) {
         setTimeout(() => {
@@ -67,6 +68,7 @@ const popupMessage = (message, duration = config.duration, onClose = () => {}) =
 
 const showMessage = (styleType, content, duration = config.duration, onClose = () => {}, option = {}) => {
     const { zIndex, style, className } = option;
+
     let props = {
         children: content
     };
@@ -80,10 +82,19 @@ const showMessage = (styleType, content, duration = config.duration, onClose = (
         props = content;
     }
     let destroy = () => {};
+    const uid = _.uniqueId('uc_message_dom');
     const message = (
-        <Message styleType={styleType} style={newStyle} className={className} {...props} onClose={() => destroy()} />
+        <Message
+            styleType={styleType}
+            style={newStyle}
+            className={className}
+            {...props}
+            onClose={() => destroy()}
+            id={uid}
+        />
     );
-    const instance = popupMessage(message, duration, onClose, option);
+
+    const instance = popupMessage(message, duration, onClose, option, uid);
     destroy = instance.destroy;
     return instance;
 };
