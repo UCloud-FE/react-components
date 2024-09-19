@@ -14,14 +14,15 @@ export const SLink = styledWrap<unknown, HTMLAnchorElement>({ className: prefixC
         } = props;
 
         return css`
+            text-decoration:  none;
             &,
             &:link,
             &:visited {
-                text-decoration: underline;
                 color: ${DT.T_COLOR_TEXT_PRIMARY_DEFAULT};
             }
             &:hover,
             &:active {
+                text-decoration: underline;
                 color: ${DT.T_COLOR_TEXT_PRIMARY_HOVER};
             }
         `;
