@@ -82,6 +82,82 @@ describe('Table', () => {
         expect(onRowSelect).toHaveBeenCalledTimes(++onRowSelectTimes);
         expect(onRowSelect).toHaveBeenLastCalledWith(['1', '2', '4', '5', '6', '7', '8', '9']);
     });
+    test('linkage select', () => {
+        const onRowSelect = jest.fn();
+        let onRowSelectTimes = 0;
+
+        class Demo extends React.Component {
+            render() {
+                let data = [];
+                data.length = 1;
+                data.fill({});
+                data = data.map((d, i) => ({
+                    key: '' + i,
+                    name: `name-${i}`,
+                    desc: `desc-${i}`,
+                    children: [1, 2, 3].map((d, j) => ({
+                        key: `${i}-${j}`,
+                        name: `name-1-${j}`,
+                        desc: `desc-1-${j}`
+                    }))
+                }));
+                const columns = [
+                    {
+                        title: 'name',
+                        dataIndex: 'name',
+                        key: 'name',
+                        width: 200
+                    },
+                    {
+                        title: 'desc',
+                        dataIndex: 'desc',
+                        key: 'desc',
+                        width: 200
+                    },
+                    {
+                        title: 'name',
+                        dataIndex: 'name',
+                        key: 'name1',
+                        width: 100
+                    },
+                    {
+                        title: 'desc',
+                        dataIndex: 'desc',
+                        key: 'desc2'
+                    }
+                ];
+                return (
+                    <div>
+                        <div className="demo-wrap">
+                            <Table
+                                rowSelection={{
+                                    linkage: true,
+                                    defaultSelectedRowKeys: ['0-1'],
+                                    onChange: onRowSelect,
+                                    getDisabledOfRow: record => record.key == '0-0'
+                                }}
+                                dataSource={data}
+                                columns={columns}
+                                {...this.props}
+                            />
+                        </div>
+                    </div>
+                );
+            }
+        }
+
+        const wrapper = mount(<Demo />);
+
+        expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-checkbox-checked').length).toBe(0);
+        expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-checkbox-disabled').length).toBe(1);
+        expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-checkbox-checked.uc-fe-checkbox-disabled').length).toBe(0);
+
+        wrapper.find('.uc-fe-table-thead span.uc-fe-checkbox').simulate('click');
+        expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-checkbox-checked').length).toBe(0);
+        expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-checkbox-disabled').length).toBe(1);
+        expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-checkbox-checked.uc-fe-checkbox-disabled').length).toBe(0);
+        expect(onRowSelect).toHaveBeenCalledTimes(++onRowSelectTimes);
+    });
     test('single select', () => {
         const onRowSelect = jest.fn();
         let onRowSelectTimes = 0;

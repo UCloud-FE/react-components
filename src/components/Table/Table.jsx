@@ -62,6 +62,9 @@ class Table extends Component {
             filtersFromProps: this.calFiltersFromProps(props),
             order: null,
             selectedRowKeyMap: {},
+            flatDataSourceKeys: [],
+            indeterminateSelectedRowKeyMap: {},
+            parentSelectedRowKeys: [],
             columnConfig: props.defaultColumnConfig,
             searchValue: ''
         };
@@ -80,13 +83,53 @@ class Table extends Component {
             };
         }
         // init selectedRowKeyMap from rowSelection
-        const { rowSelection } = props;
+        const { rowSelection, dataSource } = props;
         const { selectedRowKeyMap } = this.state;
+        const flatDataSourceKeys = this.flatDataSourceKeysForMap({
+            dataSource
+        });
+        this.state.flatDataSourceKeys = flatDataSourceKeys;
+
         if (_.isObject(rowSelection)) {
             if ('selectedRowKeys' in rowSelection) {
                 _.each(rowSelection.selectedRowKeys, key => (selectedRowKeyMap[key] = true));
             } else if ('defaultSelectedRowKeys' in rowSelection) {
                 _.each(rowSelection.defaultSelectedRowKeys, key => (selectedRowKeyMap[key] = true));
+            }
+
+            if (rowSelection.multiple !== false && rowSelection.linkage) {
+                const { finalMergeMap, finalIndeterminate } = Object.keys(selectedRowKeyMap).reduce(
+                    (p, key) => {
+                        const { mergeMap, indeterminate } = this.initLinkageRowSelectionMap(
+                            selectedRowKeyMap,
+                            true,
+                            key,
+                            flatDataSourceKeys,
+                            this.state.indeterminateSelectedRowKeyMap
+                        );
+                        return {
+                            finalMergeMap: {
+                                ...p.finalMergeMap,
+                                ...mergeMap
+                            },
+                            finalIndeterminate: {
+                                ...p.finalIndeterminate,
+                                ...indeterminate
+                            }
+                        };
+                    },
+                    {
+                        finalMergeMap: {},
+                        finalIndeterminate: {}
+                    }
+                );
+                Object.keys(finalMergeMap).forEach(key => {
+                    selectedRowKeyMap[key] = finalMergeMap[key];
+                });
+
+                this.state.indeterminateSelectedRowKeyMap = {
+                    ...finalIndeterminate
+                };
             }
         }
         // init order
@@ -171,7 +214,13 @@ class Table extends Component {
                  */
                 selectedTip: PropTypes.oneOf([true, false, 'bottom']),
                 /** 是否禁用 */
-                disabled: PropTypes.bool
+                disabled: PropTypes.bool,
+                /**
+                 * 需配合 columns.children 使用，控制是否开启父子联动，默认关闭
+                 * @default false
+                 */
+
+                linkage: PropTypes.bool
             }),
             PropTypes.oneOf([true])
         ]),
@@ -366,8 +415,11 @@ class Table extends Component {
         });
         return filters;
     };
+    // 所有key 都为字符串
     getExpandedRowKeys = (dataSource, changedUnExpandedRowKeys) => {
+        // 拍平数据
         const flatDataSource = this.flatDataSource(dataSource);
+
         const expandedRowKeys = [];
         _.each(flatDataSource, item => {
             const { key } = item;
@@ -386,16 +438,23 @@ class Table extends Component {
             this.props.onRowSelect(selectedRowKeys);
         }
     };
+    //设置选中的keys
     onSelectedRowKeysChange = selectedRowKeyMap => {
         const { rowSelection } = this.props;
+        const { parentSelectedRowKeys } = this.state;
         if (!rowSelection) return;
         const selectedRowKeys = [];
+
         _.each(selectedRowKeyMap, (selected, key) => {
             selected && selectedRowKeys.push(key);
         });
         if (_.isObject(rowSelection)) {
             if (rowSelection.onChange) {
-                rowSelection.onChange(selectedRowKeys);
+                if (rowSelection.linkage) {
+                    rowSelection.onChange(selectedRowKeys, parentSelectedRowKeys);
+                } else {
+                    rowSelection.onChange(selectedRowKeys);
+                }
             }
             if (!('selectedRowKeys' in rowSelection)) {
                 this.setState({
@@ -649,30 +708,201 @@ class Table extends Component {
         };
     };
     handleToggleCurrentPage = (enableKeysOfCurrentPage, checked) => {
+        const { flatDataSourceKeys } = this.state;
+
+        const parentSelectedRowKeys = [];
+
+        if (checked) {
+            flatDataSourceKeys.forEach(item => {
+                if (!item.parent) {
+                    parentSelectedRowKeys.push(item.key);
+                }
+            });
+        }
+
         const { selectedRowKeyMap } = this.state;
         const extendSelectedRowKeyMap = {};
         _.each(enableKeysOfCurrentPage, key => {
             extendSelectedRowKeyMap[key] = checked;
         });
-        this.onSelectedRowKeysChange({
-            ...selectedRowKeyMap,
-            ...extendSelectedRowKeyMap
-        });
+
+        this.setState(
+            {
+                indeterminateSelectedRowKeyMap: {},
+                parentSelectedRowKeys: parentSelectedRowKeys
+            },
+            () => {
+                this.onSelectedRowKeysChange({
+                    ...selectedRowKeyMap,
+                    ...extendSelectedRowKeyMap
+                });
+            }
+        );
     };
-    handleSelectRecord = (key, checked) => {
+    /**
+     * @param {
+     * {
+     *      key: string ,
+     *      checked: boolean ,
+     *      data : {
+     *              key: string ,
+     *              index: number ,
+     *              record: object,
+     *              childrenKeys: string[]
+     *      }[]
+     * }
+     * }
+     */
+    handleSelectRecord = ({ key, checked }) => {
         const { rowSelection } = this.props;
-        const { selectedRowKeyMap } = this.state;
+        const { selectedRowKeyMap, indeterminateSelectedRowKeyMap, flatDataSourceKeys } = this.state;
         if (rowSelection.multiple === false) {
             this.onSelectedRowKeysChange({
                 [key]: true
             });
         } else {
-            this.onSelectedRowKeysChange({
+            const nowSelectedRowKeyMap = {
                 ...selectedRowKeyMap,
                 [key]: checked
-            });
+            };
+            if (!rowSelection.linkage) {
+                this.onSelectedRowKeysChange({
+                    ...nowSelectedRowKeyMap
+                });
+                return;
+            }
+
+            const { mergeMap, indeterminate } = this.initLinkageRowSelectionMap(
+                nowSelectedRowKeyMap,
+                checked,
+                key,
+                flatDataSourceKeys,
+                indeterminateSelectedRowKeyMap
+            );
+            const truthyKeys = Object.keys(mergeMap).filter(key => Boolean(mergeMap[key]));
+
+            const parentSelectedRowKeys = truthyKeys.reduce(
+                (p, key) => {
+                    const record = flatDataSourceKeys.find(record => String(record.key) == String(key));
+                    const parentKeys = p.filter(x => !record.childrenKeys.includes(x));
+                    return parentKeys;
+                },
+                [...truthyKeys]
+            );
+
+            this.setState(
+                {
+                    indeterminateSelectedRowKeyMap: indeterminate,
+                    parentSelectedRowKeys: parentSelectedRowKeys
+                },
+                () => {
+                    this.onSelectedRowKeysChange({
+                        ...mergeMap
+                    });
+                }
+            );
         }
     };
+    initLinkageRowSelectionMap(nowSelectedRowKeyMap, checked, key, flatDataSourceKeys, indeterminateSelectedRowKeyMap) {
+        // 半选状态
+        const indeterminate = {
+            ...indeterminateSelectedRowKeyMap
+        };
+        // 子勾选状态变更 ，通过兄弟节点状态推断父勾选状态，存储修改父状态的map
+        const childrenKeysAllChecked = {};
+        // 父勾选变更，子状态同步变更，存储子的map
+        const parentKeyCheckedMap = {};
+        // 选中的key
+        const record = flatDataSourceKeys.find(record => String(record.key) == String(key));
+        const disabledItems = this.initDisabledOfRow();
+
+        indeterminate[String(record.key)] = false;
+        // 子被动全选
+        if (record && record.childrenKeys && record.childrenKeys.length > 0) {
+            record.childrenKeys.forEach(childKey => {
+                parentKeyCheckedMap[childKey] = checked;
+                indeterminate[String(childKey)] = false;
+            });
+        }
+        // 父被动状态
+        function changeParentChecked(record, checked) {
+            const mergeMap = {
+                ...nowSelectedRowKeyMap,
+                ...parentKeyCheckedMap,
+                ...childrenKeysAllChecked
+            };
+            const truthyKeys = Object.keys(mergeMap).filter(key => Boolean(mergeMap[key]));
+
+            if (record && checked) {
+                if (record.childrenKeys.every(x => truthyKeys.includes(x))) {
+                    childrenKeysAllChecked[record.key] = true;
+                    indeterminate[String(record.key)] = false;
+                } else {
+                    childrenKeysAllChecked[record.key] = false;
+                    indeterminate[String(record.key)] = true;
+                }
+            }
+            if (record && !checked) {
+                if (record.childrenKeys.every(x => !truthyKeys.includes(x))) {
+                    childrenKeysAllChecked[record.key] = false;
+                    indeterminate[String(record.key)] = false;
+                } else {
+                    childrenKeysAllChecked[record.key] = false;
+                    indeterminate[String(record.key)] = true;
+                }
+            }
+            if (record.parent) {
+                changeParentChecked(record.parent, checked);
+            }
+        }
+
+        if (record.parent) {
+            changeParentChecked(record.parent, checked);
+        }
+        disabledItems.forEach(key => {
+            indeterminate[String(key)] = false;
+        });
+
+        const mergeMap = {
+            ...nowSelectedRowKeyMap,
+            ...parentKeyCheckedMap,
+            ...childrenKeysAllChecked
+        };
+
+        Object.keys(mergeMap).forEach(key => {
+            if (disabledItems.includes(key)) {
+                mergeMap[String(key)] = false;
+            }
+        });
+
+        return {
+            mergeMap,
+            indeterminate
+        };
+    }
+    initDisabledOfRow() {
+        const { rowSelection } = this.props;
+        const { flatDataSourceKeys } = this.state;
+        if (!rowSelection.getDisabledOfRow) {
+            return [];
+        }
+        let needFilterData = [...flatDataSourceKeys];
+        needFilterData = _.filter(needFilterData, item => rowSelection.getDisabledOfRow(item.record));
+
+        function getDisabledOfRow(record, result = []) {
+            result.push(record.key);
+            if (record.parent) {
+                getDisabledOfRow(record.parent, result);
+            }
+            return result;
+        }
+
+        const allDisableItems = needFilterData.reduce((p, item) => {
+            const keys = getDisabledOfRow(item, []);
+            return [...keys, ...item.childrenKeys];
+        }, []);
+        return allDisableItems;
+    }
     getRowKey = (record, index) => {
         const rowKey = this.props.rowKey;
         const key = typeof rowKey === 'function' ? rowKey(record, index) : record && record[rowKey];
@@ -682,9 +912,74 @@ class Table extends Component {
         const { key } = column;
         return (key === undefined ? index : key) + '';
     };
+
+    //转换 rowSelection 所需 data
+    flatDataSourceKeysForMap = ({ dataSource }, childrenName = 'children') => {
+        const result = [];
+        const _self = this;
+        function getKey(children) {
+            return children.reduce((p, item) => {
+                const curIndex = _self.getRowKey(item, item.tableKey);
+                p = [...p, curIndex];
+
+                let childrenKeys = [];
+
+                if (item[childrenName]) {
+                    childrenKeys = getKey(item[childrenName]);
+                }
+                return [...p, ...childrenKeys];
+            }, []);
+        }
+        const push = (record, parent) => {
+            const index = result.length;
+            const children = record[childrenName] || [];
+            delete record[childrenName];
+            const data = {
+                record,
+                parent,
+                index,
+                key: this.getRowKey(record, index),
+                childrenKeys: getKey(children)
+            };
+            result.push(data);
+            return data;
+        };
+        const loop = (array, parent) => {
+            array.forEach(record => {
+                if (record && record[childrenName]) {
+                    const newRecord = { ...record };
+                    const parentData = push(newRecord, parent);
+                    if (record[childrenName].length > 0) {
+                        loop(record[childrenName], parentData);
+                    }
+                } else {
+                    push(record, parent);
+                }
+            });
+        };
+        // 递归函数，用于深度优先遍历并设置 key
+        function setTableKeys(data, index = 0) {
+            data.forEach(item => {
+                item.tableKey = index++;
+                if (item[childrenName] && item[childrenName].length > 0) {
+                    index = setTableKeys(item[childrenName], index);
+                }
+            });
+            return index;
+        }
+        const cloneDataSource = [...dataSource].filter(item => !!item);
+
+        // 调用递归函数
+        setTableKeys(cloneDataSource);
+
+        loop(cloneDataSource, null);
+
+        return result;
+    };
     getDragSorting = () => {
         const { dragSorting, expandedRowRender, columns } = this.props;
         if (!dragSorting) return false;
+        // 排序暂不支持有展开行配置的table
         if (expandedRowRender || (columns && columns.findIndex(column => !!column.children) >= 0)) {
             dragSortingWarning();
             return false;
@@ -693,7 +988,12 @@ class Table extends Component {
     };
     getColumns = (dataSourceOfCurrentPage, filters) => {
         const { columns, rowSelection, columnPlaceholder, locale, dataSource, columnResizable } = this.props;
-        const { order: currentOrder = {}, selectedRowKeyMap, columnConfig } = this.state;
+        const {
+            order: currentOrder = {},
+            selectedRowKeyMap,
+            columnConfig,
+            indeterminateSelectedRowKeyMap
+        } = this.state;
         const cloneColumns = columns.map((column, index) => ({
             ...column,
             index
@@ -741,17 +1041,24 @@ class Table extends Component {
             const flatDataSourceOfCurrentPage = this.flatDataSource(dataSourceOfCurrentPage);
             let enableDataSourceOfCurrentPage = flatDataSourceOfCurrentPage;
             const flatDataSource = this.flatDataSource(dataSource);
+
             let enableDataSource = flatDataSource;
 
             const { disabled: selectionDisabled } = rowSelection;
 
+            const disableItems = rowSelection.getDisabledOfRow && this.initDisabledOfRow();
+
+            const linkageFlag = rowSelection.multiple !== false && rowSelection.linkage ? true : false;
+
             if (rowSelection.getDisabledOfRow) {
-                enableDataSourceOfCurrentPage = _.filter(
-                    flatDataSourceOfCurrentPage,
-                    item => !rowSelection.getDisabledOfRow(item.record)
+                enableDataSourceOfCurrentPage = _.filter(flatDataSourceOfCurrentPage, item =>
+                    linkageFlag ? !disableItems.includes(item.key) : !rowSelection.getDisabledOfRow(item.record)
                 );
-                enableDataSource = _.filter(flatDataSource, item => !rowSelection.getDisabledOfRow(item.record));
+                enableDataSource = _.filter(flatDataSource, item =>
+                    linkageFlag ? !disableItems.includes(item.key) : !rowSelection.getDisabledOfRow(item.record)
+                );
             }
+
             const selectedEnableDataSourceOfCurrentPage = _.filter(
                 enableDataSourceOfCurrentPage,
                 item => selectedRowKeyMap[item.key]
@@ -815,19 +1122,31 @@ class Table extends Component {
                     if (selectionDisabled) {
                         disabled = true;
                     } else if (rowSelection.getDisabledOfRow) {
-                        disabled = rowSelection.getDisabledOfRow(record);
+                        disabled = linkageFlag
+                            ? disableItems.includes(record.key)
+                            : rowSelection.getDisabledOfRow(record);
                     }
                     return rowSelection.multiple === false ? (
                         <Radio
                             disabled={disabled}
-                            onChange={() => this.handleSelectRecord(rowKey)}
+                            onChange={() =>
+                                this.handleSelectRecord({
+                                    key: rowKey
+                                })
+                            }
                             checked={!!selectedRowKeyMap[rowKey]}
                         />
                     ) : (
                         <Checkbox
                             disabled={disabled}
-                            onChange={() => this.handleSelectRecord(rowKey, !selectedRowKeyMap[rowKey])}
+                            onChange={() =>
+                                this.handleSelectRecord({
+                                    key: rowKey,
+                                    checked: !selectedRowKeyMap[rowKey]
+                                })
+                            }
                             checked={!!selectedRowKeyMap[rowKey]}
+                            indeterminate={!!indeterminateSelectedRowKeyMap[String(rowKey)]}
                         />
                     );
                 }
@@ -1044,6 +1363,7 @@ class Table extends Component {
     renderFooter = option => {
         return <div>{this.renderEmptyAndErrorInfo(option)}</div>;
     };
+    // 展开的callback
     onExpandHandler = (expanded, record) => {
         const { changedUnExpandedRowKeys = {} } = this.state;
         const { onExpand } = this.props;
@@ -1118,6 +1438,7 @@ class Table extends Component {
         }
         const columns = this.getColumns(dataSource, finalFilters);
 
+        // 默认展开所有行
         const defaultExpandAllRowsProps = !defaultExpandAllRows
             ? null
             : (() => {
