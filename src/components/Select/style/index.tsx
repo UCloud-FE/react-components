@@ -34,18 +34,34 @@ export const SelectSearchInput = styled(Input.Search)`
     margin-top: 10px;
 `;
 
-export const SSelector = styled(Button)`
-    padding-right: 28px;
-    width: 100%;
-    min-width: 78px;
-    justify-content: space-between;
-    overflow: hidden;
-    .${selectorContentCls} {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-`;
+export const SSelector = sWrap<InputWrapProps>({})(styled(Button)(props => {
+    const {
+        theme: { designTokens: DT },
+        status,
+    } = props;
+    return css`
+            padding-right: 28px;
+            width: 100%;
+            min-width: 78px;
+            justify-content: space-between;
+            overflow: hidden;
+            .${selectorContentCls} {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            ${
+                status === 'error' &&
+                css`
+                    &&& {
+                        box-shadow: ${DT.T_SHADOW_INSET_ERROR};
+                        border-color: ${DT.T_COLOR_LINE_ERROR_DARK};
+                        background: ${DT.T_COLOR_BG_ERROR_LIGHT};
+                    }
+                `
+            };
+        `;
+}));
 
 export const SSelectorMultiple = sWrap<InputWrapProps>({})(
     styled(InputWrap)(props => {
@@ -55,7 +71,8 @@ export const SSelectorMultiple = sWrap<InputWrapProps>({})(
             disabled,
             empty,
             size,
-            block
+            block,
+            status
         } = props;
 
         const spacing = getControlSpacingBySize(DT, size);
@@ -177,6 +194,16 @@ export const SSelectorMultiple = sWrap<InputWrapProps>({})(
                     min-width: 30px;
                 }
             }
+            ${
+                status === 'error' &&
+                css`
+                    &&& {
+                        box-shadow: ${DT.T_SHADOW_INSET_ERROR};
+                        border-color: ${DT.T_COLOR_LINE_ERROR_DARK};
+                        background: ${DT.T_COLOR_BG_ERROR_LIGHT};
+                    }
+                `
+            }
         `;
     })
 );
@@ -188,8 +215,10 @@ export const SSelectorSingle = sWrap<InputWrapProps & { search?: any }>({})(
             disabled,
             empty,
             focused,
-            search
+            search,
+            status,
         } = props;
+        
         let cursor = 'pointer';
         if (disabled) cursor = 'default';
         return css`
@@ -205,6 +234,16 @@ export const SSelectorSingle = sWrap<InputWrapProps & { search?: any }>({})(
                     }
                 `
             }
+            ${
+                status === 'error' &&
+                css`
+                    &&& {
+                        box-shadow: ${DT.T_SHADOW_INSET_ERROR};
+                        border-color: ${DT.T_COLOR_LINE_ERROR_DARK};
+                        background: ${DT.T_COLOR_BG_ERROR_LIGHT};
+                    }
+                `
+            };
             .${inputWrapCls} {
                 position: relative;
                 overflow: hidden;
