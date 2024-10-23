@@ -33,7 +33,8 @@ class Demo extends React.Component {
             block: false,
             optionType: 'simple',
             width: 'default',
-            styleType: 'default'
+            styleType: 'default',
+            error: 'default'
         };
     }
     render() {
@@ -49,7 +50,8 @@ class Demo extends React.Component {
             width,
             clearable,
             block,
-            styleType
+            styleType,
+            error
         } = this.state;
         const itemLayout = {
             labelCol: {
@@ -132,6 +134,12 @@ class Demo extends React.Component {
                     <Form.Item label="clearable" {...itemLayout}>
                         <Switch checked={clearable} onChange={clearable => this.setState({ clearable })} />
                     </Form.Item>
+                    <Form.Item label="status-error" {...itemLayout}>
+                        <Switch
+                            checked={error === 'default' ? false : true}
+                            onChange={error => this.setState({ error: error ? 'error' : 'default' })}
+                        />
+                    </Form.Item>
                 </Form>
                 <div className="demo-wrap">
                     <Select
@@ -144,6 +152,7 @@ class Demo extends React.Component {
                         disabled={disabled}
                         clearable={clearable}
                         block={block}
+                        status={error}
                         {...widthProps}
                         {...optionProps}
                         {...(search ? { search } : {})}

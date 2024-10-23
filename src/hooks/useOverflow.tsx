@@ -103,7 +103,9 @@ const useOverflow = (
     // use layout effect to measure can avoid most shaking
     useLayoutEffect(() => {
         const containerDOM = containerRef?.current;
-        if (!containerDOM) return;
+       
+        
+        if (!containerDOM || containerDOM.offsetWidth === 0 || containerDOM.scrollWidth ===0) return; 
         // measure end
         if (count === latestValidCount) {
             endMeasuring(latestValidCount);

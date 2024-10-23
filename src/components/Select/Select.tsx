@@ -4,10 +4,12 @@
 import React, {
     ChangeEvent,
     ComponentType,
+    CSSProperties,
     HTMLAttributes,
     ReactNode,
     RefObject,
     useCallback,
+    useContext,
     useEffect,
     useMemo,
     useRef,
@@ -15,6 +17,7 @@ import React, {
 } from 'react';
 import classnames from 'classnames';
 
+import ControllerContext from 'src/components/Form/ControllerContext';
 import Popover from 'src/components/Popover';
 import Tag from 'src/components/Tag';
 import Tooltip from 'src/components/Tooltip';
@@ -380,6 +383,8 @@ export interface SelectProps {
           };
     /** 尺寸 */
     size?: Size;
+    /** 状态 */
+    status?: 'default' | 'error' | string;
     /** 展示变更为块占位 */
     block?: boolean;
     /** 是否可清空，仅单选可用 */
@@ -409,6 +414,10 @@ export interface SelectProps {
         /** 弹出菜单的宽度 */
         popupWidth?: string;
     };
+     /**
+     * 自定义styleType 'list'时Tag的样式
+     */
+    tagListCustomStyle?: CSSProperties;
     /**
      * 可选性为空时展示内容
      */
@@ -676,6 +685,8 @@ type SelectorProps = Pick<
     | 'clearable'
     | 'styleType'
     | 'block'
+    | 'status'
+    | 'tagListCustomStyle'
 > & {
     visible: boolean;
     setVisible: (visible: boolean) => void;
@@ -709,6 +720,8 @@ const Selector = React.memo(function Selector({
     clearable,
     styleType,
     block,
+    status,
+    tagListCustomStyle,
     ..._popupProps
 }: Omit<SelectorProps, '_popupProps'> & { v1: boolean }) {
     const props = {
@@ -731,8 +744,12 @@ const Selector = React.memo(function Selector({
         wrapRef,
         clearable,
         block,
+        status,
+        tagListCustomStyle,
         _popupProps
     };
+
+    
     const SelectorComponent = renderSelector
         ? CustomSelector
         : v1
@@ -815,11 +832,12 @@ const CustomSelector = React.memo(function CustomSelector(props: SelectorProps) 
 });
 
 const SelectorV1 = React.memo(function SelectorV1(props: SelectorProps) {
-    const { size, disabled, visible, _popupProps } = props;
+   
+    const { size, disabled, visible, status, _popupProps } = props;
     const content = useOldContent(props);
     const title = typeof content === 'string' ? content : undefined;
     return (
-        <SSelector styleType="border" size={size} disabled={disabled} title={title} {..._popupProps}>
+        <SSelector styleType="border" size={size} disabled={disabled} title={title} status={status}  {..._popupProps}>
             <div className={selectorContentCls} key="content">
                 {content}
             </div>
@@ -921,6 +939,8 @@ const MultipleListSelector = React.memo(function MultipleSelector(props: Selecto
         clearable,
         locale,
         block,
+        status,
+        tagListCustomStyle,
         _popupProps
     } = props;
     const [, , , , childrenMap = new Map()] = dataSource;
@@ -993,6 +1013,7 @@ const MultipleListSelector = React.memo(function MultipleSelector(props: Selecto
                 onClick={handleSelectorClick}
                 block={block}
                 size={size}
+                status={status}
                 disabled={disabled}
             >
                 <InputPart stretch className={measureWrapCls}>
@@ -1015,7 +1036,7 @@ const MultipleListSelector = React.memo(function MultipleSelector(props: Selecto
             </SSelectorMultiple>
             {items.length ? (
                 <Tag.Group>
-                    <div className={listCls}>{items.map(renderItem)}</div>
+                    <div className={listCls} style={{...tagListCustomStyle}}>{items.map(renderItem)}</div>
                 </Tag.Group>
             ) : null}
         </>
@@ -1038,6 +1059,7 @@ const MultipleSelector = React.memo(function MultipleSelector(props: SelectorPro
         wrapRef,
         clearable,
         block,
+        status,
         _popupProps
     } = props;
     const [, , , , childrenMap = new Map()] = dataSource;
@@ -1136,6 +1158,7 @@ const MultipleSelector = React.memo(function MultipleSelector(props: SelectorPro
                 block={block}
                 size={size}
                 disabled={disabled}
+                status={status}
             >
                 <InputPart stretch className={measureWrapCls}>
                     {placeholder && empty && !searchValue && <div className={placeholderCls}>{placeholder}</div>}
@@ -1190,8 +1213,10 @@ const SingleSelector = React.memo(function SingleSelector({
     searchValue = '',
     setSearchValue,
     clearable,
+    status,
     _popupProps
 }: SelectorProps) {
+    
     const inputRef = useRef<HTMLInputElement>(null);
     const getContent = useCallback(() => {
         const [, , , , childrenMap = new Map()] = dataSource;
@@ -1248,7 +1273,7 @@ const SingleSelector = React.memo(function SingleSelector({
     );
 
     return (
-        <SSelectorSingle {...sharedProps}>
+        <SSelectorSingle status={status} {...sharedProps}>
             <InputPart stretch className={inputWrapCls}>
                 {content ? (
                     <span
@@ -1282,6 +1307,7 @@ const SingleSelector = React.memo(function SingleSelector({
 
 const Select = ({
     size = 'md',
+    status:_status,
     value: _value,
     defaultValue,
     onChange: _onChange,
@@ -1306,6 +1332,7 @@ const Select = ({
     virtualList,
     block,
     styleType,
+    tagListCustomStyle,
     ...htmlProps
 }: SelectProps & Override<HTMLAttributes<HTMLDivElement>, SelectProps>) => {
     if (multiple) clearable = true;
@@ -1392,7 +1419,7 @@ const Select = ({
         [disabled, onVisibleChange, setSearchValue]
     );
     const hidePopup = useCallback(() => handleVisibleChange(false), [handleVisibleChange]);
-
+    
     const hasSubGroup = useMemo(() => {
         const hasSubGroup = dataSource[3].size > 0;
         warnLogForSubGroup();
@@ -1432,9 +1459,12 @@ const Select = ({
         },
         children
     );
+    const { status } = useContext(ControllerContext);
+    
     const selector = React.createElement(Selector, {
         v1,
         size,
+        status: _status || status ,
         disabled,
         multiple,
         placeholder: placeholder ?? locale.placeholder,
@@ -1453,7 +1483,8 @@ const Select = ({
         setSearchValue,
         styleType,
         wrapRef,
-        block
+        block,
+        tagListCustomStyle
     });
     const popoverTriggerAttrs = useMemo(
         () => (v1 ? { trigger: ['click'] } : { trigger: [], showAction: ['click', 'contextMenu', 'focus'] }),
