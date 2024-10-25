@@ -85,10 +85,6 @@ class Table extends Component {
         // init selectedRowKeyMap from rowSelection
         const { rowSelection, dataSource } = props;
         const { selectedRowKeyMap } = this.state;
-        const flatDataSourceKeys = this.flatDataSourceKeysForMap({
-            dataSource
-        });
-        this.state.flatDataSourceKeys = flatDataSourceKeys;
 
         if (_.isObject(rowSelection)) {
             if ('selectedRowKeys' in rowSelection) {
@@ -97,40 +93,10 @@ class Table extends Component {
                 _.each(rowSelection.defaultSelectedRowKeys, key => (selectedRowKeyMap[key] = true));
             }
 
-            if (rowSelection.multiple !== false && rowSelection.linkage) {
-                const { finalMergeMap, finalIndeterminate } = Object.keys(selectedRowKeyMap).reduce(
-                    (p, key) => {
-                        const { mergeMap, indeterminate } = this.initLinkageRowSelectionMap(
-                            selectedRowKeyMap,
-                            true,
-                            key,
-                            flatDataSourceKeys,
-                            this.state.indeterminateSelectedRowKeyMap
-                        );
-                        return {
-                            finalMergeMap: {
-                                ...p.finalMergeMap,
-                                ...mergeMap
-                            },
-                            finalIndeterminate: {
-                                ...p.finalIndeterminate,
-                                ...indeterminate
-                            }
-                        };
-                    },
-                    {
-                        finalMergeMap: {},
-                        finalIndeterminate: {}
-                    }
-                );
-                Object.keys(finalMergeMap).forEach(key => {
-                    selectedRowKeyMap[key] = finalMergeMap[key];
-                });
-
-                this.state.indeterminateSelectedRowKeyMap = {
-                    ...finalIndeterminate
-                };
-            }
+            this.initRenderRowSelectionDate({
+                dataSource,
+                rowSelection
+            });
         }
         // init order
         if ('order' in props) {
@@ -337,6 +303,7 @@ class Table extends Component {
             this.setState({
                 selectedRowKeyMap
             });
+            this.initRenderRowSelectionDate(nextProps);
         }
         // pick controlled filter value
         this.setState({
@@ -346,6 +313,54 @@ class Table extends Component {
             const order = this.getOrder(nextProps.order, nextProps.columns);
             this.setState({
                 order
+            });
+        }
+    };
+    initRenderRowSelectionDate = props => {
+        const { rowSelection, dataSource } = props;
+        const { indeterminateSelectedRowKeyMap, selectedRowKeyMap } = this.state;
+        if (!dataSource || !dataSource.length) {
+            return;
+        }
+        const flatDataSourceKeys = this.flatDataSourceKeysForMap({
+            dataSource
+        });
+
+        if (rowSelection.multiple !== false && rowSelection.linkage && flatDataSourceKeys.length) {
+            const { finalMergeMap, finalIndeterminate } = Object.keys(selectedRowKeyMap).reduce(
+                (p, key) => {
+                    const { mergeMap, indeterminate } = this.initLinkageRowSelectionMap(
+                        selectedRowKeyMap,
+                        true,
+                        key,
+                        flatDataSourceKeys,
+                        indeterminateSelectedRowKeyMap
+                    );
+                    return {
+                        finalMergeMap: {
+                            ...p.finalMergeMap,
+                            ...mergeMap
+                        },
+                        finalIndeterminate: {
+                            ...p.finalIndeterminate,
+                            ...indeterminate
+                        }
+                    };
+                },
+                {
+                    finalMergeMap: {},
+                    finalIndeterminate: {}
+                }
+            );
+
+            Object.keys(finalMergeMap).forEach(key => {
+                selectedRowKeyMap[key] = finalMergeMap[key];
+            });
+            this.setState({
+                flatDataSourceKeys: flatDataSourceKeys,
+                indeterminateSelectedRowKeyMap: {
+                    ...finalIndeterminate
+                }
             });
         }
     };
@@ -450,11 +465,7 @@ class Table extends Component {
         });
         if (_.isObject(rowSelection)) {
             if (rowSelection.onChange) {
-                if (rowSelection.linkage) {
-                    rowSelection.onChange(selectedRowKeys, parentSelectedRowKeys);
-                } else {
-                    rowSelection.onChange(selectedRowKeys);
-                }
+                rowSelection.onChange(selectedRowKeys);
             }
             if (!('selectedRowKeys' in rowSelection)) {
                 this.setState({
@@ -814,7 +825,8 @@ class Table extends Component {
         const parentKeyCheckedMap = {};
         // 选中的key
         const record = flatDataSourceKeys.find(record => String(record.key) == String(key));
-        const disabledItems = this.initDisabledOfRow();
+        // 禁用需要剔除的key
+        const disabledItems = this.initDisabledOfRow(flatDataSourceKeys);
 
         indeterminate[String(record.key)] = false;
         // 子被动全选
@@ -825,7 +837,7 @@ class Table extends Component {
             });
         }
         // 父被动状态
-        function changeParentChecked(record, checked) {
+        function changeParentChecked(record, checked, disabledItems) {
             const mergeMap = {
                 ...nowSelectedRowKeyMap,
                 ...parentKeyCheckedMap,
@@ -833,8 +845,10 @@ class Table extends Component {
             };
             const truthyKeys = Object.keys(mergeMap).filter(key => Boolean(mergeMap[key]));
 
+            const filterChildrenKeys = record.childrenKeys.filter(x => !disabledItems.includes(x));
+
             if (record && checked) {
-                if (record.childrenKeys.every(x => truthyKeys.includes(x))) {
+                if (filterChildrenKeys.every(x => truthyKeys.includes(x))) {
                     childrenKeysAllChecked[record.key] = true;
                     indeterminate[String(record.key)] = false;
                 } else {
@@ -843,7 +857,7 @@ class Table extends Component {
                 }
             }
             if (record && !checked) {
-                if (record.childrenKeys.every(x => !truthyKeys.includes(x))) {
+                if (filterChildrenKeys.every(x => !truthyKeys.includes(x))) {
                     childrenKeysAllChecked[record.key] = false;
                     indeterminate[String(record.key)] = false;
                 } else {
@@ -852,12 +866,12 @@ class Table extends Component {
                 }
             }
             if (record.parent) {
-                changeParentChecked(record.parent, checked);
+                changeParentChecked(record.parent, checked, disabledItems);
             }
         }
 
         if (record.parent) {
-            changeParentChecked(record.parent, checked);
+            changeParentChecked(record.parent, checked, disabledItems);
         }
         disabledItems.forEach(key => {
             indeterminate[String(key)] = false;
@@ -880,27 +894,29 @@ class Table extends Component {
             indeterminate
         };
     }
-    initDisabledOfRow() {
+    initDisabledOfRow(flatDataSourceKeys) {
         const { rowSelection } = this.props;
-        const { flatDataSourceKeys } = this.state;
+
         if (!rowSelection.getDisabledOfRow) {
             return [];
         }
         let needFilterData = [...flatDataSourceKeys];
         needFilterData = _.filter(needFilterData, item => rowSelection.getDisabledOfRow(item.record));
-
-        function getDisabledOfRow(record, result = []) {
-            result.push(record.key);
-            if (record.parent) {
-                getDisabledOfRow(record.parent, result);
-            }
-            return result;
-        }
+        // 父禁用逻辑
+        // function getDisabledOfRow(record, result = []) {
+        //     result.push(record.key);
+        //     if (record.parent) {
+        //         getDisabledOfRow(record.parent, result);
+        //     }
+        //     return result;
+        // }
 
         const allDisableItems = needFilterData.reduce((p, item) => {
-            const keys = getDisabledOfRow(item, []);
-            return [...keys, ...item.childrenKeys];
+            // const keys = getDisabledOfRow(item, []);
+            // return [...keys, ...item.childrenKeys];
+            return [...p, item.key, ...item.childrenKeys];
         }, []);
+
         return allDisableItems;
     }
     getRowKey = (record, index) => {
@@ -988,11 +1004,13 @@ class Table extends Component {
     };
     getColumns = (dataSourceOfCurrentPage, filters) => {
         const { columns, rowSelection, columnPlaceholder, locale, dataSource, columnResizable } = this.props;
+
         const {
             order: currentOrder = {},
             selectedRowKeyMap,
             columnConfig,
-            indeterminateSelectedRowKeyMap
+            indeterminateSelectedRowKeyMap,
+            flatDataSourceKeys
         } = this.state;
         const cloneColumns = columns.map((column, index) => ({
             ...column,
@@ -1046,7 +1064,7 @@ class Table extends Component {
 
             const { disabled: selectionDisabled } = rowSelection;
 
-            const disableItems = rowSelection.getDisabledOfRow && this.initDisabledOfRow();
+            const disableItems = rowSelection.getDisabledOfRow && this.initDisabledOfRow(flatDataSourceKeys);
 
             const linkageFlag = rowSelection.multiple !== false && rowSelection.linkage ? true : false;
 

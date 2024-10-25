@@ -30,6 +30,11 @@ class Demo extends React.Component {
                 key: 'desc2'
             }
         ];
+        this.state = {
+            data: []
+        };
+    }
+    getData() {
         let data = [];
         data.length = 1;
         data.fill({});
@@ -48,24 +53,30 @@ class Demo extends React.Component {
                 }))
             }))
         }));
-        this.state = {
+
+        this.setState({
             data
-        };
+        });
+    }
+    componentDidMount() {
+        this.getData();
     }
     render() {
+        const { data } = this.state;
+
         return (
             <div>
                 <div className="demo-wrap">
                     <Table
                         columns={this.columns}
-                        dataSource={this.state.data}
+                        dataSource={data}
                         expandIconAsCell
                         defaultExpandAllRows
                         rowSelection={{
                             linkage: true,
-                            defaultSelectedRowKeys: ['0-1-2'],
+                            defaultSelectedRowKeys: [],
                             onChange: console.log,
-                            getDisabledOfRow: record => record.key == '0-0'
+                            getDisabledOfRow: record => ['0-1-2', '0-2'].includes(record.key)
                         }}
                     />
                 </div>

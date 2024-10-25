@@ -149,12 +149,12 @@ describe('Table', () => {
         const wrapper = mount(<Demo />);
 
         expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-checkbox-checked').length).toBe(0);
-        expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-checkbox-disabled').length).toBe(1);
+        expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-checkbox-disabled').length).toBe(0);
         expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-checkbox-checked.uc-fe-checkbox-disabled').length).toBe(0);
 
         wrapper.find('.uc-fe-table-thead span.uc-fe-checkbox').simulate('click');
-        expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-checkbox-checked').length).toBe(0);
-        expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-checkbox-disabled').length).toBe(1);
+        expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-checkbox-checked').length).toBe(1);
+        expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-checkbox-disabled').length).toBe(0);
         expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-checkbox-checked.uc-fe-checkbox-disabled').length).toBe(0);
         expect(onRowSelect).toHaveBeenCalledTimes(++onRowSelectTimes);
     });
