@@ -87,21 +87,9 @@ describe('Table', () => {
         let onRowSelectTimes = 0;
 
         class Demo extends React.Component {
-            render() {
-                let data = [];
-                data.length = 1;
-                data.fill({});
-                data = data.map((d, i) => ({
-                    key: '' + i,
-                    name: `name-${i}`,
-                    desc: `desc-${i}`,
-                    children: [1, 2, 3].map((d, j) => ({
-                        key: `${i}-${j}`,
-                        name: `name-1-${j}`,
-                        desc: `desc-1-${j}`
-                    }))
-                }));
-                const columns = [
+            constructor(props) {
+                super(props);
+                this.columns = [
                     {
                         title: 'name',
                         dataIndex: 'name',
@@ -126,6 +114,35 @@ describe('Table', () => {
                         key: 'desc2'
                     }
                 ];
+                this.state = {
+                    data: []
+                };
+            }
+            getData() {
+                let data = [];
+                data.length = 1;
+                data.fill({});
+                data = data.map((d, i) => ({
+                    key: '' + i,
+                    name: `name-${i}`,
+                    desc: `desc-${i}`,
+                    children: [1, 2, 3].map((d, j) => ({
+                        key: `${i}-${j}`,
+                        name: `name-1-${j}`,
+                        desc: `desc-1-${j}`
+                    }))
+                }));
+
+                this.setState({
+                    data
+                });
+            }
+            componentDidMount() {
+                this.getData();
+            }
+            render() {
+                const { data } = this.state;
+
                 return (
                     <div>
                         <div className="demo-wrap">
@@ -137,7 +154,7 @@ describe('Table', () => {
                                     getDisabledOfRow: record => record.key == '0-0'
                                 }}
                                 dataSource={data}
-                                columns={columns}
+                                columns={this.columns}
                                 {...this.props}
                             />
                         </div>
@@ -157,6 +174,7 @@ describe('Table', () => {
         expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-checkbox-disabled').length).toBe(0);
         expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-checkbox-checked.uc-fe-checkbox-disabled').length).toBe(0);
         expect(onRowSelect).toHaveBeenCalledTimes(++onRowSelectTimes);
+        expect(onRowSelect).toHaveBeenLastCalledWith(['0', '0-1', '0-2']);
     });
     test('single select', () => {
         const onRowSelect = jest.fn();

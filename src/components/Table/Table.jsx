@@ -296,6 +296,7 @@ class Table extends Component {
     };
     componentWillReceiveProps = nextProps => {
         const { rowSelection } = nextProps;
+        const { dataSource } = this.props;
 
         if (_.isObject(rowSelection) && 'selectedRowKeys' in rowSelection) {
             const selectedRowKeyMap = {};
@@ -304,7 +305,10 @@ class Table extends Component {
                 selectedRowKeyMap
             });
         }
-        this.initRenderRowSelectionDate(nextProps);
+        if (JSON.stringify(dataSource) !== JSON.stringify(nextProps.dataSource)) {
+            this.initRenderRowSelectionDate(nextProps);
+        }
+
         // pick controlled filter value
         this.setState({
             filtersFromProps: this.calFiltersFromProps(nextProps)
@@ -330,45 +334,49 @@ class Table extends Component {
             dataSource: data
         });
 
-        if (rowSelection.multiple !== false && rowSelection.linkage && flatDataSourceKeys.length) {
-            const { finalMergeMap, finalIndeterminate } = Object.keys(selectedRowKeyMap).reduce(
-                (p, key) => {
-                    const { mergeMap, indeterminate } = this.initLinkageRowSelectionMap(
-                        selectedRowKeyMap,
-                        true,
-                        key,
-                        flatDataSourceKeys,
-                        indeterminateSelectedRowKeyMap
-                    );
-                    return {
-                        finalMergeMap: {
-                            ...p.finalMergeMap,
-                            ...mergeMap
+        this.setState(
+            {
+                flatDataSourceKeys: flatDataSourceKeys
+            },
+            () => {
+                if (rowSelection.multiple !== false && rowSelection.linkage && flatDataSourceKeys.length) {
+                    const { finalMergeMap, finalIndeterminate } = Object.keys(selectedRowKeyMap).reduce(
+                        (p, key) => {
+                            const { mergeMap, indeterminate } = this.initLinkageRowSelectionMap(
+                                selectedRowKeyMap,
+                                true,
+                                key,
+                                flatDataSourceKeys,
+                                indeterminateSelectedRowKeyMap
+                            );
+                            return {
+                                finalMergeMap: {
+                                    ...p.finalMergeMap,
+                                    ...mergeMap
+                                },
+                                finalIndeterminate: {
+                                    ...p.finalIndeterminate,
+                                    ...indeterminate
+                                }
+                            };
                         },
-                        finalIndeterminate: {
-                            ...p.finalIndeterminate,
-                            ...indeterminate
+                        {
+                            finalMergeMap: {},
+                            finalIndeterminate: {}
                         }
-                    };
-                },
-                {
-                    finalMergeMap: {},
-                    finalIndeterminate: {}
-                }
-            );
+                    );
 
-            Object.keys(finalMergeMap).forEach(key => {
-                selectedRowKeyMap[key] = finalMergeMap[key];
-            });
-            this.setState({
-                indeterminateSelectedRowKeyMap: {
-                    ...finalIndeterminate
+                    Object.keys(finalMergeMap).forEach(key => {
+                        selectedRowKeyMap[key] = finalMergeMap[key];
+                    });
+                    this.setState({
+                        indeterminateSelectedRowKeyMap: {
+                            ...finalIndeterminate
+                        }
+                    });
                 }
-            });
-        }
-        this.setState({
-            flatDataSourceKeys: flatDataSourceKeys
-        });
+            }
+        );
     };
     getOrder = (order, columns) => {
         if (!order || !columns) return null;
@@ -770,9 +778,10 @@ class Table extends Component {
      * }
      * }
      */
-    handleSelectRecord = ({ key, checked, flatDataSourceKeys }) => {
+    handleSelectRecord = ({ key, checked, flatDataSourceKeys, indeterminateSelectedRowKeyMap }) => {
         const { rowSelection } = this.props;
-        const { selectedRowKeyMap, indeterminateSelectedRowKeyMap } = this.state;
+        const { selectedRowKeyMap } = this.state;
+
         if (rowSelection.multiple === false) {
             this.onSelectedRowKeysChange({
                 [key]: true
@@ -821,6 +830,12 @@ class Table extends Component {
         }
     };
     initLinkageRowSelectionMap(nowSelectedRowKeyMap, checked, key, flatDataSourceKeys, indeterminateSelectedRowKeyMap) {
+        if (!flatDataSourceKeys.length) {
+            return {
+                mergeMap: {},
+                indeterminate: {}
+            };
+        }
         // 半选状态
         const indeterminate = {
             ...indeterminateSelectedRowKeyMap
@@ -989,7 +1004,8 @@ class Table extends Component {
             });
             return index;
         }
-        const cloneDataSource = [...dataSource].filter(item => !!item);
+
+        const cloneDataSource = _.cloneDeep([...dataSource]).filter(item => !!item);
 
         // 调用递归函数
         setTableKeys(cloneDataSource);
@@ -1008,16 +1024,15 @@ class Table extends Component {
         }
         return dragSorting;
     };
-    getColumns = (dataSourceOfCurrentPage, filters) => {
+    getColumns = (dataSourceOfCurrentPage, filters, indeterminateSelectedRowKeyMap) => {
         const { columns, rowSelection, columnPlaceholder, locale, dataSource, columnResizable } = this.props;
 
-        const {
-            order: currentOrder = {},
-            selectedRowKeyMap,
-            columnConfig,
-            indeterminateSelectedRowKeyMap,
-            flatDataSourceKeys
-        } = this.state;
+        const { order: currentOrder = {}, selectedRowKeyMap, columnConfig } = this.state;
+
+        const flatDataSourceKeys = this.flatDataSourceKeysForMap({
+            dataSource: dataSourceOfCurrentPage
+        });
+
         const cloneColumns = columns.map((column, index) => ({
             ...column,
             index
@@ -1167,7 +1182,8 @@ class Table extends Component {
                                 this.handleSelectRecord({
                                     key: rowKey,
                                     checked: !selectedRowKeyMap[rowKey],
-                                    flatDataSourceKeys: flatDataSourceKeys
+                                    flatDataSourceKeys,
+                                    indeterminateSelectedRowKeyMap
                                 })
                             }
                             checked={!!selectedRowKeyMap[rowKey]}
@@ -1450,18 +1466,19 @@ class Table extends Component {
             dragSorting: _dragSorting,
             ...rest
         } = this.props;
+
         if (emptyContent === undefined) {
             emptyContent = <Notice closable={false}>{locale.emptyTip}</Notice>;
         }
         /* eslint-enable no-unused-vars */
         const pagination = this.getPagination();
-        const { filters, filtersFromProps, searchValue, columnConfig } = this.state;
+        const { filters, filtersFromProps, searchValue, columnConfig, indeterminateSelectedRowKeyMap } = this.state;
         const finalFilters = this.mergeFilters(filters, filtersFromProps, _c);
         let { dataSource, total } = this.getDataSource(finalFilters);
         if (pagination && 'total' in pagination) {
             total = pagination.total;
         }
-        const columns = this.getColumns(dataSource, finalFilters);
+        const columns = this.getColumns(dataSource, finalFilters, indeterminateSelectedRowKeyMap);
 
         // 默认展开所有行
         const defaultExpandAllRowsProps = !defaultExpandAllRows
