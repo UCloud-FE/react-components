@@ -94,7 +94,6 @@ class Table extends Component {
             }
 
             this.initRenderRowSelectionDate({
-                dataSource,
                 rowSelection
             });
         }
@@ -297,14 +296,15 @@ class Table extends Component {
     };
     componentWillReceiveProps = nextProps => {
         const { rowSelection } = nextProps;
+
         if (_.isObject(rowSelection) && 'selectedRowKeys' in rowSelection) {
             const selectedRowKeyMap = {};
             _.each(rowSelection.selectedRowKeys, key => (selectedRowKeyMap[key] = true));
             this.setState({
                 selectedRowKeyMap
             });
-            this.initRenderRowSelectionDate(nextProps);
         }
+        this.initRenderRowSelectionDate(nextProps);
         // pick controlled filter value
         this.setState({
             filtersFromProps: this.calFiltersFromProps(nextProps)
@@ -317,13 +317,17 @@ class Table extends Component {
         }
     };
     initRenderRowSelectionDate = props => {
-        const { rowSelection, dataSource } = props;
+        const { rowSelection, dataSource: nextDateSource } = props;
+        const { dataSource } = this.props;
+        const data = nextDateSource || dataSource;
+
         const { indeterminateSelectedRowKeyMap, selectedRowKeyMap } = this.state;
-        if (!dataSource || !dataSource.length) {
+        if (!data || !data.length || !_.isObject(rowSelection)) {
             return;
         }
+
         const flatDataSourceKeys = this.flatDataSourceKeysForMap({
-            dataSource
+            dataSource: data
         });
 
         if (rowSelection.multiple !== false && rowSelection.linkage && flatDataSourceKeys.length) {
@@ -357,12 +361,14 @@ class Table extends Component {
                 selectedRowKeyMap[key] = finalMergeMap[key];
             });
             this.setState({
-                flatDataSourceKeys: flatDataSourceKeys,
                 indeterminateSelectedRowKeyMap: {
                     ...finalIndeterminate
                 }
             });
         }
+        this.setState({
+            flatDataSourceKeys: flatDataSourceKeys
+        });
     };
     getOrder = (order, columns) => {
         if (!order || !columns) return null;
@@ -764,9 +770,9 @@ class Table extends Component {
      * }
      * }
      */
-    handleSelectRecord = ({ key, checked }) => {
+    handleSelectRecord = ({ key, checked, flatDataSourceKeys }) => {
         const { rowSelection } = this.props;
-        const { selectedRowKeyMap, indeterminateSelectedRowKeyMap, flatDataSourceKeys } = this.state;
+        const { selectedRowKeyMap, indeterminateSelectedRowKeyMap } = this.state;
         if (rowSelection.multiple === false) {
             this.onSelectedRowKeysChange({
                 [key]: true
@@ -1160,7 +1166,8 @@ class Table extends Component {
                             onChange={() =>
                                 this.handleSelectRecord({
                                     key: rowKey,
-                                    checked: !selectedRowKeyMap[rowKey]
+                                    checked: !selectedRowKeyMap[rowKey],
+                                    flatDataSourceKeys: flatDataSourceKeys
                                 })
                             }
                             checked={!!selectedRowKeyMap[rowKey]}
