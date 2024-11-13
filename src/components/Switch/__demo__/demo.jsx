@@ -9,11 +9,13 @@ class Demo extends React.Component {
             <div>
                 {Switch.Sizes.map(size =>
                     [false, true].map(disabled =>
-                        [false, true].map(checked => (
-                            <div className="demo-wrap" key={`size-${size}_disabled-${disabled}_checked-${checked}`}>
-                                <Switch size={size} disabled={disabled} checked={checked} />
-                            </div>
-                        ))
+                        [false, true].map(checked =>
+                            [false, true].map(loading => (
+                                <div className="demo-wrap" key={`size-${size}_disabled-${disabled}_checked-${checked}`}>
+                                    <Switch size={size} disabled={disabled} checked={checked} loading={loading} />
+                                </div>
+                            ))
+                        )
                     )
                 )}
             </div>

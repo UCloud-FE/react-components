@@ -1,8 +1,9 @@
 import React, { HTMLAttributes, ReactNode, useCallback } from 'react';
 
 import useUncontrolled from 'src/hooks/useUncontrolled';
+import SvgIcon from '../SvgIcon';
 
-import { SwitchWrap, buttonCls, onTipCls, offTipCls, innerCls, dotCls } from './style';
+import { SwitchWrap, buttonCls, onTipCls, offTipCls, innerCls, dotCls , loadingCls } from './style';
 
 type Override<T1, T2> = Omit<T1, keyof T2> & T2;
 
@@ -15,6 +16,8 @@ export interface SwitchProps {
     onChange?: (checked: boolean) => void;
     /** 是否禁用 */
     disabled?: boolean;
+    /** 是否加载中 */
+    loading?: boolean;
     /** 尺寸 */
     size?: 'sm' | 'md' | 'lg';
     /** 打开的文字 */
@@ -31,6 +34,7 @@ const Switch = React.forwardRef(
             defaultChecked,
             onChange: _onChange,
             disabled,
+            loading,
             size = 'md',
             onText = 'ON',
             offText = 'OFF',
@@ -44,15 +48,21 @@ const Switch = React.forwardRef(
             onChange(!checked);
         }, [checked, disabled, onChange]);
         return (
-            <SwitchWrap {...rest} checked={checked} disabled={disabled} size={size} onClick={handleClick}>
+            <SwitchWrap {...rest} checked={checked} disabled={disabled || loading} size={size} onClick={handleClick}>
                 <span className={innerCls}>
                     <span className={onTipCls}>{onText}</span>
                     <span className={offTipCls}>{offText}</span>
                 </span>
                 <span className={buttonCls}>
                     <span>
-                        <span className={dotCls} />
-                    </span>
+                    {
+                        loading?  <span className={loadingCls}>
+                                <SvgIcon  key={'ring-loading'} type={'ring-loading'} spin  />
+                            </span> : 
+                            <span className={dotCls} />
+                    }
+                     </span>
+                   
                 </span>
             </SwitchWrap>
         );
