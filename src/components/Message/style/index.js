@@ -103,6 +103,7 @@ export const TitleWrap = withProps({
             padding-left: 44px;
             word-break: break-all;
             font-size: 14px;
+            font-weight: bold;
             color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
             line-height: 24px;
         `;
