@@ -1,0 +1,119 @@
+{
+    "ActionIcon": {
+        "path": "List/ActionIcon.tsx",
+        "name": "ActionIcon",
+        "info": {
+            "description": {
+                "description": "ConfigInfo.ActionIcon",
+                "tags": [{ "title": "description", "description": "配置信息项的操作图标" }]
+            },
+            "displayName": "ActionIcon",
+            "methods": [],
+            "props": {
+                "icon": {
+                    "defaultValue": { "value": "<SvgIcon type=\"edit\" />", "computed": false },
+                    "required": false
+                }
+            }
+        }
+    },
+    "ConfigInfo": {
+        "path": "List/ConfigInfo.tsx",
+        "name": "ConfigInfo",
+        "info": {
+            "description": {
+                "description": "ConfigInfo",
+                "tags": [{ "title": "description", "description": "展示配置信息" }]
+            },
+            "displayName": "ConfigInfo",
+            "methods": [],
+            "props": {
+                "dataSource": { "defaultValue": { "value": "[]", "computed": false }, "required": false },
+                "col": { "defaultValue": { "value": "1", "computed": false }, "required": false }
+            }
+        }
+    },
+    "Content": {
+        "path": "List/Content.tsx",
+        "name": "Content",
+        "info": {
+            "description": {
+                "description": "ConfigInfo.Content",
+                "tags": [{ "title": "description", "description": "配置信息项的内容展示" }]
+            },
+            "displayName": "Content",
+            "methods": [],
+            "props": { "styleType": { "defaultValue": { "value": "'primary'", "computed": false }, "required": false } }
+        }
+    },
+    "Hovertip": {
+        "path": "List/Hovertip.tsx",
+        "name": "Hovertip",
+        "info": {
+            "description": {
+                "description": "Hovertip",
+                "tags": [{ "title": "description", "description": "鼠标移入悬停提示" }]
+            },
+            "displayName": "Hovertip",
+            "methods": [],
+            "props": {
+                "contentStyle": { "defaultValue": { "value": "{}", "computed": false }, "required": false },
+                "tipStyle": { "defaultValue": { "value": "{}", "computed": false }, "required": false }
+            }
+        }
+    },
+    "Icontip": {
+        "path": "List/Icontip.tsx",
+        "name": "Icontip",
+        "info": {
+            "description": {
+                "description": "Hovertip.Icontip",
+                "tags": [{ "title": "description", "description": "图标悬停提示" }]
+            },
+            "displayName": "Icontip",
+            "methods": [],
+            "props": {
+                "icon": {
+                    "defaultValue": {
+                        "value": "<SvgIcon type=\"question-circle\" className={iconCls} />",
+                        "computed": false
+                    },
+                    "required": false
+                },
+                "placement": { "defaultValue": { "value": "'topLeft'", "computed": false }, "required": false }
+            }
+        }
+    },
+    "Item": {
+        "path": "List/Item.tsx",
+        "name": "Item",
+        "info": {
+            "description": {
+                "description": "ConfigInfo.Item",
+                "tags": [{ "title": "description", "description": "配置信息项" }]
+            },
+            "displayName": "Item",
+            "methods": [],
+            "props": {
+                "styleType": { "defaultValue": { "value": "'vertical'", "computed": false }, "required": false },
+                "noBorder": { "defaultValue": { "value": "false", "computed": false }, "required": false },
+                "aligin": { "defaultValue": { "value": "'left'", "computed": false }, "required": false }
+            }
+        }
+    },
+    "List": {
+        "path": "List/List.tsx",
+        "name": "List",
+        "info": {
+            "description": "",
+            "displayName": "List",
+            "methods": [],
+            "props": {
+                "styleType": { "defaultValue": { "value": "'list'", "computed": false }, "required": false },
+                "dataSource": { "defaultValue": { "value": "[]", "computed": false }, "required": false },
+                "col": { "defaultValue": { "value": "3", "computed": false }, "required": false },
+                "spacing": { "defaultValue": { "value": "[20, 0]", "computed": false }, "required": false }
+            }
+        }
+    }
+}

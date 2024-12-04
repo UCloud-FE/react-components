@@ -28,6 +28,7 @@ import LineArrowUp from './icons/LineArrowUp';
 import LineArrowDown from './icons/LineArrowDown';
 import Search from './icons/Search';
 import Ellipsis from './icons/Ellipsis';
+import Edit from './icons/Edit';
 import Refresh from './icons/Refresh';
 import Trash from './icons/Trash';
 import Eye from './icons/Eye';
@@ -79,6 +80,7 @@ const IconMap = {
     'line-arrow-down': LineArrowDown,
     search: Search,
     ellipsis: Ellipsis,
+    edit: Edit,
     refresh: Refresh,
     trash: Trash,
     eye: Eye,
