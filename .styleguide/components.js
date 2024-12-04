@@ -54,6 +54,9 @@ module.exports = [
                 name: 'Textarea'
             },
             {
+                name: 'Typography'
+            },
+            {
                 name: 'AutoComplete'
             },
             {
