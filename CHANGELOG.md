@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.13.0](https://github.com/UCloud-FE/react-components/compare/v1.12.2...v1.13.0) (2024-12-04)
+
+### Features
+
+-   **autocomplete:** add input props ([237797d](https://github.com/UCloud-FE/react-components/commit/237797d97079c402de459088446213c5354e7089))
+-   **Cascader:** add separator ([d9f91df](https://github.com/UCloud-FE/react-components/commit/d9f91df47d3d01eb03df2b83d18994ae065d21a4))
+-   **Message:** add h3 bold ([dc7b9a8](https://github.com/UCloud-FE/react-components/commit/dc7b9a87d730ca576038afbf73b60f2e9291365a))
+-   **Select:** add error status ([6aef4cf](https://github.com/UCloud-FE/react-components/commit/6aef4cf8f3a13a9952a596dba58a90e274184418))
+-   **Steps:** fix style ([574eb93](https://github.com/UCloud-FE/react-components/commit/574eb930d4e0e060323f19ed81023f8dfb631a2e))
+
 ### [1.12.2](https://github.com/UCloud-FE/react-components/compare/v1.12.1...v1.12.2) (2024-09-02)
 
 ### Features
