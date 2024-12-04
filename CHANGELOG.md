@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.14.0](https://github.com/UCloud-FE/react-components/compare/v1.13.0...v1.14.0) (2024-12-04)
+
+### Features
+
+-   **table:** change disabled parent check type ([973be62](https://github.com/UCloud-FE/react-components/commit/973be62a99f71cc0a5fb31e85d1f005038770dbe))
+-   **Table:** fix initRenderRowSelectionDate ([9d8d7ca](https://github.com/UCloud-FE/react-components/commit/9d8d7ca08eb020ae6767f5ce73d1c3e32aa776ad))
+-   **Table:** rowSelection 增加聚合 ([a49aee0](https://github.com/UCloud-FE/react-components/commit/a49aee03073ece7fb3187493802c35ca46e651dc))
+
+### Bug Fixes
+
+-   **Table:** get flatDataSourceKeys ([9b6c8ea](https://github.com/UCloud-FE/react-components/commit/9b6c8eacc0b0bccd056b8bf53f0852fcad6156fe))
+
 ## [1.13.0](https://github.com/UCloud-FE/react-components/compare/v1.12.2...v1.13.0) (2024-12-04)
 
 ### Features
