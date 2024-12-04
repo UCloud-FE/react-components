@@ -22,11 +22,12 @@ class Demo extends React.Component {
             size: 'md',
             onText: 'ON',
             offText: 'OFF',
-            disabled: false
+            disabled: false,
+            loading: false
         };
     }
     render() {
-        const { checked, size, disabled, onText, offText } = this.state;
+        const { checked, size, disabled, onText, offText, loading } = this.state;
         return (
             <div>
                 <Form className="demo-form">
@@ -39,6 +40,9 @@ class Demo extends React.Component {
                     </Form.Item>
                     <Form.Item label="disabled" {...itemLayout}>
                         <Switch checked={disabled} onChange={disabled => this.setState({ disabled })} />
+                    </Form.Item>
+                    <Form.Item label="loading" {...itemLayout}>
+                        <Switch checked={loading} onChange={loading => this.setState({ loading })} />
                     </Form.Item>
                     <Form.Item label="checked" {...itemLayout}>
                         <Switch checked={checked} onChange={checked => this.setState({ checked })} />
@@ -57,6 +61,7 @@ class Demo extends React.Component {
                         disabled={disabled}
                         onText={onText}
                         offText={offText}
+                        loading={loading}
                         onChange={checked => this.setState({ checked })}
                     />
                 </div>

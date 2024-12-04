@@ -11,6 +11,7 @@ export const onTipCls = prefixCls + '-tip-on';
 export const offTipCls = prefixCls + '-tip-off';
 export const innerCls = prefixCls + '-inner';
 export const buttonCls = prefixCls + '-button';
+export const loadingCls = prefixCls + '-loading';
 
 const switchTheme = {
     Width: {
@@ -84,6 +85,19 @@ export const SwitchWrap = sWrap<{ disabled?: boolean; checked?: boolean; size: S
                 border-radius: 50%;
                 transition: background 0.3s;
             }
+            .${loadingCls} {
+                position: absolute;
+                display: block;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                svg{
+                    display: block;
+                }
+            }
             .${buttonCls} {
                 position: absolute;
                 display: block;
@@ -97,6 +111,7 @@ export const SwitchWrap = sWrap<{ disabled?: boolean; checked?: boolean; size: S
                     height: 100%;
                     border-radius: ${DT.T_SWITCH_CORNER};
                     box-sizing: border-box;
+                    position: relative;
                 }
             }
             .${onTipCls}, .${offTipCls} {
@@ -196,14 +211,15 @@ export const SwitchWrap = sWrap<{ disabled?: boolean; checked?: boolean; size: S
             ${disabled &&
             css`
                 cursor: default;
-
-                .${innerCls} {
-                    border-color: ${DT.T_COLOR_LINE_DISABLED_LIGHT};
-                    background: ${DT.T_COLOR_BG_DISABLED_DARK};
-                    color: ${DT.T_COLOR_TEXT_SYSTEM_WHITE};
-                }
-                .${dotCls} {
-                    background: ${DT.T_SWITCH_COLOR_BG_DOT_DISABLED};
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: ${DT.T_COLOR_MASK_COMP};
                 }
             `};
         `;
