@@ -37,7 +37,7 @@ const Month = (props: DatePickerProps) => {
             <Popover
                 popup={
                     <SPopup {...popupProps}>
-                        <Arrow />
+                        {/* <Arrow /> */}
                         <Calendar.Month {...calendarProps} />
                         <Footer {...footerProps} tip={error} isError={!!error} />
                     </SPopup>

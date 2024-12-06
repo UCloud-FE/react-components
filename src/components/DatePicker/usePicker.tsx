@@ -65,7 +65,7 @@ const getValidCurrentDate = (value: TDate | null | undefined, d: Date, currentVa
 const trigger: string[] = [];
 const align = {
     points: ['tl', 'bl'],
-    overflow: { adjustX: 0, adjustY: 1 },
+    overflow: { adjustX: 1, adjustY: 1 },
     offset: [0, 10],
     targetOffset: [0, 0]
 };

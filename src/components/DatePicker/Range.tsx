@@ -416,46 +416,35 @@ const Range = ({
             {readonly && customRender?.readonlyDisplay ? (
                 customRender.readonlyDisplay(cacheValue)
             ) : (
-                <Popover
-                    {...popoverProps}
-                    visible={activeS || activeE}
-                    popup={
-                        <SPopup {...popupProps} endInputHighlight={activeE}>
-                            <Arrow style={{ left: activeE ? startRangeInputWidth + 'px' : '20px' }} />
-                            <RangeCalendarWrap visible={activeS}>
-                                <CalendarComp
-                                    {...calendarPropsS}
-                                    rangeValue={[calendarPropsS.value, cacheValue?.[1]]}
-                                    value={null}
-                                />
-                                <Footer
-                                    {...footerPropsS}
-                                    tip={rangeError || errorS || rangeTip}
-                                    isError={!!rangeError || !!errorS}
-                                />
-                            </RangeCalendarWrap>
-                            <RangeCalendarWrap visible={activeE}>
-                                <CalendarComp
-                                    {...calendarPropsE}
-                                    rangeValue={[cacheValue?.[0], calendarPropsE.value]}
-                                    value={null}
-                                />
-                                <Footer
-                                    {...footerPropsE}
-                                    tip={rangeError || errorE || rangeTip}
-                                    isError={!!rangeError || !!errorE}
-                                />
-                            </RangeCalendarWrap>
-                        </SPopup>
-                    }
+                <SRangeInputWrap
+                    size={size}
+                    disabled={disabled}
+                    focused={activeS || activeE}
+                    readonly={readonly}
+                    onMouseDown={handleInputMouseDown}
+                    status={status || contextStatus}
                 >
-                    <SRangeInputWrap
-                        size={size}
-                        disabled={disabled}
-                        focused={activeS || activeE}
-                        readonly={readonly}
-                        onMouseDown={handleInputMouseDown}
-                        status={status || contextStatus}
+                    <Popover
+                        {...popoverProps}
+                        visible={activeS}
+                        key={"activeS"}
+                        popup={
+                            <SPopup {...popupProps} endInputHighlight={activeE}>
+                                {/* <Arrow style={{ left: activeE ? startRangeInputWidth + 'px' : '20px' }} /> */}
+                                <RangeCalendarWrap visible={activeS}>
+                                    <CalendarComp
+                                        {...calendarPropsS}
+                                        rangeValue={[calendarPropsS.value, cacheValue?.[1]]}
+                                        value={null}
+                                    />
+                                    <Footer
+                                        {...footerPropsS}
+                                        tip={rangeError || errorS || rangeTip}
+                                        isError={!!rangeError || !!errorS}
+                                    />
+                                </RangeCalendarWrap>
+                            </SPopup>
+                        }
                     >
                         {readonly ? (
                             <span className={readonlyInputCls}>{inputPropsS.value}</span>
@@ -464,6 +453,30 @@ const Range = ({
                                 <Input {...inputPropsS} ref={inputRefS} />
                             </RangeInputWrap>
                         )}
+                    </Popover>
+                    <Popover
+                        {...popoverProps}
+                        visible={activeE}
+                        key={"activeE"}
+                        popup={
+                            <SPopup {...popupProps} endInputHighlight={activeE}>
+                                {/* <Arrow style={{ left: activeE ? startRangeInputWidth + 'px' : '20px' }} /> */}
+
+                                <RangeCalendarWrap visible={activeE}>
+                                    <CalendarComp
+                                        {...calendarPropsE}
+                                        rangeValue={[cacheValue?.[0], calendarPropsE.value]}
+                                        value={null}
+                                    />
+                                    <Footer
+                                        {...footerPropsE}
+                                        tip={rangeError || errorE || rangeTip}
+                                        isError={!!rangeError || !!errorE}
+                                    />
+                                </RangeCalendarWrap>
+                            </SPopup>
+                        }
+                    >
                         {readonly ? (
                             <>
                                 <span className={dateSeparatorCls}>-</span>
@@ -474,8 +487,8 @@ const Range = ({
                                 <Input {...inputPropsE} ref={inputRefE} />
                             </RangeInputWrap>
                         )}
-                    </SRangeInputWrap>
-                </Popover>
+                    </Popover>
+                </SRangeInputWrap>
             )}
         </RangeContainer>
     );
