@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-
+import Combine from 'src/components/Combine';
 import config from 'src/config';
 import SvgIcon from 'src/components/SvgIcon';
 import Icon from 'src/components/Icon';
@@ -8,68 +8,89 @@ import withProps from 'src/utils/withProps';
 
 const { prefixCls: _prefixCls } = config;
 export const prefixCls = _prefixCls + '-tag';
+export const menuCls = _prefixCls + '-menu';
 export const iconCls = _prefixCls + '-tag-icon';
 
 export const styleMap = {
     gray: {
-        color: 'T_COLOR_TEXT_DEFAULT_LIGHT',
-        border: 'T_COLOR_LINE_NOTICE_LIGHT',
-        bg: 'T_COLOR_BG_NOTICE_LIGHT',
-        iconHoverBG: 'T_COLOR_BG_NOTICE_DARK'
+        color: 'T_TAG_COLOR_GRAY_TEXT',
+        icon: 'T_TAG_COLOR_GRAY_ICON',
+        border: 'T_TAG_COLOR_GRAY_BORDER',
+        divider: 'T_TAG_COLOR_GRAY_DIVIDER',
+        bg: 'T_TAG_COLOR_GRAY_BG_LIGHT',
+        iconHoverBG: 'T_TAG_COLOR_GRAY_BG_DARK'
     },
     green: {
-        color: 'T_COLOR_TEXT_SUCCESS',
-        border: 'T_COLOR_LINE_SUCCESS_LIGHT',
-        bg: 'T_COLOR_BG_SUCCESS_LIGHT',
-        iconHoverBG: 'T_COLOR_BG_SUCCESS_DARK'
+        color: 'T_TAG_COLOR_GREEN_TEXT',
+        icon: 'T_TAG_COLOR_GREEN_ICON',
+        border: 'T_TAG_COLOR_GREEN_BORDER',
+        divider: 'T_TAG_COLOR_GREEN_DIVIDER',
+        bg: 'T_TAG_COLOR_GREEN_BG_LIGHT',
+        iconHoverBG: 'T_TAG_COLOR_GREEN_BG_DARK'
     },
     yellow: {
-        color: 'T_COLOR_TEXT_WARNING',
-        border: 'T_COLOR_LINE_WARNING_LIGHT',
-        bg: 'T_COLOR_BG_WARNING_LIGHT',
-        iconHoverBG: 'T_COLOR_BG_WARNING_DARK'
+        color: 'T_TAG_COLOR_YELLOW_TEXT',
+        icon: 'T_TAG_COLOR_YELLOW_ICON',
+        border: 'T_TAG_COLOR_YELLOW_BORDER',
+        divider: 'T_TAG_COLOR_YELLOW_DIVIDER',
+        bg: 'T_TAG_COLOR_YELLOW_BG_LIGHT',
+        iconHoverBG: 'T_TAG_COLOR_YELLOW_BG_DARK'
     },
     red: {
-        color: 'T_COLOR_TEXT_ERROR',
-        border: 'T_COLOR_LINE_ERROR_LIGHT',
-        bg: 'T_COLOR_BG_ERROR_LIGHT',
-        iconHoverBG: 'T_COLOR_BG_ERROR_DARK'
+        color: 'T_TAG_COLOR_RED_TEXT',
+        icon: 'T_TAG_COLOR_RED_ICON',
+        border: 'T_TAG_COLOR_RED_BORDER',
+        divider: 'T_TAG_COLOR_RED_DIVIDER',
+        bg: 'T_TAG_COLOR_RED_BG_LIGHT',
+        iconHoverBG: 'T_TAG_COLOR_RED_BG_DARK'
     },
     primary: {
-        color: 'T_COLOR_TEXT_SYSTEM_WHITE',
-        border: 'T_COLOR_LINE_PRIMARY_DEFAULT',
-        bg: 'T_COLOR_BG_PRIMARY_1',
-        iconHoverBG: 'T_COLOR_BG_PRIMARY_2'
+        color: 'T_TAG_COLOR_PRIMARY_TEXT',
+        icon: 'T_TAG_COLOR_PRIMARY_ICON',
+        border: 'T_TAG_COLOR_PRIMARY_BORDER',
+        divider: 'T_TAG_COLOR_PRIMARY_DIVIDER',
+        bg: 'T_TAG_COLOR_PRIMARY_BG_LIGHT',
+        iconHoverBG: 'T_TAG_COLOR_PRIMARY_BG_DARK'
     },
     purple: {
-        color: 'T_COLOR_LEGEND_PURPLE_5',
-        border: 'T_COLOR_LEGEND_PURPLE_2',
-        bg: 'T_COLOR_LEGEND_PURPLE_1',
-        iconHoverBG: 'T_COLOR_LEGEND_PURPLE_5'
+        color: 'T_TAG_COLOR_PURPLE_TEXT',
+        icon: 'T_TAG_COLOR_PURPLE_ICON',
+        border: 'T_TAG_COLOR_PURPLE_BORDER',
+        divider: 'T_TAG_COLOR_PURPLE_DIVIDER',
+        bg: 'T_TAG_COLOR_PURPLE_BG_LIGHT',
+        iconHoverBG: 'T_TAG_COLOR_PURPLE_BG_DARK'
     },
     lightblue: {
-        color: 'T_COLOR_LEGEND_LIGHTBLUE_5',
-        border: 'T_COLOR_LEGEND_LIGHTBLUE_2',
-        bg: 'T_COLOR_LEGEND_LIGHTBLUE_1',
-        iconHoverBG: 'T_COLOR_LEGEND_LIGHTBLUE_5'
+        color: 'T_TAG_COLOR_LIGHTBLUE_TEXT',
+        icon: 'T_TAG_COLOR_LIGHTBLUE_ICON',
+        border: 'T_TAG_COLOR_LIGHTBLUE_BORDER',
+        divider: 'T_TAG_COLOR_LIGHTBLUE_DIVIDER',
+        bg: 'T_TAG_COLOR_LIGHTBLUE_BG_LIGHT',
+        iconHoverBG: 'T_TAG_COLOR_LIGHTBLUE_BG_DARK'
     },
     blue: {
-        color: 'T_COLOR_LEGEND_BLUE_5',
-        border: 'T_COLOR_LEGEND_BLUE_2',
-        bg: 'T_COLOR_LEGEND_BLUE_1',
-        iconHoverBG: 'T_COLOR_LEGEND_BLUE_5'
+        color: 'T_TAG_COLOR_BLUE_TEXT',
+        icon: 'T_TAG_COLOR_BLUE_ICON',
+        border: 'T_TAG_COLOR_BLUE_BORDER',
+        divider: 'T_TAG_COLOR_BLUE_DIVIDER',
+        bg: 'T_TAG_COLOR_BLUE_BG_LIGHT',
+        iconHoverBG: 'T_TAG_COLOR_BLUE_BG_DARK'
     },
     orange: {
-        color: 'T_COLOR_LEGEND_ORANGE_5',
-        border: 'T_COLOR_LEGEND_ORANGE_2',
-        bg: 'T_COLOR_LEGEND_ORANGE_1',
-        iconHoverBG: 'T_COLOR_LEGEND_ORANGE_5'
+        color: 'T_TAG_COLOR_ORANGE_TEXT',
+        icon: 'T_TAG_COLOR_ORANGE_ICON',
+        border: 'T_TAG_COLOR_ORANGE_BORDER',
+        divider: 'T_TAG_COLOR_ORANG_DIVIDER',
+        bg: 'T_TAG_COLOR_ORANGE_BG_LIGHT',
+        iconHoverBG: 'T_TAG_COLOR_ORANGE_BG_DARK'
     },
     cyan: {
-        color: 'T_COLOR_LEGEND_CYAN_5',
-        border: 'T_COLOR_LEGEND_CYAN_2',
-        bg: 'T_COLOR_LEGEND_CYAN_1',
-        iconHoverBG: 'T_COLOR_LEGEND_CYAN_5'
+        color: 'T_TAG_COLOR_CYAN_EXT',
+        icon: 'T_TAG_COLOR_CYAN_ICON',
+        border: 'T_TAG_COLOR_CYAN_BORDER',
+        divider: 'T_TAG_COLOR_CYAN_DIVIDER',
+        bg: 'T_TAG_COLOR_CYAN_BG_LIGHT',
+        iconHoverBG: 'T_TAG_COLOR_CYAN_BG_DARK'
     }
 };
 
@@ -84,32 +105,32 @@ export const styleMap = {
 
 const filledStyleMap = {
     purple: {
-        bg: 'T_COLOR_LEGEND_PURPLE_6',
-        iconHoverBG: 'T_COLOR_LEGEND_PURPLE_7'
+        bg: 'T_TAG_COLOR_PURPLE_FILLBG_LIGHT',
+        iconHoverBG: 'T_TAG_COLOR_PURPLE_FILLBG_DARK'
     },
     lightblue: {
-        bg: 'T_COLOR_LEGEND_LIGHTBLUE_6',
-        iconHoverBG: 'T_COLOR_LEGEND_LIGHTBLUE_7'
+        bg: 'T_TAG_COLOR_LIGHTBLUE_FILLBG_LIGHT',
+        iconHoverBG: 'T_TAG_COLOR_LIGHTBLUE_FILLBG_DARK'
     },
     blue: {
-        bg: 'T_COLOR_LEGEND_BLUE_6',
-        iconHoverBG: 'T_COLOR_LEGEND_BLUE_7'
+        bg: 'T_TAG_COLOR_BLUE_FILLBG_LIGHT',
+        iconHoverBG: 'T_TAG_COLOR_BLUE_FILLBG_DARK'
     },
     orange: {
-        bg: 'T_COLOR_LEGEND_ORANGE_6',
-        iconHoverBG: 'T_COLOR_LEGEND_ORANGE_7'
+        bg: 'T_TAG_COLOR_ORANGE_FILLBG_LIGHT',
+        iconHoverBG: 'T_TAG_COLOR_ORANGE_FILLBG_DARK'
     },
     yellow: {
-        bg: 'T_COLOR_LEGEND_YELLOW_6',
-        iconHoverBG: 'T_COLOR_LEGEND_YELLOW_7'
+        bg: 'T_TAG_COLOR_YELLOW_FILLBG_LIGHT',
+        iconHoverBG: 'T_TAG_COLOR_YELLOW_FILLBG_DARK'
     },
     cyan: {
-        bg: 'T_COLOR_LEGEND_CYAN_6',
-        iconHoverBG: 'T_COLOR_LEGEND_CYAN_7'
+        bg: 'T_TAG_COLOR_CYAN_FILLBG_LIGHT',
+        iconHoverBG: 'T_TAG_COLOR_CYAN_FILLBG_DARK'
     },
     red: {
-        bg: 'T_COLOR_LEGEND_RED_6',
-        iconHoverBG: 'T_COLOR_LEGEND_RED_7'
+        bg: 'T_TAG_COLOR_RED_FILLBG_LIGHT',
+        iconHoverBG: 'T_TAG_COLOR_RED_FILLBG_DARK'
     }
 };
 
@@ -118,7 +139,54 @@ Object.keys(filledStyleMap).map(key => {
     styleMap[key + '-filled'] = {
         ...map,
         border: map.bg,
+        divider: map.bg,
         color: 'T_COLOR_TEXT_SYSTEM_WHITE'
+    };
+});
+
+const stateStyleMap = {
+    green: {
+        color: 'T_TAG_COLOR_GREEN_TEXT',
+        icon: 'T_TAG_COLOR_GREEN_ICON',
+        divider: 'T_TAG_COLOR_GREEN_DIVIDER',
+        bg: 'T_COLOR_BG_DEFAULT_BRIGHT',
+        iconHoverBG: 'T_COLOR_BG_DEFAULT_BRIGHT',
+        border: 'T_COLOR_LINE_NOTICE_LIGHT',
+        fontColor: 'T_COLOR_TEXT_DEFAULT_DARK'
+    },
+    blue: {
+        color: 'T_TAG_COLOR_BLUE_TEXT',
+        icon: 'T_TAG_COLOR_BLUE_ICON',
+        divider: 'T_TAG_COLOR_BLUE_DIVIDER',
+        bg: 'T_COLOR_BG_DEFAULT_BRIGHT',
+        iconHoverBG: 'T_COLOR_BG_DEFAULT_BRIGHT',
+        border: 'T_COLOR_LINE_NOTICE_LIGHT',
+        fontColor: 'T_COLOR_TEXT_DEFAULT_DARK'
+    },
+    yellow: {
+        color: 'T_TAG_COLOR_YELLOW_TEXT',
+        icon: 'T_TAG_COLOR_YELLOW_ICON',
+        divider: 'T_TAG_COLOR_YELLOW_DIVIDER',
+        bg: 'T_COLOR_BG_DEFAULT_BRIGHT',
+        iconHoverBG: 'T_COLOR_BG_DEFAULT_BRIGHT',
+        border: 'T_COLOR_LINE_NOTICE_LIGHT',
+        fontColor: 'T_COLOR_TEXT_DEFAULT_DARK'
+    },
+    red: {
+        color: 'T_TAG_COLOR_RED_TEXT',
+        icon: 'T_TAG_COLOR_RED_ICON',
+        divider: 'T_TAG_COLOR_RED_DIVIDER',
+        bg: 'T_TAG_COLOR_RED_BG_LIGHT',
+        iconHoverBG: 'T_TAG_COLOR_RED_BG_DARK',
+        border: 'T_TAG_COLOR_RED_DIVIDER',
+        fontColor: 'T_COLOR_TEXT_DEFAULT_DARK'
+    }
+};
+
+Object.keys(stateStyleMap).map(key => {
+    const map = stateStyleMap[key];
+    styleMap[key + '-crisped'] = {
+        ...map
     };
 });
 
@@ -130,24 +198,57 @@ export const CloseIconWrapper = styled('span')`
     /* empty */
 `;
 
-export const PrefixIcon = styled(Icon)`
-    /* empty */
-`;
+export const PrefixIcon = withProps({
+    className: iconCls
+})(
+    styled(Icon)(props => {
+        const {
+            size,
+            theme: { designTokens: DT }
+        } = props;
+        const iconSize = DT[`T_TAG_ICON_SIZE_${(size || 'sm').toLocaleUpperCase()}`];
+        return `
+         font-size:${iconSize};
+    `;
+    })
+);
+
+export const SvgIconWrapper = withProps({
+    className: iconCls
+})(
+    styled('i')(props => {
+        const {
+            size,
+            theme: { designTokens: DT }
+        } = props;
+        const iconSize = DT[`T_TAG_ICON_SIZE_${(size || 'sm').toLocaleUpperCase()}`];
+        return css`
+            svg {
+                width: ${iconSize};
+                height: ${iconSize};
+            }
+        `;
+    })
+);
 export const PrefixIconWrapper = styled('span')`
     /* empty */
 `;
-
+export const SuffixIconWrapper = styled('span')`
+    /* empty */
+`;
 const getColorMap = (styleType, disabled) => {
     if (/-fill$/.test(styleType)) {
         styleType += 'ed';
     }
+
     return (
         (disabled
             ? {
-                  color: 'T_COLOR_TEXT_DISABLED',
-                  border: 'T_COLOR_LINE_DISABLED_LIGHT',
-                  bg: 'T_COLOR_BG_DISABLED_LIGHT',
-                  iconHoverBG: 'T_COLOR_BG_DISABLED_LIGHT'
+                  color: 'T_TAG_COLOR_DISABLED_TEXT',
+                  border: 'T_TAG_COLOR_DISABLED_BORDER',
+                  divider: 'T_TAG_COLOR_DISABLED_DIVIDER',
+                  bg: 'T_TAG_COLOR_DISABLED_BG_LIGHT',
+                  iconHoverBG: 'T_TAG_COLOR_DISABLED_BG_LIGHT'
               }
             : styleMap[styleType]) || {}
     );
@@ -158,69 +259,120 @@ export const TagWrapper = withProps({
 })(
     styled('span')(props => {
         const {
+            border: customBorder,
+            borderType: customBorderType,
             styleType,
             disabled,
             theme: { designTokens: DT },
-            customStyle
+            customStyle,
+            closable
         } = props;
+
         const colorMap = getColorMap(styleType, disabled);
+
         const color = customStyle?.color || DT[colorMap.color];
+        const iconColor = customStyle?.color || DT[colorMap.icon];
         const bg = customStyle?.background || DT[colorMap.bg];
-        const border = customStyle?.borderColor || DT[colorMap.border];
-        const iconHoverBG = customStyle?.closeIconHoverBackground || DT[colorMap.iconHoverBG];
+
+        function getBorder(customBorder) {
+            if (customBorder) {
+                return customStyle?.borderColor || DT[colorMap.border];
+            }
+            return DT['T_COLOR_LINE_DEFAULT_TRANSPARENT'];
+        }
+
+        const border = getBorder(customBorder);
+        const borderRadius =
+            customBorderType === 'circle'
+                ? `calc(${DT['T_TAG_HEIGHT_SM']} * ${DT['T_CORNER_CIRCLE'].replace('%', '') / 100})`
+                : DT['T_TAG_BORDER_RADIUS'];
+
+        const closeIconBorderRadius = customBorderType === 'circle' ? 'calc((20px - 2px)/2)' : '0 2px 2px 0';
+
+        const paddingRight = closable ? 0 : '8px';
+        const fontColor = DT[colorMap.fontColor || colorMap.color];
+        const divider = DT[colorMap.divider];
+
+        const iconHoverBG =
+            customStyle?.closeIconHoverBackground ||
+            (styleType.includes('-crisped') ? DT['T_COLOR_BG_TRANSPARENT'] : DT[colorMap.iconHoverBG]);
+        const closeIconColor = styleType.includes('-crisped') ? DT['T_COLOR_TEXT_DEFAULT_DARK'] : color;
+        const closeIconHoverColor = styleType.includes('-crisped')
+            ? DT['T_COLOR_TEXT_DEFAULT_DARK']
+            : DT.T_TAG_ICON_CLOSE;
+        const closeIconOpacity = styleType.includes('-crisped') ? '0.5' : DT['T_TAG_ICON_OPACITY_DEFAULT'];
         return css`
             box-sizing: border-box;
-            height: 20px;
+            height: ${DT['T_TAG_HEIGHT_SM']};
             padding-left: 8px;
-            border-radius: 2px;
+            padding-right: ${paddingRight};
             display: inline-flex;
             align-items: center;
-
             color: ${color};
             background: ${bg};
             border: 1px solid ${border};
+            border-radius: ${borderRadius};
 
             ${PrefixIconWrapper} {
+                display: flex;
                 margin-right: 4px;
-                line-height: 18px;
+                line-height: calc(${DT['T_TAG_HEIGHT_SM']} - 2px);
                 flex-shrink: 0;
+                align-items: center;
+                min-width: ${DT['T_TAG_ICON_WIDTH_SM']};
+                justify-content: center;
+                color: ${iconColor};
+                i {
+                    display: flex;
+                    margin: 0;
+                }
             }
             ${ContentWrapper} {
-                margin-right: 8px;
-                line-height: 18px;
+                color: ${fontColor};
+                line-height: calc(${DT['T_TAG_HEIGHT_SM']} - 2px);
                 flex: 1 1 auto;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
             }
+            ${SuffixIconWrapper} {
+                margin-left: 4px;
+                line-height: calc(${DT['T_TAG_HEIGHT_SM']} - 2px);
+                flex-shrink: 0;
+            }
             ${CloseIconWrapper} {
                 float: right;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 width: 18px;
-                height: 18px;
-                line-height: 18px;
+                margin-left: 4px;
+                height: calc(${DT['T_TAG_HEIGHT_SM']} - 2px);
+                line-height: calc(${DT['T_TAG_HEIGHT_SM']} - 2px);
                 font-size: 0;
                 text-align: center;
-                border-radius: 0 2px 2px 0;
+                border-radius: ${closeIconBorderRadius};
                 ${!disabled && 'cursor: pointer'};
-                color: ${color};
+                color: ${closeIconColor};
                 transition: background 0.3s;
                 flex-shrink: 0;
-
+                opacity: ${closeIconOpacity};
                 ${CloseIcon} {
-                    fill: ${color};
+                    fill: ${closeIconColor};
                 }
                 ${!disabled &&
                 css`
                     :hover {
                         background: ${iconHoverBG};
+                        opacity: ${DT['T_TAG_ICON_OPACITY_HOVER']};
                         ${CloseIcon} {
-                            fill: ${DT.T_COLOR_TEXT_SYSTEM_WHITE};
+                            fill: ${closeIconHoverColor};
                         }
                     }
                 `};
             }
             ::after {
-                background: ${border};
+                background: ${divider};
             }
         `;
     })
@@ -241,29 +393,48 @@ export const IconTagWrapper = withProps({
             styleType = 'default',
             theme: { designTokens: DT },
             disabled,
-            customStyle
+            customStyle,
+            borderType: customBorderType,
+            iconSize: size,
+            border: customBorder
         } = props;
+
+        function getBorder(customBorder) {
+            if (customBorder) {
+                return customStyle?.borderColor || DT[colorMap.border];
+            }
+            return DT['T_COLOR_LINE_DEFAULT_TRANSPARENT'];
+        }
+        const iconSize = DT[`T_TAG_ICON_SIZE_${(size || 'sm').toLocaleUpperCase()}`];
 
         const colorMap = getColorMap(styleType, disabled);
         const color = customStyle?.color || DT[colorMap.color];
         const bg = customStyle?.background || DT[colorMap.bg];
-        const border = customStyle?.borderColor || DT[colorMap.border];
+
+        const border = getBorder(customBorder);
+        const borderRadius =
+            customBorderType === 'circle'
+                ? `calc(${DT['T_TAG_HEIGHT_SM']} * ${DT['T_CORNER_CIRCLE'].replace('%', '') / 100})`
+                : DT['T_TAG_BORDER_RADIUS'];
+        const divider = DT[colorMap.divider];
+
         return css`
             box-sizing: border-box;
-            height: 20px;
+            height: ${DT['T_TAG_HEIGHT_SM']};
             width: 20px;
-            line-height: 18px;
+            line-height: calc(${DT['T_TAG_HEIGHT_SM']} - 2px);
             text-align: center;
             display: inline-block;
-            border-radius: 2px;
+            border-radius: ${borderRadius};
             position: relative;
             border: 1px solid ${border};
             color: ${color};
             background: ${bg};
+            font-size: ${iconSize};
             ::after {
                 position: absolute;
                 right: -1px;
-                background: ${border};
+                background: ${divider};
                 box-sizing: border-box;
                 border: 0 solid ${bg};
                 border-width: 5px 0;
@@ -309,14 +480,16 @@ export const TagGroupWrapper = withProps()(
                       }
                   }
                   .${iconCls} {
-                      border-right-style: solid;
                       :after {
                           margin: 0;
-                          height: 100%;
+                          top: 50%;
+                          transform: translateY(-50%);
+                          border: none;
                       }
                   }
                   .${prefixCls} {
                       padding-left: 4px;
+                      padding-right: 0px;
                       :first-of-type {
                           padding-left: 8px;
                       }
@@ -338,5 +511,79 @@ export const TagGroupWrapper = withProps()(
                       vertical-align: middle;
                   }
               `;
+    })
+);
+export const SWrap = withProps({
+    className: iconCls
+})(
+    styled(Combine)(props => {
+        const { exposeCount } = props;
+        return exposeCount === void 0
+            ? ''
+            : css`
+                  white-space: nowrap;
+                  .${prefixCls}, .${iconCls} {
+                      margin-right: 0px;
+                      margin-bottom: 0px;
+                      vertical-align: middle;
+                  }
+                  .${iconCls} {
+                      margin-bottom: 0px;
+                  }
+              `;
+    })
+);
+export const TagMenuWapper = withProps({
+    className: iconCls
+})(
+    styled('div')(props => {
+        return css`
+            .${menuCls} {
+                padding: 8px 0 4px 0;
+            }
+            .${prefixCls},.${iconCls} {
+                margin-bottom: 4px;
+            }
+        `;
+    })
+);
+export const TagPopoverWrap = withProps({
+    className: iconCls
+})(
+    styled('div')(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
+        return css`
+            padding: 0 8px;
+            line-height: ${DT['T_TAG_HEIGHT_SM']};
+        `;
+    })
+);
+
+export const TagMoreWapper = withProps({
+    className: iconCls
+})(
+    styled('span')(props => {
+        const {
+            theme: { designTokens: DT }
+        } = props;
+
+        return css`
+            .${prefixCls} {
+                box-sizing: border-box;
+                height: ${DT['T_TAG_HEIGHT_SM']};
+                padding: 0 6px;
+                line-height: calc(${DT['T_TAG_HEIGHT_SM']} - 2px);
+                text-align: center;
+                display: inline-block;
+                border-radius: ${DT['T_TAG_BORDER_RADIUS']};
+                position: relative;
+                border: 1px ${DT['T_LINE_STYLE_DASHED']} ${DT['T_POPOVER_COLOR_LINE_LIGHT']};
+                color: ${DT['T_COLOR_TEXT_DEFAULT_DARK']};
+                background-color: none;
+                cursor: pointer;
+            }
+        `;
     })
 );

@@ -4,6 +4,7 @@ import Tag from 'src/components/Tag';
 import Radio from 'src/components/Radio';
 import Form from 'src/components/Form';
 import Icon from 'src/components/Icon';
+import Switch from 'src/components/Switch';
 
 // demo start
 const { StyleType } = Tag;
@@ -16,11 +17,14 @@ class Demo extends React.Component {
         super(props);
         this.state = {
             styleType: 'default',
-            icon: 'circle'
+            icon: 'circle',
+
+            border: true,
+            borderType: 'default'
         };
     }
     render() {
-        const { styleType, icon } = this.state;
+        const { styleType, icon, border, borderType } = this.state;
         const Icon = TrueIcon;
         const itemLayout = {
             labelCol: {
@@ -45,6 +49,16 @@ class Demo extends React.Component {
                             options={['circle-fill', 'circle', 'loading', 'custom'].map(v => ({ label: v, value: v }))}
                             value={icon}
                             onChange={icon => this.setState({ icon })}
+                        />
+                    </Form.Item>
+                    <Form.Item label="border" {...itemLayout}>
+                        <Switch checked={border} onChange={border => this.setState({ border })} />
+                    </Form.Item>
+                    <Form.Item label="borderType" {...itemLayout}>
+                        <Radio.Group
+                            options={['default', 'circle'].map(borderType => ({ value: borderType }))}
+                            value={borderType}
+                            onChange={borderType => this.setState({ borderType })}
                         />
                     </Form.Item>
                 </Form>
