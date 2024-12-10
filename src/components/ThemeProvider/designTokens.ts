@@ -1,19 +1,118 @@
 // Do not edit directly
-// Generated with design-token-editor on 2024/2/28 13:58:07
+// Generated with design-token-editor on 2024/12/10 19:33:29
 
 export default {
     // 按钮加载遮罩
     T_BUTTON_COMMON_COLOR_MASK: '#ffffff',
+    // 按钮/备用/背景色/默认
+    T_BUTTON_OTHER_COLOR_BG_DEFAULT: '#fafafc',
+    // 按钮/备用/背景色/hover
+    T_BUTTON_OTHER_COLOR_BG_HOVER: '#ffffff',
+    // 按钮/备用/边框/默认
+    T_BUTTON_OTHER_COLOR_BORDER_DEFAULT: '#d2d6ea',
+    // 按钮/备用/边框/hover
+    T_BUTTON_OTHER_COLOR_BORDER_HOVER: '#3357df',
+    // 按钮/备用/投影/默认
+    T_BUTTON_OTHER_COLOR_SHADOW_DEFAULT: '0 0 0 0 rgba(0,0,0,0.12),inset 0 0 0 0 #e3e9ff',
+    // 按钮/备用/投影/hover
+    T_BUTTON_OTHER_COLOR_SHADOW_HOVER: '0 0 0 0 rgba(0,0,0,0.12),inset 0 0 0 0 #e3e9ff',
     // 按钮/主/背景色
     T_BUTTON_PRIMARY_COLOR_BG_DEFAULT: 'linear-gradient(135deg, #6488fc 0%,#3860f4 100%)',
     // 按钮/主/背景色/hover
     T_BUTTON_PRIMARY_COLOR_BG_HOVER: 'linear-gradient(135deg, #5c76e8 0%,#3357df 100%)',
+    // 按钮/投影/默认
+    T_BUTTON_PRIMARY_COLOR_SHADOW_DEFAULT:
+        '0 2px 4px -1px #5c76e8, inset 0 -3px 0 0 rgba(0,0,0,0.12), inset 0 1px 0 0 rgba(0,0,0,0.12)',
+    // 按钮/投影/hover
+    T_BUTTON_PRIMARY_COLOR_SHADOW_HOVER:
+        '0 5px 8px -4px #5c76e8, inset 0 -3px 0 0 rgba(0,0,0,0.12), inset 0 1px 0 0 rgba(0,0,0,0.12)',
     // 按钮/主/文本色
     T_BUTTON_PRIMARY_COLOR_TEXT_DEFAULT: '#ffffff',
-    // 按钮/次/背景色
+    // 按钮/次/背景色/默认
     T_BUTTON_SECONDARY_COLOR_BG_DEFAULT: '#ffffff',
+    // 按钮/次/背景色/hover
+    T_BUTTON_SECONDARY_COLOR_BG_HOVER: '#ffffff',
+    // 按钮/次/边框/默认
+    T_BUTTON_SECONDARY_COLOR_BORDER_DEFAULT: '#c3cad9',
+    // 按钮/次/边框/hover
+    T_BUTTON_SECONDARY_COLOR_BORDER_HOVER: '#d2d6ea',
+    // 按钮/次/投影/默认
+    T_BUTTON_SECONDARY_COLOR_SHADOW_DEFAULT: '0 2px 3px 0 rgba(0,0,0,0.12),inset 0 -2px 0 0 #e3e9ff',
+    // 按钮/次/投影/hover
+    T_BUTTON_SECONDARY_COLOR_SHADOW_HOVER:
+        '0 0 1px 0 rgba(0,0,0,0.12),0 8px 12px -4px rgba(0,0,0,0.12),0 2px 1px -1px rgba(0,0,0,0.05), inset 0 -2px 0 0 #e3e9ff',
+    // 操作区/间距/下
+    T_CARD_ACTION_BOTTOM: '0px',
+    // 操作区/间距/左
+    T_CARD_ACTION_LEFT: '24px',
+    // 操作区/间距/右
+    T_CARD_ACTION_RIGHT: '24px',
+    // 操作区/间距/上
+    T_CARD_ACTION_TOP: '16px',
     // 卡片/背景色
     T_CARD_COLOR_BG_DEFAULT: '#ffffff',
+    // 卡片描述/字体颜色
+    T_CARD_COMMENT_FONT_COLOR_DEFAULT: '#526075',
+    // 卡片描述/字体粗细
+    T_CARD_COMMENT_FONT_FONT_WEIGHT: '400',
+    // 卡片描述/字体行高
+    T_CARD_COMMENT_FONT_LINE_HEIGHT: '1.7',
+    // 卡片描述/字体大小
+    T_CARD_COMMENT_FONT_SIZE: '12px',
+    // 内容区域/背景/Pro组件token
+    T_CARD_CONTENT_BG_DEFAULT: '#fafafc',
+    // 内容区域/间距/下
+    T_CARD_CONTENT_PADDING_BOTTOM: '0px',
+    // 内容区域/间距/左
+    T_CARD_CONTENT_PADDING_LEFT: '24px',
+    // 内容区域/间距/右
+    T_CARD_CONTENT_PADDING_RIGHT: '24px',
+    // 内容区域/间距/上
+    T_CARD_CONTENT_PADDING_TOP: '16px',
+    // 底部/外间距/下
+    T_CARD_FOOTER_MARGIN_BOTTOM: '24px',
+    // 底部/外间距/上
+    T_CARD_FOOTER_MARGIN_TOP: '24px',
+    // 底部/间距/下
+    T_CARD_FOOTER_PADDING_BOTTOM: '16px',
+    // 底部/间距/左
+    T_CARD_FOOTER_PADDING_LEFT: '24px',
+    // 底部/间距/右
+    T_CARD_FOOTER_PADDING_RIGHT: '24px',
+    // 底部/间距/上
+    T_CARD_FOOTER_PADDING_TOP: '16px',
+    // 标题/字体颜色
+    T_CARD_HEADER_FONT_COLOR_DEFAULT: '#0a1633',
+    // 标题/字体粗细
+    T_CARD_HEADER_FONT_FONT_WEIGHT: '600',
+    // 标题/字体行高
+    T_CARD_HEADER_FONT_LINE_HEIGHT: '1.7',
+    // 标题/字体大小
+    T_CARD_HEADER_FONT_SIZE: '16px',
+    // 标题区域/间距/下
+    T_CARD_HEADER_PADDING_BOTTOM: '0px',
+    // 标题区域/间距/左
+    T_CARD_HEADER_PADDING_LEFT: '24px',
+    // 标题区域/间距/右
+    T_CARD_HEADER_PADDING_RIGHT: '24px',
+    // 标题区域/间距/上
+    T_CARD_HEADER_PADDING_TOP: '24px',
+    // 分割线/线条/提示/浅色
+    T_CARD_LINE_COLOR_DEFAULT: '#d2d6ea',
+    // 分割线/subArea/间距/
+    T_CARD_LINE_PADDING_VERTICAL: '16px',
+    // 卡片/外边距
+    T_CARD_OUTSIDE_PADDING: '24px',
+    // 二级标题/字体颜色
+    T_CARD_SECONDARY_FONT_COLOR_DEFAULT: '#0a1633',
+    // 二级标题/字体粗细
+    T_CARD_SECONDARY_FONT_FONT_WEIGHT: '600',
+    // 二级标题/字体行高
+    T_CARD_SECONDARY_FONT_LINE_HEIGHT: '1.7',
+    // 二级标题/字体大小
+    T_CARD_SECONDARY_FONT_SIZE: '14px',
+    // 二级标题/间距/下
+    T_CARD_SECONDARY_PADDING_BOTTOM: '16px',
     // 图表/时间范围选择器/背景色
     T_CHART_TIMEPICKER_BG_DEFAULT: '#EAEEFD',
     // 图表/时间范围选择器/icon
@@ -246,6 +345,12 @@ export default {
     T_COLOR_LINE_WARNING_DARK: '#ffc42e',
     // 线条/警告/浅色
     T_COLOR_LINE_WARNING_LIGHT: '#ffe38d',
+    // 蒙层/背景/抽屉/弹窗
+    T_COLOR_MASK_BG: 'rgba(0,0,0,0.5)',
+    // 蒙层/组件
+    T_COLOR_MASK_COMP: 'rgba(255,255,255,0.5)',
+    // 蒙层/全局
+    T_COLOR_MASK_OVERALL: 'rgba(255,255,255,0.7)',
     // 文本/常规/亮色
     T_COLOR_TEXT_DEFAULT_BRIGHT: '#ffffff',
     // 文本/常规/深色
@@ -396,6 +501,10 @@ export default {
     T_INPUT_COLOR_BG_HL_DEFAULT: '#e3e9ff',
     // 输入框/背景色/高亮/错误
     T_INPUT_COLOR_BG_HL_ERROR: '#fed4d4',
+    // 输入框/阴影/默认
+    T_INPUT_COLOR_SHADOW_DEFAULT: 'inset 0 3px 0 0 rgba(0,0,0,0.05)',
+    // 输入框/阴影/错误
+    T_INPUT_COLOR_SHADOW_ERROR: 'inset 0 1px 3px 0 #fed4d4',
     // 默认线条，实线
     T_LINE_STYLE_BASE: 'solid',
     // 虚线边框样式，用于添加/上传照片按钮
@@ -406,6 +515,38 @@ export default {
     T_LINE_WIDTH_LG: '2px',
     // 无线条
     T_LINE_WIDTH_SM: '0px',
+    // 列内容文本颜色/文本/常规/深色
+    T_LIST_CONTENT_FONT_COLOR_DEFAULT: '#0a1633',
+    // 列内容文本颜色/文本/备注/深色
+    T_LIST_CONTENT_FONT_COLOR_REMARK: '#7a8baa',
+    // 列内容文本加粗状态/默认字体粗细，常规
+    T_LIST_CONTENT_FONT_FONT_WEIGHT: '400',
+    // 列内容行高/宽松的行高，字号1.7倍
+    T_LIST_CONTENT_FONT_LINE_HEIGHT: '1.7',
+    // 列内容文本/一般用于备注/正文，是浏览器识别的最小字号
+    T_LIST_CONTENT_FONT_SIZE: '12px',
+    // 列标题文本颜色/文本/常规/浅色
+    T_LIST_HEADER_FONT_COLOR_DEFAULT: '#526075',
+    // 列标题文本加粗状态/默认字体粗细，常规
+    T_LIST_HEADER_FONT_FONT_WEIGHT: '400',
+    // 列标题行高/宽松的行高，字号1.7倍
+    T_LIST_HEADER_FONT_LINE_HEIGHT: '1.7',
+    // 列标题文本/一般用于备注/正文，是浏览器识别的最小字号
+    T_LIST_HEADER_FONT_SIZE: '12px',
+    // 排版link中icon的默认颜色
+    T_LIST_ICON_LINK_DEFAULT: '#c3cad9',
+    // 排版link中icon的hover颜色
+    T_LIST_ICON_LINK_HOVER: '#3357df',
+    // 列项内间距/左右间距
+    T_LIST_ITEM_PADDING_HORIZONAL: '0',
+    // 列项内间距/上下间距
+    T_LIST_ITEM_PADDING_VERTICAL: '8px',
+    // 列分割线/线条/提示/浅色
+    T_LIST_LINE_COLOR_DEFAULT: '#d2d6ea',
+    // 列项布局间距/左右间距
+    T_LIST_OUTSIDE_PADDING_HORIZONAL: '20px',
+    // 列项布局间距/上下间距
+    T_LIST_OUTSIDE_PADDING_VERTICAL: '0',
     // 加载底部蒙层
     T_LOADING_COLOR_LAYER_DEFAULT: 'rgba(255,255,255,0.7)',
     // 弹窗/抽屉/通用/蒙层
@@ -503,8 +644,12 @@ export default {
     T_SHADOW_LINE_TOP: '0 1px 0 0 #d2d6ea',
     // 骨架屏/背景色/深色
     T_SKELETON_COLOR_BG_DARK: '#efeff8',
+    // 骨架屏/背景色/深色
+    T_SKELETON_COLOR_BG_DARK1: 'rgba(0,0,0,0.5)',
     // 骨架屏/背景色/浅色
     T_SKELETON_COLOR_BG_LIGHT: '#f6f6fb',
+    // 骨架屏/背景色/浅色
+    T_SKELETON_COLOR_BG_LIGHT1: 'rgba(0,0,0,0.3)',
     // 滑块/背景色/激活
     T_SLIDER_COLOR_BG_ACTIVE: '#f8f8ff',
     // 滑块/背景色/未激活
@@ -767,6 +912,58 @@ export default {
     T_TAG_ICON_SIZE_XS: '6px',
     // icon最小宽度
     T_TAG_ICON_WIDTH_SM: '10px',
+    // 粗体字
+    T_TYPOGRAPHY_FONT_H1_FONT_WEIGHT: '600',
+    // 宽松的行高，字号1.7倍
+    T_TYPOGRAPHY_FONT_H1_LINE_HEIGHT: '1.7',
+    // 一般用于标题，或者特殊场景下的文本展示
+    T_TYPOGRAPHY_FONT_H1_SIZE: '24px',
+    // 粗体字
+    T_TYPOGRAPHY_FONT_H2_FONT_WEIGHT: '600',
+    // 宽松的行高，字号1.7倍
+    T_TYPOGRAPHY_FONT_H2_LINE_HEIGHT: '1.7',
+    // 一般用于标题，或者特殊场景下的文本展示
+    T_TYPOGRAPHY_FONT_H2_SIZE: '20px',
+    // 粗体字
+    T_TYPOGRAPHY_FONT_H3_FONT_WEIGHT: '600',
+    // 宽松的行高，字号1.7倍
+    T_TYPOGRAPHY_FONT_H3_LINE_HEIGHT: '1.7',
+    // 一般用于标题
+    T_TYPOGRAPHY_FONT_H3_SIZE: '16px',
+    // 粗体字
+    T_TYPOGRAPHY_FONT_H4_FONT_WEIGHT: '600',
+    // 宽松的行高，字号1.7倍
+    T_TYPOGRAPHY_FONT_H4_LINE_HEIGHT: '1.7',
+    // 一般用于正文或者小标题
+    T_TYPOGRAPHY_FONT_H4_SIZE: '14px',
+    // 粗体字
+    T_TYPOGRAPHY_FONT_H5_FONT_WEIGHT: '600',
+    // 宽松的行高，字号1.7倍
+    T_TYPOGRAPHY_FONT_H5_LINE_HEIGHT: '1.7',
+    // 一般用于备注/正文，是浏览器识别的最小字号
+    T_TYPOGRAPHY_FONT_H5_SIZE: '12px',
+    // 默认字体粗细，常规
+    T_TYPOGRAPHY_FONT_PARAGRAPH_IMPACT_FONT_WEIGHT: '400',
+    // 宽松的行高，字号1.7倍
+    T_TYPOGRAPHY_FONT_PARAGRAPH_IMPACT_LINE_HEIGHT: '1.3',
+    // 一般用于备注/正文，是浏览器识别的最小字号
+    T_TYPOGRAPHY_FONT_PARAGRAPH_IMPACT_SIZE: '12px',
+    // 默认字体粗细，常规
+    T_TYPOGRAPHY_FONT_PARAGRAPH_NORMAL_FONT_WEIGHT: '400',
+    // 宽松的行高，字号1.7倍
+    T_TYPOGRAPHY_FONT_PARAGRAPH_NORMAL_LINE_HEIGHT: '1.7',
+    // 一般用于备注/正文，是浏览器识别的最小字号
+    T_TYPOGRAPHY_FONT_PARAGRAPH_NORMAL_SIZE: '12px',
+    // 默认字体粗细，常规
+    T_TYPOGRAPHY_FONT_TEXT_FONT_WEIGHT: '400',
+    // 宽松的行高，字号1.7倍
+    T_TYPOGRAPHY_FONT_TEXT_LINE_HEIGHT: '1.7',
+    // 一般用于备注/正文，是浏览器识别的最小字号
+    T_TYPOGRAPHY_FONT_TEXT_SIZE: '12px',
+    // 排版link中icon的默认颜色
+    T_TYPOGRAPHY_ICON_LINK_DEFAULT: '#c3cad9',
+    // 排版link中icon的hover颜色
+    T_TYPOGRAPHY_ICON_LINK_HOVER: '#3357df',
     // 一般用于备注/正文，是浏览器识别的最小字号
     T_TYPO_FONT_SIZE_1: '12px',
     // 一般用于正文或者小标题
