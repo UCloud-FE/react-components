@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.15.0](https://github.com/UCloud-FE/react-components/compare/v1.14.0...v1.15.0) (2024-12-19)
+
+### Features
+
+-   **tag:** add tag component tokens ([e439c25](https://github.com/UCloud-FE/react-components/commit/e439c2579a6ca1f578932ecf2bea3264cd03848d))
+-   **Tag:** change tokens ([36f8031](https://github.com/UCloud-FE/react-components/commit/36f80316e86a2ecce9bff572bcd1e55bcdf6c7a0))
+
 ## [1.14.0](https://github.com/UCloud-FE/react-components/compare/v1.13.0...v1.14.0) (2024-12-04)
 
 ### Features
