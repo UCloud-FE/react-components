@@ -110,6 +110,23 @@ class DemoForm extends React.PureComponent {
                         }}
                     />
                 </Item>
+                <Item label="input_4">
+                    <ZInput
+                        zName="input_4"
+                        zOptions={{
+                            rules: [
+                                {
+                                    required: true
+                                },
+                                {
+                                    validator: (rule, value, callback) => {
+                                        callback(null);
+                                    }
+                                }
+                            ]
+                        }}
+                    />
+                </Item>
                 <Item label="checkbox_1">
                     <ZCheckbox zName="checkbox_1" />
                 </Item>
