@@ -66,6 +66,13 @@ export interface DefinedCascaderProps {
     popoverProps?: { [key: string]: any };
     /** 分隔符 */
     separator?: string;
+    /** 渲染级联顶部的插槽 */
+    topExtraRender?: (props: {
+        /** 当前级联索引 */
+        index: number;
+        parents?: CascadeData[];
+        items?: CascadeData[];
+    }) => React.ReactNode;
 }
 
 export type CascaderProps = DefinedCascaderProps;
@@ -173,6 +180,7 @@ const Cascader = ({
     status,
     popoverProps,
     separator,
+    topExtraRender
 }: CascaderProps) => {
     const [value, onChange] = useUncontrolled(_value, defaultValue, _onChange);
     const [searchValue, setSearchValue] = useState('');
@@ -273,6 +281,7 @@ const Cascader = ({
                                 onChange={handleSelect}
                                 expandedValue={expandedValue}
                                 onExpand={handleExpand}
+                                topExtraRender={topExtraRender}
                                 loadData={loadData}
                             />
                         )}

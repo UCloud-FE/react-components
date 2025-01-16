@@ -120,12 +120,14 @@ const Cascade = ({
     onChange,
     expandedValue,
     onExpand,
-    loadData
+    loadData,
+    topExtraRender
 }: {
     dataSource?: CascadeData[];
     value?: Key[];
     expandedValue: Key[];
     loadData?: LoadData;
+    topExtraRender?: (props: { index: number; parents?: CascadeData[]; items?: CascadeData[] }) => React.ReactNode;
 } & SharedProps) => {
     const locale = useLocale(LOCALE, 'Cascader');
     const expandedItems = useMemo(() => getExpandedItems(dataSource, expandedValue), [dataSource, expandedValue]);
@@ -149,6 +151,8 @@ const Cascade = ({
                         selectedKey={value?.[index]}
                         expandedKey={expandedValue?.[index]}
                         parents={parents}
+                        index={index}
+                        topExtraRender={topExtraRender}
                         disabled={parents.some(parent => parent.disabled)}
                         loadData={loadData}
                     />
