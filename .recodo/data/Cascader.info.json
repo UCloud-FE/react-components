@@ -22,7 +22,52 @@
                     "tsType": { "name": "Array", "elements": [{ "name": "Key" }], "raw": "Key[]" },
                     "description": ""
                 },
-                "loadData": { "required": false, "tsType": { "name": "LoadData" }, "description": "" }
+                "loadData": { "required": false, "tsType": { "name": "LoadData" }, "description": "" },
+                "topExtraRender": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(props: { index: number; parents?: CascadeData[]; items?: CascadeData[] }) => React.ReactNode",
+                        "signature": {
+                            "arguments": [
+                                {
+                                    "name": "props",
+                                    "type": {
+                                        "name": "signature",
+                                        "type": "object",
+                                        "raw": "{ index: number; parents?: CascadeData[]; items?: CascadeData[] }",
+                                        "signature": {
+                                            "properties": [
+                                                { "key": "index", "value": { "name": "number", "required": true } },
+                                                {
+                                                    "key": "parents",
+                                                    "value": {
+                                                        "name": "Array",
+                                                        "elements": [{ "name": "CascadeData" }],
+                                                        "raw": "CascadeData[]",
+                                                        "required": false
+                                                    }
+                                                },
+                                                {
+                                                    "key": "items",
+                                                    "value": {
+                                                        "name": "Array",
+                                                        "elements": [{ "name": "CascadeData" }],
+                                                        "raw": "CascadeData[]",
+                                                        "required": false
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ],
+                            "return": { "name": "ReactReactNode", "raw": "React.ReactNode" }
+                        }
+                    },
+                    "description": ""
+                }
             }
         }
     },
@@ -210,6 +255,51 @@
                     "required": false,
                     "tsType": { "name": "string" },
                     "description": { "description": "分隔符", "tags": [] }
+                },
+                "topExtraRender": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(props: { index: number; parents?: CascadeData[]; items?: CascadeData[] }) => React.ReactNode",
+                        "signature": {
+                            "arguments": [
+                                {
+                                    "name": "props",
+                                    "type": {
+                                        "name": "signature",
+                                        "type": "object",
+                                        "raw": "{ index: number; parents?: CascadeData[]; items?: CascadeData[] }",
+                                        "signature": {
+                                            "properties": [
+                                                { "key": "index", "value": { "name": "number", "required": true } },
+                                                {
+                                                    "key": "parents",
+                                                    "value": {
+                                                        "name": "Array",
+                                                        "elements": [{ "name": "CascadeData" }],
+                                                        "raw": "CascadeData[]",
+                                                        "required": false
+                                                    }
+                                                },
+                                                {
+                                                    "key": "items",
+                                                    "value": {
+                                                        "name": "Array",
+                                                        "elements": [{ "name": "CascadeData" }],
+                                                        "raw": "CascadeData[]",
+                                                        "required": false
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ],
+                            "return": { "name": "ReactReactNode", "raw": "React.ReactNode" }
+                        }
+                    },
+                    "description": { "description": "渲染级联顶部的插槽", "tags": [] }
                 }
             }
         }
@@ -258,7 +348,53 @@
                     "tsType": { "name": "Array", "elements": [{ "name": "CascadeData" }], "raw": "CascadeData[]" },
                     "description": ""
                 },
-                "loadData": { "required": false, "tsType": { "name": "LoadData" }, "description": "" }
+                "loadData": { "required": false, "tsType": { "name": "LoadData" }, "description": "" },
+                "topExtraRender": {
+                    "required": false,
+                    "tsType": {
+                        "name": "signature",
+                        "type": "function",
+                        "raw": "(props: { index: number; parents?: CascadeData[]; items?: CascadeData[] }) => React.ReactNode",
+                        "signature": {
+                            "arguments": [
+                                {
+                                    "name": "props",
+                                    "type": {
+                                        "name": "signature",
+                                        "type": "object",
+                                        "raw": "{ index: number; parents?: CascadeData[]; items?: CascadeData[] }",
+                                        "signature": {
+                                            "properties": [
+                                                { "key": "index", "value": { "name": "number", "required": true } },
+                                                {
+                                                    "key": "parents",
+                                                    "value": {
+                                                        "name": "Array",
+                                                        "elements": [{ "name": "CascadeData" }],
+                                                        "raw": "CascadeData[]",
+                                                        "required": false
+                                                    }
+                                                },
+                                                {
+                                                    "key": "items",
+                                                    "value": {
+                                                        "name": "Array",
+                                                        "elements": [{ "name": "CascadeData" }],
+                                                        "raw": "CascadeData[]",
+                                                        "required": false
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ],
+                            "return": { "name": "ReactReactNode", "raw": "React.ReactNode" }
+                        }
+                    },
+                    "description": ""
+                },
+                "index": { "required": true, "tsType": { "name": "number" }, "description": "" }
             }
         }
     }

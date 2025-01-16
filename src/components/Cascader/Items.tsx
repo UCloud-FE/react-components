@@ -15,7 +15,9 @@ const Items = ({
     expandedKey,
     disabled,
     parents,
-    loadData
+    loadData,
+    topExtraRender,
+    index
 }: {
     items?: CascadeData[];
     selectedKey?: Key;
@@ -23,6 +25,8 @@ const Items = ({
     disabled?: boolean;
     parents?: CascadeData[];
     loadData?: LoadData;
+    topExtraRender?: (props: { index: number; parents?: CascadeData[]; items?: CascadeData[] }) => React.ReactNode;
+    index: number;
 }) => {
     const [initial, setInitial] = useState(true);
     const [loading, setLoading] = useState(false);
@@ -50,6 +54,12 @@ const Items = ({
             exited = true;
         };
     }, [items, loadData, parents]);
+
+    const topExtraRenderDom = React.useMemo(() => {
+        if (typeof topExtraRender !== 'function') return null;
+        return topExtraRender({ index, items, parents });
+    }, [index, items, parents, topExtraRender]);
+
     return (
         <Loading loading={loading}>
             {error ? (
@@ -59,11 +69,12 @@ const Items = ({
                     </Notice>
                 </div>
             ) : initial || loading ? (
-                <div className={itemsCls}></div>
+                <div className={itemsCls}>{topExtraRenderDom}</div>
             ) : !items || !items.length ? (
                 <div className={emptyCls}>{locale.emptyTip}</div>
             ) : (
                 <div className={itemsCls}>
+                    {topExtraRenderDom}
                     {items.map(item => {
                         const { key: value, disabled: itemDisabled, title, children, isParent } = item;
                         const finalDisabled = disabled || itemDisabled;
