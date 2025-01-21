@@ -50,6 +50,8 @@ export { default as Breadcrumb } from './lib/components/Breadcrumb';
 
 export { default as Nav } from './lib/components/Nav';
 
+export { default as Skeleton } from './lib/components/Skeleton';
+
 // Button
 import { ButtonProps } from './lib/components/Button/Button';
 export { default as Button } from './lib/components/Button';
@@ -82,7 +84,7 @@ export interface RowProps extends HTMLAttributes<HTMLDivElement> {
     type?: RowType;
     align?: RowAlign;
     justify?: RowJustify;
-    gutter?: number;
+    gutter?: number | [number, number];
 }
 export declare class Row extends Component<RowProps> {}
 
@@ -430,12 +432,12 @@ export interface TagProps extends HTMLAttributes<HTMLSpanElement> {
     borderType?: 'default' | 'circle';
     suffix?: ReactNode;
 }
-export  interface TagGroupProps  extends HTMLAttributes<HTMLDivElement>{
+export interface TagGroupProps extends HTMLAttributes<HTMLDivElement> {
     children?: ReactNode;
     compact?: boolean;
     exposeCount?: number;
-    popoverProps?: PopoverProps
-} 
+    popoverProps?: PopoverProps;
+}
 export declare class TagIcon extends PureComponent<TagProps> {}
 export declare class TagGroup extends PureComponent<TagGroupProps> {}
 export declare class Tag extends PureComponent<TagProps> {
@@ -518,7 +520,7 @@ interface ModalConfirmHandle {
     destroy(): void;
 }
 interface ModalConfirm {
-    (options: ModalProps): ModalConfirmHandle;
+    (options: ModalProps, contentNode?: ReactNode): ModalConfirmHandle;
 }
 export declare class ModalContent extends Component<HTMLAttributes<HTMLDivElement>> {}
 export declare class Modal extends Component<ModalProps> {
@@ -551,7 +553,7 @@ export interface TableScroll {
     y?: number;
     onScroll?: (e: WheelEvent) => void;
 }
-type RowKey = () => string;
+type RowKey = (row: any) => string;
 export interface RowSelection {
     fixed?: boolean;
     onChange?: Function;
@@ -562,8 +564,9 @@ export interface RowSelection {
     selectedTip?: boolean | 'button';
     disabled?: boolean;
 }
-interface GetRowClassName {
-    (): string;
+interface DragSorting {
+    fixed: boolean;
+    onChange: (record: any, fromIndex: number, toIndex: number) => void;
 }
 interface ColumnRender {
     (col: any, row?: any): ReactNode;
@@ -585,12 +588,11 @@ export interface Column {
 interface DefaultColumnConfig {
     [key: string]: string;
 }
-interface TableRowBack extends HTMLTableDataCellElement {}
 interface TableCustomStyle {
     outerPadding?: string;
     [key: string]: any;
 }
-interface TableDefaultOrder {
+interface TableOrder {
     key: string;
     state: 'desc' | 'asc';
 }
@@ -621,11 +623,13 @@ export interface TableProps {
     defaultExpandAllRows?: boolean;
     onExpandedRowsChange?: (row: any) => void;
     onExpand?: Function;
-    onRow?: (row: any, index: number) => TableRowBack;
-    onHeaderRow?: (row: any, index: number) => TableRowBack;
+    onRow?: (row: any, index: number) => any;
+    onHeaderRow?: (row: any, index: number) => any;
     rowSelection?: RowSelection | true;
+    dragSorting?: boolean | DragSorting;
     onRowSelect?: (keys: string[]) => void;
     showHeader?: boolean;
+    columnResizable?: boolean;
     title?: () => ReactNode;
     footer?: () => ReactNode;
     emptyContent?: ReactNode;
@@ -637,12 +641,12 @@ export interface TableProps {
     rowKey?: string | RowKey;
     zebraCrossing?: boolean;
     components?: any;
-    defaultOrder?: TableDefaultOrder;
+    defaultOrder?: TableOrder;
+    order?: TableOrder;
     onConditionChange?: ConditionChangeEvent;
     doNotHandleCondition?: boolean;
     contextMenu?: TableContextMenu;
     className?: string;
-    rowClassName?: string | GetRowClassName;
 }
 interface ColumnConfigButtonProps extends ButtonProps {
     modalProps?: ModalProps;
@@ -729,12 +733,12 @@ interface Step {
     remark?: ReactNode;
     status?: 'disabled' | 'error' | 'success' | 'normal';
 }
-export interface StepsProps extends HTMLAttributes<HTMLDivElement> {
+export interface StepsProps extends Omit<HTMLAttributes<HTMLDivElement>, 'onChange'> {
     steps: Step[];
     current?: string | number;
     status?: 'current' | 'loading' | 'error';
     direction?: 'horizontal' | 'vertical';
-    nowrap?:boolean;
+    nowrap?: boolean;
     onChange?: (current: string | number) => void;
 }
 export declare class Steps extends Component<StepsProps> {}
