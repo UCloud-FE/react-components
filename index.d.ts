@@ -597,8 +597,8 @@ interface TableOrder {
     state: 'desc' | 'asc';
 }
 export interface TableConditionChangeEventOrder {
-    order: string;
-    filter: string[];
+    order: TableOrder;
+    filters: { key: string; value: string }[];
     searchValue: string;
 }
 interface ConditionChangeEvent {
