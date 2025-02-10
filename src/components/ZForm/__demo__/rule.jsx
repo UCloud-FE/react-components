@@ -49,6 +49,8 @@ class DemoForm extends React.PureComponent {
         };
         const error1 = getError(originErrors, 'input_1');
         const error3 = getError(originErrors, 'input_3');
+        const error4 = getError(originErrors, 'input_4');
+        const error5 = getError(originErrors, 'input_5');
         const subError1 = getError(originErrors, 'sub_item_1');
         console.log(originErrors);
         return (
@@ -113,6 +115,7 @@ class DemoForm extends React.PureComponent {
                 <Item label="input_4">
                     <ZInput
                         zName="input_4"
+                        {...(error4 ? { status: 'error', tip: error4.join(',') } : { tip: 'this is required' })}
                         zOptions={{
                             rules: [
                                 {
@@ -121,6 +124,24 @@ class DemoForm extends React.PureComponent {
                                 {
                                     validator: (rule, value, callback) => {
                                         callback(null);
+                                    }
+                                }
+                            ]
+                        }}
+                    />
+                </Item>
+                <Item label="input_5">
+                    <ZInput
+                        zName="input_5"
+                        {...(error5 ? { status: 'error', tip: error5.join(',') } : { tip: 'this is required' })}
+                        zOptions={{
+                            rules: [
+                                {
+                                    required: true
+                                },
+                                {
+                                    validator: (rule, value, callback) => {
+                                        callback('error tips');
                                     }
                                 }
                             ]
