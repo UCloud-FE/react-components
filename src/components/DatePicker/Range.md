@@ -78,3 +78,8 @@
 
 ```js {"codepath": "range-customRender.jsx"}
 ```
+
+#### adjustX - 边界情况
+
+```js {"codepath": "range-adjustX.jsx"}
+```
