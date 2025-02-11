@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.16.0](https://github.com/UCloud-FE/react-components/compare/v1.15.0...v1.16.0) (2025-02-11)
+
+### Features
+
+-   **Cascader:** cascader top extra render ([7c90038](https://github.com/UCloud-FE/react-components/commit/7c90038be1b0b6382a63eceb2b7e4c954e4f0823))
+-   **DatePicker:** merge pop ups ([b632177](https://github.com/UCloud-FE/react-components/commit/b632177c0dad0c3ecdcdbfed90ac63503492ba57))
+-   **locale:** update locale of en ([07b39a9](https://github.com/UCloud-FE/react-components/commit/07b39a93356d82bc4ce1d47a2cb056add01349dd))
+
+### Bug Fixes
+
+-   **DatePicker:** adjustX ([1bf69d6](https://github.com/UCloud-FE/react-components/commit/1bf69d67c14bf4bf66516fd6244dce189dc40216))
+-   **ZForm:** fix validator null ([b6fb7b7](https://github.com/UCloud-FE/react-components/commit/b6fb7b741a0471ed99660243fd8654b7b61baa79))
+
 ## [1.15.0](https://github.com/UCloud-FE/react-components/compare/v1.14.0...v1.15.0) (2024-12-19)
 
 ### Features
