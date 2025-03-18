@@ -933,6 +933,7 @@ const MultipleListSelector = React.memo(function MultipleSelector(props: Selecto
         value,
         onChange,
         placeholder,
+        renderContent,
         search,
         searchValue = '',
         setSearchValue,
@@ -951,10 +952,10 @@ const MultipleListSelector = React.memo(function MultipleSelector(props: Selecto
             ((value as Key[]) || []).map(v => {
                 return {
                     key: v,
-                    children: childrenMap.has(v) ? childrenMap.get(v) : v
+                    children: childrenMap.has(v) ? (renderContent ? renderContent(v) :  childrenMap.get(v) ): v
                 };
             }),
-        [childrenMap, value]
+        [childrenMap, value, renderContent]
     );
 
     const handleClose = useCallback(
@@ -1053,6 +1054,7 @@ const MultipleSelector = React.memo(function MultipleSelector(props: SelectorPro
         value,
         onChange,
         placeholder,
+        renderContent,
         search,
         searchValue = '',
         setSearchValue,
@@ -1070,10 +1072,10 @@ const MultipleSelector = React.memo(function MultipleSelector(props: SelectorPro
             ((value as Key[]) || []).map(v => {
                 return {
                     key: v,
-                    children: childrenMap.has(v) ? childrenMap.get(v) : v
+                    children: childrenMap.has(v) ? (renderContent ? renderContent(v) : childrenMap.get(v) ): v
                 };
             }),
-        [childrenMap, value]
+        [childrenMap, value, renderContent]
     );
 
     const handleClose = useCallback(
