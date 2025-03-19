@@ -46,6 +46,10 @@ export type ItemType = {
    * 隐藏分割线
    */
   noBorder?: boolean;
+  /**
+   * 父级标签的高度
+   */
+  parentHeight?: number;
 };
 export interface ConfigInfoProps {
   /**

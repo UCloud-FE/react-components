@@ -94,6 +94,7 @@ export const StyledItem = withProps()(
             styleType = 'horizontal',
             aligin = 'left',
             prefix,
+            height,
             theme: { designTokens: DT }
         } = props;
 
@@ -105,7 +106,7 @@ export const StyledItem = withProps()(
             align-items: center;
             font-size: ${DT.T_TYPO_FONT_SIZE_1};
             vertical-align: middle;
-           
+            height: ${height + 'px' || 'auto'};
             ${justifyContent}
             .${itemPrefixCls}{
               display: block;
@@ -117,17 +118,20 @@ export const StyledItem = withProps()(
             }
             .${itemBodyCls} {
                display:  flex;
+               height: 100%;
                box-sizing: border-box;
                align-items: center;
                vertical-align: middle;
                ${styleType === 'vertical' ? 'flex:1;' : ''}
             }
             .${itemSourceCls}{
-               display: ${styleType === 'horizontal' ? 'flex' : 'block'};
+               display: flex;
+               flex-direction:${styleType === 'horizontal' ? 'row' : 'column'} ;
+               align-items: ${styleType === 'horizontal' ? 'center' : 'flex-start'} ;
                box-sizing: border-box;
-               align-items: center;
                vertical-align: middle;
-                flex:auto;
+               flex:auto;
+               height: 100%;
             }
             .${itemTitleCls} {
                 box-sizing: border-box;
@@ -169,6 +173,7 @@ export const StyledItem = withProps()(
                 text-align: ${aligin};
                 color: ${DT.T_COLOR_TEXT_DEFAULT_DARK};
                 min-width: 0;
+                word-break: break-all;
             }
             .${itemContentRemarkCls}{
                 color: ${DT.T_LIST_CONTENT_FONT_COLOR_REMARK};

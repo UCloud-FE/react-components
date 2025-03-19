@@ -28,6 +28,7 @@ const Item = ({
     extra,
     customTitleWidth,
     prefix,
+    parentHeight,
     aligin = 'left'
 }: ItemType): JSX.Element => {
     const renderTitle = () => {
@@ -51,6 +52,7 @@ const Item = ({
             styleType={styleType}
             aligin={aligin}
             prefix={prefix}
+            height={parentHeight}
         > 
             <ItemBody prefix={prefix}>
               {
