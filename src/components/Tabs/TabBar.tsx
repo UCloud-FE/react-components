@@ -588,7 +588,7 @@ const TabBar = (props: TabBarProps) => {
                      alignItems="center"
                 >
                     <Box 
-                        flex={1} 
+                        flex="1" 
                         className={classnames({
                             [`${prefixCls}-srcoll-box`]: 1,
                         })}
