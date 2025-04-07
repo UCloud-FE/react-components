@@ -140,6 +140,11 @@
 ```js {"codepath": "subTableForCheckBox.jsx"}
 ```
 
+#### 子表格-复选框 父子联动 远程数据清除之前选择
+
+```js {"codepath": "loadingDataFromRemoteForrowSelection.jsx"}
+```
+
 #### onConditionChange - 由于 pagination 的某些设计，onConditionChange 返回值中不包含 pagination 变化，要监听 pagination 请使用 pagination 参数
 
 ```js {"codepath": "onConditionChange.jsx"}
