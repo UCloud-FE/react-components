@@ -185,7 +185,11 @@ class Table extends Component {
                  * @default false
                  */
 
-                linkage: PropTypes.bool
+                linkage: PropTypes.bool,
+                /**
+                 * dataSource变更时, 是否重置选中项 ，默认为false
+                 */
+                resetSelected: PropTypes.bool
             }),
             PropTypes.oneOf([true])
         ]),
@@ -339,6 +343,13 @@ class Table extends Component {
                 flatDataSourceKeys: flatDataSourceKeys
             },
             () => {
+                if (rowSelection.resetSelected) {
+                    this.onSelectedRowKeysChange({});
+                    this.setState({
+                        indeterminateSelectedRowKeyMap: {}
+                    });
+                    return;
+                }
                 if (rowSelection.multiple !== false && rowSelection.linkage && flatDataSourceKeys.length) {
                     const { finalMergeMap, finalIndeterminate } = Object.keys(selectedRowKeyMap).reduce(
                         (p, key) => {
@@ -829,7 +840,13 @@ class Table extends Component {
             );
         }
     };
-    initLinkageRowSelectionMap(nowSelectedRowKeyMap, checked, key, flatDataSourceKeys, indeterminateSelectedRowKeyMap) {
+    initLinkageRowSelectionMap(
+        nowSelectedRowKeyMap = {},
+        checked,
+        key,
+        flatDataSourceKeys = [],
+        indeterminateSelectedRowKeyMap = {}
+    ) {
         if (!flatDataSourceKeys.length) {
             return {
                 mergeMap: {},
@@ -848,8 +865,9 @@ class Table extends Component {
         const record = flatDataSourceKeys.find(record => String(record.key) == String(key));
         // 禁用需要剔除的key
         const disabledItems = this.initDisabledOfRow(flatDataSourceKeys);
-
-        indeterminate[String(record.key)] = false;
+        if (record) {
+            indeterminate[String(record.key)] = false;
+        }
         // 子被动全选
         if (record && record.childrenKeys && record.childrenKeys.length > 0) {
             record.childrenKeys.forEach(childKey => {
@@ -891,7 +909,7 @@ class Table extends Component {
             }
         }
 
-        if (record.parent) {
+        if (record && record.parent) {
             changeParentChecked(record.parent, checked, disabledItems);
         }
         disabledItems.forEach(key => {
