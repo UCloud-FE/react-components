@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.17.0](https://github.com/UCloud-FE/react-components/compare/v1.16.0...v1.17.0) (2025-04-08)
+
+### Features
+
+-   **Table:** table add reset selected ([67f4441](https://github.com/UCloud-FE/react-components/commit/67f444180bab67014251580a22fd8f83e475d414))
+
+### Bug Fixes
+
+-   **Select:** multiple add renderContent ([62568d5](https://github.com/UCloud-FE/react-components/commit/62568d5064d6f75d921b2a7270336557ab9236c3))
+-   **TabBar:** flex type ([b84e4b4](https://github.com/UCloud-FE/react-components/commit/b84e4b45a1c14cb3b520fc96fd1436486a2d4eb8))
+
 ## [1.16.0](https://github.com/UCloud-FE/react-components/compare/v1.15.0...v1.16.0) (2025-02-11)
 
 ### Features
