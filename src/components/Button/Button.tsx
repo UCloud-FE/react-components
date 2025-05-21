@@ -4,7 +4,7 @@ import Icon from 'src/components/Icon';
 import SvgIcon from 'src/components/SvgIcon';
 import { Override } from 'src/type';
 
-import { SButton, iconCls } from './style';
+import { SButton, iconCls, iconMarginRightls } from './style';
 import { StyleTypes, Sizes, Shapes } from './shared';
 
 const defaultProps = {
@@ -56,11 +56,11 @@ export default class Button extends PureComponent<
     static Sizes = Sizes;
     static Shapes = Shapes;
     renderIcon = () => {
-        const { loading, icon } = this.props;
+        const { loading, icon, children } = this.props;
         if (loading) {
-            return <SvgIcon className={iconCls} type="ring-loading" spin />;
+            return <SvgIcon className={`${iconCls} ${children?iconMarginRightls:''}`} type="ring-loading" spin />;
         } else if (typeof icon === 'string') {
-            return <Icon className={iconCls} type={icon} />;
+            return <Icon className={`${iconCls} ${children?iconMarginRightls:''}`} type={icon} />;
         }
         return icon;
     };

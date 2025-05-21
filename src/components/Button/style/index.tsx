@@ -20,6 +20,7 @@ import { StyleTypes, Sizes, Shapes } from '../shared';
 const { prefixCls: _prefixCls } = config;
 const prefixCls = _prefixCls + '-button';
 export const iconCls = prefixCls + '-icon';
+export const iconMarginRightls = prefixCls + '-icon-margin-right';
 
 interface SButtonProps {
     styleType: typeof StyleTypes[number];
@@ -65,22 +66,26 @@ const styleTypeMixin = (props: SButtonPropsFinal) => {
             fill: DT.T_BUTTON_PRIMARY_COLOR_TEXT_DEFAULT,
             border: 'none',
             background: DT.T_BUTTON_PRIMARY_COLOR_BG_DEFAULT,
-            boxShadow: DT.T_SHADOW_BUTTON_PRIMARY,
+            // boxShadow: DT.T_SHADOW_BUTTON_PRIMARY,
+            boxShadow: DT.T_BUTTON_PRIMARY_COLOR_SHADOW_DEFAULT,
             transition: `${transitionProperty} ${transitionFlat}`,
             ':link,:visited': {
                 color: DT.T_BUTTON_PRIMARY_COLOR_TEXT_DEFAULT
             },
             ':hover,:active': {
                 background: DT.T_BUTTON_PRIMARY_COLOR_BG_HOVER,
-                boxShadow: DT.T_SHADOW_BUTTON_PRIMARY_HOVER
+                // boxShadow: DT.T_SHADOW_BUTTON_PRIMARY_HOVER
+                boxShadow: DT.T_BUTTON_PRIMARY_COLOR_SHADOW_HOVER
             }
         },
         border: {
             color: DT.T_COLOR_TEXT_DEFAULT_DARK,
             fill: DT.T_COLOR_TEXT_DEFAULT_DARK,
             background: DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT,
-            border: `1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK}`,
-            boxShadow: DT.T_SHADOW_BUTTON_DEFAULT,
+            // border: `1px solid ${DT.T_COLOR_LINE_DEFAULT_DARK}`,
+            border: `1px solid ${DT.T_BUTTON_SECONDARY_COLOR_BORDER_DEFAULT}`,
+            // boxShadow: DT.T_SHADOW_BUTTON_DEFAULT,
+            boxShadow: DT.T_BUTTON_SECONDARY_COLOR_SHADOW_DEFAULT,
             transition: `${transitionProperty} ${transitionFlat}`,
             ':link,:visited': {
                 color: DT.T_COLOR_TEXT_DEFAULT_DARK
@@ -88,25 +93,33 @@ const styleTypeMixin = (props: SButtonPropsFinal) => {
             ':hover,:active': {
                 color: DT.T_COLOR_TEXT_PRIMARY_DEFAULT,
                 fill: DT.T_COLOR_TEXT_PRIMARY_DEFAULT,
-                border: `1px solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT}`,
-                background: DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT,
-                boxShadow: DT.T_SHADOW_BUTTON_HOVER
+                // border: `1px solid ${DT.T_COLOR_LINE_DEFAULT_LIGHT}`,
+                border: `1px solid ${DT.T_BUTTON_SECONDARY_COLOR_BORDER_HOVER}`,
+                // background: DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT,
+                background: DT.T_BUTTON_SECONDARY_COLOR_BG_HOVER,
+                // boxShadow: DT.T_SHADOW_BUTTON_HOVER
+                boxShadow: DT.T_BUTTON_SECONDARY_COLOR_SHADOW_HOVER
             }
         },
         'border-gray': {
             color: DT.T_COLOR_TEXT_DEFAULT_LIGHT,
             fill: DT.T_COLOR_TEXT_DEFAULT_LIGHT,
-            borderColor: DT.T_COLOR_LINE_DEFAULT_LIGHT,
-            background: DT.T_COLOR_BG_DEFAULT_LIGHT,
+            // borderColor: DT.T_COLOR_LINE_DEFAULT_LIGHT,
+            borderColor: DT.T_BUTTON_OTHER_COLOR_BORDER_DEFAULT,
+            // background: DT.T_COLOR_BG_DEFAULT_LIGHT,
+            background: DT.T_BUTTON_OTHER_COLOR_BG_DEFAULT,
             transition: `${transitionProperty} ${transitionFlat}`,
+            boxShadow: DT.T_BUTTON_OTHER_COLOR_SHADOW_DEFAULT,
             ':link,:visited': {
                 color: DT.T_COLOR_TEXT_DEFAULT_LIGHT
             },
             ':hover,:active': {
                 color: DT.T_COLOR_TEXT_PRIMARY_DEFAULT,
                 fill: DT.T_COLOR_TEXT_PRIMARY_DEFAULT,
-                borderColor: DT.T_COLOR_LINE_PRIMARY_HOVER,
-                background: checkAble ? DT.T_COLOR_BG_DEFAULT_LIGHT : DT.T_BUTTON_SECONDARY_COLOR_BG_DEFAULT
+                // borderColor: DT.T_COLOR_LINE_PRIMARY_HOVER,
+                borderColor: DT.T_BUTTON_OTHER_COLOR_BORDER_HOVER,
+                boxShadow: DT.T_BUTTON_OTHER_COLOR_SHADOW_HOVER,
+                background: checkAble ? DT.T_BUTTON_OTHER_COLOR_BG_DEFAULT : DT.T_BUTTON_OTHER_COLOR_BG_HOVER
             }
         }
     };
@@ -120,6 +133,9 @@ const styleTypeMixin = (props: SButtonPropsFinal) => {
         transition: `${transitionProperty} ${transitionFlat}`
     };
     return css`
+        .${iconMarginRightls}{
+            margin-right: ${DT.T_SPACING_COMMON_XS};
+        }
         ${disabled ? disabledTheme : styleTypeTheme[styleType]};
         ${(disabled || styleType === 'border' || styleType === 'border-gray') &&
         css`
