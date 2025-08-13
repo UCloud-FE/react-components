@@ -69,6 +69,7 @@ class Table extends Component {
             searchValue: ''
         };
         this.tableId = `uc_table_uid_${uid++}`;
+        this._selectedRowsMap = {};
         // init pagination
         const { pagination } = props;
         if (_.isObject(pagination)) {
@@ -480,7 +481,7 @@ class Table extends Component {
     };
     //设置选中的keys
     onSelectedRowKeysChange = selectedRowKeyMap => {
-        const { rowSelection } = this.props;
+        const { rowSelection, dataSource } = this.props;
         const { parentSelectedRowKeys } = this.state;
         if (!rowSelection) return;
         const selectedRowKeys = [];
@@ -488,9 +489,17 @@ class Table extends Component {
         _.each(selectedRowKeyMap, (selected, key) => {
             selected && selectedRowKeys.push(key);
         });
+        // 计算所有选中的行数据，包括折叠的子项
+        const flatDataSource = this.flatDataSource(dataSource);
+        flatDataSource.forEach(item => {
+            if (selectedRowKeyMap[item.key]) {
+                this._selectedRowsMap[item.key] = item.record;
+            }
+        });
         if (_.isObject(rowSelection)) {
             if (rowSelection.onChange) {
-                rowSelection.onChange(selectedRowKeys);
+                const selectedRows = selectedRowKeys.map(key => this._selectedRowsMap[key]);
+                rowSelection.onChange(selectedRowKeys, selectedRows);
             }
             if (!('selectedRowKeys' in rowSelection)) {
                 this.setState({

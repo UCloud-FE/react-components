@@ -1,6 +1,6 @@
-import React from 'react';
+import { fireEvent, render, waitFor } from '@testing-library/react';
 import { mount } from 'enzyme';
-import { render, waitFor, fireEvent } from '@testing-library/react';
+import React from 'react';
 import Table from 'src/components/Table';
 
 jest.unmock('rc-trigger');
@@ -80,7 +80,19 @@ describe('Table', () => {
         expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-checkbox-disabled').length).toBe(4);
         expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-checkbox-checked.uc-fe-checkbox-disabled').length).toBe(2);
         expect(onRowSelect).toHaveBeenCalledTimes(++onRowSelectTimes);
-        expect(onRowSelect).toHaveBeenLastCalledWith(['1', '2', '4', '5', '6', '7', '8', '9']);
+        expect(onRowSelect).toHaveBeenLastCalledWith(
+            ['1', '2', '4', '5', '6', '7', '8', '9'],
+            [
+                { index: 'index-1', i: 1 },
+                { index: 'index-2', i: 2 },
+                { index: 'index-4', i: 4 },
+                { index: 'index-5', i: 5 },
+                { index: 'index-6', i: 6 },
+                { index: 'index-7', i: 7 },
+                { index: 'index-8', i: 8 },
+                { index: 'index-9', i: 9 }
+            ]
+        );
     });
     test('linkage select', () => {
         const onRowSelect = jest.fn();
@@ -174,7 +186,14 @@ describe('Table', () => {
         expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-checkbox-disabled').length).toBe(0);
         expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-checkbox-checked.uc-fe-checkbox-disabled').length).toBe(0);
         expect(onRowSelect).toHaveBeenCalledTimes(++onRowSelectTimes);
-        expect(onRowSelect).toHaveBeenLastCalledWith(['0', '0-1', '0-2']);
+        expect(onRowSelect).toHaveBeenLastCalledWith(
+            ['0', '0-1', '0-2'],
+            [
+                { key: '0', name: 'name-0', desc: 'desc-0' },
+                { key: '0-1', name: 'name-1-1', desc: 'desc-1-1' },
+                { key: '0-2', name: 'name-1-2', desc: 'desc-1-2' }
+            ]
+        );
     });
     test('single select', () => {
         const onRowSelect = jest.fn();
@@ -222,7 +241,7 @@ describe('Table', () => {
         expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-radio-checked').length).toBe(1);
         expect(wrapper.find('.uc-fe-table-tbody span.uc-fe-radio-checked.uc-fe-radio-disabled').length).toBe(0);
         expect(onRowSelect).toHaveBeenCalledTimes(++onRowSelectTimes);
-        expect(onRowSelect).toHaveBeenLastCalledWith(['5']);
+        expect(onRowSelect).toHaveBeenLastCalledWith(['5'], [{ i: 5, index: 'index-5' }]);
     });
     test('defaultExpandAllRows', () => {
         const onExpand = jest.fn();
