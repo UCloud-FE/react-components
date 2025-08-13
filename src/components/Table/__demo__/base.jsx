@@ -92,8 +92,8 @@ class Demo extends React.Component {
                 dataSource={this.state.data}
                 rowSelection={{
                     selectedRowKeys,
-                    onChange: selectedRowKeys => {
-                        console.log(selectedRowKeys);
+                    onChange: (selectedRowKeys, selectedRows) => {
+                        console.log(selectedRowKeys, selectedRows);
                         this.setState({ selectedRowKeys });
                     }
                 }}
