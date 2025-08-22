@@ -12,8 +12,12 @@ class MessageContainer extends Component {
     };
     state = {
         messages: [],
-        top: this.props.top
+        top: this.props.top,
+        deleteIds: []
     };
+    componentDidMount() {
+        this.setTop(this.props.top);
+    }
     appendMessage = message => {
         const uid = _.uniqueId('uc_message_');
         this.setState({
@@ -24,14 +28,44 @@ class MessageContainer extends Component {
         });
         return uid;
     };
-    removeMessage = uid => {
-        const { messages } = this.state;
-        const newMessages = messages.filter(info => info.uid !== uid);
+    sleep = duration => {
+        return new Promise(resolve => {
+            setTimeout(() => {
+                resolve();
+            }, duration);
+        });
+    };
+    removeMessage = async (uid, messageDomId) => {
+        const { deleteIds } = this.state;
+
+        this.setState({
+            deleteIds: [...deleteIds, uid]
+        });
+        const willDeleteMessage = document.getElementById(messageDomId);
+
+        willDeleteMessage.style.minHeight = '0';
+        willDeleteMessage.style.height = '0';
+        willDeleteMessage.style.padding = '0';
+        willDeleteMessage.style.marginBottom = '0';
+        willDeleteMessage.style.marginTop = '0';
+        willDeleteMessage.style.border = '0';
+        willDeleteMessage.style.overflow = 'hidden';
+        willDeleteMessage.style.opacity = '0';
+
+        _.debounce(() => {
+            this.refreshMessage();
+        }, 1000)();
+    };
+    refreshMessage = () => {
+        const { messages, deleteIds } = this.state;
+        const newMessages = messages.filter(info => !deleteIds.includes(info.uid));
         const removed = newMessages.length !== messages.length;
-        removed &&
-            this.setState({
-                messages: newMessages
-            });
+
+        this.setState({
+            messages: newMessages,
+            deleteIds: []
+        });
+
         return removed;
     };
     setTop = top => {
