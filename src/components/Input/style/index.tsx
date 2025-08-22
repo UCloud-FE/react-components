@@ -119,7 +119,7 @@ export const InputWrap = sWrap<InputWrapProps, HTMLSpanElement>({
             color: ${DT.T_COLOR_TEXT_DEFAULT_LIGHT};
             fill: currentColor;
             border: ${DT.T_LINE_WIDTH_BASE} solid ${DT.T_COLOR_LINE_DEFAULT_DARK};
-            box-shadow: ${DT.T_SHADOW_INSET_DEFAULT};
+            box-shadow: ${DT.T_INPUT_COLOR_SHADOW_DEFAULT};
             background: ${DT.T_INPUT_COLOR_BG_DEFAULT};
             transition: .18s cubic-bezier(.4,0,.2,1);
             cursor: ${cursor};
@@ -224,7 +224,7 @@ export const InputWrap = sWrap<InputWrapProps, HTMLSpanElement>({
                 status === 'error' &&
                 css`
                     &&& {
-                        box-shadow: ${DT.T_SHADOW_INSET_ERROR};
+                        box-shadow: ${DT.T_INPUT_COLOR_SHADOW_ERROR};
                         border-color: ${DT.T_COLOR_LINE_ERROR_DARK};
                         background: ${DT.T_COLOR_BG_ERROR_LIGHT};
                     }
