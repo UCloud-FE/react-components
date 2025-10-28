@@ -1,4 +1,4 @@
-import type { CSSProperties, ReactNode, Component, PureComponent, HTMLAttributes, TextareaHTMLAttributes } from 'react';
+import type { Component, CSSProperties, HTMLAttributes, PureComponent, ReactNode, TextareaHTMLAttributes } from 'react';
 
 // 忽略 T 对象中 键在 K 中的所有的属性
 type Override<T1, T2> = Omit<T1, keyof T2> & T2;
@@ -446,44 +446,8 @@ export declare class Tag extends PureComponent<TagProps> {
 }
 
 // Popover
-interface PopupAlign {
-    points?: string[];
-    offset?: number[];
-}
-export type PopoverPlacement =
-    | 'topLeft'
-    | 'top'
-    | 'topRight'
-    | 'bottomLeft'
-    | 'bottom'
-    | 'bottomRight'
-    | 'leftTop'
-    | 'left'
-    | 'leftBottom'
-    | 'rightTop'
-    | 'right'
-    | 'rightBottom';
-export interface GetPopupContainer {
-    (): HTMLElement;
-}
-export interface PopoverProps extends HTMLAttributes<HTMLDivElement> {
-    visible?: boolean;
-    defaultVisible?: boolean;
-    onVisibleChange?: (visible: boolean) => void;
-    trigger?: 'hover' | 'focus' | 'click' | 'contextMenu';
-    alignPoint?: boolean;
-    placement?: PopoverPlacement;
-    align?: PopupAlign;
-    stretch?: 'with' | 'minWidth' | 'height' | 'minHeight';
-    popup?: ReactNode;
-    popupClassName?: string;
-    popupStyle?: CSSProperties;
-    zIndex?: number;
-    getPopupContainer?: GetPopupContainer;
-    forwardPopupContainer?: boolean | GetPopupContainer;
-    prefixCls?: string;
-    animation?: 'fade' | 'zoom' | 'bounce' | 'slide-up';
-}
+import { GetPopupContainer, PopoverPlacement, PopoverProps, PopupAlign } from './lib/components/Popover';
+export type { GetPopupContainer, PopoverPlacement, PopoverProps, PopupAlign };
 export declare class Popover extends Component<PopoverProps> {}
 
 // Modal
