@@ -35,6 +35,12 @@ class Demo extends React.Component {
                             onChange: console.log,
                             getDisabledOfRow: record => record.key < 4
                         }}
+                        rowTooltip={record => {
+                            return {
+                                popup: <div>整行的提示：{record.index}</div>,
+                                theme: 'dark'
+                            };
+                        }}
                         dataSource={dataSource}
                         columns={columns}
                     />

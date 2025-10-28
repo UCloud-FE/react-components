@@ -1,18 +1,17 @@
 import classnames from 'classnames';
-import React, { useMemo } from 'react';
+import React, { ReactNode, useMemo } from 'react';
 
-import Popover from 'src/components/Popover';
+import Popover, { Animation, Placement, PopoverProps, Trigger } from 'src/components/Popover';
 import { getPlacements } from 'src/components/Popover/placements';
 import usePopoverConfig from 'src/hooks/usePopoverConfig';
 
-import { TooltipWrap, Arrow, ArrowInner, ContentWrap, tooltipPopupClassName } from './style';
+import { Arrow, ArrowInner, ContentWrap, tooltipPopupClassName, TooltipWrap } from './style';
 
-const { Animation, Trigger, Placement } = Popover as any;
 const arrowPlacements = getPlacements(10);
 const placements = getPlacements();
 const Theme = ['light', 'dark'];
 
-interface TooltipProps {
+export interface TooltipProps extends PopoverProps {
     /** 是否显示箭头 */
     arrow?: boolean;
     /** 主题风格 */
@@ -22,6 +21,8 @@ interface TooltipProps {
         /** 弹出层外层 padding */
         popupWrapperPadding?: string;
     };
+    /** 弹出层内容 */
+    popup?: ReactNode;
 }
 
 const Tooltip = ({

@@ -274,6 +274,12 @@ class Table extends Component {
          * @param record - 该行的记录值
          */
         contextMenu: PropTypes.func,
+        /**
+         * 行提示
+         * @param record - 该行的记录值
+         * @return TooltipProps
+         */
+        rowTooltip: PropTypes.func,
         /** @ignore */
         className: PropTypes.string,
         /** @ignore */
@@ -1449,11 +1455,12 @@ class Table extends Component {
         }
     };
     onRow = (record, index) => {
-        const { onRow = noop, contextMenu } = this.props;
+        const { onRow = noop, contextMenu, rowTooltip } = this.props;
         return {
             ...onRow(record, index),
             record,
-            contextMenu
+            contextMenu,
+            rowTooltip
         };
     };
     savePopupContainer = _ref => {
