@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.18.0](https://github.com/UCloud-FE/react-components/compare/v1.17.1...v1.18.0) (2025-10-28)
+
+### Features
+
+-   **Table:** table row supports tooltip ([61a6f08](https://github.com/UCloud-FE/react-components/commit/61a6f08d08b7dfa5e45ef05995327240145af181))
+
 ### [1.17.1](https://github.com/UCloud-FE/react-components/compare/v1.17.0...v1.17.1) (2025-08-22)
 
 ### Features
