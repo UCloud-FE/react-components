@@ -164,7 +164,7 @@ const ActionMenu = ({
                     <Button {...dropdownButton} />
                 )
             ) : (
-                <Button size={size} styleType={buttonStyleType} icon={<SvgIcon type="ellipsis" />} />
+                <Button size={size} shape="square" styleType={buttonStyleType} icon={<SvgIcon type="ellipsis" />} />
             )}
         </Popover>
     );
