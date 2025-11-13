@@ -8,7 +8,7 @@ class Demo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: [1, 2]
+            value: []
         };
     }
     render() {
@@ -19,9 +19,9 @@ class Demo extends React.Component {
                     value={value}
                     multiple
                     search
+                    autoClearSearchValue
                     onChange={v => {
                         console.log(v);
-
                         this.setState({ value: v });
                     }}
                 >

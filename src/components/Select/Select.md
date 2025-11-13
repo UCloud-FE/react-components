@@ -20,6 +20,11 @@
 ```js {"codepath": "multiple.jsx"}
 ```
 
+#### autoClearSearchValue - 多选场景选择后自动清除搜索文本
+
+```js {"codepath": "autoClearSearchValue.jsx"}
+```
+
 #### disabled - 禁用
 
 ```js {"codepath": "disabled.jsx"}
