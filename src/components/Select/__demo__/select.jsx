@@ -34,7 +34,8 @@ class Demo extends React.Component {
             optionType: 'simple',
             width: 'default',
             styleType: 'default',
-            error: 'default'
+            error: 'default',
+            autoClearSearchValue: false
         };
     }
     render() {
@@ -51,7 +52,8 @@ class Demo extends React.Component {
             clearable,
             block,
             styleType,
-            error
+            error,
+            autoClearSearchValue
         } = this.state;
         const itemLayout = {
             labelCol: {
@@ -140,6 +142,12 @@ class Demo extends React.Component {
                             onChange={error => this.setState({ error: error ? 'error' : 'default' })}
                         />
                     </Form.Item>
+                    <Form.Item label="autoClearSearchValue" {...itemLayout}>
+                        <Switch
+                            checked={autoClearSearchValue}
+                            onChange={autoClearSearchValue => this.setState({ autoClearSearchValue })}
+                        />
+                    </Form.Item>
                 </Form>
                 <div className="demo-wrap">
                     <Select
@@ -153,6 +161,7 @@ class Demo extends React.Component {
                         clearable={clearable}
                         block={block}
                         status={error}
+                        autoClearSearchValue={autoClearSearchValue}
                         {...widthProps}
                         {...optionProps}
                         {...(search ? { search } : {})}
