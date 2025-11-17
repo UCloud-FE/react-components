@@ -64,6 +64,11 @@ interface CascadeData {
 ```js {"codepath": "search.jsx"}
 ```
 
+#### 自定义宽度 - width
+
+```js {"codepath": "customWidth.jsx"}
+```
+
 #### 异步加载 - loadData
 
 ```js {"codepath": "loadData.jsx"}

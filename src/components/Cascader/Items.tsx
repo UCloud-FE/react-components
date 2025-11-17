@@ -6,7 +6,7 @@ import Notice from 'src/components/Notice';
 
 import { CascadeData, Key, LoadData } from './interface';
 import Item from './Item';
-import { emptyCls, errorCls, itemsCls } from './style/cascade';
+import { emptyCls, errorCls, itemsCls, itemWidthAutoCls } from './style/cascade';
 import LOCALE from './locale/zh_CN';
 
 const Items = ({
@@ -60,6 +60,9 @@ const Items = ({
         return topExtraRender({ index, items, parents });
     }, [index, items, parents, topExtraRender]);
 
+    // 自定义宽度, 获取第一个自定义宽度的项的宽度
+    const customWidth = React.useMemo(() => items?.find(item => item.width)?.width, [items]);
+
     return (
         <Loading loading={loading}>
             {error ? (
@@ -73,7 +76,7 @@ const Items = ({
             ) : !items || !items.length ? (
                 <div className={emptyCls}>{locale.emptyTip}</div>
             ) : (
-                <div className={itemsCls}>
+                <div className={itemsCls + (customWidth ? ` ${itemWidthAutoCls}` : '')} style={{ width: customWidth || undefined }}>
                     {topExtraRenderDom}
                     {items.map(item => {
                         const { key: value, disabled: itemDisabled, title, children, isParent } = item;
