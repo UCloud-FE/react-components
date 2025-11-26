@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.18.1](https://github.com/UCloud-FE/react-components/compare/v1.18.0...v1.18.1) (2025-11-26)
+
+### Bug Fixes
+
+-   **actionlist:** "action list more" button is a square ([5df7ad3](https://github.com/UCloud-FE/react-components/commit/5df7ad31432a128da102b3b51a284204f4ecf55d))
+
 ## [1.18.0](https://github.com/UCloud-FE/react-components/compare/v1.17.1...v1.18.0) (2025-10-28)
 
 ### Features
