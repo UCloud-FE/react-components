@@ -17,4 +17,6 @@ export interface CascadeData {
     disabled?: boolean;
     // 是否强制为父节点
     isParent?: boolean;
+    // 自定义宽度
+    width?: number;
 }
