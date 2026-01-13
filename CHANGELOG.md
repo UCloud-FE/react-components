@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.18.3](https://github.com/UCloud-FE/react-components/compare/v1.18.2...v1.18.3) (2026-01-13)
+
+### Features
+
+-   **Table:** pagination 支持 hide 属性 ([1fa4964](https://github.com/UCloud-FE/react-components/commit/1fa496435d05b07e7c654455c1287d6ce74c2fe0))
+
 ### [1.18.2](https://github.com/UCloud-FE/react-components/compare/v1.18.1...v1.18.2) (2025-11-26)
 
 ### [1.18.1](https://github.com/UCloud-FE/react-components/compare/v1.18.0...v1.18.1) (2025-11-26)
