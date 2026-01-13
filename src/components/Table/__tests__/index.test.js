@@ -449,4 +449,130 @@ describe('Table', () => {
         expect(wrapper.find('.uc-fe-table-tbody .uc-fe-table-drag-over-up').length).toBe(0);
         expect(onDragSorting).toHaveBeenCalledTimes(2);
     });
+    test('pagination hide', () => {
+        class Demo extends React.Component {
+            render() {
+                const dataSource = new Array(100).fill(null).map((v, i) => ({
+                    index: `index-${i}`,
+                    i
+                }));
+                const columns = new Array(5).fill(null).map((v, i) => ({
+                    title: `title-${i}`,
+                    key: `title-${i}`,
+                    width: 200,
+                    render: record => <span>content {record.index}</span>
+                }));
+                return (
+                    <div>
+                        <div className="demo-wrap">
+                            <Table
+                                pagination={{
+                                    hide: true
+                                }}
+                                dataSource={dataSource}
+                                columns={columns}
+                                {...this.props}
+                            />
+                        </div>
+                    </div>
+                );
+            }
+        }
+
+        const wrapper = mount(<Demo />);
+        const paginationElement = wrapper.find('.uc-fe-table-pagination').first().getDOMNode();
+
+        // 验证分页组件存在但被隐藏
+        expect(paginationElement).toBeTruthy();
+        const style = paginationElement.style;
+        expect(style.visibility).toBe('hidden');
+        expect(style.opacity).toBe('0');
+        expect(style.height).toBe('0px');
+        expect(style.width).toBe('0px');
+    });
+    test('pagination hide with style', () => {
+        class Demo extends React.Component {
+            render() {
+                const dataSource = new Array(100).fill(null).map((v, i) => ({
+                    index: `index-${i}`,
+                    i
+                }));
+                const columns = new Array(5).fill(null).map((v, i) => ({
+                    title: `title-${i}`,
+                    key: `title-${i}`,
+                    width: 200,
+                    render: record => <span>content {record.index}</span>
+                }));
+                return (
+                    <div>
+                        <div className="demo-wrap">
+                            <Table
+                                pagination={{
+                                    hide: true,
+                                    style: {
+                                        color: 'red'
+                                    }
+                                }}
+                                dataSource={dataSource}
+                                columns={columns}
+                                {...this.props}
+                            />
+                        </div>
+                    </div>
+                );
+            }
+        }
+
+        const wrapper = mount(<Demo />);
+        const paginationElement = wrapper.find('.uc-fe-table-pagination').first().getDOMNode();
+
+        // 验证分页组件存在但被隐藏，且不会与hide冲突的自定义样式被保留
+        expect(paginationElement).toBeTruthy();
+        const style = paginationElement.style;
+        expect(style.visibility).toBe('hidden');
+        expect(style.opacity).toBe('0');
+        expect(style.height).toBe('0px');
+        expect(style.width).toBe('0px');
+        expect(style.margin).toBe('0px');
+        // 验证不会与hide冲突的自定义样式被保留
+        expect(style.color).toBe('red');
+    });
+    test('pagination hide false', () => {
+        class Demo extends React.Component {
+            render() {
+                const dataSource = new Array(100).fill(null).map((v, i) => ({
+                    index: `index-${i}`,
+                    i
+                }));
+                const columns = new Array(5).fill(null).map((v, i) => ({
+                    title: `title-${i}`,
+                    key: `title-${i}`,
+                    width: 200,
+                    render: record => <span>content {record.index}</span>
+                }));
+                return (
+                    <div>
+                        <div className="demo-wrap">
+                            <Table
+                                pagination={{
+                                    hide: false
+                                }}
+                                dataSource={dataSource}
+                                columns={columns}
+                                {...this.props}
+                            />
+                        </div>
+                    </div>
+                );
+            }
+        }
+
+        const wrapper = mount(<Demo />);
+        const paginationElement = wrapper.find('.uc-fe-table-pagination').first().getDOMNode();
+
+        // 验证分页组件正常显示
+        expect(paginationElement).toBeTruthy();
+        const style = paginationElement.style;
+        expect(style.visibility).not.toBe('hidden');
+    });
 });
