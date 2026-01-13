@@ -109,7 +109,7 @@ class Table extends Component {
         this.check(props);
     }
     static propTypes = {
-        /** 分页组件的配置，传入null为隐藏分页 */
+        /** 分页组件的配置，传入null或者 pagination.hide = true为隐藏分页 */
         pagination: PropTypes.object,
         /** 数据源 */
         dataSource: PropTypes.array,
@@ -1528,6 +1528,22 @@ class Table extends Component {
 
         const dragSorting = this.getDragSorting();
 
+        const paginationStyle = {
+            ...(pagination?.style || {}),
+            ...(pagination?.hide
+                ? {
+                      visibility: 'hidden',
+                      opacity: 0,
+                      height: 0,
+                      width: 0,
+                      margin: 0,
+                      padding: 0,
+                      border: 0,
+                      overflow: 'hidden'
+                  }
+                : {})
+        };
+
         return (
             <DragWrap
                 draggable={!!dragSorting}
@@ -1597,6 +1613,7 @@ class Table extends Component {
                                         showSizeChanger: true
                                     }}
                                     {...pagination}
+                                    style={paginationStyle}
                                     className={`${prefixCls}-pagination`}
                                     onChange={(current, pageSize) => {
                                         this.setState({
