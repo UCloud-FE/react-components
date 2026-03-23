@@ -9,6 +9,7 @@ const componentName = 'cascade';
 
 export const prefixCls = _prefixCls + '-' + componentName;
 export const itemsCls = prefixCls + '-items';
+export const itemWidthAutoCls = prefixCls + '-item-width-auto';
 export const itemCls = prefixCls + '-item';
 export const dividerCls = prefixCls + '-divider';
 export const emptyCls = prefixCls + '-empty';
@@ -35,6 +36,9 @@ export const SCascade = sWrap({})(
                 box-sizing: border-box;
                 padding: 8px;
                 width: 240px;
+            }
+            .${itemWidthAutoCls} {
+                width: auto;
             }
             .${emptyCls} {
                 line-height: 32px;
