@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.18.4](https://github.com/UCloud-FE/react-components/compare/v1.18.3...v1.18.4) (2026-03-23)
+
+### Features
+
+-   **Cascader:** add custom width ([045a545](https://github.com/UCloud-FE/react-components/commit/045a54573f1959f50b023b637ec5c8bea331efa7))
+-   **Select:** add autoClearSearchValue ([a7b9d1b](https://github.com/UCloud-FE/react-components/commit/a7b9d1bf32b05cce03717e6c032f537892f2ad25))
+
 ### [1.18.3](https://github.com/UCloud-FE/react-components/compare/v1.18.2...v1.18.3) (2026-01-14)
 
 ### Features
