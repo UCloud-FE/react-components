@@ -308,6 +308,8 @@ const groupOptionsAsDataSource = <
 type PopoverProps = any;
 
 export interface SelectProps {
+    /** 是否自动清除搜索值，仅在多选搜索时生效，默认值为 false */
+    autoClearSearchValue?: boolean;
     /** 当前值，controlled */
     value?: Key | Key[];
     /** 默认值，uncontrolled */
@@ -359,7 +361,7 @@ export interface SelectProps {
             value?: Key | Key[];
             /** @ignore */
             children?: ReactNode;
-        } & Pick<SelectProps, 'multiple' | 'extra' | 'search' | 'options'>
+        } & Pick<SelectProps, 'multiple' | 'extra' | 'search' | 'options' | 'autoClearSearchValue'>
     ) => ReactNode;
     /**
      * - 是否展示搜索框，可以为 true 或者 Object
@@ -454,6 +456,7 @@ type PopupProps = Pick<
         dataSource: ReturnType<typeof groupChildrenAsDataSource | typeof groupOptionsAsDataSource>;
         searchValue: string;
         setSearchValue: (searchValue: string) => void;
+        autoClearSearchValue?: boolean;
     };
 
 const Popup = React.memo(function Popup({
@@ -467,7 +470,7 @@ const Popup = React.memo(function Popup({
 });
 
 const CustomPopup = React.memo(function CustomPopup(props: PopupProps) {
-    const { onChange, value, multiple, extra, search, children, options, handleVisibleChange, renderPopup } = props;
+    const { onChange, value, multiple, extra, search, children, options, handleVisibleChange, renderPopup, autoClearSearchValue } = props;
     return (
         <>
             {renderPopup?.({
@@ -478,7 +481,8 @@ const CustomPopup = React.memo(function CustomPopup(props: PopupProps) {
                 extra,
                 search,
                 children,
-                options
+                options,
+                autoClearSearchValue
             })}
         </>
     );
@@ -501,7 +505,7 @@ const PopupV1 = React.memo(function PopupV1({
     dataSource,
     searchValue,
     setSearchValue,
-    virtualList
+    virtualList,
 }: PopupProps) {
     const handleChange = useCallback(
         (value: Key[]) => {
@@ -642,6 +646,7 @@ const PopupV2 = React.memo(function PopupV2({
         <MenuWrap maxWidth={maxWidth}>
             {hasContent ? (
                 <BlockMenu
+                    key={(Array.isArray(dataSource[2]) ? dataSource[2].length : 0)}
                     showSelectAll={
                         showSelectAll &&
                         multiple && (
@@ -696,6 +701,7 @@ type SelectorProps = Pick<
     setSearchValue: (v: string) => void;
     _popupProps: any;
     wrapRef: RefObject<HTMLElement>;
+    autoClearSearchValue?: boolean;
 } & Required<Pick<SelectProps, 'size'>>;
 
 const Selector = React.memo(function Selector({
@@ -722,6 +728,7 @@ const Selector = React.memo(function Selector({
     block,
     status,
     tagListCustomStyle,
+    autoClearSearchValue,
     ..._popupProps
 }: Omit<SelectorProps, '_popupProps'> & { v1: boolean }) {
     const props = {
@@ -746,6 +753,7 @@ const Selector = React.memo(function Selector({
         block,
         status,
         tagListCustomStyle,
+        autoClearSearchValue,
         _popupProps
     };
 
@@ -1335,6 +1343,7 @@ const Select = ({
     block,
     styleType,
     tagListCustomStyle,
+    autoClearSearchValue,
     ...htmlProps
 }: SelectProps & Override<HTMLAttributes<HTMLDivElement>, SelectProps>) => {
     if (multiple) clearable = true;
@@ -1432,9 +1441,9 @@ const Select = ({
     const handleOnChange = useCallback(
         (v: Key | Key[] | undefined) => {
             onChange(v);
-            setSearchValue('');
+            if (autoClearSearchValue) setSearchValue('');
         },
-        [onChange, setSearchValue]
+        [onChange, setSearchValue, autoClearSearchValue]
     );
 
     const popup = React.createElement(
@@ -1457,6 +1466,7 @@ const Select = ({
             dataSource,
             searchValue,
             setSearchValue,
+            autoClearSearchValue,
             virtualList
         },
         children
@@ -1486,7 +1496,8 @@ const Select = ({
         styleType,
         wrapRef,
         block,
-        tagListCustomStyle
+        tagListCustomStyle,
+        autoClearSearchValue
     });
     const popoverTriggerAttrs = useMemo(
         () => (v1 ? { trigger: ['click'] } : { trigger: [], showAction: ['click', 'contextMenu', 'focus'] }),
