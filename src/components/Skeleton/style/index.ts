@@ -30,7 +30,7 @@ export const SWrap = sWrap<{ animated?: boolean; width?: string | number }, HTML
                 p {
                     overflow: hidden;
                     position: relative;
-                    background: ${DT.T_COLOR_BG_DEFAULT_DARK};
+                    background: ${DT.T_SKELETON_COLOR_BG_LIGHT};
                     height: 16px;
                     margin-top: 12px;
                     background-clip: content-box;
