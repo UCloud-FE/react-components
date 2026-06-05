@@ -1,7 +1,9 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import { mount } from 'enzyme';
+import { renderToJson } from 'enzyme-to-json';
 import React from 'react';
 import Cascader from 'src/components/Cascader';
+import { SPopup } from 'src/components/Cascader/style';
 
 jest.unmock('rc-trigger');
 const dataSource = [
@@ -150,5 +152,17 @@ describe('Cascader', () => {
             <Cascader dataSource={dataSource} popupPlacement="bottomRight" popoverProps={{ align }} />
         );
         expect(findCascaderPopover(wrapper).prop('align')).toBe(align);
+    });
+    test('SPopup renders max-width when popupMaxWidth is a number', () => {
+        const wrapper = mount(<SPopup popupMaxWidth={320}>content</SPopup>);
+        expect(renderToJson(wrapper.render())).toMatchSnapshot();
+    });
+    test('SPopup renders max-width when popupMaxWidth is a string', () => {
+        const wrapper = mount(<SPopup popupMaxWidth="50%">content</SPopup>);
+        expect(renderToJson(wrapper.render())).toMatchSnapshot();
+    });
+    test('SPopup renders without max-width when popupMaxWidth is undefined', () => {
+        const wrapper = mount(<SPopup>content</SPopup>);
+        expect(renderToJson(wrapper.render())).toMatchSnapshot();
     });
 });

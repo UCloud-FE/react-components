@@ -41,7 +41,12 @@ export const SPopup = sWrap<{ popupMaxWidth?: number | string }>({ className: po
             popupMaxWidth,
             theme: { designTokens: DT }
         } = props;
-        const maxWidth = typeof popupMaxWidth === 'number' ? `${popupMaxWidth}px` : popupMaxWidth;
+        const maxWidth =
+            typeof popupMaxWidth === 'number'
+                ? `${popupMaxWidth}px`
+                : typeof popupMaxWidth === 'string' && /^\d+$/.test(popupMaxWidth)
+                ? `${popupMaxWidth}px`
+                : popupMaxWidth;
         return css`
             box-shadow: ${DT.T_SHADOW_BLOCK_DEFAULT_LG};
             background: ${DT.T_CARD_COLOR_BG_DEFAULT};

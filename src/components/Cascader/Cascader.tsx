@@ -185,7 +185,7 @@ const popoverAlignMap: Record<NonNullable<DefinedCascaderProps['popupPlacement']
     }
 };
 
-const defaultPopoverAlign = popoverAlignMap.bottomLeft;
+const defaultPopoverAlign: PopupAlign = { ...popoverAlignMap.bottomLeft };
 
 const getPopoverAlign = (
     popupPlacement: DefinedCascaderProps['popupPlacement'],
