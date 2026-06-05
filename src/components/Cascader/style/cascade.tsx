@@ -36,6 +36,7 @@ export const SCascade = sWrap({})(
                 box-sizing: border-box;
                 padding: 8px;
                 width: 240px;
+                flex-shrink: 0;
             }
             .${itemWidthAutoCls} {
                 width: auto;
