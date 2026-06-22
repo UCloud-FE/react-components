@@ -35,15 +35,28 @@ export const SWrap = sWrap<{ disabled?: boolean }>({ className: prefixCls })(
     })
 );
 
-export const SPopup = sWrap({ className: popupCls })(
+export const SPopup = sWrap<{ popupMaxWidth?: number | string }>({ className: popupCls })(
     styled.div(props => {
         const {
+            popupMaxWidth,
             theme: { designTokens: DT }
         } = props;
+        const maxWidth =
+            typeof popupMaxWidth === 'number'
+                ? `${popupMaxWidth}px`
+                : typeof popupMaxWidth === 'string' && /^\d+$/.test(popupMaxWidth)
+                ? `${popupMaxWidth}px`
+                : popupMaxWidth;
         return css`
             box-shadow: ${DT.T_SHADOW_BLOCK_DEFAULT_LG};
             background: ${DT.T_CARD_COLOR_BG_DEFAULT};
             border-radius: 4px;
+            ${maxWidth
+                ? css`
+                      max-width: ${maxWidth};
+                      overflow-x: auto;
+                  `
+                : null}
         `;
     })
 );

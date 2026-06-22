@@ -13,6 +13,7 @@ import React, {
 } from 'react';
 
 import Popover from 'src/components/Popover';
+import { PopoverPlacement, PopupAlign } from 'src/components/Popover';
 import { InputProps } from 'src/components/Input';
 import Tooltip from 'src/components/Tooltip';
 import SvgIcon from 'src/components/SvgIcon';
@@ -64,6 +65,10 @@ export interface DefinedCascaderProps {
     placeholder?: string;
     /** 自定义 popover 的配置 */
     popoverProps?: { [key: string]: any };
+    /** 弹层对齐位置 */
+    popupPlacement?: Extract<PopoverPlacement, 'bottomLeft' | 'bottomRight'>;
+    /** 弹层最大宽度，超出后横向滚动 */
+    popupMaxWidth?: number | string;
     /** 分隔符 */
     separator?: string;
     /** 渲染级联顶部的插槽 */
@@ -77,7 +82,7 @@ export interface DefinedCascaderProps {
 
 export type CascaderProps = DefinedCascaderProps;
 
-const PopupWrapWithoutMemo = (props: HTMLAttributes<HTMLDivElement>) => {
+const PopupWrapWithoutMemo = (props: HTMLAttributes<HTMLDivElement> & { popupMaxWidth?: number | string }) => {
     const handleFocus = useCallback((e: MouseEvent) => {
         e.preventDefault();
     }, []);
@@ -138,7 +143,15 @@ const StaticInputWithoutMemo = React.forwardRef(function StaticInput(
 });
 const StaticInput = React.memo(StaticInputWithoutMemo);
 
-const getValueStringFromDataSource = ({ value, dataSource, separator: userSeparator }: { value?: Key[], dataSource?: CascadeData[],separator?:string }) => {
+const getValueStringFromDataSource = ({
+    value,
+    dataSource,
+    separator: userSeparator
+}: {
+    value?: Key[];
+    dataSource?: CascadeData[];
+    separator?: string;
+}) => {
     if (!value?.length) return '';
     const separator = userSeparator ? userSeparator : '/';
     if (!dataSource) return value.join(separator);
@@ -157,11 +170,30 @@ const getValueStringFromDataSource = ({ value, dataSource, separator: userSepara
         .join(separator);
 };
 
-const popoverAlign = {
-    points: ['tl', 'bl'],
-    overflow: { adjustX: 0, adjustY: 1 },
-    offset: [0, 5],
-    targetOffset: [0, 0]
+const popoverAlignMap: Record<NonNullable<DefinedCascaderProps['popupPlacement']>, PopupAlign> = {
+    bottomLeft: {
+        points: ['tl', 'bl'],
+        overflow: { adjustX: 0, adjustY: 1 },
+        offset: [0, 5],
+        targetOffset: [0, 0]
+    },
+    bottomRight: {
+        points: ['tr', 'br'],
+        overflow: { adjustX: 0, adjustY: 1 },
+        offset: [0, 5],
+        targetOffset: [0, 0]
+    }
+};
+
+const defaultPopoverAlign: PopupAlign = { ...popoverAlignMap.bottomLeft };
+
+const getPopoverAlign = (
+    popupPlacement: DefinedCascaderProps['popupPlacement'],
+    popoverProps: DefinedCascaderProps['popoverProps']
+) => {
+    if (popoverProps?.align) return popoverProps.align;
+    if (!popupPlacement) return defaultPopoverAlign;
+    return popoverAlignMap[popupPlacement];
 };
 
 const defaultDataSourceAfterSearch: never[] = [];
@@ -179,6 +211,8 @@ const Cascader = ({
     loadData,
     status,
     popoverProps,
+    popupPlacement,
+    popupMaxWidth,
     separator,
     topExtraRender
 }: CascaderProps) => {
@@ -213,11 +247,15 @@ const Cascader = ({
         setFocusing(false);
         setSearchValue('');
     }, []);
-    const valueString = useMemo(() => getValueStringFromDataSource({
-        value, 
-        dataSource,
-        separator
-    }), [dataSource, value,separator]);
+    const valueString = useMemo(
+        () =>
+            getValueStringFromDataSource({
+                value,
+                dataSource,
+                separator
+            }),
+        [dataSource, value, separator]
+    );
     const inputFocused = useMemo(() => searchAble && focusing, [focusing, searchAble]);
     const inputValue = useMemo(() => (inputFocused ? searchValue : valueString), [
         inputFocused,
@@ -231,6 +269,7 @@ const Cascader = ({
         locale.placeholder
     ]);
     const popoverConfigProps = usePopoverConfig();
+    const popoverAlign = useMemo(() => getPopoverAlign(popupPlacement, popoverProps), [popupPlacement, popoverProps]);
     const {
         dataSource: dataSourceAfterSearch,
         loading: searchLoading,
@@ -264,7 +303,7 @@ const Cascader = ({
                 {...popoverConfigProps}
                 {...popoverProps}
                 popup={
-                    <PopupWrap>
+                    <PopupWrap popupMaxWidth={popupMaxWidth}>
                         {searchValue ? (
                             <CascadeSearchResult
                                 dataSource={dataSourceAfterSearch}

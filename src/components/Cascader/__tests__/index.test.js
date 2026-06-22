@@ -1,7 +1,9 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import { mount } from 'enzyme';
+import { renderToJson } from 'enzyme-to-json';
 import React from 'react';
 import Cascader from 'src/components/Cascader';
+import { SPopup } from 'src/components/Cascader/style';
 
 jest.unmock('rc-trigger');
 const dataSource = [
@@ -101,6 +103,10 @@ const dataSource = [
         ]
     }
 ];
+
+const findCascaderPopover = wrapper =>
+    wrapper.findWhere(node => node.prop('align') && node.prop('popup') && node.prop('showAction')).first();
+
 describe('Cascader', () => {
     test('topExtra call', () => {
         const topExtraRenderMock = jest.fn(() => 'Extra Content');
@@ -121,5 +127,42 @@ describe('Cascader', () => {
         const input = wrapper.find('input');
         input.simulate('click');
         expect(wrapper.find('.topExtraRender').length).toBe(1);
+    });
+    test('popupPlacement bottomRight aligns popup to trigger right edge', () => {
+        const wrapper = mount(<Cascader dataSource={dataSource} popupPlacement="bottomRight" />);
+        expect(findCascaderPopover(wrapper).prop('align')).toEqual({
+            points: ['tr', 'br'],
+            overflow: { adjustX: 0, adjustY: 1 },
+            offset: [0, 5],
+            targetOffset: [0, 0]
+        });
+    });
+    test('popupMaxWidth passes max width to popup wrapper', () => {
+        const wrapper = mount(<Cascader dataSource={dataSource} popupMaxWidth={320} />);
+        expect(findCascaderPopover(wrapper).prop('popup').props.popupMaxWidth).toBe(320);
+    });
+    test('popoverProps align takes precedence over popupPlacement', () => {
+        const align = {
+            points: ['tl', 'tr'],
+            overflow: { adjustX: 1, adjustY: 1 },
+            offset: [8, 0],
+            targetOffset: [0, 0]
+        };
+        const wrapper = mount(
+            <Cascader dataSource={dataSource} popupPlacement="bottomRight" popoverProps={{ align }} />
+        );
+        expect(findCascaderPopover(wrapper).prop('align')).toBe(align);
+    });
+    test('SPopup renders max-width when popupMaxWidth is a number', () => {
+        const wrapper = mount(<SPopup popupMaxWidth={320}>content</SPopup>);
+        expect(renderToJson(wrapper.render())).toMatchSnapshot();
+    });
+    test('SPopup renders max-width when popupMaxWidth is a string', () => {
+        const wrapper = mount(<SPopup popupMaxWidth="50%">content</SPopup>);
+        expect(renderToJson(wrapper.render())).toMatchSnapshot();
+    });
+    test('SPopup renders without max-width when popupMaxWidth is undefined', () => {
+        const wrapper = mount(<SPopup>content</SPopup>);
+        expect(renderToJson(wrapper.render())).toMatchSnapshot();
     });
 });

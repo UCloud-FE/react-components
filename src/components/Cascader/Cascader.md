@@ -34,7 +34,17 @@ interface CascadeData {
     disabled?: boolean;
     // 是否强制为父节点
     isParent?: boolean;
+    // 自定义宽度
+    width?: number;
 }
+```
+
+### 抽屉等窄容器中使用
+
+右侧空间不足时，可通过 `popupPlacement="bottomRight"` 将弹层右对齐展示；如果级联列数或自定义列宽仍超过可展示区域，可通过 `popupMaxWidth` 限制弹层最大宽度，超出部分会出现横向滚动。
+
+```js static
+<Cascader popupPlacement="bottomRight" popupMaxWidth={560} />
 ```
 
 ### 演示
@@ -67,6 +77,11 @@ interface CascadeData {
 #### 自定义宽度 - width
 
 ```js {"codepath": "customWidth.jsx"}
+```
+
+#### 抽屉内右对齐与横向滚动
+
+```js {"codepath": "drawerOverflow.jsx"}
 ```
 
 #### 异步加载 - loadData

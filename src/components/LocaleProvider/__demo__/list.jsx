@@ -23,9 +23,21 @@ import ENLocale from 'src/components/LocaleProvider/locale/en_US';
 
 // demo start
 const CNLocale = {};
+const getENLocale = () => {
+    if (typeof ENLocale !== 'undefined') {
+        return ENLocale;
+    }
+    if (typeof window !== 'undefined' && window.ENLocale) {
+        return window.ENLocale;
+    }
+    if (typeof global !== 'undefined' && global.ENLocale) {
+        return global.ENLocale;
+    }
+    return {};
+};
 const localeMap = {
     zh_CN: CNLocale,
-    en_US: ENLocale
+    en_US: getENLocale()
 };
 const momentLocaleMap = {
     zh_CN: 'zh-cn',
